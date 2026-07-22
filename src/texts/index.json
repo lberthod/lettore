@@ -1,0 +1,170 @@
+[
+  {
+    "id": "marco",
+    "title": "La mattina di Marco",
+    "excerpt": "La mattina, Marco si sveglia presto e prepara il caffè. Gli piace guardare il sole che sorge dietro le colline. Dopo colazione, esce di casa…",
+    "paragraphCount": 3,
+    "wordCount": 96
+  },
+  {
+    "id": "mare",
+    "title": "Una giornata al mare",
+    "excerpt": "Sabato mattina, Giulia e suo fratello vanno al mare. Il cielo è azzurro e fa molto caldo. Portano gli asciugamani, un ombrellone e un cestin…",
+    "paragraphCount": 3,
+    "wordCount": 70
+  },
+  {
+    "id": "nonna",
+    "title": "La cucina della nonna",
+    "excerpt": "Ogni domenica, Sofia va a pranzo dalla nonna. La cucina profuma di sugo e di basilico. La nonna prepara la pasta fatta in casa.",
+    "paragraphCount": 3,
+    "wordCount": 73
+  },
+  {
+    "id": "tecnologia",
+    "title": "La tecnologia e l'intelligenza artificiale",
+    "excerpt": "Oggi la tecnologia fa parte della nostra vita quotidiana. Usiamo il telefono per parlare, leggere le notizie e ascoltare la musica. Anche i…",
+    "paragraphCount": 3,
+    "wordCount": 100
+  },
+  {
+    "id": "venezia",
+    "title": "Un viaggio a Venezia",
+    "excerpt": "Elena ha sempre sognato di visitare Venezia. Quest'anno, finalmente, decide di partire con la sua amica Chiara. Preparano le valigie con cur…",
+    "paragraphCount": 6,
+    "wordCount": 226
+  },
+  {
+    "id": "ristorante",
+    "title": "Il ristorante di Luca",
+    "excerpt": "Luca ha trent'anni e un grande sogno: aprire un ristorante nel suo paese. Da bambino, passava le ore in cucina con sua madre. Lei gli ha ins…",
+    "paragraphCount": 6,
+    "wordCount": 245
+  },
+  {
+    "id": "gatto",
+    "title": "Il gatto della stazione",
+    "excerpt": "Nella piccola stazione di un paese di montagna vive un gatto grigio. Nessuno sa da dove viene. I ferrovieri lo chiamano Baffo, per i suoi lu…",
+    "paragraphCount": 6,
+    "wordCount": 225
+  },
+  {
+    "id": "lettera",
+    "title": "La lettera nella soffitta",
+    "excerpt": "Durante le vacanze estive, Martina aiuta i genitori a pulire la vecchia casa dei nonni. In soffitta, tra scatole polverose e mobili antichi,…",
+    "paragraphCount": 6,
+    "wordCount": 229
+  },
+  {
+    "id": "maratona",
+    "title": "La maratona di Paolo",
+    "excerpt": "Paolo ha cinquant'anni e lavora in banca. Ogni giorno passa otto ore seduto davanti al computer. Un mattino, il dottore gli dice: deve muove…",
+    "paragraphCount": 6,
+    "wordCount": 235
+  },
+  {
+    "id": "montagne",
+    "title": "Le montagne d'Italia",
+    "excerpt": "L'Italia è un paese di montagne. Al nord ci sono le Alpi, una catena lunga e maestosa che separa l'Italia dalla Francia, dalla Svizzera e da…",
+    "paragraphCount": 6,
+    "wordCount": 216
+  },
+  {
+    "id": "aosta",
+    "title": "Una storia di Aosta",
+    "excerpt": "Aosta è una piccola città circondata dalle montagne più alte d'Europa. I Romani l'hanno fondata più di duemila anni fa e l'hanno chiamata Au…",
+    "paragraphCount": 6,
+    "wordCount": 224
+  },
+  {
+    "id": "ticino",
+    "title": "Una storia del Ticino",
+    "excerpt": "Il Ticino è il cantone italiano della Svizzera. Qui si parla italiano, ma la bandiera è quella rossa con la croce bianca. È una terra specia…",
+    "paragraphCount": 6,
+    "wordCount": 240
+  },
+  {
+    "id": "alpeggio",
+    "title": "Il pastore dell'alpeggio",
+    "excerpt": "Ogni estate, Pietro porta le sue mucche all'alpeggio, un grande prato a duemila metri di altezza. La salita dura un giorno intero. Le mucche…",
+    "paragraphCount": 6,
+    "wordCount": 223
+  },
+  {
+    "id": "bernina",
+    "title": "Il trenino rosso del Bernina",
+    "excerpt": "In alta montagna, tra la Svizzera e l'Italia, viaggia un piccolo treno rosso. Si chiama trenino del Bernina e parte da Sankt Moritz per arri…",
+    "paragraphCount": 6,
+    "wordCount": 215
+  },
+  {
+    "id": "stati",
+    "title": "L'Italia divisa: un mosaico di stati",
+    "excerpt": "Per molti secoli, prima di diventare una nazione unita, l'Italia fu un mosaico di stati diversi. Ogni regione aveva il suo sovrano, le sue l…",
+    "paragraphCount": 6,
+    "wordCount": 234
+  },
+  {
+    "id": "venezia_storia",
+    "title": "La Serenissima: la Repubblica di Venezia",
+    "excerpt": "Tra tutti gli stati italiani, la Repubblica di Venezia fu certamente uno dei più originali e duraturi. Nata su un gruppo di isole nella lagu…",
+    "paragraphCount": 6,
+    "wordCount": 225
+  },
+  {
+    "id": "due_sicilie",
+    "title": "Il Regno delle Due Sicilie",
+    "excerpt": "La storia del sud Italia è segnata da numerose dominazioni straniere. Normanni, svevi, angioini, aragonesi e spagnoli si succedettero nel co…",
+    "paragraphCount": 6,
+    "wordCount": 223
+  },
+  {
+    "id": "risorgimento",
+    "title": "Il Risorgimento e l'unità d'Italia",
+    "excerpt": "Il movimento che portò all'unità d'Italia si chiama Risorgimento. Fu un periodo di guerre, congiure e passioni politiche che trasformò una p…",
+    "paragraphCount": 6,
+    "wordCount": 212
+  },
+  {
+    "id": "repubblica",
+    "title": "Dalla monarchia alla repubblica",
+    "excerpt": "Il Regno d'Italia visse una storia breve e tormentata: durò meno di un secolo. Attraversò due guerre mondiali, una dittatura e infine un ref…",
+    "paragraphCount": 6,
+    "wordCount": 212
+  },
+  {
+    "id": "roma_antica",
+    "title": "Roma antica: dalla leggenda all'impero",
+    "excerpt": "Secondo la leggenda, Roma nacque nel settecentocinquantatré avanti Cristo, fondata da Romolo sul colle Palatino. La storia racconta che Romo…",
+    "paragraphCount": 12,
+    "wordCount": 579
+  },
+  {
+    "id": "rinascimento",
+    "title": "Il Rinascimento: quando l'Italia illuminò il mondo",
+    "excerpt": "Tra il Quattrocento e il Cinquecento, l'Italia visse una stagione culturale straordinaria che cambiò per sempre la storia dell'arte e del pe…",
+    "paragraphCount": 12,
+    "wordCount": 612
+  },
+  {
+    "id": "lingua",
+    "title": "La lingua italiana: una storia particolare",
+    "excerpt": "La lingua italiana ha una storia particolare: per secoli è stata scritta molto più che parlata. Nasce dal latino, come il francese e lo spag…",
+    "paragraphCount": 12,
+    "wordCount": 602
+  },
+  {
+    "id": "emigrazione",
+    "title": "Valigie di cartone: l'emigrazione italiana",
+    "excerpt": "Tra la fine dell'Ottocento e la metà del Novecento, quasi trenta milioni di italiani lasciarono il loro paese. Fu una delle più grandi migra…",
+    "paragraphCount": 12,
+    "wordCount": 608
+  },
+  {
+    "id": "miracolo",
+    "title": "Il miracolo economico: l'Italia del dopoguerra",
+    "excerpt": "Alla fine della seconda guerra mondiale, l'Italia era un paese in ginocchio. Le città erano piene di macerie, le fabbriche distrutte, le fam…",
+    "paragraphCount": 12,
+    "wordCount": 637
+  }
+]
