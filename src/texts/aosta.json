@@ -1,6 +1,7 @@
 {
   "id": "aosta",
   "title": "Una storia di Aosta",
+  "level": "B1",
   "paragraphs": [
     "Aosta è una piccola città circondata dalle montagne più alte d'Europa. I Romani l'hanno fondata più di duemila anni fa e l'hanno chiamata Augusta Praetoria. Ancora oggi si possono vedere l'arco di Augusto, il teatro romano e le antiche mura.",
     "In questa città vive Camille, una ragazza di dodici anni. Come molti abitanti della Valle d'Aosta, parla italiano e francese. Suo padre è una guida alpina e sua madre lavora in una latteria dove si produce la fontina, il formaggio della valle.",
@@ -183,5 +184,34 @@
     "La sera, tornando a casa, Camille guarda le montagne diventare rosa al tramonto.": "Le soir, en rentrant à la maison, Camille regarde les montagnes devenir roses au coucher du soleil.",
     "Ora capisce perché suo padre ama tanto questo lavoro.": "Maintenant, elle comprend pourquoi son père aime tant ce métier.",
     "Un giorno, pensa, diventerò anch'io una guida di queste montagne.": "Un jour, pense-t-elle, je deviendrai moi aussi guide de ces montagnes."
-  }
+  },
+  "questions": [
+    {
+      "q": "Chi ha fondato la città di Aosta?",
+      "options": [
+        "I Francesi",
+        "I Romani",
+        "Le guide alpine"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa vede Camille dalle rocce vicino al rifugio?",
+      "options": [
+        "Un gruppo di stambecchi",
+        "Un branco di lupi",
+        "Le mucche di suo padre"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Perché è stato creato il parco del Gran Paradiso?",
+      "options": [
+        "Per costruire nuovi rifugi in montagna",
+        "Per proteggere il ghiacciaio",
+        "Per salvare gli stambecchi"
+      ],
+      "correct": 2
+    }
+  ]
 }

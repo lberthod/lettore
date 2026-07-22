@@ -1,6 +1,7 @@
 {
   "id": "lettera",
   "title": "La lettera nella soffitta",
+  "level": "A2",
   "paragraphs": [
     "Durante le vacanze estive, Martina aiuta i genitori a pulire la vecchia casa dei nonni. In soffitta, tra scatole polverose e mobili antichi, trova una piccola scatola di legno chiusa a chiave. La chiave è appesa a un filo rosso, dietro lo specchio.",
     "Dentro la scatola c'è una lettera ingiallita dal tempo. La data dice: dodici aprile millenovecentocinquantotto. La scrittura è elegante, con l'inchiostro blu. Martina comincia a leggere con il cuore che batte forte.",
@@ -183,5 +184,34 @@
     "Quella sera, Martina scrive nel suo diario: oggi ho scoperto un tesoro.": "Ce soir-là, Martina écrit dans son journal : aujourd'hui, j'ai découvert un trésor.",
     "Non è oro e non sono soldi.": "Ce n'est pas de l'or et ce n'est pas de l'argent.",
     "È la storia d'amore dei miei nonni, custodita per sessant'anni in una scatola di legno.": "C'est l'histoire d'amour de mes grands-parents, gardée pendant soixante ans dans une boîte en bois."
-  }
+  },
+  "questions": [
+    {
+      "q": "Dove trova Martina la scatola di legno?",
+      "options": [
+        "In soffitta, nella vecchia casa dei nonni",
+        "In giardino, sotto l'albero di fico",
+        "Nella cucina della nonna"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Chi ha scritto la lettera?",
+      "options": [
+        "La nonna, quando era giovane",
+        "Il padre di Martina",
+        "Il nonno Giovanni, quando era un giovane marinaio"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Cosa fa il nonno dopo due anni in America?",
+      "options": [
+        "Resta in Argentina per lavorare",
+        "Torna al paese e sposa la nonna",
+        "Scrive un'ultima lettera e parte di nuovo"
+      ],
+      "correct": 1
+    }
+  ]
 }

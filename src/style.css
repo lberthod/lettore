@@ -15,3 +15,131 @@ body {
   margin: 0 auto;
   padding: 2rem 1.5rem 6rem;
 }
+
+/* --- Pages statiques (à propos, légal, contact…) --- */
+
+.page h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.page h2 {
+  font-size: 1.1rem;
+  margin: 1.6rem 0 0.5rem;
+}
+
+.page p,
+.page ul {
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.page a {
+  color: #b0692e;
+}
+
+.page.narrow {
+  max-width: 420px;
+}
+
+.hint {
+  font-size: 0.82rem;
+  opacity: 0.6;
+}
+
+.notice {
+  padding: 0.7rem 1rem;
+  border: 1px solid #e0c98f;
+  border-radius: 8px;
+  background: #fff8e6;
+  color: #8a6d1a;
+  font-size: 0.88rem;
+}
+
+/* --- Formulaires --- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #6b6156;
+}
+
+.form input,
+.form textarea {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #d8cfc2;
+  border-radius: 8px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #b0692e;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.btn-primary {
+  border: 1px solid #b0692e;
+  background: #b0692e;
+  color: #faf6f0;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #9a5a26;
+}
+
+.btn-secondary {
+  border: 1px solid #d8cfc2;
+  background: #fff;
+  color: #6b6156;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: #b0692e;
+  color: #b0692e;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  color: #a34430;
+  font-size: 0.88rem;
+}
+
+.success {
+  margin: 0;
+  color: #35674a;
+  font-size: 0.88rem;
+}

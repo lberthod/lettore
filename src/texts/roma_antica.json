@@ -1,6 +1,7 @@
 {
   "id": "roma_antica",
   "title": "Roma antica: dalla leggenda all'impero",
+  "level": "B2",
   "paragraphs": [
     "Secondo la leggenda, Roma nacque nel settecentocinquantatré avanti Cristo, fondata da Romolo sul colle Palatino. La storia racconta che Romolo e suo fratello Remo, abbandonati da piccoli in una cesta sul fiume Tevere, furono salvati e allattati da una lupa. Questa immagine, la lupa con i due gemelli, è ancora oggi il simbolo della città.",
     "All'inizio Roma era soltanto un villaggio di pastori e contadini. Governata dai re, crebbe lentamente, conquistando i popoli vicini e imparando dagli etruschi l'arte di costruire strade, ponti e acquedotti. Nel cinquecentonove avanti Cristo, i romani cacciarono l'ultimo re e fondarono la repubblica.",
@@ -14,6 +15,35 @@
     "La vita quotidiana dei romani ci è nota grazie a Pompei, la città sepolta dall'eruzione del Vesuvio. Sotto la cenere si sono conservati le case, i negozi, i graffiti sui muri e perfino il pane nei forni. Passeggiando tra quelle rovine, sembra che gli abitanti siano usciti soltanto ieri.",
     "A partire dal terzo secolo, l'impero entrò in una lunga crisi. Le frontiere erano minacciate dai popoli germanici, l'economia si indeboliva e gli imperatori si succedevano tra congiure e guerre civili. Costantino spostò la capitale a Bisanzio e concesse libertà di culto ai cristiani, cambiando per sempre la storia dell'Europa.",
     "Nel quattrocentosettantasei dopo Cristo, l'ultimo imperatore d'Occidente, un ragazzo chiamato Romolo Augustolo, fu deposto da un capo barbaro. L'impero era finito, ma la sua eredità sopravvive ancora: nel diritto, nelle lingue, nell'architettura e nel nome stesso dell'Europa moderna."
+  ],
+  "questions": [
+    {
+      "q": "Come era organizzato il potere nella repubblica romana?",
+      "options": [
+        "Apparteneva a un solo re eletto a vita",
+        "Era diviso tra due consoli, eletti ogni anno, e il senato",
+        "Era nelle mani dei generali dell'esercito"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa fece il generale cartaginese Annibale?",
+      "options": [
+        "Attraversò le Alpi con gli elefanti, ma alla fine dovette arrendersi",
+        "Conquistò Roma e la governò per molti anni",
+        "Fondò la città di Cartagine dopo tre guerre"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Perché Pompei è così importante per conoscere la vita quotidiana dei romani?",
+      "options": [
+        "Perché fu la capitale dell'impero per due secoli",
+        "Perché vi nacque Giulio Cesare",
+        "Perché la cenere del Vesuvio conservò case, negozi e perfino il pane nei forni"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

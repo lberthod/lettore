@@ -1,10 +1,40 @@
 {
   "id": "nonna",
   "title": "La cucina della nonna",
+  "level": "A1",
   "paragraphs": [
     "Ogni domenica, Sofia va a pranzo dalla nonna. La cucina profuma di sugo e di basilico. La nonna prepara la pasta fatta in casa.",
     "Sofia apparecchia la tavola con cura. Mette i piatti, i bicchieri e le forchette. Poi aiuta la nonna a mescolare il sugo nella pentola.",
     "Durante il pranzo, la nonna racconta storie della sua infanzia. Sofia ascolta con attenzione e ride spesso. Per lei, queste domeniche sono un vero tesoro."
+  ],
+  "questions": [
+    {
+      "q": "Quando va Sofia a pranzo dalla nonna?",
+      "options": [
+        "Ogni sabato",
+        "Ogni domenica",
+        "Ogni lunedì"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa prepara la nonna?",
+      "options": [
+        "La pizza",
+        "La torta di mele",
+        "La pasta fatta in casa"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Che cosa racconta la nonna durante il pranzo?",
+      "options": [
+        "Storie della sua infanzia",
+        "Le notizie del giornale",
+        "Una ricetta nuova"
+      ],
+      "correct": 0
+    }
   ],
   "words": {
     "ogni": "chaque",

@@ -1,6 +1,7 @@
 {
   "id": "bernina",
   "title": "Il trenino rosso del Bernina",
+  "level": "B1",
   "paragraphs": [
     "In alta montagna, tra la Svizzera e l'Italia, viaggia un piccolo treno rosso. Si chiama trenino del Bernina e parte da Sankt Moritz per arrivare a Tirano. È la ferrovia più alta delle Alpi e una delle più belle del mondo.",
     "Anna e suo nonno salgono sul treno una mattina di febbraio. I vagoni hanno grandi finestre panoramiche. Il treno parte piano e comincia a salire tra i boschi coperti di neve.",
@@ -159,5 +160,34 @@
     "Il nonno le dice: hai visto?": "Le grand-père lui dit : tu as vu ?",
     "In un solo giorno abbiamo attraversato l'inverno e la primavera.": "En un seul jour, nous avons traversé l'hiver et le printemps.",
     "È la magia delle Alpi.": "C'est la magie des Alpes."
-  }
+  },
+  "questions": [
+    {
+      "q": "Da dove parte il trenino del Bernina?",
+      "options": [
+        "Da Tirano",
+        "Da Sankt Moritz",
+        "Da Milano"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa c'è al passo del Bernina?",
+      "options": [
+        "Silenzio, neve e cime che brillano al sole",
+        "I vigneti della Valtellina",
+        "Una piazza piena di sole"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Cosa fa Anna a Tirano?",
+      "options": [
+        "Guarda un ghiacciaio e un lago gelato",
+        "Sale su un battello con il nonno",
+        "Si toglie la giacca e mangia una pizza con il nonno"
+      ],
+      "correct": 2
+    }
+  ]
 }

@@ -1,19 +1,31 @@
 {
-  "name": "lettore-italiano",
+  "name": "leggendo",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:text": "node scripts/generate-text.mjs",
+    "orchestrate": "node generator/orchestrate.mjs",
+    "orchestrate:plan": "node generator/orchestrate.mjs --dry-run --all",
+    "orchestrate:matrix": "node generator/orchestrate-matrix.mjs",
+    "orchestrate:matrix:plan": "node generator/orchestrate-matrix.mjs --dry-run --all",
+    "test:text": "node generator/test-one.mjs",
+    "test:sizes": "node generator/test-sizes.mjs",
+    "publish:text": "node scripts/publish-text.mjs"
   },
   "dependencies": {
+    "firebase": "^12.16.0",
     "vue": "^3.5.13",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.112.5",
     "@vitejs/plugin-vue": "^5.2.1",
-    "vite": "^6.2.0"
+    "firebase-admin": "^14.2.0",
+    "vite": "^6.2.0",
+    "vite-plugin-pwa": "^1.3.0"
   }
 }

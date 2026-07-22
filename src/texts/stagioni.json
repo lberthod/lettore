@@ -1,0 +1,105 @@
+{
+  "id": "stagioni",
+  "title": "Le quattro stagioni",
+  "level": "A1",
+  "paragraphs": [
+    "L'anno ha quattro stagioni. In primavera i fiori aprono e gli uccelli cantano. Fa caldo ma non troppo.",
+    "In estate il sole è forte e le giornate sono lunghe. I bambini nuotano al mare o al lago. Tutti mangiano il gelato.",
+    "In autunno le foglie diventano rosse e gialle. Piove spesso e fa fresco. In inverno arriva la neve: i bambini fanno i pupazzi e bevono cioccolata calda."
+  ],
+  "words": {
+    "al": "à la / au",
+    "aprono": "s'ouvrent",
+    "arriva": "arrive",
+    "autunno": "automne",
+    "bambini": "enfants",
+    "bevono": "boivent",
+    "calda": "chaud (« cioccolata calda » = chocolat chaud)",
+    "caldo": "chaud",
+    "cantano": "chantent",
+    "cioccolata": "chocolat (chaud)",
+    "diventano": "deviennent",
+    "e": "et",
+    "estate": "été",
+    "fa": "il fait (« fa caldo » = il fait chaud)",
+    "fanno": "font",
+    "fiori": "fleurs",
+    "foglie": "feuilles",
+    "forte": "fort",
+    "fresco": "frais",
+    "gelato": "glace",
+    "gialle": "jaunes",
+    "giornate": "journées",
+    "gli": "les",
+    "ha": "a",
+    "i": "les",
+    "il": "le",
+    "in": "en / au",
+    "inverno": "hiver",
+    "l'anno": "l'année",
+    "la": "la",
+    "lago": "lac",
+    "le": "les",
+    "lunghe": "longues",
+    "ma": "mais",
+    "mangiano": "mangent",
+    "mare": "mer",
+    "neve": "neige",
+    "non": "ne... pas",
+    "nuotano": "nagent",
+    "o": "ou",
+    "piove": "il pleut",
+    "primavera": "printemps",
+    "pupazzi": "bonshommes (de neige)",
+    "quattro": "quatre",
+    "rosse": "rouges",
+    "sole": "soleil",
+    "sono": "sont",
+    "spesso": "souvent",
+    "stagioni": "saisons",
+    "troppo": "trop",
+    "tutti": "tous",
+    "uccelli": "oiseaux",
+    "è": "est"
+  },
+  "sentences": {
+    "L'anno ha quattro stagioni.": "L'année a quatre saisons.",
+    "In primavera i fiori aprono e gli uccelli cantano.": "Au printemps, les fleurs s'ouvrent et les oiseaux chantent.",
+    "Fa caldo ma non troppo.": "Il fait chaud, mais pas trop.",
+    "In estate il sole è forte e le giornate sono lunghe.": "En été, le soleil est fort et les journées sont longues.",
+    "I bambini nuotano al mare o al lago.": "Les enfants nagent à la mer ou au lac.",
+    "Tutti mangiano il gelato.": "Tout le monde mange des glaces.",
+    "In autunno le foglie diventano rosse e gialle.": "En automne, les feuilles deviennent rouges et jaunes.",
+    "Piove spesso e fa fresco.": "Il pleut souvent et il fait frais.",
+    "In inverno arriva la neve: i bambini fanno i pupazzi e bevono cioccolata calda.": "En hiver, la neige arrive : les enfants font des bonshommes de neige et boivent du chocolat chaud."
+  },
+  "questions": [
+    {
+      "q": "Quante stagioni ha l'anno?",
+      "options": [
+        "Quattro",
+        "Tre",
+        "Cinque"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa fanno i bambini in estate?",
+      "options": [
+        "Fanno i pupazzi di neve",
+        "Nuotano al mare o al lago",
+        "Guardano le foglie rosse e gialle"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa bevono i bambini in inverno?",
+      "options": [
+        "Il latte freddo",
+        "L'acqua del lago",
+        "La cioccolata calda"
+      ],
+      "correct": 2
+    }
+  ]
+}

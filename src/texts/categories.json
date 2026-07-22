@@ -1,0 +1,62 @@
+[
+  {
+    "id": "vita_quotidiana",
+    "name": "Vie quotidienne",
+    "icon": "☕"
+  },
+  {
+    "id": "cucina",
+    "name": "Cuisine et saveurs",
+    "icon": "🍝"
+  },
+  {
+    "id": "natura_animali",
+    "name": "Nature et animaux",
+    "icon": "🐾"
+  },
+  {
+    "id": "viaggi",
+    "name": "Voyages",
+    "icon": "🧳"
+  },
+  {
+    "id": "montagna",
+    "name": "Montagne et Alpes",
+    "icon": "🏔"
+  },
+  {
+    "id": "regioni",
+    "name": "Régions alpines",
+    "icon": "🚠"
+  },
+  {
+    "id": "sport",
+    "name": "Sport et défis",
+    "icon": "⚽"
+  },
+  {
+    "id": "feste",
+    "name": "Fêtes et traditions",
+    "icon": "🎉"
+  },
+  {
+    "id": "storia_antica",
+    "name": "Histoire ancienne et Renaissance",
+    "icon": "🏛"
+  },
+  {
+    "id": "storia_moderna",
+    "name": "Histoire moderne",
+    "icon": "🇮🇹"
+  },
+  {
+    "id": "societa",
+    "name": "Société",
+    "icon": "🗞"
+  },
+  {
+    "id": "arte_lingua",
+    "name": "Arts et langue",
+    "icon": "🎭"
+  }
+]

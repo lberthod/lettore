@@ -1,6 +1,7 @@
 {
   "id": "lingua",
   "title": "La lingua italiana: una storia particolare",
+  "level": "B2",
   "paragraphs": [
     "La lingua italiana ha una storia particolare: per secoli è stata scritta molto più che parlata. Nasce dal latino, come il francese e lo spagnolo, ma a differenza di queste lingue è rimasta a lungo senza uno stato che la sostenesse. La sua fortuna è dovuta soprattutto alla letteratura.",
     "Nel Medioevo, ogni regione italiana parlava il proprio volgare, cioè la lingua del popolo, diversa da città a città. I documenti ufficiali, i libri e le preghiere erano invece in latino, che solo le persone istruite capivano. Nessuno immaginava che uno di quei volgari sarebbe diventato una grande lingua di cultura.",
@@ -14,6 +15,35 @@
     "Oggi quasi tutti gli italiani parlano italiano, ma i dialetti non sono morti. In molte famiglie si usano ancora, accanto alla lingua nazionale, e ogni regione conserva il suo accento e le sue espressioni. Questa varietà è una ricchezza: le canzoni napoletane o il teatro veneziano fanno parte della cultura italiana quanto Dante.",
     "L'italiano è anche una lingua internazionale, ma in modo particolare. Non è la lingua degli affari o della diplomazia: è la lingua della musica, della cucina, dell'arte e della bellezza. Parole come opera, piano, spaghetti, cappuccino e tiramisù sono usate in tutto il mondo senza traduzione.",
     "Milioni di persone studiano l'italiano per passione: per cantare la lirica, per capire i film, per viaggiare o semplicemente per il piacere del suo suono. È una lingua nata da un poema, cresciuta nei libri e diventata, alla fine, la voce di un popolo intero. Pochi idiomi al mondo possono raccontare una storia simile."
+  ],
+  "questions": [
+    {
+      "q": "Perché la Divina Commedia fu decisiva per la lingua italiana?",
+      "options": [
+        "Perché fu scritta nel volgare di Firenze e divenne il modello per gli scrittori",
+        "Perché tradusse il latino in tutti i dialetti regionali",
+        "Perché conteneva il primo dizionario dell'italiano"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Quando l'Italia si unì nel milleottocentosessantuno, quanti abitanti sapevano parlare italiano?",
+      "options": [
+        "Quasi tutta la popolazione",
+        "Circa la metà della popolazione",
+        "Meno del dieci per cento della popolazione"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Quale fu, secondo il testo, la vera rivoluzione per la diffusione dell'italiano parlato?",
+      "options": [
+        "L'emigrazione verso l'estero",
+        "La televisione, a partire dagli anni Cinquanta",
+        "I primi dizionari del Cinquecento"
+      ],
+      "correct": 1
+    }
   ],
   "words": {
     "a": "à",

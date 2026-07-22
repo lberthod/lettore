@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Textes : lecture publique des textes publiés gratuits ;
+    // les textes premium exigent le custom claim `premium`
+    // (posé par le webhook Stripe via l'Admin SDK).
+    match /texts/{textId} {
+      allow read: if resource.data.status == 'published'
+        && (resource.data.premium != true
+            || (request.auth != null && request.auth.token.premium == true));
+      allow write: if false; // écriture uniquement via l'Admin SDK (scripts)
+    }
+
+    // Index léger des textes publiés (titres, niveaux, extraits) : public.
+    match /meta/index {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

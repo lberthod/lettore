@@ -1,6 +1,7 @@
 {
   "id": "montagne",
   "title": "Le montagne d'Italia",
+  "level": "B1",
   "paragraphs": [
     "L'Italia è un paese di montagne. Al nord ci sono le Alpi, una catena lunga e maestosa che separa l'Italia dalla Francia, dalla Svizzera e dall'Austria. Le cime più alte superano i quattromila metri e restano bianche di neve tutto l'anno.",
     "La montagna più alta è il Monte Bianco, con i suoi quattromilaottocento metri. Vicino ci sono il Cervino, elegante come una piramide, e il Monte Rosa, che si vede anche da Milano nelle giornate limpide.",
@@ -161,5 +162,34 @@
     "Oggi molte persone visitano le montagne in ogni stagione.": "Aujourd'hui, beaucoup de gens visitent les montagnes en toute saison.",
     "D'inverno si scia, d'estate si cammina sui sentieri.": "En hiver on skie, en été on marche sur les sentiers.",
     "Ma la montagna chiede rispetto: bisogna partire preparati, guardare il cielo e ascoltare i consigli delle guide.": "Mais la montagne exige le respect : il faut partir préparé, regarder le ciel et écouter les conseils des guides."
-  }
+  },
+  "questions": [
+    {
+      "q": "Qual è la montagna più alta d'Italia?",
+      "options": [
+        "Il Cervino",
+        "Il Monte Bianco",
+        "Il Monte Rosa"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Come sono gli Appennini rispetto alle Alpi?",
+      "options": [
+        "Più alti e coperti di neve tutto l'anno",
+        "Più vicini alla Francia e alla Svizzera",
+        "Più dolci e più verdi"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Cosa succede alla neve in primavera?",
+      "options": [
+        "Si scioglie e riempie i laghi e i torrenti",
+        "Copre le vigne e gli ulivi",
+        "Resta bianca solo sugli Appennini"
+      ],
+      "correct": 0
+    }
+  ]
 }

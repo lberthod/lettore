@@ -70,3 +70,4 @@ node_modules/
 
 # Build output
 dist/
+generator/test-output/

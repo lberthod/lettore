@@ -1,6 +1,7 @@
 {
   "id": "gatto",
   "title": "Il gatto della stazione",
+  "level": "A2",
   "paragraphs": [
     "Nella piccola stazione di un paese di montagna vive un gatto grigio. Nessuno sa da dove viene. I ferrovieri lo chiamano Baffo, per i suoi lunghi baffi bianchi. Ogni mattina, Baffo aspetta il primo treno seduto sulla panchina del binario uno.",
     "I viaggiatori lo conoscono bene. Gli studenti lo salutano prima di andare a scuola, e la signora Rosa, che vende i biglietti, gli porta ogni giorno un po' di latte. In inverno, Baffo dorme nell'ufficio del capostazione, vicino al termosifone caldo.",
@@ -8,6 +9,35 @@
     "La notizia gira in fretta per il paese. I bambini della scuola preparano dei cartelli con la foto del gatto. La signora Rosa è molto triste: la stazione senza Baffo non è più la stessa.",
     "Tre giorni dopo, un contadino telefona alla stazione. Ha trovato un gatto grigio nel suo fienile, insieme a tre gattini appena nati. Baffo, in realtà, era una gatta! Tutto il paese ride e festeggia la sorpresa.",
     "Oggi alla stazione ci sono quattro gatti. Baffo ha di nuovo il suo posto sulla panchina, e i suoi piccoli giocano tra le piante del giardino. I viaggiatori arrivano anche da altri paesi per vedere la famosa gatta della stazione."
+  ],
+  "questions": [
+    {
+      "q": "Perché i ferrovieri chiamano il gatto Baffo?",
+      "options": [
+        "Per i suoi lunghi baffi bianchi",
+        "Perché beve il latte",
+        "Perché dorme in ufficio"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Dove trova il contadino il gatto grigio?",
+      "options": [
+        "Sotto un vagone",
+        "Nel suo fienile, con tre gattini",
+        "Nella sala d'attesa"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Qual è la sorpresa alla fine della storia?",
+      "options": [
+        "Baffo è partito su un treno",
+        "Baffo non torna più alla stazione",
+        "Baffo in realtà è una gatta"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

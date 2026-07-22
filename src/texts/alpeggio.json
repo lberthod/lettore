@@ -1,6 +1,7 @@
 {
   "id": "alpeggio",
   "title": "Il pastore dell'alpeggio",
+  "level": "B1",
   "paragraphs": [
     "Ogni estate, Pietro porta le sue mucche all'alpeggio, un grande prato a duemila metri di altezza. La salita dura un giorno intero. Le mucche camminano lente lungo il sentiero, con i campanacci che suonano nella valle.",
     "Lassù, Pietro vive per tre mesi in una baita di pietra. La vita è semplice e dura: si alza alle cinque, munge le mucche e porta il latte nella piccola casera. Con il latte fresco produce il burro e il formaggio di montagna.",
@@ -169,5 +170,34 @@
     "A settembre, quando l'erba diventa gialla, Pietro scende a valle con le mucche e le forme di formaggio.": "En septembre, quand l'herbe devient jaune, Pietro descend dans la vallée avec les vaches et les meules de fromage.",
     "In paese lo aspetta una grande festa, con musica e balli.": "Au village, une grande fête l'attend, avec musique et danses.",
     "La gente compra il suo formaggio: dentro c'è il sapore dei fiori e dell'estate.": "Les gens achètent son fromage : dedans, il y a le goût des fleurs et de l'été."
-  }
+  },
+  "questions": [
+    {
+      "q": "Dove vive Pietro durante l'estate?",
+      "options": [
+        "In una baita di pietra a duemila metri",
+        "In un paese della valle",
+        "In una casera vicino al fiume"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Cosa fa Pietro quando arriva il temporale?",
+      "options": [
+        "Scende subito a valle",
+        "Raduna le mucche e le porta al riparo",
+        "Ripara il tetto della baita"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa succede a settembre?",
+      "options": [
+        "Pietro sale all'alpeggio con le mucche",
+        "Arriva la grandine sulla valle",
+        "Pietro scende a valle e in paese c'è una grande festa"
+      ],
+      "correct": 2
+    }
+  ]
 }

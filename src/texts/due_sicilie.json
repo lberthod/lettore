@@ -1,6 +1,7 @@
 {
   "id": "due_sicilie",
   "title": "Il Regno delle Due Sicilie",
+  "level": "B2",
   "paragraphs": [
     "La storia del sud Italia è segnata da numerose dominazioni straniere. Normanni, svevi, angioini, aragonesi e spagnoli si succedettero nel corso dei secoli, lasciando ciascuno la propria impronta nell'arte, nella lingua e nella cucina.",
     "I normanni arrivarono nell'undicesimo secolo e fondarono un regno sorprendentemente moderno. Alla loro corte di Palermo convivevano cristiani, musulmani ed ebrei, e i documenti ufficiali venivano scritti in latino, greco e arabo.",
@@ -8,6 +9,35 @@
     "Nel Settecento, con la dinastia dei Borbone, Napoli divenne una capitale europea splendida e contraddittoria. Il re Carlo fece costruire la reggia di Caserta, un palazzo immenso che voleva superare la magnificenza di Versailles.",
     "Il regno conobbe anche importanti primati: la prima ferrovia italiana, inaugurata nel milleottocentotrentanove tra Napoli e Portici, e uno dei primi teatri d'opera del continente, il San Carlo. Eppure le campagne restavano povere, e la distanza tra la capitale e le province era enorme.",
     "Nel milleottocentosessanta, Giuseppe Garibaldi sbarcò in Sicilia con mille volontari e conquistò il regno in pochi mesi. Il sud entrò così nel nuovo Regno d'Italia, portando con sé la sua storia millenaria e le sue contraddizioni."
+  ],
+  "questions": [
+    {
+      "q": "Chi veniva chiamato dai contemporanei stupor mundi, la meraviglia del mondo?",
+      "options": [
+        "Federico secondo di Svevia",
+        "Il re Carlo di Borbone",
+        "Giuseppe Garibaldi"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Quale primato ottenne il regno nel milleottocentotrentanove?",
+      "options": [
+        "La prima università statale d'Europa",
+        "La prima ferrovia italiana, tra Napoli e Portici",
+        "Il primo teatro d'opera del mondo"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Perché il regno normanno di Palermo è descritto come sorprendentemente moderno?",
+      "options": [
+        "Perché aveva già una ferrovia",
+        "Perché il re parlava sei lingue",
+        "Perché vi convivevano religioni diverse e i documenti erano scritti in più lingue"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

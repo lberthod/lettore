@@ -1,6 +1,7 @@
 {
   "id": "emigrazione",
   "title": "Valigie di cartone: l'emigrazione italiana",
+  "level": "B2",
   "paragraphs": [
     "Tra la fine dell'Ottocento e la metà del Novecento, quasi trenta milioni di italiani lasciarono il loro paese. Fu una delle più grandi migrazioni della storia moderna. Partivano dalle campagne povere del sud e del nord-est, spinti dalla fame e dalla mancanza di lavoro, con una valigia di cartone e molta speranza.",
     "Il viaggio verso le Americhe era lungo e difficile. Le navi impiegavano settimane per attraversare l'oceano, e i passeggeri di terza classe viaggiavano ammassati in spazi stretti e poco puliti. Molti non avevano mai visto il mare prima di salire a bordo, e non sapevano nemmeno leggere il biglietto che tenevano in mano.",
@@ -14,6 +15,35 @@
     "Molti discendenti di emigrati hanno avuto successo straordinario: sindaci, governatori, scienziati, registi e attori. I loro cognomi italiani si leggono nei titoli dei film di Hollywood e nelle liste dei premi Nobel. Eppure molte famiglie hanno perso la lingua: dei nonni resta la ricetta della domenica e qualche parola d'affetto.",
     "Oggi le parti si sono invertite: l'Italia è diventata a sua volta una terra d'immigrazione. Persone arrivate da ogni continente lavorano nelle fabbriche, nei campi e negli ospedali italiani, e i loro figli crescono parlando italiano a scuola. La memoria dell'emigrazione dovrebbe aiutare il paese a capire chi arriva oggi con la stessa speranza.",
     "In tutto il mondo, si calcola che gli oriundi italiani siano ottanta milioni: più degli abitanti dell'Italia stessa. Dall'Argentina all'Australia, milioni di persone conservano un legame affettuoso con la terra dei loro bisnonni. L'Italia più grande, dicono alcuni, non è dentro i suoi confini: è sparsa per il pianeta."
+  ],
+  "questions": [
+    {
+      "q": "Cosa succedeva agli emigrati al loro arrivo a Ellis Island?",
+      "options": [
+        "I medici li controllavano e chi era malato rischiava di essere rimandato indietro",
+        "Ricevevano subito la cittadinanza americana",
+        "Venivano mandati direttamente a lavorare nelle miniere"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Chi erano i bambini dell'armadio?",
+      "options": [
+        "Bambini che lavoravano nelle miniere di carbone belghe",
+        "Bambini rimasti in Italia con i nonni",
+        "Figli di lavoratori in Svizzera, entrati di nascosto, che vivevano nascosti in casa"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Cosa dice il testo degli spaghetti con le polpette?",
+      "options": [
+        "Sono un antico piatto della cucina napoletana",
+        "Nacquero a New York, dove gli emigrati potevano permettersi la carne",
+        "Furono inventati dagli emigrati in Argentina"
+      ],
+      "correct": 1
+    }
   ],
   "words": {
     "a": "à",

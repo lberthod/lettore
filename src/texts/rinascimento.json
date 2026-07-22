@@ -1,6 +1,7 @@
 {
   "id": "rinascimento",
   "title": "Il Rinascimento: quando l'Italia illuminò il mondo",
+  "level": "B2",
   "paragraphs": [
     "Tra il Quattrocento e il Cinquecento, l'Italia visse una stagione culturale straordinaria che cambiò per sempre la storia dell'arte e del pensiero: il Rinascimento. Gli artisti e gli studiosi riscoprirono la cultura classica dei greci e dei romani, ma la usarono per creare qualcosa di completamente nuovo. Al centro della loro visione non c'era più soltanto Dio, ma l'essere umano, con la sua intelligenza e la sua libertà.",
     "Il cuore di questo movimento fu Firenze. La città toscana era ricca grazie al commercio della lana e alle sue banche, che prestavano denaro a re e principi di tutta Europa. Ma la ricchezza, da sola, non basta a spiegare il miracolo fiorentino: servivano anche l'ambizione e il gusto di una famiglia straordinaria, i Medici.",
@@ -14,6 +15,35 @@
     "Le corti italiane facevano a gara per attirare i migliori artisti. A Urbino, a Mantova, a Ferrara, i principi trasformavano i loro palazzi in centri culturali. A Venezia, i pittori scoprivano la magia del colore, mentre a Roma i papi ricostruivano la città per riportarla all'antico splendore.",
     "Questa fioritura si diffuse in tutta Europa. Gli artisti italiani lavoravano a Parigi, a Londra, a Cracovia, e gli studenti stranieri venivano in Italia per imparare. Quando Leonardo morì in Francia, ospite del re, portò con sé la Gioconda: per questo il quadro più italiano del mondo si trova oggi al Louvre.",
     "Il Rinascimento ci ha lasciato un'idea potente: l'essere umano può comprendere e trasformare il mondo con l'intelligenza e la creatività. Le città italiane conservano ancora quei capolavori, e milioni di visitatori arrivano ogni anno per ammirarli. Camminare per Firenze significa ancora oggi passeggiare dentro quel sogno."
+  ],
+  "questions": [
+    {
+      "q": "Cosa c'era al centro della visione degli artisti e degli studiosi del Rinascimento?",
+      "options": [
+        "Soltanto la religione e la vita dei santi",
+        "L'essere umano, con la sua intelligenza e la sua libertà",
+        "La conquista militare di nuovi territori"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa pensava Michelangelo della scultura?",
+      "options": [
+        "Che la statua esiste già dentro il marmo e lo scultore deve soltanto liberarla",
+        "Che fosse un'arte inferiore alla pittura",
+        "Che il marmo dovesse sempre essere dipinto a colori"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Perché la Gioconda si trova oggi al Louvre?",
+      "options": [
+        "Perché Napoleone la portò via da Firenze",
+        "Perché i Medici la vendettero al re di Francia",
+        "Perché Leonardo la portò con sé quando andò a vivere in Francia"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

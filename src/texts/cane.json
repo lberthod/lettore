@@ -1,0 +1,109 @@
+{
+  "id": "cane",
+  "title": "Il mio cane Toby",
+  "level": "A1",
+  "paragraphs": [
+    "Ho un cane piccolo e bianco. Si chiama Toby e ha tre anni. È molto allegro e corre sempre.",
+    "Ogni mattina andiamo al parco. Toby gioca con la palla e salta felice. Poi beve un po' d'acqua e riposa sotto un albero.",
+    "La sera Toby dorme nella sua cuccia in cucina. Ma quando fa freddo, sale sul mio letto. La mamma dice di no, ma io sono contento."
+  ],
+  "words": {
+    "al": "au",
+    "albero": "arbre",
+    "allegro": "joyeux / gai",
+    "andiamo": "(nous) allons",
+    "anni": "ans",
+    "beve": "boit",
+    "bianco": "blanc",
+    "cane": "chien",
+    "chiama": "appelle (« si chiama » = il s'appelle)",
+    "con": "avec",
+    "contento": "content",
+    "corre": "court",
+    "cuccia": "panier / niche (du chien)",
+    "cucina": "cuisine (la pièce)",
+    "d'acqua": "d'eau",
+    "di": "de (« dice di no » = dit non)",
+    "dice": "dit",
+    "dorme": "dort",
+    "e": "et",
+    "fa": "fait (« fa freddo » = il fait froid)",
+    "felice": "heureux",
+    "freddo": "froid",
+    "gioca": "joue",
+    "ha": "a",
+    "ho": "(j')ai",
+    "in": "dans",
+    "io": "moi / je",
+    "la": "la / le",
+    "letto": "lit",
+    "ma": "mais",
+    "mamma": "maman",
+    "mattina": "matin",
+    "mio": "mon",
+    "molto": "très",
+    "nella": "dans sa",
+    "no": "non",
+    "ogni": "chaque",
+    "palla": "balle",
+    "parco": "parc",
+    "piccolo": "petit",
+    "po'": "peu (« un po' d'acqua » = un peu d'eau)",
+    "poi": "puis",
+    "quando": "quand",
+    "riposa": "se repose",
+    "sale": "monte",
+    "salta": "saute",
+    "sempre": "toujours",
+    "sera": "soir",
+    "si": "se (« si chiama » = il s'appelle)",
+    "sono": "(je) suis",
+    "sotto": "sous",
+    "sua": "sa",
+    "sul": "sur mon (« sul mio letto » = sur mon lit)",
+    "toby": "Toby (nom du chien)",
+    "tre": "trois",
+    "un": "un",
+    "è": "est"
+  },
+  "sentences": {
+    "Ho un cane piccolo e bianco.": "J'ai un chien petit et blanc.",
+    "Si chiama Toby e ha tre anni.": "Il s'appelle Toby et il a trois ans.",
+    "È molto allegro e corre sempre.": "Il est très joyeux et court tout le temps.",
+    "Ogni mattina andiamo al parco.": "Chaque matin, nous allons au parc.",
+    "Toby gioca con la palla e salta felice.": "Toby joue avec la balle et saute, tout heureux.",
+    "Poi beve un po' d'acqua e riposa sotto un albero.": "Puis il boit un peu d'eau et se repose sous un arbre.",
+    "La sera Toby dorme nella sua cuccia in cucina.": "Le soir, Toby dort dans son panier, dans la cuisine.",
+    "Ma quando fa freddo, sale sul mio letto.": "Mais quand il fait froid, il monte sur mon lit.",
+    "La mamma dice di no, ma io sono contento.": "Maman dit non, mais moi je suis content."
+  },
+  "questions": [
+    {
+      "q": "Di che colore è Toby?",
+      "options": [
+        "È bianco",
+        "È nero",
+        "È marrone"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Dove va Toby ogni mattina?",
+      "options": [
+        "A scuola",
+        "Al parco",
+        "Al mare"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Dove dorme Toby quando fa freddo?",
+      "options": [
+        "Nella cuccia in cucina",
+        "Sotto un albero",
+        "Sul letto del bambino"
+      ],
+      "correct": 2
+    }
+  ]
+}

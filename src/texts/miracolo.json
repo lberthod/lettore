@@ -1,6 +1,7 @@
 {
   "id": "miracolo",
   "title": "Il miracolo economico: l'Italia del dopoguerra",
+  "level": "B2",
   "paragraphs": [
     "Alla fine della seconda guerra mondiale, l'Italia era un paese in ginocchio. Le città erano piene di macerie, le fabbriche distrutte, le famiglie divise dal lutto e dalla povertà. Eppure, in meno di quindici anni, quel paese contadino e ferito sarebbe diventato una delle grandi potenze industriali del mondo. Gli storici chiamano questa trasformazione il miracolo economico.",
     "La ricostruzione cominciò subito, con l'aiuto del piano Marshall americano. Gli italiani si rimisero al lavoro con un'energia sorprendente: operai, muratori, ingegneri ricostruirono ponti, ferrovie e case a un ritmo incredibile. La voglia di lasciarsi la guerra alle spalle era più forte di ogni difficoltà.",
@@ -14,6 +15,35 @@
     "Il boom ebbe anche i suoi costi. Le città crescevano in fretta e male, con periferie enormi e grigie costruite senza piani. Le campagne si svuotavano, i fiumi si inquinavano e le coste si riempivano di cemento. Alcuni intellettuali, come Pier Paolo Pasolini, denunciarono la perdita delle culture popolari, sostituite da un consumismo uguale dappertutto.",
     "Alla fine degli anni Sessanta, la stagione del miracolo si chiuse tra tensioni sociali e nuove domande. Gli operai chiedevano salari più giusti e diritti, gli studenti contestavano le vecchie autorità. L'Italia era ormai un paese moderno, ma doveva ancora imparare a distribuire meglio la ricchezza che aveva creato.",
     "Il miracolo economico resta comunque una delle pagine più straordinarie della storia italiana. Un popolo uscito da una guerra disastrosa seppe reinventarsi in una generazione, trasformando la propria creatività in industrie, oggetti e stili che il mondo ammira ancora. La Vespa, la Seicento e Volare non sono soltanto ricordi: sono la prova di ciò che quel paese seppe fare."
+  ],
+  "questions": [
+    {
+      "q": "Cosa produceva la Piaggio durante la guerra, prima di presentare la Vespa?",
+      "options": [
+        "Automobili economiche",
+        "Aerei",
+        "Navi da guerra"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Perché la Fiat Seicento fu così importante?",
+      "options": [
+        "Perché per la prima volta una famiglia operaia poteva sognare di comprare un'automobile",
+        "Perché era l'automobile più veloce d'Europa",
+        "Perché veniva regalata agli operai delle fabbriche"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Quali furono, secondo il testo, i costi del boom economico?",
+      "options": [
+        "La chiusura delle fabbriche del triangolo industriale",
+        "La fine del cinema e della musica italiana",
+        "Periferie cresciute male, inquinamento e perdita delle culture popolari"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

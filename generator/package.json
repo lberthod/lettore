@@ -1,0 +1,15 @@
+{
+  "name": "leggendo-generator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Orchestrateur de génération de textes Leggendo (1 texte par catégorie × niveau × taille) via l'API GLM.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "orchestrate": "node orchestrate.mjs",
+    "plan": "node orchestrate.mjs --dry-run --all",
+    "one": "node generate-one.mjs"
+  }
+}

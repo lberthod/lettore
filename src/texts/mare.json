@@ -1,10 +1,40 @@
 {
   "id": "mare",
   "title": "Una giornata al mare",
+  "level": "A1",
   "paragraphs": [
     "Sabato mattina, Giulia e suo fratello vanno al mare. Il cielo è azzurro e fa molto caldo. Portano gli asciugamani, un ombrellone e un cestino pieno di panini.",
     "Giulia nuota felice tra le onde. Suo fratello preferisce leggere un libro sotto il sole. Verso mezzogiorno, mangiano i panini e bevono una limonata fresca.",
     "Nel pomeriggio, costruiscono un castello di sabbia. Quando il sole scende, tornano a casa stanchi ma contenti."
+  ],
+  "questions": [
+    {
+      "q": "Dove vanno Giulia e suo fratello sabato mattina?",
+      "options": [
+        "In montagna",
+        "Al mare",
+        "A scuola"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa fa il fratello di Giulia?",
+      "options": [
+        "Legge un libro sotto il sole",
+        "Nuota tra le onde",
+        "Costruisce un castello"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa bevono verso mezzogiorno?",
+      "options": [
+        "Un caffè",
+        "Un'aranciata",
+        "Una limonata fresca"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "sabato": "samedi",

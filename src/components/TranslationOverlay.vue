@@ -8,9 +8,11 @@ defineProps({
   error: String,
   isSentence: Boolean,
   canSpeak: Boolean,
+  canFavorite: Boolean,
+  isFavorite: Boolean,
 })
 
-defineEmits(['close', 'speak'])
+defineEmits(['close', 'speak', 'favorite'])
 </script>
 
 <template>
@@ -34,13 +36,25 @@ defineEmits(['close', 'speak'])
     </div>
     <div v-if="loading" class="loading">Traduction…</div>
     <div v-else-if="error" class="error">{{ error }}</div>
-    <div v-else class="translation">{{ translation }}</div>
+    <div v-else class="translation">
+      {{ translation }}
+      <button
+        v-if="canFavorite"
+        class="fav"
+        :class="{ active: isFavorite }"
+        :title="isFavorite ? 'Retirer de mes mots' : 'Ajouter à mes mots'"
+        @click="$emit('favorite')"
+      >
+        {{ isFavorite ? '★' : '☆' }}
+      </button>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .overlay {
-  position: absolute;
+  /* Le lecteur défile dans le layout scène : coordonnées de viewport */
+  position: fixed;
   z-index: 100;
   max-width: 320px;
   background: #2c2620;
@@ -138,6 +152,23 @@ defineEmits(['close', 'speak'])
 }
 
 .speak:hover {
+  opacity: 1;
+}
+
+.fav {
+  background: none;
+  border: none;
+  color: #f0c869;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 0.15rem;
+  margin-left: 0.25rem;
+  opacity: 0.85;
+  vertical-align: -1px;
+}
+
+.fav:hover,
+.fav.active {
   opacity: 1;
 }
 </style>

@@ -1,6 +1,7 @@
 {
   "id": "stati",
   "title": "L'Italia divisa: un mosaico di stati",
+  "level": "B2",
   "paragraphs": [
     "Per molti secoli, prima di diventare una nazione unita, l'Italia fu un mosaico di stati diversi. Ogni regione aveva il suo sovrano, le sue leggi, le sue monete e perfino la sua lingua. Questa divisione durò più di mille anni e lasciò tracce profonde nella cultura italiana.",
     "Al nord si trovava il Regno di Sardegna, governato dalla dinastia dei Savoia, che comprendeva anche il Piemonte e la Liguria. La Lombardia e il Veneto, invece, appartenevano all'impero austriaco, che li amministrava da Vienna con funzionari e soldati.",
@@ -187,5 +188,34 @@
     "Un mercante che andava da Torino a Palermo attraversava almeno quattro stati diversi.": "Un marchand qui allait de Turin à Palerme traversait au moins quatre États différents.",
     "Eppure, nonostante le divisioni politiche, gli italiani condividevano una lingua letteraria, quella di Dante, e una cultura comune.": "Et pourtant, malgré les divisions politiques, les Italiens partageaient une langue littéraire, celle de Dante, et une culture commune.",
     "Fu proprio questa identità condivisa a preparare, lentamente, il cammino verso l'unità.": "Ce fut précisément cette identité partagée qui prépara, lentement, le chemin vers l'unité."
-  }
+  },
+  "questions": [
+    {
+      "q": "Chi amministrava la Lombardia e il Veneto prima dell'unità?",
+      "options": [
+        "L'impero austriaco, da Vienna",
+        "La dinastia dei Savoia",
+        "Lo Stato della Chiesa"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Perché viaggiare attraverso la penisola era complicato per un mercante?",
+      "options": [
+        "Perché le strade erano poche e pericolose",
+        "Perché mancavano i treni tra gli stati",
+        "Perché doveva mostrare documenti ai confini, cambiare moneta e pagare dazi"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Secondo il testo, cosa preparò lentamente il cammino verso l'unità?",
+      "options": [
+        "Le riforme del Granducato di Toscana",
+        "La lingua letteraria di Dante e una cultura comune",
+        "La potenza economica di Napoli"
+      ],
+      "correct": 1
+    }
+  ]
 }

@@ -1,10 +1,40 @@
 {
   "id": "tecnologia",
   "title": "La tecnologia e l'intelligenza artificiale",
+  "level": "A2",
   "paragraphs": [
     "Oggi la tecnologia fa parte della nostra vita quotidiana. Usiamo il telefono per parlare, leggere le notizie e ascoltare la musica. Anche i computer sono diventati strumenti indispensabili per lavorare e studiare.",
     "L'intelligenza artificiale è una tecnologia nuova e potente. Può scrivere testi, tradurre le lingue e riconoscere le immagini. Molte persone la usano ogni giorno senza saperlo, per esempio quando cercano una strada sulla mappa.",
     "Ma la tecnologia porta anche delle domande importanti. Dobbiamo usarla con attenzione e non dimenticare il valore delle cose semplici: una passeggiata al parco, una conversazione con gli amici, un buon libro di carta."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa può fare l'intelligenza artificiale, secondo il testo?",
+      "options": [
+        "Cucinare la pasta",
+        "Scrivere testi e tradurre le lingue",
+        "Costruire case"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Per che cosa usiamo il telefono, secondo il testo?",
+      "options": [
+        "Per parlare, leggere le notizie e ascoltare la musica",
+        "Solo per giocare",
+        "Per guardare la televisione"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa non dobbiamo dimenticare, secondo il testo?",
+      "options": [
+        "Di comprare un telefono nuovo",
+        "Di studiare l'informatica",
+        "Il valore delle cose semplici"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "oggi": "aujourd'hui",

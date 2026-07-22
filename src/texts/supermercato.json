@@ -1,0 +1,104 @@
+{
+  "id": "supermercato",
+  "title": "Al supermercato",
+  "level": "A1",
+  "paragraphs": [
+    "Oggi Sofia va al supermercato con la mamma. Hanno una lista lunga: pane, latte, uova e frutta. Sofia spinge il carrello.",
+    "Prima vanno al reparto della frutta. Comprano mele, banane e arance. Poi prendono il latte e un pezzo di formaggio.",
+    "Alla cassa c'è una piccola fila. Sofia mette la spesa nelle borse. La mamma paga e le compra un piccolo cioccolato. Sofia sorride: ama fare la spesa."
+  ],
+  "words": {
+    "al": "au",
+    "alla": "à la",
+    "ama": "aime",
+    "arance": "oranges",
+    "banane": "bananes",
+    "borse": "sacs",
+    "c'è": "il y a",
+    "carrello": "chariot / caddie",
+    "cassa": "caisse",
+    "cioccolato": "chocolat",
+    "compra": "achète (« le compra » = lui achète)",
+    "comprano": "(elles) achètent",
+    "con": "avec",
+    "della": "de la / des",
+    "di": "de",
+    "e": "et",
+    "fare": "faire (« fare la spesa » = faire les courses)",
+    "fila": "queue / file",
+    "formaggio": "fromage",
+    "frutta": "fruits",
+    "hanno": "(elles) ont",
+    "il": "le",
+    "la": "la",
+    "latte": "lait",
+    "le": "lui (« le compra » = lui achète)",
+    "lista": "liste",
+    "lunga": "longue",
+    "mamma": "maman",
+    "mele": "pommes",
+    "mette": "met",
+    "nelle": "dans les",
+    "oggi": "aujourd'hui",
+    "paga": "paie",
+    "pane": "pain",
+    "pezzo": "morceau",
+    "piccola": "petite",
+    "piccolo": "petit",
+    "poi": "puis",
+    "prendono": "(elles) prennent",
+    "prima": "d'abord",
+    "reparto": "rayon",
+    "sofia": "Sofia (prénom)",
+    "sorride": "sourit",
+    "spesa": "courses (« la spesa » = les courses)",
+    "spinge": "pousse",
+    "supermercato": "supermarché",
+    "un": "un",
+    "una": "une",
+    "uova": "œufs",
+    "va": "va",
+    "vanno": "(elles) vont"
+  },
+  "sentences": {
+    "Oggi Sofia va al supermercato con la mamma.": "Aujourd'hui, Sofia va au supermarché avec sa maman.",
+    "Hanno una lista lunga: pane, latte, uova e frutta.": "Elles ont une longue liste : pain, lait, œufs et fruits.",
+    "Sofia spinge il carrello.": "Sofia pousse le chariot.",
+    "Prima vanno al reparto della frutta.": "D'abord, elles vont au rayon des fruits.",
+    "Comprano mele, banane e arance.": "Elles achètent des pommes, des bananes et des oranges.",
+    "Poi prendono il latte e un pezzo di formaggio.": "Puis elles prennent le lait et un morceau de fromage.",
+    "Alla cassa c'è una piccola fila.": "À la caisse, il y a une petite queue.",
+    "Sofia mette la spesa nelle borse.": "Sofia met les courses dans les sacs.",
+    "La mamma paga e le compra un piccolo cioccolato.": "Maman paie et lui achète un petit chocolat.",
+    "Sofia sorride: ama fare la spesa.": "Sofia sourit : elle aime faire les courses."
+  },
+  "questions": [
+    {
+      "q": "Con chi va Sofia al supermercato?",
+      "options": [
+        "Con la nonna",
+        "Con la mamma",
+        "Con il papà"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa comprano al reparto della frutta?",
+      "options": [
+        "Pane e formaggio",
+        "Latte e uova",
+        "Mele, banane e arance"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Che cosa compra la mamma per Sofia alla cassa?",
+      "options": [
+        "Un piccolo cioccolato",
+        "Un gelato",
+        "Una banana"
+      ],
+      "correct": 0
+    }
+  ]
+}

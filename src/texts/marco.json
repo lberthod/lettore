@@ -1,10 +1,40 @@
 {
   "id": "marco",
   "title": "La mattina di Marco",
+  "level": "A1",
   "paragraphs": [
     "La mattina, Marco si sveglia presto e prepara il caffè. Gli piace guardare il sole che sorge dietro le colline. Dopo colazione, esce di casa e cammina verso la stazione.",
     "Il treno per Firenze parte alle otto. Durante il viaggio, Marco legge il giornale e ascolta la musica. Fuori dal finestrino, il paesaggio toscano scorre lentamente: vigneti, cipressi e piccoli paesi arroccati sulle colline.",
     "Quando arriva in città, va subito al mercato. Compra il pane fresco, un po' di formaggio e delle mele rosse. La vecchia signora del banco lo saluta sempre con un grande sorriso."
+  ],
+  "questions": [
+    {
+      "q": "A che ora parte il treno per Firenze?",
+      "options": [
+        "Alle nove",
+        "Alle otto",
+        "Alle sette"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa compra Marco al mercato?",
+      "options": [
+        "Pane, formaggio e mele rosse",
+        "Pesce e verdure",
+        "Solo il caffè"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa fa Marco durante il viaggio in treno?",
+      "options": [
+        "Dorme",
+        "Parla con una signora",
+        "Legge il giornale e ascolta la musica"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "la": "la / le",
@@ -84,7 +114,8 @@
     "sempre": "toujours",
     "con": "avec",
     "grande": "grand",
-    "sorriso": "sourire"
+    "sorriso": "sourire",
+    "formaggio": "fromage"
   },
   "sentences": {
     "La mattina, Marco si sveglia presto e prepara il caffè.": "Le matin, Marco se réveille tôt et prépare le café.",

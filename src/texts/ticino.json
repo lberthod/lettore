@@ -1,6 +1,7 @@
 {
   "id": "ticino",
   "title": "Una storia del Ticino",
+  "level": "B1",
   "paragraphs": [
     "Il Ticino è il cantone italiano della Svizzera. Qui si parla italiano, ma la bandiera è quella rossa con la croce bianca. È una terra speciale, dove le Alpi incontrano il sole del sud.",
     "Nonno Attilio vive in una piccola valle sopra Bellinzona, in una casa di pietra con il tetto grigio. Ogni estate suo nipote Matteo arriva da Zurigo per le vacanze. Il viaggio in treno passa sotto le montagne, nella galleria del San Gottardo, la più lunga del mondo.",
@@ -178,5 +179,34 @@
     "Alla fine dell'estate, Matteo torna a Zurigo con il cuore un po' triste.": "À la fin de l'été, Matteo rentre à Zurich, le cœur un peu triste.",
     "Ma sa che il Ticino lo aspetta: il nonno, la casa di pietra, il fiume verde e le montagne.": "Mais il sait que le Tessin l'attend : le grand-père, la maison de pierre, la rivière verte et les montagnes.",
     "Per lui, è il posto più bello del mondo.": "Pour lui, c'est le plus bel endroit du monde."
-  }
+  },
+  "questions": [
+    {
+      "q": "Che lingua si parla nel Ticino?",
+      "options": [
+        "Francese",
+        "Tedesco",
+        "Italiano"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Come viaggia Matteo da Zurigo al Ticino?",
+      "options": [
+        "In treno, passando nella galleria del San Gottardo",
+        "In battello sul Lago Maggiore",
+        "In macchina attraverso le Alpi"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Cosa visitano Matteo e il nonno a Bellinzona?",
+      "options": [
+        "Il pollaio e il negozio del villaggio",
+        "I tre castelli costruiti nel Medioevo",
+        "La piazza grande con le palme"
+      ],
+      "correct": 1
+    }
+  ]
 }

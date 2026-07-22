@@ -1,6 +1,7 @@
 {
   "id": "repubblica",
   "title": "Dalla monarchia alla repubblica",
+  "level": "B2",
   "paragraphs": [
     "Il Regno d'Italia visse una storia breve e tormentata: durò meno di un secolo. Attraversò due guerre mondiali, una dittatura e infine un referendum che trasformò il paese in una repubblica.",
     "Dopo la prima guerra mondiale, l'Italia era un paese stanco e diviso. In quel clima di crisi, Benito Mussolini prese il potere nel millenovecentoventidue e instaurò una dittatura che durò più di vent'anni. La libertà di stampa fu abolita e gli oppositori vennero perseguitati.",
@@ -162,5 +163,34 @@
     "Da allora il due giugno è la festa della Repubblica.": "Depuis lors, le deux juin est la fête de la République.",
     "Ogni anno, a Roma, una grande parata celebra quella scelta democratica.": "Chaque année, à Rome, un grand défilé célèbre ce choix démocratique.",
     "La lunga storia dei regni italiani si era conclusa: cominciava la storia dell'Italia repubblicana.": "La longue histoire des royaumes italiens s'était achevée : commençait l'histoire de l'Italie républicaine."
-  }
+  },
+  "questions": [
+    {
+      "q": "Cosa rese storico il voto del due giugno millenovecentoquarantasei?",
+      "options": [
+        "Si elesse il primo presidente della Repubblica",
+        "Fu il primo voto dopo la prima guerra mondiale",
+        "Per la prima volta votarono anche le donne"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Cosa accadde all'ultimo re, Umberto secondo, dopo il referendum?",
+      "options": [
+        "Partì per l'esilio",
+        "Rimase a Roma come cittadino privato",
+        "Divenne un capo della Resistenza"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Perché la Costituzione italiana è considerata una delle più moderne del mondo?",
+      "options": [
+        "Perché fu la prima scritta in lingua italiana",
+        "Perché difende la libertà, il lavoro e l'uguaglianza di tutti i cittadini",
+        "Perché fu approvata direttamente con un referendum"
+      ],
+      "correct": 1
+    }
+  ]
 }

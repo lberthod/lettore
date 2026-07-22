@@ -1,6 +1,7 @@
 {
   "id": "ristorante",
   "title": "Il ristorante di Luca",
+  "level": "A2",
   "paragraphs": [
     "Luca ha trent'anni e un grande sogno: aprire un ristorante nel suo paese. Da bambino, passava le ore in cucina con sua madre. Lei gli ha insegnato tutti i segreti della cucina italiana: la pasta fresca, il ragù, la torta di mele.",
     "Un giorno, Luca trova un vecchio locale vuoto nella piazza principale. Le pareti sono grigie e le finestre sporche, ma lui vede subito il suo futuro ristorante. Con i suoi risparmi, compra il locale e comincia i lavori.",
@@ -8,6 +9,35 @@
     "Finalmente arriva la sera dell'apertura. Luca è nervoso: e se non viene nessuno? Ma alle otto il ristorante è già pieno. Ci sono i vicini, i vecchi compagni di scuola e anche il sindaco del paese.",
     "Dalla cucina arrivano piatti meravigliosi: tagliatelle al tartufo, pollo arrosto con patate, e la famosa torta di mele di sua madre. Gli ospiti mangiano, ridono e applaudono. Qualcuno chiede già di prenotare un tavolo per la settimana dopo.",
     "A mezzanotte, quando l'ultimo cliente esce, Luca si siede stanco su una sedia. Sua madre gli mette una mano sulla spalla e gli dice: sono fiera di te. Luca guarda il suo ristorante e capisce che i sogni, con il lavoro e la pazienza, possono diventare realtà."
+  ],
+  "questions": [
+    {
+      "q": "Qual è il grande sogno di Luca?",
+      "options": [
+        "Diventare sindaco",
+        "Aprire un ristorante nel suo paese",
+        "Viaggiare per il mondo"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Chi ha insegnato a Luca i segreti della cucina italiana?",
+      "options": [
+        "Sua madre",
+        "Un cuoco famoso",
+        "Un compagno di scuola"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa succede la sera dell'apertura?",
+      "options": [
+        "Non viene nessuno",
+        "Il ristorante chiude presto",
+        "Alle otto il ristorante è già pieno"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

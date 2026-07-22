@@ -1,0 +1,107 @@
+{
+  "id": "casa",
+  "title": "La casa di Anna",
+  "level": "A1",
+  "paragraphs": [
+    "Anna abita in una casa gialla con un giardino. La casa ha due piani e un tetto rosso. Davanti alla porta c'è un albero di limoni.",
+    "In cucina c'è un grande tavolo di legno. Il salotto ha un divano blu e molti libri. La camera di Anna è piccola ma piena di luce.",
+    "In giardino ci sono fiori rossi e gialli. Anna ha anche un orto con pomodori e insalata. La domenica aiuta il nonno a innaffiare le piante."
+  ],
+  "words": {
+    "a": "à",
+    "abita": "habite",
+    "aiuta": "aide (verbe)",
+    "albero": "arbre",
+    "alla": "à la (« davanti alla porta » = devant la porte)",
+    "anche": "aussi",
+    "anna": "Anna (prénom)",
+    "blu": "bleu",
+    "c'è": "il y a",
+    "camera": "chambre",
+    "casa": "maison",
+    "ci": "y (« ci sono » = il y a)",
+    "con": "avec",
+    "cucina": "cuisine",
+    "davanti": "devant",
+    "di": "de / en",
+    "divano": "canapé",
+    "domenica": "dimanche",
+    "due": "deux",
+    "e": "et",
+    "fiori": "fleurs",
+    "gialla": "jaune",
+    "gialli": "jaunes",
+    "giardino": "jardin",
+    "grande": "grande",
+    "ha": "a",
+    "il": "le",
+    "in": "dans / en",
+    "innaffiare": "arroser",
+    "insalata": "salade",
+    "la": "la",
+    "le": "les",
+    "legno": "bois",
+    "libri": "livres",
+    "limoni": "citrons",
+    "luce": "lumière",
+    "ma": "mais",
+    "molti": "beaucoup de",
+    "nonno": "grand-père",
+    "orto": "potager",
+    "piani": "étages",
+    "piante": "plantes",
+    "piccola": "petite",
+    "piena": "pleine",
+    "pomodori": "tomates",
+    "porta": "porte",
+    "rossi": "rouges",
+    "rosso": "rouge",
+    "salotto": "salon",
+    "sono": "sont (« ci sono » = il y a)",
+    "tavolo": "table",
+    "tetto": "toit",
+    "un": "un",
+    "una": "une",
+    "è": "est"
+  },
+  "sentences": {
+    "Anna abita in una casa gialla con un giardino.": "Anna habite dans une maison jaune avec un jardin.",
+    "La casa ha due piani e un tetto rosso.": "La maison a deux étages et un toit rouge.",
+    "Davanti alla porta c'è un albero di limoni.": "Devant la porte, il y a un citronnier.",
+    "In cucina c'è un grande tavolo di legno.": "Dans la cuisine, il y a une grande table en bois.",
+    "Il salotto ha un divano blu e molti libri.": "Le salon a un canapé bleu et beaucoup de livres.",
+    "La camera di Anna è piccola ma piena di luce.": "La chambre d'Anna est petite mais pleine de lumière.",
+    "In giardino ci sono fiori rossi e gialli.": "Dans le jardin, il y a des fleurs rouges et jaunes.",
+    "Anna ha anche un orto con pomodori e insalata.": "Anna a aussi un potager avec des tomates et de la salade.",
+    "La domenica aiuta il nonno a innaffiare le piante.": "Le dimanche, elle aide son grand-père à arroser les plantes."
+  },
+  "questions": [
+    {
+      "q": "Di che colore è la casa di Anna?",
+      "options": [
+        "Rossa",
+        "Gialla",
+        "Blu"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa c'è davanti alla porta?",
+      "options": [
+        "Un albero di limoni",
+        "Un divano blu",
+        "Un tavolo di legno"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa fa Anna la domenica?",
+      "options": [
+        "Legge molti libri",
+        "Cucina i pomodori",
+        "Aiuta il nonno a innaffiare le piante"
+      ],
+      "correct": 2
+    }
+  ]
+}

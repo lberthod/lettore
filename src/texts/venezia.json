@@ -1,6 +1,7 @@
 {
   "id": "venezia",
   "title": "Un viaggio a Venezia",
+  "level": "A2",
   "paragraphs": [
     "Elena ha sempre sognato di visitare Venezia. Quest'anno, finalmente, decide di partire con la sua amica Chiara. Preparano le valigie con cura e comprano i biglietti del treno. La sera prima della partenza, Elena è così emozionata che non riesce a dormire.",
     "Il viaggio dura quattro ore. Dal finestrino, le due amiche guardano la campagna che scorre veloce. Quando il treno attraversa il ponte sulla laguna, Elena apre la bocca per la meraviglia. L'acqua brilla sotto il sole del mattino.",
@@ -8,6 +9,35 @@
     "A mezzogiorno, mangiano in una trattoria vicino al mercato di Rialto. Il cameriere consiglia gli spaghetti alle vongole e un bicchiere di vino bianco. Elena assaggia anche il tiramisù, il suo dolce preferito.",
     "Nel pomeriggio, visitano Piazza San Marco. La basilica è magnifica, con i suoi mosaici d'oro che brillano alla luce. I piccioni volano tra i turisti, e un musicista suona il violino davanti a un caffè storico.",
     "La sera, le due amiche si siedono in riva al canale. Le luci della città si riflettono sull'acqua scura. Una gondola passa lentamente in silenzio. Elena sorride e pensa: questo viaggio resterà per sempre nel mio cuore."
+  ],
+  "questions": [
+    {
+      "q": "Con chi parte Elena per Venezia?",
+      "options": [
+        "Con sua madre",
+        "Con la sua amica Chiara",
+        "Con suo fratello"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Come si muovono le persone a Venezia?",
+      "options": [
+        "A piedi o in vaporetto",
+        "In macchina",
+        "In autobus"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa mangiano le due amiche nella trattoria vicino a Rialto?",
+      "options": [
+        "Pizza e lasagne",
+        "Pollo arrosto con patate",
+        "Spaghetti alle vongole"
+      ],
+      "correct": 2
+    }
   ],
   "words": {
     "a": "à",

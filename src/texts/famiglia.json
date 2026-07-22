@@ -1,0 +1,102 @@
+{
+  "id": "famiglia",
+  "title": "La mia famiglia",
+  "level": "A1",
+  "paragraphs": [
+    "Mi chiamo Luca e ho dieci anni. La mia famiglia è grande. Ho un fratello, una sorella, la mamma e il papà.",
+    "Mio fratello Marco ha quindici anni e gioca a calcio. Mia sorella Anna ha sette anni e ama disegnare. La mamma lavora in ospedale e il papà fa il cuoco.",
+    "La sera mangiamo tutti insieme. Il papà cucina la pasta e la mamma racconta la sua giornata. Dopo cena guardiamo un film sul divano."
+  ],
+  "words": {
+    "a": "à (« gioca a calcio » = joue au foot)",
+    "ama": "aime",
+    "anna": "Anna (prénom)",
+    "anni": "ans",
+    "calcio": "football",
+    "cena": "dîner",
+    "chiamo": "appelle (« mi chiamo » = je m'appelle)",
+    "cucina": "cuisine (verbe : il cuisine)",
+    "cuoco": "cuisinier",
+    "dieci": "dix",
+    "disegnare": "dessiner",
+    "divano": "canapé",
+    "dopo": "après",
+    "e": "et",
+    "fa": "fait (« fa il cuoco » = est cuisinier)",
+    "famiglia": "famille",
+    "film": "film",
+    "fratello": "frère",
+    "gioca": "joue",
+    "giornata": "journée",
+    "grande": "grande",
+    "guardiamo": "(nous) regardons",
+    "ha": "a (il/elle a)",
+    "ho": "(j')ai",
+    "il": "le",
+    "in": "à / dans",
+    "insieme": "ensemble",
+    "la": "la",
+    "lavora": "travaille",
+    "luca": "Luca (prénom)",
+    "mamma": "maman",
+    "mangiamo": "(nous) mangeons",
+    "marco": "Marco (prénom)",
+    "mi": "me (« mi chiamo » = je m'appelle)",
+    "mia": "ma",
+    "mio": "mon",
+    "ospedale": "hôpital",
+    "papà": "papa",
+    "pasta": "pâtes",
+    "quindici": "quinze",
+    "racconta": "raconte",
+    "sera": "soir",
+    "sette": "sept",
+    "sorella": "sœur",
+    "sua": "sa",
+    "sul": "sur le",
+    "tutti": "tous",
+    "un": "un",
+    "una": "une",
+    "è": "est"
+  },
+  "sentences": {
+    "Mi chiamo Luca e ho dieci anni.": "Je m'appelle Luca et j'ai dix ans.",
+    "La mia famiglia è grande.": "Ma famille est grande.",
+    "Ho un fratello, una sorella, la mamma e il papà.": "J'ai un frère, une sœur, maman et papa.",
+    "Mio fratello Marco ha quindici anni e gioca a calcio.": "Mon frère Marco a quinze ans et joue au football.",
+    "Mia sorella Anna ha sette anni e ama disegnare.": "Ma sœur Anna a sept ans et aime dessiner.",
+    "La mamma lavora in ospedale e il papà fa il cuoco.": "Maman travaille à l'hôpital et papa est cuisinier.",
+    "La sera mangiamo tutti insieme.": "Le soir, nous mangeons tous ensemble.",
+    "Il papà cucina la pasta e la mamma racconta la sua giornata.": "Papa cuisine les pâtes et maman raconte sa journée.",
+    "Dopo cena guardiamo un film sul divano.": "Après le dîner, nous regardons un film sur le canapé."
+  },
+  "questions": [
+    {
+      "q": "Quanti anni ha Luca?",
+      "options": [
+        "Sette anni",
+        "Quindici anni",
+        "Dieci anni"
+      ],
+      "correct": 2
+    },
+    {
+      "q": "Che lavoro fa il papà di Luca?",
+      "options": [
+        "Fa il cuoco",
+        "Lavora in ospedale",
+        "Gioca a calcio"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa fa la famiglia dopo cena?",
+      "options": [
+        "Racconta la giornata",
+        "Guarda un film sul divano",
+        "Disegna insieme"
+      ],
+      "correct": 1
+    }
+  ]
+}
