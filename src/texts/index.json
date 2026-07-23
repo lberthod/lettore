@@ -439,5 +439,15 @@
     "paragraphCount": 6,
     "wordCount": 262,
     "category": "feste"
+  },
+  {
+    "id": "al_bar",
+    "title": "Al bar: la colazione",
+    "level": "A2",
+    "excerpt": "— Buongiorno! Un cappuccino e un cornetto, per favore. — Buongiorno a lei. Il cornetto lo vuole semplice, alla crema o alla marmellata?…",
+    "paragraphCount": 8,
+    "wordCount": 91,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
   }
 ]
