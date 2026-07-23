@@ -449,5 +449,15 @@
     "wordCount": 91,
     "genre": "dialogo",
     "category": "vita_quotidiana"
+  },
+  {
+    "id": "cicala_formica",
+    "title": "La cicala e la formica",
+    "level": "A2",
+    "excerpt": "C'era una volta una cicala che passava l'estate a cantare. Il sole splendeva e i giorni erano lunghi e felici.",
+    "paragraphCount": 6,
+    "wordCount": 151,
+    "genre": "fiaba",
+    "category": "natura_animali"
   }
 ]
