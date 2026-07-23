@@ -539,5 +539,45 @@
     "wordCount": 62,
     "genre": "teatro",
     "category": "vita_quotidiana"
+  },
+  {
+    "id": "al_ristorante",
+    "title": "Al ristorante",
+    "level": "A2",
+    "excerpt": "— Buonasera, avete un tavolo per due persone? — Certo, seguitemi. Ecco il menù. Volete qualcosa da bere?",
+    "paragraphCount": 8,
+    "wordCount": 73,
+    "genre": "dialogo",
+    "category": "cucina"
+  },
+  {
+    "id": "pettirosso",
+    "title": "Il pettirosso di Natale",
+    "level": "A2",
+    "excerpt": "Tanto tempo fa, il pettirosso era un uccellino tutto grigio. Non aveva ancora le piume rosse sul petto.",
+    "paragraphCount": 6,
+    "wordCount": 122,
+    "genre": "fiaba",
+    "category": "feste"
+  },
+  {
+    "id": "furto_museo",
+    "title": "Il furto al museo",
+    "level": "B1",
+    "excerpt": "Una mattina, al museo della città, mancava un quadro famoso. La cornice era vuota e nessuno aveva visto niente.",
+    "paragraphCount": 6,
+    "wordCount": 127,
+    "genre": "giallo",
+    "category": "societa"
+  },
+  {
+    "id": "pompei",
+    "title": "Pompei: la città sepolta",
+    "level": "C1",
+    "excerpt": "Nel settantanove dopo Cristo, l'eruzione del Vesuvio seppellì in poche ore la fiorente città di Pompei sotto una spessa coltre di cenere e lapilli.",
+    "paragraphCount": 6,
+    "wordCount": 150,
+    "genre": "documentario",
+    "category": "storia_antica"
   }
 ]
