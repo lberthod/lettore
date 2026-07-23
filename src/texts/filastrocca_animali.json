@@ -1,0 +1,83 @@
+{
+  "id": "filastrocca_animali",
+  "title": "Filastrocca degli animali",
+  "level": "A1",
+  "genre": "poesia",
+  "category": "natura_animali",
+  "paragraphs": [
+    "Il gatto nero dorme sul muro.",
+    "Il topo corre, non è sicuro.",
+    "La luna splende su nel cielo.",
+    "Il bosco tace sotto il velo.",
+    "La rana verde salta nel mare.",
+    "Il pesce nuota, vuole giocare.",
+    "Vola l'uccello leggero e fino.",
+    "Dorme il cavallo lungo il cammino."
+  ],
+  "questions": [
+    {
+      "q": "Di che colore è il gatto?",
+      "options": ["Bianco", "Nero", "Grigio"],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa fa il pesce?",
+      "options": ["Dorme", "Nuota", "Vola"],
+      "correct": 1
+    },
+    {
+      "q": "Dove dorme il cavallo?",
+      "options": ["Sul muro", "Nel mare", "Lungo il cammino"],
+      "correct": 2
+    }
+  ],
+  "words": {
+    "bosco": "forêt",
+    "cammino": "chemin",
+    "cavallo": "cheval",
+    "cielo": "ciel",
+    "corre": "court",
+    "dorme": "dort",
+    "e": "et",
+    "fino": "fin / délicat",
+    "gatto": "chat",
+    "giocare": "jouer",
+    "il": "le",
+    "l'uccello": "l'oiseau",
+    "la": "la",
+    "leggero": "léger",
+    "luna": "lune",
+    "lungo": "le long de",
+    "mare": "mer",
+    "muro": "mur",
+    "nel": "dans le",
+    "nero": "noir",
+    "non": "ne... pas",
+    "nuota": "nage",
+    "pesce": "poisson",
+    "rana": "grenouille",
+    "salta": "saute",
+    "sicuro": "sûr / en sécurité",
+    "sotto": "sous",
+    "splende": "brille",
+    "su": "en haut",
+    "sul": "sur le",
+    "tace": "se tait",
+    "topo": "souris",
+    "velo": "voile",
+    "verde": "verte",
+    "vola": "vole",
+    "vuole": "veut",
+    "è": "est"
+  },
+  "sentences": {
+    "Il gatto nero dorme sul muro.": "Le chat noir dort sur le mur.",
+    "Il topo corre, non è sicuro.": "La souris court, elle n'est pas en sécurité.",
+    "La luna splende su nel cielo.": "La lune brille là-haut dans le ciel.",
+    "Il bosco tace sotto il velo.": "La forêt se tait sous le voile.",
+    "La rana verde salta nel mare.": "La grenouille verte saute dans la mer.",
+    "Il pesce nuota, vuole giocare.": "Le poisson nage, il veut jouer.",
+    "Vola l'uccello leggero e fino.": "L'oiseau vole, léger et délicat.",
+    "Dorme il cavallo lungo il cammino.": "Le cheval dort le long du chemin."
+  }
+}

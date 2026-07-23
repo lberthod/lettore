@@ -499,5 +499,45 @@
     "wordCount": 69,
     "genre": "dialogo",
     "category": "viaggi"
+  },
+  {
+    "id": "filastrocca_animali",
+    "title": "Filastrocca degli animali",
+    "level": "A1",
+    "excerpt": "Il gatto nero dorme sul muro. Il topo corre, non è sicuro. La luna splende su nel cielo. Il bosco tace sotto il velo.",
+    "paragraphCount": 8,
+    "wordCount": 46,
+    "genre": "poesia",
+    "category": "natura_animali"
+  },
+  {
+    "id": "sardegna",
+    "title": "La Sardegna: un'isola antica",
+    "level": "B1",
+    "excerpt": "La Sardegna è la seconda isola più grande del Mar Mediterraneo, dopo la Sicilia. Si trova a ovest della penisola italiana.",
+    "paragraphCount": 6,
+    "wordCount": 144,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "cartolina_roma",
+    "title": "Cartolina da Roma",
+    "level": "A2",
+    "excerpt": "Cara Anna, ti scrivo da Roma. Sono arrivata ieri e la città è già bellissima.",
+    "paragraphCount": 5,
+    "wordCount": 87,
+    "genre": "lettera_diario",
+    "category": "viaggi"
+  },
+  {
+    "id": "in_cucina",
+    "title": "In cucina",
+    "level": "A2",
+    "excerpt": "MARCO — Che buon profumo! Che cosa cucini oggi? LUCIA — Faccio il risotto ai funghi. È la ricetta della nonna.",
+    "paragraphCount": 6,
+    "wordCount": 62,
+    "genre": "teatro",
+    "category": "vita_quotidiana"
   }
 ]
