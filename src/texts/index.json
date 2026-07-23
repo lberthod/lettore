@@ -459,5 +459,45 @@
     "wordCount": 151,
     "genre": "fiaba",
     "category": "natura_animali"
+  },
+  {
+    "id": "bruschetta",
+    "title": "La ricetta della bruschetta",
+    "level": "A1",
+    "excerpt": "La bruschetta è un piatto semplice e veloce. È perfetta per l'estate. Ecco la ricetta per quattro persone.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "pratico",
+    "category": "cucina"
+  },
+  {
+    "id": "robot_casa",
+    "title": "Il robot di casa",
+    "level": "A2",
+    "excerpt": "Nell'anno 2085, ogni famiglia ha un robot in casa. La famiglia Neri ha un robot che si chiama Zeta.",
+    "paragraphCount": 6,
+    "wordCount": 105,
+    "genre": "fantascienza",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "mistero_valigia",
+    "title": "Il mistero della valigia",
+    "level": "B1",
+    "excerpt": "L'ispettore Bruni era in vacanza a Firenze quando ricevette una telefonata dall'albergo. Una valigia era sparita dalla camera dodici.",
+    "paragraphCount": 6,
+    "wordCount": 129,
+    "genre": "giallo",
+    "category": "viaggi"
+  },
+  {
+    "id": "alla_stazione",
+    "title": "Alla stazione",
+    "level": "A2",
+    "excerpt": "— Buongiorno, vorrei un biglietto per Firenze, per favore. — Buongiorno. Solo andata o andata e ritorno?",
+    "paragraphCount": 8,
+    "wordCount": 69,
+    "genre": "dialogo",
+    "category": "viaggi"
   }
 ]
