@@ -1,0 +1,78 @@
+{
+  "id": "arrivare_centro",
+  "title": "Come arrivare in centro",
+  "level": "A1",
+  "genre": "pratico",
+  "category": "viaggi",
+  "paragraphs": [
+    "Vuoi andare in centro dalla stazione? È molto facile.",
+    "Esci dalla stazione e gira a destra.",
+    "Cammina dritto per cento metri fino alla piazza grande.",
+    "Attraversa la piazza e prendi la seconda strada a sinistra.",
+    "Il centro è a cinque minuti a piedi. Buona passeggiata!"
+  ],
+  "questions": [
+    {
+      "q": "Da dove parte il percorso?",
+      "options": ["Dalla stazione", "Dall'aeroporto", "Dal centro"],
+      "correct": 0
+    },
+    {
+      "q": "Dove bisogna girare all'uscita della stazione?",
+      "options": ["A sinistra", "A destra", "Dritto"],
+      "correct": 1
+    },
+    {
+      "q": "Quanto dista il centro a piedi?",
+      "options": ["Cinque minuti", "Mezz'ora", "Un'ora"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à (« a destra » = à droite ; « a piedi » = à pied)",
+    "alla": "à la",
+    "andare": "aller",
+    "attraversa": "traverse",
+    "buona": "bonne",
+    "cammina": "marche",
+    "cento": "cent",
+    "centro": "centre",
+    "cinque": "cinq",
+    "come": "comment",
+    "dalla": "de la (« dalla stazione » = de la gare)",
+    "destra": "droite",
+    "dritto": "tout droit",
+    "e": "et",
+    "esci": "sors",
+    "facile": "facile",
+    "fino": "jusque (« fino alla piazza » = jusqu'à la place)",
+    "gira": "tourne",
+    "grande": "grande",
+    "il": "le",
+    "in": "au (« in centro » = au centre)",
+    "la": "la",
+    "metri": "mètres",
+    "minuti": "minutes",
+    "molto": "très",
+    "passeggiata": "promenade",
+    "per": "pendant / sur (« per cento metri » = sur cent mètres)",
+    "piazza": "place",
+    "piedi": "pieds (« a piedi » = à pied)",
+    "prendi": "prends",
+    "seconda": "deuxième",
+    "sinistra": "gauche",
+    "stazione": "gare",
+    "strada": "rue",
+    "vuoi": "tu veux",
+    "è": "est"
+  },
+  "sentences": {
+    "Vuoi andare in centro dalla stazione?": "Tu veux aller au centre depuis la gare ?",
+    "È molto facile.": "C'est très facile.",
+    "Esci dalla stazione e gira a destra.": "Sors de la gare et tourne à droite.",
+    "Cammina dritto per cento metri fino alla piazza grande.": "Marche tout droit sur cent mètres jusqu'à la grande place.",
+    "Attraversa la piazza e prendi la seconda strada a sinistra.": "Traverse la place et prends la deuxième rue à gauche.",
+    "Il centro è a cinque minuti a piedi.": "Le centre est à cinq minutes à pied.",
+    "Buona passeggiata!": "Bonne promenade !"
+  }
+}

@@ -579,5 +579,45 @@
     "wordCount": 150,
     "genre": "documentario",
     "category": "storia_antica"
+  },
+  {
+    "id": "al_telefono",
+    "title": "Al telefono",
+    "level": "A1",
+    "excerpt": "— Pronto, chi parla? — Ciao Marta, sono Luca. Come stai? — Ciao Luca! Sto bene, grazie. E tu?",
+    "paragraphCount": 8,
+    "wordCount": 45,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "arrivare_centro",
+    "title": "Come arrivare in centro",
+    "level": "A1",
+    "excerpt": "Vuoi andare in centro dalla stazione? È molto facile. Esci dalla stazione e gira a destra.",
+    "paragraphCount": 5,
+    "wordCount": 45,
+    "genre": "pratico",
+    "category": "viaggi"
+  },
+  {
+    "id": "nebbia_lago",
+    "title": "Nebbia sul lago",
+    "level": "C1",
+    "excerpt": "La nebbia avvolgeva il lago di Como quando il commissario Ferri giunse sulla riva deserta. Un pescatore aveva segnalato una barca alla deriva, completamente vuota.",
+    "paragraphCount": 6,
+    "wordCount": 141,
+    "genre": "giallo",
+    "category": "regioni"
+  },
+  {
+    "id": "ultimo_tram",
+    "title": "L'ultimo tram",
+    "level": "C1",
+    "excerpt": "Ogni sera Amalia prendeva l'ultimo tram delle undici, quello quasi vuoto che attraversava la città ormai addormentata.",
+    "paragraphCount": 6,
+    "wordCount": 142,
+    "genre": "racconto",
+    "category": "societa"
   }
 ]

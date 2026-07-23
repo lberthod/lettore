@@ -1,0 +1,91 @@
+{
+  "id": "al_telefono",
+  "title": "Al telefono",
+  "level": "A1",
+  "genre": "dialogo",
+  "category": "vita_quotidiana",
+  "paragraphs": [
+    "— Pronto, chi parla?",
+    "— Ciao Marta, sono Luca. Come stai?",
+    "— Ciao Luca! Sto bene, grazie. E tu?",
+    "— Anch'io bene. Che fai domani?",
+    "— Domani vado al cinema. Vuoi venire con me?",
+    "— Sì, volentieri! A che ora?",
+    "— Alle otto di sera. Ci vediamo lì?",
+    "— Perfetto. A domani, ciao!"
+  ],
+  "questions": [
+    {
+      "q": "Chi telefona a Marta?",
+      "options": ["Luca", "Marco", "Paolo"],
+      "correct": 0
+    },
+    {
+      "q": "Dove va Luca domani?",
+      "options": ["Al ristorante", "Al cinema", "A scuola"],
+      "correct": 1
+    },
+    {
+      "q": "A che ora si vedono?",
+      "options": ["Alle sei", "Alle otto di sera", "A mezzogiorno"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "a": "à (« a che ora » = à quelle heure ; « a domani » = à demain)",
+    "al": "au",
+    "alle": "à (« alle otto » = à huit heures)",
+    "anch'io": "moi aussi",
+    "bene": "bien",
+    "che": "que / quelle",
+    "chi": "qui",
+    "ci": "nous (« ci vediamo » = on se voit)",
+    "ciao": "salut",
+    "cinema": "cinéma",
+    "come": "comment",
+    "con": "avec",
+    "di": "de / du (« di sera » = du soir)",
+    "domani": "demain",
+    "e": "et",
+    "fai": "tu fais",
+    "grazie": "merci",
+    "lì": "là / là-bas",
+    "luca": "Luca (prénom)",
+    "marta": "Marta (prénom)",
+    "me": "moi",
+    "ora": "heure",
+    "otto": "huit",
+    "parla": "parle",
+    "perfetto": "parfait",
+    "pronto": "allô",
+    "sera": "soir",
+    "sono": "je suis",
+    "stai": "vas-tu (« come stai » = comment vas-tu)",
+    "sto": "je vais (« sto bene » = je vais bien)",
+    "sì": "oui",
+    "tu": "toi",
+    "vado": "je vais",
+    "vediamo": "voyons (« ci vediamo » = on se voit)",
+    "venire": "venir",
+    "volentieri": "volontiers",
+    "vuoi": "tu veux"
+  },
+  "sentences": {
+    "— Pronto, chi parla?": "— Allô, qui est à l'appareil ?",
+    "— Ciao Marta, sono Luca.": "— Salut Marta, c'est Luca.",
+    "Come stai?": "Comment vas-tu ?",
+    "— Ciao Luca!": "— Salut Luca !",
+    "Sto bene, grazie.": "Je vais bien, merci.",
+    "E tu?": "Et toi ?",
+    "— Anch'io bene.": "— Moi aussi je vais bien.",
+    "Che fai domani?": "Que fais-tu demain ?",
+    "— Domani vado al cinema.": "— Demain je vais au cinéma.",
+    "Vuoi venire con me?": "Tu veux venir avec moi ?",
+    "— Sì, volentieri!": "— Oui, volontiers !",
+    "A che ora?": "À quelle heure ?",
+    "— Alle otto di sera.": "— À huit heures du soir.",
+    "Ci vediamo lì?": "On se voit là-bas ?",
+    "— Perfetto.": "— Parfait.",
+    "A domani, ciao!": "À demain, salut !"
+  }
+}
