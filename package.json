@@ -16,7 +16,10 @@
     "orchestrate:matrix:plan": "node generator/orchestrate-matrix.mjs --dry-run --all",
     "test:text": "node generator/test-one.mjs",
     "test:sizes": "node generator/test-sizes.mjs",
-    "publish:text": "node scripts/publish-text.mjs"
+    "publish:text": "node scripts/publish-text.mjs",
+    "fetch:book": "node scripts/fetch-book.mjs",
+    "annotate:chapter": "node scripts/annotate-chapter.mjs",
+    "orchestrate:book": "node scripts/orchestrate-book.mjs"
   },
   "dependencies": {
     "firebase": "^12.16.0",

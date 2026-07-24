@@ -48,6 +48,18 @@ const router = createRouter({
       },
     },
     {
+      path: '/classici',
+      name: 'books',
+      component: () => import('./views/BooksView.vue'),
+      meta: { title: 'Classici del dominio pubblico — Leggendo' },
+    },
+    {
+      path: '/classici/:bookId/:chapterId',
+      name: 'book-reader',
+      component: () => import('./views/BookReaderView.vue'),
+      props: true,
+    },
+    {
       path: '/condividi/:id',
       name: 'shared-text',
       // Lecture publique d'un texte créé et partagé (formule Enseignant) :

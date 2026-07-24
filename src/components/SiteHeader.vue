@@ -47,6 +47,7 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
     <nav id="chrome-nav" class="chrome-nav" :class="{ open: menuOpen }">
       <RouterLink :to="{ name: 'home' }">Accueil</RouterLink>
       <RouterLink :to="{ name: 'library' }">Textes</RouterLink>
+      <RouterLink :to="{ name: 'books' }">Classici</RouterLink>
       <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
