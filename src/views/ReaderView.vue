@@ -3,6 +3,7 @@ import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import TranslationOverlay from '../components/TranslationOverlay.vue'
+import VocabReviewModal from '../components/VocabReviewModal.vue'
 import { lookupWord, lookupSentence } from '../translate.js'
 import {
   ttsSupported,
@@ -20,6 +21,7 @@ import {
   isFavorite,
   toggleFavorite,
 } from '../progress.js'
+import { currentUser } from '../lib/auth.js'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -130,6 +132,25 @@ function openQuiz() {
 
 function onQuizCompleted(score) {
   if (score >= currentText.value.questions.length - 1) markRead(props.id)
+}
+
+// --- Mode vocabulaire (réservé aux connectés) ---
+const vocabOpen = ref(false)
+
+const vocabWords = computed(() => {
+  const dict = currentText.value?.words || {}
+  return Object.entries(dict)
+    .map(([word, translation]) => ({ word, translation }))
+    .sort((a, b) => a.word.localeCompare(b.word, 'it'))
+})
+
+function openVocabMode() {
+  if (!currentUser.value) {
+    router.push({ name: 'login', query: { redirect: router.currentRoute.value.fullPath } })
+    return
+  }
+  closeOverlay()
+  vocabOpen.value = true
 }
 
 // --- TTS ---
@@ -349,6 +370,7 @@ watch(
     closeOverlay()
     stopReading()
     quizOpen.value = false
+    vocabOpen.value = false
     loadText(id)
   },
   { immediate: true }
@@ -357,6 +379,7 @@ watch(
 function onKeydown(e) {
   if (e.key === 'Escape') {
     if (quizOpen.value) quizOpen.value = false
+    else if (vocabOpen.value) vocabOpen.value = false
     else closeOverlay()
   }
 }
@@ -521,11 +544,23 @@ onBeforeUnmount(() => {
         </article>
 
         <div
-          v-if="currentText.questions && currentText.questions.length"
+          v-if="(currentText.questions && currentText.questions.length) || vocabWords.length"
           class="verify-cta"
         >
-          <button class="btn-verify" @click="openQuiz">
+          <button
+            v-if="currentText.questions && currentText.questions.length"
+            class="btn-verify"
+            @click="openQuiz"
+          >
             Verifica la comprensione →
+          </button>
+          <button
+            v-if="vocabWords.length"
+            class="btn-vocab"
+            title="Passer en revue le vocabulaire de ce texte"
+            @click="openVocabMode"
+          >
+            📖 Mode vocabulaire
           </button>
         </div>
       </div>
@@ -583,6 +618,16 @@ onBeforeUnmount(() => {
           </div>
         </div>
       </Transition>
+    </Teleport>
+
+    <!-- Mode vocabulaire : également téléporté dans <body> -->
+    <Teleport to="body">
+      <VocabReviewModal
+        v-if="vocabOpen"
+        :words="vocabWords"
+        :text-id="props.id"
+        @close="vocabOpen = false"
+      />
     </Teleport>
   </SceneLayout>
 </template>
@@ -781,11 +826,24 @@ article p:first-letter {
 .word {
   cursor: pointer;
   border-radius: 3px;
-  transition: background 0.1s;
+  /* Affordance discrète : signale que le mot est interactif avant même le survol */
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(176, 105, 46, 0.35);
+  text-underline-offset: 3px;
+  transition: background 0.1s, text-decoration-color 0.1s;
 }
 
-.word:hover {
+.word:hover,
+.word:focus-visible {
   background: #f0e0c8;
+  text-decoration-color: #b0692e;
+}
+
+.word:focus-visible,
+.punct:focus-visible {
+  outline: 2px solid #b0692e;
+  outline-offset: 2px;
 }
 
 .punct {
@@ -797,13 +855,18 @@ article p:first-letter {
   transition: background 0.1s;
 }
 
-.punct:hover {
+.punct:hover,
+.punct:focus-visible {
   background: #f0e0c8;
 }
 
 /* --- Bouton de vérification --- */
 
 .verify-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
   text-align: center;
   margin-top: 1.6rem;
   padding-top: 1.4rem;
@@ -828,6 +891,25 @@ article p:first-letter {
   background: #9a5a26;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
+}
+
+.btn-vocab {
+  padding: 0.7rem 1.6rem;
+  border: 1px solid #b0692e;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #b0692e;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+
+.btn-vocab:hover {
+  background: #b0692e;
+  color: #faf6f0;
+  transform: translateY(-2px);
 }
 
 /* --- Pagination --- */

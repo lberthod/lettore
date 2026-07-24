@@ -5,12 +5,14 @@ import SceneLayout from '../components/SceneLayout.vue'
 import taxonomy from '../texts/category.json'
 import { listUserTexts, deleteUserText, setUserTextPublic } from '../lib/userTexts.js'
 import { generation, saveResult, resumeGeneration } from '../lib/generation.js'
+import { networkErrorMessage } from '../lib/network.js'
 
 const myTexts = ref([])
 const loading = ref(true)
 const sharing = ref({}) // id -> true pendant la requête
 const copiedId = ref(null)
 const shareError = ref('')
+const loadError = ref('')
 
 const search = ref('')
 const filterLevel = ref('')
@@ -103,10 +105,13 @@ async function copyShareLink(id) {
 }
 
 async function refresh() {
+  loadError.value = ''
   try {
     myTexts.value = await listUserTexts()
-  } catch {
-    // Pas connecté ou Firestore indisponible : la liste reste vide.
+  } catch (err) {
+    // Pas connecté : la liste reste vide sans message. Une vraie panne
+    // réseau/Firestore, en revanche, doit être visible (et réessayable).
+    loadError.value = networkErrorMessage(err) || ''
   } finally {
     loading.value = false
   }
@@ -194,6 +199,12 @@ const formatDate = (ts) =>
     </div>
 
     <p v-if="shareError" class="job error">⚠ {{ shareError }}</p>
+    <p v-if="loadError" class="job error">
+      ⚠ {{ loadError }}
+      <button type="button" class="link-btn" @click="loading = true; refresh()">
+        réessayer
+      </button>
+    </p>
 
     <div v-if="myTexts.length" class="filters">
       <input

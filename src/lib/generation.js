@@ -7,6 +7,7 @@
 import { reactive } from 'vue'
 import { getAuthInstance } from './firebase.js'
 import { saveUserText } from './userTexts.js'
+import { networkErrorMessage } from './network.js'
 
 export const API_BASE =
   import.meta.env.VITE_LEGGENDO_API || 'https://api.loicberthod.ch/leggendo'
@@ -134,7 +135,7 @@ export async function startGeneration(payload) {
     persistJob()
     poll()
   } catch (err) {
-    fail(err.message)
+    fail(networkErrorMessage(err) || err.message)
   }
 }
 
@@ -160,7 +161,7 @@ function poll() {
         poll()
       }
     } catch (err) {
-      fail(err.message)
+      fail(networkErrorMessage(err) || err.message)
     }
   }, 4000)
 }
@@ -181,9 +182,9 @@ export async function saveResult() {
     generation.saveState = 'saved'
   } catch (err) {
     console.error('Enregistrement du texte :', err)
-    generation.saveError = [err?.code, err?.message || String(err)]
-      .filter(Boolean)
-      .join(' — ')
+    generation.saveError =
+      networkErrorMessage(err) ||
+      [err?.code, err?.message || String(err)].filter(Boolean).join(' — ')
     generation.saveState = 'error'
   }
 }

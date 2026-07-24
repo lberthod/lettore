@@ -2,18 +2,28 @@
 // (api.loicberthod.ch/leggendo/*). Un utilisateur connecté (Firebase Auth)
 // demande un texte sur mesure ; la génération GLM prenant plusieurs minutes,
 // l'API fonctionne en mode job : POST /leggendo/generate → { jobId }, puis
-// GET /leggendo/jobs/<id> jusqu'à status "done".
+// GET /leggendo/jobs/<id> jusqu'à status "done". Les jobs sont persistés dans
+// Firestore (collection `leggendoJobs`) pour survivre à un redémarrage du VPS.
 //
-// Aucune dépendance npm : http natif + fetch (Node ≥ 18).
+// Seule dépendance npm : firebase-admin (accès Firestore). Le reste tourne en
+// http natif + fetch (Node ≥ 18).
 
 import http from 'node:http'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { initializeApp, applicationDefault } from 'firebase-admin/app'
+import { getFirestore } from 'firebase-admin/firestore'
 import { generateUserText } from './generate.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
+
+// Authentification du SDK Admin via un compte de service dédié (rôle Cloud
+// Datastore User) — le VPS n'est pas un runtime GCP géré, donc pas de
+// credentials implicites : voir README.md pour la procédure de génération.
+initializeApp({ credential: applicationDefault() })
+const db = getFirestore()
 
 const PORT = Number(process.env.PORT || 8091)
 // Clé web Firebase du projet leggendo-dbb84 (publique, sert uniquement à
@@ -162,38 +172,50 @@ function consumeQuota(user) {
   saveQuotas()
 }
 
-// --- Jobs en mémoire ---
-const jobs = new Map() // jobId → { uid, status, createdAt, result?, error? }
+// --- Jobs persistés dans Firestore (survivent à un redémarrage du VPS) ---
+const jobsCollection = db.collection('leggendoJobs')
 const JOB_TTL_MS = 60 * 60 * 1000
 
-function pruneJobs() {
-  const now = Date.now()
-  for (const [id, job] of jobs) {
-    if (now - job.createdAt > JOB_TTL_MS) jobs.delete(id)
-  }
+async function pruneJobs() {
+  const cutoff = Date.now() - JOB_TTL_MS
+  const stale = await jobsCollection.where('createdAt', '<', cutoff).get()
+  if (stale.empty) return
+  const batch = db.batch()
+  stale.docs.forEach((doc) => batch.delete(doc.ref))
+  await batch.commit()
 }
-setInterval(pruneJobs, 10 * 60 * 1000).unref()
+setInterval(() => {
+  pruneJobs().catch((err) => console.error('Erreur purge des jobs :', err))
+}, 10 * 60 * 1000).unref()
 
 // Filet de sécurité : un job actif depuis trop longtemps est considéré comme
 // mort (en plus du timeout des appels GLM) — sinon il verrouillerait le compte
 // définitivement, la génération étant limitée à un job à la fois par compte.
 const JOB_STUCK_MS = 45 * 60 * 1000
 
-function isActive(job) {
+async function isActive(id, job) {
   if (job.status !== 'pending' && job.status !== 'running') return false
   if (Date.now() - job.createdAt > JOB_STUCK_MS) {
-    job.status = 'error'
-    job.error = 'Génération interrompue (délai maximal dépassé).'
+    const error = 'Génération interrompue (délai maximal dépassé).'
+    await jobsCollection.doc(id).update({ status: 'error', error })
     return false
   }
   return true
 }
 
-function activeJobFor(uid) {
-  for (const [id, job] of jobs) {
-    if (job.uid === uid && isActive(job)) return { id, job }
-  }
-  return null
+// Nécessite un index composite Firestore (uid ASC, status ASC, createdAt
+// DESC) — Firestore fournit le lien de création au premier appel si absent.
+async function activeJobFor(uid) {
+  const snap = await jobsCollection
+    .where('uid', '==', uid)
+    .where('status', 'in', ['pending', 'running'])
+    .orderBy('createdAt', 'desc')
+    .limit(1)
+    .get()
+  if (snap.empty) return null
+  const doc = snap.docs[0]
+  const job = doc.data()
+  return (await isActive(doc.id, job)) ? { id: doc.id, job } : null
 }
 
 // --- Helpers HTTP ---
@@ -280,7 +302,7 @@ const server = http.createServer(async (req, res) => {
 
   try {
     if (req.method === 'GET' && url.pathname === '/leggendo/health') {
-      send(200, { ok: true, model: GLM_MODEL, jobs: jobs.size })
+      send(200, { ok: true, model: GLM_MODEL })
       return
     }
 
@@ -321,7 +343,7 @@ const server = http.createServer(async (req, res) => {
         send(400, { error: errors.join(' ; ') })
         return
       }
-      if (activeJobFor(user.uid)) {
+      if (await activeJobFor(user.uid)) {
         send(429, {
           error: 'Une génération est déjà en cours pour votre compte, patientez.',
         })
@@ -335,8 +357,8 @@ const server = http.createServer(async (req, res) => {
       consumeQuota(user)
 
       const jobId = crypto.randomUUID()
-      const job = { uid: user.uid, status: 'pending', createdAt: Date.now(), title }
-      jobs.set(jobId, job)
+      const jobRef = jobsCollection.doc(jobId)
+      await jobRef.set({ uid: user.uid, status: 'pending', createdAt: Date.now(), title })
       const q = getQuota(user.uid)
       console.log(
         `[job ${jobId}] ${user.email || user.uid} (${user.role}) — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} » — quota jour ${q.dailyCount}, mois ${q.monthlyCount}, total ${q.totalCount}`
@@ -344,7 +366,7 @@ const server = http.createServer(async (req, res) => {
 
       // Génération en tâche de fond ; le client sonde /leggendo/jobs/<id>.
       ;(async () => {
-        job.status = 'running'
+        await jobRef.update({ status: 'running' })
         try {
           const textData = await generateUserText({
             id: slugify(title),
@@ -355,12 +377,10 @@ const server = http.createServer(async (req, res) => {
             summary,
             size,
           })
-          job.result = textData
-          job.status = 'done'
+          await jobRef.update({ status: 'done', result: textData })
           console.log(`[job ${jobId}] terminé (${textData.wordCount} mots)`)
         } catch (err) {
-          job.error = err.message
-          job.status = 'error'
+          await jobRef.update({ status: 'error', error: err.message })
           console.error(`[job ${jobId}] échec : ${err.message}`)
         }
       })()
@@ -380,7 +400,7 @@ const server = http.createServer(async (req, res) => {
         send(401, { error: 'Connexion requise.' })
         return
       }
-      const active = activeJobFor(user.uid)
+      const active = await activeJobFor(user.uid)
       send(
         200,
         active
@@ -405,7 +425,8 @@ const server = http.createServer(async (req, res) => {
         send(401, { error: 'Connexion requise.' })
         return
       }
-      const job = jobs.get(jobMatch[1])
+      const jobDoc = await jobsCollection.doc(jobMatch[1]).get()
+      const job = jobDoc.exists ? jobDoc.data() : null
       if (!job || job.uid !== user.uid) {
         send(404, { error: 'Job inconnu ou expiré.' })
         return

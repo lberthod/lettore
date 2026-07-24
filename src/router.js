@@ -181,6 +181,26 @@ const router = createRouter({
         if (!isAdmin()) return { name: 'home' }
       },
     },
+    {
+      path: '/admin/mots',
+      name: 'admin-words',
+      component: () => import('./views/AdminWordsView.vue'),
+      meta: { title: 'Administration · Mots — Leggendo', requiresAuth: true },
+      beforeEnter: async () => {
+        await authReady
+        if (!isAdmin()) return { name: 'home' }
+      },
+    },
+    {
+      path: '/admin/textes',
+      name: 'admin-texts',
+      component: () => import('./views/AdminTextsView.vue'),
+      meta: { title: 'Administration · Textes — Leggendo', requiresAuth: true },
+      beforeEnter: async () => {
+        await authReady
+        if (!isAdmin()) return { name: 'home' }
+      },
+    },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   scrollBehavior() {

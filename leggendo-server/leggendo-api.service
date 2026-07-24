@@ -1,0 +1,23 @@
+[Unit]
+Description=leggendo-api — API « Créer son texte » de Leggendo
+After=network.target
+
+[Service]
+Type=simple
+# Adapter WorkingDirectory à l'emplacement réel sur le VPS.
+WorkingDirectory=/opt/leggendo-api
+ExecStart=/usr/bin/node server.mjs
+# Les secrets (GLM_API_KEY, GOOGLE_APPLICATION_CREDENTIALS, ALLOWED_ORIGINS…)
+# vivent dans ce fichier, hors du repo — voir leggendo-api.env.example.
+EnvironmentFile=/opt/leggendo-api/leggendo-api.env
+Restart=on-failure
+RestartSec=5
+# Compte dédié, non-root, propriétaire du dossier /opt/leggendo-api.
+User=leggendo
+Group=leggendo
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/leggendo-api
+
+[Install]
+WantedBy=multi-user.target

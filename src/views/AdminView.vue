@@ -1,5 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import { listUsers, setUserRole } from '../lib/admin.js'
 
@@ -69,6 +70,12 @@ const formatDate = (iso) =>
 
 <template>
   <SceneLayout title="Admin" accent="istration" tagline="Tableau de bord" wide>
+    <nav class="tabs">
+      <RouterLink :to="{ name: 'admin' }" class="tab active">Comptes</RouterLink>
+      <RouterLink :to="{ name: 'admin-words' }" class="tab" exact-active-class="active">Mots</RouterLink>
+      <RouterLink :to="{ name: 'admin-texts' }" class="tab" exact-active-class="active">Textes</RouterLink>
+    </nav>
+
     <p v-if="error" class="notice error">⚠ {{ error }}</p>
 
     <template v-if="!loading && !error">
@@ -135,6 +142,33 @@ const formatDate = (iso) =>
 </template>
 
 <style scoped>
+.tabs {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0 0 1.4rem;
+}
+
+.tab {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(176, 105, 46, 0.25);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b6156;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.tab:hover {
+  border-color: #b0692e;
+}
+
+.tab.active {
+  background: #b0692e;
+  border-color: #b0692e;
+  color: #faf6f0;
+}
+
 .notice {
   margin: 0 0 1.2rem;
   padding: 0.7rem 1rem;

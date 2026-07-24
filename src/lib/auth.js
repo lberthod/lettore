@@ -82,6 +82,8 @@ export function errorMessage(err) {
     'auth/weak-password': 'Mot de passe trop faible (6 caractères minimum).',
     'auth/too-many-requests': 'Trop de tentatives, réessayez plus tard.',
     'auth/popup-closed-by-user': 'Fenêtre de connexion fermée.',
+    'auth/network-request-failed':
+      'Connexion impossible — vérifiez votre accès internet et réessayez.',
   }
   return messages[code] || err?.message || 'Une erreur est survenue.'
 }

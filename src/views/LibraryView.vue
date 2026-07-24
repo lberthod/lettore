@@ -502,8 +502,15 @@ function loadMore() {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.8rem;
+  gap: 0.55rem;
+  margin: 0 auto 1.8rem;
+  max-width: 900px;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(176, 105, 46, 0.18);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 @media (max-width: 640px) {
@@ -617,34 +624,52 @@ function loadMore() {
 
 .cat-select {
   max-width: 240px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 1.9rem 0.35rem 0.9rem;
   border: 1px solid rgba(176, 105, 46, 0.3);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.65);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b6156' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 0.8em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   color: #6b6156;
   font-family: inherit;
   font-size: 0.83rem;
   font-weight: 600;
+  line-height: 1.3;
   cursor: pointer;
+  transition: border-color 0.12s, color 0.12s;
 }
 
 .cat-select:hover,
 .cat-select:focus {
   border-color: #b0692e;
+  color: #b0692e;
   outline: none;
 }
 
 .reset-btn {
-  padding: 0.35rem 0.6rem;
-  border: none;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(176, 105, 46, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
   color: #b0692e;
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 0.83rem;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.reset-btn:hover {
+  background: rgba(176, 105, 46, 0.1);
+  border-color: #b0692e;
 }
 
 .card-head {

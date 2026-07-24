@@ -3219,5 +3219,305 @@
     "wordCount": 244,
     "genre": "racconto",
     "category": "vita_quotidiana"
+  },
+  {
+    "id": "guida_bucato",
+    "title": "Guida al bucato in casa",
+    "level": "A2",
+    "excerpt": "Prima di tutto, dividete i vestiti per colore: bianchi da una parte, colorati dall'altra.",
+    "paragraphCount": 6,
+    "wordCount": 82,
+    "genre": "pratico",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "guida_festa_carnevale",
+    "title": "Organizzare una festa di Carnevale",
+    "level": "A2",
+    "excerpt": "Decorazioni: appendete stelle filanti colorate e palloncini sulle pareti della stanza.",
+    "paragraphCount": 6,
+    "wordCount": 81,
+    "genre": "pratico",
+    "category": "feste"
+  },
+  {
+    "id": "guida_conservazione_cibo",
+    "title": "Guida alla conservazione degli alimenti",
+    "level": "B1",
+    "excerpt": "Frigorifero: mantenete la temperatura tra i tre e i cinque gradi, e non riempitelo mai troppo per lasciare circolare l'aria.",
+    "paragraphCount": 6,
+    "wordCount": 104,
+    "genre": "pratico",
+    "category": "cucina"
+  },
+  {
+    "id": "guida_pronuncia_italiana",
+    "title": "Guida alla pronuncia italiana",
+    "level": "B1",
+    "excerpt": "Vocali: pronunciate ogni vocale in modo chiaro e breve, senza allungarla come in altre lingue.",
+    "paragraphCount": 6,
+    "wordCount": 105,
+    "genre": "pratico",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "regolamento_torneo_calcetto",
+    "title": "Regolamento del torneo di calcetto",
+    "level": "A2",
+    "excerpt": "Squadre: ogni squadra ha cinque giocatori in campo, più tre riserve in panchina.",
+    "paragraphCount": 6,
+    "wordCount": 80,
+    "genre": "pratico",
+    "category": "sport"
+  },
+  {
+    "id": "professore_virtuale",
+    "title": "Il professore virtuale",
+    "level": "B2",
+    "excerpt": "Nel 2060, il liceo di Marta introduce un professore virtuale per insegnare storia dell'arte a tutte le classi.",
+    "paragraphCount": 6,
+    "wordCount": 103,
+    "genre": "fantascienza",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "dinosauro_ritorno",
+    "title": "Il ritorno del dinosauro",
+    "level": "A2",
+    "excerpt": "Nel laboratorio del professor Bianchi, gli scienziati riescono finalmente a far nascere un piccolo dinosauro.",
+    "paragraphCount": 6,
+    "wordCount": 94,
+    "genre": "fantascienza",
+    "category": "natura_animali"
+  },
+  {
+    "id": "teletrasporto_vacanza",
+    "title": "Vacanze con il teletrasporto",
+    "level": "A2",
+    "excerpt": "Nel 2085, per andare in vacanza basta entrare in una piccola cabina e scegliere la destinazione sullo schermo.",
+    "paragraphCount": 6,
+    "wordCount": 98,
+    "genre": "fantascienza",
+    "category": "viaggi"
+  },
+  {
+    "id": "pittore_olografico",
+    "title": "Il pittore olografico",
+    "level": "B2",
+    "excerpt": "Nella galleria del futuro, un artista olografico chiamato Iris dipinge quadri che cambiano forma secondo l'umore dei visitatori.",
+    "paragraphCount": 6,
+    "wordCount": 107,
+    "genre": "fantascienza",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "soldato_del_futuro",
+    "title": "Il soldato del futuro",
+    "level": "B2",
+    "excerpt": "Nel 2145, l'esercito impianta ai soldati un chip che registra ogni battaglia con perfetta precisione, senza dimenticare alcun dettaglio.",
+    "paragraphCount": 6,
+    "wordCount": 112,
+    "genre": "fantascienza",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "teatro_stazione",
+    "title": "Persi in stazione",
+    "level": "A2",
+    "excerpt": "TURISTA 1 — Il treno per Firenze parte tra cinque minuti e non troviamo il binario giusto!",
+    "paragraphCount": 6,
+    "wordCount": 77,
+    "genre": "teatro",
+    "category": "viaggi"
+  },
+  {
+    "id": "dialetto_orgoglio",
+    "title": "L'orgoglio del dialetto",
+    "level": "C1",
+    "excerpt": "NONNA — Perché ti vergogni a parlare in dialetto davanti ai tuoi amici di Milano? Era la lingua di tuo nonno.",
+    "paragraphCount": 6,
+    "wordCount": 107,
+    "genre": "teatro",
+    "category": "regioni"
+  },
+  {
+    "id": "teatro_veterinario",
+    "title": "Dal veterinario",
+    "level": "B1",
+    "excerpt": "PROPRIETARIA — Dottore, il mio gatto non mangia più da due giorni e sembra sempre stanco.",
+    "paragraphCount": 6,
+    "wordCount": 87,
+    "genre": "teatro",
+    "category": "natura_animali"
+  },
+  {
+    "id": "teatro_natale_bambini",
+    "title": "I bambini preparano il Natale",
+    "level": "A1",
+    "excerpt": "LUCA — Mamma, possiamo fare l'albero di Natale oggi?",
+    "paragraphCount": 6,
+    "wordCount": 56,
+    "genre": "teatro",
+    "category": "feste"
+  },
+  {
+    "id": "teatro_esame",
+    "title": "Prima dell'esame",
+    "level": "A2",
+    "excerpt": "PAOLO — Sono agitatissimo, tra dieci minuti abbiamo l'esame di matematica e non ricordo niente!",
+    "paragraphCount": 6,
+    "wordCount": 81,
+    "genre": "teatro",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "diario_insonnia",
+    "title": "Diario di una notte insonne",
+    "level": "C2",
+    "excerpt": "Le tre di notte. Il soffitto, ormai familiare in ogni sua crepa, mi restituisce lo sguardo con indifferenza quasi beffarda.",
+    "paragraphCount": 6,
+    "wordCount": 120,
+    "genre": "lettera_diario",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "diario_apprendista_chef",
+    "title": "Diario di un apprendista chef",
+    "level": "B2",
+    "excerpt": "Lunedì. Il mio primo giorno nella cucina dello chef Ferrari è stato molto più duro di quanto immaginassi.",
+    "paragraphCount": 6,
+    "wordCount": 113,
+    "genre": "lettera_diario",
+    "category": "cucina"
+  },
+  {
+    "id": "diario_ferragosto",
+    "title": "Diario di Ferragosto",
+    "level": "B1",
+    "excerpt": "Caro diario, oggi è Ferragosto e tutta la famiglia si è riunita nella casa al mare dei nonni.",
+    "paragraphCount": 6,
+    "wordCount": 96,
+    "genre": "lettera_diario",
+    "category": "feste"
+  },
+  {
+    "id": "diario_ritiro_atleta",
+    "title": "Diario del ritiro",
+    "level": "C1",
+    "excerpt": "Oggi ho annunciato ufficialmente il mio ritiro dal ciclismo professionistico, dopo diciassette anni passati in sella.",
+    "paragraphCount": 6,
+    "wordCount": 111,
+    "genre": "lettera_diario",
+    "category": "sport"
+  },
+  {
+    "id": "diario_corso_disegno",
+    "title": "Diario del mio corso di disegno",
+    "level": "A2",
+    "excerpt": "Lunedì. Oggi ho iniziato il mio primo corso di disegno. La maestra ci ha fatto disegnare solo linee dritte.",
+    "paragraphCount": 6,
+    "wordCount": 105,
+    "genre": "lettera_diario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "presepe_vivente",
+    "title": "Il presepe vivente",
+    "level": "A1",
+    "excerpt": "Ogni anno, a Natale, il piccolo paese di montagna organizza il presepe vivente nella piazza principale.",
+    "paragraphCount": 4,
+    "wordCount": 84,
+    "genre": "racconto",
+    "category": "feste"
+  },
+  {
+    "id": "colombina_pasqua",
+    "title": "La colomba di Pasqua",
+    "level": "B2",
+    "excerpt": "Nel piccolo laboratorio di Rosanna, in un paese di collina, l'aria profuma di burro e di arancia candita già dalle sei del mattino.",
+    "paragraphCount": 9,
+    "wordCount": 253,
+    "genre": "racconto",
+    "category": "feste"
+  },
+  {
+    "id": "notte_bianca",
+    "title": "La notte bianca della città",
+    "level": "C2",
+    "excerpt": "Una volta all'anno, in decine di città italiane, i musei restano aperti fino all'alba e le strade si riempiono di una folla che, in altre ci…",
+    "paragraphCount": 11,
+    "wordCount": 374,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "cesare_rubicone",
+    "title": "Cesare attraversa il Rubicone",
+    "level": "A1",
+    "excerpt": "Giulio Cesare è un grande generale romano. Un giorno arriva con il suo esercito davanti a un piccolo fiume: il Rubicone.",
+    "paragraphCount": 4,
+    "wordCount": 81,
+    "genre": "racconto",
+    "category": "storia_antica"
+  },
+  {
+    "id": "bracconaggio_orso",
+    "title": "Il bracconaggio dell'orso marsicano",
+    "level": "C1",
+    "excerpt": "Tra i boschi di faggio dell'Appennino centrale sopravvive una delle popolazioni animali più fragili d'Europa: l'orso bruno marsicano, una so…",
+    "paragraphCount": 11,
+    "wordCount": 343,
+    "genre": "documentario",
+    "category": "montagna"
+  },
+  {
+    "id": "tartufo_caccia",
+    "title": "La caccia al tartufo",
+    "level": "C1",
+    "excerpt": "Prima dell'alba, quando la nebbia avvolge ancora i boschi collinari, il trifolau esce di casa in silenzio, accompagnato da un unico compagno…",
+    "paragraphCount": 11,
+    "wordCount": 383,
+    "genre": "documentario",
+    "category": "natura_animali"
+  },
+  {
+    "id": "murgia_altopiano",
+    "title": "La Murgia: un altopiano di pietra e silenzio",
+    "level": "C1",
+    "excerpt": "Nell'entroterra pugliese, tra Bari e Matera, si estende la Murgia, un altopiano calcareo che per decenni fu considerato dai più un territori…",
+    "paragraphCount": 11,
+    "wordCount": 378,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "boom_televisione",
+    "title": "Il boom della televisione",
+    "level": "A2",
+    "excerpt": "Negli anni Cinquanta la televisione arriva nelle case degli italiani, ma all'inizio è un oggetto raro e costoso.",
+    "paragraphCount": 9,
+    "wordCount": 153,
+    "genre": "documentario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "anni_piombo_memoria",
+    "title": "Gli anni di piombo: una memoria divisa",
+    "level": "C2",
+    "excerpt": "Definire con precisione gli \"anni di piombo\" resta un'operazione storiograficamente scivolosa: l'espressione designa il periodo tra la fine…",
+    "paragraphCount": 11,
+    "wordCount": 366,
+    "genre": "documentario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "vicini_balcone",
+    "title": "I vicini del balcone",
+    "level": "B2",
+    "excerpt": "Marta si trasferisce in un nuovo appartamento al terzo piano, con un balcone attaccato a quello del vicino, un uomo anziano di nome Sandro.",
+    "paragraphCount": 9,
+    "wordCount": 238,
+    "genre": "racconto",
+    "category": "vita_quotidiana"
   }
 ]

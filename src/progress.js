@@ -32,6 +32,7 @@ const favorites = (saved.favorites || []).map((f) => ({
 export const progress = reactive({
   readTexts: saved.readTexts || [], // ids des textes terminés (quiz réussi)
   favorites, // { word, translation, textId, box, due }
+  knownWords: saved.knownWords || [], // mots déjà maîtrisés (mode vocabulaire)
   ttsRate: saved.ttsRate || 0.9,
   hintDismissed: saved.hintDismissed || false,
 })
@@ -58,6 +59,15 @@ export function markRead(id) {
 
 export function isFavorite(word) {
   return progress.favorites.some((f) => f.word === word)
+}
+
+export function isKnown(word) {
+  return progress.knownWords.includes(word.toLowerCase())
+}
+
+export function markKnown(word) {
+  const w = word.toLowerCase()
+  if (!isKnown(w)) progress.knownWords.push(w)
 }
 
 export function toggleFavorite(entry) {

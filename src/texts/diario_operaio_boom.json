@@ -1,0 +1,40 @@
+{
+  "id": "diario_operaio_boom",
+  "title": "Diario di un operaio nel miracolo economico",
+  "level": "C2",
+  "genre": "lettera_diario",
+  "category": "storia_moderna",
+  "paragraphs": [
+    "12 marzo 1962 — Oggi ho firmato il contratto alla Pirelli e stento ancora a crederci: io, figlio di braccianti che non avevano mai posseduto altro che le proprie mani callose, sarò d'ora in avanti un operaio specializzato, con una busta paga fissa e persino, mi hanno detto, la tredicesima a Natale.",
+    "20 marzo 1962 — La catena di montaggio impone un ritmo che il corpo fatica ad assecondare: si ripete lo stesso gesto migliaia di volte, finché le mani sembrano muoversi da sole, mentre la mente, quasi per difendersi dalla monotonia, vaga altrove, verso il paese che ho lasciato e che ormai mi appare lontanissimo.",
+    "2 aprile 1962 — Ho scritto a mio padre per raccontargli dello stipendio, ma non sono riuscito a spiegargli che cosa significhi, in fabbrica, sentirsi allo stesso tempo indispensabile e sostituibile, un ingranaggio fra tanti, benché fondamentale quanto qualsiasi altro.",
+    "15 maggio 1962 — Con le prime mensilità risparmiate ho comprato una radio; la sera, appena rincasato, l'accendo e ascolto le canzoni che tutta Italia sembra cantare all'unisono, come se il paese, pur restando diviso da mille dialetti, avesse finalmente trovato una lingua comune nella musica leggera.",
+    "3 giugno 1962 — Un collega, tornato ieri da un concessionario, si è presentato stamattina con una Seicento fiammante, acquistata a rate; ci ha invitati tutti a fare un giro, e io, seduto su quei sedili ancora profumati di plastica nuova, mi sono chiesto se il benessere che tanto ci viene promesso sia davvero già arrivato, o se stia soltanto per arrivare.",
+    "19 luglio 1962 — Mia moglie desidererebbe un frigorifero, e non la biasimo: qualunque casalinga del quartiere ne possiede già uno, e lei si vergogna, quando le vicine vengono a farle visita, di dover ancora conservare il latte sul davanzale della finestra come si faceva al paese.",
+    "10 agosto 1962 — Durante le ferie, tornato al Sud per la prima volta da quando lavoro qui, ho percepito negli sguardi dei compaesani un misto di ammirazione e di distanza, quasi fossi diventato, in pochi mesi, un uomo diverso, più simile a un torinese che al ragazzo che ero partito.",
+    "14 settembre 1962 — Ho ripensato spesso, in questi giorni, a una frase che un anziano compagno di lavoro, comunista dichiarato, ripete ogni volta che qualcuno esalta il boom: «Attenzione, che il benessere di pochi anni non cancella la fatica di generazioni, né garantisce che duri per sempre».",
+    "5 ottobre 1962 — Alla mensa aziendale si discute animatamente di un possibile sciopero per il rinnovo del contratto collettivo; alcuni temono di perdere quel poco che hanno appena conquistato, altri sostengono che proprio ora, mentre l'azienda macina profitti, sia il momento più propizio per chiedere di più.",
+    "22 novembre 1962 — Ho comprato il primo televisore del palazzo dove abito, e la sera il mio piccolo appartamento si riempie di vicini venuti a guardare il varietà; mi accorgo, non senza un certo orgoglio misto a imbarazzo, di essere diventato per una sera il padrone di casa più ambito della via.",
+    "31 dicembre 1962 — Chiudo questo primo anno torinese chiedendomi se il benessere che finalmente tocchiamo con mano non porti con sé anche una silenziosa perdita: quella di un mondo più povero, sì, ma forse più capace di riconoscersi in ciò che condivideva, prima che ognuno rincorresse, da solo, la propria automobile e il proprio frigorifero.",
+    "1 gennaio 1963 — Mi ripropongo, in questo nuovo anno, di non dimenticare mai da dove vengo, qualunque cosa il miracolo economico voglia ancora offrirmi; perché un operaio che rinnega le proprie origini, per quanto le tasche si riempiano, resta, in fondo, più povero di prima."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa firma l'operaio all'inizio del diario?",
+      "options": ["Un contratto alla Pirelli come operaio specializzato", "Un contratto per una casa in campagna", "Un prestito bancario per comprare un'automobile"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa avverte il vecchio compagno comunista sul boom economico?",
+      "options": ["Che il benessere di pochi anni non cancella la fatica di generazioni", "Che il boom durerà per sempre senza problemi", "Che gli operai dovrebbero smettere subito di lavorare"],
+      "correct": 0
+    },
+    {
+      "q": "Quale timore esprime l'operaio nell'ultima pagina del diario?",
+      "options": ["Che il benessere porti con sé la perdita di un senso di comunità", "Che il televisore si guasti troppo presto", "Che la fabbrica chiuda definitivamente"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {}
+}
