@@ -1,0 +1,10 @@
+{
+  "name": "leggendo-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "API « Créer son texte » de Leggendo (génération GLM, jobs asynchrones)",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

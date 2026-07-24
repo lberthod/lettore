@@ -1,0 +1,193 @@
+{
+  "$schema_version": 1,
+  "description": "Base de taxonomie du Lettore Italiano — deux dimensions orthogonales : genre (la forme du texte) et theme (le sujet). Chaque texte porte un genre + un theme. Voir ANALYSE_CATEGORIES.md.",
+  "levels": ["A1", "A2", "B1", "B2", "C1"],
+  "sizes": [
+    { "id": "corto", "name": "Court", "targetWords": 150, "min": 60, "max": 200 },
+    { "id": "medio", "name": "Moyen", "targetWords": 350, "min": 200, "max": 450 },
+    { "id": "lungo", "name": "Long", "targetWords": 650, "min": 450, "max": 800 },
+    { "id": "molto_lungo", "name": "Très long", "targetWords": 1000, "min": 800, "max": 1300 }
+  ],
+  "genres": [
+    {
+      "id": "racconto",
+      "name": "Récit & nouvelle",
+      "icon": "📖",
+      "hint": "Histoire narrative avec personnages et un arc début-milieu-fin.",
+      "levels": ["A1", "A2", "B1", "B2", "C1"]
+    },
+    {
+      "id": "dialogo",
+      "name": "Dialogue & conversation",
+      "icon": "💬",
+      "hint": "Échange parlé réaliste (café, gare, téléphone). Italien oral naturel, tours de parole courts.",
+      "levels": ["A1", "A2", "B1"]
+    },
+    {
+      "id": "poesia",
+      "name": "Poésie & chanson",
+      "icon": "🪶",
+      "hint": "A1-A2 : filastrocche (comptines), rimes simples AABB, 4 à 8 vers. B1+ : vers libres, images, poèmes courts.",
+      "levels": ["A1", "A2", "B1", "B2", "C1"]
+    },
+    {
+      "id": "fiaba",
+      "name": "Fables & contes",
+      "icon": "🦊",
+      "hint": "Conte traditionnel ou fable avec morale explicite, animaux qui parlent, formules répétitives.",
+      "levels": ["A1", "A2", "B1"]
+    },
+    {
+      "id": "fantascienza",
+      "name": "Science-fiction & fantastique",
+      "icon": "🚀",
+      "hint": "Futur proche, robots, mystères surnaturels, mondes imaginaires. Intrigue simple au présent pour A2.",
+      "levels": ["A2", "B1", "B2", "C1"]
+    },
+    {
+      "id": "giallo",
+      "name": "Policier & mystère",
+      "icon": "🕵️",
+      "hint": "Enquête, disparition, indices, chute finale. Le giallo, genre très italien.",
+      "levels": ["A2", "B1", "B2", "C1"]
+    },
+    {
+      "id": "documentario",
+      "name": "Histoire & documentaire",
+      "icon": "🏛",
+      "hint": "Texte factuel : événement historique, lieu géographique, vulgarisation scientifique, biographie.",
+      "levels": ["B1", "B2", "C1"]
+    },
+    {
+      "id": "lettera_diario",
+      "name": "Lettres & journal",
+      "icon": "✉️",
+      "hint": "Correspondance, journal intime, e-mails, cartes postales. Première personne, registre personnel.",
+      "levels": ["A1", "A2", "B1", "B2"]
+    },
+    {
+      "id": "teatro",
+      "name": "Théâtre & sketch",
+      "icon": "🎭",
+      "hint": "Petite scène jouable à 2-3 personnages, didascalies minimales, humour. Répliques préfixées par le nom du personnage.",
+      "levels": ["A2", "B1", "B2"]
+    },
+    {
+      "id": "pratico",
+      "name": "Textes pratiques",
+      "icon": "📋",
+      "hint": "Recette, mode d'emploi, annonce, menu, horaires. L'italien utile du quotidien.",
+      "levels": ["A1", "A2", "B1"]
+    }
+  ],
+  "themes": [
+    {
+      "id": "vita_quotidiana",
+      "name": "Vie quotidienne",
+      "icon": "☕",
+      "hint": "Routines, famille, maison, courses, transports, petits moments du quotidien."
+    },
+    {
+      "id": "cucina",
+      "name": "Cuisine et saveurs",
+      "icon": "🍝",
+      "hint": "Plats, ingrédients, recettes, restaurants, traditions culinaires régionales."
+    },
+    {
+      "id": "natura_animali",
+      "name": "Nature et animaux",
+      "icon": "🐾",
+      "hint": "Animaux, saisons, paysages, environnement, campagne et ferme."
+    },
+    {
+      "id": "viaggi",
+      "name": "Voyages et découvertes",
+      "icon": "🧳",
+      "hint": "Villes et sites italiens, tourisme, transports, récits de voyage."
+    },
+    {
+      "id": "montagna",
+      "name": "Montagne et Alpes",
+      "icon": "🏔",
+      "hint": "Alpes, refuges, alpages, sports de montagne, vie alpine."
+    },
+    {
+      "id": "regioni",
+      "name": "Régions et géographie",
+      "icon": "🗺",
+      "hint": "Toutes les régions d'Italie, géographie, spécificités locales, dialectes."
+    },
+    {
+      "id": "sport",
+      "name": "Sport et défis",
+      "icon": "⚽",
+      "hint": "Football, cyclisme, courses, exploits sportifs, dépassement de soi."
+    },
+    {
+      "id": "feste",
+      "name": "Fêtes et traditions",
+      "icon": "🎉",
+      "hint": "Carnaval, fêtes patronales, sagre, traditions saisonnières et locales."
+    },
+    {
+      "id": "storia_antica",
+      "name": "Histoire ancienne et Renaissance",
+      "icon": "🏛",
+      "hint": "Rome antique, Moyen Âge, Renaissance, républiques maritimes."
+    },
+    {
+      "id": "storia_moderna",
+      "name": "Histoire moderne",
+      "icon": "🇮🇹",
+      "hint": "Risorgimento, unité italienne, XXe siècle, république."
+    },
+    {
+      "id": "societa",
+      "name": "Société et actualité",
+      "icon": "🗞",
+      "hint": "Vie sociale, économie, migrations, légalité, enjeux contemporains."
+    },
+    {
+      "id": "arte_lingua",
+      "name": "Arts et langue",
+      "icon": "🎨",
+      "hint": "Art, opéra, cinéma, musique, langue italienne et Made in Italy."
+    },
+    {
+      "id": "scienza_tecnologia",
+      "name": "Science et technologie",
+      "icon": "🔬",
+      "hint": "Découvertes, inventions, numérique, espace, vulgarisation scientifique."
+    },
+    {
+      "id": "scuola_lavoro",
+      "name": "École, travail et ville",
+      "icon": "🏙",
+      "hint": "Études, Erasmus, monde du travail, vie urbaine, jeunes adultes."
+    }
+  ],
+  "curatedMatrix": [
+    { "genre": "dialogo", "theme": "vita_quotidiana", "levels": ["A1", "A2"], "priority": 1 },
+    { "genre": "dialogo", "theme": "viaggi", "levels": ["A1", "A2"], "priority": 1 },
+    { "genre": "dialogo", "theme": "cucina", "levels": ["A2"], "priority": 1 },
+    { "genre": "dialogo", "theme": "scuola_lavoro", "levels": ["A2"], "priority": 1 },
+    { "genre": "fiaba", "theme": "natura_animali", "levels": ["A1", "A2"], "priority": 1 },
+    { "genre": "fiaba", "theme": "feste", "levels": ["A2"], "priority": 1 },
+    { "genre": "fantascienza", "theme": "scienza_tecnologia", "levels": ["A2", "B1"], "priority": 1 },
+    { "genre": "fantascienza", "theme": "vita_quotidiana", "levels": ["B1"], "priority": 1 },
+    { "genre": "giallo", "theme": "viaggi", "levels": ["A2", "B1"], "priority": 1 },
+    { "genre": "giallo", "theme": "societa", "levels": ["B1"], "priority": 1 },
+    { "genre": "pratico", "theme": "cucina", "levels": ["A1", "A2"], "priority": 1 },
+    { "genre": "pratico", "theme": "viaggi", "levels": ["A1"], "priority": 1 },
+    { "genre": "poesia", "theme": "natura_animali", "levels": ["A1", "A2"], "priority": 2 },
+    { "genre": "poesia", "theme": "feste", "levels": ["B1"], "priority": 2 },
+    { "genre": "documentario", "theme": "regioni", "levels": ["B1", "B2"], "priority": 2 },
+    { "genre": "documentario", "theme": "scienza_tecnologia", "levels": ["B1", "B2"], "priority": 2 },
+    { "genre": "documentario", "theme": "storia_antica", "levels": ["C1"], "priority": 2 },
+    { "genre": "racconto", "theme": "societa", "levels": ["C1"], "priority": 2 },
+    { "genre": "giallo", "theme": "regioni", "levels": ["B2", "C1"], "priority": 2 },
+    { "genre": "teatro", "theme": "vita_quotidiana", "levels": ["A2", "B1"], "priority": 3 },
+    { "genre": "lettera_diario", "theme": "viaggi", "levels": ["A2", "B1"], "priority": 3 },
+    { "genre": "poesia", "theme": "arte_lingua", "levels": ["B2", "C1"], "priority": 3 }
+  ]
+}

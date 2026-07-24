@@ -3,6 +3,7 @@ import HomeView from './views/HomeView.vue'
 import textsIndex from './texts/index.json'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
+import { EXAMPLE_TEXT_IDS } from './lib/access.js'
 
 const DEFAULT_TITLE = "Leggendo — Apprendre l'italien par la lecture"
 const DEFAULT_DESCRIPTION =
@@ -27,7 +28,7 @@ const router = createRouter({
       meta: {
         title: 'Tous les textes — Leggendo',
         description:
-          "Tous les textes gradués en italien, de A1 à B2 : histoires courtes, culture, voyages. Traduction française au clic et lecture audio.",
+          "Tous les textes gradués en italien, de A1 à C1 : histoires courtes, culture, voyages. Traduction française au clic et lecture audio.",
       },
     },
     {
@@ -36,9 +37,22 @@ const router = createRouter({
       // Chargée à la demande : la page d'accueil n'embarque pas le lecteur
       component: () => import('./views/ReaderView.vue'),
       props: true,
-      beforeEnter: (to) => {
-        // Si le texte n'existe pas, retour à la bibliothèque
-        if (!textsIndex.some((t) => t.id === to.params.id)) {
+      beforeEnter: async (to) => {
+        const inCatalog = textsIndex.some((t) => t.id === to.params.id)
+        // Hors catalogue : peut être un texte créé par l'utilisateur
+        // (chargé depuis Firestore par le lecteur) → connexion requise ;
+        // le lecteur renvoie vers la bibliothèque s'il n'existe pas.
+        // Les textes du catalogue hors aperçu sont réservés aux connectés.
+        if (
+          firebaseReady &&
+          (!inCatalog || !EXAMPLE_TEXT_IDS.includes(to.params.id))
+        ) {
+          await authReady
+          if (!currentUser.value) {
+            return { name: 'login', query: { redirect: to.fullPath } }
+          }
+        }
+        if (!inCatalog && !firebaseReady) {
           return { name: 'library' }
         }
       },
@@ -120,10 +134,21 @@ const router = createRouter({
       meta: { title: 'CGU / CGV — Leggendo' },
     },
     {
+      path: '/creer-son-texte',
+      name: 'create-text',
+      component: () => import('./views/CreateTextView.vue'),
+      meta: {
+        title: 'Créer son texte — Leggendo',
+        description:
+          "Créez votre propre histoire en italien : choisissez la catégorie, la forme, le niveau et la longueur, décrivez ce que vous voulez lire, et lisez-la avec quiz.",
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/parole',
       name: 'words',
       component: () => import('./views/WordsView.vue'),
-      meta: { title: 'Mes mots — Leggendo' },
+      meta: { title: 'Mes mots — Leggendo', requiresAuth: true },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],

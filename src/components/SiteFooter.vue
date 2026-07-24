@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
   <!-- Pied de page commun à toutes les pages (source unique) -->
   <footer class="bottom">
     <nav class="legal">
-      <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
+      <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
       <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
       <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
       <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>

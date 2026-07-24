@@ -39,7 +39,9 @@ export async function proposeTopic({ genre, category, level, size, existingTitle
     : ''
   const out = await callLLM({
     system: SYSTEM,
-    maxTokens: 2000,
+    // Certains modèles (ex. variantes "flash") sont verbeux même sur une
+    // sortie minuscule : marge large pour éviter une troncature évitable.
+    maxTokens: 4000,
     schema: TOPIC_SCHEMA,
     prompt: `${genreLine}Propose UN sujet de texte pour le thème « ${category.name} » (${category.hint}).
 Niveau CECR : ${level}. Longueur prévue : environ ${size.words} mots (texte ${size.label}).
@@ -100,9 +102,17 @@ Le champ "level" doit valoir "${level}".${sizeNote}${genreNote}`,
     console.log(
       `  réparation ${round} : ${missingWords.length} mot(s), ${missingSentences.length} phrase(s) sans traduction…`
     )
+    // Budget proportionnel au volume à réparer — un modèle qui laisse
+    // beaucoup de trous au premier passage (fréquent avec les variantes
+    // "flash") a aussi besoin de plus de place pour tout traduire d'un coup.
+    const repairMaxTokens = Math.min(
+      64000,
+      Math.max(8000, (missingWords.length + missingSentences.length) * 120)
+    )
     const repair = await callLLM({
       system: SYSTEM,
       schema: REPAIR_SCHEMA,
+      maxTokens: repairMaxTokens,
       prompt: `Voici un texte italien :\n\n${textData.paragraphs.join('\n\n')}\n\nTraduis en français les éléments suivants, tirés de ce texte (renvoie chaque élément à l'identique dans "it") :\n- Mots : ${missingWords.join(', ') || '(aucun)'}\n- Phrases : ${missingSentences.join(' | ') || '(aucune)'}`,
     })
     for (const { it, fr } of repair.words) textData.words[normalizeWord(it)] = fr

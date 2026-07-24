@@ -5,6 +5,16 @@ import SceneLayout from '../components/SceneLayout.vue'
 import textsIndex from '../texts/index.json'
 import categories from '../texts/categories.json'
 import { isRead, progress } from '../progress.js'
+import { authReady } from '../lib/auth.js'
+import { firebaseReady } from '../lib/firebase.js'
+import { isLoggedIn, EXAMPLE_TEXTS, EXAMPLE_COUNT } from '../lib/access.js'
+
+// Aperçu pour les visiteurs non connectés : on n'affiche qu'un échantillon,
+// sans filtres. Les membres connectés voient toute la bibliothèque.
+const loggedIn = computed(() => isLoggedIn())
+const authResolved = ref(!firebaseReady)
+if (firebaseReady) authReady.then(() => (authResolved.value = true))
+const baseTexts = computed(() => (loggedIn.value ? textsIndex : EXAMPLE_TEXTS))
 
 const readCount = computed(
   () => textsIndex.filter((t) => progress.readTexts.includes(t.id)).length
@@ -18,6 +28,7 @@ const levelHints = {
   A2: 'A2 — Élémentaire : petites histoires au passé, vie quotidienne, phrases simples',
   B1: 'B1 — Intermédiaire : récits et textes culturels plus riches, temps du passé variés',
   B2: 'B2 — Avancé : textes longs et complexes, passé simple, subjonctif, vocabulaire abstrait',
+  C1: 'C1 — Autonome : textes exigeants, nuances stylistiques, langue idiomatique et abstraite',
 }
 const selectedLevel = ref('all')
 const selectedCategory = ref('all')
@@ -31,7 +42,7 @@ const sizes = [
 const selectedSize = ref('all')
 
 const filteredTexts = computed(() =>
-  textsIndex.filter(
+  baseTexts.value.filter(
     (t) =>
       (selectedLevel.value === 'all' || t.level === selectedLevel.value) &&
       (selectedSize.value === 'all' ||
@@ -65,9 +76,18 @@ const sections = computed(() =>
 </script>
 
 <template>
-  <SceneLayout title="Biblio" accent="teca" tagline="Tous les textes, de A1 à B2" bare wide>
+  <SceneLayout title="Biblio" accent="teca" tagline="Tous les textes, de A1 à C1" bare wide>
     <div class="library">
-      <div v-if="readCount" class="progress-line">
+      <!-- Aperçu gratuit : rappel discret d'invitation à se connecter -->
+      <p v-if="authResolved && !loggedIn" class="preview-note">
+        Aperçu gratuit — {{ EXAMPLE_COUNT }} textes sur {{ textsIndex.length }}.
+        <RouterLink :to="{ name: 'login', query: { redirect: '/textes' } }">
+          Connectez-vous
+        </RouterLink>
+        pour tout débloquer.
+      </p>
+
+      <div v-if="loggedIn && readCount" class="progress-line">
         <span class="progress-bar">
           <span
             class="progress-fill"
@@ -84,11 +104,11 @@ const sections = computed(() =>
         phrase entière.
       </p>
 
-      <div class="filters">
+      <div v-if="loggedIn" class="filters">
         <div class="seg" role="group" aria-label="Niveau">
           <button
             :class="{ active: selectedLevel === 'all' }"
-            data-hint="Tous les niveaux, de A1 (débutant) à B2 (avancé)"
+            data-hint="Tous les niveaux, de A1 (débutant) à C1 (autonome)"
             @click="selectedLevel = 'all'"
           >
             Tous
@@ -197,6 +217,26 @@ const sections = computed(() =>
   font-size: 0.95rem;
   text-align: center;
   color: rgba(44, 38, 32, 0.7);
+}
+
+/* --- Rappel d'aperçu discret (visiteur non connecté) --- */
+.preview-note {
+  max-width: 620px;
+  margin: 0 auto 0.6rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: rgba(44, 38, 32, 0.6);
+}
+
+.preview-note a {
+  color: #b0692e;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(176, 105, 46, 0.4);
+}
+
+.preview-note a:hover {
+  border-bottom-color: #b0692e;
 }
 
 .progress-line {

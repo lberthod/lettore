@@ -1,7 +1,12 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
+import { isLoggedIn } from '../lib/access.js'
 import { progress } from '../progress.js'
+
+// « Textes » et « Mes mots » ne s'affichent qu'une fois connecté
+const loggedIn = computed(() => isLoggedIn())
 </script>
 
 <template>
@@ -11,9 +16,10 @@ import { progress } from '../progress.js'
     <nav class="chrome-nav">
       <RouterLink :to="{ name: 'home' }">Accueil</RouterLink>
       <RouterLink :to="{ name: 'library' }">Textes</RouterLink>
+      <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
-      <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
-      <RouterLink :to="{ name: 'words' }">
+      <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
+      <RouterLink v-if="loggedIn" :to="{ name: 'words' }">
         ☆ Mes mots<span v-if="progress.favorites.length" class="count">{{
           progress.favorites.length
         }}</span>

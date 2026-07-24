@@ -5,9 +5,16 @@ import textsIndex from '../texts/index.json'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
-const textCount = textsIndex.length
 const levels = [...new Set(textsIndex.map((t) => t.level))].sort()
 const levelRange = `${levels[0]} → ${levels[levels.length - 1]}`
+
+// Nombre de catégories effectivement représentées dans les textes
+const categoryCount = new Set(textsIndex.map((t) => t.category)).size
+
+// Éventail des tailles, du texte le plus court au plus long (en mots)
+const wordCounts = textsIndex.map((t) => t.wordCount)
+const minWords = Math.min(...wordCounts)
+const maxWords = Math.max(...wordCounts)
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
 const floatingWords = [
@@ -172,7 +179,7 @@ onUnmounted(() => {
 
         <div class="badge">
           <span class="pulse" aria-hidden="true"></span>
-          <span class="badge-text">{{ textCount }} textes gradués · {{ levelRange }}</span>
+          <span class="badge-text">{{ categoryCount }} catégories · {{ levelRange }} · {{ minWords }}–{{ maxWords }} mots</span>
         </div>
 
         <p class="sub">
@@ -198,7 +205,7 @@ onUnmounted(() => {
           <span class="feature-icon" aria-hidden="true">☀︎</span>
           <div>
             <h2>Lisez, simplement</h2>
-            <p>Des textes courts écrits pour votre niveau, de A1 à B2.</p>
+            <p>Des textes courts écrits pour votre niveau, de A1 à C1.</p>
           </div>
         </div>
         <div class="feature">

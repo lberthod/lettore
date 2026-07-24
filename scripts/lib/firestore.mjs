@@ -9,7 +9,7 @@
 import { initializeApp, applicationDefault } from 'firebase-admin/app'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
 
-const PROJECT_ID = 'lettore-5a3f4'
+const PROJECT_ID = 'leggendo-dbb84'
 
 let db = null
 

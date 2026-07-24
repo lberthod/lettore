@@ -18,6 +18,22 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Profil utilisateur : liste des textes créés (« Créer son texte »).
+    // Chacun ne lit et n'écrit que son propre document.
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Textes générés à la demande par les utilisateurs : privés, liés à leur
+    // auteur via le champ `owner`. Immuables une fois créés (pas d'update).
+    match /userTexts/{textId} {
+      allow create: if request.auth != null
+        && request.resource.data.owner == request.auth.uid;
+      allow read, delete: if request.auth != null
+        && resource.data.owner == request.auth.uid;
+      allow update: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

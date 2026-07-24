@@ -35,11 +35,14 @@ const currentText = ref(null)
 
 async function loadText(id) {
   const loader = textModules[`../texts/${id}.json`]
-  if (!loader) {
+  // Hors catalogue : texte créé par l'utilisateur, persisté dans Firestore
+  const data = loader
+    ? await loader()
+    : await (await import('../lib/userTexts.js')).loadUserText(id)
+  if (!data) {
     router.replace({ name: 'library' })
     return
   }
-  const data = await loader()
   // Navigation rapide : n'affiche que le texte encore demandé
   if (id === props.id) {
     currentText.value = data
@@ -57,7 +60,11 @@ function preloadNeighbors() {
 const currentIndex = computed(() =>
   textsIndex.findIndex((t) => t.id === props.id)
 )
-const textMeta = computed(() => textsIndex[currentIndex.value] || null)
+// Pour un texte créé par l'utilisateur (hors index), les métadonnées
+// viennent du document Firestore lui-même.
+const textMeta = computed(
+  () => textsIndex[currentIndex.value] || currentText.value || null
+)
 const tagline = computed(() => {
   if (!textMeta.value) return ''
   const parts = [`Niveau ${textMeta.value.level}`]
@@ -68,7 +75,7 @@ const prevText = computed(() =>
   currentIndex.value > 0 ? textsIndex[currentIndex.value - 1] : null
 )
 const nextText = computed(() =>
-  currentIndex.value < textsIndex.length - 1
+  currentIndex.value >= 0 && currentIndex.value < textsIndex.length - 1
     ? textsIndex[currentIndex.value + 1]
     : null
 )
