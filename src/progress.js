@@ -33,6 +33,7 @@ export const progress = reactive({
   readTexts: saved.readTexts || [], // ids des textes terminés (quiz réussi)
   favorites, // { word, translation, textId, box, due }
   knownWords: saved.knownWords || [], // mots déjà maîtrisés (mode vocabulaire)
+  vocabTexts: saved.vocabTexts || [], // ids des textes ajoutés au mode vocabulaire
   ttsRate: saved.ttsRate || 0.9,
   hintDismissed: saved.hintDismissed || false,
 })
@@ -68,6 +69,16 @@ export function isKnown(word) {
 export function markKnown(word) {
   const w = word.toLowerCase()
   if (!isKnown(w)) progress.knownWords.push(w)
+}
+
+export function isInVocabMode(id) {
+  return progress.vocabTexts.includes(id)
+}
+
+export function toggleVocabText(id) {
+  const i = progress.vocabTexts.indexOf(id)
+  if (i >= 0) progress.vocabTexts.splice(i, 1)
+  else progress.vocabTexts.push(id)
 }
 
 export function toggleFavorite(entry) {

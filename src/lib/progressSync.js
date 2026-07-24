@@ -44,6 +44,9 @@ async function pullAndMerge(uid, db, fs) {
   progress.knownWords = [
     ...new Set([...progress.knownWords, ...(remote.knownWords || [])]),
   ]
+  progress.vocabTexts = [
+    ...new Set([...progress.vocabTexts, ...(remote.vocabTexts || [])]),
+  ]
   if (!progress.hintDismissed && remote.hintDismissed) {
     progress.hintDismissed = true
   }
@@ -58,6 +61,7 @@ function pushLocal(uid, db, fs) {
         readTexts: progress.readTexts,
         favorites: progress.favorites,
         knownWords: progress.knownWords,
+        vocabTexts: progress.vocabTexts,
         ttsRate: progress.ttsRate,
         hintDismissed: progress.hintDismissed,
       },

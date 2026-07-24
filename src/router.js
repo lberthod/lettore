@@ -172,6 +172,12 @@ const router = createRouter({
       meta: { title: 'Mes mots — Leggendo', requiresAuth: true },
     },
     {
+      path: '/vocabolario',
+      name: 'vocabulary',
+      component: () => import('./views/VocabularyView.vue'),
+      meta: { title: 'Mode vocabulaire — Leggendo', requiresAuth: true },
+    },
+    {
       path: '/admin',
       name: 'admin',
       component: () => import('./views/AdminView.vue'),

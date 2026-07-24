@@ -3,7 +3,6 @@ import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import TranslationOverlay from '../components/TranslationOverlay.vue'
-import VocabReviewModal from '../components/VocabReviewModal.vue'
 import { lookupWord, lookupSentence } from '../translate.js'
 import {
   ttsSupported,
@@ -20,6 +19,8 @@ import {
   markRead,
   isFavorite,
   toggleFavorite,
+  isInVocabMode,
+  toggleVocabText,
 } from '../progress.js'
 import { currentUser } from '../lib/auth.js'
 
@@ -134,23 +135,17 @@ function onQuizCompleted(score) {
   if (score >= currentText.value.questions.length - 1) markRead(props.id)
 }
 
-// --- Mode vocabulaire (réservé aux connectés) ---
-const vocabOpen = ref(false)
+// --- Mode vocabulaire (réservé aux connectés) : un clic ajoute ce texte à la
+// page globale « Mode vocabulaire » (voir VocabularyView.vue), qui regroupe
+// le lexique de tous les textes ainsi marqués.
+const inVocabMode = computed(() => isInVocabMode(props.id))
 
-const vocabWords = computed(() => {
-  const dict = currentText.value?.words || {}
-  return Object.entries(dict)
-    .map(([word, translation]) => ({ word, translation }))
-    .sort((a, b) => a.word.localeCompare(b.word, 'it'))
-})
-
-function openVocabMode() {
+function toggleVocabMode() {
   if (!currentUser.value) {
     router.push({ name: 'login', query: { redirect: router.currentRoute.value.fullPath } })
     return
   }
-  closeOverlay()
-  vocabOpen.value = true
+  toggleVocabText(props.id)
 }
 
 // --- TTS ---
@@ -370,7 +365,6 @@ watch(
     closeOverlay()
     stopReading()
     quizOpen.value = false
-    vocabOpen.value = false
     loadText(id)
   },
   { immediate: true }
@@ -379,7 +373,6 @@ watch(
 function onKeydown(e) {
   if (e.key === 'Escape') {
     if (quizOpen.value) quizOpen.value = false
-    else if (vocabOpen.value) vocabOpen.value = false
     else closeOverlay()
   }
 }
@@ -544,7 +537,7 @@ onBeforeUnmount(() => {
         </article>
 
         <div
-          v-if="(currentText.questions && currentText.questions.length) || vocabWords.length"
+          v-if="(currentText.questions && currentText.questions.length) || currentText.words"
           class="verify-cta"
         >
           <button
@@ -555,12 +548,17 @@ onBeforeUnmount(() => {
             Verifica la comprensione →
           </button>
           <button
-            v-if="vocabWords.length"
+            v-if="currentText.words && Object.keys(currentText.words).length"
             class="btn-vocab"
-            title="Passer en revue le vocabulaire de ce texte"
-            @click="openVocabMode"
+            :class="{ active: inVocabMode }"
+            :title="
+              inVocabMode
+                ? 'Retirer ce texte du mode vocabulaire'
+                : 'Ajouter ce texte au mode vocabulaire'
+            "
+            @click="toggleVocabMode"
           >
-            📖 Mode vocabulaire
+            {{ inVocabMode ? '✓ Ajouté au vocabulaire' : '📖 Ajouter au vocabulaire' }}
           </button>
         </div>
       </div>
@@ -618,16 +616,6 @@ onBeforeUnmount(() => {
           </div>
         </div>
       </Transition>
-    </Teleport>
-
-    <!-- Mode vocabulaire : également téléporté dans <body> -->
-    <Teleport to="body">
-      <VocabReviewModal
-        v-if="vocabOpen"
-        :words="vocabWords"
-        :text-id="props.id"
-        @close="vocabOpen = false"
-      />
     </Teleport>
   </SceneLayout>
 </template>
@@ -910,6 +898,16 @@ article p:first-letter {
   background: #b0692e;
   color: #faf6f0;
   transform: translateY(-2px);
+}
+
+.btn-vocab.active {
+  background: #4a7c59;
+  border-color: #4a7c59;
+  color: #faf6f0;
+}
+
+.btn-vocab.active:hover {
+  background: #3d6849;
 }
 
 /* --- Pagination --- */
