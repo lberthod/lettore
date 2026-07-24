@@ -1,15 +1,14 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import taxonomy from '../texts/category.json'
-import { getAuthInstance } from '../lib/firebase.js'
-import { saveUserText, listUserTexts, deleteUserText } from '../lib/userTexts.js'
-
-// API « leggendo » sur le VPS (voir leggendo-server/). La génération est
-// asynchrone : POST /generate → { jobId }, puis on sonde /jobs/<id>.
-const API_BASE =
-  import.meta.env.VITE_LEGGENDO_API || 'https://api.loicberthod.ch/leggendo'
+import {
+  generation,
+  startGeneration,
+  saveResult,
+  resumeGeneration,
+} from '../lib/generation.js'
 
 const theme = ref('vita_quotidiana')
 const genre = ref('racconto')
@@ -29,131 +28,34 @@ function onLevelChange() {
   }
 }
 
-const status = ref('idle') // idle | working | done | error
-const error = ref('')
-const result = ref(null)
-const elapsed = ref(0)
-let pollTimer = null
-let clockTimer = null
+// La génération vit dans src/lib/generation.js : elle continue si l'on
+// navigue vers « Mes textes créés », et reprend après un rechargement.
+onMounted(resumeGeneration)
 
-function stopTimers() {
-  clearTimeout(pollTimer)
-  clearInterval(clockTimer)
-  pollTimer = clockTimer = null
-}
-onBeforeUnmount(stopTimers)
-
-async function generate() {
-  status.value = 'working'
-  error.value = ''
-  result.value = null
-  elapsed.value = 0
-  clockTimer = setInterval(() => elapsed.value++, 1000)
-
-  try {
-    const auth = await getAuthInstance()
-    const idToken = await auth?.currentUser?.getIdToken()
-    if (!idToken) throw new Error('Connectez-vous pour créer un texte.')
-
-    const res = await fetch(`${API_BASE}/generate`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${idToken}`,
-      },
-      body: JSON.stringify({
-        theme: theme.value,
-        genre: genre.value,
-        level: level.value,
-        size: size.value,
-        title: title.value,
-        summary: summary.value,
-      }),
-    })
-    const data = await res.json().catch(() => ({}))
-    if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`)
-    poll(data.jobId)
-  } catch (err) {
-    fail(err.message)
-  }
-}
-
-function poll(jobId) {
-  pollTimer = setTimeout(async () => {
-    try {
-      const res = await fetch(`${API_BASE}/jobs/${jobId}`)
-      const data = await res.json().catch(() => ({}))
-      if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`)
-      if (data.status === 'done') {
-        stopTimers()
-        result.value = data.result
-        answers.value = {}
-        status.value = 'done'
-        save(data.result)
-      } else if (data.status === 'error') {
-        throw new Error(data.error || 'La génération a échoué.')
-      } else {
-        poll(jobId)
-      }
-    } catch (err) {
-      fail(err.message)
-    }
-  }, 4000)
-}
-
-function fail(message) {
-  stopTimers()
-  error.value = message
-  status.value = 'error'
+function generate() {
+  startGeneration({
+    theme: theme.value,
+    genre: genre.value,
+    level: level.value,
+    size: size.value,
+    title: title.value,
+    summary: summary.value,
+  })
 }
 
 const minutes = computed(() => {
-  const m = Math.floor(elapsed.value / 60)
-  const s = String(elapsed.value % 60).padStart(2, '0')
+  const m = Math.floor(generation.elapsed / 60)
+  const s = String(generation.elapsed % 60).padStart(2, '0')
   return `${m}:${s}`
 })
+
+const result = computed(() => generation.result)
 
 // Petit quiz interactif sur le texte généré
 const answers = ref({})
 function answer(qi, oi) {
   if (answers.value[qi] === undefined) answers.value[qi] = oi
 }
-
-// --- Persistance Firestore : le texte est enregistré dès la fin de la
-// génération, et la liste « Mes textes créés » alimente les liens lecteur. ---
-const myTexts = ref([])
-const saveState = ref('') // '' | saving | saved | error
-
-async function save(textData) {
-  saveState.value = 'saving'
-  try {
-    const entry = await saveUserText(textData)
-    myTexts.value = [entry, ...myTexts.value.filter((e) => e.id !== entry.id)]
-    saveState.value = 'saved'
-  } catch (err) {
-    console.error('Enregistrement du texte :', err)
-    saveState.value = 'error'
-  }
-}
-
-async function removeText(id) {
-  if (!confirm('Supprimer ce texte ?')) return
-  const backup = myTexts.value
-  myTexts.value = myTexts.value.filter((e) => e.id !== id)
-  try {
-    await deleteUserText(id)
-  } catch {
-    myTexts.value = backup
-  }
-}
-
-onMounted(async () => {
-  try {
-    myTexts.value = await listUserTexts()
-  } catch {
-    // Pas connecté ou Firestore indisponible : la liste reste vide.
-  }
-})
 </script>
 
 <template>
@@ -163,6 +65,7 @@ onMounted(async () => {
       longueur, titre et résumé. Notre atelier d'écriture la rédige en italien,
       avec quiz de compréhension — comptez une à plusieurs minutes selon la
       longueur.
+      <RouterLink :to="{ name: 'my-texts' }">→ Mes textes créés</RouterLink>
     </p>
 
     <form class="form" @submit.prevent="generate">
@@ -222,29 +125,40 @@ onMounted(async () => {
           placeholder="Un vieux gardien de phare en Ligurie recueille un chat pendant une tempête ; le chat l'aide à retrouver le goût de parler aux gens du village…"
         ></textarea>
       </label>
-      <button class="btn-primary" type="submit" :disabled="status === 'working'">
-        {{ status === 'working' ? 'Génération en cours…' : 'Générer mon histoire' }}
+      <button
+        class="btn-primary"
+        type="submit"
+        :disabled="generation.status === 'working'"
+      >
+        {{
+          generation.status === 'working'
+            ? 'Génération en cours…'
+            : 'Générer mon histoire'
+        }}
       </button>
-      <p v-if="status === 'working'" class="hint working">
-        ✍️ L'histoire s'écrit ({{ minutes }})… Texte, lexique et quiz sont
-        générés puis vérifiés : laissez la page ouverte.
+      <p v-if="generation.status === 'working'" class="hint working">
+        ✍️ « {{ generation.title }} » s'écrit ({{ minutes }})… Vous pouvez
+        naviguer, la génération continue :
+        <RouterLink :to="{ name: 'my-texts' }">suivre dans Mes textes</RouterLink>
       </p>
-      <p v-if="status === 'error'" class="hint error">{{ error }}</p>
+      <p v-if="generation.status === 'error'" class="hint error">
+        {{ generation.error }}
+      </p>
     </form>
 
     <article v-if="result" class="story">
       <h2>{{ result.title }}</h2>
       <p class="story-meta">
         Niveau {{ result.level }} · {{ result.wordCount }} mots
-        <template v-if="saveState === 'saving'"> · enregistrement…</template>
-        <template v-else-if="saveState === 'saved'"> · ✓ enregistré</template>
-        <template v-else-if="saveState === 'error'">
+        <template v-if="generation.saveState === 'saving'"> · enregistrement…</template>
+        <template v-else-if="generation.saveState === 'saved'"> · ✓ enregistré</template>
+        <template v-else-if="generation.saveState === 'error'">
           · ⚠ enregistrement impossible
-          <button type="button" class="link-btn" @click="save(result)">réessayer</button>
+          <button type="button" class="link-btn" @click="saveResult">réessayer</button>
         </template>
       </p>
       <RouterLink
-        v-if="saveState === 'saved'"
+        v-if="generation.saveState === 'saved'"
         class="btn-primary read-link"
         :to="{ name: 'reader', params: { id: result.id } }"
       >
@@ -272,26 +186,6 @@ onMounted(async () => {
         </div>
       </section>
     </article>
-
-    <section v-if="myTexts.length" class="my-texts">
-      <h2>Mes textes créés</h2>
-      <ul>
-        <li v-for="t in myTexts" :key="t.id">
-          <RouterLink :to="{ name: 'reader', params: { id: t.id } }">
-            {{ t.title }}
-          </RouterLink>
-          <span class="my-meta">{{ t.level }} · {{ t.wordCount }} mots</span>
-          <button
-            type="button"
-            class="link-btn danger"
-            title="Supprimer"
-            @click="removeText(t.id)"
-          >
-            supprimer
-          </button>
-        </li>
-      </ul>
-    </section>
   </SceneLayout>
 </template>
 
@@ -390,50 +284,5 @@ onMounted(async () => {
   cursor: pointer;
   font: inherit;
   font-size: 0.88rem;
-}
-
-.link-btn.danger {
-  color: #a33a2a;
-}
-
-.my-texts {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(176, 105, 46, 0.35);
-}
-
-.my-texts h2 {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 1.15rem;
-}
-
-.my-texts ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.my-texts li {
-  display: flex;
-  align-items: baseline;
-  gap: 0.7rem;
-  padding: 0.45rem 0;
-  border-bottom: 1px dashed rgba(107, 97, 86, 0.25);
-}
-
-.my-texts a {
-  color: #2c2620;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.my-texts a:hover {
-  color: #b0692e;
-}
-
-.my-meta {
-  color: #6b6156;
-  font-size: 0.85rem;
-  margin-left: auto;
 }
 </style>

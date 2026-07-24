@@ -145,6 +145,17 @@ const router = createRouter({
       },
     },
     {
+      path: '/mes-textes',
+      name: 'my-texts',
+      component: () => import('./views/MyTextsView.vue'),
+      meta: {
+        title: 'Mes textes créés — Leggendo',
+        description:
+          'Retrouvez toutes les histoires en italien que vous avez créées sur mesure, et suivez celles en cours de génération.',
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/parole',
       name: 'words',
       component: () => import('./views/WordsView.vue'),
