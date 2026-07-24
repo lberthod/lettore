@@ -71,6 +71,11 @@ export function markKnown(word) {
   if (!isKnown(w)) progress.knownWords.push(w)
 }
 
+export function unmarkKnown(word) {
+  const i = progress.knownWords.indexOf(word.toLowerCase())
+  if (i >= 0) progress.knownWords.splice(i, 1)
+}
+
 export function isInVocabMode(id) {
   return progress.vocabTexts.includes(id)
 }

@@ -9,6 +9,7 @@ import {
   toggleFavorite,
   isKnown,
   markKnown,
+  unmarkKnown,
   toggleVocabText,
 } from '../progress.js'
 
@@ -38,17 +39,21 @@ onMounted(loadTexts)
 
 // Fusionne le lexique de tous les textes ajoutés, en gardant le premier
 // texte source rencontré pour chaque mot (utile pour l'ajout aux favoris).
-const words = computed(() => {
+const allWords = computed(() => {
   const byWord = new Map()
   for (const t of texts.value) {
     for (const [word, translation] of Object.entries(t.words)) {
       if (!byWord.has(word)) byWord.set(word, { word, translation, textId: t.id })
     }
   }
-  return [...byWord.values()]
-    .filter((w) => !isFavorite(w.word) && !isKnown(w.word))
-    .sort((a, b) => a.word.localeCompare(b.word, 'it'))
+  return [...byWord.values()].sort((a, b) => a.word.localeCompare(b.word, 'it'))
 })
+
+// Un mot trié reste visible, mais change de catégorie plutôt que de
+// disparaître — on garde une trace de ce qui a déjà été passé en revue.
+const toSort = computed(() => allWords.value.filter((w) => !isFavorite(w.word) && !isKnown(w.word)))
+const known = computed(() => allWords.value.filter((w) => isKnown(w.word)))
+const added = computed(() => allWords.value.filter((w) => isFavorite(w.word)))
 
 function speak(word) {
   speakItalian(word, { rate: progress.ttsRate })
@@ -58,8 +63,16 @@ function setKnown(word) {
   markKnown(word)
 }
 
+function undoKnown(word) {
+  unmarkKnown(word)
+}
+
 function addToVocab(entry) {
   toggleFavorite({ word: entry.word, translation: entry.translation, textId: entry.textId })
+}
+
+function undoAdd(word) {
+  toggleFavorite({ word })
 }
 
 function removeText(id) {
@@ -98,39 +111,98 @@ function removeText(id) {
       et cliquez sur « Ajouter au vocabulaire » en bas de la lecture.
     </p>
 
-    <template v-else-if="words.length">
-      <p class="count">
-        {{ words.length }} {{ words.length > 1 ? 'mots à trier' : 'mot à trier' }}
-      </p>
-      <ul class="list">
-        <li v-for="w in words" :key="w.word" class="entry">
-          <span class="word">
-            {{ w.word }}
-            <button
-              v-if="ttsSupported"
-              class="speak"
-              title="Écouter en italien"
-              aria-label="Écouter en italien"
-              @click="speak(w.word)"
-            >
-              🔊
-            </button>
-          </span>
-          <span class="translation">{{ w.translation }}</span>
-          <span class="actions">
-            <button class="btn known" title="Je connais déjà ce mot" @click="setKnown(w.word)">
-              ✓ Connu
-            </button>
-            <button class="btn add" title="Ajouter à mon vocabulaire" @click="addToVocab(w)">
-              ★ Ajouter
-            </button>
-          </span>
-        </li>
-      </ul>
+    <template v-else-if="allWords.length">
+      <section v-if="toSort.length" class="section">
+        <h3 class="section-title">
+          {{ toSort.length }} {{ toSort.length > 1 ? 'mots à trier' : 'mot à trier' }}
+        </h3>
+        <ul class="list">
+          <li v-for="w in toSort" :key="w.word" class="entry">
+            <span class="word">
+              {{ w.word }}
+              <button
+                v-if="ttsSupported"
+                class="speak"
+                title="Écouter en italien"
+                aria-label="Écouter en italien"
+                @click="speak(w.word)"
+              >
+                🔊
+              </button>
+            </span>
+            <span class="translation">{{ w.translation }}</span>
+            <span class="actions">
+              <button class="btn known" title="Je connais déjà ce mot" @click="setKnown(w.word)">
+                ✓ Connu
+              </button>
+              <button class="btn add" title="Ajouter à mon vocabulaire" @click="addToVocab(w)">
+                ★ Ajouter
+              </button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section v-if="known.length" class="section">
+        <h3 class="section-title muted">
+          {{ known.length }} {{ known.length > 1 ? 'mots connus' : 'mot connu' }}
+        </h3>
+        <ul class="list">
+          <li v-for="w in known" :key="w.word" class="entry sorted">
+            <span class="word">
+              {{ w.word }}
+              <button
+                v-if="ttsSupported"
+                class="speak"
+                title="Écouter en italien"
+                aria-label="Écouter en italien"
+                @click="speak(w.word)"
+              >
+                🔊
+              </button>
+            </span>
+            <span class="translation">{{ w.translation }}</span>
+            <span class="actions">
+              <button class="btn undo" title="Remettre à trier" @click="undoKnown(w.word)">
+                ↩ Annuler
+              </button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section v-if="added.length" class="section">
+        <h3 class="section-title muted">
+          {{ added.length }} {{ added.length > 1 ? 'mots ajoutés' : 'mot ajouté' }} à
+          <RouterLink :to="{ name: 'words' }">Mes mots</RouterLink>
+        </h3>
+        <ul class="list">
+          <li v-for="w in added" :key="w.word" class="entry sorted">
+            <span class="word">
+              {{ w.word }}
+              <button
+                v-if="ttsSupported"
+                class="speak"
+                title="Écouter en italien"
+                aria-label="Écouter en italien"
+                @click="speak(w.word)"
+              >
+                🔊
+              </button>
+            </span>
+            <span class="translation">{{ w.translation }}</span>
+            <span class="actions">
+              <button class="btn undo" title="Retirer de mes mots" @click="undoAdd(w.word)">
+                ↩ Retirer
+              </button>
+            </span>
+          </li>
+        </ul>
+      </section>
     </template>
 
     <p v-else class="hint">
-      ✓ Tous les mots des textes ajoutés sont triés —
+      Ces textes n'ont pas de lexique de mots —
       <RouterLink :to="{ name: 'library' }">ajoutez un autre texte</RouterLink>.
     </p>
   </SceneLayout>
@@ -176,10 +248,24 @@ function removeText(id) {
   opacity: 1;
 }
 
-.count {
+.section {
+  margin-top: 1.4rem;
+}
+
+.section-title {
   color: #6b6156;
   font-size: 0.85rem;
-  margin: 1.2rem 0 0.6rem;
+  font-weight: 700;
+  text-transform: none;
+  margin: 0 0 0.6rem;
+}
+
+.section-title.muted {
+  opacity: 0.7;
+}
+
+.section-title a {
+  color: #b0692e;
 }
 
 .list {
@@ -200,6 +286,11 @@ function removeText(id) {
   border: 1px solid #e4d9c6;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.85);
+}
+
+.entry.sorted {
+  opacity: 0.7;
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .word {
@@ -259,6 +350,17 @@ function removeText(id) {
 
 .btn.add:hover {
   background: #b0692e;
+  color: #faf6f0;
+}
+
+.btn.undo {
+  border: 1px solid rgba(107, 97, 86, 0.4);
+  background: #fff;
+  color: #6b6156;
+}
+
+.btn.undo:hover {
+  background: #6b6156;
   color: #faf6f0;
 }
 
