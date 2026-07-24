@@ -72,10 +72,10 @@ node_modules/
 dist/
 generator/test-output/
 
-# État runtime de leggendo-server (quotas persistés sur le VPS)
-leggendo-server/quotas.json
-
 # Secrets de leggendo-server (jamais commités, seul .example l'est)
 leggendo-server/leggendo-api.env
 leggendo-server/*.json.key
 leggendo-server/service-account*.json
+
+# Notes VPS locales (jamais commitées)
+VPS.md

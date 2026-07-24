@@ -12,12 +12,17 @@ Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebas
 | GET | `/leggendo/jobs/<uuid>` | état du job : `pending` / `running` / `done` (+ texte) / `error` |
 | GET | `/leggendo/my-job` | job actif du compte (reprise après rechargement) |
 
+## Tests
+
+`npm test` (basé sur `node --test`, aucune dépendance supplémentaire). La logique quota/jobs/validation est isolée de `server.mjs` dans `quota.mjs`, `jobs.mjs` et `validate.mjs` pour être testée sans monter de serveur HTTP ni parler à un vrai Firestore (`test/fake-firestore.mjs` fournit un faux Firestore en mémoire).
+
 Garde-fous :
 
-- **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via l'API identitytoolkit — pas de SDK admin sur le VPS. Le rôle (`gratuit` / `premium` / `enseignant`) est relu depuis les custom claims embarqués dans le token (posés côté Cloud Functions, voir [functions/index.js](../functions/index.js)).
-- **Quotas** (persistés dans `quotas.json`, à côté du serveur, pour survivre à un redémarrage) :
+- **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via `firebase-admin/auth` (`verifyIdToken`). Le rôle (`gratuit` / `premium` / `enseignant`) est relu depuis les custom claims embarqués dans le token (posés côté Cloud Functions, voir [functions/index.js](../functions/index.js)).
+- **Quotas** (persistés dans Firestore, collection `leggendoQuotas`, un document par `uid`) :
   - compte gratuit : 3 générations « de bienvenue » cumulées, puis 1 génération par jour une fois ce capital épuisé ;
   - compte payant (`premium` / `enseignant`) : 10 générations par jour, 100 par mois.
+  - la vérification, la consommation du quota et la création du job se font dans une **même transaction Firestore** : une panne d'écriture ou une requête concurrente ne peut ni faire perdre un crédit ni permettre deux générations simultanées.
 - **Un seul job actif par compte** ; jobs persistés dans Firestore (collection `leggendoJobs`, survivent à un redémarrage du VPS), purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels GLM).
 - **CORS** restreint aux origines listées dans `ALLOWED_ORIGINS` (le token Firebase reste la vraie protection, ceci évite juste qu'un site tiers rejoue les appels authentifiés depuis le navigateur d'un utilisateur).
 - **Validation** : même exigence de couverture lexicale que le catalogue ([generate.mjs](generate.mjs), découpage identique au lecteur, passes de réparation) — le lexique des mots doit être complet ; jusqu'à 2 phrases sans traduction sont tolérées plutôt que de jeter la génération.
@@ -27,8 +32,7 @@ Garde-fous :
 | Variable | Défaut | Rôle |
 |---|---|---|
 | `PORT` | `8091` | port d'écoute |
-| `FIREBASE_API_KEY` | clé web du projet | vérification des ID tokens |
-| `GOOGLE_APPLICATION_CREDENTIALS` | — | chemin vers la clé JSON du compte de service (accès Firestore, obligatoire) |
+| `GOOGLE_APPLICATION_CREDENTIALS` | — | chemin vers la clé JSON du compte de service (accès Firestore + vérification des ID tokens, obligatoire) |
 | `ALLOWED_ORIGINS` | `https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173` | origines autorisées (CORS), séparées par des virgules |
 | `GLM_API_KEY` | — | clé API GLM (obligatoire) |
 | `GLM_MODEL` | `glm-5.1` | modèle utilisé |
@@ -74,7 +78,7 @@ sudo systemctl enable --now leggendo-api
 sudo systemctl status leggendo-api
 ```
 
-Le service redémarre automatiquement (`Restart=on-failure`) et les jobs/quotas survivent grâce à Firestore (jobs) et au fichier `quotas.json` (quotas), tous deux persistés indépendamment du process.
+Le service redémarre automatiquement (`Restart=on-failure`) et les jobs comme les quotas survivent grâce à Firestore (collections `leggendoJobs` et `leggendoQuotas`), tous deux persistés indépendamment du process.
 
 Pour une mise à jour du code : `scp` à nouveau, `npm install --omit=dev` si `package.json` a changé, puis `sudo systemctl restart leggendo-api`.
 

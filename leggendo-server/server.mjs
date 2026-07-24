@@ -15,21 +15,24 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { initializeApp, applicationDefault } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
+import { getAuth } from 'firebase-admin/auth'
 import { generateUserText } from './generate.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
+import { QuotaExceededError } from './quota.mjs'
+import { createJobStore } from './jobs.mjs'
+import { buildTaxonomyIndex, parseRequest, slugify } from './validate.mjs'
 
 // Authentification du SDK Admin via un compte de service dédié (rôle Cloud
 // Datastore User) — le VPS n'est pas un runtime GCP géré, donc pas de
 // credentials implicites : voir README.md pour la procédure de génération.
+// `verifyIdToken` ci-dessous ne nécessite aucun rôle IAM supplémentaire : la
+// signature est vérifiée localement contre les clés publiques Google.
 initializeApp({ credential: applicationDefault() })
 const db = getFirestore()
+const auth = getAuth()
 
 const PORT = Number(process.env.PORT || 8091)
-// Clé web Firebase du projet leggendo-dbb84 (publique, sert uniquement à
-// vérifier les ID tokens via l'API identitytoolkit).
-const FIREBASE_API_KEY =
-  process.env.FIREBASE_API_KEY || 'AIzaSyDDRg8xkDgK92g5vogKKg8XVHZcv8DYD2k'
 
 // Origines autorisées à appeler l'API (le token Firebase reste la vraie
 // protection, mais on évite en plus qu'un site tiers embarque des appels
@@ -50,173 +53,32 @@ function corsOrigin(req) {
 // Taxonomie genre × thème embarquée (copie de src/texts/category.json).
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const taxonomy = JSON.parse(fs.readFileSync(path.join(HERE, 'category.json'), 'utf8'))
-const themeById = new Map(taxonomy.themes.map((t) => [t.id, t]))
-const genreById = new Map(taxonomy.genres.map((g) => [g.id, g]))
-const sizeById = new Map(taxonomy.sizes.map((s) => [s.id, s]))
+const { themeById, genreById, sizeById } = buildTaxonomyIndex(taxonomy)
 
-// Décode les custom claims (role, premium) embarqués dans le payload du JWT.
-// La signature du token a déjà été vérifiée par l'appel à accounts:lookup
-// ci-dessous ; on ne fait que relire les claims qu'il contient.
-function decodeClaims(idToken) {
+// --- Vérification du token Firebase ---
+// Le SDK admin vérifie la signature et relit les custom claims (role,
+// premium — posés côté Cloud Functions, voir functions/index.js) en un seul
+// appel local, sans round-trip vers identitytoolkit.
+async function verifyIdToken(idToken) {
   try {
-    const payload = idToken.split('.')[1]
-    const json = Buffer.from(payload, 'base64url').toString('utf8')
-    const claims = JSON.parse(json)
+    const decoded = await auth.verifyIdToken(idToken)
     return {
-      role: claims.role || (claims.premium ? 'premium' : 'gratuit'),
-      premium: Boolean(claims.premium),
+      uid: decoded.uid,
+      email: decoded.email,
+      role: decoded.role || (decoded.premium ? 'premium' : 'gratuit'),
+      premium: Boolean(decoded.premium),
     }
   } catch {
-    return { role: 'gratuit', premium: false }
+    return null
   }
 }
 
-// --- Vérification du token Firebase (sans SDK admin) ---
-async function verifyIdToken(idToken) {
-  const res = await fetch(
-    `https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${FIREBASE_API_KEY}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ idToken }),
-    }
-  )
-  if (!res.ok) return null
-  const data = await res.json().catch(() => null)
-  const user = data?.users?.[0]
-  if (!user) return null
-  const { role, premium } = decodeClaims(idToken)
-  return { uid: user.localId, email: user.email, role, premium }
-}
-
-// --- Quotas de génération (persistés sur disque : survivent aux redémarrages) ---
-// Gratuit  : 3 générations « de bienvenue » (cumulées, tous les jours confondus),
-//            puis 1 génération par jour une fois ce capital épuisé.
-// Payant / enseignant : 10 générations par jour, 100 par mois.
-const QUOTA_FILE = path.join(HERE, 'quotas.json')
-const FREE_STARTER_CREDITS = 3
-const FREE_DAILY_LIMIT = 1
-const PAID_DAILY_LIMIT = 10
-const PAID_MONTHLY_LIMIT = 100
-
-let quotas = {}
-try {
-  quotas = JSON.parse(fs.readFileSync(QUOTA_FILE, 'utf8'))
-} catch {
-  quotas = {}
-}
-
-let saveQuotasPending = false
-function saveQuotas() {
-  if (saveQuotasPending) return
-  saveQuotasPending = true
-  setImmediate(() => {
-    saveQuotasPending = false
-    fs.writeFile(QUOTA_FILE, JSON.stringify(quotas), () => {})
-  })
-}
-
-function todayKey() {
-  return new Date().toISOString().slice(0, 10) // YYYY-MM-DD
-}
-function monthKey() {
-  return new Date().toISOString().slice(0, 7) // YYYY-MM
-}
-
-function getQuota(uid) {
-  let q = quotas[uid]
-  if (!q) {
-    q = { totalCount: 0, dailyCount: 0, dailyDate: todayKey(), monthlyCount: 0, monthlyMonth: monthKey() }
-    quotas[uid] = q
-  }
-  if (q.dailyDate !== todayKey()) {
-    q.dailyDate = todayKey()
-    q.dailyCount = 0
-  }
-  if (q.monthlyMonth !== monthKey()) {
-    q.monthlyMonth = monthKey()
-    q.monthlyCount = 0
-  }
-  return q
-}
-
-// Vérifie le quota de l'utilisateur sans le consommer (pour messages d'erreur
-// clairs) ; l'incrémentation n'a lieu que si la génération est bien lancée.
-function checkQuota(user) {
-  const isPaid = user.role === 'premium' || user.role === 'enseignant' || user.premium
-  const q = getQuota(user.uid)
-
-  if (isPaid) {
-    if (q.monthlyCount >= PAID_MONTHLY_LIMIT) {
-      return { ok: false, error: `Quota mensuel atteint (${PAID_MONTHLY_LIMIT} générations/mois).` }
-    }
-    if (q.dailyCount >= PAID_DAILY_LIMIT) {
-      return { ok: false, error: `Quota journalier atteint (${PAID_DAILY_LIMIT} générations/jour).` }
-    }
-    return { ok: true }
-  }
-
-  if (q.totalCount < FREE_STARTER_CREDITS) return { ok: true }
-  if (q.dailyCount < FREE_DAILY_LIMIT) return { ok: true }
-  return {
-    ok: false,
-    error: 'Quota gratuit atteint pour aujourd’hui (1 génération/jour), revenez demain ou passez en compte payant.',
-  }
-}
-
-function consumeQuota(user) {
-  const q = getQuota(user.uid)
-  q.totalCount += 1
-  q.dailyCount += 1
-  q.monthlyCount += 1
-  saveQuotas()
-}
-
-// --- Jobs persistés dans Firestore (survivent à un redémarrage du VPS) ---
-const jobsCollection = db.collection('leggendoJobs')
-const JOB_TTL_MS = 60 * 60 * 1000
-
-async function pruneJobs() {
-  const cutoff = Date.now() - JOB_TTL_MS
-  const stale = await jobsCollection.where('createdAt', '<', cutoff).get()
-  if (stale.empty) return
-  const batch = db.batch()
-  stale.docs.forEach((doc) => batch.delete(doc.ref))
-  await batch.commit()
-}
+// --- Quotas + jobs persistés dans Firestore (survivent à un redémarrage du
+// VPS ; quota consommé et job créé dans la même transaction, voir jobs.mjs).
+const jobStore = createJobStore(db)
 setInterval(() => {
-  pruneJobs().catch((err) => console.error('Erreur purge des jobs :', err))
+  jobStore.pruneJobs().catch((err) => console.error('Erreur purge des jobs :', err))
 }, 10 * 60 * 1000).unref()
-
-// Filet de sécurité : un job actif depuis trop longtemps est considéré comme
-// mort (en plus du timeout des appels GLM) — sinon il verrouillerait le compte
-// définitivement, la génération étant limitée à un job à la fois par compte.
-const JOB_STUCK_MS = 45 * 60 * 1000
-
-async function isActive(id, job) {
-  if (job.status !== 'pending' && job.status !== 'running') return false
-  if (Date.now() - job.createdAt > JOB_STUCK_MS) {
-    const error = 'Génération interrompue (délai maximal dépassé).'
-    await jobsCollection.doc(id).update({ status: 'error', error })
-    return false
-  }
-  return true
-}
-
-// Nécessite un index composite Firestore (uid ASC, status ASC, createdAt
-// DESC) — Firestore fournit le lien de création au premier appel si absent.
-async function activeJobFor(uid) {
-  const snap = await jobsCollection
-    .where('uid', '==', uid)
-    .where('status', 'in', ['pending', 'running'])
-    .orderBy('createdAt', 'desc')
-    .limit(1)
-    .get()
-  if (snap.empty) return null
-  const doc = snap.docs[0]
-  const job = doc.data()
-  return (await isActive(doc.id, job)) ? { id: doc.id, job } : null
-}
 
 // --- Helpers HTTP ---
 function sendJson(res, status, body, origin) {
@@ -245,38 +107,6 @@ function readBody(req, limit = 32 * 1024) {
     req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
     req.on('error', reject)
   })
-}
-
-function slugify(title) {
-  const base = title
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '_')
-    .replace(/^_+|_+$/g, '')
-    .slice(0, 40)
-  return `${base || 'testo'}_${crypto.randomBytes(3).toString('hex')}`
-}
-
-// --- Validation de la demande ---
-function parseRequest(body) {
-  const errors = []
-  const theme = themeById.get(body.theme)
-  if (!theme) errors.push('thème inconnu')
-  const genre = genreById.get(body.genre)
-  if (!genre) errors.push('genre (sous-catégorie) inconnu')
-  const size = sizeById.get(body.size)
-  if (!size) errors.push('taille inconnue')
-  const level = LEVELS.includes(body.level) ? body.level : null
-  if (!level) errors.push('niveau CECR invalide')
-  const title = String(body.title || '').trim()
-  if (title.length < 3 || title.length > 120) errors.push('titre : 3 à 120 caractères')
-  const summary = String(body.summary || '').trim()
-  if (summary.length < 10 || summary.length > 1500)
-    errors.push('résumé : 10 à 1500 caractères')
-  if (genre && level && genre.levels && !genre.levels.includes(level))
-    errors.push(`le genre « ${genre.name} » n'est pas proposé au niveau ${level}`)
-  return { errors, theme, genre, size, level, title, summary }
 }
 
 const server = http.createServer(async (req, res) => {
@@ -338,28 +168,33 @@ const server = http.createServer(async (req, res) => {
         send(400, { error: 'JSON invalide.' })
         return
       }
-      const { errors, theme, genre, size, level, title, summary } = parseRequest(body)
+      const { errors, theme, genre, size, level, title, summary } = parseRequest(body, {
+        themeById,
+        genreById,
+        sizeById,
+      })
       if (errors.length) {
         send(400, { error: errors.join(' ; ') })
         return
       }
-      if (await activeJobFor(user.uid)) {
+      if (await jobStore.activeJobFor(user.uid)) {
         send(429, {
           error: 'Une génération est déjà en cours pour votre compte, patientez.',
         })
         return
       }
-      const quota = checkQuota(user)
-      if (!quota.ok) {
-        send(429, { error: quota.error })
-        return
-      }
-      consumeQuota(user)
-
       const jobId = crypto.randomUUID()
-      const jobRef = jobsCollection.doc(jobId)
-      await jobRef.set({ uid: user.uid, status: 'pending', createdAt: Date.now(), title })
-      const q = getQuota(user.uid)
+      const jobRef = jobStore.jobsCollection.doc(jobId)
+      let q
+      try {
+        q = await jobStore.reserveJob(user, jobRef, title)
+      } catch (err) {
+        if (err instanceof QuotaExceededError) {
+          send(429, { error: err.message })
+          return
+        }
+        throw err
+      }
       console.log(
         `[job ${jobId}] ${user.email || user.uid} (${user.role}) — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} » — quota jour ${q.dailyCount}, mois ${q.monthlyCount}, total ${q.totalCount}`
       )
@@ -400,7 +235,7 @@ const server = http.createServer(async (req, res) => {
         send(401, { error: 'Connexion requise.' })
         return
       }
-      const active = await activeJobFor(user.uid)
+      const active = await jobStore.activeJobFor(user.uid)
       send(
         200,
         active
@@ -425,9 +260,8 @@ const server = http.createServer(async (req, res) => {
         send(401, { error: 'Connexion requise.' })
         return
       }
-      const jobDoc = await jobsCollection.doc(jobMatch[1]).get()
-      const job = jobDoc.exists ? jobDoc.data() : null
-      if (!job || job.uid !== user.uid) {
+      const job = await jobStore.jobFor(user.uid, jobMatch[1])
+      if (!job) {
         send(404, { error: 'Job inconnu ou expiré.' })
         return
       }
