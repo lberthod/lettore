@@ -258,7 +258,7 @@ onUnmounted(() => {
 }
 
 .hero {
-  max-width: 860px;
+  max-width: 1100px;
   width: 100%;
   text-align: center;
 }
@@ -345,8 +345,8 @@ onUnmounted(() => {
 
 .plans {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.9rem;
   margin: 1.8rem 0 0;
   text-align: left;
   opacity: 0;
@@ -357,10 +357,10 @@ onUnmounted(() => {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  padding: 1.4rem 1.5rem;
+  gap: 0.5rem;
+  padding: 1.1rem 1.1rem;
   border: 1px solid rgba(176, 105, 46, 0.25);
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -394,27 +394,27 @@ onUnmounted(() => {
 
 .plan h2 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .price {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #b0692e;
 }
 
 .period {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 400;
   color: #6b6156;
 }
 
 .plan ul {
   margin: 0;
-  padding-left: 1.1rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
   flex-grow: 1;
 }
 

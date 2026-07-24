@@ -4538,5 +4538,65 @@
     "wordCount": 382,
     "genre": "teatro",
     "category": "arte_lingua"
+  },
+  {
+    "id": "colosseo_storia",
+    "title": "Il Colosseo di Roma",
+    "level": "A1",
+    "excerpt": "Il Colosseo è a Roma, in Italia. È un monumento molto antico e famoso in tutto il mondo. Gli antichi romani costruiscono il Colosseo tanti…",
+    "paragraphCount": 3,
+    "wordCount": 129,
+    "category": "storia_antica",
+    "genre": "documentario"
+  },
+  {
+    "id": "marco_polo_viaggio",
+    "title": "Marco Polo e la Via della Seta",
+    "level": "A1",
+    "excerpt": "Marco Polo è un famoso viaggiatore italiano. Nasce a Venezia tanti anni fa. Da giovane, parte per un lungo viaggio verso l'Asia con suo…",
+    "paragraphCount": 3,
+    "wordCount": 107,
+    "category": "storia_antica",
+    "genre": "documentario"
+  },
+  {
+    "id": "leonardo_vinci_bio",
+    "title": "Leonardo da Vinci, genio del Rinascimento",
+    "level": "A1",
+    "excerpt": "Leonardo da Vinci nasce in un piccolo paese vicino a Firenze, tanti anni fa. Da bambino, ama disegnare e osservare la natura. Da giovane,…",
+    "paragraphCount": 5,
+    "wordCount": 272,
+    "category": "storia_antica",
+    "genre": "documentario"
+  },
+  {
+    "id": "garibaldi_unita",
+    "title": "Garibaldi e l'unità d'Italia",
+    "level": "A1",
+    "excerpt": "Tanti anni fa, l'Italia non è un unico paese. Ci sono tanti piccoli stati, con re diversi e leggi diverse. Molti italiani vogliono un solo…",
+    "paragraphCount": 5,
+    "wordCount": 222,
+    "category": "storia_moderna",
+    "genre": "documentario"
+  },
+  {
+    "id": "impero_romano_vita",
+    "title": "La vita nell'antica Roma",
+    "level": "A1",
+    "excerpt": "Tanti anni fa, Roma è la capitale di un grande impero che comprende tante terre diverse, intorno al mare Mediterraneo. L'antica Roma è una…",
+    "paragraphCount": 9,
+    "wordCount": 537,
+    "category": "storia_antica",
+    "genre": "documentario"
+  },
+  {
+    "id": "nascita_repubblica",
+    "title": "La nascita della Repubblica Italiana",
+    "level": "A1",
+    "excerpt": "Dopo la fine di una lunga e terribile guerra, l'Italia deve decidere il suo futuro. Il paese è distrutto: mancano case, cibo e lavoro per…",
+    "paragraphCount": 9,
+    "wordCount": 479,
+    "category": "storia_moderna",
+    "genre": "documentario"
   }
 ]

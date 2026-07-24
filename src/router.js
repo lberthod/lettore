@@ -4,10 +4,7 @@ import textsIndex from './texts/index.json'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
 import { EXAMPLE_TEXT_IDS, isAdmin } from './lib/access.js'
-
-const DEFAULT_TITLE = "Leggendo — Apprendre l'italien par la lecture"
-const DEFAULT_DESCRIPTION =
-  "Apprenez l'italien en lisant : textes gradués A1 à C2 avec traduction française au clic et lecture audio. Méthode fondée sur la lecture extensive."
+import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION, findRoute } from './seo/staticPages.js'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,20 +13,13 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: {
-        title: DEFAULT_TITLE,
-        description: DEFAULT_DESCRIPTION,
-      },
+      meta: findRoute('/'),
     },
     {
       path: '/textes',
       name: 'library',
       component: () => import('./views/LibraryView.vue'),
-      meta: {
-        title: 'Tous les textes — Leggendo',
-        description:
-          "Tous les textes gradués en italien, de A1 à C2 : histoires courtes, culture, voyages. Traduction française au clic et lecture audio.",
-      },
+      meta: findRoute('/textes'),
     },
     {
       path: '/testo/:id',
@@ -71,86 +61,76 @@ const router = createRouter({
       path: '/a-propos',
       name: 'about',
       component: () => import('./views/AboutView.vue'),
-      meta: {
-        title: 'À propos — Leggendo',
-        description:
-          "Leggendo : un lecteur interactif pour apprendre l'italien par la lecture, développé en Suisse. Textes gradués, traduction française, audio.",
-      },
+      meta: findRoute('/a-propos'),
     },
     {
       path: '/methode',
       name: 'method',
       component: () => import('./views/MethodView.vue'),
-      meta: {
-        title: "La méthode : apprendre l'italien par la lecture — Leggendo",
-        description:
-          "Lecture extensive, textes gradués, traduction au clic : la méthode de Leggendo expliquée, avec les recherches scientifiques qui la valident.",
-      },
+      meta: findRoute('/methode'),
     },
     {
       path: '/methodologie',
       name: 'method-text',
       component: () => import('./views/MethodTextView.vue'),
-      meta: {
-        title: "La méthodologie expliquée : l'italien par la lecture — Leggendo",
-        description:
-          "La méthode de Leggendo expliquée en détail par écrit : lecture extensive, zone idéale i+1, traduction au clic, audio et répétition en contexte.",
-      },
+      meta: findRoute('/methodologie'),
     },
     {
       path: '/contact',
       name: 'contact',
       component: () => import('./views/ContactView.vue'),
-      meta: { title: 'Contact — Leggendo' },
+      meta: findRoute('/contact'),
     },
     {
       path: '/abonnement',
       name: 'pricing',
       component: () => import('./views/PricingView.vue'),
-      meta: {
-        title: 'Abonnement — Leggendo',
-        description:
-          "Accédez à tous les textes gradués en italien avec traduction française et audio. Découvrez les formules d'abonnement de Leggendo.",
-      },
+      meta: findRoute('/abonnement'),
     },
     {
       path: '/connexion',
       name: 'login',
       component: () => import('./views/LoginView.vue'),
-      meta: { title: 'Connexion — Leggendo' },
+      meta: findRoute('/connexion'),
     },
     {
       path: '/profil',
       name: 'profile',
       component: () => import('./views/ProfileView.vue'),
-      meta: { requiresAuth: true },
+      meta: { ...findRoute('/profil'), requiresAuth: true },
     },
     {
       path: '/mentions-legales',
       name: 'legal',
       component: () => import('./views/LegalView.vue'),
-      meta: { title: 'Mentions légales — Leggendo' },
+      meta: findRoute('/mentions-legales'),
     },
     {
       path: '/confidentialite',
       name: 'privacy',
       component: () => import('./views/PrivacyView.vue'),
-      meta: { title: 'Confidentialité — Leggendo' },
+      meta: findRoute('/confidentialite'),
     },
     {
       path: '/conditions',
       name: 'terms',
       component: () => import('./views/TermsView.vue'),
-      meta: { title: 'CGU / CGV — Leggendo' },
+      meta: findRoute('/conditions'),
     },
     {
       path: '/creer-son-texte',
       name: 'create-text',
       component: () => import('./views/CreateTextView.vue'),
+      meta: { ...findRoute('/creer-son-texte'), requiresAuth: true },
+    },
+    {
+      path: '/notizie',
+      name: 'news',
+      component: () => import('./views/NotizieView.vue'),
       meta: {
-        title: 'Créer son texte — Leggendo',
+        title: 'Notizie — Leggendo',
         description:
-          "Créez votre propre histoire en italien : choisissez la catégorie, la forme, le niveau et la longueur, décrivez ce que vous voulez lire, et lisez-la avec quiz.",
+          "Textes d'actualité italienne générés chaque jour et adaptés à votre niveau — formule Premium+.",
         requiresAuth: true,
       },
     },
@@ -158,30 +138,25 @@ const router = createRouter({
       path: '/mes-textes',
       name: 'my-texts',
       component: () => import('./views/MyTextsView.vue'),
-      meta: {
-        title: 'Mes textes créés — Leggendo',
-        description:
-          'Retrouvez toutes les histoires en italien que vous avez créées sur mesure, et suivez celles en cours de génération.',
-        requiresAuth: true,
-      },
+      meta: { ...findRoute('/mes-textes'), requiresAuth: true },
     },
     {
       path: '/parole',
       name: 'words',
       component: () => import('./views/WordsView.vue'),
-      meta: { title: 'Mes mots — Leggendo', requiresAuth: true },
+      meta: { ...findRoute('/parole'), requiresAuth: true },
     },
     {
       path: '/vocabolario',
       name: 'vocabulary',
       component: () => import('./views/VocabularyView.vue'),
-      meta: { title: 'Mode vocabulaire — Leggendo', requiresAuth: true },
+      meta: { ...findRoute('/vocabolario'), requiresAuth: true },
     },
     {
       path: '/admin',
       name: 'admin',
       component: () => import('./views/AdminView.vue'),
-      meta: { title: 'Administration — Leggendo', requiresAuth: true },
+      meta: { ...findRoute('/admin'), requiresAuth: true },
       beforeEnter: async () => {
         await authReady
         if (!isAdmin()) return { name: 'home' }
@@ -191,7 +166,7 @@ const router = createRouter({
       path: '/admin/mots',
       name: 'admin-words',
       component: () => import('./views/AdminWordsView.vue'),
-      meta: { title: 'Administration · Mots — Leggendo', requiresAuth: true },
+      meta: { ...findRoute('/admin/mots'), requiresAuth: true },
       beforeEnter: async () => {
         await authReady
         if (!isAdmin()) return { name: 'home' }
@@ -201,7 +176,7 @@ const router = createRouter({
       path: '/admin/textes',
       name: 'admin-texts',
       component: () => import('./views/AdminTextsView.vue'),
-      meta: { title: 'Administration · Textes — Leggendo', requiresAuth: true },
+      meta: { ...findRoute('/admin/textes'), requiresAuth: true },
       beforeEnter: async () => {
         await authReady
         if (!isAdmin()) return { name: 'home' }
@@ -240,6 +215,29 @@ router.afterEach((to) => {
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute('content', description || DEFAULT_DESCRIPTION)
+
+  // URL canonique : évite le contenu dupliqué (query strings, redirections)
+  // et donne aux moteurs une adresse stable même si le domaine de dev diffère.
+  let canonical = document.querySelector('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement('link')
+    canonical.setAttribute('rel', 'canonical')
+    document.head.appendChild(canonical)
+  }
+  canonical.setAttribute('href', `${SITE_URL}${to.path}`)
+
+  // Pages privées (compte, admin…) : jamais indexées.
+  let robotsTag = document.querySelector('meta[name="robots"]')
+  if (to.meta.requiresAuth || to.meta.noindex) {
+    if (!robotsTag) {
+      robotsTag = document.createElement('meta')
+      robotsTag.setAttribute('name', 'robots')
+      document.head.appendChild(robotsTag)
+    }
+    robotsTag.setAttribute('content', 'noindex, nofollow')
+  } else if (robotsTag) {
+    robotsTag.remove()
+  }
 })
 
 export default router

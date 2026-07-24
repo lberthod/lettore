@@ -39,10 +39,16 @@ const currentText = ref(null)
 
 async function loadText(id) {
   const loader = textModules[`../texts/${id}.json`]
-  // Hors catalogue : texte créé par l'utilisateur, persisté dans Firestore
-  const data = loader
-    ? await loader()
-    : await (await import('../lib/userTexts.js')).loadUserText(id)
+  // Hors catalogue : texte créé par l'utilisateur, ou texte d'actualité
+  // Premium+ (leggendo-server/news-cron.mjs), tous deux persistés dans
+  // Firestore — on essaie l'un puis l'autre.
+  let data = loader ? await loader() : null
+  if (!data && !loader) {
+    data = await (await import('../lib/userTexts.js')).loadUserText(id)
+  }
+  if (!data && !loader) {
+    data = await (await import('../lib/newsTexts.js')).loadNewsText(id)
+  }
   if (!data) {
     router.replace({ name: 'library' })
     return

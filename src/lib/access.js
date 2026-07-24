@@ -51,3 +51,22 @@ export const ADMIN_EMAIL = 'lberthod@gmail.com'
 export function isAdmin() {
   return currentUser.value?.email === ADMIN_EMAIL
 }
+
+// Rôle réel de l'utilisateur, lu depuis les custom claims du token Firebase
+// (posés par le webhook Stripe / adminSetUserRole — voir functions/index.js).
+// Rafraîchi à chaque appel : les claims ne changent pas souvent, mais un
+// abonnement qui vient d'être activé doit être visible sans reconnexion.
+export async function getUserRole() {
+  if (!currentUser.value) return 'gratuit'
+  try {
+    const token = await currentUser.value.getIdTokenResult()
+    if (token.claims.role) return token.claims.role
+    return token.claims.premium ? 'premium' : 'gratuit'
+  } catch {
+    return 'gratuit'
+  }
+}
+
+export async function isPremiumPlus() {
+  return (await getUserRole()) === 'premium_plus'
+}

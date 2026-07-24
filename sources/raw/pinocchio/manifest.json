@@ -1,0 +1,224 @@
+{
+  "site": "it",
+  "page": "Le avventure di Pinocchio",
+  "bookId": "pinocchio",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    {
+      "id": "01",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 1",
+      "chapterTitle": "Come andò che Maestro Ciliegia, falegname trovò un pezzo di legno che piangeva e rideva come un bambino.",
+      "wordCount": 671
+    },
+    {
+      "id": "02",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 2",
+      "chapterTitle": "Maestro Ciliegia regala il pezzo di legno al suo amico Geppetto, il quale lo prende per fabbricarsi un burattino maraviglioso, che sappia ballare, tirar di scherma e fare i salti mortali.",
+      "wordCount": 672
+    },
+    {
+      "id": "03",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 3",
+      "chapterTitle": "Geppetto, tornato a casa, comincia subito a fabbricarsi il burattino e gli mette il nome di Pinocchio. Prime monellerie del burattino.",
+      "wordCount": 1057
+    },
+    {
+      "id": "04",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 4",
+      "chapterTitle": "Vi dirò dunque, ragazzi, che mentre il povero Geppetto era condotto senza sua colpa in prigione, quel monello di Pinocchio, rimasto libero dalle grinfie del carabiniere, se la dava a gambe giù attraverso ai campi, per far più presto a tornarsene a casa; e nella gran furia del correre saltava greppi altissimi, siepi di pruni e fossi pieni d’acqua, tale e quale come avrebbe potuto fare un capretto o un leprottino inseguito dai cacciatori.",
+      "wordCount": 601
+    },
+    {
+      "id": "05",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 5",
+      "chapterTitle": "Intanto cominciò a farsi notte, e Pinocchio, ricordandosi che non aveva mangiato nulla, sentì un’uggiolina allo stomaco, che somigliava moltissimo all’appetito.",
+      "wordCount": 620
+    },
+    {
+      "id": "06",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 6",
+      "chapterTitle": "Pinocchio si addormenta coi piedi sul caldano, e la mattina dopo si sveglia coi piedi tutti bruciati.",
+      "wordCount": 427
+    },
+    {
+      "id": "07",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 7",
+      "chapterTitle": "Geppetto torna a casa, e dà al burattino la colazione che il pover’uomo aveva portata per sè.",
+      "wordCount": 937
+    },
+    {
+      "id": "08",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 8",
+      "chapterTitle": "Geppetto rifà i piedi a Pinocchio e vende la propria casacca per comprargli l’Abbecedario.",
+      "wordCount": 672
+    },
+    {
+      "id": "09",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 9",
+      "chapterTitle": "Pinocchio vende l’Abbecedario per andare a vedere il teatrino dei burattini.",
+      "wordCount": 672
+    },
+    {
+      "id": "10",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 10",
+      "chapterTitle": "Quando Pinocchio entrò nel teatrino delle marionette, accadde un fatto che destò mezza rivoluzione.",
+      "wordCount": 651
+    },
+    {
+      "id": "11",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 11",
+      "chapterTitle": "Il burattinaio Mangiafoco (che questo era il suo nome) pareva un uomo spaventoso, non dico di no, specie con quella sua barbaccia nera che, a uso grembiale, gli copriva tutto il petto e tutte le gambe; ma nel fondo poi non era un cattiv’uomo. Prova ne sia, che quando vide portarsi davanti quel povero Pinocchio, che si dibatteva per ogni verso, urlando «Non voglio morire, non voglio morire!», principiò subito a commuoversi e a impietosirsi; e dopo aver resistito un bel pezzo, alla fine non ne potè più, e lasciò andare un sonorosissimo starnuto.",
+      "wordCount": 844
+    },
+    {
+      "id": "12",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 12",
+      "chapterTitle": "Il giorno dipoi Mangiafoco chiamò in disparte Pinocchio e gli domandò:",
+      "wordCount": 1225
+    },
+    {
+      "id": "13",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 13",
+      "chapterTitle": "L’osteria del «Gambero Rosso».",
+      "wordCount": 902
+    },
+    {
+      "id": "14",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 14",
+      "chapterTitle": "Pinocchio, per non aver dato retta ai buoni consigli del Grillo-parlante, s’imbatte negli assassini.",
+      "wordCount": 967
+    },
+    {
+      "id": "15",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 15",
+      "chapterTitle": "Gli assassini inseguono Pinocchio; e dopo averlo raggiunto lo impiccano a un ramo della Quercia grande.",
+      "wordCount": 707
+    },
+    {
+      "id": "16",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 16",
+      "chapterTitle": "In quel mentre che il povero Pinocchio impiccato dagli assassini a un ramo della Quercia grande, pareva oramai più morto che vivo, la bella Bambina dai capelli turchini si affacciò daccapo alla finestra, e impietositasi alla vista di quell’infelice che, sospeso per il collo, ballava il trescone alle ventate di tramontana, battè per tre volte le mani insieme, e fece tre piccoli colpi.",
+      "wordCount": 865
+    },
+    {
+      "id": "17",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 17",
+      "chapterTitle": "Appena i tre medici furono usciti di camera, la Fata si accostò a Pinocchio, e, dopo averlo toccato sulla fronte, si accòrse che era travagliato da un febbrone da non si dire.",
+      "wordCount": 1370
+    },
+    {
+      "id": "18",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 18",
+      "chapterTitle": "Pinocchio ritrova la Volpe e il Gatto, e va con loro a seminare le quattro monete nel Campo dei miracoli.",
+      "wordCount": 1313
+    },
+    {
+      "id": "19",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 19",
+      "chapterTitle": "Pinocchio è derubato delle sue monete d’oro e, per gastigo [sic] si busca quattro mesi di prigione.",
+      "wordCount": 967
+    },
+    {
+      "id": "20",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 20",
+      "chapterTitle": "Figuratevi l’allegrezza di Pinocchio, quando si sentì libero. Senza stare a dire che è e che non è, uscì subito fuori della città e riprese la strada che doveva ricondurlo alla Casina della Fata.",
+      "wordCount": 790
+    },
+    {
+      "id": "21",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 21",
+      "chapterTitle": "Pinocchio è preso da un contadino, il quale lo costringe a far da can da guardia a un pollaio.",
+      "wordCount": 729
+    },
+    {
+      "id": "22",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 22",
+      "chapterTitle": "Pinocchio scuopre i ladri, e in ricompensa di essere stato fedele vien posto in libertà.",
+      "wordCount": 855
+    },
+    {
+      "id": "23",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 23",
+      "chapterTitle": "Appena Pinocchio non sentì più il peso durissimo e umiliante di quel collare intorno al collo, si pose a scappare attraverso i campi, e non si fermò un solo minuto finchè non ebbe raggiunta la strada maestra, che doveva ricondurlo alla casina della Fata.",
+      "wordCount": 1439
+    },
+    {
+      "id": "24",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 24",
+      "chapterTitle": "Pinocchio arriva all’isola delle «Api industriose» e ritrova la Fata.",
+      "wordCount": 1671
+    },
+    {
+      "id": "25",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 25",
+      "chapterTitle": "In sulle prime, la buona donnina cominciò col dire che lei non era la piccola Fata dai capelli turchini: ma poi, vedendosi oramai scoperta e non volendo mandare più in lungo la commedia, fini per farsi riconoscere, e disse a Pinocchio:",
+      "wordCount": 782
+    },
+    {
+      "id": "26",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 26",
+      "chapterTitle": "Pinocchio va co’ suoi compagni di scuola in riva al mare, per vedere il terribile Pesce-cane.",
+      "wordCount": 778
+    },
+    {
+      "id": "27",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 27",
+      "chapterTitle": "Giunto che fu sulla spiaggia, Pinocchio dètte subito una grande occhiata sul mare; ma non vide nessun Pesce-cane. Il mare era tutto liscio come un gran cristallo da specchio.",
+      "wordCount": 1751
+    },
+    {
+      "id": "28",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 28",
+      "chapterTitle": "Pinocchio corre pericolo di essere fritto in padella, come un pesce.",
+      "wordCount": 1366
+    },
+    {
+      "id": "29",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 29",
+      "chapterTitle": "Mentre il pescatore era proprio sul punto di buttar Pinocchio nella padella, entrò nella grotta un grosso cane condotto là dall’odore acutissimo e ghiotto della frittura.",
+      "wordCount": 2012
+    },
+    {
+      "id": "30",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 30",
+      "chapterTitle": "Com’è naturale, Pinocchio chiese subito alla Fata il permesso di andare in giro per la città a fare gl’inviti: e la Fata gli disse:",
+      "wordCount": 1287
+    },
+    {
+      "id": "31",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 31",
+      "chapterTitle": "Finalmente il carro arrivò: e arrivò senza fare il più piccolo rumore, perchè le sue ruote erano fasciate di stoppa e di cenci.",
+      "wordCount": 1711
+    },
+    {
+      "id": "32",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 32",
+      "chapterTitle": "A Pinocchio gli vengono gli orecchi di ciuco, e poi diventa un ciuchino vero e comincia a ragliare.",
+      "wordCount": 1540
+    },
+    {
+      "id": "33",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 33",
+      "chapterTitle": "Vedendo che la porta non si apriva, l’omino la spalancò con un violentissimo calcio: ed entrato nella stanza, disse col suo solito risolino a Pinocchio e a Lucignolo:",
+      "wordCount": 2102
+    },
+    {
+      "id": "34",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 34",
+      "chapterTitle": "Dopo cinquanta minuti che il ciuchino era sott’acqua, il compratore disse, discorrendo da sè solo:",
+      "wordCount": 1992
+    },
+    {
+      "id": "35",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 35",
+      "chapterTitle": "Pinocchio ritrova in corpo al Pesce-cane.... chi ritrova? Leggete questo capitolo e lo saprete.",
+      "wordCount": 1656
+    },
+    {
+      "id": "36",
+      "wikisourceTitle": "Le avventure di Pinocchio/Capitolo 36",
+      "chapterTitle": "Finalmente Pinocchio cessa d’essere un burattino e diventa un ragazzo.",
+      "wordCount": 3015
+    }
+  ]
+}

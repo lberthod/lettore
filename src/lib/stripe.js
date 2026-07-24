@@ -102,7 +102,7 @@ export const gratuitPlan = {
   ],
 }
 
-export const plans = [gratuitPlan, premiumPlan, teacherPlan]
+export const plans = [gratuitPlan, premiumPlan, premiumPlusPlan, teacherPlan]
 
 // URL de paiement liée au compte : le webhook Stripe (functions/index.js)
 // retrouve l'utilisateur via client_reference_id pour activer le premium.

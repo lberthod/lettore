@@ -1,0 +1,38 @@
+# Servi par Infomaniak (Apache) — équivalent du rewrite SPA de firebase.json
+
+# HTTPS forcé
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Pages prérendues (scripts/prerender.mjs) : /textes -> textes.html,
+# /testo/marco -> testo/marco.html, etc. — équivalent du cleanUrls de
+# firebase.json. Sert le fichier statique s'il existe avant de tomber sur
+# la SPA (index.html hydrate ensuite normalement par-dessus).
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Rewrite SPA : toute route inconnue retombe sur index.html (sauf fichiers réels)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Cache long pour les assets hashés par Vite
+<IfModule mod_expires.c>
+  ExpiresActive On
+  <FilesMatch "\.(js|css|svg|woff2?)$">
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+  <FilesMatch "^(index\.html|sw\.js|manifest\.webmanifest)$">
+    ExpiresDefault "access plus 0 seconds"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|svg|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "^(index\.html|sw\.js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

@@ -130,6 +130,7 @@
       "icon": "🏛",
       "hint": "Texte factuel : événement historique, lieu géographique, vulgarisation scientifique, biographie.",
       "levels": [
+        "A1",
         "A2",
         "B1",
         "B2",
@@ -408,7 +409,16 @@
       "genre": "documentario",
       "theme": "storia_antica",
       "levels": [
+        "A1",
         "C1"
+      ],
+      "priority": 2
+    },
+    {
+      "genre": "documentario",
+      "theme": "storia_moderna",
+      "levels": [
+        "A1"
       ],
       "priority": 2
     },

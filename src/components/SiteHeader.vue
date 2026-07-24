@@ -2,12 +2,23 @@
 import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
-import { isLoggedIn, isAdmin } from '../lib/access.js'
+import { isLoggedIn, isAdmin, isPremiumPlus } from '../lib/access.js'
 import { progress } from '../progress.js'
 
 // « Textes » et « Mes mots » ne s'affichent qu'une fois connecté
 const loggedIn = computed(() => isLoggedIn())
 const admin = computed(() => isAdmin())
+
+// Notizie (Premium+) : lecture asynchrone des custom claims, pas réactive
+// à isLoggedIn() — on la relit à chaque connexion/déconnexion.
+const premiumPlus = ref(false)
+watch(
+  currentUser,
+  async (user) => {
+    premiumPlus.value = user ? await isPremiumPlus() : false
+  },
+  { immediate: true }
+)
 
 // Menu compact (mobile) : replié par défaut, fermé à chaque navigation
 const menuOpen = ref(false)
@@ -39,6 +50,7 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
       <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
+      <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">🗞 Notizie</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">📖 Vocabulaire</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'words' }">
         ☆ Mes mots<span v-if="progress.favorites.length" class="count">{{

@@ -47,6 +47,16 @@ service cloud.firestore {
             || request.auth.token.role == 'enseignant');
     }
 
+    // Pool partagé de textes d'actualité générés par le cron VPS (formule
+    // Premium+, voir PREMIUM_PLUS_ANALYSIS.md) : écrit uniquement par
+    // l'Admin SDK (leggendo-server/news-cron.mjs), lu uniquement par les
+    // abonnés Premium+ (custom claim `role`, posé par le webhook Stripe /
+    // adminSetUserRole).
+    match /newsTexts/{textId} {
+      allow read: if request.auth != null && request.auth.token.role == 'premium_plus';
+      allow write: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

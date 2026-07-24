@@ -79,3 +79,20 @@ Le service redémarre automatiquement (`Restart=on-failure`) et les jobs/quotas 
 Pour une mise à jour du code : `scp` à nouveau, `npm install --omit=dev` si `package.json` a changé, puis `sudo systemctl restart leggendo-api`.
 
 Caddy proxifie `api.loicberthod.ch/leggendo/*` vers `localhost:8091` ; l'URL côté app se règle via `VITE_LEGGENDO_API`.
+
+## Notizie — cron d'actualité (Premium+)
+
+[news-cron.mjs](news-cron.mjs) est un script indépendant du serveur HTTP (`server.mjs`) : il ne tourne pas en continu, il est **invoqué par cron** et fait une seule chose à chaque exécution — récupérer les flux RSS ANSA ([rss.mjs](rss.mjs)), choisir un article pas encore traité, générer un texte gradué qui le reformule fidèlement ([news.mjs](news.mjs)), et l'écrire dans Firestore (collection `newsTexts`). L'app lit ce pool via [src/lib/newsTexts.js](../src/lib/newsTexts.js) (page « Notizie », réservée au rôle `premium_plus`, voir [firestore.rules](../firestore.rules) et [PREMIUM_PLUS_ANALYSIS.md](../PREMIUM_PLUS_ANALYSIS.md)).
+
+Pool partagé, pas un appel par abonné : chaque exécution produit **un seul texte**, lu ensuite par tous les abonnés Premium+ — planifier 3 exécutions par jour donne bien « jusqu'à 3 textes par jour », sans multiplier le coût par le nombre d'abonnés.
+
+Mêmes identifiants que le serveur HTTP (`GLM_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS` — voir [Configuration](#configuration-env) et [Identifiants Firestore](#identifiants-firestore-compte-de-service) ci-dessus), pas de port ni de service systemd à installer.
+
+```bash
+# crontab -e (même utilisateur système que leggendo-api.service)
+0 7,13,20 * * * cd /opt/leggendo-api && \
+  GLM_API_KEY=... GOOGLE_APPLICATION_CREDENTIALS=/opt/leggendo-api/service-account.json \
+  /usr/bin/node news-cron.mjs >> /var/log/leggendo-news.log 2>&1
+```
+
+Le rôle `premium_plus` n'est pour l'instant posé que manuellement (`adminSetUserRole`, voir [functions/index.js](../functions/index.js)) — le webhook Stripe ne le pose pas encore automatiquement (à faire quand le Payment Link Premium+ sera actif, voir `src/lib/stripe.js`).

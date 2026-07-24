@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /profil
+Disallow: /connexion
+Disallow: /creer-son-texte
+Disallow: /mes-textes
+Disallow: /parole
+Disallow: /vocabolario
+Disallow: /condividi/
+
+Sitemap: https://leggendo.fr/sitemap.xml

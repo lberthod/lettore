@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "vite build",
+    "postbuild": "node scripts/prerender.mjs",
     "preview": "vite preview",
     "generate:text": "node scripts/generate-text.mjs",
     "orchestrate": "node generator/orchestrate.mjs",
