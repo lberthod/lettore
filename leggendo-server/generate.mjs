@@ -39,8 +39,11 @@ export async function generateUserText({ id, level, theme, genre, title, summary
     ? `\nCe texte doit respecter la forme « ${genre.name} » : ${genre.hint}\nChaque paragraphe du tableau "paragraphs" doit suivre cette forme (par exemple, pour un dialogue ou du théâtre, chaque réplique commence par "NOM — " ; pour un poème, un paragraphe peut être une strophe avec des sauts de ligne "\\n" entre les vers).`
     : ''
 
-  // Le JSON complet pèse largement plus que le texte seul : budget proportionnel.
-  const maxTokens = Math.min(64000, Math.max(8000, Math.round(targetWords * 28)))
+  // Le JSON complet pèse largement plus que le texte seul, et les modèles
+  // raisonneurs (GLM 5.1, DeepSeek v4) consomment en plus des milliers de
+  // tokens de réflexion sur le même budget : plancher haut pour éviter les
+  // allers-retours « sortie tronquée → nouvel essai » qui coûtent cher.
+  const maxTokens = Math.min(64000, Math.max(16000, Math.round(targetWords * 35)))
   const out = await callLLM({
     system: SYSTEM,
     schema: TEXT_SCHEMA,
@@ -97,10 +100,19 @@ Respecte fidèlement la demande de l'utilisateur tant qu'elle est cohérente ave
     }
   }
 
+  // Le lexique doit être complet (chaque mot cliquable) ; pour les phrases,
+  // on tolère 1 ou 2 traductions manquantes plutôt que de jeter toute la
+  // génération : le lecteur affiche alors la phrase sans traduction, les
+  // mots restent traduits au clic.
   const remaining = validateCoverage(textData)
-  if (remaining.missingWords.length || remaining.missingSentences.length) {
+  if (remaining.missingWords.length || remaining.missingSentences.length > 2) {
     throw new Error(
       `Couverture incomplète après réparation — mots : ${remaining.missingWords.join(', ')} ; phrases : ${remaining.missingSentences.length}`
+    )
+  }
+  if (remaining.missingSentences.length) {
+    console.warn(
+      `  ⚠ ${remaining.missingSentences.length} phrase(s) sans traduction (toléré)`
     )
   }
 
