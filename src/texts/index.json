@@ -779,5 +779,105 @@
     "wordCount": 112,
     "genre": "racconto",
     "category": "montagna"
+  },
+  {
+    "id": "diario_montagna",
+    "title": "Diario di montagna",
+    "level": "A2",
+    "excerpt": "Caro diario, oggi siamo saliti al rifugio a duemila metri. Il panorama è incredibile.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "lettera_diario",
+    "category": "montagna"
+  },
+  {
+    "id": "ladro_ricette",
+    "title": "Il ladro di ricette",
+    "level": "B1",
+    "excerpt": "Nel famoso ristorante dello chef Bianchi, qualcuno aveva rubato il quaderno segreto delle ricette.",
+    "paragraphCount": 6,
+    "wordCount": 95,
+    "genre": "giallo",
+    "category": "cucina"
+  },
+  {
+    "id": "lepre_tartaruga",
+    "title": "La lepre e la tartaruga",
+    "level": "A2",
+    "excerpt": "Una lepre veloce rideva sempre di una tartaruga lenta. — Sei così lenta! — le diceva.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "silenzio_alta_quota",
+    "title": "Silenzio d'alta quota",
+    "level": "B1",
+    "excerpt": "Le cime bianche toccano il cielo azzurro. Nessun rumore, solo il vento tra le rocce.",
+    "paragraphCount": 6,
+    "wordCount": 44,
+    "genre": "poesia",
+    "category": "montagna"
+  },
+  {
+    "id": "cinema_italiano",
+    "title": "Il cinema italiano",
+    "level": "B2",
+    "excerpt": "Il cinema italiano è conosciuto in tutto il mondo per la sua storia ricca e i suoi grandi maestri.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "documentario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "festa_paese",
+    "title": "La festa del paese",
+    "level": "B1",
+    "excerpt": "Ogni estate, il piccolo paese di Montecielo organizzava la festa più attesa dell'anno.",
+    "paragraphCount": 6,
+    "wordCount": 95,
+    "genre": "racconto",
+    "category": "feste"
+  },
+  {
+    "id": "in_albergo",
+    "title": "In albergo",
+    "level": "A1",
+    "excerpt": "— Buongiorno, ho una prenotazione a nome Verdi. — Un attimo... sì, una camera doppia per due notti.",
+    "paragraphCount": 8,
+    "wordCount": 59,
+    "genre": "dialogo",
+    "category": "viaggi"
+  },
+  {
+    "id": "preparativi_festa",
+    "title": "Preparativi di festa",
+    "level": "A2",
+    "excerpt": "MAMMA — Ragazzi, sbrigatevi! Gli ospiti arrivano tra un'ora. LEO — Ho quasi finito di apparecchiare la tavola.",
+    "paragraphCount": 6,
+    "wordCount": 57,
+    "genre": "teatro",
+    "category": "feste"
+  },
+  {
+    "id": "citta_senza_auto",
+    "title": "La città senza automobili",
+    "level": "B2",
+    "excerpt": "Nel 2150, la grande città di Nuova Milano aveva vietato completamente le automobili private.",
+    "paragraphCount": 6,
+    "wordCount": 87,
+    "genre": "fantascienza",
+    "category": "societa"
+  },
+  {
+    "id": "etruschi",
+    "title": "Gli Etruschi",
+    "level": "B1",
+    "excerpt": "Prima dei Romani, in Italia centrale viveva un popolo misterioso e affascinante: gli Etruschi.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "documentario",
+    "category": "storia_antica"
   }
 ]

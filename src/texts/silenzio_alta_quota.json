@@ -1,0 +1,89 @@
+{
+  "id": "silenzio_alta_quota",
+  "title": "Silenzio d'alta quota",
+  "level": "B1",
+  "genre": "poesia",
+  "category": "montagna",
+  "paragraphs": [
+    "Le cime bianche toccano il cielo azzurro.",
+    "Nessun rumore, solo il vento tra le rocce.",
+    "Un'aquila disegna cerchi lenti nell'aria.",
+    "La neve custodisce il silenzio del mondo.",
+    "Qui il tempo sembra essersi fermato per sempre.",
+    "E l'uomo, davanti a tanta pace, ritrova se stesso."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa toccano le cime bianche?",
+      "options": ["Le nuvole grigie", "Il cielo azzurro", "Il mare"],
+      "correct": 1
+    },
+    {
+      "q": "Quale animale vola nell'aria?",
+      "options": ["Un'aquila", "Una rondine", "Un corvo"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa ritrova l'uomo davanti a tanta pace?",
+      "options": ["La paura", "Se stesso", "La fretta"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "a": "à / devant (« davanti a » = devant)",
+    "alta": "haute (« alta quota » = haute altitude)",
+    "aquila": "aigle (« un'aquila » = un aigle)",
+    "aria": "air (« nell'aria » = dans l'air)",
+    "azzurro": "bleu azur",
+    "bianche": "blanches",
+    "cerchi": "cercles",
+    "che": "que",
+    "cielo": "ciel",
+    "cime": "sommets",
+    "custodisce": "garde / veille sur",
+    "d'alta": "de haute",
+    "davanti": "devant",
+    "del": "du",
+    "disegna": "dessine",
+    "e": "et",
+    "essersi": "s'être (« essersi fermato » = s'être arrêté)",
+    "fermato": "arrêté",
+    "il": "le",
+    "l'uomo": "l'homme",
+    "la": "la",
+    "le": "les",
+    "lenti": "lents",
+    "mondo": "monde",
+    "nell'aria": "dans l'air",
+    "nessun": "aucun",
+    "neve": "neige",
+    "pace": "paix",
+    "per": "pour (« per sempre » = pour toujours)",
+    "qui": "ici",
+    "quota": "altitude",
+    "ritrova": "retrouve",
+    "rocce": "rochers",
+    "rumore": "bruit",
+    "se": "soi (« se stesso » = soi-même)",
+    "sembra": "semble",
+    "sempre": "toujours",
+    "silenzio": "silence",
+    "solo": "seulement",
+    "stesso": "même (« se stesso » = soi-même)",
+    "tanta": "tant de",
+    "tempo": "temps",
+    "toccano": "touchent",
+    "tra": "parmi / entre",
+    "un'aquila": "un aigle",
+    "uomo": "homme",
+    "vento": "vent"
+  },
+  "sentences": {
+    "Le cime bianche toccano il cielo azzurro.": "Les sommets blancs touchent le ciel azur.",
+    "Nessun rumore, solo il vento tra le rocce.": "Aucun bruit, seulement le vent entre les rochers.",
+    "Un'aquila disegna cerchi lenti nell'aria.": "Un aigle dessine des cercles lents dans l'air.",
+    "La neve custodisce il silenzio del mondo.": "La neige veille sur le silence du monde.",
+    "Qui il tempo sembra essersi fermato per sempre.": "Ici le temps semble s'être arrêté pour toujours.",
+    "E l'uomo, davanti a tanta pace, ritrova se stesso.": "Et l'homme, devant tant de paix, se retrouve lui-même."
+  }
+}
