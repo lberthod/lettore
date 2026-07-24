@@ -47,6 +47,27 @@ export const premiumPlan = {
   ],
 }
 
+export const premiumPlusPlan = {
+  id: 'premium_plus',
+  name: 'Premium+',
+  monthly: {
+    price: swiss ? '15 CHF' : '16 €',
+    period: '/ mois',
+    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
+  },
+  annual: {
+    price: swiss ? '150 CHF' : '160 €',
+    period: '/ an',
+    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
+  },
+  features: [
+    'Tout le Premium',
+    'Notifications pour les nouveaux textes générés',
+    'Jusqu’à 3 textes générés par jour, sur le thème ou l’actualité de votre choix',
+    'Bibliothèque d’ebooks classiques traduits et gradués : La Parure, Le Horla, Rosso Malpelo, Pinocchio, Le Dernier Jour d’un condamné, Candide, Il fu Mattia Pascal, Inferno…',
+  ],
+}
+
 export const teacherPlan = {
   id: 'enseignant',
   name: 'Enseignant',

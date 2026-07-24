@@ -6,7 +6,8 @@
     "excerpt": "La mattina, Marco si sveglia presto e prepara il caffè. Gli piace guardare il sole che sorge dietro le colline. Dopo colazione, esce di casa…",
     "paragraphCount": 3,
     "wordCount": 96,
-    "category": "vita_quotidiana"
+    "category": "vita_quotidiana",
+    "genre": "racconto"
   },
   {
     "id": "mare",
@@ -15,7 +16,8 @@
     "excerpt": "Sabato mattina, Giulia e suo fratello vanno al mare. Il cielo è azzurro e fa molto caldo. Portano gli asciugamani, un ombrellone e un cestin…",
     "paragraphCount": 3,
     "wordCount": 70,
-    "category": "viaggi"
+    "category": "viaggi",
+    "genre": "racconto"
   },
   {
     "id": "nonna",
@@ -24,7 +26,8 @@
     "excerpt": "Ogni domenica, Sofia va a pranzo dalla nonna. La cucina profuma di sugo e di basilico. La nonna prepara la pasta fatta in casa.",
     "paragraphCount": 3,
     "wordCount": 73,
-    "category": "cucina"
+    "category": "cucina",
+    "genre": "racconto"
   },
   {
     "id": "tecnologia",
@@ -33,7 +36,8 @@
     "excerpt": "Oggi la tecnologia fa parte della nostra vita quotidiana. Usiamo il telefono per parlare, leggere le notizie e ascoltare la musica. Anche i…",
     "paragraphCount": 3,
     "wordCount": 100,
-    "category": "societa"
+    "category": "societa",
+    "genre": "documentario"
   },
   {
     "id": "venezia",
@@ -42,7 +46,8 @@
     "excerpt": "Elena ha sempre sognato di visitare Venezia. Quest'anno, finalmente, decide di partire con la sua amica Chiara. Preparano le valigie con cur…",
     "paragraphCount": 6,
     "wordCount": 226,
-    "category": "viaggi"
+    "category": "viaggi",
+    "genre": "racconto"
   },
   {
     "id": "ristorante",
@@ -51,7 +56,8 @@
     "excerpt": "Luca ha trent'anni e un grande sogno: aprire un ristorante nel suo paese. Da bambino, passava le ore in cucina con sua madre. Lei gli ha ins…",
     "paragraphCount": 6,
     "wordCount": 245,
-    "category": "cucina"
+    "category": "cucina",
+    "genre": "racconto"
   },
   {
     "id": "gatto",
@@ -60,7 +66,8 @@
     "excerpt": "Nella piccola stazione di un paese di montagna vive un gatto grigio. Nessuno sa da dove viene. I ferrovieri lo chiamano Baffo, per i suoi lu…",
     "paragraphCount": 6,
     "wordCount": 225,
-    "category": "natura_animali"
+    "category": "natura_animali",
+    "genre": "racconto"
   },
   {
     "id": "lettera",
@@ -69,7 +76,8 @@
     "excerpt": "Durante le vacanze estive, Martina aiuta i genitori a pulire la vecchia casa dei nonni. In soffitta, tra scatole polverose e mobili antichi,…",
     "paragraphCount": 6,
     "wordCount": 229,
-    "category": "vita_quotidiana"
+    "category": "vita_quotidiana",
+    "genre": "racconto"
   },
   {
     "id": "maratona",
@@ -78,7 +86,8 @@
     "excerpt": "Paolo ha cinquant'anni e lavora in banca. Ogni giorno passa otto ore seduto davanti al computer. Un mattino, il dottore gli dice: deve muove…",
     "paragraphCount": 6,
     "wordCount": 235,
-    "category": "sport"
+    "category": "sport",
+    "genre": "racconto"
   },
   {
     "id": "montagne",
@@ -87,7 +96,8 @@
     "excerpt": "L'Italia è un paese di montagne. Al nord ci sono le Alpi, una catena lunga e maestosa che separa l'Italia dalla Francia, dalla Svizzera e da…",
     "paragraphCount": 6,
     "wordCount": 216,
-    "category": "montagna"
+    "category": "montagna",
+    "genre": "documentario"
   },
   {
     "id": "aosta",
@@ -96,7 +106,8 @@
     "excerpt": "Aosta è una piccola città circondata dalle montagne più alte d'Europa. I Romani l'hanno fondata più di duemila anni fa e l'hanno chiamata Au…",
     "paragraphCount": 6,
     "wordCount": 224,
-    "category": "regioni"
+    "category": "regioni",
+    "genre": "racconto"
   },
   {
     "id": "ticino",
@@ -105,7 +116,8 @@
     "excerpt": "Il Ticino è il cantone italiano della Svizzera. Qui si parla italiano, ma la bandiera è quella rossa con la croce bianca. È una terra specia…",
     "paragraphCount": 6,
     "wordCount": 240,
-    "category": "regioni"
+    "category": "regioni",
+    "genre": "racconto"
   },
   {
     "id": "alpeggio",
@@ -114,7 +126,8 @@
     "excerpt": "Ogni estate, Pietro porta le sue mucche all'alpeggio, un grande prato a duemila metri di altezza. La salita dura un giorno intero. Le mucche…",
     "paragraphCount": 6,
     "wordCount": 223,
-    "category": "montagna"
+    "category": "montagna",
+    "genre": "racconto"
   },
   {
     "id": "bernina",
@@ -123,7 +136,8 @@
     "excerpt": "In alta montagna, tra la Svizzera e l'Italia, viaggia un piccolo treno rosso. Si chiama trenino del Bernina e parte da Sankt Moritz per arri…",
     "paragraphCount": 6,
     "wordCount": 215,
-    "category": "montagna"
+    "category": "montagna",
+    "genre": "racconto"
   },
   {
     "id": "stati",
@@ -132,7 +146,8 @@
     "excerpt": "Per molti secoli, prima di diventare una nazione unita, l'Italia fu un mosaico di stati diversi. Ogni regione aveva il suo sovrano, le sue l…",
     "paragraphCount": 6,
     "wordCount": 234,
-    "category": "storia_moderna"
+    "category": "storia_moderna",
+    "genre": "documentario"
   },
   {
     "id": "venezia_storia",
@@ -141,7 +156,8 @@
     "excerpt": "Tra tutti gli stati italiani, la Repubblica di Venezia fu certamente uno dei più originali e duraturi. Nata su un gruppo di isole nella lagu…",
     "paragraphCount": 6,
     "wordCount": 225,
-    "category": "storia_antica"
+    "category": "storia_antica",
+    "genre": "documentario"
   },
   {
     "id": "due_sicilie",
@@ -150,7 +166,8 @@
     "excerpt": "La storia del sud Italia è segnata da numerose dominazioni straniere. Normanni, svevi, angioini, aragonesi e spagnoli si succedettero nel co…",
     "paragraphCount": 6,
     "wordCount": 223,
-    "category": "storia_antica"
+    "category": "storia_antica",
+    "genre": "documentario"
   },
   {
     "id": "risorgimento",
@@ -159,7 +176,8 @@
     "excerpt": "Il movimento che portò all'unità d'Italia si chiama Risorgimento. Fu un periodo di guerre, congiure e passioni politiche che trasformò una p…",
     "paragraphCount": 6,
     "wordCount": 212,
-    "category": "storia_moderna"
+    "category": "storia_moderna",
+    "genre": "documentario"
   },
   {
     "id": "repubblica",
@@ -168,7 +186,8 @@
     "excerpt": "Il Regno d'Italia visse una storia breve e tormentata: durò meno di un secolo. Attraversò due guerre mondiali, una dittatura e infine un ref…",
     "paragraphCount": 6,
     "wordCount": 212,
-    "category": "storia_moderna"
+    "category": "storia_moderna",
+    "genre": "documentario"
   },
   {
     "id": "roma_antica",
@@ -177,7 +196,8 @@
     "excerpt": "Secondo la leggenda, Roma nacque nel settecentocinquantatré avanti Cristo, fondata da Romolo sul colle Palatino. La storia racconta che Romo…",
     "paragraphCount": 12,
     "wordCount": 579,
-    "category": "storia_antica"
+    "category": "storia_antica",
+    "genre": "documentario"
   },
   {
     "id": "rinascimento",
@@ -186,7 +206,8 @@
     "excerpt": "Tra il Quattrocento e il Cinquecento, l'Italia visse una stagione culturale straordinaria che cambiò per sempre la storia dell'arte e del pe…",
     "paragraphCount": 12,
     "wordCount": 612,
-    "category": "storia_antica"
+    "category": "storia_antica",
+    "genre": "documentario"
   },
   {
     "id": "lingua",
@@ -195,7 +216,8 @@
     "excerpt": "La lingua italiana ha una storia particolare: per secoli è stata scritta molto più che parlata. Nasce dal latino, come il francese e lo spag…",
     "paragraphCount": 12,
     "wordCount": 602,
-    "category": "arte_lingua"
+    "category": "arte_lingua",
+    "genre": "documentario"
   },
   {
     "id": "emigrazione",
@@ -204,7 +226,8 @@
     "excerpt": "Tra la fine dell'Ottocento e la metà del Novecento, quasi trenta milioni di italiani lasciarono il loro paese. Fu una delle più grandi migra…",
     "paragraphCount": 12,
     "wordCount": 608,
-    "category": "societa"
+    "category": "societa",
+    "genre": "documentario"
   },
   {
     "id": "miracolo",
@@ -213,7 +236,8 @@
     "excerpt": "Alla fine della seconda guerra mondiale, l'Italia era un paese in ginocchio. Le città erano piene di macerie, le fabbriche distrutte, le fam…",
     "paragraphCount": 12,
     "wordCount": 637,
-    "category": "storia_moderna"
+    "category": "storia_moderna",
+    "genre": "documentario"
   },
   {
     "id": "erasmus",
@@ -222,7 +246,8 @@
     "excerpt": "A settembre, Julie è arrivata a Bologna per il suo anno di Erasmus. All'inizio aveva un po' paura: non conosceva nessuno e il suo italiano n…",
     "paragraphCount": 6,
     "wordCount": 254,
-    "category": "viaggi"
+    "category": "viaggi",
+    "genre": "racconto"
   },
   {
     "id": "sagra",
@@ -231,7 +256,8 @@
     "excerpt": "Ogni anno, il primo weekend di settembre, il paese di Montefiore organizza la sua sagra. Per tre giorni, le strade si riempiono di bancarell…",
     "paragraphCount": 6,
     "wordCount": 245,
-    "category": "feste"
+    "category": "feste",
+    "genre": "racconto"
   },
   {
     "id": "settimana_bianca",
@@ -240,7 +266,8 @@
     "excerpt": "A febbraio, la famiglia Ricci è partita per la settimana bianca in Trentino. Papà Andrea ha caricato la macchina la sera prima: sci, scarpon…",
     "paragraphCount": 6,
     "wordCount": 240,
-    "category": "montagna"
+    "category": "montagna",
+    "genre": "racconto"
   },
   {
     "id": "pasticceria",
@@ -249,7 +276,8 @@
     "excerpt": "Chiara ha ventisei anni e da settembre lavora in una pasticceria nel centro di Torino. Prima faceva la commessa in un negozio di vestiti, ma…",
     "paragraphCount": 6,
     "wordCount": 265,
-    "category": "cucina"
+    "category": "cucina",
+    "genre": "racconto"
   },
   {
     "id": "napoli_weekend",
@@ -258,7 +286,8 @@
     "excerpt": "Venerdì sera, Luca e Sara sono saliti sul treno ad alta velocità a Milano. Tre ore dopo erano a Napoli, la città dove è nata la nonna di Sar…",
     "paragraphCount": 6,
     "wordCount": 266,
-    "category": "viaggi"
+    "category": "viaggi",
+    "genre": "racconto"
   },
   {
     "id": "caffe",
@@ -267,7 +296,8 @@
     "excerpt": "Per gli italiani, il caffè non è semplicemente una bevanda: è un rito quotidiano con regole precise. Si beve in piedi al banco del bar, in p…",
     "paragraphCount": 6,
     "wordCount": 276,
-    "category": "cucina"
+    "category": "cucina",
+    "genre": "documentario"
   },
   {
     "id": "legalita",
@@ -276,7 +306,8 @@
     "excerpt": "Ci sono storie italiane difficili da raccontare, ma necessarie. Una di queste è la lotta contro la mafia, un'organizzazione criminale che pe…",
     "paragraphCount": 6,
     "wordCount": 264,
-    "category": "societa"
+    "category": "societa",
+    "genre": "documentario"
   },
   {
     "id": "made_in_italy",
@@ -285,7 +316,8 @@
     "excerpt": "Quando nel mondo si parla di eleganza, l'Italia arriva sempre tra i primi posti. La moda e il design italiani sono un'industria enorme, ma a…",
     "paragraphCount": 6,
     "wordCount": 278,
-    "category": "arte_lingua"
+    "category": "arte_lingua",
+    "genre": "documentario"
   },
   {
     "id": "opera_lirica",
@@ -294,7 +326,8 @@
     "excerpt": "L'opera lirica è forse il regalo più grande che l'Italia ha fatto alla musica. Nata a Firenze alla fine del Cinquecento, come esperimento di…",
     "paragraphCount": 6,
     "wordCount": 279,
-    "category": "arte_lingua"
+    "category": "arte_lingua",
+    "genre": "documentario"
   },
   {
     "id": "calcio",
@@ -303,7 +336,8 @@
     "excerpt": "In Italia il calcio non è soltanto uno sport: è una passione collettiva che attraversa tutte le generazioni e tutte le classi sociali. La do…",
     "paragraphCount": 6,
     "wordCount": 276,
-    "category": "sport"
+    "category": "sport",
+    "genre": "documentario"
   },
   {
     "id": "famiglia",
@@ -312,7 +346,8 @@
     "excerpt": "Mi chiamo Luca e ho dieci anni. La mia famiglia è grande. Ho un fratello, una sorella, la mamma e il papà.",
     "paragraphCount": 3,
     "wordCount": 76,
-    "category": "vita_quotidiana"
+    "category": "vita_quotidiana",
+    "genre": "racconto"
   },
   {
     "id": "cane",
@@ -321,7 +356,8 @@
     "excerpt": "Ho un cane piccolo e bianco. Si chiama Toby e ha tre anni. È molto allegro e corre sempre.",
     "paragraphCount": 3,
     "wordCount": 68,
-    "category": "natura_animali"
+    "category": "natura_animali",
+    "genre": "racconto"
   },
   {
     "id": "casa",
@@ -330,7 +366,8 @@
     "excerpt": "Anna abita in una casa gialla con un giardino. La casa ha due piani e un tetto rosso. Davanti alla porta c'è un albero di limoni.",
     "paragraphCount": 3,
     "wordCount": 79,
-    "category": "vita_quotidiana"
+    "category": "vita_quotidiana",
+    "genre": "racconto"
   },
   {
     "id": "supermercato",
@@ -339,7 +376,8 @@
     "excerpt": "Oggi Sofia va al supermercato con la mamma. Hanno una lista lunga: pane, latte, uova e frutta. Sofia spinge il carrello.",
     "paragraphCount": 3,
     "wordCount": 68,
-    "category": "vita_quotidiana"
+    "category": "vita_quotidiana",
+    "genre": "racconto"
   },
   {
     "id": "stagioni",
@@ -348,7 +386,8 @@
     "excerpt": "L'anno ha quattro stagioni. In primavera i fiori aprono e gli uccelli cantano. Fa caldo ma non troppo.",
     "paragraphCount": 3,
     "wordCount": 68,
-    "category": "natura_animali"
+    "category": "natura_animali",
+    "genre": "documentario"
   },
   {
     "id": "compleanno",
@@ -357,7 +396,8 @@
     "excerpt": "Oggi è il compleanno di Giulia: compie nove anni. La mamma prepara una torta al cioccolato. Il papà appende i palloncini colorati in salotto…",
     "paragraphCount": 6,
     "wordCount": 131,
-    "category": "feste"
+    "category": "feste",
+    "genre": "racconto"
   },
   {
     "id": "pioggia",
@@ -366,7 +406,8 @@
     "excerpt": "Sabato mattina piove forte. Martina guarda fuori dalla finestra e sospira: oggi niente parco. Il fratello Piero è triste.",
     "paragraphCount": 6,
     "wordCount": 141,
-    "category": "cucina"
+    "category": "cucina",
+    "genre": "racconto"
   },
   {
     "id": "bicicletta",
@@ -375,7 +416,8 @@
     "excerpt": "Matteo ha ricevuto una bicicletta nuova per il suo compleanno. È rossa, con un campanello argento. Matteo la guarda ogni mattina prima di an…",
     "paragraphCount": 6,
     "wordCount": 145,
-    "category": "sport"
+    "category": "sport",
+    "genre": "racconto"
   },
   {
     "id": "telefonino",
@@ -384,7 +426,8 @@
     "excerpt": "Nonno Piero ha settant'anni e ha un telefonino nuovo. È un regalo dei figli. Ma il nonno non sa come funziona.",
     "paragraphCount": 6,
     "wordCount": 145,
-    "category": "vita_quotidiana"
+    "category": "vita_quotidiana",
+    "genre": "racconto"
   },
   {
     "id": "fattoria",
@@ -393,7 +436,8 @@
     "excerpt": "Domenica la famiglia Bruni fa una gita in campagna. Vanno a trovare lo zio Franco, che ha una fattoria. I bambini sono felicissimi.",
     "paragraphCount": 6,
     "wordCount": 144,
-    "category": "natura_animali"
+    "category": "natura_animali",
+    "genre": "racconto"
   },
   {
     "id": "palio",
@@ -402,7 +446,8 @@
     "excerpt": "Due volte all'anno, il due luglio e il sedici agosto, la città di Siena si ferma per il Palio. È una corsa di cavalli antichissima, che si c…",
     "paragraphCount": 6,
     "wordCount": 252,
-    "category": "feste"
+    "category": "feste",
+    "genre": "documentario"
   },
   {
     "id": "cinque_terre",
@@ -411,7 +456,8 @@
     "excerpt": "Sulla costa della Liguria ci sono cinque piccoli paesi famosi in tutto il mondo: le Cinque Terre. Si chiamano Monterosso, Vernazza, Cornigli…",
     "paragraphCount": 6,
     "wordCount": 247,
-    "category": "viaggi"
+    "category": "viaggi",
+    "genre": "documentario"
   },
   {
     "id": "gelato",
@@ -420,7 +466,8 @@
     "excerpt": "Il gelato è una delle glorie italiane più amate nel mondo. La sua storia è lunga: già gli antichi romani mangiavano neve con miele e frutta.…",
     "paragraphCount": 6,
     "wordCount": 258,
-    "category": "cucina"
+    "category": "cucina",
+    "genre": "documentario"
   },
   {
     "id": "trulli",
@@ -429,7 +476,8 @@
     "excerpt": "In Puglia, nel sud dell'Italia, esiste un paese che sembra uscito da una fiaba: Alberobello. Le sue case bianche hanno tetti a forma di cono…",
     "paragraphCount": 6,
     "wordCount": 250,
-    "category": "viaggi"
+    "category": "viaggi",
+    "genre": "documentario"
   },
   {
     "id": "carnevale",
@@ -438,7 +486,8 @@
     "excerpt": "Ogni anno, tra gennaio e febbraio, Venezia si trasforma. Per due settimane, la città si riempie di maschere, costumi e musica: è il Carneval…",
     "paragraphCount": 6,
     "wordCount": 262,
-    "category": "feste"
+    "category": "feste",
+    "genre": "documentario"
   },
   {
     "id": "al_bar",

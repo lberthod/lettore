@@ -6,7 +6,7 @@ Application web de lecture pour apprendre l'italien : des textes gradués en ita
 
 ## Fonctionnalités
 
-- 📚 **227 textes en italien**, du A1 au C2, classés sur deux dimensions : **genre** (récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (cuisine, voyages, montagne, histoire, société…) — taxonomie définie dans `src/texts/category.json`
+- 📚 **454 textes en italien**, du A1 au C2, classés sur deux dimensions : **genre** (récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (cuisine, voyages, montagne, histoire, société…) — taxonomie définie dans `src/texts/category.json`
 - 🗂️ **Bibliothèque** avec filtres par niveau, genre et thème
 - 👆 **Traduction au clic** : cliquer sur un mot affiche sa traduction française ; possibilité de traduire la phrase entière
 - 🔊 **Lecture audio** en italien (voix it-IT via la Web Speech API), avec pause/reprise et trois vitesses
@@ -113,6 +113,10 @@ Une seule codebase Vue pour tout. Pas de réécriture native (Swift/Kotlin) : po
 - [ ] Renseigner les Payment Links Stripe dans `src/lib/stripe.js` et déployer
 - [ ] Valider la traction : est-ce que des visiteurs s'abonnent ?
 - Le web reste le meilleur canal de vente : ~3 % de frais Stripe, contre 15–30 % de commission sur les stores.
+
+### Idée à l'étude — palier "Premium+"
+
+Un palier au-dessus du Premium (15 CHF/mois envisagés) : notifications de nouveaux textes, jusqu'à 3 textes générés par jour (actualité ou thème au choix), et une bibliothèque d'ebooks classiques traduits et gradués (*La Parure*, *Rosso Malpelo*, *Le Horla*, *Pinocchio*, *Le Dernier Jour d'un condamné*, *Candide*, *Il fu Mattia Pascal*, *Inferno*). Le plan est déjà scaffoldé dans `src/lib/stripe.js` (`premiumPlusPlan`, sans Payment Link actif). **Ne pas construire avant d'avoir validé la conversion du Premium existant** — voir l'analyse complète (rentabilité, séquencement, sources) dans [PREMIUM_PLUS_ANALYSIS.md](PREMIUM_PLUS_ANALYSIS.md).
 
 ### Phase 2 — PWA (fait)
 

@@ -3,6 +3,8 @@
 Stratégie de catégorisation du Lettore Italiano : état des lieux chiffré, publics visés, taxonomie à deux dimensions (genre × thème), plan de production chiffré.
 
 > **Mise à jour du 24/07/2026** : la taxonomie genre × thème proposée en §3–§5 est **implémentée** (`src/texts/category.json`, champs `genre`/`category` sur les textes, orchestrateur `--genre`, `curatedMatrix`). Les Phases 1 et 2 du plan initial sont dépassées. Ce document reflète l'état réel du catalogue et fixe la suite : **Phase 4, cap sur 420 textes**.
+>
+> **Second point d'étape, même journée** : le catalogue est passé de 340 à **454 textes** — la cible de la Phase 4 (420) est déjà dépassée. Les cellules fragiles (≤ 1 texte) du §4.4 sont toutes résorbées (chacune a désormais ≥ 4 textes). Reste un seul écart ouvert : la part A1–A2 est à **36,6 %** (166/454), toujours sous la cible de 45 %. Chiffres exacts en §1.3.
 
 ---
 

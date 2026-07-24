@@ -4,7 +4,7 @@ Ce document explique comment l'application est construite : ses principes, ses m
 
 ## Vue d'ensemble
 
-Leggendo est une **SPA Vue 3 essentiellement statique** : pas d'API de traduction, pas de base de données obligatoire. Tout le catalogue (227 textes, lexiques, traductions de phrases) est pré-généré dans des fichiers JSON embarqués dans le build. Les services externes sont optionnels et chargés à la demande : Firebase Auth (comptes), Firestore (textes créés par les utilisateurs), Stripe (paiement) — l'app tourne sans eux si leur configuration n'est pas remplie. La seule pièce serveur applicative est l'API « Créer son texte » sur le VPS ([leggendo-server/](leggendo-server/)).
+Leggendo est une **SPA Vue 3 essentiellement statique** : pas d'API de traduction, pas de base de données obligatoire. Tout le catalogue (454 textes, lexiques, traductions de phrases) est pré-généré dans des fichiers JSON embarqués dans le build. Les services externes sont optionnels et chargés à la demande : Firebase Auth (comptes), Firestore (textes créés par les utilisateurs), Stripe (paiement) — l'app tourne sans eux si leur configuration n'est pas remplie. La seule pièce serveur applicative est l'API « Créer son texte » sur le VPS ([leggendo-server/](leggendo-server/)).
 
 ```
 ┌─────────────────────────── Navigateur ───────────────────────────┐

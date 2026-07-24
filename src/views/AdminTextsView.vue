@@ -328,6 +328,48 @@ const fragileGenreCells = computed(() =>
   color: #2c2620;
 }
 
+.block h3 {
+  font-size: 0.85rem;
+  margin: 1rem 0 0.5rem;
+  color: #6b6156;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fragile-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.fragile-header h2 {
+  margin: 0;
+}
+
+.threshold-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #6b6156;
+}
+
+.threshold-control select {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(138, 90, 43, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: #2c2620;
+}
+
+.threshold-control.checkbox {
+  gap: 0.35rem;
+}
+
 .hint {
   color: #6b6156;
   font-size: 0.88rem;
@@ -388,7 +430,7 @@ const fragileGenreCells = computed(() =>
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem 0.9rem;
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0;
   list-style: none;
   font-size: 0.85rem;
@@ -400,5 +442,16 @@ const fragileGenreCells = computed(() =>
   border-radius: 999px;
   background: rgba(163, 58, 42, 0.06);
   color: #a33a2a;
+}
+
+.fragile-list li.zero {
+  border-color: rgba(107, 97, 86, 0.35);
+  background: rgba(107, 97, 86, 0.08);
+  color: #6b6156;
+}
+
+.fragile-list .count {
+  opacity: 0.7;
+  font-size: 0.78rem;
 }
 </style>
