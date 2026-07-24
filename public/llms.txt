@@ -1,0 +1,31 @@
+# Leggendo
+
+> Leggendo est un lecteur interactif pour apprendre l'italien par la lecture
+> extensive : textes gradués du niveau A1 à C2, traduction française au clic
+> sur chaque mot ou phrase, et lecture audio. Site en français, textes en
+> italien, développé en Suisse, disponible aussi en France.
+
+La méthode s'appuie sur la lecture extensive (comprehensible input) : lire
+des textes légèrement au-dessus de son niveau actuel (zone i+1), avec une
+traduction immédiate et sans effort du vocabulaire inconnu, pour progresser
+en compréhension et en vocabulaire sans étudier de grammaire de façon
+explicite.
+
+## Pages principales
+
+- [Accueil](https://leggendo.fr/) : présentation générale de la méthode et de l'app.
+- [Tous les textes](https://leggendo.fr/textes) : catalogue complet, ~460 textes gradués A1 à C2, filtrables par niveau, thème et genre.
+- [La méthode](https://leggendo.fr/methode) : explication de la lecture extensive, FAQ.
+- [La méthodologie](https://leggendo.fr/methodologie) : version écrite détaillée, avec les recherches scientifiques citées.
+- [À propos](https://leggendo.fr/a-propos) : qui est derrière Leggendo.
+- [Abonnement](https://leggendo.fr/abonnement) : formules gratuite, Premium, Premium+ et Enseignant, prix en EUR et CHF.
+
+## Notes pour les agents / robots
+
+- Chaque texte du catalogue a sa propre URL stable : `https://leggendo.fr/testo/<id>`.
+- Un sitemap complet est disponible : https://leggendo.fr/sitemap.xml
+- Les pages de compte (`/profil`, `/mes-textes`, `/admin`…) sont privées et
+  exclues de l'indexation (voir robots.txt) : ne pas les citer comme contenu
+  public.
+- Six textes du catalogue sont en accès libre sans compte ; les autres
+  nécessitent un abonnement (voir /abonnement pour les tarifs).

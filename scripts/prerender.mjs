@@ -90,9 +90,22 @@ function patchHead(html, { title, description, canonical, extraHead = '' }) {
     `<meta property="og:description" content="${escapeAttr(description)}" />`
   )
   out = out.replace(
-    '</head>',
-    `    <link rel="canonical" href="${canonical}" />\n${extraHead}  </head>`
+    /<meta\s+property="og:url"[^>]*\/>/,
+    `<meta property="og:url" content="${canonical}" />`
   )
+  out = out.replace(
+    /<meta\s+name="twitter:title"[^>]*\/>/,
+    `<meta name="twitter:title" content="${escapeAttr(title)}" />`
+  )
+  out = out.replace(
+    /<meta\s+name="twitter:description"[\s\S]*?\/>/,
+    `<meta name="twitter:description" content="${escapeAttr(description)}" />`
+  )
+  out = out.replace(
+    /<link rel="canonical"[^>]*\/>/,
+    `<link rel="canonical" href="${canonical}" />`
+  )
+  out = out.replace('</head>', `${extraHead}  </head>`)
   return out
 }
 
@@ -121,17 +134,60 @@ function writeRoute(routePath, html) {
 let count = 0
 
 // --- Pages statiques : correction du <head> pour toutes les pages indexables ---
+// FAQ affichée dans MethodView.vue (slide 7) — dupliquée ici car ce script
+// ne fait pas tourner Vue. Si le contenu de la FAQ change là-bas, le
+// répercuter ici pour garder le FAQPage JSON-LD synchronisé.
+const METHOD_FAQ = [
+  {
+    q: "Peut-on vraiment apprendre l'italien juste en lisant ?",
+    a: "La compréhension et le vocabulaire, oui — c'est confirmé par plusieurs méta-analyses. Pour parler, il faut aussi pratiquer l'oral : la lecture extensive est le complément idéal d'un cours ou d'un tandem.",
+  },
+  {
+    q: 'Quel niveau faut-il pour commencer ?',
+    a: "Aucun. Les textes A1 sont accessibles dès les premiers jours, et le français partage trois quarts de son vocabulaire avec l'italien. La traduction au clic fait le reste.",
+  },
+  {
+    q: 'Combien de temps par jour ?',
+    a: "10 à 20 minutes par jour suffisent : la régularité compte plus que la durée. C'est le volume cumulé de lecture qui fait la différence.",
+  },
+  {
+    q: 'Pourquoi la traduction en français ?',
+    a: "Pour les débutants et intermédiaires, la recherche montre que les traductions en langue maternelle sont plus efficaces que les définitions en langue cible.",
+  },
+]
+
 for (const route of ROUTES) {
   if (route.noindex) continue
   const canonical = `${SITE_URL}${route.path}`
   let extraHead = ''
-  if (route.path === '/') {
+  if (route.path === '/methode') {
     extraHead = jsonLd({
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Leggendo',
-      url: SITE_URL,
-      description: route.description,
+      '@type': 'FAQPage',
+      mainEntity: METHOD_FAQ.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    })
+  } else if (route.path === '/abonnement') {
+    // Prix de référence EUR — src/lib/stripe.js ajuste l'affichage en CHF
+    // pour les visiteurs suisses côté client, ce script (Node) ne peut pas
+    // reproduire cette détection (dépend de `navigator`). À resynchroniser
+    // à la main si les tarifs changent.
+    extraHead = jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Leggendo Premium',
+      description:
+        "Accès illimité à tous les textes gradués en italien (A1 à C2), traduction française au clic et lecture audio.",
+      offers: {
+        '@type': 'Offer',
+        price: '6',
+        priceCurrency: 'EUR',
+        priceValidUntil: `${new Date().getUTCFullYear() + 1}-12-31`,
+        url: canonical,
+      },
     })
   }
   let html = patchHead(template, {
