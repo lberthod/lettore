@@ -619,5 +619,465 @@
     "wordCount": 142,
     "genre": "racconto",
     "category": "societa"
+  },
+  {
+    "id": "colloquio",
+    "title": "Il colloquio di lavoro",
+    "level": "A2",
+    "excerpt": "— Buongiorno, si accomodi. Lei ha mandato il curriculum per il posto di commessa, giusto? — Sì, esatto. Grazie per avermi ricevuta.",
+    "paragraphCount": 8,
+    "wordCount": 75,
+    "genre": "dialogo",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "casa_intelligente",
+    "title": "La casa che pensava",
+    "level": "B1",
+    "excerpt": "Nel 2090, la famiglia Ricci comprò una casa intelligente, capace di controllare tutto: luci, temperatura, elettrodomestici e persino la spesa.",
+    "paragraphCount": 6,
+    "wordCount": 130,
+    "genre": "fantascienza",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "leonardo_invenzioni",
+    "title": "Le invenzioni di Leonardo",
+    "level": "B1",
+    "excerpt": "Leonardo da Vinci non fu solo un grande pittore, ma anche uno degli inventori più geniali della storia. Viveva nel Rinascimento.",
+    "paragraphCount": 6,
+    "wordCount": 136,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "pasta_pomodoro",
+    "title": "La pasta al pomodoro",
+    "level": "A2",
+    "excerpt": "La pasta al pomodoro è il piatto italiano più famoso. È semplice, ma richiede un po' di attenzione. Ecco la ricetta per due persone.",
+    "paragraphCount": 6,
+    "wordCount": 104,
+    "genre": "pratico",
+    "category": "cucina"
+  },
+  {
+    "id": "pacco_misterioso",
+    "title": "Il pacco misterioso",
+    "level": "A2",
+    "excerpt": "Durante un viaggio in treno, Sara trova un pacco sotto il suo sedile. Non c'è nessun nome sopra.",
+    "paragraphCount": 6,
+    "wordCount": 104,
+    "genre": "giallo",
+    "category": "viaggi"
+  },
+  {
+    "id": "notte_capodanno",
+    "title": "Notte di Capodanno",
+    "level": "B1",
+    "excerpt": "La città trattiene il fiato nell'ultima ora dell'anno. Le finestre brillano come piccole stelle cadute.",
+    "paragraphCount": 6,
+    "wordCount": 51,
+    "genre": "poesia",
+    "category": "feste"
+  },
+  {
+    "id": "leone_topo",
+    "title": "Il leone e il topo",
+    "level": "A1",
+    "excerpt": "Un leone dorme sotto un albero. Un piccolo topo gli corre sopra. Il leone si sveglia e prende il topo.",
+    "paragraphCount": 6,
+    "wordCount": 79,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "diario_sofia",
+    "title": "Il diario di Sofia",
+    "level": "A2",
+    "excerpt": "Caro diario, oggi è stato un giorno speciale. Ho iniziato la scuola nuova. Ero molto nervosa.",
+    "paragraphCount": 6,
+    "wordCount": 81,
+    "genre": "lettera_diario",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "pioggia_autunno",
+    "title": "Pioggia d'autunno",
+    "level": "A2",
+    "excerpt": "Cadono le foglie gialle e rosse. Il vento gioca tra i rami spogli. La pioggia canta sopra i tetti.",
+    "paragraphCount": 6,
+    "wordCount": 36,
+    "genre": "poesia",
+    "category": "natura_animali"
+  },
+  {
+    "id": "partita_decisiva",
+    "title": "La partita decisiva",
+    "level": "B1",
+    "excerpt": "Era l'ultima partita del campionato e la piccola squadra del paese doveva vincere per non retrocedere.",
+    "paragraphCount": 6,
+    "wordCount": 108,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "in_negozio",
+    "title": "In negozio",
+    "level": "A1",
+    "excerpt": "— Buongiorno, cerco una maglietta. — Buongiorno. Che taglia porta? — Una taglia media. La vorrei blu.",
+    "paragraphCount": 8,
+    "wordCount": 46,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "viaggio_marte",
+    "title": "Viaggio su Marte",
+    "level": "B1",
+    "excerpt": "Nel 2130, il primo viaggio turistico su Marte diventò realtà. Elena fu tra i fortunati a salire sull'astronave.",
+    "paragraphCount": 6,
+    "wordCount": 121,
+    "genre": "fantascienza",
+    "category": "viaggi"
+  },
+  {
+    "id": "primo_giorno_lavoro",
+    "title": "Il primo giorno di lavoro",
+    "level": "B1",
+    "excerpt": "CAPO — Benvenuto in azienda, Luca. Sei pronto per il tuo primo giorno? LUCA — Sì, un po' emozionato, ma pronto.",
+    "paragraphCount": 6,
+    "wordCount": 73,
+    "genre": "teatro",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "voto_donne",
+    "title": "Il voto alle donne",
+    "level": "B2",
+    "excerpt": "Per molto tempo, in Italia, le donne non ebbero il diritto di votare. La politica era considerata una faccenda esclusivamente maschile.",
+    "paragraphCount": 6,
+    "wordCount": 118,
+    "genre": "documentario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "al_mercato",
+    "title": "Al mercato",
+    "level": "A1",
+    "excerpt": "— Buongiorno, quanto costano le mele? — Due euro al chilo. Sono molto buone. — Ne prendo un chilo.",
+    "paragraphCount": 8,
+    "wordCount": 49,
+    "genre": "dialogo",
+    "category": "cucina"
+  },
+  {
+    "id": "rifugio_tempesta",
+    "title": "Il rifugio nella tempesta",
+    "level": "B1",
+    "excerpt": "Durante un'escursione sulle Alpi, due amici, Anna e Paolo, furono sorpresi da un temporale improvviso.",
+    "paragraphCount": 6,
+    "wordCount": 112,
+    "genre": "racconto",
+    "category": "montagna"
+  },
+  {
+    "id": "diario_montagna",
+    "title": "Diario di montagna",
+    "level": "A2",
+    "excerpt": "Caro diario, oggi siamo saliti al rifugio a duemila metri. Il panorama è incredibile.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "lettera_diario",
+    "category": "montagna"
+  },
+  {
+    "id": "ladro_ricette",
+    "title": "Il ladro di ricette",
+    "level": "B1",
+    "excerpt": "Nel famoso ristorante dello chef Bianchi, qualcuno aveva rubato il quaderno segreto delle ricette.",
+    "paragraphCount": 6,
+    "wordCount": 95,
+    "genre": "giallo",
+    "category": "cucina"
+  },
+  {
+    "id": "lepre_tartaruga",
+    "title": "La lepre e la tartaruga",
+    "level": "A2",
+    "excerpt": "Una lepre veloce rideva sempre di una tartaruga lenta. — Sei così lenta! — le diceva.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "silenzio_alta_quota",
+    "title": "Silenzio d'alta quota",
+    "level": "B1",
+    "excerpt": "Le cime bianche toccano il cielo azzurro. Nessun rumore, solo il vento tra le rocce.",
+    "paragraphCount": 6,
+    "wordCount": 44,
+    "genre": "poesia",
+    "category": "montagna"
+  },
+  {
+    "id": "cinema_italiano",
+    "title": "Il cinema italiano",
+    "level": "B2",
+    "excerpt": "Il cinema italiano è conosciuto in tutto il mondo per la sua storia ricca e i suoi grandi maestri.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "documentario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "festa_paese",
+    "title": "La festa del paese",
+    "level": "B1",
+    "excerpt": "Ogni estate, il piccolo paese di Montecielo organizzava la festa più attesa dell'anno.",
+    "paragraphCount": 6,
+    "wordCount": 95,
+    "genre": "racconto",
+    "category": "feste"
+  },
+  {
+    "id": "in_albergo",
+    "title": "In albergo",
+    "level": "A1",
+    "excerpt": "— Buongiorno, ho una prenotazione a nome Verdi. — Un attimo... sì, una camera doppia per due notti.",
+    "paragraphCount": 8,
+    "wordCount": 59,
+    "genre": "dialogo",
+    "category": "viaggi"
+  },
+  {
+    "id": "preparativi_festa",
+    "title": "Preparativi di festa",
+    "level": "A2",
+    "excerpt": "MAMMA — Ragazzi, sbrigatevi! Gli ospiti arrivano tra un'ora. LEO — Ho quasi finito di apparecchiare la tavola.",
+    "paragraphCount": 6,
+    "wordCount": 57,
+    "genre": "teatro",
+    "category": "feste"
+  },
+  {
+    "id": "citta_senza_auto",
+    "title": "La città senza automobili",
+    "level": "B2",
+    "excerpt": "Nel 2150, la grande città di Nuova Milano aveva vietato completamente le automobili private.",
+    "paragraphCount": 6,
+    "wordCount": 87,
+    "genre": "fantascienza",
+    "category": "societa"
+  },
+  {
+    "id": "etruschi",
+    "title": "Gli Etruschi",
+    "level": "B1",
+    "excerpt": "Prima dei Romani, in Italia centrale viveva un popolo misterioso e affascinante: gli Etruschi.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "documentario",
+    "category": "storia_antica"
+  },
+  {
+    "id": "a_scuola",
+    "title": "A scuola",
+    "level": "A1",
+    "excerpt": "— Scusi, professore, non ho capito l'esercizio. — Quale esercizio? Il numero tre? — Sì, quello.",
+    "paragraphCount": 6,
+    "wordCount": 39,
+    "genre": "dialogo",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "befana",
+    "title": "La Befana",
+    "level": "B1",
+    "excerpt": "Tanti anni fa, viveva una vecchia signora che passava le giornate a pulire la sua casetta.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "fiaba",
+    "category": "feste"
+  },
+  {
+    "id": "portafoglio_scomparso",
+    "title": "Il portafoglio scomparso",
+    "level": "A2",
+    "excerpt": "In ufficio, la signora Bruni non trova più il suo portafoglio. Era nella sua borsa.",
+    "paragraphCount": 6,
+    "wordCount": 75,
+    "genre": "giallo",
+    "category": "societa"
+  },
+  {
+    "id": "le_parole",
+    "title": "Le parole",
+    "level": "B2",
+    "excerpt": "Le parole sono ponti tra due anime lontane. Alcune sanno di miele, altre feriscono come spine.",
+    "paragraphCount": 6,
+    "wordCount": 51,
+    "genre": "poesia",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "sicilia",
+    "title": "La Sicilia",
+    "level": "B2",
+    "excerpt": "La Sicilia è la più grande isola del Mediterraneo e una terra di incredibili contrasti.",
+    "paragraphCount": 6,
+    "wordCount": 84,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "torta_domenica",
+    "title": "La torta della domenica",
+    "level": "A2",
+    "excerpt": "Ogni domenica, il nonno Giuseppe preparava una torta di mele per tutta la famiglia.",
+    "paragraphCount": 6,
+    "wordCount": 80,
+    "genre": "racconto",
+    "category": "cucina"
+  },
+  {
+    "id": "lettera_amico",
+    "title": "Lettera a un amico lontano",
+    "level": "B1",
+    "excerpt": "Caro Ahmed, è passato un anno da quando sei partito dal nostro paese. Qui le cose sono cambiate.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "lettera_diario",
+    "category": "societa"
+  },
+  {
+    "id": "ultimo_albero",
+    "title": "L'ultimo albero",
+    "level": "B1",
+    "excerpt": "Nel futuro, la Terra era diventata una grande città di metallo e vetro. Non c'erano più alberi.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "fantascienza",
+    "category": "natura_animali"
+  },
+  {
+    "id": "ritardo_aeroporto",
+    "title": "Ritardo all'aeroporto",
+    "level": "B1",
+    "excerpt": "PAOLO — Hai visto il tabellone? Il nostro volo è in ritardo di tre ore! LUCIA — Tre ore?",
+    "paragraphCount": 6,
+    "wordCount": 68,
+    "genre": "teatro",
+    "category": "viaggi"
+  },
+  {
+    "id": "giro_italia",
+    "title": "Il Giro d'Italia",
+    "level": "B2",
+    "excerpt": "Il Giro d'Italia è una delle corse ciclistiche più famose e dure del mondo.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "documentario",
+    "category": "sport"
+  },
+  {
+    "id": "dante",
+    "title": "Dante e la Divina Commedia",
+    "level": "C1",
+    "excerpt": "Dante Alighieri, nato a Firenze nel milleduecentosessantacinque, è considerato il padre della lingua italiana.",
+    "paragraphCount": 6,
+    "wordCount": 109,
+    "genre": "documentario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "corvo_volpe",
+    "title": "Il corvo e la volpe",
+    "level": "A1",
+    "excerpt": "Un corvo trova un pezzo di formaggio. Vola su un albero per mangiarlo. Una volpe furba passa di lì.",
+    "paragraphCount": 6,
+    "wordCount": 69,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "dal_medico",
+    "title": "Dal medico",
+    "level": "B1",
+    "excerpt": "— Buongiorno dottore, non mi sento bene da tre giorni. — Mi dica, che sintomi ha?",
+    "paragraphCount": 8,
+    "wordCount": 78,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "valigia",
+    "title": "Cosa mettere in valigia",
+    "level": "A2",
+    "excerpt": "Prima di partire per un viaggio, è importante preparare bene la valigia.",
+    "paragraphCount": 6,
+    "wordCount": 70,
+    "genre": "pratico",
+    "category": "viaggi"
+  },
+  {
+    "id": "dolomiti",
+    "title": "Le Dolomiti",
+    "level": "B2",
+    "excerpt": "Le Dolomiti sono un gruppo di montagne situate nel nord-est dell'Italia, famose per la loro bellezza unica.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "documentario",
+    "category": "montagna"
+  },
+  {
+    "id": "lettera_natale",
+    "title": "Lettera di Natale",
+    "level": "A2",
+    "excerpt": "Cari nonni, tra pochi giorni è Natale e non vedo l'ora di vedervi.",
+    "paragraphCount": 6,
+    "wordCount": 76,
+    "genre": "lettera_diario",
+    "category": "feste"
+  },
+  {
+    "id": "cane_gatto",
+    "title": "Il cane e il gatto",
+    "level": "B1",
+    "excerpt": "In una vecchia casa di campagna vivevano un cane e un gatto che non andavano mai d'accordo.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "racconto",
+    "category": "natura_animali"
+  },
+  {
+    "id": "scuola_futuro",
+    "title": "La scuola del futuro",
+    "level": "B1",
+    "excerpt": "Nel duemilacento, la scuola era completamente diversa da quella di oggi.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "fantascienza",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "filastrocca_casa",
+    "title": "Filastrocca di casa",
+    "level": "A1",
+    "excerpt": "In cucina bolle la minestra. Il gatto dorme sulla finestra. Il papà legge il giornale.",
+    "paragraphCount": 6,
+    "wordCount": 34,
+    "genre": "poesia",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "staffetta",
+    "title": "La staffetta",
+    "level": "C1",
+    "excerpt": "Nell'inverno del millenovecentoquarantaquattro, Maria aveva soltanto sedici anni, ma era già una staffetta partigiana.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "racconto",
+    "category": "storia_moderna"
   }
 ]

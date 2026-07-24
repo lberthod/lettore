@@ -1,0 +1,92 @@
+{
+  "id": "al_mercato",
+  "title": "Al mercato",
+  "level": "A1",
+  "genre": "dialogo",
+  "category": "cucina",
+  "paragraphs": [
+    "— Buongiorno, quanto costano le mele?",
+    "— Due euro al chilo. Sono molto buone.",
+    "— Ne prendo un chilo. E i pomodori?",
+    "— Un euro e cinquanta. Quanti ne vuole?",
+    "— Mezzo chilo, grazie. Ha anche il basilico?",
+    "— Sì, eccolo. È fresco di stamattina.",
+    "— Perfetto. Quanto pago in tutto?",
+    "— Quattro euro. Grazie e arrivederci!"
+  ],
+  "questions": [
+    {
+      "q": "Quanto costano le mele al chilo?",
+      "options": ["Due euro", "Un euro", "Quattro euro"],
+      "correct": 0
+    },
+    {
+      "q": "Quanti pomodori compra il cliente?",
+      "options": ["Un chilo", "Mezzo chilo", "Due chili"],
+      "correct": 1
+    },
+    {
+      "q": "Quanto paga in tutto?",
+      "options": ["Due euro", "Quattro euro", "Sei euro"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "al": "au (« al chilo » = le kilo)",
+    "anche": "aussi",
+    "arrivederci": "au revoir",
+    "basilico": "basilic",
+    "buone": "bonnes",
+    "buongiorno": "bonjour",
+    "chilo": "kilo",
+    "cinquanta": "cinquante",
+    "costano": "coûtent",
+    "di": "de (« di stamattina » = de ce matin)",
+    "due": "deux",
+    "e": "et",
+    "eccolo": "le voici",
+    "euro": "euros",
+    "fresco": "frais",
+    "grazie": "merci",
+    "ha": "avez-vous",
+    "i": "les",
+    "il": "le",
+    "in": "en (« in tutto » = en tout)",
+    "le": "les",
+    "mele": "pommes",
+    "mezzo": "demi",
+    "molto": "très",
+    "ne": "en (« ne prendo » = j'en prends)",
+    "pago": "je paie",
+    "perfetto": "parfait",
+    "pomodori": "tomates",
+    "prendo": "je prends",
+    "quanti": "combien",
+    "quanto": "combien",
+    "quattro": "quatre",
+    "sono": "elles sont",
+    "stamattina": "ce matin",
+    "sì": "oui",
+    "tutto": "tout",
+    "un": "un",
+    "vuole": "voulez-vous",
+    "è": "est"
+  },
+  "sentences": {
+    "— Buongiorno, quanto costano le mele?": "— Bonjour, combien coûtent les pommes ?",
+    "— Due euro al chilo.": "— Deux euros le kilo.",
+    "Sono molto buone.": "Elles sont très bonnes.",
+    "— Ne prendo un chilo.": "— J'en prends un kilo.",
+    "E i pomodori?": "Et les tomates ?",
+    "— Un euro e cinquanta.": "— Un euro cinquante.",
+    "Quanti ne vuole?": "Combien en voulez-vous ?",
+    "— Mezzo chilo, grazie.": "— Un demi-kilo, merci.",
+    "Ha anche il basilico?": "Avez-vous aussi du basilic ?",
+    "— Sì, eccolo.": "— Oui, le voici.",
+    "È fresco di stamattina.": "Il est frais de ce matin.",
+    "— Perfetto.": "— Parfait.",
+    "Quanto pago in tutto?": "Combien je paie en tout ?",
+    "— Quattro euro.": "— Quatre euros.",
+    "Grazie e arrivederci!": "Merci et au revoir !"
+  }
+}

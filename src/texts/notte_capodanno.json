@@ -1,0 +1,92 @@
+{
+  "id": "notte_capodanno",
+  "title": "Notte di Capodanno",
+  "level": "B1",
+  "genre": "poesia",
+  "category": "feste",
+  "paragraphs": [
+    "La città trattiene il fiato nell'ultima ora dell'anno.",
+    "Le finestre brillano come piccole stelle cadute.",
+    "A mezzanotte il cielo si accende di mille colori.",
+    "La gente si abbraccia, ride, dimentica ogni paura.",
+    "Il vecchio anno se ne va in silenzio, senza rumore.",
+    "E in ogni cuore nasce, timida, una nuova speranza."
+  ],
+  "questions": [
+    {
+      "q": "In quale momento è ambientata la poesia?",
+      "options": ["All'alba", "A mezzanotte di Capodanno", "A mezzogiorno"],
+      "correct": 1
+    },
+    {
+      "q": "A che cosa sono paragonate le finestre?",
+      "options": ["A piccole stelle cadute", "A grandi fuochi", "A lune bianche"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa nasce in ogni cuore alla fine?",
+      "options": ["Una nuova paura", "Una nuova speranza", "Un ricordo triste"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "a": "à (« a mezzanotte » = à minuit)",
+    "abbraccia": "embrasse (« si abbraccia » = s'embrasse)",
+    "accende": "allume (« si accende » = s'illumine)",
+    "anno": "année",
+    "brillano": "brillent",
+    "cadute": "tombées",
+    "capodanno": "Nouvel An",
+    "che": "que",
+    "cielo": "ciel",
+    "città": "ville",
+    "colori": "couleurs",
+    "come": "comme",
+    "cuore": "cœur",
+    "dell'anno": "de l'année",
+    "di": "de (« di mille colori » = de mille couleurs)",
+    "dimentica": "oublie",
+    "e": "et",
+    "fiato": "souffle (« trattiene il fiato » = retient son souffle)",
+    "finestre": "fenêtres",
+    "gente": "gens",
+    "il": "le",
+    "in": "en / dans",
+    "la": "la",
+    "le": "les",
+    "mezzanotte": "minuit",
+    "mille": "mille",
+    "nasce": "naît",
+    "ne": "en (« se ne va » = s'en va)",
+    "nell'ultima": "dans la dernière",
+    "notte": "nuit",
+    "nuova": "nouvelle",
+    "ogni": "chaque",
+    "ora": "heure",
+    "paura": "peur",
+    "piccole": "petites",
+    "ride": "rit",
+    "rumore": "bruit",
+    "se": "se (« se ne va » = s'en va)",
+    "senza": "sans",
+    "si": "se / on",
+    "silenzio": "silence",
+    "speranza": "espoir",
+    "stelle": "étoiles",
+    "timida": "timide",
+    "trattiene": "retient",
+    "una": "une",
+    "ultima": "dernière",
+    "va": "va (« se ne va » = s'en va)",
+    "vecchio": "vieux",
+    "senza": "sans"
+  },
+  "sentences": {
+    "La città trattiene il fiato nell'ultima ora dell'anno.": "La ville retient son souffle dans la dernière heure de l'année.",
+    "Le finestre brillano come piccole stelle cadute.": "Les fenêtres brillent comme de petites étoiles tombées.",
+    "A mezzanotte il cielo si accende di mille colori.": "À minuit, le ciel s'illumine de mille couleurs.",
+    "La gente si abbraccia, ride, dimentica ogni paura.": "Les gens s'embrassent, rient, oublient toute peur.",
+    "Il vecchio anno se ne va in silenzio, senza rumore.": "La vieille année s'en va en silence, sans bruit.",
+    "E in ogni cuore nasce, timida, una nuova speranza.": "Et dans chaque cœur naît, timide, un nouvel espoir."
+  }
+}

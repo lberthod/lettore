@@ -1,0 +1,69 @@
+{
+  "id": "filastrocca_casa",
+  "title": "Filastrocca di casa",
+  "level": "A1",
+  "genre": "poesia",
+  "category": "vita_quotidiana",
+  "paragraphs": [
+    "In cucina bolle la minestra.",
+    "Il gatto dorme sulla finestra.",
+    "Il papà legge il giornale.",
+    "La mamma canta, è quasi sera.",
+    "I bimbi giocano sul tappeto.",
+    "La casa è calda, il cuore è lieto."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa bolle in cucina?",
+      "options": ["La minestra", "Il caffè", "L'acqua"],
+      "correct": 0
+    },
+    {
+      "q": "Dove dorme il gatto?",
+      "options": ["Sulla finestra", "Sul tappeto", "Sul divano"],
+      "correct": 0
+    },
+    {
+      "q": "Come è la casa alla fine?",
+      "options": ["Fredda e triste", "Calda e il cuore è lieto", "Vuota"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "bimbi": "enfants",
+    "bolle": "bout",
+    "calda": "chaude",
+    "canta": "chante",
+    "casa": "maison",
+    "cucina": "cuisine",
+    "cuore": "cœur",
+    "dorme": "dort",
+    "finestra": "fenêtre",
+    "gatto": "chat",
+    "giocano": "jouent",
+    "giornale": "journal",
+    "i": "les",
+    "il": "le",
+    "in": "dans (« in cucina » = dans la cuisine)",
+    "la": "la",
+    "legge": "lit",
+    "lieto": "content / joyeux",
+    "mamma": "maman",
+    "minestra": "soupe",
+    "papà": "papa",
+    "quasi": "presque",
+    "sera": "soir",
+    "sul": "sur le",
+    "sulla": "sur la",
+    "tappeto": "tapis",
+    "è": "est"
+  },
+  "sentences": {
+    "In cucina bolle la minestra.": "Dans la cuisine, la soupe bout.",
+    "Il gatto dorme sulla finestra.": "Le chat dort sur la fenêtre.",
+    "Il papà legge il giornale.": "Le papa lit le journal.",
+    "La mamma canta, è quasi sera.": "La maman chante, c'est presque le soir.",
+    "I bimbi giocano sul tappeto.": "Les enfants jouent sur le tapis.",
+    "La casa è calda, il cuore è lieto.": "La maison est chaude, le cœur est joyeux."
+  }
+}

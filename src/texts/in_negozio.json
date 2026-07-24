@@ -1,0 +1,93 @@
+{
+  "id": "in_negozio",
+  "title": "In negozio",
+  "level": "A1",
+  "genre": "dialogo",
+  "category": "vita_quotidiana",
+  "paragraphs": [
+    "— Buongiorno, cerco una maglietta.",
+    "— Buongiorno. Che taglia porta?",
+    "— Una taglia media. La vorrei blu.",
+    "— Ecco, questa è bella. Vuole provarla?",
+    "— Sì, grazie. Dov'è il camerino?",
+    "— In fondo a destra. Come va la taglia?",
+    "— Va bene, la prendo. Quanto costa?",
+    "— Venti euro. Paga alla cassa, per favore."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa cerca il cliente?",
+      "options": ["Una maglietta", "Un paio di scarpe", "Un cappello"],
+      "correct": 0
+    },
+    {
+      "q": "Di che colore la vuole?",
+      "options": ["Rossa", "Blu", "Verde"],
+      "correct": 1
+    },
+    {
+      "q": "Quanto costa la maglietta?",
+      "options": ["Dieci euro", "Venti euro", "Trenta euro"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "a": "à (« a destra » = à droite)",
+    "alla": "à la (« alla cassa » = à la caisse)",
+    "bella": "belle",
+    "bene": "bien",
+    "blu": "bleue",
+    "buongiorno": "bonjour",
+    "camerino": "cabine d'essayage",
+    "cassa": "caisse",
+    "cerco": "je cherche",
+    "che": "quelle",
+    "come": "comment",
+    "costa": "coûte",
+    "destra": "droite",
+    "dov'è": "où est",
+    "ecco": "voici",
+    "euro": "euros",
+    "favore": "faveur (« per favore » = s'il vous plaît)",
+    "fondo": "fond (« in fondo » = au fond)",
+    "grazie": "merci",
+    "il": "le",
+    "in": "dans / au (« in fondo » = au fond)",
+    "la": "la",
+    "maglietta": "tee-shirt",
+    "media": "moyenne",
+    "negozio": "magasin",
+    "paga": "payez",
+    "per": "pour",
+    "porta": "portez (« che taglia porta » = quelle taille faites-vous)",
+    "prendo": "je prends",
+    "provarla": "l'essayer",
+    "quanto": "combien",
+    "questa": "celui-ci / celle-ci",
+    "sì": "oui",
+    "taglia": "taille",
+    "una": "une",
+    "va": "va",
+    "venti": "vingt",
+    "vorrei": "je voudrais",
+    "vuole": "voulez-vous",
+    "è": "est"
+  },
+  "sentences": {
+    "— Buongiorno, cerco una maglietta.": "— Bonjour, je cherche un tee-shirt.",
+    "— Buongiorno.": "— Bonjour.",
+    "Che taglia porta?": "Quelle taille faites-vous ?",
+    "— Una taglia media.": "— Une taille moyenne.",
+    "La vorrei blu.": "Je la voudrais bleue.",
+    "— Ecco, questa è bella.": "— Voici, celle-ci est belle.",
+    "Vuole provarla?": "Voulez-vous l'essayer ?",
+    "— Sì, grazie.": "— Oui, merci.",
+    "Dov'è il camerino?": "Où est la cabine d'essayage ?",
+    "— In fondo a destra.": "— Au fond à droite.",
+    "Come va la taglia?": "La taille va bien ?",
+    "— Va bene, la prendo.": "— Ça va, je la prends.",
+    "Quanto costa?": "Combien ça coûte ?",
+    "— Venti euro.": "— Vingt euros.",
+    "Paga alla cassa, per favore.": "Payez à la caisse, s'il vous plaît."
+  }
+}
