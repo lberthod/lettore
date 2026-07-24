@@ -56,12 +56,26 @@ function pruneJobs() {
 }
 setInterval(pruneJobs, 10 * 60 * 1000).unref()
 
-function hasRunningJob(uid) {
-  for (const job of jobs.values()) {
-    if (job.uid === uid && (job.status === 'pending' || job.status === 'running'))
-      return true
+// Filet de sécurité : un job actif depuis trop longtemps est considéré comme
+// mort (en plus du timeout des appels GLM) — sinon il verrouillerait le compte
+// définitivement, la génération étant limitée à un job à la fois par compte.
+const JOB_STUCK_MS = 45 * 60 * 1000
+
+function isActive(job) {
+  if (job.status !== 'pending' && job.status !== 'running') return false
+  if (Date.now() - job.createdAt > JOB_STUCK_MS) {
+    job.status = 'error'
+    job.error = 'Génération interrompue (délai maximal dépassé).'
+    return false
   }
-  return false
+  return true
+}
+
+function activeJobFor(uid) {
+  for (const [id, job] of jobs) {
+    if (job.uid === uid && isActive(job)) return { id, job }
+  }
+  return null
 }
 
 // --- Helpers HTTP ---
@@ -183,7 +197,7 @@ const server = http.createServer(async (req, res) => {
         sendJson(res, 400, { error: errors.join(' ; ') })
         return
       }
-      if (hasRunningJob(user.uid)) {
+      if (activeJobFor(user.uid)) {
         sendJson(res, 429, {
           error: 'Une génération est déjà en cours pour votre compte, patientez.',
         })
@@ -191,7 +205,7 @@ const server = http.createServer(async (req, res) => {
       }
 
       const jobId = crypto.randomUUID()
-      const job = { uid: user.uid, status: 'pending', createdAt: Date.now() }
+      const job = { uid: user.uid, status: 'pending', createdAt: Date.now(), title }
       jobs.set(jobId, job)
       console.log(
         `[job ${jobId}] ${user.email || user.uid} — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} »`
@@ -221,6 +235,33 @@ const server = http.createServer(async (req, res) => {
       })()
 
       sendJson(res, 202, { jobId })
+      return
+    }
+
+    // Job actif de l'utilisateur : permet au client de se rattacher à une
+    // génération en cours quand il a perdu le jobId (rechargement, autre
+    // appareil) au lieu de rester bloqué sur « déjà en cours, patientez ».
+    if (req.method === 'GET' && url.pathname === '/leggendo/my-job') {
+      const auth = req.headers.authorization || ''
+      const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
+      const user = idToken ? await verifyIdToken(idToken) : null
+      if (!user) {
+        sendJson(res, 401, { error: 'Connexion requise.' })
+        return
+      }
+      const active = activeJobFor(user.uid)
+      sendJson(
+        res,
+        200,
+        active
+          ? {
+              jobId: active.id,
+              status: active.job.status,
+              title: active.job.title || '',
+              createdAt: active.job.createdAt,
+            }
+          : { jobId: null }
+      )
       return
     }
 

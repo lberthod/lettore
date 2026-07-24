@@ -6,6 +6,9 @@ export const GLM_API_KEY = process.env.GLM_API_KEY || ''
 export const GLM_MODEL = process.env.GLM_MODEL || 'glm-5.1'
 export const GLM_BASE_URL =
   process.env.GLM_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4/chat/completions'
+// Un appel qui pend sans timeout bloque le job « running » pour toujours
+// (et avec lui le verrou un-job-par-compte) : on coupe au bout de 8 minutes.
+export const GLM_TIMEOUT_MS = Number(process.env.GLM_TIMEOUT_MS || 8 * 60 * 1000)
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
@@ -41,6 +44,7 @@ Ne mets pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
     try {
       const res = await fetch(GLM_BASE_URL, {
         method: 'POST',
+        signal: AbortSignal.timeout(GLM_TIMEOUT_MS),
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${GLM_API_KEY}`,

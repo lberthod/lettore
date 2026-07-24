@@ -58,6 +58,38 @@ function persistJob() {
   }
 }
 
+async function getIdToken() {
+  const auth = await getAuthInstance()
+  return (await auth?.currentUser?.getIdToken()) || null
+}
+
+// Se rattache à la génération active côté serveur (jobId perdu après un
+// rechargement, autre onglet…). Renvoie true si un job a été retrouvé.
+export async function attachActiveJob() {
+  try {
+    const idToken = await getIdToken()
+    if (!idToken) return false
+    const res = await fetch(`${API_BASE}/my-job`, {
+      headers: { Authorization: `Bearer ${idToken}` },
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok || !data.jobId) return false
+    stopTimers()
+    generation.status = 'working'
+    generation.jobId = data.jobId
+    generation.title = data.title || generation.title || 'votre texte'
+    generation.startedAt = data.createdAt || Date.now()
+    generation.error = ''
+    generation.result = null
+    startClock()
+    persistJob()
+    poll()
+    return true
+  } catch {
+    return false
+  }
+}
+
 export async function startGeneration(payload) {
   generation.status = 'working'
   generation.error = ''
@@ -82,7 +114,12 @@ export async function startGeneration(payload) {
       body: JSON.stringify(payload),
     })
     const data = await res.json().catch(() => ({}))
-    if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`)
+    if (!res.ok) {
+      // « Déjà en cours » : on retrouve ce job et on suit sa progression
+      // plutôt que d'afficher une erreur sans issue.
+      if (res.status === 429 && (await attachActiveJob())) return
+      throw new Error(data.error || `Erreur ${res.status}`)
+    }
     generation.jobId = data.jobId
     persistJob()
     poll()
@@ -136,6 +173,7 @@ export async function saveResult() {
 
 // Reprend le sondage d'un job encore actif après un rechargement de page.
 // À appeler au montage des vues concernées ; sans effet s'il n'y a rien.
+// Si localStorage ne sait rien, on demande aussi au serveur (jobId perdu).
 export function resumeGeneration() {
   if (generation.status !== 'idle') return
   let saved
@@ -144,7 +182,10 @@ export function resumeGeneration() {
   } catch {
     saved = null
   }
-  if (!saved?.jobId) return
+  if (!saved?.jobId) {
+    attachActiveJob()
+    return
+  }
   generation.status = 'working'
   generation.jobId = saved.jobId
   generation.title = saved.title || ''
