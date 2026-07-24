@@ -619,5 +619,45 @@
     "wordCount": 142,
     "genre": "racconto",
     "category": "societa"
+  },
+  {
+    "id": "colloquio",
+    "title": "Il colloquio di lavoro",
+    "level": "A2",
+    "excerpt": "— Buongiorno, si accomodi. Lei ha mandato il curriculum per il posto di commessa, giusto? — Sì, esatto. Grazie per avermi ricevuta.",
+    "paragraphCount": 8,
+    "wordCount": 75,
+    "genre": "dialogo",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "casa_intelligente",
+    "title": "La casa che pensava",
+    "level": "B1",
+    "excerpt": "Nel 2090, la famiglia Ricci comprò una casa intelligente, capace di controllare tutto: luci, temperatura, elettrodomestici e persino la spesa.",
+    "paragraphCount": 6,
+    "wordCount": 130,
+    "genre": "fantascienza",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "leonardo_invenzioni",
+    "title": "Le invenzioni di Leonardo",
+    "level": "B1",
+    "excerpt": "Leonardo da Vinci non fu solo un grande pittore, ma anche uno degli inventori più geniali della storia. Viveva nel Rinascimento.",
+    "paragraphCount": 6,
+    "wordCount": 136,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "pasta_pomodoro",
+    "title": "La pasta al pomodoro",
+    "level": "A2",
+    "excerpt": "La pasta al pomodoro è il piatto italiano più famoso. È semplice, ma richiede un po' di attenzione. Ecco la ricetta per due persone.",
+    "paragraphCount": 6,
+    "wordCount": 104,
+    "genre": "pratico",
+    "category": "cucina"
   }
 ]
