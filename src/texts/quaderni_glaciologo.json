@@ -1,0 +1,38 @@
+{
+  "id": "quaderni_glaciologo",
+  "title": "Quaderni di un glaciologo",
+  "level": "C2",
+  "genre": "lettera_diario",
+  "category": "montagna",
+  "paragraphs": [
+    "12 agosto, trent'anni fa. Primo carotaggio sul ghiacciaio. Il ghiaccio è compatto, azzurro, quasi arrogante nella propria permanenza. Pianto la palina numero uno a quota tremiladuecento metri e annoto tutto con la diligenza di chi crede che i numeri bastino.",
+    "9 agosto, ventidue anni fa. Le paline reggono, la fronte arretra di pochi metri l'anno. Un ritmo geologico, quasi rassicurante. La sera, al rifugio, discutiamo di modelli e di scenari come se riguardassero un altro pianeta.",
+    "14 agosto, quindici anni fa. La palina numero sette, inghiottita da un crepaccio nel decennio scorso, è riemersa a valle, contorta come un relitto. Il ghiacciaio restituisce ciò che ha preso, ma lo restituisce rotto.",
+    "6 agosto, dieci anni fa. La morena avanza dove prima c'era il bianco. Pietrisco grigio, instabile, che scricchiola sotto i ramponi. Misuro, fotografo, archivio. La secchezza delle cifre mi protegge: meno tre metri di spessore in un solo anno.",
+    "11 agosto, sette anni fa. Oggi ho camminato un'ora dove un tempo bastavano dieci minuti di ghiaccio vivo. I colleghi più giovani parlano di « bilancio di massa fortemente negativo ». Io penso soltanto: sta morendo, e io prendo appunti.",
+    "8 agosto, quattro anni fa. Il torrente proglaciale è torbido, gonfio, febbrile. Abbiamo smesso di piantare paline nella parte bassa: non c'è più niente da misurare, solo roccia levigata che luccica al sole come un osso.",
+    "13 agosto, due anni fa. Ho riletto i quaderni di trent'anni. La mia grafia è cambiata meno del paesaggio. Mi accorgo che i dati, allineati in colonne, compongono un necrologio scritto a puntate, con pudore scientifico.",
+    "5 agosto, l'anno scorso. Al congresso ho mostrato le curve senza commentarle. Il silenzio in sala valeva più di ogni conclusione. Un lutto non si discute: si constata.",
+    "3 agosto, quest'anno. Ultima campagna prima della pensione. Il ghiacciaio è ormai un frammento aggrappato all'ombra della parete nord. Le cifre dicono che entro vent'anni non resterà nulla di misurabile.",
+    "4 agosto, quest'anno. Stamattina ho portato quassù mia figlia. Le ho mostrato dove piantammo la palina numero uno, oggi un deserto di pietre. Non le ho dettato numeri: le ho chiesto soltanto di guardare a lungo, perché qualcuno ricordi com'era il bianco."
+  ],
+  "questions": [
+    {
+      "q": "Da quanto tempo il glaciologo studia lo stesso ghiacciaio?",
+      "options": ["Da trent'anni", "Da cinque anni", "Da un secolo intero"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa è successo alla palina numero sette?",
+      "options": ["È riemersa a valle, contorta come un relitto", "È stata rubata da un turista", "È rimasta intatta al suo posto"],
+      "correct": 0
+    },
+    {
+      "q": "Perché nell'ultima pagina porta sua figlia sul ghiacciaio?",
+      "options": ["Perché qualcuno ricordi com'era il bianco", "Perché lei diventi glaciologa", "Perché misuri le paline al posto suo"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {}
+}

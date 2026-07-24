@@ -1,0 +1,39 @@
+{
+  "id": "rondini_ritorno",
+  "title": "Il ritorno delle rondini",
+  "level": "C2",
+  "genre": "racconto",
+  "category": "natura_animali",
+  "paragraphs": [
+    "Ogni anno, ai primi tepori di marzo, Ersilia tirava fuori la sedia impagliata e si metteva sotto il portico, gli occhi alzati verso il nido di fango incastonato nella trave.",
+    "Lo aveva fatto sua madre prima di lei, e la madre di sua madre: tre generazioni di donne a scrutare il cielo, come si aspetta una lettera da un parente lontano.",
+    "Le rondini arrivavano sempre, puntuali con l'approssimazione dei miracoli: un giorno il cielo era vuoto, il giorno dopo era cucito di strida e di voli radenti.",
+    "Poi venne l'anno in cui non arrivarono. Ersilia aspettò per tutto aprile, poi per tutto maggio, con un'ostinazione che i vicini scambiarono per capriccio di vecchia e che invece era una forma di lutto.",
+    "Il nido rimase muto. Anche i campi, a ben ascoltare, erano diventati silenziosi: gli insetticidi avevano svuotato l'aria di insetti, e le stalle ristrutturate, coi loro serramenti ermetici, non offrivano più un solo pertugio ai nidi.",
+    "Ersilia non era donna da elegie. Andò dal sindaco con un quaderno pieno di date: cinquant'anni di arrivi annotati a matita, una contabilità minuziosa della fedeltà.",
+    "« Se vogliamo che tornino », disse, « dobbiamo restituire loro un paese abitabile ».",
+    "Convinse i contadini a rinunciare ai trattamenti più aggressivi, i muratori a riaprire nei vecchi cascinali le finestrelle sotto le gronde, il parroco a lasciare socchiusa la porta della sagrestia.",
+    "Fece seminare fasce di prato fiorito lungo i fossi, perché tornassero gli insetti, e con loro la catena intera delle cose vive.",
+    "Per due primavere il cielo rimase avaro. Ersilia sedeva comunque sotto il portico, ogni sera, come una sentinella smessa dal servizio ma non dal dovere.",
+    "Poi, un mattino d'aprile del terzo anno, mentre il paese ancora dormiva, lo sentì: quel grido acuto e festoso che cuce insieme il cielo e la memoria. Alzò gli occhi. Sopra il portico, due rondini disegnavano cerchi intorno al vecchio nido, come se non se ne fossero mai andate."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa faceva Ersilia ogni primavera?",
+      "options": ["Aspettava sotto il portico il ritorno delle rondini", "Ristrutturava le stalle del paese", "Vendeva insetticidi ai contadini"],
+      "correct": 0
+    },
+    {
+      "q": "Perché un anno le rondini non tornarono?",
+      "options": ["Per gli insetticidi e le stalle ristrutturate senza aperture", "Per un inverno troppo lungo", "Perché il nido era stato distrutto da un temporale"],
+      "correct": 0
+    },
+    {
+      "q": "Quando tornarono infine le rondini?",
+      "options": ["Un mattino d'aprile, due anni dopo", "La settimana successiva", "Mai più"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {}
+}

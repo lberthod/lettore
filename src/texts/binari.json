@@ -1,0 +1,38 @@
+{
+  "id": "binari",
+  "title": "Binari",
+  "level": "B2",
+  "genre": "poesia",
+  "category": "viaggi",
+  "paragraphs": [
+    "All'alba i binari luccicano come promesse,",
+    "e le banchine si riempiono di valigie stanche.",
+    "Qualcuno abbraccia, qualcuno saluta con la mano,",
+    "qualcuno guarda l'orologio e non guarda nessuno.",
+    "Poi il treno parte, e il finestrino",
+    "trasforma il paesaggio in un film silenzioso:",
+    "campi, fabbriche, panni stesi, vite intraviste.",
+    "Io viaggio leggero, con un biglietto di sola andata,",
+    "perché ho capito, tra una stazione e l'altra,",
+    "che arrivare è solo un altro modo di partire."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa trasforma il paesaggio in un film silenzioso?",
+      "options": ["Il finestrino del treno", "Uno schermo del cinema", "Una macchina fotografica"],
+      "correct": 0
+    },
+    {
+      "q": "Con quale biglietto viaggia il poeta?",
+      "options": ["Con un biglietto di sola andata", "Con un biglietto di andata e ritorno", "Con un abbonamento annuale"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa ha capito il poeta tra una stazione e l'altra?",
+      "options": ["Che arrivare è solo un altro modo di partire", "Che i treni sono sempre in ritardo", "Che è meglio restare a casa"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {}
+}

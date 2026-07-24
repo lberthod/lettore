@@ -1,0 +1,40 @@
+{
+  "id": "ode_al_pane",
+  "title": "Ode al pane",
+  "level": "C1",
+  "genre": "poesia",
+  "category": "cucina",
+  "paragraphs": [
+    "Farina e acqua, nient'altro:",
+    "eppure da questa polvere e da questa pioggia",
+    "nasce il corpo quotidiano del mondo.",
+    "Mani che impastano prima dell'alba,",
+    "mani di madri, di fornai, di secoli,",
+    "piegano e ripiegano la pazienza",
+    "finché la pasta respira come un dormiente.",
+    "Poi il forno, la sua notte rovente,",
+    "e la crosta che canta quando la spezzi,",
+    "crepitio minuto, applauso segreto.",
+    "Pane diviso a metà sulla tavola:",
+    "prima parola di pace tra gli uomini."
+  ],
+  "questions": [
+    {
+      "q": "Da quali ingredienti nasce il pane nella poesia?",
+      "options": ["Da farina e acqua", "Da latte e miele", "Da zucchero e burro"],
+      "correct": 0
+    },
+    {
+      "q": "Quando impastano le mani?",
+      "options": ["Prima dell'alba", "A mezzogiorno", "Dopo il tramonto"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa rappresenta il pane diviso sulla tavola?",
+      "options": ["La prima parola di pace tra gli uomini", "Un segno di ricchezza", "Un'antica ricetta segreta"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {}
+}

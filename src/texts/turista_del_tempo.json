@@ -1,0 +1,55 @@
+{
+  "id": "turista_del_tempo",
+  "title": "Il turista del tempo",
+  "level": "C2",
+  "genre": "fantascienza",
+  "category": "viaggi",
+  "paragraphs": [
+    "Nel 2140 la Compagnia dei Soggiorni Temporali vende, a chi possa permetterselo, un lusso che nessun secolo aveva mai conosciuto: passeggiare nella Roma del 1955, ricostruita fin nell'ultimo sampietrino da una simulazione impeccabile.",
+    "Io faccio la guida: accompagno i clienti tra i tram color ruggine e i panni stesi di Trastevere, e li avverto che tutto, lì dentro, è vero e falso nella stessa misura.",
+    "Il signor Aldrovandi, uno dei nostri viaggiatori più facoltosi, non veniva per i monumenti; veniva per un bar minuscolo di via dei Serpenti, dove la sua bisnonna, allora ventenne, serviva caffè e chiacchiere.",
+    "La prima volta rimase sulla soglia per un'ora intera, senza osare entrare, come se temesse che il proprio sguardo potesse incrinare quella fragile eternità.",
+    "Poi tornò. Tornò dodici volte in un anno, sempre allo stesso tavolino, sempre alle cinque del pomeriggio, quando la ragazza rideva con una cliente e la luce obliqua indorava le tazzine.",
+    "Cominciò a chiedere ritocchi: che la radio trasmettesse una certa canzone, che la pioggia cadesse un giorno su due, che la bisnonna portasse il vestito azzurro di una fotografia sbiadita.",
+    "La Compagnia, che non rifiuta nulla a chi paga, esaudiva ogni capriccio; e il passato, docile come cera, si lasciava rimodellare.",
+    "Alla fine Aldrovandi smise semplicemente di ripartire: affittò una stanza sopra il bar, dichiarò che il presente gli sembrava una copia sbiadita, e che soltanto lì, tra quei fantasmi cortesi, si sentiva a casa.",
+    "Confesso che da allora non so più che cosa mostrare ai clienti. Che cos'è il passato, quando lo si può visitare come una città e correggere come una bozza?",
+    "Un tempo era la sola cosa che non si potesse cambiare, e proprio per questo ci apparteneva; adesso è un giardino curato, dove ogni rimpianto viene potato prima che fiorisca.",
+    "Ieri sono passato davanti al bar: Aldrovandi sedeva al suo tavolino, felice, immobile, perfetto anche lui come una comparsa.",
+    "Ho pensato alla vera bisnonna, morta da due secoli, che non saprà mai di essere diventata la patria di un uomo; e ho spento la mia radiolina, per non sentire quale canzone avesse scelto quel giorno."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa vende la Compagnia dei Soggiorni Temporali nel 2140?",
+      "options": ["Soggiorni immersivi nella Roma del 1955 ricostruita", "Biglietti per colonie su Marte", "Viaggi nel futuro remoto"],
+      "correct": 0
+    },
+    {
+      "q": "Perché Aldrovandi tornava sempre nello stesso bar?",
+      "options": ["Per rivedere la sua bisnonna ventenne che vi serviva caffè", "Per comprare il locale a buon prezzo", "Per studiare l'architettura del quartiere"],
+      "correct": 0
+    },
+    {
+      "q": "Come finisce la vicenda di Aldrovandi?",
+      "options": ["Resta a vivere nella copia del passato, preferendola al presente", "Torna nel 2140 guarito dalla nostalgia", "Viene espulso dalla Compagnia per i suoi capricci"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {
+    "Nel 2140 la Compagnia dei Soggiorni Temporali vende, a chi possa permetterselo, un lusso che nessun secolo aveva mai conosciuto: passeggiare nella Roma del 1955, ricostruita fin nell'ultimo sampietrino da una simulazione impeccabile.": "En 2140, la Compagnie des Séjours Temporels vend, à qui peut se le permettre, un luxe qu'aucun siècle n'avait jamais connu : se promener dans la Rome de 1955, reconstituée jusqu'au dernier pavé par une simulation impeccable.",
+    "Io faccio la guida: accompagno i clienti tra i tram color ruggine e i panni stesi di Trastevere, e li avverto che tutto, lì dentro, è vero e falso nella stessa misura.": "Moi, je suis guide : j'accompagne les clients entre les tramways couleur rouille et le linge étendu du Trastevere, et je les préviens que tout, là-dedans, est vrai et faux dans la même mesure.",
+    "Il signor Aldrovandi, uno dei nostri viaggiatori più facoltosi, non veniva per i monumenti; veniva per un bar minuscolo di via dei Serpenti, dove la sua bisnonna, allora ventenne, serviva caffè e chiacchiere.": "Monsieur Aldrovandi, l'un de nos voyageurs les plus fortunés, ne venait pas pour les monuments ; il venait pour un bar minuscule de la via dei Serpenti, où son arrière-grand-mère, alors âgée de vingt ans, servait cafés et bavardages.",
+    "La prima volta rimase sulla soglia per un'ora intera, senza osare entrare, come se temesse che il proprio sguardo potesse incrinare quella fragile eternità.": "La première fois, il resta sur le seuil une heure entière, sans oser entrer, comme s'il craignait que son propre regard ne pût fêler cette fragile éternité.",
+    "Poi tornò.": "Puis il revint.",
+    "Tornò dodici volte in un anno, sempre allo stesso tavolino, sempre alle cinque del pomeriggio, quando la ragazza rideva con una cliente e la luce obliqua indorava le tazzine.": "Il revint douze fois en un an, toujours à la même petite table, toujours à cinq heures de l'après-midi, quand la jeune fille riait avec une cliente et que la lumière oblique dorait les tasses.",
+    "Cominciò a chiedere ritocchi: che la radio trasmettesse una certa canzone, che la pioggia cadesse un giorno su due, che la bisnonna portasse il vestito azzurro di una fotografia sbiadita.": "Il se mit à demander des retouches : que la radio diffuse une certaine chanson, que la pluie tombe un jour sur deux, que l'arrière-grand-mère porte la robe bleue d'une photographie délavée.",
+    "La Compagnia, che non rifiuta nulla a chi paga, esaudiva ogni capriccio; e il passato, docile come cera, si lasciava rimodellare.": "La Compagnie, qui ne refuse rien à qui paie, exauçait chaque caprice ; et le passé, docile comme de la cire, se laissait remodeler.",
+    "Alla fine Aldrovandi smise semplicemente di ripartire: affittò una stanza sopra il bar, dichiarò che il presente gli sembrava una copia sbiadita, e che soltanto lì, tra quei fantasmi cortesi, si sentiva a casa.": "À la fin, Aldrovandi cessa tout simplement de repartir : il loua une chambre au-dessus du bar, déclara que le présent lui semblait une copie délavée, et que là seulement, parmi ces fantômes courtois, il se sentait chez lui.",
+    "Confesso che da allora non so più che cosa mostrare ai clienti.": "J'avoue que depuis lors je ne sais plus quoi montrer aux clients.",
+    "Che cos'è il passato, quando lo si può visitare come una città e correggere come una bozza?": "Qu'est-ce que le passé, quand on peut le visiter comme une ville et le corriger comme un brouillon ?",
+    "Un tempo era la sola cosa che non si potesse cambiare, e proprio per questo ci apparteneva; adesso è un giardino curato, dove ogni rimpianto viene potato prima che fiorisca.": "Autrefois, c'était la seule chose qu'on ne pût changer, et c'est justement pour cela qu'elle nous appartenait ; désormais, c'est un jardin soigné, où chaque regret est taillé avant qu'il ne fleurisse.",
+    "Ieri sono passato davanti al bar: Aldrovandi sedeva al suo tavolino, felice, immobile, perfetto anche lui come una comparsa.": "Hier, je suis passé devant le bar : Aldrovandi était assis à sa petite table, heureux, immobile, parfait lui aussi comme un figurant.",
+    "Ho pensato alla vera bisnonna, morta da due secoli, che non saprà mai di essere diventata la patria di un uomo; e ho spento la mia radiolina, per non sentire quale canzone avesse scelto quel giorno.": "J'ai pensé à la vraie arrière-grand-mère, morte depuis deux siècles, qui ne saura jamais qu'elle est devenue la patrie d'un homme ; et j'ai éteint ma petite radio, pour ne pas entendre quelle chanson il avait choisie ce jour-là."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "etichetta_vino",
+  "title": "Come leggere un'etichetta di vino",
+  "level": "C1",
+  "genre": "pratico",
+  "category": "cucina",
+  "paragraphs": [
+    "Davanti allo scaffale di un'enoteca, l'etichetta è la tua unica bussola. Impara a leggerla e nessuna bottiglia potrà più ingannarti.",
+    "Comincia dalle sigle. DOCG significa denominazione di origine controllata e garantita: è il vertice della piramide, con controlli severi su zona e produzione. DOC indica regole precise ma meno rigide, mentre IGT lascia al produttore una libertà maggiore, senza per questo garantire una qualità inferiore.",
+    "Cerca poi l'annata, cioè l'anno della vendemmia. Per i vini giovani conta la freschezza; per i rossi importanti, qualche anno di bottiglia può fare miracoli.",
+    "Il vitigno ti dice quale uva canta nel bicchiere: sangiovese, nebbiolo, vermentino. La gradazione alcolica, invece, ti avverte del carattere: sotto i dodici gradi aspettati leggerezza, sopra i quattordici una certa potenza.",
+    "Una dicitura preziosa è « imbottigliato all'origine »: significa che chi ha coltivato l'uva ha anche prodotto e imbottigliato il vino, senza intermediari.",
+    "Attenzione alle parole riserva e superiore: la prima promette un invecchiamento più lungo, la seconda una gradazione leggermente più alta e regole più strette. Non sono semplici ornamenti.",
+    "Gira la bottiglia e leggi la controetichetta: lì trovi spesso il nome dell'imbottigliatore, informazioni sulla zona e consigli di abbinamento più sinceri della poesia stampata davanti.",
+    "Diffida invece del marketing: nomi di fantasia altisonanti, castelli inventati, stemmi nobiliari disegnati ieri. Un'etichetta sobria nasconde spesso più sostanza di una copertina teatrale.",
+    "Tre consigli per non rovinarti: scegli denominazioni meno famose ma vicine a quelle celebri, preferisci i produttori che imbottigliano all'origine, e ricorda che tra dieci e quindici euro si trovano bottiglie capaci di sorprendere chiunque."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa indica la sigla DOCG?",
+      "options": ["Denominazione di origine controllata e garantita", "Un nome di fantasia del produttore", "La gradazione alcolica del vino"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa significa « imbottigliato all'origine »?",
+      "options": ["Chi ha coltivato l'uva ha anche prodotto e imbottigliato il vino", "Il vino è stato venduto senza etichetta", "La bottiglia viene da un castello inventato"],
+      "correct": 0
+    },
+    {
+      "q": "Di che cosa devi diffidare secondo il testo?",
+      "options": ["Dei nomi di fantasia e dei castelli inventati", "Delle etichette sobrie", "Della controetichetta"],
+      "correct": 0
+    }
+  ],
+  "words": {},
+  "sentences": {
+    "Davanti allo scaffale di un'enoteca, l'etichetta è la tua unica bussola.": "Devant le rayon d'une cave à vins, l'étiquette est ta seule boussole.",
+    "Impara a leggerla e nessuna bottiglia potrà più ingannarti.": "Apprends à la lire et aucune bouteille ne pourra plus te tromper.",
+    "Comincia dalle sigle.": "Commence par les sigles.",
+    "DOCG significa denominazione di origine controllata e garantita: è il vertice della piramide, con controlli severi su zona e produzione.": "DOCG signifie appellation d'origine contrôlée et garantie : c'est le sommet de la pyramide, avec des contrôles sévères sur la zone et la production.",
+    "DOC indica regole precise ma meno rigide, mentre IGT lascia al produttore una libertà maggiore, senza per questo garantire una qualità inferiore.": "DOC indique des règles précises mais moins strictes, tandis qu'IGT laisse au producteur une plus grande liberté, sans pour autant garantir une qualité inférieure.",
+    "Cerca poi l'annata, cioè l'anno della vendemmia.": "Cherche ensuite le millésime, c'est-à-dire l'année de la vendange.",
+    "Per i vini giovani conta la freschezza; per i rossi importanti, qualche anno di bottiglia può fare miracoli.": "Pour les vins jeunes, c'est la fraîcheur qui compte ; pour les grands rouges, quelques années de bouteille peuvent faire des miracles.",
+    "Il vitigno ti dice quale uva canta nel bicchiere: sangiovese, nebbiolo, vermentino.": "Le cépage te dit quel raisin chante dans le verre : sangiovese, nebbiolo, vermentino.",
+    "La gradazione alcolica, invece, ti avverte del carattere: sotto i dodici gradi aspettati leggerezza, sopra i quattordici una certa potenza.": "Le degré d'alcool, lui, t'avertit du caractère : en dessous de douze degrés, attends-toi à de la légèreté, au-dessus de quatorze, à une certaine puissance.",
+    "Una dicitura preziosa è « imbottigliato all'origine »: significa che chi ha coltivato l'uva ha anche prodotto e imbottigliato il vino, senza intermediari.": "Une mention précieuse est « mis en bouteille à la propriété » : elle signifie que celui qui a cultivé le raisin a aussi produit et mis en bouteille le vin, sans intermédiaires.",
+    "Attenzione alle parole riserva e superiore: la prima promette un invecchiamento più lungo, la seconda una gradazione leggermente più alta e regole più strette.": "Attention aux mots riserva et superiore : le premier promet un vieillissement plus long, le second un degré légèrement plus élevé et des règles plus strictes.",
+    "Non sono semplici ornamenti.": "Ce ne sont pas de simples ornements.",
+    "Gira la bottiglia e leggi la controetichetta: lì trovi spesso il nome dell'imbottigliatore, informazioni sulla zona e consigli di abbinamento più sinceri della poesia stampata davanti.": "Retourne la bouteille et lis la contre-étiquette : tu y trouves souvent le nom de l'embouteilleur, des informations sur la zone et des conseils d'accord plus sincères que la poésie imprimée devant.",
+    "Diffida invece del marketing: nomi di fantasia altisonanti, castelli inventati, stemmi nobiliari disegnati ieri.": "Méfie-toi en revanche du marketing : noms de fantaisie ronflants, châteaux inventés, blasons nobiliaires dessinés hier.",
+    "Un'etichetta sobria nasconde spesso più sostanza di una copertina teatrale.": "Une étiquette sobre cache souvent plus de substance qu'une couverture théâtrale.",
+    "Tre consigli per non rovinarti: scegli denominazioni meno famose ma vicine a quelle celebri, preferisci i produttori che imbottigliano all'origine, e ricorda che tra dieci e quindici euro si trovano bottiglie capaci di sorprendere chiunque.": "Trois conseils pour ne pas te ruiner : choisis des appellations moins célèbres mais proches des grandes, préfère les producteurs qui mettent en bouteille à la propriété, et souviens-toi qu'entre dix et quinze euros on trouve des bouteilles capables de surprendre n'importe qui."
+  }
+}
