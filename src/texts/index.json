@@ -739,5 +739,45 @@
     "wordCount": 121,
     "genre": "fantascienza",
     "category": "viaggi"
+  },
+  {
+    "id": "primo_giorno_lavoro",
+    "title": "Il primo giorno di lavoro",
+    "level": "B1",
+    "excerpt": "CAPO — Benvenuto in azienda, Luca. Sei pronto per il tuo primo giorno? LUCA — Sì, un po' emozionato, ma pronto.",
+    "paragraphCount": 6,
+    "wordCount": 73,
+    "genre": "teatro",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "voto_donne",
+    "title": "Il voto alle donne",
+    "level": "B2",
+    "excerpt": "Per molto tempo, in Italia, le donne non ebbero il diritto di votare. La politica era considerata una faccenda esclusivamente maschile.",
+    "paragraphCount": 6,
+    "wordCount": 118,
+    "genre": "documentario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "al_mercato",
+    "title": "Al mercato",
+    "level": "A1",
+    "excerpt": "— Buongiorno, quanto costano le mele? — Due euro al chilo. Sono molto buone. — Ne prendo un chilo.",
+    "paragraphCount": 8,
+    "wordCount": 49,
+    "genre": "dialogo",
+    "category": "cucina"
+  },
+  {
+    "id": "rifugio_tempesta",
+    "title": "Il rifugio nella tempesta",
+    "level": "B1",
+    "excerpt": "Durante un'escursione sulle Alpi, due amici, Anna e Paolo, furono sorpresi da un temporale improvviso.",
+    "paragraphCount": 6,
+    "wordCount": 112,
+    "genre": "racconto",
+    "category": "montagna"
   }
 ]
