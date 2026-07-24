@@ -1,0 +1,75 @@
+{
+  "id": "pioggia_autunno",
+  "title": "Pioggia d'autunno",
+  "level": "A2",
+  "genre": "poesia",
+  "category": "natura_animali",
+  "paragraphs": [
+    "Cadono le foglie gialle e rosse.",
+    "Il vento gioca tra i rami spogli.",
+    "La pioggia canta sopra i tetti.",
+    "Le rondini sono già partite.",
+    "Un gatto dorme dietro il vetro.",
+    "L'autunno veste il mondo di silenzio."
+  ],
+  "questions": [
+    {
+      "q": "In quale stagione è ambientata la poesia?",
+      "options": ["In primavera", "In autunno", "In estate"],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa fa il gatto?",
+      "options": ["Gioca con le foglie", "Dorme dietro il vetro", "Corre sotto la pioggia"],
+      "correct": 1
+    },
+    {
+      "q": "Dove sono le rondini?",
+      "options": ["Sono già partite", "Cantano sui tetti", "Dormono sui rami"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "autunno": "automne (« l'autunno » = l'automne)",
+    "cadono": "tombent",
+    "canta": "chante",
+    "di": "de (« di silenzio » = de silence)",
+    "dietro": "derrière",
+    "dorme": "dort",
+    "e": "et",
+    "foglie": "feuilles",
+    "gatto": "chat",
+    "gialle": "jaunes",
+    "gioca": "joue",
+    "già": "déjà",
+    "i": "les",
+    "il": "le",
+    "l'autunno": "l'automne",
+    "la": "la",
+    "le": "les",
+    "mondo": "monde",
+    "partite": "parties",
+    "pioggia": "pluie",
+    "rami": "branches",
+    "rondini": "hirondelles",
+    "rosse": "rouges",
+    "silenzio": "silence",
+    "sono": "sont",
+    "sopra": "au-dessus de / sur",
+    "spogli": "dénudées / nues",
+    "tetti": "toits",
+    "tra": "entre / parmi",
+    "un": "un",
+    "veste": "habille / revêt",
+    "vento": "vent",
+    "vetro": "vitre"
+  },
+  "sentences": {
+    "Cadono le foglie gialle e rosse.": "Tombent les feuilles jaunes et rouges.",
+    "Il vento gioca tra i rami spogli.": "Le vent joue parmi les branches nues.",
+    "La pioggia canta sopra i tetti.": "La pluie chante sur les toits.",
+    "Le rondini sono già partite.": "Les hirondelles sont déjà parties.",
+    "Un gatto dorme dietro il vetro.": "Un chat dort derrière la vitre.",
+    "L'autunno veste il mondo di silenzio.": "L'automne habille le monde de silence."
+  }
+}

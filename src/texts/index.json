@@ -699,5 +699,45 @@
     "wordCount": 81,
     "genre": "lettera_diario",
     "category": "vita_quotidiana"
+  },
+  {
+    "id": "pioggia_autunno",
+    "title": "Pioggia d'autunno",
+    "level": "A2",
+    "excerpt": "Cadono le foglie gialle e rosse. Il vento gioca tra i rami spogli. La pioggia canta sopra i tetti.",
+    "paragraphCount": 6,
+    "wordCount": 36,
+    "genre": "poesia",
+    "category": "natura_animali"
+  },
+  {
+    "id": "partita_decisiva",
+    "title": "La partita decisiva",
+    "level": "B1",
+    "excerpt": "Era l'ultima partita del campionato e la piccola squadra del paese doveva vincere per non retrocedere.",
+    "paragraphCount": 6,
+    "wordCount": 108,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "in_negozio",
+    "title": "In negozio",
+    "level": "A1",
+    "excerpt": "— Buongiorno, cerco una maglietta. — Buongiorno. Che taglia porta? — Una taglia media. La vorrei blu.",
+    "paragraphCount": 8,
+    "wordCount": 46,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "viaggio_marte",
+    "title": "Viaggio su Marte",
+    "level": "B1",
+    "excerpt": "Nel 2130, il primo viaggio turistico su Marte diventò realtà. Elena fu tra i fortunati a salire sull'astronave.",
+    "paragraphCount": 6,
+    "wordCount": 121,
+    "genre": "fantascienza",
+    "category": "viaggi"
   }
 ]
