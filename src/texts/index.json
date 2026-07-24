@@ -979,5 +979,105 @@
     "wordCount": 92,
     "genre": "documentario",
     "category": "sport"
+  },
+  {
+    "id": "dante",
+    "title": "Dante e la Divina Commedia",
+    "level": "C1",
+    "excerpt": "Dante Alighieri, nato a Firenze nel milleduecentosessantacinque, è considerato il padre della lingua italiana.",
+    "paragraphCount": 6,
+    "wordCount": 109,
+    "genre": "documentario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "corvo_volpe",
+    "title": "Il corvo e la volpe",
+    "level": "A1",
+    "excerpt": "Un corvo trova un pezzo di formaggio. Vola su un albero per mangiarlo. Una volpe furba passa di lì.",
+    "paragraphCount": 6,
+    "wordCount": 69,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "dal_medico",
+    "title": "Dal medico",
+    "level": "B1",
+    "excerpt": "— Buongiorno dottore, non mi sento bene da tre giorni. — Mi dica, che sintomi ha?",
+    "paragraphCount": 8,
+    "wordCount": 78,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "valigia",
+    "title": "Cosa mettere in valigia",
+    "level": "A2",
+    "excerpt": "Prima di partire per un viaggio, è importante preparare bene la valigia.",
+    "paragraphCount": 6,
+    "wordCount": 70,
+    "genre": "pratico",
+    "category": "viaggi"
+  },
+  {
+    "id": "dolomiti",
+    "title": "Le Dolomiti",
+    "level": "B2",
+    "excerpt": "Le Dolomiti sono un gruppo di montagne situate nel nord-est dell'Italia, famose per la loro bellezza unica.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "documentario",
+    "category": "montagna"
+  },
+  {
+    "id": "lettera_natale",
+    "title": "Lettera di Natale",
+    "level": "A2",
+    "excerpt": "Cari nonni, tra pochi giorni è Natale e non vedo l'ora di vedervi.",
+    "paragraphCount": 6,
+    "wordCount": 76,
+    "genre": "lettera_diario",
+    "category": "feste"
+  },
+  {
+    "id": "cane_gatto",
+    "title": "Il cane e il gatto",
+    "level": "B1",
+    "excerpt": "In una vecchia casa di campagna vivevano un cane e un gatto che non andavano mai d'accordo.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "racconto",
+    "category": "natura_animali"
+  },
+  {
+    "id": "scuola_futuro",
+    "title": "La scuola del futuro",
+    "level": "B1",
+    "excerpt": "Nel duemilacento, la scuola era completamente diversa da quella di oggi.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "fantascienza",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "filastrocca_casa",
+    "title": "Filastrocca di casa",
+    "level": "A1",
+    "excerpt": "In cucina bolle la minestra. Il gatto dorme sulla finestra. Il papà legge il giornale.",
+    "paragraphCount": 6,
+    "wordCount": 34,
+    "genre": "poesia",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "staffetta",
+    "title": "La staffetta",
+    "level": "C1",
+    "excerpt": "Nell'inverno del millenovecentoquarantaquattro, Maria aveva soltanto sedici anni, ma era già una staffetta partigiana.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "racconto",
+    "category": "storia_moderna"
   }
 ]
