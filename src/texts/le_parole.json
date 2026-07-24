@@ -1,0 +1,89 @@
+{
+  "id": "le_parole",
+  "title": "Le parole",
+  "level": "B2",
+  "genre": "poesia",
+  "category": "arte_lingua",
+  "paragraphs": [
+    "Le parole sono ponti tra due anime lontane.",
+    "Alcune sanno di miele, altre feriscono come spine.",
+    "Una parola detta bene può cambiare un giorno intero.",
+    "Le lingue del mondo cantano melodie diverse.",
+    "Ma il silenzio, a volte, dice più di mille discorsi.",
+    "Chi conosce le parole possiede le chiavi del cuore."
+  ],
+  "questions": [
+    {
+      "q": "A che cosa sono paragonate le parole all'inizio?",
+      "options": ["A ponti tra due anime", "A muri", "A fiori"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa può fare a volte più di mille discorsi?",
+      "options": ["Una parola dolce", "Il silenzio", "Una canzone"],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa possiede chi conosce le parole?",
+      "options": ["Le chiavi del cuore", "Molti soldi", "Il potere"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à (« a volte » = parfois)",
+    "alcune": "certaines",
+    "altre": "d'autres",
+    "anime": "âmes",
+    "bene": "bien (« detta bene » = bien dite)",
+    "cambiare": "changer",
+    "cantano": "chantent",
+    "che": "que",
+    "chi": "celui qui",
+    "chiavi": "clés",
+    "come": "comme",
+    "conosce": "connaît",
+    "cuore": "cœur",
+    "del": "du",
+    "detta": "dite",
+    "di": "de",
+    "dice": "dit",
+    "discorsi": "discours",
+    "diverse": "différentes",
+    "due": "deux",
+    "feriscono": "blessent",
+    "giorno": "jour",
+    "il": "le",
+    "intero": "entier",
+    "la": "la",
+    "le": "les",
+    "lingue": "langues",
+    "lontane": "lointaines",
+    "ma": "mais",
+    "melodie": "mélodies",
+    "miele": "miel (« sanno di miele » = ont un goût de miel)",
+    "mille": "mille",
+    "mondo": "monde",
+    "parola": "mot",
+    "parole": "mots",
+    "ponti": "ponts",
+    "possiede": "possède",
+    "può": "peut",
+    "più": "plus",
+    "sanno": "savent / ont le goût (« sanno di miele » = ont un goût de miel)",
+    "silenzio": "silence",
+    "sono": "sont",
+    "spine": "épines",
+    "tra": "entre",
+    "un": "un",
+    "una": "un / une",
+    "volte": "fois (« a volte » = parfois)"
+  },
+  "sentences": {
+    "Le parole sono ponti tra due anime lontane.": "Les mots sont des ponts entre deux âmes lointaines.",
+    "Alcune sanno di miele, altre feriscono come spine.": "Certains ont un goût de miel, d'autres blessent comme des épines.",
+    "Una parola detta bene può cambiare un giorno intero.": "Un mot bien dit peut changer une journée entière.",
+    "Le lingue del mondo cantano melodie diverse.": "Les langues du monde chantent des mélodies différentes.",
+    "Ma il silenzio, a volte, dice più di mille discorsi.": "Mais le silence, parfois, dit plus que mille discours.",
+    "Chi conosce le parole possiede le chiavi del cuore.": "Qui connaît les mots possède les clés du cœur."
+  }
+}

@@ -879,5 +879,105 @@
     "wordCount": 86,
     "genre": "documentario",
     "category": "storia_antica"
+  },
+  {
+    "id": "a_scuola",
+    "title": "A scuola",
+    "level": "A1",
+    "excerpt": "— Scusi, professore, non ho capito l'esercizio. — Quale esercizio? Il numero tre? — Sì, quello.",
+    "paragraphCount": 6,
+    "wordCount": 39,
+    "genre": "dialogo",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "befana",
+    "title": "La Befana",
+    "level": "B1",
+    "excerpt": "Tanti anni fa, viveva una vecchia signora che passava le giornate a pulire la sua casetta.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "fiaba",
+    "category": "feste"
+  },
+  {
+    "id": "portafoglio_scomparso",
+    "title": "Il portafoglio scomparso",
+    "level": "A2",
+    "excerpt": "In ufficio, la signora Bruni non trova più il suo portafoglio. Era nella sua borsa.",
+    "paragraphCount": 6,
+    "wordCount": 75,
+    "genre": "giallo",
+    "category": "societa"
+  },
+  {
+    "id": "le_parole",
+    "title": "Le parole",
+    "level": "B2",
+    "excerpt": "Le parole sono ponti tra due anime lontane. Alcune sanno di miele, altre feriscono come spine.",
+    "paragraphCount": 6,
+    "wordCount": 51,
+    "genre": "poesia",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "sicilia",
+    "title": "La Sicilia",
+    "level": "B2",
+    "excerpt": "La Sicilia è la più grande isola del Mediterraneo e una terra di incredibili contrasti.",
+    "paragraphCount": 6,
+    "wordCount": 84,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "torta_domenica",
+    "title": "La torta della domenica",
+    "level": "A2",
+    "excerpt": "Ogni domenica, il nonno Giuseppe preparava una torta di mele per tutta la famiglia.",
+    "paragraphCount": 6,
+    "wordCount": 80,
+    "genre": "racconto",
+    "category": "cucina"
+  },
+  {
+    "id": "lettera_amico",
+    "title": "Lettera a un amico lontano",
+    "level": "B1",
+    "excerpt": "Caro Ahmed, è passato un anno da quando sei partito dal nostro paese. Qui le cose sono cambiate.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "lettera_diario",
+    "category": "societa"
+  },
+  {
+    "id": "ultimo_albero",
+    "title": "L'ultimo albero",
+    "level": "B1",
+    "excerpt": "Nel futuro, la Terra era diventata una grande città di metallo e vetro. Non c'erano più alberi.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "fantascienza",
+    "category": "natura_animali"
+  },
+  {
+    "id": "ritardo_aeroporto",
+    "title": "Ritardo all'aeroporto",
+    "level": "B1",
+    "excerpt": "PAOLO — Hai visto il tabellone? Il nostro volo è in ritardo di tre ore! LUCIA — Tre ore?",
+    "paragraphCount": 6,
+    "wordCount": 68,
+    "genre": "teatro",
+    "category": "viaggi"
+  },
+  {
+    "id": "giro_italia",
+    "title": "Il Giro d'Italia",
+    "level": "B2",
+    "excerpt": "Il Giro d'Italia è una delle corse ciclistiche più famose e dure del mondo.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "documentario",
+    "category": "sport"
   }
 ]

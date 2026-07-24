@@ -1,0 +1,87 @@
+{
+  "id": "a_scuola",
+  "title": "A scuola",
+  "level": "A1",
+  "genre": "dialogo",
+  "category": "scuola_lavoro",
+  "paragraphs": [
+    "— Scusi, professore, non ho capito l'esercizio.",
+    "— Quale esercizio? Il numero tre?",
+    "— Sì, quello. È troppo difficile per me.",
+    "— Non ti preoccupare. Guarda l'esempio a pagina dieci.",
+    "— Ah, adesso capisco meglio. Grazie mille!",
+    "— Bravo. Se hai altre domande, chiedi pure."
+  ],
+  "questions": [
+    {
+      "q": "Quale esercizio non ha capito lo studente?",
+      "options": ["Il numero uno", "Il numero tre", "Il numero dieci"],
+      "correct": 1
+    },
+    {
+      "q": "Che cosa consiglia di guardare il professore?",
+      "options": ["L'esempio a pagina dieci", "Il libro a casa", "Un video"],
+      "correct": 0
+    },
+    {
+      "q": "Come si sente lo studente alla fine?",
+      "options": ["Ancora confuso", "Capisce meglio", "Arrabbiato"],
+      "correct": 1
+    }
+  ],
+  "words": {
+    "a": "à (« a pagina dieci » = à la page dix)",
+    "adesso": "maintenant",
+    "ah": "ah",
+    "altre": "autres",
+    "bravo": "bravo / bien",
+    "capisco": "je comprends",
+    "capito": "compris",
+    "che": "quel",
+    "chiedi": "demande",
+    "dieci": "dix",
+    "difficile": "difficile",
+    "domande": "questions",
+    "esempio": "exemple (« l'esempio » = l'exemple)",
+    "esercizio": "exercice (« l'esercizio » = l'exercice)",
+    "grazie": "merci",
+    "guarda": "regarde",
+    "hai": "tu as",
+    "ho": "j'ai",
+    "il": "le",
+    "l'esempio": "l'exemple",
+    "l'esercizio": "l'exercice",
+    "me": "moi",
+    "meglio": "mieux",
+    "mille": "mille (« grazie mille » = merci beaucoup)",
+    "non": "ne... pas",
+    "numero": "numéro",
+    "pagina": "page",
+    "per": "pour",
+    "preoccupare": "s'inquiéter (« non ti preoccupare » = ne t'inquiète pas)",
+    "professore": "professeur",
+    "pure": "donc (« chiedi pure » = n'hésite pas à demander)",
+    "quale": "quel",
+    "quello": "celui-là",
+    "scusi": "excusez-moi",
+    "se": "si",
+    "ti": "te",
+    "tre": "trois",
+    "troppo": "trop",
+    "sì": "oui",
+    "è": "est"
+  },
+  "sentences": {
+    "— Scusi, professore, non ho capito l'esercizio.": "— Excusez-moi, professeur, je n'ai pas compris l'exercice.",
+    "— Quale esercizio?": "— Quel exercice ?",
+    "Il numero tre?": "Le numéro trois ?",
+    "— Sì, quello.": "— Oui, celui-là.",
+    "È troppo difficile per me.": "Il est trop difficile pour moi.",
+    "— Non ti preoccupare.": "— Ne t'inquiète pas.",
+    "Guarda l'esempio a pagina dieci.": "Regarde l'exemple à la page dix.",
+    "— Ah, adesso capisco meglio.": "— Ah, maintenant je comprends mieux.",
+    "Grazie mille!": "Merci beaucoup !",
+    "— Bravo.": "— Bien.",
+    "Se hai altre domande, chiedi pure.": "Si tu as d'autres questions, n'hésite pas à demander."
+  }
+}
