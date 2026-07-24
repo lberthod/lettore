@@ -11,6 +11,23 @@
     "Al lago, Matteo e il papà si riposano sull'erba. Guardano le barche e i pescatori. Un signore gentile regala a Matteo un piccolo pesce di legno.",
     "Al ritorno, Matteo è stanco ma orgoglioso: ha pedalato venti chilometri. La mamma li aspetta con la cena pronta. Matteo racconta tutto e mostra il suo pesce di legno."
   ],
+  "questions": [
+    {
+      "q": "Perché Matteo ha ricevuto la bicicletta?",
+      "options": ["Per il suo compleanno", "Per Natale", "Perché ha finito la scuola"],
+      "correct": 0
+    },
+    {
+      "q": "Dove vanno Matteo e il papà in bicicletta?",
+      "options": ["Al lago", "Al mare", "In montagna"],
+      "correct": 0
+    },
+    {
+      "q": "Cosa regala il signore gentile a Matteo?",
+      "options": ["Un piccolo pesce di legno", "Un cappello", "Una canna da pesca"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "acqua": "eau",

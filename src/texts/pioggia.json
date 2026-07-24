@@ -11,6 +11,23 @@
     "Dopo mezz'ora i biscotti sono pronti. Sono un po' storti, ma buonissimi. I bambini li mangiano con una tazza di tè caldo.",
     "La sera la pioggia finisce. Martina e Piero guardano l'arcobaleno dalla finestra. Che bella giornata, dice Piero: e domani c'è il sole."
   ],
+  "questions": [
+    {
+      "q": "Perché Martina e Piero non vanno al parco?",
+      "options": ["Perché piove", "Perché sono malati", "Perché è tardi"],
+      "correct": 0
+    },
+    {
+      "q": "Cosa preparano i bambini con la mamma?",
+      "options": ["Dei biscotti", "Una torta", "Una pizza"],
+      "correct": 0
+    },
+    {
+      "q": "Cosa guardano Martina e Piero alla fine della giornata?",
+      "options": ["L'arcobaleno", "Le stelle", "Il gatto"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à (« giocano a carte » = jouent aux cartes)",
     "anche": "aussi / même",

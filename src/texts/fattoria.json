@@ -11,6 +11,23 @@
     "Nel pomeriggio, i bambini raccolgono le uova nel pollaio. Trovano sei uova marroni. Lo zio le mette in una scatola: sono per la vostra colazione.",
     "La sera, sulla strada di casa, Sara dorme in macchina. Sogna il cavallo bianco e la fattoria. La prossima volta, dice il papà, restiamo tutto il weekend."
   ],
+  "questions": [
+    {
+      "q": "Chi visita la famiglia Bruni?",
+      "options": ["Lo zio Franco", "La nonna", "Un amico"],
+      "correct": 0
+    },
+    {
+      "q": "Come si chiama il cavallo bianco?",
+      "options": ["Stella", "Luna", "Bianca"],
+      "correct": 0
+    },
+    {
+      "q": "Cosa raccolgono i bambini nel pomeriggio?",
+      "options": ["Le uova nel pollaio", "Le mele nell'albero", "I fiori nel giardino"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "albero": "arbre",

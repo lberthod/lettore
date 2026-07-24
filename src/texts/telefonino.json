@@ -11,6 +11,23 @@
     "Adesso il nonno usa il telefonino ogni giorno. Fa le videochiamate con il figlio che vive in Germania. Guarda anche i video di cucina.",
     "Elisa è orgogliosa del suo studente. Il nonno dice a tutti: mia nipote è la maestra migliore del mondo. E le manda un cuore ogni sera."
   ],
+  "questions": [
+    {
+      "q": "Chi insegna al nonno a usare il telefonino?",
+      "options": ["La nipote Elisa", "Il figlio", "Un amico"],
+      "correct": 0
+    },
+    {
+      "q": "Qual è la prima lezione del nonno?",
+      "options": ["Mandare un messaggio", "Fare una foto", "Fare una videochiamata"],
+      "correct": 0
+    },
+    {
+      "q": "Con chi fa le videochiamate il nonno?",
+      "options": ["Con il figlio che vive in Germania", "Con Elisa", "Con un amico"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "adesso": "maintenant",

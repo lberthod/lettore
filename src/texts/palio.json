@@ -11,6 +11,23 @@
     "Il giorno del Palio, il Campo si riempie di decine di migliaia di persone. Prima della corsa c'è una sfilata in costumi medievali, con tamburi e bandiere. Poi, in un silenzio incredibile, i cavalli si preparano alla partenza.",
     "Quando la corsa finisce, la contrada vincitrice esplode di gioia. La gente piange, si abbraccia e canta per le strade fino al mattino. Per chi vince, la festa dura settimane. Per gli altri, c'è già il prossimo Palio da preparare."
   ],
+  "questions": [
+    {
+      "q": "Dove si corre il Palio di Siena?",
+      "options": ["Nella piazza del Campo", "Nello stadio comunale", "Fuori città"],
+      "correct": 0
+    },
+    {
+      "q": "Quante contrade partecipano a ogni Palio?",
+      "options": ["Dieci", "Diciassette", "Cinque"],
+      "correct": 0
+    },
+    {
+      "q": "Come viene scelto il cavallo per ogni contrada?",
+      "options": ["Per sorteggio", "Per elezione", "Dal fantino"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "abbraccia": "embrasse (« si abbraccia » = on s'embrasse)",

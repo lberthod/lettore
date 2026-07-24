@@ -11,6 +11,23 @@
     "La zona intorno è altrettanto bella. La Valle d'Itria è piena di ulivi centenari, vigne e muretti bianchi. Nei paesi vicini, come Locorotondo e Martina Franca, si beve un buon vino bianco e si mangiano le orecchiette, la pasta tipica della Puglia.",
     "Dal millenovecentonovantasei, i trulli di Alberobello sono patrimonio dell'Unesco. I turisti arrivano numerosi, soprattutto d'estate. Ma basta una passeggiata all'alba, quando le strade sono vuote, per ritrovare la magia di questo paese unico al mondo."
   ],
+  "questions": [
+    {
+      "q": "Perché sono nati i trulli?",
+      "options": ["Per non pagare le tasse sulle case", "Per proteggersi dal freddo", "Per una moda architettonica"],
+      "correct": 0
+    },
+    {
+      "q": "Con cosa sono costruiti i trulli?",
+      "options": ["Pietre grigie senza cemento", "Mattoni rossi", "Legno"],
+      "correct": 0
+    },
+    {
+      "q": "Da quando i trulli sono patrimonio dell'Unesco?",
+      "options": ["Dal 1996", "Dal 1950", "Dal 2000"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "abitati": "habités",

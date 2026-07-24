@@ -11,6 +11,23 @@
     "Il momento più famoso del Carnevale è il volo dell'angelo: una giovane donna scende appesa a un cavo dal campanile di San Marco fino alla piazza. Ci sono poi i concorsi di costumi, le feste nei palazzi antichi e le gondole decorate sul Canal Grande.",
     "Il Carnevale moderno è rinato nel millenovecentosettantanove, dopo quasi due secoli di silenzio. Oggi è una grande festa popolare: nelle calli si incontrano principesse, arlecchini e fantasmi eleganti. E per qualche giorno, come mille anni fa, Venezia torna a essere un sogno."
   ],
+  "questions": [
+    {
+      "q": "Quando si svolge il Carnevale di Venezia?",
+      "options": ["Tra gennaio e febbraio", "In estate", "A dicembre"],
+      "correct": 0
+    },
+    {
+      "q": "Qual è il momento più famoso del Carnevale?",
+      "options": ["Il volo dell'angelo", "La sfilata delle gondole", "Il concerto in piazza San Marco"],
+      "correct": 0
+    },
+    {
+      "q": "Quando è rinato il Carnevale moderno?",
+      "options": ["Nel 1979", "Nel 1900", "Nel 2000"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "alla": "à la",

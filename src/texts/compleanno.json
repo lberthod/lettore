@@ -11,6 +11,23 @@
     "Giulia apre i regali: un libro di animali, dei colori e un pallone. Il regalo più bello è della nonna: un piccolo orologio rosso.",
     "Alla fine della festa, gli amici tornano a casa. Giulia è stanca ma felice. Prima di dormire, guarda ancora una volta il suo orologio nuovo."
   ],
+  "questions": [
+    {
+      "q": "Quanti anni compie Giulia?",
+      "options": ["Nove anni", "Otto anni", "Dieci anni"],
+      "correct": 0
+    },
+    {
+      "q": "Cosa fanno i bambini in giardino?",
+      "options": ["Una caccia al tesoro", "Una partita di calcio", "Un disegno"],
+      "correct": 0
+    },
+    {
+      "q": "Qual è il regalo della nonna?",
+      "options": ["Un piccolo orologio rosso", "Un libro di animali", "Un pallone"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "accende": "allume",

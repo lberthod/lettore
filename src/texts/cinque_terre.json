@@ -11,6 +11,23 @@
     "Il piatto tipico è semplice e profumato: le trofie al pesto, con basilico, pinoli e parmigiano. Si mangiano guardando le barche colorate nel piccolo porto. Un'acciuga di Monterosso con un po' di limone, dicono qui, vale più di una cena elegante.",
     "Le Cinque Terre sono oggi un parco nazionale protetto dall'Unesco. Il turismo porta ricchezza, ma anche problemi: troppa gente nei mesi estivi, sentieri consumati, case trasformate in alloggi turistici. La sfida è conservare la bellezza di questi luoghi unici anche per le generazioni future."
   ],
+  "questions": [
+    {
+      "q": "In quale regione si trovano le Cinque Terre?",
+      "options": ["In Liguria", "In Toscana", "In Sicilia"],
+      "correct": 0
+    },
+    {
+      "q": "Come si arrivava un tempo nei paesi delle Cinque Terre?",
+      "options": ["Solo in barca o a piedi", "In treno", "In macchina"],
+      "correct": 0
+    },
+    {
+      "q": "Qual è il piatto tipico delle Cinque Terre?",
+      "options": ["Le trofie al pesto", "Le orecchiette", "Il risotto"],
+      "correct": 0
+    }
+  ],
   "words": {
     "a": "à",
     "abitanti": "habitants",
