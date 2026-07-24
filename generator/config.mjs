@@ -38,7 +38,7 @@ export const SIZES = [
   { id: 'molto_lungo', label: 'très long', words: 1000, min: 850, max: Infinity },
 ]
 
-// Catégories (mêmes ids que src/texts/categories.json), avec un indice
+// Catégories (mêmes ids que les thèmes de src/texts/category.json), avec un indice
 // thématique pour guider le choix de sujet.
 export const CATEGORIES = [
   { id: 'vita_quotidiana', name: 'Vie quotidienne', hint: 'scènes de la vie de tous les jours en Italie : marché, bar, poste, voisinage, routines' },

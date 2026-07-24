@@ -4,7 +4,7 @@ import SceneLayout from '../components/SceneLayout.vue'
 
 <template>
   <SceneLayout title="Riservat" accent="ezza" tagline="Confidentialité">
-    <p class="hint">Dernière mise à jour : 22 juillet 2026</p>
+    <p class="hint">Dernière mise à jour : 24 juillet 2026</p>
 
     <h2>1. Données collectées</h2>
     <p>
@@ -33,14 +33,23 @@ import SceneLayout from '../components/SceneLayout.vue'
       </li>
     </ul>
 
-    <h2>4. Cookies et stockage local</h2>
+    <h2>4. Partage public (formule Enseignant)</h2>
+    <p>
+      Les abonnés Enseignant peuvent générer une URL publique pour partager un
+      texte créé. Toute personne disposant de ce lien peut consulter le texte
+      sans créer de compte Leggendo ; aucune donnée n'est collectée auprès de
+      ces visiteurs. Seul le titulaire du compte reste responsable du contenu
+      qu'il choisit de partager.
+    </p>
+
+    <h2>5. Cookies et stockage local</h2>
     <p>
       Le site utilise le stockage local de votre navigateur pour mémoriser
       vos préférences de lecture et permettre le fonctionnement hors ligne
       (PWA). Aucun cookie publicitaire ou de suivi n'est utilisé.
     </p>
 
-    <h2>5. Conservation et suppression</h2>
+    <h2>6. Conservation et suppression</h2>
     <p>
       Vos données sont conservées tant que votre compte est actif. Vous
       pouvez demander la suppression de votre compte et de vos données à tout
@@ -48,7 +57,7 @@ import SceneLayout from '../components/SceneLayout.vue'
       <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>.
     </p>
 
-    <h2>6. Vos droits</h2>
+    <h2>7. Vos droits</h2>
     <p>
       Conformément à la loi fédérale suisse sur la protection des données
       (nLPD) et au RGPD, vous disposez d'un droit d'accès, de rectification,

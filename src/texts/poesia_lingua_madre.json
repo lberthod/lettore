@@ -1,0 +1,93 @@
+{
+  "id": "poesia_lingua_madre",
+  "title": "Lingua madre",
+  "level": "C1",
+  "genre": "poesia",
+  "category": "arte_lingua",
+  "paragraphs": [
+    "Non sei soltanto suono, sei radice,",
+    "voce di nonna curva sul fornello,",
+    "sillaba antica che nessuno dice",
+    "eppure vive, intatta, dentro quello.",
+    "Ti perdo un poco ad ogni confine,",
+    "ti ritrovo in un canto, in un dialetto:",
+    "lingua che non ha mai davvero fine,",
+    "ma cambia volto e resta nel mio petto."
+  ],
+  "questions": [
+    {
+      "q": "A che cosa è paragonata la lingua nella poesia?",
+      "options": ["A una radice", "A un fiume", "A una montagna"],
+      "correct": 0
+    },
+    {
+      "q": "Dove ritrova l'autore la lingua perduta?",
+      "options": ["In un canto e in un dialetto", "In un libro di scuola", "In un giornale"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa succede alla lingua secondo l'ultima strofa?",
+      "options": ["Cambia volto ma resta nel petto", "Scompare per sempre", "Diventa una lingua straniera"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à",
+    "ad": "à",
+    "antica": "ancienne",
+    "cambia": "change",
+    "canto": "chant",
+    "che": "que / qui",
+    "ché": "que",
+    "confine": "frontière",
+    "curva": "courbée",
+    "davvero": "vraiment",
+    "dentro": "à l'intérieur",
+    "dialetto": "dialecte",
+    "di": "de",
+    "dice": "dit",
+    "e": "et",
+    "eppure": "et pourtant",
+    "fine": "fin",
+    "fornello": "fourneau / cuisinière",
+    "ha": "a",
+    "in": "dans",
+    "intatta": "intacte",
+    "lingua": "langue",
+    "ma": "mais",
+    "mai": "jamais",
+    "mio": "mon",
+    "nel": "dans le",
+    "nessuno": "personne",
+    "non": "ne... pas",
+    "nonna": "grand-mère",
+    "ogni": "chaque",
+    "perdo": "je perds",
+    "petto": "poitrine",
+    "poco": "peu",
+    "quello": "cela",
+    "radice": "racine",
+    "resta": "reste",
+    "ritrovo": "je retrouve",
+    "sei": "tu es",
+    "sillaba": "syllabe",
+    "soltanto": "seulement",
+    "sul": "sur le",
+    "suono": "son",
+    "ti": "te",
+    "un": "un",
+    "vive": "vit",
+    "voce": "voix",
+    "volto": "visage"
+  },
+  "sentences": {
+    "Non sei soltanto suono, sei radice,": "Tu n'es pas seulement un son, tu es une racine,",
+    "voce di nonna curva sul fornello,": "voix de grand-mère courbée sur le fourneau,",
+    "sillaba antica che nessuno dice": "syllabe ancienne que personne ne dit",
+    "eppure vive, intatta, dentro quello.": "et pourtant elle vit, intacte, à l'intérieur de cela.",
+    "Ti perdo un poco ad ogni confine,": "Je te perds un peu à chaque frontière,",
+    "ti ritrovo in un canto, in un dialetto:": "je te retrouve dans un chant, dans un dialecte :",
+    "lingua che non ha mai davvero fine,": "langue qui n'a jamais vraiment de fin,",
+    "ma cambia volto e resta nel mio petto.": "mais change de visage et reste dans ma poitrine."
+  }
+}

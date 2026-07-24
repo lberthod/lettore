@@ -1079,5 +1079,945 @@
     "wordCount": 99,
     "genre": "racconto",
     "category": "storia_moderna"
+  },
+  {
+    "id": "laboratorio_droni",
+    "title": "Il laboratorio dei droni",
+    "level": "B1",
+    "excerpt": "Nel 2040 la scuola di Marta apre un nuovo laboratorio di robotica. Ogni studente costruisce il proprio drone personale.",
+    "paragraphCount": 6,
+    "wordCount": 113,
+    "genre": "fantascienza",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "energia_pulita",
+    "title": "L'Italia e l'energia pulita",
+    "level": "B2",
+    "excerpt": "Negli ultimi anni l'Italia ha investito molto nelle energie rinnovabili. Pannelli solari e pale eoliche coprono ormai gran parte del paesag…",
+    "paragraphCount": 6,
+    "wordCount": 107,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "enigma_matera",
+    "title": "L'enigma dei Sassi di Matera",
+    "level": "B2",
+    "excerpt": "Matera, in Basilicata, è famosa per i suoi Sassi, antiche case scavate nella roccia. La commissaria Rondi arriva per un caso strano.",
+    "paragraphCount": 6,
+    "wordCount": 122,
+    "genre": "giallo",
+    "category": "regioni"
+  },
+  {
+    "id": "diario_interrail",
+    "title": "Diario di un viaggio in Interrail",
+    "level": "B1",
+    "excerpt": "3 luglio. Oggi comincia la mia avventura: un mese in treno per attraversare l'Italia da nord a sud, con solo uno zaino.",
+    "paragraphCount": 6,
+    "wordCount": 111,
+    "genre": "lettera_diario",
+    "category": "viaggi"
+  },
+  {
+    "id": "poesia_lingua_madre",
+    "title": "Lingua madre",
+    "level": "C1",
+    "excerpt": "Non sei soltanto suono, sei radice,",
+    "paragraphCount": 8,
+    "wordCount": 52,
+    "genre": "poesia",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "lite_in_famiglia",
+    "title": "Una piccola lite in famiglia",
+    "level": "B1",
+    "excerpt": "MAMMA — Chi ha lasciato i piatti sporchi nel lavandino? Questa cucina sembra un disastro!",
+    "paragraphCount": 6,
+    "wordCount": 84,
+    "genre": "teatro",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "societa_sorvegliata",
+    "title": "La città che non dimentica",
+    "level": "C1",
+    "excerpt": "Nella Milano del 2060, ogni gesto viene registrato da migliaia di sensori invisibili. Camminare per strada significa lasciare una traccia d…",
+    "paragraphCount": 6,
+    "wordCount": 124,
+    "genre": "fantascienza",
+    "category": "societa"
+  },
+  {
+    "id": "poesia_montagna",
+    "title": "Vetta all'alba",
+    "level": "C1",
+    "excerpt": "La roccia trattiene ancora il gelo,",
+    "paragraphCount": 8,
+    "wordCount": 52,
+    "genre": "poesia",
+    "category": "montagna"
+  },
+  {
+    "id": "delitto_treno_notte",
+    "title": "Il delitto del treno notturno",
+    "level": "C1",
+    "excerpt": "Il treno notturno per Bari attraversava le campagne pugliesi quando un urlo squarciò il silenzio della carrozza numero cinque.",
+    "paragraphCount": 6,
+    "wordCount": 111,
+    "genre": "giallo",
+    "category": "viaggi"
+  },
+  {
+    "id": "val_orcia",
+    "title": "La Val d'Orcia: un paesaggio disegnato dall'uomo",
+    "level": "C1",
+    "excerpt": "Nel cuore della Toscana meridionale si estende la Val d'Orcia, un territorio che dal 2004 figura nella lista del patrimonio mondiale dell'U…",
+    "paragraphCount": 6,
+    "wordCount": 135,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "leggenda_romolo_remo",
+    "title": "La leggenda di Romolo e Remo",
+    "level": "A1",
+    "excerpt": "Tanto tempo fa, due gemelli nascono vicino a un fiume. Si chiamano Romolo e Remo.",
+    "paragraphCount": 6,
+    "wordCount": 88,
+    "genre": "fiaba",
+    "category": "storia_antica"
+  },
+  {
+    "id": "invito_compleanno",
+    "title": "Un invito di compleanno",
+    "level": "A1",
+    "excerpt": "Sei invitato alla festa di compleanno di Sofia! Compie otto anni.",
+    "paragraphCount": 6,
+    "wordCount": 56,
+    "genre": "pratico",
+    "category": "feste"
+  },
+  {
+    "id": "palestra_partita",
+    "title": "In palestra prima della partita",
+    "level": "A2",
+    "excerpt": "— Ciao Luca, sei pronto per la partita di stasera?",
+    "paragraphCount": 6,
+    "wordCount": 59,
+    "genre": "dialogo",
+    "category": "sport"
+  },
+  {
+    "id": "diario_maratona",
+    "title": "Diario di allenamento",
+    "level": "A2",
+    "excerpt": "Lunedì. Oggi ho corso cinque chilometri nel parco vicino a casa. Le gambe mi fanno un po' male, ma sono contenta.",
+    "paragraphCount": 6,
+    "wordCount": 115,
+    "genre": "lettera_diario",
+    "category": "sport"
+  },
+  {
+    "id": "documenti_spariti",
+    "title": "I documenti spariti",
+    "level": "B1",
+    "excerpt": "Lunedì mattina, la segretaria dell'ufficio non trova più il faldone con i contratti più importanti dell'azienda.",
+    "paragraphCount": 6,
+    "wordCount": 106,
+    "genre": "giallo",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "regata_venezia",
+    "title": "La Regata Storica di Venezia",
+    "level": "B1",
+    "excerpt": "Ogni prima domenica di settembre, il Canal Grande di Venezia si trasforma in un grande palcoscenico d'acqua.",
+    "paragraphCount": 6,
+    "wordCount": 107,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "giovane_inventore",
+    "title": "L'invenzione del garage",
+    "level": "B2",
+    "excerpt": "Da due anni, dopo la scuola, Tommaso passa ogni pomeriggio nel garage di suo nonno, circondato da cavi e vecchi motori.",
+    "paragraphCount": 6,
+    "wordCount": 114,
+    "genre": "racconto",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "poesia_ricostruzione",
+    "title": "Case nuove",
+    "level": "B2",
+    "excerpt": "Dove c'era la guerra, ora c'è calce,",
+    "paragraphCount": 8,
+    "wordCount": 50,
+    "genre": "poesia",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "prova_generale",
+    "title": "La prova generale",
+    "level": "B2",
+    "excerpt": "REGISTA — Fermi tutti! Questa scena non funziona ancora. Manca la tensione tra i due personaggi.",
+    "paragraphCount": 6,
+    "wordCount": 88,
+    "genre": "teatro",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "poeta_artificiale",
+    "title": "Il poeta artificiale",
+    "level": "C1",
+    "excerpt": "Nel 2070 un'intelligenza artificiale chiamata Virgilio vince il più importante premio di poesia italiana, scatenando un dibattito acceso in…",
+    "paragraphCount": 6,
+    "wordCount": 128,
+    "genre": "fantascienza",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "orario_autobus",
+    "title": "L'orario dell'autobus",
+    "level": "A1",
+    "excerpt": "Linea 12: da piazza Duomo a via Stazione.",
+    "paragraphCount": 6,
+    "wordCount": 52,
+    "genre": "pratico",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "sveglia_pigra",
+    "title": "La sveglia pigra",
+    "level": "A2",
+    "excerpt": "In una casa piena di oggetti parlanti, viveva una sveglia molto pigra di nome Tic.",
+    "paragraphCount": 6,
+    "wordCount": 102,
+    "genre": "fiaba",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "organizzare_festa",
+    "title": "Organizziamo una festa",
+    "level": "A2",
+    "excerpt": "— Allora, che facciamo per il compleanno di Sara? Manca solo una settimana!",
+    "paragraphCount": 6,
+    "wordCount": 70,
+    "genre": "dialogo",
+    "category": "feste"
+  },
+  {
+    "id": "lite_condominio",
+    "title": "Lite in condominio",
+    "level": "B1",
+    "excerpt": "SIGNORA BIANCHI — Ancora questa storia dei bidoni! Lei continua a mettere la plastica insieme al vetro.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "teatro",
+    "category": "societa"
+  },
+  {
+    "id": "pizza_napoletana",
+    "title": "La pizza napoletana: storia di un simbolo",
+    "level": "B2",
+    "excerpt": "Nel 2017 l'arte del pizzaiuolo napoletano è entrata a far parte del patrimonio culturale immateriale dell'UNESCO.",
+    "paragraphCount": 6,
+    "wordCount": 113,
+    "genre": "documentario",
+    "category": "cucina"
+  },
+  {
+    "id": "diario_2_giugno",
+    "title": "Diario del 2 giugno 1946",
+    "level": "B2",
+    "excerpt": "2 giugno. Oggi, per la prima volta nella storia del nostro paese, anche le donne hanno potuto votare.",
+    "paragraphCount": 6,
+    "wordCount": 105,
+    "genre": "lettera_diario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "pittore_di_strada",
+    "title": "Il pittore di strada",
+    "level": "B1",
+    "excerpt": "Ogni mattina, Enzo si sedeva sui gradini della piazza principale e disegnava ritratti veloci ai turisti per pochi euro.",
+    "paragraphCount": 6,
+    "wordCount": 116,
+    "genre": "racconto",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "manoscritto_rubato",
+    "title": "Il manoscritto rubato",
+    "level": "B2",
+    "excerpt": "Nella biblioteca antica di Bologna, un raro manoscritto medievale scompare durante la notte, proprio la vigilia della sua esposizione pubbl…",
+    "paragraphCount": 6,
+    "wordCount": 110,
+    "genre": "giallo",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "poesia_scuola",
+    "title": "Il primo giorno di scuola",
+    "level": "A2",
+    "excerpt": "Zaino nuovo sulle spalle,",
+    "paragraphCount": 8,
+    "wordCount": 39,
+    "genre": "poesia",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "viaggio_nel_tempo_roma",
+    "title": "Un turista nella Roma antica",
+    "level": "C1",
+    "excerpt": "Nel 2153 il turismo temporale è diventato accessibile a chiunque possa permettersi il costo esorbitante di un salto nel passato.",
+    "paragraphCount": 6,
+    "wordCount": 129,
+    "genre": "fantascienza",
+    "category": "storia_antica"
+  },
+  {
+    "id": "primo_viaggio_treno",
+    "title": "Il primo viaggio in treno",
+    "level": "A1",
+    "excerpt": "Lucia ha sei anni e oggi prende il treno per la prima volta.",
+    "paragraphCount": 6,
+    "wordCount": 72,
+    "genre": "racconto",
+    "category": "viaggi"
+  },
+  {
+    "id": "museo_archeologico",
+    "title": "Una visita al museo archeologico",
+    "level": "B1",
+    "excerpt": "— Guarda questo mosaico, è stato trovato negli scavi di una villa romana vicino a qui.",
+    "paragraphCount": 6,
+    "wordCount": 77,
+    "genre": "dialogo",
+    "category": "storia_antica"
+  },
+  {
+    "id": "poesia_pasta",
+    "title": "La pasta della domenica",
+    "level": "A1",
+    "excerpt": "Acqua che bolle, sale nel piatto,",
+    "paragraphCount": 8,
+    "wordCount": 47,
+    "genre": "poesia",
+    "category": "cucina"
+  },
+  {
+    "id": "pennello_magico",
+    "title": "Il pennello magico",
+    "level": "A2",
+    "excerpt": "In un piccolo paese viveva Elio, un bambino povero che amava disegnare più di ogni altra cosa.",
+    "paragraphCount": 6,
+    "wordCount": 103,
+    "genre": "fiaba",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "carnevale_robotico",
+    "title": "Il Carnevale dei robot",
+    "level": "B1",
+    "excerpt": "Nel 2055, ogni città organizza il proprio Carnevale robotico: sfilate di robot vestiti con costumi coloratissimi.",
+    "paragraphCount": 6,
+    "wordCount": 97,
+    "genre": "fantascienza",
+    "category": "feste"
+  },
+  {
+    "id": "furto_sagra",
+    "title": "Il furto alla sagra",
+    "level": "C1",
+    "excerpt": "Ogni anno la sagra del paese si concludeva con la premiazione del miglior vino locale, un riconoscimento ambito da generazioni di viticolto…",
+    "paragraphCount": 6,
+    "wordCount": 123,
+    "genre": "giallo",
+    "category": "feste"
+  },
+  {
+    "id": "universita_bologna",
+    "title": "L'Università di Bologna: la più antica del mondo occidentale",
+    "level": "B2",
+    "excerpt": "Fondata nel 1088, l'Università di Bologna è considerata la più antica università del mondo occidentale ancora in attività.",
+    "paragraphCount": 6,
+    "wordCount": 102,
+    "genre": "documentario",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "diario_scrittore",
+    "title": "Diario di un aspirante scrittore",
+    "level": "B1",
+    "excerpt": "Lunedì. Ho ricominciato a scrivere il mio romanzo dopo mesi di silenzio. Le prime righe sono state difficilissime.",
+    "paragraphCount": 6,
+    "wordCount": 112,
+    "genre": "lettera_diario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "idi_di_marzo",
+    "title": "Prove per le Idi di marzo",
+    "level": "B2",
+    "excerpt": "REGISTA — Fermatevi! Cesare, la tua morte deve sembrare una sorpresa totale, non un evento già annunciato dal tuo sguardo.",
+    "paragraphCount": 6,
+    "wordCount": 114,
+    "genre": "teatro",
+    "category": "storia_antica"
+  },
+  {
+    "id": "guida_raccolta_differenziata",
+    "title": "Guida alla raccolta differenziata",
+    "level": "B1",
+    "excerpt": "Carta e cartone: giornali, riviste, scatole pulite e piegate. Il bidone è di colore blu.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "pratico",
+    "category": "societa"
+  },
+  {
+    "id": "cucina_patrimonio",
+    "title": "La cucina italiana: un patrimonio in movimento",
+    "level": "C1",
+    "excerpt": "Quando pensiamo alla cucina italiana, immaginiamo spesso una tradizione immutabile, custodita gelosamente nelle case e tramandata identica d…",
+    "paragraphCount": 11,
+    "wordCount": 272,
+    "genre": "documentario",
+    "category": "cucina"
+  },
+  {
+    "id": "guida_alpina",
+    "title": "La guida e il ghiacciaio",
+    "level": "C1",
+    "excerpt": "Elio faceva la guida alpina da trent'anni e conosceva il Monte Rosa come le rughe del proprio volto: ogni cengia, ogni canale, ogni umore de…",
+    "paragraphCount": 11,
+    "wordCount": 260,
+    "genre": "racconto",
+    "category": "montagna"
+  },
+  {
+    "id": "fuga_solitaria",
+    "title": "Fuga solitaria",
+    "level": "C1",
+    "excerpt": "Dario aveva trentaquattro anni, quattordici stagioni da professionista e nessuna vittoria: il mestiere del gregario, del resto, consiste nel…",
+    "paragraphCount": 11,
+    "wordCount": 264,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "diario_supplente",
+    "title": "Diario di una supplente",
+    "level": "C1",
+    "excerpt": "Quindici settembre. Stamattina la segreteria mi ha telefonato alle sette: una supplenza di tre mesi in una scuola media di periferia, da acc…",
+    "paragraphCount": 10,
+    "wordCount": 263,
+    "genre": "lettera_diario",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "olivetti",
+    "title": "Olivetti e il calcolatore italiano",
+    "level": "C1",
+    "excerpt": "Nella piccola città di Ivrea, in Piemonte, Adriano Olivetti trasformò negli anni del dopoguerra la fabbrica di macchine per scrivere eredita…",
+    "paragraphCount": 10,
+    "wordCount": 269,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "notte_taranta",
+    "title": "La Notte della Taranta",
+    "level": "C1",
+    "excerpt": "Ogni estate, alla fine di agosto, nella piazza di Melpignano, un piccolo paese del Salento, centinaia di migliaia di persone si radunano per…",
+    "paragraphCount": 10,
+    "wordCount": 263,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "assemblea_condominio",
+    "title": "L'assemblea di condominio",
+    "level": "C1",
+    "excerpt": "AMMINISTRATORE — Signori, vi prego, sedetevi: dichiaro aperta l'assemblea. Primo punto all'ordine del giorno: il rifacimento del terrazzo co…",
+    "paragraphCount": 12,
+    "wordCount": 249,
+    "genre": "teatro",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "ritorno_lupo",
+    "title": "Il ritorno del lupo",
+    "level": "C1",
+    "excerpt": "All'inizio del Novecento il lupo era quasi scomparso dall'Italia: cacciato, avvelenato, perseguitato per secoli come nemico giurato dell'uom…",
+    "paragraphCount": 10,
+    "wordCount": 260,
+    "genre": "documentario",
+    "category": "natura_animali"
+  },
+  {
+    "id": "lettere_dal_fronte",
+    "title": "Lettere dal fronte",
+    "level": "C1",
+    "excerpt": "Carso, 12 novembre 1916. Cara madre, vi scrivo da una trincea scavata nella roccia, mentre piove da tre giorni e il fango ci sale fino alle…",
+    "paragraphCount": 10,
+    "wordCount": 288,
+    "genre": "lettera_diario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "restare_o_partire",
+    "title": "Restare o partire?",
+    "level": "C1",
+    "excerpt": "— Allora è ufficiale? Hai firmato il contratto con il centro di ricerca di Berlino?",
+    "paragraphCount": 11,
+    "wordCount": 257,
+    "genre": "dialogo",
+    "category": "societa"
+  },
+  {
+    "id": "machiavelli",
+    "title": "Machiavelli e l'arte del potere",
+    "level": "C2",
+    "excerpt": "Poche figure della storia intellettuale europea sono state fraintese con tanta ostinazione quanto Niccolò Machiavelli, segretario della canc…",
+    "paragraphCount": 12,
+    "wordCount": 401,
+    "genre": "documentario",
+    "category": "storia_antica"
+  },
+  {
+    "id": "neorealismo",
+    "title": "Il neorealismo: filmare la verità",
+    "level": "C2",
+    "excerpt": "Vi sono momenti in cui un'arte, spogliata di tutto, ritrova per ciò stesso la propria ragione d'essere: accadde al cinema italiano all'indom…",
+    "paragraphCount": 12,
+    "wordCount": 377,
+    "genre": "documentario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "vajont",
+    "title": "Il Vajont: cronaca di una tragedia annunciata",
+    "level": "C2",
+    "excerpt": "La sera del nove ottobre millenovecentosessantatré, alle ventidue e trentanove, un boato sordo squarciò la quiete delle valli dolomitiche e…",
+    "paragraphCount": 12,
+    "wordCount": 352,
+    "genre": "documentario",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "orologiaio",
+    "title": "L'orologiaio di via Garibaldi",
+    "level": "C2",
+    "excerpt": "In fondo a via Garibaldi, stretta fra due negozi di telefoni dalle vetrine abbaglianti, resiste una bottega che il tempo sembra aver dimenti…",
+    "paragraphCount": 12,
+    "wordCount": 345,
+    "genre": "racconto",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "veleno_annata",
+    "title": "Veleno d'annata",
+    "level": "C2",
+    "excerpt": "Nella cantina dei conti Roviglio, scavata nel tufo sotto le colline di Barolo, la degustazione verticale era cominciata con la solennità di…",
+    "paragraphCount": 12,
+    "wordCount": 343,
+    "genre": "giallo",
+    "category": "cucina"
+  },
+  {
+    "id": "ultima_traduzione",
+    "title": "L'ultima traduzione",
+    "level": "C2",
+    "excerpt": "Quando gli impianti neurali resero istantanea la comprensione di ogni lingua, l'umanità credette di aver abbattuto l'ultima frontiera: basta…",
+    "paragraphCount": 12,
+    "wordCount": 346,
+    "genre": "fantascienza",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "canto_bosco",
+    "title": "Il canto del bosco",
+    "level": "C2",
+    "excerpt": "Sotto il frascame che l'autunno rovescia",
+    "paragraphCount": 12,
+    "wordCount": 81,
+    "genre": "poesia",
+    "category": "natura_animali"
+  },
+  {
+    "id": "taccuino_sicilia",
+    "title": "Taccuino di viaggio: la Sicilia interiore",
+    "level": "C2",
+    "excerpt": "Palermo, 3 aprile. Sono arrivato ieri sera e la città mi ha subito travolto con la sua splendida decadenza. Al mercato di Ballarò le voci de…",
+    "paragraphCount": 11,
+    "wordCount": 338,
+    "genre": "lettera_diario",
+    "category": "viaggi"
+  },
+  {
+    "id": "colloquio_selezione",
+    "title": "Il colloquio",
+    "level": "C2",
+    "excerpt": "SELEZIONATRICE — Si accomodi, prego. La sua candidatura ha superato il primo filtro algoritmico, il che, di questi tempi, equivale quasi a u…",
+    "paragraphCount": 12,
+    "wordCount": 330,
+    "genre": "teatro",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "inverno_rifugista",
+    "title": "L'inverno del rifugista",
+    "level": "C2",
+    "excerpt": "Quando l'ultimo escursionista scese a valle, ai primi di novembre, Severino chiuse il portone del rifugio, girò due volte la chiave e rimase…",
+    "paragraphCount": 12,
+    "wordCount": 347,
+    "genre": "racconto",
+    "category": "montagna"
+  },
+  {
+    "id": "dialetto_futuro",
+    "title": "I dialetti: un patrimonio che resiste",
+    "level": "C2",
+    "excerpt": "Chi attraversi la penisola da Bolzano a Palermo si imbatte in un mosaico linguistico che pochi paesi europei possono vantare: il napoletano,…",
+    "paragraphCount": 11,
+    "wordCount": 342,
+    "genre": "documentario",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "festa_dei_morti",
+    "title": "I giorni dei morti: la festa che nutre la memoria",
+    "level": "C2",
+    "excerpt": "Mentre l'Europa intera si abbandona alle zucche intagliate di Halloween, l'Italia custodisce, tra il primo e il due novembre, una festività…",
+    "paragraphCount": 11,
+    "wordCount": 351,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "derby_citta",
+    "title": "Il derby: antropologia di una città divisa",
+    "level": "C2",
+    "excerpt": "Vi sono città che il calcio non si limita ad attraversare: le divide in due, con la precisione di un bisturi e la solennità di un rito.",
+    "paragraphCount": 11,
+    "wordCount": 345,
+    "genre": "documentario",
+    "category": "sport"
+  },
+  {
+    "id": "pranzo_domenica",
+    "title": "Il pranzo della domenica",
+    "level": "C2",
+    "excerpt": "Il ragù di nonna Assunta borbottava sul fuoco fin dall'alba, e il suo profumo, insinuandosi per le scale del palazzo, annunciava ai condomin…",
+    "paragraphCount": 12,
+    "wordCount": 347,
+    "genre": "racconto",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "apprendista_liutaio",
+    "title": "L'apprendista liutaio",
+    "level": "B2",
+    "excerpt": "A diciannove anni Tommaso ha preso una decisione che ha sorpreso tutti: ha lasciato il liceo scientifico per entrare come apprendista nella…",
+    "paragraphCount": 10,
+    "wordCount": 282,
+    "genre": "racconto",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "sfoglina",
+    "title": "La sfoglina",
+    "level": "C1",
+    "excerpt": "Ogni mattina, quando il quartiere dorme ancora, Ines accende la luce del laboratorio e infarina il tagliere di legno che fu di sua madre.",
+    "paragraphCount": 11,
+    "wordCount": 270,
+    "genre": "racconto",
+    "category": "cucina"
+  },
+  {
+    "id": "strade_romane",
+    "title": "Tutte le strade portano a Roma",
+    "level": "C1",
+    "excerpt": "« Tutte le strade portano a Roma »: il proverbio, ancora vivo dopo duemila anni, racconta una verità storica prima ancora che un modo di dir…",
+    "paragraphCount": 11,
+    "wordCount": 290,
+    "genre": "documentario",
+    "category": "storia_antica"
+  },
+  {
+    "id": "notte_stromboli",
+    "title": "Una notte a Stromboli",
+    "level": "B2",
+    "excerpt": "Quando il traghetto attraccò al molo di Stromboli, il sole cominciava già a scendere e l'isola intera profumava di salsedine e di ginestra.…",
+    "paragraphCount": 10,
+    "wordCount": 255,
+    "genre": "racconto",
+    "category": "viaggi"
+  },
+  {
+    "id": "barbiere_quartiere",
+    "title": "Il barbiere di quartiere",
+    "level": "B2",
+    "excerpt": "Da quarant'anni Franco alzava la saracinesca del suo salone alle otto in punto, e da quarant'anni il quartiere entrava da quella porta come…",
+    "paragraphCount": 10,
+    "wordCount": 240,
+    "genre": "racconto",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "moria_api",
+    "title": "Il silenzio delle api",
+    "level": "B2",
+    "excerpt": "In un frutteto in fiore, il ronzio delle api è il suono stesso della primavera: senza di loro, molti rami resterebbero senza frutti.",
+    "paragraphCount": 10,
+    "wordCount": 247,
+    "genre": "documentario",
+    "category": "natura_animali"
+  },
+  {
+    "id": "ferragosto",
+    "title": "Ferragosto: storia di una festa",
+    "level": "B2",
+    "excerpt": "Poche date raccontano l'Italia come il quindici agosto, una festa che affonda le radici in età romana.",
+    "paragraphCount": 10,
+    "wordCount": 257,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "trieste_confine",
+    "title": "Trieste: la città di confine",
+    "level": "C2",
+    "excerpt": "Chi giunga a Trieste dal ciglione carsico, e veda d'improvviso il mare aprirsi sotto la città, comprende subito di trovarsi in un luogo che…",
+    "paragraphCount": 12,
+    "wordCount": 339,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "borghi_svuotati",
+    "title": "I borghi che si svuotano",
+    "level": "C2",
+    "excerpt": "Vi sono paesi, lungo la dorsale appenninica, in cui il silenzio non è quiete ma assenza: assenza di voci infantili, di saracinesche alzate,…",
+    "paragraphCount": 12,
+    "wordCount": 343,
+    "genre": "documentario",
+    "category": "societa"
+  },
+  {
+    "id": "alfabeto_notturno",
+    "title": "Alfabeto notturno",
+    "level": "C2",
+    "excerpt": "Quando la casa tace, affiorano le parole",
+    "paragraphCount": 12,
+    "wordCount": 97,
+    "genre": "poesia",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "primo_lavoro_estivo",
+    "title": "Il mio primo lavoro estivo",
+    "level": "A2",
+    "excerpt": "Quest'estate, per la prima volta, Marta lavora in un piccolo bar vicino al mare.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "racconto",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "negozio_elettronica",
+    "title": "Al negozio di elettronica",
+    "level": "B1",
+    "excerpt": "— Buongiorno, cerco un nuovo telefono. Il mio è caduto in acqua e non si accende più.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "dialogo",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "poesia_sicilia",
+    "title": "Sicilia",
+    "level": "A2",
+    "excerpt": "Isola di sole, terra di mare,",
+    "paragraphCount": 8,
+    "wordCount": 41,
+    "genre": "poesia",
+    "category": "regioni"
+  },
+  {
+    "id": "lupo_agnello",
+    "title": "Il lupo e l'agnello",
+    "level": "A1",
+    "excerpt": "Su un alto pascolo di montagna, un agnello beveva l'acqua di un ruscello limpido.",
+    "paragraphCount": 6,
+    "wordCount": 84,
+    "genre": "fiaba",
+    "category": "montagna"
+  },
+  {
+    "id": "italia_alternativa",
+    "title": "L'Italia che non fu",
+    "level": "C1",
+    "excerpt": "Nel laboratorio segreto sotto Torino, il professor Ricci ha finalmente completato la macchina capace di osservare le linee temporali altern…",
+    "paragraphCount": 6,
+    "wordCount": 126,
+    "genre": "fantascienza",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "maledizione_tomba_etrusca",
+    "title": "La maledizione della tomba etrusca",
+    "level": "B2",
+    "excerpt": "Vicino a Tarquinia, gli archeologi scoprono una tomba etrusca intatta, decorata con affreschi ancora perfettamente conservati.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "giallo",
+    "category": "storia_antica"
+  },
+  {
+    "id": "via_francigena",
+    "title": "La Via Francigena: un cammino millenario",
+    "level": "B1",
+    "excerpt": "La Via Francigena è un antico percorso che collegava Canterbury a Roma, attraversando la Francia, la Svizzera e l'Italia.",
+    "paragraphCount": 6,
+    "wordCount": 109,
+    "genre": "documentario",
+    "category": "viaggi"
+  },
+  {
+    "id": "diario_primo_smartphone",
+    "title": "Diario del mio primo smartphone",
+    "level": "A2",
+    "excerpt": "Sabato. Oggi i miei genitori mi hanno regalato il mio primo smartphone! Sono così felice, non riesco a smettere di guardarlo.",
+    "paragraphCount": 6,
+    "wordCount": 107,
+    "genre": "lettera_diario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "derby_in_famiglia",
+    "title": "Derby in famiglia",
+    "level": "B1",
+    "excerpt": "PAPÀ — Stasera c'è il derby! Preparo la maglia della mia squadra, quella vera.",
+    "paragraphCount": 6,
+    "wordCount": 80,
+    "genre": "teatro",
+    "category": "sport"
+  },
+  {
+    "id": "orario_lezioni",
+    "title": "L'orario delle lezioni",
+    "level": "A1",
+    "excerpt": "Lunedì: italiano, matematica e scienze.",
+    "paragraphCount": 6,
+    "wordCount": 34,
+    "genre": "pratico",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "ritorno_in_puglia",
+    "title": "Ritorno in Puglia",
+    "level": "B1",
+    "excerpt": "Dopo vent'anni a Milano, Carlo torna finalmente nel paese pugliese dove è nato, per il matrimonio di sua cugina.",
+    "paragraphCount": 6,
+    "wordCount": 109,
+    "genre": "racconto",
+    "category": "regioni"
+  },
+  {
+    "id": "giorno_pompei",
+    "title": "Un giorno a Pompei",
+    "level": "A2",
+    "excerpt": "Ottavia si sveglia presto, come ogni mattina, nella sua casa di Pompei vicino al foro.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "racconto",
+    "category": "storia_antica"
+  },
+  {
+    "id": "galleria_arte",
+    "title": "Alla galleria d'arte",
+    "level": "B1",
+    "excerpt": "— Guarda questo quadro, mi sembra completamente astratto. Non capisco proprio cosa rappresenti.",
+    "paragraphCount": 6,
+    "wordCount": 83,
+    "genre": "dialogo",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "poesia_internet",
+    "title": "Fili invisibili",
+    "level": "B1",
+    "excerpt": "Un cavo sottile sotto il mare,",
+    "paragraphCount": 8,
+    "wordCount": 49,
+    "genre": "poesia",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "ape_operosa",
+    "title": "L'ape che non voleva lavorare",
+    "level": "A2",
+    "excerpt": "In un grande alveare viveva un'ape giovane di nome Mimì, che non amava affatto lavorare.",
+    "paragraphCount": 6,
+    "wordCount": 101,
+    "genre": "fiaba",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "olimpiadi_robot",
+    "title": "Le prime Olimpiadi robotiche",
+    "level": "B2",
+    "excerpt": "Nel 2072, il Comitato Olimpico Internazionale organizza per la prima volta le Olimpiadi riservate esclusivamente ai robot atletici.",
+    "paragraphCount": 6,
+    "wordCount": 109,
+    "genre": "fantascienza",
+    "category": "sport"
+  },
+  {
+    "id": "chiavi_scomparse",
+    "title": "Le chiavi scomparse",
+    "level": "A2",
+    "excerpt": "Sabato mattina, Elena cerca le chiavi di casa dappertutto, ma non le trova da nessuna parte.",
+    "paragraphCount": 6,
+    "wordCount": 93,
+    "genre": "giallo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "lettera_da_pompei",
+    "title": "Una lettera da Pompei",
+    "level": "B2",
+    "excerpt": "Caro fratello, ti scrivo da Pompei dove sono arrivato per affari legati al commercio del vino.",
+    "paragraphCount": 6,
+    "wordCount": 106,
+    "genre": "lettera_diario",
+    "category": "storia_antica"
+  },
+  {
+    "id": "ritorno_emigrante",
+    "title": "Il ritorno dell'emigrante",
+    "level": "B1",
+    "excerpt": "MADRE — Giovanni, sei tu? Non ci credo, sono passati vent'anni dalla tua partenza per l'America!",
+    "paragraphCount": 6,
+    "wordCount": 94,
+    "genre": "teatro",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "guida_visita_pompei",
+    "title": "Guida alla visita degli scavi di Pompei",
+    "level": "B1",
+    "excerpt": "Orari: gli scavi sono aperti tutti i giorni dalle nove alle diciannove, tranne il primo gennaio e il venticinque dicembre.",
+    "paragraphCount": 6,
+    "wordCount": 98,
+    "genre": "pratico",
+    "category": "storia_antica"
   }
 ]

@@ -1,0 +1,78 @@
+{
+  "id": "orario_lezioni",
+  "title": "L'orario delle lezioni",
+  "level": "A1",
+  "genre": "pratico",
+  "category": "scuola_lavoro",
+  "paragraphs": [
+    "Lunedì: italiano, matematica e scienze.",
+    "Martedì: storia, inglese e educazione fisica.",
+    "Mercoledì: matematica, geografia e disegno.",
+    "Giovedì: italiano, musica e scienze.",
+    "Venerdì: inglese, storia e informatica.",
+    "Le lezioni cominciano alle otto e finiscono all'una."
+  ],
+  "questions": [
+    {
+      "q": "Quali materie ci sono il lunedì?",
+      "options": ["Italiano, matematica e scienze", "Storia, inglese e disegno", "Musica e geografia"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa c'è mercoledì oltre a matematica e geografia?",
+      "options": ["Disegno", "Educazione fisica", "Informatica"],
+      "correct": 0
+    },
+    {
+      "q": "A che ora finiscono le lezioni?",
+      "options": ["All'una", "Alle tre", "A mezzogiorno"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à",
+    "alle": "à",
+    "all'una": "à une heure",
+    "che": "que",
+    "ci": "il (« ci sono » = il y a)",
+    "cominciano": "commencent",
+    "cosa": "chose",
+    "delle": "des",
+    "disegno": "dessin",
+    "e": "et",
+    "educazione": "éducation",
+    "finiscono": "finissent",
+    "fisica": "physique (« educazione fisica » = éducation physique)",
+    "geografia": "géographie",
+    "giovedì": "jeudi",
+    "informatica": "informatique",
+    "inglese": "anglais",
+    "italiano": "italien",
+    "l'orario": "l'horaire",
+    "le": "les",
+    "lezioni": "cours",
+    "lunedì": "lundi",
+    "martedì": "mardi",
+    "matematica": "mathématiques",
+    "materie": "matières",
+    "mercoledì": "mercredi",
+    "musica": "musique",
+    "oltre": "en plus de",
+    "ora": "heure",
+    "otto": "huit",
+    "quali": "quelles",
+    "scienze": "sciences",
+    "sono": "sont",
+    "storia": "histoire",
+    "una": "une",
+    "venerdì": "vendredi"
+  },
+  "sentences": {
+    "Lunedì: italiano, matematica e scienze.": "Lundi : italien, mathématiques et sciences.",
+    "Martedì: storia, inglese e educazione fisica.": "Mardi : histoire, anglais et éducation physique.",
+    "Mercoledì: matematica, geografia e disegno.": "Mercredi : mathématiques, géographie et dessin.",
+    "Giovedì: italiano, musica e scienze.": "Jeudi : italien, musique et sciences.",
+    "Venerdì: inglese, storia e informatica.": "Vendredi : anglais, histoire et informatique.",
+    "Le lezioni cominciano alle otto e finiscono all'una.": "Les cours commencent à huit heures et finissent à une heure."
+  }
+}

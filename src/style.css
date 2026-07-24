@@ -75,7 +75,9 @@ body {
 }
 
 .form input,
-.form textarea {
+.form textarea,
+.form select {
+  width: 100%;
   padding: 0.55rem 0.7rem;
   border: 1px solid #d8cfc2;
   border-radius: 8px;
@@ -85,10 +87,42 @@ body {
   color: inherit;
 }
 
+/* Sélecteurs habillés comme les autres champs, avec chevron maison. */
+.form select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.2rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%236b6156' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.75rem;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.form input:hover,
+.form textarea:hover,
+.form select:hover {
+  border-color: #c4a488;
+}
+
 .form input:focus,
-.form textarea:focus {
+.form textarea:focus,
+.form select:focus {
   outline: none;
   border-color: #b0692e;
+  box-shadow: 0 0 0 3px rgba(176, 105, 46, 0.15);
+}
+
+/* Sur mobile : 16px mini pour éviter le zoom automatique d'iOS au focus. */
+@media (max-width: 560px) {
+  .form input,
+  .form textarea,
+  .form select {
+    font-size: 1rem;
+  }
 }
 
 .btn-primary,

@@ -10,8 +10,10 @@ const firebaseConfig = {
   measurementId: 'G-0XSL8RH1NN',
 }
 
-// Tant que la config n'est pas remplie, l'app fonctionne sans auth
-export const firebaseReady = !firebaseConfig.apiKey.startsWith('REMPLACER')
+// La config web est renseignée en dur ci-dessus : l'app tourne toujours avec
+// Firebase. La constante reste exportée car les vues s'en servent pour gérer
+// un éventuel retour au mode « sans auth » (tests, fork sans backend).
+export const firebaseReady = Boolean(firebaseConfig.apiKey)
 
 // Le SDK Firebase (~75 kB gzip) est chargé dynamiquement : il reste hors du
 // bundle initial et n'est téléchargé que si la config est renseignée.
@@ -42,6 +44,21 @@ export function getAuthInstance() {
     )
   }
   return authPromise
+}
+
+let functionsPromise = null
+
+// Cloud Functions callables (adminListUsers, adminSetUserRole…), même région
+// que le déploiement (voir functions/index.js).
+export function getFunctionsInstance() {
+  if (!firebaseReady) return Promise.resolve(null)
+  if (!functionsPromise) {
+    functionsPromise = Promise.all([
+      getApp(),
+      import('firebase/functions'),
+    ]).then(([app, { getFunctions }]) => getFunctions(app, 'europe-west1'))
+  }
+  return functionsPromise
 }
 
 let analyticsPromise = null

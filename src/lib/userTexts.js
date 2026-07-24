@@ -39,6 +39,7 @@ export async function saveUserText(textData) {
   await setDoc(doc(db, 'userTexts', textData.id), {
     ...textData,
     owner: user.uid,
+    public: false,
     createdAt: serverTimestamp(),
   })
 
@@ -50,6 +51,7 @@ export async function saveUserText(textData) {
     category: textData.category ?? null,
     genre: textData.genre ?? null,
     size: textData.size ?? null,
+    public: false,
     createdAt: Date.now(), // serverTimestamp interdit dans arrayUnion
   }
   await setDoc(
@@ -73,8 +75,9 @@ export async function listUserTexts() {
   return [...entries].sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))
 }
 
-// Charge un texte créé (pour le lecteur). Renvoie null s'il n'existe pas
-// ou n'appartient pas à l'utilisateur (les règles Firestore refusent alors).
+// Charge un texte créé (pour le lecteur). Renvoie null s'il n'existe pas,
+// s'il n'est pas public et n'appartient pas à l'utilisateur connecté (les
+// règles Firestore refusent alors la lecture).
 export async function loadUserText(id) {
   try {
     const [db, fs] = await Promise.all([getDb(), import('firebase/firestore')])
@@ -85,6 +88,25 @@ export async function loadUserText(id) {
   } catch {
     return null
   }
+}
+
+// Rend un texte public ou privé (partage par URL, sans compte requis pour le
+// lecteur). Seul l'auteur peut modifier ce champ (voir firestore.rules).
+export async function setUserTextPublic(id, isPublic) {
+  const [db, fs, user] = await Promise.all([
+    getDb(),
+    import('firebase/firestore'),
+    requireUser(),
+  ])
+  const { doc, updateDoc, getDoc, setDoc } = fs
+  await updateDoc(doc(db, 'userTexts', id), { public: isPublic })
+
+  const userRef = doc(db, 'users', user.uid)
+  const snap = await getDoc(userRef)
+  const entries = (snap.exists() ? snap.data().createdTexts || [] : []).map((e) =>
+    e.id === id ? { ...e, public: isPublic } : e
+  )
+  await setDoc(userRef, { createdTexts: entries }, { merge: true })
 }
 
 // Supprime un texte créé (document + entrée d'index).

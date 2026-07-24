@@ -1,0 +1,86 @@
+{
+  "id": "poesia_scuola",
+  "title": "Il primo giorno di scuola",
+  "level": "A2",
+  "genre": "poesia",
+  "category": "scuola_lavoro",
+  "paragraphs": [
+    "Zaino nuovo sulle spalle,",
+    "quaderni bianchi, penne nuove.",
+    "Il cuore batte forte forte,",
+    "davanti a quella porta chiusa.",
+    "Dentro ci sono facce nuove,",
+    "occhi curiosi come i miei.",
+    "Poi un sorriso, un nome, un banco:",
+    "la paura diventa amica."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa ha di nuovo il bambino sulle spalle?",
+      "options": ["Uno zaino nuovo", "Un cappello", "Una giacca"],
+      "correct": 0
+    },
+    {
+      "q": "Come batte il cuore del bambino?",
+      "options": ["Forte forte", "Piano piano", "Non batte affatto"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa diventa la paura alla fine della poesia?",
+      "options": ["Amica", "Più grande", "Un segreto"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à",
+    "amica": "amie",
+    "banco": "pupitre",
+    "batte": "bat",
+    "bianchi": "blancs",
+    "che": "que",
+    "chiusa": "fermée",
+    "ci": "il y (« ci sono » = il y a)",
+    "come": "comme",
+    "cuore": "cœur",
+    "curiosi": "curieux",
+    "davanti": "devant",
+    "dentro": "à l'intérieur",
+    "diventa": "devient",
+    "facce": "visages",
+    "forte": "fort",
+    "giorno": "jour",
+    "i": "les",
+    "il": "le",
+    "la": "la",
+    "miei": "miens",
+    "nome": "nom",
+    "nuove": "nouvelles",
+    "nuovo": "nouveau",
+    "occhi": "yeux",
+    "paura": "peur",
+    "penne": "stylos",
+    "poi": "puis",
+    "porta": "porte",
+    "primo": "premier",
+    "quaderni": "cahiers",
+    "quella": "cette",
+    "scuola": "école",
+    "sono": "sont",
+    "sorriso": "sourire",
+    "spalle": "épaules",
+    "sulle": "sur les",
+    "un": "un",
+    "uno": "un",
+    "zaino": "sac à dos"
+  },
+  "sentences": {
+    "Zaino nuovo sulle spalle,": "Sac à dos neuf sur les épaules,",
+    "quaderni bianchi, penne nuove.": "cahiers blancs, stylos neufs.",
+    "Il cuore batte forte forte,": "Le cœur bat très fort,",
+    "davanti a quella porta chiusa.": "devant cette porte fermée.",
+    "Dentro ci sono facce nuove,": "À l'intérieur il y a des visages nouveaux,",
+    "occhi curiosi come i miei.": "des yeux curieux comme les miens.",
+    "Poi un sorriso, un nome, un banco:": "Puis un sourire, un nom, un pupitre :",
+    "la paura diventa amica.": "la peur devient amie."
+  }
+}

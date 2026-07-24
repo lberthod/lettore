@@ -42,3 +42,12 @@ export function isLoggedIn() {
 export function isTextUnlocked(id) {
   return isLoggedIn() || EXAMPLE_TEXT_IDS.includes(id)
 }
+
+// Compte administrateur unique — l'autorisation réelle est vérifiée côté
+// serveur (Cloud Functions) sur l'e-mail du token, ceci ne sert qu'à afficher
+// ou masquer l'accès à la page d'administration côté client.
+export const ADMIN_EMAIL = 'lberthod@gmail.com'
+
+export function isAdmin() {
+  return currentUser.value?.email === ADMIN_EMAIL
+}

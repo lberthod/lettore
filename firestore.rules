@@ -24,14 +24,27 @@ service cloud.firestore {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
 
-    // Textes générés à la demande par les utilisateurs : privés, liés à leur
-    // auteur via le champ `owner`. Immuables une fois créés (pas d'update).
+    // Textes générés à la demande par les utilisateurs : privés par défaut,
+    // liés à leur auteur via le champ `owner`. Le propriétaire peut les
+    // rendre publics (`public: true`, formule Enseignant) pour les partager
+    // via une URL sans que le lecteur ait besoin d'un compte Leggendo.
     match /userTexts/{textId} {
       allow create: if request.auth != null
         && request.resource.data.owner == request.auth.uid;
-      allow read, delete: if request.auth != null
+      allow read: if resource.data.public == true
+        || (request.auth != null && resource.data.owner == request.auth.uid);
+      allow delete: if request.auth != null
         && resource.data.owner == request.auth.uid;
-      allow update: if false;
+      // Seul le champ `public` peut être modifié, et seulement par l'auteur.
+      // Activer le partage (public: true) exige le rôle Enseignant (custom
+      // claim `role`, posé manuellement par l'admin via adminSetUserRole en
+      // attendant Stripe) ; le désactiver reste toujours possible.
+      allow update: if request.auth != null
+        && resource.data.owner == request.auth.uid
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['public'])
+        && (request.resource.data.public == false
+            || request.auth.token.role == 'enseignant');
     }
 
     match /{document=**} {

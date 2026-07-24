@@ -9,45 +9,89 @@ export const stripeConfig = {
   publishableKey: '',
 }
 
-export const plans = [
-  {
-    id: 'gratuit',
-    name: 'Gratuit',
-    price: '0 CHF',
-    period: '',
-    features: [
-      'Accès à une sélection de textes',
-      'Traduction des mots au survol',
-      'Lecture audio des phrases',
-    ],
-    paymentLink: null, // pas de paiement
-  },
-  {
-    id: 'mensuel',
-    name: 'Premium mensuel',
-    price: '5 CHF',
-    period: '/ mois',
-    features: [
-      'Accès à tous les textes',
-      'Nouveaux textes chaque semaine',
-      'Traduction de phrases entières',
-      'Sans publicité',
-    ],
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe
-  },
-  {
-    id: 'annuel',
-    name: 'Premium annuel',
-    price: '45 CHF',
-    period: '/ an',
-    highlight: true,
-    features: [
-      'Tout le Premium mensuel',
-      '2 mois offerts',
-      'Accès prioritaire aux nouveautés',
-    ],
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe
-  },
-]
+// Abonnements facturés en CHF en Suisse et en EUR ailleurs en Europe.
+// Détection simple via la langue/le fuseau horaire du navigateur — aucune
+// donnée n'est envoyée, c'est purement indicatif côté affichage.
+function isSwitzerland() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''
+    if (tz.includes('Zurich')) return true
+    const locale = navigator.language || ''
+    return /-CH$/i.test(locale)
+  } catch {
+    return false
+  }
+}
 
-export const stripeReady = plans.some((p) => p.paymentLink)
+const swiss = isSwitzerland()
+
+export const premiumPlan = {
+  id: 'premium',
+  name: 'Premium',
+  highlight: true,
+  monthly: {
+    price: swiss ? '5 CHF' : '6 €',
+    period: '/ mois',
+    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
+  },
+  annual: {
+    price: swiss ? '45 CHF' : '50 €',
+    period: '/ an',
+    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
+  },
+  features: [
+    'Accès à tous les textes du catalogue',
+    'Nouveaux textes chaque semaine',
+    'Tous les niveaux, de A1 à C2',
+    'Soutient un projet indépendant',
+  ],
+}
+
+export const teacherPlan = {
+  id: 'enseignant',
+  name: 'Enseignant',
+  monthly: {
+    price: swiss ? '20 CHF' : '25 €',
+    period: '/ mois',
+    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
+  },
+  annual: {
+    price: swiss ? '200 CHF' : '250 €',
+    period: '/ an',
+    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
+  },
+  features: [
+    'Tout le Premium',
+    'Partage gratuit des textes créés via une URL publique',
+    "Aucun compte Leggendo requis pour les élèves qui consultent le lien",
+    'Idéal pour les enseignants et leurs classes',
+  ],
+}
+
+export const gratuitPlan = {
+  id: 'gratuit',
+  name: 'Gratuit',
+  monthly: { price: swiss ? '0 CHF' : '0 €', period: '', paymentLink: null },
+  annual: { price: swiss ? '0 CHF' : '0 €', period: '', paymentLink: null },
+  features: [
+    'Une sélection de textes découverte',
+    'Traduction des mots et des phrases',
+    'Lecture audio en italien',
+    'Quiz de compréhension',
+  ],
+}
+
+export const plans = [gratuitPlan, premiumPlan, teacherPlan]
+
+// URL de paiement liée au compte : le webhook Stripe (functions/index.js)
+// retrouve l'utilisateur via client_reference_id pour activer le premium.
+export function checkoutUrl(paymentLink, user) {
+  const url = new URL(paymentLink)
+  url.searchParams.set('client_reference_id', user.uid)
+  if (user.email) url.searchParams.set('prefilled_email', user.email)
+  return url.toString()
+}
+
+export const stripeReady = plans.some(
+  (p) => p.monthly.paymentLink || p.annual.paymentLink,
+)

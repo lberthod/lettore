@@ -1,16 +1,27 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import { plans, stripeReady } from '../lib/stripe.js'
+import { useRouter } from 'vue-router'
+import { plans, stripeReady, checkoutUrl } from '../lib/stripe.js'
 import { currentUser } from '../lib/auth.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
+const billing = ref('monthly') // 'monthly' | 'annual'
+const router = useRouter()
+
 function subscribe(plan) {
-  if (plan.paymentLink) {
-    // Payment Link Stripe : redirection vers la page de paiement hébergée
-    window.location.href = plan.paymentLink
+  const link = plan[billing.value].paymentLink
+  if (!link) return
+  // Le paiement doit être rattaché à un compte : connexion d'abord,
+  // puis retour ici pour finaliser l'abonnement.
+  if (!currentUser.value) {
+    router.push({ name: 'login', query: { redirect: '/abonnement' } })
+    return
   }
+  // Payment Link Stripe : redirection vers la page de paiement hébergée,
+  // avec client_reference_id pour que le webhook active le bon compte.
+  window.location.href = checkoutUrl(link, currentUser.value)
 }
 
 // Plein écran : on verrouille le défilement de la page (le panneau défile en interne)
@@ -90,9 +101,28 @@ onUnmounted(() => {
         </p>
 
         <p v-if="!stripeReady" class="notice">
-          Le paiement n'est pas encore activé : les liens Stripe doivent être
-          renseignés dans <code>src/lib/stripe.js</code>.
+          Les formules payantes arrivent bientôt. En attendant, créez un compte
+          gratuit pour découvrir la bibliothèque.
         </p>
+
+        <div class="billing-toggle" role="group" aria-label="Fréquence de facturation">
+          <button
+            type="button"
+            class="toggle-btn"
+            :class="{ active: billing === 'monthly' }"
+            @click="billing = 'monthly'"
+          >
+            Mensuel
+          </button>
+          <button
+            type="button"
+            class="toggle-btn"
+            :class="{ active: billing === 'annual' }"
+            @click="billing = 'annual'"
+          >
+            Annuel
+          </button>
+        </div>
 
         <div class="plans">
           <div
@@ -104,18 +134,19 @@ onUnmounted(() => {
             <span v-if="plan.highlight" class="ribbon">Consigliato</span>
             <h2>{{ plan.name }}</h2>
             <p class="price">
-              {{ plan.price }}<span class="period">{{ plan.period }}</span>
+              {{ plan[billing].price
+              }}<span class="period">{{ plan[billing].period }}</span>
             </p>
             <ul>
               <li v-for="f in plan.features" :key="f">{{ f }}</li>
             </ul>
             <button
-              v-if="plan.paymentLink !== null"
+              v-if="plan[billing].paymentLink !== null"
               class="btn-hero"
-              :disabled="!plan.paymentLink"
+              :disabled="!plan[billing].paymentLink"
               @click="subscribe(plan)"
             >
-              {{ plan.paymentLink ? "S'abonner" : 'Bientôt disponible' }}
+              {{ plan[billing].paymentLink ? "S'abonner" : 'Bientôt disponible' }}
             </button>
             <RouterLink
               v-else-if="!currentUser"
@@ -277,6 +308,37 @@ onUnmounted(() => {
   color: #8a5a2b;
   opacity: 0;
   animation: appear 0.9s ease-out 1s forwards;
+}
+
+/* --- Bascule mensuel / annuel --- */
+
+.billing-toggle {
+  display: inline-flex;
+  margin: 1.6rem auto 0;
+  padding: 0.25rem;
+  border: 1px solid rgba(176, 105, 46, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  opacity: 0;
+  animation: appear 0.9s ease-out 1.1s forwards;
+}
+
+.toggle-btn {
+  padding: 0.4rem 1.1rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #6b6156;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.toggle-btn.active {
+  background: #b0692e;
+  color: #faf6f0;
 }
 
 /* --- Cartes des formules --- */

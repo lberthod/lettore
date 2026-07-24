@@ -69,7 +69,7 @@ import SiteFooter from '../components/SiteFooter.vue'
         presque rien de nouveau à apprendre. Entre les deux se trouve la zone
         idéale — ce que la recherche appelle <em>i+1</em>&nbsp;: vous comprenez
         l'histoire, et chaque page apporte quelques mots nouveaux. C'est là
-        qu'on progresse. Nos textes sont gradués de A1 à C1 pour vous garder
+        qu'on progresse. Nos textes sont gradués de A1 à C2 pour vous garder
         dans cette zone.
       </p>
 
@@ -80,7 +80,7 @@ import SiteFooter from '../components/SiteFooter.vue'
         On acquiert une langue en comprenant des messages, bien plus qu'en
         étudiant ses règles (Krashen). L'idéal&nbsp;: un texte compris à
         ~95&nbsp;%, assez riche pour contenir du nouveau. Nos textes sont
-        gradués de A1 à C1 pour vous garder dans cette zone.
+        gradués de A1 à C2 pour vous garder dans cette zone.
       </p>
 
       <h3>👆 Traduire au clic, sans casser le fil — <em>gloses &amp; remarquage</em></h3>

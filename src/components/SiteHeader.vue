@@ -2,11 +2,12 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
-import { isLoggedIn } from '../lib/access.js'
+import { isLoggedIn, isAdmin } from '../lib/access.js'
 import { progress } from '../progress.js'
 
 // « Textes » et « Mes mots » ne s'affichent qu'une fois connecté
 const loggedIn = computed(() => isLoggedIn())
+const admin = computed(() => isAdmin())
 </script>
 
 <template>
@@ -24,6 +25,7 @@ const loggedIn = computed(() => isLoggedIn())
           progress.favorites.length
         }}</span>
       </RouterLink>
+      <RouterLink v-if="admin" :to="{ name: 'admin' }">⚙ Admin</RouterLink>
       <RouterLink v-if="currentUser" class="nav-auth" :to="{ name: 'profile' }">
         {{ currentUser.displayName || 'Profil' }}
       </RouterLink>

@@ -1,20 +1,27 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import textsIndex from '../texts/index.json'
-import categories from '../texts/categories.json'
+import taxonomy from '../texts/category.json'
 import { isRead, progress } from '../progress.js'
 import { authReady } from '../lib/auth.js'
 import { firebaseReady } from '../lib/firebase.js'
-import { isLoggedIn, EXAMPLE_TEXTS, EXAMPLE_COUNT } from '../lib/access.js'
+import { isLoggedIn, EXAMPLE_TEXT_IDS, EXAMPLE_COUNT } from '../lib/access.js'
 
-// Aperçu pour les visiteurs non connectés : on n'affiche qu'un échantillon,
-// sans filtres. Les membres connectés voient toute la bibliothèque.
+// Taxonomie unique : les catégories affichées sont les thèmes de category.json
+const categories = taxonomy.themes
+
+// Les visiteurs non connectés voient tout le catalogue : les textes de
+// l'aperçu gratuit sont ouverts, les autres apparaissent verrouillés.
 const loggedIn = computed(() => isLoggedIn())
 const authResolved = ref(!firebaseReady)
 if (firebaseReady) authReady.then(() => (authResolved.value = true))
-const baseTexts = computed(() => (loggedIn.value ? textsIndex : EXAMPLE_TEXTS))
+const baseTexts = computed(() => textsIndex)
+
+function isLocked(t) {
+  return authResolved.value && !loggedIn.value && !EXAMPLE_TEXT_IDS.includes(t.id)
+}
 
 const readCount = computed(
   () => textsIndex.filter((t) => progress.readTexts.includes(t.id)).length
@@ -29,9 +36,27 @@ const levelHints = {
   B1: 'B1 — Intermédiaire : récits et textes culturels plus riches, temps du passé variés',
   B2: 'B2 — Avancé : textes longs et complexes, passé simple, subjonctif, vocabulaire abstrait',
   C1: 'C1 — Autonome : textes exigeants, nuances stylistiques, langue idiomatique et abstraite',
+  C2: 'C2 — Maîtrise : registre littéraire et soutenu, ironie, références culturelles, syntaxe complexe',
 }
 const selectedLevel = ref('all')
 const selectedCategory = ref('all')
+const selectedGenre = ref('all')
+
+// Genres proposés : uniquement ceux réellement présents dans la catégorie choisie
+const availableGenres = computed(() => {
+  const scoped = baseTexts.value.filter(
+    (t) => selectedCategory.value === 'all' || t.category === selectedCategory.value
+  )
+  const ids = new Set(scoped.map((t) => t.genre).filter(Boolean))
+  return taxonomy.genres.filter((g) => ids.has(g.id))
+})
+
+// Catégorie changée : un genre sélectionné devenu incompatible est réinitialisé
+watch(selectedCategory, () => {
+  if (!availableGenres.value.some((g) => g.id === selectedGenre.value)) {
+    selectedGenre.value = 'all'
+  }
+})
 
 // Tranches de taille, en nombre de mots
 const sizes = [
@@ -41,12 +66,32 @@ const sizes = [
 ]
 const selectedSize = ref('all')
 
+// Recherche plein texte sur titre et extrait, insensible aux accents
+const searchQuery = ref('')
+function normalize(s) {
+  return s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+}
+const normalizedQuery = computed(() => normalize(searchQuery.value.trim()))
+
+function matchesSearch(t) {
+  if (!normalizedQuery.value) return true
+  return (
+    normalize(t.title).includes(normalizedQuery.value) ||
+    normalize(t.excerpt || '').includes(normalizedQuery.value)
+  )
+}
+
 const filteredTexts = computed(() =>
   baseTexts.value.filter(
     (t) =>
       (selectedLevel.value === 'all' || t.level === selectedLevel.value) &&
       (selectedSize.value === 'all' ||
-        sizes.find((s) => s.id === selectedSize.value).match(t.wordCount))
+        sizes.find((s) => s.id === selectedSize.value).match(t.wordCount)) &&
+      (selectedGenre.value === 'all' || t.genre === selectedGenre.value) &&
+      matchesSearch(t)
   )
 )
 
@@ -54,16 +99,20 @@ const hasFilters = computed(
   () =>
     selectedLevel.value !== 'all' ||
     selectedSize.value !== 'all' ||
-    selectedCategory.value !== 'all'
+    selectedCategory.value !== 'all' ||
+    selectedGenre.value !== 'all' ||
+    searchQuery.value.trim() !== ''
 )
 
 function resetFilters() {
   selectedLevel.value = 'all'
   selectedSize.value = 'all'
   selectedCategory.value = 'all'
+  selectedGenre.value = 'all'
+  searchQuery.value = ''
 }
 
-// Sections par catégorie, dans l'ordre de categories.json ; les vides disparaissent
+// Sections par catégorie, dans l'ordre des thèmes ; les vides disparaissent
 const sections = computed(() =>
   categories
     .filter((c) => selectedCategory.value === 'all' || c.id === selectedCategory.value)
@@ -76,15 +125,15 @@ const sections = computed(() =>
 </script>
 
 <template>
-  <SceneLayout title="Biblio" accent="teca" tagline="Tous les textes, de A1 à C1" bare wide>
+  <SceneLayout title="Biblio" accent="teca" tagline="Tous les textes, de A1 à C2" bare wide>
     <div class="library">
       <!-- Aperçu gratuit : rappel discret d'invitation à se connecter -->
       <p v-if="authResolved && !loggedIn" class="preview-note">
-        Aperçu gratuit — {{ EXAMPLE_COUNT }} textes sur {{ textsIndex.length }}.
+        {{ EXAMPLE_COUNT }} textes en accès libre.
         <RouterLink :to="{ name: 'login', query: { redirect: '/textes' } }">
-          Connectez-vous
+          Créez un compte gratuit
         </RouterLink>
-        pour tout débloquer.
+        pour débloquer les {{ textsIndex.length }} textes.
       </p>
 
       <div v-if="loggedIn && readCount" class="progress-line">
@@ -104,11 +153,18 @@ const sections = computed(() =>
         phrase entière.
       </p>
 
-      <div v-if="loggedIn" class="filters">
+      <div class="filters">
+        <input
+          v-model="searchQuery"
+          type="search"
+          class="search-input"
+          placeholder="Rechercher un texte…"
+          aria-label="Rechercher un texte"
+        />
         <div class="seg" role="group" aria-label="Niveau">
           <button
             :class="{ active: selectedLevel === 'all' }"
-            data-hint="Tous les niveaux, de A1 (débutant) à C1 (autonome)"
+            data-hint="Tous les niveaux, de A1 (débutant) à C2 (maîtrise)"
             @click="selectedLevel = 'all'"
           >
             Tous
@@ -150,6 +206,18 @@ const sections = computed(() =>
           </option>
         </select>
 
+        <select
+          v-if="availableGenres.length"
+          v-model="selectedGenre"
+          class="cat-select"
+          aria-label="Genre"
+        >
+          <option value="all">Tous les genres</option>
+          <option v-for="g in availableGenres" :key="g.id" :value="g.id">
+            {{ g.icon }} {{ g.name }}
+          </option>
+        </select>
+
         <button v-if="hasFilters" class="reset-btn" @click="resetFilters">
           ✕ Réinitialiser
         </button>
@@ -171,7 +239,12 @@ const sections = computed(() =>
             v-for="t in section.texts"
             :key="t.id"
             class="card"
-            :to="{ name: 'reader', params: { id: t.id } }"
+            :class="{ locked: isLocked(t) }"
+            :to="
+              isLocked(t)
+                ? { name: 'login', query: { redirect: `/testo/${t.id}` } }
+                : { name: 'reader', params: { id: t.id } }
+            "
           >
             <div class="card-head">
               <h3>{{ t.title }}</h3>
@@ -184,7 +257,9 @@ const sections = computed(() =>
               {{ t.paragraphCount }} paragraphes · ~{{ t.wordCount }} mots
               <span v-if="isRead(t.id)" class="read-badge">✓ lu</span>
             </p>
-            <span class="cta">{{ isRead(t.id) ? 'Relire →' : 'Lire →' }}</span>
+            <span class="cta">
+              {{ isLocked(t) ? '🔒 Se connecter pour lire' : isRead(t.id) ? 'Relire →' : 'Lire →' }}
+            </span>
           </RouterLink>
         </div>
       </section>
@@ -359,6 +434,22 @@ const sections = computed(() =>
   color: #faf6f0;
 }
 
+.search-input {
+  width: min(260px, 100%);
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(176, 105, 46, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2c2620;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.search-input:focus {
+  border-color: #b0692e;
+  outline: none;
+}
+
 .cat-select {
   max-width: 240px;
   padding: 0.35rem 0.75rem;
@@ -411,6 +502,7 @@ const sections = computed(() =>
 .level-b1 { background: #fff2cc; color: #8a6d1a; }
 .level-b2 { background: #fce5cd; color: #b45f06; }
 .level-c1 { background: #f4cccc; color: #990000; }
+.level-c2 { background: #e6d5f2; color: #5e2a84; }
 
 .empty {
   margin: 1rem 0 2rem;
@@ -456,12 +548,21 @@ const sections = computed(() =>
   padding: 1.1rem 1.2rem;
   border: 1px solid rgba(176, 105, 46, 0.25);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   color: inherit;
   text-decoration: none;
   transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s, background 0.15s;
+}
+
+.card.locked {
+  opacity: 0.82;
+  border-style: dashed;
+}
+
+.card.locked:hover {
+  opacity: 1;
 }
 
 .card:hover {

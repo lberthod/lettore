@@ -1,0 +1,84 @@
+{
+  "id": "orario_autobus",
+  "title": "L'orario dell'autobus",
+  "level": "A1",
+  "genre": "pratico",
+  "category": "vita_quotidiana",
+  "paragraphs": [
+    "Linea 12: da piazza Duomo a via Stazione.",
+    "Il primo autobus parte alle sei e mezza del mattino.",
+    "Gli autobus passano ogni venti minuti durante il giorno.",
+    "L'ultimo autobus parte alle undici di sera.",
+    "La domenica gli autobus passano solo ogni ora.",
+    "Il biglietto costa un euro e cinquanta e dura novanta minuti."
+  ],
+  "questions": [
+    {
+      "q": "A che ora parte il primo autobus?",
+      "options": ["Alle sei e mezza", "Alle otto", "A mezzogiorno"],
+      "correct": 0
+    },
+    {
+      "q": "Ogni quanto passano gli autobus durante il giorno?",
+      "options": ["Ogni venti minuti", "Ogni cinque minuti", "Ogni due ore"],
+      "correct": 0
+    },
+    {
+      "q": "Quanto costa il biglietto?",
+      "options": ["Un euro e cinquanta", "Tre euro", "Cinquanta centesimi"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à",
+    "alle": "à",
+    "autobus": "bus",
+    "biglietto": "billet",
+    "cinquanta": "cinquante",
+    "costa": "coûte",
+    "da": "de",
+    "del": "du",
+    "di": "de",
+    "domenica": "dimanche",
+    "dura": "dure",
+    "duomo": "cathédrale (« piazza Duomo » = place de la Cathédrale)",
+    "durante": "pendant",
+    "e": "et",
+    "euro": "euro",
+    "giorno": "jour",
+    "gli": "les",
+    "il": "le",
+    "l'orario": "l'horaire",
+    "l'ultimo": "le dernier",
+    "la": "la",
+    "linea": "ligne",
+    "mattino": "matin",
+    "mezza": "demie",
+    "minuti": "minutes",
+    "novanta": "quatre-vingt-dix",
+    "ogni": "chaque",
+    "ora": "heure",
+    "otto": "huit",
+    "parte": "part",
+    "passano": "passent",
+    "piazza": "place",
+    "primo": "premier",
+    "quanto": "combien",
+    "sei": "six",
+    "sera": "soir",
+    "solo": "seulement",
+    "stazione": "gare",
+    "un": "un",
+    "undici": "onze",
+    "venti": "vingt",
+    "via": "rue"
+  },
+  "sentences": {
+    "Linea 12: da piazza Duomo a via Stazione.": "Ligne 12 : de la place du Duomo à la rue de la Gare.",
+    "Il primo autobus parte alle sei e mezza del mattino.": "Le premier bus part à six heures et demie du matin.",
+    "Gli autobus passano ogni venti minuti durante il giorno.": "Les bus passent toutes les vingt minutes pendant la journée.",
+    "L'ultimo autobus parte alle undici di sera.": "Le dernier bus part à onze heures du soir.",
+    "La domenica gli autobus passano solo ogni ora.": "Le dimanche, les bus passent seulement toutes les heures.",
+    "Il biglietto costa un euro e cinquanta e dura novanta minuti.": "Le billet coûte un euro cinquante et dure quatre-vingt-dix minutes."
+  }
+}

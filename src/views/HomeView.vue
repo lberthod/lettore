@@ -205,7 +205,7 @@ onUnmounted(() => {
           <span class="feature-icon" aria-hidden="true">☀︎</span>
           <div>
             <h2>Lisez, simplement</h2>
-            <p>Des textes courts écrits pour votre niveau, de A1 à C1.</p>
+            <p>Des textes courts écrits pour votre niveau, de A1 à C2.</p>
           </div>
         </div>
         <div class="feature">

@@ -1,0 +1,90 @@
+{
+  "id": "poesia_montagna",
+  "title": "Vetta all'alba",
+  "level": "C1",
+  "genre": "poesia",
+  "category": "montagna",
+  "paragraphs": [
+    "La roccia trattiene ancora il gelo,",
+    "mentre l'alba dipinge di rosa il cielo.",
+    "Nessun rumore, solo il mio respiro",
+    "e il vento che scivola sul granito grigio.",
+    "Qui, sospesa tra il mondo e il nulla,",
+    "la vetta non chiede e non consola:",
+    "offre soltanto silenzio e altezza,",
+    "e in cambio pretende umiltà."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa trattiene ancora la roccia?",
+      "options": ["Il gelo", "La pioggia", "Il fuoco"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa scivola sul granito grigio?",
+      "options": ["Il vento", "Un fiume", "Una nuvola nera"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa pretende la vetta in cambio del silenzio?",
+      "options": ["Umiltà", "Denaro", "Coraggio infinito"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à",
+    "alba": "aube",
+    "all'alba": "à l'aube",
+    "altezza": "hauteur",
+    "ancora": "encore",
+    "cambio": "échange (« in cambio » = en échange)",
+    "che": "que / qui",
+    "chiede": "demande",
+    "cielo": "ciel",
+    "consola": "console",
+    "di": "de",
+    "dipinge": "peint",
+    "e": "et",
+    "gelo": "gel",
+    "granito": "granit",
+    "grigio": "gris",
+    "il": "le",
+    "in": "en",
+    "l'alba": "l'aube",
+    "la": "la",
+    "mentre": "tandis que",
+    "mio": "mon",
+    "mondo": "monde",
+    "nessun": "aucun",
+    "non": "ne... pas",
+    "nulla": "néant",
+    "offre": "offre",
+    "pretende": "exige",
+    "qui": "ici",
+    "respiro": "souffle",
+    "roccia": "roche",
+    "rosa": "rose",
+    "rumore": "bruit",
+    "scivola": "glisse",
+    "silenzio": "silence",
+    "solo": "seulement",
+    "soltanto": "seulement",
+    "sospesa": "suspendue",
+    "sul": "sur le",
+    "tra": "entre",
+    "trattiene": "retient",
+    "umiltà": "humilité",
+    "vento": "vent",
+    "vetta": "sommet"
+  },
+  "sentences": {
+    "La roccia trattiene ancora il gelo,": "La roche retient encore le gel,",
+    "mentre l'alba dipinge di rosa il cielo.": "tandis que l'aube peint le ciel en rose.",
+    "Nessun rumore, solo il mio respiro": "Aucun bruit, seulement mon souffle",
+    "e il vento che scivola sul granito grigio.": "et le vent qui glisse sur le granit gris.",
+    "Qui, sospesa tra il mondo e il nulla,": "Ici, suspendu entre le monde et le néant,",
+    "la vetta non chiede e non consola:": "le sommet ne demande rien et ne console pas :",
+    "offre soltanto silenzio e altezza,": "il offre seulement silence et hauteur,",
+    "e in cambio pretende umiltà.": "et en échange il exige de l'humilité."
+  }
+}

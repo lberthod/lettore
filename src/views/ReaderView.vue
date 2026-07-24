@@ -12,6 +12,7 @@ import {
   resumeSpeaking,
 } from '../tts.js'
 import textsIndex from '../texts/index.json'
+import taxonomy from '../texts/category.json'
 import QuizSection from '../components/QuizSection.vue'
 import {
   progress,
@@ -65,10 +66,20 @@ const currentIndex = computed(() =>
 const textMeta = computed(
   () => textsIndex[currentIndex.value] || currentText.value || null
 )
+const category = computed(() => {
+  if (!textMeta.value?.category) return null
+  return taxonomy.themes.find((c) => c.id === textMeta.value.category) || null
+})
+const genre = computed(() => {
+  if (!textMeta.value?.genre) return null
+  return taxonomy.genres.find((g) => g.id === textMeta.value.genre) || null
+})
 const tagline = computed(() => {
   if (!textMeta.value) return ''
   const parts = [`Niveau ${textMeta.value.level}`]
   if (textMeta.value.wordCount) parts.push(`~${textMeta.value.wordCount} mots`)
+  if (category.value) parts.push(`${category.value.icon} ${category.value.name}`)
+  if (genre.value) parts.push(`${genre.value.icon} ${genre.value.name}`)
   return parts.join(' · ')
 })
 const prevText = computed(() =>

@@ -1,0 +1,93 @@
+{
+  "id": "poesia_ricostruzione",
+  "title": "Case nuove",
+  "level": "B2",
+  "genre": "poesia",
+  "category": "storia_moderna",
+  "paragraphs": [
+    "Dove c'era la guerra, ora c'è calce,",
+    "mattoni ancora caldi di fatica.",
+    "Le donne portano secchi lungo le strade,",
+    "gli uomini cantano mentre lavorano.",
+    "Non si dimentica, ma si costruisce",
+    "sopra le macerie una nuova storia:",
+    "un paese che rialza le sue case",
+    "e impara di nuovo a chiamarsi futuro."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa c'è ora dove prima c'era la guerra?",
+      "options": ["Calce e mattoni", "Solo macerie vuote", "Un museo"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa fanno le donne nella poesia?",
+      "options": ["Portano secchi lungo le strade", "Coltivano i campi", "Scrivono lettere"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa impara di nuovo il paese secondo l'ultimo verso?",
+      "options": ["A chiamarsi futuro", "A restare fermo nel passato", "A dimenticare tutto"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "a": "à",
+    "ancora": "encore",
+    "c'è": "il y a",
+    "c'era": "il y avait",
+    "caldi": "chauds",
+    "calce": "chaux",
+    "cantano": "chantent",
+    "case": "maisons",
+    "che": "que / qui",
+    "chiamarsi": "s'appeler",
+    "costruisce": "construit (« si costruisce » = on construit)",
+    "di": "de",
+    "dimentica": "oublie (« non si dimentica » = on n'oublie pas)",
+    "donne": "femmes",
+    "dove": "où",
+    "e": "et",
+    "fatica": "fatigue / effort",
+    "futuro": "futur",
+    "gli": "les",
+    "guerra": "guerre",
+    "impara": "apprend",
+    "la": "la",
+    "lavorano": "travaillent",
+    "le": "les",
+    "lungo": "le long de",
+    "ma": "mais",
+    "macerie": "décombres",
+    "mattoni": "briques",
+    "mentre": "tandis que",
+    "non": "ne... pas",
+    "nuova": "nouvelle",
+    "nuove": "nouvelles",
+    "nuovo": "nouveau (« di nuovo » = à nouveau)",
+    "ora": "maintenant",
+    "paese": "pays",
+    "portano": "portent",
+    "rialza": "relève",
+    "secchi": "seaux",
+    "se": "si",
+    "si": "on",
+    "sopra": "au-dessus de",
+    "storia": "histoire",
+    "strade": "rues",
+    "sue": "ses",
+    "un": "un",
+    "una": "une",
+    "uomini": "hommes"
+  },
+  "sentences": {
+    "Dove c'era la guerra, ora c'è calce,": "Là où il y avait la guerre, maintenant il y a de la chaux,",
+    "mattoni ancora caldi di fatica.": "des briques encore chaudes de l'effort.",
+    "Le donne portano secchi lungo le strade,": "Les femmes portent des seaux le long des rues,",
+    "gli uomini cantano mentre lavorano.": "les hommes chantent tandis qu'ils travaillent.",
+    "Non si dimentica, ma si costruisce": "On n'oublie pas, mais on construit",
+    "sopra le macerie una nuova storia:": "sur les décombres une nouvelle histoire :",
+    "un paese che rialza le sue case": "un pays qui relève ses maisons",
+    "e impara di nuovo a chiamarsi futuro.": "et apprend à nouveau à s'appeler futur."
+  }
+}

@@ -267,8 +267,16 @@ const server = http.createServer(async (req, res) => {
 
     const jobMatch = url.pathname.match(/^\/leggendo\/jobs\/([a-f0-9-]{36})$/)
     if (req.method === 'GET' && jobMatch) {
+      // Le résultat n'est remis qu'au propriétaire du job : token exigé
+      const auth = req.headers.authorization || ''
+      const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
+      const user = idToken ? await verifyIdToken(idToken) : null
+      if (!user) {
+        sendJson(res, 401, { error: 'Connexion requise.' })
+        return
+      }
       const job = jobs.get(jobMatch[1])
-      if (!job) {
+      if (!job || job.uid !== user.uid) {
         sendJson(res, 404, { error: 'Job inconnu ou expiré.' })
         return
       }

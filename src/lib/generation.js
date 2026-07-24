@@ -13,12 +13,18 @@ export const API_BASE =
 
 const STORAGE_KEY = 'leggendo-generation-job'
 
+// Durée indicative (secondes) selon la taille demandée, pour afficher une
+// barre de progression. Purement cosmétique : le sondage fait foi.
+const ESTIMATE_SECONDS = { corto: 60, medio: 120, lungo: 210, molto_lungo: 300 }
+const DEFAULT_ESTIMATE = 120
+
 export const generation = reactive({
   status: 'idle', // idle | working | done | error
   jobId: null,
   title: '', // titre demandé, pour l'affichage pendant la génération
   startedAt: null,
   elapsed: 0, // secondes écoulées
+  estimate: DEFAULT_ESTIMATE, // durée indicative totale, pour la progression
   error: '',
   result: null,
   saveState: '', // '' | saving | saved | error
@@ -51,6 +57,7 @@ function persistJob() {
         jobId: generation.jobId,
         title: generation.title,
         startedAt: generation.startedAt,
+        estimate: generation.estimate,
       })
     )
   } else {
@@ -79,6 +86,7 @@ export async function attachActiveJob() {
     generation.jobId = data.jobId
     generation.title = data.title || generation.title || 'votre texte'
     generation.startedAt = data.createdAt || Date.now()
+    generation.estimate = ESTIMATE_SECONDS[data.size] || DEFAULT_ESTIMATE
     generation.error = ''
     generation.result = null
     startClock()
@@ -98,6 +106,7 @@ export async function startGeneration(payload) {
   generation.savedEntry = null
   generation.title = payload.title
   generation.startedAt = Date.now()
+  generation.estimate = ESTIMATE_SECONDS[payload.size] || DEFAULT_ESTIMATE
   startClock()
 
   try {
@@ -132,7 +141,10 @@ function poll() {
   clearTimeout(pollTimer)
   pollTimer = setTimeout(async () => {
     try {
-      const res = await fetch(`${API_BASE}/jobs/${generation.jobId}`)
+      const idToken = await getIdToken()
+      const res = await fetch(`${API_BASE}/jobs/${generation.jobId}`, {
+        headers: idToken ? { Authorization: `Bearer ${idToken}` } : {},
+      })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`)
       if (data.status === 'done') {
@@ -190,6 +202,7 @@ export function resumeGeneration() {
   generation.jobId = saved.jobId
   generation.title = saved.title || ''
   generation.startedAt = saved.startedAt || Date.now()
+  generation.estimate = saved.estimate || DEFAULT_ESTIMATE
   startClock()
   poll()
 }

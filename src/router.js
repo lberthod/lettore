@@ -3,11 +3,11 @@ import HomeView from './views/HomeView.vue'
 import textsIndex from './texts/index.json'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
-import { EXAMPLE_TEXT_IDS } from './lib/access.js'
+import { EXAMPLE_TEXT_IDS, isAdmin } from './lib/access.js'
 
 const DEFAULT_TITLE = "Leggendo — Apprendre l'italien par la lecture"
 const DEFAULT_DESCRIPTION =
-  "Apprenez l'italien en lisant : textes gradués A1 à C1 avec traduction française au clic et lecture audio. Méthode fondée sur la lecture extensive."
+  "Apprenez l'italien en lisant : textes gradués A1 à C2 avec traduction française au clic et lecture audio. Méthode fondée sur la lecture extensive."
 
 const router = createRouter({
   history: createWebHistory(),
@@ -28,7 +28,7 @@ const router = createRouter({
       meta: {
         title: 'Tous les textes — Leggendo',
         description:
-          "Tous les textes gradués en italien, de A1 à C1 : histoires courtes, culture, voyages. Traduction française au clic et lecture audio.",
+          "Tous les textes gradués en italien, de A1 à C2 : histoires courtes, culture, voyages. Traduction française au clic et lecture audio.",
       },
     },
     {
@@ -56,6 +56,16 @@ const router = createRouter({
           return { name: 'library' }
         }
       },
+    },
+    {
+      path: '/condividi/:id',
+      name: 'shared-text',
+      // Lecture publique d'un texte créé et partagé (formule Enseignant) :
+      // aucun compte requis, les règles Firestore autorisent la lecture des
+      // documents marqués `public: true`.
+      component: () => import('./views/ReaderView.vue'),
+      props: true,
+      meta: { title: 'Texte partagé — Leggendo' },
     },
     {
       path: '/a-propos',
@@ -160,6 +170,16 @@ const router = createRouter({
       name: 'words',
       component: () => import('./views/WordsView.vue'),
       meta: { title: 'Mes mots — Leggendo', requiresAuth: true },
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('./views/AdminView.vue'),
+      meta: { title: 'Administration — Leggendo', requiresAuth: true },
+      beforeEnter: async () => {
+        await authReady
+        if (!isAdmin()) return { name: 'home' }
+      },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],

@@ -54,7 +54,7 @@ const principles = [
     icon: '📖',
     title: 'Lire beaucoup, à son niveau',
     tag: 'Input compréhensible',
-    body: "On acquiert une langue en comprenant des messages, bien plus qu'en étudiant ses règles (Krashen). L'idéal : un texte compris à ~95 %, assez riche pour contenir du nouveau. Nos textes sont gradués de A1 à C1 pour vous garder dans cette zone.",
+    body: "On acquiert une langue en comprenant des messages, bien plus qu'en étudiant ses règles (Krashen). L'idéal : un texte compris à ~95 %, assez riche pour contenir du nouveau. Nos textes sont gradués de A1 à C2 pour vous garder dans cette zone.",
   },
   {
     icon: '👆',

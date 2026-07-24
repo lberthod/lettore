@@ -1,4 +1,5 @@
-// Traduction locale : recherche dans le lexique du texte courant (src/texts.json).
+// Traduction locale : recherche dans le lexique du texte courant (words/sentences
+// du JSON de chaque texte, src/texts/*.json).
 // Aucune API externe — tout est généré à l'avance.
 
 function normalizeWord(word) {

@@ -14,8 +14,16 @@ import SceneLayout from '../components/SceneLayout.vue'
 
     <h2>Hébergement</h2>
     <p>
-      Ce site est hébergé par Firebase Hosting (Google LLC),<br />
-      1600 Amphitheatre Parkway, Mountain View, CA 94043, États-Unis.
+      Ce site (elgendo.ch) est hébergé par Infomaniak Network SA,<br />
+      Rue Eugène-Marziano 25, 1227 Les Acacias, Genève, Suisse.
+    </p>
+    <p>
+      La base de données est hébergée par Firebase (Google LLC), 1600 Amphitheatre
+      Parkway, Mountain View, CA 94043, États-Unis.
+    </p>
+    <p>
+      La génération de textes est assurée par un serveur VPS Infomaniak, en
+      s'appuyant sur des modèles de langage tiers (GLM, DeepSeek ou Kimi).
     </p>
 
     <h2>Propriété intellectuelle</h2>
