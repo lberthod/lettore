@@ -46,7 +46,7 @@ function requireAdmin(request) {
   }
 }
 
-const ROLES = ['gratuit', 'premium', 'enseignant']
+const ROLES = ['gratuit', 'premium', 'premium_plus', 'enseignant']
 
 // Healthcheck simple : confirme que les Functions sont en ligne.
 export const ping = onRequest((req, res) => {
@@ -173,7 +173,7 @@ export const adminSetUserRole = onCall(async (request) => {
   await auth.setCustomUserClaims(uid, {
     ...(user.customClaims || {}),
     role,
-    premium: role === 'premium' || role === 'enseignant',
+    premium: role === 'premium' || role === 'premium_plus' || role === 'enseignant',
   })
 
   return { ok: true }

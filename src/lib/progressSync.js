@@ -6,7 +6,7 @@
 // pour grouper les écritures rapprochées, ex. plusieurs mots favorisés d'affilée).
 
 import { watch } from 'vue'
-import { progress } from '../progress.js'
+import { progress, hasLocalTtsRate } from '../progress.js'
 import { currentUser } from './auth.js'
 import { firebaseReady, getFirebaseApp } from './firebase.js'
 
@@ -49,6 +49,9 @@ async function pullAndMerge(uid, db, fs) {
   ]
   if (!progress.hintDismissed && remote.hintDismissed) {
     progress.hintDismissed = true
+  }
+  if (remote.ttsRate && !hasLocalTtsRate) {
+    progress.ttsRate = remote.ttsRate
   }
 }
 

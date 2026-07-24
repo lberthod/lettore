@@ -437,7 +437,7 @@ const themes = [
   max-width: 88%;
   font-size: 0.56rem;
   line-height: 1.25;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
   color: rgba(92, 58, 21, 0.7);
 }
@@ -693,10 +693,6 @@ const themes = [
     margin-top: 0.2rem;
   }
 
-  .stats {
-    margin: 0.15rem auto;
-  }
-
   .about h2 {
     font-size: 0.86rem;
     margin-bottom: 0.25rem;
@@ -780,6 +776,10 @@ const themes = [
   }
 
   .bubble {
+    animation: none;
+  }
+
+  .listen-btn.speaking {
     animation: none;
   }
 

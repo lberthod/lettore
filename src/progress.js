@@ -15,6 +15,10 @@ function load() {
 
 const saved = load()
 
+// Permet à progressSync de savoir si l'utilisateur a déjà choisi une
+// vitesse audio localement, avant d'appliquer une valeur distante.
+export const hasLocalTtsRate = 'ttsRate' in saved
+
 // Répétition espacée (boîtes de Leitner) : intervalle avant la prochaine
 // révision selon la boîte du mot (0 = nouveau … 5 = bien connu).
 const DAY = 24 * 60 * 60 * 1000
