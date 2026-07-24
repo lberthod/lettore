@@ -659,5 +659,45 @@
     "wordCount": 104,
     "genre": "pratico",
     "category": "cucina"
+  },
+  {
+    "id": "pacco_misterioso",
+    "title": "Il pacco misterioso",
+    "level": "A2",
+    "excerpt": "Durante un viaggio in treno, Sara trova un pacco sotto il suo sedile. Non c'è nessun nome sopra.",
+    "paragraphCount": 6,
+    "wordCount": 104,
+    "genre": "giallo",
+    "category": "viaggi"
+  },
+  {
+    "id": "notte_capodanno",
+    "title": "Notte di Capodanno",
+    "level": "B1",
+    "excerpt": "La città trattiene il fiato nell'ultima ora dell'anno. Le finestre brillano come piccole stelle cadute.",
+    "paragraphCount": 6,
+    "wordCount": 51,
+    "genre": "poesia",
+    "category": "feste"
+  },
+  {
+    "id": "leone_topo",
+    "title": "Il leone e il topo",
+    "level": "A1",
+    "excerpt": "Un leone dorme sotto un albero. Un piccolo topo gli corre sopra. Il leone si sveglia e prende il topo.",
+    "paragraphCount": 6,
+    "wordCount": 79,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "diario_sofia",
+    "title": "Il diario di Sofia",
+    "level": "A2",
+    "excerpt": "Caro diario, oggi è stato un giorno speciale. Ho iniziato la scuola nuova. Ero molto nervosa.",
+    "paragraphCount": 6,
+    "wordCount": 81,
+    "genre": "lettera_diario",
+    "category": "vita_quotidiana"
   }
 ]
