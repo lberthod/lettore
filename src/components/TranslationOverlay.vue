@@ -22,12 +22,13 @@ defineEmits(['close', 'speak', 'favorite'])
     :style="isSentence ? null : { left: x + 'px', top: y + 'px' }"
     @click.stop
   >
-    <button class="close" @click="$emit('close')">×</button>
+    <button class="close" title="Fermer" aria-label="Fermer" @click="$emit('close')">×</button>
     <div class="original">
       <button
         v-if="canSpeak"
         class="speak"
         title="Écouter en italien"
+        aria-label="Écouter en italien"
         @click="$emit('speak')"
       >
         🔊
@@ -43,6 +44,8 @@ defineEmits(['close', 'speak', 'favorite'])
         class="fav"
         :class="{ active: isFavorite }"
         :title="isFavorite ? 'Retirer de mes mots' : 'Ajouter à mes mots'"
+        :aria-label="isFavorite ? 'Retirer de mes mots' : 'Ajouter à mes mots'"
+        :aria-pressed="isFavorite"
         @click="$emit('favorite')"
       >
         {{ isFavorite ? '★' : '☆' }}

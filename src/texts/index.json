@@ -2319,5 +2319,905 @@
     "wordCount": 275,
     "genre": "dialogo",
     "category": "arte_lingua"
+  },
+  {
+    "id": "dialogo_regioni",
+    "title": "Un turista curioso",
+    "level": "A2",
+    "excerpt": "— Scusi, sono appena arrivato dal Nord. È vero che ogni regione italiana ha piatti molto diversi?",
+    "paragraphCount": 6,
+    "wordCount": 94,
+    "genre": "dialogo",
+    "category": "regioni"
+  },
+  {
+    "id": "intervista_nonno",
+    "title": "Un'intervista al nonno",
+    "level": "B1",
+    "excerpt": "— Nonno, per un compito di scuola devo intervistarti. Com'era l'Italia quando eri giovane?",
+    "paragraphCount": 6,
+    "wordCount": 79,
+    "genre": "dialogo",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "poesia_viaggio",
+    "title": "Finestrino",
+    "level": "A2",
+    "excerpt": "Il treno corre, il mondo vola,",
+    "paragraphCount": 8,
+    "wordCount": 45,
+    "genre": "poesia",
+    "category": "viaggi"
+  },
+  {
+    "id": "poesia_corsa",
+    "title": "Il passo giusto",
+    "level": "B1",
+    "excerpt": "Il fiato corto, le gambe di piombo,",
+    "paragraphCount": 8,
+    "wordCount": 49,
+    "genre": "poesia",
+    "category": "sport"
+  },
+  {
+    "id": "tartaruga_viaggiatrice",
+    "title": "La tartaruga viaggiatrice",
+    "level": "A1",
+    "excerpt": "C'era una volta una tartaruga di nome Tilla che sognava di vedere il mondo intero.",
+    "paragraphCount": 6,
+    "wordCount": 75,
+    "genre": "fiaba",
+    "category": "viaggi"
+  },
+  {
+    "id": "cucina_del_futuro",
+    "title": "La cucina del futuro",
+    "level": "B1",
+    "excerpt": "Nel 2075, in ogni casa c'è un sintetizzatore alimentare capace di creare qualsiasi piatto in pochi minuti.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "fantascienza",
+    "category": "cucina"
+  },
+  {
+    "id": "scomparsa_rifugio",
+    "title": "La scomparsa al rifugio",
+    "level": "B2",
+    "excerpt": "Al rifugio Alpe Rossa, il gestore scopre che uno degli escursionisti non è tornato dalla passeggiata pomeridiana.",
+    "paragraphCount": 6,
+    "wordCount": 97,
+    "genre": "giallo",
+    "category": "montagna"
+  },
+  {
+    "id": "teatro_cucina",
+    "title": "Nella cucina del ristorante",
+    "level": "A2",
+    "excerpt": "CHEF — Presto, la salsa sta bruciando! Chi doveva controllare il fuoco?",
+    "paragraphCount": 6,
+    "wordCount": 76,
+    "genre": "teatro",
+    "category": "cucina"
+  },
+  {
+    "id": "regole_palestra",
+    "title": "Le regole della palestra",
+    "level": "A1",
+    "excerpt": "Benvenuti in palestra! Ecco le regole importanti da seguire.",
+    "paragraphCount": 6,
+    "wordCount": 52,
+    "genre": "pratico",
+    "category": "sport"
+  },
+  {
+    "id": "diario_adozione_cane",
+    "title": "Diario di un'adozione",
+    "level": "B1",
+    "excerpt": "Lunedì. Oggi ho adottato Birra, un cane randagio trovato vicino al canile. Ha gli occhi tristi ma dolcissimi.",
+    "paragraphCount": 6,
+    "wordCount": 98,
+    "genre": "lettera_diario",
+    "category": "natura_animali"
+  },
+  {
+    "id": "sirena_lighea",
+    "title": "La sirena del golfo",
+    "level": "B2",
+    "excerpt": "A Cefalù, quando il vento di scirocco soffiava caldo sul mare, i pescatori chiudevano le barche nel porto e tornavano a casa prima del tramo…",
+    "paragraphCount": 8,
+    "wordCount": 241,
+    "genre": "fiaba",
+    "category": "regioni"
+  },
+  {
+    "id": "paese_senza_orologi",
+    "title": "Il paese senza orologi",
+    "level": "C1",
+    "excerpt": "Un giorno, nel paese di Torreombrosa, il consiglio comunale prese una decisione senza precedenti: bandire tutti gli orologi, dai campanili a…",
+    "paragraphCount": 9,
+    "wordCount": 260,
+    "genre": "fiaba",
+    "category": "societa"
+  },
+  {
+    "id": "etichetta_vino",
+    "title": "Come leggere un'etichetta di vino",
+    "level": "C1",
+    "excerpt": "Davanti allo scaffale di un'enoteca, l'etichetta è la tua unica bussola. Impara a leggerla e nessuna bottiglia potrà più ingannarti.",
+    "paragraphCount": 9,
+    "wordCount": 256,
+    "genre": "pratico",
+    "category": "cucina"
+  },
+  {
+    "id": "archivista",
+    "title": "L'archivista",
+    "level": "C2",
+    "excerpt": "Quando la dottoressa Elena Sarti chiese in consultazione il fascicolo del processo Baldini, celebrato nel 1949, non sospettava che quella ri…",
+    "paragraphCount": 12,
+    "wordCount": 329,
+    "genre": "giallo",
+    "category": "societa"
+  },
+  {
+    "id": "turista_del_tempo",
+    "title": "Il turista del tempo",
+    "level": "C2",
+    "excerpt": "Nel 2140 la Compagnia dei Soggiorni Temporali vende, a chi possa permetterselo, un lusso che nessun secolo aveva mai conosciuto: passeggiare…",
+    "paragraphCount": 12,
+    "wordCount": 350,
+    "genre": "fantascienza",
+    "category": "viaggi"
+  },
+  {
+    "id": "cena_critici",
+    "title": "La cena dei critici",
+    "level": "C2",
+    "excerpt": "GIORNALISTA — Maestro, i lettori del nostro supplemento fremono: stasera lei giudicherà il piatto segreto dello chef, quello di cui in città…",
+    "paragraphCount": 12,
+    "wordCount": 325,
+    "genre": "teatro",
+    "category": "cucina"
+  },
+  {
+    "id": "quaderni_glaciologo",
+    "title": "Quaderni di un glaciologo",
+    "level": "C2",
+    "excerpt": "12 agosto, trent'anni fa. Primo carotaggio sul ghiacciaio. Il ghiaccio è compatto, azzurro, quasi arrogante nella propria permanenza. Pianto…",
+    "paragraphCount": 10,
+    "wordCount": 350,
+    "genre": "lettera_diario",
+    "category": "montagna"
+  },
+  {
+    "id": "rondini_ritorno",
+    "title": "Il ritorno delle rondini",
+    "level": "C2",
+    "excerpt": "Ogni anno, ai primi tepori di marzo, Ersilia tirava fuori la sedia impagliata e si metteva sotto il portico, gli occhi alzati verso il nido…",
+    "paragraphCount": 11,
+    "wordCount": 320,
+    "genre": "racconto",
+    "category": "natura_animali"
+  },
+  {
+    "id": "binari",
+    "title": "Binari",
+    "level": "B2",
+    "excerpt": "All'alba i binari luccicano come promesse,",
+    "paragraphCount": 10,
+    "wordCount": 74,
+    "genre": "poesia",
+    "category": "viaggi"
+  },
+  {
+    "id": "ode_al_pane",
+    "title": "Ode al pane",
+    "level": "C1",
+    "excerpt": "Farina e acqua, nient'altro:",
+    "paragraphCount": 12,
+    "wordCount": 74,
+    "genre": "poesia",
+    "category": "cucina"
+  },
+  {
+    "id": "poesia_ingiustizia",
+    "title": "Chi non ha voce",
+    "level": "B2",
+    "excerpt": "C'è chi lavora dall'alba al tramonto",
+    "paragraphCount": 8,
+    "wordCount": 54,
+    "genre": "poesia",
+    "category": "societa"
+  },
+  {
+    "id": "gara_scoiattoli",
+    "title": "La gara degli scoiattoli",
+    "level": "A2",
+    "excerpt": "Nel bosco, ogni autunno, gli scoiattoli organizzavano una gara: chi raccoglieva più ghiande vinceva.",
+    "paragraphCount": 6,
+    "wordCount": 90,
+    "genre": "fiaba",
+    "category": "sport"
+  },
+  {
+    "id": "bambina_soldato",
+    "title": "Il pane condiviso",
+    "level": "A1",
+    "excerpt": "Tanti anni fa, durante la guerra, una bambina viveva in un piccolo paese con la mamma.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "fiaba",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "robot_senza_cuore",
+    "title": "Il robot senza cuore",
+    "level": "A2",
+    "excerpt": "In un laboratorio lontano, un inventore costruì un robot perfetto, ma senza sentimenti.",
+    "paragraphCount": 6,
+    "wordCount": 89,
+    "genre": "fiaba",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "venezia_sommersa",
+    "title": "Venezia, città sull'acqua del futuro",
+    "level": "B1",
+    "excerpt": "Nel 2100, il livello del mare è salito così tanto che Venezia vive quasi completamente sull'acqua.",
+    "paragraphCount": 6,
+    "wordCount": 91,
+    "genre": "fantascienza",
+    "category": "regioni"
+  },
+  {
+    "id": "sabotaggio_gara",
+    "title": "Sabotaggio prima della gara",
+    "level": "B1",
+    "excerpt": "La mattina della grande gara ciclistica, Marta scopre che i freni della sua bicicletta sono stati manomessi.",
+    "paragraphCount": 6,
+    "wordCount": 99,
+    "genre": "giallo",
+    "category": "sport"
+  },
+  {
+    "id": "segreto_partigiano",
+    "title": "Il segreto del partigiano",
+    "level": "B2",
+    "excerpt": "Durante la ristrutturazione di una vecchia casa di montagna, gli operai trovano una lettera nascosta dietro un camino murato.",
+    "paragraphCount": 6,
+    "wordCount": 96,
+    "genre": "giallo",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "algoritmo_sospetto",
+    "title": "L'algoritmo sospetto",
+    "level": "B2",
+    "excerpt": "Alla Borsa di Milano, un giovane analista nota movimenti finanziari strani, ripetuti sempre alla stessa ora esatta.",
+    "paragraphCount": 6,
+    "wordCount": 95,
+    "genre": "giallo",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "teatro_fattoria",
+    "title": "Discussione in fattoria",
+    "level": "A2",
+    "excerpt": "GALLO — Sono io il più importante della fattoria! Sveglio tutti ogni mattina con il mio canto.",
+    "paragraphCount": 6,
+    "wordCount": 79,
+    "genre": "teatro",
+    "category": "natura_animali"
+  },
+  {
+    "id": "teatro_guida_montagna",
+    "title": "La guida alpina impaziente",
+    "level": "B1",
+    "excerpt": "GUIDA — Forza, dobbiamo affrettarci! Il tempo cambia in fretta quassù, e siamo ancora lontani dal rifugio.",
+    "paragraphCount": 6,
+    "wordCount": 86,
+    "genre": "teatro",
+    "category": "montagna"
+  },
+  {
+    "id": "laghi_del_nord",
+    "title": "I laghi del nord",
+    "level": "A2",
+    "excerpt": "Nel nord dell'Italia ci sono tre grandi laghi: il lago di Garda, il lago di Como e il lago Maggiore.",
+    "paragraphCount": 6,
+    "wordCount": 122,
+    "genre": "documentario",
+    "category": "regioni"
+  },
+  {
+    "id": "spogliatoio",
+    "title": "Lo spogliatoio",
+    "level": "C1",
+    "excerpt": "MISTER — Seduti. Tutti quanti, anche tu. Adesso ascoltatemi bene, perché non ripeterò niente due volte.",
+    "paragraphCount": 12,
+    "wordCount": 281,
+    "genre": "teatro",
+    "category": "sport"
+  },
+  {
+    "id": "diario_guardaparco",
+    "title": "Diario di un guardaparco",
+    "level": "B2",
+    "excerpt": "3 maggio. Sono salito al posto di osservazione prima dell'alba. Il cielo sopra le cime era ancora viola e il silenzio, come sempre, valeva d…",
+    "paragraphCount": 9,
+    "wordCount": 235,
+    "genre": "lettera_diario",
+    "category": "natura_animali"
+  },
+  {
+    "id": "treno_per_palermo",
+    "title": "Sul treno per Palermo",
+    "level": "C1",
+    "excerpt": "— Posso sedermi qui? Il resto dello scompartimento è occupato da valigie che sembrano avere una vita propria.",
+    "paragraphCount": 16,
+    "wordCount": 433,
+    "genre": "dialogo",
+    "category": "viaggi"
+  },
+  {
+    "id": "lettera_a_mia_figlia",
+    "title": "Lettera a mia figlia",
+    "level": "C1",
+    "excerpt": "Cara Elena, sono le undici di sera e la casa, da quando sei partita stamattina con l'ultimo scatolone caricato in macchina, mi sembra più gr…",
+    "paragraphCount": 9,
+    "wordCount": 369,
+    "genre": "lettera_diario",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "furto_algoritmo",
+    "title": "Il furto dell'algoritmo",
+    "level": "C1",
+    "excerpt": "La sera prima della presentazione agli investitori, il codice sorgente dell'algoritmo di diagnosi precoce sviluppato da NovaMed, una startup…",
+    "paragraphCount": 12,
+    "wordCount": 414,
+    "genre": "giallo",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "specchio_venezia",
+    "title": "Lo specchio di Venezia",
+    "level": "C2",
+    "excerpt": "A Murano, tra il fumo delle fornaci e il tremolio del vetro fuso, viveva un maestro vetraio di nome Learco, celebre in tutta la laguna per l…",
+    "paragraphCount": 10,
+    "wordCount": 320,
+    "genre": "fiaba",
+    "category": "regioni"
+  },
+  {
+    "id": "lettera_formale",
+    "title": "Come scrivere una lettera formale",
+    "level": "C2",
+    "excerpt": "Scrivere una lettera formale in italiano significa, prima di tutto, rispettare una struttura codificata: mittente in alto a sinistra, luogo…",
+    "paragraphCount": 10,
+    "wordCount": 369,
+    "genre": "pratico",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "maratona_poesia",
+    "title": "Maratona",
+    "level": "C2",
+    "excerpt": "Il corpo è un confine che si sposta,",
+    "paragraphCount": 12,
+    "wordCount": 119,
+    "genre": "poesia",
+    "category": "sport"
+  },
+  {
+    "id": "recita_natale",
+    "title": "La recita di Natale",
+    "level": "B2",
+    "excerpt": "MAESTRA — Silenzio, bambini! Tra due minuti si alza il sipario e voi siete ancora in disordine come dopo un terremoto!",
+    "paragraphCount": 12,
+    "wordCount": 230,
+    "genre": "teatro",
+    "category": "feste"
+  },
+  {
+    "id": "teatro_hackathon",
+    "title": "L'ultima notte dell'hackathon",
+    "level": "B1",
+    "excerpt": "SARA — Mancano solo tre ore alla presentazione e l'app si blocca ancora ogni volta che clicco qui!",
+    "paragraphCount": 6,
+    "wordCount": 83,
+    "genre": "teatro",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "guida_cura_animali",
+    "title": "Guida alla cura del cane",
+    "level": "A2",
+    "excerpt": "Alimentazione: date da mangiare al cane due volte al giorno, sempre alla stessa ora.",
+    "paragraphCount": 6,
+    "wordCount": 83,
+    "genre": "pratico",
+    "category": "natura_animali"
+  },
+  {
+    "id": "equipaggiamento_montagna",
+    "title": "Che cosa portare in montagna",
+    "level": "A2",
+    "excerpt": "Scarpe: portate scarponi robusti, comodi e già usati, mai nuovi il giorno dell'escursione.",
+    "paragraphCount": 6,
+    "wordCount": 76,
+    "genre": "pratico",
+    "category": "montagna"
+  },
+  {
+    "id": "guida_museo_risorgimento",
+    "title": "Guida al Museo del Risorgimento",
+    "level": "B1",
+    "excerpt": "Orari: il museo è aperto dal martedì alla domenica, dalle nove alle diciannove e trenta.",
+    "paragraphCount": 6,
+    "wordCount": 87,
+    "genre": "pratico",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "guida_uso_computer",
+    "title": "Come usare il computer",
+    "level": "A1",
+    "excerpt": "Prima cosa: premete il tasto per accendere il computer.",
+    "paragraphCount": 6,
+    "wordCount": 64,
+    "genre": "pratico",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "documentario_grand_tour",
+    "title": "Il Grand Tour: quando l'Italia era una scuola",
+    "level": "C1",
+    "excerpt": "Tra il Seicento e l'Ottocento, i giovani aristocratici del nord Europa intraprendevano il cosiddetto Grand Tour.",
+    "paragraphCount": 6,
+    "wordCount": 95,
+    "genre": "documentario",
+    "category": "viaggi"
+  },
+  {
+    "id": "solitudine_metropoli",
+    "title": "La solitudine nelle grandi città",
+    "level": "C1",
+    "excerpt": "Paradossalmente, le grandi metropoli italiane ospitano oggi un numero crescente di persone che si sentono profondamente sole.",
+    "paragraphCount": 6,
+    "wordCount": 100,
+    "genre": "documentario",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "convivenza_artificiale",
+    "title": "Convivenza artificiale",
+    "level": "C1",
+    "excerpt": "Da tre anni, Elisa condivide il proprio appartamento con Aris, un'intelligenza artificiale incarnata in un corpo sintetico quasi indistingu…",
+    "paragraphCount": 6,
+    "wordCount": 126,
+    "genre": "fantascienza",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "falso_capolavoro",
+    "title": "Il falso capolavoro",
+    "level": "C1",
+    "excerpt": "Il quadro, attribuito a un celebre pittore del Seicento, era stato acquistato da un collezionista privato per una cifra astronomica.",
+    "paragraphCount": 6,
+    "wordCount": 111,
+    "genre": "giallo",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "cena_di_famiglia",
+    "title": "Il ritorno di Elena",
+    "level": "C1",
+    "excerpt": "MADRE — Finalmente tutti a tavola. Elena, sono anni che non ceniamo così, tutti insieme sotto lo stesso tetto.",
+    "paragraphCount": 6,
+    "wordCount": 98,
+    "genre": "teatro",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "coppia_cucina",
+    "title": "Chi ha bruciato il sugo?",
+    "level": "B2",
+    "excerpt": "— Sara, che odore è questo? Mi sembra di bruciato!",
+    "paragraphCount": 15,
+    "wordCount": 264,
+    "genre": "dialogo",
+    "category": "cucina"
+  },
+  {
+    "id": "eredita_difficile",
+    "title": "Un'eredità difficile",
+    "level": "C2",
+    "excerpt": "— Non capisco perché tu debba complicare tutto, Andrea. La casa va venduta, punto. Abbiamo debiti da saldare e nessuno dei due vive più qui.",
+    "paragraphCount": 15,
+    "wordCount": 336,
+    "genre": "dialogo",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "orso_e_apicoltore",
+    "title": "L'orso e l'apicoltore",
+    "level": "B1",
+    "excerpt": "Nei boschi dell'Abruzzo viveva Vittorio, un apicoltore che ogni estate produceva il miele più buono della valle. Le sue arnie erano allineat…",
+    "paragraphCount": 8,
+    "wordCount": 244,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "maglia_numero_10",
+    "title": "La maglia numero 10",
+    "level": "C1",
+    "excerpt": "Nel quartiere tutti sapevano chi era stato il numero 10, prima che lo diventasse Enzo. Suo fratello Davide, morto in un incidente in moto qu…",
+    "paragraphCount": 10,
+    "wordCount": 305,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "leggenda_stambecco",
+    "title": "La leggenda dello stambecco bianco",
+    "level": "C2",
+    "excerpt": "Tra le valli più remote delle Alpi si tramanda, di generazione in generazione, la leggenda dello stambecco bianco, una creatura che nessun c…",
+    "paragraphCount": 10,
+    "wordCount": 399,
+    "genre": "fiaba",
+    "category": "montagna"
+  },
+  {
+    "id": "ultimo_chilometro",
+    "title": "L'ultimo chilometro",
+    "level": "C2",
+    "excerpt": "Marta aveva cinquant'anni e sapeva, mentre allacciava le scarpe nel buio prima dell'alba, che quella sarebbe stata la sua ultima gara: dopo…",
+    "paragraphCount": 11,
+    "wordCount": 424,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "rifugio_stelle",
+    "title": "Una notte a duemila metri",
+    "level": "A2",
+    "excerpt": "La famiglia Rossi è arrivata al rifugio dopo una lunga camminata in montagna. Erano stanchi ma felici perché il panorama era bellissimo.",
+    "paragraphCount": 6,
+    "wordCount": 141,
+    "genre": "racconto",
+    "category": "montagna"
+  },
+  {
+    "id": "palio_asti",
+    "title": "Il Palio di Asti: una rivalità antica",
+    "level": "C1",
+    "excerpt": "Ogni anno, la terza domenica di settembre, la città di Asti si ferma per il Palio, la corsa di cavalli a pelo che rappresenta il cuore della…",
+    "paragraphCount": 10,
+    "wordCount": 282,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "capodanno_rituali",
+    "title": "I riti dimenticati di Capodanno",
+    "level": "C2",
+    "excerpt": "Sotto la superficie luccicante dei fuochi d'artificio, la notte di Capodanno in Italia custodisce ancora oggi una fitta trama di gesti ritua…",
+    "paragraphCount": 11,
+    "wordCount": 358,
+    "genre": "documentario",
+    "category": "feste"
+  },
+  {
+    "id": "colori_italia",
+    "title": "I colori dell'Italia",
+    "level": "A1",
+    "excerpt": "In Italia ci sono tre colori importanti: verde, bianco e rosso. Sono i colori della bandiera italiana.",
+    "paragraphCount": 4,
+    "wordCount": 79,
+    "genre": "pratico",
+    "category": "regioni"
+  },
+  {
+    "id": "bandiera_italia",
+    "title": "La bandiera italiana",
+    "level": "A1",
+    "excerpt": "La bandiera italiana ha tre colori: verde, bianco e rosso.",
+    "paragraphCount": 4,
+    "wordCount": 74,
+    "genre": "racconto",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "prima_automobile",
+    "title": "La prima automobile della nonna",
+    "level": "A2",
+    "excerpt": "Mia nonna Elena ha ottant'anni, ma ricorda ancora perfettamente la sua prima automobile, comprata tanti anni fa insieme a mio nonno.",
+    "paragraphCount": 6,
+    "wordCount": 124,
+    "genre": "racconto",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "vicino_solo",
+    "title": "Il vicino solo",
+    "level": "A1",
+    "excerpt": "Il signor Bruno vive da solo nella casa vicina, e mangia sempre da solo in giardino.",
+    "paragraphCount": 4,
+    "wordCount": 70,
+    "genre": "racconto",
+    "category": "societa"
+  },
+  {
+    "id": "gladiatori_veri",
+    "title": "I gladiatori: la vera storia",
+    "level": "A2",
+    "excerpt": "Quando pensiamo ai gladiatori, immaginiamo spesso solo schiavi costretti a combattere nell'arena, ma la realtà storica è più complessa.",
+    "paragraphCount": 6,
+    "wordCount": 133,
+    "genre": "documentario",
+    "category": "storia_antica"
+  },
+  {
+    "id": "fata_dei_prati",
+    "title": "La fata dei prati fioriti",
+    "level": "B2",
+    "excerpt": "In una valle alpina circondata da cime altissime viveva, secondo un'antica leggenda, una fata che proteggeva i prati fioriti della vallata.",
+    "paragraphCount": 8,
+    "wordCount": 214,
+    "genre": "fiaba",
+    "category": "montagna"
+  },
+  {
+    "id": "rifugista_giovane",
+    "title": "La nuova gestrice del rifugio",
+    "level": "A1",
+    "excerpt": "Elena ha venticinque anni. Lei gestisce un piccolo rifugio in montagna. Il rifugio è vicino a un lago blu.",
+    "paragraphCount": 4,
+    "wordCount": 92,
+    "genre": "racconto",
+    "category": "montagna"
+  },
+  {
+    "id": "primo_giorno_scuola",
+    "title": "Il primo giorno di scuola di Leo",
+    "level": "A1",
+    "excerpt": "Leo ha sei anni. Oggi è il primo giorno di scuola per lui.",
+    "paragraphCount": 4,
+    "wordCount": 81,
+    "genre": "racconto",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "ricercatrice_cnr",
+    "title": "La ricercatrice e il fungo che mangia plastica",
+    "level": "C1",
+    "excerpt": "Nei laboratori del CNR di Napoli, Elena Ferraro passa le sue giornate a osservare colonie di funghi al microscopio, alla ricerca di un allea…",
+    "paragraphCount": 12,
+    "wordCount": 280,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "etica_algoritmi",
+    "title": "Chi decide per l'algoritmo?",
+    "level": "C2",
+    "excerpt": "Ogni giorno, senza quasi accorgercene, deleghiamo a un algoritmo decisioni che un tempo spettavano a un funzionario, a un giudice o a un sel…",
+    "paragraphCount": 12,
+    "wordCount": 367,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "capitani_coraggiosi",
+    "title": "Capitani coraggiosi",
+    "level": "C2",
+    "excerpt": "— Un altro bicchiere, Nino, prima che il barista chiuda: stasera ho voglia di ricordare, non di dormire.",
+    "paragraphCount": 15,
+    "wordCount": 347,
+    "genre": "dialogo",
+    "category": "viaggi"
+  },
+  {
+    "id": "eredita_calabrese",
+    "title": "L'uliveto di zio Rocco",
+    "level": "C2",
+    "excerpt": "Quando lo zio Rocco morì, lasciò in eredità ai tre nipoti un uliveto secolare arroccato sulle colline della Calabria.",
+    "paragraphCount": 6,
+    "wordCount": 107,
+    "genre": "racconto",
+    "category": "regioni"
+  },
+  {
+    "id": "dialogo_socratico",
+    "title": "Un dialogo sulla virtù",
+    "level": "C2",
+    "excerpt": "— Maestro, sostieni che nessuno commetta il male volontariamente. Ma non vediamo ogni giorno uomini che scelgono deliberatamente di far tor…",
+    "paragraphCount": 6,
+    "wordCount": 94,
+    "genre": "dialogo",
+    "category": "storia_antica"
+  },
+  {
+    "id": "poesia_dolomiti",
+    "title": "Pallide regine",
+    "level": "C2",
+    "excerpt": "Guglie di roccia pallida al tramonto,",
+    "paragraphCount": 9,
+    "wordCount": 58,
+    "genre": "poesia",
+    "category": "regioni"
+  },
+  {
+    "id": "fabbrica_sogni",
+    "title": "La fabbrica dei sogni",
+    "level": "C2",
+    "excerpt": "In una città grigia, ogni cittadino era tenuto per legge a depositare ogni notte i propri sogni presso un ufficio apposito.",
+    "paragraphCount": 6,
+    "wordCount": 108,
+    "genre": "fiaba",
+    "category": "societa"
+  },
+  {
+    "id": "memoria_cancellata",
+    "title": "Memoria cancellata",
+    "level": "C2",
+    "excerpt": "Nello stato di Meridia, ogni cittadino coinvolto in un lutto grave riceveva per legge una cancellazione parziale della memoria traumatica.",
+    "paragraphCount": 6,
+    "wordCount": 114,
+    "genre": "fantascienza",
+    "category": "societa"
+  },
+  {
+    "id": "enigma_certosa",
+    "title": "L'enigma della Certosa di Pavia",
+    "level": "C2",
+    "excerpt": "Durante un restauro alla Certosa di Pavia, gli operai scoprono un vano murato contenente un manoscritto medievale mai catalogato.",
+    "paragraphCount": 6,
+    "wordCount": 102,
+    "genre": "giallo",
+    "category": "regioni"
+  },
+  {
+    "id": "rivoluzione_quantistica",
+    "title": "La rivoluzione quantistica silenziosa",
+    "level": "C2",
+    "excerpt": "Mentre l'opinione pubblica resta affascinata dall'intelligenza artificiale, una rivoluzione ben più radicale procede quasi inosservata nei…",
+    "paragraphCount": 6,
+    "wordCount": 117,
+    "genre": "documentario",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "diario_rifugiato",
+    "title": "Diario di un nuovo arrivo",
+    "level": "C2",
+    "excerpt": "Primo giorno. Il centro di accoglienza assomiglia a un limbo sospeso: non si è più partiti, ma non si è ancora arrivati davvero.",
+    "paragraphCount": 6,
+    "wordCount": 127,
+    "genre": "lettera_diario",
+    "category": "societa"
+  },
+  {
+    "id": "processo_pubblico",
+    "title": "Il processo dell'opinione",
+    "level": "C2",
+    "excerpt": "GIORNALISTA — Signora Ferri, come risponde alle accuse diffuse ieri sui social network, ancor prima di qualsiasi indagine ufficiale?",
+    "paragraphCount": 6,
+    "wordCount": 105,
+    "genre": "teatro",
+    "category": "societa"
+  },
+  {
+    "id": "ultimo_giorno_ufficio",
+    "title": "L'ultimo giorno in ufficio",
+    "level": "C2",
+    "excerpt": "Dopo trentotto anni nella stessa azienda, Bruno svuota la propria scrivania in un silenzio che gli sembra quasi irreale.",
+    "paragraphCount": 6,
+    "wordCount": 115,
+    "genre": "racconto",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "raccolta_differenziata",
+    "title": "La raccolta differenziata",
+    "level": "A1",
+    "excerpt": "In ogni casa italiana ci sono bidoni di colori diversi. Il bidone giallo è per la plastica. Il bidone blu è per la carta. Il bidone verde è…",
+    "paragraphCount": 4,
+    "wordCount": 99,
+    "genre": "pratico",
+    "category": "societa"
+  },
+  {
+    "id": "banco_alimentare",
+    "title": "Il banco alimentare del quartiere",
+    "level": "A2",
+    "excerpt": "Ogni sabato mattina, Marta e sua madre preparano una borsa di cibo. Dentro mettono pasta, riso, latte e biscotti. Poi camminano insieme fino…",
+    "paragraphCount": 6,
+    "wordCount": 167,
+    "genre": "racconto",
+    "category": "societa"
+  },
+  {
+    "id": "prima_gara_bici",
+    "title": "La prima gara in bicicletta",
+    "level": "A1",
+    "excerpt": "Oggi Marco partecipa alla sua prima gara in bicicletta. La gara è nel parco vicino a casa sua. Marco è molto emozionato, ma ha anche un po'…",
+    "paragraphCount": 4,
+    "wordCount": 110,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "delfini_costa",
+    "title": "I delfini della costa",
+    "level": "B2",
+    "excerpt": "Lungo le coste italiane, dalla Liguria alla Sardegna, vivono da sempre gruppi di delfini che affascinano ricercatori, pescatori e semplici c…",
+    "paragraphCount": 9,
+    "wordCount": 238,
+    "genre": "documentario",
+    "category": "natura_animali"
+  },
+  {
+    "id": "lupo_agnello_moderno",
+    "title": "Il lupo e l'agnello, oggi",
+    "level": "C1",
+    "excerpt": "C'era una volta, non troppo lontano da qui, un lupo che aveva smesso da tempo di cacciare nei boschi e portava invece un completo grigio, un…",
+    "paragraphCount": 9,
+    "wordCount": 310,
+    "genre": "fiaba",
+    "category": "natura_animali"
+  },
+  {
+    "id": "gufo_biblioteca",
+    "title": "Il gufo della biblioteca",
+    "level": "C2",
+    "excerpt": "Il gufo era arrivato in una notte di ottobre, senza che nessuno lo avesse notato, e si era sistemato tra le travi del sottotetto della bibli…",
+    "paragraphCount": 11,
+    "wordCount": 387,
+    "genre": "racconto",
+    "category": "natura_animali"
+  },
+  {
+    "id": "sette_colline",
+    "title": "Le sette colline di Roma",
+    "level": "A1",
+    "excerpt": "Roma è costruita su sette colline. Sono luoghi molto antichi e famosi in tutto il mondo.",
+    "paragraphCount": 5,
+    "wordCount": 74,
+    "genre": "pratico",
+    "category": "regioni"
+  },
+  {
+    "id": "vestali_roma",
+    "title": "Le vestali di Roma",
+    "level": "C2",
+    "excerpt": "Tra le figure più enigmatiche della religione romana spiccano le vestali, le sacerdotesse incaricate di custodire il fuoco sacro della dea V…",
+    "paragraphCount": 11,
+    "wordCount": 356,
+    "genre": "documentario",
+    "category": "storia_antica"
+  },
+  {
+    "id": "epifania_calze",
+    "title": "L'Epifania e le calze della Befana",
+    "level": "A1",
+    "excerpt": "Il sei gennaio è l'Epifania. In Italia, i bambini aspettano la Befana con gioia.",
+    "paragraphCount": 4,
+    "wordCount": 73,
+    "genre": "racconto",
+    "category": "feste"
+  },
+  {
+    "id": "vicinato_ferragosto",
+    "title": "Il barbecue di Ferragosto",
+    "level": "B2",
+    "excerpt": "Quest'anno nessuno del palazzo di via dei Gelsomini è partito per le vacanze. I prezzi erano troppo alti e le tasche di tutti erano un po' p…",
+    "paragraphCount": 9,
+    "wordCount": 244,
+    "genre": "racconto",
+    "category": "vita_quotidiana"
   }
 ]

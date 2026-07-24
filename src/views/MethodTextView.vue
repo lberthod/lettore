@@ -1,7 +1,16 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
+import { EXAMPLE_TEXT_IDS } from '../lib/access.js'
+
+const router = useRouter()
+
+// Ouvre un des textes de l'aperçu gratuit, tiré au hasard à chaque clic.
+function openRandomExample() {
+  const id = EXAMPLE_TEXT_IDS[Math.floor(Math.random() * EXAMPLE_TEXT_IDS.length)]
+  router.push({ name: 'reader', params: { id } })
+}
 </script>
 
 <template>
@@ -153,9 +162,9 @@ import SiteFooter from '../components/SiteFooter.vue'
       </p>
 
       <div class="actions">
-        <RouterLink class="btn-hero" :to="{ name: 'library' }">
+        <button class="btn-hero" type="button" @click="openRandomExample">
           Essayer avec un vrai texte →
-        </RouterLink>
+        </button>
         <RouterLink class="btn-ghost" :to="{ name: 'method' }">
           Voir la présentation interactive
         </RouterLink>
@@ -267,9 +276,12 @@ import SiteFooter from '../components/SiteFooter.vue'
   margin-top: 2.2rem;
 }
 
-.content a.btn-hero {
+.content .btn-hero {
   padding: 0.75rem 1.7rem;
+  border: none;
   border-radius: 999px;
+  font-family: inherit;
+  cursor: pointer;
   background: #b0692e;
   color: #faf6f0;
   font-size: 1rem;

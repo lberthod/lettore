@@ -1,5 +1,15 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { EXAMPLE_TEXT_IDS } from '../lib/access.js'
+
+const router = useRouter()
+
+// Ouvre un des textes de l'aperçu gratuit, tiré au hasard à chaque clic.
+function openRandomExample() {
+  const id = EXAMPLE_TEXT_IDS[Math.floor(Math.random() * EXAMPLE_TEXT_IDS.length)]
+  router.push({ name: 'reader', params: { id } })
+}
 
 // --- Démo : une phrase italienne cliquable ---
 const demoWords = [
@@ -304,9 +314,9 @@ onUnmounted(() => {
             Day (2016) · Yanagisawa, Webb &amp; Uchihara, <em>SSLA</em> (2020) ·
             Nation, <em>Cambridge UP</em> (2013)
           </p>
-          <RouterLink class="cta" :to="{ name: 'home' }">
+          <button class="cta" type="button" @click="openRandomExample">
             Essayer avec un vrai texte →
-          </RouterLink>
+          </button>
         </div>
       </Transition>
     </div>
@@ -715,12 +725,15 @@ onUnmounted(() => {
 .cta {
   display: inline-block;
   padding: 0.75rem 1.6rem;
+  border: none;
   border-radius: 999px;
   background: #b0692e;
   color: #faf6f0;
   text-decoration: none;
+  font-family: inherit;
   font-weight: 700;
   font-size: 1rem;
+  cursor: pointer;
   transition: background 0.15s, transform 0.15s;
 }
 

@@ -14,8 +14,12 @@ Serveur Node **sans dépendance npm** (http natif + fetch, Node ≥ 18) qui tour
 
 Garde-fous :
 
-- **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via l'API identitytoolkit — pas de SDK admin sur le VPS.
-- **Un seul job actif par compte** ; jobs en mémoire, purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels GLM).
+- **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via l'API identitytoolkit — pas de SDK admin sur le VPS. Le rôle (`gratuit` / `premium` / `enseignant`) est relu depuis les custom claims embarqués dans le token (posés côté Cloud Functions, voir [functions/index.js](../functions/index.js)).
+- **Quotas** (persistés dans `quotas.json`, à côté du serveur, pour survivre à un redémarrage) :
+  - compte gratuit : 3 générations « de bienvenue » cumulées, puis 1 génération par jour une fois ce capital épuisé ;
+  - compte payant (`premium` / `enseignant`) : 10 générations par jour, 100 par mois.
+- **Un seul job actif par compte** ; jobs en mémoire (perdus au redémarrage du VPS), purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels GLM).
+- **CORS** restreint aux origines listées dans `ALLOWED_ORIGINS` (le token Firebase reste la vraie protection, ceci évite juste qu'un site tiers rejoue les appels authentifiés depuis le navigateur d'un utilisateur).
 - **Validation** : même exigence de couverture lexicale que le catalogue ([generate.mjs](generate.mjs), découpage identique au lecteur, passes de réparation) — le lexique des mots doit être complet ; jusqu'à 2 phrases sans traduction sont tolérées plutôt que de jeter la génération.
 
 ## Configuration (env)
@@ -24,6 +28,7 @@ Garde-fous :
 |---|---|---|
 | `PORT` | `8091` | port d'écoute |
 | `FIREBASE_API_KEY` | clé web du projet | vérification des ID tokens |
+| `ALLOWED_ORIGINS` | `https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173` | origines autorisées (CORS), séparées par des virgules |
 | `GLM_API_KEY` | — | clé API GLM (obligatoire) |
 | `GLM_MODEL` | `glm-5.1` | modèle utilisé |
 | `GLM_BASE_URL` | endpoint Zhipu AI | endpoint chat completions (compatible OpenAI) |

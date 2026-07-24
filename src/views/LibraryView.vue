@@ -95,6 +95,36 @@ const filteredTexts = computed(() =>
   )
 )
 
+// Tri : l'ordre du catalogue reste la pertinence par défaut, mais on peut
+// classer par titre, niveau ou longueur
+const sortOptions = [
+  { id: 'default', name: 'Pertinence' },
+  { id: 'title-asc', name: 'Titre A → Z' },
+  { id: 'level-asc', name: 'Niveau croissant' },
+  { id: 'level-desc', name: 'Niveau décroissant' },
+  { id: 'length-asc', name: 'Plus courts d’abord' },
+  { id: 'length-desc', name: 'Plus longs d’abord' },
+]
+const selectedSort = ref('default')
+
+const sortedTexts = computed(() => {
+  const arr = [...filteredTexts.value]
+  switch (selectedSort.value) {
+    case 'title-asc':
+      return arr.sort((a, b) => a.title.localeCompare(b.title, 'it'))
+    case 'level-asc':
+      return arr.sort((a, b) => a.level.localeCompare(b.level))
+    case 'level-desc':
+      return arr.sort((a, b) => b.level.localeCompare(a.level))
+    case 'length-asc':
+      return arr.sort((a, b) => a.wordCount - b.wordCount)
+    case 'length-desc':
+      return arr.sort((a, b) => b.wordCount - a.wordCount)
+    default:
+      return arr
+  }
+})
+
 const hasFilters = computed(
   () =>
     selectedLevel.value !== 'all' ||
@@ -112,16 +142,62 @@ function resetFilters() {
   searchQuery.value = ''
 }
 
+// Filtres repliables sur mobile (toujours visibles au-delà du seuil, en CSS)
+const filtersOpen = ref(false)
+
+// Visiteurs non connectés : les textes verrouillés ne s'affichent plus comme
+// des cartes en pointillés dispersées dans le catalogue. On les compte à
+// part et on propose un unique bloc « Tout débloquer » en fin de page.
+const unlockedTexts = computed(() => sortedTexts.value.filter((t) => !isLocked(t)))
+const lockedCount = computed(
+  () => sortedTexts.value.length - unlockedTexts.value.length
+)
+const visibleTexts = computed(() =>
+  authResolved.value && !loggedIn.value ? unlockedTexts.value : sortedTexts.value
+)
+
 // Sections par catégorie, dans l'ordre des thèmes ; les vides disparaissent
 const sections = computed(() =>
   categories
     .filter((c) => selectedCategory.value === 'all' || c.id === selectedCategory.value)
     .map((c) => ({
       ...c,
-      texts: filteredTexts.value.filter((t) => t.category === c.id),
+      texts: visibleTexts.value.filter((t) => t.category === c.id),
     }))
     .filter((c) => c.texts.length > 0)
 )
+
+// Pagination : évite d'afficher des centaines de cartes d'un coup
+const PAGE_SIZE = 24
+const visibleCount = ref(PAGE_SIZE)
+watch([selectedLevel, selectedSize, selectedCategory, selectedGenre, selectedSort, searchQuery], () => {
+  visibleCount.value = PAGE_SIZE
+})
+
+const totalVisibleTexts = computed(() =>
+  sections.value.reduce((n, s) => n + s.texts.length, 0)
+)
+
+const pagedSections = computed(() => {
+  let remaining = visibleCount.value
+  const list = []
+  for (const sec of sections.value) {
+    if (remaining <= 0) break
+    const slice = sec.texts.slice(0, remaining)
+    remaining -= slice.length
+    if (slice.length) list.push({ ...sec, texts: slice, total: sec.texts.length })
+  }
+  return list
+})
+
+const shownCount = computed(() =>
+  pagedSections.value.reduce((n, s) => n + s.texts.length, 0)
+)
+const hasMore = computed(() => shownCount.value < totalVisibleTexts.value)
+
+function loadMore() {
+  visibleCount.value += PAGE_SIZE
+}
 </script>
 
 <template>
@@ -153,7 +229,27 @@ const sections = computed(() =>
         phrase entière.
       </p>
 
-      <div class="filters">
+      <div class="filters-bar">
+        <p class="results-count" aria-live="polite">
+          {{ totalVisibleTexts }} texte{{ totalVisibleTexts > 1 ? 's' : '' }}
+        </p>
+        <select v-model="selectedSort" class="cat-select sort-select" aria-label="Trier">
+          <option v-for="opt in sortOptions" :key="opt.id" :value="opt.id">
+            Trier : {{ opt.name }}
+          </option>
+        </select>
+        <button
+          class="filters-toggle"
+          type="button"
+          :aria-expanded="filtersOpen"
+          aria-controls="library-filters"
+          @click="filtersOpen = !filtersOpen"
+        >
+          Filtres <span aria-hidden="true">{{ filtersOpen ? '▲' : '▼' }}</span>
+        </button>
+      </div>
+
+      <div id="library-filters" class="filters" :class="{ open: filtersOpen }">
         <input
           v-model="searchQuery"
           type="search"
@@ -228,23 +324,18 @@ const sections = computed(() =>
         autre catégorie.
       </p>
 
-      <section v-for="section in sections" :key="section.id" class="category-section">
+      <section v-for="section in pagedSections" :key="section.id" class="category-section">
         <h2 class="category-title">
           <span aria-hidden="true">{{ section.icon }}</span>
           {{ section.name }}
-          <span class="category-count">{{ section.texts.length }}</span>
+          <span class="category-count">{{ section.total }}</span>
         </h2>
         <div class="grid">
           <RouterLink
             v-for="t in section.texts"
             :key="t.id"
             class="card"
-            :class="{ locked: isLocked(t) }"
-            :to="
-              isLocked(t)
-                ? { name: 'login', query: { redirect: `/testo/${t.id}` } }
-                : { name: 'reader', params: { id: t.id } }
-            "
+            :to="{ name: 'reader', params: { id: t.id } }"
           >
             <div class="card-head">
               <h3>{{ t.title }}</h3>
@@ -258,10 +349,30 @@ const sections = computed(() =>
               <span v-if="isRead(t.id)" class="read-badge">✓ lu</span>
             </p>
             <span class="cta">
-              {{ isLocked(t) ? '🔒 Se connecter pour lire' : isRead(t.id) ? 'Relire →' : 'Lire →' }}
+              {{ isRead(t.id) ? 'Relire →' : 'Lire →' }}
             </span>
           </RouterLink>
         </div>
+      </section>
+
+      <div v-if="hasMore" class="load-more">
+        <button class="reset-btn load-more-btn" @click="loadMore">
+          Afficher plus de textes ({{ totalVisibleTexts - shownCount }} restants)
+        </button>
+      </div>
+
+      <!-- Visiteurs non connectés : un unique bloc d'invitation, au lieu de
+           cartes verrouillées dispersées dans chaque catégorie -->
+      <section v-if="authResolved && !loggedIn && lockedCount > 0" class="unlock-all">
+        <h2>🔒 {{ lockedCount }} texte{{ lockedCount > 1 ? 's' : '' }} supplémentaire{{ lockedCount > 1 ? 's' : '' }} à débloquer</h2>
+        <p>
+          Vous consultez la sélection en accès libre. Créez un compte gratuit
+          pour lire l'intégralité du catalogue, suivre votre progression et
+          enregistrer vos mots favoris.
+        </p>
+        <RouterLink class="btn-unlock" :to="{ name: 'login', query: { redirect: '/textes' } }">
+          Tout débloquer gratuitement →
+        </RouterLink>
       </section>
     </div>
   </SceneLayout>
@@ -345,6 +456,45 @@ const sections = computed(() =>
   font-weight: 600;
 }
 
+/* --- Barre de résultats + tri + repli des filtres (mobile) --- */
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.results-count {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8a5a2b;
+}
+
+.filters-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 44px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(176, 105, 46, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #6b6156;
+  font-family: inherit;
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filters-toggle:hover {
+  border-color: #b0692e;
+  color: #b0692e;
+}
+
 /* --- Barre de filtres compacte --- */
 
 .filters {
@@ -354,6 +504,21 @@ const sections = computed(() =>
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1.8rem;
+}
+
+@media (max-width: 640px) {
+  .filters-toggle {
+    display: inline-flex;
+  }
+
+  .filters {
+    display: none;
+    justify-content: flex-start;
+  }
+
+  .filters.open {
+    display: flex;
+  }
 }
 
 .seg {
@@ -556,15 +721,6 @@ const sections = computed(() =>
   transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s, background 0.15s;
 }
 
-.card.locked {
-  opacity: 0.82;
-  border-style: dashed;
-}
-
-.card.locked:hover {
-  opacity: 1;
-}
-
 .card:hover {
   border-color: #b0692e;
   background: rgba(255, 255, 255, 0.88);
@@ -607,6 +763,70 @@ const sections = computed(() =>
   font-size: 0.85rem;
   font-weight: 700;
   color: #b0692e;
+}
+
+/* --- Charger plus --- */
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 0.4rem 0 2rem;
+}
+
+.load-more-btn {
+  min-height: 44px;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(176, 105, 46, 0.35);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.load-more-btn:hover {
+  background: rgba(176, 105, 46, 0.08);
+}
+
+/* --- Bloc « Tout débloquer » (remplace les cartes verrouillées) --- */
+
+.unlock-all {
+  margin: 1rem auto 2.5rem;
+  max-width: 560px;
+  padding: 1.6rem 1.8rem;
+  border: 1px dashed rgba(176, 105, 46, 0.4);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.unlock-all h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #8a5a2b;
+}
+
+.unlock-all p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: rgba(44, 38, 32, 0.75);
+}
+
+.btn-unlock {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: #b0692e;
+  color: #faf6f0;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 20px rgba(176, 105, 46, 0.25);
+  transition: background 0.15s, transform 0.15s;
+}
+
+.btn-unlock:hover {
+  background: #9a5a26;
+  transform: translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {

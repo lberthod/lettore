@@ -28,6 +28,7 @@ export const generation = reactive({
   error: '',
   result: null,
   saveState: '', // '' | saving | saved | error
+  saveError: '', // détail de l'erreur d'enregistrement (code + message)
   savedEntry: null, // entrée d'index Firestore une fois enregistré
 })
 
@@ -174,11 +175,15 @@ function fail(message) {
 export async function saveResult() {
   if (!generation.result) return
   generation.saveState = 'saving'
+  generation.saveError = ''
   try {
     generation.savedEntry = await saveUserText(generation.result)
     generation.saveState = 'saved'
   } catch (err) {
     console.error('Enregistrement du texte :', err)
+    generation.saveError = [err?.code, err?.message || String(err)]
+      .filter(Boolean)
+      .join(' — ')
     generation.saveState = 'error'
   }
 }

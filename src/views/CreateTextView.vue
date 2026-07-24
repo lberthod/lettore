@@ -192,7 +192,7 @@ function answer(qi, oi) {
         <template v-if="generation.saveState === 'saving'"> · enregistrement…</template>
         <template v-else-if="generation.saveState === 'saved'"> · ✓ enregistré</template>
         <template v-else-if="generation.saveState === 'error'">
-          · ⚠ enregistrement impossible
+          · ⚠ enregistrement impossible <small v-if="generation.saveError">({{ generation.saveError }})</small>
           <button type="button" class="link-btn" @click="saveResult">réessayer</button>
         </template>
       </p>

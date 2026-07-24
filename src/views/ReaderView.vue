@@ -281,6 +281,33 @@ function onWordLeave() {
   if (overlay.value && !overlay.value.isSentence) scheduleClose()
 }
 
+// Navigation clavier : un mot atteint par tabulation affiche sa traduction
+// comme au survol ; Entrée/Espace traduit la phrase entière (équivalent du
+// double-clic), Échap referme (géré par onKeydown au niveau du document).
+function onWordFocus(word, event) {
+  clearTimeout(hoverTimer)
+  cancelClose()
+  showTranslation(word, event, false)
+}
+
+function onWordBlur() {
+  onWordLeave()
+}
+
+function onWordKeydown(sentence, event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault()
+    onWordDblClick(sentence, event)
+  }
+}
+
+function onPunctKeydown(sentence, event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault()
+    onPunctClick(sentence, event)
+  }
+}
+
 function scheduleClose() {
   clearTimeout(closeTimer)
   closeTimer = setTimeout(() => {
@@ -363,6 +390,12 @@ onBeforeUnmount(() => {
                 ? 'Désactiver la prononciation'
                 : 'Activer la prononciation'
             "
+            :aria-label="
+              ttsEnabled
+                ? 'Désactiver la prononciation'
+                : 'Activer la prononciation'
+            "
+            :aria-pressed="ttsEnabled"
             @click="toggleTts"
           >
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -381,6 +414,7 @@ onBeforeUnmount(() => {
             :class="{ active: readingText && !paused }"
             :disabled="readingText && !paused"
             title="Écouter le texte"
+            aria-label="Écouter le texte"
             @click="playText"
           >
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -392,6 +426,7 @@ onBeforeUnmount(() => {
             :class="{ active: paused }"
             :disabled="!readingText || paused"
             title="Mettre en pause"
+            aria-label="Mettre en pause"
             @click="pauseText"
           >
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -402,6 +437,7 @@ onBeforeUnmount(() => {
             class="icon-btn stop"
             :disabled="!readingText"
             title="Arrêter la lecture"
+            aria-label="Arrêter la lecture"
             @click="stopReading"
           >
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -436,6 +472,7 @@ onBeforeUnmount(() => {
         <button
           class="hint-close"
           title="Ne plus afficher cette aide"
+          aria-label="Ne plus afficher cette aide"
           @click="progress.hintDismissed = true"
         >
           ✕
@@ -456,16 +493,26 @@ onBeforeUnmount(() => {
                 <span
                   v-if="isWord(token)"
                   class="word"
+                  role="button"
+                  tabindex="0"
+                  :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
                   @mouseenter="onWordEnter(token, $event)"
                   @mouseleave="onWordLeave"
+                  @focus="onWordFocus(token, $event)"
+                  @blur="onWordBlur"
                   @click="onWordTap(token, s.sentence, $event)"
                   @dblclick="onWordDblClick(s.sentence, $event)"
+                  @keydown="onWordKeydown(s.sentence, $event)"
                   >{{ token }}</span
                 ><span
                   v-else-if="isSentenceEnd(token)"
                   class="punct"
+                  role="button"
+                  tabindex="0"
                   title="Traduire la phrase"
+                  aria-label="Traduire la phrase"
                   @click="onPunctClick(s.sentence, $event)"
+                  @keydown="onPunctKeydown(s.sentence, $event)"
                   >{{ token }}</span
                 ><template v-else>{{ token }}</template>
               </template>
@@ -523,6 +570,7 @@ onBeforeUnmount(() => {
             <button
               class="quiz-close"
               title="Fermer la vérification"
+              aria-label="Fermer la vérification"
               @click="quizOpen = false"
             >
               ✕

@@ -20,10 +20,11 @@ async function refresh() {
   try {
     users.value = await listUsers()
   } catch (err) {
+    console.error('adminListUsers a échoué :', err)
     error.value =
       err?.code === 'functions/permission-denied'
         ? "Accès réservé à l'administrateur."
-        : "Impossible de charger la liste des comptes."
+        : `Impossible de charger la liste des comptes${err?.code ? ` (${err.code})` : ''}.`
   } finally {
     loading.value = false
   }

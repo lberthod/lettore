@@ -34,7 +34,14 @@ const STRIPE_WEBHOOK_SECRET = defineSecret('STRIPE_WEBHOOK_SECRET')
 const ADMIN_EMAIL = 'lberthod@gmail.com'
 
 function requireAdmin(request) {
-  if (request.auth?.token?.email !== ADMIN_EMAIL) {
+  // Comparaison normalisée (casse, espaces) : certains fournisseurs (Google…)
+  // peuvent renvoyer l'e-mail avec une casse différente de celle saisie.
+  const email = (request.auth?.token?.email || '').trim().toLowerCase()
+  if (email !== ADMIN_EMAIL) {
+    console.warn('Appel admin refusé', {
+      email: email || '(aucun e-mail dans le token)',
+      uid: request.auth?.uid || null,
+    })
     throw new HttpsError('permission-denied', 'Réservé à l’administrateur.')
   }
 }

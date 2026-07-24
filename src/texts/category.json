@@ -92,7 +92,8 @@
         "A2",
         "B1",
         "B2",
-        "C1"
+        "C1",
+        "C2"
       ]
     },
     {
@@ -129,6 +130,7 @@
       "icon": "🏛",
       "hint": "Texte factuel : événement historique, lieu géographique, vulgarisation scientifique, biographie.",
       "levels": [
+        "A2",
         "B1",
         "B2",
         "C1",
@@ -173,7 +175,8 @@
         "A2",
         "B1",
         "B2",
-        "C1"
+        "C1",
+        "C2"
       ]
     }
   ],

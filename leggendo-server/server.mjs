@@ -21,12 +21,45 @@ const PORT = Number(process.env.PORT || 8091)
 const FIREBASE_API_KEY =
   process.env.FIREBASE_API_KEY || 'AIzaSyDDRg8xkDgK92g5vogKKg8XVHZcv8DYD2k'
 
+// Origines autorisées à appeler l'API (le token Firebase reste la vraie
+// protection, mais on évite en plus qu'un site tiers embarque des appels
+// authentifiés depuis le navigateur d'un utilisateur).
+const ALLOWED_ORIGINS = (
+  process.env.ALLOWED_ORIGINS ||
+  'https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173'
+)
+  .split(',')
+  .map((o) => o.trim())
+  .filter(Boolean)
+
+function corsOrigin(req) {
+  const origin = req.headers.origin
+  return origin && ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0]
+}
+
 // Taxonomie genre × thème embarquée (copie de src/texts/category.json).
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const taxonomy = JSON.parse(fs.readFileSync(path.join(HERE, 'category.json'), 'utf8'))
 const themeById = new Map(taxonomy.themes.map((t) => [t.id, t]))
 const genreById = new Map(taxonomy.genres.map((g) => [g.id, g]))
 const sizeById = new Map(taxonomy.sizes.map((s) => [s.id, s]))
+
+// Décode les custom claims (role, premium) embarqués dans le payload du JWT.
+// La signature du token a déjà été vérifiée par l'appel à accounts:lookup
+// ci-dessous ; on ne fait que relire les claims qu'il contient.
+function decodeClaims(idToken) {
+  try {
+    const payload = idToken.split('.')[1]
+    const json = Buffer.from(payload, 'base64url').toString('utf8')
+    const claims = JSON.parse(json)
+    return {
+      role: claims.role || (claims.premium ? 'premium' : 'gratuit'),
+      premium: Boolean(claims.premium),
+    }
+  } catch {
+    return { role: 'gratuit', premium: false }
+  }
+}
 
 // --- Vérification du token Firebase (sans SDK admin) ---
 async function verifyIdToken(idToken) {
@@ -41,7 +74,92 @@ async function verifyIdToken(idToken) {
   if (!res.ok) return null
   const data = await res.json().catch(() => null)
   const user = data?.users?.[0]
-  return user ? { uid: user.localId, email: user.email } : null
+  if (!user) return null
+  const { role, premium } = decodeClaims(idToken)
+  return { uid: user.localId, email: user.email, role, premium }
+}
+
+// --- Quotas de génération (persistés sur disque : survivent aux redémarrages) ---
+// Gratuit  : 3 générations « de bienvenue » (cumulées, tous les jours confondus),
+//            puis 1 génération par jour une fois ce capital épuisé.
+// Payant / enseignant : 10 générations par jour, 100 par mois.
+const QUOTA_FILE = path.join(HERE, 'quotas.json')
+const FREE_STARTER_CREDITS = 3
+const FREE_DAILY_LIMIT = 1
+const PAID_DAILY_LIMIT = 10
+const PAID_MONTHLY_LIMIT = 100
+
+let quotas = {}
+try {
+  quotas = JSON.parse(fs.readFileSync(QUOTA_FILE, 'utf8'))
+} catch {
+  quotas = {}
+}
+
+let saveQuotasPending = false
+function saveQuotas() {
+  if (saveQuotasPending) return
+  saveQuotasPending = true
+  setImmediate(() => {
+    saveQuotasPending = false
+    fs.writeFile(QUOTA_FILE, JSON.stringify(quotas), () => {})
+  })
+}
+
+function todayKey() {
+  return new Date().toISOString().slice(0, 10) // YYYY-MM-DD
+}
+function monthKey() {
+  return new Date().toISOString().slice(0, 7) // YYYY-MM
+}
+
+function getQuota(uid) {
+  let q = quotas[uid]
+  if (!q) {
+    q = { totalCount: 0, dailyCount: 0, dailyDate: todayKey(), monthlyCount: 0, monthlyMonth: monthKey() }
+    quotas[uid] = q
+  }
+  if (q.dailyDate !== todayKey()) {
+    q.dailyDate = todayKey()
+    q.dailyCount = 0
+  }
+  if (q.monthlyMonth !== monthKey()) {
+    q.monthlyMonth = monthKey()
+    q.monthlyCount = 0
+  }
+  return q
+}
+
+// Vérifie le quota de l'utilisateur sans le consommer (pour messages d'erreur
+// clairs) ; l'incrémentation n'a lieu que si la génération est bien lancée.
+function checkQuota(user) {
+  const isPaid = user.role === 'premium' || user.role === 'enseignant' || user.premium
+  const q = getQuota(user.uid)
+
+  if (isPaid) {
+    if (q.monthlyCount >= PAID_MONTHLY_LIMIT) {
+      return { ok: false, error: `Quota mensuel atteint (${PAID_MONTHLY_LIMIT} générations/mois).` }
+    }
+    if (q.dailyCount >= PAID_DAILY_LIMIT) {
+      return { ok: false, error: `Quota journalier atteint (${PAID_DAILY_LIMIT} générations/jour).` }
+    }
+    return { ok: true }
+  }
+
+  if (q.totalCount < FREE_STARTER_CREDITS) return { ok: true }
+  if (q.dailyCount < FREE_DAILY_LIMIT) return { ok: true }
+  return {
+    ok: false,
+    error: 'Quota gratuit atteint pour aujourd’hui (1 génération/jour), revenez demain ou passez en compte payant.',
+  }
+}
+
+function consumeQuota(user) {
+  const q = getQuota(user.uid)
+  q.totalCount += 1
+  q.dailyCount += 1
+  q.monthlyCount += 1
+  saveQuotas()
 }
 
 // --- Jobs en mémoire ---
@@ -79,11 +197,12 @@ function activeJobFor(uid) {
 }
 
 // --- Helpers HTTP ---
-function sendJson(res, status, body) {
+function sendJson(res, status, body, origin) {
   const payload = JSON.stringify(body)
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': origin || ALLOWED_ORIGINS[0],
+    Vary: 'Origin',
   })
   res.end(payload)
 }
@@ -139,14 +258,19 @@ function parseRequest(body) {
 }
 
 const server = http.createServer(async (req, res) => {
-  // CORS : l'app (Firebase Hosting / localhost dev) appelle depuis un autre
-  // domaine ; l'accès est contrôlé par le token Firebase, pas par l'origine.
+  // CORS : restreint aux domaines connus de l'app (le token Firebase reste
+  // la vraie protection, mais on évite qu'un site tiers rejoue les appels
+  // authentifiés depuis le navigateur d'un utilisateur).
+  const origin = corsOrigin(req)
+  const send = (status, body) => sendJson(res, status, body, origin)
+
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': origin,
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       'Access-Control-Max-Age': '86400',
+      Vary: 'Origin',
     })
     res.end()
     return
@@ -156,14 +280,14 @@ const server = http.createServer(async (req, res) => {
 
   try {
     if (req.method === 'GET' && url.pathname === '/leggendo/health') {
-      sendJson(res, 200, { ok: true, model: GLM_MODEL, jobs: jobs.size })
+      send(200, { ok: true, model: GLM_MODEL, jobs: jobs.size })
       return
     }
 
     if (req.method === 'GET' && url.pathname === '/leggendo/taxonomy') {
       // La page « Créer son texte » peut charger la taxonomie ici (une seule
       // source de vérité côté serveur).
-      sendJson(res, 200, {
+      send(200, {
         themes: taxonomy.themes,
         genres: taxonomy.genres,
         sizes: taxonomy.sizes,
@@ -176,12 +300,12 @@ const server = http.createServer(async (req, res) => {
       const auth = req.headers.authorization || ''
       const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
       if (!idToken) {
-        sendJson(res, 401, { error: 'Connexion requise.' })
+        send(401, { error: 'Connexion requise.' })
         return
       }
       const user = await verifyIdToken(idToken)
       if (!user) {
-        sendJson(res, 401, { error: 'Session invalide ou expirée, reconnectez-vous.' })
+        send(401, { error: 'Session invalide ou expirée, reconnectez-vous.' })
         return
       }
 
@@ -189,26 +313,33 @@ const server = http.createServer(async (req, res) => {
       try {
         body = JSON.parse(await readBody(req))
       } catch {
-        sendJson(res, 400, { error: 'JSON invalide.' })
+        send(400, { error: 'JSON invalide.' })
         return
       }
       const { errors, theme, genre, size, level, title, summary } = parseRequest(body)
       if (errors.length) {
-        sendJson(res, 400, { error: errors.join(' ; ') })
+        send(400, { error: errors.join(' ; ') })
         return
       }
       if (activeJobFor(user.uid)) {
-        sendJson(res, 429, {
+        send(429, {
           error: 'Une génération est déjà en cours pour votre compte, patientez.',
         })
         return
       }
+      const quota = checkQuota(user)
+      if (!quota.ok) {
+        send(429, { error: quota.error })
+        return
+      }
+      consumeQuota(user)
 
       const jobId = crypto.randomUUID()
       const job = { uid: user.uid, status: 'pending', createdAt: Date.now(), title }
       jobs.set(jobId, job)
+      const q = getQuota(user.uid)
       console.log(
-        `[job ${jobId}] ${user.email || user.uid} — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} »`
+        `[job ${jobId}] ${user.email || user.uid} (${user.role}) — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} » — quota jour ${q.dailyCount}, mois ${q.monthlyCount}, total ${q.totalCount}`
       )
 
       // Génération en tâche de fond ; le client sonde /leggendo/jobs/<id>.
@@ -234,7 +365,7 @@ const server = http.createServer(async (req, res) => {
         }
       })()
 
-      sendJson(res, 202, { jobId })
+      send(202, { jobId })
       return
     }
 
@@ -246,12 +377,11 @@ const server = http.createServer(async (req, res) => {
       const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
       const user = idToken ? await verifyIdToken(idToken) : null
       if (!user) {
-        sendJson(res, 401, { error: 'Connexion requise.' })
+        send(401, { error: 'Connexion requise.' })
         return
       }
       const active = activeJobFor(user.uid)
-      sendJson(
-        res,
+      send(
         200,
         active
           ? {
@@ -272,15 +402,15 @@ const server = http.createServer(async (req, res) => {
       const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
       const user = idToken ? await verifyIdToken(idToken) : null
       if (!user) {
-        sendJson(res, 401, { error: 'Connexion requise.' })
+        send(401, { error: 'Connexion requise.' })
         return
       }
       const job = jobs.get(jobMatch[1])
       if (!job || job.uid !== user.uid) {
-        sendJson(res, 404, { error: 'Job inconnu ou expiré.' })
+        send(404, { error: 'Job inconnu ou expiré.' })
         return
       }
-      sendJson(res, 200, {
+      send(200, {
         status: job.status,
         ...(job.status === 'done' ? { result: job.result } : {}),
         ...(job.status === 'error' ? { error: job.error } : {}),
@@ -288,10 +418,10 @@ const server = http.createServer(async (req, res) => {
       return
     }
 
-    sendJson(res, 404, { error: 'Route inconnue.' })
+    send(404, { error: 'Route inconnue.' })
   } catch (err) {
     console.error('Erreur serveur :', err)
-    sendJson(res, 500, { error: 'Erreur interne du serveur.' })
+    send(500, { error: 'Erreur interne du serveur.' })
   }
 })
 
