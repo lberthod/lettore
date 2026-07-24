@@ -4,29 +4,41 @@ Ce document explique comment l'application est construite : ses principes, ses m
 
 ## Vue d'ensemble
 
-Leggendo est une **SPA Vue 3 entièrement statique** : pas de backend applicatif, pas d'API de traduction, pas de base de données obligatoire. Tout le contenu (textes, lexiques, traductions de phrases) est pré-généré dans des fichiers JSON embarqués dans le build. Les seuls services externes sont optionnels : Firebase Auth (comptes) et Stripe (paiement), tous deux désactivés tant que leur configuration n'est pas remplie.
+Leggendo est une **SPA Vue 3 essentiellement statique** : pas d'API de traduction, pas de base de données obligatoire. Tout le catalogue (227 textes, lexiques, traductions de phrases) est pré-généré dans des fichiers JSON embarqués dans le build. Les services externes sont optionnels et chargés à la demande : Firebase Auth (comptes), Firestore (textes créés par les utilisateurs), Stripe (paiement) — l'app tourne sans eux si leur configuration n'est pas remplie. La seule pièce serveur applicative est l'API « Créer son texte » sur le VPS ([leggendo-server/](leggendo-server/)).
 
 ```
 ┌─────────────────────────── Navigateur ───────────────────────────┐
 │                                                                  │
-│  App.vue ── router.js ──┬── HomeView        (liste des textes)   │
+│  App.vue ── router.js ──┬── HomeView        (accueil)            │
+│                         ├── LibraryView     (bibliothèque,       │
+│                         │                    filtres niveau/     │
+│                         │                    genre/thème)        │
 │                         ├── ReaderView      (lecteur, lazy)      │
 │                         │     ├── TranslationOverlay             │
 │                         │     └── QuizSection                    │
+│                         ├── CreateTextView  (« Créer son texte »)│
+│                         ├── MyTextsView     (« Mes textes »)     │
 │                         ├── WordsView       (mots favoris)       │
 │                         ├── LoginView / ProfileView              │
-│                         ├── PricingView                          │
-│                         └── pages statiques (à-propos, CGU…)     │
+│                         ├── PricingView / AdminView              │
+│                         └── pages statiques (à-propos, méthode,  │
+│                                              CGU…)               │
 │                                                                  │
-│  translate.js   lexique local (aucune API)                       │
-│  tts.js         Web Speech API (voix it-IT du système)           │
-│  progress.js    localStorage (lecture, favoris, préférences)     │
+│  translate.js       lexique local (aucune API)                   │
+│  tts.js             Web Speech API (voix it-IT du système)       │
+│  progress.js        localStorage (lecture, favoris, préférences) │
+│  lib/access.js      aperçu gratuit / accès connecté / admin      │
 │  lib/auth.js ───┐                                                │
 │  lib/firebase.js┴─→ Firebase Auth   (optionnel, chargé à la      │
-│  lib/stripe.js ───→ Payment Links     demande si configuré)      │
+│  lib/userTexts.js─→ Firestore         demande si configuré)      │
+│  lib/stripe.js ───→ Payment Links                                │
+│  lib/generation.js─→ API VPS (« Créer son texte », mode job)     │
 │                                                                  │
 └──────────────────────────────────────────────────────────────────┘
          build Vite → dist/ → Firebase Hosting (rewrite SPA)
+
+   VPS : leggendo-server/ (génération à la demande, GLM)
+         generator/       (production du catalogue, cron)
 ```
 
 ## Principes directeurs
@@ -43,6 +55,7 @@ Chaque texte vit dans `src/texts/<id>.json` et embarque tout ce dont le lecteur 
 {
   "id": "marco",
   "title": "La mattina di Marco",
+  "level": "A1",
   "paragraphs": ["La mattina, Marco si sveglia presto…"],
   "words": { "mattina": "matin", "presto": "tôt" },
   "sentences": { "La mattina, Marco si sveglia presto.": "Le matin, Marco se réveille tôt." },
@@ -50,37 +63,38 @@ Chaque texte vit dans `src/texts/<id>.json` et embarque tout ce dont le lecteur 
 }
 ```
 
-`src/texts/index.json` est l'index léger (titre, niveau CECR, extrait, nombre de mots) importé statiquement : c'est lui qu'utilisent la page d'accueil, le garde de navigation du routeur et les balises SEO — sans charger le contenu des textes.
+`src/texts/index.json` est l'index léger (titre, niveau CECR, extrait, nombre de mots, `genre`, `category`) importé statiquement : c'est lui qu'utilisent l'accueil, la bibliothèque et ses filtres, le garde de navigation du routeur et les balises SEO — sans charger le contenu des textes.
+
+La taxonomie du catalogue est définie dans [src/texts/category.json](src/texts/category.json) : niveaux (A1–C2), tailles (`corto` → `molto_lungo`), et deux dimensions orthogonales — **genre** (la forme : récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (le sujet : cuisine, voyages, montagne, histoire…). Ce fichier sert à la fois à l'UI (filtres, formulaire « Créer son texte ») et aux générateurs (hints de prompt, matrice curée). La stratégie derrière cette taxonomie est documentée dans [ANALYSE_CATEGORIES.md](ANALYSE_CATEGORIES.md).
 
 Le chargement à la demande repose sur `import.meta.glob('../texts/*.json')` dans [ReaderView.vue](src/views/ReaderView.vue) : Vite génère un chunk par fichier, et le lecteur ne télécharge que le texte demandé. Les textes précédent et suivant sont préchargés pour une navigation instantanée.
 
-### Base de contenu en ligne (Firestore) et pipeline LLM
+### Production du catalogue : `generator/`
 
-Direction validée : **Firestore pour la base de textes, le VPS pour la génération**. Motivation principale : les textes premium embarqués dans le build sont téléchargeables par n'importe qui — le modèle Premium exige un stockage servi après vérification de l'abonnement.
+Le catalogue est produit par LLM (GLM, endpoint compatible OpenAI) avec des scripts Node **sans dépendance npm**, pensés pour tourner en cron sur le VPS. Le script principal, [generator/orchestrate-matrix.mjs](generator/orchestrate-matrix.mjs), remplit la matrice curée genre × thème × niveau × taille de `category.json`. Invariant central, commun à tous les générateurs : la **couverture lexicale totale** — chaque mot et chaque phrase du texte doit avoir sa traduction, validé en reproduisant exactement le découpage du lecteur (`ReaderView`/`translate.js`), avec passes de réparation automatiques ; sinon le texte est rejeté. Sortie : `src/texts/<id>.json` + mise à jour de `index.json`. Voir [generator/README.md](generator/README.md).
+
+Le dossier `scripts/` contient l'ancien pipeline (API Claude, structured outputs) et les outils de publication Firestore (`draft → published`, [firestore.rules](firestore.rules)) — voir [scripts/README.md](scripts/README.md). Ce circuit Firestore-catalogue reste la direction envisagée pour servir les textes premium hors build, mais n'est pas branché côté app : aujourd'hui tout le catalogue est embarqué et l'accès est contrôlé côté client (voir « Accès » ci-dessous).
+
+### Textes à la demande : « Créer son texte » (`leggendo-server/`)
+
+Un utilisateur connecté décrit le texte qu'il veut (sujet, niveau, genre, thème, taille) ; la génération tourne sur le VPS et le résultat est persisté dans Firestore, lié à son compte.
 
 ```
-   Mac / VPS (cron)                        Firebase
-┌──────────────────────┐   Admin SDK   ┌─────────────────────────────┐
-│ scripts/              │ ────────────▶ │ Firestore                   │
-│  generate-text.mjs    │  (brouillon)  │  texts/<id>  status,premium │
-│   API Claude          │               │  meta/index  (publiés)      │
-│   + validation        │  relecture    │                             │
-│  publish-text.mjs     │ ────────────▶ │ Security rules :            │
-└──────────────────────┘  (publication) │  gratuit → public           │
-                                        │  premium → claim `premium`  │
-                                        │  (posé par webhook Stripe)  │
-                                        └──────────┬──────────────────┘
-                                                   │ lecture + cache offline
-                                                   ▼
-                                                l'app Vue
+  l'app Vue                      VPS (Caddy → Node :8091)              Firebase
+┌──────────────────┐  POST /generate   ┌────────────────────┐      ┌──────────────────┐
+│ CreateTextView    │ ────────────────▶ │ leggendo-server/   │      │ Auth              │
+│ lib/generation.js │   { jobId }       │  vérifie l'ID token│─────▶│ (identitytoolkit) │
+│  (état module +   │  GET /jobs/<id>   │  1 job actif/compte│      │                  │
+│   localStorage)   │ ◀──── polling ─── │  GLM + validation  │      │ Firestore         │
+│ lib/userTexts.js  │ ── texte fini ──────────────────────────────▶ │  userTexts/{id}   │
+│ MyTextsView       │                   └────────────────────┘      │  users/{uid}      │
+└──────────────────┘                                                └──────────────────┘
 ```
 
-- **[scripts/generate-text.mjs](scripts/generate-text.mjs)** : appelle l'API Claude avec un schéma JSON strict (structured outputs), puis valide la **couverture lexicale totale** en reproduisant exactement le découpage du lecteur — chaque mot et chaque phrase doit avoir sa traduction, avec passes de réparation automatiques. Deux destinations : fichier local dans `src/texts/` (workflow actuel) ou brouillon Firestore (`--sink firestore`).
-- **[scripts/publish-text.mjs](scripts/publish-text.mjs)** : bascule `draft → published` et reconstruit le doc `meta/index`.
-- **[firestore.rules](firestore.rules)** : les brouillons sont invisibles ; les textes publiés gratuits sont publics ; les premium exigent le custom claim `premium`. L'écriture passe exclusivement par l'Admin SDK.
-- **Côté app (à venir)** : les 3-4 textes gratuits restent embarqués dans le build (SEO, première visite instantanée) ; les autres seront chargés depuis Firestore avec sa persistance offline — le principe hors-ligne est conservé.
-
-Voir [scripts/README.md](scripts/README.md) pour l'utilisation.
+- **[leggendo-server/](leggendo-server/)** : serveur Node sans dépendance (http natif + fetch). La génération prenant plusieurs minutes, l'API fonctionne en **mode job** (POST `/leggendo/generate` → `{ jobId }`, puis polling de `/leggendo/jobs/<id>`). Le token Firebase est vérifié via l'API identitytoolkit (sans SDK admin), un seul job actif par compte, jobs en mémoire avec TTL et filet anti-blocage. Même validation de couverture lexicale que le catalogue (avec tolérance : jusqu'à 2 phrases sans traduction). Voir [leggendo-server/README.md](leggendo-server/README.md).
+- **[lib/generation.js](src/lib/generation.js)** : l'état du job vit au niveau module (pas dans une vue) pour que la génération continue pendant la navigation, et il est persisté dans `localStorage` pour reprendre le polling après un rechargement. À la fin, le texte est enregistré automatiquement dans Firestore.
+- **[lib/userTexts.js](src/lib/userTexts.js)** : texte complet dans `userTexts/{id}` (champ `owner`), index léger dans `users/{uid}.createdTexts` pour lister sans requête. Firestore est importé dynamiquement, comme le reste du SDK.
+- **Lecture** : `ReaderView` sert aussi les textes utilisateurs — si l'id n'est pas dans l'index du catalogue, il charge depuis Firestore via `loadUserText()`. La route `/condividi/:id` permet de partager un texte créé.
 
 ## Le lecteur (ReaderView)
 
@@ -94,6 +108,7 @@ C'est le cœur de l'app. Pipeline de rendu :
 ## État et persistance
 
 - **[progress.js](src/progress.js)** : un objet Vue `reactive` (textes lus, mots favoris, vitesse TTS) sauvegardé dans `localStorage` via un `watch` profond. Aucun compte requis — la progression est locale à l'appareil.
+- **[lib/generation.js](src/lib/generation.js)** et **[lib/userTexts.js](src/lib/userTexts.js)** : état du job de génération (module + `localStorage`) et textes créés (Firestore) — voir la section « Créer son texte » ci-dessus.
 - **[lib/auth.js](src/lib/auth.js)** : couche Firebase Auth (email/mot de passe, Google popup, reset). Expose `currentUser` (ref réactive) et `authReady` (promesse résolue une fois la session restaurée — utilisée par le garde du routeur pour éviter une redirection prématurée vers /connexion).
 
 À terme, la progression pourra être synchronisée avec le compte (Firestore), mais ce n'est pas le cas aujourd'hui : compte et progression sont indépendants.
@@ -102,13 +117,15 @@ C'est le cœur de l'app. Pipeline de rendu :
 
 [router.js](src/router.js) utilise l'historique HTML5 (`createWebHistory`), ce qui suppose le rewrite SPA configuré dans `firebase.json`. Trois mécanismes notables :
 
-- **Garde d'existence** : `/testo/:id` vérifie l'id dans l'index et renvoie à l'accueil sinon.
-- **Garde d'auth** : les routes `requiresAuth` attendent `authReady` avant de décider.
+- **Garde d'existence** : `/testo/:id` accepte les ids du catalogue et, si Firebase est configuré, les ids hors catalogue (textes utilisateurs chargés depuis Firestore) ; sinon renvoi vers la bibliothèque. `/condividi/:id` sert la lecture publique d'un texte créé et partagé (documents `public: true`), sans compte.
+- **Garde d'auth** : les routes `requiresAuth` (profil, créer son texte, mes textes, admin…) attendent `authReady` avant de décider.
 - **SEO par route** : `afterEach` met à jour `document.title` et la meta description ; pour le lecteur, elles sont générées depuis l'index des textes (titre, niveau, extrait).
 
-## Monétisation
+## Accès et monétisation
 
-Modèle freemium défini dans [lib/stripe.js](src/lib/stripe.js) : Gratuit / Premium mensuel (5 CHF) / Premium annuel (45 CHF). Le paiement passe par des **Payment Links Stripe** (page hébergée par Stripe, aucun backend). Note : le contrôle d'accès Premium côté client n'est pas encore branché — remplir les Payment Links ne suffit pas, il faudra relier l'état d'abonnement (webhook Stripe → Firestore, ou Stripe Customer Portal) au déblocage des textes.
+**Accès** ([lib/access.js](src/lib/access.js)) : les visiteurs non connectés voient un **aperçu gratuit de 6 textes** (échantillon réparti sur les niveaux) ; un compte (gratuit) débloque tout le catalogue. Si Firebase n'est pas configuré (mode développement), tout est ouvert. La page d'administration est réservée à un e-mail admin côté client — l'autorisation réelle est vérifiée côté serveur.
+
+**Monétisation** : modèle freemium défini dans [lib/stripe.js](src/lib/stripe.js) : Gratuit / Premium mensuel (5 CHF) / Premium annuel (45 CHF). Le paiement passe par des **Payment Links Stripe** (page hébergée par Stripe, aucun backend). Note : le contrôle d'accès Premium côté client n'est pas encore branché — remplir les Payment Links ne suffit pas, il faudra relier l'état d'abonnement (webhook Stripe → Firestore, ou Stripe Customer Portal) au déblocage des textes.
 
 Sur les stores (voir README, phase 3), cette brique sera remplacée par les achats in-app via un branchement `Capacitor.isNativePlatform()` — Stripe reste le canal web.
 
@@ -116,4 +133,4 @@ Sur les stores (voir README, phase 3), cette brique sera remplacée par les acha
 
 - **Vite 6** : `npm run build` → `dist/`, avec code-splitting automatique (une entrée + un chunk par vue lazy + un chunk par texte).
 - **Firebase Hosting** : sert `dist/` en statique avec rewrite de toutes les routes vers `index.html`.
-- **PWA** : `vite-plugin-pwa` est installé mais pas encore activé (phase 2 de la feuille de route).
+- **PWA** : `vite-plugin-pwa` est actif (`registerType: 'autoUpdate'`) : manifest + service worker, précache de l'app et des textes — l'ensemble fonctionne hors ligne une fois chargé.
