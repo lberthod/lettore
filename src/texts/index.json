@@ -2019,5 +2019,305 @@
     "wordCount": 98,
     "genre": "pratico",
     "category": "storia_antica"
+  },
+  {
+    "id": "partita_parco",
+    "title": "La partita al parco",
+    "level": "A1",
+    "excerpt": "È sabato. I bambini vanno al parco. Vogliono giocare a calcio con gli amici.",
+    "paragraphCount": 4,
+    "wordCount": 73,
+    "genre": "racconto",
+    "category": "sport"
+  },
+  {
+    "id": "gita_montagna",
+    "title": "La gita in montagna",
+    "level": "A1",
+    "excerpt": "Oggi la famiglia fa una gita in montagna. Il sentiero è facile. Il cielo è azzurro. Tutti sono contenti.",
+    "paragraphCount": 4,
+    "wordCount": 70,
+    "genre": "racconto",
+    "category": "montagna"
+  },
+  {
+    "id": "nord_sud",
+    "title": "L'Italia: il nord e il sud",
+    "level": "A1",
+    "excerpt": "L'Italia ha una forma speciale. Sembra uno stivale. È facile da vedere sulla mappa.",
+    "paragraphCount": 4,
+    "wordCount": 72,
+    "genre": "pratico",
+    "category": "regioni"
+  },
+  {
+    "id": "computer_nonna",
+    "title": "La nonna e il computer",
+    "level": "A1",
+    "excerpt": "La nonna ha un computer nuovo. Il computer è un regalo. Ma la nonna non sa usare il computer.",
+    "paragraphCount": 4,
+    "wordCount": 75,
+    "genre": "racconto",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "cartolina_toscana",
+    "title": "Cartolina dalla Toscana",
+    "level": "A2",
+    "excerpt": "Caro Marco, ti scrivo da Firenze. Sono in Toscana da quattro giorni e sono molto contenta. Il tempo è bellissimo e c'è sempre il sole.",
+    "paragraphCount": 5,
+    "wordCount": 125,
+    "genre": "lettera_diario",
+    "category": "regioni"
+  },
+  {
+    "id": "piccolo_gladiatore",
+    "title": "Il piccolo gladiatore",
+    "level": "A2",
+    "excerpt": "Tito era un bambino di otto anni e viveva nella Roma antica. Suo padre costruiva ponti e strade per la città.",
+    "paragraphCount": 6,
+    "wordCount": 124,
+    "genre": "racconto",
+    "category": "storia_antica"
+  },
+  {
+    "id": "al_museo",
+    "title": "Al museo",
+    "level": "A2",
+    "excerpt": "— Ciao Anna! Hai già comprato i biglietti per il museo?",
+    "paragraphCount": 8,
+    "wordCount": 117,
+    "genre": "dialogo",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "racconti_nonni",
+    "title": "I racconti dei nonni",
+    "level": "A2",
+    "excerpt": "La domenica, Marco e Sofia pranzano dai nonni. Dopo il pranzo, i nonni raccontano sempre storie della loro gioventù.",
+    "paragraphCount": 6,
+    "wordCount": 116,
+    "genre": "racconto",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "coro_paese",
+    "title": "Il coro del paese",
+    "level": "B1",
+    "excerpt": "Nel nostro paese, ogni giovedì sera, la sala parrocchiale si riempiva di voci. Era la serata del coro, e nessuno voleva mancare. Fuori facev…",
+    "paragraphCount": 7,
+    "wordCount": 234,
+    "genre": "racconto",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "troppi_turisti",
+    "title": "Troppi turisti a Venezia?",
+    "level": "B2",
+    "excerpt": "— Hai letto la notizia? Venezia ha superato i trenta milioni di visitatori in un anno. Secondo me il ticket d'ingresso era una decisione nec…",
+    "paragraphCount": 10,
+    "wordCount": 235,
+    "genre": "dialogo",
+    "category": "viaggi"
+  },
+  {
+    "id": "rifugio_dialogo",
+    "title": "Al rifugio di montagna",
+    "level": "A2",
+    "excerpt": "— Buonasera, avete ancora posti letto per stanotte? Siamo in due.",
+    "paragraphCount": 6,
+    "wordCount": 74,
+    "genre": "dialogo",
+    "category": "montagna"
+  },
+  {
+    "id": "al_parco_animali",
+    "title": "Al parco degli animali",
+    "level": "A1",
+    "excerpt": "— Guarda, mamma, un coniglio bianco! Posso dargli da mangiare?",
+    "paragraphCount": 6,
+    "wordCount": 56,
+    "genre": "dialogo",
+    "category": "natura_animali"
+  },
+  {
+    "id": "poesia_colosseo",
+    "title": "Pietra che ricorda",
+    "level": "B2",
+    "excerpt": "Cerchio di pietra, ferita aperta al cielo,",
+    "paragraphCount": 8,
+    "wordCount": 56,
+    "genre": "poesia",
+    "category": "storia_antica"
+  },
+  {
+    "id": "pane_magico",
+    "title": "Il pane che parlava",
+    "level": "A1",
+    "excerpt": "In un piccolo forno viveva una pagnotta magica che sapeva parlare.",
+    "paragraphCount": 6,
+    "wordCount": 75,
+    "genre": "fiaba",
+    "category": "cucina"
+  },
+  {
+    "id": "stazione_alpina",
+    "title": "La stazione alpina del futuro",
+    "level": "B1",
+    "excerpt": "Nel 2090, in cima a una montagna delle Alpi, sorge una stazione di ricerca completamente automatizzata.",
+    "paragraphCount": 6,
+    "wordCount": 92,
+    "genre": "fantascienza",
+    "category": "montagna"
+  },
+  {
+    "id": "mistero_zoo",
+    "title": "Il mistero dello zoo",
+    "level": "B1",
+    "excerpt": "Una mattina, i custodi dello zoo scoprono che il pinguino più famoso, Pino, è scomparso dalla sua vasca.",
+    "paragraphCount": 6,
+    "wordCount": 98,
+    "genre": "giallo",
+    "category": "natura_animali"
+  },
+  {
+    "id": "tavola_italiani",
+    "title": "La tavola degli italiani",
+    "level": "B1",
+    "excerpt": "Per gli italiani, il pranzo della domenica resta ancora oggi un momento sacro, riservato alla famiglia riunita.",
+    "paragraphCount": 6,
+    "wordCount": 104,
+    "genre": "documentario",
+    "category": "vita_quotidiana"
+  },
+  {
+    "id": "diario_cucina",
+    "title": "Diario di cucina con la nonna",
+    "level": "A2",
+    "excerpt": "Lunedì. Oggi la nonna mi ha insegnato a fare la pasta fresca con le uova e la farina.",
+    "paragraphCount": 6,
+    "wordCount": 101,
+    "genre": "lettera_diario",
+    "category": "cucina"
+  },
+  {
+    "id": "incontro_regionale",
+    "title": "Nord contro Sud",
+    "level": "B1",
+    "excerpt": "MARCO (MILANESE) — Scusa, ma qui al Sud si mangia sempre così tardi? Da noi si cena già alle sette!",
+    "paragraphCount": 6,
+    "wordCount": 100,
+    "genre": "teatro",
+    "category": "regioni"
+  },
+  {
+    "id": "orario_museo",
+    "title": "Informazioni per la visita al museo",
+    "level": "A2",
+    "excerpt": "Il museo è aperto dal martedì alla domenica, dalle nove alle diciotto.",
+    "paragraphCount": 6,
+    "wordCount": 75,
+    "genre": "pratico",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "due_giugno",
+    "title": "La festa del due giugno",
+    "level": "A1",
+    "excerpt": "Oggi è il due giugno. È la festa della Repubblica. La famiglia guarda la sfilata alla televisione.",
+    "paragraphCount": 4,
+    "wordCount": 62,
+    "genre": "racconto",
+    "category": "storia_moderna"
+  },
+  {
+    "id": "vicini_di_casa",
+    "title": "I vicini di casa",
+    "level": "A1",
+    "excerpt": "La signora Rosa è anziana. Abita da sola al primo piano. I vicini le vogliono bene.",
+    "paragraphCount": 4,
+    "wordCount": 60,
+    "genre": "racconto",
+    "category": "societa"
+  },
+  {
+    "id": "filastrocca_parole",
+    "title": "Filastrocca delle parole",
+    "level": "A1",
+    "excerpt": "Mamma è una parola d'amore.",
+    "paragraphCount": 8,
+    "wordCount": 40,
+    "genre": "poesia",
+    "category": "arte_lingua"
+  },
+  {
+    "id": "pizza_in_famiglia",
+    "title": "La pizza in famiglia",
+    "level": "A1",
+    "excerpt": "MAMMA — Oggi facciamo la pizza in casa!",
+    "paragraphCount": 8,
+    "wordCount": 61,
+    "genre": "teatro",
+    "category": "cucina"
+  },
+  {
+    "id": "ciao_da_milano",
+    "title": "Ciao da Milano",
+    "level": "A1",
+    "excerpt": "Caro Hugo, come stai? Io sono a Milano. Abito a casa di mia zia Carla.",
+    "paragraphCount": 5,
+    "wordCount": 70,
+    "genre": "lettera_diario",
+    "category": "viaggi"
+  },
+  {
+    "id": "dove_e_micio",
+    "title": "Dov'è Micio?",
+    "level": "A1",
+    "excerpt": "Micio è il gatto di Anna. Oggi Micio non è in cucina. La sua ciotola è piena.",
+    "paragraphCount": 4,
+    "wordCount": 63,
+    "genre": "giallo",
+    "category": "natura_animali"
+  },
+  {
+    "id": "amico_robot",
+    "title": "Il mio amico robot",
+    "level": "A1",
+    "excerpt": "Nino ha un piccolo robot. Il robot si chiama Bip.",
+    "paragraphCount": 4,
+    "wordCount": 62,
+    "genre": "fantascienza",
+    "category": "scienza_tecnologia"
+  },
+  {
+    "id": "drago_etna",
+    "title": "Il drago dell'Etna",
+    "level": "B1",
+    "excerpt": "C'era una volta, sotto l'Etna, un drago enorme che dormiva da mille anni. Quando il drago russava, la montagna fumava e la terra tremava fin…",
+    "paragraphCount": 7,
+    "wordCount": 215,
+    "genre": "fiaba",
+    "category": "regioni"
+  },
+  {
+    "id": "primo_contratto",
+    "title": "Guida al primo contratto di lavoro",
+    "level": "B2",
+    "excerpt": "Hai trovato il tuo primo lavoro? Congratulazioni! Ma prima di firmare il contratto, fermati e leggilo con attenzione: è il documento che def…",
+    "paragraphCount": 9,
+    "wordCount": 243,
+    "genre": "pratico",
+    "category": "scuola_lavoro"
+  },
+  {
+    "id": "dialogo_biennale",
+    "title": "Ma questa è arte?",
+    "level": "C2",
+    "excerpt": "— Allora, illuminami: che cosa dovrei provare, esattamente, davanti a una banana appesa al muro con il nastro adesivo?",
+    "paragraphCount": 12,
+    "wordCount": 275,
+    "genre": "dialogo",
+    "category": "arte_lingua"
   }
 ]

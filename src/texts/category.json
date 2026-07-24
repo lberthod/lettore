@@ -63,7 +63,9 @@
         "A1",
         "A2",
         "B1",
-        "C1"
+        "B2",
+        "C1",
+        "C2"
       ]
     },
     {
@@ -97,6 +99,7 @@
       "icon": "🚀",
       "hint": "Futur proche, robots, mystères surnaturels, mondes imaginaires. Intrigue simple au présent pour A2.",
       "levels": [
+        "A1",
         "A2",
         "B1",
         "B2",
@@ -110,6 +113,7 @@
       "icon": "🕵️",
       "hint": "Enquête, disparition, indices, chute finale. Le giallo, genre très italien.",
       "levels": [
+        "A1",
         "A2",
         "B1",
         "B2",
@@ -149,6 +153,7 @@
       "icon": "🎭",
       "hint": "Petite scène jouable à 2-3 personnages, didascalies minimales, humour. Répliques préfixées par le nom du personnage.",
       "levels": [
+        "A1",
         "A2",
         "B1",
         "B2",
@@ -164,7 +169,8 @@
       "levels": [
         "A1",
         "A2",
-        "B1"
+        "B1",
+        "B2"
       ]
     }
   ],

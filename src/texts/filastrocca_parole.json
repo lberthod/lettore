@@ -1,0 +1,88 @@
+{
+  "id": "filastrocca_parole",
+  "title": "Filastrocca delle parole",
+  "level": "A1",
+  "genre": "poesia",
+  "category": "arte_lingua",
+  "paragraphs": [
+    "Mamma è una parola d'amore.",
+    "Sole è caldo come il cuore.",
+    "Mare canta una canzone.",
+    "Ogni parola è un'emozione.",
+    "Ogni giorno imparo una parola.",
+    "Nuova e bella, e poi vola.",
+    "Le parole sono amiche vere.",
+    "Parlare insieme è un piacere."
+  ],
+  "questions": [
+    {
+      "q": "Che cosa è la parola mamma?",
+      "options": ["Una parola d'amore", "Una parola triste", "Un numero"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa canta il mare?",
+      "options": ["Una canzone", "Un nome", "Una storia"],
+      "correct": 0
+    },
+    {
+      "q": "Che cosa sono le parole?",
+      "options": ["Amiche vere", "Nemiche", "Case"],
+      "correct": 0
+    }
+  ],
+  "words": {
+    "filastrocca": "comptine",
+    "delle": "des",
+    "parole": "mots",
+    "mamma": "maman",
+    "è": "est",
+    "una": "une",
+    "parola": "mot",
+    "d'amore": "d'amour",
+    "sole": "soleil",
+    "caldo": "chaud",
+    "come": "comme",
+    "il": "le",
+    "cuore": "cœur",
+    "mare": "mer",
+    "canta": "chante",
+    "canzone": "chanson",
+    "ogni": "chaque",
+    "un'emozione": "une émotion",
+    "giorno": "jour",
+    "imparo": "(j')apprends",
+    "nuova": "nouvelle",
+    "e": "et",
+    "bella": "belle",
+    "poi": "puis",
+    "vola": "(il) vole / s'envole",
+    "le": "les",
+    "sono": "sont",
+    "amiche": "amies",
+    "vere": "vraies",
+    "parlare": "parler",
+    "insieme": "ensemble",
+    "un": "un",
+    "piacere": "plaisir",
+    "che": "que / quoi",
+    "cosa": "chose (« che cosa » = qu'est-ce que)",
+    "la": "la",
+    "triste": "triste",
+    "numero": "nombre / numéro",
+    "nome": "nom",
+    "storia": "histoire",
+    "nemiche": "ennemies",
+    "case": "maisons"
+  },
+  "sentences": {
+    "Mamma è una parola d'amore.": "Maman est un mot d'amour.",
+    "Sole è caldo come il cuore.": "Soleil est chaud comme le cœur.",
+    "Mare canta una canzone.": "Mer chante une chanson.",
+    "Ogni parola è un'emozione.": "Chaque mot est une émotion.",
+    "Ogni giorno imparo una parola.": "Chaque jour, j'apprends un mot.",
+    "Nuova e bella, e poi vola.": "Nouveau et beau, et puis il s'envole.",
+    "Le parole sono amiche vere.": "Les mots sont de vrais amis.",
+    "Parlare insieme è un piacere.": "Parler ensemble est un plaisir."
+  }
+}
