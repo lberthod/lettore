@@ -21,6 +21,7 @@
     "annotate:chapter": "node scripts/annotate-chapter.mjs",
     "orchestrate:book": "node scripts/orchestrate-book.mjs",
     "deploy": "node scripts/deploy-ftp.mjs",
+    "test": "vitest run",
     "test:rules": "firebase emulators:exec --only firestore \"node --test test/firestore-rules.test.mjs\""
   },
   "dependencies": {

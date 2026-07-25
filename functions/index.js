@@ -25,43 +25,13 @@ import { setGlobalOptions } from 'firebase-functions/v2'
 import { initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore } from 'firebase-admin/firestore'
+import { ROLES, requireAdmin, roleForPriceId } from './roles.mjs'
 
 initializeApp()
 setGlobalOptions({ region: 'europe-west1', maxInstances: 10 })
 
 const STRIPE_SECRET_KEY = defineSecret('STRIPE_SECRET_KEY')
 const STRIPE_WEBHOOK_SECRET = defineSecret('STRIPE_WEBHOOK_SECRET')
-
-// Seul ce compte peut appeler les fonctions d'administration ci-dessous.
-// L'e-mail vient du token Firebase Auth vérifié par onCall : il ne peut pas
-// être falsifié par le client.
-const ADMIN_EMAIL = 'lberthod@gmail.com'
-
-function requireAdmin(request) {
-  // Comparaison normalisée (casse, espaces) : certains fournisseurs (Google…)
-  // peuvent renvoyer l'e-mail avec une casse différente de celle saisie.
-  const email = (request.auth?.token?.email || '').trim().toLowerCase()
-  if (email !== ADMIN_EMAIL) {
-    console.warn('Appel admin refusé', {
-      email: email || '(aucun e-mail dans le token)',
-      uid: request.auth?.uid || null,
-    })
-    throw new HttpsError('permission-denied', 'Réservé à l’administrateur.')
-  }
-}
-
-const ROLES = ['gratuit', 'premium', 'premium_plus', 'enseignant']
-
-// Correspondance Stripe Price ID → rôle Leggendo. À compléter avec les Price
-// ID réels une fois les Payment Links/Checkout créés dans le dashboard
-// Stripe (voir README_TARIFICATION.md pour les formules). Tant qu'un prix
-// n'est pas dans cette table, le webhook retombe sur `premium: true` sans
-// préciser de rôle (comportement historique, non-régressif).
-const PRICE_ROLE_MAP = {
-  // 'price_xxx': 'premium',
-  // 'price_yyy': 'premium_plus',
-  // 'price_zzz': 'enseignant',
-}
 
 // Healthcheck simple : confirme que les Functions sont en ligne.
 export const ping = onRequest((req, res) => {
@@ -87,12 +57,7 @@ async function applyRole(uid, premium, role) {
 async function roleForSession(stripe, session) {
   try {
     const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 1 })
-    const priceId = lineItems.data[0]?.price?.id
-    const role = priceId ? PRICE_ROLE_MAP[priceId] : undefined
-    if (priceId && !role) {
-      console.warn('Price ID Stripe non répertorié dans PRICE_ROLE_MAP :', priceId)
-    }
-    return role
+    return roleForPriceId(lineItems.data[0]?.price?.id)
   } catch (err) {
     console.error('Impossible de lire les line items de la session Stripe :', err)
     return undefined
