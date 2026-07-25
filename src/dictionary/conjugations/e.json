@@ -1,0 +1,231 @@
+{
+  "entrarci": {
+    "presente": {
+      "io": "ci entro",
+      "tu": "ci entri",
+      "lui/lei": "c'entra",
+      "noi": "ci entriamo",
+      "voi": "ci entrate",
+      "loro": "ci entrano"
+    },
+    "passatoProssimo": {
+      "io": "ci sono entrato",
+      "tu": "ci sei entrato",
+      "lui/lei": "c'è entrato",
+      "noi": "ci siamo entrati",
+      "voi": "ci siete entrati",
+      "loro": "ci sono entrati"
+    },
+    "imperfetto": {
+      "io": "c'entravo",
+      "tu": "c'entravi",
+      "lui/lei": "c'entrava",
+      "noi": "c'entravamo",
+      "voi": "c'entravate",
+      "loro": "c'entravano"
+    },
+    "futuro": {
+      "io": "ci entrerò",
+      "tu": "ci entrerai",
+      "lui/lei": "ci entrerà",
+      "noi": "ci entreremo",
+      "voi": "ci entrerete",
+      "loro": "ci entreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ci entri",
+      "tu": "ci entri",
+      "lui/lei": "ci entri",
+      "noi": "ci entriamo",
+      "voi": "ci entriate",
+      "loro": "ci entrino"
+    },
+    "condizionale": {
+      "io": "ci entrerei",
+      "tu": "ci entreresti",
+      "lui/lei": "ci entrerebbe",
+      "noi": "ci entreremmo",
+      "voi": "ci entrereste",
+      "loro": "ci entrerebbero"
+    },
+    "imperativo": {
+      "tu": "entraci",
+      "lei": "ci entri",
+      "noi": "ci entriamo",
+      "voi": "entrateci",
+      "loro": "ci entrino"
+    }
+  },
+  "entrare": {
+    "presente": {
+      "io": "entro",
+      "tu": "entri",
+      "lui/lei": "entra",
+      "noi": "entriamo",
+      "voi": "entrate",
+      "loro": "entrano"
+    },
+    "passatoProssimo": {
+      "io": "sono entrato",
+      "tu": "sei entrato",
+      "lui/lei": "è entrato",
+      "noi": "siamo entrati",
+      "voi": "siete entrati",
+      "loro": "sono entrati"
+    },
+    "imperfetto": {
+      "io": "entravo",
+      "tu": "entravi",
+      "lui/lei": "entrava",
+      "noi": "entravamo",
+      "voi": "entravate",
+      "loro": "entravano"
+    },
+    "futuro": {
+      "io": "entrerò",
+      "tu": "entrerai",
+      "lui/lei": "entrerà",
+      "noi": "entreremo",
+      "voi": "entrerete",
+      "loro": "entreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "entri",
+      "tu": "entri",
+      "lui/lei": "entri",
+      "noi": "entriamo",
+      "voi": "entriate",
+      "loro": "entrino"
+    },
+    "condizionale": {
+      "io": "entrerei",
+      "tu": "entreresti",
+      "lui/lei": "entrerebbe",
+      "noi": "entreremmo",
+      "voi": "entrereste",
+      "loro": "entrerebbero"
+    },
+    "imperativo": {
+      "tu": "entra",
+      "lei": "entri",
+      "noi": "entriamo",
+      "voi": "entrate",
+      "loro": "entrino"
+    }
+  },
+  "esserci": {
+    "presente": {
+      "io": "ci sono",
+      "tu": "ci sei",
+      "lui/lei": "c'è",
+      "noi": "ci siamo",
+      "voi": "ci siete",
+      "loro": "ci sono"
+    },
+    "passatoProssimo": {
+      "io": "ci sono stato",
+      "tu": "ci sei stato",
+      "lui/lei": "c'è stato",
+      "noi": "ci siamo stati",
+      "voi": "ci siete stati",
+      "loro": "ci sono stati"
+    },
+    "imperfetto": {
+      "io": "c'ero",
+      "tu": "c'eri",
+      "lui/lei": "c'era",
+      "noi": "c'eravamo",
+      "voi": "c'eravate",
+      "loro": "c'erano"
+    },
+    "futuro": {
+      "io": "ci sarò",
+      "tu": "ci sarai",
+      "lui/lei": "ci sarà",
+      "noi": "ci saremo",
+      "voi": "ci sarete",
+      "loro": "ci saranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ci sia",
+      "tu": "ci sia",
+      "lui/lei": "ci sia",
+      "noi": "ci siamo",
+      "voi": "ci siate",
+      "loro": "ci siano"
+    },
+    "condizionale": {
+      "io": "ci sarei",
+      "tu": "ci saresti",
+      "lui/lei": "ci sarebbe",
+      "noi": "ci saremmo",
+      "voi": "ci sareste",
+      "loro": "ci sarebbero"
+    },
+    "imperativo": {
+      "tu": "ci sii",
+      "lei": "ci sia",
+      "noi": "ci siamo",
+      "voi": "ci siate",
+      "loro": "ci siano"
+    }
+  },
+  "essere": {
+    "presente": [
+      "sono",
+      "sei",
+      "è",
+      "siamo",
+      "siete",
+      "sono"
+    ],
+    "passato_prossimo": [
+      "sono stato/a",
+      "sei stato/a",
+      "è stato/a",
+      "siamo stati/e",
+      "siete stati/e",
+      "sono stati/e"
+    ],
+    "imperfetto": [
+      "ero",
+      "eri",
+      "era",
+      "eravamo",
+      "eravate",
+      "erano"
+    ],
+    "futuro": [
+      "sarò",
+      "sarai",
+      "sarà",
+      "saremo",
+      "sarete",
+      "saranno"
+    ],
+    "congiuntivo_presente": [
+      "sia",
+      "sia",
+      "sia",
+      "siamo",
+      "siate",
+      "siano"
+    ],
+    "condizionale": [
+      "sarei",
+      "saresti",
+      "sarebbe",
+      "saremmo",
+      "sareste",
+      "sarebbero"
+    ],
+    "imperativo": [
+      "-",
+      "sii",
+      "sia",
+      "siamo",
+      "siate",
+      "siano"
+    ]
+  }
+}

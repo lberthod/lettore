@@ -1,0 +1,173 @@
+{
+  "zampettare": {
+    "presente": {
+      "io": "zampetto",
+      "tu": "zampetti",
+      "lui/lei": "zampetta",
+      "noi": "zampettiamo",
+      "voi": "zampettate",
+      "loro": "zampettano"
+    },
+    "passatoProssimo": {
+      "io": "ho zampettato",
+      "tu": "hai zampettato",
+      "lui/lei": "ha zampettato",
+      "noi": "abbiamo zampettato",
+      "voi": "avete zampettato",
+      "loro": "hanno zampettato"
+    },
+    "imperfetto": {
+      "io": "zampettavo",
+      "tu": "zampettavi",
+      "lui/lei": "zampettava",
+      "noi": "zampettavamo",
+      "voi": "zampettavate",
+      "loro": "zampettavano"
+    },
+    "futuro": {
+      "io": "zampetterò",
+      "tu": "zampetterai",
+      "lui/lei": "zampetterà",
+      "noi": "zampetteremo",
+      "voi": "zampetterete",
+      "loro": "zampetteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "zampetti",
+      "tu": "zampetti",
+      "lui/lei": "zampetti",
+      "noi": "zampettiamo",
+      "voi": "zampettiate",
+      "loro": "zampettino"
+    },
+    "condizionale": {
+      "io": "zampetterei",
+      "tu": "zampetteresti",
+      "lui/lei": "zampetterebbe",
+      "noi": "zampetteremmo",
+      "voi": "zampettereste",
+      "loro": "zampetterebbero"
+    },
+    "imperativo": {
+      "tu": "zampetta",
+      "lei": "zampetti",
+      "noi": "zampettiamo",
+      "voi": "zampettate",
+      "loro": "zampettino"
+    }
+  },
+  "zappare": {
+    "presente": {
+      "io": "zappo",
+      "tu": "zappi",
+      "lui/lei": "zappa",
+      "noi": "zappiamo",
+      "voi": "zappate",
+      "loro": "zappano"
+    },
+    "passatoProssimo": {
+      "io": "ho zappato",
+      "tu": "hai zappato",
+      "lui/lei": "ha zappato",
+      "noi": "abbiamo zappato",
+      "voi": "avete zappato",
+      "loro": "hanno zappato"
+    },
+    "imperfetto": {
+      "io": "zappavo",
+      "tu": "zappavi",
+      "lui/lei": "zappava",
+      "noi": "zappavamo",
+      "voi": "zappavate",
+      "loro": "zappavano"
+    },
+    "futuro": {
+      "io": "zapperò",
+      "tu": "zapperai",
+      "lui/lei": "zapperà",
+      "noi": "zapperemo",
+      "voi": "zapperete",
+      "loro": "zapperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "zappi",
+      "tu": "zappi",
+      "lui/lei": "zappi",
+      "noi": "zappiamo",
+      "voi": "zappiate",
+      "loro": "zappino"
+    },
+    "condizionale": {
+      "io": "zapperei",
+      "tu": "zapperesti",
+      "lui/lei": "zapperebbe",
+      "noi": "zapperemmo",
+      "voi": "zappereste",
+      "loro": "zapperebbero"
+    },
+    "imperativo": {
+      "tu": "zappa",
+      "lei": "zappi",
+      "noi": "zappiamo",
+      "voi": "zappate",
+      "loro": "zappino"
+    }
+  },
+  "zoppicare": {
+    "presente": {
+      "io": "zoppico",
+      "tu": "zoppichi",
+      "lui/lei": "zoppica",
+      "noi": "zoppichiamo",
+      "voi": "zoppicate",
+      "loro": "zoppicano"
+    },
+    "passatoProssimo": {
+      "io": "ho zoppicato",
+      "tu": "hai zoppicato",
+      "lui/lei": "ha zoppicato",
+      "noi": "abbiamo zoppicato",
+      "voi": "avete zoppicato",
+      "loro": "hanno zoppicato"
+    },
+    "imperfetto": {
+      "io": "zoppicavo",
+      "tu": "zoppicavi",
+      "lui/lei": "zoppicava",
+      "noi": "zoppicavamo",
+      "voi": "zoppicavate",
+      "loro": "zoppicavano"
+    },
+    "futuro": {
+      "io": "zoppicherò",
+      "tu": "zoppicherai",
+      "lui/lei": "zoppicherà",
+      "noi": "zoppicheremo",
+      "voi": "zoppicherete",
+      "loro": "zoppicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "zoppichi",
+      "tu": "zoppichi",
+      "lui/lei": "zoppichi",
+      "noi": "zoppichiamo",
+      "voi": "zoppichiate",
+      "loro": "zoppichino"
+    },
+    "condizionale": {
+      "io": "zoppicherei",
+      "tu": "zoppicheresti",
+      "lui/lei": "zoppicherebbe",
+      "noi": "zoppicheremmo",
+      "voi": "zoppichereste",
+      "loro": "zoppicherebbero"
+    },
+    "imperativo": {
+      "tu": "zoppica",
+      "lei": "zoppichi",
+      "noi": "zoppichiamo",
+      "voi": "zoppicate",
+      "loro": "zoppichino"
+    }
+  }
+}

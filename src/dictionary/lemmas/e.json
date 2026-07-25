@@ -1,0 +1,335 @@
+{
+  "edicola": {
+    "lemma": "edicola",
+    "pos": "nome femminile",
+    "fr": "kiosque à journaux",
+    "definition_it": "piccolo chiosco dove si vendono giornali, riviste e simili",
+    "examples": [
+      {
+        "it": "Ho comprato il giornale all'edicola vicino a casa.",
+        "fr": "J'ai acheté le journal au kiosque près de chez moi."
+      }
+    ],
+    "synonyms": [
+      "chiosco"
+    ],
+    "isVerb": false
+  },
+  "effettuazione": {
+    "lemma": "effettuazione",
+    "pos": "nome femminile",
+    "fr": "exécution, réalisation",
+    "definition_it": "l'atto di effettuare, cioè di realizzare o compiere qualcosa, spesso in ambito burocratico o tecnico",
+    "examples": [
+      {
+        "it": "L'effettuazione del pagamento avverrà entro fine mese.",
+        "fr": "L'exécution du paiement aura lieu avant la fin du mois."
+      }
+    ],
+    "synonyms": [
+      "esecuzione",
+      "realizzazione"
+    ],
+    "isVerb": false
+  },
+  "elmo": {
+    "lemma": "elmo",
+    "pos": "sostantivo maschile",
+    "fr": "casque, heaume",
+    "definition_it": "copertura rigida che protegge la testa, usata da soldati o cavalieri",
+    "examples": [
+      {
+        "it": "Il cavaliere indossava un elmo di ferro.",
+        "fr": "Le chevalier portait un heaume de fer."
+      }
+    ],
+    "synonyms": [
+      "casco"
+    ],
+    "isVerb": false
+  },
+  "enormità": {
+    "lemma": "enormità",
+    "pos": "nome femminile invariabile",
+    "fr": "énormité",
+    "definition_it": "qualità di ciò che è enorme, molto grande; anche cosa detta o fatta in modo esagerato o assurdo",
+    "examples": [
+      {
+        "it": "Non capisco l'enormità del problema che stiamo affrontando.",
+        "fr": "Je ne comprends pas l'énormité du problème auquel nous faisons face."
+      }
+    ],
+    "synonyms": [
+      "grandezza",
+      "esagerazione"
+    ],
+    "isVerb": false
+  },
+  "entrarci": {
+    "lemma": "entrarci",
+    "pos": "verbo pronominale (entrare + ci)",
+    "fr": "avoir un rapport avec, concerner",
+    "definition_it": "avere a che fare con qualcosa, essere pertinente a un discorso o a una situazione",
+    "examples": [
+      {
+        "it": "Questo discorso non c'entra niente con il problema.",
+        "fr": "Ce discours n'a rien à voir avec le problème."
+      }
+    ],
+    "synonyms": [
+      "riguardare",
+      "concernere"
+    ],
+    "isVerb": true
+  },
+  "entrare": {
+    "lemma": "entrare",
+    "pos": "verbo",
+    "fr": "entrer",
+    "definition_it": "passare dall'esterno all'interno di un luogo",
+    "examples": [
+      {
+        "it": "V'intrai senza far rumore.",
+        "fr": "J'y entrai sans faire de bruit."
+      },
+      {
+        "it": "Siamo entrati in casa bagnati fradici.",
+        "fr": "Nous sommes entrés à la maison trempés."
+      }
+    ],
+    "synonyms": [
+      "penetrare",
+      "accedere"
+    ],
+    "isVerb": true
+  },
+  "entrata": {
+    "lemma": "entrata",
+    "pos": "nome femminile",
+    "fr": "entrée",
+    "definition_it": "il luogo o l'atto attraverso cui si entra in un posto; anche somma di denaro che si riceve",
+    "examples": [
+      {
+        "it": "L'entrata principale del museo è chiusa per lavori.",
+        "fr": "L'entrée principale du musée est fermée pour travaux."
+      }
+    ],
+    "synonyms": [
+      "ingresso"
+    ],
+    "isVerb": false
+  },
+  "epoca": {
+    "lemma": "epoca",
+    "pos": "nome femminile",
+    "fr": "époque",
+    "definition_it": "periodo storico caratterizzato da eventi, stili o condizioni particolari",
+    "examples": [
+      {
+        "it": "Questo palazzo risale a un'epoca lontana.",
+        "fr": "Ce palais date d'une époque lointaine."
+      }
+    ],
+    "synonyms": [
+      "periodo",
+      "era"
+    ],
+    "isVerb": false
+  },
+  "erede": {
+    "lemma": "erede",
+    "pos": "sostantivo maschile/femminile",
+    "fr": "héritier, héritière",
+    "definition_it": "persona che riceve un'eredità da qualcuno",
+    "examples": [
+      {
+        "it": "È l'unico erede della famiglia.",
+        "fr": "Il est l'unique héritier de la famille."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esame": {
+    "lemma": "esame",
+    "pos": "nome maschile",
+    "fr": "examen",
+    "definition_it": "prova con cui si valutano le conoscenze o le capacità di una persona",
+    "examples": [
+      {
+        "it": "Domani ho l'esame di matematica.",
+        "fr": "Demain j'ai l'examen de mathématiques."
+      }
+    ],
+    "synonyms": [
+      "prova",
+      "test"
+    ],
+    "isVerb": false
+  },
+  "esasperazione": {
+    "lemma": "esasperazione",
+    "pos": "nome femminile",
+    "fr": "exaspération",
+    "definition_it": "stato di forte irritazione o nervosismo causato da qualcosa che si ripete o dura troppo a lungo",
+    "examples": [
+      {
+        "it": "Il rumore continuo lo portò all'esasperazione.",
+        "fr": "Le bruit continu le poussa à l'exaspération."
+      }
+    ],
+    "synonyms": [
+      "irritazione",
+      "nervosismo"
+    ],
+    "isVerb": false
+  },
+  "esimio": {
+    "lemma": "esimio",
+    "pos": "aggettivo",
+    "fr": "éminent, illustre",
+    "definition_it": "che si distingue per grande valore, competenza o merito; usato spesso in modo formale",
+    "examples": [
+      {
+        "it": "Il discorso fu tenuto dall'esimio professore.",
+        "fr": "Le discours fut tenu par l'éminent professeur."
+      }
+    ],
+    "synonyms": [
+      "illustre",
+      "insigne"
+    ],
+    "isVerb": false
+  },
+  "espulsione": {
+    "lemma": "espulsione",
+    "pos": "nome femminile",
+    "fr": "expulsion",
+    "definition_it": "l'atto di espellere qualcuno o qualcosa da un luogo o da un gruppo",
+    "examples": [
+      {
+        "it": "Il giocatore ha ricevuto l'espulsione dal campo.",
+        "fr": "Le joueur a reçu l'expulsion du terrain."
+      }
+    ],
+    "synonyms": [
+      "cacciata",
+      "allontanamento"
+    ],
+    "isVerb": false
+  },
+  "esserci": {
+    "lemma": "esserci",
+    "pos": "verbo pronominale (essere + ci)",
+    "fr": "y avoir, être là",
+    "definition_it": "esistere o essere presente in un luogo o in una situazione",
+    "examples": [
+      {
+        "it": "C'era una volta un vecchio castello.",
+        "fr": "Il était une fois un vieux château."
+      }
+    ],
+    "synonyms": [
+      "esistere",
+      "trovarsi"
+    ],
+    "isVerb": true
+  },
+  "essere": {
+    "lemma": "essere",
+    "pos": "verbo intransitivo (ausiliare)",
+    "fr": "être",
+    "definition_it": "verbo fondamentale che indica esistenza, identità o stato; usato anche come ausiliare per formare tempi composti",
+    "examples": [
+      {
+        "it": "Vorrei esser certo di aver fatto la scelta giusta.",
+        "fr": "Je voudrais être sûr d'avoir fait le bon choix."
+      }
+    ],
+    "synonyms": [
+      "esistere",
+      "trovarsi"
+    ],
+    "isVerb": true
+  },
+  "estero": {
+    "lemma": "estero",
+    "pos": "nome maschile / aggettivo",
+    "fr": "étranger (pays)",
+    "definition_it": "che riguarda un paese diverso dal proprio; anche, l'insieme dei paesi diversi dal proprio",
+    "examples": [
+      {
+        "it": "Ha studiato all'estero per due anni.",
+        "fr": "Il a étudié à l'étranger pendant deux ans."
+      }
+    ],
+    "synonyms": [
+      "straniero"
+    ],
+    "isVerb": false
+  },
+  "estremo": {
+    "lemma": "estremo",
+    "pos": "aggettivo",
+    "fr": "extrême",
+    "definition_it": "che si trova al limite massimo, molto intenso o lontano dal centro",
+    "examples": [
+      {
+        "it": "Ha vissuto in condizioni di estrema povertà.",
+        "fr": "Il a vécu dans des conditions d'extrême pauvreté."
+      }
+    ],
+    "synonyms": [
+      "estremissimo",
+      "limite"
+    ],
+    "isVerb": false
+  },
+  "esule": {
+    "lemma": "esule",
+    "pos": "nome maschile e femminile / aggettivo",
+    "fr": "exilé",
+    "definition_it": "persona costretta a vivere lontano dalla propria terra, spesso per motivi politici",
+    "examples": [
+      {
+        "it": "Visse da esule in un paese straniero.",
+        "fr": "Il vécut en exilé dans un pays étranger."
+      }
+    ],
+    "synonyms": [
+      "esiliato",
+      "profugo"
+    ],
+    "isVerb": false
+  },
+  "età": {
+    "lemma": "età",
+    "pos": "nome femminile",
+    "fr": "âge",
+    "definition_it": "il numero di anni che una persona o una cosa ha vissuto o è esistita",
+    "examples": [
+      {
+        "it": "Quanti anni hai? Qual è la tua età?",
+        "fr": "Quel âge as-tu ?"
+      }
+    ],
+    "synonyms": [
+      "anni"
+    ],
+    "isVerb": false
+  },
+  "eventificazione": {
+    "lemma": "eventificazione",
+    "pos": "nome femminile",
+    "fr": "événementification",
+    "definition_it": "il processo di trasformare qualcosa in un evento speciale, spesso per attirare pubblico o attenzione",
+    "examples": [
+      {
+        "it": "L'eventificazione della cultura ha cambiato il modo di visitare i musei.",
+        "fr": "L'événementification de la culture a changé la manière de visiter les musées."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  }
+}

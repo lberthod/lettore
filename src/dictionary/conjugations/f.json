@@ -1,0 +1,59 @@
+{
+  "fare": {
+    "presente": {
+      "io": "faccio",
+      "tu": "fai",
+      "lui/lei": "fa",
+      "noi": "facciamo",
+      "voi": "fate",
+      "loro": "fanno"
+    },
+    "passatoProssimo": {
+      "io": "ho fatto",
+      "tu": "hai fatto",
+      "lui/lei": "ha fatto",
+      "noi": "abbiamo fatto",
+      "voi": "avete fatto",
+      "loro": "hanno fatto"
+    },
+    "imperfetto": {
+      "io": "facevo",
+      "tu": "facevi",
+      "lui/lei": "faceva",
+      "noi": "facevamo",
+      "voi": "facevate",
+      "loro": "facevano"
+    },
+    "futuro": {
+      "io": "farò",
+      "tu": "farai",
+      "lui/lei": "farà",
+      "noi": "faremo",
+      "voi": "farete",
+      "loro": "faranno"
+    },
+    "congiuntivoPresente": {
+      "io": "faccia",
+      "tu": "faccia",
+      "lui/lei": "faccia",
+      "noi": "facciamo",
+      "voi": "facciate",
+      "loro": "facciano"
+    },
+    "condizionale": {
+      "io": "farei",
+      "tu": "faresti",
+      "lui/lei": "farebbe",
+      "noi": "faremmo",
+      "voi": "fareste",
+      "loro": "farebbero"
+    },
+    "imperativo": {
+      "tu": "fa'",
+      "lei": "faccia",
+      "noi": "facciamo",
+      "voi": "fate",
+      "loro": "facciano"
+    }
+  }
+}

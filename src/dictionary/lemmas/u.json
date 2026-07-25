@@ -1,0 +1,255 @@
+{
+  "uccello": {
+    "lemma": "uccello",
+    "pos": "nome maschile",
+    "fr": "oiseau",
+    "definition_it": "un animale con piume e ali, capace nella maggior parte dei casi di volare",
+    "examples": [
+      {
+        "it": "Un uccello cantava sul ramo.",
+        "fr": "Un oiseau chantait sur la branche."
+      }
+    ],
+    "synonyms": [
+      "volatile"
+    ],
+    "isVerb": false
+  },
+  "udire": {
+    "lemma": "udire",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "entendre",
+    "definition_it": "percepire suoni con l'udito",
+    "examples": [
+      {
+        "it": "Non riuscivo a udire bene per il rumore.",
+        "fr": "Je n'arrivais pas bien à entendre à cause du bruit."
+      }
+    ],
+    "synonyms": [
+      "sentire",
+      "ascoltare"
+    ],
+    "isVerb": true
+  },
+  "ufficio": {
+    "lemma": "ufficio",
+    "pos": "nome maschile",
+    "fr": "bureau",
+    "definition_it": "un luogo di lavoro dove si svolgono attività amministrative o professionali",
+    "examples": [
+      {
+        "it": "Vado in ufficio ogni mattina alle otto.",
+        "fr": "Je vais au bureau tous les matins à huit heures."
+      }
+    ],
+    "synonyms": [
+      "studio"
+    ],
+    "isVerb": false
+  },
+  "ultimo": {
+    "lemma": "ultimo",
+    "pos": "aggettivo",
+    "fr": "dernier",
+    "definition_it": "che viene dopo tutti gli altri, alla fine di una serie o di un ordine",
+    "examples": [
+      {
+        "it": "Questa è l'ultima pagina del libro.",
+        "fr": "C'est la dernière page du livre."
+      }
+    ],
+    "synonyms": [
+      "finale"
+    ],
+    "isVerb": false
+  },
+  "unanimità": {
+    "lemma": "unanimità",
+    "pos": "nome femminile",
+    "fr": "unanimité",
+    "definition_it": "l'accordo completo di tutte le persone coinvolte su una decisione",
+    "examples": [
+      {
+        "it": "La proposta è stata approvata all'unanimità.",
+        "fr": "La proposition a été approuvée à l'unanimité."
+      }
+    ],
+    "synonyms": [
+      "consenso"
+    ],
+    "isVerb": false
+  },
+  "unisono": {
+    "lemma": "unisono",
+    "pos": "nome maschile",
+    "fr": "unisson",
+    "definition_it": "usato soprattutto nell'espressione 'all'unisono', che significa fare qualcosa tutti insieme e allo stesso modo",
+    "examples": [
+      {
+        "it": "Gli studenti hanno risposto all'unisono.",
+        "fr": "Les étudiants ont répondu à l'unisson."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "unità": {
+    "lemma": "unità",
+    "pos": "nome femminile",
+    "fr": "unité",
+    "definition_it": "l'essere uno solo, indivisibile; oppure una misura di riferimento o un gruppo organizzato",
+    "examples": [
+      {
+        "it": "Il metro è un'unità di misura.",
+        "fr": "Le mètre est une unité de mesure."
+      }
+    ],
+    "synonyms": [
+      "coesione"
+    ],
+    "isVerb": false
+  },
+  "università": {
+    "lemma": "università",
+    "pos": "nome femminile",
+    "fr": "université",
+    "definition_it": "un'istituzione di istruzione superiore dove si studiano materie specialistiche dopo la scuola secondaria",
+    "examples": [
+      {
+        "it": "Studia medicina all'università di Bologna.",
+        "fr": "Il étudie la médecine à l'université de Bologne."
+      }
+    ],
+    "synonyms": [
+      "ateneo"
+    ],
+    "isVerb": false
+  },
+  "uno": {
+    "lemma": "uno",
+    "pos": "numerale / articolo indeterminativo",
+    "fr": "un, une",
+    "definition_it": "il numero che indica una sola unità; usato anche come articolo indeterminativo davanti a un nome",
+    "examples": [
+      {
+        "it": "Ho comprato una mela al mercato.",
+        "fr": "J'ai acheté une pomme au marché."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "uomo": {
+    "lemma": "uomo",
+    "pos": "nome maschile",
+    "fr": "homme",
+    "definition_it": "essere umano adulto di sesso maschile; anche, l'essere umano in generale",
+    "examples": [
+      {
+        "it": "Quell'uomo lavora in banca.",
+        "fr": "Cet homme travaille dans une banque."
+      }
+    ],
+    "synonyms": [
+      "persona",
+      "individuo",
+      "maschio"
+    ],
+    "isVerb": false
+  },
+  "uovo": {
+    "lemma": "uovo",
+    "pos": "nome maschile",
+    "fr": "œuf",
+    "definition_it": "corpo ovale prodotto dagli uccelli e da altri animali, usato spesso come alimento",
+    "examples": [
+      {
+        "it": "Ho mangiato un uovo a colazione.",
+        "fr": "J'ai mangé un œuf au petit-déjeuner."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "uscio": {
+    "lemma": "uscio",
+    "pos": "nome maschile",
+    "fr": "porte, seuil",
+    "definition_it": "porta di casa, spesso usata in senso letterario o regionale",
+    "examples": [
+      {
+        "it": "Bussò all'uscio prima di entrare.",
+        "fr": "Il frappa à la porte avant d'entrer."
+      }
+    ],
+    "synonyms": [
+      "porta",
+      "soglia"
+    ],
+    "isVerb": false
+  },
+  "uscire": {
+    "lemma": "uscire",
+    "pos": "verbo (intransitivo)",
+    "fr": "sortir",
+    "definition_it": "andare fuori da un luogo",
+    "examples": [
+      {
+        "it": "Lui usciva ogni sera per una passeggiata.",
+        "fr": "Il sortait chaque soir pour une promenade."
+      }
+    ],
+    "synonyms": [
+      "andarsene"
+    ],
+    "isVerb": true
+  },
+  "uscita": {
+    "lemma": "uscita",
+    "pos": "nome femminile",
+    "fr": "sortie",
+    "definition_it": "il luogo o l'atto attraverso cui si esce da un posto",
+    "examples": [
+      {
+        "it": "L'uscita di emergenza è a destra.",
+        "fr": "La sortie de secours est à droite."
+      }
+    ],
+    "synonyms": [
+      "fuoriuscita"
+    ],
+    "isVerb": false
+  },
+  "uso": {
+    "lemma": "uso",
+    "pos": "nome maschile",
+    "fr": "usage, emploi",
+    "definition_it": "l'atto di usare qualcosa, oppure un'abitudine o consuetudine diffusa",
+    "examples": [
+      {
+        "it": "L'uso del cellulare è vietato in classe.",
+        "fr": "L'usage du téléphone portable est interdit en classe."
+      }
+    ],
+    "synonyms": [
+      "impiego",
+      "utilizzo"
+    ],
+    "isVerb": false
+  },
+  "uva": {
+    "lemma": "uva",
+    "pos": "nome femminile",
+    "fr": "raisin",
+    "definition_it": "frutto della vite, formato da chicchi raccolti in grappoli",
+    "examples": [
+      {
+        "it": "In autunno si raccoglie l'uva.",
+        "fr": "En automne, on récolte le raisin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  }
+}

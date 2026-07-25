@@ -1,0 +1,516 @@
+{
+  "impazzare": {
+    "presente": [
+      "impazzo",
+      "impazzi",
+      "impazza",
+      "impazziamo",
+      "impazzate",
+      "impazzano"
+    ],
+    "passato_prossimo": [
+      "sono impazzato/a",
+      "sei impazzato/a",
+      "è impazzato/a",
+      "siamo impazzati/e",
+      "siete impazzati/e",
+      "sono impazzati/e"
+    ],
+    "imperfetto": [
+      "impazzavo",
+      "impazzavi",
+      "impazzava",
+      "impazzavamo",
+      "impazzavate",
+      "impazzavano"
+    ],
+    "futuro": [
+      "impazzerò",
+      "impazzerai",
+      "impazzerà",
+      "impazzeremo",
+      "impazzerete",
+      "impazzeranno"
+    ],
+    "congiuntivo_presente": [
+      "impazzi",
+      "impazzi",
+      "impazzi",
+      "impazziamo",
+      "impazziate",
+      "impazzino"
+    ],
+    "condizionale": [
+      "impazzerei",
+      "impazzeresti",
+      "impazzerebbe",
+      "impazzeremmo",
+      "impazzereste",
+      "impazzerebbero"
+    ],
+    "imperativo": [
+      "-",
+      "impazza",
+      "impazzi",
+      "impazziamo",
+      "impazzate",
+      "impazzino"
+    ]
+  },
+  "indicare": {
+    "presente": {
+      "io": "indico",
+      "tu": "indichi",
+      "lui/lei": "indica",
+      "noi": "indichiamo",
+      "voi": "indicate",
+      "loro": "indicano"
+    },
+    "passatoProssimo": {
+      "io": "ho indicato",
+      "tu": "hai indicato",
+      "lui/lei": "ha indicato",
+      "noi": "abbiamo indicato",
+      "voi": "avete indicato",
+      "loro": "hanno indicato"
+    },
+    "imperfetto": {
+      "io": "indicavo",
+      "tu": "indicavi",
+      "lui/lei": "indicava",
+      "noi": "indicavamo",
+      "voi": "indicavate",
+      "loro": "indicavano"
+    },
+    "futuro": {
+      "io": "indicherò",
+      "tu": "indicherai",
+      "lui/lei": "indicherà",
+      "noi": "indicheremo",
+      "voi": "indicherete",
+      "loro": "indicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "indichi",
+      "tu": "indichi",
+      "lui/lei": "indichi",
+      "noi": "indichiamo",
+      "voi": "indichiate",
+      "loro": "indichino"
+    },
+    "condizionale": {
+      "io": "indicherei",
+      "tu": "indicheresti",
+      "lui/lei": "indicherebbe",
+      "noi": "indicheremmo",
+      "voi": "indichereste",
+      "loro": "indicherebbero"
+    },
+    "imperativo": {
+      "tu": "indica",
+      "lei": "indichi",
+      "noi": "indichiamo",
+      "voi": "indicate",
+      "loro": "indichino"
+    }
+  },
+  "ingannarsi": {
+    "presente": {
+      "io": "mi inganno",
+      "tu": "ti inganni",
+      "lui/lei": "si inganna",
+      "noi": "ci inganniamo",
+      "voi": "vi ingannate",
+      "loro": "si ingannano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono ingannato/a",
+      "tu": "ti sei ingannato/a",
+      "lui/lei": "si è ingannato/a",
+      "noi": "ci siamo ingannati/e",
+      "voi": "vi siete ingannati/e",
+      "loro": "si sono ingannati/e"
+    },
+    "imperfetto": {
+      "io": "mi ingannavo",
+      "tu": "ti ingannavi",
+      "lui/lei": "si ingannava",
+      "noi": "ci ingannavamo",
+      "voi": "vi ingannavate",
+      "loro": "si ingannavano"
+    },
+    "futuro": {
+      "io": "mi ingannerò",
+      "tu": "ti ingannerai",
+      "lui/lei": "si ingannerà",
+      "noi": "ci inganneremo",
+      "voi": "vi ingannerete",
+      "loro": "si inganneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi inganni",
+      "tu": "ti inganni",
+      "lui/lei": "si inganni",
+      "noi": "ci inganniamo",
+      "voi": "vi inganniate",
+      "loro": "si ingannino"
+    },
+    "condizionale": {
+      "io": "mi ingannerei",
+      "tu": "ti inganneresti",
+      "lui/lei": "si ingannerebbe",
+      "noi": "ci inganneremmo",
+      "voi": "vi ingannereste",
+      "loro": "si ingannerebbero"
+    },
+    "imperativo": {
+      "tu": "ingannati",
+      "lei": "si inganni",
+      "noi": "inganniamoci",
+      "voi": "ingannatevi",
+      "loro": "si ingannino"
+    }
+  },
+  "ingrassare": {
+    "presente": {
+      "io": "ingrasso",
+      "tu": "ingrassi",
+      "lui/lei": "ingrassa",
+      "noi": "ingrassiamo",
+      "voi": "ingrassate",
+      "loro": "ingrassano"
+    },
+    "passatoProssimo": {
+      "io": "ho ingrassato",
+      "tu": "hai ingrassato",
+      "lui/lei": "ha ingrassato",
+      "noi": "abbiamo ingrassato",
+      "voi": "avete ingrassato",
+      "loro": "hanno ingrassato"
+    },
+    "imperfetto": {
+      "io": "ingrassavo",
+      "tu": "ingrassavi",
+      "lui/lei": "ingrassava",
+      "noi": "ingrassavamo",
+      "voi": "ingrassavate",
+      "loro": "ingrassavano"
+    },
+    "futuro": {
+      "io": "ingrasserò",
+      "tu": "ingrasserai",
+      "lui/lei": "ingrasserà",
+      "noi": "ingrasseremo",
+      "voi": "ingrasserete",
+      "loro": "ingrasseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ingrassi",
+      "tu": "ingrassi",
+      "lui/lei": "ingrassi",
+      "noi": "ingrassiamo",
+      "voi": "ingrassiate",
+      "loro": "ingrassino"
+    },
+    "condizionale": {
+      "io": "ingrasserei",
+      "tu": "ingrasseresti",
+      "lui/lei": "ingrasserebbe",
+      "noi": "ingrasseremmo",
+      "voi": "ingrassereste",
+      "loro": "ingrasserebbero"
+    },
+    "imperativo": {
+      "tu": "ingrassa",
+      "lei": "ingrassi",
+      "noi": "ingrassiamo",
+      "voi": "ingrassate",
+      "loro": "ingrassino"
+    }
+  },
+  "insegnare": {
+    "presente": {
+      "io": "insegno",
+      "tu": "insegni",
+      "lui/lei": "insegna",
+      "noi": "insegniamo",
+      "voi": "insegnate",
+      "loro": "insegnano"
+    },
+    "passatoProssimo": {
+      "io": "ho insegnato",
+      "tu": "hai insegnato",
+      "lui/lei": "ha insegnato",
+      "noi": "abbiamo insegnato",
+      "voi": "avete insegnato",
+      "loro": "hanno insegnato"
+    },
+    "imperfetto": {
+      "io": "insegnavo",
+      "tu": "insegnavi",
+      "lui/lei": "insegnava",
+      "noi": "insegnavamo",
+      "voi": "insegnavate",
+      "loro": "insegnavano"
+    },
+    "futuro": {
+      "io": "insegnerò",
+      "tu": "insegnerai",
+      "lui/lei": "insegnerà",
+      "noi": "insegneremo",
+      "voi": "insegnerete",
+      "loro": "insegneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "insegni",
+      "tu": "insegni",
+      "lui/lei": "insegni",
+      "noi": "insegniamo",
+      "voi": "insegniate",
+      "loro": "insegnino"
+    },
+    "condizionale": {
+      "io": "insegnerei",
+      "tu": "insegneresti",
+      "lui/lei": "insegnerebbe",
+      "noi": "insegneremmo",
+      "voi": "insegnereste",
+      "loro": "insegnerebbero"
+    },
+    "imperativo": {
+      "tu": "insegna",
+      "lei": "insegni",
+      "noi": "insegniamo",
+      "voi": "insegnate",
+      "loro": "insegnino"
+    }
+  },
+  "intervenire": {
+    "presente": {
+      "io": "intervengo",
+      "tu": "intervieni",
+      "lui/lei": "interviene",
+      "noi": "interveniamo",
+      "voi": "intervenite",
+      "loro": "intervengono"
+    },
+    "passatoProssimo": {
+      "io": "sono intervenuto",
+      "tu": "sei intervenuto",
+      "lui/lei": "è intervenuto",
+      "noi": "siamo intervenuti",
+      "voi": "siete intervenuti",
+      "loro": "sono intervenuti"
+    },
+    "imperfetto": {
+      "io": "intervenivo",
+      "tu": "intervenivi",
+      "lui/lei": "interveniva",
+      "noi": "intervenivamo",
+      "voi": "intervenivate",
+      "loro": "intervenivano"
+    },
+    "futuro": {
+      "io": "interverrò",
+      "tu": "interverrai",
+      "lui/lei": "interverrà",
+      "noi": "interverremo",
+      "voi": "interverrete",
+      "loro": "interverranno"
+    },
+    "congiuntivoPresente": {
+      "io": "intervenga",
+      "tu": "intervenga",
+      "lui/lei": "intervenga",
+      "noi": "interveniamo",
+      "voi": "interveniate",
+      "loro": "intervengano"
+    },
+    "condizionale": {
+      "io": "interverrei",
+      "tu": "interverresti",
+      "lui/lei": "interverrebbe",
+      "noi": "interverremmo",
+      "voi": "interverreste",
+      "loro": "interverrebbero"
+    },
+    "imperativo": {
+      "tu": "intervieni",
+      "lei": "intervenga",
+      "noi": "interveniamo",
+      "voi": "intervenite",
+      "loro": "intervengano"
+    }
+  },
+  "introdurre": {
+    "presente": {
+      "io": "introduco",
+      "tu": "introduci",
+      "lui/lei": "introduce",
+      "noi": "introduciamo",
+      "voi": "introducete",
+      "loro": "introducono"
+    },
+    "passatoProssimo": {
+      "io": "ho introdotto",
+      "tu": "hai introdotto",
+      "lui/lei": "ha introdotto",
+      "noi": "abbiamo introdotto",
+      "voi": "avete introdotto",
+      "loro": "hanno introdotto"
+    },
+    "imperfetto": {
+      "io": "introducevo",
+      "tu": "introducevi",
+      "lui/lei": "introduceva",
+      "noi": "introducevamo",
+      "voi": "introducevate",
+      "loro": "introducevano"
+    },
+    "futuro": {
+      "io": "introdurrò",
+      "tu": "introdurrai",
+      "lui/lei": "introdurrà",
+      "noi": "introdurremo",
+      "voi": "introdurrete",
+      "loro": "introdurranno"
+    },
+    "congiuntivoPresente": {
+      "io": "introduca",
+      "tu": "introduca",
+      "lui/lei": "introduca",
+      "noi": "introduciamo",
+      "voi": "introduciate",
+      "loro": "introducano"
+    },
+    "condizionale": {
+      "io": "introdurrei",
+      "tu": "introdurresti",
+      "lui/lei": "introdurrebbe",
+      "noi": "introdurremmo",
+      "voi": "introdurreste",
+      "loro": "introdurrebbero"
+    },
+    "imperativo": {
+      "tu": "introduci",
+      "lei": "introduca",
+      "noi": "introduciamo",
+      "voi": "introducete",
+      "loro": "introducano"
+    }
+  },
+  "invitare": {
+    "presente": {
+      "io": "invito",
+      "tu": "inviti",
+      "lui/lei": "invita",
+      "noi": "invitiamo",
+      "voi": "invitate",
+      "loro": "invitano"
+    },
+    "passatoProssimo": {
+      "io": "ho invitato",
+      "tu": "hai invitato",
+      "lui/lei": "ha invitato",
+      "noi": "abbiamo invitato",
+      "voi": "avete invitato",
+      "loro": "hanno invitato"
+    },
+    "imperfetto": {
+      "io": "invitavo",
+      "tu": "invitavi",
+      "lui/lei": "invitava",
+      "noi": "invitavamo",
+      "voi": "invitavate",
+      "loro": "invitavano"
+    },
+    "futuro": {
+      "io": "inviterò",
+      "tu": "inviterai",
+      "lui/lei": "inviterà",
+      "noi": "inviteremo",
+      "voi": "inviterete",
+      "loro": "inviteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "inviti",
+      "tu": "inviti",
+      "lui/lei": "inviti",
+      "noi": "invitiamo",
+      "voi": "invitiate",
+      "loro": "invitino"
+    },
+    "condizionale": {
+      "io": "inviterei",
+      "tu": "inviteresti",
+      "lui/lei": "inviterebbe",
+      "noi": "inviteremmo",
+      "voi": "invitereste",
+      "loro": "inviterebbero"
+    },
+    "imperativo": {
+      "tu": "invita",
+      "lei": "inviti",
+      "noi": "invitiamo",
+      "voi": "invitate",
+      "loro": "invitino"
+    }
+  },
+  "ispirare": {
+    "presente": {
+      "io": "ispiro",
+      "tu": "ispiri",
+      "lui/lei": "ispira",
+      "noi": "ispiriamo",
+      "voi": "ispirate",
+      "loro": "ispirano"
+    },
+    "passatoProssimo": {
+      "io": "ho ispirato",
+      "tu": "hai ispirato",
+      "lui/lei": "ha ispirato",
+      "noi": "abbiamo ispirato",
+      "voi": "avete ispirato",
+      "loro": "hanno ispirato"
+    },
+    "imperfetto": {
+      "io": "ispiravo",
+      "tu": "ispiravi",
+      "lui/lei": "ispirava",
+      "noi": "ispiravamo",
+      "voi": "ispiravate",
+      "loro": "ispiravano"
+    },
+    "futuro": {
+      "io": "ispirerò",
+      "tu": "ispirerai",
+      "lui/lei": "ispirerà",
+      "noi": "ispireremo",
+      "voi": "ispirerete",
+      "loro": "ispireranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ispiri",
+      "tu": "ispiri",
+      "lui/lei": "ispiri",
+      "noi": "ispiriamo",
+      "voi": "ispiriate",
+      "loro": "ispirino"
+    },
+    "condizionale": {
+      "io": "ispirerei",
+      "tu": "ispireresti",
+      "lui/lei": "ispirerebbe",
+      "noi": "ispireremmo",
+      "voi": "ispirereste",
+      "loro": "ispirerebbero"
+    },
+    "imperativo": {
+      "tu": "ispira",
+      "lei": "ispiri",
+      "noi": "ispiriamo",
+      "voi": "ispirate",
+      "loro": "ispirino"
+    }
+  }
+}

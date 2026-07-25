@@ -1,0 +1,51 @@
+{
+  "weekend": {
+    "lemma": "weekend",
+    "pos": "nome maschile invariabile",
+    "fr": "week-end",
+    "definition_it": "il fine settimana, i giorni di sabato e domenica dedicati al riposo o al tempo libero",
+    "examples": [
+      {
+        "it": "Andiamo in montagna per il weekend.",
+        "fr": "Nous allons à la montagne pour le week-end."
+      }
+    ],
+    "synonyms": [
+      "fine settimana"
+    ],
+    "isVerb": false
+  },
+  "wifi": {
+    "lemma": "wifi",
+    "pos": "nome maschile invariabile",
+    "fr": "wifi",
+    "definition_it": "tecnologia che permette la connessione a internet senza fili",
+    "examples": [
+      {
+        "it": "In albergo il wifi non funzionava bene.",
+        "fr": "À l'hôtel, le wifi ne fonctionnait pas bien."
+      }
+    ],
+    "synonyms": [
+      "wi-fi"
+    ],
+    "isVerb": false
+  },
+  "wow": {
+    "lemma": "wow",
+    "pos": "interiezione",
+    "fr": "wow, waouh",
+    "definition_it": "esclamazione che esprime stupore o ammirazione",
+    "examples": [
+      {
+        "it": "Wow, che bel panorama!",
+        "fr": "Wow, quel beau panorama !"
+      }
+    ],
+    "synonyms": [
+      "accidenti",
+      "caspita"
+    ],
+    "isVerb": false
+  }
+}

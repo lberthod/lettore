@@ -1,0 +1,18 @@
+{
+  "hotel": {
+    "lemma": "hotel",
+    "pos": "nome maschile",
+    "fr": "hôtel",
+    "definition_it": "edificio dove i viaggiatori possono dormire e mangiare pagando",
+    "examples": [
+      {
+        "it": "Abbiamo prenotato una camera in un hotel vicino al mare.",
+        "fr": "Nous avons réservé une chambre dans un hôtel près de la mer."
+      }
+    ],
+    "synonyms": [
+      "albergo"
+    ],
+    "isVerb": false
+  }
+}

@@ -1,14 +1,15 @@
 // Dictionnaire italien-français : fiches lexicographiques (définition, nature
 // grammaticale, exemples, synonymes) + tables de conjugaison, pré-générées
-// une fois par lots (voir scripts/data/pilot/) puis stockées ici en JSON
-// statique. Aucun appel réseau/LLM au runtime.
-//
-// PILOTE : ce jeu de données ne couvre encore qu'un petit échantillon
-// (~30 lemmes autour de « abbandonare ») le temps de valider le format
-// avant de lancer la génération complète (~10-12k lemmes estimés).
-import lemmas from '../dictionary/lemmas.json'
-import conjugations from '../dictionary/conjugations.json'
-import wordIndex from '../dictionary/word-index.json'
+// une fois par lots (voir scripts/prepare-batch.mjs) puis stockées ici en
+// JSON statique, shardé par initiale. Aucun appel réseau/LLM au runtime.
+import indexData from '../dictionary/index.json'
+import { shardKey } from '../dictionary/shard-key.js'
+
+const lemmaShards = import.meta.glob('../dictionary/lemmas/*.json', { import: 'default' })
+const conjugationShards = import.meta.glob('../dictionary/conjugations/*.json', { import: 'default' })
+const wordIndexShards = import.meta.glob('../dictionary/word-index/*.json', { import: 'default' })
+
+const entryByLemma = new Map(indexData.entries.map((e) => [e.lemma, e]))
 
 function normalize(word) {
   return word
@@ -18,49 +19,67 @@ function normalize(word) {
     .replace(/[’‘´`]/g, "'")
 }
 
+async function loadShard(shards, dir, key) {
+  const loader = shards[`../dictionary/${dir}/${key}.json`]
+  return loader ? loader() : {}
+}
+
 // Résout n'importe quelle forme rencontrée dans un texte (ex. « abbandonava »)
-// vers son lemme (« abbandonare »), puis retourne la fiche complète.
-export function lookupDictionary(word) {
+// vers son lemme (« abbandonare »).
+async function resolveLemma(word) {
   const key = normalize(word)
-  const lemma = wordIndex[key]
+  const wi = await loadShard(wordIndexShards, 'word-index', shardKey(key))
+  if (wi[key]) return wi[key]
+  return entryByLemma.has(key) ? key : null
+}
+
+export async function lookupDictionary(word) {
+  const lemma = await resolveLemma(word)
   if (!lemma) return null
-  const entry = lemmas[lemma]
+  const shard = await loadShard(lemmaShards, 'lemmas', shardKey(lemma))
+  const entry = shard[lemma]
   if (!entry) return null
-  return { ...entry, conjugation: entry.isVerb ? conjugations[lemma] ?? null : null }
+  const conjugation = entry.isVerb
+    ? (await loadShard(conjugationShards, 'conjugations', shardKey(lemma)))[lemma] ?? null
+    : null
+  return { ...entry, conjugation }
 }
 
-export function getConjugation(verb) {
-  const key = normalize(verb)
-  const lemma = wordIndex[key] ?? key
-  return conjugations[lemma] ?? null
+export async function getConjugation(verb) {
+  const lemma = await resolveLemma(verb)
+  if (!lemma) return null
+  return (await loadShard(conjugationShards, 'conjugations', shardKey(lemma)))[lemma] ?? null
 }
 
-// Recherche libre (page /dizionario) : correspondance sur le lemme, les
-// formes fléchies indexées, ou la traduction française.
-export function searchDictionary(query) {
+// Recherche libre (page /dizionario) : correspondance sur les formes fléchies
+// indexées (un seul shard, celui de l'initiale de la requête) ou la
+// traduction française (index léger, déjà en mémoire).
+export async function searchDictionary(query) {
   const q = normalize(query)
   if (!q) return []
-  const matchedLemmas = new Set()
-  for (const [form, lemma] of Object.entries(wordIndex)) {
-    if (form.startsWith(q)) matchedLemmas.add(lemma)
+  const matched = new Map()
+  for (const e of indexData.entries) {
+    if (e.fr.toLowerCase().includes(q)) matched.set(e.lemma, e)
   }
-  for (const [lemma, entry] of Object.entries(lemmas)) {
-    if (entry.fr.toLowerCase().includes(q)) matchedLemmas.add(lemma)
+  const wi = await loadShard(wordIndexShards, 'word-index', shardKey(q))
+  for (const [form, lemma] of Object.entries(wi)) {
+    if (form.startsWith(q) && entryByLemma.has(lemma)) matched.set(lemma, entryByLemma.get(lemma))
   }
-  return [...matchedLemmas]
-    .map((lemma) => lemmas[lemma])
-    .filter(Boolean)
-    .sort((a, b) => a.lemma.localeCompare(b.lemma, 'it'))
+  return [...matched.values()].sort((a, b) => a.lemma.localeCompare(b.lemma, 'it'))
 }
 
 export function allLemmas() {
-  return Object.values(lemmas).sort((a, b) => a.lemma.localeCompare(b.lemma, 'it'))
+  return indexData.entries
 }
 
 export function allVerbs() {
-  return allLemmas().filter((l) => l.isVerb)
+  return indexData.entries.filter((l) => l.isVerb)
 }
 
 export function dictionaryEntryCount() {
-  return Object.keys(lemmas).length
+  return indexData.meta.lemmaCount
+}
+
+export function dictionaryStats() {
+  return { ...indexData.meta }
 }

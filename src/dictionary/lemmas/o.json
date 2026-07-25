@@ -1,0 +1,493 @@
+{
+  "occasione": {
+    "lemma": "occasione",
+    "pos": "nome femminile",
+    "fr": "occasion",
+    "definition_it": "circostanza favorevole o momento adatto per fare qualcosa",
+    "examples": [
+      {
+        "it": "Non voglio perdere questa occasione.",
+        "fr": "Je ne veux pas rater cette occasion."
+      }
+    ],
+    "synonyms": [
+      "opportunità",
+      "circostanza"
+    ],
+    "isVerb": false
+  },
+  "occhio": {
+    "lemma": "occhio",
+    "pos": "nome maschile",
+    "fr": "œil",
+    "definition_it": "organo del corpo che serve per vedere",
+    "examples": [
+      {
+        "it": "Ha gli occhi verdi.",
+        "fr": "Il a les yeux verts."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "occorrenza": {
+    "lemma": "occorrenza",
+    "pos": "nome femminile",
+    "fr": "occurrence, besoin, cas",
+    "definition_it": "caso o situazione che si presenta, spesso usata nell'espressione 'all'occorrenza'",
+    "examples": [
+      {
+        "it": "All'occorrenza ti chiamerò.",
+        "fr": "En cas de besoin, je t'appellerai."
+      }
+    ],
+    "synonyms": [
+      "evenienza",
+      "caso"
+    ],
+    "isVerb": false
+  },
+  "odore": {
+    "lemma": "odore",
+    "pos": "nome maschile",
+    "fr": "odeur",
+    "definition_it": "sensazione percepita dal naso, causata da una sostanza",
+    "examples": [
+      {
+        "it": "Sento un buon odore di pane.",
+        "fr": "Je sens une bonne odeur de pain."
+      }
+    ],
+    "synonyms": [
+      "profumo",
+      "aroma"
+    ],
+    "isVerb": false
+  },
+  "olfatto": {
+    "lemma": "olfatto",
+    "pos": "nome maschile",
+    "fr": "odorat",
+    "definition_it": "senso che permette di percepire gli odori",
+    "examples": [
+      {
+        "it": "Il cane ha un olfatto molto sviluppato.",
+        "fr": "Le chien a un odorat très développé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "olio": {
+    "lemma": "olio",
+    "pos": "sostantivo maschile",
+    "fr": "huile",
+    "definition_it": "liquido grasso, spesso usato in cucina, ricavato da olive o altri semi",
+    "examples": [
+      {
+        "it": "Ha condito l'insalata con olio d'oliva.",
+        "fr": "Il a assaisonné la salade avec de l'huile d'olive."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ologramma": {
+    "lemma": "ologramma",
+    "pos": "nome maschile",
+    "fr": "hologramme",
+    "definition_it": "immagine tridimensionale creata otticamente tramite la luce laser",
+    "examples": [
+      {
+        "it": "Il concerto proiettava un ologramma del cantante.",
+        "fr": "Le concert projetait un hologramme du chanteur."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ombra": {
+    "lemma": "ombra",
+    "pos": "nome femminile",
+    "fr": "ombre",
+    "definition_it": "zona scura prodotta da un corpo che blocca la luce",
+    "examples": [
+      {
+        "it": "Ci siamo seduti all'ombra dell'albero.",
+        "fr": "Nous nous sommes assis à l'ombre de l'arbre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "omino": {
+    "lemma": "omino",
+    "pos": "sostantivo maschile",
+    "fr": "petit bonhomme",
+    "definition_it": "diminutivo di uomo; persona piccola o disegno che rappresenta un uomo",
+    "examples": [
+      {
+        "it": "Il bambino ha disegnato un omino sorridente.",
+        "fr": "L'enfant a dessiné un petit bonhomme souriant."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "omologazione": {
+    "lemma": "omologazione",
+    "pos": "nome femminile",
+    "fr": "homologation",
+    "definition_it": "atto ufficiale con cui si riconosce e si approva la conformità di qualcosa a determinate norme",
+    "examples": [
+      {
+        "it": "L'auto ha superato l'omologazione richiesta.",
+        "fr": "La voiture a passé l'homologation requise."
+      }
+    ],
+    "synonyms": [
+      "approvazione",
+      "certificazione"
+    ],
+    "isVerb": false
+  },
+  "onda": {
+    "lemma": "onda",
+    "pos": "nome femminile",
+    "fr": "vague, onde",
+    "definition_it": "movimento ondulatorio dell'acqua o di un'energia che si propaga",
+    "examples": [
+      {
+        "it": "Le onde del mare si infrangevano sulla spiaggia.",
+        "fr": "Les vagues de la mer se brisaient sur la plage."
+      }
+    ],
+    "synonyms": [
+      "ondata"
+    ],
+    "isVerb": false
+  },
+  "ondeggiare": {
+    "lemma": "ondeggiare",
+    "pos": "verbo",
+    "fr": "onduler, se balancer",
+    "definition_it": "muoversi lentamente da un lato all'altro, come le onde",
+    "examples": [
+      {
+        "it": "Le barche ondeggiavano nel porto.",
+        "fr": "Les bateaux se balançaient dans le port."
+      }
+    ],
+    "synonyms": [
+      "oscillare",
+      "dondolare"
+    ],
+    "isVerb": true
+  },
+  "opera": {
+    "lemma": "opera",
+    "pos": "nome femminile",
+    "fr": "œuvre, opéra",
+    "definition_it": "lavoro creato da qualcuno, spesso artistico, oppure spettacolo musicale cantato",
+    "examples": [
+      {
+        "it": "Questo quadro è un'opera d'arte straordinaria.",
+        "fr": "Ce tableau est une œuvre d'art extraordinaire."
+      }
+    ],
+    "synonyms": [
+      "lavoro",
+      "creazione"
+    ],
+    "isVerb": false
+  },
+  "operazione": {
+    "lemma": "operazione",
+    "pos": "nome femminile",
+    "fr": "opération",
+    "definition_it": "azione svolta per raggiungere un obiettivo, oppure intervento chirurgico o calcolo matematico",
+    "examples": [
+      {
+        "it": "L'operazione chirurgica è andata bene.",
+        "fr": "L'opération chirurgicale s'est bien passée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "opinione": {
+    "lemma": "opinione",
+    "pos": "nome femminile",
+    "fr": "opinion",
+    "definition_it": "idea o giudizio personale su qualcosa",
+    "examples": [
+      {
+        "it": "Ognuno ha la propria opinione su questo tema.",
+        "fr": "Chacun a sa propre opinion sur ce sujet."
+      }
+    ],
+    "synonyms": [
+      "parere",
+      "idea"
+    ],
+    "isVerb": false
+  },
+  "opporsi": {
+    "lemma": "opporsi",
+    "pos": "verbo",
+    "fr": "s'opposer",
+    "definition_it": "essere contrario a qualcosa e manifestare la propria contrarietà",
+    "examples": [
+      {
+        "it": "Molti cittadini si opposero alla nuova legge.",
+        "fr": "De nombreux citoyens se sont opposés à la nouvelle loi."
+      }
+    ],
+    "synonyms": [
+      "contrastare",
+      "resistere"
+    ],
+    "isVerb": true
+  },
+  "oppressione": {
+    "lemma": "oppressione",
+    "pos": "nome femminile",
+    "fr": "oppression",
+    "definition_it": "condizione di chi subisce un potere ingiusto e opprimente",
+    "examples": [
+      {
+        "it": "Il popolo lottava contro l'oppressione.",
+        "fr": "Le peuple luttait contre l'oppression."
+      }
+    ],
+    "synonyms": [
+      "sopraffazione",
+      "tirannia"
+    ],
+    "isVerb": false
+  },
+  "ora": {
+    "lemma": "ora",
+    "pos": "nome femminile",
+    "fr": "heure",
+    "definition_it": "unità di tempo di sessanta minuti, oppure momento preciso della giornata",
+    "examples": [
+      {
+        "it": "Che ora è adesso?",
+        "fr": "Quelle heure est-il maintenant ?"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ordine": {
+    "lemma": "ordine",
+    "pos": "nome maschile",
+    "fr": "ordre",
+    "definition_it": "disposizione regolare delle cose, oppure comando dato a qualcuno",
+    "examples": [
+      {
+        "it": "Il generale diede l'ordine di partire.",
+        "fr": "Le général donna l'ordre de partir."
+      }
+    ],
+    "synonyms": [
+      "comando",
+      "disposizione"
+    ],
+    "isVerb": false
+  },
+  "orecchio": {
+    "lemma": "orecchio",
+    "pos": "nome maschile",
+    "fr": "oreille",
+    "definition_it": "organo del corpo che serve per udire",
+    "examples": [
+      {
+        "it": "Mi fa male l'orecchio destro.",
+        "fr": "J'ai mal à l'oreille droite."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "origine": {
+    "lemma": "origine",
+    "pos": "nome femminile",
+    "fr": "origine",
+    "definition_it": "punto o momento in cui qualcosa ha inizio",
+    "examples": [
+      {
+        "it": "Non conosciamo l'origine di questa tradizione.",
+        "fr": "Nous ne connaissons pas l'origine de cette tradition."
+      }
+    ],
+    "synonyms": [
+      "provenienza",
+      "principio"
+    ],
+    "isVerb": false
+  },
+  "orizzonte": {
+    "lemma": "orizzonte",
+    "pos": "nome maschile",
+    "fr": "horizon",
+    "definition_it": "la linea dove il cielo sembra toccare la terra o il mare; anche, l'insieme delle possibilità o prospettive future",
+    "examples": [
+      {
+        "it": "Il sole tramontava all'orizzonte.",
+        "fr": "Le soleil se couchait à l'horizon."
+      }
+    ],
+    "synonyms": [
+      "confine",
+      "prospettiva"
+    ],
+    "isVerb": false
+  },
+  "orlo": {
+    "lemma": "orlo",
+    "pos": "nome maschile",
+    "fr": "bord, ourlet",
+    "definition_it": "il margine o l'estremità di qualcosa, per esempio di un abito, di un bicchiere o di un precipizio",
+    "examples": [
+      {
+        "it": "Era sull'orlo del precipizio.",
+        "fr": "Il était au bord du précipice."
+      }
+    ],
+    "synonyms": [
+      "bordo",
+      "margine"
+    ],
+    "isVerb": false
+  },
+  "orribile": {
+    "lemma": "orribile",
+    "pos": "aggettivo",
+    "fr": "horrible",
+    "definition_it": "che provoca orrore, paura o forte disgusto; molto brutto",
+    "examples": [
+      {
+        "it": "Ha avuto un incidente orribile.",
+        "fr": "Il a eu un accident horrible."
+      }
+    ],
+    "synonyms": [
+      "terribile",
+      "spaventoso"
+    ],
+    "isVerb": false
+  },
+  "orto": {
+    "lemma": "orto",
+    "pos": "nome maschile",
+    "fr": "potager, jardin",
+    "definition_it": "un terreno coltivato con verdure e ortaggi per uso familiare",
+    "examples": [
+      {
+        "it": "Mio nonno coltiva pomodori nell'orto.",
+        "fr": "Mon grand-père cultive des tomates dans le potager."
+      }
+    ],
+    "synonyms": [
+      "giardino"
+    ],
+    "isVerb": false
+  },
+  "ospedale": {
+    "lemma": "ospedale",
+    "pos": "nome maschile",
+    "fr": "hôpital",
+    "definition_it": "un edificio dove i medici curano le persone malate o ferite",
+    "examples": [
+      {
+        "it": "L'hanno portato d'urgenza all'ospedale.",
+        "fr": "Ils l'ont emmené d'urgence à l'hôpital."
+      }
+    ],
+    "synonyms": [
+      "nosocomio",
+      "clinica"
+    ],
+    "isVerb": false
+  },
+  "osservatorio": {
+    "lemma": "osservatorio",
+    "pos": "nome maschile",
+    "fr": "observatoire",
+    "definition_it": "un luogo attrezzato per osservare fenomeni naturali, come il cielo, o per analizzare una situazione",
+    "examples": [
+      {
+        "it": "Gli astronomi lavorano in un osservatorio sulle montagne.",
+        "fr": "Les astronomes travaillent dans un observatoire en montagne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "osservazione": {
+    "lemma": "osservazione",
+    "pos": "nome femminile",
+    "fr": "observation, remarque",
+    "definition_it": "l'atto di guardare con attenzione qualcosa, oppure un commento o una critica",
+    "examples": [
+      {
+        "it": "Il professore ha fatto un'osservazione interessante.",
+        "fr": "Le professeur a fait une remarque intéressante."
+      }
+    ],
+    "synonyms": [
+      "nota",
+      "commento"
+    ],
+    "isVerb": false
+  },
+  "osso": {
+    "lemma": "osso",
+    "pos": "nome maschile",
+    "fr": "os",
+    "definition_it": "ciascuna delle parti dure che formano lo scheletro del corpo",
+    "examples": [
+      {
+        "it": "Il cane rosicchiava un osso.",
+        "fr": "Le chien rongeait un os."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "oste": {
+    "lemma": "oste",
+    "pos": "nome maschile",
+    "fr": "aubergiste, hôte",
+    "definition_it": "la persona che gestisce un'osteria o una locanda",
+    "examples": [
+      {
+        "it": "L'oste ci ha servito un buon vino locale.",
+        "fr": "L'aubergiste nous a servi un bon vin local."
+      }
+    ],
+    "synonyms": [
+      "locandiere"
+    ],
+    "isVerb": false
+  },
+  "osteria": {
+    "lemma": "osteria",
+    "pos": "nome femminile",
+    "fr": "auberge, taverne",
+    "definition_it": "un locale semplice dove si mangia e si beve, spesso a conduzione familiare",
+    "examples": [
+      {
+        "it": "Abbiamo cenato in una piccola osteria di paese.",
+        "fr": "Nous avons dîné dans une petite auberge de village."
+      }
+    ],
+    "synonyms": [
+      "trattoria",
+      "taverna"
+    ],
+    "isVerb": false
+  }
+}

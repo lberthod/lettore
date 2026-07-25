@@ -1,0 +1,118 @@
+{
+  "ondeggiare": {
+    "presente": [
+      "ondeggio",
+      "ondeggi",
+      "ondeggia",
+      "ondeggiamo",
+      "ondeggiate",
+      "ondeggiano"
+    ],
+    "passatoProssimo": [
+      "ho ondeggiato",
+      "hai ondeggiato",
+      "ha ondeggiato",
+      "abbiamo ondeggiato",
+      "avete ondeggiato",
+      "hanno ondeggiato"
+    ],
+    "imperfetto": [
+      "ondeggiavo",
+      "ondeggiavi",
+      "ondeggiava",
+      "ondeggiavamo",
+      "ondeggiavate",
+      "ondeggiavano"
+    ],
+    "futuro": [
+      "ondeggerò",
+      "ondeggerai",
+      "ondeggerà",
+      "ondeggeremo",
+      "ondeggerete",
+      "ondeggeranno"
+    ],
+    "congiuntivoPresente": [
+      "ondeggi",
+      "ondeggi",
+      "ondeggi",
+      "ondeggiamo",
+      "ondeggiate",
+      "ondeggino"
+    ],
+    "condizionale": [
+      "ondeggerei",
+      "ondeggeresti",
+      "ondeggerebbe",
+      "ondeggeremmo",
+      "ondeggereste",
+      "ondeggerebbero"
+    ],
+    "imperativo": [
+      "-",
+      "ondeggia",
+      "ondeggi",
+      "ondeggiamo",
+      "ondeggiate",
+      "ondeggino"
+    ]
+  },
+  "opporsi": {
+    "presente": [
+      "mi oppongo",
+      "ti opponi",
+      "si oppone",
+      "ci opponiamo",
+      "vi opponete",
+      "si oppongono"
+    ],
+    "passatoProssimo": [
+      "mi sono opposto/a",
+      "ti sei opposto/a",
+      "si è opposto/a",
+      "ci siamo opposti/e",
+      "vi siete opposti/e",
+      "si sono opposti/e"
+    ],
+    "imperfetto": [
+      "mi opponevo",
+      "ti opponevi",
+      "si opponeva",
+      "ci opponevamo",
+      "vi opponevate",
+      "si opponevano"
+    ],
+    "futuro": [
+      "mi opporrò",
+      "ti opporrai",
+      "si opporrà",
+      "ci opporremo",
+      "vi opporrete",
+      "si opporranno"
+    ],
+    "congiuntivoPresente": [
+      "mi opponga",
+      "ti opponga",
+      "si opponga",
+      "ci opponiamo",
+      "vi opponiate",
+      "si oppongano"
+    ],
+    "condizionale": [
+      "mi opporrei",
+      "ti opporresti",
+      "si opporrebbe",
+      "ci opporremmo",
+      "vi opporreste",
+      "si opporrebbero"
+    ],
+    "imperativo": [
+      "-",
+      "opponiti",
+      "si opponga",
+      "opponiamoci",
+      "opponetevi",
+      "si oppongano"
+    ]
+  }
+}

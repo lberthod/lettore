@@ -5,16 +5,14 @@
 // fois différemment) au lieu de les écraser silencieusement.
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
+import { loadShardedDictionary, writeLemmaShards, writeConjugationShards, writeWordIndexShards, rebuildIndex } from './dictionary-shards.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
 const BATCH_DIR = path.join(ROOT, 'scripts', 'data', 'batches')
-const DICT_DIR = path.join(ROOT, 'src', 'dictionary')
 
 const SKIPPED_PATH = path.join(ROOT, 'scripts', 'data', 'skipped-words.json')
 
-const lemmas = JSON.parse(readFileSync(path.join(DICT_DIR, 'lemmas.json'), 'utf8'))
-const conjugations = JSON.parse(readFileSync(path.join(DICT_DIR, 'conjugations.json'), 'utf8'))
-const wordIndex = JSON.parse(readFileSync(path.join(DICT_DIR, 'word-index.json'), 'utf8'))
+const { lemmas, conjugations, wordIndex } = loadShardedDictionary()
 // Mots explicitement écartés (noms propres, bruit OCR...) par un lot
 // précédent — à exclure des futurs lots, sinon ils reviennent à l'infini
 // puisqu'ils ne rejoignent jamais word-index.json.
@@ -104,9 +102,10 @@ for (const lemma of Object.keys(lemmas)) {
   }
 }
 
-writeFileSync(path.join(DICT_DIR, 'lemmas.json'), JSON.stringify(lemmas, null, 2) + '\n')
-writeFileSync(path.join(DICT_DIR, 'conjugations.json'), JSON.stringify(conjugations, null, 2) + '\n')
-writeFileSync(path.join(DICT_DIR, 'word-index.json'), JSON.stringify(wordIndex, null, 2) + '\n')
+writeLemmaShards(lemmas)
+writeConjugationShards(conjugations)
+writeWordIndexShards(wordIndex)
+rebuildIndex(lemmas, conjugations, wordIndex)
 writeFileSync(SKIPPED_PATH, JSON.stringify([...skippedWords].sort(), null, 2) + '\n')
 
 console.log(`Lots fusionnés : ${batchFiles.length}`)

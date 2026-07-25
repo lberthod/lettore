@@ -1,0 +1,16 @@
+{
+  "ragno": {
+    "lemma": "ragno",
+    "pos": "sostantivo (maschile)",
+    "fr": "araignée",
+    "definition_it": "piccolo animale con otto zampe che tesse ragnatele",
+    "examples": [
+      {
+        "it": "Un grosso ragno aveva tessuto la tela nell'angolo.",
+        "fr": "Une grosse araignée avait tissé sa toile dans le coin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  }
+}

@@ -1,0 +1,6948 @@
+{
+  "babbeo": {
+    "lemma": "babbeo",
+    "pos": "nome maschile / aggettivo",
+    "fr": "nigaud, benêt",
+    "definition_it": "persona sciocca e credulona",
+    "examples": [
+      {
+        "it": "Non fare il babbeo, è ovvio che ti prendono in giro.",
+        "fr": "Ne fais pas le nigaud, c'est évident qu'on se moque de toi."
+      }
+    ],
+    "synonyms": [
+      "sciocco",
+      "stupido"
+    ],
+    "isVerb": false
+  },
+  "babbino": {
+    "lemma": "babbino",
+    "pos": "nome maschile",
+    "fr": "petit papa",
+    "definition_it": "forma diminutiva e affettuosa di babbo, usata specialmente dai bambini",
+    "examples": [
+      {
+        "it": "Babbino caro, ti voglio tanto bene.",
+        "fr": "Petit papa chéri, je t'aime tant."
+      }
+    ],
+    "synonyms": [
+      "papino"
+    ],
+    "isVerb": false
+  },
+  "babbo": {
+    "lemma": "babbo",
+    "pos": "nome maschile",
+    "fr": "papa",
+    "definition_it": "modo affettuoso e familiare per chiamare il padre",
+    "examples": [
+      {
+        "it": "Il babbo è tornato tardi dal lavoro.",
+        "fr": "Papa est rentré tard du travail."
+      }
+    ],
+    "synonyms": [
+      "papà"
+    ],
+    "isVerb": false
+  },
+  "baccano": {
+    "lemma": "baccano",
+    "pos": "nome maschile",
+    "fr": "vacarme, tapage",
+    "definition_it": "rumore forte e confuso fatto da persone o cose",
+    "examples": [
+      {
+        "it": "I bambini facevano un baccano insopportabile.",
+        "fr": "Les enfants faisaient un vacarme insupportable."
+      }
+    ],
+    "synonyms": [
+      "chiasso",
+      "frastuono"
+    ],
+    "isVerb": false
+  },
+  "bacchetta": {
+    "lemma": "bacchetta",
+    "pos": "nome femminile",
+    "fr": "baguette",
+    "definition_it": "bastoncino sottile usato per vari scopi, ad esempio dal direttore d'orchestra o come strumento magico",
+    "examples": [
+      {
+        "it": "Il mago agitò la bacchetta e fece sparire la carta.",
+        "fr": "Le magicien agita la baguette et fit disparaître la carte."
+      }
+    ],
+    "synonyms": [
+      "verga"
+    ],
+    "isVerb": false
+  },
+  "bacchettata": {
+    "lemma": "bacchettata",
+    "pos": "nome femminile",
+    "fr": "coup de baguette, coup de férule",
+    "definition_it": "colpo dato con una bacchetta",
+    "examples": [
+      {
+        "it": "Il maestro gli diede una bacchettata sulle dita.",
+        "fr": "Le maître lui donna un coup de férule sur les doigts."
+      }
+    ],
+    "synonyms": [
+      "colpo"
+    ],
+    "isVerb": false
+  },
+  "bacheca": {
+    "lemma": "bacheca",
+    "pos": "nome femminile",
+    "fr": "vitrine, panneau d'affichage",
+    "definition_it": "mobile o pannello con vetro o rete usato per esporre oggetti o avvisi",
+    "examples": [
+      {
+        "it": "L'avviso è affisso in bacheca da una settimana.",
+        "fr": "L'avis est affiché au panneau depuis une semaine."
+      }
+    ],
+    "synonyms": [
+      "vetrina"
+    ],
+    "isVerb": false
+  },
+  "baciare": {
+    "lemma": "baciare",
+    "pos": "verbo (transitivo)",
+    "fr": "embrasser, baiser",
+    "definition_it": "dare un bacio a qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "I nonni baciano sempre i nipoti quando arrivano.",
+        "fr": "Les grands-parents embrassent toujours leurs petits-enfants quand ils arrivent."
+      }
+    ],
+    "synonyms": [
+      "sfiorare con le labbra"
+    ],
+    "isVerb": true
+  },
+  "bacino": {
+    "lemma": "bacino",
+    "pos": "nome maschile",
+    "fr": "bassin",
+    "definition_it": "cavità ossea del corpo tra il tronco e le gambe, oppure specchio d'acqua o area geografica circondata da rilievi",
+    "examples": [
+      {
+        "it": "Il bacino del fiume Po è molto vasto.",
+        "fr": "Le bassin du fleuve Pô est très vaste."
+      }
+    ],
+    "synonyms": [
+      "conca"
+    ],
+    "isVerb": false
+  },
+  "bacio": {
+    "lemma": "bacio",
+    "pos": "nome maschile",
+    "fr": "baiser, bisou",
+    "definition_it": "gesto di affetto fatto toccando con le labbra",
+    "examples": [
+      {
+        "it": "Le diede un bacio sulla guancia prima di partire.",
+        "fr": "Il lui donna un baiser sur la joue avant de partir."
+      }
+    ],
+    "synonyms": [
+      "bacetto"
+    ],
+    "isVerb": false
+  },
+  "bacione": {
+    "lemma": "bacione",
+    "pos": "nome maschile",
+    "fr": "gros bisou",
+    "definition_it": "bacio grande e affettuoso, spesso usato per salutare qualcuno con calore",
+    "examples": [
+      {
+        "it": "Ti mando un bacione, a presto!",
+        "fr": "Je t'envoie un gros bisou, à bientôt !"
+      }
+    ],
+    "synonyms": [
+      "bacio grande"
+    ],
+    "isVerb": false
+  },
+  "bacon": {
+    "lemma": "bacon",
+    "pos": "nome maschile invariabile",
+    "fr": "bacon, lard fumé",
+    "definition_it": "pancetta di maiale affumicata, tagliata a fette sottili",
+    "examples": [
+      {
+        "it": "Ha preparato le uova con il bacon per colazione.",
+        "fr": "Il a préparé des œufs avec du bacon pour le petit-déjeuner."
+      }
+    ],
+    "synonyms": [
+      "pancetta affumicata"
+    ],
+    "isVerb": false
+  },
+  "badare": {
+    "lemma": "badare",
+    "pos": "verbo (intransitivo)",
+    "fr": "faire attention, s'occuper de",
+    "definition_it": "prestare attenzione a qualcosa o prendersi cura di qualcuno",
+    "examples": [
+      {
+        "it": "Devo badare a mio fratello piccolo oggi.",
+        "fr": "Je dois m'occuper de mon petit frère aujourd'hui."
+      }
+    ],
+    "synonyms": [
+      "occuparsi",
+      "curare"
+    ],
+    "isVerb": true
+  },
+  "badia": {
+    "lemma": "badia",
+    "pos": "sostantivo (femminile)",
+    "fr": "abbaye, monastère",
+    "definition_it": "edificio dove vivono i monaci o le monache, sinonimo di abbazia",
+    "examples": [
+      {
+        "it": "I monaci vivevano nella badia in cima al colle.",
+        "fr": "Les moines vivaient dans l'abbaye au sommet de la colline."
+      }
+    ],
+    "synonyms": [
+      "abbazia",
+      "monastero"
+    ],
+    "isVerb": false
+  },
+  "badile": {
+    "lemma": "badile",
+    "pos": "sostantivo (maschile)",
+    "fr": "pelle, bêche",
+    "definition_it": "attrezzo con manico lungo e una lama piatta usato per scavare o spalare",
+    "examples": [
+      {
+        "it": "Il contadino scavava la terra con il badile.",
+        "fr": "Le paysan creusait la terre avec la pelle."
+      }
+    ],
+    "synonyms": [
+      "pala",
+      "vanga"
+    ],
+    "isVerb": false
+  },
+  "baffo": {
+    "lemma": "baffo",
+    "pos": "sostantivo (maschile)",
+    "fr": "moustache",
+    "definition_it": "pelo che cresce sopra il labbro superiore degli uomini",
+    "examples": [
+      {
+        "it": "Mio nonno ha dei baffi grigi molto folti.",
+        "fr": "Mon grand-père a une moustache grise très épaisse."
+      }
+    ],
+    "synonyms": [
+      "mustacchio"
+    ],
+    "isVerb": false
+  },
+  "bagaglio": {
+    "lemma": "bagaglio",
+    "pos": "sostantivo (maschile)",
+    "fr": "bagage",
+    "definition_it": "insieme delle valigie e degli oggetti che si portano in viaggio",
+    "examples": [
+      {
+        "it": "Ho lasciato il bagaglio in albergo.",
+        "fr": "J'ai laissé mes bagages à l'hôtel."
+      }
+    ],
+    "synonyms": [
+      "valigia"
+    ],
+    "isVerb": false
+  },
+  "bagliore": {
+    "lemma": "bagliore",
+    "pos": "sostantivo (maschile)",
+    "fr": "lueur, éclat",
+    "definition_it": "luce intensa e improvvisa, spesso di breve durata",
+    "examples": [
+      {
+        "it": "Un bagliore improvviso illuminò il cielo.",
+        "fr": "Une lueur soudaine illumina le ciel."
+      }
+    ],
+    "synonyms": [
+      "splendore",
+      "luccichio"
+    ],
+    "isVerb": false
+  },
+  "bagnare": {
+    "lemma": "bagnare",
+    "pos": "verbo (transitivo)",
+    "fr": "mouiller, arroser",
+    "definition_it": "rendere umido o coprire d'acqua qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "La pioggia ha bagnato tutto il giardino.",
+        "fr": "La pluie a mouillé tout le jardin."
+      }
+    ],
+    "synonyms": [
+      "inzuppare",
+      "irrigare"
+    ],
+    "isVerb": true
+  },
+  "bagno": {
+    "lemma": "bagno",
+    "pos": "sostantivo maschile",
+    "fr": "bain, salle de bain",
+    "definition_it": "atto di lavarsi immergendosi nell'acqua, oppure la stanza della casa dove ci si lava",
+    "examples": [
+      {
+        "it": "Ho fatto un bagno caldo prima di dormire.",
+        "fr": "J'ai pris un bain chaud avant de dormir."
+      }
+    ],
+    "synonyms": [
+      "lavaggio"
+    ],
+    "isVerb": false
+  },
+  "bah": {
+    "lemma": "bah",
+    "pos": "interiezione",
+    "fr": "bah, ma foi",
+    "definition_it": "espressione che indica dubbio, indifferenza o perplessità",
+    "examples": [
+      {
+        "it": "Bah, non so proprio cosa pensare.",
+        "fr": "Bah, je ne sais vraiment pas quoi penser."
+      }
+    ],
+    "synonyms": [
+      "boh"
+    ],
+    "isVerb": false
+  },
+  "baia": {
+    "lemma": "baia",
+    "pos": "sostantivo femminile",
+    "fr": "baie, crique",
+    "definition_it": "insenatura della costa dove il mare entra nella terraferma, forma antica: baje",
+    "examples": [
+      {
+        "it": "La barca è entrata nella baia tranquilla.",
+        "fr": "Le bateau est entré dans la baie tranquille."
+      }
+    ],
+    "synonyms": [
+      "insenatura",
+      "golfo"
+    ],
+    "isVerb": false
+  },
+  "baiocco": {
+    "lemma": "baiocco",
+    "pos": "sostantivo maschile",
+    "fr": "baiocco (ancienne monnaie pontificale)",
+    "definition_it": "antica moneta di rame usata nello Stato Pontificio, di piccolo valore; forma antica: bajocco",
+    "examples": [
+      {
+        "it": "Non aveva nemmeno un baiocco in tasca.",
+        "fr": "Il n'avait pas un sou en poche."
+      }
+    ],
+    "synonyms": [
+      "soldo"
+    ],
+    "isVerb": false
+  },
+  "baita": {
+    "lemma": "baita",
+    "pos": "sostantivo femminile",
+    "fr": "chalet, refuge de montagne",
+    "definition_it": "piccola casa di montagna, spesso di legno, usata come rifugio o abitazione",
+    "examples": [
+      {
+        "it": "Abbiamo passato la notte in una baita di montagna.",
+        "fr": "Nous avons passé la nuit dans un chalet de montagne."
+      }
+    ],
+    "synonyms": [
+      "rifugio",
+      "chalet"
+    ],
+    "isVerb": false
+  },
+  "balbettare": {
+    "lemma": "balbettare",
+    "pos": "verbo (intransitivo/transitivo)",
+    "fr": "bégayer, balbutier",
+    "definition_it": "parlare con esitazione, ripetendo suoni o sillabe, per emozione, timidezza o difficoltà",
+    "examples": [
+      {
+        "it": "Il bambino balbettava per l'emozione.",
+        "fr": "L'enfant balbutiait d'émotion."
+      }
+    ],
+    "synonyms": [
+      "tartagliare",
+      "farfugliare"
+    ],
+    "isVerb": true
+  },
+  "balbuziente": {
+    "lemma": "balbuziente",
+    "pos": "aggettivo/sostantivo",
+    "fr": "bègue",
+    "definition_it": "che, o chi, ha difficoltà a parlare in modo fluido, ripetendo suoni o sillabe",
+    "examples": [
+      {
+        "it": "Era un ragazzo balbuziente fin da piccolo.",
+        "fr": "C'était un garçon bègue depuis tout petit."
+      }
+    ],
+    "synonyms": [
+      "tartaglione"
+    ],
+    "isVerb": false
+  },
+  "balcone": {
+    "lemma": "balcone",
+    "pos": "sostantivo maschile",
+    "fr": "balcon",
+    "definition_it": "piccola terrazza sporgente da una finestra di un edificio, protetta da una ringhiera",
+    "examples": [
+      {
+        "it": "Mi affaccio ogni mattina dal balcone.",
+        "fr": "Je me penche chaque matin au balcon."
+      }
+    ],
+    "synonyms": [
+      "terrazzino"
+    ],
+    "isVerb": false
+  },
+  "baldacchino": {
+    "lemma": "baldacchino",
+    "pos": "sostantivo maschile",
+    "fr": "baldaquin, dais",
+    "definition_it": "struttura decorativa sospesa o sorretta da colonne, posta sopra un letto, un trono o un altare",
+    "examples": [
+      {
+        "it": "Il letto aveva un baldacchino di velluto rosso.",
+        "fr": "Le lit avait un baldaquin de velours rouge."
+      }
+    ],
+    "synonyms": [
+      "dais"
+    ],
+    "isVerb": false
+  },
+  "balenare": {
+    "lemma": "balenare",
+    "pos": "verbo (intransitivo)",
+    "fr": "jaillir, traverser l'esprit comme un éclair",
+    "definition_it": "apparire improvvisamente e velocemente, come un lampo; si usa spesso per idee o pensieri",
+    "examples": [
+      {
+        "it": "Un'idea improvvisa le balenò nella mente.",
+        "fr": "Une idée soudaine lui traversa l'esprit comme un éclair."
+      }
+    ],
+    "synonyms": [
+      "lampeggiare",
+      "guizzare"
+    ],
+    "isVerb": true
+  },
+  "baleno": {
+    "lemma": "baleno",
+    "pos": "nome (maschile)",
+    "fr": "éclair, éclat de lumière",
+    "definition_it": "breve bagliore improvviso di luce, come un lampo; spesso nell'espressione 'in un baleno' per dire in pochissimo tempo",
+    "examples": [
+      {
+        "it": "In un baleno arrivò alla stazione.",
+        "fr": "En un éclair, il arriva à la gare."
+      }
+    ],
+    "synonyms": [
+      "lampo",
+      "bagliore"
+    ],
+    "isVerb": false
+  },
+  "balenottera": {
+    "lemma": "balenottera",
+    "pos": "nome (femminile)",
+    "fr": "rorqual (baleine)",
+    "definition_it": "grande mammifero marino simile alla balena, ma più snello e veloce",
+    "examples": [
+      {
+        "it": "Le balenottere nuotavano al largo della costa.",
+        "fr": "Les rorquals nageaient au large de la côte."
+      }
+    ],
+    "synonyms": [
+      "balena"
+    ],
+    "isVerb": false
+  },
+  "balia": {
+    "lemma": "balia",
+    "pos": "nome (femminile)",
+    "fr": "nourrice",
+    "definition_it": "donna che allatta e cura un bambino non suo",
+    "examples": [
+      {
+        "it": "Da piccolo fu affidato a una balia.",
+        "fr": "Enfant, il fut confié à une nourrice."
+      }
+    ],
+    "synonyms": [
+      "nutrice"
+    ],
+    "isVerb": false
+  },
+  "balìa": {
+    "lemma": "balìa",
+    "pos": "nome (femminile)",
+    "fr": "pouvoir, merci (à la merci de)",
+    "definition_it": "potere o dominio su qualcuno o qualcosa; nella locuzione 'in balìa di' significa completamente alla mercé di",
+    "examples": [
+      {
+        "it": "La barca era in balìa delle onde.",
+        "fr": "Le bateau était à la merci des vagues."
+      }
+    ],
+    "synonyms": [
+      "mercé",
+      "potere"
+    ],
+    "isVerb": false
+  },
+  "ballare": {
+    "lemma": "ballare",
+    "pos": "verbo (intransitivo)",
+    "fr": "danser",
+    "definition_it": "muovere il corpo seguendo il ritmo della musica",
+    "examples": [
+      {
+        "it": "Ogni sabato sera vanno a ballare in discoteca.",
+        "fr": "Chaque samedi soir, ils vont danser en discothèque."
+      }
+    ],
+    "synonyms": [
+      "danzare"
+    ],
+    "isVerb": true
+  },
+  "ballerino": {
+    "lemma": "ballerino",
+    "pos": "nome (maschile)",
+    "fr": "danseur",
+    "definition_it": "persona che balla, spesso in modo professionale",
+    "examples": [
+      {
+        "it": "Il ballerino si esibì con grande eleganza.",
+        "fr": "Le danseur se produisit avec beaucoup d'élégance."
+      }
+    ],
+    "synonyms": [
+      "danzatore"
+    ],
+    "isVerb": false
+  },
+  "ballo": {
+    "lemma": "ballo",
+    "pos": "nome (maschile)",
+    "fr": "danse, bal",
+    "definition_it": "l'atto di ballare, oppure una festa in cui si balla",
+    "examples": [
+      {
+        "it": "Al ballo di fine anno tutti indossavano abiti eleganti.",
+        "fr": "Au bal de fin d'année, tout le monde portait des tenues élégantes."
+      }
+    ],
+    "synonyms": [
+      "danza",
+      "festa da ballo"
+    ],
+    "isVerb": false
+  },
+  "balneare": {
+    "lemma": "balneare",
+    "pos": "aggettivo",
+    "fr": "balnéaire",
+    "definition_it": "relativo ai bagni di mare o alla balneazione",
+    "examples": [
+      {
+        "it": "Trascorrono l'estate in una località balneare.",
+        "fr": "Ils passent l'été dans une station balnéaire."
+      }
+    ],
+    "synonyms": [
+      "marino"
+    ],
+    "isVerb": false
+  },
+  "baloccare": {
+    "lemma": "baloccare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "amuser, distraire (avec des jouets)",
+    "definition_it": "trastullare, tenere occupato qualcuno con giochi o passatempi",
+    "examples": [
+      {
+        "it": "La nonna baloccava il bambino con un sonaglio.",
+        "fr": "La grand-mère amusait l'enfant avec un hochet."
+      }
+    ],
+    "synonyms": [
+      "trastullare",
+      "divertire"
+    ],
+    "isVerb": true
+  },
+  "baloccarsi": {
+    "lemma": "baloccarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'amuser, jouer distraitement",
+    "definition_it": "trastullarsi, giocare in modo distratto o infantile con qualcosa",
+    "examples": [
+      {
+        "it": "Il bambino si baloccava con un filo di lana.",
+        "fr": "L'enfant s'amusait avec un fil de laine."
+      }
+    ],
+    "synonyms": [
+      "trastullarsi",
+      "divertirsi"
+    ],
+    "isVerb": true
+  },
+  "balocco": {
+    "lemma": "balocco",
+    "pos": "sostantivo maschile",
+    "fr": "jouet",
+    "definition_it": "oggetto con cui i bambini giocano",
+    "examples": [
+      {
+        "it": "I balocchi erano sparsi per tutta la stanza.",
+        "fr": "Les jouets étaient éparpillés dans toute la pièce."
+      }
+    ],
+    "synonyms": [
+      "giocattolo",
+      "trastullo"
+    ],
+    "isVerb": false
+  },
+  "balordo": {
+    "lemma": "balordo",
+    "pos": "aggettivo",
+    "fr": "stupide, maladroit, étourdi",
+    "definition_it": "sciocco, che agisce in modo goffo o poco sensato",
+    "examples": [
+      {
+        "it": "Fece una scelta balorda che gli costò caro.",
+        "fr": "Il fit un choix stupide qui lui coûta cher."
+      }
+    ],
+    "synonyms": [
+      "sciocco",
+      "goffo",
+      "stordito"
+    ],
+    "isVerb": false
+  },
+  "balsamico": {
+    "lemma": "balsamico",
+    "pos": "aggettivo",
+    "fr": "balsamique",
+    "definition_it": "che ha proprietà rinfrescanti o profumate, simile a un balsamo",
+    "examples": [
+      {
+        "it": "L'aria di montagna aveva un profumo balsamico.",
+        "fr": "L'air de la montagne avait un parfum balsamique."
+      }
+    ],
+    "synonyms": [
+      "aromatico",
+      "profumato"
+    ],
+    "isVerb": false
+  },
+  "baluginare": {
+    "lemma": "baluginare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "luire faiblement, scintiller, poindre",
+    "definition_it": "apparire con una luce debole e incerta, brillare appena",
+    "examples": [
+      {
+        "it": "Una luce baluginava in lontananza.",
+        "fr": "Une lumière scintillait faiblement au loin."
+      }
+    ],
+    "synonyms": [
+      "brillare",
+      "luccicare"
+    ],
+    "isVerb": true
+  },
+  "balzano": {
+    "lemma": "balzano",
+    "pos": "aggettivo",
+    "fr": "bizarre, extravagant, saugrenu",
+    "definition_it": "strano e stravagante, poco ragionevole (spesso riferito a un'idea)",
+    "examples": [
+      {
+        "it": "Ebbe un'idea balzana che nessuno prese sul serio.",
+        "fr": "Il eut une idée saugrenue que personne ne prit au sérieux."
+      }
+    ],
+    "synonyms": [
+      "bizzarro",
+      "stravagante",
+      "strampalato"
+    ],
+    "isVerb": false
+  },
+  "balzare": {
+    "lemma": "balzare",
+    "pos": "verbo (intransitivo, irregolare nella coniugazione)",
+    "fr": "bondir, sauter",
+    "definition_it": "sollevarsi da terra con un movimento rapido e improvviso",
+    "examples": [
+      {
+        "it": "Il gatto balzò sul tavolo in un attimo.",
+        "fr": "Le chat bondit sur la table en un instant."
+      }
+    ],
+    "synonyms": [
+      "saltare",
+      "sobbalzare"
+    ],
+    "isVerb": true
+  },
+  "balzo": {
+    "lemma": "balzo",
+    "pos": "sostantivo maschile",
+    "fr": "bond, saut",
+    "definition_it": "movimento improvviso e rapido con cui ci si stacca da terra",
+    "examples": [
+      {
+        "it": "Con un balzo superò il muretto.",
+        "fr": "D'un bond, il franchit le petit muret."
+      }
+    ],
+    "synonyms": [
+      "salto",
+      "scatto"
+    ],
+    "isVerb": false
+  },
+  "bambino": {
+    "lemma": "bambino",
+    "pos": "sostantivo maschile/femminile",
+    "fr": "enfant, petit garçon / petite fille",
+    "definition_it": "persona che si trova nella prima età della vita",
+    "examples": [
+      {
+        "it": "La bambina giocava con i suoi fratelli.",
+        "fr": "La petite fille jouait avec ses frères."
+      }
+    ],
+    "synonyms": [
+      "fanciullo",
+      "piccolo"
+    ],
+    "isVerb": false
+  },
+  "bambola": {
+    "lemma": "bambola",
+    "pos": "sostantivo femminile",
+    "fr": "poupée",
+    "definition_it": "giocattolo che rappresenta una figura umana, di solito una bambina",
+    "examples": [
+      {
+        "it": "Le bambole erano allineate sullo scaffale.",
+        "fr": "Les poupées étaient alignées sur l'étagère."
+      }
+    ],
+    "synonyms": [
+      "pupazza"
+    ],
+    "isVerb": false
+  },
+  "banale": {
+    "lemma": "banale",
+    "pos": "aggettivo",
+    "fr": "banal, ordinaire",
+    "definition_it": "privo di originalità, molto comune",
+    "examples": [
+      {
+        "it": "Era una scusa banale.",
+        "fr": "C'était une excuse banale."
+      }
+    ],
+    "synonyms": [
+      "comune",
+      "scontato"
+    ],
+    "isVerb": false
+  },
+  "banana": {
+    "lemma": "banana",
+    "pos": "sostantivo femminile",
+    "fr": "banane",
+    "definition_it": "frutto giallo e allungato di una pianta tropicale",
+    "examples": [
+      {
+        "it": "Ha comprato due banane al mercato.",
+        "fr": "Il a acheté deux bananes au marché."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "banca": {
+    "lemma": "banca",
+    "pos": "sostantivo femminile",
+    "fr": "banque",
+    "definition_it": "istituto che gestisce denaro, prestiti e depositi",
+    "examples": [
+      {
+        "it": "Ho ritirato dei soldi in banca.",
+        "fr": "J'ai retiré de l'argent à la banque."
+      }
+    ],
+    "synonyms": [
+      "istituto di credito"
+    ],
+    "isVerb": false
+  },
+  "bancarella": {
+    "lemma": "bancarella",
+    "pos": "sostantivo femminile",
+    "fr": "étal, échoppe",
+    "definition_it": "banco mobile per la vendita di merci, spesso al mercato",
+    "examples": [
+      {
+        "it": "La bancarella vendeva frutta fresca.",
+        "fr": "L'étal vendait des fruits frais."
+      }
+    ],
+    "synonyms": [
+      "banco",
+      "chiosco"
+    ],
+    "isVerb": false
+  },
+  "bancario": {
+    "lemma": "bancario",
+    "pos": "aggettivo/sostantivo",
+    "fr": "bancaire / employé de banque",
+    "definition_it": "relativo alla banca, oppure persona che lavora in banca",
+    "examples": [
+      {
+        "it": "Ha aperto un conto bancario.",
+        "fr": "Il a ouvert un compte bancaire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "banchetto": {
+    "lemma": "banchetto",
+    "pos": "sostantivo maschile",
+    "fr": "banquet",
+    "definition_it": "pranzo o cena solenne, spesso in occasione di una festa",
+    "examples": [
+      {
+        "it": "Il banchetto di nozze durò tutta la sera.",
+        "fr": "Le banquet de mariage a duré toute la soirée."
+      }
+    ],
+    "synonyms": [
+      "festino",
+      "convito"
+    ],
+    "isVerb": false
+  },
+  "banchiere": {
+    "lemma": "banchiere",
+    "pos": "sostantivo maschile",
+    "fr": "banquier",
+    "definition_it": "persona che dirige o lavora ad alto livello in una banca",
+    "examples": [
+      {
+        "it": "I banchieri discutevano dei nuovi investimenti.",
+        "fr": "Les banquiers discutaient des nouveaux investissements."
+      }
+    ],
+    "synonyms": [
+      "finanziere"
+    ],
+    "isVerb": false
+  },
+  "banchina": {
+    "lemma": "banchina",
+    "pos": "sostantivo femminile",
+    "fr": "quai",
+    "definition_it": "spazio pianeggiante lungo un porto, una stazione o una strada",
+    "examples": [
+      {
+        "it": "La nave era attraccata alla banchina.",
+        "fr": "Le navire était amarré au quai."
+      }
+    ],
+    "synonyms": [
+      "molo",
+      "marciapiede"
+    ],
+    "isVerb": false
+  },
+  "banco": {
+    "lemma": "banco",
+    "pos": "sostantivo maschile",
+    "fr": "banc, comptoir, pupitre",
+    "definition_it": "tavolo o superficie usata per lavorare, vendere o studiare",
+    "examples": [
+      {
+        "it": "Gli studenti sedevano ai loro banchi.",
+        "fr": "Les élèves étaient assis à leurs pupitres."
+      }
+    ],
+    "synonyms": [
+      "tavolo",
+      "bancone"
+    ],
+    "isVerb": false
+  },
+  "bancomat": {
+    "lemma": "bancomat",
+    "pos": "sostantivo maschile invariabile",
+    "fr": "distributeur automatique, carte bancaire",
+    "definition_it": "macchina che eroga contanti automaticamente, o la carta usata per prelevare denaro",
+    "examples": [
+      {
+        "it": "Ho prelevato dei soldi al bancomat.",
+        "fr": "J'ai retiré de l'argent au distributeur automatique."
+      }
+    ],
+    "synonyms": [
+      "sportello automatico"
+    ],
+    "isVerb": false
+  },
+  "bancone": {
+    "lemma": "bancone",
+    "pos": "sostantivo maschile",
+    "fr": "comptoir",
+    "definition_it": "grande banco, spesso di un bar o di un negozio",
+    "examples": [
+      {
+        "it": "Bevemmo un caffè al bancone del bar.",
+        "fr": "Nous avons bu un café au comptoir du bar."
+      }
+    ],
+    "synonyms": [
+      "banco"
+    ],
+    "isVerb": false
+  },
+  "banda": {
+    "lemma": "banda",
+    "pos": "sostantivo femminile",
+    "fr": "bande, groupe musical, gang",
+    "definition_it": "gruppo di persone unite per uno scopo comune, spesso musicale o criminale",
+    "examples": [
+      {
+        "it": "La banda del paese suonava in piazza.",
+        "fr": "La fanfare du village jouait sur la place."
+      }
+    ],
+    "synonyms": [
+      "gruppo",
+      "gang",
+      "combriccola"
+    ],
+    "isVerb": false
+  },
+  "bandiera": {
+    "lemma": "bandiera",
+    "pos": "sostantivo femminile",
+    "fr": "drapeau",
+    "definition_it": "pezzo di stoffa colorato che rappresenta una nazione o un gruppo",
+    "examples": [
+      {
+        "it": "La bandiera italiana sventolava sul balcone.",
+        "fr": "Le drapeau italien flottait au balcon."
+      }
+    ],
+    "synonyms": [
+      "vessillo",
+      "stendardo"
+    ],
+    "isVerb": false
+  },
+  "bandieruola": {
+    "lemma": "bandieruola",
+    "pos": "sostantivo femminile",
+    "fr": "girouette, petit drapeau",
+    "definition_it": "piccola bandiera, oppure oggetto che gira con il vento per indicarne la direzione",
+    "examples": [
+      {
+        "it": "Sul tetto c'era una bandieruola che indicava il vento.",
+        "fr": "Il y avait une girouette sur le toit qui indiquait le vent."
+      }
+    ],
+    "synonyms": [
+      "banderuola"
+    ],
+    "isVerb": false
+  },
+  "bandire": {
+    "lemma": "bandire",
+    "pos": "verbo (transitivo, 3ª coniugazione con -isc-)",
+    "fr": "annoncer publiquement, bannir, proclamer",
+    "definition_it": "dichiarare pubblicamente qualcosa, oppure allontanare qualcuno per legge",
+    "examples": [
+      {
+        "it": "Il comune ha bandito un concorso per giovani artisti.",
+        "fr": "La mairie a lancé un concours pour jeunes artistes."
+      }
+    ],
+    "synonyms": [
+      "proclamare",
+      "esiliare",
+      "annunciare"
+    ],
+    "isVerb": true
+  },
+  "bando": {
+    "lemma": "bando",
+    "pos": "sostantivo maschile",
+    "fr": "avis, ban, décret",
+    "definition_it": "atto pubblico con cui si annuncia o si ordina qualcosa a tutti",
+    "examples": [
+      {
+        "it": "Hanno pubblicato un bando per assumere nuovi impiegati.",
+        "fr": "Ils ont publié un avis pour embaucher de nouveaux employés."
+      }
+    ],
+    "synonyms": [
+      "avviso",
+      "editto",
+      "decreto"
+    ],
+    "isVerb": false
+  },
+  "banfio": {
+    "lemma": "banfio",
+    "pos": "aggettivo (letterario/dialettale)",
+    "fr": "haletant, essoufflé",
+    "definition_it": "che respira con affanno, ansimante, spesso per fatica o paura",
+    "examples": [
+      {
+        "it": "Arrivò alla porta banfio e sudato.",
+        "fr": "Il arriva à la porte haletant et en sueur."
+      }
+    ],
+    "synonyms": [
+      "ansimante",
+      "affannato"
+    ],
+    "isVerb": false
+  },
+  "bar": {
+    "lemma": "bar",
+    "pos": "sostantivo maschile invariabile",
+    "fr": "bar, café",
+    "definition_it": "locale pubblico dove si servono bevande e piccoli cibi",
+    "examples": [
+      {
+        "it": "Ci vediamo al bar all'angolo.",
+        "fr": "On se voit au bar du coin."
+      }
+    ],
+    "synonyms": [
+      "caffè",
+      "locale"
+    ],
+    "isVerb": false
+  },
+  "bara": {
+    "lemma": "bara",
+    "pos": "sostantivo femminile",
+    "fr": "cercueil",
+    "definition_it": "cassa di legno in cui si mette il corpo di una persona morta",
+    "examples": [
+      {
+        "it": "La bara fu portata in chiesa dai parenti.",
+        "fr": "Le cercueil fut porté à l'église par les proches."
+      }
+    ],
+    "synonyms": [
+      "cassa da morto",
+      "feretro"
+    ],
+    "isVerb": false
+  },
+  "baraccone": {
+    "lemma": "baraccone",
+    "pos": "sostantivo maschile",
+    "fr": "baraque foraine, stand de fête",
+    "definition_it": "grande baracca di legno usata nelle fiere per spettacoli o giochi",
+    "examples": [
+      {
+        "it": "Al luna park c'era un baraccone con i giochi di tiro.",
+        "fr": "À la fête foraine, il y avait un stand avec des jeux de tir."
+      }
+    ],
+    "synonyms": [
+      "baracca",
+      "chiosco"
+    ],
+    "isVerb": false
+  },
+  "baraonda": {
+    "lemma": "baraonda",
+    "pos": "sostantivo femminile",
+    "fr": "cohue, chahut, confusion",
+    "definition_it": "grande confusione, rumore e disordine causati da molte persone",
+    "examples": [
+      {
+        "it": "In stazione c'era una baraonda incredibile.",
+        "fr": "À la gare, il y avait une cohue incroyable."
+      }
+    ],
+    "synonyms": [
+      "confusione",
+      "caos",
+      "trambusto"
+    ],
+    "isVerb": false
+  },
+  "barattolo": {
+    "lemma": "barattolo",
+    "pos": "sostantivo maschile",
+    "fr": "pot, bocal, boîte de conserve",
+    "definition_it": "piccolo contenitore di vetro, latta o plastica per conservare cibi o altro",
+    "examples": [
+      {
+        "it": "In dispensa c'erano tanti barattoli di marmellata.",
+        "fr": "Dans le garde-manger, il y avait plein de pots de confiture."
+      }
+    ],
+    "synonyms": [
+      "vasetto",
+      "contenitore"
+    ],
+    "isVerb": false
+  },
+  "barba": {
+    "lemma": "barba",
+    "pos": "sostantivo femminile",
+    "fr": "barbe",
+    "definition_it": "peli che crescono sul viso dell'uomo, sul mento e sulle guance",
+    "examples": [
+      {
+        "it": "Si è fatto crescere la barba durante le vacanze.",
+        "fr": "Il s'est laissé pousser la barbe pendant les vacances."
+      }
+    ],
+    "synonyms": [
+      "pizzo",
+      "peluria"
+    ],
+    "isVerb": false
+  },
+  "barbaccia": {
+    "lemma": "barbaccia",
+    "pos": "sostantivo femminile",
+    "fr": "grosse barbe hirsute, vilaine barbe",
+    "definition_it": "barba lunga, folta e trascurata, spesso usata in tono spregiativo",
+    "examples": [
+      {
+        "it": "Il vecchio pastore aveva una barbaccia bianca e ispida.",
+        "fr": "Le vieux berger avait une grosse barbe blanche et hirsute."
+      }
+    ],
+    "synonyms": [
+      "barbona"
+    ],
+    "isVerb": false
+  },
+  "barbagianni": {
+    "lemma": "barbagianni",
+    "pos": "sostantivo maschile (invariabile)",
+    "fr": "chouette effraie, hibou",
+    "definition_it": "uccello rapace notturno con il viso a forma di cuore",
+    "examples": [
+      {
+        "it": "Un barbagianni volava silenzioso nella notte.",
+        "fr": "Une chouette effraie volait silencieusement dans la nuit."
+      }
+    ],
+    "synonyms": [
+      "civetta",
+      "gufo"
+    ],
+    "isVerb": false
+  },
+  "barbaramente": {
+    "lemma": "barbaramente",
+    "pos": "avverbio",
+    "fr": "barbarement, cruellement",
+    "definition_it": "in modo crudele e violento, senza pietà",
+    "examples": [
+      {
+        "it": "Il nemico fu trattato barbaramente.",
+        "fr": "L'ennemi fut traité barbarement."
+      }
+    ],
+    "synonyms": [
+      "crudelmente",
+      "brutalmente"
+    ],
+    "isVerb": false
+  },
+  "barbaro": {
+    "lemma": "barbaro",
+    "pos": "aggettivo/sostantivo",
+    "fr": "barbare",
+    "definition_it": "che appartiene a un popolo antico considerato non civilizzato, oppure crudele e primitivo",
+    "examples": [
+      {
+        "it": "Le tribù barbare invasero l'impero romano.",
+        "fr": "Les tribus barbares envahirent l'empire romain."
+      }
+    ],
+    "synonyms": [
+      "crudele",
+      "selvaggio"
+    ],
+    "isVerb": false
+  },
+  "barbecue": {
+    "lemma": "barbecue",
+    "pos": "sostantivo maschile (invariabile)",
+    "fr": "barbecue",
+    "definition_it": "griglia usata per cuocere carne all'aperto",
+    "examples": [
+      {
+        "it": "Abbiamo organizzato un barbecue in giardino.",
+        "fr": "Nous avons organisé un barbecue dans le jardin."
+      }
+    ],
+    "synonyms": [
+      "grigliata"
+    ],
+    "isVerb": false
+  },
+  "barbero": {
+    "lemma": "barbero",
+    "pos": "sostantivo maschile / aggettivo",
+    "fr": "cheval barbe (race équine)",
+    "definition_it": "razza di cavallo da corsa originaria del Nord Africa, usata anche nel Palio di Siena",
+    "examples": [
+      {
+        "it": "I barberi corsero veloci lungo la pista.",
+        "fr": "Les chevaux barbes coururent rapidement sur la piste."
+      }
+    ],
+    "synonyms": [
+      "cavallo"
+    ],
+    "isVerb": false
+  },
+  "barbiere": {
+    "lemma": "barbiere",
+    "pos": "sostantivo maschile",
+    "fr": "coiffeur pour hommes, barbier",
+    "definition_it": "persona che taglia capelli e barba, o il suo negozio",
+    "examples": [
+      {
+        "it": "Sono andato dal barbiere a tagliarmi i capelli.",
+        "fr": "Je suis allé chez le coiffeur pour me couper les cheveux."
+      }
+    ],
+    "synonyms": [
+      "parrucchiere"
+    ],
+    "isVerb": false
+  },
+  "barbone": {
+    "lemma": "barbone",
+    "pos": "sostantivo maschile",
+    "fr": "clochard ; caniche (chien)",
+    "definition_it": "persona senza casa che vive per strada, oppure una razza di cane",
+    "examples": [
+      {
+        "it": "Il barbone dormiva su una panchina.",
+        "fr": "Le clochard dormait sur un banc."
+      }
+    ],
+    "synonyms": [
+      "senzatetto",
+      "mendicante"
+    ],
+    "isVerb": false
+  },
+  "barbuto": {
+    "lemma": "barbuto",
+    "pos": "aggettivo",
+    "fr": "barbu",
+    "definition_it": "che ha una folta barba",
+    "examples": [
+      {
+        "it": "Un uomo barbuto entrò nel negozio.",
+        "fr": "Un homme barbu entra dans le magasin."
+      }
+    ],
+    "synonyms": [
+      "peloso"
+    ],
+    "isVerb": false
+  },
+  "barca": {
+    "lemma": "barca",
+    "pos": "sostantivo femminile",
+    "fr": "bateau, barque",
+    "definition_it": "piccola imbarcazione usata per navigare",
+    "examples": [
+      {
+        "it": "Abbiamo remato con la barca sul lago.",
+        "fr": "Nous avons ramé avec la barque sur le lac."
+      }
+    ],
+    "synonyms": [
+      "imbarcazione",
+      "battello"
+    ],
+    "isVerb": false
+  },
+  "barchetta": {
+    "lemma": "barchetta",
+    "pos": "sostantivo femminile",
+    "fr": "petit bateau, petite barque",
+    "definition_it": "piccola barca, spesso giocattolo o di carta",
+    "examples": [
+      {
+        "it": "Il bambino fece galleggiare una barchetta di carta.",
+        "fr": "L'enfant fit flotter un petit bateau en papier."
+      }
+    ],
+    "synonyms": [
+      "barca"
+    ],
+    "isVerb": false
+  },
+  "barcollare": {
+    "lemma": "barcollare",
+    "pos": "verbo intransitivo (regolare)",
+    "fr": "chanceler, tituber",
+    "definition_it": "camminare in modo instabile, quasi per cadere",
+    "examples": [
+      {
+        "it": "L'uomo barcollava per la strada, ubriaco.",
+        "fr": "L'homme titubait dans la rue, ivre."
+      }
+    ],
+    "synonyms": [
+      "vacillare",
+      "traballare"
+    ],
+    "isVerb": true
+  },
+  "bardare": {
+    "lemma": "bardare",
+    "pos": "verbo transitivo (regolare)",
+    "fr": "harnacher, parer",
+    "definition_it": "mettere il basto o i finimenti a un animale, oppure vestire in modo elaborato",
+    "examples": [
+      {
+        "it": "Il cavaliere bardò il cavallo prima della battaglia.",
+        "fr": "Le chevalier harnacha le cheval avant la bataille."
+      }
+    ],
+    "synonyms": [
+      "equipaggiare",
+      "agghindare"
+    ],
+    "isVerb": true
+  },
+  "bardo": {
+    "lemma": "bardo",
+    "pos": "sostantivo maschile",
+    "fr": "barde, poète",
+    "definition_it": "poeta e cantore, spesso di tradizione antica o celtica",
+    "examples": [
+      {
+        "it": "Il bardo cantava le gesta degli eroi.",
+        "fr": "Le barde chantait les exploits des héros."
+      }
+    ],
+    "synonyms": [
+      "poeta",
+      "cantore"
+    ],
+    "isVerb": false
+  },
+  "barena": {
+    "lemma": "barena",
+    "pos": "sostantivo femminile",
+    "fr": "haut-fond marécageux (typique de la lagune de Venise)",
+    "definition_it": "terreno paludoso e fangoso che emerge nella laguna con la bassa marea",
+    "examples": [
+      {
+        "it": "Le barene della laguna di Venezia sono ricche di uccelli.",
+        "fr": "Les hauts-fonds de la lagune de Venise sont riches en oiseaux."
+      }
+    ],
+    "synonyms": [
+      "palude"
+    ],
+    "isVerb": false
+  },
+  "bargello": {
+    "lemma": "bargello",
+    "pos": "sostantivo maschile",
+    "fr": "chef de la police (historique, Italie médiévale)",
+    "definition_it": "nell'Italia medievale e rinascimentale, capo della polizia cittadina",
+    "examples": [
+      {
+        "it": "Il bargello arrestò il ladro in piazza.",
+        "fr": "Le chef de la police arrêta le voleur sur la place."
+      }
+    ],
+    "synonyms": [
+      "capo della polizia"
+    ],
+    "isVerb": false
+  },
+  "bargiglio": {
+    "lemma": "bargiglio",
+    "pos": "sostantivo maschile",
+    "fr": "barbillon, caroncule (du coq/dindon)",
+    "definition_it": "escrescenza carnosa che pende sotto il becco di alcuni uccelli come il gallo",
+    "examples": [
+      {
+        "it": "Il gallo scosse i bargigli rossi.",
+        "fr": "Le coq secoua ses barbillons rouges."
+      }
+    ],
+    "synonyms": [
+      "caruncola"
+    ],
+    "isVerb": false
+  },
+  "barista": {
+    "lemma": "barista",
+    "pos": "sostantivo (maschile/femminile)",
+    "fr": "barman, barista",
+    "definition_it": "persona che lavora al bancone di un bar, preparando bevande",
+    "examples": [
+      {
+        "it": "Il barista preparò due cappuccini.",
+        "fr": "Le barista prépara deux cappuccinos."
+      }
+    ],
+    "synonyms": [
+      "barman"
+    ],
+    "isVerb": false
+  },
+  "baritoneggiare": {
+    "lemma": "baritoneggiare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "prendre une voix de baryton",
+    "definition_it": "parlare o cantare usando una voce grave, come quella di un baritono",
+    "examples": [
+      {
+        "it": "L'attore baritoneggiò per impressionare il pubblico.",
+        "fr": "L'acteur prit une voix de baryton pour impressionner le public."
+      }
+    ],
+    "synonyms": [
+      "intonarsi gravemente"
+    ],
+    "isVerb": true
+  },
+  "baro": {
+    "lemma": "baro",
+    "pos": "sostantivo (maschile)",
+    "fr": "tricheur (au jeu)",
+    "definition_it": "persona che imbroglia nel gioco, specialmente alle carte",
+    "examples": [
+      {
+        "it": "Il baro fu scoperto a giocare con carte segnate.",
+        "fr": "Le tricheur fut découvert en jouant avec des cartes marquées."
+      }
+    ],
+    "synonyms": [
+      "imbroglione",
+      "truffatore"
+    ],
+    "isVerb": false
+  },
+  "barocco": {
+    "lemma": "barocco",
+    "pos": "aggettivo",
+    "fr": "baroque",
+    "definition_it": "relativo allo stile artistico ricco di decorazioni, diffuso nel XVII secolo",
+    "examples": [
+      {
+        "it": "La chiesa aveva una facciata barocca molto decorata.",
+        "fr": "L'église avait une façade baroque très décorée."
+      }
+    ],
+    "synonyms": [
+      "sfarzoso",
+      "decorato"
+    ],
+    "isVerb": false
+  },
+  "barolo": {
+    "lemma": "barolo",
+    "pos": "sostantivo (maschile)",
+    "fr": "barolo (vin rouge piémontais)",
+    "definition_it": "pregiato vino rosso prodotto in Piemonte, nella zona di Barolo",
+    "examples": [
+      {
+        "it": "A cena bevemmo un ottimo barolo.",
+        "fr": "Au dîner, nous avons bu un excellent barolo."
+      }
+    ],
+    "synonyms": [
+      "vino rosso pregiato"
+    ],
+    "isVerb": false
+  },
+  "barometro": {
+    "lemma": "barometro",
+    "pos": "sostantivo (maschile)",
+    "fr": "baromètre",
+    "definition_it": "strumento che misura la pressione atmosferica",
+    "examples": [
+      {
+        "it": "Il barometro segnava bel tempo.",
+        "fr": "Le baromètre indiquait du beau temps."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "barone": {
+    "lemma": "barone",
+    "pos": "sostantivo (maschile)",
+    "fr": "baron",
+    "definition_it": "titolo nobiliare inferiore a quello di visconte",
+    "examples": [
+      {
+        "it": "Il barone possedeva un grande castello.",
+        "fr": "Le baron possédait un grand château."
+      }
+    ],
+    "synonyms": [
+      "nobile"
+    ],
+    "isVerb": false
+  },
+  "barra": {
+    "lemma": "barra",
+    "pos": "sostantivo (femminile)",
+    "fr": "barre",
+    "definition_it": "asta rigida usata per sostenere, chiudere o segnare qualcosa",
+    "examples": [
+      {
+        "it": "Sollevò la barra per aprire il cancello.",
+        "fr": "Il souleva la barre pour ouvrir le portail."
+      }
+    ],
+    "synonyms": [
+      "asta",
+      "sbarra"
+    ],
+    "isVerb": false
+  },
+  "barricare": {
+    "lemma": "barricare",
+    "pos": "verbo (transitivo/riflessivo, regolare)",
+    "fr": "barricader",
+    "definition_it": "chiudere un luogo con barricate per proteggersi o impedire l'accesso",
+    "examples": [
+      {
+        "it": "Si barricava in casa ogni sera per paura.",
+        "fr": "Il se barricadait chez lui chaque soir par peur."
+      }
+    ],
+    "synonyms": [
+      "sbarrare",
+      "chiudere"
+    ],
+    "isVerb": true
+  },
+  "barroccio": {
+    "lemma": "barroccio",
+    "pos": "sostantivo (maschile)",
+    "fr": "charrette à deux roues",
+    "definition_it": "carro a due ruote, spesso trainato da un animale, usato per trasportare merci",
+    "examples": [
+      {
+        "it": "Il contadino caricò il fieno sul barroccio.",
+        "fr": "Le paysan chargea le foin sur la charrette."
+      }
+    ],
+    "synonyms": [
+      "carretto",
+      "carro"
+    ],
+    "isVerb": false
+  },
+  "barzelletta": {
+    "lemma": "barzelletta",
+    "pos": "sostantivo (femminile)",
+    "fr": "blague",
+    "definition_it": "breve racconto umoristico raccontato per far ridere",
+    "examples": [
+      {
+        "it": "Raccontò una barzelletta divertente a cena.",
+        "fr": "Il raconta une blague amusante pendant le dîner."
+      }
+    ],
+    "synonyms": [
+      "battuta",
+      "scherzo"
+    ],
+    "isVerb": false
+  },
+  "base": {
+    "lemma": "base",
+    "pos": "sostantivo (femminile)",
+    "fr": "base",
+    "definition_it": "parte inferiore su cui poggia qualcosa, oppure fondamento di qualcosa",
+    "examples": [
+      {
+        "it": "La statua poggiava su una base di marmo.",
+        "fr": "La statue reposait sur une base en marbre."
+      }
+    ],
+    "synonyms": [
+      "fondamento",
+      "sostegno"
+    ],
+    "isVerb": false
+  },
+  "basilica": {
+    "lemma": "basilica",
+    "pos": "nome (femminile)",
+    "fr": "basilique",
+    "definition_it": "grande chiesa cristiana di particolare importanza storica o religiosa",
+    "examples": [
+      {
+        "it": "Abbiamo visitato la basilica di San Pietro.",
+        "fr": "Nous avons visité la basilique Saint-Pierre."
+      }
+    ],
+    "synonyms": [
+      "chiesa",
+      "cattedrale"
+    ],
+    "isVerb": false
+  },
+  "basilico": {
+    "lemma": "basilico",
+    "pos": "nome (maschile)",
+    "fr": "basilic",
+    "definition_it": "pianta aromatica dalle foglie verdi profumate, molto usata in cucina",
+    "examples": [
+      {
+        "it": "Il pesto si prepara con basilico fresco.",
+        "fr": "Le pesto se prépare avec du basilic frais."
+      }
+    ],
+    "synonyms": [
+      "erba aromatica"
+    ],
+    "isVerb": false
+  },
+  "basolo": {
+    "lemma": "basolo",
+    "pos": "nome (maschile)",
+    "fr": "pavé (bloc de basalte)",
+    "definition_it": "blocco di pietra dura, spesso di basalto, usato per pavimentare strade",
+    "examples": [
+      {
+        "it": "La stradina era lastricata di basoli antichi.",
+        "fr": "La petite rue était pavée de vieux blocs de basalte."
+      }
+    ],
+    "synonyms": [
+      "lastra",
+      "pietra da pavimentazione"
+    ],
+    "isVerb": false
+  },
+  "basso": {
+    "lemma": "basso",
+    "pos": "aggettivo",
+    "fr": "bas, petit (de taille)",
+    "definition_it": "che ha poca altezza o si trova a poca distanza dal suolo",
+    "examples": [
+      {
+        "it": "Il muro del giardino è molto basso.",
+        "fr": "Le mur du jardin est très bas."
+      }
+    ],
+    "synonyms": [
+      "piccolo",
+      "corto"
+    ],
+    "isVerb": false
+  },
+  "bassotto": {
+    "lemma": "bassotto",
+    "pos": "nome (maschile) / aggettivo",
+    "fr": "teckel, basset (chien) ; assez bas",
+    "definition_it": "razza di cane dal corpo lungo e dalle zampe corte; anche, un po' basso",
+    "examples": [
+      {
+        "it": "Il mio bassotto adora correre in giardino.",
+        "fr": "Mon teckel adore courir dans le jardin."
+      }
+    ],
+    "synonyms": [
+      "cane bassotto"
+    ],
+    "isVerb": false
+  },
+  "bastardo": {
+    "lemma": "bastardo",
+    "pos": "nome / aggettivo",
+    "fr": "bâtard",
+    "definition_it": "detto di persona o animale nato da genitori di razza o origine diversa; usato anche come insulto",
+    "examples": [
+      {
+        "it": "Il cane era un bastardo raccolto per strada.",
+        "fr": "Le chien était un bâtard recueilli dans la rue."
+      }
+    ],
+    "synonyms": [
+      "meticcio",
+      "ibrido"
+    ],
+    "isVerb": false
+  },
+  "bastare": {
+    "lemma": "bastare",
+    "pos": "verbo (intransitivo, coniugato con essere)",
+    "fr": "suffire",
+    "definition_it": "essere sufficiente per uno scopo",
+    "examples": [
+      {
+        "it": "Basta un po' di pazienza per imparare l'italiano.",
+        "fr": "Un peu de patience suffit pour apprendre l'italien."
+      }
+    ],
+    "synonyms": [
+      "essere sufficiente"
+    ],
+    "isVerb": true
+  },
+  "bastimento": {
+    "lemma": "bastimento",
+    "pos": "sostantivo maschile",
+    "fr": "navire, bâtiment (bateau)",
+    "definition_it": "grande nave usata per il trasporto di merci o persone",
+    "examples": [
+      {
+        "it": "Il bastimento salpò all'alba verso il porto lontano.",
+        "fr": "Le navire a appareillé à l'aube vers le port lointain."
+      }
+    ],
+    "synonyms": [
+      "nave",
+      "piroscafo"
+    ],
+    "isVerb": false
+  },
+  "bastonare": {
+    "lemma": "bastonare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "battre avec un bâton, rosser",
+    "definition_it": "colpire qualcuno o qualcosa con un bastone",
+    "examples": [
+      {
+        "it": "Il contadino minacciò di bastonare il ladro.",
+        "fr": "Le paysan menaça de battre le voleur avec un bâton."
+      }
+    ],
+    "synonyms": [
+      "picchiare",
+      "percuotere"
+    ],
+    "isVerb": true
+  },
+  "bastonata": {
+    "lemma": "bastonata",
+    "pos": "sostantivo femminile",
+    "fr": "coup de bâton",
+    "definition_it": "colpo dato con un bastone",
+    "examples": [
+      {
+        "it": "Ricevette una bastonata sulla schiena.",
+        "fr": "Il reçut un coup de bâton dans le dos."
+      }
+    ],
+    "synonyms": [
+      "colpo",
+      "percossa"
+    ],
+    "isVerb": false
+  },
+  "bastoncino": {
+    "lemma": "bastoncino",
+    "pos": "sostantivo maschile",
+    "fr": "petit bâton, bâtonnet",
+    "definition_it": "piccolo bastone sottile",
+    "examples": [
+      {
+        "it": "Il bambino disegnava con un bastoncino nella sabbia.",
+        "fr": "L'enfant dessinait avec un petit bâton dans le sable."
+      }
+    ],
+    "synonyms": [
+      "bacchetta",
+      "stecco"
+    ],
+    "isVerb": false
+  },
+  "bastone": {
+    "lemma": "bastone",
+    "pos": "sostantivo maschile",
+    "fr": "bâton, canne",
+    "definition_it": "oggetto lungo e rigido usato per camminare, colpire o come sostegno",
+    "examples": [
+      {
+        "it": "Il vecchio camminava appoggiato a un bastone.",
+        "fr": "Le vieil homme marchait appuyé sur une canne."
+      }
+    ],
+    "synonyms": [
+      "canna",
+      "mazza"
+    ],
+    "isVerb": false
+  },
+  "batacchio": {
+    "lemma": "batacchio",
+    "pos": "sostantivo maschile",
+    "fr": "battant (de cloche)",
+    "definition_it": "pezzo di metallo appeso dentro una campana che, muovendosi, la fa suonare",
+    "examples": [
+      {
+        "it": "Il batacchio della campana batteva a mezzogiorno.",
+        "fr": "Le battant de la cloche sonnait à midi."
+      }
+    ],
+    "synonyms": [
+      "battaglio"
+    ],
+    "isVerb": false
+  },
+  "battaglia": {
+    "lemma": "battaglia",
+    "pos": "sostantivo femminile",
+    "fr": "bataille",
+    "definition_it": "scontro armato tra eserciti nemici",
+    "examples": [
+      {
+        "it": "La battaglia durò tutto il giorno.",
+        "fr": "La bataille dura toute la journée."
+      }
+    ],
+    "synonyms": [
+      "scontro",
+      "combattimento"
+    ],
+    "isVerb": false
+  },
+  "battaglio": {
+    "lemma": "battaglio",
+    "pos": "sostantivo maschile",
+    "fr": "battant (de cloche)",
+    "definition_it": "la parte metallica interna di una campana che, muovendosi, la fa suonare",
+    "examples": [
+      {
+        "it": "Il battaglio colpiva il bronzo della campana ad ogni rintocco.",
+        "fr": "Le battant frappait le bronze de la cloche à chaque coup."
+      }
+    ],
+    "synonyms": [
+      "batacchio"
+    ],
+    "isVerb": false
+  },
+  "battello": {
+    "lemma": "battello",
+    "pos": "sostantivo maschile",
+    "fr": "bateau, embarcation",
+    "definition_it": "piccola imbarcazione usata per navigare su fiumi, laghi o vicino alla costa",
+    "examples": [
+      {
+        "it": "Il battello attraversava lentamente il fiume.",
+        "fr": "Le bateau traversait lentement le fleuve."
+      }
+    ],
+    "synonyms": [
+      "barca",
+      "imbarcazione"
+    ],
+    "isVerb": false
+  },
+  "battente": {
+    "lemma": "battente",
+    "pos": "sostantivo maschile",
+    "fr": "battant, vantail (de porta o finestra)",
+    "definition_it": "la parte mobile di una porta, di una finestra o di un'imposta che si apre e si chiude",
+    "examples": [
+      {
+        "it": "Il vento sbatteva il battente della finestra.",
+        "fr": "Le vent claquait le battant de la fenêtre."
+      }
+    ],
+    "synonyms": [
+      "anta",
+      "imposta"
+    ],
+    "isVerb": false
+  },
+  "battere": {
+    "lemma": "battere",
+    "pos": "verbo (transitivo/intransitivo, irregolare)",
+    "fr": "battre, frapper",
+    "definition_it": "colpire ripetutamente qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Il cuore batteva forte.",
+        "fr": "Le cœur battait fort."
+      }
+    ],
+    "synonyms": [
+      "colpire",
+      "percuotere"
+    ],
+    "isVerb": true
+  },
+  "batteria": {
+    "lemma": "batteria",
+    "pos": "sostantivo femminile",
+    "fr": "batterie (électrique ou instrument de musique)",
+    "definition_it": "dispositivo che accumula energia elettrica, oppure insieme di tamburi e piatti usati in musica",
+    "examples": [
+      {
+        "it": "La batteria dell'auto era scarica.",
+        "fr": "La batterie de la voiture était déchargée."
+      }
+    ],
+    "synonyms": [
+      "accumulatore",
+      "pila"
+    ],
+    "isVerb": false
+  },
+  "batterio": {
+    "lemma": "batterio",
+    "pos": "sostantivo maschile (plurale irregolare: batteri)",
+    "fr": "bactérie",
+    "definition_it": "microorganismo unicellulare, spesso causa di malattie o infezioni",
+    "examples": [
+      {
+        "it": "I batteri si moltiplicano rapidamente in condizioni favorevoli.",
+        "fr": "Les bactéries se multiplient rapidement dans des conditions favorables."
+      }
+    ],
+    "synonyms": [
+      "microrganismo",
+      "microbo"
+    ],
+    "isVerb": false
+  },
+  "battesimo": {
+    "lemma": "battesimo",
+    "pos": "sostantivo maschile",
+    "fr": "baptême",
+    "definition_it": "sacramento cristiano di iniziazione, o cerimonia con cui si dà un nome",
+    "examples": [
+      {
+        "it": "I battesimi si celebravano di solito la domenica.",
+        "fr": "Les baptêmes se célébraient généralement le dimanche."
+      }
+    ],
+    "synonyms": [
+      "cresima"
+    ],
+    "isVerb": false
+  },
+  "battezzare": {
+    "lemma": "battezzare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "baptiser",
+    "definition_it": "amministrare il sacramento del battesimo a qualcuno, oppure dare un nome a qualcosa in modo scherzoso",
+    "examples": [
+      {
+        "it": "Il prete stava per battezzare il neonato davanti a tutta la famiglia.",
+        "fr": "Le prêtre s'apprêtait à baptiser le nouveau-né devant toute la famille."
+      }
+    ],
+    "synonyms": [
+      "cristianizzare"
+    ],
+    "isVerb": true
+  },
+  "battibaleno": {
+    "lemma": "battibaleno",
+    "pos": "sostantivo maschile (invariabile, usato quasi solo in 'in un battibaleno')",
+    "fr": "en un clin d'œil, en un instant",
+    "definition_it": "un tempo brevissimo, quasi istantaneo",
+    "examples": [
+      {
+        "it": "In un battibaleno la stanza fu vuota.",
+        "fr": "En un clin d'œil, la pièce fut vide."
+      }
+    ],
+    "synonyms": [
+      "attimo",
+      "istante"
+    ],
+    "isVerb": false
+  },
+  "battibecco": {
+    "lemma": "battibecco",
+    "pos": "sostantivo maschile",
+    "fr": "prise de bec, dispute",
+    "definition_it": "breve litigio o discussione animata su cose di poca importanza",
+    "examples": [
+      {
+        "it": "Tra i due fratelli scoppiò un battibecco per una sciocchezza.",
+        "fr": "Entre les deux frères éclata une prise de bec pour une bêtise."
+      }
+    ],
+    "synonyms": [
+      "litigio",
+      "diverbio",
+      "alterco"
+    ],
+    "isVerb": false
+  },
+  "battimani": {
+    "lemma": "battimani",
+    "pos": "sostantivo maschile (invariabile)",
+    "fr": "applaudissements",
+    "definition_it": "il battere le mani insieme, in segno di approvazione o entusiasmo",
+    "examples": [
+      {
+        "it": "Alla fine dello spettacolo scoppiò un lungo battimani.",
+        "fr": "À la fin du spectacle éclatèrent de longs applaudissements."
+      }
+    ],
+    "synonyms": [
+      "applausi",
+      "applauso"
+    ],
+    "isVerb": false
+  },
+  "battito": {
+    "lemma": "battito",
+    "pos": "sostantivo maschile",
+    "fr": "battement, pulsation",
+    "definition_it": "il pulsare regolare del cuore o di un altro organo, oppure il rumore ritmico di qualcosa che batte",
+    "examples": [
+      {
+        "it": "Il medico ascoltò il battito del suo cuore.",
+        "fr": "Le médecin écouta le battement de son cœur."
+      }
+    ],
+    "synonyms": [
+      "pulsazione",
+      "palpito"
+    ],
+    "isVerb": false
+  },
+  "battitore": {
+    "lemma": "battitore",
+    "pos": "sostantivo maschile",
+    "fr": "batteur (personne qui bat, ex. le grain), enchérisseur",
+    "definition_it": "persona che batte qualcosa, per esempio il grano durante la trebbiatura, oppure chi dirige un'asta",
+    "examples": [
+      {
+        "it": "I battitori lavoravano nei campi durante la trebbiatura.",
+        "fr": "Les batteurs travaillaient dans les champs pendant le battage."
+      }
+    ],
+    "synonyms": [
+      "trebbiatore"
+    ],
+    "isVerb": false
+  },
+  "battitura": {
+    "lemma": "battitura",
+    "pos": "sostantivo femminile",
+    "fr": "battage, action de battre",
+    "definition_it": "l'atto o il risultato del battere qualcosa, per esempio il grano",
+    "examples": [
+      {
+        "it": "Le battiture del grano duravano tutta l'estate.",
+        "fr": "Les battages du blé duraient tout l'été."
+      }
+    ],
+    "synonyms": [
+      "trebbiatura"
+    ],
+    "isVerb": false
+  },
+  "batuffolo": {
+    "lemma": "batuffolo",
+    "pos": "nome (m.)",
+    "fr": "boule de coton, tampon",
+    "definition_it": "piccola massa morbida e soffice di materiale come cotone o lana",
+    "examples": [
+      {
+        "it": "Le pulì la ferita con un batuffolo di cotone.",
+        "fr": "Elle lui nettoya la plaie avec un tampon de coton."
+      }
+    ],
+    "synonyms": [
+      "batuffoletto",
+      "fiocco"
+    ],
+    "isVerb": false
+  },
+  "baule": {
+    "lemma": "baule",
+    "pos": "nome (m.)",
+    "fr": "malle, coffre",
+    "definition_it": "grande contenitore rigido usato per riporre o trasportare oggetti, soprattutto durante i viaggi",
+    "examples": [
+      {
+        "it": "Mise tutti i vestiti nel baule prima di partire.",
+        "fr": "Il mit tous ses vêtements dans la malle avant de partir."
+      }
+    ],
+    "synonyms": [
+      "cassa",
+      "bagaglio"
+    ],
+    "isVerb": false
+  },
+  "bauta": {
+    "lemma": "bauta",
+    "pos": "nome (f.)",
+    "fr": "bauta (masque et cape vénitiens)",
+    "definition_it": "antico costume veneziano composto da maschera bianca, mantello e tricorno, usato durante il carnevale",
+    "examples": [
+      {
+        "it": "Al carnevale di Venezia indossava una bauta nera.",
+        "fr": "Au carnaval de Venise, elle portait une bauta noire."
+      }
+    ],
+    "synonyms": [
+      "maschera veneziana"
+    ],
+    "isVerb": false
+  },
+  "bava": {
+    "lemma": "bava",
+    "pos": "nome (f.)",
+    "fr": "bave, salive",
+    "definition_it": "liquido denso che esce dalla bocca di persone, animali o alcuni insetti",
+    "examples": [
+      {
+        "it": "Il cane aveva la bava alla bocca dopo la corsa.",
+        "fr": "Le chien avait de la bave à la bouche après la course."
+      }
+    ],
+    "synonyms": [
+      "saliva"
+    ],
+    "isVerb": false
+  },
+  "bavero": {
+    "lemma": "bavero",
+    "pos": "nome (m.)",
+    "fr": "col, revers (de vêtement)",
+    "definition_it": "parte del vestito, spesso di un cappotto o di una giacca, che circonda il collo",
+    "examples": [
+      {
+        "it": "Si alzò il bavero del cappotto per ripararsi dal freddo.",
+        "fr": "Il releva le col de son manteau pour se protéger du froid."
+      }
+    ],
+    "synonyms": [
+      "colletto",
+      "collo"
+    ],
+    "isVerb": false
+  },
+  "bavoso": {
+    "lemma": "bavoso",
+    "pos": "aggettivo",
+    "fr": "baveux, gluant",
+    "definition_it": "che produce o è coperto di bava, oppure che appare viscido e sdolcinato",
+    "examples": [
+      {
+        "it": "Il neonato aveva le manine tutte bavose.",
+        "fr": "Le bébé avait les petites mains toutes baveuses."
+      }
+    ],
+    "synonyms": [
+      "viscido",
+      "molle"
+    ],
+    "isVerb": false
+  },
+  "bazza": {
+    "lemma": "bazza",
+    "pos": "nome (f.)",
+    "fr": "menton proéminent, aubaine",
+    "definition_it": "mento sporgente in avanti; nel linguaggio colloquiale indica anche una fortuna insperata",
+    "examples": [
+      {
+        "it": "Aveva una bazza pronunciata che lo rendeva riconoscibile.",
+        "fr": "Il avait un menton proéminent qui le rendait reconnaissable."
+      }
+    ],
+    "synonyms": [
+      "mento",
+      "fortuna"
+    ],
+    "isVerb": false
+  },
+  "bazzicare": {
+    "lemma": "bazzicare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "fréquenter, traîner dans les parages",
+    "definition_it": "frequentare abitualmente un luogo o delle persone",
+    "examples": [
+      {
+        "it": "Da giovane bazzicava spesso quel bar del centro.",
+        "fr": "Jeune, il fréquentait souvent ce bar du centre-ville."
+      }
+    ],
+    "synonyms": [
+      "frequentare",
+      "gironzolare"
+    ],
+    "isVerb": true
+  },
+  "beatitudine": {
+    "lemma": "beatitudine",
+    "pos": "nome (f.)",
+    "fr": "béatitude",
+    "definition_it": "stato di felicità perfetta e serena, spesso di natura spirituale",
+    "examples": [
+      {
+        "it": "Un senso di beatitudine lo pervase durante la preghiera.",
+        "fr": "Un sentiment de béatitude l'envahit pendant la prière."
+      }
+    ],
+    "synonyms": [
+      "felicità",
+      "gioia"
+    ],
+    "isVerb": false
+  },
+  "beato": {
+    "lemma": "beato",
+    "pos": "aggettivo",
+    "fr": "bienheureux, heureux",
+    "definition_it": "che gode di una felicità profonda e serena, oppure che è stato proclamato santo dalla Chiesa",
+    "examples": [
+      {
+        "it": "Si sentiva beato in mezzo alla natura.",
+        "fr": "Il se sentait bienheureux au milieu de la nature."
+      }
+    ],
+    "synonyms": [
+      "felice",
+      "beatificato"
+    ],
+    "isVerb": false
+  },
+  "beccare": {
+    "lemma": "beccare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "picorer, attraper",
+    "definition_it": "colpire con il becco, oppure, in senso figurato, cogliere o sorprendere qualcuno",
+    "examples": [
+      {
+        "it": "Se lo beccano a copiare, lo puniscono.",
+        "fr": "S'ils l'attrapent en train de copier, ils le punissent."
+      }
+    ],
+    "synonyms": [
+      "colpire",
+      "acchiappare",
+      "sorprendere"
+    ],
+    "isVerb": true
+  },
+  "becchime": {
+    "lemma": "becchime",
+    "pos": "nome (maschile)",
+    "fr": "grain, becquée (nourriture pour oiseaux)",
+    "definition_it": "cibo, di solito semi o granaglie, dato agli uccelli da cortile",
+    "examples": [
+      {
+        "it": "Ogni mattina spargo il becchime per le galline.",
+        "fr": "Chaque matin je répands le grain pour les poules."
+      }
+    ],
+    "synonyms": [
+      "mangime"
+    ],
+    "isVerb": false
+  },
+  "becchino": {
+    "lemma": "becchino",
+    "pos": "nome (maschile)",
+    "fr": "fossoyeur",
+    "definition_it": "persona che scava le fosse per seppellire i morti al cimitero",
+    "examples": [
+      {
+        "it": "Il becchino scavò la fossa prima del funerale.",
+        "fr": "Le fossoyeur creusa la tombe avant les funérailles."
+      }
+    ],
+    "synonyms": [
+      "seppellitore"
+    ],
+    "isVerb": false
+  },
+  "becco": {
+    "lemma": "becco",
+    "pos": "nome (maschile)",
+    "fr": "bec",
+    "definition_it": "la parte dura e appuntita della bocca degli uccelli",
+    "examples": [
+      {
+        "it": "Il pappagallo ha un becco robusto e ricurvo.",
+        "fr": "Le perroquet a un bec robuste et recourbé."
+      }
+    ],
+    "synonyms": [
+      "rostro"
+    ],
+    "isVerb": false
+  },
+  "bee": {
+    "lemma": "bee",
+    "pos": "interiezione",
+    "fr": "bêê (bêlement)",
+    "definition_it": "suono che imita il verso della pecora o della capra",
+    "examples": [
+      {
+        "it": "La pecora fece «bee» e si allontanò dal gregge.",
+        "fr": "Le mouton fit « bêê » et s'éloigna du troupeau."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "befana": {
+    "lemma": "befana",
+    "pos": "nome (femminile)",
+    "fr": "la Befana (vieille femme de l'Épiphanie) ; familièrement, vieille femme laide",
+    "definition_it": "nella tradizione italiana, vecchia donna che porta doni ai bambini nella notte dell'Epifania; per estensione, donna anziana e brutta",
+    "examples": [
+      {
+        "it": "La sera del 5 gennaio i bambini aspettano la Befana.",
+        "fr": "Le soir du 5 janvier les enfants attendent la Befana."
+      }
+    ],
+    "synonyms": [
+      "vecchietta"
+    ],
+    "isVerb": false
+  },
+  "beffa": {
+    "lemma": "beffa",
+    "pos": "nome (femminile)",
+    "fr": "moquerie, farce, tour",
+    "definition_it": "scherzo fatto per prendere in giro o umiliare qualcuno",
+    "examples": [
+      {
+        "it": "Gli amici gli fecero una beffa per il suo compleanno.",
+        "fr": "Ses amis lui ont joué un tour pour son anniversaire."
+      }
+    ],
+    "synonyms": [
+      "scherzo",
+      "burla"
+    ],
+    "isVerb": false
+  },
+  "beffardo": {
+    "lemma": "beffardo",
+    "pos": "aggettivo",
+    "fr": "moqueur, railleur",
+    "definition_it": "che deride o prende in giro con ironia pungente",
+    "examples": [
+      {
+        "it": "Rispose con un sorriso beffardo.",
+        "fr": "Il répondit avec un sourire moqueur."
+      }
+    ],
+    "synonyms": [
+      "sarcastico",
+      "canzonatorio"
+    ],
+    "isVerb": false
+  },
+  "beffare": {
+    "lemma": "beffare",
+    "pos": "verbo (transitivo/pronominale, regolare)",
+    "fr": "se moquer de, tromper",
+    "definition_it": "prendere in giro qualcuno, spesso ingannandolo",
+    "examples": [
+      {
+        "it": "Lo beffarono davanti a tutti i compagni.",
+        "fr": "Ils se sont moqués de lui devant tous ses camarades."
+      }
+    ],
+    "synonyms": [
+      "deridere",
+      "canzonare"
+    ],
+    "isVerb": true
+  },
+  "beffeggiare": {
+    "lemma": "beffeggiare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "railler, se moquer de",
+    "definition_it": "deridere ripetutamente qualcuno con parole o gesti",
+    "examples": [
+      {
+        "it": "La folla lo beffeggiava mentre passava.",
+        "fr": "La foule le raillait pendant qu'il passait."
+      }
+    ],
+    "synonyms": [
+      "schernire",
+      "canzonare"
+    ],
+    "isVerb": true
+  },
+  "beh": {
+    "lemma": "beh",
+    "pos": "interiezione",
+    "fr": "eh bien, bon",
+    "definition_it": "esclamazione usata per esprimere esitazione, rassegnazione o per introdurre un discorso",
+    "examples": [
+      {
+        "it": "Beh, non so cosa dirti.",
+        "fr": "Eh bien, je ne sais pas quoi te dire."
+      }
+    ],
+    "synonyms": [
+      "be'",
+      "insomma"
+    ],
+    "isVerb": false
+  },
+  "belare": {
+    "lemma": "belare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "bêler",
+    "definition_it": "emettere il verso tipico delle pecore e delle capre",
+    "examples": [
+      {
+        "it": "La pecora bela quando ha fame.",
+        "fr": "Le mouton bêle quand il a faim."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "belga": {
+    "lemma": "belga",
+    "pos": "aggettivo/sostantivo (invariabile al maschile, plurale belghe/belgi al femminile)",
+    "fr": "belge",
+    "definition_it": "che appartiene o si riferisce al Belgio",
+    "examples": [
+      {
+        "it": "Le città belghe sono famose per la birra.",
+        "fr": "Les villes belges sont célèbres pour la bière."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "belletto": {
+    "lemma": "belletto",
+    "pos": "sostantivo maschile",
+    "fr": "fard, rouge à joues",
+    "definition_it": "cosmetico usato per colorare le guance o il viso",
+    "examples": [
+      {
+        "it": "Si mise un po' di belletto sulle guance.",
+        "fr": "Elle mit un peu de fard sur ses joues."
+      }
+    ],
+    "synonyms": [
+      "trucco"
+    ],
+    "isVerb": false
+  },
+  "bellezza": {
+    "lemma": "bellezza",
+    "pos": "sostantivo femminile",
+    "fr": "beauté",
+    "definition_it": "qualità di ciò che è bello, che piace alla vista o allo spirito",
+    "examples": [
+      {
+        "it": "La bellezza di quel paesaggio mi ha lasciato senza parole.",
+        "fr": "La beauté de ce paysage m'a laissé sans voix."
+      }
+    ],
+    "synonyms": [
+      "splendore"
+    ],
+    "isVerb": false
+  },
+  "bellico": {
+    "lemma": "bellico",
+    "pos": "aggettivo",
+    "fr": "militaire, de guerre",
+    "definition_it": "relativo alla guerra",
+    "examples": [
+      {
+        "it": "Il conflitto bellico durò diversi anni.",
+        "fr": "Le conflit militaire dura plusieurs années."
+      }
+    ],
+    "synonyms": [
+      "militare",
+      "guerresco"
+    ],
+    "isVerb": false
+  },
+  "bellino": {
+    "lemma": "bellino",
+    "pos": "aggettivo",
+    "fr": "mignon, joli",
+    "definition_it": "diminutivo di bello, usato per indicare qualcosa o qualcuno di grazioso e carino",
+    "examples": [
+      {
+        "it": "Quel bambino è proprio bellino.",
+        "fr": "Cet enfant est vraiment mignon."
+      }
+    ],
+    "synonyms": [
+      "carino",
+      "grazioso"
+    ],
+    "isVerb": false
+  },
+  "bello": {
+    "lemma": "bello",
+    "pos": "aggettivo",
+    "fr": "beau, belle",
+    "definition_it": "che piace alla vista o all'animo per la sua armonia; gradevole",
+    "examples": [
+      {
+        "it": "Abbiamo visto un bel tramonto sul mare.",
+        "fr": "Nous avons vu un beau coucher de soleil sur la mer."
+      }
+    ],
+    "synonyms": [
+      "bellissimo",
+      "grazioso"
+    ],
+    "isVerb": false
+  },
+  "bellunese": {
+    "lemma": "bellunese",
+    "pos": "aggettivo/sostantivo",
+    "fr": "bellunais(e), de Belluno",
+    "definition_it": "che appartiene o si riferisce alla città o alla provincia di Belluno",
+    "examples": [
+      {
+        "it": "Il dialetto bellunese ha molte varianti locali.",
+        "fr": "Le dialecte bellunais a de nombreuses variantes locales."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "belva": {
+    "lemma": "belva",
+    "pos": "sostantivo (femminile)",
+    "fr": "bête féroce, fauve",
+    "definition_it": "animale selvatico e feroce, spesso un grande predatore",
+    "examples": [
+      {
+        "it": "Nella giungla vivono molte belve pericolose.",
+        "fr": "Dans la jungle vivent de nombreuses bêtes féroces dangereuses."
+      }
+    ],
+    "synonyms": [
+      "fiera",
+      "animale feroce"
+    ],
+    "isVerb": false
+  },
+  "benché": {
+    "lemma": "benché",
+    "pos": "congiunzione",
+    "fr": "bien que, quoique",
+    "definition_it": "usato per introdurre una proposizione concessiva, nonostante qualcosa",
+    "examples": [
+      {
+        "it": "Benché fosse stanco, continuò a camminare.",
+        "fr": "Bien qu'il fût fatigué, il continua à marcher."
+      }
+    ],
+    "synonyms": [
+      "sebbene",
+      "nonostante",
+      "quantunque"
+    ],
+    "isVerb": false
+  },
+  "bene": {
+    "lemma": "bene",
+    "pos": "avverbio",
+    "fr": "bien",
+    "definition_it": "in modo positivo, corretto o soddisfacente",
+    "examples": [
+      {
+        "it": "Hai lavorato bene oggi.",
+        "fr": "Tu as bien travaillé aujourd'hui."
+      }
+    ],
+    "synonyms": [
+      "correttamente",
+      "adeguatamente"
+    ],
+    "isVerb": false
+  },
+  "benedettino": {
+    "lemma": "benedettino",
+    "pos": "aggettivo/sostantivo",
+    "fr": "bénédictin",
+    "definition_it": "relativo all'ordine religioso fondato da san Benedetto, oppure monaco appartenente a tale ordine",
+    "examples": [
+      {
+        "it": "I monaci benedettini vivono secondo la regola di san Benedetto.",
+        "fr": "Les moines bénédictins vivent selon la règle de saint Benoît."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "benedetto": {
+    "lemma": "benedetto",
+    "pos": "aggettivo (participio passato di benedire)",
+    "fr": "béni(e)",
+    "definition_it": "che ha ricevuto una benedizione, considerato sacro o molto favorevole",
+    "examples": [
+      {
+        "it": "Quell'acqua benedetta si usa in chiesa.",
+        "fr": "Cette eau bénite est utilisée à l'église."
+      }
+    ],
+    "synonyms": [
+      "sacro",
+      "consacrato"
+    ],
+    "isVerb": false
+  },
+  "benedire": {
+    "lemma": "benedire",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "bénir",
+    "definition_it": "invocare la protezione o la grazia divina su qualcuno o qualcosa, spesso con un rito religioso",
+    "examples": [
+      {
+        "it": "Il sacerdote benedice i fedeli alla fine della messa.",
+        "fr": "Le prêtre bénit les fidèles à la fin de la messe."
+      }
+    ],
+    "synonyms": [
+      "consacrare"
+    ],
+    "isVerb": true
+  },
+  "benedizione": {
+    "lemma": "benedizione",
+    "pos": "sostantivo femminile",
+    "fr": "bénédiction",
+    "definition_it": "atto religioso con cui si invoca la grazia divina su qualcuno",
+    "examples": [
+      {
+        "it": "Il vescovo ha impartito la benedizione ai presenti.",
+        "fr": "L'évêque a donné la bénédiction aux personnes présentes."
+      }
+    ],
+    "synonyms": [
+      "grazia"
+    ],
+    "isVerb": false
+  },
+  "benefattore": {
+    "lemma": "benefattore",
+    "pos": "sostantivo maschile (f. benefattrice)",
+    "fr": "bienfaiteur, bienfaitrice",
+    "definition_it": "persona che fa del bene agli altri, spesso aiutandoli con donazioni o favori",
+    "examples": [
+      {
+        "it": "Il ricco benefattore ha donato una somma all'ospedale.",
+        "fr": "Le riche bienfaiteur a fait don d'une somme à l'hôpital."
+      }
+    ],
+    "synonyms": [
+      "mecenate"
+    ],
+    "isVerb": false
+  },
+  "beneficare": {
+    "lemma": "beneficare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "faire du bien à, gratifier",
+    "definition_it": "fare del bene a qualcuno, procurargli un vantaggio o un aiuto",
+    "examples": [
+      {
+        "it": "Quella riforma ha beneficato molte famiglie povere.",
+        "fr": "Cette réforme a profité à de nombreuses familles pauvres."
+      }
+    ],
+    "synonyms": [
+      "favorire"
+    ],
+    "isVerb": true
+  },
+  "beneficiare": {
+    "lemma": "beneficiare",
+    "pos": "verbo (intransitivo, regolare, aus. avere)",
+    "fr": "bénéficier",
+    "definition_it": "trarre vantaggio, aiuto o profitto da qualcosa",
+    "examples": [
+      {
+        "it": "Molti studenti hanno potuto beneficiare della borsa di studio.",
+        "fr": "De nombreux étudiants ont pu bénéficier de la bourse d'études."
+      }
+    ],
+    "synonyms": [
+      "approfittare"
+    ],
+    "isVerb": true
+  },
+  "beneficio": {
+    "lemma": "beneficio",
+    "pos": "sostantivo maschile",
+    "fr": "bienfait, bénéfice",
+    "definition_it": "vantaggio, aiuto o profitto che si riceve o si concede",
+    "examples": [
+      {
+        "it": "Lo sport porta molti benefici alla salute.",
+        "fr": "Le sport apporte de nombreux bienfaits à la santé."
+      }
+    ],
+    "synonyms": [
+      "vantaggio"
+    ],
+    "isVerb": false
+  },
+  "beneplacito": {
+    "lemma": "beneplacito",
+    "pos": "sostantivo maschile",
+    "fr": "consentement, bon plaisir",
+    "definition_it": "consenso o approvazione, spesso concessa da un'autorità",
+    "examples": [
+      {
+        "it": "Ha agito con il beneplacito del suo superiore.",
+        "fr": "Il a agi avec le consentement de son supérieur."
+      }
+    ],
+    "synonyms": [
+      "assenso"
+    ],
+    "isVerb": false
+  },
+  "benessere": {
+    "lemma": "benessere",
+    "pos": "sostantivo maschile",
+    "fr": "bien-être",
+    "definition_it": "stato di salute, serenità e agio fisico o psicologico",
+    "examples": [
+      {
+        "it": "Camminare ogni giorno migliora il benessere generale.",
+        "fr": "Marcher chaque jour améliore le bien-être général."
+      }
+    ],
+    "synonyms": [
+      "agiatezza"
+    ],
+    "isVerb": false
+  },
+  "benevolenza": {
+    "lemma": "benevolenza",
+    "pos": "sostantivo femminile",
+    "fr": "bienveillance",
+    "definition_it": "sentimento di simpatia e disponibilità verso gli altri",
+    "examples": [
+      {
+        "it": "Ci ha trattati con grande benevolenza.",
+        "fr": "Il nous a traités avec beaucoup de bienveillance."
+      }
+    ],
+    "synonyms": [
+      "cordialità"
+    ],
+    "isVerb": false
+  },
+  "benevolmente": {
+    "lemma": "benevolmente",
+    "pos": "avverbio",
+    "fr": "avec bienveillance",
+    "definition_it": "in modo benevolo, con gentilezza e comprensione",
+    "examples": [
+      {
+        "it": "Il maestro ci guardava benevolmente.",
+        "fr": "Le maître nous regardait avec bienveillance."
+      }
+    ],
+    "synonyms": [
+      "gentilmente"
+    ],
+    "isVerb": false
+  },
+  "benevolo": {
+    "lemma": "benevolo",
+    "pos": "aggettivo",
+    "fr": "bienveillant",
+    "definition_it": "che mostra simpatia, gentilezza o comprensione verso gli altri",
+    "examples": [
+      {
+        "it": "Era un giudice benevolo verso i giovani.",
+        "fr": "C'était un juge bienveillant envers les jeunes."
+      }
+    ],
+    "synonyms": [
+      "indulgente"
+    ],
+    "isVerb": false
+  },
+  "benignità": {
+    "lemma": "benignità",
+    "pos": "sostantivo femminile",
+    "fr": "bénignité, bonté",
+    "definition_it": "qualità di chi è buono, mite e indulgente verso gli altri",
+    "examples": [
+      {
+        "it": "Trattò gli sconfitti con benignità.",
+        "fr": "Il traita les vaincus avec bénignité."
+      }
+    ],
+    "synonyms": [
+      "mitezza"
+    ],
+    "isVerb": false
+  },
+  "benigno": {
+    "lemma": "benigno",
+    "pos": "aggettivo",
+    "fr": "bénin / bienveillant",
+    "definition_it": "gentile e benevolo verso gli altri; anche, non pericoloso o non maligno (per esempio un tumore)",
+    "examples": [
+      {
+        "it": "Il medico ha confermato che il tumore è benigno.",
+        "fr": "Le médecin a confirmé que la tumeur était bénigne."
+      }
+    ],
+    "synonyms": [
+      "gentile",
+      "clemente"
+    ],
+    "isVerb": false
+  },
+  "benissimo": {
+    "lemma": "benissimo",
+    "pos": "avverbio",
+    "fr": "très bien",
+    "definition_it": "superlativo di \"bene\", usato per esprimere grande approvazione o soddisfazione",
+    "examples": [
+      {
+        "it": "Va benissimo così, grazie.",
+        "fr": "C'est très bien comme ça, merci."
+      }
+    ],
+    "synonyms": [
+      "ottimamente"
+    ],
+    "isVerb": false
+  },
+  "benone": {
+    "lemma": "benone",
+    "pos": "avverbio",
+    "fr": "très bien / super",
+    "definition_it": "forma colloquiale e intensiva di \"bene\", usata per esprimere grande soddisfazione",
+    "examples": [
+      {
+        "it": "Come stai? Benone, grazie!",
+        "fr": "Comment vas-tu ? Très bien, merci !"
+      }
+    ],
+    "synonyms": [
+      "benissimo"
+    ],
+    "isVerb": false
+  },
+  "bensì": {
+    "lemma": "bensì",
+    "pos": "congiunzione",
+    "fr": "mais plutôt",
+    "definition_it": "usata per correggere o rafforzare un'affermazione precedente, con il significato di \"ma piuttosto\"",
+    "examples": [
+      {
+        "it": "Non è stanco, bensì annoiato.",
+        "fr": "Il n'est pas fatigué, mais plutôt ennuyé."
+      }
+    ],
+    "synonyms": [
+      "ma",
+      "piuttosto"
+    ],
+    "isVerb": false
+  },
+  "benvenuto": {
+    "lemma": "benvenuto",
+    "pos": "aggettivo/sostantivo",
+    "fr": "bienvenu / bienvenue",
+    "definition_it": "che si accoglie con piacere; anche il saluto o il gesto di accoglienza rivolto a chi arriva",
+    "examples": [
+      {
+        "it": "Diamo il benvenuto ai nuovi studenti.",
+        "fr": "Souhaitons la bienvenue aux nouveaux étudiants."
+      }
+    ],
+    "synonyms": [
+      "gradito"
+    ],
+    "isVerb": false
+  },
+  "benvolere": {
+    "lemma": "benvolere",
+    "pos": "verbo (transitivo, irregolare, difettivo)",
+    "fr": "avoir de l'affection pour, apprécier",
+    "definition_it": "provare simpatia, stima o affetto per qualcuno",
+    "examples": [
+      {
+        "it": "Si è fatto benvolere da tutti i colleghi.",
+        "fr": "Il s'est fait apprécier de tous ses collègues."
+      }
+    ],
+    "synonyms": [
+      "apprezzare",
+      "amare"
+    ],
+    "isVerb": true
+  },
+  "berciare": {
+    "lemma": "berciare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "brailler, hurler",
+    "definition_it": "gridare o cantare in modo sguaiato, rumoroso e fastidioso",
+    "examples": [
+      {
+        "it": "I ragazzi berciavano canzoni per strada.",
+        "fr": "Les garçons braillaient des chansons dans la rue."
+      }
+    ],
+    "synonyms": [
+      "urlare",
+      "strillare"
+    ],
+    "isVerb": true
+  },
+  "bere": {
+    "lemma": "bere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "boire",
+    "definition_it": "ingerire un liquido",
+    "examples": [
+      {
+        "it": "Ha bevuto un bicchiere d'acqua.",
+        "fr": "Il a bu un verre d'eau."
+      }
+    ],
+    "synonyms": [
+      "dissetarsi"
+    ],
+    "isVerb": true
+  },
+  "berrettino": {
+    "lemma": "berrettino",
+    "pos": "sostantivo (maschile)",
+    "fr": "petit bonnet, calotte",
+    "definition_it": "piccolo berretto, spesso aderente alla testa",
+    "examples": [
+      {
+        "it": "Portava un berrettino di cotone bianco.",
+        "fr": "Il portait une petite calotte en coton blanc."
+      }
+    ],
+    "synonyms": [
+      "cuffietta"
+    ],
+    "isVerb": false
+  },
+  "berretto": {
+    "lemma": "berretto",
+    "pos": "sostantivo (maschile)",
+    "fr": "béret, bonnet, casquette",
+    "definition_it": "copricapo morbido senza tesa, spesso di lana o di stoffa",
+    "examples": [
+      {
+        "it": "Il bambino indossava un berretto di lana rossa.",
+        "fr": "L'enfant portait un bonnet de laine rouge."
+      }
+    ],
+    "synonyms": [
+      "cappello",
+      "cuffia"
+    ],
+    "isVerb": false
+  },
+  "bersagliare": {
+    "lemma": "bersagliare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "cribler, harceler, viser",
+    "definition_it": "colpire ripetutamente un bersaglio, o tormentare qualcuno con insistenza",
+    "examples": [
+      {
+        "it": "Il nemico continuava a bersagliare le mura della città.",
+        "fr": "L'ennemi n'arrêtait pas de cribler les murs de la ville."
+      }
+    ],
+    "synonyms": [
+      "colpire",
+      "tormentare"
+    ],
+    "isVerb": true
+  },
+  "bersaglio": {
+    "lemma": "bersaglio",
+    "pos": "sostantivo (maschile)",
+    "fr": "cible",
+    "definition_it": "oggetto o persona verso cui si dirige un colpo, un'azione o un'attenzione",
+    "examples": [
+      {
+        "it": "La freccia ha colpito il centro del bersaglio.",
+        "fr": "La flèche a touché le centre de la cible."
+      }
+    ],
+    "synonyms": [
+      "obiettivo",
+      "mira"
+    ],
+    "isVerb": false
+  },
+  "bestemmia": {
+    "lemma": "bestemmia",
+    "pos": "sostantivo (femminile)",
+    "fr": "blasphème, juron",
+    "definition_it": "parola o frase offensiva pronunciata contro Dio o le cose sacre",
+    "examples": [
+      {
+        "it": "Lasciò uscire una bestemmia quando si fece male.",
+        "fr": "Il laissa échapper un juron en se blessant."
+      }
+    ],
+    "synonyms": [
+      "imprecazione"
+    ],
+    "isVerb": false
+  },
+  "bestemmiare": {
+    "lemma": "bestemmiare",
+    "pos": "verbo (intransitivo/transitivo, regolare)",
+    "fr": "blasphémer, jurer",
+    "definition_it": "pronunciare parole offensive contro Dio o le cose sacre, oppure imprecare con rabbia",
+    "examples": [
+      {
+        "it": "L'uomo bestemmiava per la rabbia dopo l'incidente.",
+        "fr": "L'homme jurait de rage après l'accident."
+      }
+    ],
+    "synonyms": [
+      "imprecare",
+      "maledire"
+    ],
+    "isVerb": true
+  },
+  "bestia": {
+    "lemma": "bestia",
+    "pos": "sostantivo (femminile)",
+    "fr": "bête, animal",
+    "definition_it": "animale, spesso usato in senso generico o per indicare una persona rozza e violenta",
+    "examples": [
+      {
+        "it": "Nella stalla c'erano molte bestie da lavoro.",
+        "fr": "Dans l'étable, il y avait beaucoup de bêtes de trait."
+      }
+    ],
+    "synonyms": [
+      "animale"
+    ],
+    "isVerb": false
+  },
+  "bestiaccia": {
+    "lemma": "bestiaccia",
+    "pos": "sostantivo (femminile)",
+    "fr": "sale bête, vilaine bête",
+    "definition_it": "bestia brutta, cattiva o fastidiosa, con valore dispregiativo",
+    "examples": [
+      {
+        "it": "Quella bestiaccia ha rovinato tutto l'orto.",
+        "fr": "Cette sale bête a ravagé tout le potager."
+      }
+    ],
+    "synonyms": [
+      "bestiaccio"
+    ],
+    "isVerb": false
+  },
+  "bestialità": {
+    "lemma": "bestialità",
+    "pos": "sostantivo (femminile)",
+    "fr": "bestialité, cruauté",
+    "definition_it": "comportamento brutale, crudele o privo di ragione, tipico di una bestia",
+    "examples": [
+      {
+        "it": "Il gesto fu compiuto con vera bestialità.",
+        "fr": "Le geste fut accompli avec une véritable bestialité."
+      }
+    ],
+    "synonyms": [
+      "ferocia",
+      "brutalità"
+    ],
+    "isVerb": false
+  },
+  "bestiame": {
+    "lemma": "bestiame",
+    "pos": "sostantivo (maschile, collettivo)",
+    "fr": "bétail",
+    "definition_it": "insieme degli animali domestici allevati in una fattoria, come mucche, pecore e maiali",
+    "examples": [
+      {
+        "it": "Il contadino portava il bestiame al pascolo ogni mattina.",
+        "fr": "Le paysan menait le bétail au pâturage chaque matin."
+      }
+    ],
+    "synonyms": [
+      "mandria",
+      "gregge"
+    ],
+    "isVerb": false
+  },
+  "bestiola": {
+    "lemma": "bestiola",
+    "pos": "sostantivo (femminile)",
+    "fr": "petite bête",
+    "definition_it": "piccolo animale, spesso usato con affetto o tenerezza",
+    "examples": [
+      {
+        "it": "Una bestiola si nascondeva tra le foglie.",
+        "fr": "Une petite bête se cachait parmi les feuilles."
+      }
+    ],
+    "synonyms": [
+      "animaletto"
+    ],
+    "isVerb": false
+  },
+  "bestiolina": {
+    "lemma": "bestiolina",
+    "pos": "sostantivo (femminile)",
+    "fr": "toute petite bête",
+    "definition_it": "animale molto piccolo, diminutivo affettuoso di bestiola",
+    "examples": [
+      {
+        "it": "Una bestiolina attraversava il sentiero saltellando.",
+        "fr": "Une toute petite bête traversait le sentier en sautillant."
+      }
+    ],
+    "synonyms": [
+      "animaletto"
+    ],
+    "isVerb": false
+  },
+  "bestione": {
+    "lemma": "bestione",
+    "pos": "nome (maschile)",
+    "fr": "grosse bête, brute",
+    "definition_it": "bestia grande e grossa, spesso usato in modo scherzoso o spregiativo",
+    "examples": [
+      {
+        "it": "Quel cavallo è proprio un bestione.",
+        "fr": "Ce cheval est vraiment une grosse bête."
+      }
+    ],
+    "synonyms": [
+      "belva",
+      "bestiaccia"
+    ],
+    "isVerb": false
+  },
+  "bestiuola": {
+    "lemma": "bestiuola",
+    "pos": "nome (femminile)",
+    "fr": "petite bête, bestiole",
+    "definition_it": "piccolo animale, bestia di dimensioni ridotte, spesso con tono affettuoso",
+    "examples": [
+      {
+        "it": "Nel prato correvano piccole bestiuole.",
+        "fr": "Dans le pré couraient de petites bestioles."
+      }
+    ],
+    "synonyms": [
+      "animaletto",
+      "bestiolina"
+    ],
+    "isVerb": false
+  },
+  "beta-agonista": {
+    "lemma": "beta-agonista",
+    "pos": "nome (maschile)",
+    "fr": "bêta-agoniste",
+    "definition_it": "farmaco che stimola i recettori beta-adrenergici, usato soprattutto per dilatare i bronchi",
+    "examples": [
+      {
+        "it": "Il medico gli ha prescritto un beta-agonista per l'asma.",
+        "fr": "Le médecin lui a prescrit un bêta-agoniste pour l'asthme."
+      }
+    ],
+    "synonyms": [
+      "broncodilatatore"
+    ],
+    "isVerb": false
+  },
+  "bettonica": {
+    "lemma": "bettonica",
+    "pos": "nome (femminile)",
+    "fr": "bétoine",
+    "definition_it": "pianta erbacea officinale con fiori rosa-violacei, usata in erboristeria",
+    "examples": [
+      {
+        "it": "La bettonica cresce spesso ai margini dei boschi.",
+        "fr": "La bétoine pousse souvent en lisière des bois."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bevanda": {
+    "lemma": "bevanda",
+    "pos": "nome (femminile)",
+    "fr": "boisson",
+    "definition_it": "liquido preparato appositamente per essere bevuto",
+    "examples": [
+      {
+        "it": "Preferisce una bevanda calda al mattino.",
+        "fr": "Il préfère une boisson chaude le matin."
+      }
+    ],
+    "synonyms": [
+      "bibita"
+    ],
+    "isVerb": false
+  },
+  "biancheggiare": {
+    "lemma": "biancheggiare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "blanchir, apparaître blanc",
+    "definition_it": "apparire bianco o quasi bianco, spesso in lontananza",
+    "examples": [
+      {
+        "it": "Le vele biancheggiavano all'orizzonte.",
+        "fr": "Les voiles blanchissaient à l'horizon."
+      }
+    ],
+    "synonyms": [
+      "imbiancare",
+      "sbiancare"
+    ],
+    "isVerb": true
+  },
+  "biancheria": {
+    "lemma": "biancheria",
+    "pos": "sostantivo femminile",
+    "fr": "linge",
+    "definition_it": "insieme di capi di tessuto per la casa o per la persona, come lenzuola o biancheria intima",
+    "examples": [
+      {
+        "it": "Ha steso la biancheria ad asciugare.",
+        "fr": "Elle a étendu le linge à sécher."
+      }
+    ],
+    "synonyms": [
+      "lenzuola",
+      "corredo"
+    ],
+    "isVerb": false
+  },
+  "bianchezza": {
+    "lemma": "bianchezza",
+    "pos": "sostantivo femminile",
+    "fr": "blancheur",
+    "definition_it": "qualità di ciò che è bianco",
+    "examples": [
+      {
+        "it": "La bianchezza della neve abbagliava gli occhi.",
+        "fr": "La blancheur de la neige éblouissait les yeux."
+      }
+    ],
+    "synonyms": [
+      "candore"
+    ],
+    "isVerb": false
+  },
+  "bianco": {
+    "lemma": "bianco",
+    "pos": "aggettivo",
+    "fr": "blanc",
+    "definition_it": "che ha il colore della neve o del latte",
+    "examples": [
+      {
+        "it": "Il gatto ha il pelo bianco.",
+        "fr": "Le chat a le pelage blanc."
+      }
+    ],
+    "synonyms": [
+      "candido",
+      "niveo"
+    ],
+    "isVerb": false
+  },
+  "biascicare": {
+    "lemma": "biascicare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "marmonner, mâchonner",
+    "definition_it": "parlare o masticare in modo confuso, muovendo poco le labbra",
+    "examples": [
+      {
+        "it": "Il vecchio biascicava qualche parola incomprensibile.",
+        "fr": "Le vieil homme marmonnait quelques mots incompréhensibles."
+      }
+    ],
+    "synonyms": [
+      "borbottare",
+      "masticare"
+    ],
+    "isVerb": true
+  },
+  "biasimare": {
+    "lemma": "biasimare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "blâmer",
+    "definition_it": "esprimere disapprovazione verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Nessuno può biasimarlo per quella scelta.",
+        "fr": "Personne ne peut le blâmer pour ce choix."
+      }
+    ],
+    "synonyms": [
+      "criticare",
+      "rimproverare"
+    ],
+    "isVerb": true
+  },
+  "biasimo": {
+    "lemma": "biasimo",
+    "pos": "sostantivo maschile",
+    "fr": "blâme",
+    "definition_it": "giudizio negativo espresso verso una persona o un'azione",
+    "examples": [
+      {
+        "it": "Le sue parole erano piene di biasimo.",
+        "fr": "Ses paroles étaient pleines de blâme."
+      }
+    ],
+    "synonyms": [
+      "rimprovero",
+      "critica"
+    ],
+    "isVerb": false
+  },
+  "bibita": {
+    "lemma": "bibita",
+    "pos": "sostantivo femminile",
+    "fr": "boisson",
+    "definition_it": "bevanda, spesso fresca o gassata, che si beve per dissetarsi",
+    "examples": [
+      {
+        "it": "Al bar ho ordinato una bibita fresca.",
+        "fr": "Au bar j'ai commandé une boisson fraîche."
+      }
+    ],
+    "synonyms": [
+      "bevanda"
+    ],
+    "isVerb": false
+  },
+  "biblico": {
+    "lemma": "biblico",
+    "pos": "aggettivo",
+    "fr": "biblique",
+    "definition_it": "che riguarda la Bibbia o vi appartiene",
+    "examples": [
+      {
+        "it": "Ha citato un episodio biblico durante la lezione.",
+        "fr": "Il a cité un épisode biblique pendant le cours."
+      }
+    ],
+    "synonyms": [
+      "sacro"
+    ],
+    "isVerb": false
+  },
+  "biblioteca": {
+    "lemma": "biblioteca",
+    "pos": "sostantivo femminile",
+    "fr": "bibliothèque",
+    "definition_it": "luogo, spesso pubblico, dove si conservano e si prestano libri",
+    "examples": [
+      {
+        "it": "Vado in biblioteca a studiare ogni pomeriggio.",
+        "fr": "Je vais à la bibliothèque étudier chaque après-midi."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bibliotecario": {
+    "lemma": "bibliotecario",
+    "pos": "sostantivo maschile",
+    "fr": "bibliothécaire",
+    "definition_it": "persona che lavora in biblioteca e si occupa dei libri e dei prestiti",
+    "examples": [
+      {
+        "it": "Il bibliotecario mi ha consigliato un buon romanzo.",
+        "fr": "Le bibliothécaire m'a conseillé un bon roman."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bicchiere": {
+    "lemma": "bicchiere",
+    "pos": "sostantivo maschile",
+    "fr": "verre",
+    "definition_it": "recipiente di vetro o plastica usato per bere",
+    "examples": [
+      {
+        "it": "Mi ha versato un bicchiere di vino.",
+        "fr": "Il m'a versé un verre de vin."
+      }
+    ],
+    "synonyms": [
+      "calice"
+    ],
+    "isVerb": false
+  },
+  "bicchierino": {
+    "lemma": "bicchierino",
+    "pos": "sostantivo maschile",
+    "fr": "petit verre",
+    "definition_it": "piccolo bicchiere, usato spesso per bere liquori",
+    "examples": [
+      {
+        "it": "Ha bevuto un bicchierino di grappa dopo cena.",
+        "fr": "Il a bu un petit verre de grappa après le dîner."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bicicletta": {
+    "lemma": "bicicletta",
+    "pos": "sostantivo femminile",
+    "fr": "bicyclette, vélo",
+    "definition_it": "veicolo a due ruote che si muove con la forza delle gambe",
+    "examples": [
+      {
+        "it": "Vado al lavoro in bicicletta ogni giorno.",
+        "fr": "Je vais au travail à vélo tous les jours."
+      }
+    ],
+    "synonyms": [
+      "bici"
+    ],
+    "isVerb": false
+  },
+  "bicipite": {
+    "lemma": "bicipite",
+    "pos": "sostantivo maschile",
+    "fr": "biceps",
+    "definition_it": "muscolo del braccio che permette di piegare l'avambraccio",
+    "examples": [
+      {
+        "it": "Ha sviluppato i bicipiti allenandosi in palestra.",
+        "fr": "Il a développé ses biceps en s'entraînant à la salle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bidone": {
+    "lemma": "bidone",
+    "pos": "sostantivo maschile",
+    "fr": "bidon, poubelle ; (fam.) arnaque",
+    "definition_it": "grande contenitore per rifiuti o liquidi; in senso figurato, una truffa o una delusione",
+    "examples": [
+      {
+        "it": "Ha buttato la spazzatura nel bidone.",
+        "fr": "Il a jeté les ordures dans la poubelle."
+      }
+    ],
+    "synonyms": [
+      "contenitore",
+      "fregatura"
+    ],
+    "isVerb": false
+  },
+  "bieco": {
+    "lemma": "bieco",
+    "pos": "aggettivo",
+    "fr": "sinistre, torve",
+    "definition_it": "che esprime malvagità o minaccia, spesso riferito allo sguardo",
+    "examples": [
+      {
+        "it": "Mi ha lanciato uno sguardo bieco.",
+        "fr": "Il m'a lancé un regard torve."
+      }
+    ],
+    "synonyms": [
+      "torvo",
+      "minaccioso"
+    ],
+    "isVerb": false
+  },
+  "biennale": {
+    "lemma": "biennale",
+    "pos": "aggettivo / sostantivo femminile",
+    "fr": "biennal(e) ; biennale (exposition)",
+    "definition_it": "che si ripete ogni due anni; anche esposizione o rassegna che si tiene ogni due anni",
+    "examples": [
+      {
+        "it": "La Biennale di Venezia attira visitatori da tutto il mondo.",
+        "fr": "La Biennale de Venise attire des visiteurs du monde entier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bietolona": {
+    "lemma": "bietolona",
+    "pos": "nome (femminile)",
+    "fr": "cruche, nigaude",
+    "definition_it": "persona sciocca e un po' inetta, spesso detto in modo scherzoso o dispregiativo",
+    "examples": [
+      {
+        "it": "Non fare la bietolona, rispondi!",
+        "fr": "Ne fais pas la nigaude, réponds !"
+      }
+    ],
+    "synonyms": [
+      "sciocca",
+      "stupidella"
+    ],
+    "isVerb": false
+  },
+  "biga": {
+    "lemma": "biga",
+    "pos": "nome (femminile)",
+    "fr": "char (attelé à deux chevaux)",
+    "definition_it": "carro leggero trainato da due cavalli, usato nell'antichità per corse o battaglie",
+    "examples": [
+      {
+        "it": "L'auriga guidava la biga nell'arena.",
+        "fr": "L'aurige conduisait le char dans l'arène."
+      }
+    ],
+    "synonyms": [
+      "carro"
+    ],
+    "isVerb": false
+  },
+  "bighellone": {
+    "lemma": "bighellone",
+    "pos": "nome (maschile)",
+    "fr": "flâneur, fainéant",
+    "definition_it": "persona che gira senza far nulla, oziando per strada",
+    "examples": [
+      {
+        "it": "Quel bighellone passa le giornate al bar.",
+        "fr": "Ce fainéant passe ses journées au bar."
+      }
+    ],
+    "synonyms": [
+      "fannullone",
+      "scansafatiche"
+    ],
+    "isVerb": false
+  },
+  "bigio": {
+    "lemma": "bigio",
+    "pos": "aggettivo",
+    "fr": "gris",
+    "definition_it": "di colore grigio, spesso riferito al pelo di animali o a cose spente",
+    "examples": [
+      {
+        "it": "Il gatto aveva il pelo bigio.",
+        "fr": "Le chat avait le poil gris."
+      }
+    ],
+    "synonyms": [
+      "grigio"
+    ],
+    "isVerb": false
+  },
+  "biglia": {
+    "lemma": "biglia",
+    "pos": "nome (femminile)",
+    "fr": "bille",
+    "definition_it": "piccola sfera di vetro o altro materiale usata per giocare",
+    "examples": [
+      {
+        "it": "I bambini giocavano a biglie in cortile.",
+        "fr": "Les enfants jouaient aux billes dans la cour."
+      }
+    ],
+    "synonyms": [
+      "pallina"
+    ],
+    "isVerb": false
+  },
+  "biglietteria": {
+    "lemma": "biglietteria",
+    "pos": "nome (femminile)",
+    "fr": "guichet, billetterie",
+    "definition_it": "luogo dove si vendono i biglietti per un servizio o uno spettacolo",
+    "examples": [
+      {
+        "it": "Ho comprato il biglietto alla biglietteria della stazione.",
+        "fr": "J'ai acheté le billet au guichet de la gare."
+      }
+    ],
+    "synonyms": [
+      "cassa"
+    ],
+    "isVerb": false
+  },
+  "bigliettino": {
+    "lemma": "bigliettino",
+    "pos": "nome (maschile)",
+    "fr": "petit mot, billet",
+    "definition_it": "piccolo foglio di carta con un breve messaggio scritto",
+    "examples": [
+      {
+        "it": "Mi ha lasciato un bigliettino sul tavolo.",
+        "fr": "Il m'a laissé un petit mot sur la table."
+      }
+    ],
+    "synonyms": [
+      "messaggino"
+    ],
+    "isVerb": false
+  },
+  "biglietto": {
+    "lemma": "biglietto",
+    "pos": "nome (maschile)",
+    "fr": "billet, ticket",
+    "definition_it": "pezzo di carta che dà diritto a un servizio, come un viaggio o uno spettacolo, oppure banconota o breve messaggio scritto",
+    "examples": [
+      {
+        "it": "Ho comprato un biglietto del treno.",
+        "fr": "J'ai acheté un billet de train."
+      }
+    ],
+    "synonyms": [
+      "ticket"
+    ],
+    "isVerb": false
+  },
+  "bilancio": {
+    "lemma": "bilancio",
+    "pos": "nome (maschile)",
+    "fr": "bilan, budget",
+    "definition_it": "documento che riassume entrate e uscite di un'azienda, di un ente o di una famiglia",
+    "examples": [
+      {
+        "it": "L'azienda ha chiuso il bilancio in attivo.",
+        "fr": "L'entreprise a clôturé son bilan avec un bénéfice."
+      }
+    ],
+    "synonyms": [
+      "budget",
+      "rendiconto"
+    ],
+    "isVerb": false
+  },
+  "bile": {
+    "lemma": "bile",
+    "pos": "nome (femminile)",
+    "fr": "bile",
+    "definition_it": "liquido amaro prodotto dal fegato che aiuta la digestione; in senso figurato, rabbia trattenuta",
+    "examples": [
+      {
+        "it": "Si è ingoiato la bile per non litigare.",
+        "fr": "Il a ravalé sa colère pour ne pas se disputer."
+      }
+    ],
+    "synonyms": [
+      "rabbia (fig.)"
+    ],
+    "isVerb": false
+  },
+  "bilinguismo": {
+    "lemma": "bilinguismo",
+    "pos": "nome (maschile)",
+    "fr": "bilinguisme",
+    "definition_it": "capacità di parlare correntemente due lingue, o la presenza di due lingue in una comunità",
+    "examples": [
+      {
+        "it": "Il bilinguismo è comune in molte regioni di confine.",
+        "fr": "Le bilinguisme est courant dans de nombreuses régions frontalières."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bimba": {
+    "lemma": "bimba",
+    "pos": "nome (femminile)",
+    "fr": "petite fille",
+    "definition_it": "bambina piccola",
+    "examples": [
+      {
+        "it": "La bimba giocava felice nel giardino.",
+        "fr": "La petite fille jouait joyeusement dans le jardin."
+      }
+    ],
+    "synonyms": [
+      "bambina"
+    ],
+    "isVerb": false
+  },
+  "bimbetta": {
+    "lemma": "bimbetta",
+    "pos": "nome (femminile)",
+    "fr": "petite fillette",
+    "definition_it": "bambina molto piccola, in tono affettuoso",
+    "examples": [
+      {
+        "it": "La bimbetta rideva tra le braccia della mamma.",
+        "fr": "La petite fillette riait dans les bras de sa maman."
+      }
+    ],
+    "synonyms": [
+      "bimba"
+    ],
+    "isVerb": false
+  },
+  "bimbetto": {
+    "lemma": "bimbetto",
+    "pos": "nome (maschile)",
+    "fr": "petit garçonnet",
+    "definition_it": "bambino molto piccolo, in tono affettuoso",
+    "examples": [
+      {
+        "it": "Il bimbetto correva dietro al pallone.",
+        "fr": "Le petit garçon courait après le ballon."
+      }
+    ],
+    "synonyms": [
+      "bimbo"
+    ],
+    "isVerb": false
+  },
+  "bimbo": {
+    "lemma": "bimbo",
+    "pos": "nome (maschile)",
+    "fr": "petit garçon, enfant",
+    "definition_it": "bambino piccolo",
+    "examples": [
+      {
+        "it": "Il bimbo dormiva tranquillo nella culla.",
+        "fr": "L'enfant dormait paisiblement dans son berceau."
+      }
+    ],
+    "synonyms": [
+      "bambino"
+    ],
+    "isVerb": false
+  },
+  "binario": {
+    "lemma": "binario",
+    "pos": "sostantivo maschile",
+    "fr": "voie ferrée, rail, quai",
+    "definition_it": "ciascuna delle due sbarre di ferro parallele su cui corrono i treni, o il luogo della stazione dove si sale",
+    "examples": [
+      {
+        "it": "Il treno parte dal binario numero cinque.",
+        "fr": "Le train part de la voie numéro cinq."
+      }
+    ],
+    "synonyms": [
+      "rotaia"
+    ],
+    "isVerb": false
+  },
+  "bindolo": {
+    "lemma": "bindolo",
+    "pos": "sostantivo maschile",
+    "fr": "dévidoir, treuil",
+    "definition_it": "arnese girevole usato per attingere acqua da un pozzo o per avvolgere filo",
+    "examples": [
+      {
+        "it": "Il contadino tirava su l'acqua con il bindolo.",
+        "fr": "Le paysan remontait l'eau avec le dévidoir."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "binocolo": {
+    "lemma": "binocolo",
+    "pos": "sostantivo maschile",
+    "fr": "jumelles",
+    "definition_it": "strumento ottico con due lenti che serve a vedere meglio le cose lontane",
+    "examples": [
+      {
+        "it": "Ha guardato gli uccelli con il binocolo.",
+        "fr": "Il a observé les oiseaux avec des jumelles."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biochimico": {
+    "lemma": "biochimico",
+    "pos": "aggettivo/sostantivo",
+    "fr": "biochimiste, biochimique",
+    "definition_it": "che riguarda la biochimica, oppure persona che studia la biochimica",
+    "examples": [
+      {
+        "it": "Il biochimico ha analizzato il campione di sangue.",
+        "fr": "Le biochimiste a analysé l'échantillon de sang."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biodiversità": {
+    "lemma": "biodiversità",
+    "pos": "sostantivo femminile",
+    "fr": "biodiversité",
+    "definition_it": "la varietà delle specie animali e vegetali presenti in un ambiente",
+    "examples": [
+      {
+        "it": "La foresta amazzonica ha un'enorme biodiversità.",
+        "fr": "La forêt amazonienne a une immense biodiversité."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biografia": {
+    "lemma": "biografia",
+    "pos": "sostantivo femminile",
+    "fr": "biographie",
+    "definition_it": "racconto scritto della vita di una persona",
+    "examples": [
+      {
+        "it": "Ho letto la biografia di un grande scrittore.",
+        "fr": "J'ai lu la biographie d'un grand écrivain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biologico": {
+    "lemma": "biologico",
+    "pos": "aggettivo",
+    "fr": "biologique, bio",
+    "definition_it": "che riguarda la biologia, oppure prodotto senza sostanze chimiche artificiali",
+    "examples": [
+      {
+        "it": "Compra sempre verdura biologica.",
+        "fr": "Il achète toujours des légumes biologiques."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biologo": {
+    "lemma": "biologo",
+    "pos": "sostantivo maschile/femminile",
+    "fr": "biologiste",
+    "definition_it": "persona che studia gli esseri viventi e i fenomeni della vita",
+    "examples": [
+      {
+        "it": "La biologa studia il comportamento dei delfini.",
+        "fr": "La biologiste étudie le comportement des dauphins."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biondo": {
+    "lemma": "biondo",
+    "pos": "aggettivo",
+    "fr": "blond",
+    "definition_it": "di colore giallo chiaro, riferito soprattutto ai capelli",
+    "examples": [
+      {
+        "it": "Sua figlia ha i capelli biondi.",
+        "fr": "Sa fille a les cheveux blonds."
+      }
+    ],
+    "synonyms": [
+      "chiaro"
+    ],
+    "isVerb": false
+  },
+  "bioremediazione": {
+    "lemma": "bioremediazione",
+    "pos": "sostantivo femminile",
+    "fr": "bioremédiation",
+    "definition_it": "tecnica che usa organismi viventi per eliminare l'inquinamento dall'ambiente",
+    "examples": [
+      {
+        "it": "La bioremediazione può ripulire un terreno contaminato.",
+        "fr": "La bioremédiation peut dépolluer un sol contaminé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bip": {
+    "lemma": "bip",
+    "pos": "sostantivo maschile (invariabile)",
+    "fr": "bip",
+    "definition_it": "breve suono acuto emesso da un apparecchio elettronico",
+    "examples": [
+      {
+        "it": "Dopo il bip, lasciate un messaggio.",
+        "fr": "Après le bip, laissez un message."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "birba": {
+    "lemma": "birba",
+    "pos": "sostantivo femminile",
+    "fr": "coquin, polisson, garnement",
+    "definition_it": "persona, spesso un bambino, che fa piccoli dispetti o marachelle in modo simpatico",
+    "examples": [
+      {
+        "it": "Quella birba ha nascosto le chiavi di papà.",
+        "fr": "Ce polisson a caché les clés de papa."
+      }
+    ],
+    "synonyms": [
+      "monello"
+    ],
+    "isVerb": false
+  },
+  "birbaccione": {
+    "lemma": "birbaccione",
+    "pos": "sostantivo (m.)",
+    "fr": "coquin, fripon, garnement (accrescitivo)",
+    "definition_it": "persona, spesso un bambino, birbona e furba, chiamata così in tono affettuoso o scherzoso",
+    "examples": [
+      {
+        "it": "Quel birbaccione ha nascosto le mie chiavi!",
+        "fr": "Ce petit coquin a caché mes clés !"
+      }
+    ],
+    "synonyms": [
+      "birbone",
+      "briccone"
+    ],
+    "isVerb": false
+  },
+  "birbante": {
+    "lemma": "birbante",
+    "pos": "sostantivo (m./f.)",
+    "fr": "coquin, fripon, canaille",
+    "definition_it": "persona furba e disonesta, che inganna gli altri o combina scherzi maliziosi",
+    "examples": [
+      {
+        "it": "Il birbante è scappato con la borsa della signora.",
+        "fr": "Le vaurien s'est enfui avec le sac de la dame."
+      }
+    ],
+    "synonyms": [
+      "furfante",
+      "briccone"
+    ],
+    "isVerb": false
+  },
+  "birbone": {
+    "lemma": "birbone",
+    "pos": "sostantivo/aggettivo (m.)",
+    "fr": "coquin, vaurien, fripon",
+    "definition_it": "persona che si comporta in modo furbo, disonesto o dispettoso, spesso detto con simpatia",
+    "examples": [
+      {
+        "it": "Da bambino era un vero birbone.",
+        "fr": "Enfant, c'était un vrai petit coquin."
+      }
+    ],
+    "synonyms": [
+      "birbante",
+      "briccone"
+    ],
+    "isVerb": false
+  },
+  "birichinata": {
+    "lemma": "birichinata",
+    "pos": "sostantivo (f.)",
+    "fr": "espièglerie, farce, bêtise",
+    "definition_it": "scherzo innocente o piccola marachella fatta soprattutto dai bambini",
+    "examples": [
+      {
+        "it": "Nascondere le pantofole del nonno era solo una birichinata.",
+        "fr": "Cacher les pantoufles du grand-père n'était qu'une petite espièglerie."
+      }
+    ],
+    "synonyms": [
+      "marachella",
+      "scherzo"
+    ],
+    "isVerb": false
+  },
+  "birichino": {
+    "lemma": "birichino",
+    "pos": "aggettivo/sostantivo (m.)",
+    "fr": "coquin, espiègle, polisson",
+    "definition_it": "detto di bambino vivace e un po' dispettoso, che combina piccoli scherzi senza cattiveria",
+    "examples": [
+      {
+        "it": "La bambina birichina ha nascosto le caramelle del fratello.",
+        "fr": "La petite fille espiègle a caché les bonbons de son frère."
+      }
+    ],
+    "synonyms": [
+      "monello",
+      "birba"
+    ],
+    "isVerb": false
+  },
+  "birillo": {
+    "lemma": "birillo",
+    "pos": "sostantivo (m.)",
+    "fr": "quille",
+    "definition_it": "piccolo cono o laterizio usato nei giochi, come i birilli da abbattere con una palla",
+    "examples": [
+      {
+        "it": "Il bambino ha lanciato la palla e ha abbattuto tutti i birilli.",
+        "fr": "L'enfant a lancé la balle et a renversé toutes les quilles."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "birra": {
+    "lemma": "birra",
+    "pos": "sostantivo (f.)",
+    "fr": "bière",
+    "definition_it": "bevanda alcolica ottenuta dalla fermentazione di malto d'orzo e luppolo",
+    "examples": [
+      {
+        "it": "Al bar abbiamo bevuto una birra fresca.",
+        "fr": "Au bar, nous avons bu une bière fraîche."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bisbetico": {
+    "lemma": "bisbetico",
+    "pos": "aggettivo (m.)",
+    "fr": "acariâtre, revêche, grincheux",
+    "definition_it": "detto di persona dal carattere difficile, che si arrabbia facilmente e brontola spesso",
+    "examples": [
+      {
+        "it": "Il vecchio vicino bisbetico si lamenta sempre del rumore.",
+        "fr": "Le vieux voisin acariâtre se plaint toujours du bruit."
+      }
+    ],
+    "synonyms": [
+      "scontroso",
+      "irascibile"
+    ],
+    "isVerb": false
+  },
+  "bisbigliare": {
+    "lemma": "bisbigliare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "chuchoter, murmurer",
+    "definition_it": "parlare a voce molto bassa, quasi in un soffio, per non farsi sentire dagli altri",
+    "examples": [
+      {
+        "it": "Le ragazze bisbigliavano segreti durante la lezione.",
+        "fr": "Les filles chuchotaient des secrets pendant le cours."
+      }
+    ],
+    "synonyms": [
+      "sussurrare",
+      "mormorare"
+    ],
+    "isVerb": true
+  },
+  "bisbiglio": {
+    "lemma": "bisbiglio",
+    "pos": "sostantivo (m.)",
+    "fr": "chuchotement, murmure",
+    "definition_it": "suono di voci basse e sommesse, sussurro appena udibile",
+    "examples": [
+      {
+        "it": "In classe si sentiva solo un lieve bisbiglio.",
+        "fr": "Dans la classe, on n'entendait qu'un léger chuchotement."
+      }
+    ],
+    "synonyms": [
+      "sussurro",
+      "mormorio"
+    ],
+    "isVerb": false
+  },
+  "bisca": {
+    "lemma": "bisca",
+    "pos": "sostantivo (f.)",
+    "fr": "tripot, maison de jeu",
+    "definition_it": "locale, spesso clandestino, dove si gioca d'azzardo per denaro",
+    "examples": [
+      {
+        "it": "La polizia ha chiuso una bisca clandestina in centro.",
+        "fr": "La police a fermé un tripot clandestin en centre-ville."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "biscotto": {
+    "lemma": "biscotto",
+    "pos": "sostantivo (m.)",
+    "fr": "biscuit, gâteau sec",
+    "definition_it": "piccolo dolce croccante cotto al forno, spesso mangiato a colazione o con il tè",
+    "examples": [
+      {
+        "it": "La mamma ha preparato dei biscotti al cioccolato.",
+        "fr": "Maman a préparé des biscuits au chocolat."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bislacco": {
+    "lemma": "bislacco",
+    "pos": "aggettivo",
+    "fr": "bizarre, farfelu",
+    "definition_it": "strano, stravagante, fuori dal comune in modo un po' buffo",
+    "examples": [
+      {
+        "it": "Ha avuto un'idea bislacca per risolvere il problema.",
+        "fr": "Il a eu une idée farfelue pour résoudre le problème."
+      }
+    ],
+    "synonyms": [
+      "strano",
+      "stravagante"
+    ],
+    "isVerb": false
+  },
+  "bisnonno": {
+    "lemma": "bisnonno",
+    "pos": "sostantivo (m./f.)",
+    "fr": "arrière-grand-père, arrière-grand-mère",
+    "definition_it": "il padre o la madre del nonno o della nonna",
+    "examples": [
+      {
+        "it": "I miei bisnonni sono nati all'inizio del Novecento.",
+        "fr": "Mes arrière-grands-parents sont nés au début du XXe siècle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bisognare": {
+    "lemma": "bisognare",
+    "pos": "verbo (impersonale, intransitivo)",
+    "fr": "falloir, être nécessaire",
+    "definition_it": "essere necessario fare o avere qualcosa",
+    "examples": [
+      {
+        "it": "Bisogna partire presto domani mattina.",
+        "fr": "Il faut partir tôt demain matin."
+      }
+    ],
+    "synonyms": [
+      "occorrere",
+      "necessitare"
+    ],
+    "isVerb": true
+  },
+  "bisogno": {
+    "lemma": "bisogno",
+    "pos": "sostantivo (m.)",
+    "fr": "besoin",
+    "definition_it": "ciò che è necessario avere o fare per stare bene o per raggiungere uno scopo",
+    "examples": [
+      {
+        "it": "Ho bisogno di riposare un po'.",
+        "fr": "J'ai besoin de me reposer un peu."
+      }
+    ],
+    "synonyms": [
+      "necessità"
+    ],
+    "isVerb": false
+  },
+  "bisognoso": {
+    "lemma": "bisognoso",
+    "pos": "aggettivo",
+    "fr": "nécessiteux, dans le besoin",
+    "definition_it": "che ha bisogno di qualcosa, spesso in difficoltà economica o materiale",
+    "examples": [
+      {
+        "it": "La famiglia bisognosa ha ricevuto un aiuto dal comune.",
+        "fr": "La famille nécessiteuse a reçu une aide de la commune."
+      }
+    ],
+    "synonyms": [
+      "povero"
+    ],
+    "isVerb": false
+  },
+  "bistecca": {
+    "lemma": "bistecca",
+    "pos": "sostantivo (f.)",
+    "fr": "steak, bifteck",
+    "definition_it": "fetta di carne, di solito di manzo, cotta alla griglia o in padella",
+    "examples": [
+      {
+        "it": "Stasera mangiamo una bistecca ai ferri.",
+        "fr": "Ce soir, nous mangeons un steak grillé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bisticciare": {
+    "lemma": "bisticciare",
+    "pos": "verbo (intransitivo, spesso riflessivo)",
+    "fr": "se disputer, se chamailler",
+    "definition_it": "litigare per motivi di poca importanza, discutere animatamente ma senza gravità",
+    "examples": [
+      {
+        "it": "I due fratelli bisticciavano sempre per delle sciocchezze.",
+        "fr": "Les deux frères se chamaillaient toujours pour des bêtises."
+      }
+    ],
+    "synonyms": [
+      "litigare",
+      "battibeccare"
+    ],
+    "isVerb": true
+  },
+  "bisticcio": {
+    "lemma": "bisticcio",
+    "pos": "sostantivo (m.)",
+    "fr": "chamaillerie, petite dispute",
+    "definition_it": "piccolo litigio senza gravità, spesso tra persone che si vogliono bene",
+    "examples": [
+      {
+        "it": "Tra fratelli ci sono sempre stati piccoli bisticci.",
+        "fr": "Entre frères et sœurs, il y a toujours eu de petites chamailleries."
+      }
+    ],
+    "synonyms": [
+      "litigio",
+      "diverbio"
+    ],
+    "isVerb": false
+  },
+  "bistrattare": {
+    "lemma": "bistrattare",
+    "pos": "verbo (transitivo)",
+    "fr": "maltraiter, malmener",
+    "definition_it": "trattare qualcuno o qualcosa con durezza, senza il dovuto rispetto",
+    "examples": [
+      {
+        "it": "Il capo bistrattava spesso i suoi dipendenti.",
+        "fr": "Le patron malmenait souvent ses employés."
+      }
+    ],
+    "synonyms": [
+      "maltrattare",
+      "strapazzare"
+    ],
+    "isVerb": true
+  },
+  "bisturi": {
+    "lemma": "bisturi",
+    "pos": "nome maschile invariabile",
+    "fr": "bistouri, scalpel",
+    "definition_it": "piccolo coltello chirurgico usato dai medici per tagliare i tessuti",
+    "examples": [
+      {
+        "it": "Il chirurgo prese il bisturi con mano sicura.",
+        "fr": "Le chirurgien prit le bistouri d'une main sûre."
+      }
+    ],
+    "synonyms": [
+      "scalpello"
+    ],
+    "isVerb": false
+  },
+  "bivacco": {
+    "lemma": "bivacco",
+    "pos": "nome maschile",
+    "fr": "bivouac, campement",
+    "definition_it": "luogo o accampamento provvisorio, spesso all'aperto, dove si sosta per riposare",
+    "examples": [
+      {
+        "it": "Gli alpinisti allestirono i bivacchi prima del tramonto.",
+        "fr": "Les alpinistes montèrent les bivouacs avant le coucher du soleil."
+      }
+    ],
+    "synonyms": [
+      "accampamento"
+    ],
+    "isVerb": false
+  },
+  "bizantino": {
+    "lemma": "bizantino",
+    "pos": "aggettivo/nome",
+    "fr": "byzantin",
+    "definition_it": "relativo a Bisanzio e al suo impero, oppure, in senso figurato, eccessivamente sottile e complicato",
+    "examples": [
+      {
+        "it": "I mosaici bizantini di Ravenna sono famosi in tutto il mondo.",
+        "fr": "Les mosaïques byzantines de Ravenne sont célèbres dans le monde entier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bizza": {
+    "lemma": "bizza",
+    "pos": "nome femminile",
+    "fr": "caprice, colère (d'enfant)",
+    "definition_it": "capriccio o scatto d'ira improvviso, tipico soprattutto dei bambini",
+    "examples": [
+      {
+        "it": "Il bambino fece una bizza perché non voleva andare a letto.",
+        "fr": "L'enfant fit un caprice parce qu'il ne voulait pas aller se coucher."
+      }
+    ],
+    "synonyms": [
+      "capriccio"
+    ],
+    "isVerb": false
+  },
+  "bizzarria": {
+    "lemma": "bizzarria",
+    "pos": "nome femminile",
+    "fr": "bizarrerie, excentricité",
+    "definition_it": "qualità di ciò che è strano, insolito o stravagante; comportamento originale e fuori dal comune",
+    "examples": [
+      {
+        "it": "Quella scelta di colori era una vera bizzarria.",
+        "fr": "Ce choix de couleurs était une vraie bizarrerie."
+      }
+    ],
+    "synonyms": [
+      "stravaganza",
+      "stranezza"
+    ],
+    "isVerb": false
+  },
+  "bizzoso": {
+    "lemma": "bizzoso",
+    "pos": "aggettivo",
+    "fr": "capricieux, irascible",
+    "definition_it": "che si arrabbia facilmente o fa spesso i capricci",
+    "examples": [
+      {
+        "it": "Era un bambino bizzosissimo e difficile da calmare.",
+        "fr": "C'était un enfant très capricieux et difficile à calmer."
+      }
+    ],
+    "synonyms": [
+      "capriccioso",
+      "irascibile"
+    ],
+    "isVerb": false
+  },
+  "blando": {
+    "lemma": "blando",
+    "pos": "aggettivo",
+    "fr": "léger, doux, faible",
+    "definition_it": "che ha effetto debole o moderato, poco intenso o poco energico",
+    "examples": [
+      {
+        "it": "Il medico prescrisse un blando sedativo.",
+        "fr": "Le médecin prescrivit un sédatif léger."
+      }
+    ],
+    "synonyms": [
+      "debole",
+      "leggero",
+      "mite"
+    ],
+    "isVerb": false
+  },
+  "bloccare": {
+    "lemma": "bloccare",
+    "pos": "verbo (transitivo)",
+    "fr": "bloquer, arrêter, immobiliser",
+    "definition_it": "impedire il movimento o il funzionamento di qualcosa, fermare bruscamente",
+    "examples": [
+      {
+        "it": "La polizia ha bloccato la strada per un incidente.",
+        "fr": "La police a bloqué la route à cause d'un accident."
+      }
+    ],
+    "synonyms": [
+      "fermare",
+      "arrestare",
+      "immobilizzare"
+    ],
+    "isVerb": true
+  },
+  "blocco": {
+    "lemma": "blocco",
+    "pos": "nome maschile",
+    "fr": "bloc, blocage",
+    "definition_it": "massa compatta di materiale solido, oppure l'atto o lo stato di bloccare qualcosa",
+    "examples": [
+      {
+        "it": "Hanno costruito il muro con grandi blocchi di pietra.",
+        "fr": "Ils ont construit le mur avec de grands blocs de pierre."
+      }
+    ],
+    "synonyms": [
+      "masso",
+      "blocaggio"
+    ],
+    "isVerb": false
+  },
+  "blu": {
+    "lemma": "blu",
+    "pos": "aggettivo/nome (invariabile)",
+    "fr": "bleu",
+    "definition_it": "colore simile a quello del cielo sereno o del mare profondo",
+    "examples": [
+      {
+        "it": "Il cielo era di un blu intenso.",
+        "fr": "Le ciel était d'un bleu intense."
+      }
+    ],
+    "synonyms": [
+      "azzurro",
+      "celeste"
+    ],
+    "isVerb": false
+  },
+  "boato": {
+    "lemma": "boato",
+    "pos": "nome maschile",
+    "fr": "vacarme, grondement",
+    "definition_it": "rumore fortissimo e improvviso, simile a un tuono o a un'esplosione",
+    "examples": [
+      {
+        "it": "Un boato scosse tutta la valle.",
+        "fr": "Un grondement secoua toute la vallée."
+      }
+    ],
+    "synonyms": [
+      "fragore",
+      "rombo"
+    ],
+    "isVerb": false
+  },
+  "bocca": {
+    "lemma": "bocca",
+    "pos": "nome femminile",
+    "fr": "bouche",
+    "definition_it": "apertura del viso usata per parlare, mangiare e respirare",
+    "examples": [
+      {
+        "it": "Aprì la bocca per parlare ma non disse nulla.",
+        "fr": "Elle ouvrit la bouche pour parler mais ne dit rien."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "boccaccia": {
+    "lemma": "boccaccia",
+    "pos": "nome femminile",
+    "fr": "grimace",
+    "definition_it": "smorfia buffa o sgradevole fatta con la bocca, spesso per prendere in giro qualcuno",
+    "examples": [
+      {
+        "it": "Il bambino fece una boccaccia al fratello.",
+        "fr": "L'enfant fit une grimace à son frère."
+      }
+    ],
+    "synonyms": [
+      "smorfia"
+    ],
+    "isVerb": false
+  },
+  "boccale": {
+    "lemma": "boccale",
+    "pos": "nome maschile",
+    "fr": "chope, pichet",
+    "definition_it": "recipiente con manico usato per bere, di solito birra o vino",
+    "examples": [
+      {
+        "it": "Bevve un boccale di birra fresca.",
+        "fr": "Il but une chope de bière fraîche."
+      }
+    ],
+    "synonyms": [
+      "caraffa"
+    ],
+    "isVerb": false
+  },
+  "boccata": {
+    "lemma": "boccata",
+    "pos": "nome femminile",
+    "fr": "bouffée, gorgée",
+    "definition_it": "quantità d'aria, fumo o liquido presa in una sola volta con la bocca",
+    "examples": [
+      {
+        "it": "Uscì a prendere una boccata d'aria fresca.",
+        "fr": "Il sortit prendre une bouffée d'air frais."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "boccettina": {
+    "lemma": "boccettina",
+    "pos": "nome femminile",
+    "fr": "petit flacon",
+    "definition_it": "piccolissima bottiglia, spesso usata per profumi o medicine",
+    "examples": [
+      {
+        "it": "Portava sempre con sé una boccettina di profumo.",
+        "fr": "Elle emportait toujours avec elle un petit flacon de parfum."
+      }
+    ],
+    "synonyms": [
+      "flaconcino"
+    ],
+    "isVerb": false
+  },
+  "bocchino": {
+    "lemma": "bocchino",
+    "pos": "nome maschile",
+    "fr": "fume-cigarette, embout",
+    "definition_it": "piccolo oggetto tubolare in cui si infila una sigaretta o uno strumento musicale a fiato",
+    "examples": [
+      {
+        "it": "Fumava con un lungo bocchino d'avorio.",
+        "fr": "Il fumait avec un long fume-cigarette en ivoire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "boccia": {
+    "lemma": "boccia",
+    "pos": "nome femminile",
+    "fr": "boule (de pétanque italienne), carafe",
+    "definition_it": "palla usata nel gioco delle bocce, oppure recipiente di vetro panciuto",
+    "examples": [
+      {
+        "it": "Gli anziani giocavano a bocce nella piazza.",
+        "fr": "Les personnes âgées jouaient aux boules sur la place."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bocciare": {
+    "lemma": "bocciare",
+    "pos": "verbo (transitivo)",
+    "fr": "recaler, rejeter",
+    "definition_it": "non promuovere qualcuno a un esame, oppure respingere una proposta o un'idea",
+    "examples": [
+      {
+        "it": "Lo studente è stato bocciato all'esame di matematica.",
+        "fr": "L'étudiant a été recalé à l'examen de mathématiques."
+      }
+    ],
+    "synonyms": [
+      "respingere",
+      "rifiutare"
+    ],
+    "isVerb": true
+  },
+  "boccone": {
+    "lemma": "boccone",
+    "pos": "nome maschile",
+    "fr": "bouchée, morceau",
+    "definition_it": "piccola quantità di cibo che si mette in bocca in una volta sola",
+    "examples": [
+      {
+        "it": "Mangiò un boccone di pane e formaggio.",
+        "fr": "Il mangea une bouchée de pain et de fromage."
+      }
+    ],
+    "synonyms": [
+      "morso"
+    ],
+    "isVerb": false
+  },
+  "bocconi": {
+    "lemma": "bocconi",
+    "pos": "avverbio",
+    "fr": "à plat ventre, face contre terre",
+    "definition_it": "in posizione distesa con il viso rivolto verso il basso",
+    "examples": [
+      {
+        "it": "Cadde bocconi sull'erba bagnata.",
+        "fr": "Il tomba à plat ventre sur l'herbe mouillée."
+      }
+    ],
+    "synonyms": [
+      "prono"
+    ],
+    "isVerb": false
+  },
+  "boccuccia": {
+    "lemma": "boccuccia",
+    "pos": "nome femminile",
+    "fr": "petite bouche",
+    "definition_it": "bocca piccola e graziosa, spesso riferita a un bambino",
+    "examples": [
+      {
+        "it": "Il neonato aveva una boccuccia rosea.",
+        "fr": "Le nouveau-né avait une petite bouche rosée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bofonchiare": {
+    "lemma": "bofonchiare",
+    "pos": "verbo (intransitivo)",
+    "fr": "marmonner, grommeler",
+    "definition_it": "parlare in modo confuso e a bassa voce, di solito per lamentarsi o essere scontenti",
+    "examples": [
+      {
+        "it": "Il vecchio bofonchiava tra sé mentre camminava.",
+        "fr": "Le vieil homme marmonnait tout seul en marchant."
+      }
+    ],
+    "synonyms": [
+      "borbottare",
+      "brontolare"
+    ],
+    "isVerb": true
+  },
+  "bolgia": {
+    "lemma": "bolgia",
+    "pos": "sostantivo femminile",
+    "fr": "cohue, tumulte, fosse (de l'Enfer)",
+    "definition_it": "luogo affollato e caotico, oppure una delle fosse dell'Inferno dantesco",
+    "examples": [
+      {
+        "it": "La piazza era una bolgia di gente durante la festa.",
+        "fr": "La place était une véritable cohue pendant la fête."
+      }
+    ],
+    "synonyms": [
+      "confusione",
+      "baraonda"
+    ],
+    "isVerb": false
+  },
+  "bolla": {
+    "lemma": "bolla",
+    "pos": "sostantivo femminile",
+    "fr": "bulle; boursouflure; document officiel",
+    "definition_it": "piccola sfera d'aria o di gas che si forma in un liquido, oppure rigonfiamento sulla pelle, oppure documento ufficiale con sigillo",
+    "examples": [
+      {
+        "it": "Una bolla di sapone si è alzata nell'aria.",
+        "fr": "Une bulle de savon s'est élevée dans l'air."
+      }
+    ],
+    "synonyms": [
+      "bollicina"
+    ],
+    "isVerb": false
+  },
+  "bollare": {
+    "lemma": "bollare",
+    "pos": "verbo (transitivo)",
+    "fr": "timbrer, tamponner, marquer",
+    "definition_it": "apporre un bollo o un timbro su un documento o un oggetto, oppure giudicare severamente qualcuno",
+    "examples": [
+      {
+        "it": "L'impiegato bollava i documenti in arrivo.",
+        "fr": "L'employé tamponnait les documents à l'arrivée."
+      }
+    ],
+    "synonyms": [
+      "timbrare",
+      "marcare"
+    ],
+    "isVerb": true
+  },
+  "bollente": {
+    "lemma": "bollente",
+    "pos": "aggettivo",
+    "fr": "bouillant, brûlant",
+    "definition_it": "che è a temperatura molto alta, quasi in ebollizione",
+    "examples": [
+      {
+        "it": "Attento, il caffè è bollente!",
+        "fr": "Attention, le café est brûlant !"
+      }
+    ],
+    "synonyms": [
+      "rovente",
+      "cocente"
+    ],
+    "isVerb": false
+  },
+  "bolletta": {
+    "lemma": "bolletta",
+    "pos": "sostantivo femminile",
+    "fr": "facture (électricité, gaz, etc.)",
+    "definition_it": "documento che indica una somma da pagare per un servizio, come luce, gas o telefono",
+    "examples": [
+      {
+        "it": "Le bollette dell'elettricità sono aumentate quest'anno.",
+        "fr": "Les factures d'électricité ont augmenté cette année."
+      }
+    ],
+    "synonyms": [
+      "fattura"
+    ],
+    "isVerb": false
+  },
+  "bollettino": {
+    "lemma": "bollettino",
+    "pos": "sostantivo maschile",
+    "fr": "bulletin, avis, relevé",
+    "definition_it": "breve documento o comunicato che riporta informazioni ufficiali, come previsioni o notizie",
+    "examples": [
+      {
+        "it": "Ho ascoltato i bollettini meteorologici prima di partire.",
+        "fr": "J'ai écouté les bulletins météo avant de partir."
+      }
+    ],
+    "synonyms": [
+      "comunicato",
+      "avviso"
+    ],
+    "isVerb": false
+  },
+  "bollire": {
+    "lemma": "bollire",
+    "pos": "verbo (intransitivo/transitivo)",
+    "fr": "bouillir, faire bouillir",
+    "definition_it": "arrivare o portare un liquido a temperatura di ebollizione",
+    "examples": [
+      {
+        "it": "L'acqua bolle a cento gradi.",
+        "fr": "L'eau bout à cent degrés."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "bolognese": {
+    "lemma": "bolognese",
+    "pos": "aggettivo/sostantivo",
+    "fr": "bolonais(e)",
+    "definition_it": "che appartiene o si riferisce alla città di Bologna, oppure abitante di Bologna",
+    "examples": [
+      {
+        "it": "Ho mangiato tagliatelle alla bolognese.",
+        "fr": "J'ai mangé des tagliatelles à la bolognaise."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bonifico": {
+    "lemma": "bonifico",
+    "pos": "sostantivo maschile",
+    "fr": "virement (bancaire)",
+    "definition_it": "operazione con cui si trasferisce una somma di denaro da un conto bancario a un altro",
+    "examples": [
+      {
+        "it": "Ho fatto un bonifico per pagare l'affitto.",
+        "fr": "J'ai fait un virement pour payer le loyer."
+      }
+    ],
+    "synonyms": [
+      "trasferimento"
+    ],
+    "isVerb": false
+  },
+  "bontà": {
+    "lemma": "bontà",
+    "pos": "sostantivo femminile",
+    "fr": "bonté",
+    "definition_it": "qualità di chi è buono, gentile e generoso verso gli altri",
+    "examples": [
+      {
+        "it": "La sua bontà d'animo colpiva tutti quelli che la conoscevano.",
+        "fr": "Sa bonté d'âme frappait tous ceux qui la connaissaient."
+      }
+    ],
+    "synonyms": [
+      "gentilezza",
+      "generosità"
+    ],
+    "isVerb": false
+  },
+  "boom": {
+    "lemma": "boom",
+    "pos": "sostantivo maschile (invariabile, prestito dall'inglese)",
+    "fr": "boom, essor soudain",
+    "definition_it": "improvviso e forte aumento di qualcosa, come l'economia o la popolarità",
+    "examples": [
+      {
+        "it": "Negli anni Sessanta l'Italia visse un vero boom economico.",
+        "fr": "Dans les années soixante, l'Italie a connu un véritable boom économique."
+      }
+    ],
+    "synonyms": [
+      "esplosione",
+      "impennata"
+    ],
+    "isVerb": false
+  },
+  "bora": {
+    "lemma": "bora",
+    "pos": "sostantivo femminile",
+    "fr": "bora (vent froid du nord-est)",
+    "definition_it": "vento freddo e forte che soffia soprattutto sulla costa nord-orientale dell'Italia",
+    "examples": [
+      {
+        "it": "A Trieste la bora può raggiungere velocità impressionanti.",
+        "fr": "À Trieste, la bora peut atteindre des vitesses impressionnantes."
+      }
+    ],
+    "synonyms": [
+      "vento"
+    ],
+    "isVerb": false
+  },
+  "borbone": {
+    "lemma": "borbone",
+    "pos": "sostantivo maschile",
+    "fr": "Bourbon (membre de la dynastie); (fig.) personne autoritaire et rétrograde",
+    "definition_it": "membro della dinastia reale dei Borboni; in senso figurato, persona di idee molto conservatrici e autoritarie",
+    "examples": [
+      {
+        "it": "Suo nonno era rimasto un borbone anche dopo la caduta della monarchia.",
+        "fr": "Son grand-père était resté un vieux réactionnaire même après la chute de la monarchie."
+      }
+    ],
+    "synonyms": [
+      "reazionario",
+      "retrogrado"
+    ],
+    "isVerb": false
+  },
+  "borbonico": {
+    "lemma": "borbonico",
+    "pos": "aggettivo",
+    "fr": "bourbonien, relatif aux Bourbons",
+    "definition_it": "relativo alla dinastia dei Borboni o al periodo storico del loro governo",
+    "examples": [
+      {
+        "it": "Il palazzo fu costruito in epoca borbonica.",
+        "fr": "Le palais fut construit à l'époque bourbonienne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "borbottare": {
+    "lemma": "borbottare",
+    "pos": "verbo (intransitivo/transitivo)",
+    "fr": "marmonner, grommeler, bougonner",
+    "definition_it": "parlare a bassa voce e in modo confuso, spesso per lamentarsi o protestare",
+    "examples": [
+      {
+        "it": "Il vecchio borbottava tra sé mentre camminava.",
+        "fr": "Le vieil homme marmonnait tout seul en marchant."
+      }
+    ],
+    "synonyms": [
+      "brontolare",
+      "mugugnare"
+    ],
+    "isVerb": true
+  },
+  "borchia": {
+    "lemma": "borchia",
+    "pos": "sostantivo femminile",
+    "fr": "clou décoratif, clouté",
+    "definition_it": "piccolo elemento metallico decorativo, spesso a forma di bottone, usato per ornare vestiti, cinture, mobili o porte",
+    "examples": [
+      {
+        "it": "La cintura era decorata con borchie d'argento.",
+        "fr": "La ceinture était ornée de clous décoratifs en argent."
+      }
+    ],
+    "synonyms": [
+      "chiodo decorativo"
+    ],
+    "isVerb": false
+  },
+  "bordo": {
+    "lemma": "bordo",
+    "pos": "sostantivo maschile",
+    "fr": "bord, bordure; à bord (d'un navire)",
+    "definition_it": "linea o striscia che delimita il margine di qualcosa; anche il fianco o l'interno di una nave o di un veicolo",
+    "examples": [
+      {
+        "it": "I passeggeri salirono a bordo della nave.",
+        "fr": "Les passagers montèrent à bord du navire."
+      }
+    ],
+    "synonyms": [
+      "margine",
+      "orlo"
+    ],
+    "isVerb": false
+  },
+  "bordone": {
+    "lemma": "bordone",
+    "pos": "sostantivo maschile",
+    "fr": "bourdon (bâton de pèlerin); note grave continue",
+    "definition_it": "lungo bastone usato un tempo dai pellegrini per camminare; anche suono grave e continuo che accompagna una melodia",
+    "examples": [
+      {
+        "it": "Il pellegrino appoggiava i passi al suo bordone.",
+        "fr": "Le pèlerin appuyait ses pas sur son bourdon."
+      }
+    ],
+    "synonyms": [
+      "bastone"
+    ],
+    "isVerb": false
+  },
+  "borghesia": {
+    "lemma": "borghesia",
+    "pos": "sostantivo femminile",
+    "fr": "bourgeoisie",
+    "definition_it": "classe sociale intermedia tra il popolo e la nobiltà, tradizionalmente legata al commercio, all'industria e alle libere professioni",
+    "examples": [
+      {
+        "it": "La borghesia ottocentesca aveva un forte peso economico.",
+        "fr": "La bourgeoisie du dix-neuvième siècle avait un poids économique considérable."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "borgo": {
+    "lemma": "borgo",
+    "pos": "sostantivo maschile",
+    "fr": "bourg, village",
+    "definition_it": "piccolo centro abitato, spesso antico, generalmente più piccolo di una città",
+    "examples": [
+      {
+        "it": "I borghi medievali della zona attirano molti turisti.",
+        "fr": "Les bourgs médiévaux de la région attirent de nombreux touristes."
+      }
+    ],
+    "synonyms": [
+      "villaggio",
+      "paese"
+    ],
+    "isVerb": false
+  },
+  "borraccia": {
+    "lemma": "borraccia",
+    "pos": "sostantivo femminile",
+    "fr": "gourde, bidon",
+    "definition_it": "piccolo contenitore, di solito di metallo o plastica, usato per portare acqua o altre bevande durante un viaggio o un'escursione",
+    "examples": [
+      {
+        "it": "Riempì la borraccia prima di partire per l'escursione.",
+        "fr": "Il remplit sa gourde avant de partir en randonnée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "borsa": {
+    "lemma": "borsa",
+    "pos": "sostantivo femminile",
+    "fr": "sac, bourse; Bourse (marché financier)",
+    "definition_it": "contenitore portatile con manici usato per trasportare oggetti; anche il mercato finanziario dove si scambiano titoli e azioni",
+    "examples": [
+      {
+        "it": "Ha comprato una nuova borsa per il lavoro.",
+        "fr": "Elle a acheté un nouveau sac pour le travail."
+      }
+    ],
+    "synonyms": [
+      "sacca"
+    ],
+    "isVerb": false
+  },
+  "borseggiatore": {
+    "lemma": "borseggiatore",
+    "pos": "nome maschile",
+    "fr": "pickpocket, voleur à la tire",
+    "definition_it": "persona che ruba oggetti di valore dalle tasche o dalle borse della gente, spesso in luoghi affollati",
+    "examples": [
+      {
+        "it": "Il borseggiatore è scappato tra la folla.",
+        "fr": "Le pickpocket s'est enfui dans la foule."
+      }
+    ],
+    "synonyms": [
+      "ladro",
+      "tagliaborse"
+    ],
+    "isVerb": false
+  },
+  "borsellino": {
+    "lemma": "borsellino",
+    "pos": "nome maschile",
+    "fr": "porte-monnaie, petit sac",
+    "definition_it": "piccola borsa usata per tenere monete e denaro spicciolo",
+    "examples": [
+      {
+        "it": "Ho perso il borsellino con tutte le monete.",
+        "fr": "J'ai perdu mon porte-monnaie avec toutes les pièces."
+      }
+    ],
+    "synonyms": [
+      "portamonete"
+    ],
+    "isVerb": false
+  },
+  "bosco": {
+    "lemma": "bosco",
+    "pos": "nome maschile",
+    "fr": "bois, forêt",
+    "definition_it": "terreno esteso coperto di alberi",
+    "examples": [
+      {
+        "it": "Andiamo a fare una passeggiata nel bosco.",
+        "fr": "Allons nous promener dans le bois."
+      }
+    ],
+    "synonyms": [
+      "foresta",
+      "selva"
+    ],
+    "isVerb": false
+  },
+  "boscoso": {
+    "lemma": "boscoso",
+    "pos": "aggettivo",
+    "fr": "boisé",
+    "definition_it": "ricoperto di boschi, pieno di alberi",
+    "examples": [
+      {
+        "it": "La regione è molto boscosa.",
+        "fr": "La région est très boisée."
+      }
+    ],
+    "synonyms": [
+      "alberato"
+    ],
+    "isVerb": false
+  },
+  "bosso": {
+    "lemma": "bosso",
+    "pos": "nome maschile",
+    "fr": "buis",
+    "definition_it": "pianta o arbusto sempreverde usato spesso per formare siepi",
+    "examples": [
+      {
+        "it": "Il giardino era circondato da siepi di bosso.",
+        "fr": "Le jardin était entouré de haies de buis."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "botta": {
+    "lemma": "botta",
+    "pos": "nome femminile",
+    "fr": "coup",
+    "definition_it": "colpo violento dato o ricevuto",
+    "examples": [
+      {
+        "it": "Ha preso una brutta botta cadendo dalle scale.",
+        "fr": "Il a reçu un mauvais coup en tombant dans les escaliers."
+      }
+    ],
+    "synonyms": [
+      "colpo",
+      "percossa"
+    ],
+    "isVerb": false
+  },
+  "botte": {
+    "lemma": "botte",
+    "pos": "nome femminile",
+    "fr": "tonneau, fût",
+    "definition_it": "grande recipiente di legno usato per conservare vino o altri liquidi",
+    "examples": [
+      {
+        "it": "Il vino invecchia nella botte.",
+        "fr": "Le vin vieillit dans le tonneau."
+      }
+    ],
+    "synonyms": [
+      "fusto",
+      "barile"
+    ],
+    "isVerb": false
+  },
+  "bottega": {
+    "lemma": "bottega",
+    "pos": "nome femminile",
+    "fr": "boutique, échoppe, atelier",
+    "definition_it": "piccolo negozio o laboratorio artigianale",
+    "examples": [
+      {
+        "it": "Il fabbro lavora nella sua bottega.",
+        "fr": "Le forgeron travaille dans son atelier."
+      }
+    ],
+    "synonyms": [
+      "negozio",
+      "atelier"
+    ],
+    "isVerb": false
+  },
+  "bottiglia": {
+    "lemma": "bottiglia",
+    "pos": "nome femminile",
+    "fr": "bouteille",
+    "definition_it": "recipiente di vetro o plastica, di solito con collo stretto, usato per contenere liquidi",
+    "examples": [
+      {
+        "it": "Ha bevuto un'intera bottiglia d'acqua.",
+        "fr": "Il a bu une bouteille d'eau entière."
+      }
+    ],
+    "synonyms": [
+      "fiasco"
+    ],
+    "isVerb": false
+  },
+  "bottino": {
+    "lemma": "bottino",
+    "pos": "nome maschile",
+    "fr": "butin",
+    "definition_it": "insieme di oggetti di valore rubati o conquistati",
+    "examples": [
+      {
+        "it": "I ladri sono fuggiti con il bottino.",
+        "fr": "Les voleurs se sont enfuis avec le butin."
+      }
+    ],
+    "synonyms": [
+      "preda",
+      "refurtiva"
+    ],
+    "isVerb": false
+  },
+  "botto": {
+    "lemma": "botto",
+    "pos": "nome maschile",
+    "fr": "coup, boum, détonation",
+    "definition_it": "rumore forte e improvviso, come un colpo o un'esplosione",
+    "examples": [
+      {
+        "it": "Si è sentito un gran botto fuori dalla finestra.",
+        "fr": "On a entendu un grand boum dehors, sous la fenêtre."
+      }
+    ],
+    "synonyms": [
+      "scoppio",
+      "colpo"
+    ],
+    "isVerb": false
+  },
+  "bottone": {
+    "lemma": "bottone",
+    "pos": "nome maschile",
+    "fr": "bouton",
+    "definition_it": "piccolo oggetto usato per chiudere indumenti o per azionare un meccanismo",
+    "examples": [
+      {
+        "it": "Ha perso un bottone della giacca.",
+        "fr": "Il a perdu un bouton de sa veste."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bozza": {
+    "lemma": "bozza",
+    "pos": "sostantivo femminile",
+    "fr": "brouillon, épreuve",
+    "definition_it": "versione provvisoria di un testo, di un disegno o di un progetto, non ancora definitiva",
+    "examples": [
+      {
+        "it": "Ho corretto la bozza del capitolo prima di stamparlo.",
+        "fr": "J'ai corrigé le brouillon du chapitre avant de l'imprimer."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bozzetto": {
+    "lemma": "bozzetto",
+    "pos": "sostantivo maschile",
+    "fr": "esquisse, maquette",
+    "definition_it": "piccolo disegno o modello preparatorio che serve come base per un'opera più grande",
+    "examples": [
+      {
+        "it": "Il pittore fece un bozzetto prima del dipinto finale.",
+        "fr": "Le peintre fit une esquisse avant le tableau final."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bracciante": {
+    "lemma": "bracciante",
+    "pos": "sostantivo maschile/femminile",
+    "fr": "ouvrier agricole, journalier",
+    "definition_it": "lavoratore agricolo che presta la propria opera manuale, spesso pagato a giornata",
+    "examples": [
+      {
+        "it": "I braccianti lavoravano nei campi dall'alba al tramonto.",
+        "fr": "Les ouvriers agricoles travaillaient dans les champs de l'aube au crépuscule."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bracciata": {
+    "lemma": "bracciata",
+    "pos": "sostantivo femminile",
+    "fr": "brassée, brasse (natation)",
+    "definition_it": "quantità di qualcosa che si può portare tra le braccia, oppure movimento delle braccia nel nuoto",
+    "examples": [
+      {
+        "it": "Nuotava con bracciate lente e regolari.",
+        "fr": "Il nageait avec des brasses lentes et régulières."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "braccio": {
+    "lemma": "braccio",
+    "pos": "sostantivo maschile (plurale irregolare: le braccia / i bracci)",
+    "fr": "bras",
+    "definition_it": "parte del corpo umano che va dalla spalla alla mano; per estensione, parte allungata di un oggetto o di una struttura",
+    "examples": [
+      {
+        "it": "Alzò le braccia al cielo per festeggiare.",
+        "fr": "Il leva les bras au ciel pour fêter."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bracco": {
+    "lemma": "bracco",
+    "pos": "sostantivo maschile",
+    "fr": "chien de chasse, braque",
+    "definition_it": "razza di cane usato tradizionalmente per la caccia",
+    "examples": [
+      {
+        "it": "Il cacciatore portava sempre con sé il suo bracco.",
+        "fr": "Le chasseur emmenait toujours son chien de chasse avec lui."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bracconaggio": {
+    "lemma": "bracconaggio",
+    "pos": "sostantivo maschile",
+    "fr": "braconnage",
+    "definition_it": "attività illegale di caccia o pesca praticata senza autorizzazione",
+    "examples": [
+      {
+        "it": "Il bracconaggio mette a rischio molte specie protette.",
+        "fr": "Le braconnage met en danger de nombreuses espèces protégées."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bracconiere": {
+    "lemma": "bracconiere",
+    "pos": "sostantivo maschile",
+    "fr": "braconnier",
+    "definition_it": "persona che pratica la caccia o la pesca illegalmente",
+    "examples": [
+      {
+        "it": "Le guardie forestali hanno arrestato un bracconiere nel bosco.",
+        "fr": "Les gardes forestiers ont arrêté un braconnier dans les bois."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "brace": {
+    "lemma": "brace",
+    "pos": "sostantivo femminile",
+    "fr": "braise",
+    "definition_it": "residuo di legna o carbone che brucia lentamente senza fiamma, molto caldo",
+    "examples": [
+      {
+        "it": "Arrostirono la carne sulla brace.",
+        "fr": "Ils firent griller la viande sur la braise."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "brache": {
+    "lemma": "brache",
+    "pos": "sostantivo femminile plurale",
+    "fr": "culotte, braies",
+    "definition_it": "antico termine per indicare pantaloni o calzoni, spesso larghi",
+    "examples": [
+      {
+        "it": "Indossava vecchie brache di tela grezza.",
+        "fr": "Il portait de vieilles braies en toile grossière."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "brama": {
+    "lemma": "brama",
+    "pos": "sostantivo femminile",
+    "fr": "désir ardent, convoitise",
+    "definition_it": "desiderio intenso e forte di ottenere qualcosa",
+    "examples": [
+      {
+        "it": "Provava una grande brama di ricchezza.",
+        "fr": "Il éprouvait un grand désir de richesse."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bramare": {
+    "lemma": "bramare",
+    "pos": "verbo transitivo",
+    "fr": "désirer ardemment, convoiter",
+    "definition_it": "desiderare con grande intensità qualcosa",
+    "examples": [
+      {
+        "it": "Bramava da anni quel viaggio in Italia.",
+        "fr": "Il désirait ardemment ce voyage en Italie depuis des années."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "bramoso": {
+    "lemma": "bramoso",
+    "pos": "aggettivo",
+    "fr": "avide, désireux",
+    "definition_it": "che desidera intensamente qualcosa",
+    "examples": [
+      {
+        "it": "Era bramosa di conoscenza fin da bambina.",
+        "fr": "Elle était avide de connaissance depuis son enfance."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "branca": {
+    "lemma": "branca",
+    "pos": "sostantivo femminile",
+    "fr": "branche, griffe",
+    "definition_it": "settore o ramo di un'attività, oppure artiglio di un animale",
+    "examples": [
+      {
+        "it": "La medicina è una branca della scienza.",
+        "fr": "La médecine est une branche de la science."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "branco": {
+    "lemma": "branco",
+    "pos": "sostantivo maschile",
+    "fr": "troupeau, meute, bande",
+    "definition_it": "gruppo di animali della stessa specie che vivono e si muovono insieme",
+    "examples": [
+      {
+        "it": "Un branco di lupi attraversò la foresta.",
+        "fr": "Une meute de loups traversa la forêt."
+      }
+    ],
+    "synonyms": [
+      "gregge",
+      "mandria",
+      "muta"
+    ],
+    "isVerb": false
+  },
+  "brancolare": {
+    "lemma": "brancolare",
+    "pos": "verbo intransitivo",
+    "fr": "tâtonner, avancer à tâtons",
+    "definition_it": "muoversi con le mani protese, cercando di orientarsi senza vedere bene",
+    "examples": [
+      {
+        "it": "Brancolava nel buio cercando l'interruttore.",
+        "fr": "Il tâtonnait dans le noir en cherchant l'interrupteur."
+      }
+    ],
+    "synonyms": [
+      "tastare",
+      "annaspare"
+    ],
+    "isVerb": true
+  },
+  "brandello": {
+    "lemma": "brandello",
+    "pos": "sostantivo maschile",
+    "fr": "lambeau, morceau déchiré",
+    "definition_it": "pezzo strappato e irregolare di un tessuto o di un altro materiale",
+    "examples": [
+      {
+        "it": "La bandiera era ridotta a brandelli.",
+        "fr": "Le drapeau était réduit en lambeaux."
+      }
+    ],
+    "synonyms": [
+      "straccio",
+      "pezzo"
+    ],
+    "isVerb": false
+  },
+  "brandire": {
+    "lemma": "brandire",
+    "pos": "verbo transitivo",
+    "fr": "brandir",
+    "definition_it": "impugnare un'arma o un oggetto agitandolo in modo minaccioso",
+    "examples": [
+      {
+        "it": "Brandiva un coltello con aria minacciosa.",
+        "fr": "Il brandissait un couteau d'un air menaçant."
+      }
+    ],
+    "synonyms": [
+      "impugnare",
+      "agitare"
+    ],
+    "isVerb": true
+  },
+  "brano": {
+    "lemma": "brano",
+    "pos": "sostantivo maschile",
+    "fr": "passage, extrait, morceau",
+    "definition_it": "parte di un testo, di un discorso o di un componimento musicale",
+    "examples": [
+      {
+        "it": "Ha letto un brano del romanzo ad alta voce.",
+        "fr": "Il a lu un extrait du roman à voix haute."
+      }
+    ],
+    "synonyms": [
+      "passo",
+      "estratto"
+    ],
+    "isVerb": false
+  },
+  "bravamente": {
+    "lemma": "bravamente",
+    "pos": "avverbio",
+    "fr": "bravement, habilement",
+    "definition_it": "in modo bravo, con abilità o coraggio",
+    "examples": [
+      {
+        "it": "Ha affrontato bravamente la difficoltà.",
+        "fr": "Il a affronté la difficulté avec courage."
+      }
+    ],
+    "synonyms": [
+      "abilmente",
+      "coraggiosamente"
+    ],
+    "isVerb": false
+  },
+  "bravo": {
+    "lemma": "bravo",
+    "pos": "aggettivo",
+    "fr": "bon, capable, doué ; brave, honnête",
+    "definition_it": "che è capace e abile in quello che fa, oppure che si comporta bene e onestamente",
+    "examples": [
+      {
+        "it": "È un bravo medico e aiuta tutti i suoi pazienti.",
+        "fr": "C'est un bon médecin et il aide tous ses patients."
+      }
+    ],
+    "synonyms": [
+      "capace",
+      "abile",
+      "onesto"
+    ],
+    "isVerb": false
+  },
+  "bravura": {
+    "lemma": "bravura",
+    "pos": "sostantivo femminile",
+    "fr": "habileté, talent, bravoure",
+    "definition_it": "capacità e abilità nel fare qualcosa, spesso con grande maestria",
+    "examples": [
+      {
+        "it": "Il pianista ha suonato con grande bravura.",
+        "fr": "Le pianiste a joué avec un grand talent."
+      }
+    ],
+    "synonyms": [
+      "abilità",
+      "maestria",
+      "talento"
+    ],
+    "isVerb": false
+  },
+  "breccia": {
+    "lemma": "breccia",
+    "pos": "sostantivo femminile",
+    "fr": "brèche",
+    "definition_it": "apertura o rottura in un muro, in una difesa o in una roccia",
+    "examples": [
+      {
+        "it": "I soldati aprirono una breccia nelle mura della città.",
+        "fr": "Les soldats ouvrirent une brèche dans les murs de la ville."
+      }
+    ],
+    "synonyms": [
+      "varco",
+      "apertura"
+    ],
+    "isVerb": false
+  },
+  "breve": {
+    "lemma": "breve",
+    "pos": "aggettivo",
+    "fr": "bref / brève",
+    "definition_it": "che dura poco tempo o che ha una lunghezza ridotta",
+    "examples": [
+      {
+        "it": "Ho fatto una breve pausa prima di ripartire.",
+        "fr": "J'ai fait une brève pause avant de repartir."
+      }
+    ],
+    "synonyms": [
+      "corto"
+    ],
+    "isVerb": false
+  },
+  "brevemente": {
+    "lemma": "brevemente",
+    "pos": "avverbio",
+    "fr": "brièvement",
+    "definition_it": "in modo breve, con poche parole",
+    "examples": [
+      {
+        "it": "Ha spiegato brevemente la situazione.",
+        "fr": "Il a expliqué brièvement la situation."
+      }
+    ],
+    "synonyms": [
+      "sinteticamente"
+    ],
+    "isVerb": false
+  },
+  "brevettare": {
+    "lemma": "brevettare",
+    "pos": "verbo (transitivo)",
+    "fr": "breveter",
+    "definition_it": "ottenere un brevetto ufficiale per un'invenzione",
+    "examples": [
+      {
+        "it": "L'ingegnere ha brevettato una nuova invenzione.",
+        "fr": "L'ingénieur a breveté une nouvelle invention."
+      }
+    ],
+    "synonyms": [
+      "registrare"
+    ],
+    "isVerb": true
+  },
+  "brevità": {
+    "lemma": "brevità",
+    "pos": "sostantivo femminile",
+    "fr": "brièveté",
+    "definition_it": "qualità di ciò che è breve o dura poco",
+    "examples": [
+      {
+        "it": "Apprezzo la brevità del suo discorso.",
+        "fr": "J'apprécie la brièveté de son discours."
+      }
+    ],
+    "synonyms": [
+      "concisione"
+    ],
+    "isVerb": false
+  },
+  "briciola": {
+    "lemma": "briciola",
+    "pos": "sostantivo femminile",
+    "fr": "miette",
+    "definition_it": "piccolissimo pezzo di pane o di altro cibo che si stacca",
+    "examples": [
+      {
+        "it": "Sul tavolo c'erano solo delle briciole di pane.",
+        "fr": "Sur la table il n'y avait que des miettes de pain."
+      }
+    ],
+    "synonyms": [
+      "pezzetto"
+    ],
+    "isVerb": false
+  },
+  "briciolo": {
+    "lemma": "briciolo",
+    "pos": "sostantivo maschile",
+    "fr": "brin, grain",
+    "definition_it": "piccolissima quantità di qualcosa, spesso in senso figurato",
+    "examples": [
+      {
+        "it": "Non c'è un briciolo di verità in quello che dice.",
+        "fr": "Il n'y a pas un brin de vérité dans ce qu'il dit."
+      }
+    ],
+    "synonyms": [
+      "minimo"
+    ],
+    "isVerb": false
+  },
+  "briga": {
+    "lemma": "briga",
+    "pos": "sostantivo femminile",
+    "fr": "souci, peine",
+    "definition_it": "fastidio o impegno che richiede sforzo, spesso nell'espressione \"darsi la briga\"",
+    "examples": [
+      {
+        "it": "Non si è preso la briga di rispondere.",
+        "fr": "Il ne s'est pas donné la peine de répondre."
+      }
+    ],
+    "synonyms": [
+      "fastidio"
+    ],
+    "isVerb": false
+  },
+  "brigante": {
+    "lemma": "brigante",
+    "pos": "sostantivo maschile",
+    "fr": "brigand",
+    "definition_it": "bandito che viveva rubando nelle campagne o sulle montagne",
+    "examples": [
+      {
+        "it": "I briganti attaccavano i viaggiatori sulle strade di montagna.",
+        "fr": "Les brigands attaquaient les voyageurs sur les routes de montagne."
+      }
+    ],
+    "synonyms": [
+      "bandito"
+    ],
+    "isVerb": false
+  },
+  "brigata": {
+    "lemma": "brigata",
+    "pos": "sostantivo femminile",
+    "fr": "brigade",
+    "definition_it": "gruppo organizzato di soldati o di persone unite per uno scopo comune",
+    "examples": [
+      {
+        "it": "La brigata avanzava lentamente verso il fronte.",
+        "fr": "La brigade avançait lentement vers le front."
+      }
+    ],
+    "synonyms": [
+      "squadra"
+    ],
+    "isVerb": false
+  },
+  "brigatista": {
+    "lemma": "brigatista",
+    "pos": "sostantivo maschile/femminile",
+    "fr": "membre des Brigades rouges",
+    "definition_it": "membro di un'organizzazione armata clandestina, in particolare delle Brigate Rosse",
+    "examples": [
+      {
+        "it": "I brigatisti furono arrestati dalla polizia.",
+        "fr": "Les membres des Brigades rouges ont été arrêtés par la police."
+      }
+    ],
+    "synonyms": [
+      "terrorista"
+    ],
+    "isVerb": false
+  },
+  "briglia": {
+    "lemma": "briglia",
+    "pos": "sostantivo femminile",
+    "fr": "bride",
+    "definition_it": "cinghia con cui si guida un cavallo",
+    "examples": [
+      {
+        "it": "Il cavaliere tirò la briglia per fermare il cavallo.",
+        "fr": "Le cavalier tira la bride pour arrêter le cheval."
+      }
+    ],
+    "synonyms": [
+      "redine"
+    ],
+    "isVerb": false
+  },
+  "brillante": {
+    "lemma": "brillante",
+    "pos": "aggettivo",
+    "fr": "brillant",
+    "definition_it": "che brilla, luminoso, oppure molto intelligente e originale",
+    "examples": [
+      {
+        "it": "Ha avuto un'idea brillante.",
+        "fr": "Il a eu une idée brillante."
+      }
+    ],
+    "synonyms": [
+      "luminoso"
+    ],
+    "isVerb": false
+  },
+  "brillare": {
+    "lemma": "brillare",
+    "pos": "verbo (intransitivo)",
+    "fr": "briller",
+    "definition_it": "emettere o riflettere una luce intensa e viva",
+    "examples": [
+      {
+        "it": "Le stelle brillano nel cielo notturno.",
+        "fr": "Les étoiles brillent dans le ciel nocturne."
+      }
+    ],
+    "synonyms": [
+      "splendere"
+    ],
+    "isVerb": true
+  },
+  "brina": {
+    "lemma": "brina",
+    "pos": "sostantivo femminile",
+    "fr": "givre, gelée blanche",
+    "definition_it": "sottile strato di ghiaccio che si forma di notte sull'erba o sulle superfici quando fa molto freddo",
+    "examples": [
+      {
+        "it": "Al mattino i campi erano coperti di brina.",
+        "fr": "Le matin, les champs étaient couverts de givre."
+      }
+    ],
+    "synonyms": [
+      "gelo"
+    ],
+    "isVerb": false
+  },
+  "brindisi": {
+    "lemma": "brindisi",
+    "pos": "sostantivo maschile",
+    "fr": "toast (à boire)",
+    "definition_it": "gesto di alzare il bicchiere e augurare qualcosa a qualcuno prima di bere insieme",
+    "examples": [
+      {
+        "it": "Abbiamo fatto un brindisi per il suo compleanno.",
+        "fr": "Nous avons porté un toast pour son anniversaire."
+      }
+    ],
+    "synonyms": [
+      "toast"
+    ],
+    "isVerb": false
+  },
+  "brioche": {
+    "lemma": "brioche",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "brioche",
+    "definition_it": "dolce soffice da forno, spesso mangiato a colazione",
+    "examples": [
+      {
+        "it": "Ogni mattina prende un caffè e una brioche al bar.",
+        "fr": "Chaque matin, il prend un café et une brioche au bar."
+      }
+    ],
+    "synonyms": [
+      "cornetto"
+    ],
+    "isVerb": false
+  },
+  "brivido": {
+    "lemma": "brivido",
+    "pos": "sostantivo maschile",
+    "fr": "frisson",
+    "definition_it": "sensazione improvvisa di freddo o di forte emozione che fa tremare il corpo",
+    "examples": [
+      {
+        "it": "Un brivido le percorse la schiena per la paura.",
+        "fr": "Un frisson lui parcourut le dos de peur."
+      }
+    ],
+    "synonyms": [
+      "tremito"
+    ],
+    "isVerb": false
+  },
+  "brizzolato": {
+    "lemma": "brizzolato",
+    "pos": "aggettivo",
+    "fr": "grisonnant, poivre et sel",
+    "definition_it": "detto di capelli o barba che cominciano a diventare grigi mescolati al colore naturale",
+    "examples": [
+      {
+        "it": "Aveva i capelli brizzolati e uno sguardo gentile.",
+        "fr": "Il avait les cheveux grisonnants et un regard doux."
+      }
+    ],
+    "synonyms": [
+      "grigiastro"
+    ],
+    "isVerb": false
+  },
+  "brocca": {
+    "lemma": "brocca",
+    "pos": "sostantivo femminile",
+    "fr": "cruche",
+    "definition_it": "recipiente con manico usato per contenere e versare liquidi",
+    "examples": [
+      {
+        "it": "Riempì la brocca d'acqua fresca.",
+        "fr": "Elle remplit la cruche d'eau fraîche."
+      }
+    ],
+    "synonyms": [
+      "caraffa"
+    ],
+    "isVerb": false
+  },
+  "brocchiere": {
+    "lemma": "brocchiere",
+    "pos": "sostantivo maschile",
+    "fr": "bouclier (petit, rond)",
+    "definition_it": "piccolo scudo rotondo usato anticamente per parare i colpi nella scherma",
+    "examples": [
+      {
+        "it": "I duellanti impugnavano spada e brocchiere.",
+        "fr": "Les duellistes tenaient épée et petit bouclier."
+      }
+    ],
+    "synonyms": [
+      "scudo"
+    ],
+    "isVerb": false
+  },
+  "brodo": {
+    "lemma": "brodo",
+    "pos": "sostantivo maschile",
+    "fr": "bouillon",
+    "definition_it": "liquido ottenuto facendo bollire carne, verdure o ossa, spesso usato come base per zuppe",
+    "examples": [
+      {
+        "it": "La nonna preparava sempre un brodo di pollo caldo.",
+        "fr": "La grand-mère préparait toujours un bouillon de poulet chaud."
+      }
+    ],
+    "synonyms": [
+      "consommé"
+    ],
+    "isVerb": false
+  },
+  "bronchite": {
+    "lemma": "bronchite",
+    "pos": "sostantivo femminile",
+    "fr": "bronchite",
+    "definition_it": "infiammazione dei bronchi che causa tosse e difficoltà respiratorie",
+    "examples": [
+      {
+        "it": "Il medico gli ha diagnosticato una bronchite.",
+        "fr": "Le médecin lui a diagnostiqué une bronchite."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "broncio": {
+    "lemma": "broncio",
+    "pos": "sostantivo maschile",
+    "fr": "bouderie, moue",
+    "definition_it": "espressione del viso di chi è imbronciato o dispiaciuto, spesso con le labbra sporgenti",
+    "examples": [
+      {
+        "it": "La bambina fece il broncio perché non voleva andare a letto.",
+        "fr": "La petite fille fit la moue parce qu'elle ne voulait pas aller au lit."
+      }
+    ],
+    "synonyms": [
+      "muso"
+    ],
+    "isVerb": false
+  },
+  "brontolare": {
+    "lemma": "brontolare",
+    "pos": "verbo (intransitivo)",
+    "fr": "grommeler, ronchonner, gronder",
+    "definition_it": "esprimere malumore o disapprovazione a bassa voce, oppure fare un rumore sordo e continuo (come il tuono o lo stomaco)",
+    "examples": [
+      {
+        "it": "Il nonno brontola sempre quando deve alzarsi presto.",
+        "fr": "Le grand-père ronchonne toujours quand il doit se lever tôt."
+      }
+    ],
+    "synonyms": [
+      "borbottare",
+      "lamentarsi"
+    ],
+    "isVerb": true
+  },
+  "bronzina": {
+    "lemma": "bronzina",
+    "pos": "sostantivo femminile",
+    "fr": "coussinet, palier (mécanique)",
+    "definition_it": "piccolo cuscinetto metallico usato nei motori per ridurre l'attrito tra parti mobili",
+    "examples": [
+      {
+        "it": "Il meccanico ha sostituito la bronzina usurata del motore.",
+        "fr": "Le mécanicien a remplacé le coussinet usé du moteur."
+      }
+    ],
+    "synonyms": [
+      "cuscinetto"
+    ],
+    "isVerb": false
+  },
+  "bronzo": {
+    "lemma": "bronzo",
+    "pos": "sostantivo maschile",
+    "fr": "bronze",
+    "definition_it": "lega metallica di rame e stagno, usata per statue, oggetti d'arte e monete",
+    "examples": [
+      {
+        "it": "La statua di bronzo si trova al centro della piazza.",
+        "fr": "La statue de bronze se trouve au centre de la place."
+      }
+    ],
+    "synonyms": [
+      "lega"
+    ],
+    "isVerb": false
+  },
+  "bruciapelo": {
+    "lemma": "bruciapelo",
+    "pos": "locuzione avverbiale (usata in \"a bruciapelo\")",
+    "fr": "à bout portant, de but en blanc",
+    "definition_it": "usato nell'espressione \"a bruciapelo\": da distanza molto ravvicinata, oppure in modo improvviso e diretto",
+    "examples": [
+      {
+        "it": "Gli ha fatto una domanda a bruciapelo, senza preavviso.",
+        "fr": "Il lui a posé une question de but en blanc, sans prévenir."
+      }
+    ],
+    "synonyms": [
+      "improvvisamente"
+    ],
+    "isVerb": false
+  },
+  "bruciare": {
+    "lemma": "bruciare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "brûler",
+    "definition_it": "distruggere o essere distrutto dal fuoco, oppure provocare una forte sensazione di calore o dolore",
+    "examples": [
+      {
+        "it": "Ha bruciato i documenti vecchi nel camino.",
+        "fr": "Il a brûlé les vieux documents dans la cheminée."
+      }
+    ],
+    "synonyms": [
+      "incendiare",
+      "ardere"
+    ],
+    "isVerb": true
+  },
+  "brulicare": {
+    "lemma": "brulicare",
+    "pos": "verbo intransitivo",
+    "fr": "grouiller",
+    "definition_it": "muoversi in gran numero, in modo disordinato e continuo, come formiche o insetti",
+    "examples": [
+      {
+        "it": "La piazza brulica di gente.",
+        "fr": "La place grouille de monde."
+      }
+    ],
+    "synonyms": [
+      "formicolare",
+      "pullulare"
+    ],
+    "isVerb": true
+  },
+  "brulichio": {
+    "lemma": "brulichio",
+    "pos": "sostantivo maschile",
+    "fr": "grouillement, fourmillement",
+    "definition_it": "movimento continuo e disordinato di persone o animali riuniti in gran numero",
+    "examples": [
+      {
+        "it": "Si sentiva un brulichio di voci in lontananza.",
+        "fr": "On entendait un fourmillement de voix au loin."
+      }
+    ],
+    "synonyms": [
+      "formicolio",
+      "pullulare"
+    ],
+    "isVerb": false
+  },
+  "brullo": {
+    "lemma": "brullo",
+    "pos": "aggettivo",
+    "fr": "aride, dénudé",
+    "definition_it": "privo di vegetazione, spoglio e arido",
+    "examples": [
+      {
+        "it": "La collina era brulla e desolata.",
+        "fr": "La colline était aride et désolée."
+      }
+    ],
+    "synonyms": [
+      "spoglio",
+      "arido"
+    ],
+    "isVerb": false
+  },
+  "bruno": {
+    "lemma": "bruno",
+    "pos": "aggettivo",
+    "fr": "brun",
+    "definition_it": "di colore scuro, tra il marrone e il nero, spesso riferito a capelli o carnagione",
+    "examples": [
+      {
+        "it": "Aveva i capelli bruni e gli occhi scuri.",
+        "fr": "Il avait les cheveux bruns et les yeux foncés."
+      }
+    ],
+    "synonyms": [
+      "scuro",
+      "castano"
+    ],
+    "isVerb": false
+  },
+  "bruscamente": {
+    "lemma": "bruscamente",
+    "pos": "avverbio",
+    "fr": "brusquement",
+    "definition_it": "in modo improvviso e brusco, senza gentilezza o preavviso",
+    "examples": [
+      {
+        "it": "Si fermò bruscamente in mezzo alla strada.",
+        "fr": "Il s'arrêta brusquement au milieu de la route."
+      }
+    ],
+    "synonyms": [
+      "improvvisamente",
+      "seccamente"
+    ],
+    "isVerb": false
+  },
+  "bruschetta": {
+    "lemma": "bruschetta",
+    "pos": "sostantivo femminile",
+    "fr": "bruschetta (tartine grillée)",
+    "definition_it": "fetta di pane abbrustolito condita con olio, aglio e talvolta pomodoro",
+    "examples": [
+      {
+        "it": "Ci hanno servito una bruschetta al pomodoro come antipasto.",
+        "fr": "On nous a servi une bruschetta à la tomate en entrée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bruto": {
+    "lemma": "bruto",
+    "pos": "aggettivo/sostantivo maschile",
+    "fr": "brute",
+    "definition_it": "che agisce con violenza istintiva e senza ragione, oppure persona rozza e violenta",
+    "examples": [
+      {
+        "it": "Si comportò come un bruto senza alcun rispetto.",
+        "fr": "Il s'est comporté comme une brute sans aucun respect."
+      }
+    ],
+    "synonyms": [
+      "rozzo",
+      "violento"
+    ],
+    "isVerb": false
+  },
+  "bruttezza": {
+    "lemma": "bruttezza",
+    "pos": "sostantivo femminile",
+    "fr": "laideur",
+    "definition_it": "qualità di ciò che è brutto",
+    "examples": [
+      {
+        "it": "La bruttezza dell'edificio colpiva tutti i passanti.",
+        "fr": "La laideur du bâtiment frappait tous les passants."
+      }
+    ],
+    "synonyms": [
+      "deformità"
+    ],
+    "isVerb": false
+  },
+  "brutto": {
+    "lemma": "brutto",
+    "pos": "aggettivo",
+    "fr": "laid, moche",
+    "definition_it": "che non è piacevole a vedersi o che provoca una sensazione negativa",
+    "examples": [
+      {
+        "it": "Era una brutta giornata di pioggia.",
+        "fr": "C'était une vilaine journée de pluie."
+      }
+    ],
+    "synonyms": [
+      "orribile",
+      "sgradevole"
+    ],
+    "isVerb": false
+  },
+  "bubbolo": {
+    "lemma": "bubbolo",
+    "pos": "sostantivo maschile",
+    "fr": "grelot",
+    "definition_it": "piccola sfera di metallo cava che tintinna se agitata",
+    "examples": [
+      {
+        "it": "I bubboli del vestito di carnevale tintinnavano ad ogni passo.",
+        "fr": "Les grelots du costume de carnaval tintaient à chaque pas."
+      }
+    ],
+    "synonyms": [
+      "campanello"
+    ],
+    "isVerb": false
+  },
+  "buca": {
+    "lemma": "buca",
+    "pos": "sostantivo femminile",
+    "fr": "trou, fosse",
+    "definition_it": "cavità nel terreno o in una superficie",
+    "examples": [
+      {
+        "it": "La macchina è caduta in una buca sulla strada.",
+        "fr": "La voiture est tombée dans un trou sur la route."
+      }
+    ],
+    "synonyms": [
+      "fossa"
+    ],
+    "isVerb": false
+  },
+  "bucare": {
+    "lemma": "bucare",
+    "pos": "verbo transitivo",
+    "fr": "percer, crever",
+    "definition_it": "fare un buco in qualcosa",
+    "examples": [
+      {
+        "it": "Ho bucato una gomma della bicicletta.",
+        "fr": "J'ai crevé un pneu de vélo."
+      }
+    ],
+    "synonyms": [
+      "forare"
+    ],
+    "isVerb": true
+  },
+  "buccia": {
+    "lemma": "buccia",
+    "pos": "sostantivo femminile",
+    "fr": "peau, pelure",
+    "definition_it": "la parte esterna che ricopre un frutto o un ortaggio",
+    "examples": [
+      {
+        "it": "Ha mangiato la mela con la buccia.",
+        "fr": "Il a mangé la pomme avec la peau."
+      }
+    ],
+    "synonyms": [
+      "scorza"
+    ],
+    "isVerb": false
+  },
+  "buco": {
+    "lemma": "buco",
+    "pos": "sostantivo maschile",
+    "fr": "trou",
+    "definition_it": "apertura o cavità stretta in un oggetto o in una superficie",
+    "examples": [
+      {
+        "it": "C'è un buco nel maglione.",
+        "fr": "Il y a un trou dans le pull."
+      }
+    ],
+    "synonyms": [
+      "foro"
+    ],
+    "isVerb": false
+  },
+  "budget": {
+    "lemma": "budget",
+    "pos": "sostantivo maschile (invariabile, prestito dall'inglese)",
+    "fr": "budget",
+    "definition_it": "somma di denaro disponibile per una spesa o un progetto",
+    "examples": [
+      {
+        "it": "Il budget per il progetto è limitato.",
+        "fr": "Le budget pour le projet est limité."
+      }
+    ],
+    "synonyms": [
+      "bilancio"
+    ],
+    "isVerb": false
+  },
+  "bue": {
+    "lemma": "bue",
+    "pos": "sostantivo maschile",
+    "fr": "boeuf",
+    "definition_it": "grande animale domestico bovino maschio, usato tradizionalmente per il lavoro nei campi o come alimento",
+    "examples": [
+      {
+        "it": "I bovi tiravano l'aratro lungo il campo.",
+        "fr": "Les boeufs tiraient la charrue le long du champ."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bufalo": {
+    "lemma": "bufalo",
+    "pos": "sostantivo maschile",
+    "fr": "buffle",
+    "definition_it": "grande mammifero bovino con corna ricurve",
+    "examples": [
+      {
+        "it": "I bufali pascolavano nella pianura.",
+        "fr": "Les buffles paissaient dans la plaine."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bufera": {
+    "lemma": "bufera",
+    "pos": "sostantivo femminile",
+    "fr": "tempête, blizzard",
+    "definition_it": "forte tempesta di vento, pioggia o neve",
+    "examples": [
+      {
+        "it": "Una bufera di neve ha bloccato la strada.",
+        "fr": "Une tempête de neige a bloqué la route."
+      }
+    ],
+    "synonyms": [
+      "tempesta"
+    ],
+    "isVerb": false
+  },
+  "buffata": {
+    "lemma": "buffata",
+    "pos": "sostantivo femminile",
+    "fr": "bouffée",
+    "definition_it": "getto improvviso e breve di vento, fumo o aria",
+    "examples": [
+      {
+        "it": "Una buffata di vento fece volare le foglie.",
+        "fr": "Une bouffée de vent fit voler les feuilles."
+      }
+    ],
+    "synonyms": [
+      "raffica",
+      "folata"
+    ],
+    "isVerb": false
+  },
+  "buffet": {
+    "lemma": "buffet",
+    "pos": "sostantivo maschile invariabile",
+    "fr": "buffet",
+    "definition_it": "tavolo apparecchiato con cibi e bevande a cui gli invitati si servono da soli",
+    "examples": [
+      {
+        "it": "Al matrimonio c'era un ricco buffet di dolci.",
+        "fr": "Au mariage il y avait un riche buffet de desserts."
+      }
+    ],
+    "synonyms": [
+      "rinfresco"
+    ],
+    "isVerb": false
+  },
+  "buffo": {
+    "lemma": "buffo",
+    "pos": "aggettivo",
+    "fr": "drôle, comique",
+    "definition_it": "che fa ridere, divertente e un po' strano",
+    "examples": [
+      {
+        "it": "Quel cappello è davvero buffo.",
+        "fr": "Ce chapeau est vraiment drôle."
+      }
+    ],
+    "synonyms": [
+      "comico",
+      "divertente"
+    ],
+    "isVerb": false
+  },
+  "buffone": {
+    "lemma": "buffone",
+    "pos": "sostantivo maschile",
+    "fr": "bouffon, clown",
+    "definition_it": "persona che scherza continuamente o fa la parte del pagliaccio",
+    "examples": [
+      {
+        "it": "Non fare il buffone durante la riunione.",
+        "fr": "Ne fais pas le bouffon pendant la réunion."
+      }
+    ],
+    "synonyms": [
+      "pagliaccio",
+      "giullare"
+    ],
+    "isVerb": false
+  },
+  "bugia": {
+    "lemma": "bugia",
+    "pos": "sostantivo femminile",
+    "fr": "mensonge",
+    "definition_it": "affermazione falsa detta di proposito per ingannare qualcuno",
+    "examples": [
+      {
+        "it": "Ha detto una bugia per non essere punito.",
+        "fr": "Il a dit un mensonge pour ne pas être puni."
+      }
+    ],
+    "synonyms": [
+      "menzogna"
+    ],
+    "isVerb": false
+  },
+  "bugiardo": {
+    "lemma": "bugiardo",
+    "pos": "aggettivo/sostantivo",
+    "fr": "menteur",
+    "definition_it": "che dice bugie, non sincero",
+    "examples": [
+      {
+        "it": "Non fidarti di lui, è un bugiardo.",
+        "fr": "Ne te fie pas à lui, c'est un menteur."
+      }
+    ],
+    "synonyms": [
+      "falso",
+      "mendace"
+    ],
+    "isVerb": false
+  },
+  "buio": {
+    "lemma": "buio",
+    "pos": "aggettivo/sostantivo maschile",
+    "fr": "sombre, obscur / obscurité",
+    "definition_it": "privo di luce, oscuro",
+    "examples": [
+      {
+        "it": "La stanza era completamente buia.",
+        "fr": "La pièce était complètement sombre."
+      }
+    ],
+    "synonyms": [
+      "oscuro",
+      "scuro"
+    ],
+    "isVerb": false
+  },
+  "bulbo": {
+    "lemma": "bulbo",
+    "pos": "sostantivo maschile",
+    "fr": "bulbe",
+    "definition_it": "organo sotterraneo di alcune piante da cui nascono foglie e fiori",
+    "examples": [
+      {
+        "it": "In autunno ho piantato i bulbi dei tulipani.",
+        "fr": "En automne j'ai planté les bulbes de tulipes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "bum": {
+    "lemma": "bum",
+    "pos": "interiezione",
+    "fr": "boum",
+    "definition_it": "suono che imita un forte rumore o un'esplosione",
+    "examples": [
+      {
+        "it": "Bum! La porta si chiuse di colpo.",
+        "fr": "Boum ! La porte se referma d'un coup."
+      }
+    ],
+    "synonyms": [
+      "bang"
+    ],
+    "isVerb": false
+  },
+  "bunker": {
+    "lemma": "bunker",
+    "pos": "sostantivo maschile invariabile",
+    "fr": "bunker",
+    "definition_it": "rifugio sotterraneo fortificato usato per proteggersi da attacchi o bombardamenti",
+    "examples": [
+      {
+        "it": "Durante la guerra si nascosero in un bunker.",
+        "fr": "Pendant la guerre ils se cachèrent dans un bunker."
+      }
+    ],
+    "synonyms": [
+      "rifugio"
+    ],
+    "isVerb": false
+  },
+  "buon'ora": {
+    "lemma": "buon'ora",
+    "pos": "locuzione avverbiale",
+    "fr": "de bonne heure, tôt",
+    "definition_it": "espressione che indica un'ora presto del mattino, di buon mattino",
+    "examples": [
+      {
+        "it": "Si è alzato di buon'ora per andare al mercato.",
+        "fr": "Il s'est levé de bonne heure pour aller au marché."
+      }
+    ],
+    "synonyms": [
+      "presto"
+    ],
+    "isVerb": false
+  },
+  "buonanima": {
+    "lemma": "buonanima",
+    "pos": "sostantivo femminile",
+    "fr": "feu, défunt(e), que Dieu ait son âme",
+    "definition_it": "espressione usata per ricordare con affetto una persona morta",
+    "examples": [
+      {
+        "it": "Mio nonno, buon'anima, raccontava sempre storie belle.",
+        "fr": "Mon grand-père, que Dieu ait son âme, racontait toujours de belles histoires."
+      }
+    ],
+    "synonyms": [
+      "defunto"
+    ],
+    "isVerb": false
+  },
+  "buonanotte": {
+    "lemma": "buonanotte",
+    "pos": "sostantivo/interiezione",
+    "fr": "bonne nuit",
+    "definition_it": "saluto che si dice prima di andare a dormire",
+    "examples": [
+      {
+        "it": "Buonanotte, a domani!",
+        "fr": "Bonne nuit, à demain !"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "buonasera": {
+    "lemma": "buonasera",
+    "pos": "sostantivo/interiezione",
+    "fr": "bonsoir",
+    "definition_it": "saluto che si usa nel tardo pomeriggio o alla sera",
+    "examples": [
+      {
+        "it": "Buonasera a tutti, come state?",
+        "fr": "Bonsoir à tous, comment allez-vous ?"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "buongiorno": {
+    "lemma": "buongiorno",
+    "pos": "sostantivo/interiezione",
+    "fr": "bonjour",
+    "definition_it": "saluto che si usa al mattino o durante il giorno",
+    "examples": [
+      {
+        "it": "Buongiorno, professore!",
+        "fr": "Bonjour, monsieur le professeur !"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "buono": {
+    "lemma": "buono",
+    "pos": "aggettivo",
+    "fr": "bon, bonne",
+    "definition_it": "che ha qualità positive, piacevole o di valore; forma dialettale/antica: bona",
+    "examples": [
+      {
+        "it": "Questa è una bona annata per il vino, dicevano i contadini.",
+        "fr": "C'est une bonne année pour le vin, disaient les paysans."
+      }
+    ],
+    "synonyms": [
+      "bravo",
+      "gentile"
+    ],
+    "isVerb": false
+  },
+  "buonumore": {
+    "lemma": "buonumore",
+    "pos": "sostantivo maschile",
+    "fr": "bonne humeur",
+    "definition_it": "stato d'animo allegro e contento",
+    "examples": [
+      {
+        "it": "Oggi sono di buonumore.",
+        "fr": "Aujourd'hui je suis de bonne humeur."
+      }
+    ],
+    "synonyms": [
+      "allegria"
+    ],
+    "isVerb": false
+  },
+  "burattinaio": {
+    "lemma": "burattinaio",
+    "pos": "sostantivo maschile",
+    "fr": "montreur de marionnettes, marionnettiste",
+    "definition_it": "persona che fa muovere i burattini in uno spettacolo",
+    "examples": [
+      {
+        "it": "Il burattinaio faceva ridere tutti i bambini.",
+        "fr": "Le marionnettiste faisait rire tous les enfants."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "burattino": {
+    "lemma": "burattino",
+    "pos": "sostantivo maschile",
+    "fr": "marionnette, pantin",
+    "definition_it": "pupazzo di legno o stoffa mosso con dei fili o con le mani",
+    "examples": [
+      {
+        "it": "Pinocchio è il burattino più famoso d'Italia.",
+        "fr": "Pinocchio est le pantin le plus célèbre d'Italie."
+      }
+    ],
+    "synonyms": [
+      "marionetta"
+    ],
+    "isVerb": false
+  },
+  "burbero": {
+    "lemma": "burbero",
+    "pos": "aggettivo",
+    "fr": "bourru, revêche",
+    "definition_it": "che ha un carattere brusco e poco gentile all'apparenza",
+    "examples": [
+      {
+        "it": "Il vecchio contadino sembrava burbero ma era generoso.",
+        "fr": "Le vieux paysan avait l'air bourru mais il était généreux."
+      }
+    ],
+    "synonyms": [
+      "scontroso"
+    ],
+    "isVerb": false
+  },
+  "burchiellesco": {
+    "lemma": "burchiellesco",
+    "pos": "aggettivo",
+    "fr": "burlesque, à la manière de Burchiello",
+    "definition_it": "relativo allo stile poetico burlesco e bizzarro ispirato al Burchiello",
+    "examples": [
+      {
+        "it": "Ha scritto una poesia in stile burchiellesca, piena di giochi di parole.",
+        "fr": "Il a écrit un poème de style burlesque, plein de jeux de mots."
+      }
+    ],
+    "synonyms": [
+      "burlesco"
+    ],
+    "isVerb": false
+  },
+  "burella": {
+    "lemma": "burella",
+    "pos": "sostantivo femminile",
+    "fr": "cachot, cavité souterraine",
+    "definition_it": "antica prigione o grotta sotterranea buia e stretta",
+    "examples": [
+      {
+        "it": "Nel racconto antico i prigionieri erano chiusi in una burella.",
+        "fr": "Dans le récit ancien, les prisonniers étaient enfermés dans un cachot souterrain."
+      }
+    ],
+    "synonyms": [
+      "prigione"
+    ],
+    "isVerb": false
+  },
+  "burla": {
+    "lemma": "burla",
+    "pos": "sostantivo femminile",
+    "fr": "farce, plaisanterie",
+    "definition_it": "scherzo fatto per divertirsi o per prendere in giro qualcuno",
+    "examples": [
+      {
+        "it": "Gli amici gli hanno fatto una burla per il suo compleanno.",
+        "fr": "Ses amis lui ont fait une farce pour son anniversaire."
+      }
+    ],
+    "synonyms": [
+      "scherzo"
+    ],
+    "isVerb": false
+  },
+  "burlare": {
+    "lemma": "burlare",
+    "pos": "verbo (transitivo, letterario)",
+    "fr": "berner, se moquer de",
+    "definition_it": "prendere in giro qualcuno, beffarlo con scherzi o parole",
+    "examples": [
+      {
+        "it": "I ragazzi lo burlavano continuamente davanti agli altri.",
+        "fr": "Les garçons se moquaient continuellement de lui devant les autres."
+      }
+    ],
+    "synonyms": [
+      "beffare",
+      "canzonare"
+    ],
+    "isVerb": true
+  },
+  "burlescamente": {
+    "lemma": "burlescamente",
+    "pos": "avverbio",
+    "fr": "d'une manière burlesque",
+    "definition_it": "in modo comico ed esagerato, da farsa",
+    "examples": [
+      {
+        "it": "Si inchinò burlescamente davanti al pubblico.",
+        "fr": "Il s'inclina de manière burlesque devant le public."
+      }
+    ],
+    "synonyms": [
+      "comicamente"
+    ],
+    "isVerb": false
+  },
+  "burlesco": {
+    "lemma": "burlesco",
+    "pos": "aggettivo",
+    "fr": "burlesque",
+    "definition_it": "che ha un carattere comico ed esagerato, da farsa",
+    "examples": [
+      {
+        "it": "Lo spettacolo aveva scene burlesche molto divertenti.",
+        "fr": "Le spectacle avait des scènes burlesques très amusantes."
+      }
+    ],
+    "synonyms": [
+      "comico",
+      "buffonesco"
+    ],
+    "isVerb": false
+  },
+  "burocratico": {
+    "lemma": "burocratico",
+    "pos": "aggettivo",
+    "fr": "bureaucratique",
+    "definition_it": "relativo alla burocrazia, spesso inteso come lento e complicato",
+    "examples": [
+      {
+        "it": "La procedura burocratica per il permesso è molto lunga.",
+        "fr": "La procédure bureaucratique pour le permis est très longue."
+      }
+    ],
+    "synonyms": [
+      "amministrativo"
+    ],
+    "isVerb": false
+  },
+  "burocrazia": {
+    "lemma": "burocrazia",
+    "pos": "nome femminile",
+    "fr": "bureaucratie",
+    "definition_it": "insieme degli uffici e delle procedure amministrative di uno stato o ente",
+    "examples": [
+      {
+        "it": "La burocrazia italiana richiede molti documenti.",
+        "fr": "La bureaucratie italienne exige beaucoup de documents."
+      }
+    ],
+    "synonyms": [
+      "amministrazione"
+    ],
+    "isVerb": false
+  },
+  "burrasca": {
+    "lemma": "burrasca",
+    "pos": "nome femminile",
+    "fr": "tempête",
+    "definition_it": "forte perturbazione atmosferica con vento intenso, spesso in mare",
+    "examples": [
+      {
+        "it": "La nave ha affrontato una violenta burrasca in mare aperto.",
+        "fr": "Le navire a affronté une violente tempête en pleine mer."
+      }
+    ],
+    "synonyms": [
+      "tempesta",
+      "temporale"
+    ],
+    "isVerb": false
+  },
+  "burrata": {
+    "lemma": "burrata",
+    "pos": "nome femminile",
+    "fr": "burrata",
+    "definition_it": "formaggio fresco pugliese a base di mozzarella e panna, dal cuore morbido",
+    "examples": [
+      {
+        "it": "Abbiamo mangiato una burrata con pomodorini e basilico.",
+        "fr": "Nous avons mangé une burrata avec des tomates cerises et du basilic."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "burro": {
+    "lemma": "burro",
+    "pos": "nome maschile",
+    "fr": "beurre",
+    "definition_it": "grasso alimentare denso e giallastro ricavato dalla panna del latte",
+    "examples": [
+      {
+        "it": "Ha spalmato il burro sul pane caldo.",
+        "fr": "Il a étalé le beurre sur le pain chaud."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "burrone": {
+    "lemma": "burrone",
+    "pos": "nome maschile",
+    "fr": "ravin",
+    "definition_it": "profonda e stretta valle scavata dall'erosione, con pareti ripide",
+    "examples": [
+      {
+        "it": "L'auto è precipitata in un burrone lungo la strada di montagna.",
+        "fr": "La voiture est tombée dans un ravin le long de la route de montagne."
+      }
+    ],
+    "synonyms": [
+      "dirupo",
+      "precipizio"
+    ],
+    "isVerb": false
+  },
+  "buscare": {
+    "lemma": "buscare",
+    "pos": "verbo (transitivo/riflessivo, colloquiale)",
+    "fr": "attraper, se prendre (quelque chose de désagréable)",
+    "definition_it": "procurarsi o subire qualcosa di spiacevole, come una malattia o una punizione",
+    "examples": [
+      {
+        "it": "Mi sono buscato un brutto raffreddore in montagna.",
+        "fr": "J'ai attrapé un mauvais rhume à la montagne."
+      }
+    ],
+    "synonyms": [
+      "prendersi",
+      "beccarsi"
+    ],
+    "isVerb": true
+  },
+  "bussa": {
+    "lemma": "bussa",
+    "pos": "nome (femminile, spesso plurale)",
+    "fr": "coup, raclée",
+    "definition_it": "colpo o percossa, usato soprattutto nell'espressione al plurale 'prendere le busse'",
+    "examples": [
+      {
+        "it": "Il ladro ha preso le busse dai vicini infuriati.",
+        "fr": "Le voleur a reçu une raclée des voisins furieux."
+      }
+    ],
+    "synonyms": [
+      "percossa",
+      "colpo"
+    ],
+    "isVerb": false
+  },
+  "bussare": {
+    "lemma": "bussare",
+    "pos": "verbo (intransitivo)",
+    "fr": "frapper (à une porte)",
+    "definition_it": "battere ripetutamente con la mano su una porta per farsi aprire",
+    "examples": [
+      {
+        "it": "Qualcuno bussa alla porta, vai ad aprire.",
+        "fr": "Quelqu'un frappe à la porte, va ouvrir."
+      }
+    ],
+    "synonyms": [
+      "picchiare"
+    ],
+    "isVerb": true
+  },
+  "bussola": {
+    "lemma": "bussola",
+    "pos": "nome (femminile)",
+    "fr": "boussole",
+    "definition_it": "strumento con un ago magnetico che indica sempre il nord, usato per orientarsi",
+    "examples": [
+      {
+        "it": "Il marinaio usava la bussola per orientarsi in mare aperto.",
+        "fr": "Le marin utilisait la boussole pour s'orienter en pleine mer."
+      }
+    ],
+    "synonyms": [
+      "compasso magnetico"
+    ],
+    "isVerb": false
+  },
+  "busta": {
+    "lemma": "busta",
+    "pos": "nome (femminile)",
+    "fr": "enveloppe",
+    "definition_it": "involucro di carta o plastica usato per contenere lettere, documenti o oggetti",
+    "examples": [
+      {
+        "it": "Ha messo la lettera in una busta e l'ha spedita.",
+        "fr": "Elle a mis la lettre dans une enveloppe et l'a envoyée."
+      }
+    ],
+    "synonyms": [
+      "involucro"
+    ],
+    "isVerb": false
+  },
+  "busto": {
+    "lemma": "busto",
+    "pos": "nome (maschile)",
+    "fr": "buste",
+    "definition_it": "parte superiore del corpo umano, dal collo alla vita, oppure scultura che la rappresenta",
+    "examples": [
+      {
+        "it": "Nel museo c'è un busto di marmo dell'imperatore.",
+        "fr": "Dans le musée, il y a un buste en marbre de l'empereur."
+      }
+    ],
+    "synonyms": [
+      "torso"
+    ],
+    "isVerb": false
+  },
+  "buttare": {
+    "lemma": "buttare",
+    "pos": "verbo (transitivo)",
+    "fr": "jeter",
+    "definition_it": "lanciare qualcosa lontano da sé, oppure gettare via qualcosa di inutile o non voluto",
+    "examples": [
+      {
+        "it": "Ha buttato la spazzatura nel bidone.",
+        "fr": "Il a jeté les ordures dans la poubelle."
+      }
+    ],
+    "synonyms": [
+      "gettare",
+      "lanciare"
+    ],
+    "isVerb": true
+  }
+}

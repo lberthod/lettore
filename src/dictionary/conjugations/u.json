@@ -1,0 +1,116 @@
+{
+  "udire": {
+    "presente": {
+      "io": "odo",
+      "tu": "odi",
+      "lui/lei": "ode",
+      "noi": "udiamo",
+      "voi": "udite",
+      "loro": "odono"
+    },
+    "passatoProssimo": {
+      "io": "ho udito",
+      "tu": "hai udito",
+      "lui/lei": "ha udito",
+      "noi": "abbiamo udito",
+      "voi": "avete udito",
+      "loro": "hanno udito"
+    },
+    "imperfetto": {
+      "io": "udivo",
+      "tu": "udivi",
+      "lui/lei": "udiva",
+      "noi": "udivamo",
+      "voi": "udivate",
+      "loro": "udivano"
+    },
+    "futuro": {
+      "io": "udrò",
+      "tu": "udrai",
+      "lui/lei": "udrà",
+      "noi": "udremo",
+      "voi": "udrete",
+      "loro": "udranno"
+    },
+    "congiuntivoPresente": {
+      "io": "oda",
+      "tu": "oda",
+      "lui/lei": "oda",
+      "noi": "udiamo",
+      "voi": "udiate",
+      "loro": "odano"
+    },
+    "condizionale": {
+      "io": "udrei",
+      "tu": "udresti",
+      "lui/lei": "udrebbe",
+      "noi": "udremmo",
+      "voi": "udreste",
+      "loro": "udrebbero"
+    },
+    "imperativo": {
+      "tu": "odi",
+      "lei": "oda",
+      "noi": "udiamo",
+      "voi": "udite",
+      "loro": "odano"
+    }
+  },
+  "uscire": {
+    "presente": {
+      "io": "esco",
+      "tu": "esci",
+      "lui/lei": "esce",
+      "noi": "usciamo",
+      "voi": "uscite",
+      "loro": "escono"
+    },
+    "passatoProssimo": {
+      "io": "sono uscito/a",
+      "tu": "sei uscito/a",
+      "lui/lei": "è uscito/a",
+      "noi": "siamo usciti/e",
+      "voi": "siete usciti/e",
+      "loro": "sono usciti/e"
+    },
+    "imperfetto": {
+      "io": "uscivo",
+      "tu": "uscivi",
+      "lui/lei": "usciva",
+      "noi": "uscivamo",
+      "voi": "uscivate",
+      "loro": "uscivano"
+    },
+    "futuro": {
+      "io": "uscirò",
+      "tu": "uscirai",
+      "lui/lei": "uscirà",
+      "noi": "usciremo",
+      "voi": "uscirete",
+      "loro": "usciranno"
+    },
+    "congiuntivoPresente": {
+      "io": "esca",
+      "tu": "esca",
+      "lui/lei": "esca",
+      "noi": "usciamo",
+      "voi": "usciate",
+      "loro": "escano"
+    },
+    "condizionale": {
+      "io": "uscirei",
+      "tu": "usciresti",
+      "lui/lei": "uscirebbe",
+      "noi": "usciremmo",
+      "voi": "uscireste",
+      "loro": "uscirebbero"
+    },
+    "imperativo": {
+      "tu": "esci",
+      "lei": "esca",
+      "noi": "usciamo",
+      "voi": "uscite",
+      "loro": "escano"
+    }
+  }
+}

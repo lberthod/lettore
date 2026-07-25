@@ -1,0 +1,820 @@
+{
+  "idea": {
+    "lemma": "idea",
+    "pos": "nome femminile",
+    "fr": "idée",
+    "definition_it": "un pensiero o un progetto che nasce nella mente",
+    "examples": [
+      {
+        "it": "Ho avuto un'idea per il tuo compleanno.",
+        "fr": "J'ai eu une idée pour ton anniversaire."
+      }
+    ],
+    "synonyms": [
+      "pensiero",
+      "concetto"
+    ],
+    "isVerb": false
+  },
+  "immaginazione": {
+    "lemma": "immaginazione",
+    "pos": "nome femminile",
+    "fr": "imagination",
+    "definition_it": "la capacità della mente di creare immagini o idee non presenti nella realtà",
+    "examples": [
+      {
+        "it": "I bambini hanno una grande immaginazione.",
+        "fr": "Les enfants ont une grande imagination."
+      }
+    ],
+    "synonyms": [
+      "fantasia"
+    ],
+    "isVerb": false
+  },
+  "imminente": {
+    "lemma": "imminente",
+    "pos": "aggettivo",
+    "fr": "imminent",
+    "definition_it": "che sta per accadere molto presto",
+    "examples": [
+      {
+        "it": "Il temporale è imminente.",
+        "fr": "L'orage est imminent."
+      }
+    ],
+    "synonyms": [
+      "vicino",
+      "incombente"
+    ],
+    "isVerb": false
+  },
+  "impazzare": {
+    "lemma": "impazzare",
+    "pos": "verbo intransitivo",
+    "fr": "être déchaîné, battre son plein",
+    "definition_it": "svolgersi con grande intensità o senza controllo; essere molto diffuso in un certo momento (spesso nella locuzione 'all'impazzata', cioè in modo disordinato e frenetico)",
+    "examples": [
+      {
+        "it": "In discoteca la musica impazzava fino all'alba.",
+        "fr": "En boîte, la musique battait son plein jusqu'à l'aube."
+      }
+    ],
+    "synonyms": [
+      "infuriare",
+      "dilagare"
+    ],
+    "isVerb": true
+  },
+  "imperatrice": {
+    "lemma": "imperatrice",
+    "pos": "nome femminile",
+    "fr": "impératrice",
+    "definition_it": "la sovrana di un impero, o la moglie di un imperatore",
+    "examples": [
+      {
+        "it": "L'imperatrice governò con saggezza per molti anni.",
+        "fr": "L'impératrice gouverna avec sagesse pendant de nombreuses années."
+      }
+    ],
+    "synonyms": [
+      "sovrana"
+    ],
+    "isVerb": false
+  },
+  "imperfezione": {
+    "lemma": "imperfezione",
+    "pos": "nome femminile",
+    "fr": "imperfection",
+    "definition_it": "un difetto o una mancanza di perfezione",
+    "examples": [
+      {
+        "it": "Ogni persona ha le sue piccole imperfezioni.",
+        "fr": "Chaque personne a ses petites imperfections."
+      }
+    ],
+    "synonyms": [
+      "difetto",
+      "imperfezione"
+    ],
+    "isVerb": false
+  },
+  "impero": {
+    "lemma": "impero",
+    "pos": "nome maschile",
+    "fr": "empire",
+    "definition_it": "un grande stato formato da più territori o popoli governati da un unico sovrano",
+    "examples": [
+      {
+        "it": "L'Impero Romano durò per secoli.",
+        "fr": "L'Empire romain a duré pendant des siècles."
+      }
+    ],
+    "synonyms": [
+      "dominio"
+    ],
+    "isVerb": false
+  },
+  "impeto": {
+    "lemma": "impeto",
+    "pos": "nome maschile",
+    "fr": "élan, fougue, impétuosité",
+    "definition_it": "una forza improvvisa e intensa, spesso emotiva",
+    "examples": [
+      {
+        "it": "Rispose con impeto alle accuse.",
+        "fr": "Il répondit avec fougue aux accusations."
+      }
+    ],
+    "synonyms": [
+      "slancio",
+      "veemenza"
+    ],
+    "isVerb": false
+  },
+  "impresa": {
+    "lemma": "impresa",
+    "pos": "nome femminile",
+    "fr": "entreprise, exploit",
+    "definition_it": "un'azienda che produce beni o servizi, oppure un'azione difficile e coraggiosa",
+    "examples": [
+      {
+        "it": "Fondare un'impresa richiede coraggio.",
+        "fr": "Fonder une entreprise demande du courage."
+      }
+    ],
+    "synonyms": [
+      "azienda",
+      "impresa"
+    ],
+    "isVerb": false
+  },
+  "imprevisto": {
+    "lemma": "imprevisto",
+    "pos": "nome maschile",
+    "fr": "imprévu",
+    "definition_it": "un avvenimento che non era stato previsto",
+    "examples": [
+      {
+        "it": "Il viaggio è stato ritardato da un imprevisto.",
+        "fr": "Le voyage a été retardé par un imprévu."
+      }
+    ],
+    "synonyms": [
+      "sorpresa",
+      "contrattempo"
+    ],
+    "isVerb": false
+  },
+  "improvviso": {
+    "lemma": "improvviso",
+    "pos": "aggettivo",
+    "fr": "soudain, subit",
+    "definition_it": "che accade in modo rapido e inaspettato",
+    "examples": [
+      {
+        "it": "Un rumore improvviso ci ha spaventati.",
+        "fr": "Un bruit soudain nous a effrayés."
+      }
+    ],
+    "synonyms": [
+      "repentino",
+      "inatteso"
+    ],
+    "isVerb": false
+  },
+  "incanto": {
+    "lemma": "incanto",
+    "pos": "nome maschile",
+    "fr": "enchantement, charme",
+    "definition_it": "uno stato di grande meraviglia e fascino, come per magia",
+    "examples": [
+      {
+        "it": "Il paesaggio al tramonto sembrava un incanto.",
+        "fr": "Le paysage au coucher du soleil semblait un enchantement."
+      }
+    ],
+    "synonyms": [
+      "fascino",
+      "magia"
+    ],
+    "isVerb": false
+  },
+  "inchiostro": {
+    "lemma": "inchiostro",
+    "pos": "sostantivo maschile",
+    "fr": "encre",
+    "definition_it": "liquido colorato usato per scrivere o stampare",
+    "examples": [
+      {
+        "it": "La penna era piena di inchiostro nero.",
+        "fr": "Le stylo était plein d'encre noire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "incontro": {
+    "lemma": "incontro",
+    "pos": "nome maschile",
+    "fr": "rencontre",
+    "definition_it": "il fatto di trovarsi insieme a qualcuno, per caso o per appuntamento",
+    "examples": [
+      {
+        "it": "Il nostro incontro è stato una piacevole sorpresa.",
+        "fr": "Notre rencontre a été une agréable surprise."
+      }
+    ],
+    "synonyms": [
+      "appuntamento"
+    ],
+    "isVerb": false
+  },
+  "indagine": {
+    "lemma": "indagine",
+    "pos": "nome femminile",
+    "fr": "enquête",
+    "definition_it": "una ricerca approfondita per scoprire la verità su un fatto",
+    "examples": [
+      {
+        "it": "La polizia ha aperto un'indagine sul furto.",
+        "fr": "La police a ouvert une enquête sur le vol."
+      }
+    ],
+    "synonyms": [
+      "inchiesta",
+      "ricerca"
+    ],
+    "isVerb": false
+  },
+  "indicare": {
+    "lemma": "indicare",
+    "pos": "verbo (transitivo)",
+    "fr": "indiquer",
+    "definition_it": "mostrare o segnalare qualcosa con un gesto, una parola o un segno",
+    "examples": [
+      {
+        "it": "Puoi indicarci la strada per la stazione?",
+        "fr": "Peux-tu nous indiquer le chemin de la gare ?"
+      }
+    ],
+    "synonyms": [
+      "mostrare",
+      "segnalare"
+    ],
+    "isVerb": true
+  },
+  "indice": {
+    "lemma": "indice",
+    "pos": "sostantivo maschile",
+    "fr": "index, indice",
+    "definition_it": "il secondo dito della mano, oppure elenco ordinato di argomenti o dati in un libro o in una statistica",
+    "examples": [
+      {
+        "it": "Ha puntato l'indice verso la porta.",
+        "fr": "Il a pointé l'index vers la porte."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "indietro": {
+    "lemma": "indietro",
+    "pos": "avverbio",
+    "fr": "en arrière",
+    "definition_it": "verso la parte posteriore, nella direzione opposta a quella davanti",
+    "examples": [
+      {
+        "it": "Fai un passo indietro, per favore.",
+        "fr": "Fais un pas en arrière, s'il te plaît."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "indirizzo": {
+    "lemma": "indirizzo",
+    "pos": "nome maschile",
+    "fr": "adresse",
+    "definition_it": "l'insieme di via, numero civico e città che indica dove si trova una persona o un luogo",
+    "examples": [
+      {
+        "it": "Mi puoi dare il tuo indirizzo di casa?",
+        "fr": "Peux-tu me donner ton adresse de domicile ?"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "indomani": {
+    "lemma": "indomani",
+    "pos": "nome maschile",
+    "fr": "lendemain",
+    "definition_it": "il giorno seguente rispetto a un giorno di riferimento (usato quasi sempre con l'articolo: l'indomani)",
+    "examples": [
+      {
+        "it": "L'indomani partimmo presto per la montagna.",
+        "fr": "Le lendemain, nous sommes partis tôt pour la montagne."
+      }
+    ],
+    "synonyms": [
+      "domani"
+    ],
+    "isVerb": false
+  },
+  "industria": {
+    "lemma": "industria",
+    "pos": "nome femminile",
+    "fr": "industrie",
+    "definition_it": "l'insieme delle attività economiche che producono beni attraverso macchine e lavoro organizzato",
+    "examples": [
+      {
+        "it": "L'industria automobilistica italiana è famosa nel mondo.",
+        "fr": "L'industrie automobile italienne est célèbre dans le monde."
+      }
+    ],
+    "synonyms": [
+      "produzione",
+      "manifattura"
+    ],
+    "isVerb": false
+  },
+  "infelice": {
+    "lemma": "infelice",
+    "pos": "aggettivo",
+    "fr": "malheureux, infortuné",
+    "definition_it": "che non è felice, che prova tristezza o dispiacere",
+    "examples": [
+      {
+        "it": "Si sentiva infelice da quando aveva perso il lavoro.",
+        "fr": "Il se sentait malheureux depuis qu'il avait perdu son emploi."
+      }
+    ],
+    "synonyms": [
+      "triste",
+      "sfortunato"
+    ],
+    "isVerb": false
+  },
+  "inferno": {
+    "lemma": "inferno",
+    "pos": "nome maschile",
+    "fr": "enfer",
+    "definition_it": "nella tradizione religiosa, il luogo di punizione eterna per i dannati; in senso figurato, una situazione terribile",
+    "examples": [
+      {
+        "it": "Dante descrive l'Inferno nella prima cantica della Divina Commedia.",
+        "fr": "Dante décrit l'Enfer dans le premier chant de la Divine Comédie."
+      }
+    ],
+    "synonyms": [
+      "tormento",
+      "supplizio"
+    ],
+    "isVerb": false
+  },
+  "infinito": {
+    "lemma": "infinito",
+    "pos": "aggettivo, nome maschile",
+    "fr": "infini",
+    "definition_it": "che non ha limiti né fine, che dura o si estende senza confini",
+    "examples": [
+      {
+        "it": "Il cielo stellato sembrava infinito.",
+        "fr": "Le ciel étoilé semblait infini."
+      }
+    ],
+    "synonyms": [
+      "illimitato",
+      "sconfinato"
+    ],
+    "isVerb": false
+  },
+  "infuori": {
+    "lemma": "infuori",
+    "pos": "avverbio",
+    "fr": "en dehors, dehors",
+    "definition_it": "verso l'esterno; usato soprattutto nell'espressione 'all'infuori di', che significa 'tranne, eccetto'",
+    "examples": [
+      {
+        "it": "Tutti sono venuti, all'infuori di Marco.",
+        "fr": "Tout le monde est venu, sauf Marco."
+      }
+    ],
+    "synonyms": [
+      "eccetto",
+      "tranne"
+    ],
+    "isVerb": false
+  },
+  "ingannarsi": {
+    "lemma": "ingannarsi",
+    "pos": "verbo pronominale",
+    "fr": "se tromper",
+    "definition_it": "sbagliarsi, credere per errore a qualcosa che non è vero",
+    "examples": [
+      {
+        "it": "Spesso ci inganniamo pensando di sapere tutto.",
+        "fr": "Souvent nous nous trompons en pensant tout savoir."
+      }
+    ],
+    "synonyms": [
+      "sbagliarsi",
+      "illudersi"
+    ],
+    "isVerb": true
+  },
+  "ingegno": {
+    "lemma": "ingegno",
+    "pos": "sostantivo maschile",
+    "fr": "ingéniosité, esprit",
+    "definition_it": "capacità mentale di capire, inventare o risolvere problemi in modo intelligente",
+    "examples": [
+      {
+        "it": "Ha risolto il problema con grande ingegno.",
+        "fr": "Il a résolu le problème avec une grande ingéniosité."
+      }
+    ],
+    "synonyms": [
+      "intelligenza",
+      "genio"
+    ],
+    "isVerb": false
+  },
+  "ingrassare": {
+    "lemma": "ingrassare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "engraisser, faire grossir",
+    "definition_it": "far diventare grasso qualcuno o qualcosa, oppure diventare grasso",
+    "examples": [
+      {
+        "it": "Quel cibo ci ingrassava molto.",
+        "fr": "Cette nourriture nous faisait beaucoup grossir."
+      }
+    ],
+    "synonyms": [
+      "appesantire"
+    ],
+    "isVerb": true
+  },
+  "ingresso": {
+    "lemma": "ingresso",
+    "pos": "nome maschile",
+    "fr": "entrée",
+    "definition_it": "il luogo o l'atto attraverso cui si entra in un edificio o in un luogo",
+    "examples": [
+      {
+        "it": "L'ingresso del museo è gratuito la domenica.",
+        "fr": "L'entrée du musée est gratuite le dimanche."
+      }
+    ],
+    "synonyms": [
+      "entrata",
+      "accesso"
+    ],
+    "isVerb": false
+  },
+  "ingrosso": {
+    "lemma": "ingrosso",
+    "pos": "nome maschile",
+    "fr": "gros (commerce de gros)",
+    "definition_it": "usato soprattutto nell'espressione 'all'ingrosso', che indica la vendita di grandi quantità di merce a rivenditori",
+    "examples": [
+      {
+        "it": "Compriamo la frutta all'ingrosso per risparmiare.",
+        "fr": "Nous achetons les fruits en gros pour économiser."
+      }
+    ],
+    "synonyms": [
+      "grossista"
+    ],
+    "isVerb": false
+  },
+  "inizio": {
+    "lemma": "inizio",
+    "pos": "nome maschile",
+    "fr": "début, commencement",
+    "definition_it": "il momento o il punto in cui qualcosa comincia",
+    "examples": [
+      {
+        "it": "L'inizio del film era molto emozionante.",
+        "fr": "Le début du film était très émouvant."
+      }
+    ],
+    "synonyms": [
+      "principio",
+      "avvio"
+    ],
+    "isVerb": false
+  },
+  "insegna": {
+    "lemma": "insegna",
+    "pos": "nome femminile",
+    "fr": "enseigne, panneau",
+    "definition_it": "il cartello o il segno esposto all'esterno di un negozio o di un locale per farlo riconoscere",
+    "examples": [
+      {
+        "it": "L'insegna del ristorante si vedeva da lontano.",
+        "fr": "L'enseigne du restaurant se voyait de loin."
+      }
+    ],
+    "synonyms": [
+      "cartello",
+      "targa"
+    ],
+    "isVerb": false
+  },
+  "insegnare": {
+    "lemma": "insegnare",
+    "pos": "verbo (transitivo)",
+    "fr": "enseigner",
+    "definition_it": "trasmettere a qualcuno una conoscenza, un'abilità o un valore",
+    "examples": [
+      {
+        "it": "Nostro nonno ci insegnava a pescare.",
+        "fr": "Notre grand-père nous apprenait à pêcher."
+      }
+    ],
+    "synonyms": [
+      "istruire"
+    ],
+    "isVerb": true
+  },
+  "insù": {
+    "lemma": "insù",
+    "pos": "avverbio",
+    "fr": "vers le haut, en haut",
+    "definition_it": "verso l'alto; usato spesso nell'espressione 'all'insù'",
+    "examples": [
+      {
+        "it": "Guardò il naso all'insù, incuriosito dal rumore.",
+        "fr": "Il leva le nez en l'air, intrigué par le bruit."
+      }
+    ],
+    "synonyms": [
+      "su",
+      "verso l'alto"
+    ],
+    "isVerb": false
+  },
+  "intenzione": {
+    "lemma": "intenzione",
+    "pos": "sostantivo femminile",
+    "fr": "intention",
+    "definition_it": "ciò che una persona vuole fare o ottenere; proposito",
+    "examples": [
+      {
+        "it": "Ho l'intenzione di studiare l'italiano ogni giorno.",
+        "fr": "J'ai l'intention d'étudier l'italien tous les jours."
+      }
+    ],
+    "synonyms": [
+      "proposito",
+      "scopo"
+    ],
+    "isVerb": false
+  },
+  "interno": {
+    "lemma": "interno",
+    "pos": "aggettivo, nome maschile",
+    "fr": "intérieur, interne",
+    "definition_it": "che si trova o avviene dentro qualcosa, non all'esterno",
+    "examples": [
+      {
+        "it": "L'interno della casa era arredato con gusto.",
+        "fr": "L'intérieur de la maison était décoré avec goût."
+      }
+    ],
+    "synonyms": [
+      "interiore",
+      "intimo"
+    ],
+    "isVerb": false
+  },
+  "intero": {
+    "lemma": "intero",
+    "pos": "aggettivo",
+    "fr": "entier, complet",
+    "definition_it": "che comprende tutte le parti, senza mancanze; completo",
+    "examples": [
+      {
+        "it": "Ha mangiato una pizza intera da solo.",
+        "fr": "Il a mangé une pizza entière tout seul."
+      }
+    ],
+    "synonyms": [
+      "completo",
+      "totale"
+    ],
+    "isVerb": false
+  },
+  "intervallo": {
+    "lemma": "intervallo",
+    "pos": "nome maschile",
+    "fr": "intervalle, pause",
+    "definition_it": "lo spazio di tempo o di distanza compreso tra due momenti o due punti; anche pausa tra due parti di uno spettacolo",
+    "examples": [
+      {
+        "it": "Durante l'intervallo dello spettacolo abbiamo preso un caffè.",
+        "fr": "Pendant l'entracte du spectacle, nous avons pris un café."
+      }
+    ],
+    "synonyms": [
+      "pausa",
+      "interruzione"
+    ],
+    "isVerb": false
+  },
+  "intervenire": {
+    "lemma": "intervenire",
+    "pos": "verbo",
+    "fr": "intervenir",
+    "definition_it": "prendere parte a qualcosa o agire per modificarne il corso",
+    "examples": [
+      {
+        "it": "V'interveniva spesso anche il maestro.",
+        "fr": "Le maître y intervenait aussi souvent."
+      },
+      {
+        "it": "Il medico è dovuto intervenire subito.",
+        "fr": "Le médecin a dû intervenir immédiatement."
+      }
+    ],
+    "synonyms": [
+      "partecipare",
+      "agire"
+    ],
+    "isVerb": true
+  },
+  "intorno": {
+    "lemma": "intorno",
+    "pos": "avverbio, preposizione",
+    "fr": "autour",
+    "definition_it": "nello spazio circostante a qualcosa o a qualcuno",
+    "examples": [
+      {
+        "it": "I bambini giocavano intorno all'albero.",
+        "fr": "Les enfants jouaient autour de l'arbre."
+      }
+    ],
+    "synonyms": [
+      "attorno",
+      "circa"
+    ],
+    "isVerb": false
+  },
+  "introdurre": {
+    "lemma": "introdurre",
+    "pos": "verbo",
+    "fr": "introduire",
+    "definition_it": "far entrare qualcosa o qualcuno in un luogo o in un contesto",
+    "examples": [
+      {
+        "it": "V'introdusse di nascosto un messaggero.",
+        "fr": "Il y introduisit secrètement un messager."
+      },
+      {
+        "it": "Hanno introdotto nuove regole in classe.",
+        "fr": "Ils ont introduit de nouvelles règles en classe."
+      }
+    ],
+    "synonyms": [
+      "inserire",
+      "far entrare"
+    ],
+    "isVerb": true
+  },
+  "inverno": {
+    "lemma": "inverno",
+    "pos": "nome maschile",
+    "fr": "hiver",
+    "definition_it": "la stagione più fredda dell'anno, tra l'autunno e la primavera",
+    "examples": [
+      {
+        "it": "In inverno nevica spesso sulle montagne.",
+        "fr": "En hiver, il neige souvent sur les montagnes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "inverosimile": {
+    "lemma": "inverosimile",
+    "pos": "aggettivo",
+    "fr": "invraisemblable",
+    "definition_it": "che sembra difficile da credere, poco probabile o poco credibile",
+    "examples": [
+      {
+        "it": "Ci ha raccontato una storia inverosimile.",
+        "fr": "Il nous a raconté une histoire invraisemblable."
+      }
+    ],
+    "synonyms": [
+      "improbabile",
+      "incredibile"
+    ],
+    "isVerb": false
+  },
+  "invidia": {
+    "lemma": "invidia",
+    "pos": "nome femminile",
+    "fr": "envie, jalousie",
+    "definition_it": "il sentimento di malessere provato quando si desidera qualcosa che ha un'altra persona",
+    "examples": [
+      {
+        "it": "Prova invidia per il successo del fratello.",
+        "fr": "Il éprouve de la jalousie pour le succès de son frère."
+      }
+    ],
+    "synonyms": [
+      "gelosia",
+      "livore"
+    ],
+    "isVerb": false
+  },
+  "invitare": {
+    "lemma": "invitare",
+    "pos": "verbo",
+    "fr": "inviter",
+    "definition_it": "chiedere a qualcuno di partecipare a un evento o di fare qualcosa",
+    "examples": [
+      {
+        "it": "V'inviti tutti al tuo compleanno?",
+        "fr": "Y invites-tu tout le monde pour ton anniversaire ?"
+      },
+      {
+        "it": "Ci hanno invitato a cena.",
+        "fr": "Ils nous ont invités à dîner."
+      }
+    ],
+    "synonyms": [
+      "convocare",
+      "chiamare"
+    ],
+    "isVerb": true
+  },
+  "ispettrice": {
+    "lemma": "ispettrice",
+    "pos": "nome femminile",
+    "fr": "inspectrice",
+    "definition_it": "donna incaricata di controllare che qualcosa funzioni correttamente o rispetti le regole",
+    "examples": [
+      {
+        "it": "L'ispettrice ha verificato la sicurezza dell'edificio.",
+        "fr": "L'inspectrice a vérifié la sécurité du bâtiment."
+      }
+    ],
+    "synonyms": [
+      "controllore",
+      "revisora"
+    ],
+    "isVerb": false
+  },
+  "ispirare": {
+    "lemma": "ispirare",
+    "pos": "verbo (transitivo)",
+    "fr": "inspirer",
+    "definition_it": "far nascere in qualcuno un'idea, un sentimento o il desiderio di fare qualcosa",
+    "examples": [
+      {
+        "it": "Quel viaggio ci ispirò a scrivere un libro.",
+        "fr": "Ce voyage nous a inspiré l'écriture d'un livre."
+      }
+    ],
+    "synonyms": [
+      "stimolare"
+    ],
+    "isVerb": true
+  },
+  "istante": {
+    "lemma": "istante",
+    "pos": "nome maschile",
+    "fr": "instant",
+    "definition_it": "un brevissimo momento di tempo",
+    "examples": [
+      {
+        "it": "Per un istante pensò di rinunciare.",
+        "fr": "Pendant un instant, il pensa à renoncer."
+      }
+    ],
+    "synonyms": [
+      "momento",
+      "attimo"
+    ],
+    "isVerb": false
+  },
+  "italiano": {
+    "lemma": "italiano",
+    "pos": "aggettivo",
+    "fr": "italien, italienne",
+    "definition_it": "che appartiene o si riferisce all'Italia, al suo popolo o alla sua lingua",
+    "examples": [
+      {
+        "it": "La cucina italiana è famosa in tutto il mondo.",
+        "fr": "La cuisine italienne est célèbre dans le monde entier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "garage": {
+    "lemma": "garage",
+    "pos": "sostantivo maschile (invariabile, dal francese)",
+    "fr": "garage",
+    "definition_it": "locale o edificio dove si ripara o si tiene l'automobile",
+    "examples": [
+      {
+        "it": "Ha lasciato la macchina al garage per la revisione.",
+        "fr": "Il a laissé la voiture au garage pour la révision."
+      }
+    ],
+    "synonyms": [
+      "autorimessa"
+    ],
+    "isVerb": false
+  }
+}

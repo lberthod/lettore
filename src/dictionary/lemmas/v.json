@@ -1,0 +1,2435 @@
+{
+  "vacante": {
+    "lemma": "vacante",
+    "pos": "aggettivo",
+    "fr": "vacant",
+    "definition_it": "detto di un posto, una carica o un alloggio che non è occupato",
+    "examples": [
+      {
+        "it": "Il posto di direttore è ancora vacante.",
+        "fr": "Le poste de directeur est encore vacant."
+      }
+    ],
+    "synonyms": [
+      "libero",
+      "disponibile"
+    ],
+    "isVerb": false
+  },
+  "vacanza": {
+    "lemma": "vacanza",
+    "pos": "nome (f.)",
+    "fr": "vacances",
+    "definition_it": "periodo di riposo dal lavoro o dalla scuola",
+    "examples": [
+      {
+        "it": "Andiamo in vacanza al mare ogni estate.",
+        "fr": "Nous partons en vacances à la mer chaque été."
+      },
+      {
+        "it": "Le vacanze estive durano tre mesi.",
+        "fr": "Les vacances d'été durent trois mois."
+      }
+    ],
+    "synonyms": [
+      "ferie",
+      "riposo"
+    ],
+    "isVerb": false
+  },
+  "vacchetta": {
+    "lemma": "vacchetta",
+    "pos": "nome (f.)",
+    "fr": "génisse; carnet",
+    "definition_it": "piccola vacca giovane; anche registro o quaderno un tempo rilegato in pelle di vacca",
+    "examples": [
+      {
+        "it": "Nella stalla c'era anche una vacchetta.",
+        "fr": "Dans l'étable, il y avait aussi une jeune vache."
+      },
+      {
+        "it": "Segnò la spesa sulla vacchetta del negozio.",
+        "fr": "Il nota la dépense dans le carnet du magasin."
+      }
+    ],
+    "synonyms": [
+      "giovenca"
+    ],
+    "isVerb": false
+  },
+  "vacillante": {
+    "lemma": "vacillante",
+    "pos": "aggettivo",
+    "fr": "vacillant",
+    "definition_it": "che vacilla, instabile o incerto",
+    "examples": [
+      {
+        "it": "Camminava con passo vacillante.",
+        "fr": "Il marchait d'un pas vacillant."
+      }
+    ],
+    "synonyms": [
+      "instabile",
+      "incerto",
+      "traballante"
+    ],
+    "isVerb": false
+  },
+  "vacillare": {
+    "lemma": "vacillare",
+    "pos": "verbo",
+    "fr": "vaciller",
+    "definition_it": "oscillare senza stabilità, essere sul punto di cadere o cedere",
+    "examples": [
+      {
+        "it": "La fiamma della candela vacillava nel vento.",
+        "fr": "La flamme de la bougie vacillait dans le vent."
+      },
+      {
+        "it": "Le sue certezze cominciarono a vacillare.",
+        "fr": "Ses certitudes commencèrent à vaciller."
+      }
+    ],
+    "synonyms": [
+      "oscillare",
+      "traballare"
+    ],
+    "isVerb": true
+  },
+  "vagabondaggio": {
+    "lemma": "vagabondaggio",
+    "pos": "nome",
+    "fr": "vagabondage",
+    "definition_it": "il vagabondare, l'andare senza meta né dimora fissa",
+    "examples": [
+      {
+        "it": "Passò anni in un vagabondaggio senza meta per l'Europa.",
+        "fr": "Il passa des années dans un vagabondage sans but à travers l'Europe."
+      }
+    ],
+    "synonyms": [
+      "girovagare"
+    ],
+    "isVerb": false
+  },
+  "vagabondo": {
+    "lemma": "vagabondo",
+    "pos": "nome",
+    "fr": "vagabond",
+    "definition_it": "persona che vive senza fissa dimora e senza lavoro stabile, girando di luogo in luogo",
+    "examples": [
+      {
+        "it": "Un vecchio vagabondo dormiva sotto il ponte.",
+        "fr": "Un vieux vagabond dormait sous le pont."
+      }
+    ],
+    "synonyms": [
+      "girovago",
+      "randagio"
+    ],
+    "isVerb": false
+  },
+  "vagamente": {
+    "lemma": "vagamente",
+    "pos": "avverbio",
+    "fr": "vaguement",
+    "definition_it": "in modo vago, poco preciso o poco definito",
+    "examples": [
+      {
+        "it": "Ricordava vagamente il suo volto.",
+        "fr": "Il se souvenait vaguement de son visage."
+      }
+    ],
+    "synonyms": [
+      "confusamente",
+      "indistintamente"
+    ],
+    "isVerb": false
+  },
+  "vagare": {
+    "lemma": "vagare",
+    "pos": "verbo",
+    "fr": "errer, vagabonder",
+    "definition_it": "andare qua e là senza una meta precisa",
+    "examples": [
+      {
+        "it": "Vagava per le strade della città senza sapere dove andare.",
+        "fr": "Il errait dans les rues de la ville sans savoir où aller."
+      }
+    ],
+    "synonyms": [
+      "girovagare",
+      "errare"
+    ],
+    "isVerb": true
+  },
+  "vagheggiare": {
+    "lemma": "vagheggiare",
+    "pos": "verbo",
+    "fr": "rêver de, désirer ardemment",
+    "definition_it": "desiderare intensamente qualcosa, immaginandola con compiacimento",
+    "examples": [
+      {
+        "it": "Vagheggiava da anni un viaggio in Italia.",
+        "fr": "Il rêvait depuis des années d'un voyage en Italie."
+      }
+    ],
+    "synonyms": [
+      "sognare",
+      "bramare"
+    ],
+    "isVerb": true
+  },
+  "vaghezza": {
+    "lemma": "vaghezza",
+    "pos": "nome",
+    "fr": "grâce, charme vague",
+    "definition_it": "qualità di ciò che è vago; in senso letterario, grazia e leggiadria delicata",
+    "examples": [
+      {
+        "it": "Il quadro aveva una particolare vaghezza di colori.",
+        "fr": "Le tableau avait une charmante imprécision de couleurs."
+      }
+    ],
+    "synonyms": [
+      "leggiadria",
+      "grazia"
+    ],
+    "isVerb": false
+  },
+  "vagire": {
+    "lemma": "vagire",
+    "pos": "verbo",
+    "fr": "vagir",
+    "definition_it": "emettere il verso caratteristico del neonato che piange",
+    "examples": [
+      {
+        "it": "Il neonato vagiva nella culla.",
+        "fr": "Le nouveau-né vagissait dans son berceau."
+      }
+    ],
+    "synonyms": [
+      "piangere"
+    ],
+    "isVerb": true
+  },
+  "vaglia": {
+    "lemma": "vaglia",
+    "pos": "nome",
+    "fr": "mandat (postal)",
+    "definition_it": "documento con cui si dispone il pagamento di una somma di denaro tramite posta o banca",
+    "examples": [
+      {
+        "it": "Le inviò un vaglia postale per aiutarla economicamente.",
+        "fr": "Il lui envoya un mandat postal pour l'aider financièrement."
+      }
+    ],
+    "synonyms": [
+      "mandato"
+    ],
+    "isVerb": false
+  },
+  "vago": {
+    "lemma": "vago",
+    "pos": "aggettivo",
+    "fr": "vague, gracieux",
+    "definition_it": "non ben definito o determinato; in senso letterario, leggiadro, gradevole",
+    "examples": [
+      {
+        "it": "Ricordava solo un'immagine vaga di quel giorno.",
+        "fr": "Il ne se souvenait que d'une image vague de ce jour-là."
+      }
+    ],
+    "synonyms": [
+      "indefinito",
+      "impreciso"
+    ],
+    "isVerb": false
+  },
+  "vagolare": {
+    "lemma": "vagolare",
+    "pos": "verbo (intransitivo)",
+    "fr": "errer, vagabonder",
+    "definition_it": "vagare senza meta precisa, andare qua e là senza direzione; forma letteraria di vagare",
+    "examples": [
+      {
+        "it": "Vagolava per le strade deserte della città.",
+        "fr": "Il errait dans les rues désertes de la ville."
+      }
+    ],
+    "synonyms": [
+      "vagare",
+      "girovagare",
+      "errare"
+    ],
+    "isVerb": true
+  },
+  "vagone": {
+    "lemma": "vagone",
+    "pos": "nome, m.",
+    "fr": "wagon",
+    "definition_it": "veicolo ferroviario trainato da una locomotiva, usato per trasportare persone o merci",
+    "examples": [
+      {
+        "it": "Il treno aveva dieci vagoni.",
+        "fr": "Le train avait dix wagons."
+      }
+    ],
+    "synonyms": [
+      "carrozza"
+    ],
+    "isVerb": false
+  },
+  "valanga": {
+    "lemma": "valanga",
+    "pos": "nome, f.",
+    "fr": "avalanche",
+    "definition_it": "grande massa di neve che si stacca e precipita rapidamente lungo un pendio montano",
+    "examples": [
+      {
+        "it": "Una valanga ha bloccato la strada di montagna.",
+        "fr": "Une avalanche a bloqué la route de montagne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "valente": {
+    "lemma": "valente",
+    "pos": "aggettivo",
+    "fr": "habile, vaillant",
+    "definition_it": "che ha valore, capacità o abilità in un'arte, un mestiere o un'impresa",
+    "examples": [
+      {
+        "it": "Era un medico valente e molto stimato.",
+        "fr": "C'était un médecin habile et très estimé."
+      }
+    ],
+    "synonyms": [
+      "abile",
+      "capace",
+      "bravo"
+    ],
+    "isVerb": false
+  },
+  "valere": {
+    "lemma": "valere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "valoir",
+    "definition_it": "avere un determinato valore, pregio, importanza o efficacia; essere utile o giovare a qualcuno",
+    "examples": [
+      {
+        "it": "Questo quadro vale molto.",
+        "fr": "Ce tableau vaut beaucoup."
+      },
+      {
+        "it": "Vagliami il lungo studio e l'amore.",
+        "fr": "Que me soient utiles le long étude et l'amour."
+      }
+    ],
+    "synonyms": [
+      "contare",
+      "giovare"
+    ],
+    "isVerb": true
+  },
+  "valico": {
+    "lemma": "valico",
+    "pos": "nome (m.)",
+    "fr": "col, passage de montagne",
+    "definition_it": "punto di passaggio tra due versanti di una catena montuosa, spesso attraverso un colle",
+    "examples": [
+      {
+        "it": "Attraversarono il valico prima che nevicasse.",
+        "fr": "Ils traversèrent le col avant qu'il ne neige."
+      }
+    ],
+    "synonyms": [
+      "passo",
+      "colle"
+    ],
+    "isVerb": false
+  },
+  "validamente": {
+    "lemma": "validamente",
+    "pos": "avverbio",
+    "fr": "valablement, efficacement",
+    "definition_it": "in modo valido, con piena efficacia o legittimità",
+    "examples": [
+      {
+        "it": "Il contratto fu firmato validamente.",
+        "fr": "Le contrat fut signé valablement."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "valido": {
+    "lemma": "valido",
+    "pos": "aggettivo",
+    "fr": "valable, valide",
+    "definition_it": "che ha valore legale, pratico o efficace; che funziona bene o è forte",
+    "examples": [
+      {
+        "it": "Il documento è ancora valido.",
+        "fr": "Le document est encore valable."
+      },
+      {
+        "it": "Le sue argomentazioni erano valide.",
+        "fr": "Ses arguments étaient valides."
+      }
+    ],
+    "synonyms": [
+      "efficace",
+      "valevole"
+    ],
+    "isVerb": false
+  },
+  "valigia": {
+    "lemma": "valigia",
+    "pos": "nome (f.)",
+    "fr": "valise",
+    "definition_it": "contenitore rigido o semirigido con maniglia, usato per trasportare vestiti e oggetti personali in viaggio",
+    "examples": [
+      {
+        "it": "Ho fatto la valigia per il viaggio.",
+        "fr": "J'ai fait ma valise pour le voyage."
+      },
+      {
+        "it": "Le valigie erano troppo pesanti.",
+        "fr": "Les valises étaient trop lourdes."
+      }
+    ],
+    "synonyms": [
+      "bagaglio"
+    ],
+    "isVerb": false
+  },
+  "vallata": {
+    "lemma": "vallata",
+    "pos": "nome (f.)",
+    "fr": "vallée (large)",
+    "definition_it": "ampia distesa di terreno pianeggiante o dolcemente inclinato compresa tra rilievi montuosi o collinari",
+    "examples": [
+      {
+        "it": "La vallata era coperta di vigneti.",
+        "fr": "La vallée était couverte de vignes."
+      },
+      {
+        "it": "Dall'alto si vedevano tutte le vallate.",
+        "fr": "D'en haut on voyait toutes les vallées."
+      }
+    ],
+    "synonyms": [
+      "valle"
+    ],
+    "isVerb": false
+  },
+  "valle": {
+    "lemma": "valle",
+    "pos": "nome (f.)",
+    "fr": "vallée",
+    "definition_it": "territorio pianeggiante o depresso compreso tra due montagne o colline, spesso attraversato da un fiume",
+    "examples": [
+      {
+        "it": "Il fiume scorre nella valle.",
+        "fr": "La rivière coule dans la vallée."
+      },
+      {
+        "it": "Le valli erano avvolte dalla nebbia.",
+        "fr": "Les vallées étaient enveloppées de brouillard."
+      }
+    ],
+    "synonyms": [
+      "vallata"
+    ],
+    "isVerb": false
+  },
+  "valletto": {
+    "lemma": "valletto",
+    "pos": "nome (m.)",
+    "fr": "jeune valet, page",
+    "definition_it": "giovane servitore o paggio al servizio di un signore o di una corte",
+    "examples": [
+      {
+        "it": "I valletti accompagnavano il principe.",
+        "fr": "Les jeunes valets accompagnaient le prince."
+      }
+    ],
+    "synonyms": [
+      "paggio",
+      "servitore"
+    ],
+    "isVerb": false
+  },
+  "valligiano": {
+    "lemma": "valligiano",
+    "pos": "aggettivo/nome",
+    "fr": "montagnard, habitant de la vallée",
+    "definition_it": "che abita in una valle, o abitante di una valle montana",
+    "examples": [
+      {
+        "it": "I valligiani conoscevano bene i sentieri.",
+        "fr": "Les habitants de la vallée connaissaient bien les sentiers."
+      }
+    ],
+    "synonyms": [
+      "montanaro"
+    ],
+    "isVerb": false
+  },
+  "valore": {
+    "lemma": "valore",
+    "pos": "nome (m.)",
+    "fr": "valeur, courage",
+    "definition_it": "importanza, pregio o utilità di qualcosa; oppure coraggio e ardimento dimostrato in un'azione",
+    "examples": [
+      {
+        "it": "Il quadro ha un grande valore artistico.",
+        "fr": "Le tableau a une grande valeur artistique."
+      },
+      {
+        "it": "Combatté con valore in battaglia.",
+        "fr": "Il combattit avec courage lors de la bataille."
+      }
+    ],
+    "synonyms": [
+      "pregio",
+      "coraggio"
+    ],
+    "isVerb": false
+  },
+  "valorizzazione": {
+    "lemma": "valorizzazione",
+    "pos": "nome",
+    "fr": "mise en valeur",
+    "definition_it": "l'atto o il processo di far risaltare il pregio e l'importanza di qualcosa",
+    "examples": [
+      {
+        "it": "Il comune investe nella valorizzazione del centro storico.",
+        "fr": "La commune investit dans la mise en valeur du centre historique."
+      }
+    ],
+    "synonyms": [
+      "promozione",
+      "rivalutazione"
+    ],
+    "isVerb": false
+  },
+  "valutare": {
+    "lemma": "valutare",
+    "pos": "verbo",
+    "fr": "évaluer",
+    "definition_it": "stimare il valore, l'importanza o la qualità di qualcosa dopo un'attenta considerazione",
+    "examples": [
+      {
+        "it": "Gli esperti valutano il quadro prima dell'asta.",
+        "fr": "Les experts évaluent le tableau avant la vente aux enchères."
+      },
+      {
+        "it": "Ho valutato attentamente tutte le opzioni.",
+        "fr": "J'ai évalué attentivement toutes les options."
+      }
+    ],
+    "synonyms": [
+      "stimare",
+      "giudicare"
+    ],
+    "isVerb": true
+  },
+  "valutazione": {
+    "lemma": "valutazione",
+    "pos": "nome",
+    "fr": "évaluation",
+    "definition_it": "il giudizio o la stima del valore, dell'importanza o della qualità di qualcosa",
+    "examples": [
+      {
+        "it": "La valutazione del progetto è stata positiva.",
+        "fr": "L'évaluation du projet a été positive."
+      },
+      {
+        "it": "Le valutazioni degli studenti arriveranno domani.",
+        "fr": "Les évaluations des étudiants arriveront demain."
+      }
+    ],
+    "synonyms": [
+      "stima",
+      "giudizio"
+    ],
+    "isVerb": false
+  },
+  "valvola": {
+    "lemma": "valvola",
+    "pos": "nome",
+    "fr": "valve, soupape",
+    "definition_it": "dispositivo meccanico che regola il passaggio di un fluido o di una corrente in un condotto o in un circuito",
+    "examples": [
+      {
+        "it": "Le valvole del motore vanno controllate regolarmente.",
+        "fr": "Les soupapes du moteur doivent être contrôlées régulièrement."
+      }
+    ],
+    "synonyms": [
+      "rubinetto"
+    ],
+    "isVerb": false
+  },
+  "valzer": {
+    "lemma": "valzer",
+    "pos": "nome",
+    "fr": "valse",
+    "definition_it": "danza in tempo ternario di origine austriaca, molto diffusa nell'Ottocento",
+    "examples": [
+      {
+        "it": "Ballarono un valzer al centro della sala.",
+        "fr": "Ils dansèrent une valse au centre de la salle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vampa": {
+    "lemma": "vampa",
+    "pos": "nome",
+    "fr": "flamme, bouffée",
+    "definition_it": "fiamma viva e improvvisa, oppure sensazione improvvisa di calore, spesso al viso",
+    "examples": [
+      {
+        "it": "Una vampa di calore le arrossò il viso.",
+        "fr": "Une bouffée de chaleur lui rougit le visage."
+      }
+    ],
+    "synonyms": [
+      "fiammata"
+    ],
+    "isVerb": false
+  },
+  "vaneggiare": {
+    "lemma": "vaneggiare",
+    "pos": "verbo",
+    "fr": "délirer",
+    "definition_it": "dire cose senza senso o irrazionali, come in stato di delirio o confusione mentale",
+    "examples": [
+      {
+        "it": "Il malato vaneggiava per la febbre alta.",
+        "fr": "Le malade délirait à cause de la forte fièvre."
+      },
+      {
+        "it": "Stava vaneggiando tutta la notte.",
+        "fr": "Il délirait toute la nuit."
+      }
+    ],
+    "synonyms": [
+      "delirare",
+      "farneticare"
+    ],
+    "isVerb": true
+  },
+  "vangelo": {
+    "lemma": "vangelo",
+    "pos": "nome",
+    "fr": "évangile",
+    "definition_it": "ciascuno dei quattro libri del Nuovo Testamento che narrano la vita e gli insegnamenti di Gesù",
+    "examples": [
+      {
+        "it": "Il sacerdote lesse un passo del vangelo.",
+        "fr": "Le prêtre lut un passage de l'évangile."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vaniglia": {
+    "lemma": "vaniglia",
+    "pos": "nome",
+    "fr": "vanille",
+    "definition_it": "spezia aromatica ricavata dai baccelli di una pianta tropicale, usata in pasticceria",
+    "examples": [
+      {
+        "it": "Il gelato alla vaniglia è il suo preferito.",
+        "fr": "La glace à la vanille est sa préférée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vanità": {
+    "lemma": "vanità",
+    "pos": "nome f.",
+    "fr": "vanité",
+    "definition_it": "eccessiva stima di sé stessi e delle proprie qualità; anche, l'essere privo di valore reale o durevole",
+    "examples": [
+      {
+        "it": "La sua vanità lo portava a parlare sempre di sé.",
+        "fr": "Sa vanité le poussait à toujours parler de lui-même."
+      }
+    ],
+    "synonyms": [
+      "presunzione",
+      "boria"
+    ],
+    "isVerb": false
+  },
+  "vanitoso": {
+    "lemma": "vanitoso",
+    "pos": "aggettivo",
+    "fr": "vaniteux",
+    "definition_it": "che ha o mostra vanità, troppo orgoglioso di sé stesso",
+    "examples": [
+      {
+        "it": "Era un uomo vanitoso, sempre attento al proprio aspetto.",
+        "fr": "C'était un homme vaniteux, toujours attentif à son apparence."
+      }
+    ],
+    "synonyms": [
+      "presuntuoso",
+      "borioso"
+    ],
+    "isVerb": false
+  },
+  "vano": {
+    "lemma": "vano",
+    "pos": "aggettivo",
+    "fr": "vain",
+    "definition_it": "che non produce l'effetto desiderato, inutile",
+    "examples": [
+      {
+        "it": "Fu un tentativo vano.",
+        "fr": "Ce fut une tentative vaine."
+      },
+      {
+        "it": "Le sue speranze si rivelarono vane.",
+        "fr": "Ses espoirs se révélèrent vains."
+      }
+    ],
+    "synonyms": [
+      "inutile",
+      "infruttuoso"
+    ],
+    "isVerb": false
+  },
+  "vantaggio": {
+    "lemma": "vantaggio",
+    "pos": "nome m.",
+    "fr": "avantage",
+    "definition_it": "condizione o elemento favorevole rispetto ad altri; guadagno o beneficio",
+    "examples": [
+      {
+        "it": "Avere più esperienza è un vantaggio nel lavoro.",
+        "fr": "Avoir plus d'expérience est un avantage dans le travail."
+      }
+    ],
+    "synonyms": [
+      "beneficio",
+      "profitto"
+    ],
+    "isVerb": false
+  },
+  "vantaggioso": {
+    "lemma": "vantaggioso",
+    "pos": "aggettivo",
+    "fr": "avantageux",
+    "definition_it": "che offre un vantaggio, favorevole o conveniente",
+    "examples": [
+      {
+        "it": "Ci ha proposto un accordo molto vantaggioso.",
+        "fr": "Il nous a proposé un accord très avantageux."
+      }
+    ],
+    "synonyms": [
+      "favorevole",
+      "conveniente"
+    ],
+    "isVerb": false
+  },
+  "vantare": {
+    "lemma": "vantare",
+    "pos": "verbo (transitivo/riflessivo)",
+    "fr": "vanter, se vanter",
+    "definition_it": "lodare con orgoglio le proprie qualità o quelle di qualcosa; alla forma riflessiva, gloriarsi di qualcosa",
+    "examples": [
+      {
+        "it": "Si vantava sempre dei suoi successi.",
+        "fr": "Il se vantait toujours de ses succès."
+      }
+    ],
+    "synonyms": [
+      "gloriarsi",
+      "millantare"
+    ],
+    "isVerb": true
+  },
+  "vapore": {
+    "lemma": "vapore",
+    "pos": "nome m.",
+    "fr": "vapeur",
+    "definition_it": "gas che si forma quando un liquido, in particolare l'acqua, viene riscaldato",
+    "examples": [
+      {
+        "it": "Il vapore usciva dalla pentola bollente.",
+        "fr": "La vapeur sortait de la casserole bouillante."
+      }
+    ],
+    "synonyms": [
+      "fumo"
+    ],
+    "isVerb": false
+  },
+  "vaporetto": {
+    "lemma": "vaporetto",
+    "pos": "nome m.",
+    "fr": "vaporetto, bateau-bus (vénitien)",
+    "definition_it": "battello a motore usato come mezzo di trasporto pubblico, tipico di Venezia",
+    "examples": [
+      {
+        "it": "Abbiamo preso il vaporetto per attraversare il canale.",
+        "fr": "Nous avons pris le vaporetto pour traverser le canal."
+      }
+    ],
+    "synonyms": [
+      "battello"
+    ],
+    "isVerb": false
+  },
+  "varcare": {
+    "lemma": "varcare",
+    "pos": "verbo (transitivo)",
+    "fr": "franchir, passer",
+    "definition_it": "attraversare un limite, una soglia o un confine passando da un lato all'altro",
+    "examples": [
+      {
+        "it": "Varcò la soglia di casa senza voltarsi indietro.",
+        "fr": "Il franchit le seuil de la maison sans se retourner."
+      }
+    ],
+    "synonyms": [
+      "attraversare",
+      "oltrepassare"
+    ],
+    "isVerb": true
+  },
+  "variabile": {
+    "lemma": "variabile",
+    "pos": "aggettivo/nome f.",
+    "fr": "variable",
+    "definition_it": "che può cambiare o variare; come nome, elemento o fattore soggetto a cambiamento",
+    "examples": [
+      {
+        "it": "Il tempo in montagna è molto variabile.",
+        "fr": "Le temps en montagne est très variable."
+      }
+    ],
+    "synonyms": [
+      "mutevole",
+      "incostante"
+    ],
+    "isVerb": false
+  },
+  "variabilità": {
+    "lemma": "variabilità",
+    "pos": "nome (f.)",
+    "fr": "variabilité",
+    "definition_it": "caratteristica di ciò che varia, cambia o non rimane costante nel tempo",
+    "examples": [
+      {
+        "it": "La variabilità del clima rende difficili le previsioni.",
+        "fr": "La variabilité du climat rend les prévisions difficiles."
+      }
+    ],
+    "synonyms": [
+      "mutevolezza",
+      "instabilità"
+    ],
+    "isVerb": false
+  },
+  "variamente": {
+    "lemma": "variamente",
+    "pos": "avverbio",
+    "fr": "diversement",
+    "definition_it": "in modo vario, in maniere diverse",
+    "examples": [
+      {
+        "it": "Gli invitati furono variamente accolti dai padroni di casa.",
+        "fr": "Les invités furent accueillis de diverses manières par les hôtes."
+      }
+    ],
+    "synonyms": [
+      "diversamente"
+    ],
+    "isVerb": false
+  },
+  "variante": {
+    "lemma": "variante",
+    "pos": "nome (f.)",
+    "fr": "variante",
+    "definition_it": "forma diversa da quella originaria di qualcosa, ma ad essa collegata",
+    "examples": [
+      {
+        "it": "Questa ricetta ha molte varianti regionali.",
+        "fr": "Cette recette a de nombreuses variantes régionales."
+      }
+    ],
+    "synonyms": [
+      "versione"
+    ],
+    "isVerb": false
+  },
+  "variare": {
+    "lemma": "variare",
+    "pos": "verbo",
+    "fr": "varier, changer",
+    "definition_it": "cambiare, modificarsi o rendere diverso qualcosa",
+    "examples": [
+      {
+        "it": "Il prezzo può variare a seconda della stagione.",
+        "fr": "Le prix peut varier selon la saison."
+      }
+    ],
+    "synonyms": [
+      "cambiare",
+      "modificare"
+    ],
+    "isVerb": true
+  },
+  "variazione": {
+    "lemma": "variazione",
+    "pos": "nome (f.)",
+    "fr": "variation",
+    "definition_it": "cambiamento, modifica rispetto a una condizione precedente",
+    "examples": [
+      {
+        "it": "Si è registrata una variazione di temperatura durante la notte.",
+        "fr": "On a enregistré une variation de température pendant la nuit."
+      }
+    ],
+    "synonyms": [
+      "cambiamento",
+      "mutamento"
+    ],
+    "isVerb": false
+  },
+  "varietà": {
+    "lemma": "varietà",
+    "pos": "nome (f., invariabile)",
+    "fr": "variété",
+    "definition_it": "insieme di elementi diversi tra loro; anche, tipo particolare all'interno di una specie o categoria",
+    "examples": [
+      {
+        "it": "Il mercato offriva una grande varietà di frutta.",
+        "fr": "Le marché offrait une grande variété de fruits."
+      }
+    ],
+    "synonyms": [
+      "diversità",
+      "assortimento"
+    ],
+    "isVerb": false
+  },
+  "vario": {
+    "lemma": "vario",
+    "pos": "aggettivo",
+    "fr": "varié",
+    "definition_it": "che presenta diversità, differenze o cambiamenti; non uniforme",
+    "examples": [
+      {
+        "it": "Il paesaggio era vario, tra colline e vallate.",
+        "fr": "Le paysage était varié, entre collines et vallées."
+      }
+    ],
+    "synonyms": [
+      "diverso",
+      "differente"
+    ],
+    "isVerb": false
+  },
+  "variopinto": {
+    "lemma": "variopinto",
+    "pos": "aggettivo",
+    "fr": "multicolore, bariolé",
+    "definition_it": "che ha molti colori diversi",
+    "examples": [
+      {
+        "it": "Un uccello variopinto si posò sul ramo.",
+        "fr": "Un oiseau multicolore se posa sur la branche."
+      }
+    ],
+    "synonyms": [
+      "multicolore",
+      "policromo"
+    ],
+    "isVerb": false
+  },
+  "varroa": {
+    "lemma": "varroa",
+    "pos": "nome (f.)",
+    "fr": "varroa",
+    "definition_it": "piccolo acaro parassita che attacca le api e gli alveari",
+    "examples": [
+      {
+        "it": "La varroa è un grave pericolo per gli alveari.",
+        "fr": "Le varroa est un grave danger pour les ruches."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vasca": {
+    "lemma": "vasca",
+    "pos": "nome (f.)",
+    "fr": "bassin, baignoire",
+    "definition_it": "recipiente grande usato per contenere acqua, ad esempio per lavarsi o allevare pesci",
+    "examples": [
+      {
+        "it": "I bambini giocavano nella vasca da bagno.",
+        "fr": "Les enfants jouaient dans la baignoire."
+      }
+    ],
+    "synonyms": [
+      "bacino"
+    ],
+    "isVerb": false
+  },
+  "vaschetta": {
+    "lemma": "vaschetta",
+    "pos": "nome (f.)",
+    "fr": "petit bac, barquette",
+    "definition_it": "piccolo contenitore, spesso usato per alimenti o piccoli oggetti",
+    "examples": [
+      {
+        "it": "Comprò una vaschetta di gelato al cioccolato.",
+        "fr": "Il acheta une barquette de glace au chocolat."
+      }
+    ],
+    "synonyms": [
+      "contenitore"
+    ],
+    "isVerb": false
+  },
+  "vaso": {
+    "lemma": "vaso",
+    "pos": "nome (m.)",
+    "fr": "vase, pot",
+    "definition_it": "recipiente usato per contenere fiori, piante o altri oggetti",
+    "examples": [
+      {
+        "it": "Mise i fiori in un vaso di cristallo.",
+        "fr": "Elle mit les fleurs dans un vase en cristal."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vassoio": {
+    "lemma": "vassoio",
+    "pos": "nome (m.)",
+    "fr": "plateau",
+    "definition_it": "oggetto piatto usato per portare o servire cibi e bevande",
+    "examples": [
+      {
+        "it": "La cameriera portò il caffè su un vassoio d'argento.",
+        "fr": "La serveuse apporta le café sur un plateau en argent."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vasto": {
+    "lemma": "vasto",
+    "pos": "aggettivo",
+    "fr": "vaste",
+    "definition_it": "molto esteso in superficie o in ampiezza",
+    "examples": [
+      {
+        "it": "Davanti a loro si apriva una vasta pianura.",
+        "fr": "Devant eux s'ouvrait une vaste plaine."
+      }
+    ],
+    "synonyms": [
+      "ampio",
+      "esteso"
+    ],
+    "isVerb": false
+  },
+  "vaticano": {
+    "lemma": "vaticano",
+    "pos": "aggettivo",
+    "fr": "vatican, du Vatican",
+    "definition_it": "relativo alla Città del Vaticano o alla Santa Sede",
+    "examples": [
+      {
+        "it": "I musei vaticani custodiscono opere d'arte inestimabili.",
+        "fr": "Les musées du Vatican conservent des œuvres d'art inestimables."
+      }
+    ],
+    "synonyms": [
+      "pontificio"
+    ],
+    "isVerb": false
+  },
+  "ve": {
+    "lemma": "ve",
+    "pos": "particella pronominale",
+    "fr": "vous (le/en/y) — forme de vi",
+    "definition_it": "forma della particella pronominale vi usata davanti a lo, la, li, le o ne",
+    "examples": [
+      {
+        "it": "Ve lo dico subito: non è possibile.",
+        "fr": "Je vous le dis tout de suite : ce n'est pas possible."
+      }
+    ],
+    "synonyms": [
+      "vi"
+    ],
+    "isVerb": false
+  },
+  "vecchiaia": {
+    "lemma": "vecchiaia",
+    "pos": "nome femminile",
+    "fr": "vieillesse",
+    "definition_it": "l'ultima fase della vita di una persona, caratterizzata dall'avanzare dell'età",
+    "examples": [
+      {
+        "it": "La vecchiaia porta con sé saggezza ed esperienza.",
+        "fr": "La vieillesse apporte avec elle sagesse et expérience."
+      }
+    ],
+    "synonyms": [
+      "senilità"
+    ],
+    "isVerb": false
+  },
+  "vecchio": {
+    "lemma": "vecchio",
+    "pos": "aggettivo / nome",
+    "fr": "vieux, vieille",
+    "definition_it": "che ha molti anni, non più giovane; anche persona anziana",
+    "examples": [
+      {
+        "it": "Il vecchio si sedette sulla panchina a guardare i bambini.",
+        "fr": "Le vieil homme s'assit sur le banc pour regarder les enfants."
+      }
+    ],
+    "synonyms": [
+      "anziano"
+    ],
+    "isVerb": false
+  },
+  "vecchiume": {
+    "lemma": "vecchiume",
+    "pos": "nome maschile",
+    "fr": "vieilleries, choses désuètes",
+    "definition_it": "insieme di cose vecchie, superate o in disuso, spesso con sfumatura spregiativa",
+    "examples": [
+      {
+        "it": "La soffitta era piena di vecchiume accumulato negli anni.",
+        "fr": "Le grenier était plein de vieilleries accumulées au fil des ans."
+      }
+    ],
+    "synonyms": [
+      "cianfrusaglie",
+      "anticaglie"
+    ],
+    "isVerb": false
+  },
+  "veccia": {
+    "lemma": "veccia",
+    "pos": "nome femminile",
+    "fr": "vesce",
+    "definition_it": "pianta erbacea foraggera usata come mangime per il bestiame",
+    "examples": [
+      {
+        "it": "Il campo era coltivato a vecce e avena.",
+        "fr": "Le champ était cultivé en vesces et en avoine."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vece": {
+    "lemma": "vece",
+    "pos": "nome femminile",
+    "fr": "à la place de, en remplacement de",
+    "definition_it": "usato soprattutto nell'espressione in vece di (al posto di) o fare le veci (sostituire qualcuno)",
+    "examples": [
+      {
+        "it": "Il direttore era assente, così il suo assistente fece le veci.",
+        "fr": "Le directeur était absent, alors son assistant le remplaça."
+      }
+    ],
+    "synonyms": [
+      "posto",
+      "sostituzione"
+    ],
+    "isVerb": false
+  },
+  "vedere": {
+    "lemma": "vedere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "voir",
+    "definition_it": "percepire con gli occhi, osservare qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Ho visto un bellissimo tramonto ieri sera.",
+        "fr": "J'ai vu un magnifique coucher de soleil hier soir."
+      }
+    ],
+    "synonyms": [
+      "scorgere",
+      "osservare"
+    ],
+    "isVerb": true
+  },
+  "vedersi": {
+    "lemma": "vedersi",
+    "pos": "verbo (riflessivo reciproco, irregolare)",
+    "fr": "se voir, se retrouver",
+    "definition_it": "incontrarsi con un'altra persona in un luogo e in un momento stabiliti",
+    "examples": [
+      {
+        "it": "Ci vediamo alle otto davanti al cinema.",
+        "fr": "On se retrouve à huit heures devant le cinéma."
+      }
+    ],
+    "synonyms": [
+      "incontrarsi"
+    ],
+    "isVerb": true
+  },
+  "vedetta": {
+    "lemma": "vedetta",
+    "pos": "nome (f.)",
+    "fr": "vigie, poste de guet",
+    "definition_it": "persona o luogo posto per sorvegliare e avvistare in anticipo pericoli o novità",
+    "examples": [
+      {
+        "it": "La sentinella era di vedetta sulla torre.",
+        "fr": "La sentinelle était de vigie sur la tour."
+      }
+    ],
+    "synonyms": [
+      "sentinella"
+    ],
+    "isVerb": false
+  },
+  "vedova": {
+    "lemma": "vedova",
+    "pos": "nome (f.)",
+    "fr": "veuve",
+    "definition_it": "donna il cui marito è morto e che non si è risposata",
+    "examples": [
+      {
+        "it": "La vedova indossava ancora l'abito nero.",
+        "fr": "La veuve portait encore la robe noire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vedovella": {
+    "lemma": "vedovella",
+    "pos": "nome (f.)",
+    "fr": "petite veuve",
+    "definition_it": "forma affettuosa o diminutiva di vedova, giovane vedova",
+    "examples": [
+      {
+        "it": "La povera vedovella viveva sola con i suoi figli.",
+        "fr": "La pauvre petite veuve vivait seule avec ses enfants."
+      }
+    ],
+    "synonyms": [
+      "vedova"
+    ],
+    "isVerb": false
+  },
+  "vedovo": {
+    "lemma": "vedovo",
+    "pos": "nome/aggettivo (m.)",
+    "fr": "veuf",
+    "definition_it": "uomo la cui moglie è morta e che non si è risposato",
+    "examples": [
+      {
+        "it": "Il vedovo cresceva i figli da solo.",
+        "fr": "Le veuf élevait ses enfants seul."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "veduta": {
+    "lemma": "veduta",
+    "pos": "nome (f.)",
+    "fr": "vue, panorama",
+    "definition_it": "ciò che si vede da un certo punto, panorama, paesaggio osservabile",
+    "examples": [
+      {
+        "it": "Dalla collina si godeva una splendida veduta della valle.",
+        "fr": "Depuis la colline on profitait d'une splendide vue sur la vallée."
+      }
+    ],
+    "synonyms": [
+      "panorama",
+      "vista",
+      "paesaggio"
+    ],
+    "isVerb": false
+  },
+  "vegetazione": {
+    "lemma": "vegetazione",
+    "pos": "nome (f.)",
+    "fr": "végétation",
+    "definition_it": "insieme delle piante che crescono in un determinato luogo",
+    "examples": [
+      {
+        "it": "La vegetazione lungo il fiume era fitta e rigogliosa.",
+        "fr": "La végétation le long de la rivière était dense et luxuriante."
+      }
+    ],
+    "synonyms": [
+      "flora"
+    ],
+    "isVerb": false
+  },
+  "veglia": {
+    "lemma": "veglia",
+    "pos": "nome femminile",
+    "fr": "veillée, garde de nuit",
+    "definition_it": "il tempo che si passa svegli durante la notte, spesso per sorvegliare un malato, assistere qualcuno o pregare",
+    "examples": [
+      {
+        "it": "Passò la veglia accanto al letto del malato.",
+        "fr": "Il passa la veillée au chevet du malade."
+      }
+    ],
+    "synonyms": [
+      "vigilia",
+      "guardia notturna"
+    ],
+    "isVerb": false
+  },
+  "vegliare": {
+    "lemma": "vegliare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "veiller",
+    "definition_it": "restare svegli di notte per sorvegliare, assistere qualcuno o pregare",
+    "examples": [
+      {
+        "it": "La madre vegliò tutta la notte accanto al bambino malato.",
+        "fr": "La mère veilla toute la nuit auprès de l'enfant malade."
+      }
+    ],
+    "synonyms": [
+      "sorvegliare",
+      "custodire"
+    ],
+    "isVerb": true
+  },
+  "veicolo": {
+    "lemma": "veicolo",
+    "pos": "nome maschile",
+    "fr": "véhicule",
+    "definition_it": "mezzo di trasporto, spesso a motore, usato per spostare persone o cose",
+    "examples": [
+      {
+        "it": "I veicoli erano fermi nel traffico.",
+        "fr": "Les véhicules étaient arrêtés dans les embouteillages."
+      }
+    ],
+    "synonyms": [
+      "mezzo di trasporto"
+    ],
+    "isVerb": false
+  },
+  "vela": {
+    "lemma": "vela",
+    "pos": "nome femminile",
+    "fr": "voile",
+    "definition_it": "tessuto resistente fissato all'albero di una barca, usato per sfruttare la forza del vento",
+    "examples": [
+      {
+        "it": "La barca navigava a vele spiegate.",
+        "fr": "Le bateau naviguait à voiles déployées."
+      }
+    ],
+    "synonyms": [
+      "velatura"
+    ],
+    "isVerb": false
+  },
+  "velame": {
+    "lemma": "velame",
+    "pos": "nome maschile",
+    "fr": "voile, tissu léger ; ce qui dissimule",
+    "definition_it": "tessuto leggero e trasparente che copre qualcosa; in senso figurato, ciò che nasconde o attenua una realtà",
+    "examples": [
+      {
+        "it": "Un velame di tristezza copriva il suo volto.",
+        "fr": "Un voile de tristesse couvrait son visage."
+      }
+    ],
+    "synonyms": [
+      "velo"
+    ],
+    "isVerb": false
+  },
+  "velato": {
+    "lemma": "velato",
+    "pos": "aggettivo",
+    "fr": "voilé",
+    "definition_it": "coperto da un velo, oppure, in senso figurato, non del tutto esplicito, appena percepibile o nascosto",
+    "examples": [
+      {
+        "it": "Parlò con voce velata di malinconia.",
+        "fr": "Il parla d'une voix voilée de mélancolie."
+      }
+    ],
+    "synonyms": [
+      "nascosto",
+      "coperto"
+    ],
+    "isVerb": false
+  },
+  "veleno": {
+    "lemma": "veleno",
+    "pos": "nome maschile",
+    "fr": "poison",
+    "definition_it": "sostanza che, introdotta nell'organismo, può causare malattia o morte",
+    "examples": [
+      {
+        "it": "I veleni di quella pianta sono mortali per gli animali.",
+        "fr": "Les poisons de cette plante sont mortels pour les animaux."
+      }
+    ],
+    "synonyms": [
+      "tossina"
+    ],
+    "isVerb": false
+  },
+  "velenosamente": {
+    "lemma": "velenosamente",
+    "pos": "avverbio",
+    "fr": "venimeusement",
+    "definition_it": "in modo velenoso, con cattiveria o astio",
+    "examples": [
+      {
+        "it": "Rispose velenosamente al suo avversario.",
+        "fr": "Il répondit venimeusement à son adversaire."
+      }
+    ],
+    "synonyms": [
+      "malignamente"
+    ],
+    "isVerb": false
+  },
+  "velenoso": {
+    "lemma": "velenoso",
+    "pos": "aggettivo",
+    "fr": "venimeux, vénéneux",
+    "definition_it": "che contiene o produce veleno, oppure, in senso figurato, pieno di malizia",
+    "examples": [
+      {
+        "it": "Quel fungo è velenoso e non va mangiato.",
+        "fr": "Ce champignon est vénéneux et il ne faut pas le manger."
+      }
+    ],
+    "synonyms": [
+      "tossico",
+      "nocivo"
+    ],
+    "isVerb": false
+  },
+  "velleità": {
+    "lemma": "velleità",
+    "pos": "nome (f.)",
+    "fr": "velléité",
+    "definition_it": "desiderio vago e incostante, non sostenuto da una reale volontà di agire",
+    "examples": [
+      {
+        "it": "Aveva velleità artistiche mai realizzate.",
+        "fr": "Il avait des velléités artistiques jamais réalisées."
+      }
+    ],
+    "synonyms": [
+      "aspirazione",
+      "pretesa"
+    ],
+    "isVerb": false
+  },
+  "vellicazione": {
+    "lemma": "vellicazione",
+    "pos": "nome (f.)",
+    "fr": "chatouillement",
+    "definition_it": "leggero e ripetuto stimolo sulla pelle o su una parte del corpo, simile al solletico",
+    "examples": [
+      {
+        "it": "Sentì una strana vellicazione alla gola.",
+        "fr": "Il sentit un étrange chatouillement dans la gorge."
+      }
+    ],
+    "synonyms": [
+      "solletico",
+      "pizzicorio"
+    ],
+    "isVerb": false
+  },
+  "vello": {
+    "lemma": "vello",
+    "pos": "nome (m.)",
+    "fr": "toison",
+    "definition_it": "il pelo folto e ricciuto che ricopre il corpo di alcuni animali, in particolare della pecora",
+    "examples": [
+      {
+        "it": "Il vello della pecora era candido e morbido.",
+        "fr": "La toison de la brebis était blanche et douce."
+      }
+    ],
+    "synonyms": [
+      "pelame",
+      "lana"
+    ],
+    "isVerb": false
+  },
+  "velluto": {
+    "lemma": "velluto",
+    "pos": "nome (m.)",
+    "fr": "velours",
+    "definition_it": "tessuto pregiato con superficie morbida e vellutata, formata da un fitto pelo corto",
+    "examples": [
+      {
+        "it": "Indossava un abito di velluto rosso.",
+        "fr": "Elle portait une robe de velours rouge."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "velo": {
+    "lemma": "velo",
+    "pos": "nome (m.)",
+    "fr": "voile",
+    "definition_it": "tessuto sottile e trasparente usato per coprire il viso o il capo, oppure, in senso figurato, ciò che nasconde qualcosa",
+    "examples": [
+      {
+        "it": "La sposa indossava un velo bianco.",
+        "fr": "La mariée portait un voile blanc."
+      }
+    ],
+    "synonyms": [
+      "tulle",
+      "garza"
+    ],
+    "isVerb": false
+  },
+  "veloce": {
+    "lemma": "veloce",
+    "pos": "aggettivo",
+    "fr": "rapide",
+    "definition_it": "che si muove o agisce con grande rapidità",
+    "examples": [
+      {
+        "it": "Quella macchina è molto veloce.",
+        "fr": "Cette voiture est très rapide."
+      }
+    ],
+    "synonyms": [
+      "rapido",
+      "svelto"
+    ],
+    "isVerb": false
+  },
+  "velocemente": {
+    "lemma": "velocemente",
+    "pos": "avverbio",
+    "fr": "rapidement",
+    "definition_it": "in modo veloce, con rapidità",
+    "examples": [
+      {
+        "it": "Corse velocemente verso la stazione.",
+        "fr": "Il courut rapidement vers la gare."
+      }
+    ],
+    "synonyms": [
+      "rapidamente",
+      "in fretta"
+    ],
+    "isVerb": false
+  },
+  "velocipede": {
+    "lemma": "velocipede",
+    "pos": "nome (m.)",
+    "fr": "vélocipède",
+    "definition_it": "antico veicolo a due o più ruote, azionato dalla forza muscolare, antenato della bicicletta",
+    "examples": [
+      {
+        "it": "Nell'Ottocento si vedevano signori sul velocipede per le strade.",
+        "fr": "Au XIXe siècle, on voyait des messieurs sur un vélocipède dans les rues."
+      }
+    ],
+    "synonyms": [
+      "bicicletta"
+    ],
+    "isVerb": false
+  },
+  "velocista": {
+    "lemma": "velocista",
+    "pos": "nome (m./f.)",
+    "fr": "sprinteur, sprinteuse",
+    "definition_it": "atleta specializzato nelle gare di corsa veloce sulle brevi distanze",
+    "examples": [
+      {
+        "it": "Il velocista ha vinto i cento metri.",
+        "fr": "Le sprinteur a gagné le cent mètres."
+      }
+    ],
+    "synonyms": [
+      "sprinter"
+    ],
+    "isVerb": false
+  },
+  "velocità": {
+    "lemma": "velocità",
+    "pos": "nome (f., invariabile)",
+    "fr": "vitesse",
+    "definition_it": "rapidità di movimento o di svolgimento di un'azione, misurata come spazio percorso nell'unità di tempo",
+    "examples": [
+      {
+        "it": "Il treno viaggiava ad alta velocità.",
+        "fr": "Le train roulait à grande vitesse."
+      }
+    ],
+    "synonyms": [
+      "rapidità",
+      "celerità"
+    ],
+    "isVerb": false
+  },
+  "veltro": {
+    "lemma": "veltro",
+    "pos": "nome (m.)",
+    "fr": "lévrier",
+    "definition_it": "cane da caccia snello e veloce, usato fin dall'antichità per l'inseguimento della selvaggina; nella Divina Commedia simboleggia un salvatore atteso dall'Italia",
+    "examples": [
+      {
+        "it": "Dante profetizza l'arrivo di un veltro che scaccerà la lupa.",
+        "fr": "Dante prophétise l'arrivée d'un lévrier qui chassera la louve."
+      }
+    ],
+    "synonyms": [
+      "levriero",
+      "levriere"
+    ],
+    "isVerb": false
+  },
+  "vena": {
+    "lemma": "vena",
+    "pos": "nome (f.)",
+    "fr": "veine",
+    "definition_it": "vaso sanguigno che riporta il sangue verso il cuore; per estensione, filone o disposizione naturale",
+    "examples": [
+      {
+        "it": "Il medico gli ha misurato il polso sulla vena del polso.",
+        "fr": "Le médecin lui a pris le pouls sur la veine du poignet."
+      }
+    ],
+    "synonyms": [
+      "filone",
+      "estro"
+    ],
+    "isVerb": false
+  },
+  "venato": {
+    "lemma": "venato",
+    "pos": "aggettivo",
+    "fr": "veiné, strié",
+    "definition_it": "che presenta venature, striature simili a vene, nel legno, nel marmo o in altri materiali",
+    "examples": [
+      {
+        "it": "Il tavolo era di marmo venato di grigio.",
+        "fr": "La table était en marbre veiné de gris."
+      }
+    ],
+    "synonyms": [
+      "striato",
+      "screziato"
+    ],
+    "isVerb": false
+  },
+  "venatura": {
+    "lemma": "venatura",
+    "pos": "nome (f.)",
+    "fr": "veinure",
+    "definition_it": "disegno formato dalle vene naturali del legno, del marmo o di una foglia",
+    "examples": [
+      {
+        "it": "Le venature del legno di noce sono molto decorative.",
+        "fr": "Les veinures du bois de noyer sont très décoratives."
+      }
+    ],
+    "synonyms": [
+      "striatura",
+      "vena"
+    ],
+    "isVerb": false
+  },
+  "vendemmia": {
+    "lemma": "vendemmia",
+    "pos": "nome (f.)",
+    "fr": "vendange",
+    "definition_it": "raccolta dell'uva matura destinata alla produzione del vino, e periodo in cui avviene",
+    "examples": [
+      {
+        "it": "In settembre inizia la vendemmia in Toscana.",
+        "fr": "En septembre commence la vendange en Toscane."
+      }
+    ],
+    "synonyms": [
+      "raccolta dell'uva"
+    ],
+    "isVerb": false
+  },
+  "vendere": {
+    "lemma": "vendere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "vendre",
+    "definition_it": "cedere un bene o un servizio a qualcuno in cambio di denaro",
+    "examples": [
+      {
+        "it": "Ha venduto la casa dei suoi genitori.",
+        "fr": "Il a vendu la maison de ses parents."
+      }
+    ],
+    "synonyms": [
+      "cedere",
+      "smerciare"
+    ],
+    "isVerb": true
+  },
+  "vendetta": {
+    "lemma": "vendetta",
+    "pos": "nome (f.)",
+    "fr": "vengeance",
+    "definition_it": "atto compiuto per punire chi ha fatto un torto, per ristabilire un'ingiustizia subita",
+    "examples": [
+      {
+        "it": "Giurò vendetta contro i suoi nemici.",
+        "fr": "Il jura vengeance contre ses ennemis."
+      }
+    ],
+    "synonyms": [
+      "ritorsione",
+      "rivalsa"
+    ],
+    "isVerb": false
+  },
+  "vendicare": {
+    "lemma": "vendicare",
+    "pos": "verbo (transitivo/riflessivo)",
+    "fr": "venger",
+    "definition_it": "punire chi ha commesso un torto per ristabilire la giustizia, spesso in modo violento",
+    "examples": [
+      {
+        "it": "Giurò di vendicare la morte del padre.",
+        "fr": "Il jura de venger la mort de son père."
+      }
+    ],
+    "synonyms": [
+      "punire"
+    ],
+    "isVerb": true
+  },
+  "vendicativo": {
+    "lemma": "vendicativo",
+    "pos": "aggettivo",
+    "fr": "vindicatif",
+    "definition_it": "che tende a vendicarsi facilmente, che serba rancore verso chi lo ha offeso",
+    "examples": [
+      {
+        "it": "Era un uomo vendicativo, che non dimenticava mai un torto subito.",
+        "fr": "C'était un homme vindicatif, qui n'oubliait jamais un tort subi."
+      }
+    ],
+    "synonyms": [
+      "rancoroso"
+    ],
+    "isVerb": false
+  },
+  "vendita": {
+    "lemma": "vendita",
+    "pos": "nome (f.)",
+    "fr": "vente",
+    "definition_it": "atto di cedere un bene o un servizio in cambio di denaro",
+    "examples": [
+      {
+        "it": "La vendita della casa è andata a buon fine.",
+        "fr": "La vente de la maison s'est bien passée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "venditore": {
+    "lemma": "venditore",
+    "pos": "nome (m.)",
+    "fr": "vendeur",
+    "definition_it": "persona che vende merci o servizi, spesso al pubblico",
+    "examples": [
+      {
+        "it": "Il venditore ambulante gridava per attirare i clienti.",
+        "fr": "Le vendeur ambulant criait pour attirer les clients."
+      }
+    ],
+    "synonyms": [
+      "commerciante"
+    ],
+    "isVerb": false
+  },
+  "venerando": {
+    "lemma": "venerando",
+    "pos": "aggettivo",
+    "fr": "vénérable",
+    "definition_it": "che merita rispetto e venerazione per l'età, la saggezza o l'autorità",
+    "examples": [
+      {
+        "it": "Il venerando anziano del villaggio dava sempre buoni consigli.",
+        "fr": "Le vénérable ancien du village donnait toujours de bons conseils."
+      }
+    ],
+    "synonyms": [
+      "venerabile",
+      "rispettabile"
+    ],
+    "isVerb": false
+  },
+  "venerare": {
+    "lemma": "venerare",
+    "pos": "verbo",
+    "fr": "vénérer",
+    "definition_it": "provare o mostrare profondo rispetto e devozione verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Il popolo venerava quel santo con grande devozione.",
+        "fr": "Le peuple vénérait ce saint avec une grande dévotion."
+      }
+    ],
+    "synonyms": [
+      "adorare",
+      "onorare"
+    ],
+    "isVerb": true
+  },
+  "venerazione": {
+    "lemma": "venerazione",
+    "pos": "nome (f.)",
+    "fr": "vénération",
+    "definition_it": "profondo rispetto e devozione provati verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Guardava il maestro con venerazione.",
+        "fr": "Il regardait le maître avec vénération."
+      }
+    ],
+    "synonyms": [
+      "devozione",
+      "adorazione"
+    ],
+    "isVerb": false
+  },
+  "venerdì": {
+    "lemma": "venerdì",
+    "pos": "nome (m., invariabile)",
+    "fr": "vendredi",
+    "definition_it": "il quinto giorno della settimana, tra giovedì e sabato",
+    "examples": [
+      {
+        "it": "Ci vediamo venerdì prossimo.",
+        "fr": "On se voit vendredi prochain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "veneto": {
+    "lemma": "veneto",
+    "pos": "aggettivo/nome",
+    "fr": "vénète, de Vénétie",
+    "definition_it": "che appartiene o si riferisce alla regione italiana del Veneto, oppure abitante del Veneto",
+    "examples": [
+      {
+        "it": "Il dialetto veneto si parla in molte province del Nord-Est.",
+        "fr": "Le dialecte vénète se parle dans de nombreuses provinces du Nord-Est."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "veneziano": {
+    "lemma": "veneziano",
+    "pos": "aggettivo/nome",
+    "fr": "vénitien",
+    "definition_it": "che appartiene o si riferisce a Venezia, oppure abitante di Venezia",
+    "examples": [
+      {
+        "it": "Il dialetto veneziano ha molte espressioni caratteristiche.",
+        "fr": "Le dialecte vénitien a de nombreuses expressions caractéristiques."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "venia": {
+    "lemma": "venia",
+    "pos": "nome (f., letterario)",
+    "fr": "pardon, grâce",
+    "definition_it": "perdono o permesso concesso con benevolenza, usato soprattutto in espressioni formali o letterarie",
+    "examples": [
+      {
+        "it": "Chiedo venia per il ritardo.",
+        "fr": "Je vous demande pardon pour le retard."
+      }
+    ],
+    "synonyms": [
+      "perdono",
+      "grazia"
+    ],
+    "isVerb": false
+  },
+  "venire": {
+    "lemma": "venire",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "venir",
+    "definition_it": "muoversi verso il luogo dove si trova chi parla o un punto di riferimento",
+    "examples": [
+      {
+        "it": "Vieni a trovarmi domani.",
+        "fr": "Viens me voir demain."
+      },
+      {
+        "it": "Non so se verrà alla festa.",
+        "fr": "Je ne sais pas s'il viendra à la fête."
+      }
+    ],
+    "synonyms": [
+      "arrivare",
+      "giungere"
+    ],
+    "isVerb": true
+  },
+  "ventaglio": {
+    "lemma": "ventaglio",
+    "pos": "nome (m.)",
+    "fr": "éventail",
+    "definition_it": "oggetto pieghevole, spesso decorato, usato per farsi aria muovendolo con la mano",
+    "examples": [
+      {
+        "it": "Si rinfrescava con un ventaglio di carta.",
+        "fr": "Elle se rafraîchissait avec un éventail en papier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventata": {
+    "lemma": "ventata",
+    "pos": "nome (f.)",
+    "fr": "rafale de vent",
+    "definition_it": "colpo di vento improvviso e violento, ma di breve durata",
+    "examples": [
+      {
+        "it": "Una ventata improvvisa fece volare le foglie.",
+        "fr": "Une rafale de vent soudaine fit voler les feuilles."
+      }
+    ],
+    "synonyms": [
+      "raffica"
+    ],
+    "isVerb": false
+  },
+  "ventenne": {
+    "lemma": "ventenne",
+    "pos": "aggettivo / nome",
+    "fr": "vingtenaire, âgé de vingt ans",
+    "definition_it": "che ha venti anni di età, riferito a una persona",
+    "examples": [
+      {
+        "it": "Era un ragazzo ventenne pieno di sogni.",
+        "fr": "C'était un jeune homme de vingt ans plein de rêves."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventennio": {
+    "lemma": "ventennio",
+    "pos": "nome (m.)",
+    "fr": "période de vingt ans",
+    "definition_it": "periodo della durata di venti anni; con la maiuscola, il Ventennio indica in Italia gli anni del regime fascista (1922-1943)",
+    "examples": [
+      {
+        "it": "Il Ventennio fascista segnò profondamente la storia italiana.",
+        "fr": "Le Ventennio fasciste a profondément marqué l'histoire italienne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventesimo": {
+    "lemma": "ventesimo",
+    "pos": "aggettivo numerale ordinale",
+    "fr": "vingtième",
+    "definition_it": "che occupa il posto numero venti in una serie ordinata",
+    "examples": [
+      {
+        "it": "Viveva al ventesimo piano del palazzo.",
+        "fr": "Il vivait au vingtième étage de l'immeuble."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "venti": {
+    "lemma": "venti",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt",
+    "definition_it": "il numero cardinale che segue diciannove e precede ventuno",
+    "examples": [
+      {
+        "it": "Ha venti anni.",
+        "fr": "Il a vingt ans."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "venticinque": {
+    "lemma": "venticinque",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt-cinq",
+    "definition_it": "il numero cardinale che segue ventiquattro e precede ventisei",
+    "examples": [
+      {
+        "it": "Il ristorante poteva ospitare venticinque persone.",
+        "fr": "Le restaurant pouvait accueillir vingt-cinq personnes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventidue": {
+    "lemma": "ventidue",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt-deux",
+    "definition_it": "il numero cardinale che segue ventuno e precede ventitré",
+    "examples": [
+      {
+        "it": "Aveva ventidue anni quando si laureò.",
+        "fr": "Il avait vingt-deux ans quand il a obtenu son diplôme."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventina": {
+    "lemma": "ventina",
+    "pos": "nome (f.)",
+    "fr": "une vingtaine",
+    "definition_it": "quantità approssimativa di circa venti unità",
+    "examples": [
+      {
+        "it": "C'era una ventina di persone in piazza.",
+        "fr": "Il y avait une vingtaine de personnes sur la place."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventiquattr'ore": {
+    "lemma": "ventiquattr'ore",
+    "pos": "locuzione / nome (f. invariabile)",
+    "fr": "vingt-quatre heures",
+    "definition_it": "espressione che indica l'intera durata di un giorno, cioè ventiquattro ore; usata anche come nome per indicare una piccola valigetta rigida da lavoro",
+    "examples": [
+      {
+        "it": "Il negozio è aperto ventiquattr'ore su ventiquattro.",
+        "fr": "Le magasin est ouvert vingt-quatre heures sur vingt-quatre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventiquattro": {
+    "lemma": "ventiquattro",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt-quatre",
+    "definition_it": "il numero cardinale che segue ventitré e precede venticinque",
+    "examples": [
+      {
+        "it": "Un giorno ha ventiquattro ore.",
+        "fr": "Un jour compte vingt-quatre heures."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventisei": {
+    "lemma": "ventisei",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt-six",
+    "definition_it": "il numero cardinale che segue venticinque e precede ventisette",
+    "examples": [
+      {
+        "it": "Compirà ventisei anni a marzo.",
+        "fr": "Il aura vingt-six ans en mars."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventiseiesimo": {
+    "lemma": "ventiseiesimo",
+    "pos": "aggettivo numerale ordinale",
+    "fr": "vingt-sixième",
+    "definition_it": "che occupa il posto numero ventisei in una serie ordinata",
+    "examples": [
+      {
+        "it": "Oggi è il ventiseiesimo giorno del mese.",
+        "fr": "Aujourd'hui, c'est le vingt-sixième jour du mois."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventitré": {
+    "lemma": "ventitré",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt-trois",
+    "definition_it": "il numero cardinale che segue ventidue e precede ventiquattro",
+    "examples": [
+      {
+        "it": "Il treno partiva alle ventitré.",
+        "fr": "Le train partait à vingt-trois heures."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "vento": {
+    "lemma": "vento",
+    "pos": "nome (m.)",
+    "fr": "vent",
+    "definition_it": "movimento naturale dell'aria, spesso percepibile come corrente più o meno forte",
+    "examples": [
+      {
+        "it": "Il vento soffiava forte sulla collina.",
+        "fr": "Le vent soufflait fort sur la colline."
+      }
+    ],
+    "synonyms": [
+      "brezza",
+      "aria"
+    ],
+    "isVerb": false
+  },
+  "ventotto": {
+    "lemma": "ventotto",
+    "pos": "aggettivo numerale / nome",
+    "fr": "vingt-huit",
+    "definition_it": "il numero cardinale che segue ventisette e precede ventinove",
+    "examples": [
+      {
+        "it": "Febbraio ha ventotto giorni negli anni non bisestili.",
+        "fr": "Février compte vingt-huit jours les années non bissextiles."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventre": {
+    "lemma": "ventre",
+    "pos": "nome (m.)",
+    "fr": "ventre",
+    "definition_it": "parte anteriore del corpo umano compresa tra il torace e il bacino, che contiene gli organi addominali",
+    "examples": [
+      {
+        "it": "Le faceva male il ventre dopo la lunga camminata.",
+        "fr": "Elle avait mal au ventre après la longue marche."
+      }
+    ],
+    "synonyms": [
+      "pancia",
+      "addome"
+    ],
+    "isVerb": false
+  },
+  "ventuno": {
+    "lemma": "ventuno",
+    "pos": "numero",
+    "fr": "vingt-et-un",
+    "definition_it": "numero cardinale che segue venti e precede ventidue",
+    "examples": [
+      {
+        "it": "Ho ventuno anni.",
+        "fr": "J'ai vingt-et-un ans."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ventura": {
+    "lemma": "ventura",
+    "pos": "nome (f.)",
+    "fr": "fortune, hasard, destin",
+    "definition_it": "sorte, caso, destino; ciò che accade senza essere previsto o cercato",
+    "examples": [
+      {
+        "it": "Andò a ventura, senza una meta precisa.",
+        "fr": "Il partit à l'aventure, sans destination précise."
+      }
+    ],
+    "synonyms": [
+      "sorte",
+      "destino",
+      "caso"
+    ],
+    "isVerb": false
+  },
+  "venturo": {
+    "lemma": "venturo",
+    "pos": "aggettivo",
+    "fr": "prochain, à venir",
+    "definition_it": "che deve ancora venire, futuro, prossimo",
+    "examples": [
+      {
+        "it": "Ci vedremo l'anno venturo.",
+        "fr": "Nous nous reverrons l'année prochaine."
+      }
+    ],
+    "synonyms": [
+      "prossimo",
+      "futuro"
+    ],
+    "isVerb": false
+  },
+  "venuta": {
+    "lemma": "venuta",
+    "pos": "nome (f.)",
+    "fr": "venue, arrivée",
+    "definition_it": "l'atto del venire, l'arrivo di qualcuno o qualcosa in un luogo",
+    "examples": [
+      {
+        "it": "Aspettavamo la sua venuta con impazienza.",
+        "fr": "Nous attendions sa venue avec impatience."
+      }
+    ],
+    "synonyms": [
+      "arrivo",
+      "giunta"
+    ],
+    "isVerb": false
+  },
+  "verace": {
+    "lemma": "verace",
+    "pos": "aggettivo",
+    "fr": "véridique, authentique",
+    "definition_it": "che dice o esprime la verità; genuino, sincero",
+    "examples": [
+      {
+        "it": "Un racconto verace dei fatti accaduti.",
+        "fr": "Un récit véridique des faits survenus."
+      }
+    ],
+    "synonyms": [
+      "veritiero",
+      "autentico",
+      "sincero"
+    ],
+    "isVerb": false
+  },
+  "veramente": {
+    "lemma": "veramente",
+    "pos": "avverbio",
+    "fr": "vraiment",
+    "definition_it": "in modo vero, effettivamente, davvero",
+    "examples": [
+      {
+        "it": "Sei veramente sicuro di questo?",
+        "fr": "Es-tu vraiment sûr de cela ?"
+      }
+    ],
+    "synonyms": [
+      "davvero",
+      "effettivamente"
+    ],
+    "isVerb": false
+  },
+  "verbale": {
+    "lemma": "verbale",
+    "pos": "nome (m.)",
+    "fr": "procès-verbal",
+    "definition_it": "documento scritto che riporta ufficialmente lo svolgimento di una riunione, un fatto o un accertamento",
+    "examples": [
+      {
+        "it": "Il vigile ha redatto un verbale per l'infrazione.",
+        "fr": "L'agent a rédigé un procès-verbal pour l'infraction."
+      }
+    ],
+    "synonyms": [
+      "rapporto",
+      "resoconto"
+    ],
+    "isVerb": false
+  },
+  "verbo": {
+    "lemma": "verbo",
+    "pos": "nome (m.)",
+    "fr": "verbe",
+    "definition_it": "parte del discorso che esprime un'azione, uno stato o un evento",
+    "examples": [
+      {
+        "it": "In italiano il verbo si coniuga secondo il modo e il tempo.",
+        "fr": "En italien, le verbe se conjugue selon le mode et le temps."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "verdastro": {
+    "lemma": "verdastro",
+    "pos": "aggettivo",
+    "fr": "verdâtre",
+    "definition_it": "che tende al verde, di colore non puramente verde",
+    "examples": [
+      {
+        "it": "L'acqua dello stagno aveva un colore verdastro.",
+        "fr": "L'eau de l'étang avait une couleur verdâtre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "verde": {
+    "lemma": "verde",
+    "pos": "aggettivo/nome",
+    "fr": "vert",
+    "definition_it": "colore simile a quello dell'erba o delle foglie",
+    "examples": [
+      {
+        "it": "Ha gli occhi verdi.",
+        "fr": "Il a les yeux verts."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "verdolino": {
+    "lemma": "verdolino",
+    "pos": "aggettivo",
+    "fr": "verdâtre, vert pâle",
+    "definition_it": "che tende al verde chiaro, di colore verde tenue",
+    "examples": [
+      {
+        "it": "I frutti erano ancora verdolini e acerbi.",
+        "fr": "Les fruits étaient encore verdâtres et pas mûrs."
+      }
+    ],
+    "synonyms": [
+      "verdastro"
+    ],
+    "isVerb": false
+  },
+  "verdura": {
+    "lemma": "verdura",
+    "pos": "nome (f.)",
+    "fr": "légume(s)",
+    "definition_it": "insieme di ortaggi commestibili, generalmente a foglia verde o comunque di origine vegetale",
+    "examples": [
+      {
+        "it": "Mangia sempre molta verdura a pranzo.",
+        "fr": "Il mange toujours beaucoup de légumes au déjeuner."
+      }
+    ],
+    "synonyms": [
+      "ortaggi"
+    ],
+    "isVerb": false
+  },
+  "vergata": {
+    "lemma": "vergata",
+    "pos": "nome (f.)",
+    "fr": "coup de baguette",
+    "definition_it": "colpo dato con una verga, un bastone sottile e flessibile",
+    "examples": [
+      {
+        "it": "Il maestro lo punì con una vergata sulle mani.",
+        "fr": "Le maître le punit d'un coup de baguette sur les mains."
+      }
+    ],
+    "synonyms": [
+      "bastonata",
+      "frustata"
+    ],
+    "isVerb": false
+  },
+  "vergine": {
+    "lemma": "vergine",
+    "pos": "aggettivo/nome (f.)",
+    "fr": "vierge",
+    "definition_it": "che non ha mai avuto rapporti sessuali; anche, per estensione, intatto, incontaminato",
+    "examples": [
+      {
+        "it": "La foresta vergine si estendeva a perdita d'occhio.",
+        "fr": "La forêt vierge s'étendait à perte de vue."
+      }
+    ],
+    "synonyms": [
+      "intatto",
+      "puro"
+    ],
+    "isVerb": false
+  },
+  "vergogna": {
+    "lemma": "vergogna",
+    "pos": "nome (f.)",
+    "fr": "honte",
+    "definition_it": "sentimento penoso causato dalla consapevolezza di aver fatto qualcosa di sbagliato o disonorevole",
+    "examples": [
+      {
+        "it": "Provava una grande vergogna per il suo errore.",
+        "fr": "Il ressentait une grande honte pour son erreur."
+      }
+    ],
+    "synonyms": [
+      "imbarazzo"
+    ],
+    "isVerb": false
+  },
+  "vergognarsi": {
+    "lemma": "vergognarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "avoir honte",
+    "definition_it": "provare vergogna per qualcosa che si è fatto o detto",
+    "examples": [
+      {
+        "it": "Si vergognava di aver mentito.",
+        "fr": "Il avait honte d'avoir menti."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "vero": {
+    "lemma": "vero",
+    "pos": "aggettivo",
+    "fr": "vrai",
+    "definition_it": "che corrisponde alla realtà, non falso",
+    "examples": [
+      {
+        "it": "Quello che dice è vero.",
+        "fr": "Ce qu'il dit est vrai."
+      }
+    ],
+    "synonyms": [
+      "autentico",
+      "veritiero"
+    ],
+    "isVerb": false
+  }
+}

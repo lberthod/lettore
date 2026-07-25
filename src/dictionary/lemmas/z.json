@@ -1,0 +1,640 @@
+{
+  "zac": {
+    "lemma": "zac",
+    "pos": "interiezione",
+    "fr": "vlan, clac (bruit sec)",
+    "definition_it": "espressione onomatopeica che imita un rumore secco e improvviso, come un taglio o uno scatto",
+    "examples": [
+      {
+        "it": "Zac! La corda si spezzò all'improvviso.",
+        "fr": "Vlan ! La corde se rompit tout à coup."
+      }
+    ],
+    "synonyms": [
+      "zac zac"
+    ],
+    "isVerb": false
+  },
+  "zaino": {
+    "lemma": "zaino",
+    "pos": "nome (m.)",
+    "fr": "sac à dos",
+    "definition_it": "borsa con spallacci portata sulla schiena, usata per trasportare oggetti",
+    "examples": [
+      {
+        "it": "Ha messo i libri nello zaino prima di uscire.",
+        "fr": "Il a mis les livres dans le sac à dos avant de sortir."
+      }
+    ],
+    "synonyms": [
+      "sacca"
+    ],
+    "isVerb": false
+  },
+  "zampa": {
+    "lemma": "zampa",
+    "pos": "nome (f.)",
+    "fr": "patte",
+    "definition_it": "arto degli animali usato per camminare, correre o afferrare",
+    "examples": [
+      {
+        "it": "Il cane alzò la zampa per giocare.",
+        "fr": "Le chien leva la patte pour jouer."
+      }
+    ],
+    "synonyms": [
+      "arto"
+    ],
+    "isVerb": false
+  },
+  "zampetta": {
+    "lemma": "zampetta",
+    "pos": "nome (f.)",
+    "fr": "petite patte",
+    "definition_it": "diminutivo di zampa, piccola zampa di un animale",
+    "examples": [
+      {
+        "it": "Il gattino muoveva le zampette in aria.",
+        "fr": "Le chaton agitait ses petites pattes en l'air."
+      }
+    ],
+    "synonyms": [
+      "zampina"
+    ],
+    "isVerb": false
+  },
+  "zampettare": {
+    "lemma": "zampettare",
+    "pos": "verbo",
+    "fr": "trottiner",
+    "definition_it": "camminare con passi piccoli, rapidi e leggeri, tipico di animali piccoli o bambini",
+    "examples": [
+      {
+        "it": "I topolini zampettavano nervosamente sul pavimento.",
+        "fr": "Les petites souris trottinaient nerveusement sur le sol."
+      }
+    ],
+    "synonyms": [
+      "trotterellare"
+    ],
+    "isVerb": true
+  },
+  "zampetto": {
+    "lemma": "zampetto",
+    "pos": "nome (m.)",
+    "fr": "petit pied, pied de porc",
+    "definition_it": "diminutivo riferito a un piccolo piede o zampa, spesso usato in cucina per indicare lo zampetto di maiale",
+    "examples": [
+      {
+        "it": "La nonna cucinava lo zampetto di maiale in umido.",
+        "fr": "La grand-mère cuisinait le pied de porc en ragoût."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zampina": {
+    "lemma": "zampina",
+    "pos": "nome (f.)",
+    "fr": "petite patte",
+    "definition_it": "diminutivo di zampa, usato soprattutto per piccoli animali",
+    "examples": [
+      {
+        "it": "Il criceto nascose il seme sotto la zampina.",
+        "fr": "Le hamster cacha la graine sous sa petite patte."
+      }
+    ],
+    "synonyms": [
+      "zampetta"
+    ],
+    "isVerb": false
+  },
+  "zanca": {
+    "lemma": "zanca",
+    "pos": "nome (f.)",
+    "fr": "crampon métallique, attache",
+    "definition_it": "elemento metallico usato per fissare telai di porte o finestre al muro",
+    "examples": [
+      {
+        "it": "Il muratore fissò il telaio con delle zanche.",
+        "fr": "Le maçon fixa le cadre avec des crampons métalliques."
+      }
+    ],
+    "synonyms": [
+      "staffa"
+    ],
+    "isVerb": false
+  },
+  "zanna": {
+    "lemma": "zanna",
+    "pos": "nome (f.)",
+    "fr": "croc, défense",
+    "definition_it": "dente lungo e appuntito di alcuni animali, usato per mordere o difendersi",
+    "examples": [
+      {
+        "it": "Il lupo mostrò le zanne ringhiando.",
+        "fr": "Le loup montra ses crocs en grognant."
+      }
+    ],
+    "synonyms": [
+      "dente"
+    ],
+    "isVerb": false
+  },
+  "zanzara": {
+    "lemma": "zanzara",
+    "pos": "nome (f.)",
+    "fr": "moustique",
+    "definition_it": "piccolo insetto volante che punge la pelle e succhia il sangue",
+    "examples": [
+      {
+        "it": "Una zanzara mi ha punto durante la notte.",
+        "fr": "Un moustique m'a piqué pendant la nuit."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zappa": {
+    "lemma": "zappa",
+    "pos": "nome (f.)",
+    "fr": "houe, binette",
+    "definition_it": "attrezzo agricolo con una lama usato per lavorare la terra",
+    "examples": [
+      {
+        "it": "Prese la zappa e cominciò a lavorare il campo.",
+        "fr": "Il prit la houe et commença à travailler le champ."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zappare": {
+    "lemma": "zappare",
+    "pos": "verbo",
+    "fr": "biner, houer",
+    "definition_it": "lavorare la terra con la zappa",
+    "examples": [
+      {
+        "it": "Il contadino zappava il campo fin dal mattino.",
+        "fr": "Le paysan binait le champ depuis le matin."
+      }
+    ],
+    "synonyms": [
+      "vangare"
+    ],
+    "isVerb": true
+  },
+  "zar": {
+    "lemma": "zar",
+    "pos": "nome (m.)",
+    "fr": "tsar",
+    "definition_it": "titolo dato agli antichi imperatori della Russia",
+    "examples": [
+      {
+        "it": "Lo zar governava con potere assoluto.",
+        "fr": "Le tsar gouvernait avec un pouvoir absolu."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zarina": {
+    "lemma": "zarina",
+    "pos": "nome (f.)",
+    "fr": "tsarine",
+    "definition_it": "moglie dello zar o imperatrice della Russia",
+    "examples": [
+      {
+        "it": "La zarina indossava una corona tempestata di gioielli.",
+        "fr": "La tsarine portait une couronne ornée de bijoux."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zavorra": {
+    "lemma": "zavorra",
+    "pos": "nome (f.)",
+    "fr": "lest",
+    "definition_it": "peso usato per stabilizzare una nave o un pallone, oppure, in senso figurato, qualcosa di inutile e di peso",
+    "examples": [
+      {
+        "it": "Gettarono la zavorra in mare per alleggerire la nave.",
+        "fr": "Ils jetèrent le lest à la mer pour alléger le navire."
+      }
+    ],
+    "synonyms": [
+      "peso morto"
+    ],
+    "isVerb": false
+  },
+  "zecca": {
+    "lemma": "zecca",
+    "pos": "nome (f.)",
+    "fr": "tique",
+    "definition_it": "piccolo insetto parassita che si attacca alla pelle di uomini e animali per succhiarne il sangue",
+    "examples": [
+      {
+        "it": "Ho trovato una zecca attaccata alla gamba del cane.",
+        "fr": "J'ai trouvé une tique accrochée à la patte du chien."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zecchino": {
+    "lemma": "zecchino",
+    "pos": "nome (m.)",
+    "fr": "sequin (ancienne pièce d'or)",
+    "definition_it": "antica moneta d'oro veneziana, usata come simbolo di ricchezza",
+    "examples": [
+      {
+        "it": "Il pirata nascose un forziere pieno di zecchini.",
+        "fr": "Le pirate cacha un coffre plein de sequins d'or."
+      }
+    ],
+    "synonyms": [
+      "moneta d'oro"
+    ],
+    "isVerb": false
+  },
+  "zelante": {
+    "lemma": "zelante",
+    "pos": "aggettivo",
+    "fr": "zélé",
+    "definition_it": "che mostra zelo, molto premuroso e diligente nel compiere il proprio dovere",
+    "examples": [
+      {
+        "it": "Il nuovo impiegato era molto zelante nel suo lavoro.",
+        "fr": "Le nouvel employé était très zélé dans son travail."
+      }
+    ],
+    "synonyms": [
+      "diligente",
+      "solerte"
+    ],
+    "isVerb": false
+  },
+  "zelo": {
+    "lemma": "zelo",
+    "pos": "nome (m.)",
+    "fr": "zèle",
+    "definition_it": "grande impegno, passione e cura nel fare qualcosa",
+    "examples": [
+      {
+        "it": "Lavorava con grande zelo.",
+        "fr": "Il travaillait avec un grand zèle."
+      }
+    ],
+    "synonyms": [
+      "ardore",
+      "impegno"
+    ],
+    "isVerb": false
+  },
+  "zenzero": {
+    "lemma": "zenzero",
+    "pos": "nome (m.)",
+    "fr": "gingembre",
+    "definition_it": "radice piccante e profumata usata come spezia in cucina",
+    "examples": [
+      {
+        "it": "Il tè allo zenzero riscalda in inverno.",
+        "fr": "Le thé au gingembre réchauffe en hiver."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zero": {
+    "lemma": "zero",
+    "pos": "nome (m.)",
+    "fr": "zéro",
+    "definition_it": "il numero che indica l'assenza di quantità",
+    "examples": [
+      {
+        "it": "La temperatura è scesa sotto zero.",
+        "fr": "La température est descendue sous zéro."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zeta": {
+    "lemma": "zeta",
+    "pos": "nome (f.)",
+    "fr": "lettre Z",
+    "definition_it": "ultima lettera dell'alfabeto italiano",
+    "examples": [
+      {
+        "it": "La parola comincia con la zeta.",
+        "fr": "Le mot commence par la lettre Z."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zia": {
+    "lemma": "zia",
+    "pos": "nome (f.)",
+    "fr": "tante",
+    "definition_it": "sorella del padre o della madre, o moglie dello zio",
+    "examples": [
+      {
+        "it": "Mia zia vive a Firenze.",
+        "fr": "Ma tante vit à Florence."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zibaldone": {
+    "lemma": "zibaldone",
+    "pos": "nome (m.)",
+    "fr": "recueil de notes, cahier de pensées",
+    "definition_it": "quaderno o raccolta di appunti, pensieri e note varie messi insieme senza un ordine preciso",
+    "examples": [
+      {
+        "it": "Leopardi scrisse le sue riflessioni nello Zibaldone.",
+        "fr": "Leopardi écrivit ses réflexions dans le Zibaldone."
+      }
+    ],
+    "synonyms": [
+      "taccuino",
+      "quaderno di appunti"
+    ],
+    "isVerb": false
+  },
+  "zinzino": {
+    "lemma": "zinzino",
+    "pos": "nome (m.)",
+    "fr": "un tout petit peu, une pincée",
+    "definition_it": "(regionale, toscano) una quantità molto piccola di qualcosa, un pizzico",
+    "examples": [
+      {
+        "it": "Mettici solo uno zinzino di sale.",
+        "fr": "Mets juste une pincée de sel."
+      }
+    ],
+    "synonyms": [
+      "pizzico",
+      "briciolo"
+    ],
+    "isVerb": false
+  },
+  "zio": {
+    "lemma": "zio",
+    "pos": "nome (m.)",
+    "fr": "oncle",
+    "definition_it": "fratello del padre o della madre, o marito della zia",
+    "examples": [
+      {
+        "it": "Mio zio abita a Roma.",
+        "fr": "Mon oncle habite à Rome."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zitellona": {
+    "lemma": "zitellona",
+    "pos": "nome (f.)",
+    "fr": "vieille fille",
+    "definition_it": "(spesso spregiativo) donna non più giovane rimasta nubile",
+    "examples": [
+      {
+        "it": "In paese la chiamavano la zitellona.",
+        "fr": "Au village, on l'appelait la vieille fille."
+      }
+    ],
+    "synonyms": [
+      "nubile"
+    ],
+    "isVerb": false
+  },
+  "zitto": {
+    "lemma": "zitto",
+    "pos": "aggettivo",
+    "fr": "silencieux, tais-toi",
+    "definition_it": "che non parla, silenzioso; usato anche come esclamazione per imporre il silenzio",
+    "examples": [
+      {
+        "it": "Stai zitto e ascolta!",
+        "fr": "Tais-toi et écoute !"
+      }
+    ],
+    "synonyms": [
+      "silenzioso",
+      "muto"
+    ],
+    "isVerb": false
+  },
+  "zoccolo": {
+    "lemma": "zoccolo",
+    "pos": "nome (m.)",
+    "fr": "sabot",
+    "definition_it": "calzatura di legno; anche unghia dura e ricurva del piede di alcuni animali come il cavallo",
+    "examples": [
+      {
+        "it": "Il cavallo batteva gli zoccoli sul selciato.",
+        "fr": "Le cheval frappait ses sabots sur le pavé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zolfo": {
+    "lemma": "zolfo",
+    "pos": "nome (m.)",
+    "fr": "soufre",
+    "definition_it": "elemento chimico di colore giallo, dall'odore forte, usato in vari processi industriali",
+    "examples": [
+      {
+        "it": "L'aria vicino al vulcano puzzava di zolfo.",
+        "fr": "L'air près du volcan sentait le soufre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zombie": {
+    "lemma": "zombie",
+    "pos": "nome (m., invariabile)",
+    "fr": "zombie",
+    "definition_it": "nella narrativa e nel cinema horror, essere umano morto che torna a muoversi senza volontà propria",
+    "examples": [
+      {
+        "it": "Nel film gli zombie invadevano la città deserta.",
+        "fr": "Dans le film, les zombies envahissaient la ville déserte."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zona": {
+    "lemma": "zona",
+    "pos": "nome (f.)",
+    "fr": "zone, quartier",
+    "definition_it": "parte determinata di un territorio, di una città o di uno spazio, delimitata da confini o caratteristiche comuni",
+    "examples": [
+      {
+        "it": "Abitiamo in una zona tranquilla della città.",
+        "fr": "Nous habitons dans un quartier tranquille de la ville."
+      }
+    ],
+    "synonyms": [
+      "area",
+      "quartiere"
+    ],
+    "isVerb": false
+  },
+  "zoo": {
+    "lemma": "zoo",
+    "pos": "nome (m., invariabile)",
+    "fr": "zoo",
+    "definition_it": "parco o struttura dove sono tenuti e mostrati al pubblico animali di specie diverse",
+    "examples": [
+      {
+        "it": "I bambini adorano visitare lo zoo di domenica.",
+        "fr": "Les enfants adorent visiter le zoo le dimanche."
+      }
+    ],
+    "synonyms": [
+      "giardino zoologico"
+    ],
+    "isVerb": false
+  },
+  "zoppicare": {
+    "lemma": "zoppicare",
+    "pos": "verbo (intransitivo)",
+    "fr": "boiter",
+    "definition_it": "camminare in modo irregolare, appoggiandosi con difficoltà su una gamba per un dolore o una lesione",
+    "examples": [
+      {
+        "it": "Da quando è caduto, zoppica leggermente.",
+        "fr": "Depuis sa chute, il boite légèrement."
+      }
+    ],
+    "synonyms": [
+      "azzoppare"
+    ],
+    "isVerb": true
+  },
+  "zoppo": {
+    "lemma": "zoppo",
+    "pos": "aggettivo",
+    "fr": "boiteux, boiteuse",
+    "definition_it": "che ha una gamba o un piede lesi e cammina con difficoltà, zoppicando",
+    "examples": [
+      {
+        "it": "Il cane era zoppo dopo l'incidente.",
+        "fr": "Le chien était boiteux après l'accident."
+      }
+    ],
+    "synonyms": [
+      "storpio"
+    ],
+    "isVerb": false
+  },
+  "zucca": {
+    "lemma": "zucca",
+    "pos": "nome (f.)",
+    "fr": "citrouille, courge",
+    "definition_it": "ortaggio dalla buccia dura e dalla polpa arancione o gialla, spesso usato in cucina",
+    "examples": [
+      {
+        "it": "In autunno si cucina spesso la zucca.",
+        "fr": "En automne, on cuisine souvent la courge."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zuccata": {
+    "lemma": "zuccata",
+    "pos": "nome (f.)",
+    "fr": "coup de tête",
+    "definition_it": "colpo dato o ricevuto con la testa, spesso per errore o urtando qualcosa",
+    "examples": [
+      {
+        "it": "Ha preso una zuccata contro lo stipite della porta.",
+        "fr": "Il s'est pris un coup de tête contre le montant de la porte."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zuccheriera": {
+    "lemma": "zuccheriera",
+    "pos": "nome (f.)",
+    "fr": "sucrier",
+    "definition_it": "piccolo recipiente, spesso con coperchio, usato per contenere e servire lo zucchero a tavola",
+    "examples": [
+      {
+        "it": "Ha messo la zuccheriera accanto alla caffettiera.",
+        "fr": "Elle a posé le sucrier à côté de la cafetière."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zucchero": {
+    "lemma": "zucchero",
+    "pos": "nome (m.)",
+    "fr": "sucre",
+    "definition_it": "sostanza dolce, di solito bianca o bruna, ricavata dalla canna o dalla barbabietola, usata per dolcificare",
+    "examples": [
+      {
+        "it": "Prendo il caffè con due cucchiaini di zucchero.",
+        "fr": "Je prends mon café avec deux cuillères de sucre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zucchina": {
+    "lemma": "zucchina",
+    "pos": "nome (f.)",
+    "fr": "courgette",
+    "definition_it": "ortaggio allungato dalla buccia verde, appartenente alla famiglia delle zucche, usato in molte ricette",
+    "examples": [
+      {
+        "it": "Ho comprato zucchine fresche al mercato.",
+        "fr": "J'ai acheté des courgettes fraîches au marché."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zum": {
+    "lemma": "zum",
+    "pos": "interiezione (onomatopea)",
+    "fr": "vroum, bzz",
+    "definition_it": "voce onomatopeica che imita un ronzio, un rombo o un rapido movimento",
+    "examples": [
+      {
+        "it": "Zum, la moto sparì dietro la curva.",
+        "fr": "Vroum, la moto disparut derrière le virage."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "zuppa": {
+    "lemma": "zuppa",
+    "pos": "nome (f.)",
+    "fr": "soupe",
+    "definition_it": "piatto liquido a base di verdure, legumi o carne, spesso servito con pane o pasta",
+    "examples": [
+      {
+        "it": "D'inverno preferisco mangiare una zuppa calda.",
+        "fr": "En hiver, je préfère manger une soupe chaude."
+      }
+    ],
+    "synonyms": [
+      "minestra"
+    ],
+    "isVerb": false
+  }
+}

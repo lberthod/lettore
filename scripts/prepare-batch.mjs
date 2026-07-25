@@ -7,9 +7,9 @@
 // pour la résoudre après la fusion (voir merge-dictionary-batches.mjs).
 import { readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
+import { loadShardedDictionary, writeWordIndexShards } from './dictionary-shards.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
-const DICT_DIR = path.join(ROOT, 'src', 'dictionary')
 const BATCH_DIR = path.join(ROOT, 'scripts', 'data', 'batches')
 
 const phase = process.argv[2]
@@ -23,7 +23,7 @@ if (!phase) {
 const CONTRACTION_RE = /^(all|dell|nell|sull|dall|coll)'(.+)$/
 
 const allWords = JSON.parse(readFileSync(path.join(ROOT, 'scripts', 'data', 'dictionary-words.json'), 'utf8')).map((w) => w.word)
-const wordIndex = JSON.parse(readFileSync(path.join(DICT_DIR, 'word-index.json'), 'utf8'))
+const { wordIndex } = loadShardedDictionary()
 let skipped
 try {
   skipped = new Set(JSON.parse(readFileSync(path.join(ROOT, 'scripts', 'data', 'skipped-words.json'), 'utf8')))
@@ -52,7 +52,7 @@ for (const w of filtered) {
 }
 
 if (resolvedNow > 0) {
-  writeFileSync(path.join(DICT_DIR, 'word-index.json'), JSON.stringify(wordIndex, null, 2) + '\n')
+  writeWordIndexShards(wordIndex)
 }
 
 console.log(`Mots restants (bruts) : ${filtered.length - Object.keys(wordIndex).length - skipped.size + resolvedNow}`)

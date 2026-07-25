@@ -1,0 +1,19 @@
+{
+  "fare": {
+    "lemma": "fare",
+    "pos": "verbo (transitivo)",
+    "fr": "faire",
+    "definition_it": "compiere un'azione, produrre o realizzare qualcosa",
+    "examples": [
+      {
+        "it": "Ha fatto i compiti prima di cena.",
+        "fr": "Il a fait ses devoirs avant le dîner."
+      }
+    ],
+    "synonyms": [
+      "compiere",
+      "realizzare"
+    ],
+    "isVerb": true
+  }
+}
