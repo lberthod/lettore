@@ -43,7 +43,10 @@ Découvrir la méthode Leggendo gratuitement.
 - quiz de compréhension ;
 - progression locale ;
 - inscription gratuite ;
-- une génération IA d'essai après inscription.
+- une génération IA d'essai après inscription ;
+- **Classici** (aperçu, dès la connexion) : 2 livres en entier et le premier
+  chapitre de quelques autres — voir la section « Classici » de
+  [README.md](README.md).
 
 Le compte gratuit ne débloque pas automatiquement tout le catalogue.
 
@@ -80,7 +83,8 @@ Créer des lectures adaptées à son niveau et à ses centres d'intérêt.
 - traduction complète du texte généré ;
 - audio et quiz de compréhension ;
 - bibliothèque personnelle des textes créés ;
-- collection de classiques adaptés et gradués ;
+- **catalogue Classici complet** (au-delà des 2 livres et des premiers
+  chapitres offerts en aperçu à tout compte connecté) ;
 - notification lorsque la génération est terminée ;
 - **Notizie** : jusqu'à 3 textes d'actualité italienne générés chaque jour
   (flux partagé, pas un crédit consommé par abonné — voir
@@ -149,7 +153,8 @@ Les limites devront être visibles dans l'offre et vérifiées côté serveur.
 | Audio, traductions et quiz | Oui | Oui | Oui | Oui |
 | Progression synchronisée | Non | Oui | Oui | Oui |
 | Création IA | 1 essai | Non | 30 crédits/mois | 100 crédits/mois |
-| Classiques adaptés | Non | Non | Oui | Oui |
+| Classici : aperçu (2 livres + 1ᵉʳ chapitre) | Oui | Oui | Oui | Oui |
+| Classici : catalogue complet | Non | Non | Oui | Oui |
 | Notizie (actualité générée) | Non | Non | Oui | Oui |
 | Liens publics | Non | Non | Non | Oui |
 | Classes et dossiers | Non | Non | Non | Oui |

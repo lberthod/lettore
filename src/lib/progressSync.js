@@ -78,7 +78,11 @@ function pushLocal(uid, db, fs) {
 
 let started = false
 
-// À appeler une fois au démarrage de l'application.
+// À appeler une fois au démarrage de l'application. Suppose que progress.js
+// a déjà basculé `progress` vers l'espace localStorage du bon compte avant
+// que pullAndMerge ne s'exécute (son propre watch sur currentUser, enregistré
+// dès l'import de progress.js ci-dessus, se déclenche donc en premier) —
+// sinon la fusion mélangerait la progression de deux comptes différents.
 export function initProgressSync() {
   if (started || !firebaseReady) return
   started = true

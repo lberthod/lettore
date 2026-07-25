@@ -12,6 +12,7 @@ const updating = ref({}) // uid -> true pendant le changement de rôle
 const ROLE_LABELS = {
   gratuit: 'Invité / gratuit',
   premium: 'Payant (Premium)',
+  premium_plus: 'Premium IA',
   enseignant: 'Enseignant',
 }
 
@@ -49,7 +50,7 @@ async function changeRole(user, role) {
 }
 
 const stats = computed(() => {
-  const byRole = { gratuit: 0, premium: 0, enseignant: 0 }
+  const byRole = { gratuit: 0, premium: 0, premium_plus: 0, enseignant: 0 }
   let textsTotal = 0
   for (const u of users.value) {
     byRole[u.role] = (byRole[u.role] || 0) + 1
@@ -91,6 +92,10 @@ const formatDate = (iso) =>
         <div class="stat">
           <span class="stat-value">{{ stats.byRole.premium }}</span>
           <span class="stat-label">Payant</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ stats.byRole.premium_plus }}</span>
+          <span class="stat-label">Premium IA</span>
         </div>
         <div class="stat">
           <span class="stat-value">{{ stats.byRole.enseignant }}</span>

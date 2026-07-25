@@ -12,7 +12,8 @@ Application web de lecture pour apprendre l'italien : des textes gradués en ita
 - 🔊 **Lecture audio** en italien (voix it-IT via la Web Speech API), avec pause/reprise et trois vitesses
 - ❓ **Quiz de compréhension** à la fin de chaque texte, ⭐ **mots favoris** avec répétition espacée (vue « Parole »)
 - ✍️ **Créer son texte** : un utilisateur connecté demande un texte sur mesure (sujet, niveau, genre, taille) — généré par LLM sur le VPS, enregistré dans Firestore, retrouvable dans « Mes textes »
-- 👤 **Comptes Firebase** (facultatifs) : 6 textes en aperçu gratuit pour les visiteurs, tout le catalogue une fois connecté
+- 👤 **Comptes Firebase** (facultatifs) : 6 textes en aperçu gratuit pour les visiteurs, catalogue complet réservé à Premium et au-dessus
+- 📖 **Classici** : 16 œuvres classiques du domaine public (texte authentique, non simplifié) — 2 livres en entier et le premier chapitre de quelques autres en aperçu gratuit dès la connexion, le reste réservé à Premium IA et Enseignant
 - 📱 **PWA installable** : service worker actif, app et textes disponibles hors ligne
 - ⚡ **Chargement à la demande** : chaque texte est un chunk séparé (via `import.meta.glob`)
 
@@ -102,6 +103,31 @@ npm run test:text -- --genre dialogo --theme cucina --level A2   # essayer sans 
 ```
 
 Voir [generator/README.md](generator/README.md) (pipeline catalogue, cron VPS), [leggendo-server/README.md](leggendo-server/README.md) (génération à la demande des utilisateurs) et [scripts/README.md](scripts/README.md) (ancien pipeline Claude, publication Firestore).
+
+## Classici : catalogue de livres
+
+Section `/classici`, distincte des 454 textes gradués : des œuvres du domaine public en texte authentique (non simplifié), chapitre par chapitre, avec les mêmes fonctionnalités que le lecteur (traduction au clic, audio, quiz). Chaque livre est un manifeste `book.json` + un chunk JSON par chapitre dans `src/books/<id>/`, référencés dans `src/books/index.json`.
+
+| Livre | Auteur | Niveau | Chapitres | Accès |
+|---|---|---|---:|---|
+| Le avventure di Pinocchio | Carlo Collodi | B1 | 36 | 1ᵉʳ chapitre gratuit |
+| Cappuccetto Rosso | Fiaba popolare | A1 | 4 | Premium IA |
+| Il gatto con gli stivali | Charles Perrault | A1 | 1 | Premium IA |
+| Cenerentola | Adattamento tradizionale | A2 | 5 | 1ᵉʳ chapitre gratuit |
+| La bella e la bestia | D'après Leprince de Beaumont | A2 | 5 | Premium IA |
+| La cicala e la formica | Esopo | A1 | 1 | **Gratuit** |
+| La colomba e la formica | Esopo | A1 | 1 | Premium IA |
+| Il leone e il topo | Esopo | A1 | 1 | **Gratuit** |
+| Rosso Malpelo | Giovanni Verga | B2 | 1 | Premium IA |
+| Il Principe | Niccolò Machiavelli | C2 | 5 | 1ᵉʳ chapitre gratuit |
+| Pollicino | Fiaba popolare | A2 | 5 | Premium IA |
+| Pelle d'asino | D'après Charles Perrault | A2 | 5 | Premium IA |
+| Inferno (Divina Commedia, sélection) | Dante Alighieri | C2 | 6 | Premium IA |
+| La figlia del re | Racconto popolare italiano | A2 | 4 | Premium IA |
+| Le novelle della nonna (sélection) | Emma Perodi | B2 | 5 | Premium IA |
+| Il fu Mattia Pascal | Luigi Pirandello | C1 | 18 | 1ᵉʳ chapitre gratuit |
+
+Règle d'accès (`src/lib/access.js`, `isFreeClassiciChapter`) : un compte connecté peut lire gratuitement 2 livres en entier (*La cicala e la formica*, *Il leone e il topo*) et le premier chapitre de 4 livres plus longs (*Pinocchio*, *Cenerentola*, *Il Principe*, *Il fu Mattia Pascal*). Le reste de Classici est réservé aux formules **Premium IA** et **Enseignant** — voir [README_TARIFICATION.md](README_TARIFICATION.md).
 
 ## Feuille de route : web → PWA → stores
 

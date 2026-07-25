@@ -20,7 +20,7 @@ import { generateUserText } from './generate.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
 import { QuotaExceededError, creditCost } from './quota.mjs'
-import { createJobStore } from './jobs.mjs'
+import { createJobStore, ActiveJobError } from './jobs.mjs'
 import { buildTaxonomyIndex, parseRequest, slugify } from './validate.mjs'
 
 // Authentification du SDK Admin via un compte de service dédié (rôle Cloud
@@ -123,12 +123,22 @@ async function logGeneration({ user, size, level, jobId, status, startedAt, usag
 }
 
 // --- Helpers HTTP ---
+// En-têtes de durcissement communs à toutes les réponses (JSON comme
+// préflight OPTIONS). Pas de CSP ici : cette API ne sert que du JSON, la CSP
+// n'a de sens que pour les réponses HTML (voir firebase.json côté hosting).
+const SECURITY_HEADERS = {
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Cross-Origin-Resource-Policy': 'same-site',
+}
+
 function sendJson(res, status, body, origin) {
   const payload = JSON.stringify(body)
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
     'Access-Control-Allow-Origin': origin || ALLOWED_ORIGINS[0],
     Vary: 'Origin',
+    ...SECURITY_HEADERS,
   })
   res.end(payload)
 }
@@ -165,6 +175,7 @@ const server = http.createServer(async (req, res) => {
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       'Access-Control-Max-Age': '86400',
       Vary: 'Origin',
+      ...SECURITY_HEADERS,
     })
     res.end()
     return
@@ -219,19 +230,13 @@ const server = http.createServer(async (req, res) => {
         send(400, { error: errors.join(' ; ') })
         return
       }
-      if (await jobStore.activeJobFor(user.uid)) {
-        send(429, {
-          error: 'Une génération est déjà en cours pour votre compte, patientez.',
-        })
-        return
-      }
       const jobId = crypto.randomUUID()
       const jobRef = jobStore.jobsCollection.doc(jobId)
       let q
       try {
         q = await jobStore.reserveJob(user, jobRef, title, size.id)
       } catch (err) {
-        if (err instanceof QuotaExceededError) {
+        if (err instanceof QuotaExceededError || err instanceof ActiveJobError) {
           send(429, { error: err.message })
           return
         }

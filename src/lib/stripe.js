@@ -73,7 +73,7 @@ export const premiumPlusPlan = {
     'Tout le Premium',
     '30 crédits de génération par mois (sujet, niveau, genre et longueur au choix)',
     'Bibliothèque personnelle des textes créés, notification à la fin de la génération',
-    'Bibliothèque de classiques adaptés et gradués : La Parure, Le Horla, Rosso Malpelo, Pinocchio, Le Dernier Jour d’un condamné, Candide, Il fu Mattia Pascal, Inferno…',
+    'Bibliothèque de classiques italiens adaptés et gradués : Pinocchio, Il Principe, Rosso Malpelo, Il fu Mattia Pascal, Inferno (Divina Commedia)…',
     'Notizie : jusqu’à 3 textes d’actualité italienne générés chaque jour',
   ],
 }

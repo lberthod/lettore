@@ -19,7 +19,9 @@
     "publish:text": "node scripts/publish-text.mjs",
     "fetch:book": "node scripts/fetch-book.mjs",
     "annotate:chapter": "node scripts/annotate-chapter.mjs",
-    "orchestrate:book": "node scripts/orchestrate-book.mjs"
+    "orchestrate:book": "node scripts/orchestrate-book.mjs",
+    "deploy": "node scripts/deploy-ftp.mjs",
+    "test:rules": "firebase emulators:exec --only firestore \"node --test test/firestore-rules.test.mjs\""
   },
   "dependencies": {
     "firebase": "^12.16.0",
@@ -28,9 +30,13 @@
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.112.5",
+    "@firebase/rules-unit-testing": "^5.0.1",
     "@vitejs/plugin-vue": "^5.2.1",
+    "basic-ftp": "^6.0.2",
     "firebase-admin": "^14.2.0",
+    "happy-dom": "^20.11.1",
     "vite": "^6.2.0",
-    "vite-plugin-pwa": "^1.3.0"
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^4.1.10"
   }
 }

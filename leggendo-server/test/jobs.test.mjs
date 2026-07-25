@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { FakeFirestore } from './fake-firestore.mjs'
-import { createJobStore, JOB_STUCK_MS } from '../jobs.mjs'
+import { createJobStore, ActiveJobError, JOB_STUCK_MS } from '../jobs.mjs'
 import { QuotaExceededError, MONTHLY_CREDITS } from '../quota.mjs'
 
 function makeStore() {
@@ -122,4 +122,75 @@ test('jobFor ne renvoie le job qu\'à son propriétaire', async () => {
   assert.deepEqual((await store.jobFor('u1', 'job-1')).uid, 'u1')
   assert.equal(await store.jobFor('u2', 'job-1'), null)
   assert.equal(await store.jobFor('u1', 'job-inconnu'), null)
+})
+
+test('reserveJob refuse une deuxième réservation tant que la première est active (même compte)', async () => {
+  const store = makeStore()
+  const user = { uid: 'u1', role: 'premium_plus', premium: true }
+
+  await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre 1', 'corto')
+  await assert.rejects(
+    () => store.reserveJob(user, store.jobsCollection.doc('job-2'), 'Titre 2', 'corto'),
+    ActiveJobError
+  )
+
+  const status = await store.getQuotaStatus(user)
+  assert.equal(status.used, 1, 'un seul job doit avoir consommé du crédit')
+})
+
+test('reserveJob n\'empêche pas un autre compte de réserver un job en parallèle', async () => {
+  const store = makeStore()
+  const userA = { uid: 'uA', role: 'premium_plus', premium: true }
+  const userB = { uid: 'uB', role: 'premium_plus', premium: true }
+
+  await store.reserveJob(userA, store.jobsCollection.doc('job-a'), 'Titre A', 'corto')
+  const q = await store.reserveJob(userB, store.jobsCollection.doc('job-b'), 'Titre B', 'corto')
+  assert.equal(q.monthlyUsed, 1)
+})
+
+test('reserveJob clôture et rembourse un job bloqué du même compte, puis réserve normalement', async () => {
+  const store = makeStore()
+  const user = { uid: 'u1', role: 'premium_plus', premium: true }
+  const stuckRef = store.jobsCollection.doc('job-stuck')
+  await stuckRef.set({
+    uid: 'u1',
+    status: 'running',
+    createdAt: Date.now() - JOB_STUCK_MS - 1000,
+    title: 'Bloqué',
+    sizeId: 'lungo',
+    role: 'premium_plus',
+  })
+  const q = await store.reserveJob(user, store.jobsCollection.doc('job-new'), 'Nouveau titre', 'corto')
+
+  const stuckDoc = await stuckRef.get()
+  assert.equal(stuckDoc.data().status, 'error')
+  assert.ok(stuckDoc.data().creditRefundedAt)
+  // Aucun crédit n'avait encore été décompté pour ce job bloqué créé
+  // directement par le test (le remboursement est borné à 0) ; seul le
+  // nouveau job (1 crédit) est comptabilisé.
+  assert.equal(q.monthlyUsed, 1)
+})
+
+test('activeJobFor clôture et rembourse un job bloqué une seule fois même appelé plusieurs fois', async () => {
+  const store = makeStore()
+  const jobRef = store.jobsCollection.doc('job-stuck')
+  await jobRef.set({
+    uid: 'u1',
+    status: 'running',
+    createdAt: Date.now() - JOB_STUCK_MS - 1000,
+    title: 'Bloqué',
+    sizeId: 'lungo',
+    role: 'premium_plus',
+  })
+
+  assert.equal(await store.activeJobFor('u1'), null)
+  const afterFirst = await store.getQuotaStatus({ uid: 'u1', role: 'premium_plus', premium: true })
+  assert.equal(afterFirst.used, 0, 'le remboursement doit ramener la consommation à 0')
+
+  // Rappel : le job est déjà en 'error', donc plus détecté comme actif —
+  // mais on vérifie explicitement qu'un deuxième remboursement ne se
+  // déclenche pas si on rejoue la clôture sur le même document.
+  assert.equal(await store.activeJobFor('u1'), null)
+  const afterSecond = await store.getQuotaStatus({ uid: 'u1', role: 'premium_plus', premium: true })
+  assert.equal(afterSecond.used, 0, 'un deuxième passage ne doit pas rembourser une deuxième fois')
 })

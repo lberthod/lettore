@@ -3,7 +3,13 @@ import HomeView from './views/HomeView.vue'
 import textsIndex from './texts/index.json'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
-import { EXAMPLE_TEXT_IDS, isAdmin } from './lib/access.js'
+import {
+  EXAMPLE_TEXT_IDS,
+  isAdmin,
+  hasCatalogAccess,
+  hasClassiciAccess,
+  isFreeClassiciChapter,
+} from './lib/access.js'
 import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION, findRoute } from './seo/staticPages.js'
 
 const router = createRouter({
@@ -29,21 +35,24 @@ const router = createRouter({
       props: true,
       beforeEnter: async (to) => {
         const inCatalog = textsIndex.some((t) => t.id === to.params.id)
-        // Hors catalogue : peut être un texte créé par l'utilisateur
-        // (chargé depuis Firestore par le lecteur) → connexion requise ;
-        // le lecteur renvoie vers la bibliothèque s'il n'existe pas.
-        // Les textes du catalogue hors aperçu sont réservés aux connectés.
-        if (
-          firebaseReady &&
-          (!inCatalog || !EXAMPLE_TEXT_IDS.includes(to.params.id))
-        ) {
-          await authReady
-          if (!currentUser.value) {
-            return { name: 'login', query: { redirect: to.fullPath } }
-          }
+        const isExample = EXAMPLE_TEXT_IDS.includes(to.params.id)
+        if (!firebaseReady) {
+          if (!inCatalog) return { name: 'library' }
+          return
         }
-        if (!inCatalog && !firebaseReady) {
-          return { name: 'library' }
+        // Aperçu gratuit : toujours accessible, même sans compte.
+        if (inCatalog && isExample) return
+        // Hors aperçu : connexion requise (texte du catalogue réservé aux
+        // formules payantes, ou texte créé par l'utilisateur/actualité — le
+        // lecteur et les règles Firestore gèrent ce dernier cas).
+        await authReady
+        if (!currentUser.value) {
+          return { name: 'login', query: { redirect: to.fullPath } }
+        }
+        // Catalogue complet : réservé à Premium et au-dessus (README_TARIFICATION.md) —
+        // un compte gratuit connecté ne suffit pas.
+        if (inCatalog && !(await hasCatalogAccess())) {
+          return { name: 'pricing', query: { redirect: to.fullPath } }
         }
       },
     },
@@ -58,6 +67,19 @@ const router = createRouter({
       name: 'book-reader',
       component: () => import('./views/BookReaderView.vue'),
       props: true,
+      beforeEnter: async (to) => {
+        if (!firebaseReady) return
+        // Classici (Premium IA/Enseignant) : connexion requise, sauf aperçu
+        // gratuit (deux livres entiers + premier chapitre de quelques autres).
+        await authReady
+        if (!currentUser.value) {
+          return { name: 'login', query: { redirect: to.fullPath } }
+        }
+        if (isFreeClassiciChapter(to.params.bookId, to.params.chapterId)) return
+        if (!(await hasClassiciAccess())) {
+          return { name: 'pricing', query: { redirect: to.fullPath } }
+        }
+      },
     },
     {
       path: '/condividi/:id',

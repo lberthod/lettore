@@ -5,22 +5,31 @@ import SceneLayout from '../components/SceneLayout.vue'
 import textsIndex from '../texts/index.json'
 import taxonomy from '../texts/category.json'
 import { isRead, progress } from '../progress.js'
-import { authReady } from '../lib/auth.js'
+import { authReady, currentUser } from '../lib/auth.js'
 import { firebaseReady } from '../lib/firebase.js'
-import { isLoggedIn, EXAMPLE_TEXT_IDS, EXAMPLE_COUNT } from '../lib/access.js'
+import { hasCatalogAccess, isLoggedIn, EXAMPLE_TEXT_IDS, EXAMPLE_COUNT } from '../lib/access.js'
 
 // Taxonomie unique : les catégories affichées sont les thèmes de category.json
 const categories = taxonomy.themes
 
-// Les visiteurs non connectés voient tout le catalogue : les textes de
-// l'aperçu gratuit sont ouverts, les autres apparaissent verrouillés.
+// Catalogue complet réservé à Premium et au-dessus (README_TARIFICATION.md) :
+// tout le monde voit les textes de l'aperçu gratuit, les autres apparaissent
+// verrouillés tant que le compte n'a pas le rôle payant requis.
 const loggedIn = computed(() => isLoggedIn())
+const catalogAccess = ref(!firebaseReady)
 const authResolved = ref(!firebaseReady)
 if (firebaseReady) authReady.then(() => (authResolved.value = true))
+watch(
+  currentUser,
+  async () => {
+    catalogAccess.value = await hasCatalogAccess()
+  },
+  { immediate: true }
+)
 const baseTexts = computed(() => textsIndex)
 
 function isLocked(t) {
-  return authResolved.value && !loggedIn.value && !EXAMPLE_TEXT_IDS.includes(t.id)
+  return authResolved.value && !catalogAccess.value && !EXAMPLE_TEXT_IDS.includes(t.id)
 }
 
 const readCount = computed(
@@ -153,7 +162,7 @@ const lockedCount = computed(
   () => sortedTexts.value.length - unlockedTexts.value.length
 )
 const visibleTexts = computed(() =>
-  authResolved.value && !loggedIn.value ? unlockedTexts.value : sortedTexts.value
+  authResolved.value && !catalogAccess.value ? unlockedTexts.value : sortedTexts.value
 )
 
 // Sections par catégorie, dans l'ordre des thèmes ; les vides disparaissent
@@ -203,12 +212,10 @@ function loadMore() {
 <template>
   <SceneLayout title="Biblio" accent="teca" tagline="Tous les textes, de A1 à C2" bare wide>
     <div class="library">
-      <!-- Aperçu gratuit : rappel discret d'invitation à se connecter -->
-      <p v-if="authResolved && !loggedIn" class="preview-note">
+      <!-- Aperçu gratuit : rappel discret d'invitation à passer Premium -->
+      <p v-if="authResolved && !catalogAccess" class="preview-note">
         {{ EXAMPLE_COUNT }} textes en accès libre.
-        <RouterLink :to="{ name: 'login', query: { redirect: '/textes' } }">
-          Créez un compte gratuit
-        </RouterLink>
+        <RouterLink :to="{ name: 'pricing' }">Passez à Premium</RouterLink>
         pour débloquer les {{ textsIndex.length }} textes.
       </p>
 
@@ -361,17 +368,17 @@ function loadMore() {
         </button>
       </div>
 
-      <!-- Visiteurs non connectés : un unique bloc d'invitation, au lieu de
-           cartes verrouillées dispersées dans chaque catégorie -->
-      <section v-if="authResolved && !loggedIn && lockedCount > 0" class="unlock-all">
+      <!-- Comptes sans accès catalogue (visiteurs et gratuit) : un unique
+           bloc d'invitation, au lieu de cartes verrouillées dispersées -->
+      <section v-if="authResolved && !catalogAccess && lockedCount > 0" class="unlock-all">
         <h2>🔒 {{ lockedCount }} texte{{ lockedCount > 1 ? 's' : '' }} supplémentaire{{ lockedCount > 1 ? 's' : '' }} à débloquer</h2>
         <p>
-          Vous consultez la sélection en accès libre. Créez un compte gratuit
-          pour lire l'intégralité du catalogue, suivre votre progression et
+          Vous consultez la sélection en accès libre. Passez à Premium pour
+          lire l'intégralité du catalogue, suivre votre progression et
           enregistrer vos mots favoris.
         </p>
-        <RouterLink class="btn-unlock" :to="{ name: 'login', query: { redirect: '/textes' } }">
-          Tout débloquer gratuitement →
+        <RouterLink class="btn-unlock" :to="{ name: 'pricing' }">
+          Découvrir Premium →
         </RouterLink>
       </section>
     </div>

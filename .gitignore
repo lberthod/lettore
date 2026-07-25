@@ -79,3 +79,6 @@ leggendo-server/service-account*.json
 
 # Notes VPS locales (jamais commitées)
 VPS.md
+
+# Identifiants FTP de déploiement (jamais commités, seul .example l'est)
+scripts/.env.deploy

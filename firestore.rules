@@ -18,10 +18,21 @@ service cloud.firestore {
       allow write: if false;
     }
 
-    // Profil utilisateur : liste des textes créés (« Créer son texte »).
-    // Chacun ne lit et n'écrit que son propre document.
+    // Profil utilisateur : liste des textes créés (« Créer son texte »,
+    // voir src/lib/userTexts.js) et progression synchronisée (lecture,
+    // favoris, préférences — voir src/lib/progressSync.js). Chacun ne lit et
+    // n'écrit que son propre document, et seuls ces deux champs peuvent être
+    // écrits par le client — empêche d'y injecter des champs arbitraires
+    // (ex. un futur champ de rôle ou de statut lu ailleurs comme fiable).
     match /users/{uid} {
-      allow read, write: if request.auth != null && request.auth.uid == uid;
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if request.auth != null && request.auth.uid == uid
+        // `resource` est absent tant que le document n'existe pas encore
+        // (première écriture) — sans ce garde, `.diff(resource.data)` échoue.
+        && request.resource.data.diff(resource == null ? {} : resource.data)
+             .affectedKeys().hasOnly(['createdTexts', 'progress'])
+        && (!('createdTexts' in request.resource.data) || request.resource.data.createdTexts is list)
+        && (!('progress' in request.resource.data) || request.resource.data.progress is map);
     }
 
     // Textes générés à la demande par les utilisateurs : privés par défaut,
@@ -29,8 +40,21 @@ service cloud.firestore {
     // rendre publics (`public: true`, formule Enseignant) pour les partager
     // via une URL sans que le lecteur ait besoin d'un compte Leggendo.
     match /userTexts/{textId} {
+      // Validation de forme minimale (pas une réplique du schéma Ajv du
+      // VPS) : rejette les documents grossièrement malformés ou
+      // disproportionnés plutôt que de tout accepter dès que `owner`
+      // correspond à l'appelant.
       allow create: if request.auth != null
-        && request.resource.data.owner == request.auth.uid;
+        && request.resource.data.owner == request.auth.uid
+        && request.resource.data.public == false
+        && request.resource.data.level in ['A1', 'A2', 'B1', 'B2', 'C1']
+        && request.resource.data.title is string
+        && request.resource.data.title.size() <= 200
+        && request.resource.data.paragraphs is list
+        && request.resource.data.paragraphs.size() <= 60
+        && request.resource.data.questions is list
+        && request.resource.data.words is map
+        && request.resource.data.sentences is map;
       allow read: if resource.data.public == true
         || (request.auth != null && resource.data.owner == request.auth.uid);
       allow delete: if request.auth != null

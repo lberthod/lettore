@@ -38,11 +38,6 @@ export function isLoggedIn() {
   return !firebaseReady || !!currentUser.value
 }
 
-// Un texte est accessible s'il fait partie de l'aperçu ou si l'on est connecté.
-export function isTextUnlocked(id) {
-  return isLoggedIn() || EXAMPLE_TEXT_IDS.includes(id)
-}
-
 // Compte administrateur unique — l'autorisation réelle est vérifiée côté
 // serveur (Cloud Functions) sur l'e-mail du token, ceci ne sert qu'à afficher
 // ou masquer l'accès à la page d'administration côté client.
@@ -74,4 +69,32 @@ export async function getUserRole() {
 export async function isPremiumPlus() {
   const role = await getUserRole()
   return role === 'premium_plus' || role === 'enseignant'
+}
+
+// Catalogue complet (README_TARIFICATION.md) : réservé à Premium et
+// au-dessus — un compte gratuit connecté ne suffit pas (contrairement à
+// l'ancien contrôle « connecté = débloqué »). En dev sans Firebase configuré,
+// il n'y a pas de rôle à vérifier : on ne verrouille rien (comme isLoggedIn).
+export async function hasCatalogAccess() {
+  if (!firebaseReady) return true
+  const role = await getUserRole()
+  return role === 'premium' || role === 'premium_plus' || role === 'enseignant'
+}
+
+// Classiques adaptés (« Classici ») : réservés à Premium IA et Enseignant,
+// comme les crédits de génération (voir README_TARIFICATION.md).
+export async function hasClassiciAccess() {
+  if (!firebaseReady) return true
+  return isPremiumPlus()
+}
+
+// Aperçu gratuit de Classici pour tout utilisateur connecté (README_TARIFICATION.md) :
+// deux fables courtes en entier, et le premier chapitre de quelques livres plus
+// longs, pour donner un aperçu avant l'abonnement Premium IA.
+export const FREE_CLASSICI_BOOK_IDS = ['cicala-formica', 'leone-topo']
+export const FREE_CLASSICI_PREVIEW_BOOK_IDS = ['pinocchio', 'cenerentola', 'il-principe', 'mattia-pascal']
+
+export function isFreeClassiciChapter(bookId, chapterId) {
+  if (FREE_CLASSICI_BOOK_IDS.includes(bookId)) return true
+  return FREE_CLASSICI_PREVIEW_BOOK_IDS.includes(bookId) && chapterId === '01'
 }

@@ -11,18 +11,63 @@ export const JOB_TTL_MS = 60 * 60 * 1000
 // compte.
 export const JOB_STUCK_MS = 45 * 60 * 1000
 
+const STUCK_JOB_ERROR = 'Génération interrompue (délai maximal dépassé).'
+
+// Levée par reserveJob quand un job actif (non bloqué) existe déjà pour ce
+// compte — distincte de QuotaExceededError pour que server.mjs renvoie le
+// bon message/status (429 « patientez » plutôt que « quota dépassé »).
+export class ActiveJobError extends Error {}
+
 export function createJobStore(db) {
   const jobsCollection = db.collection('leggendoJobs')
   const quotasCollection = db.collection('leggendoQuotas')
 
-  // Vérifie et consomme le crédit (barème par taille, voir quota.mjs), et
-  // crée le job, en une seule transaction Firestore : soit tout réussit,
-  // soit rien n'est modifié.
+  function activeJobQuery(uid) {
+    return jobsCollection
+      .where('uid', '==', uid)
+      .where('status', 'in', ['pending', 'running'])
+      .orderBy('createdAt', 'desc')
+      .limit(1)
+  }
+
+  // Recrédite dans `q` (objet quota déjà lu, pas encore réécrit) le coût
+  // d'un job qu'on s'apprête à clôturer — utilisé aussi bien par
+  // reserveJob (job bloqué détecté au passage) que par refundCredit.
+  function refundInto(q, role, sizeId) {
+    if (role === 'premium_plus' || role === 'enseignant') {
+      q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - creditCost(sizeId))
+    } else {
+      q.trialUsed = false
+    }
+  }
+
+  // Vérifie qu'aucun job n'est déjà actif, consomme le crédit (barème par
+  // taille, voir quota.mjs) et crée le job, en une seule transaction
+  // Firestore : soit tout réussit, soit rien n'est modifié. Un job actif
+  // bloqué depuis plus de JOB_STUCK_MS appartenant au même compte est
+  // clôturé et remboursé dans cette même transaction (même document
+  // quotasCollection/{uid}) ; un job encore valide fait échouer la
+  // réservation (ActiveJobError) au lieu de laisser deux requêtes
+  // concurrentes passer le contrôle.
   async function reserveJob(user, jobRef, title, sizeId) {
     const quotaRef = quotasCollection.doc(user.uid)
+    const query = activeJobQuery(user.uid)
     return db.runTransaction(async (tx) => {
-      const quotaDoc = await tx.get(quotaRef)
+      const [quotaDoc, activeSnap] = await Promise.all([tx.get(quotaRef), tx.get(query)])
       const q = resetIfStale(quotaDoc.exists ? quotaDoc.data() : freshQuota())
+
+      if (!activeSnap.empty) {
+        const activeDoc = activeSnap.docs[0]
+        const activeJob = activeDoc.data()
+        if (Date.now() - activeJob.createdAt <= JOB_STUCK_MS) {
+          throw new ActiveJobError('Une génération est déjà en cours pour votre compte, patientez.')
+        }
+        tx.update(activeDoc.ref, { status: 'error', error: STUCK_JOB_ERROR, creditRefundedAt: Date.now() })
+        if (!activeJob.creditRefundedAt && activeJob.sizeId) {
+          refundInto(q, activeJob.role, activeJob.sizeId)
+        }
+      }
+
       const error = quotaError(user, q, sizeId)
       if (error) throw new QuotaExceededError(error)
 
@@ -32,7 +77,14 @@ export function createJobStore(db) {
         q.trialUsed = true
       }
       tx.set(quotaRef, q)
-      tx.set(jobRef, { uid: user.uid, status: 'pending', createdAt: Date.now(), title })
+      tx.set(jobRef, {
+        uid: user.uid,
+        status: 'pending',
+        createdAt: Date.now(),
+        title,
+        sizeId,
+        role: user.role,
+      })
       return q
     })
   }
@@ -48,11 +100,7 @@ export function createJobStore(db) {
       const quotaDoc = await tx.get(quotaRef)
       if (!quotaDoc.exists) return
       const q = quotaDoc.data()
-      if (user.role === 'premium_plus' || user.role === 'enseignant') {
-        q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - creditCost(sizeId))
-      } else {
-        q.trialUsed = false
-      }
+      refundInto(q, user.role, sizeId)
       tx.set(quotaRef, q)
     })
   }
@@ -75,11 +123,34 @@ export function createJobStore(db) {
     await batch.commit()
   }
 
+  // Clôture un job détecté bloqué en dehors du chemin reserveJob (ex. lu via
+  // /my-job) et rembourse son crédit — transaction dédiée sur jobRef +
+  // quotaRef, protégée par `creditRefundedAt` pour ne jamais rembourser deux
+  // fois, y compris si reserveJob a entre-temps déjà clôturé ce même job.
+  async function closeStuckJob(id, job) {
+    const jobRef = jobsCollection.doc(id)
+    const quotaRef = quotasCollection.doc(job.uid)
+    await db.runTransaction(async (tx) => {
+      const freshDoc = await tx.get(jobRef)
+      if (!freshDoc.exists) return
+      const freshJob = freshDoc.data()
+      if (freshJob.status !== 'pending' && freshJob.status !== 'running') return
+      tx.update(jobRef, { status: 'error', error: STUCK_JOB_ERROR, creditRefundedAt: Date.now() })
+      if (!freshJob.creditRefundedAt && freshJob.sizeId) {
+        const quotaDoc = await tx.get(quotaRef)
+        if (quotaDoc.exists) {
+          const q = quotaDoc.data()
+          refundInto(q, freshJob.role, freshJob.sizeId)
+          tx.set(quotaRef, q)
+        }
+      }
+    })
+  }
+
   async function isActive(id, job) {
     if (job.status !== 'pending' && job.status !== 'running') return false
     if (Date.now() - job.createdAt > JOB_STUCK_MS) {
-      const error = 'Génération interrompue (délai maximal dépassé).'
-      await jobsCollection.doc(id).update({ status: 'error', error })
+      await closeStuckJob(id, job)
       return false
     }
     return true
@@ -88,12 +159,7 @@ export function createJobStore(db) {
   // Nécessite un index composite Firestore (uid ASC, status ASC, createdAt
   // DESC) — Firestore fournit le lien de création au premier appel si absent.
   async function activeJobFor(uid) {
-    const snap = await jobsCollection
-      .where('uid', '==', uid)
-      .where('status', 'in', ['pending', 'running'])
-      .orderBy('createdAt', 'desc')
-      .limit(1)
-      .get()
+    const snap = await activeJobQuery(uid).get()
     if (snap.empty) return null
     const doc = snap.docs[0]
     const job = doc.data()

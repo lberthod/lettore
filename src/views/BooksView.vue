@@ -3,16 +3,23 @@ import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import booksIndex from '../books/index.json'
 import { progress } from '../progress.js'
+import { FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS } from '../lib/access.js'
 
 function readChapters(book) {
   return progress.readTexts.filter((id) => id.startsWith(`${book.id}-`)).length
+}
+
+function accessLabel(book) {
+  if (FREE_CLASSICI_BOOK_IDS.includes(book.id)) return 'Gratuit'
+  if (FREE_CLASSICI_PREVIEW_BOOK_IDS.includes(book.id)) return '1er chapitre gratuit'
+  return 'Premium IA'
 }
 </script>
 
 <template>
   <SceneLayout title="Classici" accent="del dominio pubblico" wide>
     <p class="intro">
-      Des œuvres classiques italiennes et françaises, en texte authentique
+      Des œuvres classiques italiennes du domaine public, en texte authentique
       (non simplifié) — traduction au clic, lecture audio et quiz de
       compréhension, chapitre par chapitre.
     </p>
@@ -36,6 +43,9 @@ function readChapters(book) {
             / {{ book.totalChapterCount }}
           </template>
           · ~{{ book.wordCount }} mots
+        </p>
+        <p class="access" :class="{ free: accessLabel(book) !== 'Premium IA' }">
+          {{ accessLabel(book) }}
         </p>
         <p v-if="readChapters(book)" class="progress">
           {{ readChapters(book) }} chapitre{{ readChapters(book) > 1 ? 's' : '' }} lu{{ readChapters(book) > 1 ? 's' : '' }}
@@ -105,5 +115,21 @@ function readChapters(book) {
   font-size: 0.8rem;
   font-weight: 700;
   color: #4a7c59;
+}
+
+.access {
+  display: inline-block;
+  margin: 0.6rem 0 0;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #8a5a2b;
+  background: rgba(176, 105, 46, 0.12);
+}
+
+.access.free {
+  color: #4a7c59;
+  background: rgba(74, 124, 89, 0.14);
 }
 </style>

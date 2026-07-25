@@ -19,6 +19,9 @@ import {
   toggleFavorite,
   isRead,
 } from '../progress.js'
+import { authReady, currentUser } from '../lib/auth.js'
+import { firebaseReady } from '../lib/firebase.js'
+import { hasClassiciAccess, isFreeClassiciChapter } from '../lib/access.js'
 
 const props = defineProps({
   bookId: { type: String, required: true },
@@ -26,6 +29,18 @@ const props = defineProps({
 })
 
 const router = useRouter()
+
+// Le guard de route (`beforeEnter`) ne se redéclenche pas quand seuls les
+// params changent (ex. tourner la page dans le même livre) — on revérifie
+// donc ici à chaque chapitre, car l'accès gratuit ne couvre que certains
+// chapitres d'un même livre (voir isFreeClassiciChapter).
+async function checkChapterAccess(bookId, chapterId) {
+  if (!firebaseReady) return true
+  await authReady
+  if (!currentUser.value) return false
+  if (isFreeClassiciChapter(bookId, chapterId)) return true
+  return hasClassiciAccess()
+}
 
 // Un livre = un manifeste (book.json) + un chunk séparé par chapitre —
 // même principe de chargement à la demande que ReaderView pour les textes.
@@ -48,6 +63,12 @@ async function loadBook(bookId) {
 }
 
 async function loadChapter(bookId, chapterId) {
+  if (!(await checkChapterAccess(bookId, chapterId))) {
+    const redirect = { name: currentUser.value ? 'pricing' : 'login' }
+    redirect.query = { redirect: router.currentRoute.value.fullPath }
+    router.replace(redirect)
+    return
+  }
   const loader = chapterModules[`../books/${bookId}/${bookId}-${chapterId}.json`]
   const data = loader ? await loader() : null
   if (!data) {

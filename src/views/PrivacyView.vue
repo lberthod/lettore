@@ -52,9 +52,12 @@ import SceneLayout from '../components/SceneLayout.vue'
     <h2>6. Conservation et suppression</h2>
     <p>
       Vos données sont conservées tant que votre compte est actif. Vous
-      pouvez demander la suppression de votre compte et de vos données à tout
-      moment en écrivant à
-      <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>.
+      pouvez supprimer vous-même votre compte et vos données à tout moment
+      depuis la page « Mon profil » (suppression immédiate et définitive :
+      textes créés, progression et compte), ou en écrivant à
+      <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>. La
+      suppression du compte ne résilie pas automatiquement un abonnement
+      Stripe en cours — contactez-nous pour l'annuler.
     </p>
 
     <h2>7. Vos droits</h2>

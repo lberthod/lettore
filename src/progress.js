@@ -1,23 +1,26 @@
 // Progression locale : textes lus, mots favoris, préférences.
-// Tout est stocké dans localStorage — aucun compte, aucune API.
+// Tout est stocké dans localStorage, isolé par compte (voir switchNamespace
+// ci-dessous) — deux comptes utilisés sur le même navigateur ne partagent
+// jamais leur progression.
 
 import { reactive, watch } from 'vue'
+import { currentUser } from './lib/auth.js'
 
-const KEY = 'lettore.progress'
+// Clé historique (avant l'isolation par UID), conservée comme espace des
+// visiteurs non connectés.
+const BASE_KEY = 'lettore.progress'
 
-function load() {
+function keyFor(uid) {
+  return uid ? `${BASE_KEY}.${uid}` : BASE_KEY
+}
+
+function load(uid) {
   try {
-    return JSON.parse(localStorage.getItem(KEY)) || {}
+    return JSON.parse(localStorage.getItem(keyFor(uid))) || {}
   } catch {
     return {}
   }
 }
-
-const saved = load()
-
-// Permet à progressSync de savoir si l'utilisateur a déjà choisi une
-// vitesse audio localement, avant d'appliquer une valeur distante.
-export const hasLocalTtsRate = 'ttsRate' in saved
 
 // Répétition espacée (boîtes de Leitner) : intervalle avant la prochaine
 // révision selon la boîte du mot (0 = nouveau … 5 = bien connu).
@@ -25,33 +28,68 @@ const DAY = 24 * 60 * 60 * 1000
 const INTERVALS = [0, 1 * DAY, 3 * DAY, 7 * DAY, 14 * DAY, 30 * DAY]
 export const MAX_BOX = INTERVALS.length - 1
 
-// Migration : les favoris enregistrés avant la répétition espacée
-// reçoivent une boîte 0 et sont immédiatement révisables.
-const favorites = (saved.favorites || []).map((f) => ({
-  box: 0,
-  due: 0,
-  ...f,
-}))
+function normalize(saved) {
+  return {
+    readTexts: saved.readTexts || [], // ids des textes terminés (quiz réussi)
+    // Migration : les favoris enregistrés avant la répétition espacée
+    // reçoivent une boîte 0 et sont immédiatement révisables.
+    favorites: (saved.favorites || []).map((f) => ({ box: 0, due: 0, ...f })),
+    knownWords: saved.knownWords || [], // mots déjà maîtrisés (mode vocabulaire)
+    vocabTexts: saved.vocabTexts || [], // ids des textes ajoutés au mode vocabulaire
+    ttsRate: saved.ttsRate || 0.9,
+    hintDismissed: saved.hintDismissed || false,
+  }
+}
 
-export const progress = reactive({
-  readTexts: saved.readTexts || [], // ids des textes terminés (quiz réussi)
-  favorites, // { word, translation, textId, box, due }
-  knownWords: saved.knownWords || [], // mots déjà maîtrisés (mode vocabulaire)
-  vocabTexts: saved.vocabTexts || [], // ids des textes ajoutés au mode vocabulaire
-  ttsRate: saved.ttsRate || 0.9,
-  hintDismissed: saved.hintDismissed || false,
-})
-
-watch(
-  progress,
-  () => {
-    try {
-      localStorage.setItem(KEY, JSON.stringify(progress))
-    } catch {
-      // stockage plein ou indisponible : on continue sans persister
+// Première connexion d'un compte qui n'a pas encore son propre espace :
+// reprend la progression anonyme de ce navigateur (clé historique) une seule
+// fois, au lieu de la perdre — puis la retire pour qu'un autre compte utilisé
+// ensuite sur ce même navigateur ne l'hérite pas à son tour.
+function stateFor(uid) {
+  const key = keyFor(uid)
+  if (uid && localStorage.getItem(key) === null) {
+    const legacy = localStorage.getItem(BASE_KEY)
+    if (legacy !== null) {
+      localStorage.setItem(key, legacy)
+      localStorage.removeItem(BASE_KEY)
     }
-  },
-  { deep: true }
+  }
+  return normalize(load(uid))
+}
+
+let activeUid = currentUser.value?.uid || null
+const initialState = stateFor(activeUid)
+
+// Permet à progressSync de savoir si l'utilisateur a déjà choisi une
+// vitesse audio localement, avant d'appliquer une valeur distante.
+export const hasLocalTtsRate = 'ttsRate' in load(activeUid)
+
+export const progress = reactive(initialState)
+
+let persistEnabled = true
+
+function persist() {
+  if (!persistEnabled) return
+  try {
+    localStorage.setItem(keyFor(activeUid), JSON.stringify(progress))
+  } catch {
+    // stockage plein ou indisponible : on continue sans persister
+  }
+}
+
+watch(progress, persist, { deep: true })
+
+// Connexion/déconnexion : vide l'état réactif puis recharge l'espace du bon
+// compte — jamais de fusion automatique entre deux comptes.
+watch(
+  () => currentUser.value?.uid || null,
+  (uid) => {
+    if (uid === activeUid) return
+    persistEnabled = false
+    activeUid = uid
+    Object.assign(progress, stateFor(uid))
+    persistEnabled = true
+  }
 )
 
 export function isRead(id) {
