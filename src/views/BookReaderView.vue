@@ -467,7 +467,7 @@ onBeforeUnmount(() => {
           class="pager-link prev"
           :to="{ name: 'book-reader', params: { bookId, chapterId: prevChapter.id } }"
         >
-          ← {{ prevChapter.title }}
+          ← Capitolo {{ currentIndex }} — {{ prevChapter.title }}
         </RouterLink>
         <span v-else></span>
         <RouterLink
@@ -475,7 +475,7 @@ onBeforeUnmount(() => {
           class="pager-link next"
           :to="{ name: 'book-reader', params: { bookId, chapterId: nextChapter.id } }"
         >
-          {{ nextChapter.title }} →
+          Capitolo {{ currentIndex + 2 }} — {{ nextChapter.title }} →
         </RouterLink>
       </nav>
     </div>
@@ -537,12 +537,17 @@ onBeforeUnmount(() => {
 }
 
 .toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.6rem 1rem;
-  margin-bottom: 0.4rem;
+  margin: 0 -1px;
+  padding: 0.6rem 1px 0.5rem;
+  background: linear-gradient(180deg, #fdf3e3 0%, #fdf3e3 70%, rgba(253, 243, 227, 0.85) 100%);
 }
 
 .back {

@@ -1,0 +1,35 @@
+{
+  "id": "il-principe",
+  "title": "Il Principe",
+  "author": "Niccolò Machiavelli",
+  "language": "it",
+  "level": "C2",
+  "levelNote": "Niveau indicatif — texte authentique non simplifié",
+  "source": {
+    "provider": "Wikisource",
+    "pageTitle": "Il Principe",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Delle cose, mediante le quali gli uomini, e massimamente i Principi, sono lodati o vituperati."
+    },
+    {
+      "id": "02",
+      "title": "Della crudeltà e clemenzia; e se egli è meglio essere amato, che temuto."
+    },
+    {
+      "id": "03",
+      "title": "In che modo i Principi debbino osservare la fede."
+    },
+    {
+      "id": "04",
+      "title": "Quanto possa nelle umane cose la fortuna, e in che modo se gli possa ostare."
+    },
+    {
+      "id": "05",
+      "title": "Esortazione a liberare la Italia da’ barbari."
+    }
+  ]
+}

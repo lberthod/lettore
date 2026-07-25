@@ -10,6 +10,13 @@
 //   --page <titre>     titre de la page racine de l'œuvre, sans les sous-pages (obligatoire)
 //   --book-id <slug>   identifiant du livre, dossier de sortie sources/raw/<book-id>/ (obligatoire)
 //   --prefix <texte>   préfixe des sous-pages si différent de --page (ex. "Capitolo", "Chapitre")
+//   --pages "a,b,c"    liste explicite de sous-pages (relatives à --page), DANS L'ORDRE voulu —
+//                      remplace la découverte par préfixe. Nécessaire quand les sous-pages
+//                      utilisent des chiffres romains (ex. "Capitolo XV") que le tri
+//                      numérique automatique ne sait pas ordonner, ou pour une sélection
+//                      curée (quelques chants/chapitres, pas l'œuvre entière).
+//   --single           --page EST la page à récupérer (pas de sous-pages) — œuvre courte
+//                      tenant sur une seule page (ex. une nouvelle).
 //
 // Ne touche à rien dans src/ : sortie uniquement dans sources/raw/, à relire
 // avant de passer à scripts/annotate-chapter.mjs.
@@ -20,10 +27,13 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
+const BOOLEAN_FLAGS = new Set(['single', 'strip-verse-numbers'])
 const args = {}
 for (let i = 2; i < process.argv.length; i++) {
   const a = process.argv[i]
-  if (a.startsWith('--')) args[a.slice(2)] = process.argv[++i]
+  if (!a.startsWith('--')) continue
+  const key = a.slice(2)
+  args[key] = BOOLEAN_FLAGS.has(key) ? true : process.argv[++i]
 }
 const { site, page, 'book-id': bookId } = args
 if (!site || !page || !bookId || !['it', 'fr'].includes(site)) {
@@ -62,6 +72,9 @@ function chapterNumber(title) {
 }
 
 async function listChapters() {
+  if (args.single) return [page]
+  if (args.pages) return args.pages.split(',').map((p) => `${page}/${p.trim()}`)
+
   const prefix = args.prefix ? `${page}/${args.prefix}` : `${page}/`
   const chapters = []
   let apcontinue
@@ -148,8 +161,8 @@ function htmlToParagraphs(html) {
   const pRegex = /<p>([\s\S]*?)<\/p>/g
   let match
   while ((match = pRegex.exec(cleaned))) {
-    let text = match[1]
-      .replace(/<br\s*\/?>/gi, ' ')
+    const raw = match[1]
+      .replace(/<br\s*\/?>/gi, '\n')
       .replace(/<[^>]+>/g, '')
       .replace(/&#160;|&nbsp;/g, ' ')
       .replace(/&#32;/g, ' ')
@@ -159,25 +172,42 @@ function htmlToParagraphs(html) {
       .replace(/&gt;/g, '>')
       .replace(/&#x25ba;|&#9658;/g, '')
       .replace(/\[p\.\s*\d+\s*modifica\]/gi, '')
-      .replace(/\s+/g, ' ')
-      .trim()
-    if (text) paragraphs.push(text)
+    // Certaines pages (ex. Le novelle della nonna) mettent tout un récit dans
+    // un seul <p>, les paragraphes/répliques n'étant séparés que par des
+    // retours à la ligne littéraux (\n) plutôt que par des balises <p>
+    // distinctes — on les traite donc comme des ruptures de paragraphe.
+    for (const line of raw.split('\n')) {
+      const text = line.replace(/\s+/g, ' ').trim()
+      if (text) paragraphs.push(text)
+    }
   }
   return paragraphs
 }
 
 // Le premier paragraphe est souvent un simple numéro/chiffre romain de
-// chapitre (ex. "I.") — bruit, pas du contenu.
+// chapitre (ex. "I.", "CAPITOLO XV.", "CHAPITRE III") — bruit, pas du
+// contenu ; le vrai titre (s'il existe) devient alors le premier paragraphe.
 function dropChapterNumeral(paragraphs) {
-  if (paragraphs.length && /^[IVXLCDM]{1,6}\.?$/.test(paragraphs[0])) {
+  if (
+    paragraphs.length &&
+    /^([IVXLCDM]{1,6}\.?|(CAPITOLO|CHAPITRE)\s+[IVXLCDM]{1,6}\.?)$/i.test(paragraphs[0])
+  ) {
     return paragraphs.slice(1)
   }
   return paragraphs
 }
 
+// Éditions versifiées (ex. Divina Commedia) : chaque tercet porte un numéro
+// de vers en fin de ligne ("...la paura! 6") — bruit typographique, pas du
+// texte du poème.
+function stripVerseNumbers(paragraphs) {
+  return paragraphs.map((p) => p.replace(/\s+\d{1,4}$/, ''))
+}
+
 async function fetchChapter(title) {
   const data = await apiGet({ action: 'parse', page: title, prop: 'text' })
-  const paragraphs = dropChapterNumeral(htmlToParagraphs(data.parse.text))
+  let paragraphs = dropChapterNumeral(htmlToParagraphs(data.parse.text))
+  if (args['strip-verse-numbers']) paragraphs = stripVerseNumbers(paragraphs)
   return paragraphs
 }
 

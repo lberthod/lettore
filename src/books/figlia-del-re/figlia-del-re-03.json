@@ -1,0 +1,119 @@
+{
+  "id": "figlia-del-re-03",
+  "title": "Tre indovinelli",
+  "paragraphs": [
+    "La principessa sorride, sorpresa dalla risposta giusta, e fa la seconda domanda: — Cosa puoi tenere in mano destra, ma mai in mano sinistra? — Nino risponde subito: — La mano sinistra, principessa.",
+    "La principessa è ancora più sorpresa e fa l'ultima domanda, la più difficile: — Qual è la cosa più preziosa del mondo, che non si può comprare né vendere? — Nino pensa a lungo, poi risponde: — Il tempo, principessa. Nessuno può comprarlo, venderlo o farlo tornare indietro.",
+    "La principessa capisce che Nino non è solo intelligente, ma anche saggio. Si alza e dice davanti a tutta la corte: — Questo giovane ha risposto meglio di ogni principe."
+  ],
+  "words": {
+    "la": "la",
+    "principessa": "princesse",
+    "sorride": "sourit",
+    "sorpresa": "surprise",
+    "dalla": "par la",
+    "risposta": "réponse",
+    "giusta": "juste, bonne",
+    "e": "et",
+    "fa": "pose",
+    "seconda": "deuxième",
+    "domanda": "question",
+    "cosa": "que",
+    "puoi": "peux",
+    "tenere": "tenir",
+    "in": "dans",
+    "mano": "main",
+    "destra": "droite",
+    "ma": "mais",
+    "mai": "jamais",
+    "sinistra": "gauche",
+    "nino": "Nino",
+    "risponde": "répond",
+    "subito": "aussitôt",
+    "è": "est",
+    "ancora": "encore",
+    "più": "plus",
+    "l'ultima": "la dernière",
+    "difficile": "difficile",
+    "qual": "quelle",
+    "preziosa": "précieuse",
+    "del": "du",
+    "mondo": "monde",
+    "che": "que",
+    "non": "ne...pas",
+    "si": "on",
+    "può": "peut",
+    "comprare": "acheter",
+    "né": "ni",
+    "vendere": "vendre",
+    "pensa": "réfléchit",
+    "a": "à",
+    "lungo": "long (a lungo = longtemps)",
+    "poi": "puis",
+    "il": "le",
+    "tempo": "temps",
+    "nessuno": "personne",
+    "comprarlo": "l'acheter",
+    "venderlo": "le vendre",
+    "o": "ou",
+    "farlo": "le faire",
+    "tornare": "revenir",
+    "indietro": "en arrière",
+    "capisce": "comprend",
+    "solo": "seulement",
+    "intelligente": "intelligent",
+    "anche": "aussi",
+    "saggio": "sage",
+    "alza": "lève",
+    "dice": "dit",
+    "davanti": "devant",
+    "tutta": "toute",
+    "corte": "cour",
+    "questo": "ce",
+    "giovane": "jeune homme",
+    "ha": "a",
+    "risposto": "répondu",
+    "meglio": "mieux",
+    "di": "que",
+    "ogni": "chaque",
+    "principe": "prince"
+  },
+  "sentences": {
+    "La principessa sorride, sorpresa dalla risposta giusta, e fa la seconda domanda: — Cosa puoi tenere in mano destra, ma mai in mano sinistra?": "La princesse sourit, surprise par la bonne réponse, et pose la deuxième question : — Que peux-tu tenir dans ta main droite, mais jamais dans ta main gauche ?",
+    "— Nino risponde subito: — La mano sinistra, principessa.": "— Nino répond aussitôt : — La main gauche, princesse.",
+    "La principessa è ancora più sorpresa e fa l'ultima domanda, la più difficile: — Qual è la cosa più preziosa del mondo, che non si può comprare né vendere?": "La princesse est encore plus surprise et pose la dernière question, la plus difficile : — Quelle est la chose la plus précieuse du monde, qu'on ne peut ni acheter ni vendre ?",
+    "— Nino pensa a lungo, poi risponde: — Il tempo, principessa.": "— Nino réfléchit longtemps, puis répond : — Le temps, princesse.",
+    "Nessuno può comprarlo, venderlo o farlo tornare indietro.": "Personne ne peut l'acheter, le vendre ou le faire revenir.",
+    "La principessa capisce che Nino non è solo intelligente, ma anche saggio.": "La princesse comprend que Nino n'est pas seulement intelligent, mais aussi sage.",
+    "Si alza e dice davanti a tutta la corte: — Questo giovane ha risposto meglio di ogni principe.": "Elle se lève et dit devant toute la cour : — Ce jeune homme a mieux répondu que tous les princes."
+  },
+  "questions": [
+    {
+      "q": "Qual è la risposta di Nino al secondo indovinello?",
+      "options": [
+        "La mano destra",
+        "La mano sinistra",
+        "Nessuna mano"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa risponde Nino all'ultimo indovinello, il più difficile?",
+      "options": [
+        "L'amore",
+        "Il tempo",
+        "L'oro"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa capisce la principessa su Nino alla fine?",
+      "options": [
+        "Che è solo fortunato",
+        "Che è intelligente e saggio",
+        "Che ha imbrogliato"
+      ],
+      "correct": 1
+    }
+  ]
+}

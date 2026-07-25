@@ -1,0 +1,13 @@
+{
+  "site": null,
+  "page": "Cenerentola (adattamento originale A2)",
+  "bookId": "cenerentola",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    { "id": "01", "chapterTitle": "Cenerentola vive con la matrigna cattiva" },
+    { "id": "02", "chapterTitle": "L'invito del re" },
+    { "id": "03", "chapterTitle": "La fata madrina" },
+    { "id": "04", "chapterTitle": "Il ballo a palazzo" },
+    { "id": "05", "chapterTitle": "La scarpetta di cristallo" }
+  ]
+}

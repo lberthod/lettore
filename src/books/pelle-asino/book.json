@@ -1,0 +1,35 @@
+{
+  "id": "pelle-asino",
+  "title": "Pelle d'asino",
+  "author": "Fiaba popolare, da Charles Perrault (adattamento)",
+  "language": "it",
+  "level": "A2",
+  "levelNote": "Adattamento semplificato — testo riscritto per questo livello",
+  "source": {
+    "provider": "Adattamento originale",
+    "pageTitle": "Pelle d'asino (adattamento originale A2)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "La promessa del re"
+    },
+    {
+      "id": "02",
+      "title": "I tre vestiti impossibili"
+    },
+    {
+      "id": "03",
+      "title": "La fuga con la pelle d'asino"
+    },
+    {
+      "id": "04",
+      "title": "Il principe e l'anello"
+    },
+    {
+      "id": "05",
+      "title": "Il matrimonio"
+    }
+  ]
+}

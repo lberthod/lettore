@@ -1,0 +1,31 @@
+{
+  "id": "cappuccetto-rosso",
+  "title": "Cappuccetto Rosso",
+  "author": "Fiaba popolare (adattamento)",
+  "language": "it",
+  "level": "A1",
+  "levelNote": "Adattamento originale semplificato per il livello A1 — non è il testo tradizionale di Perrault/Grimm",
+  "source": {
+    "provider": "racconto popolare",
+    "pageTitle": "Cappuccetto Rosso (racconto popolare, adattamento A1)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Cappuccetto Rosso parte per la casa della nonna"
+    },
+    {
+      "id": "02",
+      "title": "Il lupo nel bosco"
+    },
+    {
+      "id": "03",
+      "title": "Il lupo e la nonna"
+    },
+    {
+      "id": "04",
+      "title": "Che occhi grandi, nonna!"
+    }
+  ]
+}

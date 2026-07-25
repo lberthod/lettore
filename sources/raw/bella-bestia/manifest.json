@@ -1,0 +1,13 @@
+{
+  "site": null,
+  "page": "La bella e la bestia (adattamento originale A2)",
+  "bookId": "bella-bestia",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    { "id": "01", "chapterTitle": "Un mercante e le sue tre figlie" },
+    { "id": "02", "chapterTitle": "La rosa e il castello incantato" },
+    { "id": "03", "chapterTitle": "Bella arriva al castello" },
+    { "id": "04", "chapterTitle": "L'amicizia cresce" },
+    { "id": "05", "chapterTitle": "L'amore rompe l'incantesimo" }
+  ]
+}

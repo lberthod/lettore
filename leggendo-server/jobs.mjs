@@ -2,7 +2,7 @@
 // VPS). Prend `db` en paramètre plutôt qu'un import global : permet de
 // brancher un faux Firestore dans les tests (voir test/jobs.test.mjs).
 
-import { QuotaExceededError, freshQuota, resetIfStale, quotaError } from './quota.mjs'
+import { QuotaExceededError, freshQuota, resetIfStale, quotaError, quotaStatus, creditCost } from './quota.mjs'
 
 export const JOB_TTL_MS = 60 * 60 * 1000
 // Filet de sécurité : un job actif depuis trop longtemps est considéré comme
@@ -15,23 +15,55 @@ export function createJobStore(db) {
   const jobsCollection = db.collection('leggendoJobs')
   const quotasCollection = db.collection('leggendoQuotas')
 
-  // Vérifie et consomme le quota, et crée le job, en une seule transaction
-  // Firestore : soit tout réussit, soit rien n'est modifié.
-  async function reserveJob(user, jobRef, title) {
+  // Vérifie et consomme le crédit (barème par taille, voir quota.mjs), et
+  // crée le job, en une seule transaction Firestore : soit tout réussit,
+  // soit rien n'est modifié.
+  async function reserveJob(user, jobRef, title, sizeId) {
     const quotaRef = quotasCollection.doc(user.uid)
     return db.runTransaction(async (tx) => {
       const quotaDoc = await tx.get(quotaRef)
       const q = resetIfStale(quotaDoc.exists ? quotaDoc.data() : freshQuota())
-      const error = quotaError(user, q)
+      const error = quotaError(user, q, sizeId)
       if (error) throw new QuotaExceededError(error)
 
-      q.totalCount += 1
-      q.dailyCount += 1
-      q.monthlyCount += 1
+      if (user.role === 'premium_plus' || user.role === 'enseignant') {
+        q.monthlyUsed += creditCost(sizeId)
+      } else {
+        q.trialUsed = true
+      }
       tx.set(quotaRef, q)
       tx.set(jobRef, { uid: user.uid, status: 'pending', createdAt: Date.now(), title })
       return q
     })
+  }
+
+  // Rembourse le crédit consommé par `reserveJob` quand la génération
+  // échoue pour une raison technique (README_TARIFICATION.md : « une
+  // génération qui échoue [...] ne consomme pas de crédit »). Une nouvelle
+  // tentative automatique interne (retry GLM) ne compte pas comme une
+  // génération séparée — elle fait partie du même job, donc du même coût.
+  async function refundCredit(user, sizeId) {
+    const quotaRef = quotasCollection.doc(user.uid)
+    await db.runTransaction(async (tx) => {
+      const quotaDoc = await tx.get(quotaRef)
+      if (!quotaDoc.exists) return
+      const q = quotaDoc.data()
+      if (user.role === 'premium_plus' || user.role === 'enseignant') {
+        q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - creditCost(sizeId))
+      } else {
+        q.trialUsed = false
+      }
+      tx.set(quotaRef, q)
+    })
+  }
+
+  // Solde à afficher côté client (GET /leggendo/quota) sans consommer ni
+  // écrire — la période en cours n'est réinitialisée en base qu'à la
+  // prochaine vraie réservation.
+  async function getQuotaStatus(user) {
+    const quotaDoc = await quotasCollection.doc(user.uid).get()
+    const q = resetIfStale(quotaDoc.exists ? quotaDoc.data() : freshQuota())
+    return quotaStatus(user, q)
   }
 
   async function pruneJobs() {
@@ -76,5 +108,5 @@ export function createJobStore(db) {
     return job && job.uid === uid ? job : null
   }
 
-  return { jobsCollection, reserveJob, pruneJobs, activeJobFor, jobFor }
+  return { jobsCollection, reserveJob, refundCredit, getQuotaStatus, pruneJobs, activeJobFor, jobFor }
 }

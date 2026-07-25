@@ -1,0 +1,13 @@
+{
+  "site": null,
+  "page": "Pelle d'asino (adattamento originale A2)",
+  "bookId": "pelle-asino",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    { "id": "01", "chapterTitle": "La promessa del re" },
+    { "id": "02", "chapterTitle": "I tre vestiti impossibili" },
+    { "id": "03", "chapterTitle": "La fuga con la pelle d'asino" },
+    { "id": "04", "chapterTitle": "Il principe e l'anello" },
+    { "id": "05", "chapterTitle": "Il matrimonio" }
+  ]
+}

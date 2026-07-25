@@ -723,6 +723,14 @@ const themes = [
   }
 }
 
+/* --- Écrans moyens : le lede évite le soleil décoratif en haut à droite --- */
+
+@media (min-width: 721px) and (max-width: 1200px) {
+  .lede {
+    max-width: 560px;
+  }
+}
+
 /* --- Responsive : sur petit écran, on rend le défilement (contenu intact) --- */
 
 @media (max-width: 980px) {

@@ -1,0 +1,19 @@
+{
+  "id": "rosso-malpelo",
+  "title": "Rosso Malpelo",
+  "author": "Giovanni Verga",
+  "language": "it",
+  "level": "B2",
+  "levelNote": "Niveau indicatif — texte authentique non simplifié",
+  "source": {
+    "provider": "Wikisource",
+    "pageTitle": "Vita dei campi (1881)/Rosso Malpelo",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "ROSSO MALPELO."
+    }
+  ]
+}

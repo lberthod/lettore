@@ -25,46 +25,56 @@ function isSwitzerland() {
 
 const swiss = isSwitzerland()
 
+// Tarification et périmètre fonctionnel : voir README_TARIFICATION.md
+// (décision de lancement, source de vérité — ne pas modifier les prix ou
+// les fonctionnalités listées ici sans mettre à jour ce document).
+
 export const premiumPlan = {
   id: 'premium',
   name: 'Premium',
   highlight: true,
   monthly: {
-    price: swiss ? '5 CHF' : '6 €',
+    price: swiss ? '6,90 CHF' : '7,90 €',
     period: '/ mois',
     paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
   },
   annual: {
-    price: swiss ? '45 CHF' : '50 €',
+    price: swiss ? '69 CHF' : '79 €',
     period: '/ an',
     paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
   },
   features: [
-    'Accès à tous les textes du catalogue',
-    'Nouveaux textes chaque semaine',
-    'Tous les niveaux, de A1 à C2',
-    'Soutient un projet indépendant',
+    'Accès à l’ensemble du catalogue, tous niveaux (A1 à C2)',
+    'Traductions, audio et quiz',
+    'Favoris et vocabulaire sauvegardé',
+    'Progression synchronisée entre appareils',
+    'Nouveaux textes ajoutés régulièrement',
+    'Lecture hors ligne',
   ],
 }
 
+// Nom commercial « Premium IA » (voir README_TARIFICATION.md, §Règles
+// d'accès) — l'identifiant technique `premium_plus` reste inchangé dans le
+// code (rôle Firebase, firestore.rules) pour éviter une migration inutile.
 export const premiumPlusPlan = {
   id: 'premium_plus',
-  name: 'Premium+',
+  name: 'Premium IA',
   monthly: {
-    price: swiss ? '15 CHF' : '16 €',
+    price: swiss ? '13,90 CHF' : '14,90 €',
     period: '/ mois',
     paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
   },
   annual: {
-    price: swiss ? '150 CHF' : '160 €',
+    price: swiss ? '139 CHF' : '149 €',
     period: '/ an',
     paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
   },
   features: [
     'Tout le Premium',
-    'Notifications pour les nouveaux textes générés',
-    'Jusqu’à 3 textes générés par jour, sur le thème ou l’actualité de votre choix',
-    'Bibliothèque d’ebooks classiques traduits et gradués : La Parure, Le Horla, Rosso Malpelo, Pinocchio, Le Dernier Jour d’un condamné, Candide, Il fu Mattia Pascal, Inferno…',
+    '30 crédits de génération par mois (sujet, niveau, genre et longueur au choix)',
+    'Bibliothèque personnelle des textes créés, notification à la fin de la génération',
+    'Bibliothèque de classiques adaptés et gradués : La Parure, Le Horla, Rosso Malpelo, Pinocchio, Le Dernier Jour d’un condamné, Candide, Il fu Mattia Pascal, Inferno…',
+    'Notizie : jusqu’à 3 textes d’actualité italienne générés chaque jour',
   ],
 }
 
@@ -72,20 +82,22 @@ export const teacherPlan = {
   id: 'enseignant',
   name: 'Enseignant',
   monthly: {
-    price: swiss ? '20 CHF' : '25 €',
+    price: swiss ? '22,90 CHF' : '24,90 €',
     period: '/ mois',
     paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
   },
   annual: {
-    price: swiss ? '200 CHF' : '250 €',
+    price: swiss ? '229 CHF' : '249 €',
     period: '/ an',
     paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
   },
   features: [
-    'Tout le Premium',
-    'Partage gratuit des textes créés via une URL publique',
-    "Aucun compte Leggendo requis pour les élèves qui consultent le lien",
-    'Idéal pour les enseignants et leurs classes',
+    'Tout Premium IA (100 crédits de génération par mois)',
+    'Partage d’un texte par URL publique, sans compte requis pour les élèves',
+    'Classes et dossiers, affectation d’un texte à une classe',
+    'Personnalisation des quiz, duplication et adaptation d’un texte existant',
+    'Export PDF',
+    'Statistiques simples : ouvertures, lectures et quiz terminés',
   ],
 }
 
@@ -95,10 +107,11 @@ export const gratuitPlan = {
   monthly: { price: swiss ? '0 CHF' : '0 €', period: '', paymentLink: null },
   annual: { price: swiss ? '0 CHF' : '0 €', period: '', paymentLink: null },
   features: [
-    'Une sélection de textes découverte',
+    '6 à 10 textes complets répartis sur plusieurs niveaux',
     'Traduction des mots et des phrases',
     'Lecture audio en italien',
     'Quiz de compréhension',
+    'Une génération IA d’essai après inscription',
   ],
 }
 

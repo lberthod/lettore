@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "id": "pinocchio",
+    "title": "Le avventure di Pinocchio",
+    "author": "Carlo Collodi",
+    "language": "it",
+    "level": "B1",
+    "chapterCount": 36,
+    "totalChapterCount": 36,
+    "wordCount": 38826
+  },
+  {
+    "id": "cappuccetto-rosso",
+    "title": "Cappuccetto Rosso",
+    "author": "Fiaba popolare (adattamento)",
+    "language": "it",
+    "level": "A1",
+    "chapterCount": 4,
+    "totalChapterCount": 4,
+    "wordCount": 309
+  },
+  {
+    "id": "gatto-con-gli-stivali",
+    "title": "Il gatto con gli stivali",
+    "author": "Charles Perrault",
+    "language": "it",
+    "level": "A1",
+    "chapterCount": 1,
+    "totalChapterCount": 1,
+    "wordCount": 446
+  },
+  {
+    "id": "cenerentola",
+    "title": "Cenerentola",
+    "author": "Adattamento tradizionale",
+    "language": "it",
+    "level": "A2",
+    "chapterCount": 5,
+    "totalChapterCount": 5,
+    "wordCount": 581
+  },
+  {
+    "id": "bella-bestia",
+    "title": "La bella e la bestia",
+    "author": "Adattamento originale (da Jeanne-Marie Leprince de Beaumont)",
+    "language": "it",
+    "level": "A2",
+    "chapterCount": 5,
+    "totalChapterCount": 5,
+    "wordCount": 884
+  },
+  {
+    "id": "cicala-formica",
+    "title": "La cicala e la formica",
+    "author": "Favola di Esopo (adattamento)",
+    "language": "it",
+    "level": "A1",
+    "chapterCount": 1,
+    "totalChapterCount": 1,
+    "wordCount": 108
+  },
+  {
+    "id": "colomba-formica",
+    "title": "La colomba e la formica",
+    "author": "Favola di Esopo (adattamento)",
+    "language": "it",
+    "level": "A1",
+    "chapterCount": 1,
+    "totalChapterCount": 1,
+    "wordCount": 115
+  },
+  {
+    "id": "leone-topo",
+    "title": "Il leone e il topo",
+    "author": "Favola di Esopo (adattamento)",
+    "language": "it",
+    "level": "A1",
+    "chapterCount": 1,
+    "totalChapterCount": 1,
+    "wordCount": 122
+  },
+  {
+    "id": "rosso-malpelo",
+    "title": "Rosso Malpelo",
+    "author": "Giovanni Verga",
+    "language": "it",
+    "level": "B2",
+    "chapterCount": 1,
+    "totalChapterCount": 1,
+    "wordCount": 5540
+  },
+  {
+    "id": "il-principe",
+    "title": "Il Principe",
+    "author": "Niccolò Machiavelli",
+    "language": "it",
+    "level": "C2",
+    "chapterCount": 5,
+    "totalChapterCount": 5,
+    "wordCount": 4406
+  },
+  {
+    "id": "pollicino",
+    "title": "Pollicino",
+    "author": "Fiaba popolare (adattamento)",
+    "language": "it",
+    "level": "A2",
+    "chapterCount": 5,
+    "totalChapterCount": 5,
+    "wordCount": 651
+  },
+  {
+    "id": "pelle-asino",
+    "title": "Pelle d'asino",
+    "author": "Fiaba popolare, da Charles Perrault (adattamento)",
+    "language": "it",
+    "level": "A2",
+    "chapterCount": 5,
+    "totalChapterCount": 5,
+    "wordCount": 691
+  },
+  {
+    "id": "inferno",
+    "title": "Inferno (Divina Commedia) — selezione di canti",
+    "author": "Dante Alighieri",
+    "language": "it",
+    "level": "C2",
+    "chapterCount": 6,
+    "totalChapterCount": 6,
+    "wordCount": 5909
+  },
+  {
+    "id": "figlia-del-re",
+    "title": "La figlia del re",
+    "author": "Racconto popolare italiano (adattamento originale)",
+    "language": "it",
+    "level": "A2",
+    "chapterCount": 4,
+    "totalChapterCount": 4,
+    "wordCount": 474
+  },
+  {
+    "id": "novelle-della-nonna",
+    "title": "Le novelle della nonna — selezione",
+    "author": "Emma Perodi",
+    "language": "it",
+    "level": "B2",
+    "chapterCount": 5,
+    "totalChapterCount": 5,
+    "wordCount": 22366
+  },
+  {
+    "id": "mattia-pascal",
+    "title": "Il fu Mattia Pascal",
+    "author": "Luigi Pirandello",
+    "language": "it",
+    "level": "C1",
+    "chapterCount": 18,
+    "totalChapterCount": 18,
+    "wordCount": 71426
+  }
+]

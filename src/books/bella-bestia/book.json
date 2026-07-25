@@ -1,0 +1,35 @@
+{
+  "id": "bella-bestia",
+  "title": "La bella e la bestia",
+  "author": "Adattamento originale (da Jeanne-Marie Leprince de Beaumont)",
+  "language": "it",
+  "level": "A2",
+  "levelNote": "Adattamento semplificato — testo riscritto per questo livello",
+  "source": {
+    "provider": "Adattamento originale",
+    "pageTitle": "La bella e la bestia (adattamento originale A2)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Un mercante e le sue tre figlie"
+    },
+    {
+      "id": "02",
+      "title": "La rosa e il castello incantato"
+    },
+    {
+      "id": "03",
+      "title": "Bella arriva al castello"
+    },
+    {
+      "id": "04",
+      "title": "L'amicizia cresce"
+    },
+    {
+      "id": "05",
+      "title": "L'amore rompe l'incantesimo"
+    }
+  ]
+}

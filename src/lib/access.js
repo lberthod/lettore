@@ -67,6 +67,11 @@ export async function getUserRole() {
   }
 }
 
+// Hiérarchie des rôles (README_TARIFICATION.md) : un rôle supérieur inclut
+// les droits du rôle précédent — gratuit < premium < premium_plus < enseignant.
+// « Premium IA » est le nom commercial de `premium_plus` ; l'identifiant
+// technique reste inchangé pour éviter une migration inutile.
 export async function isPremiumPlus() {
-  return (await getUserRole()) === 'premium_plus'
+  const role = await getUserRole()
+  return role === 'premium_plus' || role === 'enseignant'
 }

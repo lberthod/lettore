@@ -100,6 +100,23 @@ export async function attachActiveJob() {
   }
 }
 
+// Solde de crédits de génération, à afficher avant de lancer une génération
+// (README_TARIFICATION.md, § Règles des crédits). Le serveur reste la seule
+// source de vérité ; ceci n'est qu'un affichage informatif.
+export async function fetchQuota() {
+  const idToken = await getIdToken()
+  if (!idToken) return null
+  try {
+    const res = await fetch(`${API_BASE}/quota`, {
+      headers: { Authorization: `Bearer ${idToken}` },
+    })
+    if (!res.ok) return null
+    return await res.json()
+  } catch {
+    return null
+  }
+}
+
 export async function startGeneration(payload) {
   generation.status = 'working'
   generation.error = ''

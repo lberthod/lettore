@@ -114,9 +114,18 @@ Une seule codebase Vue pour tout. Pas de réécriture native (Swift/Kotlin) : po
 - [ ] Valider la traction : est-ce que des visiteurs s'abonnent ?
 - Le web reste le meilleur canal de vente : ~3 % de frais Stripe, contre 15–30 % de commission sur les stores.
 
-### Idée à l'étude — palier "Premium+"
+### Tarification retenue pour le lancement
 
-Un palier au-dessus du Premium (15 CHF/mois envisagés) : notifications de nouveaux textes, jusqu'à 3 textes générés par jour (actualité ou thème au choix), et une bibliothèque d'ebooks classiques traduits et gradués (*La Parure*, *Rosso Malpelo*, *Le Horla*, *Pinocchio*, *Le Dernier Jour d'un condamné*, *Candide*, *Il fu Mattia Pascal*, *Inferno*). Le plan est déjà scaffoldé dans `src/lib/stripe.js` (`premiumPlusPlan`, sans Payment Link actif). **Ne pas construire avant d'avoir validé la conversion du Premium existant** — voir l'analyse complète (rentabilité, séquencement, sources) dans [PREMIUM_PLUS_ANALYSIS.md](PREMIUM_PLUS_ANALYSIS.md).
+Les quatre formules seront disponibles ensemble dès l'ouverture des paiements :
+
+- Gratuit : 0 €
+- Premium : 7,90 €/mois
+- Premium IA : 14,90 €/mois, avec 30 crédits de génération mensuels
+- Enseignant : 24,90 €/mois, incluant Premium IA et les outils pédagogiques
+
+Le périmètre fonctionnel, les règles de crédits, les droits d'accès et les
+conditions de lancement sont définis dans
+[README_TARIFICATION.md](README_TARIFICATION.md).
 
 ### Phase 2 — PWA (fait)
 

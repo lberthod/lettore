@@ -43,18 +43,19 @@ const chapters = rawManifest.chapters
     return { id: c.id, title: data.title, wordCount: countWords(data.paragraphs) }
   })
 
+const isAdaptation = rawManifest.site == null
 const book = {
   id: bookId,
   title,
   author,
   language,
   level,
-  levelNote: 'Niveau indicatif — texte authentique non simplifié',
-  source: {
-    provider: 'Wikisource',
-    pageTitle: rawManifest.page,
-    retrievedAt: rawManifest.retrievedAt,
-  },
+  levelNote: isAdaptation
+    ? 'Adattamento semplificato — testo riscritto per questo livello'
+    : 'Niveau indicatif — texte authentique non simplifié',
+  source: isAdaptation
+    ? { provider: 'Adattamento originale', pageTitle: rawManifest.page, retrievedAt: rawManifest.retrievedAt }
+    : { provider: 'Wikisource', pageTitle: rawManifest.page, retrievedAt: rawManifest.retrievedAt },
   chapters: chapters.map(({ id, title }) => ({ id, title })),
 }
 fs.writeFileSync(path.join(outDir, 'book.json'), JSON.stringify(book, null, 2) + '\n')

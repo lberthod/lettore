@@ -40,7 +40,7 @@ onMounted(async () => {
     <p>
       Jusqu'à 3 nouveaux textes par jour, générés à partir de l'actualité
       italienne (ANSA) et adaptés à votre niveau — réservé à la formule
-      <RouterLink :to="{ name: 'pricing' }">Premium+</RouterLink>.
+      <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink>.
     </p>
 
     <div v-if="loading" class="hint">Chargement…</div>
@@ -53,8 +53,8 @@ onMounted(async () => {
     </div>
 
     <div v-else-if="!premiumPlus" class="upsell">
-      <p>Les Notizie font partie de la formule Premium+ (15 CHF/mois) : notifications de nouveaux textes, jusqu'à 3 textes générés par jour, et une bibliothèque d'ebooks classiques traduits.</p>
-      <RouterLink class="btn-hero" :to="{ name: 'pricing' }">Découvrir Premium+</RouterLink>
+      <p>Les Notizie font partie de la formule Premium IA (14,90 €/mois) : 30 crédits de génération par mois, jusqu'à 3 textes d'actualité par jour, et une bibliothèque de classiques adaptés et gradués.</p>
+      <RouterLink class="btn-hero" :to="{ name: 'pricing' }">Découvrir Premium IA</RouterLink>
     </div>
 
     <template v-else>

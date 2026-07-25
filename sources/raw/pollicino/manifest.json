@@ -1,0 +1,13 @@
+{
+  "site": null,
+  "page": "Pollicino (adattamento originale A2)",
+  "bookId": "pollicino",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    { "id": "01", "chapterTitle": "Una famiglia povera nel bosco" },
+    { "id": "02", "chapterTitle": "Persi nel bosco" },
+    { "id": "03", "chapterTitle": "La casa dell'orco" },
+    { "id": "04", "chapterTitle": "La fuga con gli stivali magici" },
+    { "id": "05", "chapterTitle": "Il ritorno a casa" }
+  ]
+}

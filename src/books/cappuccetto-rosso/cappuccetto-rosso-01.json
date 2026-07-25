@@ -1,0 +1,110 @@
+{
+  "id": "cappuccetto-rosso-01",
+  "title": "Cappuccetto Rosso parte per la casa della nonna",
+  "paragraphs": [
+    "C'era una volta una bambina che si chiama Cappuccetto Rosso. Ha un cappuccio rosso e per questo tutti la chiamano così.",
+    "Un giorno la mamma dice: — La nonna è malata. Porta questo cesto alla nonna. Nel cesto ci sono pane, burro e una torta.",
+    "La nonna abita in una piccola casa nel bosco, lontano dal paese.",
+    "La mamma dice: — Non parlare con nessuno. Vai dritta a casa della nonna.",
+    "Cappuccetto Rosso dice: — Sì, mamma.",
+    "Cappuccetto Rosso saluta la mamma e parte felice con il cesto."
+  ],
+  "words": {
+    "c'era": "il était",
+    "una": "une",
+    "volta": "fois",
+    "bambina": "petite fille",
+    "che": "qui",
+    "si": "se",
+    "chiama": "appelle",
+    "cappuccetto": "chaperon",
+    "rosso": "rouge",
+    "ha": "elle a",
+    "un": "un",
+    "cappuccio": "capuchon",
+    "e": "et",
+    "per": "pour",
+    "questo": "ça",
+    "tutti": "tous",
+    "la": "la",
+    "chiamano": "appellent",
+    "così": "ainsi",
+    "giorno": "jour",
+    "mamma": "maman",
+    "dice": "dit",
+    "nonna": "grand-mère",
+    "è": "est",
+    "malata": "malade",
+    "porta": "apporte",
+    "cesto": "panier",
+    "alla": "à la",
+    "nel": "dans le",
+    "ci": "y",
+    "sono": "sont",
+    "pane": "pain",
+    "burro": "beurre",
+    "torta": "tarte",
+    "abita": "habite",
+    "in": "dans",
+    "piccola": "petite",
+    "casa": "maison",
+    "bosco": "bois",
+    "lontano": "loin",
+    "dal": "du",
+    "paese": "village",
+    "non": "ne...pas",
+    "parlare": "parler",
+    "con": "avec",
+    "nessuno": "personne",
+    "vai": "va",
+    "dritta": "tout droit",
+    "a": "à",
+    "della": "de la",
+    "sì": "oui",
+    "saluta": "salue",
+    "parte": "part",
+    "felice": "heureuse",
+    "il": "le"
+  },
+  "sentences": {
+    "C'era una volta una bambina che si chiama Cappuccetto Rosso.": "Il était une fois une petite fille qui s'appelle Chaperon Rouge.",
+    "Ha un cappuccio rosso e per questo tutti la chiamano così.": "Elle a un capuchon rouge et pour cela tout le monde l'appelle ainsi.",
+    "Un giorno la mamma dice: — La nonna è malata.": "Un jour, la maman dit : — La grand-mère est malade.",
+    "Porta questo cesto alla nonna.": "Apporte ce panier à la grand-mère.",
+    "Nel cesto ci sono pane, burro e una torta.": "Dans le panier, il y a du pain, du beurre et une tarte.",
+    "La nonna abita in una piccola casa nel bosco, lontano dal paese.": "La grand-mère habite dans une petite maison dans le bois, loin du village.",
+    "La mamma dice: — Non parlare con nessuno.": "La maman dit : — Ne parle avec personne.",
+    "Vai dritta a casa della nonna.": "Va tout droit chez la grand-mère.",
+    "Cappuccetto Rosso dice: — Sì, mamma.": "Chaperon Rouge dit : — Oui, maman.",
+    "Cappuccetto Rosso saluta la mamma e parte felice con il cesto.": "Chaperon Rouge salue sa maman et part heureuse avec le panier."
+  },
+  "questions": [
+    {
+      "q": "Perché la bambina si chiama Cappuccetto Rosso?",
+      "options": [
+        "Perché ha un cappuccio rosso",
+        "Perché abita in una casa rossa",
+        "Perché ama i pomodori"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Cosa c'è nel cesto?",
+      "options": [
+        "Fiori e frutta",
+        "Pane, burro e una torta",
+        "Latte e formaggio"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa dice la mamma a Cappuccetto Rosso?",
+      "options": [
+        "Di correre veloce",
+        "Di tornare a casa presto",
+        "Di non parlare con nessuno"
+      ],
+      "correct": 2
+    }
+  ]
+}

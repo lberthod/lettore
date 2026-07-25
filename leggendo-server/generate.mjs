@@ -29,7 +29,10 @@ Contraintes de format ABSOLUES :
 // Génère un texte complet à partir de la demande utilisateur.
 // `theme` et `genre` sont les objets de la taxonomie (name + hint), `title` et
 // `summary` viennent de l'utilisateur, `size` = {targetWords, name}, `level` CECR.
-export async function generateUserText({ id, level, theme, genre, title, summary, size }) {
+// `usage` (optionnel) : tableau muté en place, un élément par appel LLM
+// réussi — sert à mesurer le coût réel de la génération côté appelant
+// (server.mjs), sans changer la forme du texte renvoyé.
+export async function generateUserText({ id, level, theme, genre, title, summary, size, usage = [] }) {
   const targetWords = size.targetWords
   const sizeNote =
     targetWords >= 850
@@ -48,6 +51,7 @@ export async function generateUserText({ id, level, theme, genre, title, summary
     system: SYSTEM,
     schema: TEXT_SCHEMA,
     maxTokens,
+    onUsage: (u) => usage.push(u),
     prompt: `Un utilisateur demande un texte sur mesure. Écris un texte de niveau ${level} d'environ ${targetWords} mots.
 
 Thème : « ${theme.name} » (${theme.hint})${genreNote}
@@ -83,6 +87,7 @@ Respecte fidèlement la demande de l'utilisateur tant qu'elle est cohérente ave
       system: SYSTEM,
       schema: REPAIR_SCHEMA,
       maxTokens: repairMaxTokens,
+      onUsage: (u) => usage.push(u),
       prompt: `Voici un texte italien :\n\n${textData.paragraphs.join('\n\n')}\n\nTraduis en français les éléments suivants, tirés de ce texte (renvoie chaque élément à l'identique dans "it") :\n- Mots : ${missingWords.join(', ') || '(aucun)'}\n- Phrases : ${missingSentences.join(' | ') || '(aucune)'}`,
     })
     for (const { it, fr } of repair.words) textData.words[normalizeWord(it)] = fr

@@ -64,19 +64,33 @@ function fuzzyKey(s) {
     .trim()
 }
 
+// Chaque phrase source (avec doublons : la même phrase peut apparaître deux
+// fois dans un chapitre) devient une entrée "disponible" une seule fois —
+// consommée au premier match (exact d'abord, fuzzy en repli). Une simple Map
+// fuzzyKey→texte perdrait les doublons qui ne diffèrent que par la casse
+// (ex. "Dàlli!" / "dàlli!" dans Le novelle della nonna) : leur fuzzyKey est
+// identique, donc l'un écrasait l'autre et la couverture ne pouvait jamais
+// être satisfaite quelle que soit la traduction fournie.
 export function remapSentences(paragraphs, annSentences) {
-  const real = new Map()
+  const realSentences = []
   for (const p of paragraphs) {
     for (const s of splitSentences(p)) {
-      real.set(fuzzyKey(s), normalizeSentence(s))
+      realSentences.push({ text: normalizeSentence(s), fuzzy: fuzzyKey(s), used: false })
     }
   }
   const sentences = {}
   const unmatched = []
   for (const { it, fr } of annSentences) {
-    const key = real.get(fuzzyKey(it))
-    if (key) sentences[key] = fr
-    else unmatched.push(it)
+    const itNorm = normalizeSentence(it)
+    const itFuzzy = fuzzyKey(it)
+    let match = realSentences.find((r) => !r.used && r.text === itNorm)
+    if (!match) match = realSentences.find((r) => !r.used && r.fuzzy === itFuzzy)
+    if (match) {
+      match.used = true
+      sentences[match.text] = fr
+    } else {
+      unmatched.push(it)
+    }
   }
   return { sentences, unmatched }
 }

@@ -1,0 +1,90 @@
+{
+  "id": "cappuccetto-rosso-03",
+  "title": "Il lupo e la nonna",
+  "paragraphs": [
+    "Il lupo arriva alla casa della nonna e bussa alla porta.",
+    "La nonna chiede: — Chi è?",
+    "Il lupo dice con voce sottile: — Sono io, Cappuccetto Rosso.",
+    "La nonna dice: — Entra, la porta non è chiusa.",
+    "Il lupo entra nella casa e mangia la nonna.",
+    "Poi il lupo prende il vestito della nonna, va a letto e aspetta.",
+    "Dopo un po', Cappuccetto Rosso arriva e bussa alla porta."
+  ],
+  "words": {
+    "il": "le",
+    "lupo": "loup",
+    "arriva": "arrive",
+    "alla": "à la",
+    "casa": "maison",
+    "della": "de la",
+    "nonna": "grand-mère",
+    "e": "et",
+    "bussa": "frappe",
+    "porta": "porte",
+    "la": "la",
+    "chiede": "demande",
+    "chi": "qui",
+    "è": "est",
+    "dice": "dit",
+    "con": "avec",
+    "voce": "voix",
+    "sottile": "fine",
+    "sono": "suis",
+    "io": "moi",
+    "cappuccetto": "chaperon",
+    "rosso": "rouge",
+    "entra": "entre",
+    "non": "ne...pas",
+    "chiusa": "fermée",
+    "nella": "dans la",
+    "mangia": "mange",
+    "poi": "puis",
+    "prende": "prend",
+    "vestito": "vêtement",
+    "va": "va",
+    "a": "à",
+    "letto": "lit",
+    "aspetta": "attend",
+    "dopo": "après",
+    "un": "un",
+    "po'": "peu"
+  },
+  "sentences": {
+    "Il lupo arriva alla casa della nonna e bussa alla porta.": "Le loup arrive à la maison de la grand-mère et frappe à la porte.",
+    "La nonna chiede: — Chi è?": "La grand-mère demande : — Qui est-ce ?",
+    "Il lupo dice con voce sottile: — Sono io, Cappuccetto Rosso.": "Le loup dit d'une voix fine : — C'est moi, Chaperon Rouge.",
+    "La nonna dice: — Entra, la porta non è chiusa.": "La grand-mère dit : — Entre, la porte n'est pas fermée.",
+    "Il lupo entra nella casa e mangia la nonna.": "Le loup entre dans la maison et mange la grand-mère.",
+    "Poi il lupo prende il vestito della nonna, va a letto e aspetta.": "Puis le loup prend le vêtement de la grand-mère, va au lit et attend.",
+    "Dopo un po', Cappuccetto Rosso arriva e bussa alla porta.": "Après un peu de temps, Chaperon Rouge arrive et frappe à la porte."
+  },
+  "questions": [
+    {
+      "q": "Come parla il lupo alla porta della nonna?",
+      "options": [
+        "Con voce sottile",
+        "Con voce grossa",
+        "Non parla"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Cosa fa il lupo dopo essere entrato in casa?",
+      "options": [
+        "Beve un tè",
+        "Mangia la nonna",
+        "Pulisce la casa"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Cosa prende il lupo prima di andare a letto?",
+      "options": [
+        "Il cesto del pane",
+        "Il vestito della nonna",
+        "Un libro"
+      ],
+      "correct": 1
+    }
+  ]
+}

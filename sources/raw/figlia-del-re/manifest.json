@@ -1,0 +1,12 @@
+{
+  "site": null,
+  "page": "La figlia del re (adattamento originale A2, conte italien)",
+  "bookId": "figlia-del-re",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    { "id": "01", "chapterTitle": "L'annuncio del re" },
+    { "id": "02", "chapterTitle": "Il contadino intelligente" },
+    { "id": "03", "chapterTitle": "Tre indovinelli" },
+    { "id": "04", "chapterTitle": "Il matrimonio" }
+  ]
+}

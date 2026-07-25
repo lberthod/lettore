@@ -1,0 +1,35 @@
+{
+  "id": "pollicino",
+  "title": "Pollicino",
+  "author": "Fiaba popolare (adattamento)",
+  "language": "it",
+  "level": "A2",
+  "levelNote": "Adattamento semplificato — testo riscritto per questo livello",
+  "source": {
+    "provider": "Adattamento originale",
+    "pageTitle": "Pollicino (adattamento originale A2)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Una famiglia povera nel bosco"
+    },
+    {
+      "id": "02",
+      "title": "Persi nel bosco"
+    },
+    {
+      "id": "03",
+      "title": "La casa dell'orco"
+    },
+    {
+      "id": "04",
+      "title": "La fuga con gli stivali magici"
+    },
+    {
+      "id": "05",
+      "title": "Il ritorno a casa"
+    }
+  ]
+}

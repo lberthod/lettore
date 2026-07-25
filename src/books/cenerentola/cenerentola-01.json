@@ -1,0 +1,121 @@
+{
+  "id": "cenerentola-01",
+  "title": "Cenerentola vive con la matrigna cattiva",
+  "paragraphs": [
+    "C'era una volta una ragazza buona e gentile. Il suo papà è morto e ora lei vive con la matrigna e le due sorellastre.",
+    "La matrigna e le sorellastre sono cattive con lei. Ogni giorno la ragazza lava i piatti, pulisce la casa e prepara da mangiare per tutti.",
+    "La sera, quando il lavoro finisce, la ragazza è stanca. Non ha un letto comodo. Dorme vicino al fuoco, tra la cenere. Per questo tutti la chiamano Cenerentola.",
+    "Le sorellastre hanno vestiti belli e scarpe nuove. Cenerentola ha solo un vestito vecchio e sporco. Ma lei non si lamenta mai."
+  ],
+  "words": {
+    "c'era": "Il était",
+    "una": "une",
+    "volta": "fois",
+    "ragazza": "fille",
+    "buona": "bonne",
+    "e": "et",
+    "gentile": "gentille",
+    "il": "Le",
+    "suo": "son",
+    "papà": "papa",
+    "è": "est",
+    "morto": "mort",
+    "ora": "maintenant",
+    "lei": "elle",
+    "vive": "vit",
+    "con": "avec",
+    "la": "la",
+    "matrigna": "belle-mère",
+    "le": "les",
+    "due": "deux",
+    "sorellastre": "demi-sœurs",
+    "sono": "sont",
+    "cattive": "méchantes",
+    "ogni": "Chaque",
+    "giorno": "jour",
+    "lava": "lave",
+    "i": "les",
+    "piatti": "assiettes",
+    "pulisce": "nettoie",
+    "casa": "maison",
+    "prepara": "prépare",
+    "da": "à",
+    "mangiare": "manger",
+    "per": "pour",
+    "tutti": "tous",
+    "sera": "soir",
+    "quando": "quand",
+    "lavoro": "travail",
+    "finisce": "finit",
+    "stanca": "fatiguée",
+    "non": "Ne pas",
+    "ha": "a",
+    "un": "un",
+    "letto": "lit",
+    "comodo": "confortable",
+    "dorme": "Dort",
+    "vicino": "près",
+    "al": "au",
+    "fuoco": "feu",
+    "tra": "dans",
+    "cenere": "cendre",
+    "questo": "cela",
+    "chiamano": "appellent",
+    "cenerentola": "Cendrillon",
+    "hanno": "ont",
+    "vestiti": "robes",
+    "belli": "beaux",
+    "scarpe": "chaussures",
+    "nuove": "neuves",
+    "solo": "seulement",
+    "vestito": "robe",
+    "vecchio": "vieux",
+    "sporco": "sale",
+    "ma": "Mais",
+    "si": "se",
+    "lamenta": "plaint",
+    "mai": "jamais"
+  },
+  "sentences": {
+    "C'era una volta una ragazza buona e gentile.": "Il était une fois une fille bonne et gentille.",
+    "Il suo papà è morto e ora lei vive con la matrigna e le due sorellastre.": "Son père est mort et maintenant elle vit avec sa belle-mère et ses deux demi-sœurs.",
+    "La matrigna e le sorellastre sono cattive con lei.": "La belle-mère et les demi-sœurs sont méchantes avec elle.",
+    "Ogni giorno la ragazza lava i piatti, pulisce la casa e prepara da mangiare per tutti.": "Chaque jour, la fille lave les assiettes, nettoie la maison et prépare à manger pour tout le monde.",
+    "La sera, quando il lavoro finisce, la ragazza è stanca.": "Le soir, quand le travail finit, la fille est fatiguée.",
+    "Non ha un letto comodo.": "Elle n'a pas de lit confortable.",
+    "Dorme vicino al fuoco, tra la cenere.": "Elle dort près du feu, dans la cendre.",
+    "Per questo tutti la chiamano Cenerentola.": "C'est pour cela que tout le monde l'appelle Cendrillon.",
+    "Le sorellastre hanno vestiti belli e scarpe nuove.": "Les demi-sœurs ont de belles robes et des chaussures neuves.",
+    "Cenerentola ha solo un vestito vecchio e sporco.": "Cendrillon n'a qu'une vieille robe sale.",
+    "Ma lei non si lamenta mai.": "Mais elle ne se plaint jamais."
+  },
+  "questions": [
+    {
+      "q": "Perché tutti chiamano la ragazza \"Cenerentola\"?",
+      "options": [
+        "Perché dorme vicino al fuoco, tra la cenere",
+        "Perché ha i capelli grigi",
+        "Perché lavora in una fabbrica"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Chi tratta male la ragazza?",
+      "options": [
+        "La matrigna e le sorellastre",
+        "Il papà",
+        "Il principe"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Come sono i vestiti delle sorellastre?",
+      "options": [
+        "Belli e nuovi",
+        "Vecchi e sporchi",
+        "Semplici e grigi"
+      ],
+      "correct": 0
+    }
+  ]
+}

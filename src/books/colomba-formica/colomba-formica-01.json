@@ -1,0 +1,120 @@
+{
+  "id": "colomba-formica-01",
+  "title": "La colomba e la formica",
+  "paragraphs": [
+    "Una formica cammina vicino a un fiume. Ha sete e vuole bere un po' d'acqua. All'improvviso cade nel fiume e non riesce a uscire.",
+    "Su un albero vicino, una colomba vede la formica in pericolo. La colomba prende una foglia con il becco e la lascia cadere vicino alla formica. La formica sale sulla foglia e arriva sicura sulla riva.",
+    "Qualche giorno dopo, un cacciatore vede la colomba sull'albero. Prende il fucile e vuole sparare. La formica vede il cacciatore e capisce il pericolo.",
+    "La formica morde velocemente il piede del cacciatore. Il cacciatore sente dolore e grida. La colomba sente il rumore e vola via, salva. Un buon aiuto merita sempre un altro aiuto."
+  ],
+  "words": {
+    "una": "une",
+    "formica": "fourmi",
+    "cammina": "marche",
+    "vicino": "près",
+    "a": "à",
+    "un": "un",
+    "fiume": "fleuve, rivière",
+    "ha": "a",
+    "sete": "soif",
+    "e": "et",
+    "vuole": "veut",
+    "bere": "boire",
+    "po'": "peu (un po' = un peu)",
+    "d'acqua": "d'eau",
+    "all'improvviso": "tout à coup",
+    "cade": "tombe",
+    "nel": "dans le",
+    "non": "ne...pas",
+    "riesce": "arrive (à), réussit",
+    "uscire": "sortir",
+    "su": "sur",
+    "albero": "arbre",
+    "colomba": "colombe",
+    "vede": "voit",
+    "la": "la",
+    "in": "en",
+    "pericolo": "danger",
+    "prende": "prend",
+    "foglia": "feuille",
+    "con": "avec",
+    "il": "le",
+    "becco": "bec",
+    "lascia": "laisse",
+    "cadere": "tomber",
+    "alla": "à la, près de la",
+    "sale": "monte",
+    "sulla": "sur la",
+    "arriva": "arrive",
+    "sicura": "en sécurité, sauve",
+    "riva": "rive",
+    "qualche": "quelques",
+    "giorno": "jour",
+    "dopo": "après",
+    "cacciatore": "chasseur",
+    "sull'albero": "sur l'arbre",
+    "fucile": "fusil",
+    "sparare": "tirer",
+    "capisce": "comprend",
+    "morde": "mord",
+    "velocemente": "rapidement",
+    "piede": "pied",
+    "del": "du",
+    "sente": "sent, entend",
+    "dolore": "douleur",
+    "grida": "crie",
+    "rumore": "bruit",
+    "vola": "vole",
+    "via": "loin, s'en va",
+    "salva": "sauve, saine et sauve",
+    "buon": "bon",
+    "aiuto": "aide",
+    "merita": "mérite",
+    "sempre": "toujours",
+    "altro": "autre"
+  },
+  "sentences": {
+    "Una formica cammina vicino a un fiume.": "Une fourmi marche près d'une rivière.",
+    "Ha sete e vuole bere un po' d'acqua.": "Elle a soif et veut boire un peu d'eau.",
+    "All'improvviso cade nel fiume e non riesce a uscire.": "Tout à coup, elle tombe dans la rivière et n'arrive pas à en sortir.",
+    "Su un albero vicino, una colomba vede la formica in pericolo.": "Sur un arbre proche, une colombe voit la fourmi en danger.",
+    "La colomba prende una foglia con il becco e la lascia cadere vicino alla formica.": "La colombe prend une feuille avec son bec et la laisse tomber près de la fourmi.",
+    "La formica sale sulla foglia e arriva sicura sulla riva.": "La fourmi monte sur la feuille et arrive saine et sauve sur la rive.",
+    "Qualche giorno dopo, un cacciatore vede la colomba sull'albero.": "Quelques jours après, un chasseur voit la colombe sur l'arbre.",
+    "Prende il fucile e vuole sparare.": "Il prend son fusil et veut tirer.",
+    "La formica vede il cacciatore e capisce il pericolo.": "La fourmi voit le chasseur et comprend le danger.",
+    "La formica morde velocemente il piede del cacciatore.": "La fourmi mord rapidement le pied du chasseur.",
+    "Il cacciatore sente dolore e grida.": "Le chasseur sent une douleur et crie.",
+    "La colomba sente il rumore e vola via, salva.": "La colombe entend le bruit et s'envole, saine et sauve.",
+    "Un buon aiuto merita sempre un altro aiuto.": "Une bonne aide mérite toujours une autre aide."
+  },
+  "questions": [
+    {
+      "q": "Perché la formica cade nel fiume?",
+      "options": [
+        "Vuole nuotare",
+        "Vuole bere acqua e cade",
+        "Il vento la spinge"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Come salva la colomba la formica?",
+      "options": [
+        "Le dà una foglia",
+        "La porta sull'albero",
+        "Chiama un cacciatore"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Come salva la formica la colomba dal cacciatore?",
+      "options": [
+        "Vola con lei",
+        "Morde il piede del cacciatore",
+        "Grida forte"
+      ],
+      "correct": 1
+    }
+  ]
+}

@@ -11,6 +11,7 @@ Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebas
 | POST | `/leggendo/generate` | crée un job → `{ jobId }` (auth requise) |
 | GET | `/leggendo/jobs/<uuid>` | état du job : `pending` / `running` / `done` (+ texte) / `error` |
 | GET | `/leggendo/my-job` | job actif du compte (reprise après rechargement) |
+| GET | `/leggendo/quota` | solde de crédits de génération du compte (auth requise) |
 
 ## Tests
 
@@ -18,11 +19,17 @@ Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebas
 
 Garde-fous :
 
-- **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via `firebase-admin/auth` (`verifyIdToken`). Le rôle (`gratuit` / `premium` / `enseignant`) est relu depuis les custom claims embarqués dans le token (posés côté Cloud Functions, voir [functions/index.js](../functions/index.js)).
-- **Quotas** (persistés dans Firestore, collection `leggendoQuotas`, un document par `uid`) :
-  - compte gratuit : 3 générations « de bienvenue » cumulées, puis 1 génération par jour une fois ce capital épuisé ;
-  - compte payant (`premium` / `enseignant`) : 10 générations par jour, 100 par mois.
-  - la vérification, la consommation du quota et la création du job se font dans une **même transaction Firestore** : une panne d'écriture ou une requête concurrente ne peut ni faire perdre un crédit ni permettre deux générations simultanées.
+- **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via `firebase-admin/auth` (`verifyIdToken`). Le rôle (`gratuit` / `premium` / `premium_plus` / `enseignant`) est relu depuis les custom claims embarqués dans le token (posés côté Cloud Functions, voir [functions/index.js](../functions/index.js)).
+- **Crédits de génération** (barème défini dans [README_TARIFICATION.md](../README_TARIFICATION.md), logique dans `quota.mjs`, persistés dans Firestore — collection `leggendoQuotas`, un document par `uid`) :
+  - `gratuit` : 1 génération d'essai, à vie, jamais renouvelée ;
+  - `premium` : **aucun accès** à la génération (formule lecture uniquement — `premium_plus`, alias commercial « Premium IA », est requis) ;
+  - `premium_plus` (« Premium IA ») : 30 crédits par mois ;
+  - `enseignant` : 100 crédits par mois (rôle le plus élevé, inclut les droits `premium_plus`) ;
+  - coût par taille de texte : `corto`=1, `medio`=2, `lungo`=3, `molto_lungo`=4 crédits ;
+  - la vérification, la consommation du crédit et la création du job se font dans une **même transaction Firestore** : une panne d'écriture ou une requête concurrente ne peut ni faire perdre un crédit ni permettre deux générations simultanées ;
+  - **remboursement automatique** (`jobStore.refundCredit`) si le job se termine en erreur — une génération qui échoue pour une raison technique ne consomme pas de crédit ;
+  - solde consultable via `GET /leggendo/quota`, sans consommation (affiché côté app avant de lancer une génération, voir [CreateTextView.vue](../src/views/CreateTextView.vue)).
+- **Mesure des coûts IA** (`logGeneration` dans `server.mjs`, collection Firestore `generationLogs`) : chaque génération enregistre uid, rôle, niveau, taille, coût en crédits, nombre d'appels au modèle, tokens consommés et coût estimé (`ESTIMATED_COST_PER_1K_TOKENS_USD`, approximatif) — une alerte est loguée si le coût estimé d'une génération dépasse 0.50 $.
 - **Un seul job actif par compte** ; jobs persistés dans Firestore (collection `leggendoJobs`, survivent à un redémarrage du VPS), purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels GLM).
 - **CORS** restreint aux origines listées dans `ALLOWED_ORIGINS` (le token Firebase reste la vraie protection, ceci évite juste qu'un site tiers rejoue les appels authentifiés depuis le navigateur d'un utilisateur).
 - **Validation** : même exigence de couverture lexicale que le catalogue ([generate.mjs](generate.mjs), découpage identique au lecteur, passes de réparation) — le lexique des mots doit être complet ; jusqu'à 2 phrases sans traduction sont tolérées plutôt que de jeter la génération.
@@ -84,11 +91,11 @@ Pour une mise à jour du code : `scp` à nouveau, `npm install --omit=dev` si `p
 
 Caddy proxifie `api.loicberthod.ch/leggendo/*` vers `localhost:8091` ; l'URL côté app se règle via `VITE_LEGGENDO_API`.
 
-## Notizie — cron d'actualité (Premium+)
+## Notizie — cron d'actualité (Premium IA)
 
-[news-cron.mjs](news-cron.mjs) est un script indépendant du serveur HTTP (`server.mjs`) : il ne tourne pas en continu, il est **invoqué par cron** et fait une seule chose à chaque exécution — récupérer les flux RSS ANSA ([rss.mjs](rss.mjs)), choisir un article pas encore traité, générer un texte gradué qui le reformule fidèlement ([news.mjs](news.mjs)), et l'écrire dans Firestore (collection `newsTexts`). L'app lit ce pool via [src/lib/newsTexts.js](../src/lib/newsTexts.js) (page « Notizie », réservée au rôle `premium_plus`, voir [firestore.rules](../firestore.rules) et [PREMIUM_PLUS_ANALYSIS.md](../PREMIUM_PLUS_ANALYSIS.md)).
+[news-cron.mjs](news-cron.mjs) est un script indépendant du serveur HTTP (`server.mjs`) : il ne tourne pas en continu, il est **invoqué par cron** et fait une seule chose à chaque exécution — récupérer les flux RSS ANSA ([rss.mjs](rss.mjs)), choisir un article pas encore traité, générer un texte gradué qui le reformule fidèlement ([news.mjs](news.mjs)), et l'écrire dans Firestore (collection `newsTexts`). L'app lit ce pool via [src/lib/newsTexts.js](../src/lib/newsTexts.js) (page « Notizie », réservée aux rôles `premium_plus` et `enseignant`, voir [firestore.rules](../firestore.rules) et [README_TARIFICATION.md](../README_TARIFICATION.md)).
 
-Pool partagé, pas un appel par abonné : chaque exécution produit **un seul texte**, lu ensuite par tous les abonnés Premium+ — planifier 3 exécutions par jour donne bien « jusqu'à 3 textes par jour », sans multiplier le coût par le nombre d'abonnés.
+Feature de la formule Premium IA, mais **hors du système de crédits** : c'est un flux partagé généré par le cron, pas une génération à la demande consommant un crédit par abonné. Pool partagé, pas un appel par abonné : chaque exécution produit **un seul texte**, lu ensuite par tous les abonnés Premium IA — planifier 3 exécutions par jour donne bien « jusqu'à 3 textes par jour », sans multiplier le coût par le nombre d'abonnés.
 
 Mêmes identifiants que le serveur HTTP (`GLM_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS` — voir [Configuration](#configuration-env) et [Identifiants Firestore](#identifiants-firestore-compte-de-service) ci-dessus), pas de port ni de service systemd à installer.
 

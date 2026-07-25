@@ -1,0 +1,98 @@
+{
+  "id": "cappuccetto-rosso-02",
+  "title": "Il lupo nel bosco",
+  "paragraphs": [
+    "Nel bosco, Cappuccetto Rosso incontra un lupo grande e nero.",
+    "Il lupo chiede: — Dove vai, piccola?",
+    "Cappuccetto Rosso risponde: — Vado dalla nonna. Lei è malata e io porto pane e una torta.",
+    "Il lupo chiede: — Dove abita la nonna?",
+    "Cappuccetto Rosso dice: — In una casa dopo il grande albero, vicino al fiume.",
+    "Il lupo pensa: prima vado io dalla nonna.",
+    "Il lupo saluta e corre veloce verso la casa della nonna."
+  ],
+  "words": {
+    "nel": "dans le",
+    "bosco": "bois",
+    "cappuccetto": "chaperon",
+    "rosso": "rouge",
+    "incontra": "rencontre",
+    "un": "un",
+    "lupo": "loup",
+    "grande": "grand",
+    "e": "et",
+    "nero": "noir",
+    "il": "le",
+    "chiede": "demande",
+    "dove": "où",
+    "vai": "vas-tu",
+    "piccola": "petite",
+    "risponde": "répond",
+    "vado": "je vais",
+    "dalla": "chez",
+    "nonna": "grand-mère",
+    "lei": "elle",
+    "è": "est",
+    "malata": "malade",
+    "io": "je",
+    "porto": "j'apporte",
+    "pane": "pain",
+    "una": "une",
+    "torta": "tarte",
+    "abita": "habite",
+    "la": "la",
+    "dice": "dit",
+    "in": "dans",
+    "casa": "maison",
+    "dopo": "après",
+    "albero": "arbre",
+    "vicino": "près",
+    "al": "au",
+    "fiume": "fleuve",
+    "pensa": "pense",
+    "prima": "d'abord",
+    "saluta": "salue",
+    "corre": "court",
+    "veloce": "vite",
+    "verso": "vers",
+    "della": "de la"
+  },
+  "sentences": {
+    "Nel bosco, Cappuccetto Rosso incontra un lupo grande e nero.": "Dans le bois, Chaperon Rouge rencontre un grand loup noir.",
+    "Il lupo chiede: — Dove vai, piccola?": "Le loup demande : — Où vas-tu, petite ?",
+    "Cappuccetto Rosso risponde: — Vado dalla nonna.": "Chaperon Rouge répond : — Je vais chez ma grand-mère.",
+    "Lei è malata e io porto pane e una torta.": "Elle est malade et j'apporte du pain et une tarte.",
+    "Il lupo chiede: — Dove abita la nonna?": "Le loup demande : — Où habite ta grand-mère ?",
+    "Cappuccetto Rosso dice: — In una casa dopo il grande albero, vicino al fiume.": "Chaperon Rouge dit : — Dans une maison après le grand arbre, près du fleuve.",
+    "Il lupo pensa: prima vado io dalla nonna.": "Le loup pense : j'y vais d'abord, moi, chez la grand-mère.",
+    "Il lupo saluta e corre veloce verso la casa della nonna.": "Le loup salue et court vite vers la maison de la grand-mère."
+  },
+  "questions": [
+    {
+      "q": "Chi incontra Cappuccetto Rosso nel bosco?",
+      "options": [
+        "Un cacciatore",
+        "Un lupo grande e nero",
+        "Un uccellino"
+      ],
+      "correct": 1
+    },
+    {
+      "q": "Dove va Cappuccetto Rosso?",
+      "options": [
+        "Dalla nonna",
+        "A scuola",
+        "Al mercato"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Cosa fa il lupo dopo aver parlato con Cappuccetto Rosso?",
+      "options": [
+        "Torna nel bosco",
+        "Corre veloce verso la casa della nonna",
+        "Si addormenta"
+      ],
+      "correct": 1
+    }
+  ]
+}

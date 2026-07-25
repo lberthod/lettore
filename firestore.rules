@@ -47,13 +47,15 @@ service cloud.firestore {
             || request.auth.token.role == 'enseignant');
     }
 
-    // Pool partagé de textes d'actualité générés par le cron VPS (formule
-    // Premium+, voir PREMIUM_PLUS_ANALYSIS.md) : écrit uniquement par
-    // l'Admin SDK (leggendo-server/news-cron.mjs), lu uniquement par les
-    // abonnés Premium+ (custom claim `role`, posé par le webhook Stripe /
-    // adminSetUserRole).
+    // Pool partagé de textes d'actualité générés par le cron VPS — feature
+    // « Notizie » de la formule Premium IA (voir README_TARIFICATION.md) :
+    // écrit uniquement par l'Admin SDK (leggendo-server/news-cron.mjs), lu
+    // par les rôles `premium_plus` et `enseignant` (qui inclut les droits
+    // Premium IA, voir la hiérarchie des rôles dans README_TARIFICATION.md).
     match /newsTexts/{textId} {
-      allow read: if request.auth != null && request.auth.token.role == 'premium_plus';
+      allow read: if request.auth != null
+        && (request.auth.token.role == 'premium_plus'
+            || request.auth.token.role == 'enseignant');
       allow write: if false;
     }
 

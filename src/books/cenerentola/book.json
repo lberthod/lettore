@@ -1,0 +1,35 @@
+{
+  "id": "cenerentola",
+  "title": "Cenerentola",
+  "author": "Adattamento tradizionale",
+  "language": "it",
+  "level": "A2",
+  "levelNote": "Adattamento semplificato — testo riscritto per questo livello",
+  "source": {
+    "provider": "Adattamento originale",
+    "pageTitle": "Cenerentola (adattamento originale A2)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Cenerentola vive con la matrigna cattiva"
+    },
+    {
+      "id": "02",
+      "title": "L'invito del re"
+    },
+    {
+      "id": "03",
+      "title": "La fata madrina"
+    },
+    {
+      "id": "04",
+      "title": "Il ballo a palazzo"
+    },
+    {
+      "id": "05",
+      "title": "La scarpetta di cristallo"
+    }
+  ]
+}

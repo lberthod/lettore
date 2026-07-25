@@ -1,0 +1,44 @@
+{
+  "site": "it",
+  "page": "Divina Commedia/Inferno",
+  "bookId": "inferno",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    {
+      "id": "01",
+      "wikisourceTitle": "Divina Commedia/Inferno/Canto I",
+      "chapterTitle": "Incomincia la Comedia di Dante Alleghieri di Fiorenza, ne la quale tratta de le pene e punimenti de’ vizi e de’ meriti e premi de le virtù. Comincia il canto primo de la prima parte nel qual l’auttore fa proemio a tutta l’opera.",
+      "wordCount": 1009
+    },
+    {
+      "id": "02",
+      "wikisourceTitle": "Divina Commedia/Inferno/Canto III",
+      "chapterTitle": "Canto terzo, nel quale tratta de la porta e de l’entrata de l’inferno e del fiume d’Acheronte, de la pena di coloro che vissero sanza opere di fama degne, e come il demonio Caron li trae in sua nave e come elli parlò a l’auttore; e tocca qui questo vizio ne la persona di papa Cilestino.",
+      "wordCount": 981
+    },
+    {
+      "id": "03",
+      "wikisourceTitle": "Divina Commedia/Inferno/Canto V",
+      "chapterTitle": "Canto quinto, nel quale mostra del secondo cerchio de l’inferno, e tratta de la pena del vizio de la lussuria ne la persona di più famosi gentili uomini.",
+      "wordCount": 977
+    },
+    {
+      "id": "04",
+      "wikisourceTitle": "Divina Commedia/Inferno/Canto XXVI",
+      "chapterTitle": "Canto XXVI, nel quale si tratta de l’ottava bolgia contro a quelli che mettono aguati e danno frodolenti consigli; e in prima sgrida contro a’ fiorentini e tacitamente predice del futuro e in persona d’Ulisse e Diomedes pone loro pene.",
+      "wordCount": 1037
+    },
+    {
+      "id": "05",
+      "wikisourceTitle": "Divina Commedia/Inferno/Canto XXXIII",
+      "chapterTitle": "Canto XXXIII, ove tratta di quelli che tradirono coloro che in loro tutto si fidavano, e coloro da cui erano stati promossi a dignità e grande stato; e riprende qui i Pisani e i Genovesi.",
+      "wordCount": 1138
+    },
+    {
+      "id": "06",
+      "wikisourceTitle": "Divina Commedia/Inferno/Canto XXXIV",
+      "chapterTitle": "Canto XXXIV e ultimo de la prima cantica di Dante Alleghieri di Fiorenza, nel qual canto tratta di Belzebù principe de’ dimoni e de’ traditori di loro signori, e narra come uscie de l’inferno.",
+      "wordCount": 1016
+    }
+  ]
+}

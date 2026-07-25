@@ -1,0 +1,116 @@
+{
+  "site": "it",
+  "page": "Il fu Mattia Pascal",
+  "bookId": "mattia-pascal",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    {
+      "id": "01",
+      "wikisourceTitle": "Il fu Mattia Pascal/1",
+      "chapterTitle": "§ 1. — Premessa.",
+      "wordCount": 593
+    },
+    {
+      "id": "02",
+      "wikisourceTitle": "Il fu Mattia Pascal/2",
+      "chapterTitle": "§ 2. — Premessa seconda (filosofica)",
+      "wordCount": 1233
+    },
+    {
+      "id": "03",
+      "wikisourceTitle": "Il fu Mattia Pascal/3",
+      "chapterTitle": "§ 3. — La casa e la talpa.",
+      "wordCount": 2970
+    },
+    {
+      "id": "04",
+      "wikisourceTitle": "Il fu Mattia Pascal/4",
+      "chapterTitle": "§ 4. — Fu così.",
+      "wordCount": 5153
+    },
+    {
+      "id": "05",
+      "wikisourceTitle": "Il fu Mattia Pascal/5",
+      "chapterTitle": "§ 5. — Maturazione.",
+      "wordCount": 5113
+    },
+    {
+      "id": "06",
+      "wikisourceTitle": "Il fu Mattia Pascal/6",
+      "chapterTitle": "§ 6. — Tac tac tac....",
+      "wordCount": 5346
+    },
+    {
+      "id": "07",
+      "wikisourceTitle": "Il fu Mattia Pascal/7",
+      "chapterTitle": "§ 7. — Cambio treno.",
+      "wordCount": 3769
+    },
+    {
+      "id": "08",
+      "wikisourceTitle": "Il fu Mattia Pascal/8",
+      "chapterTitle": "§ 8. — Adriano Meis.",
+      "wordCount": 4503
+    },
+    {
+      "id": "09",
+      "wikisourceTitle": "Il fu Mattia Pascal/9",
+      "chapterTitle": "§ 9. — Un po' di nebbia.",
+      "wordCount": 3117
+    },
+    {
+      "id": "10",
+      "wikisourceTitle": "Il fu Mattia Pascal/10",
+      "chapterTitle": "§ 10. — Acquasantiera e portacenere.",
+      "wordCount": 4159
+    },
+    {
+      "id": "11",
+      "wikisourceTitle": "Il fu Mattia Pascal/11",
+      "chapterTitle": "§ 11. — Di sera, guardando il fiume.",
+      "wordCount": 6137
+    },
+    {
+      "id": "12",
+      "wikisourceTitle": "Il fu Mattia Pascal/12",
+      "chapterTitle": "§ 12. — L'occhio e Papiano.",
+      "wordCount": 4414
+    },
+    {
+      "id": "13",
+      "wikisourceTitle": "Il fu Mattia Pascal/13",
+      "chapterTitle": "§ 13. — Il lanternino.",
+      "wordCount": 4200
+    },
+    {
+      "id": "14",
+      "wikisourceTitle": "Il fu Mattia Pascal/14",
+      "chapterTitle": "§ 14. — Le prodezze di Max.",
+      "wordCount": 3158
+    },
+    {
+      "id": "15",
+      "wikisourceTitle": "Il fu Mattia Pascal/15",
+      "chapterTitle": "§ 15. — Io e l'ombra mia.",
+      "wordCount": 4520
+    },
+    {
+      "id": "16",
+      "wikisourceTitle": "Il fu Mattia Pascal/16",
+      "chapterTitle": "§ 16. — Il ritratto di Minerva.",
+      "wordCount": 6788
+    },
+    {
+      "id": "17",
+      "wikisourceTitle": "Il fu Mattia Pascal/17",
+      "chapterTitle": "§ 17. — Rincarnazione.",
+      "wordCount": 3653
+    },
+    {
+      "id": "18",
+      "wikisourceTitle": "Il fu Mattia Pascal/18",
+      "chapterTitle": "§ 18. — Il fu Mattia Pascal.",
+      "wordCount": 4833
+    }
+  ]
+}

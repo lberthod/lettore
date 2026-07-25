@@ -1,0 +1,19 @@
+{
+  "id": "gatto-con-gli-stivali",
+  "title": "Il gatto con gli stivali",
+  "author": "Charles Perrault",
+  "language": "it",
+  "level": "A1",
+  "levelNote": "Adattamento semplificato in italiano A1 — non è il testo originale di Perrault",
+  "source": {
+    "provider": "Adattamento originale (fiaba di pubblico dominio)",
+    "pageTitle": "Il gatto con gli stivali (adattamento A1)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Il gatto con gli stivali"
+    }
+  ]
+}

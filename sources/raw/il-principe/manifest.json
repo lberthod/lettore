@@ -1,0 +1,38 @@
+{
+  "site": "it",
+  "page": "Il Principe",
+  "bookId": "il-principe",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    {
+      "id": "01",
+      "wikisourceTitle": "Il Principe/Capitolo XV",
+      "chapterTitle": "Delle cose, mediante le quali gli uomini, e massimamente i Principi, sono lodati o vituperati.",
+      "wordCount": 454
+    },
+    {
+      "id": "02",
+      "wikisourceTitle": "Il Principe/Capitolo XVII",
+      "chapterTitle": "Della crudeltà e clemenzia; e se egli è meglio essere amato, che temuto.",
+      "wordCount": 949
+    },
+    {
+      "id": "03",
+      "wikisourceTitle": "Il Principe/Capitolo XVIII",
+      "chapterTitle": "In che modo i Principi debbino osservare la fede.",
+      "wordCount": 826
+    },
+    {
+      "id": "04",
+      "wikisourceTitle": "Il Principe/Capitolo XXV",
+      "chapterTitle": "Quanto possa nelle umane cose la fortuna, e in che modo se gli possa ostare.",
+      "wordCount": 1036
+    },
+    {
+      "id": "05",
+      "wikisourceTitle": "Il Principe/Capitolo XXVI",
+      "chapterTitle": "Esortazione a liberare la Italia da’ barbari.",
+      "wordCount": 1200
+    }
+  ]
+}

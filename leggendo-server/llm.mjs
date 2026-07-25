@@ -30,7 +30,12 @@ function extractJson(text) {
   return JSON.parse(candidate.slice(start, end + 1))
 }
 
-export async function callLLM({ system, prompt, schema, maxTokens = 8000 }) {
+// `onUsage(usage)` est appelé après chaque réponse réussie du modèle, avec
+// les tokens consommés — sert à mesurer le coût réel d'une génération
+// (README_TARIFICATION.md, § Mesure des coûts IA). Les tentatives qui
+// échouent avant d'obtenir de réponse ne sont pas comptées (pas de usage
+// disponible).
+export async function callLLM({ system, prompt, schema, maxTokens = 8000, onUsage }) {
   if (!GLM_API_KEY) {
     throw new Error('GLM_API_KEY manquante (export GLM_API_KEY=...).')
   }
@@ -81,6 +86,7 @@ Ne mets pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
         console.log(
           `  usage : in=${u.prompt_tokens} out=${u.completion_tokens} total=${u.total_tokens}`
         )
+        onUsage?.(u)
       }
       const choice = data.choices?.[0]
       if (!choice) throw new Error(`Réponse GLM inattendue : ${JSON.stringify(data).slice(0, 300)}`)

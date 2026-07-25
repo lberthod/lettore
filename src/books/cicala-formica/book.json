@@ -1,0 +1,19 @@
+{
+  "id": "cicala-formica",
+  "title": "La cicala e la formica",
+  "author": "Favola di Esopo (adattamento)",
+  "language": "it",
+  "level": "A1",
+  "levelNote": "Adattamento semplificato — testo riscritto per questo livello",
+  "source": {
+    "provider": "Adattamento originale",
+    "pageTitle": "La cicala e la formica (adattamento originale A1)",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "La cicala e la formica"
+    }
+  ]
+}

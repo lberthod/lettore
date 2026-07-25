@@ -19,7 +19,7 @@ import { getAuth } from 'firebase-admin/auth'
 import { generateUserText } from './generate.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
-import { QuotaExceededError } from './quota.mjs'
+import { QuotaExceededError, creditCost } from './quota.mjs'
 import { createJobStore } from './jobs.mjs'
 import { buildTaxonomyIndex, parseRequest, slugify } from './validate.mjs'
 
@@ -79,6 +79,48 @@ const jobStore = createJobStore(db)
 setInterval(() => {
   jobStore.pruneJobs().catch((err) => console.error('Erreur purge des jobs :', err))
 }, 10 * 60 * 1000).unref()
+
+// --- Mesure des coûts IA (README_TARIFICATION.md, § Mesure des coûts IA) ---
+// Estimation approximative, pas une facture exacte : le tarif réel dépend du
+// fournisseur/modèle configuré (GLM_MODEL) et change dans le temps.
+// Ajustable sans redéploiement de schéma via une variable d'env.
+const ESTIMATED_COST_PER_1K_TOKENS_USD = Number(
+  process.env.ESTIMATED_COST_PER_1K_TOKENS_USD || 0.003
+)
+const generationLogs = db.collection('generationLogs')
+
+async function logGeneration({ user, size, level, jobId, status, startedAt, usage, error }) {
+  const totalTokens = usage.reduce((sum, u) => sum + (u.total_tokens || 0), 0)
+  const entry = {
+    uid: user.uid,
+    email: user.email || null,
+    role: user.role,
+    level,
+    sizeId: size.id,
+    creditsCost: creditCost(size.id),
+    jobId,
+    status,
+    durationMs: Date.now() - startedAt,
+    modelCalls: usage.length,
+    totalTokens,
+    estimatedCostUsd: Math.round((totalTokens / 1000) * ESTIMATED_COST_PER_1K_TOKENS_USD * 10000) / 10000,
+    createdAt: Date.now(),
+    ...(error ? { error } : {}),
+  }
+  try {
+    await generationLogs.add(entry)
+  } catch (err) {
+    console.error(`[job ${jobId}] échec de journalisation du coût :`, err)
+  }
+  // Alerte simple (README_TARIFICATION.md) : le coût IA ne doit pas dépasser
+  // 25 % du revenu Premium IA — seuil grossier faute d'agrégation en temps
+  // réel, mais suffisant pour repérer une génération anormalement coûteuse.
+  if (entry.estimatedCostUsd > 0.5) {
+    console.warn(
+      `[job ${jobId}] ⚠ coût estimé élevé pour une génération : $${entry.estimatedCostUsd} (${totalTokens} tokens, ${usage.length} appel(s))`
+    )
+  }
+}
 
 // --- Helpers HTTP ---
 function sendJson(res, status, body, origin) {
@@ -187,7 +229,7 @@ const server = http.createServer(async (req, res) => {
       const jobRef = jobStore.jobsCollection.doc(jobId)
       let q
       try {
-        q = await jobStore.reserveJob(user, jobRef, title)
+        q = await jobStore.reserveJob(user, jobRef, title, size.id)
       } catch (err) {
         if (err instanceof QuotaExceededError) {
           send(429, { error: err.message })
@@ -196,12 +238,14 @@ const server = http.createServer(async (req, res) => {
         throw err
       }
       console.log(
-        `[job ${jobId}] ${user.email || user.uid} (${user.role}) — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} » — quota jour ${q.dailyCount}, mois ${q.monthlyCount}, total ${q.totalCount}`
+        `[job ${jobId}] ${user.email || user.uid} (${user.role}) — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} » — crédits ${JSON.stringify(q)}`
       )
+      const startedAt = Date.now()
 
       // Génération en tâche de fond ; le client sonde /leggendo/jobs/<id>.
       ;(async () => {
         await jobRef.update({ status: 'running' })
+        const usage = []
         try {
           const textData = await generateUserText({
             id: slugify(title),
@@ -211,16 +255,38 @@ const server = http.createServer(async (req, res) => {
             title,
             summary,
             size,
+            usage,
           })
           await jobRef.update({ status: 'done', result: textData })
           console.log(`[job ${jobId}] terminé (${textData.wordCount} mots)`)
+          await logGeneration({ user, size, level, jobId, status: 'done', startedAt, usage })
         } catch (err) {
           await jobRef.update({ status: 'error', error: err.message })
           console.error(`[job ${jobId}] échec : ${err.message}`)
+          // Une génération qui échoue pour une raison technique ne consomme
+          // pas de crédit (README_TARIFICATION.md).
+          await jobStore.refundCredit(user, size.id).catch((e) =>
+            console.error(`[job ${jobId}] échec du remboursement de crédit :`, e)
+          )
+          await logGeneration({ user, size, level, jobId, status: 'error', startedAt, usage, error: err.message })
         }
       })()
 
       send(202, { jobId })
+      return
+    }
+
+    // Solde de crédits de génération, à afficher avant de lancer une
+    // génération (README_TARIFICATION.md, § Règles des crédits).
+    if (req.method === 'GET' && url.pathname === '/leggendo/quota') {
+      const authHeader = req.headers.authorization || ''
+      const idToken = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : ''
+      const user = idToken ? await verifyIdToken(idToken) : null
+      if (!user) {
+        send(401, { error: 'Connexion requise.' })
+        return
+      }
+      send(200, await jobStore.getQuotaStatus(user))
       return
     }
 

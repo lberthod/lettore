@@ -8,6 +8,7 @@ import {
   startGeneration,
   saveResult,
   resumeGeneration,
+  fetchQuota,
 } from '../lib/generation.js'
 
 const theme = ref('vita_quotidiana')
@@ -16,6 +17,26 @@ const level = ref('A2')
 const size = ref('medio')
 const title = ref('')
 const summary = ref('')
+
+// Solde de crédits (README_TARIFICATION.md) : affiché avant de lancer une
+// génération. null tant qu'il n'a pas été chargé ; le serveur reste la seule
+// source de vérité (le blocage réel se fait via son message d'erreur 429).
+const quota = ref(null)
+async function refreshQuota() {
+  quota.value = await fetchQuota()
+}
+onMounted(refreshQuota)
+watch(() => generation.status, (s) => {
+  if (s === 'done' || s === 'error') refreshQuota()
+})
+
+const sizeCost = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
+const canGenerate = computed(() => {
+  if (!quota.value) return true // pas chargé : ne bloque pas, le serveur tranchera
+  if (quota.value.type === 'no_access') return false
+  if (quota.value.type === 'trial') return quota.value.remaining > 0
+  return quota.value.remaining >= (sizeCost[size.value] || 1)
+})
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1']
 const working = computed(() => generation.status === 'working')
@@ -93,6 +114,24 @@ function answer(qi, oi) {
       <RouterLink :to="{ name: 'my-texts' }">→ Mes textes créés</RouterLink>
     </p>
 
+    <p v-if="quota?.type === 'no_access'" class="quota-banner blocked">
+      La génération de textes fait partie de la formule
+      <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink> — votre
+      formule actuelle ne l'inclut pas.
+    </p>
+    <p v-else-if="quota?.type === 'trial'" class="quota-banner">
+      {{ quota.remaining > 0
+        ? 'Il vous reste votre génération d’essai gratuite.'
+        : 'Génération d’essai déjà utilisée.' }}
+      <RouterLink v-if="quota.remaining === 0" :to="{ name: 'pricing' }">
+        Passer à Premium IA
+      </RouterLink>
+    </p>
+    <p v-else-if="quota?.type === 'credits'" class="quota-banner">
+      {{ quota.remaining }} crédit{{ quota.remaining > 1 ? 's' : '' }} sur
+      {{ quota.limit }} restant{{ quota.remaining > 1 ? 's' : '' }} ce mois-ci.
+    </p>
+
     <form class="form" @submit.prevent="generate">
       <fieldset class="fields" :disabled="working">
         <div class="row">
@@ -157,7 +196,7 @@ function answer(qi, oi) {
           ></textarea>
         </label>
       </fieldset>
-      <button class="btn-primary" type="submit" :disabled="working">
+      <button class="btn-primary" type="submit" :disabled="working || !canGenerate">
         <span v-if="working" class="spinner" aria-hidden="true"></span>
         {{ working ? 'Génération en cours…' : 'Générer mon histoire' }}
       </button>
@@ -316,6 +355,21 @@ function answer(qi, oi) {
 }
 
 .hint.error {
+  color: #a33a2a;
+}
+
+.quota-banner {
+  margin: 0.8rem 0 1.2rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(176, 105, 46, 0.08);
+  border: 1px solid rgba(176, 105, 46, 0.25);
+  font-size: 0.9rem;
+}
+
+.quota-banner.blocked {
+  background: rgba(163, 58, 42, 0.08);
+  border-color: rgba(163, 58, 42, 0.3);
   color: #a33a2a;
 }
 

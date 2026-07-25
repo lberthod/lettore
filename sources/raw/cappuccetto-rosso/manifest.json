@@ -1,0 +1,12 @@
+{
+  "site": null,
+  "page": "Cappuccetto Rosso (adattamento originale A1)",
+  "bookId": "cappuccetto-rosso",
+  "retrievedAt": "2026-07-24",
+  "chapters": [
+    { "id": "01", "chapterTitle": "Cappuccetto Rosso parte per la casa della nonna" },
+    { "id": "02", "chapterTitle": "Il lupo nel bosco" },
+    { "id": "03", "chapterTitle": "Il lupo e la nonna" },
+    { "id": "04", "chapterTitle": "Che occhi grandi, nonna!" }
+  ]
+}

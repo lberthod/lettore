@@ -1,0 +1,103 @@
+{
+  "id": "cappuccetto-rosso-04",
+  "title": "Che occhi grandi, nonna!",
+  "paragraphs": [
+    "Cappuccetto Rosso entra nella casa e vede la nonna a letto.",
+    "Cappuccetto Rosso dice: — Nonna, che occhi grandi hai!",
+    "Il lupo risponde: — Sono per guardarti meglio!",
+    "Cappuccetto Rosso dice: — Nonna, che orecchie grandi hai!",
+    "Il lupo risponde: — Sono per sentirti meglio!",
+    "Cappuccetto Rosso dice: — Nonna, che bocca grande hai!",
+    "Il lupo grida: — È per mangiarti meglio! — e salta dal letto.",
+    "Un cacciatore sente le grida ed entra veloce nella casa. Il cacciatore salva Cappuccetto Rosso e la nonna.",
+    "Tutti sono felici e mangiano insieme la torta."
+  ],
+  "words": {
+    "cappuccetto": "chaperon",
+    "rosso": "rouge",
+    "entra": "entre",
+    "nella": "dans la",
+    "casa": "maison",
+    "e": "et",
+    "vede": "voit",
+    "la": "la",
+    "nonna": "grand-mère",
+    "a": "à",
+    "letto": "lit",
+    "dice": "dit",
+    "che": "que/quels",
+    "occhi": "yeux",
+    "grandi": "grands",
+    "hai": "as-tu",
+    "il": "le",
+    "lupo": "loup",
+    "risponde": "répond",
+    "sono": "ils sont",
+    "per": "pour",
+    "guardarti": "te regarder",
+    "meglio": "mieux",
+    "orecchie": "oreilles",
+    "sentirti": "t'entendre",
+    "bocca": "bouche",
+    "grande": "grande",
+    "grida": "crie",
+    "è": "est/c'est",
+    "mangiarti": "te manger",
+    "salta": "saute",
+    "dal": "du",
+    "un": "un",
+    "cacciatore": "chasseur",
+    "sente": "entend",
+    "le": "les",
+    "ed": "et",
+    "veloce": "vite",
+    "salva": "sauve",
+    "tutti": "tous",
+    "felici": "heureux",
+    "mangiano": "mangent",
+    "insieme": "ensemble",
+    "torta": "tarte"
+  },
+  "sentences": {
+    "Cappuccetto Rosso entra nella casa e vede la nonna a letto.": "Chaperon Rouge entre dans la maison et voit la grand-mère au lit.",
+    "Cappuccetto Rosso dice: — Nonna, che occhi grandi hai!": "Chaperon Rouge dit : — Grand-mère, quels grands yeux tu as !",
+    "Il lupo risponde: — Sono per guardarti meglio!": "Le loup répond : — C'est pour mieux te regarder !",
+    "Cappuccetto Rosso dice: — Nonna, che orecchie grandi hai!": "Chaperon Rouge dit : — Grand-mère, quelles grandes oreilles tu as !",
+    "Il lupo risponde: — Sono per sentirti meglio!": "Le loup répond : — C'est pour mieux t'entendre !",
+    "Cappuccetto Rosso dice: — Nonna, che bocca grande hai!": "Chaperon Rouge dit : — Grand-mère, quelle grande bouche tu as !",
+    "Il lupo grida: — È per mangiarti meglio!": "Le loup crie : — C'est pour mieux te manger !",
+    "— e salta dal letto.": "— et il saute du lit.",
+    "Un cacciatore sente le grida ed entra veloce nella casa.": "Un chasseur entend les cris et entre vite dans la maison.",
+    "Il cacciatore salva Cappuccetto Rosso e la nonna.": "Le chasseur sauve Chaperon Rouge et la grand-mère.",
+    "Tutti sono felici e mangiano insieme la torta.": "Tous sont heureux et mangent la tarte ensemble."
+  },
+  "questions": [
+    {
+      "q": "Cosa nota Cappuccetto Rosso guardando la nonna a letto?",
+      "options": [
+        "Che ha occhi, orecchie e bocca molto grandi",
+        "Che dorme troppo",
+        "Che ha un vestito nuovo"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Chi salva Cappuccetto Rosso e la nonna?",
+      "options": [
+        "Un cacciatore",
+        "La mamma",
+        "Un altro lupo"
+      ],
+      "correct": 0
+    },
+    {
+      "q": "Come finisce la storia?",
+      "options": [
+        "Tutti sono tristi",
+        "Tutti sono felici e mangiano la torta",
+        "Cappuccetto Rosso torna nel bosco"
+      ],
+      "correct": 1
+    }
+  ]
+}

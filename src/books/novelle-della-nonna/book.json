@@ -1,0 +1,35 @@
+{
+  "id": "novelle-della-nonna",
+  "title": "Le novelle della nonna — selezione",
+  "author": "Emma Perodi",
+  "language": "it",
+  "level": "B2",
+  "levelNote": "Niveau indicatif — texte authentique non simplifié",
+  "source": {
+    "provider": "Wikisource",
+    "pageTitle": "Le novelle della nonna",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "La sera della vigilia di Befana, i bambini del vicinato giunsero più tardi a veglia al podere dei Marcucci; alcuni allegri, altri con una faccia lunga come se qualcuno li avesse ben ben rimproverati."
+    },
+    {
+      "id": "02",
+      "title": "Il tempo era brutto, ma brutto, e invece di maturare il grano, le piogge e i vènti lo facevano piegare a terra. S’era alla fine di maggio, e Maso e i suoi fratelli si grattavan la testa, vedendo i campi così rovinati dalle intemperie. Anche le viti, che avevano già fiorito, pativano, e i contadini si struggevano a veder andar tutto in perdizione per quel tempaccio da lupi. Nessuno pensava più a star sull’aia nel dopopranzo, e la sera, anzi, la famiglia Marcucci si rincantucciava sotto la cappa del camino, mentre cuoceva la cena, per levarsi da dosso quell’umido penetrante che veniva dalla pioggia continua."
+    },
+    {
+      "id": "03",
+      "title": "Tutta la settimana i Marcucci erano stati sossopra per il grande avvenimento. La signora Durini, tornando a Camaldoli, aveva parlato con Carlo Buoni, il quale era tutto lieto della risposta avuta, perché ormai gli pareva che nessuna donna potesse renderlo così felice quanto la modesta e gioviale contadinella di Farneta, che egli aveva incontrato più volte nelle sue passeggiate, e che aveva veduta curva sul lavoro quando passava col fucile in spalla accanto al giardino dell’ispettore Durini."
+    },
+    {
+      "id": "04",
+      "title": "Quella domenica, mentre tutti i Marcucci aspettavano, seduti sull’aia, che la Regina narrasse la novella, Vezzosa si mostrava inquieta e spiava sempre la via maestra come se attendesse qualcuno. E infatti ella attendeva Cecco, partito verso le undici per Pratovecchio, insieme con una comitiva d’amici, per festeggiare la copertura di una fabbrica di uno di loro. Vezzosa aveva fatto un po’ il broncio quando erano venuti a prendere il suo Cecco, e lo avrebbe volentieri trattenuto, ma la Carola aveva detto:"
+    },
+    {
+      "id": "05",
+      "title": "Dopo quella spiegazione avvenuta fra i due sposi nel silenzio di una splendida sera di primavera, la gioia era tornata a brillare sull’esistenza di Cecco e di Vezzosa. Gli uomini del podere erano in faccende per preparare le viti, che si coprivano di pampini, e per vangare e arare i campi che volevan mettere a granturco e a saggina, e le donne erano occupate a riaccomodare i vestiti da estate per loro, per i mariti e per i figli. Vezzosa era la più libera e toccava a lei a portare il desinare nel campo ai cinque fratelli e a fare il pane e il bucato, aiutata dall’Annina. Benché il lavoro fosse duro e incominciasse alle cinque di mattina per continuare fino a tarda sera, pure ella trovava sempre il tempo d’insegnare a leggere e scrivere ai bimbi. Specialmente allora che si avvicinava la Pentecoste, ella s’era messa in testa di far imparare al Rossino una poesia per la nonna; e per indurlo a ripetere i versi e tenerli a mente, gli faceva ogni tanto un omìno di pasta con un po’ di zucchero, oppure due brigidini, che gli dava a lezione terminata."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "mattia-pascal",
+  "title": "Il fu Mattia Pascal",
+  "author": "Luigi Pirandello",
+  "language": "it",
+  "level": "C1",
+  "levelNote": "Niveau indicatif — texte authentique non simplifié",
+  "source": {
+    "provider": "Wikisource",
+    "pageTitle": "Il fu Mattia Pascal",
+    "retrievedAt": "2026-07-24"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "§ 1. — Premessa."
+    },
+    {
+      "id": "02",
+      "title": "§ 2. — Premessa seconda (filosofica)"
+    },
+    {
+      "id": "03",
+      "title": "§ 3. — La casa e la talpa."
+    },
+    {
+      "id": "04",
+      "title": "§ 4. — Fu così."
+    },
+    {
+      "id": "05",
+      "title": "§ 5. — Maturazione."
+    },
+    {
+      "id": "06",
+      "title": "§ 6. — Tac tac tac...."
+    },
+    {
+      "id": "07",
+      "title": "§ 7. — Cambio treno."
+    },
+    {
+      "id": "08",
+      "title": "§ 8. — Adriano Meis."
+    },
+    {
+      "id": "09",
+      "title": "§ 9. — Un po' di nebbia."
+    },
+    {
+      "id": "10",
+      "title": "§ 10. — Acquasantiera e portacenere."
+    },
+    {
+      "id": "11",
+      "title": "§ 11. — Di sera, guardando il fiume."
+    },
+    {
+      "id": "12",
+      "title": "§ 12. — L'occhio e Papiano."
+    },
+    {
+      "id": "13",
+      "title": "§ 13. — Il lanternino."
+    },
+    {
+      "id": "14",
+      "title": "§ 14. — Le prodezze di Max."
+    },
+    {
+      "id": "15",
+      "title": "§ 15. — Io e l'ombra mia."
+    },
+    {
+      "id": "16",
+      "title": "§ 16. — Il ritratto di Minerva."
+    },
+    {
+      "id": "17",
+      "title": "§ 17. — Rincarnazione."
+    },
+    {
+      "id": "18",
+      "title": "§ 18. — Il fu Mattia Pascal."
+    }
+  ]
+}

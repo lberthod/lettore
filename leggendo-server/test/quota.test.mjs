@@ -1,70 +1,95 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { freshQuota, resetIfStale, quotaError, isPaidUser, FREE_STARTER_CREDITS } from '../quota.mjs'
+import {
+  freshQuota,
+  resetIfStale,
+  quotaError,
+  quotaStatus,
+  creditCost,
+  MONTHLY_CREDITS,
+  FREE_TRIAL_CREDITS,
+} from '../quota.mjs'
 
 const gratuit = { uid: 'u1', role: 'gratuit', premium: false }
-const paid = { uid: 'u2', role: 'premium', premium: true }
+const premium = { uid: 'u2', role: 'premium', premium: true }
+const premiumIA = { uid: 'u3', role: 'premium_plus', premium: true }
+const enseignant = { uid: 'u4', role: 'enseignant', premium: true }
 
-test('compte gratuit : autorisé tant que le capital de bienvenue n\'est pas épuisé', () => {
+test('creditCost applique le barème par taille et 1 par défaut si inconnue', () => {
+  assert.equal(creditCost('corto'), 1)
+  assert.equal(creditCost('medio'), 2)
+  assert.equal(creditCost('lungo'), 3)
+  assert.equal(creditCost('molto_lungo'), 4)
+  assert.equal(creditCost('inconnu'), 1)
+})
+
+test('compte gratuit : autorisé pour son unique essai', () => {
   const q = freshQuota()
-  q.totalCount = FREE_STARTER_CREDITS - 1
-  assert.equal(quotaError(gratuit, q), null)
+  assert.equal(quotaError(gratuit, q, 'corto'), null)
 })
 
-test('compte gratuit : bloqué une fois le capital épuisé et la génération du jour déjà faite', () => {
+test('compte gratuit : bloqué une fois l\'essai consommé, quelle que soit la taille', () => {
   const q = freshQuota()
-  q.totalCount = FREE_STARTER_CREDITS
-  q.dailyCount = 1
-  assert.match(quotaError(gratuit, q), /Quota gratuit atteint/)
+  q.trialUsed = true
+  assert.match(quotaError(gratuit, q, 'corto'), /essai déjà utilisée/)
 })
 
-test('compte gratuit : autorisé le lendemain même capital épuisé', () => {
+test('compte Premium (sans IA) : toujours refusé, quel que soit le quota', () => {
   const q = freshQuota()
-  q.totalCount = FREE_STARTER_CREDITS
-  q.dailyCount = 0
-  assert.equal(quotaError(gratuit, q), null)
+  assert.match(quotaError(premium, q, 'corto'), /ne comprend pas la génération/)
 })
 
-test('compte payant : bloqué au-delà de la limite journalière', () => {
+test('Premium IA : autorisé sous la limite mensuelle de crédits', () => {
   const q = freshQuota()
-  q.dailyCount = 10
-  assert.match(quotaError(paid, q), /Quota journalier atteint/)
+  q.monthlyUsed = MONTHLY_CREDITS.premium_plus - 2
+  assert.equal(quotaError(premiumIA, q, 'medio'), null) // coûte 2, il en reste 2
 })
 
-test('compte payant : bloqué au-delà de la limite mensuelle même sous la limite journalière', () => {
+test('Premium IA : refusé si le coût dépasse les crédits restants', () => {
   const q = freshQuota()
-  q.dailyCount = 0
-  q.monthlyCount = 100
-  assert.match(quotaError(paid, q), /Quota mensuel atteint/)
+  q.monthlyUsed = MONTHLY_CREDITS.premium_plus - 1
+  assert.match(quotaError(premiumIA, q, 'medio'), /Crédits mensuels insuffisants/) // coûte 2, il n'en reste qu'1
 })
 
-test('compte payant : autorisé sous les deux limites', () => {
+test('Enseignant : limite mensuelle propre (100), indépendante de Premium IA', () => {
   const q = freshQuota()
-  q.dailyCount = 9
-  q.monthlyCount = 99
-  assert.equal(quotaError(paid, q), null)
+  q.monthlyUsed = MONTHLY_CREDITS.enseignant - 4
+  assert.equal(quotaError(enseignant, q, 'molto_lungo'), null) // coûte 4
+  q.monthlyUsed = MONTHLY_CREDITS.enseignant
+  assert.match(quotaError(enseignant, q, 'corto'), /Crédits mensuels insuffisants/)
 })
 
-test('isPaidUser reconnaît premium_plus et enseignant', () => {
-  assert.equal(isPaidUser({ role: 'premium_plus' }), true)
-  assert.equal(isPaidUser({ role: 'enseignant' }), true)
-  assert.equal(isPaidUser({ role: 'gratuit', premium: false }), false)
-})
-
-test('resetIfStale remet les compteurs jour/mois à zéro au changement de période', () => {
-  const q = { totalCount: 5, dailyCount: 3, dailyDate: '2026-01-01', monthlyCount: 20, monthlyMonth: '2026-01' }
+test('resetIfStale remet le compteur mensuel à zéro au changement de mois, sans toucher à l\'essai', () => {
+  const q = { trialUsed: true, monthlyUsed: 20, monthlyMonth: '2026-01' }
   const reset = resetIfStale(q, new Date('2026-02-15T10:00:00Z'))
-  assert.equal(reset.dailyCount, 0)
-  assert.equal(reset.monthlyCount, 0)
-  assert.equal(reset.totalCount, 5) // le total cumulé n'est jamais remis à zéro
+  assert.equal(reset.monthlyUsed, 0)
+  assert.equal(reset.trialUsed, true) // l'essai gratuit n'est jamais remis à zéro
 })
 
-test('resetIfStale ne touche rien si on est toujours dans la même période', () => {
+test('resetIfStale ne touche rien si on est toujours dans le même mois', () => {
   const now = new Date('2026-02-15T10:00:00Z')
   const q = freshQuota(now)
-  q.dailyCount = 2
-  q.monthlyCount = 7
+  q.monthlyUsed = 7
   const reset = resetIfStale(q, now)
-  assert.equal(reset.dailyCount, 2)
-  assert.equal(reset.monthlyCount, 7)
+  assert.equal(reset.monthlyUsed, 7)
+})
+
+test('quotaStatus expose le solde correct par rôle', () => {
+  const qGratuit = freshQuota()
+  assert.deepEqual(quotaStatus(gratuit, qGratuit), {
+    type: 'trial',
+    used: 0,
+    remaining: FREE_TRIAL_CREDITS,
+  })
+
+  assert.deepEqual(quotaStatus(premium, freshQuota()), { type: 'no_access' })
+
+  const qIA = freshQuota()
+  qIA.monthlyUsed = 5
+  assert.deepEqual(quotaStatus(premiumIA, qIA), {
+    type: 'credits',
+    limit: MONTHLY_CREDITS.premium_plus,
+    used: 5,
+    remaining: MONTHLY_CREDITS.premium_plus - 5,
+  })
 })
