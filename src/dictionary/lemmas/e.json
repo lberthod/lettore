@@ -1,4 +1,54 @@
 {
+  "ebbrezza": {
+    "lemma": "ebbrezza",
+    "pos": "nome femminile",
+    "fr": "ivresse",
+    "definition_it": "stato di chi ha bevuto troppo alcol, oppure forte eccitazione emotiva",
+    "examples": [
+      {
+        "it": "Guidava in stato di ebbrezza.",
+        "fr": "Il conduisait en état d'ivresse."
+      }
+    ],
+    "synonyms": [
+      "ubriachezza"
+    ],
+    "isVerb": false
+  },
+  "eccellentissimo": {
+    "lemma": "eccellentissimo",
+    "pos": "aggettivo",
+    "fr": "excellentissime, très excellent",
+    "definition_it": "forma superlativa di eccellente, usata spesso come titolo di rispetto",
+    "examples": [
+      {
+        "it": "Si rivolse all'eccellentissima signora con grande rispetto.",
+        "fr": "Il s'adressa à la très honorable dame avec grand respect."
+      }
+    ],
+    "synonyms": [
+      "ottimo",
+      "sommo"
+    ],
+    "isVerb": false
+  },
+  "eccitazione": {
+    "lemma": "eccitazione",
+    "pos": "sostantivo (f)",
+    "fr": "excitation",
+    "definition_it": "stato di forte emozione o agitazione",
+    "examples": [
+      {
+        "it": "L'eccitazione per la partenza era grande.",
+        "fr": "L'excitation pour le départ était grande."
+      }
+    ],
+    "synonyms": [
+      "agitazione",
+      "entusiasmo"
+    ],
+    "isVerb": false
+  },
   "edicola": {
     "lemma": "edicola",
     "pos": "nome femminile",
@@ -12,6 +62,40 @@
     ],
     "synonyms": [
       "chiosco"
+    ],
+    "isVerb": false
+  },
+  "edificio": {
+    "lemma": "edificio",
+    "pos": "nome maschile",
+    "fr": "édifice, bâtiment",
+    "definition_it": "costruzione di grandi dimensioni, come una casa o un palazzo",
+    "examples": [
+      {
+        "it": "L'edificio è stato costruito nel secolo scorso.",
+        "fr": "Le bâtiment a été construit au siècle dernier."
+      }
+    ],
+    "synonyms": [
+      "palazzo",
+      "costruzione"
+    ],
+    "isVerb": false
+  },
+  "educazione": {
+    "lemma": "educazione",
+    "pos": "sostantivo (f)",
+    "fr": "éducation",
+    "definition_it": "insieme di insegnamenti e comportamenti trasmessi a una persona",
+    "examples": [
+      {
+        "it": "I genitori curano molto l'educazione dei figli.",
+        "fr": "Les parents veillent beaucoup à l'éducation de leurs enfants."
+      }
+    ],
+    "synonyms": [
+      "istruzione",
+      "formazione"
     ],
     "isVerb": false
   },
@@ -32,6 +116,70 @@
     ],
     "isVerb": false
   },
+  "egro": {
+    "lemma": "egro",
+    "pos": "aggettivo (letterario, arcaico)",
+    "fr": "malade, souffrant",
+    "definition_it": "malato, che sta poco bene (parola letteraria e antica)",
+    "examples": [
+      {
+        "it": "La donna egra giaceva nel letto.",
+        "fr": "La femme malade était allongée dans le lit."
+      }
+    ],
+    "synonyms": [
+      "malato"
+    ],
+    "isVerb": false
+  },
+  "elegante": {
+    "lemma": "elegante",
+    "pos": "aggettivo",
+    "fr": "élégant",
+    "definition_it": "che ha grazia e raffinatezza nell'aspetto o nei modi",
+    "examples": [
+      {
+        "it": "Indossava un abito molto elegante.",
+        "fr": "Elle portait une robe très élégante."
+      }
+    ],
+    "synonyms": [
+      "raffinato"
+    ],
+    "isVerb": false
+  },
+  "eleganza": {
+    "lemma": "eleganza",
+    "pos": "nome femminile",
+    "fr": "élégance",
+    "definition_it": "qualità di ciò che è elegante, di buon gusto e raffinato",
+    "examples": [
+      {
+        "it": "Si veste sempre con grande eleganza.",
+        "fr": "Elle s'habille toujours avec beaucoup d'élégance."
+      }
+    ],
+    "synonyms": [
+      "raffinatezza"
+    ],
+    "isVerb": false
+  },
+  "elemosina": {
+    "lemma": "elemosina",
+    "pos": "nome femminile",
+    "fr": "aumône",
+    "definition_it": "denaro o cibo dato per carità a chi è povero",
+    "examples": [
+      {
+        "it": "Chiedeva l'elemosina davanti alla chiesa.",
+        "fr": "Il mendiait l'aumône devant l'église."
+      }
+    ],
+    "synonyms": [
+      "carità"
+    ],
+    "isVerb": false
+  },
   "elmo": {
     "lemma": "elmo",
     "pos": "sostantivo maschile",
@@ -45,6 +193,105 @@
     ],
     "synonyms": [
       "casco"
+    ],
+    "isVerb": false
+  },
+  "embrice": {
+    "lemma": "embrice",
+    "pos": "nome maschile",
+    "fr": "tuile",
+    "definition_it": "tegola piatta usata per coprire i tetti",
+    "examples": [
+      {
+        "it": "Il tetto era coperto di embrici rossi.",
+        "fr": "Le toit était couvert de tuiles rouges."
+      }
+    ],
+    "synonyms": [
+      "tegola"
+    ],
+    "isVerb": false
+  },
+  "emigrante": {
+    "lemma": "emigrante",
+    "pos": "sostantivo (m/f)",
+    "fr": "émigrant, émigrante",
+    "definition_it": "persona che lascia il proprio paese per andare a vivere altrove",
+    "examples": [
+      {
+        "it": "Molti emigranti italiani partirono per l'America.",
+        "fr": "De nombreux émigrants italiens partirent pour l'Amérique."
+      }
+    ],
+    "synonyms": [
+      "migrante"
+    ],
+    "isVerb": false
+  },
+  "emigrazione": {
+    "lemma": "emigrazione",
+    "pos": "sostantivo (f)",
+    "fr": "émigration",
+    "definition_it": "atto di lasciare il proprio paese per stabilirsi altrove",
+    "examples": [
+      {
+        "it": "L'emigrazione fu un fenomeno enorme nel Novecento.",
+        "fr": "L'émigration fut un phénomène énorme au XXe siècle."
+      }
+    ],
+    "synonyms": [
+      "esodo"
+    ],
+    "isVerb": false
+  },
+  "emozione": {
+    "lemma": "emozione",
+    "pos": "nome femminile",
+    "fr": "émotion",
+    "definition_it": "sentimento intenso e improvviso provocato da qualcosa",
+    "examples": [
+      {
+        "it": "Non riusciva a nascondere l'emozione.",
+        "fr": "Elle n'arrivait pas à cacher son émotion."
+      }
+    ],
+    "synonyms": [
+      "sentimento",
+      "commozione"
+    ],
+    "isVerb": false
+  },
+  "encomio": {
+    "lemma": "encomio",
+    "pos": "nome maschile",
+    "fr": "éloge",
+    "definition_it": "parole di lode rivolte a qualcuno per i suoi meriti",
+    "examples": [
+      {
+        "it": "Ricevette un encomio per il coraggio dimostrato.",
+        "fr": "Il reçut un éloge pour le courage démontré."
+      }
+    ],
+    "synonyms": [
+      "elogio",
+      "lode"
+    ],
+    "isVerb": false
+  },
+  "energia": {
+    "lemma": "energia",
+    "pos": "nome femminile",
+    "fr": "énergie",
+    "definition_it": "forza o capacità di agire e di produrre movimento o lavoro",
+    "examples": [
+      {
+        "it": "Non aveva più energia per continuare a camminare.",
+        "fr": "Il n'avait plus d'énergie pour continuer à marcher."
+      }
+    ],
+    "synonyms": [
+      "forza",
+      "vigore"
     ],
     "isVerb": false
   },
@@ -62,6 +309,23 @@
     "synonyms": [
       "grandezza",
       "esagerazione"
+    ],
+    "isVerb": false
+  },
+  "entrambi": {
+    "lemma": "entrambi",
+    "pos": "aggettivo/pronome",
+    "fr": "tous les deux, l'un et l'autre",
+    "definition_it": "l'uno e l'altro, tutti e due insieme",
+    "examples": [
+      {
+        "it": "Entrambi i fratelli sono partiti stamattina.",
+        "fr": "Les deux frères sont partis ce matin."
+      }
+    ],
+    "synonyms": [
+      "ambedue",
+      "tutti e due"
     ],
     "isVerb": false
   },
@@ -119,6 +383,39 @@
     ],
     "isVerb": false
   },
+  "entroterra": {
+    "lemma": "entroterra",
+    "pos": "sostantivo (m)",
+    "fr": "arrière-pays",
+    "definition_it": "zona interna di un territorio, lontana dalla costa",
+    "examples": [
+      {
+        "it": "Il villaggio si trova nell'entroterra ligure.",
+        "fr": "Le village se trouve dans l'arrière-pays ligure."
+      }
+    ],
+    "synonyms": [
+      "interno"
+    ],
+    "isVerb": false
+  },
+  "epifania": {
+    "lemma": "epifania",
+    "pos": "sostantivo (f)",
+    "fr": "épiphanie, manifestation",
+    "definition_it": "improvvisa manifestazione o rivelazione di qualcosa; anche festa cristiana",
+    "examples": [
+      {
+        "it": "Ebbe una sorta di epifania mentre camminava.",
+        "fr": "Il eut une sorte d'épiphanie en marchant."
+      }
+    ],
+    "synonyms": [
+      "rivelazione",
+      "manifestazione"
+    ],
+    "isVerb": false
+  },
   "epoca": {
     "lemma": "epoca",
     "pos": "nome femminile",
@@ -136,6 +433,20 @@
     ],
     "isVerb": false
   },
+  "erba": {
+    "lemma": "erba",
+    "pos": "nome femminile",
+    "fr": "herbe",
+    "definition_it": "pianta verde e bassa che cresce nei prati",
+    "examples": [
+      {
+        "it": "I bambini giocavano sull'erba del giardino.",
+        "fr": "Les enfants jouaient sur l'herbe du jardin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "erede": {
     "lemma": "erede",
     "pos": "sostantivo maschile/femminile",
@@ -145,6 +456,70 @@
       {
         "it": "È l'unico erede della famiglia.",
         "fr": "Il est l'unique héritier de la famille."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eredità": {
+    "lemma": "eredità",
+    "pos": "sostantivo (f)",
+    "fr": "héritage",
+    "definition_it": "beni o valori trasmessi da chi muore a chi resta",
+    "examples": [
+      {
+        "it": "Ha ricevuto una piccola eredità dallo zio.",
+        "fr": "Il a reçu un petit héritage de son oncle."
+      }
+    ],
+    "synonyms": [
+      "patrimonio",
+      "retaggio"
+    ],
+    "isVerb": false
+  },
+  "errare": {
+    "lemma": "errare",
+    "pos": "verbo (intransitivo/transitivo, regolare)",
+    "fr": "errer, se tromper",
+    "definition_it": "vagare senza meta, oppure sbagliare",
+    "examples": [
+      {
+        "it": "Erro spesso quando faccio i conti a mente.",
+        "fr": "Je me trompe souvent quand je fais les calculs de tête."
+      }
+    ],
+    "synonyms": [
+      "sbagliare",
+      "vagare"
+    ],
+    "isVerb": true
+  },
+  "errore": {
+    "lemma": "errore",
+    "pos": "nome maschile",
+    "fr": "erreur",
+    "definition_it": "azione o giudizio sbagliato, contrario al vero o al corretto",
+    "examples": [
+      {
+        "it": "Ha commesso un grave errore di calcolo.",
+        "fr": "Il a commis une grave erreur de calcul."
+      }
+    ],
+    "synonyms": [
+      "sbaglio"
+    ],
+    "isVerb": false
+  },
+  "eruzione": {
+    "lemma": "eruzione",
+    "pos": "nome femminile",
+    "fr": "éruption",
+    "definition_it": "fuoriuscita improvvisa di materiale, per esempio da un vulcano",
+    "examples": [
+      {
+        "it": "Il vulcano è entrato in eruzione all'improvviso.",
+        "fr": "Le volcan est entré en éruption soudainement."
       }
     ],
     "synonyms": [],
@@ -184,6 +559,87 @@
     ],
     "isVerb": false
   },
+  "esca": {
+    "lemma": "esca",
+    "pos": "sostantivo (f)",
+    "fr": "appât",
+    "definition_it": "cibo usato per attirare un animale, spesso nella pesca",
+    "examples": [
+      {
+        "it": "Il pescatore mise l'esca sull'amo.",
+        "fr": "Le pêcheur mit l'appât sur l'hameçon."
+      }
+    ],
+    "synonyms": [
+      "richiamo"
+    ],
+    "isVerb": false
+  },
+  "escursione": {
+    "lemma": "escursione",
+    "pos": "sostantivo (f)",
+    "fr": "excursion, randonnée",
+    "definition_it": "breve viaggio o passeggiata fatta per svago o esplorazione",
+    "examples": [
+      {
+        "it": "Domenica faremo un'escursione in montagna.",
+        "fr": "Dimanche nous ferons une excursion en montagne."
+      }
+    ],
+    "synonyms": [
+      "gita",
+      "passeggiata"
+    ],
+    "isVerb": false
+  },
+  "esercizio": {
+    "lemma": "esercizio",
+    "pos": "sostantivo (m)",
+    "fr": "exercice",
+    "definition_it": "attività ripetuta per allenarsi o imparare qualcosa",
+    "examples": [
+      {
+        "it": "Ogni giorno faccio esercizio fisico.",
+        "fr": "Chaque jour je fais de l'exercice physique."
+      }
+    ],
+    "synonyms": [
+      "allenamento",
+      "pratica"
+    ],
+    "isVerb": false
+  },
+  "esigere": {
+    "lemma": "esigere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "exiger, réclamer",
+    "definition_it": "pretendere con fermezza qualcosa che si ritiene dovuto",
+    "examples": [
+      {
+        "it": "Il capo esige puntualità da tutti.",
+        "fr": "Le chef exige de la ponctualité de la part de tous."
+      }
+    ],
+    "synonyms": [
+      "pretendere",
+      "richiedere"
+    ],
+    "isVerb": true
+  },
+  "esilio": {
+    "lemma": "esilio",
+    "pos": "nome maschile",
+    "fr": "exil",
+    "definition_it": "condizione di chi è costretto a vivere lontano dalla propria patria",
+    "examples": [
+      {
+        "it": "Visse molti anni in esilio.",
+        "fr": "Il a vécu de nombreuses années en exil."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "esimio": {
     "lemma": "esimio",
     "pos": "aggettivo",
@@ -201,6 +657,56 @@
     ],
     "isVerb": false
   },
+  "esistenza": {
+    "lemma": "esistenza",
+    "pos": "nome femminile",
+    "fr": "existence",
+    "definition_it": "il fatto di esistere, oppure la vita di una persona",
+    "examples": [
+      {
+        "it": "Ha condotto un'esistenza semplice e tranquilla.",
+        "fr": "Il a mené une existence simple et tranquille."
+      }
+    ],
+    "synonyms": [
+      "vita"
+    ],
+    "isVerb": false
+  },
+  "esitazione": {
+    "lemma": "esitazione",
+    "pos": "nome femminile",
+    "fr": "hésitation",
+    "definition_it": "momento di dubbio o incertezza prima di decidere o agire",
+    "examples": [
+      {
+        "it": "Rispose senza esitazione.",
+        "fr": "Il répondit sans hésitation."
+      }
+    ],
+    "synonyms": [
+      "indecisione",
+      "dubbio"
+    ],
+    "isVerb": false
+  },
+  "esperienza": {
+    "lemma": "esperienza",
+    "pos": "sostantivo (f)",
+    "fr": "expérience",
+    "definition_it": "conoscenza acquisita vivendo o facendo qualcosa direttamente",
+    "examples": [
+      {
+        "it": "Ha molta esperienza nel suo lavoro.",
+        "fr": "Il a beaucoup d'expérience dans son travail."
+      }
+    ],
+    "synonyms": [
+      "pratica",
+      "vissuto"
+    ],
+    "isVerb": false
+  },
   "espulsione": {
     "lemma": "espulsione",
     "pos": "nome femminile",
@@ -215,6 +721,22 @@
     "synonyms": [
       "cacciata",
       "allontanamento"
+    ],
+    "isVerb": false
+  },
+  "esse": {
+    "lemma": "esse",
+    "pos": "pronome personale",
+    "fr": "elles",
+    "definition_it": "pronome personale di terza persona plurale femminile, soggetto",
+    "examples": [
+      {
+        "it": "Esse tornarono a casa tardi la sera.",
+        "fr": "Elles rentrèrent tard le soir."
+      }
+    ],
+    "synonyms": [
+      "loro"
     ],
     "isVerb": false
   },
@@ -252,6 +774,52 @@
     ],
     "isVerb": true
   },
+  "essi": {
+    "lemma": "essi",
+    "pos": "pronome personale (arcaico: elli)",
+    "fr": "ils, eux",
+    "definition_it": "pronome personale di terza persona plurale maschile, soggetto; 'elli' è una forma antica",
+    "examples": [
+      {
+        "it": "Elli andarono in cerca di fortuna.",
+        "fr": "Ils partirent en quête de fortune."
+      }
+    ],
+    "synonyms": [
+      "loro"
+    ],
+    "isVerb": false
+  },
+  "estate": {
+    "lemma": "estate",
+    "pos": "nome femminile",
+    "fr": "été",
+    "definition_it": "la stagione più calda dell'anno, compresa tra la primavera e l'autunno",
+    "examples": [
+      {
+        "it": "In estate fa molto caldo al sud.",
+        "fr": "En été il fait très chaud dans le sud."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esterno": {
+    "lemma": "esterno",
+    "pos": "aggettivo / nome maschile",
+    "fr": "extérieur",
+    "definition_it": "che si trova fuori, non all'interno di qualcosa",
+    "examples": [
+      {
+        "it": "L'esterno della casa è dipinto di bianco.",
+        "fr": "L'extérieur de la maison est peint en blanc."
+      }
+    ],
+    "synonyms": [
+      "esteriore"
+    ],
+    "isVerb": false
+  },
   "estero": {
     "lemma": "estero",
     "pos": "nome maschile / aggettivo",
@@ -265,6 +833,39 @@
     ],
     "synonyms": [
       "straniero"
+    ],
+    "isVerb": false
+  },
+  "estinto": {
+    "lemma": "estinto",
+    "pos": "aggettivo/sostantivo (m)",
+    "fr": "éteint, disparu ; défunt",
+    "definition_it": "che non esiste più; anche persona morta",
+    "examples": [
+      {
+        "it": "Quella specie di animale è ormai estinta.",
+        "fr": "Cette espèce d'animal est désormais éteinte."
+      }
+    ],
+    "synonyms": [
+      "scomparso",
+      "defunto"
+    ],
+    "isVerb": false
+  },
+  "esto": {
+    "lemma": "esto",
+    "pos": "aggettivo/pronome dimostrativo (forma arcaica e letteraria)",
+    "fr": "ce, cet (forme archaïque de 'questo')",
+    "definition_it": "forma antica e letteraria dell'aggettivo dimostrativo 'questo', usata soprattutto in testi poetici",
+    "examples": [
+      {
+        "it": "Esto giorno rimarrà nella memoria di tutti.",
+        "fr": "Ce jour restera dans la mémoire de tous."
+      }
+    ],
+    "synonyms": [
+      "questo"
     ],
     "isVerb": false
   },
@@ -318,6 +919,22 @@
     ],
     "isVerb": false
   },
+  "eterodirezione": {
+    "lemma": "eterodirezione",
+    "pos": "sostantivo (f)",
+    "fr": "hétérodirection",
+    "definition_it": "condizione in cui il comportamento di una persona è determinato da influenze esterne piuttosto che dalla propria volontà",
+    "examples": [
+      {
+        "it": "La società moderna spinge molti verso l'eterodirezione.",
+        "fr": "La société moderne pousse beaucoup de gens vers l'hétérodirection."
+      }
+    ],
+    "synonyms": [
+      "conformismo"
+    ],
+    "isVerb": false
+  },
   "eventificazione": {
     "lemma": "eventificazione",
     "pos": "nome femminile",
@@ -330,6 +947,56 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "evento": {
+    "lemma": "evento",
+    "pos": "sostantivo (m)",
+    "fr": "événement",
+    "definition_it": "avvenimento importante che accade in un certo momento",
+    "examples": [
+      {
+        "it": "L'evento si terrà sabato sera.",
+        "fr": "L'événement aura lieu samedi soir."
+      }
+    ],
+    "synonyms": [
+      "avvenimento",
+      "accadimento"
+    ],
+    "isVerb": false
+  },
+  "eventuale": {
+    "lemma": "eventuale",
+    "pos": "aggettivo",
+    "fr": "éventuel",
+    "definition_it": "che può accadere ma non è certo",
+    "examples": [
+      {
+        "it": "Comunicaci un eventuale ritardo.",
+        "fr": "Informe-nous d'un éventuel retard."
+      }
+    ],
+    "synonyms": [
+      "possibile",
+      "ipotetico"
+    ],
+    "isVerb": false
+  },
+  "eversione": {
+    "lemma": "eversione",
+    "pos": "nome femminile",
+    "fr": "subversion",
+    "definition_it": "azione volta a distruggere o rovesciare un ordine costituito",
+    "examples": [
+      {
+        "it": "Fu accusato di eversione contro lo Stato.",
+        "fr": "Il fut accusé de subversion contre l'État."
+      }
+    ],
+    "synonyms": [
+      "sovversione"
+    ],
     "isVerb": false
   }
 }

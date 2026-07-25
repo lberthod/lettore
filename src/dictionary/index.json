@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lemmaCount": 2436,
-    "verbCount": 549,
-    "conjugatedVerbCount": 549,
-    "indexedFormCount": 6272
+    "lemmaCount": 3496,
+    "verbCount": 788,
+    "conjugatedVerbCount": 788,
+    "indexedFormCount": 9654
   },
   "entries": [
     {
@@ -71,6 +71,12 @@
       "pos": "verbe (transitif)",
       "fr": "abandonner",
       "isVerb": true
+    },
+    {
+      "lemma": "abbandono",
+      "pos": "nome maschile",
+      "fr": "abandon",
+      "isVerb": false
     },
     {
       "lemma": "abbassare",
@@ -325,6 +331,12 @@
       "isVerb": false
     },
     {
+      "lemma": "abside",
+      "pos": "nome femminile",
+      "fr": "abside",
+      "isVerb": false
+    },
+    {
       "lemma": "acaro",
       "pos": "nome maschile",
       "fr": "acarien",
@@ -517,6 +529,12 @@
       "isVerb": true
     },
     {
+      "lemma": "acciaio",
+      "pos": "nome maschile",
+      "fr": "acier",
+      "isVerb": false
+    },
+    {
       "lemma": "accigliarsi",
       "pos": "verbo (riflessivo)",
       "fr": "froncer les sourcils",
@@ -592,6 +610,12 @@
       "lemma": "acconciare",
       "pos": "verbo (transitivo)",
       "fr": "arranger, coiffer",
+      "isVerb": true
+    },
+    {
+      "lemma": "acconciarsi",
+      "pos": "verbo riflessivo (1ª coniugazione)",
+      "fr": "s'arranger, se coiffer, s'apprêter",
       "isVerb": true
     },
     {
@@ -700,6 +724,12 @@
       "lemma": "accumulatore",
       "pos": "nome (m.)",
       "fr": "accumulateur, batterie",
+      "isVerb": false
+    },
+    {
+      "lemma": "accumulo",
+      "pos": "nome maschile",
+      "fr": "accumulation",
       "isVerb": false
     },
     {
@@ -2119,6 +2149,12 @@
       "isVerb": true
     },
     {
+      "lemma": "allegrezza",
+      "pos": "nome femminile",
+      "fr": "allégresse, joie",
+      "isVerb": false
+    },
+    {
       "lemma": "allegro",
       "pos": "aggettivo",
       "fr": "joyeux, gai",
@@ -2609,6 +2645,18 @@
       "pos": "verbo (transitivo)",
       "fr": "cabosser, bosseler",
       "isVerb": true
+    },
+    {
+      "lemma": "ammaccatura",
+      "pos": "nome femminile",
+      "fr": "bosse, cabosse",
+      "isVerb": false
+    },
+    {
+      "lemma": "ammaestramento",
+      "pos": "nome maschile",
+      "fr": "dressage, enseignement",
+      "isVerb": false
     },
     {
       "lemma": "ammaestrare",
@@ -3871,6 +3919,12 @@
       "isVerb": false
     },
     {
+      "lemma": "appurare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "vérifier, établir, constater",
+      "isVerb": true
+    },
+    {
       "lemma": "aprile",
       "pos": "sostantivo (maschile)",
       "fr": "avril",
@@ -4162,6 +4216,12 @@
       "lemma": "aristocratico",
       "pos": "aggettivo/sostantivo",
       "fr": "aristocrate, aristocratique",
+      "isVerb": false
+    },
+    {
+      "lemma": "aristocrazia",
+      "pos": "sostantivo (f.)",
+      "fr": "aristocratie",
       "isVerb": false
     },
     {
@@ -4459,6 +4519,12 @@
       "isVerb": false
     },
     {
+      "lemma": "arsione",
+      "pos": "nome femminile (letterario)",
+      "fr": "brûlure, ardeur, soif ardente",
+      "isVerb": false
+    },
+    {
       "lemma": "arte",
       "pos": "nome femminile",
       "fr": "art",
@@ -4489,6 +4555,12 @@
       "isVerb": false
     },
     {
+      "lemma": "artificio",
+      "pos": "nome maschile",
+      "fr": "artifice, stratagème",
+      "isVerb": false
+    },
+    {
       "lemma": "artigianale",
       "pos": "aggettivo",
       "fr": "artisanal",
@@ -4505,6 +4577,12 @@
       "pos": "verbo (transitivo)",
       "fr": "griffer, agripper avec les serres",
       "isVerb": true
+    },
+    {
+      "lemma": "artiglieria",
+      "pos": "nome femminile",
+      "fr": "artillerie",
+      "isVerb": false
     },
     {
       "lemma": "artiglio",
@@ -4612,6 +4690,12 @@
       "lemma": "asino",
       "pos": "nome (maschile)",
       "fr": "âne",
+      "isVerb": false
+    },
+    {
+      "lemma": "asma",
+      "pos": "nome femminile",
+      "fr": "asthme",
       "isVerb": false
     },
     {
@@ -5017,6 +5101,12 @@
       "isVerb": false
     },
     {
+      "lemma": "astro",
+      "pos": "sostantivo (m)",
+      "fr": "astre, étoile",
+      "isVerb": false
+    },
+    {
       "lemma": "astronauta",
       "pos": "sostantivo (m/f)",
       "fr": "astronaute",
@@ -5117,6 +5207,12 @@
       "pos": "verbo (transitivo/intransitivo)",
       "fr": "attaquer, attacher",
       "isVerb": true
+    },
+    {
+      "lemma": "attaccatura",
+      "pos": "nome femminile",
+      "fr": "point d'attache, racine (des cheveux)",
+      "isVerb": false
     },
     {
       "lemma": "attacco",
@@ -5629,9 +5725,21 @@
       "isVerb": true
     },
     {
+      "lemma": "avanzo",
+      "pos": "nome maschile",
+      "fr": "reste, surplus",
+      "isVerb": false
+    },
+    {
       "lemma": "avaro",
       "pos": "aggettivo/sostantivo",
       "fr": "avare",
+      "isVerb": false
+    },
+    {
+      "lemma": "avello",
+      "pos": "sostantivo (m)",
+      "fr": "tombeau, sépulcre",
       "isVerb": false
     },
     {
@@ -12721,6 +12829,1068 @@
       "isVerb": true
     },
     {
+      "lemma": "comparsa",
+      "pos": "nome (f.)",
+      "fr": "apparition; figurant(e)",
+      "isVerb": false
+    },
+    {
+      "lemma": "compassato",
+      "pos": "aggettivo",
+      "fr": "compassé, mesuré",
+      "isVerb": false
+    },
+    {
+      "lemma": "compassione",
+      "pos": "nome (f.)",
+      "fr": "compassion, pitié",
+      "isVerb": false
+    },
+    {
+      "lemma": "compassionevole",
+      "pos": "aggettivo",
+      "fr": "compatissant, pitoyable",
+      "isVerb": false
+    },
+    {
+      "lemma": "compatimento",
+      "pos": "nome (m.)",
+      "fr": "commisération, indulgence condescendante",
+      "isVerb": false
+    },
+    {
+      "lemma": "compatire",
+      "pos": "verbo (transitivo)",
+      "fr": "plaindre, avoir pitié de",
+      "isVerb": true
+    },
+    {
+      "lemma": "compatto",
+      "pos": "aggettivo",
+      "fr": "compact, uni",
+      "isVerb": false
+    },
+    {
+      "lemma": "compenetrare",
+      "pos": "verbo (transitivo/riflessivo)",
+      "fr": "pénétrer intimement, fusionner",
+      "isVerb": true
+    },
+    {
+      "lemma": "compensare",
+      "pos": "verbo (transitivo)",
+      "fr": "compenser, dédommager",
+      "isVerb": true
+    },
+    {
+      "lemma": "compenso",
+      "pos": "sostantivo maschile",
+      "fr": "rémunération, dédommagement",
+      "isVerb": false
+    },
+    {
+      "lemma": "comperare",
+      "pos": "verbo (transitivo)",
+      "fr": "acheter",
+      "isVerb": true
+    },
+    {
+      "lemma": "competente",
+      "pos": "aggettivo",
+      "fr": "compétent",
+      "isVerb": false
+    },
+    {
+      "lemma": "competenza",
+      "pos": "sostantivo femminile",
+      "fr": "compétence",
+      "isVerb": false
+    },
+    {
+      "lemma": "competere",
+      "pos": "verbo (intransitivo)",
+      "fr": "rivaliser, être en concurrence",
+      "isVerb": true
+    },
+    {
+      "lemma": "competitivo",
+      "pos": "aggettivo",
+      "fr": "compétitif",
+      "isVerb": false
+    },
+    {
+      "lemma": "competizione",
+      "pos": "sostantivo femminile",
+      "fr": "compétition",
+      "isVerb": false
+    },
+    {
+      "lemma": "compiacente",
+      "pos": "aggettivo",
+      "fr": "complaisant, serviable",
+      "isVerb": false
+    },
+    {
+      "lemma": "compiacenza",
+      "pos": "sostantivo femminile",
+      "fr": "complaisance, amabilité",
+      "isVerb": false
+    },
+    {
+      "lemma": "compiacere",
+      "pos": "verbo (transitivo e intransitivo)",
+      "fr": "faire plaisir à, satisfaire, complaire",
+      "isVerb": true
+    },
+    {
+      "lemma": "compiacimento",
+      "pos": "sostantivo maschile",
+      "fr": "satisfaction, contentement",
+      "isVerb": false
+    },
+    {
+      "lemma": "compiangere",
+      "pos": "verbo (transitivo)",
+      "fr": "plaindre, pleurer (quelqu'un)",
+      "isVerb": true
+    },
+    {
+      "lemma": "compianto",
+      "pos": "sostantivo maschile / aggettivo",
+      "fr": "deuil, regret / regretté, défunt",
+      "isVerb": false
+    },
+    {
+      "lemma": "compiere",
+      "pos": "verbo (transitivo)",
+      "fr": "accomplir, achever",
+      "isVerb": true
+    },
+    {
+      "lemma": "compilare",
+      "pos": "verbo (transitivo)",
+      "fr": "remplir, compiler (un formulaire, un document)",
+      "isVerb": true
+    },
+    {
+      "lemma": "compimento",
+      "pos": "sostantivo maschile",
+      "fr": "accomplissement, achèvement",
+      "isVerb": false
+    },
+    {
+      "lemma": "compitare",
+      "pos": "verbo (transitivo)",
+      "fr": "épeler",
+      "isVerb": true
+    },
+    {
+      "lemma": "compito",
+      "pos": "sostantivo maschile",
+      "fr": "devoir, tâche",
+      "isVerb": false
+    },
+    {
+      "lemma": "compleanno",
+      "pos": "nome (maschile)",
+      "fr": "anniversaire",
+      "isVerb": false
+    },
+    {
+      "lemma": "complessione",
+      "pos": "nome (femminile)",
+      "fr": "constitution physique, corpulence",
+      "isVerb": false
+    },
+    {
+      "lemma": "complessità",
+      "pos": "nome (femminile)",
+      "fr": "complexité",
+      "isVerb": false
+    },
+    {
+      "lemma": "complessivo",
+      "pos": "aggettivo",
+      "fr": "global, total",
+      "isVerb": false
+    },
+    {
+      "lemma": "complesso",
+      "pos": "aggettivo",
+      "fr": "complexe",
+      "isVerb": false
+    },
+    {
+      "lemma": "completamente",
+      "pos": "avverbio",
+      "fr": "complètement",
+      "isVerb": false
+    },
+    {
+      "lemma": "completamento",
+      "pos": "nome (maschile)",
+      "fr": "achèvement",
+      "isVerb": false
+    },
+    {
+      "lemma": "completare",
+      "pos": "verbo (transitivo)",
+      "fr": "compléter, achever",
+      "isVerb": true
+    },
+    {
+      "lemma": "completo",
+      "pos": "aggettivo",
+      "fr": "complet",
+      "isVerb": false
+    },
+    {
+      "lemma": "complicare",
+      "pos": "verbo (transitivo)",
+      "fr": "compliquer",
+      "isVerb": true
+    },
+    {
+      "lemma": "complicato",
+      "pos": "aggettivo",
+      "fr": "compliqué",
+      "isVerb": false
+    },
+    {
+      "lemma": "complicazione",
+      "pos": "sostantivo (f.)",
+      "fr": "complication",
+      "isVerb": false
+    },
+    {
+      "lemma": "complice",
+      "pos": "sostantivo/aggettivo (m./f.)",
+      "fr": "complice",
+      "isVerb": false
+    },
+    {
+      "lemma": "complimento",
+      "pos": "sostantivo (m.)",
+      "fr": "compliment",
+      "isVerb": false
+    },
+    {
+      "lemma": "complimentoso",
+      "pos": "aggettivo",
+      "fr": "qui fait beaucoup de compliments, cérémonieux",
+      "isVerb": false
+    },
+    {
+      "lemma": "complotto",
+      "pos": "sostantivo (m.)",
+      "fr": "complot",
+      "isVerb": false
+    },
+    {
+      "lemma": "componente",
+      "pos": "sostantivo (m./f.)",
+      "fr": "composant, membre",
+      "isVerb": false
+    },
+    {
+      "lemma": "comporre",
+      "pos": "verbo (transitivo)",
+      "fr": "composer",
+      "isVerb": true
+    },
+    {
+      "lemma": "comportamentale",
+      "pos": "aggettivo",
+      "fr": "comportemental",
+      "isVerb": false
+    },
+    {
+      "lemma": "comportamento",
+      "pos": "sostantivo maschile",
+      "fr": "comportement",
+      "isVerb": false
+    },
+    {
+      "lemma": "comportare",
+      "pos": "verbo (transitivo/riflessivo)",
+      "fr": "comporter, entraîner ; se comporter",
+      "isVerb": true
+    },
+    {
+      "lemma": "compositore",
+      "pos": "sostantivo maschile",
+      "fr": "compositeur",
+      "isVerb": false
+    },
+    {
+      "lemma": "comprare",
+      "pos": "verbo (transitivo)",
+      "fr": "acheter",
+      "isVerb": true
+    },
+    {
+      "lemma": "compratore",
+      "pos": "sostantivo (m.)",
+      "fr": "acheteur",
+      "isVerb": false
+    },
+    {
+      "lemma": "comprendere",
+      "pos": "verbo (transitivo)",
+      "fr": "comprendre",
+      "isVerb": true
+    },
+    {
+      "lemma": "comprensione",
+      "pos": "sostantivo femminile",
+      "fr": "compréhension",
+      "isVerb": false
+    },
+    {
+      "lemma": "compromesso",
+      "pos": "sostantivo maschile",
+      "fr": "compromis",
+      "isVerb": false
+    },
+    {
+      "lemma": "compromettere",
+      "pos": "verbo (transitivo)",
+      "fr": "compromettre",
+      "isVerb": true
+    },
+    {
+      "lemma": "compromissione",
+      "pos": "sostantivo femminile",
+      "fr": "compromission",
+      "isVerb": false
+    },
+    {
+      "lemma": "comprovare",
+      "pos": "verbo (transitivo)",
+      "fr": "prouver, démontrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "compunto",
+      "pos": "aggettivo",
+      "fr": "contrit, plein de componction",
+      "isVerb": false
+    },
+    {
+      "lemma": "computer",
+      "pos": "sostantivo maschile invariabile",
+      "fr": "ordinateur",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunale",
+      "pos": "aggettivo",
+      "fr": "communal, municipal",
+      "isVerb": false
+    },
+    {
+      "lemma": "comune",
+      "pos": "aggettivo / sostantivo maschile",
+      "fr": "commun / commune (municipalité)",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunemente",
+      "pos": "avverbio",
+      "fr": "communément",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunicare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "communiquer",
+      "isVerb": true
+    },
+    {
+      "lemma": "comunicazione",
+      "pos": "sostantivo femminile",
+      "fr": "communication",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunista",
+      "pos": "sostantivo / aggettivo",
+      "fr": "communiste",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunità",
+      "pos": "sostantivo femminile",
+      "fr": "communauté",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunitario",
+      "pos": "aggettivo",
+      "fr": "communautaire",
+      "isVerb": false
+    },
+    {
+      "lemma": "comunque",
+      "pos": "avverbio / congiunzione",
+      "fr": "de toute façon, quoi qu'il en soit",
+      "isVerb": false
+    },
+    {
+      "lemma": "con",
+      "pos": "preposizione",
+      "fr": "avec",
+      "isVerb": false
+    },
+    {
+      "lemma": "conca",
+      "pos": "nome (f.)",
+      "fr": "cuvette, bassin",
+      "isVerb": false
+    },
+    {
+      "lemma": "concedere",
+      "pos": "verbo (transitivo)",
+      "fr": "accorder, concéder",
+      "isVerb": true
+    },
+    {
+      "lemma": "concentrare",
+      "pos": "verbo (transitivo/pronominale)",
+      "fr": "concentrer, se concentrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "concentrarsi",
+      "pos": "verbo (pronominale, regolare)",
+      "fr": "se concentrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "concentrato",
+      "pos": "aggettivo / participio passato",
+      "fr": "concentré",
+      "isVerb": false
+    },
+    {
+      "lemma": "concentrazione",
+      "pos": "nome (femminile)",
+      "fr": "concentration",
+      "isVerb": false
+    },
+    {
+      "lemma": "concepire",
+      "pos": "verbo (transitivo, con -isc- al presente)",
+      "fr": "concevoir",
+      "isVerb": true
+    },
+    {
+      "lemma": "concertare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "concerter, organiser d'un commun accord",
+      "isVerb": true
+    },
+    {
+      "lemma": "concerto",
+      "pos": "nome (maschile)",
+      "fr": "concert",
+      "isVerb": false
+    },
+    {
+      "lemma": "concessionario",
+      "pos": "sostantivo maschile",
+      "fr": "concessionnaire",
+      "isVerb": false
+    },
+    {
+      "lemma": "concessione",
+      "pos": "sostantivo femminile",
+      "fr": "concession",
+      "isVerb": false
+    },
+    {
+      "lemma": "concetto",
+      "pos": "sostantivo maschile",
+      "fr": "concept, idée",
+      "isVerb": false
+    },
+    {
+      "lemma": "concettoso",
+      "pos": "aggettivo",
+      "fr": "alambiqué, plein de concepts",
+      "isVerb": false
+    },
+    {
+      "lemma": "concettuale",
+      "pos": "aggettivo",
+      "fr": "conceptuel",
+      "isVerb": false
+    },
+    {
+      "lemma": "concezione",
+      "pos": "sostantivo femminile",
+      "fr": "conception",
+      "isVerb": false
+    },
+    {
+      "lemma": "conchetta",
+      "pos": "sostantivo femminile",
+      "fr": "petit bol, petite conque",
+      "isVerb": false
+    },
+    {
+      "lemma": "conchiglia",
+      "pos": "sostantivo femminile",
+      "fr": "coquillage",
+      "isVerb": false
+    },
+    {
+      "lemma": "conciare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "tanner (le cuir) ; (fig.) mettre dans un sale état",
+      "isVerb": true
+    },
+    {
+      "lemma": "conciliabolo",
+      "pos": "sostantivo maschile",
+      "fr": "conciliabule",
+      "isVerb": false
+    },
+    {
+      "lemma": "conciliare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "concilier, réconcilier",
+      "isVerb": true
+    },
+    {
+      "lemma": "conciossiaché",
+      "pos": "congiunzione (arcaica)",
+      "fr": "puisque, étant donné que",
+      "isVerb": false
+    },
+    {
+      "lemma": "concitatamente",
+      "pos": "avverbio",
+      "fr": "avec agitation, fébrilement",
+      "isVerb": false
+    },
+    {
+      "lemma": "concitato",
+      "pos": "aggettivo",
+      "fr": "agité, fébrile",
+      "isVerb": false
+    },
+    {
+      "lemma": "concittadino",
+      "pos": "sostantivo maschile",
+      "fr": "concitoyen",
+      "isVerb": false
+    },
+    {
+      "lemma": "concludere",
+      "pos": "verbo (transitivo/intransitivo, irregolare)",
+      "fr": "conclure, terminer",
+      "isVerb": true
+    },
+    {
+      "lemma": "conclusione",
+      "pos": "nome (f)",
+      "fr": "conclusion",
+      "isVerb": false
+    },
+    {
+      "lemma": "concordare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "accorder, convenir, être d'accord",
+      "isVerb": true
+    },
+    {
+      "lemma": "concordia",
+      "pos": "nome (f)",
+      "fr": "concorde, harmonie",
+      "isVerb": false
+    },
+    {
+      "lemma": "concorrente",
+      "pos": "nome/aggettivo (m/f)",
+      "fr": "concurrent, concurrente",
+      "isVerb": false
+    },
+    {
+      "lemma": "concorrenza",
+      "pos": "nome (f)",
+      "fr": "concurrence",
+      "isVerb": false
+    },
+    {
+      "lemma": "concorrere",
+      "pos": "verbo (intransitivo, irregolare)",
+      "fr": "concourir, participer à un concours",
+      "isVerb": true
+    },
+    {
+      "lemma": "concorso",
+      "pos": "nome (m)",
+      "fr": "concours",
+      "isVerb": false
+    },
+    {
+      "lemma": "concreto",
+      "pos": "aggettivo",
+      "fr": "concret, concrète",
+      "isVerb": false
+    },
+    {
+      "lemma": "concuocere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "cuire ensemble",
+      "isVerb": true
+    },
+    {
+      "lemma": "condanna",
+      "pos": "sostantivo (femminile)",
+      "fr": "condamnation, peine",
+      "isVerb": false
+    },
+    {
+      "lemma": "condannare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "condamner",
+      "isVerb": true
+    },
+    {
+      "lemma": "condire",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "assaisonner",
+      "isVerb": true
+    },
+    {
+      "lemma": "condiscendente",
+      "pos": "aggettivo",
+      "fr": "condescendant, complaisant",
+      "isVerb": false
+    },
+    {
+      "lemma": "condividere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "partager",
+      "isVerb": true
+    },
+    {
+      "lemma": "condizione",
+      "pos": "nome (femminile)",
+      "fr": "condition, état",
+      "isVerb": false
+    },
+    {
+      "lemma": "condoglianza",
+      "pos": "nome (femminile, spesso plurale)",
+      "fr": "condoléances",
+      "isVerb": false
+    },
+    {
+      "lemma": "condominiale",
+      "pos": "aggettivo",
+      "fr": "de copropriété, du condominium",
+      "isVerb": false
+    },
+    {
+      "lemma": "condominio",
+      "pos": "nome (maschile)",
+      "fr": "copropriété, immeuble en copropriété",
+      "isVerb": false
+    },
+    {
+      "lemma": "condomino",
+      "pos": "nome (maschile)",
+      "fr": "copropriétaire",
+      "isVerb": false
+    },
+    {
+      "lemma": "condotta",
+      "pos": "nome (femminile)",
+      "fr": "conduite, comportement",
+      "isVerb": false
+    },
+    {
+      "lemma": "condurre",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "conduire, mener",
+      "isVerb": true
+    },
+    {
+      "lemma": "conduttore",
+      "pos": "sostantivo/aggettivo (maschile)",
+      "fr": "conducteur",
+      "isVerb": false
+    },
+    {
+      "lemma": "conduttura",
+      "pos": "sostantivo (femminile)",
+      "fr": "conduite, canalisation",
+      "isVerb": false
+    },
+    {
+      "lemma": "conduzione",
+      "pos": "sostantivo (femminile)",
+      "fr": "gestion, conduction",
+      "isVerb": false
+    },
+    {
+      "lemma": "confarsi",
+      "pos": "verbo (riflessivo, irregolare, difettivo)",
+      "fr": "convenir, être adapté",
+      "isVerb": true
+    },
+    {
+      "lemma": "conferenza",
+      "pos": "sostantivo (femminile)",
+      "fr": "conférence",
+      "isVerb": false
+    },
+    {
+      "lemma": "conferire",
+      "pos": "verbo (transitivo/intransitivo, irregolare)",
+      "fr": "conférer, attribuer",
+      "isVerb": true
+    },
+    {
+      "lemma": "conferma",
+      "pos": "sostantivo (femminile)",
+      "fr": "confirmation",
+      "isVerb": false
+    },
+    {
+      "lemma": "confermare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "confirmer",
+      "isVerb": true
+    },
+    {
+      "lemma": "confessare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "avouer, confesser",
+      "isVerb": true
+    },
+    {
+      "lemma": "confessione",
+      "pos": "sostantivo femminile",
+      "fr": "confession, aveu",
+      "isVerb": false
+    },
+    {
+      "lemma": "confetto",
+      "pos": "sostantivo maschile",
+      "fr": "dragée",
+      "isVerb": false
+    },
+    {
+      "lemma": "confezionare",
+      "pos": "verbo (transitivo)",
+      "fr": "emballer, confectionner",
+      "isVerb": true
+    },
+    {
+      "lemma": "confezione",
+      "pos": "sostantivo femminile",
+      "fr": "emballage, boîte",
+      "isVerb": false
+    },
+    {
+      "lemma": "conficcare",
+      "pos": "verbo (transitivo)",
+      "fr": "planter, enfoncer",
+      "isVerb": true
+    },
+    {
+      "lemma": "confidare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "confier, faire confiance",
+      "isVerb": true
+    },
+    {
+      "lemma": "confidenza",
+      "pos": "sostantivo femminile",
+      "fr": "confidence, familiarité",
+      "isVerb": false
+    },
+    {
+      "lemma": "confidenziale",
+      "pos": "aggettivo",
+      "fr": "confidentiel",
+      "isVerb": false
+    },
+    {
+      "lemma": "configurazione",
+      "pos": "sostantivo femminile",
+      "fr": "configuration",
+      "isVerb": false
+    },
+    {
+      "lemma": "confinare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "confiner, exiler, être limitrophe",
+      "isVerb": true
+    },
+    {
+      "lemma": "confine",
+      "pos": "sostantivo maschile",
+      "fr": "frontière, limite",
+      "isVerb": false
+    },
+    {
+      "lemma": "confisca",
+      "pos": "sostantivo femminile",
+      "fr": "confiscation",
+      "isVerb": false
+    },
+    {
+      "lemma": "confiscare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "confisquer",
+      "isVerb": true
+    },
+    {
+      "lemma": "conflitto",
+      "pos": "sostantivo maschile",
+      "fr": "conflit",
+      "isVerb": false
+    },
+    {
+      "lemma": "confondere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "confondre, mélanger, embrouiller",
+      "isVerb": true
+    },
+    {
+      "lemma": "conformare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "conformer, adapter",
+      "isVerb": true
+    },
+    {
+      "lemma": "conforme",
+      "pos": "aggettivo",
+      "fr": "conforme",
+      "isVerb": false
+    },
+    {
+      "lemma": "conformità",
+      "pos": "sostantivo femminile",
+      "fr": "conformité",
+      "isVerb": false
+    },
+    {
+      "lemma": "confortante",
+      "pos": "aggettivo",
+      "fr": "réconfortant, réconfortante",
+      "isVerb": false
+    },
+    {
+      "lemma": "confortare",
+      "pos": "verbo (transitivo)",
+      "fr": "réconforter, consoler",
+      "isVerb": true
+    },
+    {
+      "lemma": "confortevole",
+      "pos": "aggettivo",
+      "fr": "confortable",
+      "isVerb": false
+    },
+    {
+      "lemma": "conforto",
+      "pos": "nome (maschile)",
+      "fr": "réconfort, consolation",
+      "isVerb": false
+    },
+    {
+      "lemma": "confraternita",
+      "pos": "nome (femminile)",
+      "fr": "confrérie",
+      "isVerb": false
+    },
+    {
+      "lemma": "confrontare",
+      "pos": "verbo (transitivo)",
+      "fr": "comparer",
+      "isVerb": true
+    },
+    {
+      "lemma": "confronto",
+      "pos": "nome (maschile)",
+      "fr": "comparaison, confrontation",
+      "isVerb": false
+    },
+    {
+      "lemma": "confusamente",
+      "pos": "avverbio",
+      "fr": "confusément",
+      "isVerb": false
+    },
+    {
+      "lemma": "confusione",
+      "pos": "nome (femminile)",
+      "fr": "confusion",
+      "isVerb": false
+    },
+    {
+      "lemma": "confuso",
+      "pos": "aggettivo / participio passato (di confondere)",
+      "fr": "confus, confuse",
+      "isVerb": false
+    },
+    {
+      "lemma": "congedo",
+      "pos": "nome (maschile)",
+      "fr": "congé",
+      "isVerb": false
+    },
+    {
+      "lemma": "congegnare",
+      "pos": "verbo (transitivo)",
+      "fr": "concevoir, agencer",
+      "isVerb": true
+    },
+    {
+      "lemma": "congegno",
+      "pos": "nome (maschile)",
+      "fr": "mécanisme, dispositif",
+      "isVerb": false
+    },
+    {
+      "lemma": "congelare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "congeler, geler",
+      "isVerb": true
+    },
+    {
+      "lemma": "congelatore",
+      "pos": "nome (maschile)",
+      "fr": "congélateur",
+      "isVerb": false
+    },
+    {
+      "lemma": "congestionare",
+      "pos": "verbo (transitivo)",
+      "fr": "engorger, congestionner",
+      "isVerb": true
+    },
+    {
+      "lemma": "congiunto",
+      "pos": "nome/aggettivo (maschile, participio di congiungere)",
+      "fr": "proche parent; uni, congiunto",
+      "isVerb": false
+    },
+    {
+      "lemma": "congiuntura",
+      "pos": "nome (femminile)",
+      "fr": "conjoncture",
+      "isVerb": false
+    },
+    {
+      "lemma": "congiura",
+      "pos": "nome (femminile)",
+      "fr": "conjuration, complot",
+      "isVerb": false
+    },
+    {
+      "lemma": "congiurare",
+      "pos": "verbo (intransitivo)",
+      "fr": "conspirer, comploter",
+      "isVerb": true
+    },
+    {
+      "lemma": "congratulazione",
+      "pos": "nome (femminile, spesso plurale)",
+      "fr": "félicitation",
+      "isVerb": false
+    },
+    {
+      "lemma": "congresso",
+      "pos": "nome (maschile)",
+      "fr": "congrès",
+      "isVerb": false
+    },
+    {
+      "lemma": "coniettura",
+      "pos": "sostantivo (f.)",
+      "fr": "conjecture",
+      "isVerb": false
+    },
+    {
+      "lemma": "coniglio",
+      "pos": "sostantivo (m.)",
+      "fr": "lapin",
+      "isVerb": false
+    },
+    {
+      "lemma": "coniugale",
+      "pos": "aggettivo",
+      "fr": "conjugal",
+      "isVerb": false
+    },
+    {
+      "lemma": "coniugare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "conjuguer",
+      "isVerb": true
+    },
+    {
+      "lemma": "coniuge",
+      "pos": "sostantivo (m./f.)",
+      "fr": "époux / épouse",
+      "isVerb": false
+    },
+    {
+      "lemma": "connazionale",
+      "pos": "sostantivo (m./f.)",
+      "fr": "compatriote",
+      "isVerb": false
+    },
+    {
+      "lemma": "connessione",
+      "pos": "sostantivo (f.)",
+      "fr": "connexion",
+      "isVerb": false
+    },
+    {
+      "lemma": "connesso",
+      "pos": "aggettivo / participio passato",
+      "fr": "connecté, lié",
+      "isVerb": false
+    },
+    {
+      "lemma": "connettere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "connecter, relier",
+      "isVerb": true
+    },
+    {
+      "lemma": "connotato",
+      "pos": "sostantivo (m.)",
+      "fr": "trait caractéristique",
+      "isVerb": false
+    },
+    {
+      "lemma": "connumerare",
+      "pos": "verbo (transitivo, regolare, letterario)",
+      "fr": "compter parmi, inclure dans le nombre",
+      "isVerb": true
+    },
+    {
+      "lemma": "cono",
+      "pos": "sostantivo (m.)",
+      "fr": "cône",
+      "isVerb": false
+    },
+    {
+      "lemma": "conoscente",
+      "pos": "sostantivo/aggettivo (m/f)",
+      "fr": "connaissance (personne)",
+      "isVerb": false
+    },
+    {
       "lemma": "conoscenza",
       "pos": "nome (femminile)",
       "fr": "connaissance",
@@ -12733,9 +13903,2175 @@
       "isVerb": true
     },
     {
+      "lemma": "conoscitore",
+      "pos": "sostantivo (m)",
+      "fr": "connaisseur",
+      "isVerb": false
+    },
+    {
+      "lemma": "conquista",
+      "pos": "sostantivo (femminile)",
+      "fr": "conquête",
+      "isVerb": false
+    },
+    {
+      "lemma": "conquistare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "conquérir",
+      "isVerb": true
+    },
+    {
+      "lemma": "consapevole",
+      "pos": "aggettivo",
+      "fr": "conscient",
+      "isVerb": false
+    },
+    {
+      "lemma": "consapevolezza",
+      "pos": "sostantivo (femminile)",
+      "fr": "conscience, prise de conscience",
+      "isVerb": false
+    },
+    {
+      "lemma": "consapevolmente",
+      "pos": "avverbio",
+      "fr": "consciemment",
+      "isVerb": false
+    },
+    {
+      "lemma": "consecutivo",
+      "pos": "aggettivo",
+      "fr": "consécutif",
+      "isVerb": false
+    },
+    {
+      "lemma": "consegna",
+      "pos": "sostantivo (f.)",
+      "fr": "livraison, remise",
+      "isVerb": false
+    },
+    {
+      "lemma": "consegnare",
+      "pos": "verbo (transitivo, regolare, I coniugazione)",
+      "fr": "livrer, remettre",
+      "isVerb": true
+    },
+    {
+      "lemma": "conseguente",
+      "pos": "aggettivo",
+      "fr": "consécutif, qui en résulte",
+      "isVerb": false
+    },
+    {
+      "lemma": "conseguenza",
+      "pos": "sostantivo (f.)",
+      "fr": "conséquence",
+      "isVerb": false
+    },
+    {
+      "lemma": "conseguire",
+      "pos": "verbo (transitivo/intransitivo, III coniugazione)",
+      "fr": "obtenir, atteindre",
+      "isVerb": true
+    },
+    {
+      "lemma": "consenso",
+      "pos": "nome (maschile)",
+      "fr": "consentement, accord",
+      "isVerb": false
+    },
+    {
+      "lemma": "consentire",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "permettre, consentir",
+      "isVerb": true
+    },
+    {
+      "lemma": "conservante",
+      "pos": "nome (maschile)",
+      "fr": "conservateur (additif alimentaire)",
+      "isVerb": false
+    },
+    {
+      "lemma": "conservare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "conserver",
+      "isVerb": true
+    },
+    {
+      "lemma": "conservatore",
+      "pos": "nome/aggettivo (maschile)",
+      "fr": "conservateur",
+      "isVerb": false
+    },
+    {
+      "lemma": "conservazione",
+      "pos": "nome (femminile)",
+      "fr": "conservation",
+      "isVerb": false
+    },
+    {
+      "lemma": "considerare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "considérer",
+      "isVerb": true
+    },
+    {
+      "lemma": "considerazione",
+      "pos": "nome (femminile)",
+      "fr": "considération",
+      "isVerb": false
+    },
+    {
+      "lemma": "considerevole",
+      "pos": "aggettivo",
+      "fr": "considérable, notable",
+      "isVerb": false
+    },
+    {
+      "lemma": "consigliare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "conseiller",
+      "isVerb": true
+    },
+    {
+      "lemma": "consigliere",
+      "pos": "sostantivo (m.)",
+      "fr": "conseiller",
+      "isVerb": false
+    },
+    {
+      "lemma": "consiglio",
+      "pos": "sostantivo (m.)",
+      "fr": "conseil",
+      "isVerb": false
+    },
+    {
+      "lemma": "consimile",
+      "pos": "aggettivo",
+      "fr": "similaire, semblable",
+      "isVerb": false
+    },
+    {
+      "lemma": "consistenza",
+      "pos": "sostantivo femminile",
+      "fr": "consistance",
+      "isVerb": false
+    },
+    {
+      "lemma": "consistere",
+      "pos": "verbo (intransitivo, ausiliare essere)",
+      "fr": "consister",
+      "isVerb": true
+    },
+    {
+      "lemma": "consolante",
+      "pos": "aggettivo",
+      "fr": "consolant",
+      "isVerb": false
+    },
+    {
+      "lemma": "consolare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "consoler",
+      "isVerb": true
+    },
+    {
+      "lemma": "consolatorio",
+      "pos": "aggettivo",
+      "fr": "consolateur, réconfortant",
+      "isVerb": false
+    },
+    {
+      "lemma": "consolazione",
+      "pos": "sostantivo femminile",
+      "fr": "consolation",
+      "isVerb": false
+    },
+    {
+      "lemma": "consonante",
+      "pos": "nome femminile",
+      "fr": "consonne",
+      "isVerb": false
+    },
+    {
+      "lemma": "consorte",
+      "pos": "nome maschile e femminile",
+      "fr": "conjoint, épouse",
+      "isVerb": false
+    },
+    {
+      "lemma": "consorzio",
+      "pos": "nome maschile",
+      "fr": "consortium",
+      "isVerb": false
+    },
+    {
+      "lemma": "constatare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "constater",
+      "isVerb": true
+    },
+    {
+      "lemma": "constatazione",
+      "pos": "nome femminile",
+      "fr": "constatation",
+      "isVerb": false
+    },
+    {
+      "lemma": "consueto",
+      "pos": "aggettivo",
+      "fr": "habituel, coutumier",
+      "isVerb": false
+    },
+    {
+      "lemma": "consuetudine",
+      "pos": "nome femminile",
+      "fr": "coutume, habitude",
+      "isVerb": false
+    },
+    {
+      "lemma": "consulente",
+      "pos": "nome maschile e femminile",
+      "fr": "consultant",
+      "isVerb": false
+    },
+    {
+      "lemma": "consulenza",
+      "pos": "nome femminile",
+      "fr": "conseil, consultation",
+      "isVerb": false
+    },
+    {
+      "lemma": "consultare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "consulter",
+      "isVerb": true
+    },
+    {
+      "lemma": "consultazione",
+      "pos": "nome femminile",
+      "fr": "consultation",
+      "isVerb": false
+    },
+    {
+      "lemma": "consumare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "consommer, user",
+      "isVerb": true
+    },
+    {
+      "lemma": "consumismo",
+      "pos": "nome maschile",
+      "fr": "consumérisme",
+      "isVerb": false
+    },
+    {
+      "lemma": "consustanziarsi",
+      "pos": "verbo riflessivo (letterario/teologico)",
+      "fr": "se consubstantialiser",
+      "isVerb": true
+    },
+    {
+      "lemma": "contabile",
+      "pos": "nome/aggettivo",
+      "fr": "comptable",
+      "isVerb": false
+    },
+    {
+      "lemma": "contabilità",
+      "pos": "nome femminile",
+      "fr": "comptabilité",
+      "isVerb": false
+    },
+    {
+      "lemma": "contadino",
+      "pos": "nome/aggettivo",
+      "fr": "paysan",
+      "isVerb": false
+    },
+    {
+      "lemma": "contado",
+      "pos": "nome maschile (arcaico/letterario)",
+      "fr": "campagne environnante, territoire rural",
+      "isVerb": false
+    },
+    {
+      "lemma": "contagio",
+      "pos": "nome maschile",
+      "fr": "contagion",
+      "isVerb": false
+    },
+    {
+      "lemma": "contagioso",
+      "pos": "aggettivo",
+      "fr": "contagieux",
+      "isVerb": false
+    },
+    {
+      "lemma": "contanti",
+      "pos": "sostantivo maschile plurale",
+      "fr": "espèces, argent liquide",
+      "isVerb": false
+    },
+    {
+      "lemma": "contare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "compter",
+      "isVerb": true
+    },
+    {
+      "lemma": "contattare",
+      "pos": "verbo transitivo",
+      "fr": "contacter",
+      "isVerb": true
+    },
+    {
+      "lemma": "contatto",
+      "pos": "sostantivo maschile",
+      "fr": "contact",
+      "isVerb": false
+    },
+    {
+      "lemma": "conte",
+      "pos": "sostantivo maschile",
+      "fr": "comte",
+      "isVerb": false
+    },
+    {
+      "lemma": "contegno",
+      "pos": "sostantivo maschile",
+      "fr": "attitude, maintien",
+      "isVerb": false
+    },
+    {
+      "lemma": "contemplare",
+      "pos": "verbo transitivo",
+      "fr": "contempler",
+      "isVerb": true
+    },
+    {
+      "lemma": "contempo",
+      "pos": "sostantivo maschile",
+      "fr": "moment présent, temps même",
+      "isVerb": false
+    },
+    {
+      "lemma": "contemporaneamente",
+      "pos": "avverbio",
+      "fr": "en même temps, simultanément",
+      "isVerb": false
+    },
+    {
+      "lemma": "contemporaneo",
+      "pos": "aggettivo",
+      "fr": "contemporain",
+      "isVerb": false
+    },
+    {
+      "lemma": "contendere",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "disputer, se disputer quelque chose",
+      "isVerb": true
+    },
+    {
+      "lemma": "contenere",
+      "pos": "verbo (transitivo)",
+      "fr": "contenir",
+      "isVerb": true
+    },
+    {
+      "lemma": "contenitore",
+      "pos": "sostantivo maschile",
+      "fr": "récipient, conteneur",
+      "isVerb": false
+    },
+    {
+      "lemma": "contentare",
+      "pos": "verbo (transitivo/riflessivo)",
+      "fr": "contenter, satisfaire",
+      "isVerb": true
+    },
+    {
+      "lemma": "contentarsi",
+      "pos": "verbo riflessivo",
+      "fr": "se contenter",
+      "isVerb": true
+    },
+    {
+      "lemma": "contentatura",
+      "pos": "sostantivo (femminile)",
+      "fr": "manière d'être satisfait",
+      "isVerb": false
+    },
+    {
+      "lemma": "contentezza",
+      "pos": "sostantivo (femminile)",
+      "fr": "contentement, joie",
+      "isVerb": false
+    },
+    {
+      "lemma": "contento",
+      "pos": "aggettivo",
+      "fr": "content, satisfait",
+      "isVerb": false
+    },
+    {
+      "lemma": "contentone",
+      "pos": "sostantivo/aggettivo (accrescitivo, maschile)",
+      "fr": "très content, joyeux luron",
+      "isVerb": false
+    },
+    {
+      "lemma": "contesa",
+      "pos": "sostantivo femminile",
+      "fr": "dispute, litige",
+      "isVerb": false
+    },
+    {
+      "lemma": "contessa",
+      "pos": "sostantivo femminile",
+      "fr": "comtesse",
+      "isVerb": false
+    },
+    {
+      "lemma": "contestare",
+      "pos": "verbo (transitivo)",
+      "fr": "contester",
+      "isVerb": true
+    },
+    {
+      "lemma": "contesto",
+      "pos": "sostantivo maschile",
+      "fr": "contexte",
+      "isVerb": false
+    },
+    {
+      "lemma": "contestualmente",
+      "pos": "avverbio",
+      "fr": "en même temps, dans ce contexte",
+      "isVerb": false
+    },
+    {
+      "lemma": "continente",
+      "pos": "sostantivo maschile",
+      "fr": "continent",
+      "isVerb": false
+    },
+    {
+      "lemma": "continenza",
+      "pos": "sostantivo femminile",
+      "fr": "continence, modération",
+      "isVerb": false
+    },
+    {
+      "lemma": "continuamente",
+      "pos": "avverbio",
+      "fr": "continuellement, sans cesse",
+      "isVerb": false
+    },
+    {
+      "lemma": "continuare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "continuer",
+      "isVerb": true
+    },
+    {
+      "lemma": "continuativo",
+      "pos": "aggettivo",
+      "fr": "continu, permanent",
+      "isVerb": false
+    },
+    {
+      "lemma": "continuazione",
+      "pos": "sostantivo femminile",
+      "fr": "continuation, suite",
+      "isVerb": false
+    },
+    {
+      "lemma": "continuità",
+      "pos": "sostantivo femminile",
+      "fr": "continuité",
+      "isVerb": false
+    },
+    {
+      "lemma": "continuo",
+      "pos": "aggettivo",
+      "fr": "continu",
+      "isVerb": false
+    },
+    {
+      "lemma": "conto",
+      "pos": "sostantivo maschile",
+      "fr": "compte, addition",
+      "isVerb": false
+    },
+    {
+      "lemma": "contorcersi",
+      "pos": "verbo riflessivo",
+      "fr": "se tordre",
+      "isVerb": true
+    },
+    {
+      "lemma": "contornare",
+      "pos": "verbo transitivo",
+      "fr": "entourer, encadrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "contorno",
+      "pos": "sostantivo maschile",
+      "fr": "contour; garniture (cuisine)",
+      "isVerb": false
+    },
+    {
+      "lemma": "contorto",
+      "pos": "aggettivo",
+      "fr": "tordu",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrada",
+      "pos": "sostantivo femminile",
+      "fr": "quartier, ruelle",
+      "isVerb": false
+    },
+    {
+      "lemma": "contraddire",
+      "pos": "verbo transitivo",
+      "fr": "contredire",
+      "isVerb": true
+    },
+    {
+      "lemma": "contraddistinguere",
+      "pos": "verbo transitivo",
+      "fr": "caractériser, distinguer",
+      "isVerb": true
+    },
+    {
+      "lemma": "contraddittorio",
+      "pos": "aggettivo",
+      "fr": "contradictoire",
+      "isVerb": false
+    },
+    {
+      "lemma": "contraddizione",
+      "pos": "sostantivo femminile",
+      "fr": "contradiction",
+      "isVerb": false
+    },
+    {
+      "lemma": "contraffazione",
+      "pos": "sostantivo femminile",
+      "fr": "contrefaçon",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrappeso",
+      "pos": "sostantivo maschile",
+      "fr": "contrepoids",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrapposto",
+      "pos": "aggettivo/participio passato",
+      "fr": "opposé, contraposé",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrariare",
+      "pos": "verbo transitivo",
+      "fr": "contrarier",
+      "isVerb": true
+    },
+    {
+      "lemma": "contrario",
+      "pos": "aggettivo/sostantivo maschile",
+      "fr": "contraire, opposé",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrarre",
+      "pos": "verbo transitivo",
+      "fr": "contracter",
+      "isVerb": true
+    },
+    {
+      "lemma": "contrassegnare",
+      "pos": "verbo (transitivo)",
+      "fr": "marquer, estampiller",
+      "isVerb": true
+    },
+    {
+      "lemma": "contrastante",
+      "pos": "aggettivo",
+      "fr": "contradictoire, contrastant",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrastare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "contraster, s'opposer à",
+      "isVerb": true
+    },
+    {
+      "lemma": "contrasto",
+      "pos": "sostantivo maschile",
+      "fr": "contraste, conflit",
+      "isVerb": false
+    },
+    {
+      "lemma": "contratto",
+      "pos": "sostantivo maschile",
+      "fr": "contrat",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrattuale",
+      "pos": "aggettivo",
+      "fr": "contractuel",
+      "isVerb": false
+    },
+    {
+      "lemma": "contravvenire",
+      "pos": "verbo (intransitivo)",
+      "fr": "contrevenir, enfreindre",
+      "isVerb": true
+    },
+    {
+      "lemma": "contribuire",
+      "pos": "verbo (intransitivo)",
+      "fr": "contribuer",
+      "isVerb": true
+    },
+    {
+      "lemma": "contributo",
+      "pos": "sostantivo maschile",
+      "fr": "contribution, apport",
+      "isVerb": false
+    },
+    {
+      "lemma": "contrizione",
+      "pos": "sostantivo femminile",
+      "fr": "contrition",
+      "isVerb": false
+    },
+    {
+      "lemma": "contro",
+      "pos": "preposizione/avverbio",
+      "fr": "contre",
+      "isVerb": false
+    },
+    {
+      "lemma": "controetichetta",
+      "pos": "sostantivo femminile",
+      "fr": "contre-étiquette",
+      "isVerb": false
+    },
+    {
+      "lemma": "controintuitivo",
+      "pos": "aggettivo",
+      "fr": "contre-intuitif",
+      "isVerb": false
+    },
+    {
+      "lemma": "controllare",
+      "pos": "verbo (transitivo)",
+      "fr": "contrôler, vérifier",
+      "isVerb": true
+    },
+    {
+      "lemma": "controllo",
+      "pos": "sostantivo maschile",
+      "fr": "contrôle, vérification",
+      "isVerb": false
+    },
+    {
+      "lemma": "controllore",
+      "pos": "sostantivo maschile",
+      "fr": "contrôleur",
+      "isVerb": false
+    },
+    {
+      "lemma": "controluce",
+      "pos": "sostantivo maschile / locuzione avverbiale",
+      "fr": "contre-jour",
+      "isVerb": false
+    },
+    {
+      "lemma": "controversia",
+      "pos": "sostantivo femminile",
+      "fr": "controverse, litige",
+      "isVerb": false
+    },
+    {
+      "lemma": "convegno",
+      "pos": "sostantivo maschile",
+      "fr": "congrès, colloque, réunion",
+      "isVerb": false
+    },
+    {
+      "lemma": "convenevoli",
+      "pos": "sostantivo maschile plurale",
+      "fr": "civilités, politesses",
+      "isVerb": false
+    },
+    {
+      "lemma": "conveniente",
+      "pos": "aggettivo",
+      "fr": "avantageux, convenable",
+      "isVerb": false
+    },
+    {
+      "lemma": "convenienza",
+      "pos": "sostantivo femminile",
+      "fr": "convenance, avantage, intérêt",
+      "isVerb": false
+    },
+    {
+      "lemma": "convenire",
+      "pos": "verbo (intransitivo)",
+      "fr": "convenir, être avantageux, se réunir, se mettre d'accord",
+      "isVerb": true
+    },
+    {
+      "lemma": "convenzione",
+      "pos": "sostantivo femminile",
+      "fr": "convention",
+      "isVerb": false
+    },
+    {
+      "lemma": "conversare",
+      "pos": "verbo (intransitivo)",
+      "fr": "converser, bavarder",
+      "isVerb": true
+    },
+    {
+      "lemma": "conversazione",
+      "pos": "sostantivo femminile",
+      "fr": "conversation",
+      "isVerb": false
+    },
+    {
+      "lemma": "convertire",
+      "pos": "verbo (transitivo)",
+      "fr": "convertir",
+      "isVerb": true
+    },
+    {
+      "lemma": "convesso",
+      "pos": "aggettivo",
+      "fr": "convexe",
+      "isVerb": false
+    },
+    {
+      "lemma": "convincere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "convaincre",
+      "isVerb": true
+    },
+    {
+      "lemma": "convinzione",
+      "pos": "nome femminile",
+      "fr": "conviction",
+      "isVerb": false
+    },
+    {
+      "lemma": "convivenza",
+      "pos": "nome femminile",
+      "fr": "cohabitation, vie commune",
+      "isVerb": false
+    },
+    {
+      "lemma": "convivere",
+      "pos": "verbo (intransitivo, irregolare)",
+      "fr": "cohabiter, vivre ensemble",
+      "isVerb": true
+    },
+    {
+      "lemma": "convocare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "convoquer",
+      "isVerb": true
+    },
+    {
+      "lemma": "convocazione",
+      "pos": "nome femminile",
+      "fr": "convocation",
+      "isVerb": false
+    },
+    {
+      "lemma": "convoglio",
+      "pos": "nome maschile",
+      "fr": "convoi, train",
+      "isVerb": false
+    },
+    {
+      "lemma": "convulsione",
+      "pos": "nome femminile",
+      "fr": "convulsion",
+      "isVerb": false
+    },
+    {
+      "lemma": "convulso",
+      "pos": "aggettivo",
+      "fr": "convulsif, agité",
+      "isVerb": false
+    },
+    {
+      "lemma": "cooperare",
+      "pos": "verbo (intransitivo, regolare)",
+      "fr": "coopérer",
+      "isVerb": true
+    },
+    {
+      "lemma": "cooperativa",
+      "pos": "nome femminile",
+      "fr": "coopérative",
+      "isVerb": false
+    },
+    {
+      "lemma": "coordinamento",
+      "pos": "nome maschile",
+      "fr": "coordination",
+      "isVerb": false
+    },
+    {
+      "lemma": "coordinare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "coordonner",
+      "isVerb": true
+    },
+    {
+      "lemma": "coperchio",
+      "pos": "nome maschile",
+      "fr": "couvercle",
+      "isVerb": false
+    },
+    {
+      "lemma": "coperta",
+      "pos": "nome femminile",
+      "fr": "couverture",
+      "isVerb": false
+    },
+    {
+      "lemma": "copertamente",
+      "pos": "avverbio",
+      "fr": "de manière cachée, secrètement",
+      "isVerb": false
+    },
+    {
+      "lemma": "copertina",
+      "pos": "nome femminile",
+      "fr": "couverture (de livre, revue)",
+      "isVerb": false
+    },
+    {
+      "lemma": "copertura",
+      "pos": "nome femminile",
+      "fr": "couverture, toiture",
+      "isVerb": false
+    },
+    {
+      "lemma": "copia",
+      "pos": "nome femminile",
+      "fr": "copie, exemplaire",
+      "isVerb": false
+    },
+    {
+      "lemma": "copiare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "copier",
+      "isVerb": true
+    },
+    {
+      "lemma": "copione",
+      "pos": "nome maschile",
+      "fr": "scénario, script",
+      "isVerb": false
+    },
+    {
+      "lemma": "coppa",
+      "pos": "nome femminile",
+      "fr": "coupe, trophée",
+      "isVerb": false
+    },
+    {
+      "lemma": "coppetta",
+      "pos": "nome femminile",
+      "fr": "petite coupe, gobelet",
+      "isVerb": false
+    },
+    {
+      "lemma": "coppia",
+      "pos": "nome femminile",
+      "fr": "couple, paire",
+      "isVerb": false
+    },
+    {
+      "lemma": "coppo",
+      "pos": "nome maschile",
+      "fr": "tuile courbe (tuile de toit)",
+      "isVerb": false
+    },
+    {
+      "lemma": "coprire",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "couvrir",
+      "isVerb": true
+    },
+    {
+      "lemma": "copywriter",
+      "pos": "nome maschile/femminile (invariabile, prestito dall'inglese)",
+      "fr": "rédacteur publicitaire, copywriter",
+      "isVerb": false
+    },
+    {
+      "lemma": "coraggio",
+      "pos": "nome maschile",
+      "fr": "courage",
+      "isVerb": false
+    },
+    {
+      "lemma": "coraggiosamente",
+      "pos": "avverbio",
+      "fr": "courageusement",
+      "isVerb": false
+    },
+    {
+      "lemma": "coraggioso",
+      "pos": "aggettivo",
+      "fr": "courageux",
+      "isVerb": false
+    },
+    {
+      "lemma": "corba",
+      "pos": "nome femminile",
+      "fr": "grande corbeille, panier",
+      "isVerb": false
+    },
+    {
+      "lemma": "corbello",
+      "pos": "nome maschile",
+      "fr": "corbeille, panier en osier",
+      "isVerb": false
+    },
+    {
+      "lemma": "corda",
+      "pos": "nome femminile",
+      "fr": "corde",
+      "isVerb": false
+    },
+    {
+      "lemma": "cordiale",
+      "pos": "aggettivo",
+      "fr": "cordial, chaleureux",
+      "isVerb": false
+    },
+    {
+      "lemma": "cordialità",
+      "pos": "nome femminile",
+      "fr": "cordialité",
+      "isVerb": false
+    },
+    {
+      "lemma": "cordoglio",
+      "pos": "nome maschile",
+      "fr": "deuil, condoléances",
+      "isVerb": false
+    },
+    {
+      "lemma": "cordoncino",
+      "pos": "nome maschile",
+      "fr": "petit cordon, cordelette",
+      "isVerb": false
+    },
+    {
+      "lemma": "core",
+      "pos": "nome maschile (forma poetica/letteraria di 'cuore')",
+      "fr": "cœur",
+      "isVerb": false
+    },
+    {
+      "lemma": "coreografia",
+      "pos": "nome femminile",
+      "fr": "chorégraphie",
+      "isVerb": false
+    },
+    {
+      "lemma": "coriandolo",
+      "pos": "nome maschile",
+      "fr": "confetti (papier)",
+      "isVerb": false
+    },
+    {
+      "lemma": "coricarsi",
+      "pos": "verbo (riflessivo, regolare)",
+      "fr": "se coucher",
+      "isVerb": true
+    },
+    {
+      "lemma": "cornetto",
+      "pos": "nome maschile",
+      "fr": "croissant",
+      "isVerb": false
+    },
+    {
+      "lemma": "cornice",
+      "pos": "nome femminile",
+      "fr": "cadre",
+      "isVerb": false
+    },
+    {
+      "lemma": "cornicione",
+      "pos": "nome maschile",
+      "fr": "corniche",
+      "isVerb": false
+    },
+    {
+      "lemma": "corno",
+      "pos": "nome maschile",
+      "fr": "corne",
+      "isVerb": false
+    },
+    {
+      "lemma": "cornuto",
+      "pos": "aggettivo",
+      "fr": "cornu",
+      "isVerb": false
+    },
+    {
+      "lemma": "coro",
+      "pos": "nome maschile",
+      "fr": "chœur",
+      "isVerb": false
+    },
+    {
+      "lemma": "corona",
+      "pos": "nome femminile",
+      "fr": "couronne",
+      "isVerb": false
+    },
+    {
+      "lemma": "corpo",
+      "pos": "nome maschile",
+      "fr": "corps",
+      "isVerb": false
+    },
+    {
+      "lemma": "corporalmente",
+      "pos": "avverbio",
+      "fr": "corporellement",
+      "isVerb": false
+    },
+    {
+      "lemma": "corporatura",
+      "pos": "nome femminile",
+      "fr": "carrure, corpulence",
+      "isVerb": false
+    },
+    {
+      "lemma": "corporeo",
+      "pos": "aggettivo",
+      "fr": "corporel",
+      "isVerb": false
+    },
+    {
+      "lemma": "corpus",
+      "pos": "nome maschile invariabile",
+      "fr": "corpus",
+      "isVerb": false
+    },
+    {
+      "lemma": "corredare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "munir, équiper",
+      "isVerb": true
+    },
+    {
+      "lemma": "corredino",
+      "pos": "nome maschile",
+      "fr": "layette",
+      "isVerb": false
+    },
+    {
+      "lemma": "corredo",
+      "pos": "nome maschile",
+      "fr": "trousseau, équipement",
+      "isVerb": false
+    },
+    {
+      "lemma": "correggere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "corriger",
+      "isVerb": true
+    },
+    {
+      "lemma": "correggersi",
+      "pos": "verbo riflessivo (irregolare)",
+      "fr": "se corriger",
+      "isVerb": true
+    },
+    {
+      "lemma": "correlativo",
+      "pos": "aggettivo",
+      "fr": "corrélatif",
+      "isVerb": false
+    },
+    {
+      "lemma": "correlazione",
+      "pos": "nome femminile",
+      "fr": "corrélation",
+      "isVerb": false
+    },
+    {
+      "lemma": "corrente",
+      "pos": "aggettivo/nome femminile",
+      "fr": "courant",
+      "isVerb": false
+    },
+    {
+      "lemma": "correntemente",
+      "pos": "avverbio",
+      "fr": "couramment",
+      "isVerb": false
+    },
+    {
+      "lemma": "correre",
+      "pos": "verbo (intransitivo/transitivo, irregolare)",
+      "fr": "courir",
+      "isVerb": true
+    },
+    {
+      "lemma": "correttamente",
+      "pos": "avverbio",
+      "fr": "correctement",
+      "isVerb": false
+    },
+    {
+      "lemma": "correttivo",
+      "pos": "aggettivo/nome maschile",
+      "fr": "correctif",
+      "isVerb": false
+    },
+    {
+      "lemma": "correzione",
+      "pos": "nome femminile",
+      "fr": "correction",
+      "isVerb": false
+    },
+    {
+      "lemma": "corridoio",
+      "pos": "nome maschile",
+      "fr": "couloir",
+      "isVerb": false
+    },
+    {
+      "lemma": "corridore",
+      "pos": "nome maschile",
+      "fr": "coureur",
+      "isVerb": false
+    },
+    {
+      "lemma": "corriera",
+      "pos": "nome femminile",
+      "fr": "autocar, car",
+      "isVerb": false
+    },
+    {
+      "lemma": "corriere",
+      "pos": "nome maschile",
+      "fr": "courrier, messager",
+      "isVerb": false
+    },
+    {
+      "lemma": "corrispondenza",
+      "pos": "nome femminile",
+      "fr": "correspondance",
+      "isVerb": false
+    },
+    {
+      "lemma": "corrispondere",
+      "pos": "verbo (intransitivo/transitivo, irregolare)",
+      "fr": "correspondre",
+      "isVerb": true
+    },
+    {
+      "lemma": "corrompere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "corrompre",
+      "isVerb": true
+    },
+    {
+      "lemma": "corruttore",
+      "pos": "nome maschile",
+      "fr": "corrupteur",
+      "isVerb": false
+    },
+    {
+      "lemma": "corruzione",
+      "pos": "nome femminile",
+      "fr": "corruption",
+      "isVerb": false
+    },
+    {
+      "lemma": "corsa",
+      "pos": "nome femminile",
+      "fr": "course, course à pied",
+      "isVerb": false
+    },
+    {
+      "lemma": "corso",
+      "pos": "nome maschile",
+      "fr": "cours, avenue",
+      "isVerb": false
+    },
+    {
+      "lemma": "corte",
+      "pos": "nome femminile",
+      "fr": "cour",
+      "isVerb": false
+    },
+    {
+      "lemma": "corteo",
+      "pos": "nome maschile",
+      "fr": "cortège, défilé",
+      "isVerb": false
+    },
+    {
+      "lemma": "cortese",
+      "pos": "aggettivo",
+      "fr": "courtois, poli",
+      "isVerb": false
+    },
+    {
+      "lemma": "cortesia",
+      "pos": "nome femminile",
+      "fr": "courtoisie, gentillesse",
+      "isVerb": false
+    },
+    {
+      "lemma": "cortile",
+      "pos": "nome maschile",
+      "fr": "cour intérieure",
+      "isVerb": false
+    },
+    {
+      "lemma": "cortina",
+      "pos": "nome femminile",
+      "fr": "rideau",
+      "isVerb": false
+    },
+    {
+      "lemma": "corto",
+      "pos": "aggettivo",
+      "fr": "court",
+      "isVerb": false
+    },
+    {
+      "lemma": "cortocircuito",
+      "pos": "nome maschile",
+      "fr": "court-circuit",
+      "isVerb": false
+    },
+    {
+      "lemma": "corvino",
+      "pos": "aggettivo",
+      "fr": "noir corbeau",
+      "isVerb": false
+    },
+    {
+      "lemma": "corvo",
+      "pos": "nome maschile",
+      "fr": "corbeau",
+      "isVerb": false
+    },
+    {
       "lemma": "cosa",
       "pos": "pronome interrogativo",
       "fr": "quoi, que",
+      "isVerb": false
+    },
+    {
+      "lemma": "cosca",
+      "pos": "nome (femminile)",
+      "fr": "clan mafieux",
+      "isVerb": false
+    },
+    {
+      "lemma": "coscia",
+      "pos": "nome (femminile)",
+      "fr": "cuisse",
+      "isVerb": false
+    },
+    {
+      "lemma": "coscienza",
+      "pos": "nome (femminile)",
+      "fr": "conscience",
+      "isVerb": false
+    },
+    {
+      "lemma": "coscina",
+      "pos": "nome (femminile, diminutivo di coscia)",
+      "fr": "petite cuisse (souvent de poulet)",
+      "isVerb": false
+    },
+    {
+      "lemma": "così",
+      "pos": "avverbio",
+      "fr": "ainsi, comme ça, tellement",
+      "isVerb": false
+    },
+    {
+      "lemma": "cosicché",
+      "pos": "congiunzione",
+      "fr": "de sorte que, si bien que",
+      "isVerb": false
+    },
+    {
+      "lemma": "cosiddetto",
+      "pos": "aggettivo",
+      "fr": "soi-disant, ce qu'on appelle, dénommé",
+      "isVerb": false
+    },
+    {
+      "lemma": "cosmogonia",
+      "pos": "nome (femminile)",
+      "fr": "cosmogonie",
+      "isVerb": false
+    },
+    {
+      "lemma": "cosmopolita",
+      "pos": "aggettivo / nome",
+      "fr": "cosmopolite",
+      "isVerb": false
+    },
+    {
+      "lemma": "coso",
+      "pos": "nome (maschile, colloquiale)",
+      "fr": "truc, machin",
+      "isVerb": false
+    },
+    {
+      "lemma": "cospetto",
+      "pos": "nome (maschile)",
+      "fr": "présence (dans l'expression 'en présence de')",
+      "isVerb": false
+    },
+    {
+      "lemma": "cospicuo",
+      "pos": "aggettivo",
+      "fr": "considérable, notable",
+      "isVerb": false
+    },
+    {
+      "lemma": "cospirativo",
+      "pos": "aggettivo",
+      "fr": "conspirateur, relatif à un complot",
+      "isVerb": false
+    },
+    {
+      "lemma": "costa",
+      "pos": "nome femminile",
+      "fr": "côte",
+      "isVerb": false
+    },
+    {
+      "lemma": "costaggiù",
+      "pos": "avverbio (regionale/letterario)",
+      "fr": "là-bas",
+      "isVerb": false
+    },
+    {
+      "lemma": "costante",
+      "pos": "aggettivo",
+      "fr": "constant",
+      "isVerb": false
+    },
+    {
+      "lemma": "costanza",
+      "pos": "nome femminile",
+      "fr": "constance, persévérance",
+      "isVerb": false
+    },
+    {
+      "lemma": "costare",
+      "pos": "verbo (intransitivo, regolare, ausiliare essere)",
+      "fr": "coûter",
+      "isVerb": true
+    },
+    {
+      "lemma": "costei",
+      "pos": "pronome dimostrativo (femminile)",
+      "fr": "celle-ci / elle",
+      "isVerb": false
+    },
+    {
+      "lemma": "costellazione",
+      "pos": "nome (femminile)",
+      "fr": "constellation",
+      "isVerb": false
+    },
+    {
+      "lemma": "costernato",
+      "pos": "aggettivo / participio passato",
+      "fr": "consterné",
+      "isVerb": false
+    },
+    {
+      "lemma": "costernazione",
+      "pos": "nome (femminile)",
+      "fr": "consternation",
+      "isVerb": false
+    },
+    {
+      "lemma": "costì",
+      "pos": "avverbio (letterario/regionale)",
+      "fr": "là (près de toi)",
+      "isVerb": false
+    },
+    {
+      "lemma": "costiero",
+      "pos": "aggettivo",
+      "fr": "côtier",
+      "isVerb": false
+    },
+    {
+      "lemma": "costituire",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "constituer",
+      "isVerb": true
+    },
+    {
+      "lemma": "costituzione",
+      "pos": "nome (femminile)",
+      "fr": "constitution",
+      "isVerb": false
+    },
+    {
+      "lemma": "costo",
+      "pos": "nome (maschile)",
+      "fr": "coût / prix",
+      "isVerb": false
+    },
+    {
+      "lemma": "costola",
+      "pos": "nome (femminile)",
+      "fr": "côte (anatomie)",
+      "isVerb": false
+    },
+    {
+      "lemma": "costoro",
+      "pos": "pronome (dimostrativo, plurale)",
+      "fr": "ceux-ci, ceux-là, ces gens",
+      "isVerb": false
+    },
+    {
+      "lemma": "costoso",
+      "pos": "aggettivo",
+      "fr": "coûteux, cher",
+      "isVerb": false
+    },
+    {
+      "lemma": "costringere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "contraindre, forcer",
+      "isVerb": true
+    },
+    {
+      "lemma": "costruire",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "construire, bâtir",
+      "isVerb": true
+    },
+    {
+      "lemma": "costrutto",
+      "pos": "sostantivo maschile",
+      "fr": "sens, signification (littéraire)",
+      "isVerb": false
+    },
+    {
+      "lemma": "costruttore",
+      "pos": "sostantivo maschile",
+      "fr": "constructeur, entrepreneur (du bâtiment)",
+      "isVerb": false
+    },
+    {
+      "lemma": "costruzione",
+      "pos": "sostantivo femminile",
+      "fr": "construction, bâtiment",
+      "isVerb": false
+    },
+    {
+      "lemma": "costui",
+      "pos": "pronome dimostrativo (maschile singolare)",
+      "fr": "celui-ci, cet homme (souvent péjoratif)",
+      "isVerb": false
+    },
+    {
+      "lemma": "costumato",
+      "pos": "aggettivo",
+      "fr": "bien élevé, courtois",
+      "isVerb": false
+    },
+    {
+      "lemma": "costume",
+      "pos": "sostantivo maschile",
+      "fr": "coutume, costume, maillot de bain",
+      "isVerb": false
+    },
+    {
+      "lemma": "cotale",
+      "pos": "aggettivo/pronome (letterario, arcaico)",
+      "fr": "tel, pareil",
+      "isVerb": false
+    },
+    {
+      "lemma": "cotanto",
+      "pos": "aggettivo/avverbio (letterario, arcaico)",
+      "fr": "tant, si grand",
+      "isVerb": false
+    },
+    {
+      "lemma": "cotechino",
+      "pos": "nome maschile",
+      "fr": "cotechino (saucisson de porc cuit)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cotesto",
+      "pos": "aggettivo/pronome demonstrativo (letterario, arcaico, toscano)",
+      "fr": "ce, celui-là (proche de l'interlocuteur)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cotone",
+      "pos": "nome maschile",
+      "fr": "coton",
+      "isVerb": false
+    },
+    {
+      "lemma": "cotta",
+      "pos": "nome femminile",
+      "fr": "coup de foudre; aube (vêtement liturgique)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cottimante",
+      "pos": "nome maschile/femminile",
+      "fr": "travailleur à la pièce",
+      "isVerb": false
+    },
+    {
+      "lemma": "cottimo",
+      "pos": "nome maschile",
+      "fr": "travail à la pièce, à la tâche",
+      "isVerb": false
+    },
+    {
+      "lemma": "cottura",
+      "pos": "nome femminile",
+      "fr": "cuisson",
+      "isVerb": false
+    },
+    {
+      "lemma": "covare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "couver",
+      "isVerb": true
+    },
+    {
+      "lemma": "cover",
+      "pos": "nome femminile invariabile (anglicismo)",
+      "fr": "cover, reprise (chanson); couverture (livre)",
+      "isVerb": false
+    },
+    {
+      "lemma": "coverchio",
+      "pos": "nome maschile (letterario, arcaico)",
+      "fr": "couvercle",
+      "isVerb": false
+    },
+    {
+      "lemma": "coworking",
+      "pos": "nome maschile invariabile (anglicismo)",
+      "fr": "coworking, espace de travail partagé",
+      "isVerb": false
+    },
+    {
+      "lemma": "crac",
+      "pos": "nome maschile invariabile / interiezione",
+      "fr": "crac (bruit); crash, faillite (finance)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cranio",
+      "pos": "sostantivo maschile",
+      "fr": "crâne",
+      "isVerb": false
+    },
+    {
+      "lemma": "cratere",
+      "pos": "sostantivo maschile",
+      "fr": "cratère",
+      "isVerb": false
+    },
+    {
+      "lemma": "cravatta",
+      "pos": "sostantivo femminile",
+      "fr": "cravate",
+      "isVerb": false
+    },
+    {
+      "lemma": "creanza",
+      "pos": "sostantivo femminile",
+      "fr": "politesse, savoir-vivre",
+      "isVerb": false
+    },
+    {
+      "lemma": "creare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "créer",
+      "isVerb": true
+    },
+    {
+      "lemma": "creatività",
+      "pos": "sostantivo femminile",
+      "fr": "créativité",
+      "isVerb": false
+    },
+    {
+      "lemma": "creatura",
+      "pos": "sostantivo femminile",
+      "fr": "créature",
+      "isVerb": false
+    },
+    {
+      "lemma": "creazione",
+      "pos": "sostantivo femminile",
+      "fr": "création",
+      "isVerb": false
+    },
+    {
+      "lemma": "credenziale",
+      "pos": "sostantivo femminile",
+      "fr": "identifiant, accréditation",
+      "isVerb": false
+    },
+    {
+      "lemma": "credere",
+      "pos": "verbo (transitivo/intransitivo, irregolare)",
+      "fr": "croire",
+      "isVerb": true
+    },
+    {
+      "lemma": "credibile",
+      "pos": "aggettivo",
+      "fr": "crédible",
+      "isVerb": false
+    },
+    {
+      "lemma": "credito",
+      "pos": "nome maschile",
+      "fr": "crédit",
+      "isVerb": false
+    },
+    {
+      "lemma": "creditore",
+      "pos": "nome (maschile/femminile)",
+      "fr": "créancier",
+      "isVerb": false
+    },
+    {
+      "lemma": "credulità",
+      "pos": "nome femminile",
+      "fr": "crédulité",
+      "isVerb": false
+    },
+    {
+      "lemma": "crema",
+      "pos": "nome femminile",
+      "fr": "crème",
+      "isVerb": false
+    },
+    {
+      "lemma": "cremisi",
+      "pos": "aggettivo/nome (invariabile)",
+      "fr": "cramoisi",
+      "isVerb": false
+    },
+    {
+      "lemma": "cremoso",
+      "pos": "aggettivo",
+      "fr": "crémeux",
+      "isVerb": false
+    },
+    {
+      "lemma": "crepa",
+      "pos": "nome femminile",
+      "fr": "fissure",
+      "isVerb": false
+    },
+    {
+      "lemma": "crepaccio",
+      "pos": "nome maschile",
+      "fr": "crevasse",
+      "isVerb": false
+    },
+    {
+      "lemma": "crepacuore",
+      "pos": "nome maschile (invariabile)",
+      "fr": "chagrin d'amour, crève-cœur",
+      "isVerb": false
+    },
+    {
+      "lemma": "crepare",
+      "pos": "verbo (intransitivo, regolare)",
+      "fr": "se fissurer ; (familier) crever, mourir",
+      "isVerb": true
+    },
+    {
+      "lemma": "crepitare",
+      "pos": "verbo (intransitivo, regolare)",
+      "fr": "crépiter",
+      "isVerb": true
+    },
+    {
+      "lemma": "crepitio",
+      "pos": "nome maschile",
+      "fr": "crépitement",
+      "isVerb": false
+    },
+    {
+      "lemma": "crepuscolo",
+      "pos": "nome maschile",
+      "fr": "crépuscule",
+      "isVerb": false
+    },
+    {
+      "lemma": "crescente",
+      "pos": "aggettivo",
+      "fr": "croissant",
+      "isVerb": false
+    },
+    {
+      "lemma": "crescere",
+      "pos": "verbo (intransitivo/transitivo, irregolare)",
+      "fr": "grandir, croître",
+      "isVerb": true
+    },
+    {
+      "lemma": "crescita",
+      "pos": "nome (f.)",
+      "fr": "croissance",
+      "isVerb": false
+    },
+    {
+      "lemma": "cresimare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "confirmer (sacrement)",
+      "isVerb": true
+    },
+    {
+      "lemma": "cresta",
+      "pos": "nome (f.)",
+      "fr": "crête",
+      "isVerb": false
+    },
+    {
+      "lemma": "criminale",
+      "pos": "aggettivo / nome (m./f.)",
+      "fr": "criminel",
+      "isVerb": false
+    },
+    {
+      "lemma": "criminalità",
+      "pos": "nome (f.)",
+      "fr": "criminalité",
+      "isVerb": false
+    },
+    {
+      "lemma": "crimine",
+      "pos": "nome (maschile)",
+      "fr": "crime",
+      "isVerb": false
+    },
+    {
+      "lemma": "crinale",
+      "pos": "nome (maschile)",
+      "fr": "crête (de montagne)",
+      "isVerb": false
+    },
+    {
+      "lemma": "criniera",
+      "pos": "nome (femminile)",
+      "fr": "crinière",
+      "isVerb": false
+    },
+    {
+      "lemma": "criogenico",
+      "pos": "aggettivo",
+      "fr": "cryogénique",
+      "isVerb": false
+    },
+    {
+      "lemma": "crisi",
+      "pos": "nome (femminile, invariabile)",
+      "fr": "crise",
+      "isVerb": false
+    },
+    {
+      "lemma": "cristallino",
+      "pos": "aggettivo",
+      "fr": "cristallin",
+      "isVerb": false
+    },
+    {
+      "lemma": "cristallo",
+      "pos": "nome (maschile)",
+      "fr": "cristal",
+      "isVerb": false
+    },
+    {
+      "lemma": "cristianamente",
+      "pos": "avverbio",
+      "fr": "chrétiennement",
+      "isVerb": false
+    },
+    {
+      "lemma": "cristianesimo",
+      "pos": "nome (maschile)",
+      "fr": "christianisme",
+      "isVerb": false
+    },
+    {
+      "lemma": "cristiano",
+      "pos": "aggettivo/nome (maschile)",
+      "fr": "chrétien",
+      "isVerb": false
+    },
+    {
+      "lemma": "criterio",
+      "pos": "nome (maschile)",
+      "fr": "critère",
+      "isVerb": false
+    },
+    {
+      "lemma": "criticare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "critiquer",
+      "isVerb": true
+    },
+    {
+      "lemma": "critico",
+      "pos": "nome/aggettivo (maschile)",
+      "fr": "critique",
+      "isVerb": false
+    },
+    {
+      "lemma": "crittografia",
+      "pos": "nome (f.)",
+      "fr": "cryptographie",
+      "isVerb": false
+    },
+    {
+      "lemma": "croccante",
+      "pos": "aggettivo",
+      "fr": "croustillant, croquant",
+      "isVerb": false
+    },
+    {
+      "lemma": "crocchiare",
+      "pos": "verbo (intransitivo)",
+      "fr": "craquer, crépiter",
+      "isVerb": true
+    },
+    {
+      "lemma": "crocchio",
+      "pos": "nome (m.)",
+      "fr": "petit groupe (de personnes)",
+      "isVerb": false
+    },
+    {
+      "lemma": "croce",
+      "pos": "nome (f.)",
+      "fr": "croix",
+      "isVerb": false
+    },
+    {
+      "lemma": "crociera",
+      "pos": "nome (f.)",
+      "fr": "croisière",
+      "isVerb": false
+    },
+    {
+      "lemma": "croissant",
+      "pos": "nome (m., invariabile)",
+      "fr": "croissant",
+      "isVerb": false
+    },
+    {
+      "lemma": "crollare",
+      "pos": "verbo (intransitivo, aux. essere)",
+      "fr": "s'effondrer, s'écrouler",
+      "isVerb": true
+    },
+    {
+      "lemma": "crollo",
+      "pos": "nome (m.)",
+      "fr": "effondrement, chute",
+      "isVerb": false
+    },
+    {
+      "lemma": "cronaca",
+      "pos": "nome (f.)",
+      "fr": "chronique, actualité",
+      "isVerb": false
+    },
+    {
+      "lemma": "cronico",
+      "pos": "aggettivo",
+      "fr": "chronique",
+      "isVerb": false
+    },
+    {
+      "lemma": "cronista",
+      "pos": "nome (m./f.)",
+      "fr": "chroniqueur, journaliste",
+      "isVerb": false
+    },
+    {
+      "lemma": "cronografo",
+      "pos": "nome (m.)",
+      "fr": "chronographe",
+      "isVerb": false
+    },
+    {
+      "lemma": "cronometrare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "chronométrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "cross",
+      "pos": "nome maschile invariabile",
+      "fr": "cross",
+      "isVerb": false
+    },
+    {
+      "lemma": "crosta",
+      "pos": "nome femminile",
+      "fr": "croûte",
+      "isVerb": false
+    },
+    {
+      "lemma": "crostata",
+      "pos": "nome femminile",
+      "fr": "tarte",
+      "isVerb": false
+    },
+    {
+      "lemma": "crosterello",
+      "pos": "nome maschile",
+      "fr": "petit croûton, morceau de croûte",
+      "isVerb": false
+    },
+    {
+      "lemma": "croupier",
+      "pos": "nome maschile invariabile (francesismo)",
+      "fr": "croupier",
+      "isVerb": false
+    },
+    {
+      "lemma": "crucciare",
+      "pos": "verbo (transitivo/riflessivo, regolare)",
+      "fr": "tourmenter, affliger",
+      "isVerb": true
+    },
+    {
+      "lemma": "cruccio",
+      "pos": "nome maschile",
+      "fr": "souci, tourment",
+      "isVerb": false
+    },
+    {
+      "lemma": "crudele",
+      "pos": "aggettivo",
+      "fr": "cruel",
+      "isVerb": false
+    },
+    {
+      "lemma": "crudelmente",
+      "pos": "avverbio",
+      "fr": "cruellement",
+      "isVerb": false
+    },
+    {
+      "lemma": "crudeltà",
+      "pos": "nome (f.)",
+      "fr": "cruauté",
+      "isVerb": false
+    },
+    {
+      "lemma": "crudezza",
+      "pos": "nome (f.)",
+      "fr": "crudité",
+      "isVerb": false
+    },
+    {
+      "lemma": "crudo",
+      "pos": "aggettivo",
+      "fr": "cru",
+      "isVerb": false
+    },
+    {
+      "lemma": "crusca",
+      "pos": "nome (f.)",
+      "fr": "son (de blé)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cubo",
+      "pos": "nome (m.) / aggettivo",
+      "fr": "cube",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuccagna",
+      "pos": "nome (f.)",
+      "fr": "abondance, pays de cocagne",
+      "isVerb": false
+    },
+    {
+      "lemma": "cucchiaiata",
+      "pos": "nome (f.)",
+      "fr": "cuillerée",
+      "isVerb": false
+    },
+    {
+      "lemma": "cucchiaino",
+      "pos": "nome (m.)",
+      "fr": "petite cuillère, cuillère à café",
+      "isVerb": false
+    },
+    {
+      "lemma": "cucchiaio",
+      "pos": "nome (m.)",
+      "fr": "cuillère",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuccia",
+      "pos": "nome (f.)",
+      "fr": "niche, panier (du chien)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cucciolo",
+      "pos": "nome (m.)",
+      "fr": "chiot, petit (animal)",
+      "isVerb": false
+    },
+    {
+      "lemma": "cucina",
+      "pos": "nome (f.)",
+      "fr": "cuisine",
+      "isVerb": false
+    },
+    {
+      "lemma": "cucinare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "cuisiner, cuire",
+      "isVerb": true
+    },
+    {
+      "lemma": "cucire",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "coudre",
+      "isVerb": true
+    },
+    {
+      "lemma": "cucù",
+      "pos": "nome (m) / interiezione onomatopeica",
+      "fr": "coucou",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuffia",
+      "pos": "nome (f)",
+      "fr": "casque audio, bonnet",
+      "isVerb": false
+    },
+    {
+      "lemma": "cugino",
+      "pos": "nome (m/f)",
+      "fr": "cousin, cousine",
+      "isVerb": false
+    },
+    {
+      "lemma": "cui",
+      "pos": "pronome relativo",
+      "fr": "qui, que, dont, auquel",
+      "isVerb": false
+    },
+    {
+      "lemma": "culla",
+      "pos": "nome (femminile)",
+      "fr": "berceau",
+      "isVerb": false
+    },
+    {
+      "lemma": "cullare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "bercer",
+      "isVerb": true
+    },
+    {
+      "lemma": "culminante",
+      "pos": "aggettivo",
+      "fr": "culminant",
+      "isVerb": false
+    },
+    {
+      "lemma": "culmine",
+      "pos": "nome (maschile)",
+      "fr": "sommet, apogée",
+      "isVerb": false
+    },
+    {
+      "lemma": "culto",
+      "pos": "nome (maschile)",
+      "fr": "culte",
+      "isVerb": false
+    },
+    {
+      "lemma": "cultura",
+      "pos": "nome (femminile)",
+      "fr": "culture",
+      "isVerb": false
+    },
+    {
+      "lemma": "culturale",
+      "pos": "aggettivo",
+      "fr": "culturel",
+      "isVerb": false
+    },
+    {
+      "lemma": "cumulo",
+      "pos": "nome (maschile)",
+      "fr": "tas, amas",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuna",
+      "pos": "nome (femminile, letterario/regionale)",
+      "fr": "berceau",
+      "isVerb": false
+    },
+    {
+      "lemma": "cunicolo",
+      "pos": "nome (maschile)",
+      "fr": "terrier, galerie souterraine",
       "isVerb": false
     },
     {
@@ -12745,9 +16081,2031 @@
       "isVerb": true
     },
     {
+      "lemma": "cuoco",
+      "pos": "sostantivo maschile",
+      "fr": "cuisinier",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuoio",
+      "pos": "sostantivo maschile",
+      "fr": "cuir",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuore",
+      "pos": "sostantivo maschile",
+      "fr": "cœur",
+      "isVerb": false
+    },
+    {
+      "lemma": "cupidigia",
+      "pos": "sostantivo femminile",
+      "fr": "cupidité",
+      "isVerb": false
+    },
+    {
+      "lemma": "cupido",
+      "pos": "aggettivo (letterario)",
+      "fr": "avide, cupide",
+      "isVerb": false
+    },
+    {
+      "lemma": "cupo",
+      "pos": "aggettivo",
+      "fr": "sombre, profond",
+      "isVerb": false
+    },
+    {
+      "lemma": "cupola",
+      "pos": "sostantivo femminile",
+      "fr": "coupole, dôme",
+      "isVerb": false
+    },
+    {
+      "lemma": "cura",
+      "pos": "sostantivo femminile",
+      "fr": "soin, cure",
+      "isVerb": false
+    },
+    {
+      "lemma": "curare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "soigner",
+      "isVerb": true
+    },
+    {
+      "lemma": "curia",
+      "pos": "nome femminile",
+      "fr": "curie",
+      "isVerb": false
+    },
+    {
+      "lemma": "curiale",
+      "pos": "aggettivo",
+      "fr": "curial",
+      "isVerb": false
+    },
+    {
+      "lemma": "curiosamente",
+      "pos": "avverbio",
+      "fr": "curieusement",
+      "isVerb": false
+    },
+    {
+      "lemma": "curiosità",
+      "pos": "nome femminile",
+      "fr": "curiosité",
+      "isVerb": false
+    },
+    {
+      "lemma": "curioso",
+      "pos": "aggettivo",
+      "fr": "curieux",
+      "isVerb": false
+    },
+    {
+      "lemma": "curriculum",
+      "pos": "nome maschile (invariabile)",
+      "fr": "curriculum vitae",
+      "isVerb": false
+    },
+    {
+      "lemma": "cursus",
+      "pos": "nome maschile (latinismo, invariabile)",
+      "fr": "cursus",
+      "isVerb": false
+    },
+    {
+      "lemma": "curva",
+      "pos": "nome femminile",
+      "fr": "courbe, virage",
+      "isVerb": false
+    },
+    {
+      "lemma": "curvare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "courber, plier",
+      "isVerb": true
+    },
+    {
+      "lemma": "curvo",
+      "pos": "aggettivo",
+      "fr": "courbé, voûté",
+      "isVerb": false
+    },
+    {
+      "lemma": "cuscino",
+      "pos": "nome (m)",
+      "fr": "coussin",
+      "isVerb": false
+    },
+    {
+      "lemma": "custode",
+      "pos": "nome (m/f)",
+      "fr": "gardien, gardienne",
+      "isVerb": false
+    },
+    {
+      "lemma": "custodia",
+      "pos": "nome (f)",
+      "fr": "étui, garde",
+      "isVerb": false
+    },
+    {
+      "lemma": "custodire",
+      "pos": "verbo (transitivo, -ire con isc)",
+      "fr": "garder, conserver avec soin",
+      "isVerb": true
+    },
+    {
+      "lemma": "da",
+      "pos": "preposizione",
+      "fr": "de, depuis, chez",
+      "isVerb": false
+    },
+    {
+      "lemma": "dabbenaggine",
+      "pos": "nome femminile",
+      "fr": "naïveté, crédulité",
+      "isVerb": false
+    },
+    {
+      "lemma": "dabbene",
+      "pos": "aggettivo invariabile",
+      "fr": "honnête, brave",
+      "isVerb": false
+    },
+    {
+      "lemma": "daccapo",
+      "pos": "avverbio",
+      "fr": "depuis le début, de nouveau",
+      "isVerb": false
+    },
+    {
+      "lemma": "dacché",
+      "pos": "congiunzione",
+      "fr": "depuis que",
+      "isVerb": false
+    },
+    {
+      "lemma": "dado",
+      "pos": "nome maschile",
+      "fr": "dé (à jouer), cube",
+      "isVerb": false
+    },
+    {
+      "lemma": "daino",
+      "pos": "nome maschile",
+      "fr": "daim",
+      "isVerb": false
+    },
+    {
+      "lemma": "dalli",
+      "pos": "interiezione",
+      "fr": "vas-y, attrape-le (exclamation pour inciter à poursuivre quelqu'un)",
+      "isVerb": false
+    },
+    {
+      "lemma": "dama",
+      "pos": "sostantivo (femminile)",
+      "fr": "dame",
+      "isVerb": false
+    },
+    {
+      "lemma": "damerino",
+      "pos": "sostantivo (maschile)",
+      "fr": "dandy, freluquet",
+      "isVerb": false
+    },
+    {
+      "lemma": "damigiana",
+      "pos": "sostantivo (femminile)",
+      "fr": "dame-jeanne",
+      "isVerb": false
+    },
+    {
+      "lemma": "damo",
+      "pos": "sostantivo (maschile, arcaico/dialettale)",
+      "fr": "galant, soupirant (terme ancien/dialectal)",
+      "isVerb": false
+    },
+    {
+      "lemma": "danaro",
+      "pos": "nome maschile (variante antica di 'denaro')",
+      "fr": "argent (variante ancienne de 'denaro')",
+      "isVerb": false
+    },
+    {
+      "lemma": "danaroso",
+      "pos": "aggettivo",
+      "fr": "riche, fortuné",
+      "isVerb": false
+    },
+    {
+      "lemma": "danda",
+      "pos": "nome femminile",
+      "fr": "lisière (pour soutenir un enfant qui apprend à marcher)",
+      "isVerb": false
+    },
+    {
+      "lemma": "dannare",
+      "pos": "verbo (transitivo/riflessivo, regolare)",
+      "fr": "damner",
+      "isVerb": true
+    },
+    {
+      "lemma": "dannazione",
+      "pos": "nome femminile",
+      "fr": "damnation",
+      "isVerb": false
+    },
+    {
+      "lemma": "danneggiare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "endommager, nuire à",
+      "isVerb": true
+    },
+    {
+      "lemma": "danno",
+      "pos": "nome maschile",
+      "fr": "dommage, dégât",
+      "isVerb": false
+    },
+    {
+      "lemma": "dannoso",
+      "pos": "aggettivo",
+      "fr": "nuisible, dommageable",
+      "isVerb": false
+    },
+    {
+      "lemma": "danza",
+      "pos": "sostantivo femminile",
+      "fr": "danse",
+      "isVerb": false
+    },
+    {
+      "lemma": "danzare",
+      "pos": "verbo (intransitivo, regolare, 1ª coniugazione)",
+      "fr": "danser",
+      "isVerb": true
+    },
+    {
+      "lemma": "dappertutto",
+      "pos": "avverbio",
+      "fr": "partout",
+      "isVerb": false
+    },
+    {
+      "lemma": "dapprima",
+      "pos": "avverbio",
+      "fr": "d'abord, tout d'abord",
+      "isVerb": false
+    },
+    {
+      "lemma": "dapprincipio",
+      "pos": "avverbio",
+      "fr": "au début, au commencement",
+      "isVerb": false
+    },
+    {
+      "lemma": "dare",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "donner",
+      "isVerb": true
+    },
+    {
+      "lemma": "data",
+      "pos": "nome (femminile)",
+      "fr": "date",
+      "isVerb": false
+    },
+    {
+      "lemma": "datare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "dater",
+      "isVerb": true
+    },
+    {
+      "lemma": "dato",
+      "pos": "nome (maschile)",
+      "fr": "donnée, fait",
+      "isVerb": false
+    },
+    {
+      "lemma": "datore",
+      "pos": "nome (maschile)",
+      "fr": "employeur, donneur",
+      "isVerb": false
+    },
+    {
+      "lemma": "dattero",
+      "pos": "nome (maschile)",
+      "fr": "datte",
+      "isVerb": false
+    },
+    {
+      "lemma": "davanti",
+      "pos": "avverbio/preposizione",
+      "fr": "devant",
+      "isVerb": false
+    },
+    {
+      "lemma": "davanzale",
+      "pos": "nome (m.)",
+      "fr": "rebord de fenêtre, appui de fenêtre",
+      "isVerb": false
+    },
+    {
+      "lemma": "davvero",
+      "pos": "avverbio",
+      "fr": "vraiment",
+      "isVerb": false
+    },
+    {
+      "lemma": "dazio",
+      "pos": "nome (m.)",
+      "fr": "taxe douanière, droit de douane",
+      "isVerb": false
+    },
+    {
+      "lemma": "dea",
+      "pos": "nome (f.)",
+      "fr": "déesse",
+      "isVerb": false
+    },
+    {
+      "lemma": "deambulazione",
+      "pos": "nome (f.)",
+      "fr": "déambulation, marche",
+      "isVerb": false
+    },
+    {
+      "lemma": "debilitare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "affaiblir, débiliter",
+      "isVerb": true
+    },
+    {
+      "lemma": "debito",
+      "pos": "sostantivo maschile / aggettivo",
+      "fr": "dette / dû",
+      "isVerb": false
+    },
+    {
+      "lemma": "debitore",
+      "pos": "sostantivo (maschile: debitore, femminile: debitrice)",
+      "fr": "débiteur / débitrice",
+      "isVerb": false
+    },
+    {
+      "lemma": "debole",
+      "pos": "aggettivo",
+      "fr": "faible",
+      "isVerb": false
+    },
+    {
+      "lemma": "debolezza",
+      "pos": "sostantivo femminile",
+      "fr": "faiblesse",
+      "isVerb": false
+    },
+    {
+      "lemma": "debolmente",
+      "pos": "avverbio",
+      "fr": "faiblement",
+      "isVerb": false
+    },
+    {
+      "lemma": "deca",
+      "pos": "sostantivo femminile (invariabile, colloquiale)",
+      "fr": "dizaine / billet de dix (familier)",
+      "isVerb": false
+    },
+    {
+      "lemma": "decadenza",
+      "pos": "sostantivo femminile",
+      "fr": "décadence, déchéance",
+      "isVerb": false
+    },
+    {
+      "lemma": "decennio",
+      "pos": "sostantivo maschile",
+      "fr": "décennie",
+      "isVerb": false
+    },
+    {
+      "lemma": "decente",
+      "pos": "aggettivo",
+      "fr": "décent",
+      "isVerb": false
+    },
+    {
+      "lemma": "decidere",
+      "pos": "verbo (transitivo/intransitivo, irregolare)",
+      "fr": "décider",
+      "isVerb": true
+    },
+    {
+      "lemma": "decifrare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déchiffrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "decimo",
+      "pos": "aggettivo numerale ordinale",
+      "fr": "dixième",
+      "isVerb": false
+    },
+    {
+      "lemma": "decina",
+      "pos": "sostantivo (femminile)",
+      "fr": "dizaine",
+      "isVerb": false
+    },
+    {
+      "lemma": "decisionale",
+      "pos": "aggettivo",
+      "fr": "décisionnel",
+      "isVerb": false
+    },
+    {
+      "lemma": "decisione",
+      "pos": "sostantivo (femminile)",
+      "fr": "décision",
+      "isVerb": false
+    },
+    {
+      "lemma": "decisivo",
+      "pos": "aggettivo",
+      "fr": "décisif",
+      "isVerb": false
+    },
+    {
+      "lemma": "declassare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déclasser, rétrograder",
+      "isVerb": true
+    },
+    {
+      "lemma": "declinare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "décliner, refuser",
+      "isVerb": true
+    },
+    {
+      "lemma": "declino",
+      "pos": "sostantivo maschile",
+      "fr": "déclin",
+      "isVerb": false
+    },
+    {
+      "lemma": "decodificare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "décoder",
+      "isVerb": true
+    },
+    {
+      "lemma": "decomposizione",
+      "pos": "sostantivo femminile",
+      "fr": "décomposition",
+      "isVerb": false
+    },
+    {
+      "lemma": "decorare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "décorer",
+      "isVerb": true
+    },
+    {
+      "lemma": "decorazione",
+      "pos": "sostantivo femminile",
+      "fr": "décoration",
+      "isVerb": false
+    },
+    {
+      "lemma": "decorrenza",
+      "pos": "sostantivo femminile",
+      "fr": "date d'effet, entrée en vigueur",
+      "isVerb": false
+    },
+    {
+      "lemma": "decorrere",
+      "pos": "verbo (intransitivo, irregolare)",
+      "fr": "s'écouler, prendre effet",
+      "isVerb": true
+    },
+    {
+      "lemma": "decrepito",
+      "pos": "aggettivo",
+      "fr": "décrépit",
+      "isVerb": false
+    },
+    {
+      "lemma": "decretare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "décréter, ordonner",
+      "isVerb": true
+    },
+    {
+      "lemma": "decreto",
+      "pos": "sostantivo (m)",
+      "fr": "décret",
+      "isVerb": false
+    },
+    {
+      "lemma": "dedica",
+      "pos": "sostantivo (f)",
+      "fr": "dédicace",
+      "isVerb": false
+    },
+    {
+      "lemma": "dedicare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "dédier, consacrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dedurre",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "déduire",
+      "isVerb": true
+    },
+    {
+      "lemma": "definire",
+      "pos": "verbo (transitivo, regolare -ire con -isc-)",
+      "fr": "définir",
+      "isVerb": true
+    },
+    {
+      "lemma": "definitivamente",
+      "pos": "avverbio",
+      "fr": "définitivement",
+      "isVerb": false
+    },
+    {
+      "lemma": "definitivo",
+      "pos": "aggettivo",
+      "fr": "définitif",
+      "isVerb": false
+    },
+    {
+      "lemma": "definizione",
+      "pos": "sostantivo (f)",
+      "fr": "définition",
+      "isVerb": false
+    },
+    {
+      "lemma": "deforme",
+      "pos": "aggettivo",
+      "fr": "difforme",
+      "isVerb": false
+    },
+    {
+      "lemma": "defunto",
+      "pos": "aggettivo/sostantivo",
+      "fr": "défunt, décédé",
+      "isVerb": false
+    },
+    {
+      "lemma": "degenere",
+      "pos": "aggettivo",
+      "fr": "dégénéré",
+      "isVerb": false
+    },
+    {
+      "lemma": "degli",
+      "pos": "preposizione articolata (di + gli)",
+      "fr": "des, de les",
+      "isVerb": false
+    },
+    {
+      "lemma": "deglutizione",
+      "pos": "sostantivo femminile",
+      "fr": "déglutition",
+      "isVerb": false
+    },
+    {
+      "lemma": "degnamente",
+      "pos": "avverbio",
+      "fr": "dignement",
+      "isVerb": false
+    },
+    {
+      "lemma": "degnarsi",
+      "pos": "verbo (riflessivo, regolare)",
+      "fr": "daigner, condescendre à",
+      "isVerb": true
+    },
+    {
+      "lemma": "degno",
+      "pos": "aggettivo",
+      "fr": "digne",
+      "isVerb": false
+    },
+    {
+      "lemma": "degradare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "dégrader",
+      "isVerb": true
+    },
+    {
+      "lemma": "degustare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déguster",
+      "isVerb": true
+    },
+    {
+      "lemma": "degustazione",
+      "pos": "sostantivo femminile",
+      "fr": "dégustation",
+      "isVerb": false
+    },
+    {
+      "lemma": "dei",
+      "pos": "preposizione articolata",
+      "fr": "des, de les",
+      "isVerb": false
+    },
+    {
+      "lemma": "del",
+      "pos": "preposizione articolata (di + il)",
+      "fr": "du, de le",
+      "isVerb": false
+    },
+    {
+      "lemma": "del resto",
+      "pos": "locuzione avverbiale",
+      "fr": "d'ailleurs, du reste, par ailleurs",
+      "isVerb": false
+    },
+    {
+      "lemma": "delega",
+      "pos": "sostantivo (f.)",
+      "fr": "délégation, procuration",
+      "isVerb": false
+    },
+    {
+      "lemma": "delegare",
+      "pos": "verbo (transitivo)",
+      "fr": "déléguer",
+      "isVerb": true
+    },
+    {
+      "lemma": "delfino",
+      "pos": "sostantivo (m.)",
+      "fr": "dauphin",
+      "isVerb": false
+    },
+    {
+      "lemma": "delibera",
+      "pos": "sostantivo (f.)",
+      "fr": "délibération, résolution (officielle)",
+      "isVerb": false
+    },
+    {
+      "lemma": "deliberare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "délibérer, décider (officialmente)",
+      "isVerb": true
+    },
+    {
+      "lemma": "deliberatamente",
+      "pos": "avverbio",
+      "fr": "délibérément, exprès",
+      "isVerb": false
+    },
+    {
+      "lemma": "deliberazione",
+      "pos": "sostantivo (f.)",
+      "fr": "délibération, décision officielle",
+      "isVerb": false
+    },
+    {
+      "lemma": "delicatamente",
+      "pos": "avverbio",
+      "fr": "délicatement, avec douceur",
+      "isVerb": false
+    },
+    {
+      "lemma": "delicatezza",
+      "pos": "sostantivo (f.)",
+      "fr": "délicatesse, douceur",
+      "isVerb": false
+    },
+    {
+      "lemma": "delicato",
+      "pos": "aggettivo",
+      "fr": "délicat, fragile",
+      "isVerb": false
+    },
+    {
+      "lemma": "delinquere",
+      "pos": "verbo (intransitivo)",
+      "fr": "commettre des délits, se livrer au crime",
+      "isVerb": true
+    },
+    {
+      "lemma": "delirio",
+      "pos": "sostantivo (m.)",
+      "fr": "délire",
+      "isVerb": false
+    },
+    {
+      "lemma": "delitto",
+      "pos": "sostantivo (m.)",
+      "fr": "délit, crime",
+      "isVerb": false
+    },
+    {
+      "lemma": "delizia",
+      "pos": "sostantivo (f.)",
+      "fr": "délice",
+      "isVerb": false
+    },
+    {
+      "lemma": "delizioso",
+      "pos": "aggettivo",
+      "fr": "délicieux",
+      "isVerb": false
+    },
+    {
+      "lemma": "delta",
+      "pos": "sostantivo maschile (invariabile)",
+      "fr": "delta",
+      "isVerb": false
+    },
+    {
+      "lemma": "deludere",
+      "pos": "verbo (transitivo)",
+      "fr": "décevoir",
+      "isVerb": true
+    },
+    {
+      "lemma": "delusione",
+      "pos": "nome femminile",
+      "fr": "déception",
+      "isVerb": false
+    },
+    {
+      "lemma": "deluso",
+      "pos": "aggettivo/participio passato",
+      "fr": "déçu",
+      "isVerb": false
+    },
+    {
+      "lemma": "democratico",
+      "pos": "aggettivo",
+      "fr": "démocratique",
+      "isVerb": false
+    },
+    {
+      "lemma": "democrazia",
+      "pos": "nome femminile",
+      "fr": "démocratie",
+      "isVerb": false
+    },
+    {
+      "lemma": "demonio",
+      "pos": "nome maschile",
+      "fr": "démon, diable",
+      "isVerb": false
+    },
+    {
+      "lemma": "denaro",
+      "pos": "sostantivo (maschile)",
+      "fr": "argent",
+      "isVerb": false
+    },
+    {
+      "lemma": "denominare",
+      "pos": "verbo (transitivo)",
+      "fr": "dénommer, appeler",
+      "isVerb": true
+    },
+    {
+      "lemma": "denominazione",
+      "pos": "nome femminile",
+      "fr": "dénomination, appellation",
+      "isVerb": false
+    },
+    {
+      "lemma": "denso",
+      "pos": "aggettivo",
+      "fr": "dense, épais",
+      "isVerb": false
+    },
+    {
+      "lemma": "dente",
+      "pos": "nome maschile",
+      "fr": "dent",
+      "isVerb": false
+    },
+    {
+      "lemma": "dentifricio",
+      "pos": "nome maschile",
+      "fr": "dentifrice",
+      "isVerb": false
+    },
+    {
+      "lemma": "dentro",
+      "pos": "avverbio/preposizione",
+      "fr": "dedans, à l'intérieur (de)",
+      "isVerb": false
+    },
+    {
+      "lemma": "denuncia",
+      "pos": "nome femminile",
+      "fr": "dénonciation, plainte",
+      "isVerb": false
+    },
+    {
+      "lemma": "denunciare",
+      "pos": "verbo (transitivo)",
+      "fr": "dénoncer, signaler",
+      "isVerb": true
+    },
+    {
+      "lemma": "deperire",
+      "pos": "verbo (intransitivo)",
+      "fr": "dépérir, se détériorer",
+      "isVerb": true
+    },
+    {
+      "lemma": "depistaggio",
+      "pos": "nome (m)",
+      "fr": "manœuvre de diversion, brouillage de pistes",
+      "isVerb": false
+    },
+    {
+      "lemma": "deplorabile",
+      "pos": "aggettivo",
+      "fr": "déplorable",
+      "isVerb": false
+    },
+    {
+      "lemma": "deplorevole",
+      "pos": "aggettivo",
+      "fr": "déplorable, regrettable",
+      "isVerb": false
+    },
+    {
+      "lemma": "deporre",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "déposer, témoigner",
+      "isVerb": true
+    },
+    {
+      "lemma": "depositare",
+      "pos": "verbo (transitivo)",
+      "fr": "déposer",
+      "isVerb": true
+    },
+    {
+      "lemma": "deposito",
+      "pos": "nome (m)",
+      "fr": "dépôt, entrepôt",
+      "isVerb": false
+    },
+    {
+      "lemma": "deprimente",
+      "pos": "aggettivo",
+      "fr": "déprimant",
+      "isVerb": false
+    },
+    {
+      "lemma": "deputato",
+      "pos": "nome (m/f)",
+      "fr": "député",
+      "isVerb": false
+    },
+    {
+      "lemma": "derby",
+      "pos": "nome (m, invariabile)",
+      "fr": "derby",
+      "isVerb": false
+    },
+    {
+      "lemma": "deridere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "se moquer de, railler",
+      "isVerb": true
+    },
+    {
+      "lemma": "derisorio",
+      "pos": "aggettivo",
+      "fr": "dérisoire",
+      "isVerb": false
+    },
+    {
+      "lemma": "deriva",
+      "pos": "nome (f)",
+      "fr": "dérive",
+      "isVerb": false
+    },
+    {
+      "lemma": "derivare",
+      "pos": "verbo (intransitivo)",
+      "fr": "dériver, provenire",
+      "isVerb": true
+    },
+    {
+      "lemma": "derubare",
+      "pos": "verbo (transitivo)",
+      "fr": "dévaliser, voler",
+      "isVerb": true
+    },
+    {
+      "lemma": "descrivere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "décrire",
+      "isVerb": true
+    },
+    {
+      "lemma": "descrizione",
+      "pos": "sostantivo (nome femminile)",
+      "fr": "description",
+      "isVerb": false
+    },
+    {
+      "lemma": "deserto",
+      "pos": "aggettivo",
+      "fr": "désert(e), vide",
+      "isVerb": false
+    },
+    {
+      "lemma": "desiderare",
+      "pos": "verbo (transitivo)",
+      "fr": "désirer, souhaiter",
+      "isVerb": true
+    },
+    {
+      "lemma": "desiderio",
+      "pos": "nome (maschile)",
+      "fr": "désir",
+      "isVerb": false
+    },
+    {
+      "lemma": "desideroso",
+      "pos": "aggettivo",
+      "fr": "désireux",
+      "isVerb": false
+    },
+    {
+      "lemma": "design",
+      "pos": "nome (maschile, invariabile, forestierismo)",
+      "fr": "design",
+      "isVerb": false
+    },
+    {
+      "lemma": "designare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "désigner",
+      "isVerb": true
+    },
+    {
+      "lemma": "designazione",
+      "pos": "nome (femminile)",
+      "fr": "désignation",
+      "isVerb": false
+    },
+    {
+      "lemma": "designer",
+      "pos": "nome (maschile/femminile, invariabile, forestierismo)",
+      "fr": "designer, créateur",
+      "isVerb": false
+    },
+    {
+      "lemma": "desinare",
+      "pos": "verbo (intransitivo, regolare, letterario)",
+      "fr": "dîner, déjeuner",
+      "isVerb": true
+    },
+    {
+      "lemma": "desolato",
+      "pos": "aggettivo",
+      "fr": "désolé",
+      "isVerb": false
+    },
+    {
+      "lemma": "desolazione",
+      "pos": "nome (femminile)",
+      "fr": "désolation",
+      "isVerb": false
+    },
+    {
+      "lemma": "dessert",
+      "pos": "sostantivo maschile invariabile",
+      "fr": "dessert",
+      "isVerb": false
+    },
+    {
+      "lemma": "destabilizzare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déstabiliser",
+      "isVerb": true
+    },
+    {
+      "lemma": "destare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "réveiller, éveiller",
+      "isVerb": true
+    },
+    {
+      "lemma": "destinare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "destiner",
+      "isVerb": true
+    },
+    {
+      "lemma": "destinatario",
+      "pos": "sostantivo maschile",
+      "fr": "destinataire",
+      "isVerb": false
+    },
+    {
+      "lemma": "destinazione",
+      "pos": "nome femminile",
+      "fr": "destination",
+      "isVerb": false
+    },
+    {
+      "lemma": "destino",
+      "pos": "nome maschile",
+      "fr": "destin",
+      "isVerb": false
+    },
+    {
+      "lemma": "desto",
+      "pos": "aggettivo",
+      "fr": "éveillé, alerte",
+      "isVerb": false
+    },
+    {
+      "lemma": "destra",
+      "pos": "nome femminile / aggettivo",
+      "fr": "droite",
+      "isVerb": false
+    },
+    {
+      "lemma": "destrezza",
+      "pos": "nome femminile",
+      "fr": "dextérité, adresse",
+      "isVerb": false
+    },
+    {
+      "lemma": "destro",
+      "pos": "aggettivo",
+      "fr": "droit, adroit",
+      "isVerb": false
+    },
+    {
+      "lemma": "destrutturare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déstructurer",
+      "isVerb": true
+    },
+    {
+      "lemma": "destrutturazione",
+      "pos": "nome femminile",
+      "fr": "déstructuration",
+      "isVerb": false
+    },
+    {
+      "lemma": "detenere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "détenir",
+      "isVerb": true
+    },
+    {
+      "lemma": "determinare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déterminer",
+      "isVerb": true
+    },
+    {
+      "lemma": "determinazione",
+      "pos": "nome femminile",
+      "fr": "détermination",
+      "isVerb": false
+    },
+    {
+      "lemma": "detrito",
+      "pos": "nome maschile",
+      "fr": "débris, détritus",
+      "isVerb": false
+    },
+    {
+      "lemma": "dettagliare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "détailler",
+      "isVerb": true
+    },
+    {
+      "lemma": "dettaglio",
+      "pos": "nome maschile",
+      "fr": "détail",
+      "isVerb": false
+    },
+    {
+      "lemma": "dettare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "dicter",
+      "isVerb": true
+    },
+    {
+      "lemma": "dettatura",
+      "pos": "nome (femminile)",
+      "fr": "dictée",
+      "isVerb": false
+    },
+    {
+      "lemma": "devastante",
+      "pos": "aggettivo",
+      "fr": "dévastateur",
+      "isVerb": false
+    },
+    {
+      "lemma": "deviare",
+      "pos": "verbo (transitivo/intransitivo, regolare)",
+      "fr": "dévier",
+      "isVerb": true
+    },
+    {
+      "lemma": "deviazione",
+      "pos": "nome (femminile)",
+      "fr": "déviation",
+      "isVerb": false
+    },
+    {
+      "lemma": "devoto",
+      "pos": "aggettivo",
+      "fr": "dévot",
+      "isVerb": false
+    },
+    {
+      "lemma": "devozione",
+      "pos": "sostantivo femminile",
+      "fr": "dévotion",
+      "isVerb": false
+    },
+    {
+      "lemma": "di",
+      "pos": "preposizione",
+      "fr": "de",
+      "isVerb": false
+    },
+    {
+      "lemma": "dì",
+      "pos": "sostantivo maschile (letterario)",
+      "fr": "jour",
+      "isVerb": false
+    },
+    {
+      "lemma": "di più",
+      "pos": "locuzione avverbiale",
+      "fr": "davantage, plus",
+      "isVerb": false
+    },
+    {
+      "lemma": "diabolico",
+      "pos": "aggettivo",
+      "fr": "diabolique",
+      "isVerb": false
+    },
+    {
+      "lemma": "diadema",
+      "pos": "sostantivo maschile",
+      "fr": "diadème",
+      "isVerb": false
+    },
+    {
+      "lemma": "diafano",
+      "pos": "aggettivo",
+      "fr": "diaphane",
+      "isVerb": false
+    },
+    {
+      "lemma": "diagnosi",
+      "pos": "sostantivo femminile invariabile",
+      "fr": "diagnostic",
+      "isVerb": false
+    },
+    {
+      "lemma": "diagnostica",
+      "pos": "sostantivo femminile",
+      "fr": "diagnostic (discipline)",
+      "isVerb": false
+    },
+    {
+      "lemma": "dialettale",
+      "pos": "aggettivo",
+      "fr": "dialectal",
+      "isVerb": false
+    },
+    {
+      "lemma": "dialetto",
+      "pos": "sostantivo maschile",
+      "fr": "dialecte",
+      "isVerb": false
+    },
+    {
+      "lemma": "dialogare",
+      "pos": "verbo (intransitivo)",
+      "fr": "dialoguer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dialogo",
+      "pos": "nome (m)",
+      "fr": "dialogue",
+      "isVerb": false
+    },
+    {
+      "lemma": "diamine",
+      "pos": "interiezione",
+      "fr": "diable, mince alors",
+      "isVerb": false
+    },
+    {
+      "lemma": "dianzi",
+      "pos": "avverbio",
+      "fr": "tout à l'heure, peu avant",
+      "isVerb": false
+    },
+    {
+      "lemma": "diario",
+      "pos": "nome (m)",
+      "fr": "journal intime",
+      "isVerb": false
+    },
+    {
+      "lemma": "diavolaccio",
+      "pos": "nome (m)",
+      "fr": "satané diable, vilain diable",
+      "isVerb": false
+    },
+    {
+      "lemma": "diavoleria",
+      "pos": "nome (f)",
+      "fr": "diablerie",
+      "isVerb": false
+    },
+    {
+      "lemma": "diavolo",
+      "pos": "nome (m)",
+      "fr": "diable",
+      "isVerb": false
+    },
+    {
+      "lemma": "dibattersi",
+      "pos": "verbo (riflessivo)",
+      "fr": "se débattre",
+      "isVerb": true
+    },
+    {
+      "lemma": "dibattito",
+      "pos": "nome (m)",
+      "fr": "débat",
+      "isVerb": false
+    },
+    {
+      "lemma": "dicembre",
+      "pos": "nome (m)",
+      "fr": "décembre",
+      "isVerb": false
+    },
+    {
+      "lemma": "dichiarare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "déclarer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dichiarazione",
+      "pos": "sostantivo femminile",
+      "fr": "déclaration",
+      "isVerb": false
+    },
+    {
+      "lemma": "diciannove",
+      "pos": "aggettivo numerale (invariabile)",
+      "fr": "dix-neuf",
+      "isVerb": false
+    },
+    {
+      "lemma": "diciannovesimo",
+      "pos": "aggettivo numerale ordinale",
+      "fr": "dix-neuvième",
+      "isVerb": false
+    },
+    {
+      "lemma": "diciassette",
+      "pos": "aggettivo numerale (invariabile)",
+      "fr": "dix-sept",
+      "isVerb": false
+    },
+    {
+      "lemma": "diciotto",
+      "pos": "aggettivo numerale (invariabile)",
+      "fr": "dix-huit",
+      "isVerb": false
+    },
+    {
+      "lemma": "dicitura",
+      "pos": "sostantivo femminile",
+      "fr": "mention, formule, inscription",
+      "isVerb": false
+    },
+    {
+      "lemma": "didascalia",
+      "pos": "sostantivo femminile",
+      "fr": "légende, sous-titre",
+      "isVerb": false
+    },
+    {
+      "lemma": "didattico",
+      "pos": "aggettivo",
+      "fr": "didactique, pédagogique",
+      "isVerb": false
+    },
+    {
+      "lemma": "dieci",
+      "pos": "aggettivo numerale / sostantivo",
+      "fr": "dix",
+      "isVerb": false
+    },
+    {
+      "lemma": "dieta",
+      "pos": "sostantivo (f.)",
+      "fr": "régime alimentaire",
+      "isVerb": false
+    },
+    {
+      "lemma": "dietro",
+      "pos": "preposizione / avverbio",
+      "fr": "derrière",
+      "isVerb": false
+    },
+    {
+      "lemma": "difatti",
+      "pos": "avverbio",
+      "fr": "en effet, effectivement",
+      "isVerb": false
+    },
+    {
+      "lemma": "difendere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "défendre",
+      "isVerb": true
+    },
+    {
+      "lemma": "difensore",
+      "pos": "sostantivo (m./f.)",
+      "fr": "défenseur",
+      "isVerb": false
+    },
+    {
+      "lemma": "difesa",
+      "pos": "sostantivo (f.)",
+      "fr": "défense",
+      "isVerb": false
+    },
+    {
+      "lemma": "difetto",
+      "pos": "sostantivo (m.)",
+      "fr": "défaut",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffamazione",
+      "pos": "nome (femminile)",
+      "fr": "diffamation",
+      "isVerb": false
+    },
+    {
+      "lemma": "differenza",
+      "pos": "nome (femminile)",
+      "fr": "différence",
+      "isVerb": false
+    },
+    {
+      "lemma": "differenziato",
+      "pos": "aggettivo (participio passato)",
+      "fr": "différencié, trié",
+      "isVerb": false
+    },
+    {
+      "lemma": "difficile",
+      "pos": "aggettivo",
+      "fr": "difficile",
+      "isVerb": false
+    },
+    {
+      "lemma": "difficilmente",
+      "pos": "avverbio",
+      "fr": "difficilement",
+      "isVerb": false
+    },
+    {
+      "lemma": "difficoltà",
+      "pos": "nome (femminile, invariabile)",
+      "fr": "difficulté",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffida",
+      "pos": "nome (femminile)",
+      "fr": "mise en demeure, avertissement",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffidare",
+      "pos": "verbo (intransitivo/transitivo, regolare)",
+      "fr": "se méfier de, mettre en demeure",
+      "isVerb": true
+    },
+    {
+      "lemma": "diffidente",
+      "pos": "aggettivo",
+      "fr": "méfiant",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffidenza",
+      "pos": "nome (femminile)",
+      "fr": "méfiance",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffondere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "diffuser, répandre",
+      "isVerb": true
+    },
+    {
+      "lemma": "diffondersi",
+      "pos": "verbo (riflessivo/intransitivo pronominale)",
+      "fr": "se répandre, se diffuser",
+      "isVerb": true
+    },
+    {
+      "lemma": "diffusamente",
+      "pos": "avverbio",
+      "fr": "de manière étendue, en détail",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffusione",
+      "pos": "nome (femminile)",
+      "fr": "diffusion, propagation",
+      "isVerb": false
+    },
+    {
+      "lemma": "diffuso",
+      "pos": "aggettivo / participio passato",
+      "fr": "répandu, diffusé, courant",
+      "isVerb": false
+    },
+    {
+      "lemma": "difilato",
+      "pos": "avverbio",
+      "fr": "tout droit, directement",
+      "isVerb": false
+    },
+    {
+      "lemma": "diga",
+      "pos": "nome (femminile)",
+      "fr": "barrage, digue",
+      "isVerb": false
+    },
+    {
+      "lemma": "digerire",
+      "pos": "verbo (transitivo)",
+      "fr": "digérer",
+      "isVerb": true
+    },
+    {
+      "lemma": "digitale",
+      "pos": "aggettivo",
+      "fr": "numérique, digital",
+      "isVerb": false
+    },
+    {
+      "lemma": "digitalizzazione",
+      "pos": "sostantivo femminile",
+      "fr": "digitalisation, numérisation",
+      "isVerb": false
+    },
+    {
+      "lemma": "digiunare",
+      "pos": "verbo (intransitivo)",
+      "fr": "jeûner",
+      "isVerb": true
+    },
+    {
+      "lemma": "digiuno",
+      "pos": "sostantivo maschile",
+      "fr": "jeûne",
+      "isVerb": false
+    },
+    {
+      "lemma": "dignità",
+      "pos": "sostantivo femminile",
+      "fr": "dignité",
+      "isVerb": false
+    },
+    {
+      "lemma": "dignitoso",
+      "pos": "aggettivo",
+      "fr": "digne",
+      "isVerb": false
+    },
+    {
+      "lemma": "digressione",
+      "pos": "sostantivo femminile",
+      "fr": "digression",
+      "isVerb": false
+    },
+    {
+      "lemma": "digrignare",
+      "pos": "verbo (transitivo)",
+      "fr": "grincer (les dents), montrer les dents",
+      "isVerb": true
+    },
+    {
+      "lemma": "digrossare",
+      "pos": "verbo (transitivo)",
+      "fr": "dégrossir",
+      "isVerb": true
+    },
+    {
+      "lemma": "dileggio",
+      "pos": "sostantivo maschile",
+      "fr": "moquerie, raillerie",
+      "isVerb": false
+    },
+    {
+      "lemma": "dilettante",
+      "pos": "sostantivo / aggettivo",
+      "fr": "amateur",
+      "isVerb": false
+    },
+    {
+      "lemma": "diletto",
+      "pos": "sostantivo maschile / aggettivo",
+      "fr": "plaisir, délice / bien-aimé, cher",
+      "isVerb": false
+    },
+    {
+      "lemma": "dilettoso",
+      "pos": "aggettivo (letterario)",
+      "fr": "délicieux, agréable",
+      "isVerb": false
+    },
+    {
+      "lemma": "diligente",
+      "pos": "aggettivo",
+      "fr": "diligent, appliqué",
+      "isVerb": false
+    },
+    {
+      "lemma": "diligenza",
+      "pos": "sostantivo femminile",
+      "fr": "diligence (soin, application); autrefois: diligence (carrosse)",
+      "isVerb": false
+    },
+    {
+      "lemma": "diluviare",
+      "pos": "verbo (intransitivo, impersonale)",
+      "fr": "pleuvoir à verse",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimagrire",
+      "pos": "verbo (intransitivo)",
+      "fr": "maigrir",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimenare",
+      "pos": "verbo (transitivo, anche riflessivo)",
+      "fr": "agiter, remuer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimensione",
+      "pos": "nome (femminile)",
+      "fr": "dimension",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimenticanza",
+      "pos": "nome (femminile)",
+      "fr": "oubli, étourderie",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimenticare",
+      "pos": "verbo (transitivo)",
+      "fr": "oublier",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimettere",
+      "pos": "verbo (transitivo)",
+      "fr": "renvoyer, faire sortir",
+      "isVerb": true
+    },
+    {
+      "lemma": "diminuire",
+      "pos": "verbo (intransitivo/transitivo)",
+      "fr": "diminuer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimissioni",
+      "pos": "nome (femminile plurale)",
+      "fr": "démission",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimodoché",
+      "pos": "congiunzione",
+      "fr": "de sorte que, de manière que",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimolto",
+      "pos": "avverbio (arcaico/dialettale)",
+      "fr": "beaucoup",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimonio",
+      "pos": "nome (maschile, variante dialettale)",
+      "fr": "démon, diable",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimora",
+      "pos": "nome (femminile)",
+      "fr": "demeure, résidence",
+      "isVerb": false
+    },
+    {
+      "lemma": "dimorare",
+      "pos": "verbo (intransitivo)",
+      "fr": "résider, demeurer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimostrare",
+      "pos": "verbo (transitivo)",
+      "fr": "démontrer, prouver",
+      "isVerb": true
+    },
+    {
+      "lemma": "dimostrazione",
+      "pos": "sostantivo (f.)",
+      "fr": "démonstration, preuve",
+      "isVerb": false
+    },
+    {
+      "lemma": "din",
+      "pos": "interiezione/onomatopea",
+      "fr": "ding",
+      "isVerb": false
+    },
+    {
+      "lemma": "dinanzi",
+      "pos": "avverbio/preposizione",
+      "fr": "devant, en face de",
+      "isVerb": false
+    },
+    {
+      "lemma": "dinastia",
+      "pos": "nome femminile",
+      "fr": "dynastie",
+      "isVerb": false
+    },
+    {
+      "lemma": "dinosauro",
+      "pos": "nome maschile",
+      "fr": "dinosaure",
+      "isVerb": false
+    },
+    {
+      "lemma": "dintorno",
+      "pos": "nome maschile",
+      "fr": "environs, alentours",
+      "isVerb": false
+    },
+    {
+      "lemma": "dio",
+      "pos": "sostantivo (m.)",
+      "fr": "dieu",
+      "isVerb": false
+    },
+    {
+      "lemma": "dipartire",
+      "pos": "verbo (intransitivo, letterario/arcaico)",
+      "fr": "s'en aller, se séparer, partir",
+      "isVerb": true
+    },
+    {
+      "lemma": "dipendente",
+      "pos": "aggettivo/nome",
+      "fr": "dépendant; employé",
+      "isVerb": false
+    },
+    {
+      "lemma": "dipendenza",
+      "pos": "nome femminile",
+      "fr": "dépendance",
+      "isVerb": false
+    },
+    {
+      "lemma": "dipendere",
+      "pos": "verbo (intransitivo)",
+      "fr": "dépendre",
+      "isVerb": true
+    },
+    {
+      "lemma": "dipingere",
+      "pos": "verbo (transitivo)",
+      "fr": "peindre",
+      "isVerb": true
+    },
+    {
+      "lemma": "diploma",
+      "pos": "sostantivo (m.)",
+      "fr": "diplôme",
+      "isVerb": false
+    },
+    {
+      "lemma": "diplomarsi",
+      "pos": "verbo (riflessivo)",
+      "fr": "obtenir son diplôme, être diplômé",
+      "isVerb": true
+    },
+    {
+      "lemma": "diplomatico",
+      "pos": "aggettivo",
+      "fr": "diplomatique",
+      "isVerb": false
+    },
+    {
+      "lemma": "diplomazia",
+      "pos": "sostantivo (f.)",
+      "fr": "diplomatie",
+      "isVerb": false
+    },
+    {
+      "lemma": "dipoi",
+      "pos": "avverbio",
+      "fr": "ensuite, par la suite",
+      "isVerb": false
+    },
+    {
+      "lemma": "diradare",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "raréfier, disperser, espacer",
+      "isVerb": true
+    },
+    {
+      "lemma": "dire",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "dire",
+      "isVerb": true
+    },
+    {
+      "lemma": "direttamente",
+      "pos": "avverbio",
+      "fr": "directement",
+      "isVerb": false
+    },
+    {
+      "lemma": "direttiva",
+      "pos": "sostantivo (femminile)",
+      "fr": "directive",
+      "isVerb": false
+    },
+    {
+      "lemma": "direttivo",
+      "pos": "aggettivo/sostantivo (maschile)",
+      "fr": "directif, comité directeur",
+      "isVerb": false
+    },
+    {
+      "lemma": "diretto",
+      "pos": "aggettivo/participio passato",
+      "fr": "direct, dirigé",
+      "isVerb": false
+    },
+    {
+      "lemma": "direttore",
+      "pos": "sostantivo (maschile)",
+      "fr": "directeur",
+      "isVerb": false
+    },
+    {
+      "lemma": "direttrice",
+      "pos": "sostantivo (femminile)",
+      "fr": "directrice",
+      "isVerb": false
+    },
+    {
+      "lemma": "direzione",
+      "pos": "sostantivo (femminile)",
+      "fr": "direction",
+      "isVerb": false
+    },
+    {
+      "lemma": "dirigente",
+      "pos": "sostantivo (m/f)",
+      "fr": "dirigeant, cadre",
+      "isVerb": false
+    },
+    {
+      "lemma": "dirigere",
+      "pos": "verbo (transitivo)",
+      "fr": "diriger",
+      "isVerb": true
+    },
+    {
+      "lemma": "dirigersi",
+      "pos": "verbo (riflessivo/intransitivo pronominale)",
+      "fr": "se diriger",
+      "isVerb": true
+    },
+    {
+      "lemma": "dirimpetto",
+      "pos": "avverbio / preposizione",
+      "fr": "en face, vis-à-vis",
+      "isVerb": false
+    },
+    {
+      "lemma": "diritto",
+      "pos": "aggettivo / sostantivo (m.)",
+      "fr": "droit (adj.); droit, loi (n.)",
+      "isVerb": false
+    },
+    {
+      "lemma": "dirizzone",
+      "pos": "sostantivo (m.)",
+      "fr": "faux pas, coup de tête",
+      "isVerb": false
+    },
+    {
+      "lemma": "dirompere",
+      "pos": "verbo (transitivo/intransitivo)",
+      "fr": "faire éclater, briser violemment",
+      "isVerb": true
+    },
+    {
+      "lemma": "dirottamente",
+      "pos": "avverbio",
+      "fr": "de manière incontrôlable, abondamment",
+      "isVerb": false
+    },
+    {
+      "lemma": "dirotto",
+      "pos": "aggettivo",
+      "fr": "torrentiel, incontrôlable",
+      "isVerb": false
+    },
+    {
+      "lemma": "disabilità",
+      "pos": "nome femminile (invariabile)",
+      "fr": "handicap, incapacité",
+      "isVerb": false
+    },
+    {
+      "lemma": "disabitato",
+      "pos": "aggettivo",
+      "fr": "inhabité",
+      "isVerb": false
+    },
+    {
+      "lemma": "disadatto",
+      "pos": "aggettivo",
+      "fr": "inadapté, inapte",
+      "isVerb": false
+    },
+    {
+      "lemma": "disagio",
+      "pos": "nome maschile",
+      "fr": "malaise, gêne",
+      "isVerb": false
+    },
+    {
+      "lemma": "disagioso",
+      "pos": "aggettivo",
+      "fr": "pénible, inconfortable",
+      "isVerb": false
+    },
+    {
+      "lemma": "disarmante",
+      "pos": "aggettivo",
+      "fr": "désarmant",
+      "isVerb": false
+    },
+    {
+      "lemma": "disastro",
+      "pos": "nome maschile",
+      "fr": "désastre",
+      "isVerb": false
+    },
+    {
+      "lemma": "disastroso",
+      "pos": "aggettivo",
+      "fr": "désastreux",
+      "isVerb": false
+    },
+    {
+      "lemma": "disattivare",
+      "pos": "verbo (transitivo)",
+      "fr": "désactiver",
+      "isVerb": true
+    },
+    {
+      "lemma": "disboscamento",
+      "pos": "nome maschile",
+      "fr": "déforestation",
+      "isVerb": false
+    },
+    {
+      "lemma": "disbrigo",
+      "pos": "nome maschile",
+      "fr": "expédition (des affaires), règlement",
+      "isVerb": false
+    },
+    {
+      "lemma": "discarica",
+      "pos": "nome femminile",
+      "fr": "décharge",
+      "isVerb": false
+    },
+    {
+      "lemma": "discendere",
+      "pos": "verbo (intransitivo/transitivo)",
+      "fr": "descendre",
+      "isVerb": true
+    },
+    {
+      "lemma": "domandare",
+      "pos": "verbo (transitivo)",
+      "fr": "demander",
+      "isVerb": true
+    },
+    {
+      "lemma": "domani",
+      "pos": "avverbio",
+      "fr": "demain",
+      "isVerb": false
+    },
+    {
+      "lemma": "dovere",
+      "pos": "verbo (servile/transitivo, irregolare)",
+      "fr": "devoir",
+      "isVerb": true
+    },
+    {
+      "lemma": "ebbrezza",
+      "pos": "nome femminile",
+      "fr": "ivresse",
+      "isVerb": false
+    },
+    {
+      "lemma": "eccellentissimo",
+      "pos": "aggettivo",
+      "fr": "excellentissime, très excellent",
+      "isVerb": false
+    },
+    {
+      "lemma": "eccitazione",
+      "pos": "sostantivo (f)",
+      "fr": "excitation",
+      "isVerb": false
+    },
+    {
       "lemma": "edicola",
       "pos": "nome femminile",
       "fr": "kiosque à journaux",
+      "isVerb": false
+    },
+    {
+      "lemma": "edificio",
+      "pos": "nome maschile",
+      "fr": "édifice, bâtiment",
+      "isVerb": false
+    },
+    {
+      "lemma": "educazione",
+      "pos": "sostantivo (f)",
+      "fr": "éducation",
       "isVerb": false
     },
     {
@@ -12757,15 +18115,81 @@
       "isVerb": false
     },
     {
+      "lemma": "egro",
+      "pos": "aggettivo (letterario, arcaico)",
+      "fr": "malade, souffrant",
+      "isVerb": false
+    },
+    {
+      "lemma": "elegante",
+      "pos": "aggettivo",
+      "fr": "élégant",
+      "isVerb": false
+    },
+    {
+      "lemma": "eleganza",
+      "pos": "nome femminile",
+      "fr": "élégance",
+      "isVerb": false
+    },
+    {
+      "lemma": "elemosina",
+      "pos": "nome femminile",
+      "fr": "aumône",
+      "isVerb": false
+    },
+    {
       "lemma": "elmo",
       "pos": "sostantivo maschile",
       "fr": "casque, heaume",
       "isVerb": false
     },
     {
+      "lemma": "embrice",
+      "pos": "nome maschile",
+      "fr": "tuile",
+      "isVerb": false
+    },
+    {
+      "lemma": "emigrante",
+      "pos": "sostantivo (m/f)",
+      "fr": "émigrant, émigrante",
+      "isVerb": false
+    },
+    {
+      "lemma": "emigrazione",
+      "pos": "sostantivo (f)",
+      "fr": "émigration",
+      "isVerb": false
+    },
+    {
+      "lemma": "emozione",
+      "pos": "nome femminile",
+      "fr": "émotion",
+      "isVerb": false
+    },
+    {
+      "lemma": "encomio",
+      "pos": "nome maschile",
+      "fr": "éloge",
+      "isVerb": false
+    },
+    {
+      "lemma": "energia",
+      "pos": "nome femminile",
+      "fr": "énergie",
+      "isVerb": false
+    },
+    {
       "lemma": "enormità",
       "pos": "nome femminile invariabile",
       "fr": "énormité",
+      "isVerb": false
+    },
+    {
+      "lemma": "entrambi",
+      "pos": "aggettivo/pronome",
+      "fr": "tous les deux, l'un et l'autre",
       "isVerb": false
     },
     {
@@ -12787,15 +18211,57 @@
       "isVerb": false
     },
     {
+      "lemma": "entroterra",
+      "pos": "sostantivo (m)",
+      "fr": "arrière-pays",
+      "isVerb": false
+    },
+    {
+      "lemma": "epifania",
+      "pos": "sostantivo (f)",
+      "fr": "épiphanie, manifestation",
+      "isVerb": false
+    },
+    {
       "lemma": "epoca",
       "pos": "nome femminile",
       "fr": "époque",
       "isVerb": false
     },
     {
+      "lemma": "erba",
+      "pos": "nome femminile",
+      "fr": "herbe",
+      "isVerb": false
+    },
+    {
       "lemma": "erede",
       "pos": "sostantivo maschile/femminile",
       "fr": "héritier, héritière",
+      "isVerb": false
+    },
+    {
+      "lemma": "eredità",
+      "pos": "sostantivo (f)",
+      "fr": "héritage",
+      "isVerb": false
+    },
+    {
+      "lemma": "errare",
+      "pos": "verbo (intransitivo/transitivo, regolare)",
+      "fr": "errer, se tromper",
+      "isVerb": true
+    },
+    {
+      "lemma": "errore",
+      "pos": "nome maschile",
+      "fr": "erreur",
+      "isVerb": false
+    },
+    {
+      "lemma": "eruzione",
+      "pos": "nome femminile",
+      "fr": "éruption",
       "isVerb": false
     },
     {
@@ -12811,15 +18277,69 @@
       "isVerb": false
     },
     {
+      "lemma": "esca",
+      "pos": "sostantivo (f)",
+      "fr": "appât",
+      "isVerb": false
+    },
+    {
+      "lemma": "escursione",
+      "pos": "sostantivo (f)",
+      "fr": "excursion, randonnée",
+      "isVerb": false
+    },
+    {
+      "lemma": "esercizio",
+      "pos": "sostantivo (m)",
+      "fr": "exercice",
+      "isVerb": false
+    },
+    {
+      "lemma": "esigere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "exiger, réclamer",
+      "isVerb": true
+    },
+    {
+      "lemma": "esilio",
+      "pos": "nome maschile",
+      "fr": "exil",
+      "isVerb": false
+    },
+    {
       "lemma": "esimio",
       "pos": "aggettivo",
       "fr": "éminent, illustre",
       "isVerb": false
     },
     {
+      "lemma": "esistenza",
+      "pos": "nome femminile",
+      "fr": "existence",
+      "isVerb": false
+    },
+    {
+      "lemma": "esitazione",
+      "pos": "nome femminile",
+      "fr": "hésitation",
+      "isVerb": false
+    },
+    {
+      "lemma": "esperienza",
+      "pos": "sostantivo (f)",
+      "fr": "expérience",
+      "isVerb": false
+    },
+    {
       "lemma": "espulsione",
       "pos": "nome femminile",
       "fr": "expulsion",
+      "isVerb": false
+    },
+    {
+      "lemma": "esse",
+      "pos": "pronome personale",
+      "fr": "elles",
       "isVerb": false
     },
     {
@@ -12835,9 +18355,39 @@
       "isVerb": true
     },
     {
+      "lemma": "essi",
+      "pos": "pronome personale (arcaico: elli)",
+      "fr": "ils, eux",
+      "isVerb": false
+    },
+    {
+      "lemma": "estate",
+      "pos": "nome femminile",
+      "fr": "été",
+      "isVerb": false
+    },
+    {
+      "lemma": "esterno",
+      "pos": "aggettivo / nome maschile",
+      "fr": "extérieur",
+      "isVerb": false
+    },
+    {
       "lemma": "estero",
       "pos": "nome maschile / aggettivo",
       "fr": "étranger (pays)",
+      "isVerb": false
+    },
+    {
+      "lemma": "estinto",
+      "pos": "aggettivo/sostantivo (m)",
+      "fr": "éteint, disparu ; défunt",
+      "isVerb": false
+    },
+    {
+      "lemma": "esto",
+      "pos": "aggettivo/pronome dimostrativo (forma arcaica e letteraria)",
+      "fr": "ce, cet (forme archaïque de 'questo')",
       "isVerb": false
     },
     {
@@ -12859,9 +18409,33 @@
       "isVerb": false
     },
     {
+      "lemma": "eterodirezione",
+      "pos": "sostantivo (f)",
+      "fr": "hétérodirection",
+      "isVerb": false
+    },
+    {
       "lemma": "eventificazione",
       "pos": "nome femminile",
       "fr": "événementification",
+      "isVerb": false
+    },
+    {
+      "lemma": "evento",
+      "pos": "sostantivo (m)",
+      "fr": "événement",
+      "isVerb": false
+    },
+    {
+      "lemma": "eventuale",
+      "pos": "aggettivo",
+      "fr": "éventuel",
+      "isVerb": false
+    },
+    {
+      "lemma": "eversione",
+      "pos": "nome femminile",
+      "fr": "subversion",
       "isVerb": false
     },
     {
@@ -12877,9 +18451,27 @@
       "isVerb": false
     },
     {
+      "lemma": "già",
+      "pos": "avverbio",
+      "fr": "déjà",
+      "isVerb": false
+    },
+    {
       "lemma": "hotel",
       "pos": "nome maschile",
       "fr": "hôtel",
+      "isVerb": false
+    },
+    {
+      "lemma": "i",
+      "pos": "articolo determinativo plurale maschile",
+      "fr": "les",
+      "isVerb": false
+    },
+    {
+      "lemma": "iconografia",
+      "pos": "nome femminile",
+      "fr": "iconographie",
       "isVerb": false
     },
     {
@@ -12889,9 +18481,75 @@
       "isVerb": false
     },
     {
+      "lemma": "identità",
+      "pos": "nome femminile (invariabile)",
+      "fr": "identité",
+      "isVerb": false
+    },
+    {
+      "lemma": "ignominia",
+      "pos": "nome femminile",
+      "fr": "ignominie",
+      "isVerb": false
+    },
+    {
+      "lemma": "illusione",
+      "pos": "nome femminile",
+      "fr": "illusion",
+      "isVerb": false
+    },
+    {
+      "lemma": "imbarazzo",
+      "pos": "nome maschile",
+      "fr": "embarras, gêne",
+      "isVerb": false
+    },
+    {
+      "lemma": "imbattersi",
+      "pos": "verbo riflessivo (intransitivo pronominale, regolare)",
+      "fr": "se heurter à, tomber sur, rencontrer par hasard",
+      "isVerb": true
+    },
+    {
+      "lemma": "imbottigliatore",
+      "pos": "sostantivo (m)",
+      "fr": "embouteilleur",
+      "isVerb": false
+    },
+    {
+      "lemma": "imbottitura",
+      "pos": "sostantivo (f)",
+      "fr": "rembourrage, matelassure",
+      "isVerb": false
+    },
+    {
+      "lemma": "immaginare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "imaginer",
+      "isVerb": true
+    },
+    {
       "lemma": "immaginazione",
       "pos": "nome femminile",
       "fr": "imagination",
+      "isVerb": false
+    },
+    {
+      "lemma": "immagine",
+      "pos": "nome femminile",
+      "fr": "image",
+      "isVerb": false
+    },
+    {
+      "lemma": "immenso",
+      "pos": "aggettivo",
+      "fr": "immense",
+      "isVerb": false
+    },
+    {
+      "lemma": "immigrazione",
+      "pos": "nome femminile",
+      "fr": "immigration",
       "isVerb": false
     },
     {
@@ -12901,10 +18559,46 @@
       "isVerb": false
     },
     {
+      "lemma": "immobile",
+      "pos": "aggettivo",
+      "fr": "immobile",
+      "isVerb": false
+    },
+    {
+      "lemma": "impasto",
+      "pos": "sostantivo (m)",
+      "fr": "pâte",
+      "isVerb": false
+    },
+    {
+      "lemma": "impazienza",
+      "pos": "nome femminile",
+      "fr": "impatience",
+      "isVerb": false
+    },
+    {
       "lemma": "impazzare",
       "pos": "verbo intransitivo",
       "fr": "être déchaîné, battre son plein",
       "isVerb": true
+    },
+    {
+      "lemma": "impazzire",
+      "pos": "verbo (intransitivo, regolare, con -isc-)",
+      "fr": "devenir fou, perdre la raison",
+      "isVerb": true
+    },
+    {
+      "lemma": "impedire",
+      "pos": "verbo (transitivo, regolare, con -isc-)",
+      "fr": "empêcher",
+      "isVerb": true
+    },
+    {
+      "lemma": "imperatore",
+      "pos": "nome maschile",
+      "fr": "empereur",
+      "isVerb": false
     },
     {
       "lemma": "imperatrice",
@@ -12931,6 +18625,30 @@
       "isVerb": false
     },
     {
+      "lemma": "impianto",
+      "pos": "sostantivo (m)",
+      "fr": "installation, système",
+      "isVerb": false
+    },
+    {
+      "lemma": "impiego",
+      "pos": "nome maschile",
+      "fr": "emploi, travail",
+      "isVerb": false
+    },
+    {
+      "lemma": "imposta",
+      "pos": "sostantivo (f)",
+      "fr": "impôt, taxe",
+      "isVerb": false
+    },
+    {
+      "lemma": "imprenditoria",
+      "pos": "sostantivo (f)",
+      "fr": "entrepreneuriat",
+      "isVerb": false
+    },
+    {
       "lemma": "impresa",
       "pos": "nome femminile",
       "fr": "entreprise, exploit",
@@ -12949,6 +18667,12 @@
       "isVerb": false
     },
     {
+      "lemma": "inatteso",
+      "pos": "aggettivo",
+      "fr": "inattendu",
+      "isVerb": false
+    },
+    {
       "lemma": "incanto",
       "pos": "nome maschile",
       "fr": "enchantement, charme",
@@ -12961,9 +18685,45 @@
       "isVerb": false
     },
     {
+      "lemma": "incidente",
+      "pos": "sostantivo (m)",
+      "fr": "accident",
+      "isVerb": false
+    },
+    {
+      "lemma": "incipriare",
+      "pos": "verbo (transitivo)",
+      "fr": "poudrer",
+      "isVerb": true
+    },
+    {
+      "lemma": "incolpare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "accuser, blâmer",
+      "isVerb": true
+    },
+    {
+      "lemma": "incontrare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "rencontrer",
+      "isVerb": true
+    },
+    {
       "lemma": "incontro",
       "pos": "nome maschile",
       "fr": "rencontre",
+      "isVerb": false
+    },
+    {
+      "lemma": "incorrere",
+      "pos": "verbo (intransitivo, irregolare)",
+      "fr": "encourir, s'exposer à",
+      "isVerb": true
+    },
+    {
+      "lemma": "incudine",
+      "pos": "nome femminile",
+      "fr": "enclume",
       "isVerb": false
     },
     {
@@ -12991,9 +18751,27 @@
       "isVerb": false
     },
     {
+      "lemma": "indifferenza",
+      "pos": "nome femminile",
+      "fr": "indifférence",
+      "isVerb": false
+    },
+    {
+      "lemma": "indipendenza",
+      "pos": "nome femminile",
+      "fr": "indépendance",
+      "isVerb": false
+    },
+    {
       "lemma": "indirizzo",
       "pos": "nome maschile",
       "fr": "adresse",
+      "isVerb": false
+    },
+    {
+      "lemma": "indole",
+      "pos": "nome femminile",
+      "fr": "nature, caractère",
       "isVerb": false
     },
     {
@@ -13003,9 +18781,57 @@
       "isVerb": false
     },
     {
+      "lemma": "indovinare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "deviner",
+      "isVerb": true
+    },
+    {
+      "lemma": "indurre",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "induire, pousser à",
+      "isVerb": true
+    },
+    {
       "lemma": "industria",
       "pos": "nome femminile",
       "fr": "industrie",
+      "isVerb": false
+    },
+    {
+      "lemma": "industriarsi",
+      "pos": "verbo pronominale (intransitivo)",
+      "fr": "s'ingénier, se débrouiller",
+      "isVerb": true
+    },
+    {
+      "lemma": "inenarrabile",
+      "pos": "aggettivo",
+      "fr": "inénarrable, indescriptible",
+      "isVerb": false
+    },
+    {
+      "lemma": "inesplicabile",
+      "pos": "aggettivo",
+      "fr": "inexplicable",
+      "isVerb": false
+    },
+    {
+      "lemma": "inettitudine",
+      "pos": "nome femminile",
+      "fr": "inaptitude, incapacité",
+      "isVerb": false
+    },
+    {
+      "lemma": "infamia",
+      "pos": "sostantivo (f)",
+      "fr": "infamie",
+      "isVerb": false
+    },
+    {
+      "lemma": "infanzia",
+      "pos": "nome femminile",
+      "fr": "enfance",
       "isVerb": false
     },
     {
@@ -13015,10 +18841,22 @@
       "isVerb": false
     },
     {
+      "lemma": "infelicità",
+      "pos": "nome femminile",
+      "fr": "malheur, tristesse",
+      "isVerb": false
+    },
+    {
       "lemma": "inferno",
       "pos": "nome maschile",
       "fr": "enfer",
       "isVerb": false
+    },
+    {
+      "lemma": "infilare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "enfiler, insérer",
+      "isVerb": true
     },
     {
       "lemma": "infinito",
@@ -13027,10 +18865,34 @@
       "isVerb": false
     },
     {
+      "lemma": "infiorata",
+      "pos": "sostantivo (f)",
+      "fr": "infiorata, tapis de fleurs",
+      "isVerb": false
+    },
+    {
+      "lemma": "infrangere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "briser, enfreindre",
+      "isVerb": true
+    },
+    {
       "lemma": "infuori",
       "pos": "avverbio",
       "fr": "en dehors, dehors",
       "isVerb": false
+    },
+    {
+      "lemma": "infuriare",
+      "pos": "verbo (intransitivo, regolare)",
+      "fr": "faire rage, se déchaîner",
+      "isVerb": true
+    },
+    {
+      "lemma": "ingannare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "tromper",
+      "isVerb": true
     },
     {
       "lemma": "ingannarsi",
@@ -13039,9 +18901,27 @@
       "isVerb": true
     },
     {
+      "lemma": "ingegnarsi",
+      "pos": "verbo pronominale (intransitivo)",
+      "fr": "s'ingénier, se débrouiller",
+      "isVerb": true
+    },
+    {
+      "lemma": "ingegneria",
+      "pos": "sostantivo (f)",
+      "fr": "ingénierie",
+      "isVerb": false
+    },
+    {
       "lemma": "ingegno",
       "pos": "sostantivo maschile",
       "fr": "ingéniosité, esprit",
+      "isVerb": false
+    },
+    {
+      "lemma": "inglese",
+      "pos": "aggettivo / nome",
+      "fr": "anglais",
       "isVerb": false
     },
     {
@@ -13049,6 +18929,12 @@
       "pos": "verbo (transitivo/intransitivo)",
       "fr": "engraisser, faire grossir",
       "isVerb": true
+    },
+    {
+      "lemma": "ingrediente",
+      "pos": "nome maschile",
+      "fr": "ingrédient",
+      "isVerb": false
     },
     {
       "lemma": "ingresso",
@@ -13063,9 +18949,45 @@
       "isVerb": false
     },
     {
+      "lemma": "iniziativa",
+      "pos": "nome femminile",
+      "fr": "initiative",
+      "isVerb": false
+    },
+    {
       "lemma": "inizio",
       "pos": "nome maschile",
       "fr": "début, commencement",
+      "isVerb": false
+    },
+    {
+      "lemma": "innalzare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "élever, hausser",
+      "isVerb": true
+    },
+    {
+      "lemma": "innamorarsi",
+      "pos": "verbo pronominale (intransitivo)",
+      "fr": "tomber amoureux",
+      "isVerb": true
+    },
+    {
+      "lemma": "innanzi",
+      "pos": "avverbio / preposizione",
+      "fr": "avant, en avant, devant",
+      "isVerb": false
+    },
+    {
+      "lemma": "innocente",
+      "pos": "aggettivo",
+      "fr": "innocent",
+      "isVerb": false
+    },
+    {
+      "lemma": "insalata",
+      "pos": "sostantivo (f)",
+      "fr": "salade",
       "isVerb": false
     },
     {
@@ -13081,10 +19003,64 @@
       "isVerb": true
     },
     {
+      "lemma": "inseguire",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "poursuivre",
+      "isVerb": true
+    },
+    {
+      "lemma": "insistere",
+      "pos": "verbo (intransitivo, irregolare)",
+      "fr": "insister",
+      "isVerb": true
+    },
+    {
+      "lemma": "insolito",
+      "pos": "aggettivo",
+      "fr": "insolite, inhabituel",
+      "isVerb": false
+    },
+    {
+      "lemma": "insonnia",
+      "pos": "sostantivo (f)",
+      "fr": "insomnie",
+      "isVerb": false
+    },
+    {
       "lemma": "insù",
       "pos": "avverbio",
       "fr": "vers le haut, en haut",
       "isVerb": false
+    },
+    {
+      "lemma": "intagliatore",
+      "pos": "nome maschile",
+      "fr": "sculpteur sur bois, graveur",
+      "isVerb": false
+    },
+    {
+      "lemma": "integrazione",
+      "pos": "sostantivo (f.)",
+      "fr": "intégration",
+      "isVerb": false
+    },
+    {
+      "lemma": "intelligenza",
+      "pos": "nome femminile",
+      "fr": "intelligence",
+      "isVerb": false
+    },
+    {
+      "lemma": "intendere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "comprendre, avoir l'intention de",
+      "isVerb": true
+    },
+    {
+      "lemma": "intendersi",
+      "pos": "verbo riflessivo/reciproco (irregolare)",
+      "fr": "s'entendre, se comprendre",
+      "isVerb": true
     },
     {
       "lemma": "intenzione",
@@ -13105,6 +19081,18 @@
       "isVerb": false
     },
     {
+      "lemma": "interporsi",
+      "pos": "verbo riflessivo (irregolare)",
+      "fr": "s'interposer",
+      "isVerb": true
+    },
+    {
+      "lemma": "interrogare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "interroger",
+      "isVerb": true
+    },
+    {
       "lemma": "intervallo",
       "pos": "nome maschile",
       "fr": "intervalle, pause",
@@ -13117,6 +19105,24 @@
       "isVerb": true
     },
     {
+      "lemma": "intervento",
+      "pos": "sostantivo (m.)",
+      "fr": "intervention",
+      "isVerb": false
+    },
+    {
+      "lemma": "intimare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "intimer, ordonner",
+      "isVerb": true
+    },
+    {
+      "lemma": "intollerabile",
+      "pos": "aggettivo",
+      "fr": "intolérable",
+      "isVerb": false
+    },
+    {
       "lemma": "intorno",
       "pos": "avverbio, preposizione",
       "fr": "autour",
@@ -13126,6 +19132,12 @@
       "lemma": "introdurre",
       "pos": "verbo",
       "fr": "introduire",
+      "isVerb": true
+    },
+    {
+      "lemma": "invadere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "envahir",
       "isVerb": true
     },
     {
@@ -13141,6 +19153,12 @@
       "isVerb": false
     },
     {
+      "lemma": "investire",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "renverser (une personne), investir (de l'argent)",
+      "isVerb": true
+    },
+    {
       "lemma": "invidia",
       "pos": "nome femminile",
       "fr": "envie, jalousie",
@@ -13151,6 +19169,42 @@
       "pos": "verbo",
       "fr": "inviter",
       "isVerb": true
+    },
+    {
+      "lemma": "ira",
+      "pos": "nome femminile",
+      "fr": "colère",
+      "isVerb": false
+    },
+    {
+      "lemma": "ironia",
+      "pos": "nome femminile",
+      "fr": "ironie",
+      "isVerb": false
+    },
+    {
+      "lemma": "irritazione",
+      "pos": "sostantivo (f.)",
+      "fr": "irritation",
+      "isVerb": false
+    },
+    {
+      "lemma": "iscrizione",
+      "pos": "sostantivo (f.)",
+      "fr": "inscription",
+      "isVerb": false
+    },
+    {
+      "lemma": "isola",
+      "pos": "sostantivo (f.)",
+      "fr": "île",
+      "isVerb": false
+    },
+    {
+      "lemma": "ispettore",
+      "pos": "sostantivo (m.)",
+      "fr": "inspecteur",
+      "isVerb": false
     },
     {
       "lemma": "ispettrice",
@@ -13171,9 +19225,39 @@
       "isVerb": false
     },
     {
+      "lemma": "istituto",
+      "pos": "sostantivo (m.)",
+      "fr": "institut, établissement",
+      "isVerb": false
+    },
+    {
+      "lemma": "istruire",
+      "pos": "verbo (transitivo, irregolare - incoativo)",
+      "fr": "instruire, former",
+      "isVerb": true
+    },
+    {
+      "lemma": "istruzione",
+      "pos": "sostantivo (f.)",
+      "fr": "instruction, éducation",
+      "isVerb": false
+    },
+    {
       "lemma": "italiano",
       "pos": "aggettivo",
       "fr": "italien, italienne",
+      "isVerb": false
+    },
+    {
+      "lemma": "obbligo",
+      "pos": "sostantivo (m.)",
+      "fr": "obligation, devoir",
+      "isVerb": false
+    },
+    {
+      "lemma": "oblio",
+      "pos": "sostantivo (maschile)",
+      "fr": "oubli",
       "isVerb": false
     },
     {
@@ -13183,9 +19267,27 @@
       "isVerb": false
     },
     {
+      "lemma": "occhiali",
+      "pos": "nome maschile plurale",
+      "fr": "lunettes",
+      "isVerb": false
+    },
+    {
+      "lemma": "occhietto",
+      "pos": "nome maschile",
+      "fr": "petit œil, œillade",
+      "isVerb": false
+    },
+    {
       "lemma": "occhio",
       "pos": "nome maschile",
       "fr": "œil",
+      "isVerb": false
+    },
+    {
+      "lemma": "occidente",
+      "pos": "nome maschile",
+      "fr": "occident, ouest",
       "isVerb": false
     },
     {
@@ -13195,9 +19297,57 @@
       "isVerb": false
     },
     {
+      "lemma": "occupare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "occuper",
+      "isVerb": true
+    },
+    {
+      "lemma": "occupazione",
+      "pos": "sostantivo (f.)",
+      "fr": "occupation, emploi",
+      "isVerb": false
+    },
+    {
+      "lemma": "odio",
+      "pos": "nome maschile",
+      "fr": "haine",
+      "isVerb": false
+    },
+    {
+      "lemma": "odioso",
+      "pos": "aggettivo",
+      "fr": "odieux, détestable",
+      "isVerb": false
+    },
+    {
       "lemma": "odore",
       "pos": "nome maschile",
       "fr": "odeur",
+      "isVerb": false
+    },
+    {
+      "lemma": "offesa",
+      "pos": "sostantivo (f.)",
+      "fr": "offense, insulte",
+      "isVerb": false
+    },
+    {
+      "lemma": "oggetto",
+      "pos": "sostantivo (m.)",
+      "fr": "objet",
+      "isVerb": false
+    },
+    {
+      "lemma": "oggi",
+      "pos": "avverbio",
+      "fr": "aujourd'hui",
+      "isVerb": false
+    },
+    {
+      "lemma": "ogni",
+      "pos": "aggettivo indefinito",
+      "fr": "chaque, tout",
       "isVerb": false
     },
     {
@@ -13210,6 +19360,12 @@
       "lemma": "olio",
       "pos": "sostantivo maschile",
       "fr": "huile",
+      "isVerb": false
+    },
+    {
+      "lemma": "oliva",
+      "pos": "nome femminile",
+      "fr": "olive",
       "isVerb": false
     },
     {
@@ -13237,6 +19393,12 @@
       "isVerb": false
     },
     {
+      "lemma": "omone",
+      "pos": "nome maschile",
+      "fr": "grand gaillard, costaud",
+      "isVerb": false
+    },
+    {
       "lemma": "onda",
       "pos": "nome femminile",
       "fr": "vague, onde",
@@ -13247,6 +19409,12 @@
       "pos": "verbo",
       "fr": "onduler, se balancer",
       "isVerb": true
+    },
+    {
+      "lemma": "onore",
+      "pos": "nome maschile",
+      "fr": "honneur",
+      "isVerb": false
     },
     {
       "lemma": "opera",
@@ -13285,6 +19453,18 @@
       "isVerb": false
     },
     {
+      "lemma": "orchestra",
+      "pos": "nome femminile",
+      "fr": "orchestre",
+      "isVerb": false
+    },
+    {
+      "lemma": "orco",
+      "pos": "nome maschile",
+      "fr": "ogre",
+      "isVerb": false
+    },
+    {
       "lemma": "ordine",
       "pos": "nome maschile",
       "fr": "ordre",
@@ -13294,6 +19474,12 @@
       "lemma": "orecchio",
       "pos": "nome maschile",
       "fr": "oreille",
+      "isVerb": false
+    },
+    {
+      "lemma": "oriente",
+      "pos": "sostantivo (maschile)",
+      "fr": "orient, est",
       "isVerb": false
     },
     {
@@ -13315,9 +19501,27 @@
       "isVerb": false
     },
     {
+      "lemma": "oro",
+      "pos": "nome maschile",
+      "fr": "or",
+      "isVerb": false
+    },
+    {
       "lemma": "orribile",
       "pos": "aggettivo",
       "fr": "horrible",
+      "isVerb": false
+    },
+    {
+      "lemma": "orrore",
+      "pos": "nome maschile",
+      "fr": "horreur",
+      "isVerb": false
+    },
+    {
+      "lemma": "orso",
+      "pos": "sostantivo (m.)",
+      "fr": "ours",
       "isVerb": false
     },
     {
@@ -13327,10 +19531,34 @@
       "isVerb": false
     },
     {
+      "lemma": "ortolano",
+      "pos": "sostantivo (m.)",
+      "fr": "maraîcher, marchand de légumes",
+      "isVerb": false
+    },
+    {
+      "lemma": "oscurità",
+      "pos": "sostantivo femminile (invariabile)",
+      "fr": "obscurité",
+      "isVerb": false
+    },
+    {
       "lemma": "ospedale",
       "pos": "nome maschile",
       "fr": "hôpital",
       "isVerb": false
+    },
+    {
+      "lemma": "ospitale",
+      "pos": "aggettivo",
+      "fr": "hospitalier, accueillant",
+      "isVerb": false
+    },
+    {
+      "lemma": "ospitare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "héberger, accueillir",
+      "isVerb": true
     },
     {
       "lemma": "osservatorio",
@@ -13351,6 +19579,12 @@
       "isVerb": false
     },
     {
+      "lemma": "ostacolo",
+      "pos": "nome maschile",
+      "fr": "obstacle",
+      "isVerb": false
+    },
+    {
       "lemma": "oste",
       "pos": "nome maschile",
       "fr": "aubergiste, hôte",
@@ -13363,9 +19597,45 @@
       "isVerb": false
     },
     {
+      "lemma": "ottocento",
+      "pos": "sostantivo maschile / aggettivo numerale",
+      "fr": "huit cents ; le dix-neuvième siècle (le XIXe siècle)",
+      "isVerb": false
+    },
+    {
+      "lemma": "ottone",
+      "pos": "nome maschile",
+      "fr": "laiton",
+      "isVerb": false
+    },
+    {
+      "lemma": "ozio",
+      "pos": "sostantivo (maschile)",
+      "fr": "oisiveté, farniente",
+      "isVerb": false
+    },
+    {
+      "lemma": "ozioso",
+      "pos": "aggettivo",
+      "fr": "oisif, paresseux",
+      "isVerb": false
+    },
+    {
+      "lemma": "piccolo",
+      "pos": "aggettivo",
+      "fr": "petit",
+      "isVerb": false
+    },
+    {
       "lemma": "ragno",
       "pos": "sostantivo (maschile)",
       "fr": "araignée",
+      "isVerb": false
+    },
+    {
+      "lemma": "ubbidienza",
+      "pos": "nome femminile",
+      "fr": "obéissance",
       "isVerb": false
     },
     {
@@ -13373,6 +19643,12 @@
       "pos": "nome maschile",
       "fr": "oiseau",
       "isVerb": false
+    },
+    {
+      "lemma": "uccidere",
+      "pos": "verbo (transitivo, irregolare)",
+      "fr": "tuer",
+      "isVerb": true
     },
     {
       "lemma": "udire",
@@ -13387,15 +19663,51 @@
       "isVerb": false
     },
     {
+      "lemma": "uggia",
+      "pos": "sostantivo femminile",
+      "fr": "ennui, malaise, antipathie",
+      "isVerb": false
+    },
+    {
       "lemma": "ultimo",
       "pos": "aggettivo",
       "fr": "dernier",
       "isVerb": false
     },
     {
+      "lemma": "umanità",
+      "pos": "nome femminile",
+      "fr": "humanité",
+      "isVerb": false
+    },
+    {
+      "lemma": "umido",
+      "pos": "aggettivo",
+      "fr": "humide",
+      "isVerb": false
+    },
+    {
+      "lemma": "umore",
+      "pos": "nome maschile",
+      "fr": "humeur",
+      "isVerb": false
+    },
+    {
       "lemma": "unanimità",
       "pos": "nome femminile",
       "fr": "unanimité",
+      "isVerb": false
+    },
+    {
+      "lemma": "unico",
+      "pos": "aggettivo",
+      "fr": "unique, seul",
+      "isVerb": false
+    },
+    {
+      "lemma": "unione",
+      "pos": "sostantivo femminile",
+      "fr": "union",
       "isVerb": false
     },
     {
@@ -13417,6 +19729,12 @@
       "isVerb": false
     },
     {
+      "lemma": "universo",
+      "pos": "sostantivo maschile",
+      "fr": "univers",
+      "isVerb": false
+    },
+    {
       "lemma": "uno",
       "pos": "numerale / articolo indeterminativo",
       "fr": "un, une",
@@ -13435,6 +19753,24 @@
       "isVerb": false
     },
     {
+      "lemma": "urgenza",
+      "pos": "nome femminile",
+      "fr": "urgence",
+      "isVerb": false
+    },
+    {
+      "lemma": "urlo",
+      "pos": "nome maschile (plurale irregolare femminile: urla, anche urli)",
+      "fr": "cri, hurlement",
+      "isVerb": false
+    },
+    {
+      "lemma": "usare",
+      "pos": "verbo (transitivo, regolare)",
+      "fr": "utiliser, employer",
+      "isVerb": true
+    },
+    {
       "lemma": "uscio",
       "pos": "nome maschile",
       "fr": "porte, seuil",
@@ -13450,6 +19786,12 @@
       "lemma": "uscita",
       "pos": "nome femminile",
       "fr": "sortie",
+      "isVerb": false
+    },
+    {
+      "lemma": "usignolo",
+      "pos": "sostantivo maschile",
+      "fr": "rossignol",
       "isVerb": false
     },
     {
@@ -14368,6 +20710,24 @@
       "lemma": "wow",
       "pos": "interiezione",
       "fr": "wow, waouh",
+      "isVerb": false
+    },
+    {
+      "lemma": "yankee",
+      "pos": "nome/aggettivo (invariabile)",
+      "fr": "yankee, américain",
+      "isVerb": false
+    },
+    {
+      "lemma": "yoga",
+      "pos": "nome (m., invariabile)",
+      "fr": "yoga",
+      "isVerb": false
+    },
+    {
+      "lemma": "yogurt",
+      "pos": "nome (m., invariabile)",
+      "fr": "yaourt",
       "isVerb": false
     },
     {

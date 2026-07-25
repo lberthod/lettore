@@ -113,6 +113,120 @@
       "loro": "entrino"
     }
   },
+  "errare": {
+    "presente": {
+      "io": "erro",
+      "tu": "erri",
+      "lui/lei": "erra",
+      "noi": "erriamo",
+      "voi": "errate",
+      "loro": "errano"
+    },
+    "passatoProssimo": {
+      "io": "ho errato",
+      "tu": "hai errato",
+      "lui/lei": "ha errato",
+      "noi": "abbiamo errato",
+      "voi": "avete errato",
+      "loro": "hanno errato"
+    },
+    "imperfetto": {
+      "io": "erravo",
+      "tu": "erravi",
+      "lui/lei": "errava",
+      "noi": "erravamo",
+      "voi": "erravate",
+      "loro": "erravano"
+    },
+    "futuro": {
+      "io": "errerò",
+      "tu": "errerai",
+      "lui/lei": "errerà",
+      "noi": "erreremo",
+      "voi": "errerete",
+      "loro": "erreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "erri",
+      "tu": "erri",
+      "lui/lei": "erri",
+      "noi": "erriamo",
+      "voi": "erriate",
+      "loro": "errino"
+    },
+    "condizionale": {
+      "io": "errerei",
+      "tu": "erreresti",
+      "lui/lei": "errerebbe",
+      "noi": "erreremmo",
+      "voi": "errereste",
+      "loro": "errerebbero"
+    },
+    "imperativo": {
+      "tu": "erra",
+      "lei": "erri",
+      "noi": "erriamo",
+      "voi": "errate",
+      "loro": "errino"
+    }
+  },
+  "esigere": {
+    "presente": {
+      "io": "esigo",
+      "tu": "esigi",
+      "lui/lei": "esige",
+      "noi": "esigiamo",
+      "voi": "esigete",
+      "loro": "esigono"
+    },
+    "passatoProssimo": {
+      "io": "ho esatto",
+      "tu": "hai esatto",
+      "lui/lei": "ha esatto",
+      "noi": "abbiamo esatto",
+      "voi": "avete esatto",
+      "loro": "hanno esatto"
+    },
+    "imperfetto": {
+      "io": "esigevo",
+      "tu": "esigevi",
+      "lui/lei": "esigeva",
+      "noi": "esigevamo",
+      "voi": "esigevate",
+      "loro": "esigevano"
+    },
+    "futuro": {
+      "io": "esigerò",
+      "tu": "esigerai",
+      "lui/lei": "esigerà",
+      "noi": "esigeremo",
+      "voi": "esigerete",
+      "loro": "esigeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "esiga",
+      "tu": "esiga",
+      "lui/lei": "esiga",
+      "noi": "esigiamo",
+      "voi": "esigiate",
+      "loro": "esigano"
+    },
+    "condizionale": {
+      "io": "esigerei",
+      "tu": "esigeresti",
+      "lui/lei": "esigerebbe",
+      "noi": "esigeremmo",
+      "voi": "esigereste",
+      "loro": "esigerebbero"
+    },
+    "imperativo": {
+      "tu": "esigi",
+      "lei": "esiga",
+      "noi": "esigiamo",
+      "voi": "esigete",
+      "loro": "esigano"
+    }
+  },
   "esserci": {
     "presente": {
       "io": "ci sono",

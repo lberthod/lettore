@@ -1,0 +1,4391 @@
+{
+  "dannare": {
+    "presente": {
+      "io": "danno",
+      "tu": "danni",
+      "lui/lei": "danna",
+      "noi": "danniamo",
+      "voi": "dannate",
+      "loro": "dannano"
+    },
+    "passatoProssimo": {
+      "io": "ho dannato",
+      "tu": "hai dannato",
+      "lui/lei": "ha dannato",
+      "noi": "abbiamo dannato",
+      "voi": "avete dannato",
+      "loro": "hanno dannato"
+    },
+    "imperfetto": {
+      "io": "dannavo",
+      "tu": "dannavi",
+      "lui/lei": "dannava",
+      "noi": "dannavamo",
+      "voi": "dannavate",
+      "loro": "dannavano"
+    },
+    "futuro": {
+      "io": "dannerò",
+      "tu": "dannerai",
+      "lui/lei": "dannerà",
+      "noi": "danneremo",
+      "voi": "dannerete",
+      "loro": "danneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "danni",
+      "tu": "danni",
+      "lui/lei": "danni",
+      "noi": "danniamo",
+      "voi": "danniate",
+      "loro": "dannino"
+    },
+    "condizionale": {
+      "io": "dannerei",
+      "tu": "danneresti",
+      "lui/lei": "dannerebbe",
+      "noi": "danneremmo",
+      "voi": "dannereste",
+      "loro": "dannerebbero"
+    },
+    "imperativo": {
+      "tu": "danna",
+      "lei": "danni",
+      "noi": "danniamo",
+      "voi": "dannate",
+      "loro": "dannino"
+    }
+  },
+  "danneggiare": {
+    "presente": {
+      "io": "danneggio",
+      "tu": "danneggi",
+      "lui/lei": "danneggia",
+      "noi": "danneggiamo",
+      "voi": "danneggiate",
+      "loro": "danneggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho danneggiato",
+      "tu": "hai danneggiato",
+      "lui/lei": "ha danneggiato",
+      "noi": "abbiamo danneggiato",
+      "voi": "avete danneggiato",
+      "loro": "hanno danneggiato"
+    },
+    "imperfetto": {
+      "io": "danneggiavo",
+      "tu": "danneggiavi",
+      "lui/lei": "danneggiava",
+      "noi": "danneggiavamo",
+      "voi": "danneggiavate",
+      "loro": "danneggiavano"
+    },
+    "futuro": {
+      "io": "danneggerò",
+      "tu": "danneggerai",
+      "lui/lei": "danneggerà",
+      "noi": "danneggeremo",
+      "voi": "danneggerete",
+      "loro": "danneggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "danneggi",
+      "tu": "danneggi",
+      "lui/lei": "danneggi",
+      "noi": "danneggiamo",
+      "voi": "danneggiate",
+      "loro": "danneggino"
+    },
+    "condizionale": {
+      "io": "danneggerei",
+      "tu": "danneggeresti",
+      "lui/lei": "danneggerebbe",
+      "noi": "danneggeremmo",
+      "voi": "danneggereste",
+      "loro": "danneggerebbero"
+    },
+    "imperativo": {
+      "tu": "danneggia",
+      "lei": "danneggi",
+      "noi": "danneggiamo",
+      "voi": "danneggiate",
+      "loro": "danneggino"
+    }
+  },
+  "danzare": {
+    "presente": {
+      "io": "danzo",
+      "tu": "danzi",
+      "lui/lei": "danza",
+      "noi": "danziamo",
+      "voi": "danzate",
+      "loro": "danzano"
+    },
+    "passatoProssimo": {
+      "io": "ho danzato",
+      "tu": "hai danzato",
+      "lui/lei": "ha danzato",
+      "noi": "abbiamo danzato",
+      "voi": "avete danzato",
+      "loro": "hanno danzato"
+    },
+    "imperfetto": {
+      "io": "danzavo",
+      "tu": "danzavi",
+      "lui/lei": "danzava",
+      "noi": "danzavamo",
+      "voi": "danzavate",
+      "loro": "danzavano"
+    },
+    "futuro": {
+      "io": "danzerò",
+      "tu": "danzerai",
+      "lui/lei": "danzerà",
+      "noi": "danzeremo",
+      "voi": "danzerete",
+      "loro": "danzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "danzi",
+      "tu": "danzi",
+      "lui/lei": "danzi",
+      "noi": "danziamo",
+      "voi": "danziate",
+      "loro": "danzino"
+    },
+    "condizionale": {
+      "io": "danzerei",
+      "tu": "danzeresti",
+      "lui/lei": "danzerebbe",
+      "noi": "danzeremmo",
+      "voi": "danzereste",
+      "loro": "danzerebbero"
+    },
+    "imperativo": {
+      "tu": "danza",
+      "lei": "danzi",
+      "noi": "danziamo",
+      "voi": "danzate",
+      "loro": "danzino"
+    }
+  },
+  "dare": {
+    "presente": {
+      "io": "do",
+      "tu": "dai",
+      "lui/lei": "dà",
+      "noi": "diamo",
+      "voi": "date",
+      "loro": "danno"
+    },
+    "passatoProssimo": {
+      "io": "ho dato",
+      "tu": "hai dato",
+      "lui/lei": "ha dato",
+      "noi": "abbiamo dato",
+      "voi": "avete dato",
+      "loro": "hanno dato"
+    },
+    "imperfetto": {
+      "io": "davo",
+      "tu": "davi",
+      "lui/lei": "dava",
+      "noi": "davamo",
+      "voi": "davate",
+      "loro": "davano"
+    },
+    "futuro": {
+      "io": "darò",
+      "tu": "darai",
+      "lui/lei": "darà",
+      "noi": "daremo",
+      "voi": "darete",
+      "loro": "daranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dia",
+      "tu": "dia",
+      "lui/lei": "dia",
+      "noi": "diamo",
+      "voi": "diate",
+      "loro": "diano"
+    },
+    "condizionale": {
+      "io": "darei",
+      "tu": "daresti",
+      "lui/lei": "darebbe",
+      "noi": "daremmo",
+      "voi": "dareste",
+      "loro": "darebbero"
+    },
+    "imperativo": {
+      "tu": "dai",
+      "lei": "dia",
+      "noi": "diamo",
+      "voi": "date",
+      "loro": "diano"
+    }
+  },
+  "datare": {
+    "presente": {
+      "io": "dato",
+      "tu": "dati",
+      "lui/lei": "data",
+      "noi": "datiamo",
+      "voi": "datate",
+      "loro": "datano"
+    },
+    "passatoProssimo": {
+      "io": "ho datato",
+      "tu": "hai datato",
+      "lui/lei": "ha datato",
+      "noi": "abbiamo datato",
+      "voi": "avete datato",
+      "loro": "hanno datato"
+    },
+    "imperfetto": {
+      "io": "datavo",
+      "tu": "datavi",
+      "lui/lei": "datava",
+      "noi": "datavamo",
+      "voi": "datavate",
+      "loro": "datavano"
+    },
+    "futuro": {
+      "io": "daterò",
+      "tu": "daterai",
+      "lui/lei": "daterà",
+      "noi": "dateremo",
+      "voi": "daterete",
+      "loro": "dateranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dati",
+      "tu": "dati",
+      "lui/lei": "dati",
+      "noi": "datiamo",
+      "voi": "datiate",
+      "loro": "datino"
+    },
+    "condizionale": {
+      "io": "daterei",
+      "tu": "dateresti",
+      "lui/lei": "daterebbe",
+      "noi": "dateremmo",
+      "voi": "datereste",
+      "loro": "daterebbero"
+    },
+    "imperativo": {
+      "tu": "data",
+      "lei": "dati",
+      "noi": "datiamo",
+      "voi": "datate",
+      "loro": "datino"
+    }
+  },
+  "debilitare": {
+    "presente": {
+      "io": "debilito",
+      "tu": "debiliti",
+      "lui/lei": "debilita",
+      "noi": "debilitiamo",
+      "voi": "debilitate",
+      "loro": "debilitano"
+    },
+    "passatoProssimo": {
+      "io": "ho debilitato",
+      "tu": "hai debilitato",
+      "lui/lei": "ha debilitato",
+      "noi": "abbiamo debilitato",
+      "voi": "avete debilitato",
+      "loro": "hanno debilitato"
+    },
+    "imperfetto": {
+      "io": "debilitavo",
+      "tu": "debilitavi",
+      "lui/lei": "debilitava",
+      "noi": "debilitavamo",
+      "voi": "debilitavate",
+      "loro": "debilitavano"
+    },
+    "futuro": {
+      "io": "debiliterò",
+      "tu": "debiliterai",
+      "lui/lei": "debiliterà",
+      "noi": "debiliteremo",
+      "voi": "debiliterete",
+      "loro": "debiliteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "debiliti",
+      "tu": "debiliti",
+      "lui/lei": "debiliti",
+      "noi": "debilitiamo",
+      "voi": "debilitiate",
+      "loro": "debilitino"
+    },
+    "condizionale": {
+      "io": "debiliterei",
+      "tu": "debiliteresti",
+      "lui/lei": "debiliterebbe",
+      "noi": "debiliteremmo",
+      "voi": "debilitereste",
+      "loro": "debiliterebbero"
+    },
+    "imperativo": {
+      "tu": "debilita",
+      "lei": "debiliti",
+      "noi": "debilitiamo",
+      "voi": "debilitate",
+      "loro": "debilitino"
+    }
+  },
+  "decidere": {
+    "presente": {
+      "io": "decido",
+      "tu": "decidi",
+      "lui/lei": "decide",
+      "noi": "decidiamo",
+      "voi": "decidete",
+      "loro": "decidono"
+    },
+    "passatoProssimo": {
+      "io": "ho deciso",
+      "tu": "hai deciso",
+      "lui/lei": "ha deciso",
+      "noi": "abbiamo deciso",
+      "voi": "avete deciso",
+      "loro": "hanno deciso"
+    },
+    "imperfetto": {
+      "io": "decidevo",
+      "tu": "decidevi",
+      "lui/lei": "decideva",
+      "noi": "decidevamo",
+      "voi": "decidevate",
+      "loro": "decidevano"
+    },
+    "futuro": {
+      "io": "deciderò",
+      "tu": "deciderai",
+      "lui/lei": "deciderà",
+      "noi": "decideremo",
+      "voi": "deciderete",
+      "loro": "decideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "decida",
+      "tu": "decida",
+      "lui/lei": "decida",
+      "noi": "decidiamo",
+      "voi": "decidiate",
+      "loro": "decidano"
+    },
+    "condizionale": {
+      "io": "deciderei",
+      "tu": "decideresti",
+      "lui/lei": "deciderebbe",
+      "noi": "decideremmo",
+      "voi": "decidereste",
+      "loro": "deciderebbero"
+    },
+    "imperativo": {
+      "tu": "decidi",
+      "lei": "decida",
+      "noi": "decidiamo",
+      "voi": "decidete",
+      "loro": "decidano"
+    }
+  },
+  "decifrare": {
+    "presente": {
+      "io": "decifro",
+      "tu": "decifri",
+      "lui/lei": "decifra",
+      "noi": "decifriamo",
+      "voi": "decifrate",
+      "loro": "decifrano"
+    },
+    "passatoProssimo": {
+      "io": "ho decifrato",
+      "tu": "hai decifrato",
+      "lui/lei": "ha decifrato",
+      "noi": "abbiamo decifrato",
+      "voi": "avete decifrato",
+      "loro": "hanno decifrato"
+    },
+    "imperfetto": {
+      "io": "decifravo",
+      "tu": "decifravi",
+      "lui/lei": "decifrava",
+      "noi": "decifravamo",
+      "voi": "decifravate",
+      "loro": "decifravano"
+    },
+    "futuro": {
+      "io": "decifrerò",
+      "tu": "decifrerai",
+      "lui/lei": "decifrerà",
+      "noi": "decifreremo",
+      "voi": "decifrerete",
+      "loro": "decifreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "decifri",
+      "tu": "decifri",
+      "lui/lei": "decifri",
+      "noi": "decifriamo",
+      "voi": "decifriate",
+      "loro": "decifrino"
+    },
+    "condizionale": {
+      "io": "decifrerei",
+      "tu": "decifreresti",
+      "lui/lei": "decifrerebbe",
+      "noi": "decifreremmo",
+      "voi": "decifrereste",
+      "loro": "decifrerebbero"
+    },
+    "imperativo": {
+      "tu": "decifra",
+      "lei": "decifri",
+      "noi": "decifriamo",
+      "voi": "decifrate",
+      "loro": "decifrino"
+    }
+  },
+  "declassare": {
+    "presente": {
+      "io": "declasso",
+      "tu": "declassi",
+      "lui/lei": "declassa",
+      "noi": "declassiamo",
+      "voi": "declassate",
+      "loro": "declassano"
+    },
+    "passatoProssimo": {
+      "io": "ho declassato",
+      "tu": "hai declassato",
+      "lui/lei": "ha declassato",
+      "noi": "abbiamo declassato",
+      "voi": "avete declassato",
+      "loro": "hanno declassato"
+    },
+    "imperfetto": {
+      "io": "declassavo",
+      "tu": "declassavi",
+      "lui/lei": "declassava",
+      "noi": "declassavamo",
+      "voi": "declassavate",
+      "loro": "declassavano"
+    },
+    "futuro": {
+      "io": "declasserò",
+      "tu": "declasserai",
+      "lui/lei": "declasserà",
+      "noi": "declasseremo",
+      "voi": "declasserete",
+      "loro": "declasseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "declassi",
+      "tu": "declassi",
+      "lui/lei": "declassi",
+      "noi": "declassiamo",
+      "voi": "declassiate",
+      "loro": "declassino"
+    },
+    "condizionale": {
+      "io": "declasserei",
+      "tu": "declasseresti",
+      "lui/lei": "declasserebbe",
+      "noi": "declasseremmo",
+      "voi": "declassereste",
+      "loro": "declasserebbero"
+    },
+    "imperativo": {
+      "tu": "declassa",
+      "lei": "declassi",
+      "noi": "declassiamo",
+      "voi": "declassate",
+      "loro": "declassino"
+    }
+  },
+  "declinare": {
+    "presente": {
+      "io": "declino",
+      "tu": "declini",
+      "lui/lei": "declina",
+      "noi": "decliniamo",
+      "voi": "declinate",
+      "loro": "declinano"
+    },
+    "passatoProssimo": {
+      "io": "ho declinato",
+      "tu": "hai declinato",
+      "lui/lei": "ha declinato",
+      "noi": "abbiamo declinato",
+      "voi": "avete declinato",
+      "loro": "hanno declinato"
+    },
+    "imperfetto": {
+      "io": "declinavo",
+      "tu": "declinavi",
+      "lui/lei": "declinava",
+      "noi": "declinavamo",
+      "voi": "declinavate",
+      "loro": "declinavano"
+    },
+    "futuro": {
+      "io": "declinerò",
+      "tu": "declinerai",
+      "lui/lei": "declinerà",
+      "noi": "declineremo",
+      "voi": "declinerete",
+      "loro": "declineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "declini",
+      "tu": "declini",
+      "lui/lei": "declini",
+      "noi": "decliniamo",
+      "voi": "decliniate",
+      "loro": "declinino"
+    },
+    "condizionale": {
+      "io": "declinerei",
+      "tu": "declineresti",
+      "lui/lei": "declinerebbe",
+      "noi": "declineremmo",
+      "voi": "declinereste",
+      "loro": "declinerebbero"
+    },
+    "imperativo": {
+      "tu": "declina",
+      "lei": "declini",
+      "noi": "decliniamo",
+      "voi": "declinate",
+      "loro": "declinino"
+    }
+  },
+  "decodificare": {
+    "presente": {
+      "io": "decodifico",
+      "tu": "decodifichi",
+      "lui/lei": "decodifica",
+      "noi": "decodifichiamo",
+      "voi": "decodificate",
+      "loro": "decodificano"
+    },
+    "passatoProssimo": {
+      "io": "ho decodificato",
+      "tu": "hai decodificato",
+      "lui/lei": "ha decodificato",
+      "noi": "abbiamo decodificato",
+      "voi": "avete decodificato",
+      "loro": "hanno decodificato"
+    },
+    "imperfetto": {
+      "io": "decodificavo",
+      "tu": "decodificavi",
+      "lui/lei": "decodificava",
+      "noi": "decodificavamo",
+      "voi": "decodificavate",
+      "loro": "decodificavano"
+    },
+    "futuro": {
+      "io": "decodificherò",
+      "tu": "decodificherai",
+      "lui/lei": "decodificherà",
+      "noi": "decodificheremo",
+      "voi": "decodificherete",
+      "loro": "decodificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "decodifichi",
+      "tu": "decodifichi",
+      "lui/lei": "decodifichi",
+      "noi": "decodifichiamo",
+      "voi": "decodifichiate",
+      "loro": "decodifichino"
+    },
+    "condizionale": {
+      "io": "decodificherei",
+      "tu": "decodificheresti",
+      "lui/lei": "decodificherebbe",
+      "noi": "decodificheremmo",
+      "voi": "decodifichereste",
+      "loro": "decodificherebbero"
+    },
+    "imperativo": {
+      "tu": "decodifica",
+      "lei": "decodifichi",
+      "noi": "decodifichiamo",
+      "voi": "decodificate",
+      "loro": "decodifichino"
+    }
+  },
+  "decorare": {
+    "presente": {
+      "io": "decoro",
+      "tu": "decori",
+      "lui/lei": "decora",
+      "noi": "decoriamo",
+      "voi": "decorate",
+      "loro": "decorano"
+    },
+    "passatoProssimo": {
+      "io": "ho decorato",
+      "tu": "hai decorato",
+      "lui/lei": "ha decorato",
+      "noi": "abbiamo decorato",
+      "voi": "avete decorato",
+      "loro": "hanno decorato"
+    },
+    "imperfetto": {
+      "io": "decoravo",
+      "tu": "decoravi",
+      "lui/lei": "decorava",
+      "noi": "decoravamo",
+      "voi": "decoravate",
+      "loro": "decoravano"
+    },
+    "futuro": {
+      "io": "decorerò",
+      "tu": "decorerai",
+      "lui/lei": "decorerà",
+      "noi": "decoreremo",
+      "voi": "decorerete",
+      "loro": "decoreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "decori",
+      "tu": "decori",
+      "lui/lei": "decori",
+      "noi": "decoriamo",
+      "voi": "decoriate",
+      "loro": "decorino"
+    },
+    "condizionale": {
+      "io": "decorerei",
+      "tu": "decoreresti",
+      "lui/lei": "decorerebbe",
+      "noi": "decoreremmo",
+      "voi": "decorereste",
+      "loro": "decorerebbero"
+    },
+    "imperativo": {
+      "tu": "decora",
+      "lei": "decori",
+      "noi": "decoriamo",
+      "voi": "decorate",
+      "loro": "decorino"
+    }
+  },
+  "decorrere": {
+    "presente": {
+      "io": "decorro",
+      "tu": "decorri",
+      "lui/lei": "decorre",
+      "noi": "decorriamo",
+      "voi": "decorrete",
+      "loro": "decorrono"
+    },
+    "passatoProssimo": {
+      "io": "sono decorso",
+      "tu": "sei decorso",
+      "lui/lei": "è decorso",
+      "noi": "siamo decorsi",
+      "voi": "siete decorsi",
+      "loro": "sono decorsi"
+    },
+    "imperfetto": {
+      "io": "decorrevo",
+      "tu": "decorrevi",
+      "lui/lei": "decorreva",
+      "noi": "decorrevamo",
+      "voi": "decorrevate",
+      "loro": "decorrevano"
+    },
+    "futuro": {
+      "io": "decorrerò",
+      "tu": "decorrerai",
+      "lui/lei": "decorrerà",
+      "noi": "decorreremo",
+      "voi": "decorrerete",
+      "loro": "decorreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "decorra",
+      "tu": "decorra",
+      "lui/lei": "decorra",
+      "noi": "decorriamo",
+      "voi": "decorriate",
+      "loro": "decorrano"
+    },
+    "condizionale": {
+      "io": "decorrerei",
+      "tu": "decorreresti",
+      "lui/lei": "decorrerebbe",
+      "noi": "decorreremmo",
+      "voi": "decorrereste",
+      "loro": "decorrerebbero"
+    },
+    "imperativo": {
+      "tu": "decorri",
+      "lei": "decorra",
+      "noi": "decorriamo",
+      "voi": "decorrete",
+      "loro": "decorrano"
+    }
+  },
+  "decretare": {
+    "presente": {
+      "io": "decreto",
+      "tu": "decreti",
+      "lui/lei": "decreta",
+      "noi": "decretiamo",
+      "voi": "decretate",
+      "loro": "decretano"
+    },
+    "passatoProssimo": {
+      "io": "ho decretato",
+      "tu": "hai decretato",
+      "lui/lei": "ha decretato",
+      "noi": "abbiamo decretato",
+      "voi": "avete decretato",
+      "loro": "hanno decretato"
+    },
+    "imperfetto": {
+      "io": "decretavo",
+      "tu": "decretavi",
+      "lui/lei": "decretava",
+      "noi": "decretavamo",
+      "voi": "decretavate",
+      "loro": "decretavano"
+    },
+    "futuro": {
+      "io": "decreterò",
+      "tu": "decreterai",
+      "lui/lei": "decreterà",
+      "noi": "decreteremo",
+      "voi": "decreterete",
+      "loro": "decreteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "decreti",
+      "tu": "decreti",
+      "lui/lei": "decreti",
+      "noi": "decretiamo",
+      "voi": "decretiate",
+      "loro": "decretino"
+    },
+    "condizionale": {
+      "io": "decreterei",
+      "tu": "decreteresti",
+      "lui/lei": "decreterebbe",
+      "noi": "decreteremmo",
+      "voi": "decretereste",
+      "loro": "decreterebbero"
+    },
+    "imperativo": {
+      "tu": "decreta",
+      "lei": "decreti",
+      "noi": "decretiamo",
+      "voi": "decretate",
+      "loro": "decretino"
+    }
+  },
+  "dedicare": {
+    "presente": {
+      "io": "dedico",
+      "tu": "dedichi",
+      "lui/lei": "dedica",
+      "noi": "dedichiamo",
+      "voi": "dedicate",
+      "loro": "dedicano"
+    },
+    "passatoProssimo": {
+      "io": "ho dedicato",
+      "tu": "hai dedicato",
+      "lui/lei": "ha dedicato",
+      "noi": "abbiamo dedicato",
+      "voi": "avete dedicato",
+      "loro": "hanno dedicato"
+    },
+    "imperfetto": {
+      "io": "dedicavo",
+      "tu": "dedicavi",
+      "lui/lei": "dedicava",
+      "noi": "dedicavamo",
+      "voi": "dedicavate",
+      "loro": "dedicavano"
+    },
+    "futuro": {
+      "io": "dedicherò",
+      "tu": "dedicherai",
+      "lui/lei": "dedicherà",
+      "noi": "dedicheremo",
+      "voi": "dedicherete",
+      "loro": "dedicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dedichi",
+      "tu": "dedichi",
+      "lui/lei": "dedichi",
+      "noi": "dedichiamo",
+      "voi": "dedichiate",
+      "loro": "dedichino"
+    },
+    "condizionale": {
+      "io": "dedicherei",
+      "tu": "dedicheresti",
+      "lui/lei": "dedicherebbe",
+      "noi": "dedicheremmo",
+      "voi": "dedichereste",
+      "loro": "dedicherebbero"
+    },
+    "imperativo": {
+      "tu": "dedica",
+      "lei": "dedichi",
+      "noi": "dedichiamo",
+      "voi": "dedicate",
+      "loro": "dedichino"
+    }
+  },
+  "dedurre": {
+    "presente": {
+      "io": "deduco",
+      "tu": "deduci",
+      "lui/lei": "deduce",
+      "noi": "deduciamo",
+      "voi": "deducete",
+      "loro": "deducono"
+    },
+    "passatoProssimo": {
+      "io": "ho dedotto",
+      "tu": "hai dedotto",
+      "lui/lei": "ha dedotto",
+      "noi": "abbiamo dedotto",
+      "voi": "avete dedotto",
+      "loro": "hanno dedotto"
+    },
+    "imperfetto": {
+      "io": "deducevo",
+      "tu": "deducevi",
+      "lui/lei": "deduceva",
+      "noi": "deducevamo",
+      "voi": "deducevate",
+      "loro": "deducevano"
+    },
+    "futuro": {
+      "io": "dedurrò",
+      "tu": "dedurrai",
+      "lui/lei": "dedurrà",
+      "noi": "dedurremo",
+      "voi": "dedurrete",
+      "loro": "dedurranno"
+    },
+    "congiuntivoPresente": {
+      "io": "deduca",
+      "tu": "deduca",
+      "lui/lei": "deduca",
+      "noi": "deduciamo",
+      "voi": "deduciate",
+      "loro": "deducano"
+    },
+    "condizionale": {
+      "io": "dedurrei",
+      "tu": "dedurresti",
+      "lui/lei": "dedurrebbe",
+      "noi": "dedurremmo",
+      "voi": "dedurreste",
+      "loro": "dedurrebbero"
+    },
+    "imperativo": {
+      "tu": "deduci",
+      "lei": "deduca",
+      "noi": "deduciamo",
+      "voi": "deducete",
+      "loro": "deducano"
+    }
+  },
+  "definire": {
+    "presente": {
+      "io": "definisco",
+      "tu": "definisci",
+      "lui/lei": "definisce",
+      "noi": "definiamo",
+      "voi": "definite",
+      "loro": "definiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho definito",
+      "tu": "hai definito",
+      "lui/lei": "ha definito",
+      "noi": "abbiamo definito",
+      "voi": "avete definito",
+      "loro": "hanno definito"
+    },
+    "imperfetto": {
+      "io": "definivo",
+      "tu": "definivi",
+      "lui/lei": "definiva",
+      "noi": "definivamo",
+      "voi": "definivate",
+      "loro": "definivano"
+    },
+    "futuro": {
+      "io": "definirò",
+      "tu": "definirai",
+      "lui/lei": "definirà",
+      "noi": "definiremo",
+      "voi": "definirete",
+      "loro": "definiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "definisca",
+      "tu": "definisca",
+      "lui/lei": "definisca",
+      "noi": "definiamo",
+      "voi": "definiate",
+      "loro": "definiscano"
+    },
+    "condizionale": {
+      "io": "definirei",
+      "tu": "definiresti",
+      "lui/lei": "definirebbe",
+      "noi": "definiremmo",
+      "voi": "definireste",
+      "loro": "definirebbero"
+    },
+    "imperativo": {
+      "tu": "definisci",
+      "lei": "definisca",
+      "noi": "definiamo",
+      "voi": "definite",
+      "loro": "definiscano"
+    }
+  },
+  "degnarsi": {
+    "presente": {
+      "io": "mi degno",
+      "tu": "ti degni",
+      "lui/lei": "si degna",
+      "noi": "ci degniamo",
+      "voi": "vi degnate",
+      "loro": "si degnano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono degnato/a",
+      "tu": "ti sei degnato/a",
+      "lui/lei": "si è degnato/a",
+      "noi": "ci siamo degnati/e",
+      "voi": "vi siete degnati/e",
+      "loro": "si sono degnati/e"
+    },
+    "imperfetto": {
+      "io": "mi degnavo",
+      "tu": "ti degnavi",
+      "lui/lei": "si degnava",
+      "noi": "ci degnavamo",
+      "voi": "vi degnavate",
+      "loro": "si degnavano"
+    },
+    "futuro": {
+      "io": "mi degnerò",
+      "tu": "ti degnerai",
+      "lui/lei": "si degnerà",
+      "noi": "ci degneremo",
+      "voi": "vi degnerete",
+      "loro": "si degneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi degni",
+      "tu": "ti degni",
+      "lui/lei": "si degni",
+      "noi": "ci degniamo",
+      "voi": "vi degniate",
+      "loro": "si degnino"
+    },
+    "condizionale": {
+      "io": "mi degnerei",
+      "tu": "ti degneresti",
+      "lui/lei": "si degnerebbe",
+      "noi": "ci degneremmo",
+      "voi": "vi degnereste",
+      "loro": "si degnerebbero"
+    },
+    "imperativo": {
+      "tu": "degnati",
+      "lei": "si degni",
+      "noi": "degniamoci",
+      "voi": "degnatevi",
+      "loro": "si degnino"
+    }
+  },
+  "degradare": {
+    "presente": {
+      "io": "degrado",
+      "tu": "degradi",
+      "lui/lei": "degrada",
+      "noi": "degradiamo",
+      "voi": "degradate",
+      "loro": "degradano"
+    },
+    "passatoProssimo": {
+      "io": "ho degradato",
+      "tu": "hai degradato",
+      "lui/lei": "ha degradato",
+      "noi": "abbiamo degradato",
+      "voi": "avete degradato",
+      "loro": "hanno degradato"
+    },
+    "imperfetto": {
+      "io": "degradavo",
+      "tu": "degradavi",
+      "lui/lei": "degradava",
+      "noi": "degradavamo",
+      "voi": "degradavate",
+      "loro": "degradavano"
+    },
+    "futuro": {
+      "io": "degraderò",
+      "tu": "degraderai",
+      "lui/lei": "degraderà",
+      "noi": "degraderemo",
+      "voi": "degraderete",
+      "loro": "degraderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "degradi",
+      "tu": "degradi",
+      "lui/lei": "degradi",
+      "noi": "degradiamo",
+      "voi": "degradiate",
+      "loro": "degradino"
+    },
+    "condizionale": {
+      "io": "degraderei",
+      "tu": "degraderesti",
+      "lui/lei": "degraderebbe",
+      "noi": "degraderemmo",
+      "voi": "degradereste",
+      "loro": "degraderebbero"
+    },
+    "imperativo": {
+      "tu": "degrada",
+      "lei": "degradi",
+      "noi": "degradiamo",
+      "voi": "degradate",
+      "loro": "degradino"
+    }
+  },
+  "degustare": {
+    "presente": {
+      "io": "degusto",
+      "tu": "degusti",
+      "lui/lei": "degusta",
+      "noi": "degustiamo",
+      "voi": "degustate",
+      "loro": "degustano"
+    },
+    "passatoProssimo": {
+      "io": "ho degustato",
+      "tu": "hai degustato",
+      "lui/lei": "ha degustato",
+      "noi": "abbiamo degustato",
+      "voi": "avete degustato",
+      "loro": "hanno degustato"
+    },
+    "imperfetto": {
+      "io": "degustavo",
+      "tu": "degustavi",
+      "lui/lei": "degustava",
+      "noi": "degustavamo",
+      "voi": "degustavate",
+      "loro": "degustavano"
+    },
+    "futuro": {
+      "io": "degusterò",
+      "tu": "degusterai",
+      "lui/lei": "degusterà",
+      "noi": "degusteremo",
+      "voi": "degusterete",
+      "loro": "degusteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "degusti",
+      "tu": "degusti",
+      "lui/lei": "degusti",
+      "noi": "degustiamo",
+      "voi": "degustiate",
+      "loro": "degustino"
+    },
+    "condizionale": {
+      "io": "degusterei",
+      "tu": "degusteresti",
+      "lui/lei": "degusterebbe",
+      "noi": "degusteremmo",
+      "voi": "degustereste",
+      "loro": "degusterebbero"
+    },
+    "imperativo": {
+      "tu": "degusta",
+      "lei": "degusti",
+      "noi": "degustiamo",
+      "voi": "degustate",
+      "loro": "degustino"
+    }
+  },
+  "delegare": {
+    "presente": {
+      "io": "delego",
+      "tu": "deleghi",
+      "lui/lei": "delega",
+      "noi": "deleghiamo",
+      "voi": "delegate",
+      "loro": "delegano"
+    },
+    "passatoProssimo": {
+      "io": "ho delegato",
+      "tu": "hai delegato",
+      "lui/lei": "ha delegato",
+      "noi": "abbiamo delegato",
+      "voi": "avete delegato",
+      "loro": "hanno delegato"
+    },
+    "imperfetto": {
+      "io": "delegavo",
+      "tu": "delegavi",
+      "lui/lei": "delegava",
+      "noi": "delegavamo",
+      "voi": "delegavate",
+      "loro": "delegavano"
+    },
+    "futuro": {
+      "io": "delegherò",
+      "tu": "delegherai",
+      "lui/lei": "delegherà",
+      "noi": "delegheremo",
+      "voi": "delegherete",
+      "loro": "delegheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "deleghi",
+      "tu": "deleghi",
+      "lui/lei": "deleghi",
+      "noi": "deleghiamo",
+      "voi": "deleghiate",
+      "loro": "deleghino"
+    },
+    "condizionale": {
+      "io": "delegherei",
+      "tu": "delegheresti",
+      "lui/lei": "delegherebbe",
+      "noi": "delegheremmo",
+      "voi": "deleghereste",
+      "loro": "delegherebbero"
+    },
+    "imperativo": {
+      "tu": "delega",
+      "lei": "deleghi",
+      "noi": "deleghiamo",
+      "voi": "delegate",
+      "loro": "deleghino"
+    }
+  },
+  "deliberare": {
+    "presente": {
+      "io": "delibero",
+      "tu": "deliberi",
+      "lui/lei": "delibera",
+      "noi": "deliberiamo",
+      "voi": "deliberate",
+      "loro": "deliberano"
+    },
+    "passatoProssimo": {
+      "io": "ho deliberato",
+      "tu": "hai deliberato",
+      "lui/lei": "ha deliberato",
+      "noi": "abbiamo deliberato",
+      "voi": "avete deliberato",
+      "loro": "hanno deliberato"
+    },
+    "imperfetto": {
+      "io": "deliberavo",
+      "tu": "deliberavi",
+      "lui/lei": "deliberava",
+      "noi": "deliberavamo",
+      "voi": "deliberavate",
+      "loro": "deliberavano"
+    },
+    "futuro": {
+      "io": "delibererò",
+      "tu": "delibererai",
+      "lui/lei": "delibererà",
+      "noi": "delibereremo",
+      "voi": "delibererete",
+      "loro": "delibereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "deliberi",
+      "tu": "deliberi",
+      "lui/lei": "deliberi",
+      "noi": "deliberiamo",
+      "voi": "deliberiate",
+      "loro": "deliberino"
+    },
+    "condizionale": {
+      "io": "delibererei",
+      "tu": "delibereresti",
+      "lui/lei": "delibererebbe",
+      "noi": "delibereremmo",
+      "voi": "deliberereste",
+      "loro": "delibererebbero"
+    },
+    "imperativo": {
+      "tu": "delibera",
+      "lei": "deliberi",
+      "noi": "deliberiamo",
+      "voi": "deliberate",
+      "loro": "deliberino"
+    }
+  },
+  "delinquere": {
+    "presente": {
+      "io": "delinquo",
+      "tu": "delinqui",
+      "lui/lei": "delinque",
+      "noi": "delinquiamo",
+      "voi": "delinquete",
+      "loro": "delinquono"
+    },
+    "passatoProssimo": {
+      "io": "ho delinquito",
+      "tu": "hai delinquito",
+      "lui/lei": "ha delinquito",
+      "noi": "abbiamo delinquito",
+      "voi": "avete delinquito",
+      "loro": "hanno delinquito"
+    },
+    "imperfetto": {
+      "io": "delinquevo",
+      "tu": "delinquevi",
+      "lui/lei": "delinqueva",
+      "noi": "delinquevamo",
+      "voi": "delinquevate",
+      "loro": "delinquevano"
+    },
+    "futuro": {
+      "io": "delinquerò",
+      "tu": "delinquerai",
+      "lui/lei": "delinquerà",
+      "noi": "delinqueremo",
+      "voi": "delinquerete",
+      "loro": "delinqueranno"
+    },
+    "congiuntivoPresente": {
+      "io": "delinqua",
+      "tu": "delinqua",
+      "lui/lei": "delinqua",
+      "noi": "delinquiamo",
+      "voi": "delinquiate",
+      "loro": "delinquano"
+    },
+    "condizionale": {
+      "io": "delinquerei",
+      "tu": "delinqueresti",
+      "lui/lei": "delinquerebbe",
+      "noi": "delinqueremmo",
+      "voi": "delinquereste",
+      "loro": "delinquerebbero"
+    },
+    "imperativo": {
+      "tu": "delinqui",
+      "lei": "delinqua",
+      "noi": "delinquiamo",
+      "voi": "delinquete",
+      "loro": "delinquano"
+    }
+  },
+  "deludere": {
+    "presente": {
+      "io": "deludo",
+      "tu": "deludi",
+      "lui/lei": "delude",
+      "noi": "deludiamo",
+      "voi": "deludete",
+      "loro": "deludono"
+    },
+    "passatoProssimo": {
+      "io": "ho deluso",
+      "tu": "hai deluso",
+      "lui/lei": "ha deluso",
+      "noi": "abbiamo deluso",
+      "voi": "avete deluso",
+      "loro": "hanno deluso"
+    },
+    "imperfetto": {
+      "io": "deludevo",
+      "tu": "deludevi",
+      "lui/lei": "deludeva",
+      "noi": "deludevamo",
+      "voi": "deludevate",
+      "loro": "deludevano"
+    },
+    "futuro": {
+      "io": "deluderò",
+      "tu": "deluderai",
+      "lui/lei": "deluderà",
+      "noi": "deluderemo",
+      "voi": "deluderete",
+      "loro": "deluderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "deluda",
+      "tu": "deluda",
+      "lui/lei": "deluda",
+      "noi": "deludiamo",
+      "voi": "deludiate",
+      "loro": "deludano"
+    },
+    "condizionale": {
+      "io": "deluderei",
+      "tu": "deluderesti",
+      "lui/lei": "deluderebbe",
+      "noi": "deluderemmo",
+      "voi": "deludereste",
+      "loro": "deluderebbero"
+    },
+    "imperativo": {
+      "tu": "deludi",
+      "lei": "deluda",
+      "noi": "deludiamo",
+      "voi": "deludete",
+      "loro": "deludano"
+    }
+  },
+  "denominare": {
+    "presente": {
+      "io": "denomino",
+      "tu": "denomini",
+      "lui/lei": "denomina",
+      "noi": "denominiamo",
+      "voi": "denominate",
+      "loro": "denominano"
+    },
+    "passatoProssimo": {
+      "io": "ho denominato",
+      "tu": "hai denominato",
+      "lui/lei": "ha denominato",
+      "noi": "abbiamo denominato",
+      "voi": "avete denominato",
+      "loro": "hanno denominato"
+    },
+    "imperfetto": {
+      "io": "denominavo",
+      "tu": "denominavi",
+      "lui/lei": "denominava",
+      "noi": "denominavamo",
+      "voi": "denominavate",
+      "loro": "denominavano"
+    },
+    "futuro": {
+      "io": "denominerò",
+      "tu": "denominerai",
+      "lui/lei": "denominerà",
+      "noi": "denomineremo",
+      "voi": "denominerete",
+      "loro": "denomineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "denomini",
+      "tu": "denomini",
+      "lui/lei": "denomini",
+      "noi": "denominiamo",
+      "voi": "denominiate",
+      "loro": "denominino"
+    },
+    "condizionale": {
+      "io": "denominerei",
+      "tu": "denomineresti",
+      "lui/lei": "denominerebbe",
+      "noi": "denomineremmo",
+      "voi": "denominereste",
+      "loro": "denominerebbero"
+    },
+    "imperativo": {
+      "tu": "denomina",
+      "lei": "denomini",
+      "noi": "denominiamo",
+      "voi": "denominate",
+      "loro": "denominino"
+    }
+  },
+  "denunciare": {
+    "presente": {
+      "io": "denuncio",
+      "tu": "denunci",
+      "lui/lei": "denuncia",
+      "noi": "denunciamo",
+      "voi": "denunciate",
+      "loro": "denunciano"
+    },
+    "passatoProssimo": {
+      "io": "ho denunciato",
+      "tu": "hai denunciato",
+      "lui/lei": "ha denunciato",
+      "noi": "abbiamo denunciato",
+      "voi": "avete denunciato",
+      "loro": "hanno denunciato"
+    },
+    "imperfetto": {
+      "io": "denunciavo",
+      "tu": "denunciavi",
+      "lui/lei": "denunciava",
+      "noi": "denunciavamo",
+      "voi": "denunciavate",
+      "loro": "denunciavano"
+    },
+    "futuro": {
+      "io": "denuncerò",
+      "tu": "denuncerai",
+      "lui/lei": "denuncerà",
+      "noi": "denunceremo",
+      "voi": "denuncerete",
+      "loro": "denunceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "denunci",
+      "tu": "denunci",
+      "lui/lei": "denunci",
+      "noi": "denunciamo",
+      "voi": "denunciate",
+      "loro": "denuncino"
+    },
+    "condizionale": {
+      "io": "denuncerei",
+      "tu": "denunceresti",
+      "lui/lei": "denuncerebbe",
+      "noi": "denunceremmo",
+      "voi": "denuncereste",
+      "loro": "denuncerebbero"
+    },
+    "imperativo": {
+      "tu": "denuncia",
+      "lei": "denunci",
+      "noi": "denunciamo",
+      "voi": "denunciate",
+      "loro": "denuncino"
+    }
+  },
+  "deperire": {
+    "presente": {
+      "io": "deperisco",
+      "tu": "deperisci",
+      "lui/lei": "deperisce",
+      "noi": "deperiamo",
+      "voi": "deperite",
+      "loro": "deperiscono"
+    },
+    "passatoProssimo": {
+      "io": "sono deperito",
+      "tu": "sei deperito",
+      "lui/lei": "è deperito",
+      "noi": "siamo deperiti",
+      "voi": "siete deperiti",
+      "loro": "sono deperiti"
+    },
+    "imperfetto": {
+      "io": "deperivo",
+      "tu": "deperivi",
+      "lui/lei": "deperiva",
+      "noi": "deperivamo",
+      "voi": "deperivate",
+      "loro": "deperivano"
+    },
+    "futuro": {
+      "io": "deperirò",
+      "tu": "deperirai",
+      "lui/lei": "deperirà",
+      "noi": "deperiremo",
+      "voi": "deperirete",
+      "loro": "deperiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "deperisca",
+      "tu": "deperisca",
+      "lui/lei": "deperisca",
+      "noi": "deperiamo",
+      "voi": "deperiate",
+      "loro": "deperiscano"
+    },
+    "condizionale": {
+      "io": "deperirei",
+      "tu": "deperiresti",
+      "lui/lei": "deperirebbe",
+      "noi": "deperiremmo",
+      "voi": "deperireste",
+      "loro": "deperirebbero"
+    },
+    "imperativo": {
+      "tu": "deperisci",
+      "lei": "deperisca",
+      "noi": "deperiamo",
+      "voi": "deperite",
+      "loro": "deperiscano"
+    }
+  },
+  "deporre": {
+    "presente": {
+      "io": "depongo",
+      "tu": "deponi",
+      "lui/lei": "depone",
+      "noi": "deponiamo",
+      "voi": "deponete",
+      "loro": "depongono"
+    },
+    "passatoProssimo": {
+      "io": "ho deposto",
+      "tu": "hai deposto",
+      "lui/lei": "ha deposto",
+      "noi": "abbiamo deposto",
+      "voi": "avete deposto",
+      "loro": "hanno deposto"
+    },
+    "imperfetto": {
+      "io": "deponevo",
+      "tu": "deponevi",
+      "lui/lei": "deponeva",
+      "noi": "deponevamo",
+      "voi": "deponevate",
+      "loro": "deponevano"
+    },
+    "futuro": {
+      "io": "deporrò",
+      "tu": "deporrai",
+      "lui/lei": "deporrà",
+      "noi": "deporremo",
+      "voi": "deporrete",
+      "loro": "deporranno"
+    },
+    "congiuntivoPresente": {
+      "io": "deponga",
+      "tu": "deponga",
+      "lui/lei": "deponga",
+      "noi": "deponiamo",
+      "voi": "deponiate",
+      "loro": "depongano"
+    },
+    "condizionale": {
+      "io": "deporrei",
+      "tu": "deporresti",
+      "lui/lei": "deporrebbe",
+      "noi": "deporremmo",
+      "voi": "deporreste",
+      "loro": "deporrebbero"
+    },
+    "imperativo": {
+      "tu": "deponi",
+      "lei": "deponga",
+      "noi": "deponiamo",
+      "voi": "deponete",
+      "loro": "depongano"
+    }
+  },
+  "depositare": {
+    "presente": {
+      "io": "deposito",
+      "tu": "depositi",
+      "lui/lei": "deposita",
+      "noi": "depositiamo",
+      "voi": "depositate",
+      "loro": "depositano"
+    },
+    "passatoProssimo": {
+      "io": "ho depositato",
+      "tu": "hai depositato",
+      "lui/lei": "ha depositato",
+      "noi": "abbiamo depositato",
+      "voi": "avete depositato",
+      "loro": "hanno depositato"
+    },
+    "imperfetto": {
+      "io": "depositavo",
+      "tu": "depositavi",
+      "lui/lei": "depositava",
+      "noi": "depositavamo",
+      "voi": "depositavate",
+      "loro": "depositavano"
+    },
+    "futuro": {
+      "io": "depositerò",
+      "tu": "depositerai",
+      "lui/lei": "depositerà",
+      "noi": "depositeremo",
+      "voi": "depositerete",
+      "loro": "depositeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "depositi",
+      "tu": "depositi",
+      "lui/lei": "depositi",
+      "noi": "depositiamo",
+      "voi": "depositiate",
+      "loro": "depositino"
+    },
+    "condizionale": {
+      "io": "depositerei",
+      "tu": "depositeresti",
+      "lui/lei": "depositerebbe",
+      "noi": "depositeremmo",
+      "voi": "depositereste",
+      "loro": "depositerebbero"
+    },
+    "imperativo": {
+      "tu": "deposita",
+      "lei": "depositi",
+      "noi": "depositiamo",
+      "voi": "depositate",
+      "loro": "depositino"
+    }
+  },
+  "deridere": {
+    "presente": {
+      "io": "derido",
+      "tu": "deridi",
+      "lui/lei": "deride",
+      "noi": "deridiamo",
+      "voi": "deridete",
+      "loro": "deridono"
+    },
+    "passatoProssimo": {
+      "io": "ho deriso",
+      "tu": "hai deriso",
+      "lui/lei": "ha deriso",
+      "noi": "abbiamo deriso",
+      "voi": "avete deriso",
+      "loro": "hanno deriso"
+    },
+    "imperfetto": {
+      "io": "deridevo",
+      "tu": "deridevi",
+      "lui/lei": "derideva",
+      "noi": "deridevamo",
+      "voi": "deridevate",
+      "loro": "deridevano"
+    },
+    "futuro": {
+      "io": "deriderò",
+      "tu": "deriderai",
+      "lui/lei": "deriderà",
+      "noi": "derideremo",
+      "voi": "deriderete",
+      "loro": "derideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "derida",
+      "tu": "derida",
+      "lui/lei": "derida",
+      "noi": "deridiamo",
+      "voi": "deridiate",
+      "loro": "deridano"
+    },
+    "condizionale": {
+      "io": "deriderei",
+      "tu": "derideresti",
+      "lui/lei": "deriderebbe",
+      "noi": "derideremmo",
+      "voi": "deridereste",
+      "loro": "deriderebbero"
+    },
+    "imperativo": {
+      "tu": "deridi",
+      "lei": "derida",
+      "noi": "deridiamo",
+      "voi": "deridete",
+      "loro": "deridano"
+    }
+  },
+  "derivare": {
+    "presente": {
+      "io": "derivo",
+      "tu": "derivi",
+      "lui/lei": "deriva",
+      "noi": "deriviamo",
+      "voi": "derivate",
+      "loro": "derivano"
+    },
+    "passatoProssimo": {
+      "io": "sono derivato/a",
+      "tu": "sei derivato/a",
+      "lui/lei": "è derivato/a",
+      "noi": "siamo derivati/e",
+      "voi": "siete derivati/e",
+      "loro": "sono derivati/e"
+    },
+    "imperfetto": {
+      "io": "derivavo",
+      "tu": "derivavi",
+      "lui/lei": "derivava",
+      "noi": "derivavamo",
+      "voi": "derivavate",
+      "loro": "derivavano"
+    },
+    "futuro": {
+      "io": "deriverò",
+      "tu": "deriverai",
+      "lui/lei": "deriverà",
+      "noi": "deriveremo",
+      "voi": "deriverete",
+      "loro": "deriveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "derivi",
+      "tu": "derivi",
+      "lui/lei": "derivi",
+      "noi": "deriviamo",
+      "voi": "deriviate",
+      "loro": "derivino"
+    },
+    "condizionale": {
+      "io": "deriverei",
+      "tu": "deriveresti",
+      "lui/lei": "deriverebbe",
+      "noi": "deriveremmo",
+      "voi": "derivereste",
+      "loro": "deriverebbero"
+    },
+    "imperativo": {
+      "tu": "deriva",
+      "lei": "derivi",
+      "noi": "deriviamo",
+      "voi": "derivate",
+      "loro": "derivino"
+    }
+  },
+  "derubare": {
+    "presente": {
+      "io": "derubo",
+      "tu": "derubi",
+      "lui/lei": "deruba",
+      "noi": "derubiamo",
+      "voi": "derubate",
+      "loro": "derubano"
+    },
+    "passatoProssimo": {
+      "io": "ho derubato",
+      "tu": "hai derubato",
+      "lui/lei": "ha derubato",
+      "noi": "abbiamo derubato",
+      "voi": "avete derubato",
+      "loro": "hanno derubato"
+    },
+    "imperfetto": {
+      "io": "derubavo",
+      "tu": "derubavi",
+      "lui/lei": "derubava",
+      "noi": "derubavamo",
+      "voi": "derubavate",
+      "loro": "derubavano"
+    },
+    "futuro": {
+      "io": "deruberò",
+      "tu": "deruberai",
+      "lui/lei": "deruberà",
+      "noi": "deruberemo",
+      "voi": "deruberete",
+      "loro": "deruberanno"
+    },
+    "congiuntivoPresente": {
+      "io": "derubi",
+      "tu": "derubi",
+      "lui/lei": "derubi",
+      "noi": "derubiamo",
+      "voi": "derubiate",
+      "loro": "derubino"
+    },
+    "condizionale": {
+      "io": "deruberei",
+      "tu": "deruberesti",
+      "lui/lei": "deruberebbe",
+      "noi": "deruberemmo",
+      "voi": "derubereste",
+      "loro": "deruberebbero"
+    },
+    "imperativo": {
+      "tu": "deruba",
+      "lei": "derubi",
+      "noi": "derubiamo",
+      "voi": "derubate",
+      "loro": "derubino"
+    }
+  },
+  "descrivere": {
+    "presente": {
+      "io": "descrivo",
+      "tu": "descrivi",
+      "lui/lei": "descrive",
+      "noi": "descriviamo",
+      "voi": "descrivete",
+      "loro": "descrivono"
+    },
+    "passatoProssimo": {
+      "io": "ho descritto",
+      "tu": "hai descritto",
+      "lui/lei": "ha descritto",
+      "noi": "abbiamo descritto",
+      "voi": "avete descritto",
+      "loro": "hanno descritto"
+    },
+    "imperfetto": {
+      "io": "descrivevo",
+      "tu": "descrivevi",
+      "lui/lei": "descriveva",
+      "noi": "descrivevamo",
+      "voi": "descrivevate",
+      "loro": "descrivevano"
+    },
+    "futuro": {
+      "io": "descriverò",
+      "tu": "descriverai",
+      "lui/lei": "descriverà",
+      "noi": "descriveremo",
+      "voi": "descriverete",
+      "loro": "descriveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "descriva",
+      "tu": "descriva",
+      "lui/lei": "descriva",
+      "noi": "descriviamo",
+      "voi": "descriviate",
+      "loro": "descrivano"
+    },
+    "condizionale": {
+      "io": "descriverei",
+      "tu": "descriveresti",
+      "lui/lei": "descriverebbe",
+      "noi": "descriveremmo",
+      "voi": "descrivereste",
+      "loro": "descriverebbero"
+    },
+    "imperativo": {
+      "tu": "descrivi",
+      "lei": "descriva",
+      "noi": "descriviamo",
+      "voi": "descrivete",
+      "loro": "descrivano"
+    }
+  },
+  "desiderare": {
+    "presente": {
+      "io": "desidero",
+      "tu": "desideri",
+      "lui/lei": "desidera",
+      "noi": "desideriamo",
+      "voi": "desiderate",
+      "loro": "desiderano"
+    },
+    "passatoProssimo": {
+      "io": "ho desiderato",
+      "tu": "hai desiderato",
+      "lui/lei": "ha desiderato",
+      "noi": "abbiamo desiderato",
+      "voi": "avete desiderato",
+      "loro": "hanno desiderato"
+    },
+    "imperfetto": {
+      "io": "desideravo",
+      "tu": "desideravi",
+      "lui/lei": "desiderava",
+      "noi": "desideravamo",
+      "voi": "desideravate",
+      "loro": "desideravano"
+    },
+    "futuro": {
+      "io": "desidererò",
+      "tu": "desidererai",
+      "lui/lei": "desidererà",
+      "noi": "desidereremo",
+      "voi": "desidererete",
+      "loro": "desidereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "desideri",
+      "tu": "desideri",
+      "lui/lei": "desideri",
+      "noi": "desideriamo",
+      "voi": "desideriate",
+      "loro": "desiderino"
+    },
+    "condizionale": {
+      "io": "desidererei",
+      "tu": "desidereresti",
+      "lui/lei": "desidererebbe",
+      "noi": "desidereremmo",
+      "voi": "desiderereste",
+      "loro": "desidererebbero"
+    },
+    "imperativo": {
+      "tu": "desidera",
+      "lei": "desideri",
+      "noi": "desideriamo",
+      "voi": "desiderate",
+      "loro": "desiderino"
+    }
+  },
+  "designare": {
+    "presente": {
+      "io": "designo",
+      "tu": "designi",
+      "lui/lei": "designa",
+      "noi": "designiamo",
+      "voi": "designate",
+      "loro": "designano"
+    },
+    "passatoProssimo": {
+      "io": "ho designato",
+      "tu": "hai designato",
+      "lui/lei": "ha designato",
+      "noi": "abbiamo designato",
+      "voi": "avete designato",
+      "loro": "hanno designato"
+    },
+    "imperfetto": {
+      "io": "designavo",
+      "tu": "designavi",
+      "lui/lei": "designava",
+      "noi": "designavamo",
+      "voi": "designavate",
+      "loro": "designavano"
+    },
+    "futuro": {
+      "io": "designerò",
+      "tu": "designerai",
+      "lui/lei": "designerà",
+      "noi": "designeremo",
+      "voi": "designerete",
+      "loro": "designeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "designi",
+      "tu": "designi",
+      "lui/lei": "designi",
+      "noi": "designiamo",
+      "voi": "designiate",
+      "loro": "designino"
+    },
+    "condizionale": {
+      "io": "designerei",
+      "tu": "designeresti",
+      "lui/lei": "designerebbe",
+      "noi": "designeremmo",
+      "voi": "designereste",
+      "loro": "designerebbero"
+    },
+    "imperativo": {
+      "tu": "designa",
+      "lei": "designi",
+      "noi": "designiamo",
+      "voi": "designate",
+      "loro": "designino"
+    }
+  },
+  "desinare": {
+    "presente": {
+      "io": "desino",
+      "tu": "desini",
+      "lui/lei": "desina",
+      "noi": "desiniamo",
+      "voi": "desinate",
+      "loro": "desinano"
+    },
+    "passatoProssimo": {
+      "io": "ho desinato",
+      "tu": "hai desinato",
+      "lui/lei": "ha desinato",
+      "noi": "abbiamo desinato",
+      "voi": "avete desinato",
+      "loro": "hanno desinato"
+    },
+    "imperfetto": {
+      "io": "desinavo",
+      "tu": "desinavi",
+      "lui/lei": "desinava",
+      "noi": "desinavamo",
+      "voi": "desinavate",
+      "loro": "desinavano"
+    },
+    "futuro": {
+      "io": "desinerò",
+      "tu": "desinerai",
+      "lui/lei": "desinerà",
+      "noi": "desineremo",
+      "voi": "desinerete",
+      "loro": "desineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "desini",
+      "tu": "desini",
+      "lui/lei": "desini",
+      "noi": "desiniamo",
+      "voi": "desiniate",
+      "loro": "desinino"
+    },
+    "condizionale": {
+      "io": "desinerei",
+      "tu": "desineresti",
+      "lui/lei": "desinerebbe",
+      "noi": "desineremmo",
+      "voi": "desinereste",
+      "loro": "desinerebbero"
+    },
+    "imperativo": {
+      "tu": "desina",
+      "lei": "desini",
+      "noi": "desiniamo",
+      "voi": "desinate",
+      "loro": "desinino"
+    }
+  },
+  "destabilizzare": {
+    "presente": {
+      "io": "destabilizzo",
+      "tu": "destabilizzi",
+      "lui/lei": "destabilizza",
+      "noi": "destabilizziamo",
+      "voi": "destabilizzate",
+      "loro": "destabilizzano"
+    },
+    "passatoProssimo": {
+      "io": "ho destabilizzato",
+      "tu": "hai destabilizzato",
+      "lui/lei": "ha destabilizzato",
+      "noi": "abbiamo destabilizzato",
+      "voi": "avete destabilizzato",
+      "loro": "hanno destabilizzato"
+    },
+    "imperfetto": {
+      "io": "destabilizzavo",
+      "tu": "destabilizzavi",
+      "lui/lei": "destabilizzava",
+      "noi": "destabilizzavamo",
+      "voi": "destabilizzavate",
+      "loro": "destabilizzavano"
+    },
+    "futuro": {
+      "io": "destabilizzerò",
+      "tu": "destabilizzerai",
+      "lui/lei": "destabilizzerà",
+      "noi": "destabilizzeremo",
+      "voi": "destabilizzerete",
+      "loro": "destabilizzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "destabilizzi",
+      "tu": "destabilizzi",
+      "lui/lei": "destabilizzi",
+      "noi": "destabilizziamo",
+      "voi": "destabilizziate",
+      "loro": "destabilizzino"
+    },
+    "condizionale": {
+      "io": "destabilizzerei",
+      "tu": "destabilizzeresti",
+      "lui/lei": "destabilizzerebbe",
+      "noi": "destabilizzeremmo",
+      "voi": "destabilizzereste",
+      "loro": "destabilizzerebbero"
+    },
+    "imperativo": {
+      "tu": "destabilizza",
+      "lei": "destabilizzi",
+      "noi": "destabilizziamo",
+      "voi": "destabilizzate",
+      "loro": "destabilizzino"
+    }
+  },
+  "destare": {
+    "presente": {
+      "io": "desto",
+      "tu": "desti",
+      "lui/lei": "desta",
+      "noi": "destiamo",
+      "voi": "destate",
+      "loro": "destano"
+    },
+    "passatoProssimo": {
+      "io": "ho destato",
+      "tu": "hai destato",
+      "lui/lei": "ha destato",
+      "noi": "abbiamo destato",
+      "voi": "avete destato",
+      "loro": "hanno destato"
+    },
+    "imperfetto": {
+      "io": "destavo",
+      "tu": "destavi",
+      "lui/lei": "destava",
+      "noi": "destavamo",
+      "voi": "destavate",
+      "loro": "destavano"
+    },
+    "futuro": {
+      "io": "desterò",
+      "tu": "desterai",
+      "lui/lei": "desterà",
+      "noi": "desteremo",
+      "voi": "desterete",
+      "loro": "desteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "desti",
+      "tu": "desti",
+      "lui/lei": "desti",
+      "noi": "destiamo",
+      "voi": "destiate",
+      "loro": "destino"
+    },
+    "condizionale": {
+      "io": "desterei",
+      "tu": "desteresti",
+      "lui/lei": "desterebbe",
+      "noi": "desteremmo",
+      "voi": "destereste",
+      "loro": "desterebbero"
+    },
+    "imperativo": {
+      "tu": "desta",
+      "lei": "desti",
+      "noi": "destiamo",
+      "voi": "destate",
+      "loro": "destino"
+    }
+  },
+  "destinare": {
+    "presente": {
+      "io": "destino",
+      "tu": "destini",
+      "lui/lei": "destina",
+      "noi": "destiniamo",
+      "voi": "destinate",
+      "loro": "destinano"
+    },
+    "passatoProssimo": {
+      "io": "ho destinato",
+      "tu": "hai destinato",
+      "lui/lei": "ha destinato",
+      "noi": "abbiamo destinato",
+      "voi": "avete destinato",
+      "loro": "hanno destinato"
+    },
+    "imperfetto": {
+      "io": "destinavo",
+      "tu": "destinavi",
+      "lui/lei": "destinava",
+      "noi": "destinavamo",
+      "voi": "destinavate",
+      "loro": "destinavano"
+    },
+    "futuro": {
+      "io": "destinerò",
+      "tu": "destinerai",
+      "lui/lei": "destinerà",
+      "noi": "destineremo",
+      "voi": "destinerete",
+      "loro": "destineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "destini",
+      "tu": "destini",
+      "lui/lei": "destini",
+      "noi": "destiniamo",
+      "voi": "destiniate",
+      "loro": "destinino"
+    },
+    "condizionale": {
+      "io": "destinerei",
+      "tu": "destineresti",
+      "lui/lei": "destinerebbe",
+      "noi": "destineremmo",
+      "voi": "destinereste",
+      "loro": "destinerebbero"
+    },
+    "imperativo": {
+      "tu": "destina",
+      "lei": "destini",
+      "noi": "destiniamo",
+      "voi": "destinate",
+      "loro": "destinino"
+    }
+  },
+  "destrutturare": {
+    "presente": {
+      "io": "destrutturo",
+      "tu": "destrutturi",
+      "lui/lei": "destruttura",
+      "noi": "destrutturiamo",
+      "voi": "destrutturate",
+      "loro": "destrutturano"
+    },
+    "passatoProssimo": {
+      "io": "ho destrutturato",
+      "tu": "hai destrutturato",
+      "lui/lei": "ha destrutturato",
+      "noi": "abbiamo destrutturato",
+      "voi": "avete destrutturato",
+      "loro": "hanno destrutturato"
+    },
+    "imperfetto": {
+      "io": "destrutturavo",
+      "tu": "destrutturavi",
+      "lui/lei": "destrutturava",
+      "noi": "destrutturavamo",
+      "voi": "destrutturavate",
+      "loro": "destrutturavano"
+    },
+    "futuro": {
+      "io": "destrutturerò",
+      "tu": "destrutturerai",
+      "lui/lei": "destrutturerà",
+      "noi": "destruttureremo",
+      "voi": "destrutturerete",
+      "loro": "destruttureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "destrutturi",
+      "tu": "destrutturi",
+      "lui/lei": "destrutturi",
+      "noi": "destrutturiamo",
+      "voi": "destrutturiate",
+      "loro": "destrutturino"
+    },
+    "condizionale": {
+      "io": "destrutturerei",
+      "tu": "destruttureresti",
+      "lui/lei": "destrutturerebbe",
+      "noi": "destruttureremmo",
+      "voi": "destrutturereste",
+      "loro": "destrutturerebbero"
+    },
+    "imperativo": {
+      "tu": "destruttura",
+      "lei": "destrutturi",
+      "noi": "destrutturiamo",
+      "voi": "destrutturate",
+      "loro": "destrutturino"
+    }
+  },
+  "detenere": {
+    "presente": {
+      "io": "detengo",
+      "tu": "detieni",
+      "lui/lei": "detiene",
+      "noi": "deteniamo",
+      "voi": "detenete",
+      "loro": "detengono"
+    },
+    "passatoProssimo": {
+      "io": "ho detenuto",
+      "tu": "hai detenuto",
+      "lui/lei": "ha detenuto",
+      "noi": "abbiamo detenuto",
+      "voi": "avete detenuto",
+      "loro": "hanno detenuto"
+    },
+    "imperfetto": {
+      "io": "detenevo",
+      "tu": "detenevi",
+      "lui/lei": "deteneva",
+      "noi": "detenevamo",
+      "voi": "detenevate",
+      "loro": "detenevano"
+    },
+    "futuro": {
+      "io": "deterrò",
+      "tu": "deterrai",
+      "lui/lei": "deterrà",
+      "noi": "deterremo",
+      "voi": "deterrete",
+      "loro": "deterranno"
+    },
+    "congiuntivoPresente": {
+      "io": "detenga",
+      "tu": "detenga",
+      "lui/lei": "detenga",
+      "noi": "deteniamo",
+      "voi": "deteniate",
+      "loro": "detengano"
+    },
+    "condizionale": {
+      "io": "deterrei",
+      "tu": "deterresti",
+      "lui/lei": "deterrebbe",
+      "noi": "deterremmo",
+      "voi": "deterreste",
+      "loro": "deterrebbero"
+    },
+    "imperativo": {
+      "tu": "detieni",
+      "lei": "detenga",
+      "noi": "deteniamo",
+      "voi": "detenete",
+      "loro": "detengano"
+    }
+  },
+  "determinare": {
+    "presente": {
+      "io": "determino",
+      "tu": "determini",
+      "lui/lei": "determina",
+      "noi": "determiniamo",
+      "voi": "determinate",
+      "loro": "determinano"
+    },
+    "passatoProssimo": {
+      "io": "ho determinato",
+      "tu": "hai determinato",
+      "lui/lei": "ha determinato",
+      "noi": "abbiamo determinato",
+      "voi": "avete determinato",
+      "loro": "hanno determinato"
+    },
+    "imperfetto": {
+      "io": "determinavo",
+      "tu": "determinavi",
+      "lui/lei": "determinava",
+      "noi": "determinavamo",
+      "voi": "determinavate",
+      "loro": "determinavano"
+    },
+    "futuro": {
+      "io": "determinerò",
+      "tu": "determinerai",
+      "lui/lei": "determinerà",
+      "noi": "determineremo",
+      "voi": "determinerete",
+      "loro": "determineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "determini",
+      "tu": "determini",
+      "lui/lei": "determini",
+      "noi": "determiniamo",
+      "voi": "determiniate",
+      "loro": "determinino"
+    },
+    "condizionale": {
+      "io": "determinerei",
+      "tu": "determineresti",
+      "lui/lei": "determinerebbe",
+      "noi": "determineremmo",
+      "voi": "determinereste",
+      "loro": "determinerebbero"
+    },
+    "imperativo": {
+      "tu": "determina",
+      "lei": "determini",
+      "noi": "determiniamo",
+      "voi": "determinate",
+      "loro": "determinino"
+    }
+  },
+  "dettagliare": {
+    "presente": {
+      "io": "dettaglio",
+      "tu": "dettagli",
+      "lui/lei": "dettaglia",
+      "noi": "dettagliamo",
+      "voi": "dettagliate",
+      "loro": "dettagliano"
+    },
+    "passatoProssimo": {
+      "io": "ho dettagliato",
+      "tu": "hai dettagliato",
+      "lui/lei": "ha dettagliato",
+      "noi": "abbiamo dettagliato",
+      "voi": "avete dettagliato",
+      "loro": "hanno dettagliato"
+    },
+    "imperfetto": {
+      "io": "dettagliavo",
+      "tu": "dettagliavi",
+      "lui/lei": "dettagliava",
+      "noi": "dettagliavamo",
+      "voi": "dettagliavate",
+      "loro": "dettagliavano"
+    },
+    "futuro": {
+      "io": "dettaglierò",
+      "tu": "dettaglierai",
+      "lui/lei": "dettaglierà",
+      "noi": "dettaglieremo",
+      "voi": "dettaglierete",
+      "loro": "dettaglieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dettagli",
+      "tu": "dettagli",
+      "lui/lei": "dettagli",
+      "noi": "dettagliamo",
+      "voi": "dettagliate",
+      "loro": "dettaglino"
+    },
+    "condizionale": {
+      "io": "dettaglierei",
+      "tu": "dettaglieresti",
+      "lui/lei": "dettaglierebbe",
+      "noi": "dettaglieremmo",
+      "voi": "dettagliereste",
+      "loro": "dettaglierebbero"
+    },
+    "imperativo": {
+      "tu": "dettaglia",
+      "lei": "dettagli",
+      "noi": "dettagliamo",
+      "voi": "dettagliate",
+      "loro": "dettaglino"
+    }
+  },
+  "dettare": {
+    "presente": {
+      "io": "detto",
+      "tu": "detti",
+      "lui/lei": "detta",
+      "noi": "dettiamo",
+      "voi": "dettate",
+      "loro": "dettano"
+    },
+    "passatoProssimo": {
+      "io": "ho dettato",
+      "tu": "hai dettato",
+      "lui/lei": "ha dettato",
+      "noi": "abbiamo dettato",
+      "voi": "avete dettato",
+      "loro": "hanno dettato"
+    },
+    "imperfetto": {
+      "io": "dettavo",
+      "tu": "dettavi",
+      "lui/lei": "dettava",
+      "noi": "dettavamo",
+      "voi": "dettavate",
+      "loro": "dettavano"
+    },
+    "futuro": {
+      "io": "detterò",
+      "tu": "detterai",
+      "lui/lei": "detterà",
+      "noi": "detteremo",
+      "voi": "detterete",
+      "loro": "detteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "detti",
+      "tu": "detti",
+      "lui/lei": "detti",
+      "noi": "dettiamo",
+      "voi": "dettiate",
+      "loro": "dettino"
+    },
+    "condizionale": {
+      "io": "detterei",
+      "tu": "detteresti",
+      "lui/lei": "detterebbe",
+      "noi": "detteremmo",
+      "voi": "dettereste",
+      "loro": "detterebbero"
+    },
+    "imperativo": {
+      "tu": "detta",
+      "lei": "detti",
+      "noi": "dettiamo",
+      "voi": "dettate",
+      "loro": "dettino"
+    }
+  },
+  "deviare": {
+    "presente": {
+      "io": "devio",
+      "tu": "devii",
+      "lui/lei": "devia",
+      "noi": "deviamo",
+      "voi": "deviate",
+      "loro": "deviano"
+    },
+    "passatoProssimo": {
+      "io": "ho deviato",
+      "tu": "hai deviato",
+      "lui/lei": "ha deviato",
+      "noi": "abbiamo deviato",
+      "voi": "avete deviato",
+      "loro": "hanno deviato"
+    },
+    "imperfetto": {
+      "io": "deviavo",
+      "tu": "deviavi",
+      "lui/lei": "deviava",
+      "noi": "deviavamo",
+      "voi": "deviavate",
+      "loro": "deviavano"
+    },
+    "futuro": {
+      "io": "devierò",
+      "tu": "devierai",
+      "lui/lei": "devierà",
+      "noi": "devieremo",
+      "voi": "devierete",
+      "loro": "devieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "devii",
+      "tu": "devii",
+      "lui/lei": "devii",
+      "noi": "deviamo",
+      "voi": "deviate",
+      "loro": "devino"
+    },
+    "condizionale": {
+      "io": "devierei",
+      "tu": "devieresti",
+      "lui/lei": "devierebbe",
+      "noi": "devieremmo",
+      "voi": "deviereste",
+      "loro": "devierebbero"
+    },
+    "imperativo": {
+      "tu": "devia",
+      "lei": "devii",
+      "noi": "deviamo",
+      "voi": "deviate",
+      "loro": "devino"
+    }
+  },
+  "dialogare": {
+    "presente": {
+      "io": "dialogo",
+      "tu": "dialoghi",
+      "lui/lei": "dialoga",
+      "noi": "dialoghiamo",
+      "voi": "dialogate",
+      "loro": "dialogano"
+    },
+    "passatoProssimo": {
+      "io": "ho dialogato",
+      "tu": "hai dialogato",
+      "lui/lei": "ha dialogato",
+      "noi": "abbiamo dialogato",
+      "voi": "avete dialogato",
+      "loro": "hanno dialogato"
+    },
+    "imperfetto": {
+      "io": "dialogavo",
+      "tu": "dialogavi",
+      "lui/lei": "dialogava",
+      "noi": "dialogavamo",
+      "voi": "dialogavate",
+      "loro": "dialogavano"
+    },
+    "futuro": {
+      "io": "dialogherò",
+      "tu": "dialogherai",
+      "lui/lei": "dialogherà",
+      "noi": "dialogheremo",
+      "voi": "dialogherete",
+      "loro": "dialogheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dialoghi",
+      "tu": "dialoghi",
+      "lui/lei": "dialoghi",
+      "noi": "dialoghiamo",
+      "voi": "dialoghiate",
+      "loro": "dialoghino"
+    },
+    "condizionale": {
+      "io": "dialogherei",
+      "tu": "dialogheresti",
+      "lui/lei": "dialogherebbe",
+      "noi": "dialogheremmo",
+      "voi": "dialoghereste",
+      "loro": "dialogherebbero"
+    },
+    "imperativo": {
+      "tu": "dialoga",
+      "lei": "dialoghi",
+      "noi": "dialoghiamo",
+      "voi": "dialogate",
+      "loro": "dialoghino"
+    }
+  },
+  "dibattersi": {
+    "presente": {
+      "io": "mi dibatto",
+      "tu": "ti dibatti",
+      "lui/lei": "si dibatte",
+      "noi": "ci dibattiamo",
+      "voi": "vi dibattete",
+      "loro": "si dibattono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono dibattuto/a",
+      "tu": "ti sei dibattuto/a",
+      "lui/lei": "si è dibattuto/a",
+      "noi": "ci siamo dibattuti/e",
+      "voi": "vi siete dibattuti/e",
+      "loro": "si sono dibattuti/e"
+    },
+    "imperfetto": {
+      "io": "mi dibattevo",
+      "tu": "ti dibattevi",
+      "lui/lei": "si dibatteva",
+      "noi": "ci dibattevamo",
+      "voi": "vi dibattevate",
+      "loro": "si dibattevano"
+    },
+    "futuro": {
+      "io": "mi dibatterò",
+      "tu": "ti dibatterai",
+      "lui/lei": "si dibatterà",
+      "noi": "ci dibatteremo",
+      "voi": "vi dibatterete",
+      "loro": "si dibatteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi dibatta",
+      "tu": "ti dibatta",
+      "lui/lei": "si dibatta",
+      "noi": "ci dibattiamo",
+      "voi": "vi dibattiate",
+      "loro": "si dibattano"
+    },
+    "condizionale": {
+      "io": "mi dibatterei",
+      "tu": "ti dibatteresti",
+      "lui/lei": "si dibatterebbe",
+      "noi": "ci dibatteremmo",
+      "voi": "vi dibattereste",
+      "loro": "si dibatterebbero"
+    },
+    "imperativo": {
+      "tu": "dibattiti",
+      "lei": "si dibatta",
+      "noi": "dibattiamoci",
+      "voi": "dibattetevi",
+      "loro": "si dibattano"
+    }
+  },
+  "dichiarare": {
+    "presente": {
+      "io": "dichiaro",
+      "tu": "dichiari",
+      "lui/lei": "dichiara",
+      "noi": "dichiariamo",
+      "voi": "dichiarate",
+      "loro": "dichiarano"
+    },
+    "passatoProssimo": {
+      "io": "ho dichiarato",
+      "tu": "hai dichiarato",
+      "lui/lei": "ha dichiarato",
+      "noi": "abbiamo dichiarato",
+      "voi": "avete dichiarato",
+      "loro": "hanno dichiarato"
+    },
+    "imperfetto": {
+      "io": "dichiaravo",
+      "tu": "dichiaravi",
+      "lui/lei": "dichiarava",
+      "noi": "dichiaravamo",
+      "voi": "dichiaravate",
+      "loro": "dichiaravano"
+    },
+    "futuro": {
+      "io": "dichiarerò",
+      "tu": "dichiarerai",
+      "lui/lei": "dichiarerà",
+      "noi": "dichiareremo",
+      "voi": "dichiarerete",
+      "loro": "dichiareranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dichiari",
+      "tu": "dichiari",
+      "lui/lei": "dichiari",
+      "noi": "dichiariamo",
+      "voi": "dichiariate",
+      "loro": "dichiarino"
+    },
+    "condizionale": {
+      "io": "dichiarerei",
+      "tu": "dichiareresti",
+      "lui/lei": "dichiarerebbe",
+      "noi": "dichiareremmo",
+      "voi": "dichiarereste",
+      "loro": "dichiarerebbero"
+    },
+    "imperativo": {
+      "tu": "dichiara",
+      "lei": "dichiari",
+      "noi": "dichiariamo",
+      "voi": "dichiarate",
+      "loro": "dichiarino"
+    }
+  },
+  "difendere": {
+    "presente": {
+      "io": "difendo",
+      "tu": "difendi",
+      "lui/lei": "difende",
+      "noi": "difendiamo",
+      "voi": "difendete",
+      "loro": "difendono"
+    },
+    "passatoProssimo": {
+      "io": "ho difeso",
+      "tu": "hai difeso",
+      "lui/lei": "ha difeso",
+      "noi": "abbiamo difeso",
+      "voi": "avete difeso",
+      "loro": "hanno difeso"
+    },
+    "imperfetto": {
+      "io": "difendevo",
+      "tu": "difendevi",
+      "lui/lei": "difendeva",
+      "noi": "difendevamo",
+      "voi": "difendevate",
+      "loro": "difendevano"
+    },
+    "futuro": {
+      "io": "difenderò",
+      "tu": "difenderai",
+      "lui/lei": "difenderà",
+      "noi": "difenderemo",
+      "voi": "difenderete",
+      "loro": "difenderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "difenda",
+      "tu": "difenda",
+      "lui/lei": "difenda",
+      "noi": "difendiamo",
+      "voi": "difendiate",
+      "loro": "difendano"
+    },
+    "condizionale": {
+      "io": "difenderei",
+      "tu": "difenderesti",
+      "lui/lei": "difenderebbe",
+      "noi": "difenderemmo",
+      "voi": "difendereste",
+      "loro": "difenderebbero"
+    },
+    "imperativo": {
+      "tu": "difendi",
+      "lei": "difenda",
+      "noi": "difendiamo",
+      "voi": "difendete",
+      "loro": "difendano"
+    }
+  },
+  "diffidare": {
+    "presente": {
+      "io": "diffido",
+      "tu": "diffidi",
+      "lui/lei": "diffida",
+      "noi": "diffidiamo",
+      "voi": "diffidate",
+      "loro": "diffidano"
+    },
+    "passatoProssimo": {
+      "io": "ho diffidato",
+      "tu": "hai diffidato",
+      "lui/lei": "ha diffidato",
+      "noi": "abbiamo diffidato",
+      "voi": "avete diffidato",
+      "loro": "hanno diffidato"
+    },
+    "imperfetto": {
+      "io": "diffidavo",
+      "tu": "diffidavi",
+      "lui/lei": "diffidava",
+      "noi": "diffidavamo",
+      "voi": "diffidavate",
+      "loro": "diffidavano"
+    },
+    "futuro": {
+      "io": "diffiderò",
+      "tu": "diffiderai",
+      "lui/lei": "diffiderà",
+      "noi": "diffideremo",
+      "voi": "diffiderete",
+      "loro": "diffideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "diffidi",
+      "tu": "diffidi",
+      "lui/lei": "diffidi",
+      "noi": "diffidiamo",
+      "voi": "diffidiate",
+      "loro": "diffidino"
+    },
+    "condizionale": {
+      "io": "diffiderei",
+      "tu": "diffideresti",
+      "lui/lei": "diffiderebbe",
+      "noi": "diffideremmo",
+      "voi": "diffidereste",
+      "loro": "diffiderebbero"
+    },
+    "imperativo": {
+      "tu": "diffida",
+      "lei": "diffidi",
+      "noi": "diffidiamo",
+      "voi": "diffidate",
+      "loro": "diffidino"
+    }
+  },
+  "diffondere": {
+    "presente": {
+      "io": "diffondo",
+      "tu": "diffondi",
+      "lui/lei": "diffonde",
+      "noi": "diffondiamo",
+      "voi": "diffondete",
+      "loro": "diffondono"
+    },
+    "passatoProssimo": {
+      "io": "ho diffuso",
+      "tu": "hai diffuso",
+      "lui/lei": "ha diffuso",
+      "noi": "abbiamo diffuso",
+      "voi": "avete diffuso",
+      "loro": "hanno diffuso"
+    },
+    "imperfetto": {
+      "io": "diffondevo",
+      "tu": "diffondevi",
+      "lui/lei": "diffondeva",
+      "noi": "diffondevamo",
+      "voi": "diffondevate",
+      "loro": "diffondevano"
+    },
+    "futuro": {
+      "io": "diffonderò",
+      "tu": "diffonderai",
+      "lui/lei": "diffonderà",
+      "noi": "diffonderemo",
+      "voi": "diffonderete",
+      "loro": "diffonderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "diffonda",
+      "tu": "diffonda",
+      "lui/lei": "diffonda",
+      "noi": "diffondiamo",
+      "voi": "diffondiate",
+      "loro": "diffondano"
+    },
+    "condizionale": {
+      "io": "diffonderei",
+      "tu": "diffonderesti",
+      "lui/lei": "diffonderebbe",
+      "noi": "diffonderemmo",
+      "voi": "diffondereste",
+      "loro": "diffonderebbero"
+    },
+    "imperativo": {
+      "tu": "diffondi",
+      "lei": "diffonda",
+      "noi": "diffondiamo",
+      "voi": "diffondete",
+      "loro": "diffondano"
+    }
+  },
+  "diffondersi": {
+    "presente": {
+      "io": "mi diffondo",
+      "tu": "ti diffondi",
+      "lui/lei": "si diffonde",
+      "noi": "ci diffondiamo",
+      "voi": "vi diffondete",
+      "loro": "si diffondono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono diffuso/a",
+      "tu": "ti sei diffuso/a",
+      "lui/lei": "si è diffuso/a",
+      "noi": "ci siamo diffusi/e",
+      "voi": "vi siete diffusi/e",
+      "loro": "si sono diffusi/e"
+    },
+    "imperfetto": {
+      "io": "mi diffondevo",
+      "tu": "ti diffondevi",
+      "lui/lei": "si diffondeva",
+      "noi": "ci diffondevamo",
+      "voi": "vi diffondevate",
+      "loro": "si diffondevano"
+    },
+    "futuro": {
+      "io": "mi diffonderò",
+      "tu": "ti diffonderai",
+      "lui/lei": "si diffonderà",
+      "noi": "ci diffonderemo",
+      "voi": "vi diffonderete",
+      "loro": "si diffonderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi diffonda",
+      "tu": "ti diffonda",
+      "lui/lei": "si diffonda",
+      "noi": "ci diffondiamo",
+      "voi": "vi diffondiate",
+      "loro": "si diffondano"
+    },
+    "condizionale": {
+      "io": "mi diffonderei",
+      "tu": "ti diffonderesti",
+      "lui/lei": "si diffonderebbe",
+      "noi": "ci diffonderemmo",
+      "voi": "vi diffondereste",
+      "loro": "si diffonderebbero"
+    },
+    "imperativo": {
+      "tu": "diffonditi",
+      "lei": "si diffonda",
+      "noi": "diffondiamoci",
+      "voi": "diffondetevi",
+      "loro": "si diffondano"
+    }
+  },
+  "digerire": {
+    "presente": {
+      "io": "digerisco",
+      "tu": "digerisci",
+      "lui/lei": "digerisce",
+      "noi": "digeriamo",
+      "voi": "digerite",
+      "loro": "digeriscono"
+    },
+    "passatoProssimo": {
+      "io": "ho digerito",
+      "tu": "hai digerito",
+      "lui/lei": "ha digerito",
+      "noi": "abbiamo digerito",
+      "voi": "avete digerito",
+      "loro": "hanno digerito"
+    },
+    "imperfetto": {
+      "io": "digerivo",
+      "tu": "digerivi",
+      "lui/lei": "digeriva",
+      "noi": "digerivamo",
+      "voi": "digerivate",
+      "loro": "digerivano"
+    },
+    "futuro": {
+      "io": "digerirò",
+      "tu": "digerirai",
+      "lui/lei": "digerirà",
+      "noi": "digeriremo",
+      "voi": "digerirete",
+      "loro": "digeriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "digerisca",
+      "tu": "digerisca",
+      "lui/lei": "digerisca",
+      "noi": "digeriamo",
+      "voi": "digeriate",
+      "loro": "digeriscano"
+    },
+    "condizionale": {
+      "io": "digerirei",
+      "tu": "digeriresti",
+      "lui/lei": "digerirebbe",
+      "noi": "digeriremmo",
+      "voi": "digerireste",
+      "loro": "digerirebbero"
+    },
+    "imperativo": {
+      "tu": "digerisci",
+      "lei": "digerisca",
+      "noi": "digeriamo",
+      "voi": "digerite",
+      "loro": "digeriscano"
+    }
+  },
+  "digiunare": {
+    "presente": {
+      "io": "digiuno",
+      "tu": "digiuni",
+      "lui/lei": "digiuna",
+      "noi": "digiuniamo",
+      "voi": "digiunate",
+      "loro": "digiunano"
+    },
+    "passatoProssimo": {
+      "io": "ho digiunato",
+      "tu": "hai digiunato",
+      "lui/lei": "ha digiunato",
+      "noi": "abbiamo digiunato",
+      "voi": "avete digiunato",
+      "loro": "hanno digiunato"
+    },
+    "imperfetto": {
+      "io": "digiunavo",
+      "tu": "digiunavi",
+      "lui/lei": "digiunava",
+      "noi": "digiunavamo",
+      "voi": "digiunavate",
+      "loro": "digiunavano"
+    },
+    "futuro": {
+      "io": "digiunerò",
+      "tu": "digiunerai",
+      "lui/lei": "digiunerà",
+      "noi": "digiuneremo",
+      "voi": "digiunerete",
+      "loro": "digiuneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "digiuni",
+      "tu": "digiuni",
+      "lui/lei": "digiuni",
+      "noi": "digiuniamo",
+      "voi": "digiuniate",
+      "loro": "digiunino"
+    },
+    "condizionale": {
+      "io": "digiunerei",
+      "tu": "digiuneresti",
+      "lui/lei": "digiunerebbe",
+      "noi": "digiuneremmo",
+      "voi": "digiunereste",
+      "loro": "digiunerebbero"
+    },
+    "imperativo": {
+      "tu": "digiuna",
+      "lei": "digiuni",
+      "noi": "digiuniamo",
+      "voi": "digiunate",
+      "loro": "digiunino"
+    }
+  },
+  "digrignare": {
+    "presente": {
+      "io": "digrigno",
+      "tu": "digrigni",
+      "lui/lei": "digrigna",
+      "noi": "digrigniamo",
+      "voi": "digrignate",
+      "loro": "digrignano"
+    },
+    "passatoProssimo": {
+      "io": "ho digrignato",
+      "tu": "hai digrignato",
+      "lui/lei": "ha digrignato",
+      "noi": "abbiamo digrignato",
+      "voi": "avete digrignato",
+      "loro": "hanno digrignato"
+    },
+    "imperfetto": {
+      "io": "digrignavo",
+      "tu": "digrignavi",
+      "lui/lei": "digrignava",
+      "noi": "digrignavamo",
+      "voi": "digrignavate",
+      "loro": "digrignavano"
+    },
+    "futuro": {
+      "io": "digrignerò",
+      "tu": "digrignerai",
+      "lui/lei": "digrignerà",
+      "noi": "digrigneremo",
+      "voi": "digrignerete",
+      "loro": "digrigneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "digrigni",
+      "tu": "digrigni",
+      "lui/lei": "digrigni",
+      "noi": "digrigniamo",
+      "voi": "digrigniate",
+      "loro": "digrignino"
+    },
+    "condizionale": {
+      "io": "digrignerei",
+      "tu": "digrigneresti",
+      "lui/lei": "digrignerebbe",
+      "noi": "digrigneremmo",
+      "voi": "digrignereste",
+      "loro": "digrignerebbero"
+    },
+    "imperativo": {
+      "tu": "digrigna",
+      "lei": "digrigni",
+      "noi": "digrigniamo",
+      "voi": "digrignate",
+      "loro": "digrignino"
+    }
+  },
+  "digrossare": {
+    "presente": {
+      "io": "digrosso",
+      "tu": "digrossi",
+      "lui/lei": "digrossa",
+      "noi": "digrossiamo",
+      "voi": "digrossate",
+      "loro": "digrossano"
+    },
+    "passatoProssimo": {
+      "io": "ho digrossato",
+      "tu": "hai digrossato",
+      "lui/lei": "ha digrossato",
+      "noi": "abbiamo digrossato",
+      "voi": "avete digrossato",
+      "loro": "hanno digrossato"
+    },
+    "imperfetto": {
+      "io": "digrossavo",
+      "tu": "digrossavi",
+      "lui/lei": "digrossava",
+      "noi": "digrossavamo",
+      "voi": "digrossavate",
+      "loro": "digrossavano"
+    },
+    "futuro": {
+      "io": "digrosserò",
+      "tu": "digrosserai",
+      "lui/lei": "digrosserà",
+      "noi": "digrosseremo",
+      "voi": "digrosserete",
+      "loro": "digrosseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "digrossi",
+      "tu": "digrossi",
+      "lui/lei": "digrossi",
+      "noi": "digrossiamo",
+      "voi": "digrossiate",
+      "loro": "digrossino"
+    },
+    "condizionale": {
+      "io": "digrosserei",
+      "tu": "digrosseresti",
+      "lui/lei": "digrosserebbe",
+      "noi": "digrosseremmo",
+      "voi": "digrossereste",
+      "loro": "digrosserebbero"
+    },
+    "imperativo": {
+      "tu": "digrossa",
+      "lei": "digrossi",
+      "noi": "digrossiamo",
+      "voi": "digrossate",
+      "loro": "digrossino"
+    }
+  },
+  "diluviare": {
+    "presente": {
+      "io": "diluvio",
+      "tu": "diluvi",
+      "lui/lei": "diluvia",
+      "noi": "diluviamo",
+      "voi": "diluviate",
+      "loro": "diluviano"
+    },
+    "passatoProssimo": {
+      "io": "ho diluviato",
+      "tu": "hai diluviato",
+      "lui/lei": "ha diluviato",
+      "noi": "abbiamo diluviato",
+      "voi": "avete diluviato",
+      "loro": "hanno diluviato"
+    },
+    "imperfetto": {
+      "io": "diluviavo",
+      "tu": "diluviavi",
+      "lui/lei": "diluviava",
+      "noi": "diluviavamo",
+      "voi": "diluviavate",
+      "loro": "diluviavano"
+    },
+    "futuro": {
+      "io": "diluvierò",
+      "tu": "diluvierai",
+      "lui/lei": "diluvierà",
+      "noi": "diluvieremo",
+      "voi": "diluvierete",
+      "loro": "diluvieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "diluvi",
+      "tu": "diluvi",
+      "lui/lei": "diluvi",
+      "noi": "diluviamo",
+      "voi": "diluviate",
+      "loro": "diluvino"
+    },
+    "condizionale": {
+      "io": "diluvierei",
+      "tu": "diluvieresti",
+      "lui/lei": "diluvierebbe",
+      "noi": "diluvieremmo",
+      "voi": "diluviereste",
+      "loro": "diluvierebbero"
+    },
+    "imperativo": {
+      "tu": "diluvia",
+      "lei": "diluvi",
+      "noi": "diluviamo",
+      "voi": "diluviate",
+      "loro": "diluvino"
+    }
+  },
+  "dimagrire": {
+    "presente": {
+      "io": "dimagrisco",
+      "tu": "dimagrisci",
+      "lui/lei": "dimagrisce",
+      "noi": "dimagriamo",
+      "voi": "dimagrite",
+      "loro": "dimagriscono"
+    },
+    "passatoProssimo": {
+      "io": "sono dimagrito/a",
+      "tu": "sei dimagrito/a",
+      "lui/lei": "è dimagrito/a",
+      "noi": "siamo dimagriti/e",
+      "voi": "siete dimagriti/e",
+      "loro": "sono dimagriti/e"
+    },
+    "imperfetto": {
+      "io": "dimagrivo",
+      "tu": "dimagrivi",
+      "lui/lei": "dimagriva",
+      "noi": "dimagrivamo",
+      "voi": "dimagrivate",
+      "loro": "dimagrivano"
+    },
+    "futuro": {
+      "io": "dimagrirò",
+      "tu": "dimagrirai",
+      "lui/lei": "dimagrirà",
+      "noi": "dimagriremo",
+      "voi": "dimagrirete",
+      "loro": "dimagriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dimagrisca",
+      "tu": "dimagrisca",
+      "lui/lei": "dimagrisca",
+      "noi": "dimagriamo",
+      "voi": "dimagriate",
+      "loro": "dimagriscano"
+    },
+    "condizionale": {
+      "io": "dimagrirei",
+      "tu": "dimagriresti",
+      "lui/lei": "dimagrirebbe",
+      "noi": "dimagriremmo",
+      "voi": "dimagrireste",
+      "loro": "dimagrirebbero"
+    },
+    "imperativo": {
+      "tu": "dimagrisci",
+      "lei": "dimagrisca",
+      "noi": "dimagriamo",
+      "voi": "dimagrite",
+      "loro": "dimagriscano"
+    }
+  },
+  "dimenare": {
+    "presente": {
+      "io": "dimeno",
+      "tu": "dimeni",
+      "lui/lei": "dimena",
+      "noi": "dimeniamo",
+      "voi": "dimenate",
+      "loro": "dimenano"
+    },
+    "passatoProssimo": {
+      "io": "ho dimenato",
+      "tu": "hai dimenato",
+      "lui/lei": "ha dimenato",
+      "noi": "abbiamo dimenato",
+      "voi": "avete dimenato",
+      "loro": "hanno dimenato"
+    },
+    "imperfetto": {
+      "io": "dimenavo",
+      "tu": "dimenavi",
+      "lui/lei": "dimenava",
+      "noi": "dimenavamo",
+      "voi": "dimenavate",
+      "loro": "dimenavano"
+    },
+    "futuro": {
+      "io": "dimenerò",
+      "tu": "dimenerai",
+      "lui/lei": "dimenerà",
+      "noi": "dimeneremo",
+      "voi": "dimenerete",
+      "loro": "dimeneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dimeni",
+      "tu": "dimeni",
+      "lui/lei": "dimeni",
+      "noi": "dimeniamo",
+      "voi": "dimeniate",
+      "loro": "dimenino"
+    },
+    "condizionale": {
+      "io": "dimenerei",
+      "tu": "dimeneresti",
+      "lui/lei": "dimenerebbe",
+      "noi": "dimeneremmo",
+      "voi": "dimenereste",
+      "loro": "dimenerebbero"
+    },
+    "imperativo": {
+      "tu": "dimena",
+      "lei": "dimeni",
+      "noi": "dimeniamo",
+      "voi": "dimenate",
+      "loro": "dimenino"
+    }
+  },
+  "dimenticare": {
+    "presente": {
+      "io": "dimentico",
+      "tu": "dimentichi",
+      "lui/lei": "dimentica",
+      "noi": "dimentichiamo",
+      "voi": "dimenticate",
+      "loro": "dimenticano"
+    },
+    "passatoProssimo": {
+      "io": "ho dimenticato",
+      "tu": "hai dimenticato",
+      "lui/lei": "ha dimenticato",
+      "noi": "abbiamo dimenticato",
+      "voi": "avete dimenticato",
+      "loro": "hanno dimenticato"
+    },
+    "imperfetto": {
+      "io": "dimenticavo",
+      "tu": "dimenticavi",
+      "lui/lei": "dimenticava",
+      "noi": "dimenticavamo",
+      "voi": "dimenticavate",
+      "loro": "dimenticavano"
+    },
+    "futuro": {
+      "io": "dimenticherò",
+      "tu": "dimenticherai",
+      "lui/lei": "dimenticherà",
+      "noi": "dimenticheremo",
+      "voi": "dimenticherete",
+      "loro": "dimenticheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dimentichi",
+      "tu": "dimentichi",
+      "lui/lei": "dimentichi",
+      "noi": "dimentichiamo",
+      "voi": "dimentichiate",
+      "loro": "dimentichino"
+    },
+    "condizionale": {
+      "io": "dimenticherei",
+      "tu": "dimenticheresti",
+      "lui/lei": "dimenticherebbe",
+      "noi": "dimenticheremmo",
+      "voi": "dimentichereste",
+      "loro": "dimenticherebbero"
+    },
+    "imperativo": {
+      "tu": "dimentica",
+      "lei": "dimentichi",
+      "noi": "dimentichiamo",
+      "voi": "dimenticate",
+      "loro": "dimentichino"
+    }
+  },
+  "dimettere": {
+    "presente": {
+      "io": "dimetto",
+      "tu": "dimetti",
+      "lui/lei": "dimette",
+      "noi": "dimettiamo",
+      "voi": "dimettete",
+      "loro": "dimettono"
+    },
+    "passatoProssimo": {
+      "io": "ho dimesso",
+      "tu": "hai dimesso",
+      "lui/lei": "ha dimesso",
+      "noi": "abbiamo dimesso",
+      "voi": "avete dimesso",
+      "loro": "hanno dimesso"
+    },
+    "imperfetto": {
+      "io": "dimettevo",
+      "tu": "dimettevi",
+      "lui/lei": "dimetteva",
+      "noi": "dimettevamo",
+      "voi": "dimettevate",
+      "loro": "dimettevano"
+    },
+    "futuro": {
+      "io": "dimetterò",
+      "tu": "dimetterai",
+      "lui/lei": "dimetterà",
+      "noi": "dimetteremo",
+      "voi": "dimetterete",
+      "loro": "dimetteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dimetta",
+      "tu": "dimetta",
+      "lui/lei": "dimetta",
+      "noi": "dimettiamo",
+      "voi": "dimettiate",
+      "loro": "dimettano"
+    },
+    "condizionale": {
+      "io": "dimetterei",
+      "tu": "dimetteresti",
+      "lui/lei": "dimetterebbe",
+      "noi": "dimetteremmo",
+      "voi": "dimettereste",
+      "loro": "dimetterebbero"
+    },
+    "imperativo": {
+      "tu": "dimetti",
+      "lei": "dimetta",
+      "noi": "dimettiamo",
+      "voi": "dimettete",
+      "loro": "dimettano"
+    }
+  },
+  "diminuire": {
+    "presente": {
+      "io": "diminuisco",
+      "tu": "diminuisci",
+      "lui/lei": "diminuisce",
+      "noi": "diminuiamo",
+      "voi": "diminuite",
+      "loro": "diminuiscono"
+    },
+    "passatoProssimo": {
+      "io": "sono diminuito/a",
+      "tu": "sei diminuito/a",
+      "lui/lei": "è diminuito/a",
+      "noi": "siamo diminuiti/e",
+      "voi": "siete diminuiti/e",
+      "loro": "sono diminuiti/e"
+    },
+    "imperfetto": {
+      "io": "diminuivo",
+      "tu": "diminuivi",
+      "lui/lei": "diminuiva",
+      "noi": "diminuivamo",
+      "voi": "diminuivate",
+      "loro": "diminuivano"
+    },
+    "futuro": {
+      "io": "diminuirò",
+      "tu": "diminuirai",
+      "lui/lei": "diminuirà",
+      "noi": "diminuiremo",
+      "voi": "diminuirete",
+      "loro": "diminuiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "diminuisca",
+      "tu": "diminuisca",
+      "lui/lei": "diminuisca",
+      "noi": "diminuiamo",
+      "voi": "diminuiate",
+      "loro": "diminuiscano"
+    },
+    "condizionale": {
+      "io": "diminuirei",
+      "tu": "diminuiresti",
+      "lui/lei": "diminuirebbe",
+      "noi": "diminuiremmo",
+      "voi": "diminuireste",
+      "loro": "diminuirebbero"
+    },
+    "imperativo": {
+      "tu": "diminuisci",
+      "lei": "diminuisca",
+      "noi": "diminuiamo",
+      "voi": "diminuite",
+      "loro": "diminuiscano"
+    }
+  },
+  "dimorare": {
+    "presente": {
+      "io": "dimoro",
+      "tu": "dimori",
+      "lui/lei": "dimora",
+      "noi": "dimoriamo",
+      "voi": "dimorate",
+      "loro": "dimorano"
+    },
+    "passatoProssimo": {
+      "io": "ho dimorato",
+      "tu": "hai dimorato",
+      "lui/lei": "ha dimorato",
+      "noi": "abbiamo dimorato",
+      "voi": "avete dimorato",
+      "loro": "hanno dimorato"
+    },
+    "imperfetto": {
+      "io": "dimoravo",
+      "tu": "dimoravi",
+      "lui/lei": "dimorava",
+      "noi": "dimoravamo",
+      "voi": "dimoravate",
+      "loro": "dimoravano"
+    },
+    "futuro": {
+      "io": "dimorerò",
+      "tu": "dimorerai",
+      "lui/lei": "dimorerà",
+      "noi": "dimoreremo",
+      "voi": "dimorerete",
+      "loro": "dimoreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dimori",
+      "tu": "dimori",
+      "lui/lei": "dimori",
+      "noi": "dimoriamo",
+      "voi": "dimoriate",
+      "loro": "dimorino"
+    },
+    "condizionale": {
+      "io": "dimorerei",
+      "tu": "dimoreresti",
+      "lui/lei": "dimorerebbe",
+      "noi": "dimoreremmo",
+      "voi": "dimorereste",
+      "loro": "dimorerebbero"
+    },
+    "imperativo": {
+      "tu": "dimora",
+      "lei": "dimori",
+      "noi": "dimoriamo",
+      "voi": "dimorate",
+      "loro": "dimorino"
+    }
+  },
+  "dimostrare": {
+    "presente": {
+      "io": "dimostro",
+      "tu": "dimostri",
+      "lui/lei": "dimostra",
+      "noi": "dimostriamo",
+      "voi": "dimostrate",
+      "loro": "dimostrano"
+    },
+    "passatoProssimo": {
+      "io": "ho dimostrato",
+      "tu": "hai dimostrato",
+      "lui/lei": "ha dimostrato",
+      "noi": "abbiamo dimostrato",
+      "voi": "avete dimostrato",
+      "loro": "hanno dimostrato"
+    },
+    "imperfetto": {
+      "io": "dimostravo",
+      "tu": "dimostravi",
+      "lui/lei": "dimostrava",
+      "noi": "dimostravamo",
+      "voi": "dimostravate",
+      "loro": "dimostravano"
+    },
+    "futuro": {
+      "io": "dimostrerò",
+      "tu": "dimostrerai",
+      "lui/lei": "dimostrerà",
+      "noi": "dimostreremo",
+      "voi": "dimostrerete",
+      "loro": "dimostreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dimostri",
+      "tu": "dimostri",
+      "lui/lei": "dimostri",
+      "noi": "dimostriamo",
+      "voi": "dimostriate",
+      "loro": "dimostrino"
+    },
+    "condizionale": {
+      "io": "dimostrerei",
+      "tu": "dimostreresti",
+      "lui/lei": "dimostrerebbe",
+      "noi": "dimostreremmo",
+      "voi": "dimostrereste",
+      "loro": "dimostrerebbero"
+    },
+    "imperativo": {
+      "tu": "dimostra",
+      "lei": "dimostri",
+      "noi": "dimostriamo",
+      "voi": "dimostrate",
+      "loro": "dimostrino"
+    }
+  },
+  "dipartire": {
+    "presente": {
+      "io": "diparto",
+      "tu": "diparti",
+      "lui/lei": "diparte",
+      "noi": "dipartiamo",
+      "voi": "dipartite",
+      "loro": "dipartono"
+    },
+    "passatoProssimo": {
+      "io": "sono dipartito/a",
+      "tu": "sei dipartito/a",
+      "lui/lei": "è dipartito/a",
+      "noi": "siamo dipartiti/e",
+      "voi": "siete dipartiti/e",
+      "loro": "sono dipartiti/e"
+    },
+    "imperfetto": {
+      "io": "dipartivo",
+      "tu": "dipartivi",
+      "lui/lei": "dipartiva",
+      "noi": "dipartivamo",
+      "voi": "dipartivate",
+      "loro": "dipartivano"
+    },
+    "futuro": {
+      "io": "dipartirò",
+      "tu": "dipartirai",
+      "lui/lei": "dipartirà",
+      "noi": "dipartiremo",
+      "voi": "dipartirete",
+      "loro": "dipartiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "diparta",
+      "tu": "diparta",
+      "lui/lei": "diparta",
+      "noi": "dipartiamo",
+      "voi": "dipartiate",
+      "loro": "dipartano"
+    },
+    "condizionale": {
+      "io": "dipartirei",
+      "tu": "dipartiresti",
+      "lui/lei": "dipartirebbe",
+      "noi": "dipartiremmo",
+      "voi": "dipartireste",
+      "loro": "dipartirebbero"
+    },
+    "imperativo": {
+      "tu": "diparti",
+      "lei": "diparta",
+      "noi": "dipartiamo",
+      "voi": "dipartite",
+      "loro": "dipartano"
+    }
+  },
+  "dipendere": {
+    "presente": {
+      "io": "dipendo",
+      "tu": "dipendi",
+      "lui/lei": "dipende",
+      "noi": "dipendiamo",
+      "voi": "dipendete",
+      "loro": "dipendono"
+    },
+    "passatoProssimo": {
+      "io": "sono dipeso/a",
+      "tu": "sei dipeso/a",
+      "lui/lei": "è dipeso/a",
+      "noi": "siamo dipesi/e",
+      "voi": "siete dipesi/e",
+      "loro": "sono dipesi/e"
+    },
+    "imperfetto": {
+      "io": "dipendevo",
+      "tu": "dipendevi",
+      "lui/lei": "dipendeva",
+      "noi": "dipendevamo",
+      "voi": "dipendevate",
+      "loro": "dipendevano"
+    },
+    "futuro": {
+      "io": "dipenderò",
+      "tu": "dipenderai",
+      "lui/lei": "dipenderà",
+      "noi": "dipenderemo",
+      "voi": "dipenderete",
+      "loro": "dipenderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "dipenda",
+      "tu": "dipenda",
+      "lui/lei": "dipenda",
+      "noi": "dipendiamo",
+      "voi": "dipendiate",
+      "loro": "dipendano"
+    },
+    "condizionale": {
+      "io": "dipenderei",
+      "tu": "dipenderesti",
+      "lui/lei": "dipenderebbe",
+      "noi": "dipenderemmo",
+      "voi": "dipendereste",
+      "loro": "dipenderebbero"
+    },
+    "imperativo": {
+      "tu": "dipendi",
+      "lei": "dipenda",
+      "noi": "dipendiamo",
+      "voi": "dipendete",
+      "loro": "dipendano"
+    }
+  },
+  "dipingere": {
+    "presente": {
+      "io": "dipingo",
+      "tu": "dipingi",
+      "lui/lei": "dipinge",
+      "noi": "dipingiamo",
+      "voi": "dipingete",
+      "loro": "dipingono"
+    },
+    "passatoProssimo": {
+      "io": "ho dipinto",
+      "tu": "hai dipinto",
+      "lui/lei": "ha dipinto",
+      "noi": "abbiamo dipinto",
+      "voi": "avete dipinto",
+      "loro": "hanno dipinto"
+    },
+    "imperfetto": {
+      "io": "dipingevo",
+      "tu": "dipingevi",
+      "lui/lei": "dipingeva",
+      "noi": "dipingevamo",
+      "voi": "dipingevate",
+      "loro": "dipingevano"
+    },
+    "futuro": {
+      "io": "dipingerò",
+      "tu": "dipingerai",
+      "lui/lei": "dipingerà",
+      "noi": "dipingeremo",
+      "voi": "dipingerete",
+      "loro": "dipingeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dipinga",
+      "tu": "dipinga",
+      "lui/lei": "dipinga",
+      "noi": "dipingiamo",
+      "voi": "dipingiate",
+      "loro": "dipingano"
+    },
+    "condizionale": {
+      "io": "dipingerei",
+      "tu": "dipingeresti",
+      "lui/lei": "dipingerebbe",
+      "noi": "dipingeremmo",
+      "voi": "dipingereste",
+      "loro": "dipingerebbero"
+    },
+    "imperativo": {
+      "tu": "dipingi",
+      "lei": "dipinga",
+      "noi": "dipingiamo",
+      "voi": "dipingete",
+      "loro": "dipingano"
+    }
+  },
+  "diplomarsi": {
+    "presente": {
+      "io": "mi diplomo",
+      "tu": "ti diplomi",
+      "lui/lei": "si diploma",
+      "noi": "ci diplomiamo",
+      "voi": "vi diplomate",
+      "loro": "si diplomano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono diplomato/a",
+      "tu": "ti sei diplomato/a",
+      "lui/lei": "si è diplomato/a",
+      "noi": "ci siamo diplomati/e",
+      "voi": "vi siete diplomati/e",
+      "loro": "si sono diplomati/e"
+    },
+    "imperfetto": {
+      "io": "mi diplomavo",
+      "tu": "ti diplomavi",
+      "lui/lei": "si diplomava",
+      "noi": "ci diplomavamo",
+      "voi": "vi diplomavate",
+      "loro": "si diplomavano"
+    },
+    "futuro": {
+      "io": "mi diplomerò",
+      "tu": "ti diplomerai",
+      "lui/lei": "si diplomerà",
+      "noi": "ci diplomeremo",
+      "voi": "vi diplomerete",
+      "loro": "si diplomeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi diplomi",
+      "tu": "ti diplomi",
+      "lui/lei": "si diplomi",
+      "noi": "ci diplomiamo",
+      "voi": "vi diplomiate",
+      "loro": "si diplomino"
+    },
+    "condizionale": {
+      "io": "mi diplomerei",
+      "tu": "ti diplomeresti",
+      "lui/lei": "si diplomerebbe",
+      "noi": "ci diplomeremmo",
+      "voi": "vi diplomereste",
+      "loro": "si diplomerebbero"
+    },
+    "imperativo": {
+      "tu": "diplomati",
+      "lei": "si diplomi",
+      "noi": "diplomiamoci",
+      "voi": "diplomatevi",
+      "loro": "si diplomino"
+    }
+  },
+  "diradare": {
+    "presente": {
+      "io": "dirado",
+      "tu": "diradi",
+      "lui/lei": "dirada",
+      "noi": "diradiamo",
+      "voi": "diradate",
+      "loro": "diradano"
+    },
+    "passatoProssimo": {
+      "io": "ho diradato",
+      "tu": "hai diradato",
+      "lui/lei": "ha diradato",
+      "noi": "abbiamo diradato",
+      "voi": "avete diradato",
+      "loro": "hanno diradato"
+    },
+    "imperfetto": {
+      "io": "diradavo",
+      "tu": "diradavi",
+      "lui/lei": "diradava",
+      "noi": "diradavamo",
+      "voi": "diradavate",
+      "loro": "diradavano"
+    },
+    "futuro": {
+      "io": "diraderò",
+      "tu": "diraderai",
+      "lui/lei": "diraderà",
+      "noi": "diraderemo",
+      "voi": "diraderete",
+      "loro": "diraderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "diradi",
+      "tu": "diradi",
+      "lui/lei": "diradi",
+      "noi": "diradiamo",
+      "voi": "diradiate",
+      "loro": "diradino"
+    },
+    "condizionale": {
+      "io": "diraderei",
+      "tu": "diraderesti",
+      "lui/lei": "diraderebbe",
+      "noi": "diraderemmo",
+      "voi": "diradereste",
+      "loro": "diraderebbero"
+    },
+    "imperativo": {
+      "tu": "dirada",
+      "lei": "diradi",
+      "noi": "diradiamo",
+      "voi": "diradate",
+      "loro": "diradino"
+    }
+  },
+  "dire": {
+    "presente": {
+      "io": "dico",
+      "tu": "dici",
+      "lui/lei": "dice",
+      "noi": "diciamo",
+      "voi": "dite",
+      "loro": "dicono"
+    },
+    "passatoProssimo": {
+      "io": "ho detto",
+      "tu": "hai detto",
+      "lui/lei": "ha detto",
+      "noi": "abbiamo detto",
+      "voi": "avete detto",
+      "loro": "hanno detto"
+    },
+    "imperfetto": {
+      "io": "dicevo",
+      "tu": "dicevi",
+      "lui/lei": "diceva",
+      "noi": "dicevamo",
+      "voi": "dicevate",
+      "loro": "dicevano"
+    },
+    "futuro": {
+      "io": "dirò",
+      "tu": "dirai",
+      "lui/lei": "dirà",
+      "noi": "diremo",
+      "voi": "direte",
+      "loro": "diranno"
+    },
+    "congiuntivoPresente": {
+      "io": "dica",
+      "tu": "dica",
+      "lui/lei": "dica",
+      "noi": "diciamo",
+      "voi": "diciate",
+      "loro": "dicano"
+    },
+    "condizionale": {
+      "io": "direi",
+      "tu": "diresti",
+      "lui/lei": "direbbe",
+      "noi": "diremmo",
+      "voi": "direste",
+      "loro": "direbbero"
+    },
+    "imperativo": {
+      "tu": "di'",
+      "lei": "dica",
+      "noi": "diciamo",
+      "voi": "dite",
+      "loro": "dicano"
+    }
+  },
+  "dirigere": {
+    "presente": {
+      "io": "dirigo",
+      "tu": "dirigi",
+      "lui/lei": "dirige",
+      "noi": "dirigiamo",
+      "voi": "dirigete",
+      "loro": "dirigono"
+    },
+    "passatoProssimo": {
+      "io": "ho diretto",
+      "tu": "hai diretto",
+      "lui/lei": "ha diretto",
+      "noi": "abbiamo diretto",
+      "voi": "avete diretto",
+      "loro": "hanno diretto"
+    },
+    "imperfetto": {
+      "io": "dirigevo",
+      "tu": "dirigevi",
+      "lui/lei": "dirigeva",
+      "noi": "dirigevamo",
+      "voi": "dirigevate",
+      "loro": "dirigevano"
+    },
+    "futuro": {
+      "io": "dirigerò",
+      "tu": "dirigerai",
+      "lui/lei": "dirigerà",
+      "noi": "dirigeremo",
+      "voi": "dirigerete",
+      "loro": "dirigeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "diriga",
+      "tu": "diriga",
+      "lui/lei": "diriga",
+      "noi": "dirigiamo",
+      "voi": "dirigiate",
+      "loro": "dirigano"
+    },
+    "condizionale": {
+      "io": "dirigerei",
+      "tu": "dirigeresti",
+      "lui/lei": "dirigerebbe",
+      "noi": "dirigeremmo",
+      "voi": "dirigereste",
+      "loro": "dirigerebbero"
+    },
+    "imperativo": {
+      "tu": "dirigi",
+      "lei": "diriga",
+      "noi": "dirigiamo",
+      "voi": "dirigete",
+      "loro": "dirigano"
+    }
+  },
+  "dirigersi": {
+    "presente": {
+      "io": "mi dirigo",
+      "tu": "ti dirigi",
+      "lui/lei": "si dirige",
+      "noi": "ci dirigiamo",
+      "voi": "vi dirigete",
+      "loro": "si dirigono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono diretto/a",
+      "tu": "ti sei diretto/a",
+      "lui/lei": "si è diretto/a",
+      "noi": "ci siamo diretti/e",
+      "voi": "vi siete diretti/e",
+      "loro": "si sono diretti/e"
+    },
+    "imperfetto": {
+      "io": "mi dirigevo",
+      "tu": "ti dirigevi",
+      "lui/lei": "si dirigeva",
+      "noi": "ci dirigevamo",
+      "voi": "vi dirigevate",
+      "loro": "si dirigevano"
+    },
+    "futuro": {
+      "io": "mi dirigerò",
+      "tu": "ti dirigerai",
+      "lui/lei": "si dirigerà",
+      "noi": "ci dirigeremo",
+      "voi": "vi dirigerete",
+      "loro": "si dirigeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi diriga",
+      "tu": "ti diriga",
+      "lui/lei": "si diriga",
+      "noi": "ci dirigiamo",
+      "voi": "vi dirigiate",
+      "loro": "si dirigano"
+    },
+    "condizionale": {
+      "io": "mi dirigerei",
+      "tu": "ti dirigeresti",
+      "lui/lei": "si dirigerebbe",
+      "noi": "ci dirigeremmo",
+      "voi": "vi dirigereste",
+      "loro": "si dirigerebbero"
+    },
+    "imperativo": {
+      "tu": "dirigiti",
+      "lei": "si diriga",
+      "noi": "dirigiamoci",
+      "voi": "dirigetevi",
+      "loro": "si dirigano"
+    }
+  },
+  "dirompere": {
+    "presente": {
+      "io": "dirompo",
+      "tu": "dirompi",
+      "lui/lei": "dirompe",
+      "noi": "dirompiamo",
+      "voi": "dirompete",
+      "loro": "dirompono"
+    },
+    "passatoProssimo": {
+      "io": "ho dirotto",
+      "tu": "hai dirotto",
+      "lui/lei": "ha dirotto",
+      "noi": "abbiamo dirotto",
+      "voi": "avete dirotto",
+      "loro": "hanno dirotto"
+    },
+    "imperfetto": {
+      "io": "dirompevo",
+      "tu": "dirompevi",
+      "lui/lei": "dirompeva",
+      "noi": "dirompevamo",
+      "voi": "dirompevate",
+      "loro": "dirompevano"
+    },
+    "futuro": {
+      "io": "diromperò",
+      "tu": "diromperai",
+      "lui/lei": "diromperà",
+      "noi": "diromperemo",
+      "voi": "diromperete",
+      "loro": "diromperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "dirompa",
+      "tu": "dirompa",
+      "lui/lei": "dirompa",
+      "noi": "dirompiamo",
+      "voi": "dirompiate",
+      "loro": "dirompano"
+    },
+    "condizionale": {
+      "io": "diromperei",
+      "tu": "diromperesti",
+      "lui/lei": "diromperebbe",
+      "noi": "diromperemmo",
+      "voi": "dirompereste",
+      "loro": "diromperebbero"
+    },
+    "imperativo": {
+      "tu": "dirompi",
+      "lei": "dirompa",
+      "noi": "dirompiamo",
+      "voi": "dirompete",
+      "loro": "dirompano"
+    }
+  },
+  "disattivare": {
+    "presente": {
+      "io": "disattivo",
+      "tu": "disattivi",
+      "lui/lei": "disattiva",
+      "noi": "disattiviamo",
+      "voi": "disattivate",
+      "loro": "disattivano"
+    },
+    "passatoProssimo": {
+      "io": "ho disattivato",
+      "tu": "hai disattivato",
+      "lui/lei": "ha disattivato",
+      "noi": "abbiamo disattivato",
+      "voi": "avete disattivato",
+      "loro": "hanno disattivato"
+    },
+    "imperfetto": {
+      "io": "disattivavo",
+      "tu": "disattivavi",
+      "lui/lei": "disattivava",
+      "noi": "disattivavamo",
+      "voi": "disattivavate",
+      "loro": "disattivavano"
+    },
+    "futuro": {
+      "io": "disattiverò",
+      "tu": "disattiverai",
+      "lui/lei": "disattiverà",
+      "noi": "disattiveremo",
+      "voi": "disattiverete",
+      "loro": "disattiveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "disattivi",
+      "tu": "disattivi",
+      "lui/lei": "disattivi",
+      "noi": "disattiviamo",
+      "voi": "disattiviate",
+      "loro": "disattivino"
+    },
+    "condizionale": {
+      "io": "disattiverei",
+      "tu": "disattiveresti",
+      "lui/lei": "disattiverebbe",
+      "noi": "disattiveremmo",
+      "voi": "disattivereste",
+      "loro": "disattiverebbero"
+    },
+    "imperativo": {
+      "tu": "disattiva",
+      "lei": "disattivi",
+      "noi": "disattiviamo",
+      "voi": "disattivate",
+      "loro": "disattivino"
+    }
+  },
+  "discendere": {
+    "presente": {
+      "io": "discendo",
+      "tu": "discendi",
+      "lui/lei": "discende",
+      "noi": "discendiamo",
+      "voi": "discendete",
+      "loro": "discendono"
+    },
+    "passatoProssimo": {
+      "io": "sono disceso/a",
+      "tu": "sei disceso/a",
+      "lui/lei": "è disceso/a",
+      "noi": "siamo discesi/e",
+      "voi": "siete discesi/e",
+      "loro": "sono discesi/e"
+    },
+    "imperfetto": {
+      "io": "discendevo",
+      "tu": "discendevi",
+      "lui/lei": "discendeva",
+      "noi": "discendevamo",
+      "voi": "discendevate",
+      "loro": "discendevano"
+    },
+    "futuro": {
+      "io": "discenderò",
+      "tu": "discenderai",
+      "lui/lei": "discenderà",
+      "noi": "discenderemo",
+      "voi": "discenderete",
+      "loro": "discenderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "discenda",
+      "tu": "discenda",
+      "lui/lei": "discenda",
+      "noi": "discendiamo",
+      "voi": "discendiate",
+      "loro": "discendano"
+    },
+    "condizionale": {
+      "io": "discenderei",
+      "tu": "discenderesti",
+      "lui/lei": "discenderebbe",
+      "noi": "discenderemmo",
+      "voi": "discendereste",
+      "loro": "discenderebbero"
+    },
+    "imperativo": {
+      "tu": "discendi",
+      "lei": "discenda",
+      "noi": "discendiamo",
+      "voi": "discendete",
+      "loro": "discendano"
+    }
+  },
+  "domandare": {
+    "presente": {
+      "io": "domando",
+      "tu": "domandi",
+      "lui/lei": "domanda",
+      "noi": "domandiamo",
+      "voi": "domandate",
+      "loro": "domandano"
+    },
+    "passatoProssimo": {
+      "io": "ho domandato",
+      "tu": "hai domandato",
+      "lui/lei": "ha domandato",
+      "noi": "abbiamo domandato",
+      "voi": "avete domandato",
+      "loro": "hanno domandato"
+    },
+    "imperfetto": {
+      "io": "domandavo",
+      "tu": "domandavi",
+      "lui/lei": "domandava",
+      "noi": "domandavamo",
+      "voi": "domandavate",
+      "loro": "domandavano"
+    },
+    "futuro": {
+      "io": "domanderò",
+      "tu": "domanderai",
+      "lui/lei": "domanderà",
+      "noi": "domanderemo",
+      "voi": "domanderete",
+      "loro": "domanderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "domandi",
+      "tu": "domandi",
+      "lui/lei": "domandi",
+      "noi": "domandiamo",
+      "voi": "domandiate",
+      "loro": "domandino"
+    },
+    "condizionale": {
+      "io": "domanderei",
+      "tu": "domanderesti",
+      "lui/lei": "domanderebbe",
+      "noi": "domanderemmo",
+      "voi": "domandereste",
+      "loro": "domanderebbero"
+    },
+    "imperativo": {
+      "tu": "domanda",
+      "lei": "domandi",
+      "noi": "domandiamo",
+      "voi": "domandate",
+      "loro": "domandino"
+    }
+  },
+  "dovere": {
+    "presente": {
+      "io": "devo (debbo)",
+      "tu": "devi",
+      "lui/lei": "deve",
+      "noi": "dobbiamo",
+      "voi": "dovete",
+      "loro": "devono (debbono)"
+    },
+    "passatoProssimo": {
+      "io": "ho dovuto",
+      "tu": "hai dovuto",
+      "lui/lei": "ha dovuto",
+      "noi": "abbiamo dovuto",
+      "voi": "avete dovuto",
+      "loro": "hanno dovuto"
+    },
+    "imperfetto": {
+      "io": "dovevo",
+      "tu": "dovevi",
+      "lui/lei": "doveva",
+      "noi": "dovevamo",
+      "voi": "dovevate",
+      "loro": "dovevano"
+    },
+    "futuro": {
+      "io": "dovrò",
+      "tu": "dovrai",
+      "lui/lei": "dovrà",
+      "noi": "dovremo",
+      "voi": "dovrete",
+      "loro": "dovranno"
+    },
+    "congiuntivoPresente": {
+      "io": "debba",
+      "tu": "debba",
+      "lui/lei": "debba",
+      "noi": "dobbiamo",
+      "voi": "dobbiate",
+      "loro": "debbano"
+    },
+    "condizionale": {
+      "io": "dovrei",
+      "tu": "dovresti",
+      "lui/lei": "dovrebbe",
+      "noi": "dovremmo",
+      "voi": "dovreste",
+      "loro": "dovrebbero"
+    },
+    "imperativo": {
+      "tu": "—",
+      "lei": "—",
+      "noi": "dobbiamo",
+      "voi": "dovete",
+      "loro": "—"
+    }
+  }
+}

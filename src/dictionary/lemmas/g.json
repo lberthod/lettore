@@ -14,5 +14,21 @@
       "autorimessa"
     ],
     "isVerb": false
+  },
+  "già": {
+    "lemma": "già",
+    "pos": "avverbio",
+    "fr": "déjà",
+    "definition_it": "indica che qualcosa è avvenuto o esiste prima del momento considerato",
+    "examples": [
+      {
+        "it": "Sono già le otto di sera.",
+        "fr": "Il est déjà huit heures du soir."
+      }
+    ],
+    "synonyms": [
+      "oramai"
+    ],
+    "isVerb": false
   }
 }

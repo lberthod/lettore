@@ -174,6 +174,22 @@
     ],
     "isVerb": true
   },
+  "abbandono": {
+    "lemma": "abbandono",
+    "pos": "nome maschile",
+    "fr": "abandon",
+    "definition_it": "l'atto di lasciare qualcuno o qualcosa, oppure lo stato di trascuratezza",
+    "examples": [
+      {
+        "it": "La casa era in stato di abbandono.",
+        "fr": "La maison était à l'abandon."
+      }
+    ],
+    "synonyms": [
+      "trascuratezza"
+    ],
+    "isVerb": false
+  },
   "abbassare": {
     "lemma": "abbassare",
     "pos": "verbo (transitivo)",
@@ -863,6 +879,20 @@
     "synonyms": [],
     "isVerb": false
   },
+  "abside": {
+    "lemma": "abside",
+    "pos": "nome femminile",
+    "fr": "abside",
+    "definition_it": "parte semicircolare posta in fondo a una chiesa, dietro l'altare",
+    "examples": [
+      {
+        "it": "L'abside della cattedrale è decorata con mosaici.",
+        "fr": "L'abside de la cathédrale est décorée de mosaïques."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "acaro": {
     "lemma": "acaro",
     "pos": "nome maschile",
@@ -1403,6 +1433,20 @@
     ],
     "isVerb": true
   },
+  "acciaio": {
+    "lemma": "acciaio",
+    "pos": "nome maschile",
+    "fr": "acier",
+    "definition_it": "lega metallica dura e resistente formata da ferro e carbonio",
+    "examples": [
+      {
+        "it": "La lama era fatta di acciaio temprato.",
+        "fr": "La lame était faite d'acier trempé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "accigliarsi": {
     "lemma": "accigliarsi",
     "pos": "verbo (riflessivo)",
@@ -1620,6 +1664,22 @@
     "synonyms": [
       "pettinare",
       "sistemare"
+    ],
+    "isVerb": true
+  },
+  "acconciarsi": {
+    "lemma": "acconciarsi",
+    "pos": "verbo riflessivo (1ª coniugazione)",
+    "fr": "s'arranger, se coiffer, s'apprêter",
+    "definition_it": "sistemarsi i capelli o l'aspetto, prepararsi con cura",
+    "examples": [
+      {
+        "it": "Si acconciava i capelli davanti allo specchio.",
+        "fr": "Elle se coiffait devant le miroir."
+      }
+    ],
+    "synonyms": [
+      "prepararsi"
     ],
     "isVerb": true
   },
@@ -1928,6 +1988,23 @@
     ],
     "synonyms": [
       "batteria"
+    ],
+    "isVerb": false
+  },
+  "accumulo": {
+    "lemma": "accumulo",
+    "pos": "nome maschile",
+    "fr": "accumulation",
+    "definition_it": "l'atto o il risultato dell'accumulare qualcosa",
+    "examples": [
+      {
+        "it": "L'accumulo di neve ha bloccato la strada.",
+        "fr": "L'accumulation de neige a bloqué la route."
+      }
+    ],
+    "synonyms": [
+      "ammasso",
+      "cumulo"
     ],
     "isVerb": false
   },
@@ -5854,6 +5931,23 @@
     ],
     "isVerb": true
   },
+  "allegrezza": {
+    "lemma": "allegrezza",
+    "pos": "nome femminile",
+    "fr": "allégresse, joie",
+    "definition_it": "sentimento di grande gioia e contentezza",
+    "examples": [
+      {
+        "it": "La notizia riempì tutti di allegrezza.",
+        "fr": "La nouvelle remplit tout le monde d'allégresse."
+      }
+    ],
+    "synonyms": [
+      "gioia",
+      "allegria"
+    ],
+    "isVerb": false
+  },
   "allegro": {
     "lemma": "allegro",
     "pos": "aggettivo",
@@ -7219,6 +7313,40 @@
       "deformare"
     ],
     "isVerb": true
+  },
+  "ammaccatura": {
+    "lemma": "ammaccatura",
+    "pos": "nome femminile",
+    "fr": "bosse, cabosse",
+    "definition_it": "segno o deformazione causata da un urto su una superficie",
+    "examples": [
+      {
+        "it": "La macchina ha un'ammaccatura sulla portiera.",
+        "fr": "La voiture a une bosse sur la portière."
+      }
+    ],
+    "synonyms": [
+      "ammaccatura",
+      "botta"
+    ],
+    "isVerb": false
+  },
+  "ammaestramento": {
+    "lemma": "ammaestramento",
+    "pos": "nome maschile",
+    "fr": "dressage, enseignement",
+    "definition_it": "addestramento o insegnamento, spesso riferito ad animali o a un'esperienza formativa",
+    "examples": [
+      {
+        "it": "L'ammaestramento del cane ha richiesto molta pazienza.",
+        "fr": "Le dressage du chien a demandé beaucoup de patience."
+      }
+    ],
+    "synonyms": [
+      "addestramento",
+      "insegnamento"
+    ],
+    "isVerb": false
   },
   "ammaestrare": {
     "lemma": "ammaestrare",
@@ -10736,6 +10864,23 @@
     ],
     "isVerb": false
   },
+  "appurare": {
+    "lemma": "appurare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "vérifier, établir, constater",
+    "definition_it": "accertare la verità di qualcosa dopo un'indagine o una verifica",
+    "examples": [
+      {
+        "it": "Gli investigatori vogliono appurare la verità sui fatti.",
+        "fr": "Les enquêteurs veulent établir la vérité sur les faits."
+      }
+    ],
+    "synonyms": [
+      "accertare",
+      "verificare"
+    ],
+    "isVerb": true
+  },
   "aprile": {
     "lemma": "aprile",
     "pos": "sostantivo (maschile)",
@@ -11490,6 +11635,22 @@
     ],
     "synonyms": [
       "nobile"
+    ],
+    "isVerb": false
+  },
+  "aristocrazia": {
+    "lemma": "aristocrazia",
+    "pos": "sostantivo (f.)",
+    "fr": "aristocratie",
+    "definition_it": "classe sociale formata dalla nobiltà, che gode di privilegi ereditari",
+    "examples": [
+      {
+        "it": "L'aristocrazia possedeva la maggior parte delle terre.",
+        "fr": "L'aristocratie possédait la majeure partie des terres."
+      }
+    ],
+    "synonyms": [
+      "nobiltà"
     ],
     "isVerb": false
   },
@@ -12291,6 +12452,23 @@
     ],
     "isVerb": false
   },
+  "arsione": {
+    "lemma": "arsione",
+    "pos": "nome femminile (letterario)",
+    "fr": "brûlure, ardeur, soif ardente",
+    "definition_it": "sensazione intensa di bruciore o sete, calore ardente (termine letterario antico)",
+    "examples": [
+      {
+        "it": "Sentiva un'arsione terribile in gola per la sete.",
+        "fr": "Il ressentait une brûlure terrible dans la gorge à cause de la soif."
+      }
+    ],
+    "synonyms": [
+      "bruciore",
+      "arsura"
+    ],
+    "isVerb": false
+  },
   "arte": {
     "lemma": "arte",
     "pos": "nome femminile",
@@ -12365,6 +12543,23 @@
     "synonyms": [],
     "isVerb": false
   },
+  "artificio": {
+    "lemma": "artificio",
+    "pos": "nome maschile",
+    "fr": "artifice, stratagème",
+    "definition_it": "espediente ingegnoso, spesso usato per ingannare o per abbellire qualcosa",
+    "examples": [
+      {
+        "it": "Ha usato un artificio retorico per convincere il pubblico.",
+        "fr": "Il a utilisé un artifice rhétorique pour convaincre le public."
+      }
+    ],
+    "synonyms": [
+      "espediente",
+      "stratagemma"
+    ],
+    "isVerb": false
+  },
   "artigianale": {
     "lemma": "artigianale",
     "pos": "aggettivo",
@@ -12413,6 +12608,22 @@
       "ghermire"
     ],
     "isVerb": true
+  },
+  "artiglieria": {
+    "lemma": "artiglieria",
+    "pos": "nome femminile",
+    "fr": "artillerie",
+    "definition_it": "insieme delle armi da fuoco pesanti, come cannoni, usate in guerra",
+    "examples": [
+      {
+        "it": "L'artiglieria ha bombardato la collina per ore.",
+        "fr": "L'artillerie a bombardé la colline pendant des heures."
+      }
+    ],
+    "synonyms": [
+      "cannoni"
+    ],
+    "isVerb": false
   },
   "artiglio": {
     "lemma": "artiglio",
@@ -12689,6 +12900,20 @@
     "synonyms": [
       "somaro"
     ],
+    "isVerb": false
+  },
+  "asma": {
+    "lemma": "asma",
+    "pos": "nome femminile",
+    "fr": "asthme",
+    "definition_it": "malattia respiratoria cronica che causa difficoltà a respirare",
+    "examples": [
+      {
+        "it": "Soffre di asma fin da bambino.",
+        "fr": "Il souffre d'asthme depuis l'enfance."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "aspergere": {
@@ -13796,6 +14021,23 @@
     ],
     "isVerb": false
   },
+  "astro": {
+    "lemma": "astro",
+    "pos": "sostantivo (m)",
+    "fr": "astre, étoile",
+    "definition_it": "corpo celeste visibile nel cielo, come una stella o un pianeta",
+    "examples": [
+      {
+        "it": "Di notte si vedono migliaia di astri nel cielo.",
+        "fr": "La nuit, on voit des milliers d'astres dans le ciel."
+      }
+    ],
+    "synonyms": [
+      "stella",
+      "corpo celeste"
+    ],
+    "isVerb": false
+  },
   "astronauta": {
     "lemma": "astronauta",
     "pos": "sostantivo (m/f)",
@@ -14062,6 +14304,22 @@
       "aggredire"
     ],
     "isVerb": true
+  },
+  "attaccatura": {
+    "lemma": "attaccatura",
+    "pos": "nome femminile",
+    "fr": "point d'attache, racine (des cheveux)",
+    "definition_it": "il punto in cui una parte del corpo o di un oggetto si unisce a un'altra",
+    "examples": [
+      {
+        "it": "Ha i capelli grigi vicino all'attaccatura.",
+        "fr": "Elle a les cheveux gris près de la racine."
+      }
+    ],
+    "synonyms": [
+      "giuntura"
+    ],
+    "isVerb": false
   },
   "attacco": {
     "lemma": "attacco",
@@ -15465,6 +15723,23 @@
     ],
     "isVerb": true
   },
+  "avanzo": {
+    "lemma": "avanzo",
+    "pos": "nome maschile",
+    "fr": "reste, surplus",
+    "definition_it": "ciò che rimane di qualcosa dopo che è stato usato o consumato",
+    "examples": [
+      {
+        "it": "Ha dato gli avanzi del pranzo al cane.",
+        "fr": "Il a donné les restes du déjeuner au chien."
+      }
+    ],
+    "synonyms": [
+      "resto",
+      "residuo"
+    ],
+    "isVerb": false
+  },
   "avaro": {
     "lemma": "avaro",
     "pos": "aggettivo/sostantivo",
@@ -15479,6 +15754,23 @@
     "synonyms": [
       "taccagno",
       "spilorcio"
+    ],
+    "isVerb": false
+  },
+  "avello": {
+    "lemma": "avello",
+    "pos": "sostantivo (m)",
+    "fr": "tombeau, sépulcre",
+    "definition_it": "parola letteraria antica per indicare la tomba",
+    "examples": [
+      {
+        "it": "Il poeta descrive l'avello di marmo antico.",
+        "fr": "Le poète décrit le tombeau de marbre ancien."
+      }
+    ],
+    "synonyms": [
+      "tomba",
+      "sepolcro"
     ],
     "isVerb": false
   },

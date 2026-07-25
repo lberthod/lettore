@@ -1,4 +1,32 @@
 {
+  "i": {
+    "lemma": "i",
+    "pos": "articolo determinativo plurale maschile",
+    "fr": "les",
+    "definition_it": "articolo determinativo usato davanti a nomi maschili plurali che iniziano per consonante",
+    "examples": [
+      {
+        "it": "I libri sono sul tavolo.",
+        "fr": "Les livres sont sur la table."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "iconografia": {
+    "lemma": "iconografia",
+    "pos": "nome femminile",
+    "fr": "iconographie",
+    "definition_it": "insieme delle immagini e delle rappresentazioni figurative relative a un soggetto, un tema o un'epoca",
+    "examples": [
+      {
+        "it": "Il libro studia l'iconografia religiosa medievale.",
+        "fr": "Le livre étudie l'iconographie religieuse médiévale."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "idea": {
     "lemma": "idea",
     "pos": "nome femminile",
@@ -16,6 +44,130 @@
     ],
     "isVerb": false
   },
+  "identità": {
+    "lemma": "identità",
+    "pos": "nome femminile (invariabile)",
+    "fr": "identité",
+    "definition_it": "l'insieme delle caratteristiche che rendono una persona o una cosa unica e riconoscibile",
+    "examples": [
+      {
+        "it": "Ha dovuto dimostrare la sua identità alla polizia.",
+        "fr": "Il a dû prouver son identité à la police."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ignominia": {
+    "lemma": "ignominia",
+    "pos": "nome femminile",
+    "fr": "ignominie",
+    "definition_it": "grande vergogna o disonore pubblico",
+    "examples": [
+      {
+        "it": "Quel tradimento fu considerato un'ignominia.",
+        "fr": "Cette trahison fut considérée comme une ignominie."
+      }
+    ],
+    "synonyms": [
+      "disonore",
+      "vergogna"
+    ],
+    "isVerb": false
+  },
+  "illusione": {
+    "lemma": "illusione",
+    "pos": "nome femminile",
+    "fr": "illusion",
+    "definition_it": "idea o percezione falsa che sembra reale, spesso legata a una speranza",
+    "examples": [
+      {
+        "it": "Si è fatto un'illusione che non si è mai avverata.",
+        "fr": "Il s'est fait une illusion qui ne s'est jamais réalisée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "imbarazzo": {
+    "lemma": "imbarazzo",
+    "pos": "nome maschile",
+    "fr": "embarras, gêne",
+    "definition_it": "sensazione di disagio o vergogna davanti agli altri",
+    "examples": [
+      {
+        "it": "Il suo silenzio metteva tutti in imbarazzo.",
+        "fr": "Son silence mettait tout le monde mal à l'aise."
+      }
+    ],
+    "synonyms": [
+      "disagio",
+      "impaccio"
+    ],
+    "isVerb": false
+  },
+  "imbattersi": {
+    "lemma": "imbattersi",
+    "pos": "verbo riflessivo (intransitivo pronominale, regolare)",
+    "fr": "se heurter à, tomber sur, rencontrer par hasard",
+    "definition_it": "trovarsi per caso di fronte a qualcosa o a qualcuno",
+    "examples": [
+      {
+        "it": "Passeggiando nel bosco, mi sono imbattuto in un vecchio amico.",
+        "fr": "En me promenant dans les bois, je suis tombé par hasard sur un vieil ami."
+      }
+    ],
+    "synonyms": [
+      "incontrare per caso"
+    ],
+    "isVerb": true
+  },
+  "imbottigliatore": {
+    "lemma": "imbottigliatore",
+    "pos": "sostantivo (m)",
+    "fr": "embouteilleur",
+    "definition_it": "persona o azienda che imbottiglia bevande, in particolare il vino",
+    "examples": [
+      {
+        "it": "L'imbottigliatore controlla la qualità del vino prima di venderlo.",
+        "fr": "L'embouteilleur contrôle la qualité du vin avant de le vendre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "imbottitura": {
+    "lemma": "imbottitura",
+    "pos": "sostantivo (f)",
+    "fr": "rembourrage, matelassure",
+    "definition_it": "materiale morbido usato per riempire cuscini, giacche o mobili",
+    "examples": [
+      {
+        "it": "Il piumino ha un'imbottitura calda e leggera.",
+        "fr": "La doudoune a un rembourrage chaud et léger."
+      }
+    ],
+    "synonyms": [
+      "riempimento"
+    ],
+    "isVerb": false
+  },
+  "immaginare": {
+    "lemma": "immaginare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "imaginer",
+    "definition_it": "formare nella mente un'immagine o un'idea di qualcosa che non è reale o presente",
+    "examples": [
+      {
+        "it": "Non riesco a immaginare come sarà il futuro.",
+        "fr": "Je n'arrive pas à imaginer comment sera le futur."
+      }
+    ],
+    "synonyms": [
+      "figurarsi"
+    ],
+    "isVerb": true
+  },
   "immaginazione": {
     "lemma": "immaginazione",
     "pos": "nome femminile",
@@ -30,6 +182,51 @@
     "synonyms": [
       "fantasia"
     ],
+    "isVerb": false
+  },
+  "immagine": {
+    "lemma": "immagine",
+    "pos": "nome femminile",
+    "fr": "image",
+    "definition_it": "rappresentazione visiva di una persona, un oggetto o una scena, reale o mentale",
+    "examples": [
+      {
+        "it": "Ha guardato le immagini del viaggio con nostalgia.",
+        "fr": "Il a regardé les images du voyage avec nostalgie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "immenso": {
+    "lemma": "immenso",
+    "pos": "aggettivo",
+    "fr": "immense",
+    "definition_it": "molto grande, quasi senza limiti",
+    "examples": [
+      {
+        "it": "Il deserto è immenso.",
+        "fr": "Le désert est immense."
+      }
+    ],
+    "synonyms": [
+      "enorme",
+      "sconfinato"
+    ],
+    "isVerb": false
+  },
+  "immigrazione": {
+    "lemma": "immigrazione",
+    "pos": "nome femminile",
+    "fr": "immigration",
+    "definition_it": "il fenomeno di persone che si trasferiscono a vivere in un paese diverso dal proprio",
+    "examples": [
+      {
+        "it": "L'immigrazione ha cambiato il volto della città.",
+        "fr": "L'immigration a changé le visage de la ville."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "imminente": {
@@ -49,6 +246,53 @@
     ],
     "isVerb": false
   },
+  "immobile": {
+    "lemma": "immobile",
+    "pos": "aggettivo",
+    "fr": "immobile",
+    "definition_it": "che non si muove, fermo",
+    "examples": [
+      {
+        "it": "È rimasto immobile per ore.",
+        "fr": "Il est resté immobile pendant des heures."
+      }
+    ],
+    "synonyms": [
+      "fermo",
+      "fisso"
+    ],
+    "isVerb": false
+  },
+  "impasto": {
+    "lemma": "impasto",
+    "pos": "sostantivo (m)",
+    "fr": "pâte",
+    "definition_it": "miscela di ingredienti, come farina e acqua, usata per fare pane, pasta o dolci",
+    "examples": [
+      {
+        "it": "L'impasto della pizza deve riposare un'ora.",
+        "fr": "La pâte à pizza doit reposer une heure."
+      }
+    ],
+    "synonyms": [
+      "miscela"
+    ],
+    "isVerb": false
+  },
+  "impazienza": {
+    "lemma": "impazienza",
+    "pos": "nome femminile",
+    "fr": "impatience",
+    "definition_it": "stato d'animo di chi non riesce ad aspettare con calma",
+    "examples": [
+      {
+        "it": "Aspettava con impazienza la sua risposta.",
+        "fr": "Il attendait sa réponse avec impatience."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "impazzare": {
     "lemma": "impazzare",
     "pos": "verbo intransitivo",
@@ -65,6 +309,54 @@
       "dilagare"
     ],
     "isVerb": true
+  },
+  "impazzire": {
+    "lemma": "impazzire",
+    "pos": "verbo (intransitivo, regolare, con -isc-)",
+    "fr": "devenir fou, perdre la raison",
+    "definition_it": "perdere la ragione o il controllo mentale",
+    "examples": [
+      {
+        "it": "Rischiava di impazzire per la troppa pressione al lavoro.",
+        "fr": "Il risquait de devenir fou à cause de trop de pression au travail."
+      }
+    ],
+    "synonyms": [
+      "impazzare"
+    ],
+    "isVerb": true
+  },
+  "impedire": {
+    "lemma": "impedire",
+    "pos": "verbo (transitivo, regolare, con -isc-)",
+    "fr": "empêcher",
+    "definition_it": "fare in modo che qualcosa non accada o che qualcuno non possa fare qualcosa",
+    "examples": [
+      {
+        "it": "La pioggia ha impedito lo svolgimento della partita.",
+        "fr": "La pluie a empêché le déroulement du match."
+      }
+    ],
+    "synonyms": [
+      "ostacolare"
+    ],
+    "isVerb": true
+  },
+  "imperatore": {
+    "lemma": "imperatore",
+    "pos": "nome maschile",
+    "fr": "empereur",
+    "definition_it": "sovrano che governa un impero",
+    "examples": [
+      {
+        "it": "L'imperatore governò per quarant'anni.",
+        "fr": "L'empereur régna pendant quarante ans."
+      }
+    ],
+    "synonyms": [
+      "sovrano"
+    ],
+    "isVerb": false
   },
   "imperatrice": {
     "lemma": "imperatrice",
@@ -132,6 +424,71 @@
     ],
     "isVerb": false
   },
+  "impianto": {
+    "lemma": "impianto",
+    "pos": "sostantivo (m)",
+    "fr": "installation, système",
+    "definition_it": "insieme di apparecchi o strutture organizzate per un determinato scopo",
+    "examples": [
+      {
+        "it": "L'impianto di riscaldamento non funziona.",
+        "fr": "L'installation de chauffage ne fonctionne pas."
+      }
+    ],
+    "synonyms": [
+      "installazione",
+      "sistema"
+    ],
+    "isVerb": false
+  },
+  "impiego": {
+    "lemma": "impiego",
+    "pos": "nome maschile",
+    "fr": "emploi, travail",
+    "definition_it": "attività lavorativa retribuita, oppure l'uso di qualcosa",
+    "examples": [
+      {
+        "it": "Ha trovato un impiego in banca.",
+        "fr": "Il a trouvé un emploi dans une banque."
+      }
+    ],
+    "synonyms": [
+      "lavoro",
+      "occupazione"
+    ],
+    "isVerb": false
+  },
+  "imposta": {
+    "lemma": "imposta",
+    "pos": "sostantivo (f)",
+    "fr": "impôt, taxe",
+    "definition_it": "somma di denaro che i cittadini o le imprese pagano allo Stato",
+    "examples": [
+      {
+        "it": "Le imposte sul reddito aumentano ogni anno.",
+        "fr": "Les impôts sur le revenu augmentent chaque année."
+      }
+    ],
+    "synonyms": [
+      "tassa",
+      "tributo"
+    ],
+    "isVerb": false
+  },
+  "imprenditoria": {
+    "lemma": "imprenditoria",
+    "pos": "sostantivo (f)",
+    "fr": "entrepreneuriat",
+    "definition_it": "attività di chi crea, organizza e gestisce imprese",
+    "examples": [
+      {
+        "it": "L'imprenditoria giovanile è in crescita in Italia.",
+        "fr": "L'entrepreneuriat des jeunes est en croissance en Italie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "impresa": {
     "lemma": "impresa",
     "pos": "nome femminile",
@@ -183,6 +540,23 @@
     ],
     "isVerb": false
   },
+  "inatteso": {
+    "lemma": "inatteso",
+    "pos": "aggettivo",
+    "fr": "inattendu",
+    "definition_it": "che non ci si aspettava, improvviso",
+    "examples": [
+      {
+        "it": "La sua visita fu del tutto inattesa.",
+        "fr": "Sa visite fut totalement inattendue."
+      }
+    ],
+    "synonyms": [
+      "imprevisto",
+      "improvviso"
+    ],
+    "isVerb": false
+  },
   "incanto": {
     "lemma": "incanto",
     "pos": "nome maschile",
@@ -214,6 +588,67 @@
     "synonyms": [],
     "isVerb": false
   },
+  "incidente": {
+    "lemma": "incidente",
+    "pos": "sostantivo (m)",
+    "fr": "accident",
+    "definition_it": "evento improvviso e dannoso, spesso uno scontro tra veicoli",
+    "examples": [
+      {
+        "it": "C'è stato un incidente stradale in autostrada.",
+        "fr": "Il y a eu un accident de la route sur l'autoroute."
+      }
+    ],
+    "synonyms": [
+      "scontro",
+      "sinistro"
+    ],
+    "isVerb": false
+  },
+  "incipriare": {
+    "lemma": "incipriare",
+    "pos": "verbo (transitivo)",
+    "fr": "poudrer",
+    "definition_it": "coprire il viso o la pelle con la cipria",
+    "examples": [
+      {
+        "it": "Si è incipriata il viso prima della festa.",
+        "fr": "Elle s'est poudré le visage avant la fête."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "incolpare": {
+    "lemma": "incolpare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "accuser, blâmer",
+    "definition_it": "attribuire a qualcuno la responsabilità di una colpa o di un errore",
+    "examples": [
+      {
+        "it": "Non puoi incolpare lui per questo errore.",
+        "fr": "Tu ne peux pas le blâmer pour cette erreur."
+      }
+    ],
+    "synonyms": [
+      "accusare"
+    ],
+    "isVerb": true
+  },
+  "incontrare": {
+    "lemma": "incontrare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "rencontrer",
+    "definition_it": "trovarsi faccia a faccia con qualcuno, per caso o per appuntamento",
+    "examples": [
+      {
+        "it": "Domani incontrerò un vecchio compagno di scuola.",
+        "fr": "Demain je rencontrerai un ancien camarade de classe."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
   "incontro": {
     "lemma": "incontro",
     "pos": "nome maschile",
@@ -228,6 +663,34 @@
     "synonyms": [
       "appuntamento"
     ],
+    "isVerb": false
+  },
+  "incorrere": {
+    "lemma": "incorrere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "encourir, s'exposer à",
+    "definition_it": "andare incontro a qualcosa di negativo, come una sanzione o un rischio",
+    "examples": [
+      {
+        "it": "Chi non paga le tasse incorre in una multa.",
+        "fr": "Celui qui ne paie pas ses impôts encourt une amende."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "incudine": {
+    "lemma": "incudine",
+    "pos": "nome femminile",
+    "fr": "enclume",
+    "definition_it": "blocco di ferro su cui si batte il metallo con il martello",
+    "examples": [
+      {
+        "it": "Il fabbro batteva il ferro sull'incudine.",
+        "fr": "Le forgeron battait le fer sur l'enclume."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "indagine": {
@@ -292,6 +755,39 @@
     "synonyms": [],
     "isVerb": false
   },
+  "indifferenza": {
+    "lemma": "indifferenza",
+    "pos": "nome femminile",
+    "fr": "indifférence",
+    "definition_it": "mancanza di interesse o di partecipazione emotiva verso qualcosa",
+    "examples": [
+      {
+        "it": "Reagì alla notizia con totale indifferenza.",
+        "fr": "Il réagit à la nouvelle avec une totale indifférence."
+      }
+    ],
+    "synonyms": [
+      "disinteresse",
+      "apatia"
+    ],
+    "isVerb": false
+  },
+  "indipendenza": {
+    "lemma": "indipendenza",
+    "pos": "nome femminile",
+    "fr": "indépendance",
+    "definition_it": "condizione di chi non dipende da altri e agisce liberamente",
+    "examples": [
+      {
+        "it": "I giovani cercano l'indipendenza economica.",
+        "fr": "Les jeunes recherchent l'indépendance économique."
+      }
+    ],
+    "synonyms": [
+      "autonomia"
+    ],
+    "isVerb": false
+  },
   "indirizzo": {
     "lemma": "indirizzo",
     "pos": "nome maschile",
@@ -304,6 +800,23 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "indole": {
+    "lemma": "indole",
+    "pos": "nome femminile",
+    "fr": "nature, caractère",
+    "definition_it": "modo di essere naturale e istintivo di una persona",
+    "examples": [
+      {
+        "it": "Ha un'indole calma e paziente.",
+        "fr": "Il a une nature calme et patiente."
+      }
+    ],
+    "synonyms": [
+      "carattere",
+      "natura"
+    ],
     "isVerb": false
   },
   "indomani": {
@@ -322,6 +835,38 @@
     ],
     "isVerb": false
   },
+  "indovinare": {
+    "lemma": "indovinare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "deviner",
+    "definition_it": "capire o scoprire qualcosa senza avere informazioni certe",
+    "examples": [
+      {
+        "it": "Ha indovinato subito il mio pensiero.",
+        "fr": "Il a tout de suite deviné ma pensée."
+      }
+    ],
+    "synonyms": [
+      "intuire"
+    ],
+    "isVerb": true
+  },
+  "indurre": {
+    "lemma": "indurre",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "induire, pousser à",
+    "definition_it": "spingere qualcuno a fare qualcosa",
+    "examples": [
+      {
+        "it": "Lo ha indotto a mentire.",
+        "fr": "Il l'a poussé à mentir."
+      }
+    ],
+    "synonyms": [
+      "persuadere"
+    ],
+    "isVerb": true
+  },
   "industria": {
     "lemma": "industria",
     "pos": "nome femminile",
@@ -339,6 +884,103 @@
     ],
     "isVerb": false
   },
+  "industriarsi": {
+    "lemma": "industriarsi",
+    "pos": "verbo pronominale (intransitivo)",
+    "fr": "s'ingénier, se débrouiller",
+    "definition_it": "impegnarsi con astuzia e sforzo per riuscire in qualcosa",
+    "examples": [
+      {
+        "it": "Si industriava per trovare una soluzione.",
+        "fr": "Il s'ingéniait à trouver une solution."
+      }
+    ],
+    "synonyms": [
+      "ingegnarsi",
+      "arrangiarsi"
+    ],
+    "isVerb": true
+  },
+  "inenarrabile": {
+    "lemma": "inenarrabile",
+    "pos": "aggettivo",
+    "fr": "inénarrable, indescriptible",
+    "definition_it": "che non si può raccontare, troppo forte per essere espresso a parole",
+    "examples": [
+      {
+        "it": "Provò una gioia inenarrabile.",
+        "fr": "Il ressentit une joie indescriptible."
+      }
+    ],
+    "synonyms": [
+      "indescrivibile"
+    ],
+    "isVerb": false
+  },
+  "inesplicabile": {
+    "lemma": "inesplicabile",
+    "pos": "aggettivo",
+    "fr": "inexplicable",
+    "definition_it": "che non si può spiegare o capire",
+    "examples": [
+      {
+        "it": "Il suo comportamento è del tutto inesplicabile.",
+        "fr": "Son comportement est totalement inexplicable."
+      }
+    ],
+    "synonyms": [
+      "incomprensibile",
+      "misterioso"
+    ],
+    "isVerb": false
+  },
+  "inettitudine": {
+    "lemma": "inettitudine",
+    "pos": "nome femminile",
+    "fr": "inaptitude, incapacité",
+    "definition_it": "incapacità di fare bene qualcosa, mancanza di attitudine",
+    "examples": [
+      {
+        "it": "Mostrò la sua inettitudine nel gestire la crisi.",
+        "fr": "Il montra son inaptitude à gérer la crise."
+      }
+    ],
+    "synonyms": [
+      "incapacità"
+    ],
+    "isVerb": false
+  },
+  "infamia": {
+    "lemma": "infamia",
+    "pos": "sostantivo (f)",
+    "fr": "infamie",
+    "definition_it": "azione o parola disonorevole e vergognosa",
+    "examples": [
+      {
+        "it": "Quella accusa falsa è stata una vera infamia.",
+        "fr": "Cette fausse accusation a été une véritable infamie."
+      }
+    ],
+    "synonyms": [
+      "disonore",
+      "vergogna"
+    ],
+    "isVerb": false
+  },
+  "infanzia": {
+    "lemma": "infanzia",
+    "pos": "nome femminile",
+    "fr": "enfance",
+    "definition_it": "periodo della vita che va dalla nascita ai primi anni di età",
+    "examples": [
+      {
+        "it": "Ha trascorso l'infanzia in campagna.",
+        "fr": "Il a passé son enfance à la campagne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "infelice": {
     "lemma": "infelice",
     "pos": "aggettivo",
@@ -353,6 +995,23 @@
     "synonyms": [
       "triste",
       "sfortunato"
+    ],
+    "isVerb": false
+  },
+  "infelicità": {
+    "lemma": "infelicità",
+    "pos": "nome femminile",
+    "fr": "malheur, tristesse",
+    "definition_it": "stato di chi non è felice, mancanza di gioia",
+    "examples": [
+      {
+        "it": "La sua infelicità si leggeva negli occhi.",
+        "fr": "Son malheur se lisait dans ses yeux."
+      }
+    ],
+    "synonyms": [
+      "tristezza",
+      "sconforto"
     ],
     "isVerb": false
   },
@@ -373,6 +1032,22 @@
     ],
     "isVerb": false
   },
+  "infilare": {
+    "lemma": "infilare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "enfiler, insérer",
+    "definition_it": "far passare qualcosa attraverso un'apertura o metterla addosso",
+    "examples": [
+      {
+        "it": "Ti aiuto a infilarti il cappotto.",
+        "fr": "Je t'aide à enfiler ton manteau."
+      }
+    ],
+    "synonyms": [
+      "inserire"
+    ],
+    "isVerb": true
+  },
   "infinito": {
     "lemma": "infinito",
     "pos": "aggettivo, nome maschile",
@@ -389,6 +1064,37 @@
       "sconfinato"
     ],
     "isVerb": false
+  },
+  "infiorata": {
+    "lemma": "infiorata",
+    "pos": "sostantivo (f)",
+    "fr": "infiorata, tapis de fleurs",
+    "definition_it": "manifestazione tradizionale in cui le strade vengono decorate con disegni fatti di petali di fiori",
+    "examples": [
+      {
+        "it": "Ogni anno la città organizza una splendida infiorata per Corpus Domini.",
+        "fr": "Chaque année, la ville organise une magnifique infiorata pour la Fête-Dieu."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "infrangere": {
+    "lemma": "infrangere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "briser, enfreindre",
+    "definition_it": "rompere qualcosa con forza oppure non rispettare una regola",
+    "examples": [
+      {
+        "it": "Ha infranto tutte le regole del gioco.",
+        "fr": "Il a enfreint toutes les règles du jeu."
+      }
+    ],
+    "synonyms": [
+      "rompere",
+      "violare"
+    ],
+    "isVerb": true
   },
   "infuori": {
     "lemma": "infuori",
@@ -407,6 +1113,40 @@
     ],
     "isVerb": false
   },
+  "infuriare": {
+    "lemma": "infuriare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "faire rage, se déchaîner",
+    "definition_it": "manifestarsi con grande violenza, parlando di eventi come tempeste o battaglie",
+    "examples": [
+      {
+        "it": "La tempesta infuriava sul mare.",
+        "fr": "La tempête faisait rage sur la mer."
+      }
+    ],
+    "synonyms": [
+      "infierire",
+      "scatenarsi"
+    ],
+    "isVerb": true
+  },
+  "ingannare": {
+    "lemma": "ingannare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "tromper",
+    "definition_it": "far credere a qualcuno una cosa falsa per trarne vantaggio",
+    "examples": [
+      {
+        "it": "Cercò di ingannarlo con belle parole.",
+        "fr": "Il essaya de le tromper avec de belles paroles."
+      }
+    ],
+    "synonyms": [
+      "imbrogliare",
+      "raggirare"
+    ],
+    "isVerb": true
+  },
   "ingannarsi": {
     "lemma": "ingannarsi",
     "pos": "verbo pronominale",
@@ -423,6 +1163,37 @@
       "illudersi"
     ],
     "isVerb": true
+  },
+  "ingegnarsi": {
+    "lemma": "ingegnarsi",
+    "pos": "verbo pronominale (intransitivo)",
+    "fr": "s'ingénier, se débrouiller",
+    "definition_it": "usare la propria intelligenza e inventiva per risolvere un problema",
+    "examples": [
+      {
+        "it": "Si ingegnava per guadagnare qualche soldo in più.",
+        "fr": "Il s'ingéniait à gagner un peu plus d'argent."
+      }
+    ],
+    "synonyms": [
+      "industriarsi",
+      "arrangiarsi"
+    ],
+    "isVerb": true
+  },
+  "ingegneria": {
+    "lemma": "ingegneria",
+    "pos": "sostantivo (f)",
+    "fr": "ingénierie",
+    "definition_it": "scienza e tecnica applicate alla progettazione di macchine, strutture e impianti",
+    "examples": [
+      {
+        "it": "Ha studiato ingegneria al politecnico.",
+        "fr": "Il a étudié l'ingénierie à l'école polytechnique."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
   },
   "ingegno": {
     "lemma": "ingegno",
@@ -441,6 +1212,20 @@
     ],
     "isVerb": false
   },
+  "inglese": {
+    "lemma": "inglese",
+    "pos": "aggettivo / nome",
+    "fr": "anglais",
+    "definition_it": "che appartiene all'Inghilterra o alla sua lingua",
+    "examples": [
+      {
+        "it": "Studia inglese da tre anni.",
+        "fr": "Il étudie l'anglais depuis trois ans."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "ingrassare": {
     "lemma": "ingrassare",
     "pos": "verbo (transitivo/intransitivo)",
@@ -456,6 +1241,20 @@
       "appesantire"
     ],
     "isVerb": true
+  },
+  "ingrediente": {
+    "lemma": "ingrediente",
+    "pos": "nome maschile",
+    "fr": "ingrédient",
+    "definition_it": "ciascuno degli elementi che compongono una ricetta o un preparato",
+    "examples": [
+      {
+        "it": "Ha comprato tutti gli ingredienti per la torta.",
+        "fr": "Il a acheté tous les ingrédients pour le gâteau."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
   },
   "ingresso": {
     "lemma": "ingresso",
@@ -490,6 +1289,22 @@
     ],
     "isVerb": false
   },
+  "iniziativa": {
+    "lemma": "iniziativa",
+    "pos": "nome femminile",
+    "fr": "initiative",
+    "definition_it": "capacità di proporre o avviare qualcosa per primi",
+    "examples": [
+      {
+        "it": "Ha preso l'iniziativa di organizzare la festa.",
+        "fr": "Elle a pris l'initiative d'organiser la fête."
+      }
+    ],
+    "synonyms": [
+      "intraprendenza"
+    ],
+    "isVerb": false
+  },
   "inizio": {
     "lemma": "inizio",
     "pos": "nome maschile",
@@ -505,6 +1320,86 @@
       "principio",
       "avvio"
     ],
+    "isVerb": false
+  },
+  "innalzare": {
+    "lemma": "innalzare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "élever, hausser",
+    "definition_it": "rendere più alto qualcosa, portarlo verso l'alto",
+    "examples": [
+      {
+        "it": "Hanno innalzato un monumento in piazza.",
+        "fr": "Ils ont élevé un monument sur la place."
+      }
+    ],
+    "synonyms": [
+      "alzare",
+      "elevare"
+    ],
+    "isVerb": true
+  },
+  "innamorarsi": {
+    "lemma": "innamorarsi",
+    "pos": "verbo pronominale (intransitivo)",
+    "fr": "tomber amoureux",
+    "definition_it": "cominciare a provare amore per qualcuno",
+    "examples": [
+      {
+        "it": "Se ne innamorò a prima vista.",
+        "fr": "Il en tomba amoureux au premier regard."
+      }
+    ],
+    "synonyms": [
+      "invaghirsi"
+    ],
+    "isVerb": true
+  },
+  "innanzi": {
+    "lemma": "innanzi",
+    "pos": "avverbio / preposizione",
+    "fr": "avant, en avant, devant",
+    "definition_it": "prima nel tempo o nello spazio; davanti a qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Si fece innanzi per parlare.",
+        "fr": "Il s'avança pour parler."
+      }
+    ],
+    "synonyms": [
+      "avanti",
+      "prima"
+    ],
+    "isVerb": false
+  },
+  "innocente": {
+    "lemma": "innocente",
+    "pos": "aggettivo",
+    "fr": "innocent",
+    "definition_it": "che non ha colpa, non colpevole",
+    "examples": [
+      {
+        "it": "Il giudice ha dichiarato innocente l'imputato.",
+        "fr": "Le juge a déclaré l'accusé innocent."
+      }
+    ],
+    "synonyms": [
+      "incolpevole"
+    ],
+    "isVerb": false
+  },
+  "insalata": {
+    "lemma": "insalata",
+    "pos": "sostantivo (f)",
+    "fr": "salade",
+    "definition_it": "piatto di verdure crude condite, spesso a base di lattuga",
+    "examples": [
+      {
+        "it": "Preparo un'insalata mista per pranzo.",
+        "fr": "Je prépare une salade mixte pour le déjeuner."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "insegna": {
@@ -540,6 +1435,71 @@
     ],
     "isVerb": true
   },
+  "inseguire": {
+    "lemma": "inseguire",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "poursuivre",
+    "definition_it": "correre dietro a qualcuno o qualcosa per raggiungerlo",
+    "examples": [
+      {
+        "it": "Il cane inseguiva il gatto per il giardino.",
+        "fr": "Le chien poursuivait le chat dans le jardin."
+      }
+    ],
+    "synonyms": [
+      "rincorrere",
+      "braccare"
+    ],
+    "isVerb": true
+  },
+  "insistere": {
+    "lemma": "insistere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "insister",
+    "definition_it": "continuare a chiedere o a fare qualcosa con forza, senza arrendersi",
+    "examples": [
+      {
+        "it": "Ha insistito finché non ha ottenuto una risposta.",
+        "fr": "Il a insisté jusqu'à obtenir une réponse."
+      }
+    ],
+    "synonyms": [
+      "persistere",
+      "ostinarsi"
+    ],
+    "isVerb": true
+  },
+  "insolito": {
+    "lemma": "insolito",
+    "pos": "aggettivo",
+    "fr": "insolite, inhabituel",
+    "definition_it": "che non è comune, che si discosta dall'abitudine",
+    "examples": [
+      {
+        "it": "Quel giorno c'era un silenzio insolito in casa.",
+        "fr": "Ce jour-là régnait un silence inhabituel dans la maison."
+      }
+    ],
+    "synonyms": [
+      "strano",
+      "raro"
+    ],
+    "isVerb": false
+  },
+  "insonnia": {
+    "lemma": "insonnia",
+    "pos": "sostantivo (f)",
+    "fr": "insomnie",
+    "definition_it": "disturbo che impedisce di dormire bene",
+    "examples": [
+      {
+        "it": "Soffre di insonnia da mesi.",
+        "fr": "Il souffre d'insomnie depuis des mois."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "insù": {
     "lemma": "insù",
     "pos": "avverbio",
@@ -556,6 +1516,90 @@
       "verso l'alto"
     ],
     "isVerb": false
+  },
+  "intagliatore": {
+    "lemma": "intagliatore",
+    "pos": "nome maschile",
+    "fr": "sculpteur sur bois, graveur",
+    "definition_it": "artigiano che lavora il legno o altri materiali intagliandoli",
+    "examples": [
+      {
+        "it": "L'intagliatore ha creato una statua di legno bellissima.",
+        "fr": "Le sculpteur sur bois a créé une magnifique statue en bois."
+      }
+    ],
+    "synonyms": [
+      "scultore",
+      "incisore"
+    ],
+    "isVerb": false
+  },
+  "integrazione": {
+    "lemma": "integrazione",
+    "pos": "sostantivo (f.)",
+    "fr": "intégration",
+    "definition_it": "il fatto di integrare o di integrarsi, di far diventare parte di un insieme",
+    "examples": [
+      {
+        "it": "L'integrazione degli stranieri è un tema importante.",
+        "fr": "L'intégration des étrangers est un thème important."
+      }
+    ],
+    "synonyms": [
+      "inserimento",
+      "completamento"
+    ],
+    "isVerb": false
+  },
+  "intelligenza": {
+    "lemma": "intelligenza",
+    "pos": "nome femminile",
+    "fr": "intelligence",
+    "definition_it": "capacità di comprendere, imparare e risolvere problemi",
+    "examples": [
+      {
+        "it": "Ha risolto il problema con grande intelligenza.",
+        "fr": "Il a résolu le problème avec beaucoup d'intelligence."
+      }
+    ],
+    "synonyms": [
+      "ingegno"
+    ],
+    "isVerb": false
+  },
+  "intendere": {
+    "lemma": "intendere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "comprendre, avoir l'intention de",
+    "definition_it": "capire il significato di qualcosa, oppure avere in mente di fare qualcosa",
+    "examples": [
+      {
+        "it": "Non ho intenzione di partire domani.",
+        "fr": "Je n'ai pas l'intention de partir demain."
+      }
+    ],
+    "synonyms": [
+      "capire",
+      "comprendere"
+    ],
+    "isVerb": true
+  },
+  "intendersi": {
+    "lemma": "intendersi",
+    "pos": "verbo riflessivo/reciproco (irregolare)",
+    "fr": "s'entendre, se comprendre",
+    "definition_it": "andare d'accordo con qualcuno oppure mettersi d'accordo su qualcosa",
+    "examples": [
+      {
+        "it": "I due fratelli si intendono molto bene.",
+        "fr": "Les deux frères s'entendent très bien."
+      }
+    ],
+    "synonyms": [
+      "andare d'accordo",
+      "capirsi"
+    ],
+    "isVerb": true
   },
   "intenzione": {
     "lemma": "intenzione",
@@ -608,6 +1652,40 @@
     ],
     "isVerb": false
   },
+  "interporsi": {
+    "lemma": "interporsi",
+    "pos": "verbo riflessivo (irregolare)",
+    "fr": "s'interposer",
+    "definition_it": "mettersi in mezzo tra due persone o cose per fermare o mediare",
+    "examples": [
+      {
+        "it": "Si interpose tra i due litiganti per calmarli.",
+        "fr": "Il s'interposa entre les deux querelleurs pour les calmer."
+      }
+    ],
+    "synonyms": [
+      "intromettersi",
+      "frapporsi"
+    ],
+    "isVerb": true
+  },
+  "interrogare": {
+    "lemma": "interrogare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "interroger",
+    "definition_it": "fare domande a qualcuno per sapere qualcosa",
+    "examples": [
+      {
+        "it": "Il professore ha interrogato lo studente sulla lezione.",
+        "fr": "Le professeur a interrogé l'étudiant sur la leçon."
+      }
+    ],
+    "synonyms": [
+      "chiedere",
+      "esaminare"
+    ],
+    "isVerb": true
+  },
   "intervallo": {
     "lemma": "intervallo",
     "pos": "nome maschile",
@@ -645,6 +1723,57 @@
       "agire"
     ],
     "isVerb": true
+  },
+  "intervento": {
+    "lemma": "intervento",
+    "pos": "sostantivo (m.)",
+    "fr": "intervention",
+    "definition_it": "l'atto di intervenire in una situazione, o operazione chirurgica",
+    "examples": [
+      {
+        "it": "Il medico ha eseguito un intervento delicato.",
+        "fr": "Le médecin a réalisé une intervention délicate."
+      }
+    ],
+    "synonyms": [
+      "operazione",
+      "azione"
+    ],
+    "isVerb": false
+  },
+  "intimare": {
+    "lemma": "intimare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "intimer, ordonner",
+    "definition_it": "ordinare con fermezza e autorità di fare o non fare qualcosa",
+    "examples": [
+      {
+        "it": "Gli intimò di uscire subito dalla stanza.",
+        "fr": "Il lui intima de sortir immédiatement de la pièce."
+      }
+    ],
+    "synonyms": [
+      "ordinare",
+      "ingiungere"
+    ],
+    "isVerb": true
+  },
+  "intollerabile": {
+    "lemma": "intollerabile",
+    "pos": "aggettivo",
+    "fr": "intolérable",
+    "definition_it": "che non si può tollerare, sopportare",
+    "examples": [
+      {
+        "it": "Il rumore era diventato intollerabile.",
+        "fr": "Le bruit était devenu intolérable."
+      }
+    ],
+    "synonyms": [
+      "insopportabile",
+      "inaccettabile"
+    ],
+    "isVerb": false
   },
   "intorno": {
     "lemma": "intorno",
@@ -684,6 +1813,23 @@
     ],
     "isVerb": true
   },
+  "invadere": {
+    "lemma": "invadere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "envahir",
+    "definition_it": "entrare con la forza in un luogo, occupandolo",
+    "examples": [
+      {
+        "it": "L'esercito ha invaso il territorio nemico.",
+        "fr": "L'armée a envahi le territoire ennemi."
+      }
+    ],
+    "synonyms": [
+      "occupare",
+      "conquistare"
+    ],
+    "isVerb": true
+  },
   "inverno": {
     "lemma": "inverno",
     "pos": "nome maschile",
@@ -714,6 +1860,23 @@
       "incredibile"
     ],
     "isVerb": false
+  },
+  "investire": {
+    "lemma": "investire",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "renverser (une personne), investir (de l'argent)",
+    "definition_it": "urtare violentemente con un veicolo, oppure impiegare denaro per ottenere un guadagno",
+    "examples": [
+      {
+        "it": "L'auto lo ha investito mentre attraversava la strada.",
+        "fr": "La voiture l'a renversé alors qu'il traversait la rue."
+      }
+    ],
+    "synonyms": [
+      "urtare",
+      "impiegare"
+    ],
+    "isVerb": true
   },
   "invidia": {
     "lemma": "invidia",
@@ -752,6 +1915,103 @@
       "chiamare"
     ],
     "isVerb": true
+  },
+  "ira": {
+    "lemma": "ira",
+    "pos": "nome femminile",
+    "fr": "colère",
+    "definition_it": "forte sentimento di rabbia",
+    "examples": [
+      {
+        "it": "Non riusciva a contenere la sua ira.",
+        "fr": "Il n'arrivait pas à contenir sa colère."
+      }
+    ],
+    "synonyms": [
+      "rabbia",
+      "collera"
+    ],
+    "isVerb": false
+  },
+  "ironia": {
+    "lemma": "ironia",
+    "pos": "nome femminile",
+    "fr": "ironie",
+    "definition_it": "modo di esprimersi dicendo il contrario di ciò che si pensa, spesso per scherzo o critica",
+    "examples": [
+      {
+        "it": "Parlava sempre con un tono di ironia.",
+        "fr": "Il parlait toujours avec un ton d'ironie."
+      }
+    ],
+    "synonyms": [
+      "sarcasmo",
+      "arguzia"
+    ],
+    "isVerb": false
+  },
+  "irritazione": {
+    "lemma": "irritazione",
+    "pos": "sostantivo (f.)",
+    "fr": "irritation",
+    "definition_it": "stato di fastidio o infiammazione, fisica o di rabbia",
+    "examples": [
+      {
+        "it": "La crema calma l'irritazione della pelle.",
+        "fr": "La crème calme l'irritation de la peau."
+      }
+    ],
+    "synonyms": [
+      "fastidio",
+      "nervosismo"
+    ],
+    "isVerb": false
+  },
+  "iscrizione": {
+    "lemma": "iscrizione",
+    "pos": "sostantivo (f.)",
+    "fr": "inscription",
+    "definition_it": "atto di iscriversi a qualcosa, oppure testo scritto su una superficie",
+    "examples": [
+      {
+        "it": "Ho fatto l'iscrizione al corso di italiano.",
+        "fr": "J'ai fait l'inscription au cours d'italien."
+      }
+    ],
+    "synonyms": [
+      "registrazione"
+    ],
+    "isVerb": false
+  },
+  "isola": {
+    "lemma": "isola",
+    "pos": "sostantivo (f.)",
+    "fr": "île",
+    "definition_it": "terra circondata dall'acqua da ogni lato",
+    "examples": [
+      {
+        "it": "La Sicilia è la più grande isola italiana.",
+        "fr": "La Sicile est la plus grande île italienne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ispettore": {
+    "lemma": "ispettore",
+    "pos": "sostantivo (m.)",
+    "fr": "inspecteur",
+    "definition_it": "persona che controlla il rispetto di regole o leggi",
+    "examples": [
+      {
+        "it": "L'ispettore ha controllato i documenti.",
+        "fr": "L'inspecteur a contrôlé les documents."
+      }
+    ],
+    "synonyms": [
+      "controllore"
+    ],
+    "isVerb": false
   },
   "ispettrice": {
     "lemma": "ispettrice",
@@ -800,6 +2060,57 @@
     "synonyms": [
       "momento",
       "attimo"
+    ],
+    "isVerb": false
+  },
+  "istituto": {
+    "lemma": "istituto",
+    "pos": "sostantivo (m.)",
+    "fr": "institut, établissement",
+    "definition_it": "organizzazione o edificio dedicato a un'attività scientifica, educativa o culturale",
+    "examples": [
+      {
+        "it": "Studia in un istituto tecnico.",
+        "fr": "Il étudie dans un institut technique."
+      }
+    ],
+    "synonyms": [
+      "ente",
+      "scuola"
+    ],
+    "isVerb": false
+  },
+  "istruire": {
+    "lemma": "istruire",
+    "pos": "verbo (transitivo, irregolare - incoativo)",
+    "fr": "instruire, former",
+    "definition_it": "insegnare a qualcuno delle nozioni o delle competenze",
+    "examples": [
+      {
+        "it": "Il maestro istruisce i bambini con pazienza.",
+        "fr": "Le maître instruit les enfants avec patience."
+      }
+    ],
+    "synonyms": [
+      "insegnare",
+      "educare"
+    ],
+    "isVerb": true
+  },
+  "istruzione": {
+    "lemma": "istruzione",
+    "pos": "sostantivo (f.)",
+    "fr": "instruction, éducation",
+    "definition_it": "l'insegnamento e l'apprendimento del sapere, oppure indicazione su come fare qualcosa",
+    "examples": [
+      {
+        "it": "L'istruzione pubblica è gratuita in Italia.",
+        "fr": "L'instruction publique est gratuite en Italie."
+      }
+    ],
+    "synonyms": [
+      "educazione",
+      "insegnamento"
     ],
     "isVerb": false
   },

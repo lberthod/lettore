@@ -1,0 +1,18 @@
+{
+  "piccolo": {
+    "lemma": "piccolo",
+    "pos": "aggettivo",
+    "fr": "petit",
+    "definition_it": "di dimensioni ridotte, oppure giovane d'età",
+    "examples": [
+      {
+        "it": "Da piccoli giocavamo sempre insieme.",
+        "fr": "Quand nous étions petits, nous jouions toujours ensemble."
+      }
+    ],
+    "synonyms": [
+      "minuto"
+    ],
+    "isVerb": false
+  }
+}

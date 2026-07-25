@@ -1,4 +1,37 @@
 {
+  "obbligo": {
+    "lemma": "obbligo",
+    "pos": "sostantivo (m.)",
+    "fr": "obligation, devoir",
+    "definition_it": "dovere imposto da una legge, una regola o una promessa",
+    "examples": [
+      {
+        "it": "È un obbligo indossare la cintura di sicurezza.",
+        "fr": "C'est une obligation de porter la ceinture de sécurité."
+      }
+    ],
+    "synonyms": [
+      "dovere",
+      "impegno"
+    ],
+    "isVerb": false
+  },
+  "oblio": {
+    "lemma": "oblio",
+    "pos": "sostantivo (maschile)",
+    "fr": "oubli",
+    "definition_it": "condizione di essere dimenticato o il dimenticare qualcosa",
+    "examples": [
+      {
+        "it": "Il suo nome cadde nell'oblio dopo pochi anni.",
+        "fr": "Son nom tomba dans l'oubli après quelques années."
+      }
+    ],
+    "synonyms": [
+      "dimenticanza"
+    ],
+    "isVerb": false
+  },
   "occasione": {
     "lemma": "occasione",
     "pos": "nome femminile",
@@ -16,6 +49,34 @@
     ],
     "isVerb": false
   },
+  "occhiali": {
+    "lemma": "occhiali",
+    "pos": "nome maschile plurale",
+    "fr": "lunettes",
+    "definition_it": "oggetto con lenti che si porta davanti agli occhi per vedere meglio",
+    "examples": [
+      {
+        "it": "Ha dimenticato gli occhiali a casa.",
+        "fr": "Il a oublié ses lunettes à la maison."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "occhietto": {
+    "lemma": "occhietto",
+    "pos": "nome maschile",
+    "fr": "petit œil, œillade",
+    "definition_it": "diminutivo di occhio, spesso usato con affetto o per indicare uno sguardo furtivo",
+    "examples": [
+      {
+        "it": "Il bambino aveva due occhietti vispi.",
+        "fr": "L'enfant avait deux petits yeux vifs."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "occhio": {
     "lemma": "occhio",
     "pos": "nome maschile",
@@ -28,6 +89,22 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "occidente": {
+    "lemma": "occidente",
+    "pos": "nome maschile",
+    "fr": "occident, ouest",
+    "definition_it": "punto cardinale dove tramonta il sole, o l'insieme dei paesi occidentali",
+    "examples": [
+      {
+        "it": "Il sole tramonta a occidente.",
+        "fr": "Le soleil se couche à l'ouest."
+      }
+    ],
+    "synonyms": [
+      "ovest"
+    ],
     "isVerb": false
   },
   "occorrenza": {
@@ -47,6 +124,74 @@
     ],
     "isVerb": false
   },
+  "occupare": {
+    "lemma": "occupare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "occuper",
+    "definition_it": "prendere possesso di uno spazio o di un posto, o tenere impegnato qualcuno",
+    "examples": [
+      {
+        "it": "I soldati hanno occupato la città.",
+        "fr": "Les soldats ont occupé la ville."
+      }
+    ],
+    "synonyms": [
+      "invadere",
+      "impegnare"
+    ],
+    "isVerb": true
+  },
+  "occupazione": {
+    "lemma": "occupazione",
+    "pos": "sostantivo (f.)",
+    "fr": "occupation, emploi",
+    "definition_it": "attività lavorativa o l'atto di occupare un luogo",
+    "examples": [
+      {
+        "it": "Ha trovato un'occupazione stabile.",
+        "fr": "Il a trouvé une occupation stable."
+      }
+    ],
+    "synonyms": [
+      "lavoro",
+      "impiego"
+    ],
+    "isVerb": false
+  },
+  "odio": {
+    "lemma": "odio",
+    "pos": "nome maschile",
+    "fr": "haine",
+    "definition_it": "sentimento molto forte di avversione verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Prova un odio profondo per l'ingiustizia.",
+        "fr": "Il éprouve une haine profonde pour l'injustice."
+      }
+    ],
+    "synonyms": [
+      "avversione",
+      "rancore"
+    ],
+    "isVerb": false
+  },
+  "odioso": {
+    "lemma": "odioso",
+    "pos": "aggettivo",
+    "fr": "odieux, détestable",
+    "definition_it": "che provoca odio o forte antipatia",
+    "examples": [
+      {
+        "it": "Ha detto una cosa odiosa.",
+        "fr": "Elle a dit une chose odieuse."
+      }
+    ],
+    "synonyms": [
+      "detestabile",
+      "ripugnante"
+    ],
+    "isVerb": false
+  },
   "odore": {
     "lemma": "odore",
     "pos": "nome maschile",
@@ -61,6 +206,72 @@
     "synonyms": [
       "profumo",
       "aroma"
+    ],
+    "isVerb": false
+  },
+  "offesa": {
+    "lemma": "offesa",
+    "pos": "sostantivo (f.)",
+    "fr": "offense, insulte",
+    "definition_it": "parola o azione che ferisce l'onore o i sentimenti di qualcuno",
+    "examples": [
+      {
+        "it": "Quelle parole erano una vera offesa.",
+        "fr": "Ces mots étaient une véritable offense."
+      }
+    ],
+    "synonyms": [
+      "insulto",
+      "affronto"
+    ],
+    "isVerb": false
+  },
+  "oggetto": {
+    "lemma": "oggetto",
+    "pos": "sostantivo (m.)",
+    "fr": "objet",
+    "definition_it": "cosa materiale che si può vedere e toccare",
+    "examples": [
+      {
+        "it": "Ho trovato un oggetto strano nel cassetto.",
+        "fr": "J'ai trouvé un objet étrange dans le tiroir."
+      }
+    ],
+    "synonyms": [
+      "cosa",
+      "articolo"
+    ],
+    "isVerb": false
+  },
+  "oggi": {
+    "lemma": "oggi",
+    "pos": "avverbio",
+    "fr": "aujourd'hui",
+    "definition_it": "nel giorno presente, in questo momento della storia",
+    "examples": [
+      {
+        "it": "Oggi è una bella giornata.",
+        "fr": "Aujourd'hui il fait beau."
+      }
+    ],
+    "synonyms": [
+      "attualmente"
+    ],
+    "isVerb": false
+  },
+  "ogni": {
+    "lemma": "ogni",
+    "pos": "aggettivo indefinito",
+    "fr": "chaque, tout",
+    "definition_it": "usato davanti a un nome singolare per indicare la totalità degli elementi di un insieme, uno per uno",
+    "examples": [
+      {
+        "it": "Ogni giorno vado a scuola a piedi.",
+        "fr": "Chaque jour je vais à l'école à pied."
+      }
+    ],
+    "synonyms": [
+      "ciascuno"
     ],
     "isVerb": false
   },
@@ -87,6 +298,20 @@
       {
         "it": "Ha condito l'insalata con olio d'oliva.",
         "fr": "Il a assaisonné la salade avec de l'huile d'olive."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "oliva": {
+    "lemma": "oliva",
+    "pos": "nome femminile",
+    "fr": "olive",
+    "definition_it": "piccolo frutto verde o nero dell'olivo, usato per fare l'olio",
+    "examples": [
+      {
+        "it": "Ho mangiato del pane con le olive.",
+        "fr": "J'ai mangé du pain avec des olives."
       }
     ],
     "synonyms": [],
@@ -151,6 +376,22 @@
     ],
     "isVerb": false
   },
+  "omone": {
+    "lemma": "omone",
+    "pos": "nome maschile",
+    "fr": "grand gaillard, costaud",
+    "definition_it": "accrescitivo di uomo, persona di corporatura molto grande e robusta",
+    "examples": [
+      {
+        "it": "Alla porta c'era un omone con la barba.",
+        "fr": "À la porte il y avait un grand gaillard barbu."
+      }
+    ],
+    "synonyms": [
+      "gigante"
+    ],
+    "isVerb": false
+  },
   "onda": {
     "lemma": "onda",
     "pos": "nome femminile",
@@ -183,6 +424,22 @@
       "dondolare"
     ],
     "isVerb": true
+  },
+  "onore": {
+    "lemma": "onore",
+    "pos": "nome maschile",
+    "fr": "honneur",
+    "definition_it": "sentimento di dignità e rispetto verso se stessi e verso gli altri",
+    "examples": [
+      {
+        "it": "Ha difeso il suo onore con coraggio.",
+        "fr": "Il a défendu son honneur avec courage."
+      }
+    ],
+    "synonyms": [
+      "dignità"
+    ],
+    "isVerb": false
   },
   "opera": {
     "lemma": "opera",
@@ -280,6 +537,38 @@
     "synonyms": [],
     "isVerb": false
   },
+  "orchestra": {
+    "lemma": "orchestra",
+    "pos": "nome femminile",
+    "fr": "orchestre",
+    "definition_it": "gruppo di musicisti che suonano insieme diversi strumenti",
+    "examples": [
+      {
+        "it": "L'orchestra ha suonato una sinfonia di Beethoven.",
+        "fr": "L'orchestre a joué une symphonie de Beethoven."
+      }
+    ],
+    "synonyms": [
+      "ensemble"
+    ],
+    "isVerb": false
+  },
+  "orco": {
+    "lemma": "orco",
+    "pos": "nome maschile",
+    "fr": "ogre",
+    "definition_it": "essere mostruoso e feroce delle fiabe, che spesso divora le persone",
+    "examples": [
+      {
+        "it": "Nella favola l'orco viveva in una grotta buia.",
+        "fr": "Dans le conte, l'ogre vivait dans une grotte sombre."
+      }
+    ],
+    "synonyms": [
+      "mostro"
+    ],
+    "isVerb": false
+  },
   "ordine": {
     "lemma": "ordine",
     "pos": "nome maschile",
@@ -309,6 +598,23 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "oriente": {
+    "lemma": "oriente",
+    "pos": "sostantivo (maschile)",
+    "fr": "orient, est",
+    "definition_it": "punto cardinale da cui sorge il sole, o le regioni situate in quella direzione",
+    "examples": [
+      {
+        "it": "Il sole sorge a oriente.",
+        "fr": "Le soleil se lève à l'est."
+      }
+    ],
+    "synonyms": [
+      "est",
+      "levante"
+    ],
     "isVerb": false
   },
   "origine": {
@@ -362,6 +668,20 @@
     ],
     "isVerb": false
   },
+  "oro": {
+    "lemma": "oro",
+    "pos": "nome maschile",
+    "fr": "or",
+    "definition_it": "metallo prezioso di colore giallo",
+    "examples": [
+      {
+        "it": "Ha comprato un anello d'oro.",
+        "fr": "Il a acheté une bague en or."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "orribile": {
     "lemma": "orribile",
     "pos": "aggettivo",
@@ -379,6 +699,37 @@
     ],
     "isVerb": false
   },
+  "orrore": {
+    "lemma": "orrore",
+    "pos": "nome maschile",
+    "fr": "horreur",
+    "definition_it": "sentimento di paura e disgusto molto forte davanti a qualcosa di terribile",
+    "examples": [
+      {
+        "it": "Ha provato orrore davanti a quella scena.",
+        "fr": "Il a ressenti de l'horreur devant cette scène."
+      }
+    ],
+    "synonyms": [
+      "terrore",
+      "raccapriccio"
+    ],
+    "isVerb": false
+  },
+  "orso": {
+    "lemma": "orso",
+    "pos": "sostantivo (m.)",
+    "fr": "ours",
+    "definition_it": "grande animale selvatico con pelliccia folta, tipico dei boschi e delle montagne",
+    "examples": [
+      {
+        "it": "Nel bosco abbiamo visto un orso.",
+        "fr": "Dans la forêt nous avons vu un ours."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "orto": {
     "lemma": "orto",
     "pos": "nome maschile",
@@ -392,6 +743,39 @@
     ],
     "synonyms": [
       "giardino"
+    ],
+    "isVerb": false
+  },
+  "ortolano": {
+    "lemma": "ortolano",
+    "pos": "sostantivo (m.)",
+    "fr": "maraîcher, marchand de légumes",
+    "definition_it": "persona che coltiva o vende ortaggi e verdure",
+    "examples": [
+      {
+        "it": "Ho comprato le zucchine dall'ortolano.",
+        "fr": "J'ai acheté les courgettes chez le maraîcher."
+      }
+    ],
+    "synonyms": [
+      "fruttivendolo"
+    ],
+    "isVerb": false
+  },
+  "oscurità": {
+    "lemma": "oscurità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "obscurité",
+    "definition_it": "l'assenza di luce, condizione di ciò che è buio",
+    "examples": [
+      {
+        "it": "Nell'oscurità della notte non vedevo nulla.",
+        "fr": "Dans l'obscurité de la nuit je ne voyais rien."
+      }
+    ],
+    "synonyms": [
+      "buio",
+      "tenebra"
     ],
     "isVerb": false
   },
@@ -411,6 +795,39 @@
       "clinica"
     ],
     "isVerb": false
+  },
+  "ospitale": {
+    "lemma": "ospitale",
+    "pos": "aggettivo",
+    "fr": "hospitalier, accueillant",
+    "definition_it": "che accoglie bene gli ospiti, generoso con chi arriva",
+    "examples": [
+      {
+        "it": "La gente di quel paese è molto ospitale.",
+        "fr": "Les gens de ce village sont très hospitaliers."
+      }
+    ],
+    "synonyms": [
+      "accogliente"
+    ],
+    "isVerb": false
+  },
+  "ospitare": {
+    "lemma": "ospitare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "héberger, accueillir",
+    "definition_it": "accogliere qualcuno nella propria casa o offrire un luogo dove stare",
+    "examples": [
+      {
+        "it": "Ci hanno ospitato per una settimana.",
+        "fr": "Ils nous ont hébergés pendant une semaine."
+      }
+    ],
+    "synonyms": [
+      "accogliere",
+      "alloggiare"
+    ],
+    "isVerb": true
   },
   "osservatorio": {
     "lemma": "osservatorio",
@@ -457,6 +874,22 @@
     "synonyms": [],
     "isVerb": false
   },
+  "ostacolo": {
+    "lemma": "ostacolo",
+    "pos": "nome maschile",
+    "fr": "obstacle",
+    "definition_it": "cosa che impedisce o rende difficile fare qualcosa",
+    "examples": [
+      {
+        "it": "La pioggia è stata un ostacolo per la gara.",
+        "fr": "La pluie a été un obstacle pour la course."
+      }
+    ],
+    "synonyms": [
+      "impedimento"
+    ],
+    "isVerb": false
+  },
   "oste": {
     "lemma": "oste",
     "pos": "nome maschile",
@@ -487,6 +920,68 @@
     "synonyms": [
       "trattoria",
       "taverna"
+    ],
+    "isVerb": false
+  },
+  "ottocento": {
+    "lemma": "ottocento",
+    "pos": "sostantivo maschile / aggettivo numerale",
+    "fr": "huit cents ; le dix-neuvième siècle (le XIXe siècle)",
+    "definition_it": "il numero 800; se scritto con la maiuscola, indica il diciannovesimo secolo (gli anni dal 1800 al 1899)",
+    "examples": [
+      {
+        "it": "Questo romanzo è ambientato nell'Ottocento.",
+        "fr": "Ce roman se déroule au dix-neuvième siècle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottone": {
+    "lemma": "ottone",
+    "pos": "nome maschile",
+    "fr": "laiton",
+    "definition_it": "lega metallica di colore giallo dorato, fatta di rame e zinco",
+    "examples": [
+      {
+        "it": "Il vaso era fatto di ottone lucido.",
+        "fr": "Le vase était fait de laiton brillant."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ozio": {
+    "lemma": "ozio",
+    "pos": "sostantivo (maschile)",
+    "fr": "oisiveté, farniente",
+    "definition_it": "stato di inattività, il non fare nulla",
+    "examples": [
+      {
+        "it": "Passava le giornate estive nell'ozio più totale.",
+        "fr": "Il passait les journées d'été dans l'oisiveté la plus totale."
+      }
+    ],
+    "synonyms": [
+      "inattività",
+      "pigrizia"
+    ],
+    "isVerb": false
+  },
+  "ozioso": {
+    "lemma": "ozioso",
+    "pos": "aggettivo",
+    "fr": "oisif, paresseux",
+    "definition_it": "che non fa niente, pigro, senza occupazione",
+    "examples": [
+      {
+        "it": "Non mi piace stare ozioso tutto il giorno.",
+        "fr": "Je n'aime pas rester oisif toute la journée."
+      }
+    ],
+    "synonyms": [
+      "pigro",
+      "inattivo"
     ],
     "isVerb": false
   }

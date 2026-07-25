@@ -1,0 +1,4918 @@
+{
+  "da": {
+    "lemma": "da",
+    "pos": "preposizione",
+    "fr": "de, depuis, chez",
+    "definition_it": "preposizione che indica origine, provenienza, causa o luogo",
+    "examples": [
+      {
+        "it": "Vengo da Roma.",
+        "fr": "Je viens de Rome."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dabbenaggine": {
+    "lemma": "dabbenaggine",
+    "pos": "nome femminile",
+    "fr": "naïveté, crédulité",
+    "definition_it": "qualità di chi è ingenuo e facilmente ingannabile",
+    "examples": [
+      {
+        "it": "La sua dabbenaggine lo rende facile da ingannare.",
+        "fr": "Sa naïveté le rend facile à tromper."
+      }
+    ],
+    "synonyms": [
+      "ingenuità",
+      "credulità"
+    ],
+    "isVerb": false
+  },
+  "dabbene": {
+    "lemma": "dabbene",
+    "pos": "aggettivo invariabile",
+    "fr": "honnête, brave",
+    "definition_it": "onesto e di buoni costumi",
+    "examples": [
+      {
+        "it": "È un uomo dabbene, sempre disposto ad aiutare.",
+        "fr": "C'est un homme honnête, toujours prêt à aider."
+      }
+    ],
+    "synonyms": [
+      "onesto",
+      "perbene"
+    ],
+    "isVerb": false
+  },
+  "daccapo": {
+    "lemma": "daccapo",
+    "pos": "avverbio",
+    "fr": "depuis le début, de nouveau",
+    "definition_it": "dall'inizio, di nuovo",
+    "examples": [
+      {
+        "it": "Ha dovuto ricominciare daccapo il lavoro.",
+        "fr": "Il a dû recommencer le travail depuis le début."
+      }
+    ],
+    "synonyms": [
+      "di nuovo",
+      "da capo"
+    ],
+    "isVerb": false
+  },
+  "dacché": {
+    "lemma": "dacché",
+    "pos": "congiunzione",
+    "fr": "depuis que",
+    "definition_it": "da quando, dal momento che",
+    "examples": [
+      {
+        "it": "Dacché sei partito, non ho più tue notizie.",
+        "fr": "Depuis que tu es parti, je n'ai plus de tes nouvelles."
+      }
+    ],
+    "synonyms": [
+      "da quando"
+    ],
+    "isVerb": false
+  },
+  "dado": {
+    "lemma": "dado",
+    "pos": "nome maschile",
+    "fr": "dé (à jouer), cube",
+    "definition_it": "piccolo cubo usato nei giochi o ottenuto tagliando un alimento",
+    "examples": [
+      {
+        "it": "Ha lanciato i dadi sul tavolo.",
+        "fr": "Il a lancé les dés sur la table."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "daino": {
+    "lemma": "daino",
+    "pos": "nome maschile",
+    "fr": "daim",
+    "definition_it": "mammifero simile al cervo, con corna a forma di pala",
+    "examples": [
+      {
+        "it": "Nel bosco abbiamo visto un daino.",
+        "fr": "Dans le bois nous avons vu un daim."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dalli": {
+    "lemma": "dalli",
+    "pos": "interiezione",
+    "fr": "vas-y, attrape-le (exclamation pour inciter à poursuivre quelqu'un)",
+    "definition_it": "esclamazione usata per incitare all'inseguimento o all'attacco di qualcuno, spesso ripetuta (dagli e dalli)",
+    "examples": [
+      {
+        "it": "\"Dalli al ladro!\" gridava la gente per strada.",
+        "fr": "« Attrapez le voleur ! » criaient les gens dans la rue."
+      }
+    ],
+    "synonyms": [
+      "dagli"
+    ],
+    "isVerb": false
+  },
+  "dama": {
+    "lemma": "dama",
+    "pos": "sostantivo (femminile)",
+    "fr": "dame",
+    "definition_it": "donna nobile o elegante; anche pezzo del gioco della dama o carta delle figure nel mazzo",
+    "examples": [
+      {
+        "it": "Le dame indossavano abiti sfarzosi al ballo.",
+        "fr": "Les dames portaient des robes somptueuses au bal."
+      }
+    ],
+    "synonyms": [
+      "signora",
+      "nobildonna"
+    ],
+    "isVerb": false
+  },
+  "damerino": {
+    "lemma": "damerino",
+    "pos": "sostantivo (maschile)",
+    "fr": "dandy, freluquet",
+    "definition_it": "uomo che cura in modo eccessivo ed elegante il proprio aspetto, spesso in modo vanitoso",
+    "examples": [
+      {
+        "it": "Quel giovane damerino si guardava sempre allo specchio.",
+        "fr": "Ce jeune dandy se regardait toujours dans le miroir."
+      }
+    ],
+    "synonyms": [
+      "dandy",
+      "zerbinotto"
+    ],
+    "isVerb": false
+  },
+  "damigiana": {
+    "lemma": "damigiana",
+    "pos": "sostantivo (femminile)",
+    "fr": "dame-jeanne",
+    "definition_it": "grande recipiente di vetro, spesso protetto da un rivestimento, usato per conservare vino o olio",
+    "examples": [
+      {
+        "it": "In cantina c'era una damigiana piena di vino rosso.",
+        "fr": "Dans la cave, il y avait une dame-jeanne pleine de vin rouge."
+      }
+    ],
+    "synonyms": [
+      "bottiglione"
+    ],
+    "isVerb": false
+  },
+  "damo": {
+    "lemma": "damo",
+    "pos": "sostantivo (maschile, arcaico/dialettale)",
+    "fr": "galant, soupirant (terme ancien/dialectal)",
+    "definition_it": "termine antico o dialettale per indicare l'innamorato o il corteggiatore di una dama",
+    "examples": [
+      {
+        "it": "Nella vecchia canzone, il damo aspettava la sua bella sotto il balcone.",
+        "fr": "Dans la vieille chanson, le galant attendait sa belle sous le balcon."
+      }
+    ],
+    "synonyms": [
+      "corteggiatore",
+      "innamorato"
+    ],
+    "isVerb": false
+  },
+  "danaro": {
+    "lemma": "danaro",
+    "pos": "nome maschile (variante antica di 'denaro')",
+    "fr": "argent (variante ancienne de 'denaro')",
+    "definition_it": "forma antica o letteraria di 'denaro', il mezzo che si usa per comprare le cose",
+    "examples": [
+      {
+        "it": "Non aveva danaro per comprare il pane.",
+        "fr": "Il n'avait pas d'argent pour acheter du pain."
+      }
+    ],
+    "synonyms": [
+      "denaro"
+    ],
+    "isVerb": false
+  },
+  "danaroso": {
+    "lemma": "danaroso",
+    "pos": "aggettivo",
+    "fr": "riche, fortuné",
+    "definition_it": "che possiede molto denaro, ricco",
+    "examples": [
+      {
+        "it": "Era un uomo danaroso e generoso con tutti.",
+        "fr": "C'était un homme riche et généreux avec tout le monde."
+      }
+    ],
+    "synonyms": [
+      "ricco",
+      "facoltoso"
+    ],
+    "isVerb": false
+  },
+  "danda": {
+    "lemma": "danda",
+    "pos": "nome femminile",
+    "fr": "lisière (pour soutenir un enfant qui apprend à marcher)",
+    "definition_it": "striscia di stoffa usata un tempo per sostenere i bambini piccoli mentre imparano a camminare",
+    "examples": [
+      {
+        "it": "Il bambino faceva i primi passi tenuto per le dande.",
+        "fr": "L'enfant faisait ses premiers pas tenu par les lisières."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dannare": {
+    "lemma": "dannare",
+    "pos": "verbo (transitivo/riflessivo, regolare)",
+    "fr": "damner",
+    "definition_it": "condannare qualcuno alla dannazione eterna secondo la religione; oppure, riferito a se stessi, tormentarsi molto per fare qualcosa",
+    "examples": [
+      {
+        "it": "Secondo la dottrina, i peccatori vengono dannati per sempre.",
+        "fr": "Selon la doctrine, les pécheurs sont damnés pour toujours."
+      }
+    ],
+    "synonyms": [
+      "condannare",
+      "maledire"
+    ],
+    "isVerb": true
+  },
+  "dannazione": {
+    "lemma": "dannazione",
+    "pos": "nome femminile",
+    "fr": "damnation",
+    "definition_it": "condanna eterna e senza fine, secondo la religione, per chi ha peccato",
+    "examples": [
+      {
+        "it": "Temeva la dannazione eterna più di ogni altra cosa.",
+        "fr": "Il craignait la damnation éternelle plus que tout."
+      }
+    ],
+    "synonyms": [
+      "condanna"
+    ],
+    "isVerb": false
+  },
+  "danneggiare": {
+    "lemma": "danneggiare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "endommager, nuire à",
+    "definition_it": "causare un danno a una cosa o a una persona",
+    "examples": [
+      {
+        "it": "La grandine ha danneggiato tutto il raccolto.",
+        "fr": "La grêle a endommagé toute la récolte."
+      }
+    ],
+    "synonyms": [
+      "rovinare",
+      "guastare"
+    ],
+    "isVerb": true
+  },
+  "danno": {
+    "lemma": "danno",
+    "pos": "nome maschile",
+    "fr": "dommage, dégât",
+    "definition_it": "conseguenza negativa causata da un evento, da un'azione o da un incidente",
+    "examples": [
+      {
+        "it": "L'incendio ha causato gravi danni alla casa.",
+        "fr": "L'incendie a causé de graves dégâts à la maison."
+      }
+    ],
+    "synonyms": [
+      "guasto",
+      "danneggiamento"
+    ],
+    "isVerb": false
+  },
+  "dannoso": {
+    "lemma": "dannoso",
+    "pos": "aggettivo",
+    "fr": "nuisible, dommageable",
+    "definition_it": "che causa danno o male a qualcuno o a qualcosa",
+    "examples": [
+      {
+        "it": "Il fumo è dannoso per la salute.",
+        "fr": "Fumer est nuisible pour la santé."
+      }
+    ],
+    "synonyms": [
+      "nocivo",
+      "pericoloso"
+    ],
+    "isVerb": false
+  },
+  "danza": {
+    "lemma": "danza",
+    "pos": "sostantivo femminile",
+    "fr": "danse",
+    "definition_it": "insieme di movimenti del corpo eseguiti a ritmo di musica",
+    "examples": [
+      {
+        "it": "La danza classica richiede molta disciplina.",
+        "fr": "La danse classique demande beaucoup de discipline."
+      }
+    ],
+    "synonyms": [
+      "ballo"
+    ],
+    "isVerb": false
+  },
+  "danzare": {
+    "lemma": "danzare",
+    "pos": "verbo (intransitivo, regolare, 1ª coniugazione)",
+    "fr": "danser",
+    "definition_it": "muovere il corpo seguendo un ritmo musicale",
+    "examples": [
+      {
+        "it": "I bambini danzavano felici in giardino.",
+        "fr": "Les enfants dansaient joyeusement dans le jardin."
+      }
+    ],
+    "synonyms": [
+      "ballare"
+    ],
+    "isVerb": true
+  },
+  "dappertutto": {
+    "lemma": "dappertutto",
+    "pos": "avverbio",
+    "fr": "partout",
+    "definition_it": "in ogni luogo, in tutti i posti",
+    "examples": [
+      {
+        "it": "Ho cercato le chiavi dappertutto.",
+        "fr": "J'ai cherché les clés partout."
+      }
+    ],
+    "synonyms": [
+      "ovunque"
+    ],
+    "isVerb": false
+  },
+  "dapprima": {
+    "lemma": "dapprima",
+    "pos": "avverbio",
+    "fr": "d'abord, tout d'abord",
+    "definition_it": "all'inizio, prima di ogni altra cosa",
+    "examples": [
+      {
+        "it": "Dapprima era timido, poi diventò più sicuro.",
+        "fr": "D'abord il était timide, puis il devint plus sûr de lui."
+      }
+    ],
+    "synonyms": [
+      "inizialmente",
+      "all'inizio"
+    ],
+    "isVerb": false
+  },
+  "dapprincipio": {
+    "lemma": "dapprincipio",
+    "pos": "avverbio",
+    "fr": "au début, au commencement",
+    "definition_it": "nella fase iniziale di qualcosa",
+    "examples": [
+      {
+        "it": "Dapprincipio non capiva le regole del gioco.",
+        "fr": "Au début, il ne comprenait pas les règles du jeu."
+      }
+    ],
+    "synonyms": [
+      "all'inizio",
+      "in principio"
+    ],
+    "isVerb": false
+  },
+  "dare": {
+    "lemma": "dare",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "donner",
+    "definition_it": "consegnare qualcosa a qualcuno",
+    "examples": [
+      {
+        "it": "Mi dà sempre buoni consigli.",
+        "fr": "Il/Elle me donne toujours de bons conseils."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "data": {
+    "lemma": "data",
+    "pos": "nome (femminile)",
+    "fr": "date",
+    "definition_it": "il giorno, il mese e l'anno in cui avviene o è avvenuto qualcosa",
+    "examples": [
+      {
+        "it": "Qual è la data del tuo compleanno?",
+        "fr": "Quelle est la date de ton anniversaire ?"
+      }
+    ],
+    "synonyms": [
+      "giorno"
+    ],
+    "isVerb": false
+  },
+  "datare": {
+    "lemma": "datare",
+    "pos": "verbo (transitivo/intransitivo, regolare)",
+    "fr": "dater",
+    "definition_it": "indicare la data di un documento o di un avvenimento, oppure risalire a un certo periodo",
+    "examples": [
+      {
+        "it": "Questa lettera è datata 1990.",
+        "fr": "Cette lettre est datée de 1990."
+      }
+    ],
+    "synonyms": [
+      "risalire"
+    ],
+    "isVerb": true
+  },
+  "dato": {
+    "lemma": "dato",
+    "pos": "nome (maschile)",
+    "fr": "donnée, fait",
+    "definition_it": "un'informazione o un fatto noto, spesso usato al plurale per indicare informazioni raccolte",
+    "examples": [
+      {
+        "it": "I dati mostrano un aumento delle vendite.",
+        "fr": "Les données montrent une augmentation des ventes."
+      }
+    ],
+    "synonyms": [
+      "informazione",
+      "elemento"
+    ],
+    "isVerb": false
+  },
+  "datore": {
+    "lemma": "datore",
+    "pos": "nome (maschile)",
+    "fr": "employeur, donneur",
+    "definition_it": "persona o ente che dà lavoro a qualcuno, spesso nell'espressione 'datore di lavoro'",
+    "examples": [
+      {
+        "it": "Il mio datore di lavoro è molto disponibile.",
+        "fr": "Mon employeur est très disponible."
+      }
+    ],
+    "synonyms": [
+      "principale"
+    ],
+    "isVerb": false
+  },
+  "dattero": {
+    "lemma": "dattero",
+    "pos": "nome (maschile)",
+    "fr": "datte",
+    "definition_it": "frutto dolce e allungato della palma da dattero",
+    "examples": [
+      {
+        "it": "Ho mangiato un dattero dolcissimo.",
+        "fr": "J'ai mangé une datte très sucrée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "davanti": {
+    "lemma": "davanti",
+    "pos": "avverbio/preposizione",
+    "fr": "devant",
+    "definition_it": "nella parte anteriore, di fronte a qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "La macchina è parcheggiata davanti a casa.",
+        "fr": "La voiture est garée devant la maison."
+      }
+    ],
+    "synonyms": [
+      "dinanzi",
+      "innanzi"
+    ],
+    "isVerb": false
+  },
+  "davanzale": {
+    "lemma": "davanzale",
+    "pos": "nome (m.)",
+    "fr": "rebord de fenêtre, appui de fenêtre",
+    "definition_it": "la parte inferiore orizzontale di una finestra, dove ci si può appoggiare",
+    "examples": [
+      {
+        "it": "Il gatto dormiva sul davanzale della finestra.",
+        "fr": "Le chat dormait sur le rebord de la fenêtre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "davvero": {
+    "lemma": "davvero",
+    "pos": "avverbio",
+    "fr": "vraiment",
+    "definition_it": "in modo vero, effettivamente, senza dubbio",
+    "examples": [
+      {
+        "it": "Sei davvero molto gentile.",
+        "fr": "Tu es vraiment très gentil."
+      }
+    ],
+    "synonyms": [
+      "veramente",
+      "realmente"
+    ],
+    "isVerb": false
+  },
+  "dazio": {
+    "lemma": "dazio",
+    "pos": "nome (m.)",
+    "fr": "taxe douanière, droit de douane",
+    "definition_it": "tassa che si paga per far entrare merci in un paese o in una città",
+    "examples": [
+      {
+        "it": "I mercanti dovevano pagare i dazi alla dogana.",
+        "fr": "Les marchands devaient payer les droits de douane."
+      }
+    ],
+    "synonyms": [
+      "tassa",
+      "imposta"
+    ],
+    "isVerb": false
+  },
+  "dea": {
+    "lemma": "dea",
+    "pos": "nome (f.)",
+    "fr": "déesse",
+    "definition_it": "figura femminile divina, venerata nelle religioni antiche",
+    "examples": [
+      {
+        "it": "Atena era la dea della saggezza.",
+        "fr": "Athéna était la déesse de la sagesse."
+      }
+    ],
+    "synonyms": [
+      "divinità"
+    ],
+    "isVerb": false
+  },
+  "deambulazione": {
+    "lemma": "deambulazione",
+    "pos": "nome (f.)",
+    "fr": "déambulation, marche",
+    "definition_it": "l'atto di camminare, spostarsi a piedi lentamente",
+    "examples": [
+      {
+        "it": "Il medico ha valutato la sua capacità di deambulazione.",
+        "fr": "Le médecin a évalué sa capacité de marche."
+      }
+    ],
+    "synonyms": [
+      "camminata"
+    ],
+    "isVerb": false
+  },
+  "debilitare": {
+    "lemma": "debilitare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "affaiblir, débiliter",
+    "definition_it": "rendere debole o meno forte, fisicamente o moralmente",
+    "examples": [
+      {
+        "it": "La lunga malattia lo ha debilitato molto.",
+        "fr": "La longue maladie l'a beaucoup affaibli."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "debito": {
+    "lemma": "debito",
+    "pos": "sostantivo maschile / aggettivo",
+    "fr": "dette / dû",
+    "definition_it": "somma di denaro che si deve restituire a qualcuno, oppure ciò che è dovuto o appropriato",
+    "examples": [
+      {
+        "it": "Ha ancora un debito con la banca.",
+        "fr": "Il a encore une dette envers la banque."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "debitore": {
+    "lemma": "debitore",
+    "pos": "sostantivo (maschile: debitore, femminile: debitrice)",
+    "fr": "débiteur / débitrice",
+    "definition_it": "persona che deve del denaro o è obbligata verso un'altra persona",
+    "examples": [
+      {
+        "it": "È debitrice di una grossa somma nei confronti della banca.",
+        "fr": "Elle est débitrice d'une grosse somme envers la banque."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "debole": {
+    "lemma": "debole",
+    "pos": "aggettivo",
+    "fr": "faible",
+    "definition_it": "che ha poca forza fisica, morale o di carattere",
+    "examples": [
+      {
+        "it": "Dopo l'operazione si sentiva molto debole.",
+        "fr": "Après l'opération, il se sentait très faible."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "debolezza": {
+    "lemma": "debolezza",
+    "pos": "sostantivo femminile",
+    "fr": "faiblesse",
+    "definition_it": "mancanza di forza fisica, morale o di carattere",
+    "examples": [
+      {
+        "it": "La sua debolezza per i dolci è nota a tutti.",
+        "fr": "Sa faiblesse pour les sucreries est connue de tous."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "debolmente": {
+    "lemma": "debolmente",
+    "pos": "avverbio",
+    "fr": "faiblement",
+    "definition_it": "in modo debole, senza forza",
+    "examples": [
+      {
+        "it": "La luce brillava debolmente nella stanza buia.",
+        "fr": "La lumière brillait faiblement dans la pièce sombre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "deca": {
+    "lemma": "deca",
+    "pos": "sostantivo femminile (invariabile, colloquiale)",
+    "fr": "dizaine / billet de dix (familier)",
+    "definition_it": "gruppo di dieci unità, oppure, in modo informale, una banconota da dieci euro",
+    "examples": [
+      {
+        "it": "Mi presti una deca fino a domani?",
+        "fr": "Tu me prêtes dix euros jusqu'à demain ?"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decadenza": {
+    "lemma": "decadenza",
+    "pos": "sostantivo femminile",
+    "fr": "décadence, déchéance",
+    "definition_it": "perdita progressiva di valore, potere o splendore",
+    "examples": [
+      {
+        "it": "Il libro racconta la decadenza dell'impero romano.",
+        "fr": "Le livre raconte la décadence de l'empire romain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decennio": {
+    "lemma": "decennio",
+    "pos": "sostantivo maschile",
+    "fr": "décennie",
+    "definition_it": "periodo di dieci anni",
+    "examples": [
+      {
+        "it": "Negli ultimi decenni la città è cambiata molto.",
+        "fr": "Ces dernières décennies, la ville a beaucoup changé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decente": {
+    "lemma": "decente",
+    "pos": "aggettivo",
+    "fr": "décent",
+    "definition_it": "che rispetta le regole di educazione e correttezza, accettabile",
+    "examples": [
+      {
+        "it": "Vogliamo un lavoro decente e ben pagato.",
+        "fr": "Nous voulons un travail décent et bien payé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decidere": {
+    "lemma": "decidere",
+    "pos": "verbo (transitivo/intransitivo, irregolare)",
+    "fr": "décider",
+    "definition_it": "prendere una decisione dopo aver valutato le possibilità",
+    "examples": [
+      {
+        "it": "Ha deciso di partire domani.",
+        "fr": "Il a décidé de partir demain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "decifrare": {
+    "lemma": "decifrare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déchiffrer",
+    "definition_it": "interpretare un testo scritto in modo poco chiaro, criptato o in una lingua sconosciuta",
+    "examples": [
+      {
+        "it": "Riesco a malapena a decifrare la sua calligrafia.",
+        "fr": "J'arrive à peine à déchiffrer son écriture."
+      }
+    ],
+    "synonyms": [
+      "interpretare",
+      "capire"
+    ],
+    "isVerb": true
+  },
+  "decimo": {
+    "lemma": "decimo",
+    "pos": "aggettivo numerale ordinale",
+    "fr": "dixième",
+    "definition_it": "che occupa il posto numero dieci in una serie ordinata",
+    "examples": [
+      {
+        "it": "È arrivato decimo alla gara.",
+        "fr": "Il est arrivé dixième à la course."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decina": {
+    "lemma": "decina",
+    "pos": "sostantivo (femminile)",
+    "fr": "dizaine",
+    "definition_it": "gruppo formato da circa dieci elementi",
+    "examples": [
+      {
+        "it": "C'erano una decina di persone in fila.",
+        "fr": "Il y avait une dizaine de personnes dans la file."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decisionale": {
+    "lemma": "decisionale",
+    "pos": "aggettivo",
+    "fr": "décisionnel",
+    "definition_it": "che riguarda il potere o il processo di prendere decisioni",
+    "examples": [
+      {
+        "it": "Il potere decisionale spetta al consiglio.",
+        "fr": "Le pouvoir décisionnel revient au conseil."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "decisione": {
+    "lemma": "decisione",
+    "pos": "sostantivo (femminile)",
+    "fr": "décision",
+    "definition_it": "scelta definitiva presa dopo una riflessione",
+    "examples": [
+      {
+        "it": "Ha preso una decisione importante.",
+        "fr": "Il a pris une décision importante."
+      }
+    ],
+    "synonyms": [
+      "scelta",
+      "risoluzione"
+    ],
+    "isVerb": false
+  },
+  "decisivo": {
+    "lemma": "decisivo",
+    "pos": "aggettivo",
+    "fr": "décisif",
+    "definition_it": "che determina in modo definitivo l'esito di qualcosa",
+    "examples": [
+      {
+        "it": "Il suo intervento è stato decisivo per la vittoria.",
+        "fr": "Son intervention a été décisive pour la victoire."
+      }
+    ],
+    "synonyms": [
+      "determinante",
+      "cruciale"
+    ],
+    "isVerb": false
+  },
+  "declassare": {
+    "lemma": "declassare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déclasser, rétrograder",
+    "definition_it": "far scendere di livello, categoria o rango qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "L'agenzia ha declassato il rating del paese.",
+        "fr": "L'agence a déclassé la notation du pays."
+      }
+    ],
+    "synonyms": [
+      "retrocedere",
+      "abbassare"
+    ],
+    "isVerb": true
+  },
+  "declinare": {
+    "lemma": "declinare",
+    "pos": "verbo (transitivo/intransitivo, regolare)",
+    "fr": "décliner, refuser",
+    "definition_it": "rifiutare con cortesia qualcosa, oppure diminuire progressivamente",
+    "examples": [
+      {
+        "it": "Ha declinato l'invito alla festa.",
+        "fr": "Il a décliné l'invitation à la fête."
+      }
+    ],
+    "synonyms": [
+      "rifiutare",
+      "diminuire"
+    ],
+    "isVerb": true
+  },
+  "declino": {
+    "lemma": "declino",
+    "pos": "sostantivo maschile",
+    "fr": "déclin",
+    "definition_it": "fase di progressivo peggioramento o diminuzione",
+    "examples": [
+      {
+        "it": "L'azienda è in declino da anni.",
+        "fr": "L'entreprise est en déclin depuis des années."
+      }
+    ],
+    "synonyms": [
+      "decadenza",
+      "regresso"
+    ],
+    "isVerb": false
+  },
+  "decodificare": {
+    "lemma": "decodificare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "décoder",
+    "definition_it": "interpretare un messaggio codificato per capirne il significato",
+    "examples": [
+      {
+        "it": "Il computer decodifica il segnale in pochi secondi.",
+        "fr": "L'ordinateur décode le signal en quelques secondes."
+      }
+    ],
+    "synonyms": [
+      "decifrare",
+      "interpretare"
+    ],
+    "isVerb": true
+  },
+  "decomposizione": {
+    "lemma": "decomposizione",
+    "pos": "sostantivo femminile",
+    "fr": "décomposition",
+    "definition_it": "processo di disgregazione di una sostanza organica o di un insieme",
+    "examples": [
+      {
+        "it": "La decomposizione delle foglie arricchisce il terreno.",
+        "fr": "La décomposition des feuilles enrichit le sol."
+      }
+    ],
+    "synonyms": [
+      "disgregazione",
+      "putrefazione"
+    ],
+    "isVerb": false
+  },
+  "decorare": {
+    "lemma": "decorare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "décorer",
+    "definition_it": "abbellire un luogo o un oggetto con ornamenti",
+    "examples": [
+      {
+        "it": "Abbiamo decorato la casa per Natale.",
+        "fr": "Nous avons décoré la maison pour Noël."
+      }
+    ],
+    "synonyms": [
+      "ornare",
+      "abbellire"
+    ],
+    "isVerb": true
+  },
+  "decorazione": {
+    "lemma": "decorazione",
+    "pos": "sostantivo femminile",
+    "fr": "décoration",
+    "definition_it": "oggetto o insieme di oggetti usati per abbellire qualcosa",
+    "examples": [
+      {
+        "it": "Le decorazioni dell'albero sono bellissime.",
+        "fr": "Les décorations du sapin sont magnifiques."
+      }
+    ],
+    "synonyms": [
+      "ornamento",
+      "addobbo"
+    ],
+    "isVerb": false
+  },
+  "decorrenza": {
+    "lemma": "decorrenza",
+    "pos": "sostantivo femminile",
+    "fr": "date d'effet, entrée en vigueur",
+    "definition_it": "il momento a partire dal quale qualcosa ha effetto o validità",
+    "examples": [
+      {
+        "it": "Il contratto ha decorrenza dal primo gennaio.",
+        "fr": "Le contrat prend effet à partir du premier janvier."
+      }
+    ],
+    "synonyms": [
+      "validità",
+      "inizio"
+    ],
+    "isVerb": false
+  },
+  "decorrere": {
+    "lemma": "decorrere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "s'écouler, prendre effet",
+    "definition_it": "trascorrere nel tempo, oppure cominciare a essere valido a partire da una data",
+    "examples": [
+      {
+        "it": "Il termine decorre dalla data di notifica.",
+        "fr": "Le délai commence à courir à partir de la date de notification."
+      }
+    ],
+    "synonyms": [
+      "trascorrere",
+      "decorrere"
+    ],
+    "isVerb": true
+  },
+  "decrepito": {
+    "lemma": "decrepito",
+    "pos": "aggettivo",
+    "fr": "décrépit",
+    "definition_it": "molto vecchio e in cattivo stato a causa dell'età",
+    "examples": [
+      {
+        "it": "Viveva in una casa decrepita in fondo al paese.",
+        "fr": "Il vivait dans une maison décrépite au bout du village."
+      }
+    ],
+    "synonyms": [
+      "vecchio",
+      "malandato"
+    ],
+    "isVerb": false
+  },
+  "decretare": {
+    "lemma": "decretare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "décréter, ordonner",
+    "definition_it": "stabilire ufficialmente qualcosa con un atto d'autorità",
+    "examples": [
+      {
+        "it": "Il re decretò la fine della guerra.",
+        "fr": "Le roi décréta la fin de la guerre."
+      }
+    ],
+    "synonyms": [
+      "ordinare",
+      "stabilire"
+    ],
+    "isVerb": true
+  },
+  "decreto": {
+    "lemma": "decreto",
+    "pos": "sostantivo (m)",
+    "fr": "décret",
+    "definition_it": "atto ufficiale emesso da un'autorità competente per stabilire una regola o disposizione",
+    "examples": [
+      {
+        "it": "Il governo ha emanato nuovi decreti.",
+        "fr": "Le gouvernement a promulgué de nouveaux décrets."
+      }
+    ],
+    "synonyms": [
+      "editto",
+      "provvedimento"
+    ],
+    "isVerb": false
+  },
+  "dedica": {
+    "lemma": "dedica",
+    "pos": "sostantivo (f)",
+    "fr": "dédicace",
+    "definition_it": "scritta con cui si offre un'opera o un dono a qualcuno",
+    "examples": [
+      {
+        "it": "Ha scritto una dedica sul libro.",
+        "fr": "Elle a écrit une dédicace sur le livre."
+      }
+    ],
+    "synonyms": [
+      "dedicazione"
+    ],
+    "isVerb": false
+  },
+  "dedicare": {
+    "lemma": "dedicare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "dédier, consacrer",
+    "definition_it": "offrire qualcosa a qualcuno in segno di affetto o stima, oppure impiegare tempo ed energie per uno scopo",
+    "examples": [
+      {
+        "it": "Vuole dedicare il suo tempo libero allo studio.",
+        "fr": "Il veut consacrer son temps libre à l'étude."
+      }
+    ],
+    "synonyms": [
+      "consacrare",
+      "offrire"
+    ],
+    "isVerb": true
+  },
+  "dedurre": {
+    "lemma": "dedurre",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "déduire",
+    "definition_it": "trarre una conclusione logica da premesse note, oppure sottrarre una somma da un totale",
+    "examples": [
+      {
+        "it": "Dalle sue parole ho dedotto la verità.",
+        "fr": "De ses paroles, j'ai déduit la vérité."
+      }
+    ],
+    "synonyms": [
+      "desumere",
+      "inferire"
+    ],
+    "isVerb": true
+  },
+  "definire": {
+    "lemma": "definire",
+    "pos": "verbo (transitivo, regolare -ire con -isc-)",
+    "fr": "définir",
+    "definition_it": "spiegare con precisione il significato di qualcosa, oppure stabilire in modo chiaro e conclusivo",
+    "examples": [
+      {
+        "it": "Il dizionario definisce il significato delle parole.",
+        "fr": "Le dictionnaire définit le sens des mots."
+      }
+    ],
+    "synonyms": [
+      "precisare",
+      "stabilire"
+    ],
+    "isVerb": true
+  },
+  "definitivamente": {
+    "lemma": "definitivamente",
+    "pos": "avverbio",
+    "fr": "définitivement",
+    "definition_it": "in modo definitivo, senza possibilità di cambiamento",
+    "examples": [
+      {
+        "it": "Ha lasciato definitivamente il paese.",
+        "fr": "Il a quitté définitivement le pays."
+      }
+    ],
+    "synonyms": [
+      "irrevocabilmente"
+    ],
+    "isVerb": false
+  },
+  "definitivo": {
+    "lemma": "definitivo",
+    "pos": "aggettivo",
+    "fr": "définitif",
+    "definition_it": "che non può essere cambiato o rimesso in discussione, conclusivo",
+    "examples": [
+      {
+        "it": "La decisione presa è definitiva.",
+        "fr": "La décision prise est définitive."
+      }
+    ],
+    "synonyms": [
+      "conclusivo",
+      "finale"
+    ],
+    "isVerb": false
+  },
+  "definizione": {
+    "lemma": "definizione",
+    "pos": "sostantivo (f)",
+    "fr": "définition",
+    "definition_it": "spiegazione precisa del significato di una parola o di un concetto",
+    "examples": [
+      {
+        "it": "La definizione di questo termine è poco chiara.",
+        "fr": "La définition de ce terme est peu claire."
+      }
+    ],
+    "synonyms": [
+      "spiegazione",
+      "descrizione"
+    ],
+    "isVerb": false
+  },
+  "deforme": {
+    "lemma": "deforme",
+    "pos": "aggettivo",
+    "fr": "difforme",
+    "definition_it": "che ha una forma anormale o irregolare, non conforme alla norma",
+    "examples": [
+      {
+        "it": "Il vaso è uscito deforme dal forno.",
+        "fr": "Le vase est sorti difforme du four."
+      }
+    ],
+    "synonyms": [
+      "difforme"
+    ],
+    "isVerb": false
+  },
+  "defunto": {
+    "lemma": "defunto",
+    "pos": "aggettivo/sostantivo",
+    "fr": "défunt, décédé",
+    "definition_it": "che è morto, non più in vita",
+    "examples": [
+      {
+        "it": "Il defunto viveva in questa casa.",
+        "fr": "Le défunt vivait dans cette maison."
+      }
+    ],
+    "synonyms": [
+      "morto"
+    ],
+    "isVerb": false
+  },
+  "degenere": {
+    "lemma": "degenere",
+    "pos": "aggettivo",
+    "fr": "dégénéré",
+    "definition_it": "che si è allontanato negativamente dai valori o dalle qualità originarie",
+    "examples": [
+      {
+        "it": "I suoi comportamenti sono giudicati degeneri dalla famiglia.",
+        "fr": "Ses comportements sont jugés dégénérés par la famille."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "degli": {
+    "lemma": "degli",
+    "pos": "preposizione articolata (di + gli)",
+    "fr": "des, de les",
+    "definition_it": "preposizione che unisce 'di' e l'articolo determinativo plurale 'gli'",
+    "examples": [
+      {
+        "it": "Parliamo degli amici comuni.",
+        "fr": "Nous parlons des amis communs."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "deglutizione": {
+    "lemma": "deglutizione",
+    "pos": "sostantivo femminile",
+    "fr": "déglutition",
+    "definition_it": "l'atto di deglutire, cioè far passare cibo o saliva dalla bocca all'esofago",
+    "examples": [
+      {
+        "it": "La deglutizione può diventare difficile con l'età.",
+        "fr": "La déglutition peut devenir difficile avec l'âge."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "degnamente": {
+    "lemma": "degnamente",
+    "pos": "avverbio",
+    "fr": "dignement",
+    "definition_it": "in modo degno, con dignità",
+    "examples": [
+      {
+        "it": "Ha rappresentato degnamente il suo paese.",
+        "fr": "Il a représenté dignement son pays."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "degnarsi": {
+    "lemma": "degnarsi",
+    "pos": "verbo (riflessivo, regolare)",
+    "fr": "daigner, condescendre à",
+    "definition_it": "acconsentire a fare qualcosa, spesso con un tono di superiorità o riluttanza",
+    "examples": [
+      {
+        "it": "Non si è degnato di rispondere.",
+        "fr": "Il n'a pas daigné répondre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "degno": {
+    "lemma": "degno",
+    "pos": "aggettivo",
+    "fr": "digne",
+    "definition_it": "che merita stima, rispetto o una determinata cosa",
+    "examples": [
+      {
+        "it": "È un uomo degno di fiducia.",
+        "fr": "C'est un homme digne de confiance."
+      }
+    ],
+    "synonyms": [
+      "meritevole"
+    ],
+    "isVerb": false
+  },
+  "degradare": {
+    "lemma": "degradare",
+    "pos": "verbo (transitivo/intransitivo, regolare)",
+    "fr": "dégrader",
+    "definition_it": "far perdere valore, qualità o rango a qualcosa o qualcuno, oppure peggiorare progressivamente",
+    "examples": [
+      {
+        "it": "L'inquinamento degrada l'ambiente.",
+        "fr": "La pollution dégrade l'environnement."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "degustare": {
+    "lemma": "degustare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déguster",
+    "definition_it": "assaggiare un cibo o una bevanda per apprezzarne il sapore",
+    "examples": [
+      {
+        "it": "Ogni sera degustano un buon vino.",
+        "fr": "Chaque soir ils dégustent un bon vin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "degustazione": {
+    "lemma": "degustazione",
+    "pos": "sostantivo femminile",
+    "fr": "dégustation",
+    "definition_it": "l'atto di assaggiare cibi o bevande per valutarne la qualità",
+    "examples": [
+      {
+        "it": "Abbiamo partecipato a una degustazione di formaggi.",
+        "fr": "Nous avons participé à une dégustation de fromages."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dei": {
+    "lemma": "dei",
+    "pos": "preposizione articolata",
+    "fr": "des, de les",
+    "definition_it": "unione della preposizione 'di' con l'articolo 'i', usata anche in forma antica 'de''",
+    "examples": [
+      {
+        "it": "Erano membri de' più nobili casati.",
+        "fr": "Ils étaient membres des plus nobles familles."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "del": {
+    "lemma": "del",
+    "pos": "preposizione articolata (di + il)",
+    "fr": "du, de le",
+    "definition_it": "preposizione semplice 'di' unita all'articolo determinativo maschile singolare 'il'",
+    "examples": [
+      {
+        "it": "Il colore del cielo è azzurro.",
+        "fr": "La couleur du ciel est bleue."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "del resto": {
+    "lemma": "del resto",
+    "pos": "locuzione avverbiale",
+    "fr": "d'ailleurs, du reste, par ailleurs",
+    "definition_it": "usata per aggiungere una considerazione o giustificazione a quanto detto prima",
+    "examples": [
+      {
+        "it": "Non è colpa mia, del resto lo sapevi anche tu.",
+        "fr": "Ce n'est pas ma faute, d'ailleurs tu le savais aussi."
+      }
+    ],
+    "synonyms": [
+      "d'altronde",
+      "peraltro"
+    ],
+    "isVerb": false
+  },
+  "delega": {
+    "lemma": "delega",
+    "pos": "sostantivo (f.)",
+    "fr": "délégation, procuration",
+    "definition_it": "documento o atto con cui si trasferisce a un'altra persona il potere di agire in proprio nome",
+    "examples": [
+      {
+        "it": "Ho firmato una delega per ritirare il pacco al posto mio.",
+        "fr": "J'ai signé une procuration pour que quelqu'un retire le colis à ma place."
+      }
+    ],
+    "synonyms": [
+      "procura",
+      "mandato"
+    ],
+    "isVerb": false
+  },
+  "delegare": {
+    "lemma": "delegare",
+    "pos": "verbo (transitivo)",
+    "fr": "déléguer",
+    "definition_it": "affidare a qualcuno un compito o un potere che spetterebbe a sé",
+    "examples": [
+      {
+        "it": "Il direttore ha deciso di delegare alcune responsabilità ai suoi collaboratori.",
+        "fr": "Le directeur a décidé de déléguer certaines responsabilités à ses collaborateurs."
+      }
+    ],
+    "synonyms": [
+      "affidare",
+      "incaricare"
+    ],
+    "isVerb": true
+  },
+  "delfino": {
+    "lemma": "delfino",
+    "pos": "sostantivo (m.)",
+    "fr": "dauphin",
+    "definition_it": "mammifero marino intelligente e socievole che vive in gruppi",
+    "examples": [
+      {
+        "it": "I delfini nuotavano vicino alla barca.",
+        "fr": "Les dauphins nageaient près du bateau."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "delibera": {
+    "lemma": "delibera",
+    "pos": "sostantivo (f.)",
+    "fr": "délibération, résolution (officielle)",
+    "definition_it": "decisione ufficiale presa da un organo collegiale, come un consiglio comunale",
+    "examples": [
+      {
+        "it": "Il consiglio comunale ha approvato la delibera sul nuovo parco.",
+        "fr": "Le conseil municipal a approuvé la délibération sur le nouveau parc."
+      }
+    ],
+    "synonyms": [
+      "deliberazione",
+      "decisione"
+    ],
+    "isVerb": false
+  },
+  "deliberare": {
+    "lemma": "deliberare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "délibérer, décider (officialmente)",
+    "definition_it": "discutere e decidere ufficialmente su una questione, di solito in un'assemblea",
+    "examples": [
+      {
+        "it": "Il consiglio si è riunito per deliberare sul bilancio.",
+        "fr": "Le conseil s'est réuni pour délibérer sur le budget."
+      }
+    ],
+    "synonyms": [
+      "decidere",
+      "stabilire"
+    ],
+    "isVerb": true
+  },
+  "deliberatamente": {
+    "lemma": "deliberatamente",
+    "pos": "avverbio",
+    "fr": "délibérément, exprès",
+    "definition_it": "in modo intenzionale e consapevole",
+    "examples": [
+      {
+        "it": "Ha rotto il vaso deliberatamente.",
+        "fr": "Il a cassé le vase délibérément."
+      }
+    ],
+    "synonyms": [
+      "intenzionalmente",
+      "appositamente"
+    ],
+    "isVerb": false
+  },
+  "deliberazione": {
+    "lemma": "deliberazione",
+    "pos": "sostantivo (f.)",
+    "fr": "délibération, décision officielle",
+    "definition_it": "atto o decisione presa dopo una discussione, spesso in ambito ufficiale",
+    "examples": [
+      {
+        "it": "La deliberazione del tribunale sarà pubblicata domani.",
+        "fr": "La délibération du tribunal sera publiée demain."
+      }
+    ],
+    "synonyms": [
+      "delibera",
+      "decisione"
+    ],
+    "isVerb": false
+  },
+  "delicatamente": {
+    "lemma": "delicatamente",
+    "pos": "avverbio",
+    "fr": "délicatement, avec douceur",
+    "definition_it": "con delicatezza, con cura e leggerezza",
+    "examples": [
+      {
+        "it": "Ha posato il bambino delicatamente nella culla.",
+        "fr": "Elle a posé délicatement le bébé dans le berceau."
+      }
+    ],
+    "synonyms": [
+      "dolcemente",
+      "gentilmente"
+    ],
+    "isVerb": false
+  },
+  "delicatezza": {
+    "lemma": "delicatezza",
+    "pos": "sostantivo (f.)",
+    "fr": "délicatesse, douceur",
+    "definition_it": "qualità di ciò che è delicato, gentilezza nei modi",
+    "examples": [
+      {
+        "it": "Le parlò con grande delicatezza.",
+        "fr": "Il lui parla avec beaucoup de délicatesse."
+      }
+    ],
+    "synonyms": [
+      "gentilezza",
+      "dolcezza"
+    ],
+    "isVerb": false
+  },
+  "delicato": {
+    "lemma": "delicato",
+    "pos": "aggettivo",
+    "fr": "délicat, fragile",
+    "definition_it": "che va trattato con cura perché fragile o sensibile",
+    "examples": [
+      {
+        "it": "Questo vaso di cristallo è molto delicato.",
+        "fr": "Ce vase en cristal est très délicat."
+      }
+    ],
+    "synonyms": [
+      "fragile",
+      "sensibile"
+    ],
+    "isVerb": false
+  },
+  "delinquere": {
+    "lemma": "delinquere",
+    "pos": "verbo (intransitivo)",
+    "fr": "commettre des délits, se livrer au crime",
+    "definition_it": "commettere reati o crimini",
+    "examples": [
+      {
+        "it": "Fu arrestato per associazione a delinquere.",
+        "fr": "Il fut arrêté pour association de malfaiteurs."
+      }
+    ],
+    "synonyms": [
+      "commettere reati"
+    ],
+    "isVerb": true
+  },
+  "delirio": {
+    "lemma": "delirio",
+    "pos": "sostantivo (m.)",
+    "fr": "délire",
+    "definition_it": "stato di confusione mentale con perdita di lucidità, spesso dovuto a febbre alta",
+    "examples": [
+      {
+        "it": "Nel delirio della febbre continuava a parlare da solo.",
+        "fr": "Dans le délire de la fièvre, il continuait à parler tout seul."
+      }
+    ],
+    "synonyms": [
+      "farneticazione"
+    ],
+    "isVerb": false
+  },
+  "delitto": {
+    "lemma": "delitto",
+    "pos": "sostantivo (m.)",
+    "fr": "délit, crime",
+    "definition_it": "azione grave che viola la legge, spesso un omicidio",
+    "examples": [
+      {
+        "it": "La polizia indaga sul delitto avvenuto ieri notte.",
+        "fr": "La police enquête sur le crime survenu hier soir."
+      }
+    ],
+    "synonyms": [
+      "reato",
+      "crimine"
+    ],
+    "isVerb": false
+  },
+  "delizia": {
+    "lemma": "delizia",
+    "pos": "sostantivo (f.)",
+    "fr": "délice",
+    "definition_it": "grande piacere, cosa che dà molta gioia o soddisfazione",
+    "examples": [
+      {
+        "it": "Questo dolce è una vera delizia.",
+        "fr": "Ce gâteau est un vrai délice."
+      }
+    ],
+    "synonyms": [
+      "piacere",
+      "gioia"
+    ],
+    "isVerb": false
+  },
+  "delizioso": {
+    "lemma": "delizioso",
+    "pos": "aggettivo",
+    "fr": "délicieux",
+    "definition_it": "che procura molto piacere, in particolare al gusto",
+    "examples": [
+      {
+        "it": "Abbiamo mangiato un pranzo delizioso.",
+        "fr": "Nous avons mangé un déjeuner délicieux."
+      }
+    ],
+    "synonyms": [
+      "squisito",
+      "gustoso"
+    ],
+    "isVerb": false
+  },
+  "delta": {
+    "lemma": "delta",
+    "pos": "sostantivo maschile (invariabile)",
+    "fr": "delta",
+    "definition_it": "la zona pianeggiante dove un fiume si divide in più rami prima di sfociare nel mare; anche lettera dell'alfabeto greco",
+    "examples": [
+      {
+        "it": "Il delta del Po è ricco di uccelli acquatici.",
+        "fr": "Le delta du Pô est riche en oiseaux aquatiques."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "deludere": {
+    "lemma": "deludere",
+    "pos": "verbo (transitivo)",
+    "fr": "décevoir",
+    "definition_it": "non soddisfare le aspettative o le speranze di qualcuno",
+    "examples": [
+      {
+        "it": "Il film mi ha deluso molto.",
+        "fr": "Le film m'a beaucoup déçu."
+      }
+    ],
+    "synonyms": [
+      "disilludere"
+    ],
+    "isVerb": true
+  },
+  "delusione": {
+    "lemma": "delusione",
+    "pos": "nome femminile",
+    "fr": "déception",
+    "definition_it": "sentimento provato quando le aspettative non vengono soddisfatte",
+    "examples": [
+      {
+        "it": "Che delusione, il film non era interessante!",
+        "fr": "Quelle déception, le film n'était pas intéressant !"
+      }
+    ],
+    "synonyms": [
+      "disillusione",
+      "amarezza"
+    ],
+    "isVerb": false
+  },
+  "deluso": {
+    "lemma": "deluso",
+    "pos": "aggettivo/participio passato",
+    "fr": "déçu",
+    "definition_it": "che ha provato delusione, non soddisfatto nelle proprie aspettative",
+    "examples": [
+      {
+        "it": "Sono rimasto deluso dal risultato dell'esame.",
+        "fr": "J'ai été déçu par le résultat de l'examen."
+      }
+    ],
+    "synonyms": [
+      "insoddisfatto",
+      "amareggiato"
+    ],
+    "isVerb": false
+  },
+  "democratico": {
+    "lemma": "democratico",
+    "pos": "aggettivo",
+    "fr": "démocratique",
+    "definition_it": "che riguarda la democrazia o si basa sui suoi principi",
+    "examples": [
+      {
+        "it": "Il paese ha un governo democratico.",
+        "fr": "Le pays a un gouvernement démocratique."
+      }
+    ],
+    "synonyms": [
+      "popolare",
+      "rappresentativo"
+    ],
+    "isVerb": false
+  },
+  "democrazia": {
+    "lemma": "democrazia",
+    "pos": "nome femminile",
+    "fr": "démocratie",
+    "definition_it": "forma di governo in cui il potere appartiene al popolo",
+    "examples": [
+      {
+        "it": "L'Italia è una democrazia parlamentare.",
+        "fr": "L'Italie est une démocratie parlementaire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "demonio": {
+    "lemma": "demonio",
+    "pos": "nome maschile",
+    "fr": "démon, diable",
+    "definition_it": "essere maligno e soprannaturale, il diavolo",
+    "examples": [
+      {
+        "it": "Nel racconto il demonio tenta l'uomo.",
+        "fr": "Dans le récit, le démon tente l'homme."
+      }
+    ],
+    "synonyms": [
+      "diavolo",
+      "satana"
+    ],
+    "isVerb": false
+  },
+  "denaro": {
+    "lemma": "denaro",
+    "pos": "sostantivo (maschile)",
+    "fr": "argent",
+    "definition_it": "moneta o mezzo di pagamento usato per comprare beni e servizi",
+    "examples": [
+      {
+        "it": "Aveva speso tutto il suo denaro in pochi giorni.",
+        "fr": "Il avait dépensé tout son argent en quelques jours."
+      }
+    ],
+    "synonyms": [
+      "soldi",
+      "moneta"
+    ],
+    "isVerb": false
+  },
+  "denominare": {
+    "lemma": "denominare",
+    "pos": "verbo (transitivo)",
+    "fr": "dénommer, appeler",
+    "definition_it": "dare un nome a qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Hanno denominato la nuova via in onore dello scrittore.",
+        "fr": "Ils ont dénommé la nouvelle rue en l'honneur de l'écrivain."
+      }
+    ],
+    "synonyms": [
+      "chiamare",
+      "nominare"
+    ],
+    "isVerb": true
+  },
+  "denominazione": {
+    "lemma": "denominazione",
+    "pos": "nome femminile",
+    "fr": "dénomination, appellation",
+    "definition_it": "il nome con cui qualcosa viene ufficialmente chiamato",
+    "examples": [
+      {
+        "it": "Il vino ha una denominazione di origine controllata.",
+        "fr": "Le vin a une appellation d'origine contrôlée."
+      }
+    ],
+    "synonyms": [
+      "nome",
+      "appellativo"
+    ],
+    "isVerb": false
+  },
+  "denso": {
+    "lemma": "denso",
+    "pos": "aggettivo",
+    "fr": "dense, épais",
+    "definition_it": "che ha grande densità, compatto o fitto",
+    "examples": [
+      {
+        "it": "La nebbia era molto densa stamattina.",
+        "fr": "Le brouillard était très dense ce matin."
+      }
+    ],
+    "synonyms": [
+      "fitto",
+      "compatto"
+    ],
+    "isVerb": false
+  },
+  "dente": {
+    "lemma": "dente",
+    "pos": "nome maschile",
+    "fr": "dent",
+    "definition_it": "organo duro presente nella bocca, usato per masticare",
+    "examples": [
+      {
+        "it": "Mi fa male un dente da ieri.",
+        "fr": "J'ai mal à une dent depuis hier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dentifricio": {
+    "lemma": "dentifricio",
+    "pos": "nome maschile",
+    "fr": "dentifrice",
+    "definition_it": "prodotto usato per lavare i denti",
+    "examples": [
+      {
+        "it": "Compro un tubetto di dentifricio al supermercato.",
+        "fr": "J'achète un tube de dentifrice au supermarché."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dentro": {
+    "lemma": "dentro",
+    "pos": "avverbio/preposizione",
+    "fr": "dedans, à l'intérieur (de)",
+    "definition_it": "nella parte interna di un luogo o di un oggetto",
+    "examples": [
+      {
+        "it": "Il gatto è dentro la scatola.",
+        "fr": "Le chat est dans la boîte."
+      }
+    ],
+    "synonyms": [
+      "all'interno"
+    ],
+    "isVerb": false
+  },
+  "denuncia": {
+    "lemma": "denuncia",
+    "pos": "nome femminile",
+    "fr": "dénonciation, plainte",
+    "definition_it": "dichiarazione fatta alle autorità per segnalare un reato o un'irregolarità",
+    "examples": [
+      {
+        "it": "Ha presentato una denuncia alla polizia.",
+        "fr": "Il a déposé une plainte à la police."
+      }
+    ],
+    "synonyms": [
+      "esposto",
+      "querela"
+    ],
+    "isVerb": false
+  },
+  "denunciare": {
+    "lemma": "denunciare",
+    "pos": "verbo (transitivo)",
+    "fr": "dénoncer, signaler",
+    "definition_it": "segnalare alle autorità un reato o un fatto irregolare",
+    "examples": [
+      {
+        "it": "I giornalisti stanno denunciando la corruzione.",
+        "fr": "Les journalistes dénoncent la corruption."
+      }
+    ],
+    "synonyms": [
+      "segnalare",
+      "accusare"
+    ],
+    "isVerb": true
+  },
+  "deperire": {
+    "lemma": "deperire",
+    "pos": "verbo (intransitivo)",
+    "fr": "dépérir, se détériorer",
+    "definition_it": "perdere forza, salute o valore col passare del tempo",
+    "examples": [
+      {
+        "it": "La sua salute deperiva di giorno in giorno.",
+        "fr": "Sa santé se dégradait de jour en jour."
+      }
+    ],
+    "synonyms": [
+      "deteriorarsi",
+      "indebolirsi"
+    ],
+    "isVerb": true
+  },
+  "depistaggio": {
+    "lemma": "depistaggio",
+    "pos": "nome (m)",
+    "fr": "manœuvre de diversion, brouillage de pistes",
+    "definition_it": "azione compiuta per confondere o sviare un'indagine",
+    "examples": [
+      {
+        "it": "Gli inquirenti hanno scoperto diversi depistaggi nel caso.",
+        "fr": "Les enquêteurs ont découvert plusieurs manœuvres de diversion dans l'affaire."
+      }
+    ],
+    "synonyms": [
+      "depistamento"
+    ],
+    "isVerb": false
+  },
+  "deplorabile": {
+    "lemma": "deplorabile",
+    "pos": "aggettivo",
+    "fr": "déplorable",
+    "definition_it": "che merita di essere biasimato o criticato",
+    "examples": [
+      {
+        "it": "Il suo comportamento è stato deplorabile.",
+        "fr": "Son comportement a été déplorable."
+      }
+    ],
+    "synonyms": [
+      "riprovevole",
+      "biasimevole"
+    ],
+    "isVerb": false
+  },
+  "deplorevole": {
+    "lemma": "deplorevole",
+    "pos": "aggettivo",
+    "fr": "déplorable, regrettable",
+    "definition_it": "che suscita disapprovazione o dispiacere",
+    "examples": [
+      {
+        "it": "Vive in una condizione deplorevole.",
+        "fr": "Il vit dans une condition déplorable."
+      }
+    ],
+    "synonyms": [
+      "deplorabile",
+      "triste"
+    ],
+    "isVerb": false
+  },
+  "deporre": {
+    "lemma": "deporre",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "déposer, témoigner",
+    "definition_it": "posare qualcosa in un luogo, oppure testimoniare davanti a un giudice",
+    "examples": [
+      {
+        "it": "Il testimone ha deposto in tribunale.",
+        "fr": "Le témoin a témoigné au tribunal."
+      }
+    ],
+    "synonyms": [
+      "posare",
+      "testimoniare"
+    ],
+    "isVerb": true
+  },
+  "depositare": {
+    "lemma": "depositare",
+    "pos": "verbo (transitivo)",
+    "fr": "déposer",
+    "definition_it": "mettere qualcosa in un luogo sicuro, in banca o presso un ente ufficiale",
+    "examples": [
+      {
+        "it": "Devo depositare i soldi in banca.",
+        "fr": "Je dois déposer l'argent à la banque."
+      }
+    ],
+    "synonyms": [
+      "versare",
+      "posare"
+    ],
+    "isVerb": true
+  },
+  "deposito": {
+    "lemma": "deposito",
+    "pos": "nome (m)",
+    "fr": "dépôt, entrepôt",
+    "definition_it": "luogo dove si conservano oggetti o merci, oppure somma di denaro versata in banca",
+    "examples": [
+      {
+        "it": "Il deposito si trova vicino alla stazione.",
+        "fr": "Le dépôt se trouve près de la gare."
+      }
+    ],
+    "synonyms": [
+      "magazzino",
+      "versamento"
+    ],
+    "isVerb": false
+  },
+  "deprimente": {
+    "lemma": "deprimente",
+    "pos": "aggettivo",
+    "fr": "déprimant",
+    "definition_it": "che rattrista o scoraggia molto",
+    "examples": [
+      {
+        "it": "Il tempo grigio è deprimente.",
+        "fr": "Le temps gris est déprimant."
+      }
+    ],
+    "synonyms": [
+      "avvilente",
+      "sconfortante"
+    ],
+    "isVerb": false
+  },
+  "deputato": {
+    "lemma": "deputato",
+    "pos": "nome (m/f)",
+    "fr": "député",
+    "definition_it": "persona eletta a far parte del parlamento",
+    "examples": [
+      {
+        "it": "I deputati hanno votato la nuova legge.",
+        "fr": "Les députés ont voté la nouvelle loi."
+      }
+    ],
+    "synonyms": [
+      "parlamentare"
+    ],
+    "isVerb": false
+  },
+  "derby": {
+    "lemma": "derby",
+    "pos": "nome (m, invariabile)",
+    "fr": "derby",
+    "definition_it": "partita sportiva tra due squadre della stessa città o regione",
+    "examples": [
+      {
+        "it": "Stasera si gioca il derby della città.",
+        "fr": "Ce soir se joue le derby de la ville."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "deridere": {
+    "lemma": "deridere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "se moquer de, railler",
+    "definition_it": "prendere in giro qualcuno con disprezzo",
+    "examples": [
+      {
+        "it": "I compagni lo deridevano per il suo accento.",
+        "fr": "Ses camarades se moquaient de lui pour son accent."
+      }
+    ],
+    "synonyms": [
+      "schernire",
+      "prendere in giro"
+    ],
+    "isVerb": true
+  },
+  "derisorio": {
+    "lemma": "derisorio",
+    "pos": "aggettivo",
+    "fr": "dérisoire",
+    "definition_it": "così piccolo o insignificante da sembrare una presa in giro",
+    "examples": [
+      {
+        "it": "Gli hanno offerto una cifra derisoria.",
+        "fr": "On lui a offert une somme dérisoire."
+      }
+    ],
+    "synonyms": [
+      "irrisorio"
+    ],
+    "isVerb": false
+  },
+  "deriva": {
+    "lemma": "deriva",
+    "pos": "nome (f)",
+    "fr": "dérive",
+    "definition_it": "movimento incontrollato di qualcosa trascinato dalla corrente o dal vento",
+    "examples": [
+      {
+        "it": "La barca era alla deriva nel mare.",
+        "fr": "Le bateau était à la dérive en mer."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "derivare": {
+    "lemma": "derivare",
+    "pos": "verbo (intransitivo)",
+    "fr": "dériver, provenire",
+    "definition_it": "avere origine da qualcosa, provenire da una fonte",
+    "examples": [
+      {
+        "it": "Questa parola deriva dal latino.",
+        "fr": "Ce mot dérive du latin."
+      }
+    ],
+    "synonyms": [
+      "provenire",
+      "originare"
+    ],
+    "isVerb": true
+  },
+  "derubare": {
+    "lemma": "derubare",
+    "pos": "verbo (transitivo)",
+    "fr": "dévaliser, voler",
+    "definition_it": "rubare qualcosa a qualcuno con la forza o con l'inganno",
+    "examples": [
+      {
+        "it": "È stato derubato del portafoglio in metro.",
+        "fr": "Il s'est fait voler son portefeuille dans le métro."
+      }
+    ],
+    "synonyms": [
+      "rubare",
+      "svaligiare"
+    ],
+    "isVerb": true
+  },
+  "descrivere": {
+    "lemma": "descrivere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "décrire",
+    "definition_it": "spiegare a parole com'è fatta una persona, una cosa o una situazione",
+    "examples": [
+      {
+        "it": "Descrissi la scena ai poliziotti.",
+        "fr": "Je décrivis la scène aux policiers."
+      }
+    ],
+    "synonyms": [
+      "raccontare",
+      "illustrare"
+    ],
+    "isVerb": true
+  },
+  "descrizione": {
+    "lemma": "descrizione",
+    "pos": "sostantivo (nome femminile)",
+    "fr": "description",
+    "definition_it": "il testo o il discorso con cui si descrive qualcosa",
+    "examples": [
+      {
+        "it": "La descrizione del personaggio è molto dettagliata.",
+        "fr": "La description du personnage est très détaillée."
+      }
+    ],
+    "synonyms": [
+      "ritratto"
+    ],
+    "isVerb": false
+  },
+  "deserto": {
+    "lemma": "deserto",
+    "pos": "aggettivo",
+    "fr": "désert(e), vide",
+    "definition_it": "senza persone, completamente vuoto",
+    "examples": [
+      {
+        "it": "Alle due di notte la piazza era completamente deserta.",
+        "fr": "À deux heures du matin, la place était complètement déserte."
+      }
+    ],
+    "synonyms": [
+      "vuoto",
+      "spopolato"
+    ],
+    "isVerb": false
+  },
+  "desiderare": {
+    "lemma": "desiderare",
+    "pos": "verbo (transitivo)",
+    "fr": "désirer, souhaiter",
+    "definition_it": "volere fortemente qualcosa",
+    "examples": [
+      {
+        "it": "Desidero un caffè, grazie.",
+        "fr": "Je désire un café, merci."
+      }
+    ],
+    "synonyms": [
+      "volere"
+    ],
+    "isVerb": true
+  },
+  "desiderio": {
+    "lemma": "desiderio",
+    "pos": "nome (maschile)",
+    "fr": "désir",
+    "definition_it": "il volere fortemente qualcosa",
+    "examples": [
+      {
+        "it": "Ha un grande desiderio di viaggiare.",
+        "fr": "Il a un grand désir de voyager."
+      }
+    ],
+    "synonyms": [
+      "voglia",
+      "brama"
+    ],
+    "isVerb": false
+  },
+  "desideroso": {
+    "lemma": "desideroso",
+    "pos": "aggettivo",
+    "fr": "désireux",
+    "definition_it": "che desidera fortemente qualcosa",
+    "examples": [
+      {
+        "it": "È desideroso di imparare l'italiano.",
+        "fr": "Il est désireux d'apprendre l'italien."
+      }
+    ],
+    "synonyms": [
+      "bramoso"
+    ],
+    "isVerb": false
+  },
+  "design": {
+    "lemma": "design",
+    "pos": "nome (maschile, invariabile, forestierismo)",
+    "fr": "design",
+    "definition_it": "l'arte di progettare oggetti belli, pratici e funzionali",
+    "examples": [
+      {
+        "it": "Questo mobile ha un design molto moderno.",
+        "fr": "Ce meuble a un design très moderne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "designare": {
+    "lemma": "designare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "désigner",
+    "definition_it": "scegliere ufficialmente una persona o una cosa per un compito o un ruolo",
+    "examples": [
+      {
+        "it": "Il consiglio ha designato il nuovo direttore.",
+        "fr": "Le conseil a désigné le nouveau directeur."
+      }
+    ],
+    "synonyms": [
+      "nominare",
+      "indicare"
+    ],
+    "isVerb": true
+  },
+  "designazione": {
+    "lemma": "designazione",
+    "pos": "nome (femminile)",
+    "fr": "désignation",
+    "definition_it": "l'atto di designare qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "La sua designazione a presidente è stata approvata.",
+        "fr": "Sa désignation comme président a été approuvée."
+      }
+    ],
+    "synonyms": [
+      "nomina"
+    ],
+    "isVerb": false
+  },
+  "designer": {
+    "lemma": "designer",
+    "pos": "nome (maschile/femminile, invariabile, forestierismo)",
+    "fr": "designer, créateur",
+    "definition_it": "persona che progetta oggetti, mobili o abiti",
+    "examples": [
+      {
+        "it": "Il designer ha presentato la nuova collezione.",
+        "fr": "Le designer a présenté la nouvelle collection."
+      }
+    ],
+    "synonyms": [
+      "stilista"
+    ],
+    "isVerb": false
+  },
+  "desinare": {
+    "lemma": "desinare",
+    "pos": "verbo (intransitivo, regolare, letterario)",
+    "fr": "dîner, déjeuner",
+    "definition_it": "pranzare o cenare, consumare il pasto principale della giornata",
+    "examples": [
+      {
+        "it": "La famiglia si riunì per desinare insieme.",
+        "fr": "La famille se réunit pour déjeuner ensemble."
+      }
+    ],
+    "synonyms": [
+      "pranzare",
+      "cenare"
+    ],
+    "isVerb": true
+  },
+  "desolato": {
+    "lemma": "desolato",
+    "pos": "aggettivo",
+    "fr": "désolé",
+    "definition_it": "molto triste e senza consolazione, oppure privo di vita e vegetazione",
+    "examples": [
+      {
+        "it": "Il paesaggio era desolato e silenzioso.",
+        "fr": "Le paysage était désolé et silencieux."
+      }
+    ],
+    "synonyms": [
+      "afflitto",
+      "deserto"
+    ],
+    "isVerb": false
+  },
+  "desolazione": {
+    "lemma": "desolazione",
+    "pos": "nome (femminile)",
+    "fr": "désolation",
+    "definition_it": "stato di grande tristezza o di abbandono totale",
+    "examples": [
+      {
+        "it": "La città era in preda alla desolazione dopo la guerra.",
+        "fr": "La ville était en proie à la désolation après la guerre."
+      }
+    ],
+    "synonyms": [
+      "tristezza",
+      "sconforto"
+    ],
+    "isVerb": false
+  },
+  "dessert": {
+    "lemma": "dessert",
+    "pos": "sostantivo maschile invariabile",
+    "fr": "dessert",
+    "definition_it": "dolce servito alla fine di un pasto",
+    "examples": [
+      {
+        "it": "Per dessert prendo il tiramisù.",
+        "fr": "Comme dessert, je prends le tiramisu."
+      }
+    ],
+    "synonyms": [
+      "dolce"
+    ],
+    "isVerb": false
+  },
+  "destabilizzare": {
+    "lemma": "destabilizzare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déstabiliser",
+    "definition_it": "far perdere stabilità o equilibrio a qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Quella notizia rischia di destabilizzare i mercati.",
+        "fr": "Cette nouvelle risque de déstabiliser les marchés."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "destare": {
+    "lemma": "destare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "réveiller, éveiller",
+    "definition_it": "svegliare qualcuno dal sonno o far nascere un sentimento",
+    "examples": [
+      {
+        "it": "Il rumore lo destò di soprassalto.",
+        "fr": "Le bruit le réveilla en sursaut."
+      }
+    ],
+    "synonyms": [
+      "svegliare",
+      "risvegliare"
+    ],
+    "isVerb": true
+  },
+  "destinare": {
+    "lemma": "destinare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "destiner",
+    "definition_it": "stabilire l'uso, la sorte o la destinazione futura di qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Questi fondi sono destinati alla scuola.",
+        "fr": "Ces fonds sont destinés à l'école."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "destinatario": {
+    "lemma": "destinatario",
+    "pos": "sostantivo maschile",
+    "fr": "destinataire",
+    "definition_it": "la persona a cui è indirizzata una lettera, un pacco o un messaggio",
+    "examples": [
+      {
+        "it": "Il pacco è arrivato al destinatario giusto.",
+        "fr": "Le colis est arrivé au bon destinataire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "destinazione": {
+    "lemma": "destinazione",
+    "pos": "nome femminile",
+    "fr": "destination",
+    "definition_it": "il luogo verso cui una persona o una cosa è diretta",
+    "examples": [
+      {
+        "it": "Il treno è arrivato a destinazione con dieci minuti di ritardo.",
+        "fr": "Le train est arrivé à destination avec dix minutes de retard."
+      }
+    ],
+    "synonyms": [
+      "meta",
+      "traguardo"
+    ],
+    "isVerb": false
+  },
+  "destino": {
+    "lemma": "destino",
+    "pos": "nome maschile",
+    "fr": "destin",
+    "definition_it": "il corso degli eventi della vita, considerato come già stabilito",
+    "examples": [
+      {
+        "it": "Credeva che il suo destino fosse già scritto.",
+        "fr": "Il croyait que son destin était déjà écrit."
+      }
+    ],
+    "synonyms": [
+      "fato",
+      "sorte"
+    ],
+    "isVerb": false
+  },
+  "desto": {
+    "lemma": "desto",
+    "pos": "aggettivo",
+    "fr": "éveillé, alerte",
+    "definition_it": "sveglio, non addormentato; anche mentalmente vigile e attento",
+    "examples": [
+      {
+        "it": "Restò desto tutta la notte per finire il lavoro.",
+        "fr": "Il resta éveillé toute la nuit pour finir le travail."
+      }
+    ],
+    "synonyms": [
+      "sveglio",
+      "vigile"
+    ],
+    "isVerb": false
+  },
+  "destra": {
+    "lemma": "destra",
+    "pos": "nome femminile / aggettivo",
+    "fr": "droite",
+    "definition_it": "il lato opposto a sinistra, oppure la mano destra",
+    "examples": [
+      {
+        "it": "Gira a destra al prossimo semaforo.",
+        "fr": "Tourne à droite au prochain feu."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "destrezza": {
+    "lemma": "destrezza",
+    "pos": "nome femminile",
+    "fr": "dextérité, adresse",
+    "definition_it": "abilità e agilità nel compiere movimenti o azioni con precisione",
+    "examples": [
+      {
+        "it": "Il giocoliere manipolava le palline con grande destrezza.",
+        "fr": "Le jongleur manipulait les balles avec une grande dextérité."
+      }
+    ],
+    "synonyms": [
+      "abilità",
+      "agilità"
+    ],
+    "isVerb": false
+  },
+  "destro": {
+    "lemma": "destro",
+    "pos": "aggettivo",
+    "fr": "droit, adroit",
+    "definition_it": "che sta o si trova dalla parte della destra; anche abile e svelto",
+    "examples": [
+      {
+        "it": "Alzò il braccio destro per salutare.",
+        "fr": "Il leva le bras droit pour saluer."
+      }
+    ],
+    "synonyms": [
+      "abile"
+    ],
+    "isVerb": false
+  },
+  "destrutturare": {
+    "lemma": "destrutturare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déstructurer",
+    "definition_it": "scomporre o smontare una struttura organizzata, togliendone l'ordine originario",
+    "examples": [
+      {
+        "it": "Il romanzo destruttura la narrazione cronologica tradizionale.",
+        "fr": "Le roman déstructure la narration chronologique traditionnelle."
+      }
+    ],
+    "synonyms": [
+      "scomporre",
+      "disgregare"
+    ],
+    "isVerb": true
+  },
+  "destrutturazione": {
+    "lemma": "destrutturazione",
+    "pos": "nome femminile",
+    "fr": "déstructuration",
+    "definition_it": "il processo di smantellamento di una struttura organizzata",
+    "examples": [
+      {
+        "it": "La destrutturazione del sistema ha richiesto anni.",
+        "fr": "La déstructuration du système a demandé des années."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "detenere": {
+    "lemma": "detenere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "détenir",
+    "definition_it": "avere il possesso o il controllo legale di qualcosa, oppure tenere una persona in stato di detenzione",
+    "examples": [
+      {
+        "it": "Quella squadra deterrà il titolo per un altro anno.",
+        "fr": "Cette équipe détiendra le titre pendant encore un an."
+      }
+    ],
+    "synonyms": [
+      "possedere",
+      "trattenere"
+    ],
+    "isVerb": true
+  },
+  "determinare": {
+    "lemma": "determinare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déterminer",
+    "definition_it": "stabilire con precisione qualcosa, oppure essere la causa di un evento",
+    "examples": [
+      {
+        "it": "Gli esami determineranno la causa del disturbo.",
+        "fr": "Les examens détermineront la cause du trouble."
+      }
+    ],
+    "synonyms": [
+      "stabilire",
+      "causare"
+    ],
+    "isVerb": true
+  },
+  "determinazione": {
+    "lemma": "determinazione",
+    "pos": "nome femminile",
+    "fr": "détermination",
+    "definition_it": "fermezza e volontà decisa nel perseguire un obiettivo",
+    "examples": [
+      {
+        "it": "Affrontò la sfida con grande determinazione.",
+        "fr": "Il affronta le défi avec une grande détermination."
+      }
+    ],
+    "synonyms": [
+      "fermezza",
+      "risolutezza"
+    ],
+    "isVerb": false
+  },
+  "detrito": {
+    "lemma": "detrito",
+    "pos": "nome maschile",
+    "fr": "débris, détritus",
+    "definition_it": "resto o frammento di materiale disgregato, spesso al plurale",
+    "examples": [
+      {
+        "it": "Dopo la frana la strada era coperta di detriti.",
+        "fr": "Après l'éboulement, la route était couverte de débris."
+      }
+    ],
+    "synonyms": [
+      "rottami",
+      "macerie"
+    ],
+    "isVerb": false
+  },
+  "dettagliare": {
+    "lemma": "dettagliare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "détailler",
+    "definition_it": "spiegare o descrivere qualcosa con precisione, elencando ogni particolare",
+    "examples": [
+      {
+        "it": "Ti prego di dettagliare meglio la tua richiesta.",
+        "fr": "Je te prie de détailler mieux ta demande."
+      }
+    ],
+    "synonyms": [
+      "specificare",
+      "particolareggiare"
+    ],
+    "isVerb": true
+  },
+  "dettaglio": {
+    "lemma": "dettaglio",
+    "pos": "nome maschile",
+    "fr": "détail",
+    "definition_it": "particolare minuto e specifico di qualcosa",
+    "examples": [
+      {
+        "it": "Ha curato ogni dettaglio del progetto.",
+        "fr": "Il a soigné chaque détail du projet."
+      }
+    ],
+    "synonyms": [
+      "particolare"
+    ],
+    "isVerb": false
+  },
+  "dettare": {
+    "lemma": "dettare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "dicter",
+    "definition_it": "pronunciare parole affinché qualcuno le scriva, oppure imporre regole o condizioni",
+    "examples": [
+      {
+        "it": "La maestra detta un breve testo agli alunni.",
+        "fr": "La maîtresse dicte un court texte aux élèves."
+      }
+    ],
+    "synonyms": [
+      "imporre",
+      "prescrivere"
+    ],
+    "isVerb": true
+  },
+  "dettatura": {
+    "lemma": "dettatura",
+    "pos": "nome (femminile)",
+    "fr": "dictée",
+    "definition_it": "esercizio o attività in cui si scrive un testo pronunciato da un'altra persona",
+    "examples": [
+      {
+        "it": "La maestra fece una dettatura per esercitare l'ortografia.",
+        "fr": "La maîtresse a fait une dictée pour exercer l'orthographe."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "devastante": {
+    "lemma": "devastante",
+    "pos": "aggettivo",
+    "fr": "dévastateur",
+    "definition_it": "che provoca grande distruzione o un danno molto grave",
+    "examples": [
+      {
+        "it": "L'alluvione ha avuto conseguenze devastanti sul villaggio.",
+        "fr": "L'inondation a eu des conséquences dévastatrices sur le village."
+      }
+    ],
+    "synonyms": [
+      "distruttivo",
+      "rovinoso"
+    ],
+    "isVerb": false
+  },
+  "deviare": {
+    "lemma": "deviare",
+    "pos": "verbo (transitivo/intransitivo, regolare)",
+    "fr": "dévier",
+    "definition_it": "cambiare direzione rispetto al percorso o al comportamento previsto",
+    "examples": [
+      {
+        "it": "L'autobus dovette deviare a causa dei lavori in strada.",
+        "fr": "Le bus a dû dévier à cause des travaux sur la route."
+      }
+    ],
+    "synonyms": [
+      "scostarsi",
+      "allontanarsi"
+    ],
+    "isVerb": true
+  },
+  "deviazione": {
+    "lemma": "deviazione",
+    "pos": "nome (femminile)",
+    "fr": "déviation",
+    "definition_it": "cambiamento di percorso o di direzione rispetto a quello normale",
+    "examples": [
+      {
+        "it": "Abbiamo seguito la deviazione indicata dai cartelli.",
+        "fr": "Nous avons suivi la déviation indiquée par les panneaux."
+      }
+    ],
+    "synonyms": [
+      "scarto"
+    ],
+    "isVerb": false
+  },
+  "devoto": {
+    "lemma": "devoto",
+    "pos": "aggettivo",
+    "fr": "dévot",
+    "definition_it": "che ha molta fede religiosa o grande attaccamento verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "È un uomo molto devoto.",
+        "fr": "C'est un homme très dévot."
+      }
+    ],
+    "synonyms": [
+      "pio",
+      "fedele"
+    ],
+    "isVerb": false
+  },
+  "devozione": {
+    "lemma": "devozione",
+    "pos": "sostantivo femminile",
+    "fr": "dévotion",
+    "definition_it": "sentimento di grande fede religiosa o forte attaccamento verso qualcuno",
+    "examples": [
+      {
+        "it": "Prega con devozione ogni giorno.",
+        "fr": "Il prie avec dévotion chaque jour."
+      }
+    ],
+    "synonyms": [
+      "fede",
+      "venerazione"
+    ],
+    "isVerb": false
+  },
+  "di": {
+    "lemma": "di",
+    "pos": "preposizione",
+    "fr": "de",
+    "definition_it": "preposizione che indica appartenenza, origine o argomento; si combina con l'articolo (es. dell', del, della)",
+    "examples": [
+      {
+        "it": "Questo è il libro dell'insegnante.",
+        "fr": "C'est le livre du professeur."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dì": {
+    "lemma": "dì",
+    "pos": "sostantivo maschile (letterario)",
+    "fr": "jour",
+    "definition_it": "parola letteraria e poetica per indicare il giorno",
+    "examples": [
+      {
+        "it": "Buon dì a tutti!",
+        "fr": "Bonjour à tous !"
+      }
+    ],
+    "synonyms": [
+      "giorno"
+    ],
+    "isVerb": false
+  },
+  "di più": {
+    "lemma": "di più",
+    "pos": "locuzione avverbiale",
+    "fr": "davantage, plus",
+    "definition_it": "in quantità o misura maggiore",
+    "examples": [
+      {
+        "it": "Vorrei sapere di più su questo argomento.",
+        "fr": "J'aimerais en savoir plus sur ce sujet."
+      }
+    ],
+    "synonyms": [
+      "maggiormente"
+    ],
+    "isVerb": false
+  },
+  "diabolico": {
+    "lemma": "diabolico",
+    "pos": "aggettivo",
+    "fr": "diabolique",
+    "definition_it": "che riguarda il diavolo, oppure estremamente malvagio o astuto",
+    "examples": [
+      {
+        "it": "Ha ideato un piano diabolico.",
+        "fr": "Il a conçu un plan diabolique."
+      }
+    ],
+    "synonyms": [
+      "demoniaco",
+      "malvagio"
+    ],
+    "isVerb": false
+  },
+  "diadema": {
+    "lemma": "diadema",
+    "pos": "sostantivo maschile",
+    "fr": "diadème",
+    "definition_it": "ornamento a forma di semicerchio che si porta sulla testa",
+    "examples": [
+      {
+        "it": "La regina indossava un diadema d'oro.",
+        "fr": "La reine portait un diadème en or."
+      }
+    ],
+    "synonyms": [
+      "corona"
+    ],
+    "isVerb": false
+  },
+  "diafano": {
+    "lemma": "diafano",
+    "pos": "aggettivo",
+    "fr": "diaphane",
+    "definition_it": "che lascia passare la luce, quasi trasparente",
+    "examples": [
+      {
+        "it": "Il tessuto è così diafano che si vede attraverso.",
+        "fr": "Le tissu est si diaphane qu'on voit à travers."
+      }
+    ],
+    "synonyms": [
+      "trasparente"
+    ],
+    "isVerb": false
+  },
+  "diagnosi": {
+    "lemma": "diagnosi",
+    "pos": "sostantivo femminile invariabile",
+    "fr": "diagnostic",
+    "definition_it": "individuazione di una malattia attraverso l'esame dei sintomi",
+    "examples": [
+      {
+        "it": "Il medico ha fatto una diagnosi precisa.",
+        "fr": "Le médecin a posé un diagnostic précis."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diagnostica": {
+    "lemma": "diagnostica",
+    "pos": "sostantivo femminile",
+    "fr": "diagnostic (discipline)",
+    "definition_it": "insieme delle tecniche e degli esami usati per fare una diagnosi",
+    "examples": [
+      {
+        "it": "La diagnostica medica è oggi molto avanzata.",
+        "fr": "Le diagnostic médical est aujourd'hui très avancé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dialettale": {
+    "lemma": "dialettale",
+    "pos": "aggettivo",
+    "fr": "dialectal",
+    "definition_it": "relativo a un dialetto",
+    "examples": [
+      {
+        "it": "Usa spesso espressioni dialettali.",
+        "fr": "Il utilise souvent des expressions dialectales."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dialetto": {
+    "lemma": "dialetto",
+    "pos": "sostantivo maschile",
+    "fr": "dialecte",
+    "definition_it": "varietà linguistica parlata in una zona geografica limitata",
+    "examples": [
+      {
+        "it": "Parla il dialetto della sua regione.",
+        "fr": "Il parle le dialecte de sa région."
+      }
+    ],
+    "synonyms": [
+      "vernacolo"
+    ],
+    "isVerb": false
+  },
+  "dialogare": {
+    "lemma": "dialogare",
+    "pos": "verbo (intransitivo)",
+    "fr": "dialoguer",
+    "definition_it": "parlare con qualcuno scambiando opinioni e idee",
+    "examples": [
+      {
+        "it": "I due leader dialogano per la pace.",
+        "fr": "Les deux dirigeants dialoguent pour la paix."
+      }
+    ],
+    "synonyms": [
+      "conversare",
+      "discutere"
+    ],
+    "isVerb": true
+  },
+  "dialogo": {
+    "lemma": "dialogo",
+    "pos": "nome (m)",
+    "fr": "dialogue",
+    "definition_it": "conversazione tra due o più persone, oppure parte scritta di un libro o film in cui i personaggi parlano",
+    "examples": [
+      {
+        "it": "Il dialogo tra i due protagonisti è molto intenso.",
+        "fr": "Le dialogue entre les deux protagonistes est très intense."
+      }
+    ],
+    "synonyms": [
+      "conversazione",
+      "colloquio"
+    ],
+    "isVerb": false
+  },
+  "diamine": {
+    "lemma": "diamine",
+    "pos": "interiezione",
+    "fr": "diable, mince alors",
+    "definition_it": "esclamazione usata per esprimere sorpresa, stizza o rafforzare una domanda, in modo più educato di 'diavolo'",
+    "examples": [
+      {
+        "it": "Ma che diamine stai facendo?",
+        "fr": "Mais que diable es-tu en train de faire ?"
+      }
+    ],
+    "synonyms": [
+      "diavolo",
+      "caspita"
+    ],
+    "isVerb": false
+  },
+  "dianzi": {
+    "lemma": "dianzi",
+    "pos": "avverbio",
+    "fr": "tout à l'heure, peu avant",
+    "definition_it": "poco tempo fa, in un momento appena precedente",
+    "examples": [
+      {
+        "it": "Come dicevo dianzi, la questione è complessa.",
+        "fr": "Comme je le disais tout à l'heure, la question est complexe."
+      }
+    ],
+    "synonyms": [
+      "poco fa",
+      "or ora"
+    ],
+    "isVerb": false
+  },
+  "diario": {
+    "lemma": "diario",
+    "pos": "nome (m)",
+    "fr": "journal intime",
+    "definition_it": "quaderno o testo in cui si scrivono giorno per giorno pensieri ed eventi personali",
+    "examples": [
+      {
+        "it": "Ogni sera scrivo qualche riga sul mio diario.",
+        "fr": "Chaque soir j'écris quelques lignes dans mon journal intime."
+      }
+    ],
+    "synonyms": [
+      "giornale intimo"
+    ],
+    "isVerb": false
+  },
+  "diavolaccio": {
+    "lemma": "diavolaccio",
+    "pos": "nome (m)",
+    "fr": "satané diable, vilain diable",
+    "definition_it": "diavolo, spesso usato in senso figurato per indicare una persona astuta o malvagia, con tono spregiativo",
+    "examples": [
+      {
+        "it": "Quel diavolaccio ha combinato un altro pasticcio.",
+        "fr": "Ce satané diable a encore fait des siennes."
+      }
+    ],
+    "synonyms": [
+      "furfante",
+      "birbante"
+    ],
+    "isVerb": false
+  },
+  "diavoleria": {
+    "lemma": "diavoleria",
+    "pos": "nome (f)",
+    "fr": "diablerie",
+    "definition_it": "azione malvagia o astuta, oppure cosa strana e complicata che sembra opera del diavolo",
+    "examples": [
+      {
+        "it": "Non capisco come funzioni questa diavoleria elettronica.",
+        "fr": "Je ne comprends pas comment fonctionne cette diablerie électronique."
+      }
+    ],
+    "synonyms": [
+      "stregoneria",
+      "trucco"
+    ],
+    "isVerb": false
+  },
+  "diavolo": {
+    "lemma": "diavolo",
+    "pos": "nome (m)",
+    "fr": "diable",
+    "definition_it": "essere maligno della tradizione religiosa, opposto a Dio, oppure persona molto vivace o cattiva",
+    "examples": [
+      {
+        "it": "Quel bambino è un vero diavolo.",
+        "fr": "Cet enfant est un vrai diable."
+      }
+    ],
+    "synonyms": [
+      "demonio",
+      "satana"
+    ],
+    "isVerb": false
+  },
+  "dibattersi": {
+    "lemma": "dibattersi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se débattre",
+    "definition_it": "muoversi con forza e agitazione per liberarsi da qualcosa, oppure trovarsi in una situazione difficile e lottare per uscirne",
+    "examples": [
+      {
+        "it": "Il pesce si dibatteva nella rete cercando di fuggire.",
+        "fr": "Le poisson se débattait dans le filet en essayant de s'échapper."
+      }
+    ],
+    "synonyms": [
+      "divincolarsi",
+      "agitarsi"
+    ],
+    "isVerb": true
+  },
+  "dibattito": {
+    "lemma": "dibattito",
+    "pos": "nome (m)",
+    "fr": "débat",
+    "definition_it": "discussione pubblica in cui persone con opinioni diverse si confrontano su un argomento",
+    "examples": [
+      {
+        "it": "Il dibattito politico in televisione è durato due ore.",
+        "fr": "Le débat politique à la télévision a duré deux heures."
+      }
+    ],
+    "synonyms": [
+      "discussione",
+      "confronto"
+    ],
+    "isVerb": false
+  },
+  "dicembre": {
+    "lemma": "dicembre",
+    "pos": "nome (m)",
+    "fr": "décembre",
+    "definition_it": "dodicesimo e ultimo mese dell'anno",
+    "examples": [
+      {
+        "it": "A dicembre fa molto freddo in montagna.",
+        "fr": "En décembre, il fait très froid en montagne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dichiarare": {
+    "lemma": "dichiarare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "déclarer",
+    "definition_it": "affermare qualcosa in modo chiaro, ufficiale o pubblico",
+    "examples": [
+      {
+        "it": "Il presidente ha dichiarato lo stato di emergenza.",
+        "fr": "Le président a déclaré l'état d'urgence."
+      }
+    ],
+    "synonyms": [
+      "affermare",
+      "proclamare"
+    ],
+    "isVerb": true
+  },
+  "dichiarazione": {
+    "lemma": "dichiarazione",
+    "pos": "sostantivo femminile",
+    "fr": "déclaration",
+    "definition_it": "affermazione fatta in modo chiaro e spesso ufficiale",
+    "examples": [
+      {
+        "it": "Ha firmato una dichiarazione dei redditi.",
+        "fr": "Il a signé une déclaration de revenus."
+      }
+    ],
+    "synonyms": [
+      "affermazione",
+      "asserzione"
+    ],
+    "isVerb": false
+  },
+  "diciannove": {
+    "lemma": "diciannove",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "dix-neuf",
+    "definition_it": "il numero che segue diciotto e precede venti",
+    "examples": [
+      {
+        "it": "Ha diciannove anni.",
+        "fr": "Il a dix-neuf ans."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diciannovesimo": {
+    "lemma": "diciannovesimo",
+    "pos": "aggettivo numerale ordinale",
+    "fr": "dix-neuvième",
+    "definition_it": "che occupa il posto numero diciannove in una serie",
+    "examples": [
+      {
+        "it": "Viviamo nel diciannovesimo secolo.",
+        "fr": "Nous vivons au dix-neuvième siècle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diciassette": {
+    "lemma": "diciassette",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "dix-sept",
+    "definition_it": "il numero che segue sedici e precede diciotto",
+    "examples": [
+      {
+        "it": "La classe conta diciassette studenti.",
+        "fr": "La classe compte dix-sept élèves."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diciotto": {
+    "lemma": "diciotto",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "dix-huit",
+    "definition_it": "il numero che segue diciassette e precede diciannove",
+    "examples": [
+      {
+        "it": "A diciott'anni si diventa maggiorenni in Italia.",
+        "fr": "À dix-huit ans, on devient majeur en Italie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dicitura": {
+    "lemma": "dicitura",
+    "pos": "sostantivo femminile",
+    "fr": "mention, formule, inscription",
+    "definition_it": "modo particolare in cui una frase o una parola è scritta, spesso su un'etichetta o un documento",
+    "examples": [
+      {
+        "it": "Sull'etichetta c'è la dicitura \"senza glutine\".",
+        "fr": "Sur l'étiquette figure la mention « sans gluten »."
+      }
+    ],
+    "synonyms": [
+      "scritta",
+      "formula"
+    ],
+    "isVerb": false
+  },
+  "didascalia": {
+    "lemma": "didascalia",
+    "pos": "sostantivo femminile",
+    "fr": "légende, sous-titre",
+    "definition_it": "breve testo che spiega un'immagine, una foto o una scena",
+    "examples": [
+      {
+        "it": "Le didascalie sotto le foto spiegano il contesto.",
+        "fr": "Les légendes sous les photos expliquent le contexte."
+      }
+    ],
+    "synonyms": [
+      "sottotitolo",
+      "spiegazione"
+    ],
+    "isVerb": false
+  },
+  "didattico": {
+    "lemma": "didattico",
+    "pos": "aggettivo",
+    "fr": "didactique, pédagogique",
+    "definition_it": "che serve a insegnare o a facilitare l'apprendimento",
+    "examples": [
+      {
+        "it": "Il museo offre un percorso didattico per i bambini.",
+        "fr": "Le musée propose un parcours pédagogique pour les enfants."
+      }
+    ],
+    "synonyms": [
+      "educativo",
+      "pedagogico"
+    ],
+    "isVerb": false
+  },
+  "dieci": {
+    "lemma": "dieci",
+    "pos": "aggettivo numerale / sostantivo",
+    "fr": "dix",
+    "definition_it": "il numero che segue nove e precede undici",
+    "examples": [
+      {
+        "it": "Ho aspettato dieci minuti.",
+        "fr": "J'ai attendu dix minutes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dieta": {
+    "lemma": "dieta",
+    "pos": "sostantivo (f.)",
+    "fr": "régime alimentaire",
+    "definition_it": "insieme di cibi e abitudini alimentari seguite per salute o dimagrimento",
+    "examples": [
+      {
+        "it": "Il medico gli ha consigliato una dieta equilibrata.",
+        "fr": "Le médecin lui a conseillé un régime équilibré."
+      }
+    ],
+    "synonyms": [
+      "regime alimentare"
+    ],
+    "isVerb": false
+  },
+  "dietro": {
+    "lemma": "dietro",
+    "pos": "preposizione / avverbio",
+    "fr": "derrière",
+    "definition_it": "nella parte posteriore rispetto a qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "La chiave è dietro il vaso.",
+        "fr": "La clé est derrière le vase."
+      }
+    ],
+    "synonyms": [
+      "dopo",
+      "posteriormente"
+    ],
+    "isVerb": false
+  },
+  "difatti": {
+    "lemma": "difatti",
+    "pos": "avverbio",
+    "fr": "en effet, effectivement",
+    "definition_it": "usato per confermare quanto detto prima; infatti",
+    "examples": [
+      {
+        "it": "Difatti, le cose andarono proprio così.",
+        "fr": "En effet, les choses se sont passées ainsi."
+      }
+    ],
+    "synonyms": [
+      "infatti"
+    ],
+    "isVerb": false
+  },
+  "difendere": {
+    "lemma": "difendere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "défendre",
+    "definition_it": "proteggere qualcuno o qualcosa da un pericolo, un attacco o un'accusa",
+    "examples": [
+      {
+        "it": "L'avvocato difende il suo cliente in tribunale.",
+        "fr": "L'avocat défend son client au tribunal."
+      }
+    ],
+    "synonyms": [
+      "proteggere",
+      "tutelare"
+    ],
+    "isVerb": true
+  },
+  "difensore": {
+    "lemma": "difensore",
+    "pos": "sostantivo (m./f.)",
+    "fr": "défenseur",
+    "definition_it": "persona che difende qualcuno, spesso un avvocato o un giocatore di calcio",
+    "examples": [
+      {
+        "it": "Il difensore ha convinto la giuria.",
+        "fr": "Le défenseur a convaincu le jury."
+      }
+    ],
+    "synonyms": [
+      "protettore",
+      "avvocato difensore"
+    ],
+    "isVerb": false
+  },
+  "difesa": {
+    "lemma": "difesa",
+    "pos": "sostantivo (f.)",
+    "fr": "défense",
+    "definition_it": "azione o mezzo con cui ci si protegge da un attacco o un'accusa",
+    "examples": [
+      {
+        "it": "La difesa ha presentato nuove prove.",
+        "fr": "La défense a présenté de nouvelles preuves."
+      }
+    ],
+    "synonyms": [
+      "protezione",
+      "tutela"
+    ],
+    "isVerb": false
+  },
+  "difetto": {
+    "lemma": "difetto",
+    "pos": "sostantivo (m.)",
+    "fr": "défaut",
+    "definition_it": "imperfezione o mancanza in una persona o in una cosa",
+    "examples": [
+      {
+        "it": "Questo vestito ha un piccolo difetto di cucitura.",
+        "fr": "Cette robe a un petit défaut de couture."
+      }
+    ],
+    "synonyms": [
+      "imperfezione",
+      "difetto"
+    ],
+    "isVerb": false
+  },
+  "diffamazione": {
+    "lemma": "diffamazione",
+    "pos": "nome (femminile)",
+    "fr": "diffamation",
+    "definition_it": "l'azione di danneggiare la reputazione di qualcuno diffondendo affermazioni false",
+    "examples": [
+      {
+        "it": "È stato accusato di diffamazione sui social media.",
+        "fr": "Il a été accusé de diffamation sur les réseaux sociaux."
+      }
+    ],
+    "synonyms": [
+      "calunnia"
+    ],
+    "isVerb": false
+  },
+  "differenza": {
+    "lemma": "differenza",
+    "pos": "nome (femminile)",
+    "fr": "différence",
+    "definition_it": "ciò che distingue una cosa o una persona da un'altra",
+    "examples": [
+      {
+        "it": "Non capisco la differenza tra questi due prodotti.",
+        "fr": "Je ne comprends pas la différence entre ces deux produits."
+      }
+    ],
+    "synonyms": [
+      "distinzione"
+    ],
+    "isVerb": false
+  },
+  "differenziato": {
+    "lemma": "differenziato",
+    "pos": "aggettivo (participio passato)",
+    "fr": "différencié, trié",
+    "definition_it": "reso diverso o suddiviso in categorie distinte, spesso riferito ai rifiuti",
+    "examples": [
+      {
+        "it": "In città la raccolta differenziata funziona molto bene.",
+        "fr": "En ville, le tri sélectif fonctionne très bien."
+      }
+    ],
+    "synonyms": [
+      "diversificato"
+    ],
+    "isVerb": false
+  },
+  "difficile": {
+    "lemma": "difficile",
+    "pos": "aggettivo",
+    "fr": "difficile",
+    "definition_it": "che richiede molto sforzo o abilità per essere fatto o capito",
+    "examples": [
+      {
+        "it": "Questo esercizio è troppo difficile per me.",
+        "fr": "Cet exercice est trop difficile pour moi."
+      }
+    ],
+    "synonyms": [
+      "arduo",
+      "complicato"
+    ],
+    "isVerb": false
+  },
+  "difficilmente": {
+    "lemma": "difficilmente",
+    "pos": "avverbio",
+    "fr": "difficilement",
+    "definition_it": "con difficoltà, quasi mai o molto raramente",
+    "examples": [
+      {
+        "it": "Difficilmente arriverà in tempo con questo traffico.",
+        "fr": "Il arrivera difficilement à temps avec ce trafic."
+      }
+    ],
+    "synonyms": [
+      "raramente"
+    ],
+    "isVerb": false
+  },
+  "difficoltà": {
+    "lemma": "difficoltà",
+    "pos": "nome (femminile, invariabile)",
+    "fr": "difficulté",
+    "definition_it": "una situazione o un ostacolo che rende difficile fare qualcosa",
+    "examples": [
+      {
+        "it": "Ho avuto molte difficoltà a trovare lavoro.",
+        "fr": "J'ai eu beaucoup de difficultés à trouver du travail."
+      }
+    ],
+    "synonyms": [
+      "ostacolo",
+      "problema"
+    ],
+    "isVerb": false
+  },
+  "diffida": {
+    "lemma": "diffida",
+    "pos": "nome (femminile)",
+    "fr": "mise en demeure, avertissement",
+    "definition_it": "un avviso formale, spesso scritto, con cui si intima a qualcuno di fare o smettere di fare qualcosa",
+    "examples": [
+      {
+        "it": "L'avvocato ha inviato una diffida al vicino rumoroso.",
+        "fr": "L'avocat a envoyé une mise en demeure au voisin bruyant."
+      }
+    ],
+    "synonyms": [
+      "avvertimento",
+      "intimazione"
+    ],
+    "isVerb": false
+  },
+  "diffidare": {
+    "lemma": "diffidare",
+    "pos": "verbo (intransitivo/transitivo, regolare)",
+    "fr": "se méfier de, mettre en demeure",
+    "definition_it": "non fidarsi di qualcuno o qualcosa, oppure avvisare formalmente qualcuno",
+    "examples": [
+      {
+        "it": "Diffido delle persone troppo gentili.",
+        "fr": "Je me méfie des personnes trop gentilles."
+      }
+    ],
+    "synonyms": [
+      "sospettare"
+    ],
+    "isVerb": true
+  },
+  "diffidente": {
+    "lemma": "diffidente",
+    "pos": "aggettivo",
+    "fr": "méfiant",
+    "definition_it": "che non si fida facilmente degli altri",
+    "examples": [
+      {
+        "it": "Dopo quella delusione è diventato molto diffidente.",
+        "fr": "Après cette déception, il est devenu très méfiant."
+      }
+    ],
+    "synonyms": [
+      "sospettoso"
+    ],
+    "isVerb": false
+  },
+  "diffidenza": {
+    "lemma": "diffidenza",
+    "pos": "nome (femminile)",
+    "fr": "méfiance",
+    "definition_it": "mancanza di fiducia verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Guarda tutti con diffidenza.",
+        "fr": "Il regarde tout le monde avec méfiance."
+      }
+    ],
+    "synonyms": [
+      "sospetto"
+    ],
+    "isVerb": false
+  },
+  "diffondere": {
+    "lemma": "diffondere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "diffuser, répandre",
+    "definition_it": "far conoscere o spargere qualcosa in un'area ampia",
+    "examples": [
+      {
+        "it": "La notizia si è diffusa molto rapidamente.",
+        "fr": "La nouvelle s'est répandue très rapidement."
+      }
+    ],
+    "synonyms": [
+      "divulgare",
+      "propagare"
+    ],
+    "isVerb": true
+  },
+  "diffondersi": {
+    "lemma": "diffondersi",
+    "pos": "verbo (riflessivo/intransitivo pronominale)",
+    "fr": "se répandre, se diffuser",
+    "definition_it": "spargersi, propagarsi in un luogo o tra le persone",
+    "examples": [
+      {
+        "it": "La notizia si diffuse rapidamente in tutta la città.",
+        "fr": "La nouvelle se répandit rapidement dans toute la ville."
+      }
+    ],
+    "synonyms": [
+      "propagarsi",
+      "spargersi"
+    ],
+    "isVerb": true
+  },
+  "diffusamente": {
+    "lemma": "diffusamente",
+    "pos": "avverbio",
+    "fr": "de manière étendue, en détail",
+    "definition_it": "in modo diffuso, ampio e dettagliato",
+    "examples": [
+      {
+        "it": "L'argomento è stato trattato diffusamente nel libro.",
+        "fr": "Le sujet a été traité en détail dans le livre."
+      }
+    ],
+    "synonyms": [
+      "ampiamente"
+    ],
+    "isVerb": false
+  },
+  "diffusione": {
+    "lemma": "diffusione",
+    "pos": "nome (femminile)",
+    "fr": "diffusion, propagation",
+    "definition_it": "il diffondersi, lo spargersi di qualcosa",
+    "examples": [
+      {
+        "it": "La diffusione di internet ha cambiato le nostre abitudini.",
+        "fr": "La diffusion d'internet a changé nos habitudes."
+      }
+    ],
+    "synonyms": [
+      "propagazione",
+      "divulgazione"
+    ],
+    "isVerb": false
+  },
+  "diffuso": {
+    "lemma": "diffuso",
+    "pos": "aggettivo / participio passato",
+    "fr": "répandu, diffusé, courant",
+    "definition_it": "che si trova o si è propagato in molti luoghi o tra molte persone",
+    "examples": [
+      {
+        "it": "È un'abitudine molto diffusa in Italia.",
+        "fr": "C'est une habitude très répandue en Italie."
+      }
+    ],
+    "synonyms": [
+      "comune",
+      "propagato"
+    ],
+    "isVerb": false
+  },
+  "difilato": {
+    "lemma": "difilato",
+    "pos": "avverbio",
+    "fr": "tout droit, directement",
+    "definition_it": "direttamente, senza fermarsi e senza indugio",
+    "examples": [
+      {
+        "it": "Uscì di casa e andò difilato al lavoro.",
+        "fr": "Il sortit de chez lui et alla directement au travail."
+      }
+    ],
+    "synonyms": [
+      "direttamente",
+      "dritto"
+    ],
+    "isVerb": false
+  },
+  "diga": {
+    "lemma": "diga",
+    "pos": "nome (femminile)",
+    "fr": "barrage, digue",
+    "definition_it": "costruzione che serve a trattenere l'acqua di un fiume, di un lago o del mare",
+    "examples": [
+      {
+        "it": "La diga fornisce energia elettrica a tutta la regione.",
+        "fr": "Le barrage fournit de l'électricité à toute la région."
+      }
+    ],
+    "synonyms": [
+      "sbarramento",
+      "argine"
+    ],
+    "isVerb": false
+  },
+  "digerire": {
+    "lemma": "digerire",
+    "pos": "verbo (transitivo)",
+    "fr": "digérer",
+    "definition_it": "trasformare il cibo nello stomaco e nell'intestino per poterlo assimilare",
+    "examples": [
+      {
+        "it": "Ho mangiato troppo e faccio fatica a digerire.",
+        "fr": "J'ai trop mangé et j'ai du mal à digérer."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "digitale": {
+    "lemma": "digitale",
+    "pos": "aggettivo",
+    "fr": "numérique, digital",
+    "definition_it": "che riguarda i numeri o le tecnologie informatiche basate su segnali numerici",
+    "examples": [
+      {
+        "it": "Ho comprato una nuova fotocamera digitale.",
+        "fr": "J'ai acheté un nouvel appareil photo numérique."
+      }
+    ],
+    "synonyms": [
+      "numerico"
+    ],
+    "isVerb": false
+  },
+  "digitalizzazione": {
+    "lemma": "digitalizzazione",
+    "pos": "sostantivo femminile",
+    "fr": "digitalisation, numérisation",
+    "definition_it": "il processo di trasformazione di informazioni, documenti o processi in formato digitale",
+    "examples": [
+      {
+        "it": "L'azienda ha investito molto nella digitalizzazione dei documenti.",
+        "fr": "L'entreprise a beaucoup investi dans la digitalisation des documents."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "digiunare": {
+    "lemma": "digiunare",
+    "pos": "verbo (intransitivo)",
+    "fr": "jeûner",
+    "definition_it": "astenersi volontariamente dal mangiare per un periodo di tempo",
+    "examples": [
+      {
+        "it": "Molti musulmani digiunano durante il Ramadan.",
+        "fr": "Beaucoup de musulmans jeûnent pendant le Ramadan."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "digiuno": {
+    "lemma": "digiuno",
+    "pos": "sostantivo maschile",
+    "fr": "jeûne",
+    "definition_it": "l'astenersi dal mangiare per un certo periodo, spesso per motivi religiosi o di salute",
+    "examples": [
+      {
+        "it": "Ha fatto un digiuno di tre giorni.",
+        "fr": "Il a fait un jeûne de trois jours."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dignità": {
+    "lemma": "dignità",
+    "pos": "sostantivo femminile",
+    "fr": "dignité",
+    "definition_it": "il rispetto e il valore morale che una persona merita e dimostra",
+    "examples": [
+      {
+        "it": "Ha affrontato la malattia con grande dignità.",
+        "fr": "Il a affronté la maladie avec une grande dignité."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dignitoso": {
+    "lemma": "dignitoso",
+    "pos": "aggettivo",
+    "fr": "digne",
+    "definition_it": "che ha o dimostra dignità, che si comporta con decoro",
+    "examples": [
+      {
+        "it": "Ha mantenuto un atteggiamento dignitoso anche nelle difficoltà.",
+        "fr": "Il a gardé une attitude digne même dans les difficultés."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "digressione": {
+    "lemma": "digressione",
+    "pos": "sostantivo femminile",
+    "fr": "digression",
+    "definition_it": "una deviazione dal tema principale di un discorso o di un testo",
+    "examples": [
+      {
+        "it": "L'autore fa spesso digressioni storiche nel suo romanzo.",
+        "fr": "L'auteur fait souvent des digressions historiques dans son roman."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "digrignare": {
+    "lemma": "digrignare",
+    "pos": "verbo (transitivo)",
+    "fr": "grincer (les dents), montrer les dents",
+    "definition_it": "battere o stringere i denti in segno di rabbia o minaccia",
+    "examples": [
+      {
+        "it": "Il cane digrignava i denti in modo minaccioso.",
+        "fr": "Le chien montrait les dents d'un air menaçant."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "digrossare": {
+    "lemma": "digrossare",
+    "pos": "verbo (transitivo)",
+    "fr": "dégrossir",
+    "definition_it": "togliere la parte più grossolana di un materiale per iniziare a lavorarlo; anche, in senso figurato, rendere una persona meno rozza",
+    "examples": [
+      {
+        "it": "Bisogna digrossare il legno prima di scolpirlo.",
+        "fr": "Il faut dégrossir le bois avant de le sculpter."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dileggio": {
+    "lemma": "dileggio",
+    "pos": "sostantivo maschile",
+    "fr": "moquerie, raillerie",
+    "definition_it": "atto di deridere o schernire qualcuno con parole o gesti",
+    "examples": [
+      {
+        "it": "Fu oggetto di dileggio da parte dei compagni.",
+        "fr": "Il fut l'objet de moqueries de la part de ses camarades."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dilettante": {
+    "lemma": "dilettante",
+    "pos": "sostantivo / aggettivo",
+    "fr": "amateur",
+    "definition_it": "chi pratica un'attività per passione e non professionalmente",
+    "examples": [
+      {
+        "it": "È un fotografo dilettante ma molto bravo.",
+        "fr": "C'est un photographe amateur mais très doué."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diletto": {
+    "lemma": "diletto",
+    "pos": "sostantivo maschile / aggettivo",
+    "fr": "plaisir, délice / bien-aimé, cher",
+    "definition_it": "piacere intenso e piacevole; come aggettivo, molto amato e caro",
+    "examples": [
+      {
+        "it": "La lettura è per lei un grande diletto.",
+        "fr": "La lecture est pour elle un grand plaisir."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dilettoso": {
+    "lemma": "dilettoso",
+    "pos": "aggettivo (letterario)",
+    "fr": "délicieux, agréable",
+    "definition_it": "che procura diletto, molto piacevole",
+    "examples": [
+      {
+        "it": "Trascorsero un pomeriggio dilettoso in campagna.",
+        "fr": "Ils passèrent un après-midi délicieux à la campagne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diligente": {
+    "lemma": "diligente",
+    "pos": "aggettivo",
+    "fr": "diligent, appliqué",
+    "definition_it": "che compie i propri doveri con cura, impegno e precisione",
+    "examples": [
+      {
+        "it": "È uno studente molto diligente.",
+        "fr": "C'est un élève très appliqué."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diligenza": {
+    "lemma": "diligenza",
+    "pos": "sostantivo femminile",
+    "fr": "diligence (soin, application); autrefois: diligence (carrosse)",
+    "definition_it": "cura e impegno nello svolgere un compito; in passato, anche carrozza per il trasporto di persone",
+    "examples": [
+      {
+        "it": "Svolge il suo lavoro con grande diligenza.",
+        "fr": "Il accomplit son travail avec beaucoup de diligence."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diluviare": {
+    "lemma": "diluviare",
+    "pos": "verbo (intransitivo, impersonale)",
+    "fr": "pleuvoir à verse",
+    "definition_it": "piovere in modo molto intenso e abbondante",
+    "examples": [
+      {
+        "it": "Ieri sera diluviò per tutta la notte.",
+        "fr": "Hier soir il a plu à verse toute la nuit."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimagrire": {
+    "lemma": "dimagrire",
+    "pos": "verbo (intransitivo)",
+    "fr": "maigrir",
+    "definition_it": "perdere peso, diventare più magro",
+    "examples": [
+      {
+        "it": "Ha deciso di dimagrire mangiando meno dolci.",
+        "fr": "Il a décidé de maigrir en mangeant moins de sucreries."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimenare": {
+    "lemma": "dimenare",
+    "pos": "verbo (transitivo, anche riflessivo)",
+    "fr": "agiter, remuer",
+    "definition_it": "muovere velocemente e ripetutamente una parte del corpo",
+    "examples": [
+      {
+        "it": "Il cane dimenava la coda per la gioia.",
+        "fr": "Le chien remuait la queue de joie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimensione": {
+    "lemma": "dimensione",
+    "pos": "nome (femminile)",
+    "fr": "dimension",
+    "definition_it": "grandezza o misura di qualcosa, oppure aspetto e ambito di una realtà",
+    "examples": [
+      {
+        "it": "Le dimensioni della stanza sono perfette per un letto matrimoniale.",
+        "fr": "Les dimensions de la pièce sont parfaites pour un lit double."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dimenticanza": {
+    "lemma": "dimenticanza",
+    "pos": "nome (femminile)",
+    "fr": "oubli, étourderie",
+    "definition_it": "il fatto di dimenticare qualcosa, distrazione o mancanza di attenzione",
+    "examples": [
+      {
+        "it": "Per una dimenticanza non ho portato i documenti.",
+        "fr": "Par étourderie je n'ai pas apporté les documents."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dimenticare": {
+    "lemma": "dimenticare",
+    "pos": "verbo (transitivo)",
+    "fr": "oublier",
+    "definition_it": "non ricordare più qualcosa",
+    "examples": [
+      {
+        "it": "Ho dimenticato le chiavi a casa.",
+        "fr": "J'ai oublié les clés à la maison."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimettere": {
+    "lemma": "dimettere",
+    "pos": "verbo (transitivo)",
+    "fr": "renvoyer, faire sortir",
+    "definition_it": "far cessare qualcuno da una carica o da un ricovero, farlo uscire",
+    "examples": [
+      {
+        "it": "I medici hanno dimesso il paziente dall'ospedale.",
+        "fr": "Les médecins ont laissé sortir le patient de l'hôpital."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "diminuire": {
+    "lemma": "diminuire",
+    "pos": "verbo (intransitivo/transitivo)",
+    "fr": "diminuer",
+    "definition_it": "diventare o rendere più piccolo, meno numeroso o meno intenso",
+    "examples": [
+      {
+        "it": "I prezzi diminuiscono ogni anno.",
+        "fr": "Les prix diminuent chaque année."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimissioni": {
+    "lemma": "dimissioni",
+    "pos": "nome (femminile plurale)",
+    "fr": "démission",
+    "definition_it": "atto con cui una persona rinuncia volontariamente a una carica o a un impiego",
+    "examples": [
+      {
+        "it": "Il ministro ha presentato le sue dimissioni.",
+        "fr": "Le ministre a présenté sa démission."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dimodoché": {
+    "lemma": "dimodoché",
+    "pos": "congiunzione",
+    "fr": "de sorte que, de manière que",
+    "definition_it": "in modo tale che, così che (introduce una conseguenza)",
+    "examples": [
+      {
+        "it": "Parla piano, dimodoché tutti possano capire.",
+        "fr": "Parle doucement, de sorte que tout le monde puisse comprendre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dimolto": {
+    "lemma": "dimolto",
+    "pos": "avverbio (arcaico/dialettale)",
+    "fr": "beaucoup",
+    "definition_it": "forma antica o regionale per 'molto'",
+    "examples": [
+      {
+        "it": "Era dimolto stanco dopo il viaggio.",
+        "fr": "Il était très fatigué après le voyage."
+      }
+    ],
+    "synonyms": [
+      "molto"
+    ],
+    "isVerb": false
+  },
+  "dimonio": {
+    "lemma": "dimonio",
+    "pos": "nome (maschile, variante dialettale)",
+    "fr": "démon, diable",
+    "definition_it": "variante popolare o dialettale di 'demonio', spirito maligno",
+    "examples": [
+      {
+        "it": "Quel bambino è un vero dimonio!",
+        "fr": "Cet enfant est un vrai petit démon !"
+      }
+    ],
+    "synonyms": [
+      "demonio"
+    ],
+    "isVerb": false
+  },
+  "dimora": {
+    "lemma": "dimora",
+    "pos": "nome (femminile)",
+    "fr": "demeure, résidence",
+    "definition_it": "luogo in cui una persona abita stabilmente",
+    "examples": [
+      {
+        "it": "Il castello fu per secoli la dimora della famiglia reale.",
+        "fr": "Le château fut pendant des siècles la demeure de la famille royale."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dimorare": {
+    "lemma": "dimorare",
+    "pos": "verbo (intransitivo)",
+    "fr": "résider, demeurer",
+    "definition_it": "abitare o risiedere stabilmente in un luogo",
+    "examples": [
+      {
+        "it": "Preferisce dimorarvi durante l'estate.",
+        "fr": "Il préfère y résider pendant l'été."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimostrare": {
+    "lemma": "dimostrare",
+    "pos": "verbo (transitivo)",
+    "fr": "démontrer, prouver",
+    "definition_it": "provare con argomenti o fatti la verità di qualcosa",
+    "examples": [
+      {
+        "it": "Questo esperimento dimostra la sua teoria.",
+        "fr": "Cette expérience démontre sa théorie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "dimostrazione": {
+    "lemma": "dimostrazione",
+    "pos": "sostantivo (f.)",
+    "fr": "démonstration, preuve",
+    "definition_it": "insieme di prove o ragionamenti che mostrano la verità di qualcosa, oppure manifestazione pubblica di un'idea o di un sentimento",
+    "examples": [
+      {
+        "it": "La dimostrazione del teorema è stata molto chiara.",
+        "fr": "La démonstration du théorème a été très claire."
+      }
+    ],
+    "synonyms": [
+      "prova",
+      "manifestazione"
+    ],
+    "isVerb": false
+  },
+  "din": {
+    "lemma": "din",
+    "pos": "interiezione/onomatopea",
+    "fr": "ding",
+    "definition_it": "suono ripetuto di una campana o di un campanello, spesso nell'espressione «din don»",
+    "examples": [
+      {
+        "it": "Din don, la campana suonava nel silenzio della notte.",
+        "fr": "Ding dong, la cloche sonnait dans le silence de la nuit."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dinanzi": {
+    "lemma": "dinanzi",
+    "pos": "avverbio/preposizione",
+    "fr": "devant, en face de",
+    "definition_it": "davanti, di fronte a qualcuno o qualcosa (spesso seguito da 'a')",
+    "examples": [
+      {
+        "it": "Si fermò dinanzi alla porta prima di entrare.",
+        "fr": "Il s'arrêta devant la porte avant d'entrer."
+      }
+    ],
+    "synonyms": [
+      "davanti",
+      "innanzi"
+    ],
+    "isVerb": false
+  },
+  "dinastia": {
+    "lemma": "dinastia",
+    "pos": "nome femminile",
+    "fr": "dynastie",
+    "definition_it": "serie di sovrani appartenenti alla stessa famiglia che si succedono al potere",
+    "examples": [
+      {
+        "it": "Quella dinastia regnò per tre secoli.",
+        "fr": "Cette dynastie régna pendant trois siècles."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dinosauro": {
+    "lemma": "dinosauro",
+    "pos": "nome maschile",
+    "fr": "dinosaure",
+    "definition_it": "grande animale preistorico, oggi estinto, vissuto milioni di anni fa",
+    "examples": [
+      {
+        "it": "Il museo espone lo scheletro di un dinosauro.",
+        "fr": "Le musée expose le squelette d'un dinosaure."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dintorno": {
+    "lemma": "dintorno",
+    "pos": "nome maschile",
+    "fr": "environs, alentours",
+    "definition_it": "zona che circonda un luogo; usato spesso al plurale 'dintorni'",
+    "examples": [
+      {
+        "it": "Nei dintorni della città ci sono molte colline.",
+        "fr": "Aux alentours de la ville, il y a de nombreuses collines."
+      }
+    ],
+    "synonyms": [
+      "vicinanze",
+      "paraggi"
+    ],
+    "isVerb": false
+  },
+  "dio": {
+    "lemma": "dio",
+    "pos": "sostantivo (m.)",
+    "fr": "dieu",
+    "definition_it": "essere supremo o divinità venerata in una religione",
+    "examples": [
+      {
+        "it": "Gli antichi Greci credevano in molti dèi.",
+        "fr": "Les Grecs anciens croyaient en plusieurs dieux."
+      }
+    ],
+    "synonyms": [
+      "divinità"
+    ],
+    "isVerb": false
+  },
+  "dipartire": {
+    "lemma": "dipartire",
+    "pos": "verbo (intransitivo, letterario/arcaico)",
+    "fr": "s'en aller, se séparer, partir",
+    "definition_it": "andarsene, separarsi, allontanarsi; in senso letterario anche 'morire' (spesso usato come 'dipartirsi')",
+    "examples": [
+      {
+        "it": "L'anima si dipartì dolcemente dal corpo.",
+        "fr": "L'âme se sépara doucement du corps."
+      }
+    ],
+    "synonyms": [
+      "partire",
+      "separarsi",
+      "andarsene"
+    ],
+    "isVerb": true
+  },
+  "dipendente": {
+    "lemma": "dipendente",
+    "pos": "aggettivo/nome",
+    "fr": "dépendant; employé",
+    "definition_it": "che dipende da qualcuno o qualcosa; anche persona che lavora alle dipendenze di un'azienda",
+    "examples": [
+      {
+        "it": "È un dipendente dell'azienda da dieci anni.",
+        "fr": "Il est employé de l'entreprise depuis dix ans."
+      }
+    ],
+    "synonyms": [
+      "subordinato",
+      "impiegato"
+    ],
+    "isVerb": false
+  },
+  "dipendenza": {
+    "lemma": "dipendenza",
+    "pos": "nome femminile",
+    "fr": "dépendance",
+    "definition_it": "condizione di chi dipende da qualcosa o qualcuno; anche assuefazione",
+    "examples": [
+      {
+        "it": "La dipendenza dal fumo è difficile da vincere.",
+        "fr": "La dépendance au tabac est difficile à vaincre."
+      }
+    ],
+    "synonyms": [
+      "assuefazione"
+    ],
+    "isVerb": false
+  },
+  "dipendere": {
+    "lemma": "dipendere",
+    "pos": "verbo (intransitivo)",
+    "fr": "dépendre",
+    "definition_it": "essere subordinato a qualcuno o qualcosa; avere come causa o condizione",
+    "examples": [
+      {
+        "it": "Il risultato dipende dall'impegno di ognuno.",
+        "fr": "Le résultat dépend de l'engagement de chacun."
+      }
+    ],
+    "synonyms": [
+      "derivare"
+    ],
+    "isVerb": true
+  },
+  "dipingere": {
+    "lemma": "dipingere",
+    "pos": "verbo (transitivo)",
+    "fr": "peindre",
+    "definition_it": "rappresentare figure, oggetti o paesaggi con colori su una superficie",
+    "examples": [
+      {
+        "it": "L'artista dipinge un paesaggio al tramonto.",
+        "fr": "L'artiste peint un paysage au coucher du soleil."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "diploma": {
+    "lemma": "diploma",
+    "pos": "sostantivo (m.)",
+    "fr": "diplôme",
+    "definition_it": "documento ufficiale che attesta il completamento di un corso di studi o di un esame",
+    "examples": [
+      {
+        "it": "Ha ricevuto il diploma di maturità con ottimi voti.",
+        "fr": "Il a reçu son diplôme de fin d'études secondaires avec d'excellentes notes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diplomarsi": {
+    "lemma": "diplomarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "obtenir son diplôme, être diplômé",
+    "definition_it": "ottenere un diploma al termine di un ciclo di studi",
+    "examples": [
+      {
+        "it": "Si è diplomata l'anno scorso al liceo classico.",
+        "fr": "Elle a obtenu son diplôme l'année dernière au lycée classique."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "diplomatico": {
+    "lemma": "diplomatico",
+    "pos": "aggettivo",
+    "fr": "diplomatique",
+    "definition_it": "relativo alla diplomazia, oppure che agisce con tatto, prudenza e cortesia",
+    "examples": [
+      {
+        "it": "Il corpo diplomatico ha partecipato alla cerimonia ufficiale.",
+        "fr": "Le corps diplomatique a participé à la cérémonie officielle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "diplomazia": {
+    "lemma": "diplomazia",
+    "pos": "sostantivo (f.)",
+    "fr": "diplomatie",
+    "definition_it": "arte e attività di gestire le relazioni tra Stati, o modo di comportarsi con tatto e prudenza",
+    "examples": [
+      {
+        "it": "La diplomazia internazionale ha evitato il conflitto.",
+        "fr": "La diplomatie internationale a évité le conflit."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dipoi": {
+    "lemma": "dipoi",
+    "pos": "avverbio",
+    "fr": "ensuite, par la suite",
+    "definition_it": "forma letteraria e antica per 'poi', indica un momento successivo nel tempo",
+    "examples": [
+      {
+        "it": "Partì per la guerra e non tornò mai dipoi.",
+        "fr": "Il partit pour la guerre et ne revint jamais par la suite."
+      }
+    ],
+    "synonyms": [
+      "poi"
+    ],
+    "isVerb": false
+  },
+  "diradare": {
+    "lemma": "diradare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "raréfier, disperser, espacer",
+    "definition_it": "rendere meno fitto o meno frequente qualcosa",
+    "examples": [
+      {
+        "it": "La nebbia si dirada lentamente al mattino.",
+        "fr": "Le brouillard se dissipe lentement le matin."
+      }
+    ],
+    "synonyms": [
+      "disperdere",
+      "rarefare"
+    ],
+    "isVerb": true
+  },
+  "dire": {
+    "lemma": "dire",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "dire",
+    "definition_it": "esprimere un pensiero o un'informazione a parole",
+    "examples": [
+      {
+        "it": "Non ho capito bene cosa hai detto.",
+        "fr": "Je n'ai pas bien compris ce que tu as dit."
+      }
+    ],
+    "synonyms": [
+      "affermare",
+      "esprimere"
+    ],
+    "isVerb": true
+  },
+  "direttamente": {
+    "lemma": "direttamente",
+    "pos": "avverbio",
+    "fr": "directement",
+    "definition_it": "in modo diretto, senza intermediari o deviazioni",
+    "examples": [
+      {
+        "it": "Puoi rivolgerti direttamente al direttore.",
+        "fr": "Tu peux t'adresser directement au directeur."
+      }
+    ],
+    "synonyms": [
+      "subito",
+      "senza intermediari"
+    ],
+    "isVerb": false
+  },
+  "direttiva": {
+    "lemma": "direttiva",
+    "pos": "sostantivo (femminile)",
+    "fr": "directive",
+    "definition_it": "norma o istruzione che indica come agire in una determinata situazione",
+    "examples": [
+      {
+        "it": "L'azienda ha emesso una nuova direttiva sulla sicurezza.",
+        "fr": "L'entreprise a émis une nouvelle directive sur la sécurité."
+      }
+    ],
+    "synonyms": [
+      "istruzione",
+      "disposizione"
+    ],
+    "isVerb": false
+  },
+  "direttivo": {
+    "lemma": "direttivo",
+    "pos": "aggettivo/sostantivo (maschile)",
+    "fr": "directif, comité directeur",
+    "definition_it": "che ha il compito di dirigere; anche il gruppo di persone che dirige un'organizzazione",
+    "examples": [
+      {
+        "it": "Il consiglio direttivo si riunisce ogni mese.",
+        "fr": "Le conseil directeur se réunit chaque mois."
+      }
+    ],
+    "synonyms": [
+      "dirigente",
+      "comitato"
+    ],
+    "isVerb": false
+  },
+  "diretto": {
+    "lemma": "diretto",
+    "pos": "aggettivo/participio passato",
+    "fr": "direct, dirigé",
+    "definition_it": "che va senza deviazioni verso un punto preciso, oppure guidato da qualcuno",
+    "examples": [
+      {
+        "it": "Ho preso il treno diretto a Roma.",
+        "fr": "J'ai pris le train direct pour Rome."
+      }
+    ],
+    "synonyms": [
+      "immediato",
+      "guidato"
+    ],
+    "isVerb": false
+  },
+  "direttore": {
+    "lemma": "direttore",
+    "pos": "sostantivo (maschile)",
+    "fr": "directeur",
+    "definition_it": "persona che dirige un'azienda, un'istituzione o un gruppo di persone",
+    "examples": [
+      {
+        "it": "Il direttore ha convocato una riunione urgente.",
+        "fr": "Le directeur a convoqué une réunion urgente."
+      }
+    ],
+    "synonyms": [
+      "capo",
+      "dirigente"
+    ],
+    "isVerb": false
+  },
+  "direttrice": {
+    "lemma": "direttrice",
+    "pos": "sostantivo (femminile)",
+    "fr": "directrice",
+    "definition_it": "donna che dirige un'azienda, un'istituzione o un gruppo di persone",
+    "examples": [
+      {
+        "it": "La direttrice della scuola ha accolto i nuovi studenti.",
+        "fr": "La directrice de l'école a accueilli les nouveaux élèves."
+      }
+    ],
+    "synonyms": [
+      "capo",
+      "dirigente"
+    ],
+    "isVerb": false
+  },
+  "direzione": {
+    "lemma": "direzione",
+    "pos": "sostantivo (femminile)",
+    "fr": "direction",
+    "definition_it": "verso cui ci si muove, oppure l'insieme delle persone che dirigono un'organizzazione",
+    "examples": [
+      {
+        "it": "Abbiamo preso la direzione sbagliata.",
+        "fr": "Nous avons pris la mauvaise direction."
+      }
+    ],
+    "synonyms": [
+      "senso",
+      "amministrazione"
+    ],
+    "isVerb": false
+  },
+  "dirigente": {
+    "lemma": "dirigente",
+    "pos": "sostantivo (m/f)",
+    "fr": "dirigeant, cadre",
+    "definition_it": "persona che dirige un'azienda, un ente o un'organizzazione",
+    "examples": [
+      {
+        "it": "I dirigenti dell'azienda si sono riuniti per decidere la strategia.",
+        "fr": "Les dirigeants de l'entreprise se sont réunis pour décider de la stratégie."
+      }
+    ],
+    "synonyms": [
+      "manager",
+      "direttore"
+    ],
+    "isVerb": false
+  },
+  "dirigere": {
+    "lemma": "dirigere",
+    "pos": "verbo (transitivo)",
+    "fr": "diriger",
+    "definition_it": "guidare, comandare o indirizzare qualcosa verso uno scopo",
+    "examples": [
+      {
+        "it": "Il regista diresse il film con grande maestria.",
+        "fr": "Le réalisateur dirigea le film avec beaucoup de maîtrise."
+      }
+    ],
+    "synonyms": [
+      "guidare",
+      "amministrare"
+    ],
+    "isVerb": true
+  },
+  "dirigersi": {
+    "lemma": "dirigersi",
+    "pos": "verbo (riflessivo/intransitivo pronominale)",
+    "fr": "se diriger",
+    "definition_it": "andare verso un luogo preciso, incamminarsi in una direzione",
+    "examples": [
+      {
+        "it": "Si diressero verso la stazione.",
+        "fr": "Ils se dirigèrent vers la gare."
+      }
+    ],
+    "synonyms": [
+      "avviarsi",
+      "incamminarsi"
+    ],
+    "isVerb": true
+  },
+  "dirimpetto": {
+    "lemma": "dirimpetto",
+    "pos": "avverbio / preposizione",
+    "fr": "en face, vis-à-vis",
+    "definition_it": "di fronte, dalla parte opposta rispetto a un luogo o a una persona",
+    "examples": [
+      {
+        "it": "Abitava dirimpetto alla chiesa.",
+        "fr": "Il habitait en face de l'église."
+      }
+    ],
+    "synonyms": [
+      "di fronte",
+      "davanti"
+    ],
+    "isVerb": false
+  },
+  "diritto": {
+    "lemma": "diritto",
+    "pos": "aggettivo / sostantivo (m.)",
+    "fr": "droit (adj.); droit, loi (n.)",
+    "definition_it": "che non è curvo o piegato, che segue una linea retta; oppure facoltà riconosciuta dalla legge o dalla morale",
+    "examples": [
+      {
+        "it": "La strada era diritta fino all'orizzonte.",
+        "fr": "La route était droite jusqu'à l'horizon."
+      }
+    ],
+    "synonyms": [
+      "dritto",
+      "retto"
+    ],
+    "isVerb": false
+  },
+  "dirizzone": {
+    "lemma": "dirizzone",
+    "pos": "sostantivo (m.)",
+    "fr": "faux pas, coup de tête",
+    "definition_it": "decisione improvvisa e sbagliata, colpo di testa che porta a sbagliare strada o comportamento",
+    "examples": [
+      {
+        "it": "Prese un dirizzone e lasciò il lavoro senza pensarci.",
+        "fr": "Il eut un coup de tête et quitta son travail sans réfléchir."
+      }
+    ],
+    "synonyms": [
+      "colpo di testa",
+      "sbaglio"
+    ],
+    "isVerb": false
+  },
+  "dirompere": {
+    "lemma": "dirompere",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "faire éclater, briser violemment",
+    "definition_it": "rompere con violenza, esplodere o manifestarsi in modo improvviso e forte",
+    "examples": [
+      {
+        "it": "Il temporale dirompeva sulla città con violenza.",
+        "fr": "L'orage éclatait violemment sur la ville."
+      }
+    ],
+    "synonyms": [
+      "esplodere",
+      "irrompere"
+    ],
+    "isVerb": true
+  },
+  "dirottamente": {
+    "lemma": "dirottamente",
+    "pos": "avverbio",
+    "fr": "de manière incontrôlable, abondamment",
+    "definition_it": "in modo dirotto, con grande intensità e senza controllo",
+    "examples": [
+      {
+        "it": "Piangeva dirottamente dopo la triste notizia.",
+        "fr": "Elle pleurait de manière incontrôlable après la triste nouvelle."
+      }
+    ],
+    "synonyms": [
+      "copiosamente",
+      "violentemente"
+    ],
+    "isVerb": false
+  },
+  "dirotto": {
+    "lemma": "dirotto",
+    "pos": "aggettivo",
+    "fr": "torrentiel, incontrôlable",
+    "definition_it": "detto di pioggia, pianto o sentimento che si manifesta con grande intensità e senza controllo",
+    "examples": [
+      {
+        "it": "Pianse a dirotto per tutta la sera.",
+        "fr": "Il pleura de manière incontrôlable toute la soirée."
+      }
+    ],
+    "synonyms": [
+      "torrenziale",
+      "violento"
+    ],
+    "isVerb": false
+  },
+  "disabilità": {
+    "lemma": "disabilità",
+    "pos": "nome femminile (invariabile)",
+    "fr": "handicap, incapacité",
+    "definition_it": "condizione fisica, mentale o sensoriale che limita le capacità di una persona",
+    "examples": [
+      {
+        "it": "La legge tutela le persone con disabilità.",
+        "fr": "La loi protège les personnes en situation de handicap."
+      }
+    ],
+    "synonyms": [
+      "handicap",
+      "invalidità"
+    ],
+    "isVerb": false
+  },
+  "disabitato": {
+    "lemma": "disabitato",
+    "pos": "aggettivo",
+    "fr": "inhabité",
+    "definition_it": "che non è abitato da nessuno",
+    "examples": [
+      {
+        "it": "L'isola è completamente disabitata.",
+        "fr": "L'île est complètement inhabitée."
+      }
+    ],
+    "synonyms": [
+      "deserto",
+      "spopolato"
+    ],
+    "isVerb": false
+  },
+  "disadatto": {
+    "lemma": "disadatto",
+    "pos": "aggettivo",
+    "fr": "inadapté, inapte",
+    "definition_it": "che non è adatto a una situazione, a un ambiente o a un compito",
+    "examples": [
+      {
+        "it": "Si sentiva disadatto a quel lavoro.",
+        "fr": "Il se sentait inadapté à ce travail."
+      }
+    ],
+    "synonyms": [
+      "inadatto",
+      "inadeguato"
+    ],
+    "isVerb": false
+  },
+  "disagio": {
+    "lemma": "disagio",
+    "pos": "nome maschile",
+    "fr": "malaise, gêne",
+    "definition_it": "sensazione di fastidio, difficoltà o mancanza di comodità",
+    "examples": [
+      {
+        "it": "Provava un forte disagio in mezzo alla folla.",
+        "fr": "Il ressentait un fort malaise au milieu de la foule."
+      }
+    ],
+    "synonyms": [
+      "fastidio",
+      "imbarazzo"
+    ],
+    "isVerb": false
+  },
+  "disagioso": {
+    "lemma": "disagioso",
+    "pos": "aggettivo",
+    "fr": "pénible, inconfortable",
+    "definition_it": "che causa disagio o difficoltà",
+    "examples": [
+      {
+        "it": "Il viaggio è stato lungo e disagioso.",
+        "fr": "Le voyage a été long et pénible."
+      }
+    ],
+    "synonyms": [
+      "scomodo",
+      "difficile"
+    ],
+    "isVerb": false
+  },
+  "disarmante": {
+    "lemma": "disarmante",
+    "pos": "aggettivo",
+    "fr": "désarmant",
+    "definition_it": "che sorprende per la sua semplicità o sincerità, togliendo ogni obiezione",
+    "examples": [
+      {
+        "it": "Ha risposto con una sincerità disarmante.",
+        "fr": "Il a répondu avec une sincérité désarmante."
+      }
+    ],
+    "synonyms": [
+      "sconcertante",
+      "sorprendente"
+    ],
+    "isVerb": false
+  },
+  "disastro": {
+    "lemma": "disastro",
+    "pos": "nome maschile",
+    "fr": "désastre",
+    "definition_it": "evento molto grave che causa danni enormi",
+    "examples": [
+      {
+        "it": "L'alluvione è stata un vero disastro.",
+        "fr": "L'inondation a été un véritable désastre."
+      }
+    ],
+    "synonyms": [
+      "catastrofe",
+      "rovina"
+    ],
+    "isVerb": false
+  },
+  "disastroso": {
+    "lemma": "disastroso",
+    "pos": "aggettivo",
+    "fr": "désastreux",
+    "definition_it": "che ha esiti molto negativi o dannosi",
+    "examples": [
+      {
+        "it": "Il raccolto di quest'anno è stato disastroso.",
+        "fr": "La récolte de cette année a été désastreuse."
+      }
+    ],
+    "synonyms": [
+      "catastrofico",
+      "rovinoso"
+    ],
+    "isVerb": false
+  },
+  "disattivare": {
+    "lemma": "disattivare",
+    "pos": "verbo (transitivo)",
+    "fr": "désactiver",
+    "definition_it": "rendere inattivo un dispositivo, un meccanismo o una funzione",
+    "examples": [
+      {
+        "it": "Ho disattivato le notifiche sul telefono.",
+        "fr": "J'ai désactivé les notifications sur mon téléphone."
+      }
+    ],
+    "synonyms": [
+      "spegnere",
+      "bloccare"
+    ],
+    "isVerb": true
+  },
+  "disboscamento": {
+    "lemma": "disboscamento",
+    "pos": "nome maschile",
+    "fr": "déforestation",
+    "definition_it": "eliminazione degli alberi e della vegetazione da una zona boschiva",
+    "examples": [
+      {
+        "it": "Il disboscamento minaccia molte specie animali.",
+        "fr": "La déforestation menace de nombreuses espèces animales."
+      }
+    ],
+    "synonyms": [
+      "deforestazione"
+    ],
+    "isVerb": false
+  },
+  "disbrigo": {
+    "lemma": "disbrigo",
+    "pos": "nome maschile",
+    "fr": "expédition (des affaires), règlement",
+    "definition_it": "lo svolgimento rapido e completo di una pratica o di un affare",
+    "examples": [
+      {
+        "it": "Sono andato in comune per il disbrigo di alcune pratiche.",
+        "fr": "Je suis allé à la mairie pour régler quelques démarches."
+      }
+    ],
+    "synonyms": [
+      "espletamento",
+      "svolgimento"
+    ],
+    "isVerb": false
+  },
+  "discarica": {
+    "lemma": "discarica",
+    "pos": "nome femminile",
+    "fr": "décharge",
+    "definition_it": "luogo dove vengono accumulati e trattati i rifiuti",
+    "examples": [
+      {
+        "it": "I rifiuti vengono portati alla discarica.",
+        "fr": "Les déchets sont amenés à la décharge."
+      }
+    ],
+    "synonyms": [
+      "deposito",
+      "immondezzaio"
+    ],
+    "isVerb": false
+  },
+  "discendere": {
+    "lemma": "discendere",
+    "pos": "verbo (intransitivo/transitivo)",
+    "fr": "descendre",
+    "definition_it": "andare verso il basso, oppure avere origine da una persona, una famiglia o una cosa",
+    "examples": [
+      {
+        "it": "La famiglia discende da un'antica dinastia.",
+        "fr": "La famille descend d'une ancienne dynastie."
+      }
+    ],
+    "synonyms": [
+      "scendere",
+      "derivare"
+    ],
+    "isVerb": true
+  },
+  "domandare": {
+    "lemma": "domandare",
+    "pos": "verbo (transitivo)",
+    "fr": "demander",
+    "definition_it": "chiedere qualcosa a qualcuno per sapere o ottenere una risposta",
+    "examples": [
+      {
+        "it": "Il maestro le domandò come si chiamasse.",
+        "fr": "Le maître lui demanda comment elle s'appelait."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "domani": {
+    "lemma": "domani",
+    "pos": "avverbio",
+    "fr": "demain",
+    "definition_it": "il giorno che viene subito dopo oggi",
+    "examples": [
+      {
+        "it": "Verrò a trovarti dimani, disse il vecchio contadino.",
+        "fr": "Je viendrai te voir demain, dit le vieux paysan."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "dovere": {
+    "lemma": "dovere",
+    "pos": "verbo (servile/transitivo, irregolare)",
+    "fr": "devoir",
+    "definition_it": "essere obbligato a fare qualcosa, avere un debito o un obbligo",
+    "examples": [
+      {
+        "it": "Tutti debbono rispettare le regole.",
+        "fr": "Tous doivent respecter les règles."
+      }
+    ],
+    "synonyms": [
+      "essere obbligato"
+    ],
+    "isVerb": true
+  }
+}

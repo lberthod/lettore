@@ -1,4 +1,20 @@
 {
+  "ubbidienza": {
+    "lemma": "ubbidienza",
+    "pos": "nome femminile",
+    "fr": "obéissance",
+    "definition_it": "il comportamento di chi ubbidisce e segue le regole",
+    "examples": [
+      {
+        "it": "I soldati devono ubbidienza ai loro superiori.",
+        "fr": "Les soldats doivent obéissance à leurs supérieurs."
+      }
+    ],
+    "synonyms": [
+      "obbedienza"
+    ],
+    "isVerb": false
+  },
   "uccello": {
     "lemma": "uccello",
     "pos": "nome maschile",
@@ -14,6 +30,22 @@
       "volatile"
     ],
     "isVerb": false
+  },
+  "uccidere": {
+    "lemma": "uccidere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "tuer",
+    "definition_it": "togliere la vita a una persona o a un animale",
+    "examples": [
+      {
+        "it": "Il cacciatore ha ucciso un cervo.",
+        "fr": "Le chasseur a tué un cerf."
+      }
+    ],
+    "synonyms": [
+      "ammazzare"
+    ],
+    "isVerb": true
   },
   "udire": {
     "lemma": "udire",
@@ -48,6 +80,23 @@
     ],
     "isVerb": false
   },
+  "uggia": {
+    "lemma": "uggia",
+    "pos": "sostantivo femminile",
+    "fr": "ennui, malaise, antipathie",
+    "definition_it": "sensazione di noia, fastidio o leggera antipatia verso qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Ho uggia per quel tipo di lavoro.",
+        "fr": "Ce genre de travail m'ennuie profondément."
+      }
+    ],
+    "synonyms": [
+      "noia",
+      "fastidio"
+    ],
+    "isVerb": false
+  },
   "ultimo": {
     "lemma": "ultimo",
     "pos": "aggettivo",
@@ -64,6 +113,50 @@
     ],
     "isVerb": false
   },
+  "umanità": {
+    "lemma": "umanità",
+    "pos": "nome femminile",
+    "fr": "humanité",
+    "definition_it": "l'insieme degli esseri umani; anche il sentimento di comprensione e compassione verso gli altri",
+    "examples": [
+      {
+        "it": "Dobbiamo mostrare umanità verso chi soffre.",
+        "fr": "Nous devons montrer de l'humanité envers ceux qui souffrent."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "umido": {
+    "lemma": "umido",
+    "pos": "aggettivo",
+    "fr": "humide",
+    "definition_it": "che contiene un po' d'acqua o di vapore, non asciutto",
+    "examples": [
+      {
+        "it": "L'aria della cantina è fredda e umida.",
+        "fr": "L'air de la cave est froid et humide."
+      }
+    ],
+    "synonyms": [
+      "bagnato"
+    ],
+    "isVerb": false
+  },
+  "umore": {
+    "lemma": "umore",
+    "pos": "nome maschile",
+    "fr": "humeur",
+    "definition_it": "lo stato d'animo di una persona in un certo momento",
+    "examples": [
+      {
+        "it": "Oggi sono di buon umore.",
+        "fr": "Aujourd'hui je suis de bonne humeur."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "unanimità": {
     "lemma": "unanimità",
     "pos": "nome femminile",
@@ -77,6 +170,40 @@
     ],
     "synonyms": [
       "consenso"
+    ],
+    "isVerb": false
+  },
+  "unico": {
+    "lemma": "unico",
+    "pos": "aggettivo",
+    "fr": "unique, seul",
+    "definition_it": "che è solo uno, che non ha uguali o non si ripete",
+    "examples": [
+      {
+        "it": "Sei la persona unica nella mia vita.",
+        "fr": "Tu es la seule personne unique dans ma vie."
+      }
+    ],
+    "synonyms": [
+      "solo",
+      "singolare"
+    ],
+    "isVerb": false
+  },
+  "unione": {
+    "lemma": "unione",
+    "pos": "sostantivo femminile",
+    "fr": "union",
+    "definition_it": "l'atto o il risultato di unire più cose, persone o gruppi insieme",
+    "examples": [
+      {
+        "it": "L'unione fa la forza.",
+        "fr": "L'union fait la force."
+      }
+    ],
+    "synonyms": [
+      "fusione",
+      "alleanza"
     ],
     "isVerb": false
   },
@@ -126,6 +253,22 @@
     ],
     "isVerb": false
   },
+  "universo": {
+    "lemma": "universo",
+    "pos": "sostantivo maschile",
+    "fr": "univers",
+    "definition_it": "l'insieme di tutto ciò che esiste, lo spazio con tutti i corpi celesti",
+    "examples": [
+      {
+        "it": "Gli scienziati studiano l'origine dell'universo.",
+        "fr": "Les scientifiques étudient l'origine de l'univers."
+      }
+    ],
+    "synonyms": [
+      "cosmo"
+    ],
+    "isVerb": false
+  },
   "uno": {
     "lemma": "uno",
     "pos": "numerale / articolo indeterminativo",
@@ -171,6 +314,53 @@
     ],
     "synonyms": [],
     "isVerb": false
+  },
+  "urgenza": {
+    "lemma": "urgenza",
+    "pos": "nome femminile",
+    "fr": "urgence",
+    "definition_it": "situazione che richiede un intervento immediato",
+    "examples": [
+      {
+        "it": "Ha bisogno di cure con urgenza.",
+        "fr": "Il a besoin de soins en urgence."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "urlo": {
+    "lemma": "urlo",
+    "pos": "nome maschile (plurale irregolare femminile: urla, anche urli)",
+    "fr": "cri, hurlement",
+    "definition_it": "grido forte e improvviso",
+    "examples": [
+      {
+        "it": "Ho sentito un urlo nella notte.",
+        "fr": "J'ai entendu un cri dans la nuit."
+      }
+    ],
+    "synonyms": [
+      "grido"
+    ],
+    "isVerb": false
+  },
+  "usare": {
+    "lemma": "usare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "utiliser, employer",
+    "definition_it": "impiegare qualcosa per uno scopo particolare",
+    "examples": [
+      {
+        "it": "Preferisco usare la bicicletta per andare al lavoro.",
+        "fr": "Je préfère utiliser le vélo pour aller au travail."
+      }
+    ],
+    "synonyms": [
+      "adoperare",
+      "impiegare"
+    ],
+    "isVerb": true
   },
   "uscio": {
     "lemma": "uscio",
@@ -219,6 +409,20 @@
     "synonyms": [
       "fuoriuscita"
     ],
+    "isVerb": false
+  },
+  "usignolo": {
+    "lemma": "usignolo",
+    "pos": "sostantivo maschile",
+    "fr": "rossignol",
+    "definition_it": "piccolo uccello dal piumaggio bruno, famoso per il suo canto melodioso",
+    "examples": [
+      {
+        "it": "Di notte si sentiva il canto dell'usignolo.",
+        "fr": "La nuit on entendait le chant du rossignol."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "uso": {

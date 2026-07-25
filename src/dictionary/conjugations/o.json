@@ -1,4 +1,61 @@
 {
+  "occupare": {
+    "presente": {
+      "io": "occupo",
+      "tu": "occupi",
+      "lui/lei": "occupa",
+      "noi": "occupiamo",
+      "voi": "occupate",
+      "loro": "occupano"
+    },
+    "passatoProssimo": {
+      "io": "ho occupato",
+      "tu": "hai occupato",
+      "lui/lei": "ha occupato",
+      "noi": "abbiamo occupato",
+      "voi": "avete occupato",
+      "loro": "hanno occupato"
+    },
+    "imperfetto": {
+      "io": "occupavo",
+      "tu": "occupavi",
+      "lui/lei": "occupava",
+      "noi": "occupavamo",
+      "voi": "occupavate",
+      "loro": "occupavano"
+    },
+    "futuro": {
+      "io": "occuperò",
+      "tu": "occuperai",
+      "lui/lei": "occuperà",
+      "noi": "occuperemo",
+      "voi": "occuperete",
+      "loro": "occuperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "occupi",
+      "tu": "occupi",
+      "lui/lei": "occupi",
+      "noi": "occupiamo",
+      "voi": "occupiate",
+      "loro": "occupino"
+    },
+    "condizionale": {
+      "io": "occuperei",
+      "tu": "occuperesti",
+      "lui/lei": "occuperebbe",
+      "noi": "occuperemmo",
+      "voi": "occupereste",
+      "loro": "occuperebbero"
+    },
+    "imperativo": {
+      "tu": "occupa",
+      "lei": "occupi",
+      "noi": "occupiamo",
+      "voi": "occupate",
+      "loro": "occupino"
+    }
+  },
   "ondeggiare": {
     "presente": [
       "ondeggio",
@@ -114,5 +171,62 @@
       "opponetevi",
       "si oppongano"
     ]
+  },
+  "ospitare": {
+    "presente": {
+      "io": "ospito",
+      "tu": "ospiti",
+      "lui/lei": "ospita",
+      "noi": "ospitiamo",
+      "voi": "ospitate",
+      "loro": "ospitano"
+    },
+    "passatoProssimo": {
+      "io": "ho ospitato",
+      "tu": "hai ospitato",
+      "lui/lei": "ha ospitato",
+      "noi": "abbiamo ospitato",
+      "voi": "avete ospitato",
+      "loro": "hanno ospitato"
+    },
+    "imperfetto": {
+      "io": "ospitavo",
+      "tu": "ospitavi",
+      "lui/lei": "ospitava",
+      "noi": "ospitavamo",
+      "voi": "ospitavate",
+      "loro": "ospitavano"
+    },
+    "futuro": {
+      "io": "ospiterò",
+      "tu": "ospiterai",
+      "lui/lei": "ospiterà",
+      "noi": "ospiteremo",
+      "voi": "ospiterete",
+      "loro": "ospiteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ospiti",
+      "tu": "ospiti",
+      "lui/lei": "ospiti",
+      "noi": "ospitiamo",
+      "voi": "ospitiate",
+      "loro": "ospitino"
+    },
+    "condizionale": {
+      "io": "ospiterei",
+      "tu": "ospiteresti",
+      "lui/lei": "ospiterebbe",
+      "noi": "ospiteremmo",
+      "voi": "ospitereste",
+      "loro": "ospiterebbero"
+    },
+    "imperativo": {
+      "tu": "ospita",
+      "lei": "ospiti",
+      "noi": "ospitiamo",
+      "voi": "ospitate",
+      "loro": "ospitino"
+    }
   }
 }

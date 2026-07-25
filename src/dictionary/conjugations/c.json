@@ -5186,6 +5186,3084 @@
       "loro": "compaiano"
     }
   },
+  "compatire": {
+    "presente": {
+      "io": "compatisco",
+      "tu": "compatisci",
+      "lui/lei": "compatisce",
+      "noi": "compatiamo",
+      "voi": "compatite",
+      "loro": "compatiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho compatito",
+      "tu": "hai compatito",
+      "lui/lei": "ha compatito",
+      "noi": "abbiamo compatito",
+      "voi": "avete compatito",
+      "loro": "hanno compatito"
+    },
+    "imperfetto": {
+      "io": "compativo",
+      "tu": "compativi",
+      "lui/lei": "compativa",
+      "noi": "compativamo",
+      "voi": "compativate",
+      "loro": "compativano"
+    },
+    "futuro": {
+      "io": "compatirò",
+      "tu": "compatirai",
+      "lui/lei": "compatirà",
+      "noi": "compatiremo",
+      "voi": "compatirete",
+      "loro": "compatiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compatisca",
+      "tu": "compatisca",
+      "lui/lei": "compatisca",
+      "noi": "compatiamo",
+      "voi": "compatiate",
+      "loro": "compatiscano"
+    },
+    "condizionale": {
+      "io": "compatirei",
+      "tu": "compatiresti",
+      "lui/lei": "compatirebbe",
+      "noi": "compatiremmo",
+      "voi": "compatireste",
+      "loro": "compatirebbero"
+    },
+    "imperativo": {
+      "tu": "compatisci",
+      "lei": "compatisca",
+      "noi": "compatiamo",
+      "voi": "compatite",
+      "loro": "compatiscano"
+    }
+  },
+  "compenetrare": {
+    "presente": {
+      "io": "compenetro",
+      "tu": "compenetri",
+      "lui/lei": "compenetra",
+      "noi": "compenetriamo",
+      "voi": "compenetrate",
+      "loro": "compenetrano"
+    },
+    "passatoProssimo": {
+      "io": "ho compenetrato",
+      "tu": "hai compenetrato",
+      "lui/lei": "ha compenetrato",
+      "noi": "abbiamo compenetrato",
+      "voi": "avete compenetrato",
+      "loro": "hanno compenetrato"
+    },
+    "imperfetto": {
+      "io": "compenetravo",
+      "tu": "compenetravi",
+      "lui/lei": "compenetrava",
+      "noi": "compenetravamo",
+      "voi": "compenetravate",
+      "loro": "compenetravano"
+    },
+    "futuro": {
+      "io": "compenetrerò",
+      "tu": "compenetrerai",
+      "lui/lei": "compenetrerà",
+      "noi": "compenetreremo",
+      "voi": "compenetrerete",
+      "loro": "compenetreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compenetri",
+      "tu": "compenetri",
+      "lui/lei": "compenetri",
+      "noi": "compenetriamo",
+      "voi": "compenetriate",
+      "loro": "compenetrino"
+    },
+    "condizionale": {
+      "io": "compenetrerei",
+      "tu": "compenetreresti",
+      "lui/lei": "compenetrerebbe",
+      "noi": "compenetreremmo",
+      "voi": "compenetrereste",
+      "loro": "compenetrerebbero"
+    },
+    "imperativo": {
+      "tu": "compenetra",
+      "lei": "compenetri",
+      "noi": "compenetriamo",
+      "voi": "compenetrate",
+      "loro": "compenetrino"
+    }
+  },
+  "compensare": {
+    "presente": {
+      "io": "compenso",
+      "tu": "compensi",
+      "lui/lei": "compensa",
+      "noi": "compensiamo",
+      "voi": "compensate",
+      "loro": "compensano"
+    },
+    "passatoProssimo": {
+      "io": "ho compensato",
+      "tu": "hai compensato",
+      "lui/lei": "ha compensato",
+      "noi": "abbiamo compensato",
+      "voi": "avete compensato",
+      "loro": "hanno compensato"
+    },
+    "imperfetto": {
+      "io": "compensavo",
+      "tu": "compensavi",
+      "lui/lei": "compensava",
+      "noi": "compensavamo",
+      "voi": "compensavate",
+      "loro": "compensavano"
+    },
+    "futuro": {
+      "io": "compenserò",
+      "tu": "compenserai",
+      "lui/lei": "compenserà",
+      "noi": "compenseremo",
+      "voi": "compenserete",
+      "loro": "compenseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compensi",
+      "tu": "compensi",
+      "lui/lei": "compensi",
+      "noi": "compensiamo",
+      "voi": "compensiate",
+      "loro": "compensino"
+    },
+    "condizionale": {
+      "io": "compenserei",
+      "tu": "compenseresti",
+      "lui/lei": "compenserebbe",
+      "noi": "compenseremmo",
+      "voi": "compensereste",
+      "loro": "compenserebbero"
+    },
+    "imperativo": {
+      "tu": "compensa",
+      "lei": "compensi",
+      "noi": "compensiamo",
+      "voi": "compensate",
+      "loro": "compensino"
+    }
+  },
+  "comperare": {
+    "presente": {
+      "io": "compero",
+      "tu": "comperi",
+      "lui/lei": "compera",
+      "noi": "comperiamo",
+      "voi": "comperate",
+      "loro": "comperano"
+    },
+    "passatoProssimo": {
+      "io": "ho comperato",
+      "tu": "hai comperato",
+      "lui/lei": "ha comperato",
+      "noi": "abbiamo comperato",
+      "voi": "avete comperato",
+      "loro": "hanno comperato"
+    },
+    "imperfetto": {
+      "io": "comperavo",
+      "tu": "comperavi",
+      "lui/lei": "comperava",
+      "noi": "comperavamo",
+      "voi": "comperavate",
+      "loro": "comperavano"
+    },
+    "futuro": {
+      "io": "compererò",
+      "tu": "compererai",
+      "lui/lei": "compererà",
+      "noi": "compereremo",
+      "voi": "compererete",
+      "loro": "compereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "comperi",
+      "tu": "comperi",
+      "lui/lei": "comperi",
+      "noi": "comperiamo",
+      "voi": "comperiate",
+      "loro": "comperino"
+    },
+    "condizionale": {
+      "io": "compererei",
+      "tu": "compereresti",
+      "lui/lei": "compererebbe",
+      "noi": "compereremmo",
+      "voi": "comperereste",
+      "loro": "compererebbero"
+    },
+    "imperativo": {
+      "tu": "compera",
+      "lei": "comperi",
+      "noi": "comperiamo",
+      "voi": "comperate",
+      "loro": "comperino"
+    }
+  },
+  "competere": {
+    "presente": {
+      "io": "competo",
+      "tu": "competi",
+      "lui/lei": "compete",
+      "noi": "competiamo",
+      "voi": "competete",
+      "loro": "competono"
+    },
+    "passatoProssimo": {
+      "io": "ho competuto",
+      "tu": "hai competuto",
+      "lui/lei": "ha competuto",
+      "noi": "abbiamo competuto",
+      "voi": "avete competuto",
+      "loro": "hanno competuto"
+    },
+    "imperfetto": {
+      "io": "competevo",
+      "tu": "competevi",
+      "lui/lei": "competeva",
+      "noi": "competevamo",
+      "voi": "competevate",
+      "loro": "competevano"
+    },
+    "futuro": {
+      "io": "competerò",
+      "tu": "competerai",
+      "lui/lei": "competerà",
+      "noi": "competeremo",
+      "voi": "competerete",
+      "loro": "competeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "competa",
+      "tu": "competa",
+      "lui/lei": "competa",
+      "noi": "competiamo",
+      "voi": "competiate",
+      "loro": "competano"
+    },
+    "condizionale": {
+      "io": "competerei",
+      "tu": "competeresti",
+      "lui/lei": "competerebbe",
+      "noi": "competeremmo",
+      "voi": "competereste",
+      "loro": "competerebbero"
+    },
+    "imperativo": {
+      "tu": "competi",
+      "lei": "competa",
+      "noi": "competiamo",
+      "voi": "competete",
+      "loro": "competano"
+    }
+  },
+  "compiacere": {
+    "presente": {
+      "io": "compiaccio",
+      "tu": "compiaci",
+      "lui/lei": "compiace",
+      "noi": "compiacciamo",
+      "voi": "compiacete",
+      "loro": "compiacciono"
+    },
+    "passatoProssimo": {
+      "io": "ho compiaciuto",
+      "tu": "hai compiaciuto",
+      "lui/lei": "ha compiaciuto",
+      "noi": "abbiamo compiaciuto",
+      "voi": "avete compiaciuto",
+      "loro": "hanno compiaciuto"
+    },
+    "imperfetto": {
+      "io": "compiacevo",
+      "tu": "compiacevi",
+      "lui/lei": "compiaceva",
+      "noi": "compiacevamo",
+      "voi": "compiacevate",
+      "loro": "compiacevano"
+    },
+    "futuro": {
+      "io": "compiacerò",
+      "tu": "compiacerai",
+      "lui/lei": "compiacerà",
+      "noi": "compiaceremo",
+      "voi": "compiacerete",
+      "loro": "compiaceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compiaccia",
+      "tu": "compiaccia",
+      "lui/lei": "compiaccia",
+      "noi": "compiacciamo",
+      "voi": "compiacciate",
+      "loro": "compiacciano"
+    },
+    "condizionale": {
+      "io": "compiacerei",
+      "tu": "compiaceresti",
+      "lui/lei": "compiacerebbe",
+      "noi": "compiaceremmo",
+      "voi": "compiacereste",
+      "loro": "compiacerebbero"
+    },
+    "imperativo": {
+      "tu": "compiaci",
+      "lei": "compiaccia",
+      "noi": "compiacciamo",
+      "voi": "compiacete",
+      "loro": "compiacciano"
+    }
+  },
+  "compiangere": {
+    "presente": {
+      "io": "compiango",
+      "tu": "compiangi",
+      "lui/lei": "compiange",
+      "noi": "compiangiamo",
+      "voi": "compiangete",
+      "loro": "compiangono"
+    },
+    "passatoProssimo": {
+      "io": "ho compianto",
+      "tu": "hai compianto",
+      "lui/lei": "ha compianto",
+      "noi": "abbiamo compianto",
+      "voi": "avete compianto",
+      "loro": "hanno compianto"
+    },
+    "imperfetto": {
+      "io": "compiangevo",
+      "tu": "compiangevi",
+      "lui/lei": "compiangeva",
+      "noi": "compiangevamo",
+      "voi": "compiangevate",
+      "loro": "compiangevano"
+    },
+    "futuro": {
+      "io": "compiangerò",
+      "tu": "compiangerai",
+      "lui/lei": "compiangerà",
+      "noi": "compiangeremo",
+      "voi": "compiangerete",
+      "loro": "compiangeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compianga",
+      "tu": "compianga",
+      "lui/lei": "compianga",
+      "noi": "compiangiamo",
+      "voi": "compiangiate",
+      "loro": "compiangano"
+    },
+    "condizionale": {
+      "io": "compiangerei",
+      "tu": "compiangeresti",
+      "lui/lei": "compiangerebbe",
+      "noi": "compiangeremmo",
+      "voi": "compiangereste",
+      "loro": "compiangerebbero"
+    },
+    "imperativo": {
+      "tu": "compiangi",
+      "lei": "compianga",
+      "noi": "compiangiamo",
+      "voi": "compiangete",
+      "loro": "compiangano"
+    }
+  },
+  "compiere": {
+    "presente": {
+      "io": "compio",
+      "tu": "compi",
+      "lui/lei": "compie",
+      "noi": "compiamo",
+      "voi": "compite",
+      "loro": "compiono"
+    },
+    "passatoProssimo": {
+      "io": "ho compiuto",
+      "tu": "hai compiuto",
+      "lui/lei": "ha compiuto",
+      "noi": "abbiamo compiuto",
+      "voi": "avete compiuto",
+      "loro": "hanno compiuto"
+    },
+    "imperfetto": {
+      "io": "compivo",
+      "tu": "compivi",
+      "lui/lei": "compiva",
+      "noi": "compivamo",
+      "voi": "compivate",
+      "loro": "compivano"
+    },
+    "futuro": {
+      "io": "compirò",
+      "tu": "compirai",
+      "lui/lei": "compirà",
+      "noi": "compiremo",
+      "voi": "compirete",
+      "loro": "compiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compia",
+      "tu": "compia",
+      "lui/lei": "compia",
+      "noi": "compiamo",
+      "voi": "compiate",
+      "loro": "compiano"
+    },
+    "condizionale": {
+      "io": "compirei",
+      "tu": "compiresti",
+      "lui/lei": "compirebbe",
+      "noi": "compiremmo",
+      "voi": "compireste",
+      "loro": "compirebbero"
+    },
+    "imperativo": {
+      "tu": "compi",
+      "lei": "compia",
+      "noi": "compiamo",
+      "voi": "compite",
+      "loro": "compiano"
+    }
+  },
+  "compilare": {
+    "presente": {
+      "io": "compilo",
+      "tu": "compili",
+      "lui/lei": "compila",
+      "noi": "compiliamo",
+      "voi": "compilate",
+      "loro": "compilano"
+    },
+    "passatoProssimo": {
+      "io": "ho compilato",
+      "tu": "hai compilato",
+      "lui/lei": "ha compilato",
+      "noi": "abbiamo compilato",
+      "voi": "avete compilato",
+      "loro": "hanno compilato"
+    },
+    "imperfetto": {
+      "io": "compilavo",
+      "tu": "compilavi",
+      "lui/lei": "compilava",
+      "noi": "compilavamo",
+      "voi": "compilavate",
+      "loro": "compilavano"
+    },
+    "futuro": {
+      "io": "compilerò",
+      "tu": "compilerai",
+      "lui/lei": "compilerà",
+      "noi": "compileremo",
+      "voi": "compilerete",
+      "loro": "compileranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compili",
+      "tu": "compili",
+      "lui/lei": "compili",
+      "noi": "compiliamo",
+      "voi": "compiliate",
+      "loro": "compilino"
+    },
+    "condizionale": {
+      "io": "compilerei",
+      "tu": "compileresti",
+      "lui/lei": "compilerebbe",
+      "noi": "compileremmo",
+      "voi": "compilereste",
+      "loro": "compilerebbero"
+    },
+    "imperativo": {
+      "tu": "compila",
+      "lei": "compili",
+      "noi": "compiliamo",
+      "voi": "compilate",
+      "loro": "compilino"
+    }
+  },
+  "compitare": {
+    "presente": {
+      "io": "compito",
+      "tu": "compiti",
+      "lui/lei": "compita",
+      "noi": "compitiamo",
+      "voi": "compitate",
+      "loro": "compitano"
+    },
+    "passatoProssimo": {
+      "io": "ho compitato",
+      "tu": "hai compitato",
+      "lui/lei": "ha compitato",
+      "noi": "abbiamo compitato",
+      "voi": "avete compitato",
+      "loro": "hanno compitato"
+    },
+    "imperfetto": {
+      "io": "compitavo",
+      "tu": "compitavi",
+      "lui/lei": "compitava",
+      "noi": "compitavamo",
+      "voi": "compitavate",
+      "loro": "compitavano"
+    },
+    "futuro": {
+      "io": "compiterò",
+      "tu": "compiterai",
+      "lui/lei": "compiterà",
+      "noi": "compiteremo",
+      "voi": "compiterete",
+      "loro": "compiteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compiti",
+      "tu": "compiti",
+      "lui/lei": "compiti",
+      "noi": "compitiamo",
+      "voi": "compitiate",
+      "loro": "compitino"
+    },
+    "condizionale": {
+      "io": "compiterei",
+      "tu": "compiteresti",
+      "lui/lei": "compiterebbe",
+      "noi": "compiteremmo",
+      "voi": "compitereste",
+      "loro": "compiterebbero"
+    },
+    "imperativo": {
+      "tu": "compita",
+      "lei": "compiti",
+      "noi": "compitiamo",
+      "voi": "compitate",
+      "loro": "compitino"
+    }
+  },
+  "completare": {
+    "presente": {
+      "io": "completo",
+      "tu": "completi",
+      "lui/lei": "completa",
+      "noi": "completiamo",
+      "voi": "completate",
+      "loro": "completano"
+    },
+    "passatoProssimo": {
+      "io": "ho completato",
+      "tu": "hai completato",
+      "lui/lei": "ha completato",
+      "noi": "abbiamo completato",
+      "voi": "avete completato",
+      "loro": "hanno completato"
+    },
+    "imperfetto": {
+      "io": "completavo",
+      "tu": "completavi",
+      "lui/lei": "completava",
+      "noi": "completavamo",
+      "voi": "completavate",
+      "loro": "completavano"
+    },
+    "futuro": {
+      "io": "completerò",
+      "tu": "completerai",
+      "lui/lei": "completerà",
+      "noi": "completeremo",
+      "voi": "completerete",
+      "loro": "completeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "completi",
+      "tu": "completi",
+      "lui/lei": "completi",
+      "noi": "completiamo",
+      "voi": "completiate",
+      "loro": "completino"
+    },
+    "condizionale": {
+      "io": "completerei",
+      "tu": "completeresti",
+      "lui/lei": "completerebbe",
+      "noi": "completeremmo",
+      "voi": "completereste",
+      "loro": "completerebbero"
+    },
+    "imperativo": {
+      "tu": "completa",
+      "lei": "completi",
+      "noi": "completiamo",
+      "voi": "completate",
+      "loro": "completino"
+    }
+  },
+  "complicare": {
+    "presente": {
+      "io": "complico",
+      "tu": "complichi",
+      "lui/lei": "complica",
+      "noi": "complichiamo",
+      "voi": "complicate",
+      "loro": "complicano"
+    },
+    "passatoProssimo": {
+      "io": "ho complicato",
+      "tu": "hai complicato",
+      "lui/lei": "ha complicato",
+      "noi": "abbiamo complicato",
+      "voi": "avete complicato",
+      "loro": "hanno complicato"
+    },
+    "imperfetto": {
+      "io": "complicavo",
+      "tu": "complicavi",
+      "lui/lei": "complicava",
+      "noi": "complicavamo",
+      "voi": "complicavate",
+      "loro": "complicavano"
+    },
+    "futuro": {
+      "io": "complicherò",
+      "tu": "complicherai",
+      "lui/lei": "complicherà",
+      "noi": "complicheremo",
+      "voi": "complicherete",
+      "loro": "complicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "complichi",
+      "tu": "complichi",
+      "lui/lei": "complichi",
+      "noi": "complichiamo",
+      "voi": "complichiate",
+      "loro": "complichino"
+    },
+    "condizionale": {
+      "io": "complicherei",
+      "tu": "complicheresti",
+      "lui/lei": "complicherebbe",
+      "noi": "complicheremmo",
+      "voi": "complichereste",
+      "loro": "complicherebbero"
+    },
+    "imperativo": {
+      "tu": "complica",
+      "lei": "complichi",
+      "noi": "complichiamo",
+      "voi": "complicate",
+      "loro": "complichino"
+    }
+  },
+  "comporre": {
+    "presente": {
+      "io": "compongo",
+      "tu": "componi",
+      "lui/lei": "compone",
+      "noi": "componiamo",
+      "voi": "componete",
+      "loro": "compongono"
+    },
+    "passatoProssimo": {
+      "io": "ho composto",
+      "tu": "hai composto",
+      "lui/lei": "ha composto",
+      "noi": "abbiamo composto",
+      "voi": "avete composto",
+      "loro": "hanno composto"
+    },
+    "imperfetto": {
+      "io": "componevo",
+      "tu": "componevi",
+      "lui/lei": "componeva",
+      "noi": "componevamo",
+      "voi": "componevate",
+      "loro": "componevano"
+    },
+    "futuro": {
+      "io": "comporrò",
+      "tu": "comporrai",
+      "lui/lei": "comporrà",
+      "noi": "comporremo",
+      "voi": "comporrete",
+      "loro": "comporranno"
+    },
+    "congiuntivoPresente": {
+      "io": "componga",
+      "tu": "componga",
+      "lui/lei": "componga",
+      "noi": "componiamo",
+      "voi": "componiate",
+      "loro": "compongano"
+    },
+    "condizionale": {
+      "io": "comporrei",
+      "tu": "comporresti",
+      "lui/lei": "comporrebbe",
+      "noi": "comporremmo",
+      "voi": "comporreste",
+      "loro": "comporrebbero"
+    },
+    "imperativo": {
+      "tu": "componi",
+      "lei": "componga",
+      "noi": "componiamo",
+      "voi": "componete",
+      "loro": "compongano"
+    }
+  },
+  "comportare": {
+    "presente": {
+      "io": "comporto",
+      "tu": "comporti",
+      "lui/lei": "comporta",
+      "noi": "comportiamo",
+      "voi": "comportate",
+      "loro": "comportano"
+    },
+    "passatoProssimo": {
+      "io": "ho comportato",
+      "tu": "hai comportato",
+      "lui/lei": "ha comportato",
+      "noi": "abbiamo comportato",
+      "voi": "avete comportato",
+      "loro": "hanno comportato"
+    },
+    "imperfetto": {
+      "io": "comportavo",
+      "tu": "comportavi",
+      "lui/lei": "comportava",
+      "noi": "comportavamo",
+      "voi": "comportavate",
+      "loro": "comportavano"
+    },
+    "futuro": {
+      "io": "comporterò",
+      "tu": "comporterai",
+      "lui/lei": "comporterà",
+      "noi": "comporteremo",
+      "voi": "comporterete",
+      "loro": "comporteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "comporti",
+      "tu": "comporti",
+      "lui/lei": "comporti",
+      "noi": "comportiamo",
+      "voi": "comportiate",
+      "loro": "comportino"
+    },
+    "condizionale": {
+      "io": "comporterei",
+      "tu": "comporteresti",
+      "lui/lei": "comporterebbe",
+      "noi": "comporteremmo",
+      "voi": "comportereste",
+      "loro": "comporterebbero"
+    },
+    "imperativo": {
+      "tu": "comporta",
+      "lei": "comporti",
+      "noi": "comportiamo",
+      "voi": "comportate",
+      "loro": "comportino"
+    }
+  },
+  "comprare": {
+    "presente": {
+      "io": "compro",
+      "tu": "compri",
+      "lui/lei": "compra",
+      "noi": "compriamo",
+      "voi": "comprate",
+      "loro": "comprano"
+    },
+    "passatoProssimo": {
+      "io": "ho comprato",
+      "tu": "hai comprato",
+      "lui/lei": "ha comprato",
+      "noi": "abbiamo comprato",
+      "voi": "avete comprato",
+      "loro": "hanno comprato"
+    },
+    "imperfetto": {
+      "io": "compravo",
+      "tu": "compravi",
+      "lui/lei": "comprava",
+      "noi": "compravamo",
+      "voi": "compravate",
+      "loro": "compravano"
+    },
+    "futuro": {
+      "io": "comprerò",
+      "tu": "comprerai",
+      "lui/lei": "comprerà",
+      "noi": "compreremo",
+      "voi": "comprerete",
+      "loro": "compreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "compri",
+      "tu": "compri",
+      "lui/lei": "compri",
+      "noi": "compriamo",
+      "voi": "compriate",
+      "loro": "comprino"
+    },
+    "condizionale": {
+      "io": "comprerei",
+      "tu": "compreresti",
+      "lui/lei": "comprerebbe",
+      "noi": "compreremmo",
+      "voi": "comprereste",
+      "loro": "comprerebbero"
+    },
+    "imperativo": {
+      "tu": "compra",
+      "lei": "compri",
+      "noi": "compriamo",
+      "voi": "comprate",
+      "loro": "comprino"
+    }
+  },
+  "comprendere": {
+    "presente": {
+      "io": "comprendo",
+      "tu": "comprendi",
+      "lui/lei": "comprende",
+      "noi": "comprendiamo",
+      "voi": "comprendete",
+      "loro": "comprendono"
+    },
+    "passatoProssimo": {
+      "io": "ho compreso",
+      "tu": "hai compreso",
+      "lui/lei": "ha compreso",
+      "noi": "abbiamo compreso",
+      "voi": "avete compreso",
+      "loro": "hanno compreso"
+    },
+    "imperfetto": {
+      "io": "comprendevo",
+      "tu": "comprendevi",
+      "lui/lei": "comprendeva",
+      "noi": "comprendevamo",
+      "voi": "comprendevate",
+      "loro": "comprendevano"
+    },
+    "futuro": {
+      "io": "comprenderò",
+      "tu": "comprenderai",
+      "lui/lei": "comprenderà",
+      "noi": "comprenderemo",
+      "voi": "comprenderete",
+      "loro": "comprenderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "comprenda",
+      "tu": "comprenda",
+      "lui/lei": "comprenda",
+      "noi": "comprendiamo",
+      "voi": "comprendiate",
+      "loro": "comprendano"
+    },
+    "condizionale": {
+      "io": "comprenderei",
+      "tu": "comprenderesti",
+      "lui/lei": "comprenderebbe",
+      "noi": "comprenderemmo",
+      "voi": "comprendereste",
+      "loro": "comprenderebbero"
+    },
+    "imperativo": {
+      "tu": "comprendi",
+      "lei": "comprenda",
+      "noi": "comprendiamo",
+      "voi": "comprendete",
+      "loro": "comprendano"
+    }
+  },
+  "compromettere": {
+    "presente": {
+      "io": "comprometto",
+      "tu": "comprometti",
+      "lui/lei": "compromette",
+      "noi": "compromettiamo",
+      "voi": "compromettete",
+      "loro": "compromettono"
+    },
+    "passatoProssimo": {
+      "io": "ho compromesso",
+      "tu": "hai compromesso",
+      "lui/lei": "ha compromesso",
+      "noi": "abbiamo compromesso",
+      "voi": "avete compromesso",
+      "loro": "hanno compromesso"
+    },
+    "imperfetto": {
+      "io": "compromettevo",
+      "tu": "compromettevi",
+      "lui/lei": "comprometteva",
+      "noi": "compromettevamo",
+      "voi": "compromettevate",
+      "loro": "compromettevano"
+    },
+    "futuro": {
+      "io": "comprometterò",
+      "tu": "comprometterai",
+      "lui/lei": "comprometterà",
+      "noi": "comprometteremo",
+      "voi": "comprometterete",
+      "loro": "comprometteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "comprometta",
+      "tu": "comprometta",
+      "lui/lei": "comprometta",
+      "noi": "compromettiamo",
+      "voi": "compromettiate",
+      "loro": "compromettano"
+    },
+    "condizionale": {
+      "io": "comprometterei",
+      "tu": "comprometteresti",
+      "lui/lei": "comprometterebbe",
+      "noi": "comprometteremmo",
+      "voi": "compromettereste",
+      "loro": "comprometterebbero"
+    },
+    "imperativo": {
+      "tu": "comprometti",
+      "lei": "comprometta",
+      "noi": "compromettiamo",
+      "voi": "compromettete",
+      "loro": "comprometano"
+    }
+  },
+  "comprovare": {
+    "presente": {
+      "io": "comprovo",
+      "tu": "comprovi",
+      "lui/lei": "comprova",
+      "noi": "comproviamo",
+      "voi": "comprovate",
+      "loro": "comprovano"
+    },
+    "passatoProssimo": {
+      "io": "ho comprovato",
+      "tu": "hai comprovato",
+      "lui/lei": "ha comprovato",
+      "noi": "abbiamo comprovato",
+      "voi": "avete comprovato",
+      "loro": "hanno comprovato"
+    },
+    "imperfetto": {
+      "io": "comprovavo",
+      "tu": "comprovavi",
+      "lui/lei": "comprovava",
+      "noi": "comprovavamo",
+      "voi": "comprovavate",
+      "loro": "comprovavano"
+    },
+    "futuro": {
+      "io": "comproverò",
+      "tu": "comproverai",
+      "lui/lei": "comproverà",
+      "noi": "comproveremo",
+      "voi": "comproverete",
+      "loro": "comproveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "comprovi",
+      "tu": "comprovi",
+      "lui/lei": "comprovi",
+      "noi": "comproviamo",
+      "voi": "comproviate",
+      "loro": "comprovino"
+    },
+    "condizionale": {
+      "io": "comproverei",
+      "tu": "comproveresti",
+      "lui/lei": "comproverebbe",
+      "noi": "comproveremmo",
+      "voi": "comprovereste",
+      "loro": "comproverebbero"
+    },
+    "imperativo": {
+      "tu": "comprova",
+      "lei": "comprovi",
+      "noi": "comproviamo",
+      "voi": "comprovate",
+      "loro": "comprovino"
+    }
+  },
+  "comunicare": {
+    "presente": {
+      "io": "comunico",
+      "tu": "comunichi",
+      "lui/lei": "comunica",
+      "noi": "comunichiamo",
+      "voi": "comunicate",
+      "loro": "comunicano"
+    },
+    "passatoProssimo": {
+      "io": "ho comunicato",
+      "tu": "hai comunicato",
+      "lui/lei": "ha comunicato",
+      "noi": "abbiamo comunicato",
+      "voi": "avete comunicato",
+      "loro": "hanno comunicato"
+    },
+    "imperfetto": {
+      "io": "comunicavo",
+      "tu": "comunicavi",
+      "lui/lei": "comunicava",
+      "noi": "comunicavamo",
+      "voi": "comunicavate",
+      "loro": "comunicavano"
+    },
+    "futuro": {
+      "io": "comunicherò",
+      "tu": "comunicherai",
+      "lui/lei": "comunicherà",
+      "noi": "comunicheremo",
+      "voi": "comunicherete",
+      "loro": "comunicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "comunichi",
+      "tu": "comunichi",
+      "lui/lei": "comunichi",
+      "noi": "comunichiamo",
+      "voi": "comunichiate",
+      "loro": "comunichino"
+    },
+    "condizionale": {
+      "io": "comunicherei",
+      "tu": "comunicheresti",
+      "lui/lei": "comunicherebbe",
+      "noi": "comunicheremmo",
+      "voi": "comunichereste",
+      "loro": "comunicherebbero"
+    },
+    "imperativo": {
+      "tu": "comunica",
+      "lei": "comunichi",
+      "noi": "comunichiamo",
+      "voi": "comunicate",
+      "loro": "comunichino"
+    }
+  },
+  "concedere": {
+    "presente": {
+      "io": "concedo",
+      "tu": "concedi",
+      "lui/lei": "concede",
+      "noi": "concediamo",
+      "voi": "concedete",
+      "loro": "concedono"
+    },
+    "passatoProssimo": {
+      "io": "ho concesso",
+      "tu": "hai concesso",
+      "lui/lei": "ha concesso",
+      "noi": "abbiamo concesso",
+      "voi": "avete concesso",
+      "loro": "hanno concesso"
+    },
+    "imperfetto": {
+      "io": "concedevo",
+      "tu": "concedevi",
+      "lui/lei": "concedeva",
+      "noi": "concedevamo",
+      "voi": "concedevate",
+      "loro": "concedevano"
+    },
+    "futuro": {
+      "io": "concederò",
+      "tu": "concederai",
+      "lui/lei": "concederà",
+      "noi": "concederemo",
+      "voi": "concederete",
+      "loro": "concederanno"
+    },
+    "congiuntivoPresente": {
+      "io": "conceda",
+      "tu": "conceda",
+      "lui/lei": "conceda",
+      "noi": "concediamo",
+      "voi": "concediate",
+      "loro": "concedano"
+    },
+    "condizionale": {
+      "io": "concederei",
+      "tu": "concederesti",
+      "lui/lei": "concederebbe",
+      "noi": "concederemmo",
+      "voi": "concedereste",
+      "loro": "concederebbero"
+    },
+    "imperativo": {
+      "tu": "concedi",
+      "lei": "conceda",
+      "noi": "concediamo",
+      "voi": "concedete",
+      "loro": "concedano"
+    }
+  },
+  "concentrare": {
+    "presente": {
+      "io": "concentro",
+      "tu": "concentri",
+      "lui/lei": "concentra",
+      "noi": "concentriamo",
+      "voi": "concentrate",
+      "loro": "concentrano"
+    },
+    "passatoProssimo": {
+      "io": "ho concentrato",
+      "tu": "hai concentrato",
+      "lui/lei": "ha concentrato",
+      "noi": "abbiamo concentrato",
+      "voi": "avete concentrato",
+      "loro": "hanno concentrato"
+    },
+    "imperfetto": {
+      "io": "concentravo",
+      "tu": "concentravi",
+      "lui/lei": "concentrava",
+      "noi": "concentravamo",
+      "voi": "concentravate",
+      "loro": "concentravano"
+    },
+    "futuro": {
+      "io": "concentrerò",
+      "tu": "concentrerai",
+      "lui/lei": "concentrerà",
+      "noi": "concentreremo",
+      "voi": "concentrerete",
+      "loro": "concentreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "concentri",
+      "tu": "concentri",
+      "lui/lei": "concentri",
+      "noi": "concentriamo",
+      "voi": "concentriate",
+      "loro": "concentrino"
+    },
+    "condizionale": {
+      "io": "concentrerei",
+      "tu": "concentreresti",
+      "lui/lei": "concentrerebbe",
+      "noi": "concentreremmo",
+      "voi": "concentrereste",
+      "loro": "concentrerebbero"
+    },
+    "imperativo": {
+      "tu": "concentra",
+      "lei": "concentri",
+      "noi": "concentriamo",
+      "voi": "concentrate",
+      "loro": "concentrino"
+    }
+  },
+  "concentrarsi": {
+    "presente": {
+      "io": "mi concentro",
+      "tu": "ti concentri",
+      "lui/lei": "si concentra",
+      "noi": "ci concentriamo",
+      "voi": "vi concentrate",
+      "loro": "si concentrano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono concentrato/a",
+      "tu": "ti sei concentrato/a",
+      "lui/lei": "si è concentrato/a",
+      "noi": "ci siamo concentrati/e",
+      "voi": "vi siete concentrati/e",
+      "loro": "si sono concentrati/e"
+    },
+    "imperfetto": {
+      "io": "mi concentravo",
+      "tu": "ti concentravi",
+      "lui/lei": "si concentrava",
+      "noi": "ci concentravamo",
+      "voi": "vi concentravate",
+      "loro": "si concentravano"
+    },
+    "futuro": {
+      "io": "mi concentrerò",
+      "tu": "ti concentrerai",
+      "lui/lei": "si concentrerà",
+      "noi": "ci concentreremo",
+      "voi": "vi concentrerete",
+      "loro": "si concentreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi concentri",
+      "tu": "ti concentri",
+      "lui/lei": "si concentri",
+      "noi": "ci concentriamo",
+      "voi": "vi concentriate",
+      "loro": "si concentrino"
+    },
+    "condizionale": {
+      "io": "mi concentrerei",
+      "tu": "ti concentreresti",
+      "lui/lei": "si concentrerebbe",
+      "noi": "ci concentreremmo",
+      "voi": "vi concentrereste",
+      "loro": "si concentrerebbero"
+    },
+    "imperativo": {
+      "tu": "concentrati",
+      "lei": "si concentri",
+      "noi": "concentriamoci",
+      "voi": "concentratevi",
+      "loro": "si concentrino"
+    }
+  },
+  "concepire": {
+    "presente": {
+      "io": "concepisco",
+      "tu": "concepisci",
+      "lui/lei": "concepisce",
+      "noi": "concepiamo",
+      "voi": "concepite",
+      "loro": "concepiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho concepito",
+      "tu": "hai concepito",
+      "lui/lei": "ha concepito",
+      "noi": "abbiamo concepito",
+      "voi": "avete concepito",
+      "loro": "hanno concepito"
+    },
+    "imperfetto": {
+      "io": "concepivo",
+      "tu": "concepivi",
+      "lui/lei": "concepiva",
+      "noi": "concepivamo",
+      "voi": "concepivate",
+      "loro": "concepivano"
+    },
+    "futuro": {
+      "io": "concepirò",
+      "tu": "concepirai",
+      "lui/lei": "concepirà",
+      "noi": "concepiremo",
+      "voi": "concepirete",
+      "loro": "concepiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "concepisca",
+      "tu": "concepisca",
+      "lui/lei": "concepisca",
+      "noi": "concepiamo",
+      "voi": "concepiate",
+      "loro": "concepiscano"
+    },
+    "condizionale": {
+      "io": "concepirei",
+      "tu": "concepiresti",
+      "lui/lei": "concepirebbe",
+      "noi": "concepiremmo",
+      "voi": "concepireste",
+      "loro": "concepirebbero"
+    },
+    "imperativo": {
+      "tu": "concepisci",
+      "lei": "concepisca",
+      "noi": "concepiamo",
+      "voi": "concepite",
+      "loro": "concepiscano"
+    }
+  },
+  "concertare": {
+    "presente": {
+      "io": "concerto",
+      "tu": "concerti",
+      "lui/lei": "concerta",
+      "noi": "concertiamo",
+      "voi": "concertate",
+      "loro": "concertano"
+    },
+    "passatoProssimo": {
+      "io": "ho concertato",
+      "tu": "hai concertato",
+      "lui/lei": "ha concertato",
+      "noi": "abbiamo concertato",
+      "voi": "avete concertato",
+      "loro": "hanno concertato"
+    },
+    "imperfetto": {
+      "io": "concertavo",
+      "tu": "concertavi",
+      "lui/lei": "concertava",
+      "noi": "concertavamo",
+      "voi": "concertavate",
+      "loro": "concertavano"
+    },
+    "futuro": {
+      "io": "concerterò",
+      "tu": "concerterai",
+      "lui/lei": "concerterà",
+      "noi": "concerteremo",
+      "voi": "concerterete",
+      "loro": "concerteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "concerti",
+      "tu": "concerti",
+      "lui/lei": "concerti",
+      "noi": "concertiamo",
+      "voi": "concertiate",
+      "loro": "concertino"
+    },
+    "condizionale": {
+      "io": "concerterei",
+      "tu": "concerteresti",
+      "lui/lei": "concerterebbe",
+      "noi": "concerteremmo",
+      "voi": "concertereste",
+      "loro": "concerterebbero"
+    },
+    "imperativo": {
+      "tu": "concerta",
+      "lei": "concerti",
+      "noi": "concertiamo",
+      "voi": "concertate",
+      "loro": "concertino"
+    }
+  },
+  "conciare": {
+    "presente": {
+      "io": "concio",
+      "tu": "conci",
+      "lui/lei": "concia",
+      "noi": "conciamo",
+      "voi": "conciate",
+      "loro": "conciano"
+    },
+    "passatoProssimo": {
+      "io": "ho conciato",
+      "tu": "hai conciato",
+      "lui/lei": "ha conciato",
+      "noi": "abbiamo conciato",
+      "voi": "avete conciato",
+      "loro": "hanno conciato"
+    },
+    "imperfetto": {
+      "io": "conciavo",
+      "tu": "conciavi",
+      "lui/lei": "conciava",
+      "noi": "conciavamo",
+      "voi": "conciavate",
+      "loro": "conciavano"
+    },
+    "futuro": {
+      "io": "concerò",
+      "tu": "concerai",
+      "lui/lei": "concerà",
+      "noi": "conceremo",
+      "voi": "concerete",
+      "loro": "conceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conci",
+      "tu": "conci",
+      "lui/lei": "conci",
+      "noi": "conciamo",
+      "voi": "conciate",
+      "loro": "concino"
+    },
+    "condizionale": {
+      "io": "concerei",
+      "tu": "conceresti",
+      "lui/lei": "concerebbe",
+      "noi": "conceremmo",
+      "voi": "concereste",
+      "loro": "concerebbero"
+    },
+    "imperativo": {
+      "tu": "concia",
+      "lei": "conci",
+      "noi": "conciamo",
+      "voi": "conciate",
+      "loro": "concino"
+    }
+  },
+  "conciliare": {
+    "presente": {
+      "io": "concilio",
+      "tu": "concilii",
+      "lui/lei": "concilia",
+      "noi": "conciliamo",
+      "voi": "conciliate",
+      "loro": "conciliano"
+    },
+    "passatoProssimo": {
+      "io": "ho conciliato",
+      "tu": "hai conciliato",
+      "lui/lei": "ha conciliato",
+      "noi": "abbiamo conciliato",
+      "voi": "avete conciliato",
+      "loro": "hanno conciliato"
+    },
+    "imperfetto": {
+      "io": "conciliavo",
+      "tu": "conciliavi",
+      "lui/lei": "conciliava",
+      "noi": "conciliavamo",
+      "voi": "conciliavate",
+      "loro": "conciliavano"
+    },
+    "futuro": {
+      "io": "concilierò",
+      "tu": "concilierai",
+      "lui/lei": "concilierà",
+      "noi": "concilieremo",
+      "voi": "concilierete",
+      "loro": "concilieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "concili",
+      "tu": "concili",
+      "lui/lei": "concili",
+      "noi": "conciliamo",
+      "voi": "conciliate",
+      "loro": "concilino"
+    },
+    "condizionale": {
+      "io": "concilierei",
+      "tu": "concilieresti",
+      "lui/lei": "concilierebbe",
+      "noi": "concilieremmo",
+      "voi": "conciliereste",
+      "loro": "concilierebbero"
+    },
+    "imperativo": {
+      "tu": "concilia",
+      "lei": "concili",
+      "noi": "conciliamo",
+      "voi": "conciliate",
+      "loro": "concilino"
+    }
+  },
+  "concludere": {
+    "presente": {
+      "io": "concludo",
+      "tu": "concludi",
+      "lui/lei": "conclude",
+      "noi": "concludiamo",
+      "voi": "concludete",
+      "loro": "concludono"
+    },
+    "passatoProssimo": {
+      "io": "ho concluso",
+      "tu": "hai concluso",
+      "lui/lei": "ha concluso",
+      "noi": "abbiamo concluso",
+      "voi": "avete concluso",
+      "loro": "hanno concluso"
+    },
+    "imperfetto": {
+      "io": "concludevo",
+      "tu": "concludevi",
+      "lui/lei": "concludeva",
+      "noi": "concludevamo",
+      "voi": "concludevate",
+      "loro": "concludevano"
+    },
+    "futuro": {
+      "io": "concluderò",
+      "tu": "concluderai",
+      "lui/lei": "concluderà",
+      "noi": "concluderemo",
+      "voi": "concluderete",
+      "loro": "concluderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "concluda",
+      "tu": "concluda",
+      "lui/lei": "concluda",
+      "noi": "concludiamo",
+      "voi": "concludiate",
+      "loro": "concludano"
+    },
+    "condizionale": {
+      "io": "concluderei",
+      "tu": "concluderesti",
+      "lui/lei": "concluderebbe",
+      "noi": "concluderemmo",
+      "voi": "concludereste",
+      "loro": "concluderebbero"
+    },
+    "imperativo": {
+      "tu": "concludi",
+      "lei": "concluda",
+      "noi": "concludiamo",
+      "voi": "concludete",
+      "loro": "concludano"
+    }
+  },
+  "concordare": {
+    "presente": {
+      "io": "concordo",
+      "tu": "concordi",
+      "lui/lei": "concorda",
+      "noi": "concordiamo",
+      "voi": "concordate",
+      "loro": "concordano"
+    },
+    "passatoProssimo": {
+      "io": "ho concordato",
+      "tu": "hai concordato",
+      "lui/lei": "ha concordato",
+      "noi": "abbiamo concordato",
+      "voi": "avete concordato",
+      "loro": "hanno concordato"
+    },
+    "imperfetto": {
+      "io": "concordavo",
+      "tu": "concordavi",
+      "lui/lei": "concordava",
+      "noi": "concordavamo",
+      "voi": "concordavate",
+      "loro": "concordavano"
+    },
+    "futuro": {
+      "io": "concorderò",
+      "tu": "concorderai",
+      "lui/lei": "concorderà",
+      "noi": "concorderemo",
+      "voi": "concorderete",
+      "loro": "concorderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "concordi",
+      "tu": "concordi",
+      "lui/lei": "concordi",
+      "noi": "concordiamo",
+      "voi": "concordiate",
+      "loro": "concordino"
+    },
+    "condizionale": {
+      "io": "concorderei",
+      "tu": "concorderesti",
+      "lui/lei": "concorderebbe",
+      "noi": "concorderemmo",
+      "voi": "concordereste",
+      "loro": "concorderebbero"
+    },
+    "imperativo": {
+      "tu": "concorda",
+      "lei": "concordi",
+      "noi": "concordiamo",
+      "voi": "concordate",
+      "loro": "concordino"
+    }
+  },
+  "concorrere": {
+    "presente": {
+      "io": "concorro",
+      "tu": "concorri",
+      "lui/lei": "concorre",
+      "noi": "concorriamo",
+      "voi": "concorrete",
+      "loro": "concorrono"
+    },
+    "passatoProssimo": {
+      "io": "ho concorso",
+      "tu": "hai concorso",
+      "lui/lei": "ha concorso",
+      "noi": "abbiamo concorso",
+      "voi": "avete concorso",
+      "loro": "hanno concorso"
+    },
+    "imperfetto": {
+      "io": "concorrevo",
+      "tu": "concorrevi",
+      "lui/lei": "concorreva",
+      "noi": "concorrevamo",
+      "voi": "concorrevate",
+      "loro": "concorrevano"
+    },
+    "futuro": {
+      "io": "concorrerò",
+      "tu": "concorrerai",
+      "lui/lei": "concorrerà",
+      "noi": "concorreremo",
+      "voi": "concorrerete",
+      "loro": "concorreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "concorra",
+      "tu": "concorra",
+      "lui/lei": "concorra",
+      "noi": "concorriamo",
+      "voi": "concorriate",
+      "loro": "concorrano"
+    },
+    "condizionale": {
+      "io": "concorrerei",
+      "tu": "concorreresti",
+      "lui/lei": "concorrerebbe",
+      "noi": "concorreremmo",
+      "voi": "concorrereste",
+      "loro": "concorrerebbero"
+    },
+    "imperativo": {
+      "tu": "concorri",
+      "lei": "concorra",
+      "noi": "concorriamo",
+      "voi": "concorrete",
+      "loro": "concorrano"
+    }
+  },
+  "concuocere": {
+    "presente": {
+      "io": "concuocio",
+      "tu": "concuoci",
+      "lui/lei": "concuoce",
+      "noi": "concociamo",
+      "voi": "concuocete",
+      "loro": "concuociono"
+    },
+    "passatoProssimo": {
+      "io": "ho concotto",
+      "tu": "hai concotto",
+      "lui/lei": "ha concotto",
+      "noi": "abbiamo concotto",
+      "voi": "avete concotto",
+      "loro": "hanno concotto"
+    },
+    "imperfetto": {
+      "io": "concuocevo",
+      "tu": "concuocevi",
+      "lui/lei": "concuoceva",
+      "noi": "concuocevamo",
+      "voi": "concuocevate",
+      "loro": "concuocevano"
+    },
+    "futuro": {
+      "io": "concuocerò",
+      "tu": "concuocerai",
+      "lui/lei": "concuocerà",
+      "noi": "concuoceremo",
+      "voi": "concuocerete",
+      "loro": "concuoceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "concuocia",
+      "tu": "concuocia",
+      "lui/lei": "concuocia",
+      "noi": "conciociamo",
+      "voi": "concuociate",
+      "loro": "concuociano"
+    },
+    "condizionale": {
+      "io": "concuocerei",
+      "tu": "concuoceresti",
+      "lui/lei": "concuocerebbe",
+      "noi": "concuoceremmo",
+      "voi": "concuocereste",
+      "loro": "concuocerebbero"
+    },
+    "imperativo": {
+      "tu": "concuoci",
+      "lei": "concuocia",
+      "noi": "concociamo",
+      "voi": "concuocete",
+      "loro": "concuociano"
+    }
+  },
+  "condannare": {
+    "presente": {
+      "io": "condanno",
+      "tu": "condanni",
+      "lui/lei": "condanna",
+      "noi": "condanniamo",
+      "voi": "condannate",
+      "loro": "condannano"
+    },
+    "passatoProssimo": {
+      "io": "ho condannato",
+      "tu": "hai condannato",
+      "lui/lei": "ha condannato",
+      "noi": "abbiamo condannato",
+      "voi": "avete condannato",
+      "loro": "hanno condannato"
+    },
+    "imperfetto": {
+      "io": "condannavo",
+      "tu": "condannavi",
+      "lui/lei": "condannava",
+      "noi": "condannavamo",
+      "voi": "condannavate",
+      "loro": "condannavano"
+    },
+    "futuro": {
+      "io": "condannerò",
+      "tu": "condannerai",
+      "lui/lei": "condannerà",
+      "noi": "condanneremo",
+      "voi": "condannerete",
+      "loro": "condanneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "condanni",
+      "tu": "condanni",
+      "lui/lei": "condanni",
+      "noi": "condanniamo",
+      "voi": "condanniate",
+      "loro": "condannino"
+    },
+    "condizionale": {
+      "io": "condannerei",
+      "tu": "condanneresti",
+      "lui/lei": "condannerebbe",
+      "noi": "condanneremmo",
+      "voi": "condannereste",
+      "loro": "condannerebbero"
+    },
+    "imperativo": {
+      "tu": "condanna",
+      "lei": "condanni",
+      "noi": "condanniamo",
+      "voi": "condannate",
+      "loro": "condannino"
+    }
+  },
+  "condire": {
+    "presente": {
+      "io": "condisco",
+      "tu": "condisci",
+      "lui/lei": "condisce",
+      "noi": "condiamo",
+      "voi": "condite",
+      "loro": "condiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho condito",
+      "tu": "hai condito",
+      "lui/lei": "ha condito",
+      "noi": "abbiamo condito",
+      "voi": "avete condito",
+      "loro": "hanno condito"
+    },
+    "imperfetto": {
+      "io": "condivo",
+      "tu": "condivi",
+      "lui/lei": "condiva",
+      "noi": "condivamo",
+      "voi": "condivate",
+      "loro": "condivano"
+    },
+    "futuro": {
+      "io": "condirò",
+      "tu": "condirai",
+      "lui/lei": "condirà",
+      "noi": "condiremo",
+      "voi": "condirete",
+      "loro": "condiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "condisca",
+      "tu": "condisca",
+      "lui/lei": "condisca",
+      "noi": "condiamo",
+      "voi": "condiate",
+      "loro": "condiscano"
+    },
+    "condizionale": {
+      "io": "condirei",
+      "tu": "condiresti",
+      "lui/lei": "condirebbe",
+      "noi": "condiremmo",
+      "voi": "condireste",
+      "loro": "condirebbero"
+    },
+    "imperativo": {
+      "tu": "condisci",
+      "lei": "condisca",
+      "noi": "condiamo",
+      "voi": "condite",
+      "loro": "condiscano"
+    }
+  },
+  "condividere": {
+    "presente": {
+      "io": "condivido",
+      "tu": "condividi",
+      "lui/lei": "condivide",
+      "noi": "condividiamo",
+      "voi": "condividete",
+      "loro": "condividono"
+    },
+    "passatoProssimo": {
+      "io": "ho condiviso",
+      "tu": "hai condiviso",
+      "lui/lei": "ha condiviso",
+      "noi": "abbiamo condiviso",
+      "voi": "avete condiviso",
+      "loro": "hanno condiviso"
+    },
+    "imperfetto": {
+      "io": "condividevo",
+      "tu": "condividevi",
+      "lui/lei": "condivideva",
+      "noi": "condividevamo",
+      "voi": "condividevate",
+      "loro": "condividevano"
+    },
+    "futuro": {
+      "io": "condividerò",
+      "tu": "condividerai",
+      "lui/lei": "condividerà",
+      "noi": "condivideremo",
+      "voi": "condividerete",
+      "loro": "condivideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "condivida",
+      "tu": "condivida",
+      "lui/lei": "condivida",
+      "noi": "condividiamo",
+      "voi": "condividiate",
+      "loro": "condividano"
+    },
+    "condizionale": {
+      "io": "condividerei",
+      "tu": "condivideresti",
+      "lui/lei": "condividerebbe",
+      "noi": "condivideremmo",
+      "voi": "condividereste",
+      "loro": "condividerebbero"
+    },
+    "imperativo": {
+      "tu": "condividi",
+      "lei": "condivida",
+      "noi": "condividiamo",
+      "voi": "condividete",
+      "loro": "condividano"
+    }
+  },
+  "condurre": {
+    "presente": {
+      "io": "conduco",
+      "tu": "conduci",
+      "lui/lei": "conduce",
+      "noi": "conduciamo",
+      "voi": "conducete",
+      "loro": "conducono"
+    },
+    "passatoProssimo": {
+      "io": "ho condotto",
+      "tu": "hai condotto",
+      "lui/lei": "ha condotto",
+      "noi": "abbiamo condotto",
+      "voi": "avete condotto",
+      "loro": "hanno condotto"
+    },
+    "imperfetto": {
+      "io": "conducevo",
+      "tu": "conducevi",
+      "lui/lei": "conduceva",
+      "noi": "conducevamo",
+      "voi": "conducevate",
+      "loro": "conducevano"
+    },
+    "futuro": {
+      "io": "condurrò",
+      "tu": "condurrai",
+      "lui/lei": "condurrà",
+      "noi": "condurremo",
+      "voi": "condurrete",
+      "loro": "condurranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conduca",
+      "tu": "conduca",
+      "lui/lei": "conduca",
+      "noi": "conduciamo",
+      "voi": "conduciate",
+      "loro": "conducano"
+    },
+    "condizionale": {
+      "io": "condurrei",
+      "tu": "condurresti",
+      "lui/lei": "condurrebbe",
+      "noi": "condurremmo",
+      "voi": "condurreste",
+      "loro": "condurrebbero"
+    },
+    "imperativo": {
+      "tu": "conduci",
+      "lei": "conduca",
+      "noi": "conduciamo",
+      "voi": "conducete",
+      "loro": "conducano"
+    }
+  },
+  "confarsi": {
+    "presente": {
+      "io": "mi confaccio",
+      "tu": "ti confai",
+      "lui/lei": "si confà",
+      "noi": "ci confacciamo",
+      "voi": "vi confate",
+      "loro": "si confanno"
+    },
+    "passatoProssimo": {
+      "io": "mi sono confatto",
+      "tu": "ti sei confatto",
+      "lui/lei": "si è confatto",
+      "noi": "ci siamo confatti",
+      "voi": "vi siete confatti",
+      "loro": "si sono confatti"
+    },
+    "imperfetto": {
+      "io": "mi confacevo",
+      "tu": "ti confacevi",
+      "lui/lei": "si confaceva",
+      "noi": "ci confacevamo",
+      "voi": "vi confacevate",
+      "loro": "si confacevano"
+    },
+    "futuro": {
+      "io": "mi confarò",
+      "tu": "ti confarai",
+      "lui/lei": "si confarà",
+      "noi": "ci confaremo",
+      "voi": "vi confarete",
+      "loro": "si confaranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi confaccia",
+      "tu": "ti confaccia",
+      "lui/lei": "si confaccia",
+      "noi": "ci confacciamo",
+      "voi": "vi confacciate",
+      "loro": "si confacciano"
+    },
+    "condizionale": {
+      "io": "mi confarei",
+      "tu": "ti confaresti",
+      "lui/lei": "si confarebbe",
+      "noi": "ci confaremmo",
+      "voi": "vi confareste",
+      "loro": "si confarebbero"
+    },
+    "imperativo": {
+      "tu": "confatti",
+      "lei": "si confaccia",
+      "noi": "confacciamoci",
+      "voi": "confatevi",
+      "loro": "si confacciano"
+    }
+  },
+  "conferire": {
+    "presente": {
+      "io": "conferisco",
+      "tu": "conferisci",
+      "lui/lei": "conferisce",
+      "noi": "conferiamo",
+      "voi": "conferite",
+      "loro": "conferiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho conferito",
+      "tu": "hai conferito",
+      "lui/lei": "ha conferito",
+      "noi": "abbiamo conferito",
+      "voi": "avete conferito",
+      "loro": "hanno conferito"
+    },
+    "imperfetto": {
+      "io": "conferivo",
+      "tu": "conferivi",
+      "lui/lei": "conferiva",
+      "noi": "conferivamo",
+      "voi": "conferivate",
+      "loro": "conferivano"
+    },
+    "futuro": {
+      "io": "conferirò",
+      "tu": "conferirai",
+      "lui/lei": "conferirà",
+      "noi": "conferiremo",
+      "voi": "conferirete",
+      "loro": "conferiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conferisca",
+      "tu": "conferisca",
+      "lui/lei": "conferisca",
+      "noi": "conferiamo",
+      "voi": "conferiate",
+      "loro": "conferiscano"
+    },
+    "condizionale": {
+      "io": "conferirei",
+      "tu": "conferiresti",
+      "lui/lei": "conferirebbe",
+      "noi": "conferiremmo",
+      "voi": "conferireste",
+      "loro": "conferirebbero"
+    },
+    "imperativo": {
+      "tu": "conferisci",
+      "lei": "conferisca",
+      "noi": "conferiamo",
+      "voi": "conferite",
+      "loro": "conferiscano"
+    }
+  },
+  "confermare": {
+    "presente": {
+      "io": "confermo",
+      "tu": "confermi",
+      "lui/lei": "conferma",
+      "noi": "confermiamo",
+      "voi": "confermate",
+      "loro": "confermano"
+    },
+    "passatoProssimo": {
+      "io": "ho confermato",
+      "tu": "hai confermato",
+      "lui/lei": "ha confermato",
+      "noi": "abbiamo confermato",
+      "voi": "avete confermato",
+      "loro": "hanno confermato"
+    },
+    "imperfetto": {
+      "io": "confermavo",
+      "tu": "confermavi",
+      "lui/lei": "confermava",
+      "noi": "confermavamo",
+      "voi": "confermavate",
+      "loro": "confermavano"
+    },
+    "futuro": {
+      "io": "confermerò",
+      "tu": "confermerai",
+      "lui/lei": "confermerà",
+      "noi": "confermeremo",
+      "voi": "confermerete",
+      "loro": "confermeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confermi",
+      "tu": "confermi",
+      "lui/lei": "confermi",
+      "noi": "confermiamo",
+      "voi": "confermiate",
+      "loro": "confermino"
+    },
+    "condizionale": {
+      "io": "confermerei",
+      "tu": "confermeresti",
+      "lui/lei": "confermerebbe",
+      "noi": "confermeremmo",
+      "voi": "confermereste",
+      "loro": "confermerebbero"
+    },
+    "imperativo": {
+      "tu": "conferma",
+      "lei": "confermi",
+      "noi": "confermiamo",
+      "voi": "confermate",
+      "loro": "confermino"
+    }
+  },
+  "confessare": {
+    "presente": {
+      "io": "confesso",
+      "tu": "confessi",
+      "lui/lei": "confessa",
+      "noi": "confessiamo",
+      "voi": "confessate",
+      "loro": "confessano"
+    },
+    "passatoProssimo": {
+      "io": "ho confessato",
+      "tu": "hai confessato",
+      "lui/lei": "ha confessato",
+      "noi": "abbiamo confessato",
+      "voi": "avete confessato",
+      "loro": "hanno confessato"
+    },
+    "imperfetto": {
+      "io": "confessavo",
+      "tu": "confessavi",
+      "lui/lei": "confessava",
+      "noi": "confessavamo",
+      "voi": "confessavate",
+      "loro": "confessavano"
+    },
+    "futuro": {
+      "io": "confesserò",
+      "tu": "confesserai",
+      "lui/lei": "confesserà",
+      "noi": "confesseremo",
+      "voi": "confesserete",
+      "loro": "confesseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confessi",
+      "tu": "confessi",
+      "lui/lei": "confessi",
+      "noi": "confessiamo",
+      "voi": "confessiate",
+      "loro": "confessino"
+    },
+    "condizionale": {
+      "io": "confesserei",
+      "tu": "confesseresti",
+      "lui/lei": "confesserebbe",
+      "noi": "confesseremmo",
+      "voi": "confessereste",
+      "loro": "confesserebbero"
+    },
+    "imperativo": {
+      "tu": "confessa",
+      "lei": "confessi",
+      "noi": "confessiamo",
+      "voi": "confessate",
+      "loro": "confessino"
+    }
+  },
+  "confezionare": {
+    "presente": {
+      "io": "confeziono",
+      "tu": "confezioni",
+      "lui/lei": "confeziona",
+      "noi": "confezioniamo",
+      "voi": "confezionate",
+      "loro": "confezionano"
+    },
+    "passatoProssimo": {
+      "io": "ho confezionato",
+      "tu": "hai confezionato",
+      "lui/lei": "ha confezionato",
+      "noi": "abbiamo confezionato",
+      "voi": "avete confezionato",
+      "loro": "hanno confezionato"
+    },
+    "imperfetto": {
+      "io": "confezionavo",
+      "tu": "confezionavi",
+      "lui/lei": "confezionava",
+      "noi": "confezionavamo",
+      "voi": "confezionavate",
+      "loro": "confezionavano"
+    },
+    "futuro": {
+      "io": "confezionerò",
+      "tu": "confezionerai",
+      "lui/lei": "confezionerà",
+      "noi": "confezioneremo",
+      "voi": "confezionerete",
+      "loro": "confezioneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confezioni",
+      "tu": "confezioni",
+      "lui/lei": "confezioni",
+      "noi": "confezioniamo",
+      "voi": "confezioniate",
+      "loro": "confezionino"
+    },
+    "condizionale": {
+      "io": "confezionerei",
+      "tu": "confezioneresti",
+      "lui/lei": "confezionerebbe",
+      "noi": "confezioneremmo",
+      "voi": "confezionereste",
+      "loro": "confezionerebbero"
+    },
+    "imperativo": {
+      "tu": "confeziona",
+      "lei": "confezioni",
+      "noi": "confezioniamo",
+      "voi": "confezionate",
+      "loro": "confezionino"
+    }
+  },
+  "conficcare": {
+    "presente": {
+      "io": "conficco",
+      "tu": "conficchi",
+      "lui/lei": "conficca",
+      "noi": "conficchiamo",
+      "voi": "conficcate",
+      "loro": "conficcano"
+    },
+    "passatoProssimo": {
+      "io": "ho conficcato",
+      "tu": "hai conficcato",
+      "lui/lei": "ha conficcato",
+      "noi": "abbiamo conficcato",
+      "voi": "avete conficcato",
+      "loro": "hanno conficcato"
+    },
+    "imperfetto": {
+      "io": "conficcavo",
+      "tu": "conficcavi",
+      "lui/lei": "conficcava",
+      "noi": "conficcavamo",
+      "voi": "conficcavate",
+      "loro": "conficcavano"
+    },
+    "futuro": {
+      "io": "conficcherò",
+      "tu": "conficcherai",
+      "lui/lei": "conficcherà",
+      "noi": "conficcheremo",
+      "voi": "conficcherete",
+      "loro": "conficcheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conficchi",
+      "tu": "conficchi",
+      "lui/lei": "conficchi",
+      "noi": "conficchiamo",
+      "voi": "conficchiate",
+      "loro": "conficchino"
+    },
+    "condizionale": {
+      "io": "conficcherei",
+      "tu": "conficcheresti",
+      "lui/lei": "conficcherebbe",
+      "noi": "conficcheremmo",
+      "voi": "conficchereste",
+      "loro": "conficcherebbero"
+    },
+    "imperativo": {
+      "tu": "conficca",
+      "lei": "conficchi",
+      "noi": "conficchiamo",
+      "voi": "conficcate",
+      "loro": "conficchino"
+    }
+  },
+  "confidare": {
+    "presente": {
+      "io": "confido",
+      "tu": "confidi",
+      "lui/lei": "confida",
+      "noi": "confidiamo",
+      "voi": "confidate",
+      "loro": "confidano"
+    },
+    "passatoProssimo": {
+      "io": "ho confidato",
+      "tu": "hai confidato",
+      "lui/lei": "ha confidato",
+      "noi": "abbiamo confidato",
+      "voi": "avete confidato",
+      "loro": "hanno confidato"
+    },
+    "imperfetto": {
+      "io": "confidavo",
+      "tu": "confidavi",
+      "lui/lei": "confidava",
+      "noi": "confidavamo",
+      "voi": "confidavate",
+      "loro": "confidavano"
+    },
+    "futuro": {
+      "io": "confiderò",
+      "tu": "confiderai",
+      "lui/lei": "confiderà",
+      "noi": "confideremo",
+      "voi": "confiderete",
+      "loro": "confideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confidi",
+      "tu": "confidi",
+      "lui/lei": "confidi",
+      "noi": "confidiamo",
+      "voi": "confidiate",
+      "loro": "confidino"
+    },
+    "condizionale": {
+      "io": "confiderei",
+      "tu": "confideresti",
+      "lui/lei": "confiderebbe",
+      "noi": "confideremmo",
+      "voi": "confidereste",
+      "loro": "confiderebbero"
+    },
+    "imperativo": {
+      "tu": "confida",
+      "lei": "confidi",
+      "noi": "confidiamo",
+      "voi": "confidate",
+      "loro": "confidino"
+    }
+  },
+  "confinare": {
+    "presente": {
+      "io": "confino",
+      "tu": "confini",
+      "lui/lei": "confina",
+      "noi": "confiniamo",
+      "voi": "confinate",
+      "loro": "confinano"
+    },
+    "passatoProssimo": {
+      "io": "ho confinato",
+      "tu": "hai confinato",
+      "lui/lei": "ha confinato",
+      "noi": "abbiamo confinato",
+      "voi": "avete confinato",
+      "loro": "hanno confinato"
+    },
+    "imperfetto": {
+      "io": "confinavo",
+      "tu": "confinavi",
+      "lui/lei": "confinava",
+      "noi": "confinavamo",
+      "voi": "confinavate",
+      "loro": "confinavano"
+    },
+    "futuro": {
+      "io": "confinerò",
+      "tu": "confinerai",
+      "lui/lei": "confinerà",
+      "noi": "confineremo",
+      "voi": "confinerete",
+      "loro": "confineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confini",
+      "tu": "confini",
+      "lui/lei": "confini",
+      "noi": "confiniamo",
+      "voi": "confiniate",
+      "loro": "confinino"
+    },
+    "condizionale": {
+      "io": "confinerei",
+      "tu": "confineresti",
+      "lui/lei": "confinerebbe",
+      "noi": "confineremmo",
+      "voi": "confinereste",
+      "loro": "confinerebbero"
+    },
+    "imperativo": {
+      "tu": "confina",
+      "lei": "confini",
+      "noi": "confiniamo",
+      "voi": "confinate",
+      "loro": "confinino"
+    }
+  },
+  "confiscare": {
+    "presente": {
+      "io": "confisco",
+      "tu": "confischi",
+      "lui/lei": "confisca",
+      "noi": "confischiamo",
+      "voi": "confiscate",
+      "loro": "confiscano"
+    },
+    "passatoProssimo": {
+      "io": "ho confiscato",
+      "tu": "hai confiscato",
+      "lui/lei": "ha confiscato",
+      "noi": "abbiamo confiscato",
+      "voi": "avete confiscato",
+      "loro": "hanno confiscato"
+    },
+    "imperfetto": {
+      "io": "confiscavo",
+      "tu": "confiscavi",
+      "lui/lei": "confiscava",
+      "noi": "confiscavamo",
+      "voi": "confiscavate",
+      "loro": "confiscavano"
+    },
+    "futuro": {
+      "io": "confischerò",
+      "tu": "confischerai",
+      "lui/lei": "confischerà",
+      "noi": "confischeremo",
+      "voi": "confischerete",
+      "loro": "confischeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confischi",
+      "tu": "confischi",
+      "lui/lei": "confischi",
+      "noi": "confischiamo",
+      "voi": "confischiate",
+      "loro": "confischino"
+    },
+    "condizionale": {
+      "io": "confischerei",
+      "tu": "confischeresti",
+      "lui/lei": "confischerebbe",
+      "noi": "confischeremmo",
+      "voi": "confischereste",
+      "loro": "confischerebbero"
+    },
+    "imperativo": {
+      "tu": "confisca",
+      "lei": "confischi",
+      "noi": "confischiamo",
+      "voi": "confiscate",
+      "loro": "confischino"
+    }
+  },
+  "confondere": {
+    "presente": {
+      "io": "confondo",
+      "tu": "confondi",
+      "lui/lei": "confonde",
+      "noi": "confondiamo",
+      "voi": "confondete",
+      "loro": "confondono"
+    },
+    "passatoProssimo": {
+      "io": "ho confuso",
+      "tu": "hai confuso",
+      "lui/lei": "ha confuso",
+      "noi": "abbiamo confuso",
+      "voi": "avete confuso",
+      "loro": "hanno confuso"
+    },
+    "imperfetto": {
+      "io": "confondevo",
+      "tu": "confondevi",
+      "lui/lei": "confondeva",
+      "noi": "confondevamo",
+      "voi": "confondevate",
+      "loro": "confondevano"
+    },
+    "futuro": {
+      "io": "confonderò",
+      "tu": "confonderai",
+      "lui/lei": "confonderà",
+      "noi": "confonderemo",
+      "voi": "confonderete",
+      "loro": "confonderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "confonda",
+      "tu": "confonda",
+      "lui/lei": "confonda",
+      "noi": "confondiamo",
+      "voi": "confondiate",
+      "loro": "confondano"
+    },
+    "condizionale": {
+      "io": "confonderei",
+      "tu": "confonderesti",
+      "lui/lei": "confonderebbe",
+      "noi": "confonderemmo",
+      "voi": "confondereste",
+      "loro": "confonderebbero"
+    },
+    "imperativo": {
+      "tu": "confondi",
+      "lei": "confonda",
+      "noi": "confondiamo",
+      "voi": "confondete",
+      "loro": "confondano"
+    }
+  },
+  "conformare": {
+    "presente": {
+      "io": "conformo",
+      "tu": "conformi",
+      "lui/lei": "conforma",
+      "noi": "conformiamo",
+      "voi": "conformate",
+      "loro": "conformano"
+    },
+    "passatoProssimo": {
+      "io": "ho conformato",
+      "tu": "hai conformato",
+      "lui/lei": "ha conformato",
+      "noi": "abbiamo conformato",
+      "voi": "avete conformato",
+      "loro": "hanno conformato"
+    },
+    "imperfetto": {
+      "io": "conformavo",
+      "tu": "conformavi",
+      "lui/lei": "conformava",
+      "noi": "conformavamo",
+      "voi": "conformavate",
+      "loro": "conformavano"
+    },
+    "futuro": {
+      "io": "conformerò",
+      "tu": "conformerai",
+      "lui/lei": "conformerà",
+      "noi": "conformeremo",
+      "voi": "conformerete",
+      "loro": "conformeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conformi",
+      "tu": "conformi",
+      "lui/lei": "conformi",
+      "noi": "conformiamo",
+      "voi": "conformiate",
+      "loro": "conformino"
+    },
+    "condizionale": {
+      "io": "conformerei",
+      "tu": "conformeresti",
+      "lui/lei": "conformerebbe",
+      "noi": "conformeremmo",
+      "voi": "conformereste",
+      "loro": "conformerebbero"
+    },
+    "imperativo": {
+      "tu": "conforma",
+      "lei": "conformi",
+      "noi": "conformiamo",
+      "voi": "conformate",
+      "loro": "conformino"
+    }
+  },
+  "confortare": {
+    "presente": {
+      "io": "conforto",
+      "tu": "conforti",
+      "lui/lei": "conforta",
+      "noi": "confortiamo",
+      "voi": "confortate",
+      "loro": "confortano"
+    },
+    "passatoProssimo": {
+      "io": "ho confortato",
+      "tu": "hai confortato",
+      "lui/lei": "ha confortato",
+      "noi": "abbiamo confortato",
+      "voi": "avete confortato",
+      "loro": "hanno confortato"
+    },
+    "imperfetto": {
+      "io": "confortavo",
+      "tu": "confortavi",
+      "lui/lei": "confortava",
+      "noi": "confortavamo",
+      "voi": "confortavate",
+      "loro": "confortavano"
+    },
+    "futuro": {
+      "io": "conforterò",
+      "tu": "conforterai",
+      "lui/lei": "conforterà",
+      "noi": "conforteremo",
+      "voi": "conforterete",
+      "loro": "conforteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conforti",
+      "tu": "conforti",
+      "lui/lei": "conforti",
+      "noi": "confortiamo",
+      "voi": "confortiate",
+      "loro": "confortino"
+    },
+    "condizionale": {
+      "io": "conforterei",
+      "tu": "conforteresti",
+      "lui/lei": "conforterebbe",
+      "noi": "conforteremmo",
+      "voi": "confortereste",
+      "loro": "conforterebbero"
+    },
+    "imperativo": {
+      "tu": "conforta",
+      "lei": "conforti",
+      "noi": "confortiamo",
+      "voi": "confortate",
+      "loro": "confortino"
+    }
+  },
+  "confrontare": {
+    "presente": {
+      "io": "confronto",
+      "tu": "confronti",
+      "lui/lei": "confronta",
+      "noi": "confrontiamo",
+      "voi": "confrontate",
+      "loro": "confrontano"
+    },
+    "passatoProssimo": {
+      "io": "ho confrontato",
+      "tu": "hai confrontato",
+      "lui/lei": "ha confrontato",
+      "noi": "abbiamo confrontato",
+      "voi": "avete confrontato",
+      "loro": "hanno confrontato"
+    },
+    "imperfetto": {
+      "io": "confrontavo",
+      "tu": "confrontavi",
+      "lui/lei": "confrontava",
+      "noi": "confrontavamo",
+      "voi": "confrontavate",
+      "loro": "confrontavano"
+    },
+    "futuro": {
+      "io": "confronterò",
+      "tu": "confronterai",
+      "lui/lei": "confronterà",
+      "noi": "confronteremo",
+      "voi": "confronterete",
+      "loro": "confronteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "confronti",
+      "tu": "confronti",
+      "lui/lei": "confronti",
+      "noi": "confrontiamo",
+      "voi": "confrontiate",
+      "loro": "confrontino"
+    },
+    "condizionale": {
+      "io": "confronterei",
+      "tu": "confronteresti",
+      "lui/lei": "confronterebbe",
+      "noi": "confronteremmo",
+      "voi": "confrontereste",
+      "loro": "confronterebbero"
+    },
+    "imperativo": {
+      "tu": "confronta",
+      "lei": "confronti",
+      "noi": "confrontiamo",
+      "voi": "confrontate",
+      "loro": "confrontino"
+    }
+  },
+  "congegnare": {
+    "presente": {
+      "io": "congegno",
+      "tu": "congegni",
+      "lui/lei": "congegna",
+      "noi": "congegniamo",
+      "voi": "congegnate",
+      "loro": "congegnano"
+    },
+    "passatoProssimo": {
+      "io": "ho congegnato",
+      "tu": "hai congegnato",
+      "lui/lei": "ha congegnato",
+      "noi": "abbiamo congegnato",
+      "voi": "avete congegnato",
+      "loro": "hanno congegnato"
+    },
+    "imperfetto": {
+      "io": "congegnavo",
+      "tu": "congegnavi",
+      "lui/lei": "congegnava",
+      "noi": "congegnavamo",
+      "voi": "congegnavate",
+      "loro": "congegnavano"
+    },
+    "futuro": {
+      "io": "congegnerò",
+      "tu": "congegnerai",
+      "lui/lei": "congegnerà",
+      "noi": "congegneremo",
+      "voi": "congegnerete",
+      "loro": "congegneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "congegni",
+      "tu": "congegni",
+      "lui/lei": "congegni",
+      "noi": "congegniamo",
+      "voi": "congegniate",
+      "loro": "congegnino"
+    },
+    "condizionale": {
+      "io": "congegnerei",
+      "tu": "congegneresti",
+      "lui/lei": "congegnerebbe",
+      "noi": "congegneremmo",
+      "voi": "congegnereste",
+      "loro": "congegnerebbero"
+    },
+    "imperativo": {
+      "tu": "congegna",
+      "lei": "congegni",
+      "noi": "congegniamo",
+      "voi": "congegnate",
+      "loro": "congegnino"
+    }
+  },
+  "congelare": {
+    "presente": {
+      "io": "congelo",
+      "tu": "congeli",
+      "lui/lei": "congela",
+      "noi": "congeliamo",
+      "voi": "congelate",
+      "loro": "congelano"
+    },
+    "passatoProssimo": {
+      "io": "ho congelato",
+      "tu": "hai congelato",
+      "lui/lei": "ha congelato",
+      "noi": "abbiamo congelato",
+      "voi": "avete congelato",
+      "loro": "hanno congelato"
+    },
+    "imperfetto": {
+      "io": "congelavo",
+      "tu": "congelavi",
+      "lui/lei": "congelava",
+      "noi": "congelavamo",
+      "voi": "congelavate",
+      "loro": "congelavano"
+    },
+    "futuro": {
+      "io": "congelerò",
+      "tu": "congelerai",
+      "lui/lei": "congelerà",
+      "noi": "congeleremo",
+      "voi": "congelerete",
+      "loro": "congeleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "congeli",
+      "tu": "congeli",
+      "lui/lei": "congeli",
+      "noi": "congeliamo",
+      "voi": "congeliate",
+      "loro": "congelino"
+    },
+    "condizionale": {
+      "io": "congelerei",
+      "tu": "congeleresti",
+      "lui/lei": "congelerebbe",
+      "noi": "congeleremmo",
+      "voi": "congelereste",
+      "loro": "congelerebbero"
+    },
+    "imperativo": {
+      "tu": "congela",
+      "lei": "congeli",
+      "noi": "congeliamo",
+      "voi": "congelate",
+      "loro": "congelino"
+    }
+  },
+  "congestionare": {
+    "presente": {
+      "io": "congestiono",
+      "tu": "congestioni",
+      "lui/lei": "congestiona",
+      "noi": "congestioniamo",
+      "voi": "congestionate",
+      "loro": "congestionano"
+    },
+    "passatoProssimo": {
+      "io": "ho congestionato",
+      "tu": "hai congestionato",
+      "lui/lei": "ha congestionato",
+      "noi": "abbiamo congestionato",
+      "voi": "avete congestionato",
+      "loro": "hanno congestionato"
+    },
+    "imperfetto": {
+      "io": "congestionavo",
+      "tu": "congestionavi",
+      "lui/lei": "congestionava",
+      "noi": "congestionavamo",
+      "voi": "congestionavate",
+      "loro": "congestionavano"
+    },
+    "futuro": {
+      "io": "congestionerò",
+      "tu": "congestionerai",
+      "lui/lei": "congestionerà",
+      "noi": "congestioneremo",
+      "voi": "congestionerete",
+      "loro": "congestioneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "congestioni",
+      "tu": "congestioni",
+      "lui/lei": "congestioni",
+      "noi": "congestioniamo",
+      "voi": "congestioniate",
+      "loro": "congestionino"
+    },
+    "condizionale": {
+      "io": "congestionerei",
+      "tu": "congestioneresti",
+      "lui/lei": "congestionerebbe",
+      "noi": "congestioneremmo",
+      "voi": "congestionereste",
+      "loro": "congestionerebbero"
+    },
+    "imperativo": {
+      "tu": "congestiona",
+      "lei": "congestioni",
+      "noi": "congestioniamo",
+      "voi": "congestionate",
+      "loro": "congestionino"
+    }
+  },
+  "congiurare": {
+    "presente": {
+      "io": "congiuro",
+      "tu": "congiuri",
+      "lui/lei": "congiura",
+      "noi": "congiuriamo",
+      "voi": "congiurate",
+      "loro": "congiurano"
+    },
+    "passatoProssimo": {
+      "io": "ho congiurato",
+      "tu": "hai congiurato",
+      "lui/lei": "ha congiurato",
+      "noi": "abbiamo congiurato",
+      "voi": "avete congiurato",
+      "loro": "hanno congiurato"
+    },
+    "imperfetto": {
+      "io": "congiuravo",
+      "tu": "congiuravi",
+      "lui/lei": "congiurava",
+      "noi": "congiuravamo",
+      "voi": "congiuravate",
+      "loro": "congiuravano"
+    },
+    "futuro": {
+      "io": "congiurerò",
+      "tu": "congiurerai",
+      "lui/lei": "congiurerà",
+      "noi": "congiureremo",
+      "voi": "congiurerete",
+      "loro": "congiureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "congiuri",
+      "tu": "congiuri",
+      "lui/lei": "congiuri",
+      "noi": "congiuriamo",
+      "voi": "congiuriate",
+      "loro": "congiurino"
+    },
+    "condizionale": {
+      "io": "congiurerei",
+      "tu": "congiureresti",
+      "lui/lei": "congiurerebbe",
+      "noi": "congiureremmo",
+      "voi": "congiurereste",
+      "loro": "congiurerebbero"
+    },
+    "imperativo": {
+      "tu": "congiura",
+      "lei": "congiuri",
+      "noi": "congiuriamo",
+      "voi": "congiurate",
+      "loro": "congiurino"
+    }
+  },
+  "coniugare": {
+    "presente": {
+      "io": "coniugo",
+      "tu": "coniughi",
+      "lui/lei": "coniuga",
+      "noi": "coniughiamo",
+      "voi": "coniugate",
+      "loro": "coniugano"
+    },
+    "passatoProssimo": {
+      "io": "ho coniugato",
+      "tu": "hai coniugato",
+      "lui/lei": "ha coniugato",
+      "noi": "abbiamo coniugato",
+      "voi": "avete coniugato",
+      "loro": "hanno coniugato"
+    },
+    "imperfetto": {
+      "io": "coniugavo",
+      "tu": "coniugavi",
+      "lui/lei": "coniugava",
+      "noi": "coniugavamo",
+      "voi": "coniugavate",
+      "loro": "coniugavano"
+    },
+    "futuro": {
+      "io": "coniugherò",
+      "tu": "coniugherai",
+      "lui/lei": "coniugherà",
+      "noi": "coniugheremo",
+      "voi": "coniugherete",
+      "loro": "coniugheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "coniughi",
+      "tu": "coniughi",
+      "lui/lei": "coniughi",
+      "noi": "coniughiamo",
+      "voi": "coniughiate",
+      "loro": "coniughino"
+    },
+    "condizionale": {
+      "io": "coniugherei",
+      "tu": "coniugheresti",
+      "lui/lei": "coniugherebbe",
+      "noi": "coniugheremmo",
+      "voi": "coniughereste",
+      "loro": "coniugherebbero"
+    },
+    "imperativo": {
+      "tu": "coniuga",
+      "lei": "coniughi",
+      "noi": "coniughiamo",
+      "voi": "coniugate",
+      "loro": "coniughino"
+    }
+  },
+  "connettere": {
+    "presente": {
+      "io": "connetto",
+      "tu": "connetti",
+      "lui/lei": "connette",
+      "noi": "connettiamo",
+      "voi": "connettete",
+      "loro": "connettono"
+    },
+    "passatoProssimo": {
+      "io": "ho connesso",
+      "tu": "hai connesso",
+      "lui/lei": "ha connesso",
+      "noi": "abbiamo connesso",
+      "voi": "avete connesso",
+      "loro": "hanno connesso"
+    },
+    "imperfetto": {
+      "io": "connettevo",
+      "tu": "connettevi",
+      "lui/lei": "connetteva",
+      "noi": "connettevamo",
+      "voi": "connettevate",
+      "loro": "connettevano"
+    },
+    "futuro": {
+      "io": "connetterò",
+      "tu": "connetterai",
+      "lui/lei": "connetterà",
+      "noi": "connetteremo",
+      "voi": "connetterete",
+      "loro": "connetteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "connetta",
+      "tu": "connetta",
+      "lui/lei": "connetta",
+      "noi": "connettiamo",
+      "voi": "connettiate",
+      "loro": "connettano"
+    },
+    "condizionale": {
+      "io": "connetterei",
+      "tu": "connetteresti",
+      "lui/lei": "connetterebbe",
+      "noi": "connetteremmo",
+      "voi": "connettereste",
+      "loro": "connetterebbero"
+    },
+    "imperativo": {
+      "tu": "connetti",
+      "lei": "connetta",
+      "noi": "connettiamo",
+      "voi": "connettete",
+      "loro": "connettano"
+    }
+  },
+  "connumerare": {
+    "presente": {
+      "io": "connumero",
+      "tu": "connumeri",
+      "lui/lei": "connumera",
+      "noi": "connumeriamo",
+      "voi": "connumerate",
+      "loro": "connumerano"
+    },
+    "passatoProssimo": {
+      "io": "ho connumerato",
+      "tu": "hai connumerato",
+      "lui/lei": "ha connumerato",
+      "noi": "abbiamo connumerato",
+      "voi": "avete connumerato",
+      "loro": "hanno connumerato"
+    },
+    "imperfetto": {
+      "io": "connumeravo",
+      "tu": "connumeravi",
+      "lui/lei": "connumerava",
+      "noi": "connumeravamo",
+      "voi": "connumeravate",
+      "loro": "connumeravano"
+    },
+    "futuro": {
+      "io": "connumererò",
+      "tu": "connumererai",
+      "lui/lei": "connumererà",
+      "noi": "connumereremo",
+      "voi": "connumererete",
+      "loro": "connumereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "connumeri",
+      "tu": "connumeri",
+      "lui/lei": "connumeri",
+      "noi": "connumeriamo",
+      "voi": "connumeriate",
+      "loro": "connumerino"
+    },
+    "condizionale": {
+      "io": "connumererei",
+      "tu": "connumereresti",
+      "lui/lei": "connumererebbe",
+      "noi": "connumereremmo",
+      "voi": "connumerereste",
+      "loro": "connumererebbero"
+    },
+    "imperativo": {
+      "tu": "connumera",
+      "lei": "connumeri",
+      "noi": "connumeriamo",
+      "voi": "connumerate",
+      "loro": "connumerino"
+    }
+  },
   "conoscere": {
     "presente": {
       "io": "conosco",
@@ -5243,6 +8321,3947 @@
       "loro": "conoscano"
     }
   },
+  "conquistare": {
+    "presente": {
+      "io": "conquisto",
+      "tu": "conquisti",
+      "lui/lei": "conquista",
+      "noi": "conquistiamo",
+      "voi": "conquistate",
+      "loro": "conquistano"
+    },
+    "passatoProssimo": {
+      "io": "ho conquistato",
+      "tu": "hai conquistato",
+      "lui/lei": "ha conquistato",
+      "noi": "abbiamo conquistato",
+      "voi": "avete conquistato",
+      "loro": "hanno conquistato"
+    },
+    "imperfetto": {
+      "io": "conquistavo",
+      "tu": "conquistavi",
+      "lui/lei": "conquistava",
+      "noi": "conquistavamo",
+      "voi": "conquistavate",
+      "loro": "conquistavano"
+    },
+    "futuro": {
+      "io": "conquisterò",
+      "tu": "conquisterai",
+      "lui/lei": "conquisterà",
+      "noi": "conquisteremo",
+      "voi": "conquisterete",
+      "loro": "conquisteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conquisti",
+      "tu": "conquisti",
+      "lui/lei": "conquisti",
+      "noi": "conquistiamo",
+      "voi": "conquistiate",
+      "loro": "conquistino"
+    },
+    "condizionale": {
+      "io": "conquisterei",
+      "tu": "conquisteresti",
+      "lui/lei": "conquisterebbe",
+      "noi": "conquisteremmo",
+      "voi": "conquistereste",
+      "loro": "conquisterebbero"
+    },
+    "imperativo": {
+      "tu": "conquista",
+      "lei": "conquisti",
+      "noi": "conquistiamo",
+      "voi": "conquistate",
+      "loro": "conquistino"
+    }
+  },
+  "consegnare": {
+    "presente": {
+      "io": "consegno",
+      "tu": "consegni",
+      "lui/lei": "consegna",
+      "noi": "consegniamo",
+      "voi": "consegnate",
+      "loro": "consegnano"
+    },
+    "passatoProssimo": {
+      "io": "ho consegnato",
+      "tu": "hai consegnato",
+      "lui/lei": "ha consegnato",
+      "noi": "abbiamo consegnato",
+      "voi": "avete consegnato",
+      "loro": "hanno consegnato"
+    },
+    "imperfetto": {
+      "io": "consegnavo",
+      "tu": "consegnavi",
+      "lui/lei": "consegnava",
+      "noi": "consegnavamo",
+      "voi": "consegnavate",
+      "loro": "consegnavano"
+    },
+    "futuro": {
+      "io": "consegnerò",
+      "tu": "consegnerai",
+      "lui/lei": "consegnerà",
+      "noi": "consegneremo",
+      "voi": "consegnerete",
+      "loro": "consegneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consegni",
+      "tu": "consegni",
+      "lui/lei": "consegni",
+      "noi": "consegniamo",
+      "voi": "consegniate",
+      "loro": "consegnino"
+    },
+    "condizionale": {
+      "io": "consegnerei",
+      "tu": "consegneresti",
+      "lui/lei": "consegnerebbe",
+      "noi": "consegneremmo",
+      "voi": "consegnereste",
+      "loro": "consegnerebbero"
+    },
+    "imperativo": {
+      "tu": "consegna",
+      "lei": "consegni",
+      "noi": "consegniamo",
+      "voi": "consegnate",
+      "loro": "consegnino"
+    }
+  },
+  "conseguire": {
+    "presente": {
+      "io": "consegno",
+      "tu": "consegui",
+      "lui/lei": "consegue",
+      "noi": "conseguiamo",
+      "voi": "conseguite",
+      "loro": "conseguono"
+    },
+    "passatoProssimo": {
+      "io": "ho conseguito",
+      "tu": "hai conseguito",
+      "lui/lei": "ha conseguito",
+      "noi": "abbiamo conseguito",
+      "voi": "avete conseguito",
+      "loro": "hanno conseguito"
+    },
+    "imperfetto": {
+      "io": "conseguivo",
+      "tu": "conseguivi",
+      "lui/lei": "conseguiva",
+      "noi": "conseguivamo",
+      "voi": "conseguivate",
+      "loro": "conseguivano"
+    },
+    "futuro": {
+      "io": "conseguirò",
+      "tu": "conseguirai",
+      "lui/lei": "conseguirà",
+      "noi": "conseguiremo",
+      "voi": "conseguirete",
+      "loro": "conseguiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consegua",
+      "tu": "consegua",
+      "lui/lei": "consegua",
+      "noi": "conseguiamo",
+      "voi": "conseguiate",
+      "loro": "conseguano"
+    },
+    "condizionale": {
+      "io": "conseguirei",
+      "tu": "conseguiresti",
+      "lui/lei": "conseguirebbe",
+      "noi": "conseguiremmo",
+      "voi": "conseguireste",
+      "loro": "conseguirebbero"
+    },
+    "imperativo": {
+      "tu": "consegui",
+      "lei": "consegua",
+      "noi": "conseguiamo",
+      "voi": "conseguite",
+      "loro": "conseguano"
+    }
+  },
+  "consentire": {
+    "presente": {
+      "io": "consento",
+      "tu": "consenti",
+      "lui/lei": "consente",
+      "noi": "consentiamo",
+      "voi": "consentite",
+      "loro": "consentono"
+    },
+    "passatoProssimo": {
+      "io": "ho consentito",
+      "tu": "hai consentito",
+      "lui/lei": "ha consentito",
+      "noi": "abbiamo consentito",
+      "voi": "avete consentito",
+      "loro": "hanno consentito"
+    },
+    "imperfetto": {
+      "io": "consentivo",
+      "tu": "consentivi",
+      "lui/lei": "consentiva",
+      "noi": "consentivamo",
+      "voi": "consentivate",
+      "loro": "consentivano"
+    },
+    "futuro": {
+      "io": "consentirò",
+      "tu": "consentirai",
+      "lui/lei": "consentirà",
+      "noi": "consentiremo",
+      "voi": "consentirete",
+      "loro": "consentiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consenta",
+      "tu": "consenta",
+      "lui/lei": "consenta",
+      "noi": "consentiamo",
+      "voi": "consentiate",
+      "loro": "consentano"
+    },
+    "condizionale": {
+      "io": "consentirei",
+      "tu": "consentiresti",
+      "lui/lei": "consentirebbe",
+      "noi": "consentiremmo",
+      "voi": "consentireste",
+      "loro": "consentirebbero"
+    },
+    "imperativo": {
+      "tu": "consenti",
+      "lei": "consenta",
+      "noi": "consentiamo",
+      "voi": "consentite",
+      "loro": "consentano"
+    }
+  },
+  "conservare": {
+    "presente": {
+      "io": "conservo",
+      "tu": "conservi",
+      "lui/lei": "conserva",
+      "noi": "conserviamo",
+      "voi": "conservate",
+      "loro": "conservano"
+    },
+    "passatoProssimo": {
+      "io": "ho conservato",
+      "tu": "hai conservato",
+      "lui/lei": "ha conservato",
+      "noi": "abbiamo conservato",
+      "voi": "avete conservato",
+      "loro": "hanno conservato"
+    },
+    "imperfetto": {
+      "io": "conservavo",
+      "tu": "conservavi",
+      "lui/lei": "conservava",
+      "noi": "conservavamo",
+      "voi": "conservavate",
+      "loro": "conservavano"
+    },
+    "futuro": {
+      "io": "conserverò",
+      "tu": "conserverai",
+      "lui/lei": "conserverà",
+      "noi": "conserveremo",
+      "voi": "conserverete",
+      "loro": "conserveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conservi",
+      "tu": "conservi",
+      "lui/lei": "conservi",
+      "noi": "conserviamo",
+      "voi": "conserviate",
+      "loro": "conservino"
+    },
+    "condizionale": {
+      "io": "conserverei",
+      "tu": "conserveresti",
+      "lui/lei": "conserverebbe",
+      "noi": "conserveremmo",
+      "voi": "conservereste",
+      "loro": "conserverebbero"
+    },
+    "imperativo": {
+      "tu": "conserva",
+      "lei": "conservi",
+      "noi": "conserviamo",
+      "voi": "conservate",
+      "loro": "conservino"
+    }
+  },
+  "considerare": {
+    "presente": {
+      "io": "considero",
+      "tu": "consideri",
+      "lui/lei": "considera",
+      "noi": "consideriamo",
+      "voi": "considerate",
+      "loro": "considerano"
+    },
+    "passatoProssimo": {
+      "io": "ho considerato",
+      "tu": "hai considerato",
+      "lui/lei": "ha considerato",
+      "noi": "abbiamo considerato",
+      "voi": "avete considerato",
+      "loro": "hanno considerato"
+    },
+    "imperfetto": {
+      "io": "consideravo",
+      "tu": "consideravi",
+      "lui/lei": "considerava",
+      "noi": "consideravamo",
+      "voi": "consideravate",
+      "loro": "consideravano"
+    },
+    "futuro": {
+      "io": "considererò",
+      "tu": "considererai",
+      "lui/lei": "considererà",
+      "noi": "considereremo",
+      "voi": "considererete",
+      "loro": "considereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consideri",
+      "tu": "consideri",
+      "lui/lei": "consideri",
+      "noi": "consideriamo",
+      "voi": "consideriate",
+      "loro": "considerino"
+    },
+    "condizionale": {
+      "io": "considererei",
+      "tu": "considereresti",
+      "lui/lei": "considererebbe",
+      "noi": "considereremmo",
+      "voi": "considerereste",
+      "loro": "considererebbero"
+    },
+    "imperativo": {
+      "tu": "considera",
+      "lei": "consideri",
+      "noi": "consideriamo",
+      "voi": "considerate",
+      "loro": "considerino"
+    }
+  },
+  "consigliare": {
+    "presente": {
+      "io": "consiglio",
+      "tu": "consigli",
+      "lui/lei": "consiglia",
+      "noi": "consigliamo",
+      "voi": "consigliate",
+      "loro": "consigliano"
+    },
+    "passatoProssimo": {
+      "io": "ho consigliato",
+      "tu": "hai consigliato",
+      "lui/lei": "ha consigliato",
+      "noi": "abbiamo consigliato",
+      "voi": "avete consigliato",
+      "loro": "hanno consigliato"
+    },
+    "imperfetto": {
+      "io": "consigliavo",
+      "tu": "consigliavi",
+      "lui/lei": "consigliava",
+      "noi": "consigliavamo",
+      "voi": "consigliavate",
+      "loro": "consigliavano"
+    },
+    "futuro": {
+      "io": "consiglierò",
+      "tu": "consiglierai",
+      "lui/lei": "consiglierà",
+      "noi": "consiglieremo",
+      "voi": "consiglierete",
+      "loro": "consiglieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consigli",
+      "tu": "consigli",
+      "lui/lei": "consigli",
+      "noi": "consigliamo",
+      "voi": "consigliate",
+      "loro": "consiglino"
+    },
+    "condizionale": {
+      "io": "consiglierei",
+      "tu": "consiglieresti",
+      "lui/lei": "consiglierebbe",
+      "noi": "consiglieremmo",
+      "voi": "consigliereste",
+      "loro": "consiglierebbero"
+    },
+    "imperativo": {
+      "tu": "consiglia",
+      "lei": "consigli",
+      "noi": "consigliamo",
+      "voi": "consigliate",
+      "loro": "consiglino"
+    }
+  },
+  "consistere": {
+    "presente": {
+      "io": "consisto",
+      "tu": "consisti",
+      "lui/lei": "consiste",
+      "noi": "consistiamo",
+      "voi": "consistete",
+      "loro": "consistono"
+    },
+    "passatoProssimo": {
+      "io": "sono consistito",
+      "tu": "sei consistito",
+      "lui/lei": "è consistito",
+      "noi": "siamo consistiti",
+      "voi": "siete consistiti",
+      "loro": "sono consistiti"
+    },
+    "imperfetto": {
+      "io": "consistevo",
+      "tu": "consistevi",
+      "lui/lei": "consisteva",
+      "noi": "consistevamo",
+      "voi": "consistevate",
+      "loro": "consistevano"
+    },
+    "futuro": {
+      "io": "consisterò",
+      "tu": "consisterai",
+      "lui/lei": "consisterà",
+      "noi": "consisteremo",
+      "voi": "consisterete",
+      "loro": "consisteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consista",
+      "tu": "consista",
+      "lui/lei": "consista",
+      "noi": "consistiamo",
+      "voi": "consistiate",
+      "loro": "consistano"
+    },
+    "condizionale": {
+      "io": "consisterei",
+      "tu": "consisteresti",
+      "lui/lei": "consisterebbe",
+      "noi": "consisteremmo",
+      "voi": "consistereste",
+      "loro": "consisterebbero"
+    },
+    "imperativo": {
+      "tu": "consisti",
+      "lei": "consista",
+      "noi": "consistiamo",
+      "voi": "consistete",
+      "loro": "consistano"
+    }
+  },
+  "consolare": {
+    "presente": {
+      "io": "consolo",
+      "tu": "consoli",
+      "lui/lei": "consola",
+      "noi": "consoliamo",
+      "voi": "consolate",
+      "loro": "consolano"
+    },
+    "passatoProssimo": {
+      "io": "ho consolato",
+      "tu": "hai consolato",
+      "lui/lei": "ha consolato",
+      "noi": "abbiamo consolato",
+      "voi": "avete consolato",
+      "loro": "hanno consolato"
+    },
+    "imperfetto": {
+      "io": "consolavo",
+      "tu": "consolavi",
+      "lui/lei": "consolava",
+      "noi": "consolavamo",
+      "voi": "consolavate",
+      "loro": "consolavano"
+    },
+    "futuro": {
+      "io": "consolerò",
+      "tu": "consolerai",
+      "lui/lei": "consolerà",
+      "noi": "consoleremo",
+      "voi": "consolerete",
+      "loro": "consoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consoli",
+      "tu": "consoli",
+      "lui/lei": "consoli",
+      "noi": "consoliamo",
+      "voi": "consoliate",
+      "loro": "consolino"
+    },
+    "condizionale": {
+      "io": "consolerei",
+      "tu": "consoleresti",
+      "lui/lei": "consolerebbe",
+      "noi": "consoleremmo",
+      "voi": "consolereste",
+      "loro": "consolerebbero"
+    },
+    "imperativo": {
+      "tu": "consola",
+      "lei": "consoli",
+      "noi": "consoliamo",
+      "voi": "consolate",
+      "loro": "consolino"
+    }
+  },
+  "constatare": {
+    "presente": {
+      "io": "constato",
+      "tu": "constati",
+      "lui/lei": "constata",
+      "noi": "constatiamo",
+      "voi": "constatate",
+      "loro": "constatano"
+    },
+    "passatoProssimo": {
+      "io": "ho constatato",
+      "tu": "hai constatato",
+      "lui/lei": "ha constatato",
+      "noi": "abbiamo constatato",
+      "voi": "avete constatato",
+      "loro": "hanno constatato"
+    },
+    "imperfetto": {
+      "io": "constatavo",
+      "tu": "constatavi",
+      "lui/lei": "constatava",
+      "noi": "constatavamo",
+      "voi": "constatavate",
+      "loro": "constatavano"
+    },
+    "futuro": {
+      "io": "constaterò",
+      "tu": "constaterai",
+      "lui/lei": "constaterà",
+      "noi": "constateremo",
+      "voi": "constaterete",
+      "loro": "constateranno"
+    },
+    "congiuntivoPresente": {
+      "io": "constati",
+      "tu": "constati",
+      "lui/lei": "constati",
+      "noi": "constatiamo",
+      "voi": "constatiate",
+      "loro": "constatino"
+    },
+    "condizionale": {
+      "io": "constaterei",
+      "tu": "constateresti",
+      "lui/lei": "constaterebbe",
+      "noi": "constateremmo",
+      "voi": "constatereste",
+      "loro": "constaterebbero"
+    },
+    "imperativo": {
+      "tu": "constata",
+      "lei": "constati",
+      "noi": "constatiamo",
+      "voi": "constatate",
+      "loro": "constatino"
+    }
+  },
+  "consultare": {
+    "presente": {
+      "io": "consulto",
+      "tu": "consulti",
+      "lui/lei": "consulta",
+      "noi": "consultiamo",
+      "voi": "consultate",
+      "loro": "consultano"
+    },
+    "passatoProssimo": {
+      "io": "ho consultato",
+      "tu": "hai consultato",
+      "lui/lei": "ha consultato",
+      "noi": "abbiamo consultato",
+      "voi": "avete consultato",
+      "loro": "hanno consultato"
+    },
+    "imperfetto": {
+      "io": "consultavo",
+      "tu": "consultavi",
+      "lui/lei": "consultava",
+      "noi": "consultavamo",
+      "voi": "consultavate",
+      "loro": "consultavano"
+    },
+    "futuro": {
+      "io": "consulterò",
+      "tu": "consulterai",
+      "lui/lei": "consulterà",
+      "noi": "consulteremo",
+      "voi": "consulterete",
+      "loro": "consulteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consulti",
+      "tu": "consulti",
+      "lui/lei": "consulti",
+      "noi": "consultiamo",
+      "voi": "consultiate",
+      "loro": "consultino"
+    },
+    "condizionale": {
+      "io": "consulterei",
+      "tu": "consulteresti",
+      "lui/lei": "consulterebbe",
+      "noi": "consulteremmo",
+      "voi": "consultereste",
+      "loro": "consulterebbero"
+    },
+    "imperativo": {
+      "tu": "consulta",
+      "lei": "consulti",
+      "noi": "consultiamo",
+      "voi": "consultate",
+      "loro": "consultino"
+    }
+  },
+  "consumare": {
+    "presente": {
+      "io": "consumo",
+      "tu": "consumi",
+      "lui/lei": "consuma",
+      "noi": "consumiamo",
+      "voi": "consumate",
+      "loro": "consumano"
+    },
+    "passatoProssimo": {
+      "io": "ho consumato",
+      "tu": "hai consumato",
+      "lui/lei": "ha consumato",
+      "noi": "abbiamo consumato",
+      "voi": "avete consumato",
+      "loro": "hanno consumato"
+    },
+    "imperfetto": {
+      "io": "consumavo",
+      "tu": "consumavi",
+      "lui/lei": "consumava",
+      "noi": "consumavamo",
+      "voi": "consumavate",
+      "loro": "consumavano"
+    },
+    "futuro": {
+      "io": "consumerò",
+      "tu": "consumerai",
+      "lui/lei": "consumerà",
+      "noi": "consumeremo",
+      "voi": "consumerete",
+      "loro": "consumeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "consumi",
+      "tu": "consumi",
+      "lui/lei": "consumi",
+      "noi": "consumiamo",
+      "voi": "consumiate",
+      "loro": "consumino"
+    },
+    "condizionale": {
+      "io": "consumerei",
+      "tu": "consumeresti",
+      "lui/lei": "consumerebbe",
+      "noi": "consumeremmo",
+      "voi": "consumereste",
+      "loro": "consumerebbero"
+    },
+    "imperativo": {
+      "tu": "consuma",
+      "lei": "consumi",
+      "noi": "consumiamo",
+      "voi": "consumate",
+      "loro": "consumino"
+    }
+  },
+  "consustanziarsi": {
+    "presente": {
+      "io": "mi consustanzio",
+      "tu": "ti consustanzi",
+      "lui/lei": "si consustanzia",
+      "noi": "ci consustanziamo",
+      "voi": "vi consustanziate",
+      "loro": "si consustanziano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono consustanziato/a",
+      "tu": "ti sei consustanziato/a",
+      "lui/lei": "si è consustanziato/a",
+      "noi": "ci siamo consustanziati/e",
+      "voi": "vi siete consustanziati/e",
+      "loro": "si sono consustanziati/e"
+    },
+    "imperfetto": {
+      "io": "mi consustanziavo",
+      "tu": "ti consustanziavi",
+      "lui/lei": "si consustanziava",
+      "noi": "ci consustanziavamo",
+      "voi": "vi consustanziavate",
+      "loro": "si consustanziavano"
+    },
+    "futuro": {
+      "io": "mi consustanzierò",
+      "tu": "ti consustanzierai",
+      "lui/lei": "si consustanzierà",
+      "noi": "ci consustanzieremo",
+      "voi": "vi consustanzierete",
+      "loro": "si consustanzieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi consustanzi",
+      "tu": "ti consustanzi",
+      "lui/lei": "si consustanzi",
+      "noi": "ci consustanziamo",
+      "voi": "vi consustanziate",
+      "loro": "si consustanzino"
+    },
+    "condizionale": {
+      "io": "mi consustanzierei",
+      "tu": "ti consustanzieresti",
+      "lui/lei": "si consustanzierebbe",
+      "noi": "ci consustanzieremmo",
+      "voi": "vi consustanziereste",
+      "loro": "si consustanzierebbero"
+    },
+    "imperativo": {
+      "tu": "consustanziati",
+      "lei": "si consustanzi",
+      "noi": "consustanziamoci",
+      "voi": "consustanziatevi",
+      "loro": "si consustanzino"
+    }
+  },
+  "contare": {
+    "presente": {
+      "io": "conto",
+      "tu": "conti",
+      "lui/lei": "conta",
+      "noi": "contiamo",
+      "voi": "contate",
+      "loro": "contano"
+    },
+    "passatoProssimo": {
+      "io": "ho contato",
+      "tu": "hai contato",
+      "lui/lei": "ha contato",
+      "noi": "abbiamo contato",
+      "voi": "avete contato",
+      "loro": "hanno contato"
+    },
+    "imperfetto": {
+      "io": "contavo",
+      "tu": "contavi",
+      "lui/lei": "contava",
+      "noi": "contavamo",
+      "voi": "contavate",
+      "loro": "contavano"
+    },
+    "futuro": {
+      "io": "conterò",
+      "tu": "conterai",
+      "lui/lei": "conterà",
+      "noi": "conteremo",
+      "voi": "conterete",
+      "loro": "conteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conti",
+      "tu": "conti",
+      "lui/lei": "conti",
+      "noi": "contiamo",
+      "voi": "contiate",
+      "loro": "contino"
+    },
+    "condizionale": {
+      "io": "conterei",
+      "tu": "conteresti",
+      "lui/lei": "conterebbe",
+      "noi": "conteremmo",
+      "voi": "contereste",
+      "loro": "conterebbero"
+    },
+    "imperativo": {
+      "tu": "conta",
+      "lei": "conti",
+      "noi": "contiamo",
+      "voi": "contate",
+      "loro": "contino"
+    }
+  },
+  "contattare": {
+    "presente": {
+      "io": "contatto",
+      "tu": "contatti",
+      "lui/lei": "contatta",
+      "noi": "contattiamo",
+      "voi": "contattate",
+      "loro": "contattano"
+    },
+    "passatoProssimo": {
+      "io": "ho contattato",
+      "tu": "hai contattato",
+      "lui/lei": "ha contattato",
+      "noi": "abbiamo contattato",
+      "voi": "avete contattato",
+      "loro": "hanno contattato"
+    },
+    "imperfetto": {
+      "io": "contattavo",
+      "tu": "contattavi",
+      "lui/lei": "contattava",
+      "noi": "contattavamo",
+      "voi": "contattavate",
+      "loro": "contattavano"
+    },
+    "futuro": {
+      "io": "contatterò",
+      "tu": "contatterai",
+      "lui/lei": "contatterà",
+      "noi": "contatteremo",
+      "voi": "contatterete",
+      "loro": "contatteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contatti",
+      "tu": "contatti",
+      "lui/lei": "contatti",
+      "noi": "contattiamo",
+      "voi": "contattiate",
+      "loro": "contattino"
+    },
+    "condizionale": {
+      "io": "contatterei",
+      "tu": "contatteresti",
+      "lui/lei": "contatterebbe",
+      "noi": "contatteremmo",
+      "voi": "contattereste",
+      "loro": "contatterebbero"
+    },
+    "imperativo": {
+      "tu": "contatta",
+      "lei": "contatti",
+      "noi": "contattiamo",
+      "voi": "contattate",
+      "loro": "contattino"
+    }
+  },
+  "contemplare": {
+    "presente": {
+      "io": "contemplo",
+      "tu": "contempli",
+      "lui/lei": "contempla",
+      "noi": "contempliamo",
+      "voi": "contemplate",
+      "loro": "contemplano"
+    },
+    "passatoProssimo": {
+      "io": "ho contemplato",
+      "tu": "hai contemplato",
+      "lui/lei": "ha contemplato",
+      "noi": "abbiamo contemplato",
+      "voi": "avete contemplato",
+      "loro": "hanno contemplato"
+    },
+    "imperfetto": {
+      "io": "contemplavo",
+      "tu": "contemplavi",
+      "lui/lei": "contemplava",
+      "noi": "contemplavamo",
+      "voi": "contemplavate",
+      "loro": "contemplavano"
+    },
+    "futuro": {
+      "io": "contemplerò",
+      "tu": "contemplerai",
+      "lui/lei": "contemplerà",
+      "noi": "contempleremo",
+      "voi": "contemplerete",
+      "loro": "contempleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contempli",
+      "tu": "contempli",
+      "lui/lei": "contempli",
+      "noi": "contempliamo",
+      "voi": "contempliate",
+      "loro": "contemplino"
+    },
+    "condizionale": {
+      "io": "contemplerei",
+      "tu": "contempleresti",
+      "lui/lei": "contemplerebbe",
+      "noi": "contempleremmo",
+      "voi": "contemplereste",
+      "loro": "contemplerebbero"
+    },
+    "imperativo": {
+      "tu": "contempla",
+      "lei": "contempli",
+      "noi": "contempliamo",
+      "voi": "contemplate",
+      "loro": "contemplino"
+    }
+  },
+  "contendere": {
+    "presente": {
+      "io": "contendo",
+      "tu": "contendi",
+      "lui/lei": "contende",
+      "noi": "contendiamo",
+      "voi": "contendete",
+      "loro": "contendono"
+    },
+    "passatoProssimo": {
+      "io": "ho conteso",
+      "tu": "hai conteso",
+      "lui/lei": "ha conteso",
+      "noi": "abbiamo conteso",
+      "voi": "avete conteso",
+      "loro": "hanno conteso"
+    },
+    "imperfetto": {
+      "io": "contendevo",
+      "tu": "contendevi",
+      "lui/lei": "contendeva",
+      "noi": "contendevamo",
+      "voi": "contendevate",
+      "loro": "contendevano"
+    },
+    "futuro": {
+      "io": "contenderò",
+      "tu": "contenderai",
+      "lui/lei": "contenderà",
+      "noi": "contenderemo",
+      "voi": "contenderete",
+      "loro": "contenderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "contenda",
+      "tu": "contenda",
+      "lui/lei": "contenda",
+      "noi": "contendiamo",
+      "voi": "contendiate",
+      "loro": "contendano"
+    },
+    "condizionale": {
+      "io": "contenderei",
+      "tu": "contenderesti",
+      "lui/lei": "contenderebbe",
+      "noi": "contenderemmo",
+      "voi": "contendereste",
+      "loro": "contenderebbero"
+    },
+    "imperativo": {
+      "tu": "contendi",
+      "lei": "contenda",
+      "noi": "contendiamo",
+      "voi": "contendete",
+      "loro": "contendano"
+    }
+  },
+  "contenere": {
+    "presente": {
+      "io": "contengo",
+      "tu": "contieni",
+      "lui/lei": "contiene",
+      "noi": "conteniamo",
+      "voi": "contenete",
+      "loro": "contengono"
+    },
+    "passatoProssimo": {
+      "io": "ho contenuto",
+      "tu": "hai contenuto",
+      "lui/lei": "ha contenuto",
+      "noi": "abbiamo contenuto",
+      "voi": "avete contenuto",
+      "loro": "hanno contenuto"
+    },
+    "imperfetto": {
+      "io": "contenevo",
+      "tu": "contenevi",
+      "lui/lei": "conteneva",
+      "noi": "contenevamo",
+      "voi": "contenevate",
+      "loro": "contenevano"
+    },
+    "futuro": {
+      "io": "conterrò",
+      "tu": "conterrai",
+      "lui/lei": "conterrà",
+      "noi": "conterremo",
+      "voi": "conterrete",
+      "loro": "conterranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contenga",
+      "tu": "contenga",
+      "lui/lei": "contenga",
+      "noi": "conteniamo",
+      "voi": "conteniate",
+      "loro": "contengano"
+    },
+    "condizionale": {
+      "io": "conterrei",
+      "tu": "conterresti",
+      "lui/lei": "conterrebbe",
+      "noi": "conterremmo",
+      "voi": "conterreste",
+      "loro": "conterrebbero"
+    },
+    "imperativo": {
+      "tu": "contieni",
+      "lei": "contenga",
+      "noi": "conteniamo",
+      "voi": "contenete",
+      "loro": "contengano"
+    }
+  },
+  "contentare": {
+    "presente": {
+      "io": "contento",
+      "tu": "contenti",
+      "lui/lei": "contenta",
+      "noi": "contentiamo",
+      "voi": "contentate",
+      "loro": "contentano"
+    },
+    "passatoProssimo": {
+      "io": "ho contentato",
+      "tu": "hai contentato",
+      "lui/lei": "ha contentato",
+      "noi": "abbiamo contentato",
+      "voi": "avete contentato",
+      "loro": "hanno contentato"
+    },
+    "imperfetto": {
+      "io": "contentavo",
+      "tu": "contentavi",
+      "lui/lei": "contentava",
+      "noi": "contentavamo",
+      "voi": "contentavate",
+      "loro": "contentavano"
+    },
+    "futuro": {
+      "io": "contenterò",
+      "tu": "contenterai",
+      "lui/lei": "contenterà",
+      "noi": "contenteremo",
+      "voi": "contenterete",
+      "loro": "contenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contenti",
+      "tu": "contenti",
+      "lui/lei": "contenti",
+      "noi": "contentiamo",
+      "voi": "contentiate",
+      "loro": "contentino"
+    },
+    "condizionale": {
+      "io": "contenterei",
+      "tu": "contenteresti",
+      "lui/lei": "contenterebbe",
+      "noi": "contenteremmo",
+      "voi": "contentereste",
+      "loro": "contenterebbero"
+    },
+    "imperativo": {
+      "tu": "contenta",
+      "lei": "contenti",
+      "noi": "contentiamo",
+      "voi": "contentate",
+      "loro": "contentino"
+    }
+  },
+  "contentarsi": {
+    "presente": {
+      "io": "mi contento",
+      "tu": "ti contenti",
+      "lui/lei": "si contenta",
+      "noi": "ci contentiamo",
+      "voi": "vi contentate",
+      "loro": "si contentano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono contentato/a",
+      "tu": "ti sei contentato/a",
+      "lui/lei": "si è contentato/a",
+      "noi": "ci siamo contentati/e",
+      "voi": "vi siete contentati/e",
+      "loro": "si sono contentati/e"
+    },
+    "imperfetto": {
+      "io": "mi contentavo",
+      "tu": "ti contentavi",
+      "lui/lei": "si contentava",
+      "noi": "ci contentavamo",
+      "voi": "vi contentavate",
+      "loro": "si contentavano"
+    },
+    "futuro": {
+      "io": "mi contenterò",
+      "tu": "ti contenterai",
+      "lui/lei": "si contenterà",
+      "noi": "ci contenteremo",
+      "voi": "vi contenterete",
+      "loro": "si contenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi contenti",
+      "tu": "ti contenti",
+      "lui/lei": "si contenti",
+      "noi": "ci contentiamo",
+      "voi": "vi contentiate",
+      "loro": "si contentino"
+    },
+    "condizionale": {
+      "io": "mi contenterei",
+      "tu": "ti contenteresti",
+      "lui/lei": "si contenterebbe",
+      "noi": "ci contenteremmo",
+      "voi": "vi contentereste",
+      "loro": "si contenterebbero"
+    },
+    "imperativo": {
+      "tu": "contentati",
+      "lei": "si contenti",
+      "noi": "contentiamoci",
+      "voi": "contentatevi",
+      "loro": "si contentino"
+    }
+  },
+  "contestare": {
+    "presente": {
+      "io": "contesto",
+      "tu": "contesti",
+      "lui/lei": "contesta",
+      "noi": "contestiamo",
+      "voi": "contestate",
+      "loro": "contestano"
+    },
+    "passatoProssimo": {
+      "io": "ho contestato",
+      "tu": "hai contestato",
+      "lui/lei": "ha contestato",
+      "noi": "abbiamo contestato",
+      "voi": "avete contestato",
+      "loro": "hanno contestato"
+    },
+    "imperfetto": {
+      "io": "contestavo",
+      "tu": "contestavi",
+      "lui/lei": "contestava",
+      "noi": "contestavamo",
+      "voi": "contestavate",
+      "loro": "contestavano"
+    },
+    "futuro": {
+      "io": "contesterò",
+      "tu": "contesterai",
+      "lui/lei": "contesterà",
+      "noi": "contesteremo",
+      "voi": "contesterete",
+      "loro": "contesteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contesti",
+      "tu": "contesti",
+      "lui/lei": "contesti",
+      "noi": "contestiamo",
+      "voi": "contestiate",
+      "loro": "contestino"
+    },
+    "condizionale": {
+      "io": "contesterei",
+      "tu": "contesteresti",
+      "lui/lei": "contesterebbe",
+      "noi": "contesteremmo",
+      "voi": "contestereste",
+      "loro": "contesterebbero"
+    },
+    "imperativo": {
+      "tu": "contesta",
+      "lei": "contesti",
+      "noi": "contestiamo",
+      "voi": "contestate",
+      "loro": "contestino"
+    }
+  },
+  "continuare": {
+    "presente": {
+      "io": "continuo",
+      "tu": "continui",
+      "lui/lei": "continua",
+      "noi": "continuiamo",
+      "voi": "continuate",
+      "loro": "continuano"
+    },
+    "passatoProssimo": {
+      "io": "ho continuato",
+      "tu": "hai continuato",
+      "lui/lei": "ha continuato",
+      "noi": "abbiamo continuato",
+      "voi": "avete continuato",
+      "loro": "hanno continuato"
+    },
+    "imperfetto": {
+      "io": "continuavo",
+      "tu": "continuavi",
+      "lui/lei": "continuava",
+      "noi": "continuavamo",
+      "voi": "continuavate",
+      "loro": "continuavano"
+    },
+    "futuro": {
+      "io": "continuerò",
+      "tu": "continuerai",
+      "lui/lei": "continuerà",
+      "noi": "continueremo",
+      "voi": "continuerete",
+      "loro": "continueranno"
+    },
+    "congiuntivoPresente": {
+      "io": "continui",
+      "tu": "continui",
+      "lui/lei": "continui",
+      "noi": "continuiamo",
+      "voi": "continuiate",
+      "loro": "continuino"
+    },
+    "condizionale": {
+      "io": "continuerei",
+      "tu": "continueresti",
+      "lui/lei": "continuerebbe",
+      "noi": "continueremmo",
+      "voi": "continuereste",
+      "loro": "continuerebbero"
+    },
+    "imperativo": {
+      "tu": "continua",
+      "lei": "continui",
+      "noi": "continuiamo",
+      "voi": "continuate",
+      "loro": "continuino"
+    }
+  },
+  "contorcersi": {
+    "presente": {
+      "io": "mi contorco",
+      "tu": "ti contorci",
+      "lui/lei": "si contorce",
+      "noi": "ci contorciamo",
+      "voi": "vi contorcete",
+      "loro": "si contorcono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono contorto/a",
+      "tu": "ti sei contorto/a",
+      "lui/lei": "si è contorto/a",
+      "noi": "ci siamo contorti/e",
+      "voi": "vi siete contorti/e",
+      "loro": "si sono contorti/e"
+    },
+    "imperfetto": {
+      "io": "mi contorcevo",
+      "tu": "ti contorcevi",
+      "lui/lei": "si contorceva",
+      "noi": "ci contorcevamo",
+      "voi": "vi contorcevate",
+      "loro": "si contorcevano"
+    },
+    "futuro": {
+      "io": "mi contorcerò",
+      "tu": "ti contorcerai",
+      "lui/lei": "si contorcerà",
+      "noi": "ci contorceremo",
+      "voi": "vi contorcerete",
+      "loro": "si contorceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi contorca",
+      "tu": "ti contorca",
+      "lui/lei": "si contorca",
+      "noi": "ci contorciamo",
+      "voi": "vi contorciate",
+      "loro": "si contorcano"
+    },
+    "condizionale": {
+      "io": "mi contorcerei",
+      "tu": "ti contorceresti",
+      "lui/lei": "si contorcerebbe",
+      "noi": "ci contorceremmo",
+      "voi": "vi contorcereste",
+      "loro": "si contorcerebbero"
+    },
+    "imperativo": {
+      "tu": "contorciti",
+      "lei": "si contorca",
+      "noi": "contorciamoci",
+      "voi": "contorcetevi",
+      "loro": "si contorcano"
+    }
+  },
+  "contornare": {
+    "presente": {
+      "io": "contorno",
+      "tu": "contorni",
+      "lui/lei": "contorna",
+      "noi": "contorniamo",
+      "voi": "contornate",
+      "loro": "contornano"
+    },
+    "passatoProssimo": {
+      "io": "ho contornato",
+      "tu": "hai contornato",
+      "lui/lei": "ha contornato",
+      "noi": "abbiamo contornato",
+      "voi": "avete contornato",
+      "loro": "hanno contornato"
+    },
+    "imperfetto": {
+      "io": "contornavo",
+      "tu": "contornavi",
+      "lui/lei": "contornava",
+      "noi": "contornavamo",
+      "voi": "contornavate",
+      "loro": "contornavano"
+    },
+    "futuro": {
+      "io": "contornerò",
+      "tu": "contornerai",
+      "lui/lei": "contornerà",
+      "noi": "contorneremo",
+      "voi": "contornerete",
+      "loro": "contorneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contorni",
+      "tu": "contorni",
+      "lui/lei": "contorni",
+      "noi": "contorniamo",
+      "voi": "contorniate",
+      "loro": "contornino"
+    },
+    "condizionale": {
+      "io": "contornerei",
+      "tu": "contorneresti",
+      "lui/lei": "contornerebbe",
+      "noi": "contorneremmo",
+      "voi": "contornereste",
+      "loro": "contornerebbero"
+    },
+    "imperativo": {
+      "tu": "contorna",
+      "lei": "contorni",
+      "noi": "contorniamo",
+      "voi": "contornate",
+      "loro": "contornino"
+    }
+  },
+  "contraddire": {
+    "presente": {
+      "io": "contraddico",
+      "tu": "contraddici",
+      "lui/lei": "contraddice",
+      "noi": "contraddiciamo",
+      "voi": "contraddite",
+      "loro": "contraddicono"
+    },
+    "passatoProssimo": {
+      "io": "ho contraddetto",
+      "tu": "hai contraddetto",
+      "lui/lei": "ha contraddetto",
+      "noi": "abbiamo contraddetto",
+      "voi": "avete contraddetto",
+      "loro": "hanno contraddetto"
+    },
+    "imperfetto": {
+      "io": "contraddicevo",
+      "tu": "contraddicevi",
+      "lui/lei": "contraddiceva",
+      "noi": "contraddicevamo",
+      "voi": "contraddicevate",
+      "loro": "contraddicevano"
+    },
+    "futuro": {
+      "io": "contraddirò",
+      "tu": "contraddirai",
+      "lui/lei": "contraddirà",
+      "noi": "contraddiremo",
+      "voi": "contraddirete",
+      "loro": "contraddiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contraddica",
+      "tu": "contraddica",
+      "lui/lei": "contraddica",
+      "noi": "contraddiciamo",
+      "voi": "contraddiciate",
+      "loro": "contraddicano"
+    },
+    "condizionale": {
+      "io": "contraddirei",
+      "tu": "contraddiresti",
+      "lui/lei": "contraddirebbe",
+      "noi": "contraddiremmo",
+      "voi": "contraddireste",
+      "loro": "contraddirebbero"
+    },
+    "imperativo": {
+      "tu": "contraddici",
+      "lei": "contraddica",
+      "noi": "contraddiciamo",
+      "voi": "contraddite",
+      "loro": "contraddicano"
+    }
+  },
+  "contraddistinguere": {
+    "presente": {
+      "io": "contraddistinguo",
+      "tu": "contraddistingui",
+      "lui/lei": "contraddistingue",
+      "noi": "contraddistinguiamo",
+      "voi": "contraddistinguete",
+      "loro": "contraddistinguono"
+    },
+    "passatoProssimo": {
+      "io": "ho contraddistinto",
+      "tu": "hai contraddistinto",
+      "lui/lei": "ha contraddistinto",
+      "noi": "abbiamo contraddistinto",
+      "voi": "avete contraddistinto",
+      "loro": "hanno contraddistinto"
+    },
+    "imperfetto": {
+      "io": "contraddistinguevo",
+      "tu": "contraddistinguevi",
+      "lui/lei": "contraddistingueva",
+      "noi": "contraddistinguevamo",
+      "voi": "contraddistinguevate",
+      "loro": "contraddistinguevano"
+    },
+    "futuro": {
+      "io": "contraddistinguerò",
+      "tu": "contraddistinguerai",
+      "lui/lei": "contraddistinguerà",
+      "noi": "contraddistingueremo",
+      "voi": "contraddistinguerete",
+      "loro": "contraddistingueranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contraddistingua",
+      "tu": "contraddistingua",
+      "lui/lei": "contraddistingua",
+      "noi": "contraddistinguiamo",
+      "voi": "contraddistinguiate",
+      "loro": "contraddistinguano"
+    },
+    "condizionale": {
+      "io": "contraddistinguerei",
+      "tu": "contraddistingueresti",
+      "lui/lei": "contraddistinguerebbe",
+      "noi": "contraddistingueremmo",
+      "voi": "contraddistinguereste",
+      "loro": "contraddistinguerebbero"
+    },
+    "imperativo": {
+      "tu": "contraddistingui",
+      "lei": "contraddistingua",
+      "noi": "contraddistinguiamo",
+      "voi": "contraddistinguete",
+      "loro": "contraddistinguano"
+    }
+  },
+  "contrariare": {
+    "presente": {
+      "io": "contrario",
+      "tu": "contrarii",
+      "lui/lei": "contraria",
+      "noi": "contrariamo",
+      "voi": "contrariate",
+      "loro": "contrariano"
+    },
+    "passatoProssimo": {
+      "io": "ho contrariato",
+      "tu": "hai contrariato",
+      "lui/lei": "ha contrariato",
+      "noi": "abbiamo contrariato",
+      "voi": "avete contrariato",
+      "loro": "hanno contrariato"
+    },
+    "imperfetto": {
+      "io": "contrariavo",
+      "tu": "contrariavi",
+      "lui/lei": "contrariava",
+      "noi": "contrariavamo",
+      "voi": "contrariavate",
+      "loro": "contrariavano"
+    },
+    "futuro": {
+      "io": "contrarierò",
+      "tu": "contrarierai",
+      "lui/lei": "contrarierà",
+      "noi": "contrarieremo",
+      "voi": "contrarierete",
+      "loro": "contrarieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contrari",
+      "tu": "contrari",
+      "lui/lei": "contrari",
+      "noi": "contrariamo",
+      "voi": "contrariate",
+      "loro": "contrarino"
+    },
+    "condizionale": {
+      "io": "contrarierei",
+      "tu": "contrarieresti",
+      "lui/lei": "contrarierebbe",
+      "noi": "contrarieremmo",
+      "voi": "contrariereste",
+      "loro": "contrarierebbero"
+    },
+    "imperativo": {
+      "tu": "contraria",
+      "lei": "contrari",
+      "noi": "contrariamo",
+      "voi": "contrariate",
+      "loro": "contrarino"
+    }
+  },
+  "contrarre": {
+    "presente": {
+      "io": "contraggo",
+      "tu": "contrai",
+      "lui/lei": "contrae",
+      "noi": "contraiamo",
+      "voi": "contraete",
+      "loro": "contraggono"
+    },
+    "passatoProssimo": {
+      "io": "ho contratto",
+      "tu": "hai contratto",
+      "lui/lei": "ha contratto",
+      "noi": "abbiamo contratto",
+      "voi": "avete contratto",
+      "loro": "hanno contratto"
+    },
+    "imperfetto": {
+      "io": "contraevo",
+      "tu": "contraevi",
+      "lui/lei": "contraeva",
+      "noi": "contraevamo",
+      "voi": "contraevate",
+      "loro": "contraevano"
+    },
+    "futuro": {
+      "io": "contrarrò",
+      "tu": "contrarrai",
+      "lui/lei": "contrarrà",
+      "noi": "contrarremo",
+      "voi": "contrarrete",
+      "loro": "contrarranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contragga",
+      "tu": "contragga",
+      "lui/lei": "contragga",
+      "noi": "contraiamo",
+      "voi": "contraiate",
+      "loro": "contraggano"
+    },
+    "condizionale": {
+      "io": "contrarrei",
+      "tu": "contrarresti",
+      "lui/lei": "contrarrebbe",
+      "noi": "contrarremmo",
+      "voi": "contrarreste",
+      "loro": "contrarrebbero"
+    },
+    "imperativo": {
+      "tu": "contrai",
+      "lei": "contragga",
+      "noi": "contraiamo",
+      "voi": "contraete",
+      "loro": "contraggano"
+    }
+  },
+  "contrassegnare": {
+    "presente": {
+      "io": "contrassegno",
+      "tu": "contrassegni",
+      "lui/lei": "contrassegna",
+      "noi": "contrassegniamo",
+      "voi": "contrassegnate",
+      "loro": "contrassegnano"
+    },
+    "passatoProssimo": {
+      "io": "ho contrassegnato",
+      "tu": "hai contrassegnato",
+      "lui/lei": "ha contrassegnato",
+      "noi": "abbiamo contrassegnato",
+      "voi": "avete contrassegnato",
+      "loro": "hanno contrassegnato"
+    },
+    "imperfetto": {
+      "io": "contrassegnavo",
+      "tu": "contrassegnavi",
+      "lui/lei": "contrassegnava",
+      "noi": "contrassegnavamo",
+      "voi": "contrassegnavate",
+      "loro": "contrassegnavano"
+    },
+    "futuro": {
+      "io": "contrassegnerò",
+      "tu": "contrassegnerai",
+      "lui/lei": "contrassegnerà",
+      "noi": "contrassegneremo",
+      "voi": "contrassegnerete",
+      "loro": "contrassegneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contrassegni",
+      "tu": "contrassegni",
+      "lui/lei": "contrassegni",
+      "noi": "contrassegniamo",
+      "voi": "contrassegniate",
+      "loro": "contrassegnino"
+    },
+    "condizionale": {
+      "io": "contrassegnerei",
+      "tu": "contrassegneresti",
+      "lui/lei": "contrassegnerebbe",
+      "noi": "contrassegneremmo",
+      "voi": "contrassegnereste",
+      "loro": "contrassegnerebbero"
+    },
+    "imperativo": {
+      "tu": "contrassegna",
+      "lei": "contrassegni",
+      "noi": "contrassegniamo",
+      "voi": "contrassegnate",
+      "loro": "contrassegnino"
+    }
+  },
+  "contrastare": {
+    "presente": {
+      "io": "contrasto",
+      "tu": "contrasti",
+      "lui/lei": "contrasta",
+      "noi": "contrastiamo",
+      "voi": "contrastate",
+      "loro": "contrastano"
+    },
+    "passatoProssimo": {
+      "io": "ho contrastato",
+      "tu": "hai contrastato",
+      "lui/lei": "ha contrastato",
+      "noi": "abbiamo contrastato",
+      "voi": "avete contrastato",
+      "loro": "hanno contrastato"
+    },
+    "imperfetto": {
+      "io": "contrastavo",
+      "tu": "contrastavi",
+      "lui/lei": "contrastava",
+      "noi": "contrastavamo",
+      "voi": "contrastavate",
+      "loro": "contrastavano"
+    },
+    "futuro": {
+      "io": "contrasterò",
+      "tu": "contrasterai",
+      "lui/lei": "contrasterà",
+      "noi": "contrasteremo",
+      "voi": "contrasterete",
+      "loro": "contrasteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contrasti",
+      "tu": "contrasti",
+      "lui/lei": "contrasti",
+      "noi": "contrastiamo",
+      "voi": "contrastiate",
+      "loro": "contrastino"
+    },
+    "condizionale": {
+      "io": "contrasterei",
+      "tu": "contrasteresti",
+      "lui/lei": "contrasterebbe",
+      "noi": "contrasteremmo",
+      "voi": "contrastereste",
+      "loro": "contrasterebbero"
+    },
+    "imperativo": {
+      "tu": "contrasta",
+      "lei": "contrasti",
+      "noi": "contrastiamo",
+      "voi": "contrastate",
+      "loro": "contrastino"
+    }
+  },
+  "contravvenire": {
+    "presente": {
+      "io": "contravvengo",
+      "tu": "contravvieni",
+      "lui/lei": "contravviene",
+      "noi": "contravveniamo",
+      "voi": "contravvenite",
+      "loro": "contravvengono"
+    },
+    "passatoProssimo": {
+      "io": "ho contravvenuto",
+      "tu": "hai contravvenuto",
+      "lui/lei": "ha contravvenuto",
+      "noi": "abbiamo contravvenuto",
+      "voi": "avete contravvenuto",
+      "loro": "hanno contravvenuto"
+    },
+    "imperfetto": {
+      "io": "contravvenivo",
+      "tu": "contravvenivi",
+      "lui/lei": "contravveniva",
+      "noi": "contravvenivamo",
+      "voi": "contravvenivate",
+      "loro": "contravvenivano"
+    },
+    "futuro": {
+      "io": "contravverrò",
+      "tu": "contravverrai",
+      "lui/lei": "contravverrà",
+      "noi": "contravverremo",
+      "voi": "contravverrete",
+      "loro": "contravverranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contravvenga",
+      "tu": "contravvenga",
+      "lui/lei": "contravvenga",
+      "noi": "contravveniamo",
+      "voi": "contravveniate",
+      "loro": "contravvengano"
+    },
+    "condizionale": {
+      "io": "contravverrei",
+      "tu": "contravverresti",
+      "lui/lei": "contravverrebbe",
+      "noi": "contravverremmo",
+      "voi": "contravverreste",
+      "loro": "contravverrebbero"
+    },
+    "imperativo": {
+      "tu": "contravvieni",
+      "lei": "contravvenga",
+      "noi": "contravveniamo",
+      "voi": "contravvenite",
+      "loro": "contravvengano"
+    }
+  },
+  "contribuire": {
+    "presente": {
+      "io": "contribuisco",
+      "tu": "contribuisci",
+      "lui/lei": "contribuisce",
+      "noi": "contribuiamo",
+      "voi": "contribuite",
+      "loro": "contribuiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho contribuito",
+      "tu": "hai contribuito",
+      "lui/lei": "ha contribuito",
+      "noi": "abbiamo contribuito",
+      "voi": "avete contribuito",
+      "loro": "hanno contribuito"
+    },
+    "imperfetto": {
+      "io": "contribuivo",
+      "tu": "contribuivi",
+      "lui/lei": "contribuiva",
+      "noi": "contribuivamo",
+      "voi": "contribuivate",
+      "loro": "contribuivano"
+    },
+    "futuro": {
+      "io": "contribuirò",
+      "tu": "contribuirai",
+      "lui/lei": "contribuirà",
+      "noi": "contribuiremo",
+      "voi": "contribuirete",
+      "loro": "contribuiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "contribuisca",
+      "tu": "contribuisca",
+      "lui/lei": "contribuisca",
+      "noi": "contribuiamo",
+      "voi": "contribuiate",
+      "loro": "contribuiscano"
+    },
+    "condizionale": {
+      "io": "contribuirei",
+      "tu": "contribuiresti",
+      "lui/lei": "contribuirebbe",
+      "noi": "contribuiremmo",
+      "voi": "contribuireste",
+      "loro": "contribuirebbero"
+    },
+    "imperativo": {
+      "tu": "contribuisci",
+      "lei": "contribuisca",
+      "noi": "contribuiamo",
+      "voi": "contribuite",
+      "loro": "contribuiscano"
+    }
+  },
+  "controllare": {
+    "presente": {
+      "io": "controllo",
+      "tu": "controlli",
+      "lui/lei": "controlla",
+      "noi": "controlliamo",
+      "voi": "controllate",
+      "loro": "controllano"
+    },
+    "passatoProssimo": {
+      "io": "ho controllato",
+      "tu": "hai controllato",
+      "lui/lei": "ha controllato",
+      "noi": "abbiamo controllato",
+      "voi": "avete controllato",
+      "loro": "hanno controllato"
+    },
+    "imperfetto": {
+      "io": "controllavo",
+      "tu": "controllavi",
+      "lui/lei": "controllava",
+      "noi": "controllavamo",
+      "voi": "controllavate",
+      "loro": "controllavano"
+    },
+    "futuro": {
+      "io": "controllerò",
+      "tu": "controllerai",
+      "lui/lei": "controllerà",
+      "noi": "controlleremo",
+      "voi": "controllerete",
+      "loro": "controlleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "controlli",
+      "tu": "controlli",
+      "lui/lei": "controlli",
+      "noi": "controlliamo",
+      "voi": "controlliate",
+      "loro": "controllino"
+    },
+    "condizionale": {
+      "io": "controllerei",
+      "tu": "controlleresti",
+      "lui/lei": "controllerebbe",
+      "noi": "controlleremmo",
+      "voi": "controllereste",
+      "loro": "controllerebbero"
+    },
+    "imperativo": {
+      "tu": "controlla",
+      "lei": "controlli",
+      "noi": "controlliamo",
+      "voi": "controllate",
+      "loro": "controllino"
+    }
+  },
+  "convenire": {
+    "presente": {
+      "io": "convengo",
+      "tu": "convieni",
+      "lui/lei": "conviene",
+      "noi": "conveniamo",
+      "voi": "convenite",
+      "loro": "convengono"
+    },
+    "passatoProssimo": {
+      "io": "sono convenuto/a",
+      "tu": "sei convenuto/a",
+      "lui/lei": "è convenuto/a",
+      "noi": "siamo convenuti/e",
+      "voi": "siete convenuti/e",
+      "loro": "sono convenuti/e"
+    },
+    "imperfetto": {
+      "io": "convenivo",
+      "tu": "convenivi",
+      "lui/lei": "conveniva",
+      "noi": "convenivamo",
+      "voi": "convenivate",
+      "loro": "convenivano"
+    },
+    "futuro": {
+      "io": "converrò",
+      "tu": "converrai",
+      "lui/lei": "converrà",
+      "noi": "converremo",
+      "voi": "converrete",
+      "loro": "converranno"
+    },
+    "congiuntivoPresente": {
+      "io": "convenga",
+      "tu": "convenga",
+      "lui/lei": "convenga",
+      "noi": "conveniamo",
+      "voi": "conveniate",
+      "loro": "convengano"
+    },
+    "condizionale": {
+      "io": "converrei",
+      "tu": "converresti",
+      "lui/lei": "converrebbe",
+      "noi": "converremmo",
+      "voi": "converreste",
+      "loro": "converrebbero"
+    },
+    "imperativo": {
+      "tu": "convieni",
+      "lei": "convenga",
+      "noi": "conveniamo",
+      "voi": "convenite",
+      "loro": "convengano"
+    }
+  },
+  "conversare": {
+    "presente": {
+      "io": "converso",
+      "tu": "conversi",
+      "lui/lei": "conversa",
+      "noi": "conversiamo",
+      "voi": "conversate",
+      "loro": "conversano"
+    },
+    "passatoProssimo": {
+      "io": "ho conversato",
+      "tu": "hai conversato",
+      "lui/lei": "ha conversato",
+      "noi": "abbiamo conversato",
+      "voi": "avete conversato",
+      "loro": "hanno conversato"
+    },
+    "imperfetto": {
+      "io": "conversavo",
+      "tu": "conversavi",
+      "lui/lei": "conversava",
+      "noi": "conversavamo",
+      "voi": "conversavate",
+      "loro": "conversavano"
+    },
+    "futuro": {
+      "io": "converserò",
+      "tu": "converserai",
+      "lui/lei": "converserà",
+      "noi": "converseremo",
+      "voi": "converserete",
+      "loro": "converseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conversi",
+      "tu": "conversi",
+      "lui/lei": "conversi",
+      "noi": "conversiamo",
+      "voi": "conversiate",
+      "loro": "conversino"
+    },
+    "condizionale": {
+      "io": "converserei",
+      "tu": "converseresti",
+      "lui/lei": "converserebbe",
+      "noi": "converseremmo",
+      "voi": "conversereste",
+      "loro": "converserebbero"
+    },
+    "imperativo": {
+      "tu": "conversa",
+      "lei": "conversi",
+      "noi": "conversiamo",
+      "voi": "conversate",
+      "loro": "conversino"
+    }
+  },
+  "convertire": {
+    "presente": {
+      "io": "converto",
+      "tu": "converti",
+      "lui/lei": "converte",
+      "noi": "convertiamo",
+      "voi": "convertite",
+      "loro": "convertono"
+    },
+    "passatoProssimo": {
+      "io": "ho convertito",
+      "tu": "hai convertito",
+      "lui/lei": "ha convertito",
+      "noi": "abbiamo convertito",
+      "voi": "avete convertito",
+      "loro": "hanno convertito"
+    },
+    "imperfetto": {
+      "io": "convertivo",
+      "tu": "convertivi",
+      "lui/lei": "convertiva",
+      "noi": "convertivamo",
+      "voi": "convertivate",
+      "loro": "convertivano"
+    },
+    "futuro": {
+      "io": "convertirò",
+      "tu": "convertirai",
+      "lui/lei": "convertirà",
+      "noi": "convertiremo",
+      "voi": "convertirete",
+      "loro": "convertiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "converta",
+      "tu": "converta",
+      "lui/lei": "converta",
+      "noi": "convertiamo",
+      "voi": "convertiate",
+      "loro": "convertano"
+    },
+    "condizionale": {
+      "io": "convertirei",
+      "tu": "convertiresti",
+      "lui/lei": "convertirebbe",
+      "noi": "convertiremmo",
+      "voi": "convertireste",
+      "loro": "convertirebbero"
+    },
+    "imperativo": {
+      "tu": "converti",
+      "lei": "converta",
+      "noi": "convertiamo",
+      "voi": "convertite",
+      "loro": "convertano"
+    }
+  },
+  "convincere": {
+    "presente": {
+      "io": "convinco",
+      "tu": "convinci",
+      "lui/lei": "convince",
+      "noi": "convinciamo",
+      "voi": "convincete",
+      "loro": "convincono"
+    },
+    "passatoProssimo": {
+      "io": "ho convinto",
+      "tu": "hai convinto",
+      "lui/lei": "ha convinto",
+      "noi": "abbiamo convinto",
+      "voi": "avete convinto",
+      "loro": "hanno convinto"
+    },
+    "imperfetto": {
+      "io": "convincevo",
+      "tu": "convincevi",
+      "lui/lei": "convinceva",
+      "noi": "convincevamo",
+      "voi": "convincevate",
+      "loro": "convincevano"
+    },
+    "futuro": {
+      "io": "convincerò",
+      "tu": "convincerai",
+      "lui/lei": "convincerà",
+      "noi": "convinceremo",
+      "voi": "convincerete",
+      "loro": "convinceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "convinca",
+      "tu": "convinca",
+      "lui/lei": "convinca",
+      "noi": "convinciamo",
+      "voi": "convinciate",
+      "loro": "convincano"
+    },
+    "condizionale": {
+      "io": "convincerei",
+      "tu": "convinceresti",
+      "lui/lei": "convincerebbe",
+      "noi": "convinceremmo",
+      "voi": "convincereste",
+      "loro": "convincerebbero"
+    },
+    "imperativo": {
+      "tu": "convinci",
+      "lei": "convinca",
+      "noi": "convinciamo",
+      "voi": "convincete",
+      "loro": "convincano"
+    }
+  },
+  "convivere": {
+    "presente": {
+      "io": "convivo",
+      "tu": "convivi",
+      "lui/lei": "convive",
+      "noi": "conviviamo",
+      "voi": "convivete",
+      "loro": "convivono"
+    },
+    "passatoProssimo": {
+      "io": "ho convissuto",
+      "tu": "hai convissuto",
+      "lui/lei": "ha convissuto",
+      "noi": "abbiamo convissuto",
+      "voi": "avete convissuto",
+      "loro": "hanno convissuto"
+    },
+    "imperfetto": {
+      "io": "convivevo",
+      "tu": "convivevi",
+      "lui/lei": "conviveva",
+      "noi": "convivevamo",
+      "voi": "convivevate",
+      "loro": "convivevano"
+    },
+    "futuro": {
+      "io": "convivrò",
+      "tu": "convivrai",
+      "lui/lei": "convivrà",
+      "noi": "convivremo",
+      "voi": "convivrete",
+      "loro": "convivranno"
+    },
+    "congiuntivoPresente": {
+      "io": "conviva",
+      "tu": "conviva",
+      "lui/lei": "conviva",
+      "noi": "conviviamo",
+      "voi": "conviviate",
+      "loro": "convivano"
+    },
+    "condizionale": {
+      "io": "convivrei",
+      "tu": "convivresti",
+      "lui/lei": "convivrebbe",
+      "noi": "convivremmo",
+      "voi": "convivreste",
+      "loro": "convivrebbero"
+    },
+    "imperativo": {
+      "tu": "convivi",
+      "lei": "conviva",
+      "noi": "conviviamo",
+      "voi": "convivete",
+      "loro": "convivano"
+    }
+  },
+  "convocare": {
+    "presente": {
+      "io": "convoco",
+      "tu": "convochi",
+      "lui/lei": "convoca",
+      "noi": "convochiamo",
+      "voi": "convocate",
+      "loro": "convocano"
+    },
+    "passatoProssimo": {
+      "io": "ho convocato",
+      "tu": "hai convocato",
+      "lui/lei": "ha convocato",
+      "noi": "abbiamo convocato",
+      "voi": "avete convocato",
+      "loro": "hanno convocato"
+    },
+    "imperfetto": {
+      "io": "convocavo",
+      "tu": "convocavi",
+      "lui/lei": "convocava",
+      "noi": "convocavamo",
+      "voi": "convocavate",
+      "loro": "convocavano"
+    },
+    "futuro": {
+      "io": "convocherò",
+      "tu": "convocherai",
+      "lui/lei": "convocherà",
+      "noi": "convocheremo",
+      "voi": "convocherete",
+      "loro": "convocheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "convochi",
+      "tu": "convochi",
+      "lui/lei": "convochi",
+      "noi": "convochiamo",
+      "voi": "convochiate",
+      "loro": "convochino"
+    },
+    "condizionale": {
+      "io": "convocherei",
+      "tu": "convocheresti",
+      "lui/lei": "convocherebbe",
+      "noi": "convocheremmo",
+      "voi": "convochereste",
+      "loro": "convocherebbero"
+    },
+    "imperativo": {
+      "tu": "convoca",
+      "lei": "convochi",
+      "noi": "convochiamo",
+      "voi": "convocate",
+      "loro": "convochino"
+    }
+  },
+  "cooperare": {
+    "presente": {
+      "io": "coopero",
+      "tu": "cooperi",
+      "lui/lei": "coopera",
+      "noi": "cooperiamo",
+      "voi": "cooperate",
+      "loro": "cooperano"
+    },
+    "passatoProssimo": {
+      "io": "ho cooperato",
+      "tu": "hai cooperato",
+      "lui/lei": "ha cooperato",
+      "noi": "abbiamo cooperato",
+      "voi": "avete cooperato",
+      "loro": "hanno cooperato"
+    },
+    "imperfetto": {
+      "io": "cooperavo",
+      "tu": "cooperavi",
+      "lui/lei": "cooperava",
+      "noi": "cooperavamo",
+      "voi": "cooperavate",
+      "loro": "cooperavano"
+    },
+    "futuro": {
+      "io": "coopererò",
+      "tu": "coopererai",
+      "lui/lei": "coopererà",
+      "noi": "coopereremo",
+      "voi": "coopererete",
+      "loro": "coopereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "cooperi",
+      "tu": "cooperi",
+      "lui/lei": "cooperi",
+      "noi": "cooperiamo",
+      "voi": "cooperiate",
+      "loro": "cooperino"
+    },
+    "condizionale": {
+      "io": "coopererei",
+      "tu": "coopereresti",
+      "lui/lei": "coopererebbe",
+      "noi": "coopereremmo",
+      "voi": "coopereste",
+      "loro": "coopererebbero"
+    },
+    "imperativo": {
+      "tu": "coopera",
+      "lei": "cooperi",
+      "noi": "cooperiamo",
+      "voi": "cooperate",
+      "loro": "cooperino"
+    }
+  },
+  "coordinare": {
+    "presente": {
+      "io": "coordino",
+      "tu": "coordini",
+      "lui/lei": "coordina",
+      "noi": "coordiniamo",
+      "voi": "coordinate",
+      "loro": "coordinano"
+    },
+    "passatoProssimo": {
+      "io": "ho coordinato",
+      "tu": "hai coordinato",
+      "lui/lei": "ha coordinato",
+      "noi": "abbiamo coordinato",
+      "voi": "avete coordinato",
+      "loro": "hanno coordinato"
+    },
+    "imperfetto": {
+      "io": "coordinavo",
+      "tu": "coordinavi",
+      "lui/lei": "coordinava",
+      "noi": "coordinavamo",
+      "voi": "coordinavate",
+      "loro": "coordinavano"
+    },
+    "futuro": {
+      "io": "coordinerò",
+      "tu": "coordinerai",
+      "lui/lei": "coordinerà",
+      "noi": "coordineremo",
+      "voi": "coordinerete",
+      "loro": "coordineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "coordini",
+      "tu": "coordini",
+      "lui/lei": "coordini",
+      "noi": "coordiniamo",
+      "voi": "coordiniate",
+      "loro": "coordinino"
+    },
+    "condizionale": {
+      "io": "coordinerei",
+      "tu": "coordineresti",
+      "lui/lei": "coordinerebbe",
+      "noi": "coordineremmo",
+      "voi": "coordinereste",
+      "loro": "coordinerebbero"
+    },
+    "imperativo": {
+      "tu": "coordina",
+      "lei": "coordini",
+      "noi": "coordiniamo",
+      "voi": "coordinate",
+      "loro": "coordinino"
+    }
+  },
+  "copiare": {
+    "presente": {
+      "io": "copio",
+      "tu": "copi",
+      "lui/lei": "copia",
+      "noi": "copiamo",
+      "voi": "copiate",
+      "loro": "copiano"
+    },
+    "passatoProssimo": {
+      "io": "ho copiato",
+      "tu": "hai copiato",
+      "lui/lei": "ha copiato",
+      "noi": "abbiamo copiato",
+      "voi": "avete copiato",
+      "loro": "hanno copiato"
+    },
+    "imperfetto": {
+      "io": "copiavo",
+      "tu": "copiavi",
+      "lui/lei": "copiava",
+      "noi": "copiavamo",
+      "voi": "copiavate",
+      "loro": "copiavano"
+    },
+    "futuro": {
+      "io": "copierò",
+      "tu": "copierai",
+      "lui/lei": "copierà",
+      "noi": "copieremo",
+      "voi": "copierete",
+      "loro": "copieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "copi",
+      "tu": "copi",
+      "lui/lei": "copi",
+      "noi": "copiamo",
+      "voi": "copiate",
+      "loro": "copino"
+    },
+    "condizionale": {
+      "io": "copierei",
+      "tu": "copieresti",
+      "lui/lei": "copierebbe",
+      "noi": "copieremmo",
+      "voi": "copiereste",
+      "loro": "copierebbero"
+    },
+    "imperativo": {
+      "tu": "copia",
+      "lei": "copi",
+      "noi": "copiamo",
+      "voi": "copiate",
+      "loro": "copino"
+    }
+  },
+  "coprire": {
+    "presente": {
+      "io": "copro",
+      "tu": "copri",
+      "lui/lei": "copre",
+      "noi": "copriamo",
+      "voi": "coprite",
+      "loro": "coprono"
+    },
+    "passatoProssimo": {
+      "io": "ho coperto",
+      "tu": "hai coperto",
+      "lui/lei": "ha coperto",
+      "noi": "abbiamo coperto",
+      "voi": "avete coperto",
+      "loro": "hanno coperto"
+    },
+    "imperfetto": {
+      "io": "coprivo",
+      "tu": "coprivi",
+      "lui/lei": "copriva",
+      "noi": "coprivamo",
+      "voi": "coprivate",
+      "loro": "coprivano"
+    },
+    "futuro": {
+      "io": "coprirò",
+      "tu": "coprirai",
+      "lui/lei": "coprirà",
+      "noi": "copriremo",
+      "voi": "coprirete",
+      "loro": "copriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "copra",
+      "tu": "copra",
+      "lui/lei": "copra",
+      "noi": "copriamo",
+      "voi": "copriate",
+      "loro": "coprano"
+    },
+    "condizionale": {
+      "io": "coprirei",
+      "tu": "copriresti",
+      "lui/lei": "coprirebbe",
+      "noi": "copriremmo",
+      "voi": "coprireste",
+      "loro": "coprirebbero"
+    },
+    "imperativo": {
+      "tu": "copri",
+      "lei": "copra",
+      "noi": "copriamo",
+      "voi": "coprite",
+      "loro": "coprano"
+    }
+  },
+  "coricarsi": {
+    "presente": {
+      "io": "mi corico",
+      "tu": "ti corichi",
+      "lui/lei": "si corica",
+      "noi": "ci corichiamo",
+      "voi": "vi coricate",
+      "loro": "si coricano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono coricato",
+      "tu": "ti sei coricato",
+      "lui/lei": "si è coricato",
+      "noi": "ci siamo coricati",
+      "voi": "vi siete coricati",
+      "loro": "si sono coricati"
+    },
+    "imperfetto": {
+      "io": "mi coricavo",
+      "tu": "ti coricavi",
+      "lui/lei": "si coricava",
+      "noi": "ci coricavamo",
+      "voi": "vi coricavate",
+      "loro": "si coricavano"
+    },
+    "passatoRemoto": {
+      "io": "mi coricai",
+      "tu": "ti coricasti",
+      "lui/lei": "si coricò",
+      "noi": "ci coricammo",
+      "voi": "vi coricaste",
+      "loro": "si coricarono"
+    },
+    "futuro": {
+      "io": "mi coricherò",
+      "tu": "ti coricherai",
+      "lui/lei": "si coricherà",
+      "noi": "ci coricheremo",
+      "voi": "vi coricherete",
+      "loro": "si coricheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi corichi",
+      "tu": "ti corichi",
+      "lui/lei": "si corichi",
+      "noi": "ci corichiamo",
+      "voi": "vi corichiate",
+      "loro": "si corichino"
+    },
+    "condizionale": {
+      "io": "mi coricherei",
+      "tu": "ti coricheresti",
+      "lui/lei": "si coricherebbe",
+      "noi": "ci coricheremmo",
+      "voi": "vi corichereste",
+      "loro": "si coricherebbero"
+    },
+    "imperativo": {
+      "tu": "coricati",
+      "lei": "si corichi",
+      "noi": "coricamoci",
+      "voi": "coricatevi",
+      "loro": "si corichino"
+    }
+  },
+  "corredare": {
+    "presente": {
+      "io": "corredo",
+      "tu": "corredi",
+      "lui/lei": "correda",
+      "noi": "corrediamo",
+      "voi": "corredate",
+      "loro": "corredano"
+    },
+    "passatoProssimo": {
+      "io": "ho corredato",
+      "tu": "hai corredato",
+      "lui/lei": "ha corredato",
+      "noi": "abbiamo corredato",
+      "voi": "avete corredato",
+      "loro": "hanno corredato"
+    },
+    "imperfetto": {
+      "io": "corredavo",
+      "tu": "corredavi",
+      "lui/lei": "corredava",
+      "noi": "corredavamo",
+      "voi": "corredavate",
+      "loro": "corredavano"
+    },
+    "futuro": {
+      "io": "correderò",
+      "tu": "correderai",
+      "lui/lei": "correderà",
+      "noi": "correderemo",
+      "voi": "correderete",
+      "loro": "correderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "correda",
+      "tu": "correda",
+      "lui/lei": "correda",
+      "noi": "corrediamo",
+      "voi": "corrediate",
+      "loro": "corredino"
+    },
+    "condizionale": {
+      "io": "correderei",
+      "tu": "correderesti",
+      "lui/lei": "correderebbe",
+      "noi": "correderemmo",
+      "voi": "corredereste",
+      "loro": "correderebbero"
+    },
+    "imperativo": {
+      "tu": "correda",
+      "lei": "corredi",
+      "noi": "corrediamo",
+      "voi": "corredate",
+      "loro": "corredino"
+    }
+  },
+  "correggere": {
+    "presente": {
+      "io": "correggo",
+      "tu": "correggi",
+      "lui/lei": "corregge",
+      "noi": "correggiamo",
+      "voi": "correggete",
+      "loro": "correggono"
+    },
+    "passatoProssimo": {
+      "io": "ho corretto",
+      "tu": "hai corretto",
+      "lui/lei": "ha corretto",
+      "noi": "abbiamo corretto",
+      "voi": "avete corretto",
+      "loro": "hanno corretto"
+    },
+    "imperfetto": {
+      "io": "correggevo",
+      "tu": "correggevi",
+      "lui/lei": "correggeva",
+      "noi": "correggevamo",
+      "voi": "correggevate",
+      "loro": "correggevano"
+    },
+    "futuro": {
+      "io": "correggerò",
+      "tu": "correggerai",
+      "lui/lei": "correggerà",
+      "noi": "correggeremo",
+      "voi": "correggerete",
+      "loro": "correggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "corregga",
+      "tu": "corregga",
+      "lui/lei": "corregga",
+      "noi": "correggiamo",
+      "voi": "correggiate",
+      "loro": "correggano"
+    },
+    "condizionale": {
+      "io": "correggerei",
+      "tu": "correggeresti",
+      "lui/lei": "correggerebbe",
+      "noi": "correggeremmo",
+      "voi": "correggereste",
+      "loro": "correggerebbero"
+    },
+    "imperativo": {
+      "tu": "correggi",
+      "lei": "corregga",
+      "noi": "correggiamo",
+      "voi": "correggete",
+      "loro": "correggano"
+    }
+  },
+  "correggersi": {
+    "presente": {
+      "io": "mi correggo",
+      "tu": "ti correggi",
+      "lui/lei": "si corregge",
+      "noi": "ci correggiamo",
+      "voi": "vi correggete",
+      "loro": "si correggono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono corretto",
+      "tu": "ti sei corretto",
+      "lui/lei": "si è corretto",
+      "noi": "ci siamo corretti",
+      "voi": "vi siete corretti",
+      "loro": "si sono corretti"
+    },
+    "imperfetto": {
+      "io": "mi correggevo",
+      "tu": "ti correggevi",
+      "lui/lei": "si correggeva",
+      "noi": "ci correggevamo",
+      "voi": "vi correggevate",
+      "loro": "si correggevano"
+    },
+    "futuro": {
+      "io": "mi correggerò",
+      "tu": "ti correggerai",
+      "lui/lei": "si correggerà",
+      "noi": "ci correggeremo",
+      "voi": "vi correggerete",
+      "loro": "si correggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi corregga",
+      "tu": "ti corregga",
+      "lui/lei": "si corregga",
+      "noi": "ci correggiamo",
+      "voi": "vi correggiate",
+      "loro": "si correggano"
+    },
+    "condizionale": {
+      "io": "mi correggerei",
+      "tu": "ti correggeresti",
+      "lui/lei": "si correggerebbe",
+      "noi": "ci correggeremmo",
+      "voi": "vi correggereste",
+      "loro": "si correggerebbero"
+    },
+    "imperativo": {
+      "tu": "correggiti",
+      "lei": "si corregga",
+      "noi": "correggiamoci",
+      "voi": "correggetevi",
+      "loro": "si correggano"
+    }
+  },
+  "correre": {
+    "presente": {
+      "io": "corro",
+      "tu": "corri",
+      "lui/lei": "corre",
+      "noi": "corriamo",
+      "voi": "correte",
+      "loro": "corrono"
+    },
+    "passatoProssimo": {
+      "io": "ho corso",
+      "tu": "hai corso",
+      "lui/lei": "ha corso",
+      "noi": "abbiamo corso",
+      "voi": "avete corso",
+      "loro": "hanno corso"
+    },
+    "imperfetto": {
+      "io": "correvo",
+      "tu": "correvi",
+      "lui/lei": "correva",
+      "noi": "correvamo",
+      "voi": "correvate",
+      "loro": "correvano"
+    },
+    "futuro": {
+      "io": "correrò",
+      "tu": "correrai",
+      "lui/lei": "correrà",
+      "noi": "correremo",
+      "voi": "correrete",
+      "loro": "correranno"
+    },
+    "congiuntivoPresente": {
+      "io": "corra",
+      "tu": "corra",
+      "lui/lei": "corra",
+      "noi": "corriamo",
+      "voi": "corriate",
+      "loro": "corrano"
+    },
+    "condizionale": {
+      "io": "correrei",
+      "tu": "correresti",
+      "lui/lei": "correrebbe",
+      "noi": "correremmo",
+      "voi": "correreste",
+      "loro": "correrebbero"
+    },
+    "imperativo": {
+      "tu": "corri",
+      "lei": "corra",
+      "noi": "corriamo",
+      "voi": "correte",
+      "loro": "corrano"
+    }
+  },
+  "corrispondere": {
+    "presente": {
+      "io": "corrispondo",
+      "tu": "corrispondi",
+      "lui/lei": "corrisponde",
+      "noi": "corrispondiamo",
+      "voi": "corrispondete",
+      "loro": "corrispondono"
+    },
+    "passatoProssimo": {
+      "io": "ho corrisposto",
+      "tu": "hai corrisposto",
+      "lui/lei": "ha corrisposto",
+      "noi": "abbiamo corrisposto",
+      "voi": "avete corrisposto",
+      "loro": "hanno corrisposto"
+    },
+    "imperfetto": {
+      "io": "corrispondevo",
+      "tu": "corrispondevi",
+      "lui/lei": "corrispondeva",
+      "noi": "corrispondevamo",
+      "voi": "corrispondevate",
+      "loro": "corrispondevano"
+    },
+    "futuro": {
+      "io": "corrisponderò",
+      "tu": "corrisponderai",
+      "lui/lei": "corrisponderà",
+      "noi": "corrisponderemo",
+      "voi": "corrisponderete",
+      "loro": "corrisponderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "corrisponda",
+      "tu": "corrisponda",
+      "lui/lei": "corrisponda",
+      "noi": "corrispondiamo",
+      "voi": "corrispondiate",
+      "loro": "corrispondano"
+    },
+    "condizionale": {
+      "io": "corrisponderei",
+      "tu": "corrisponderesti",
+      "lui/lei": "corrisponderebbe",
+      "noi": "corrisponderemmo",
+      "voi": "corrispondereste",
+      "loro": "corrisponderebbero"
+    },
+    "imperativo": {
+      "tu": "corrispondi",
+      "lei": "corrisponda",
+      "noi": "corrispondiamo",
+      "voi": "corrispondete",
+      "loro": "corrispondano"
+    }
+  },
+  "corrompere": {
+    "presente": {
+      "io": "corrompo",
+      "tu": "corrompi",
+      "lui/lei": "corrompe",
+      "noi": "corrompiamo",
+      "voi": "corrompete",
+      "loro": "corrompono"
+    },
+    "passatoProssimo": {
+      "io": "ho corrotto",
+      "tu": "hai corrotto",
+      "lui/lei": "ha corrotto",
+      "noi": "abbiamo corrotto",
+      "voi": "avete corrotto",
+      "loro": "hanno corrotto"
+    },
+    "imperfetto": {
+      "io": "corrompevo",
+      "tu": "corrompevi",
+      "lui/lei": "corrompeva",
+      "noi": "corrompevamo",
+      "voi": "corrompevate",
+      "loro": "corrompevano"
+    },
+    "futuro": {
+      "io": "corromperò",
+      "tu": "corromperai",
+      "lui/lei": "corromperà",
+      "noi": "corromperemo",
+      "voi": "corromperete",
+      "loro": "corromperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "corrompa",
+      "tu": "corrompa",
+      "lui/lei": "corrompa",
+      "noi": "corrompiamo",
+      "voi": "corrompiate",
+      "loro": "corrompano"
+    },
+    "condizionale": {
+      "io": "corromperei",
+      "tu": "corromperesti",
+      "lui/lei": "corromperebbe",
+      "noi": "corromperemmo",
+      "voi": "corrompereste",
+      "loro": "corromperebbero"
+    },
+    "imperativo": {
+      "tu": "corrompi",
+      "lei": "corrompa",
+      "noi": "corrompiamo",
+      "voi": "corrompete",
+      "loro": "corrompano"
+    }
+  },
+  "costare": {
+    "presente": {
+      "io": "costo",
+      "tu": "costi",
+      "lui/lei": "costa",
+      "noi": "costiamo",
+      "voi": "costate",
+      "loro": "costano"
+    },
+    "passatoProssimo": {
+      "io": "sono costato",
+      "tu": "sei costato",
+      "lui/lei": "è costato",
+      "noi": "siamo costati",
+      "voi": "siete costati",
+      "loro": "sono costati"
+    },
+    "imperfetto": {
+      "io": "costavo",
+      "tu": "costavi",
+      "lui/lei": "costava",
+      "noi": "costavamo",
+      "voi": "costavate",
+      "loro": "costavano"
+    },
+    "futuro": {
+      "io": "costerò",
+      "tu": "costerai",
+      "lui/lei": "costerà",
+      "noi": "costeremo",
+      "voi": "costerete",
+      "loro": "costeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "costi",
+      "tu": "costi",
+      "lui/lei": "costi",
+      "noi": "costiamo",
+      "voi": "costiate",
+      "loro": "costino"
+    },
+    "condizionale": {
+      "io": "costerei",
+      "tu": "costeresti",
+      "lui/lei": "costerebbe",
+      "noi": "costeremmo",
+      "voi": "costereste",
+      "loro": "costerebbero"
+    },
+    "imperativo": {
+      "tu": "costa",
+      "lei": "costi",
+      "noi": "costiamo",
+      "voi": "costate",
+      "loro": "costino"
+    }
+  },
+  "costituire": {
+    "presente": {
+      "io": "costituisco",
+      "tu": "costituisci",
+      "lui/lei": "costituisce",
+      "noi": "costituiamo",
+      "voi": "costituite",
+      "loro": "costituiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho costituito",
+      "tu": "hai costituito",
+      "lui/lei": "ha costituito",
+      "noi": "abbiamo costituito",
+      "voi": "avete costituito",
+      "loro": "hanno costituito"
+    },
+    "imperfetto": {
+      "io": "costituivo",
+      "tu": "costituivi",
+      "lui/lei": "costituiva",
+      "noi": "costituivamo",
+      "voi": "costituivate",
+      "loro": "costituivano"
+    },
+    "futuro": {
+      "io": "costituirò",
+      "tu": "costituirai",
+      "lui/lei": "costituirà",
+      "noi": "costituiremo",
+      "voi": "costituirete",
+      "loro": "costituiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "costituisca",
+      "tu": "costituisca",
+      "lui/lei": "costituisca",
+      "noi": "costituiamo",
+      "voi": "costituiate",
+      "loro": "costituiscano"
+    },
+    "condizionale": {
+      "io": "costituirei",
+      "tu": "costituiresti",
+      "lui/lei": "costituirebbe",
+      "noi": "costituiremmo",
+      "voi": "costituireste",
+      "loro": "costituirebbero"
+    },
+    "imperativo": {
+      "tu": "costituisci",
+      "lei": "costituisca",
+      "noi": "costituiamo",
+      "voi": "costituite",
+      "loro": "costituiscano"
+    }
+  },
+  "costringere": {
+    "presente": {
+      "io": "costringo",
+      "tu": "costringi",
+      "lui/lei": "costringe",
+      "noi": "costringiamo",
+      "voi": "costringete",
+      "loro": "costringono"
+    },
+    "passatoProssimo": {
+      "io": "ho costretto",
+      "tu": "hai costretto",
+      "lui/lei": "ha costretto",
+      "noi": "abbiamo costretto",
+      "voi": "avete costretto",
+      "loro": "hanno costretto"
+    },
+    "imperfetto": {
+      "io": "costringevo",
+      "tu": "costringevi",
+      "lui/lei": "costringeva",
+      "noi": "costringevamo",
+      "voi": "costringevate",
+      "loro": "costringevano"
+    },
+    "futuro": {
+      "io": "costringerò",
+      "tu": "costringerai",
+      "lui/lei": "costringerà",
+      "noi": "costringeremo",
+      "voi": "costringerete",
+      "loro": "costringeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "costringa",
+      "tu": "costringa",
+      "lui/lei": "costringa",
+      "noi": "costringiamo",
+      "voi": "costringiate",
+      "loro": "costringano"
+    },
+    "condizionale": {
+      "io": "costringerei",
+      "tu": "costringeresti",
+      "lui/lei": "costringerebbe",
+      "noi": "costringeremmo",
+      "voi": "costringereste",
+      "loro": "costringerebbero"
+    },
+    "imperativo": {
+      "tu": "costringi",
+      "lei": "costringa",
+      "noi": "costringiamo",
+      "voi": "costringete",
+      "loro": "costringano"
+    }
+  },
+  "costruire": {
+    "presente": {
+      "io": "costruisco",
+      "tu": "costruisci",
+      "lui/lei": "costruisce",
+      "noi": "costruiamo",
+      "voi": "costruite",
+      "loro": "costruiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho costruito",
+      "tu": "hai costruito",
+      "lui/lei": "ha costruito",
+      "noi": "abbiamo costruito",
+      "voi": "avete costruito",
+      "loro": "hanno costruito"
+    },
+    "imperfetto": {
+      "io": "costruivo",
+      "tu": "costruivi",
+      "lui/lei": "costruiva",
+      "noi": "costruivamo",
+      "voi": "costruivate",
+      "loro": "costruivano"
+    },
+    "futuro": {
+      "io": "costruirò",
+      "tu": "costruirai",
+      "lui/lei": "costruirà",
+      "noi": "costruiremo",
+      "voi": "costruirete",
+      "loro": "costruiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "costruisca",
+      "tu": "costruisca",
+      "lui/lei": "costruisca",
+      "noi": "costruiamo",
+      "voi": "costruiate",
+      "loro": "costruiscano"
+    },
+    "condizionale": {
+      "io": "costruirei",
+      "tu": "costruiresti",
+      "lui/lei": "costruirebbe",
+      "noi": "costruiremmo",
+      "voi": "costruireste",
+      "loro": "costruirebbero"
+    },
+    "imperativo": {
+      "tu": "costruisci",
+      "lei": "costruisca",
+      "noi": "costruiamo",
+      "voi": "costruite",
+      "loro": "costruiscano"
+    }
+  },
+  "covare": {
+    "presente": {
+      "io": "covo",
+      "tu": "covi",
+      "lui/lei": "cova",
+      "noi": "coviamo",
+      "voi": "covate",
+      "loro": "covano"
+    },
+    "passatoProssimo": {
+      "io": "ho covato",
+      "tu": "hai covato",
+      "lui/lei": "ha covato",
+      "noi": "abbiamo covato",
+      "voi": "avete covato",
+      "loro": "hanno covato"
+    },
+    "imperfetto": {
+      "io": "covavo",
+      "tu": "covavi",
+      "lui/lei": "covava",
+      "noi": "covavamo",
+      "voi": "covavate",
+      "loro": "covavano"
+    },
+    "futuro": {
+      "io": "coverò",
+      "tu": "coverai",
+      "lui/lei": "coverà",
+      "noi": "coveremo",
+      "voi": "coverete",
+      "loro": "coveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "covi",
+      "tu": "covi",
+      "lui/lei": "covi",
+      "noi": "coviamo",
+      "voi": "coviate",
+      "loro": "covino"
+    },
+    "condizionale": {
+      "io": "coverei",
+      "tu": "coveresti",
+      "lui/lei": "coverebbe",
+      "noi": "coveremmo",
+      "voi": "covereste",
+      "loro": "coverebbero"
+    },
+    "imperativo": {
+      "tu": "cova",
+      "lei": "covi",
+      "noi": "coviamo",
+      "voi": "covate",
+      "loro": "covino"
+    }
+  },
+  "creare": {
+    "presente": {
+      "io": "creo",
+      "tu": "crei",
+      "lui/lei": "crea",
+      "noi": "creiamo",
+      "voi": "create",
+      "loro": "creano"
+    },
+    "passatoProssimo": {
+      "io": "ho creato",
+      "tu": "hai creato",
+      "lui/lei": "ha creato",
+      "noi": "abbiamo creato",
+      "voi": "avete creato",
+      "loro": "hanno creato"
+    },
+    "imperfetto": {
+      "io": "creavo",
+      "tu": "creavi",
+      "lui/lei": "creava",
+      "noi": "creavamo",
+      "voi": "creavate",
+      "loro": "creavano"
+    },
+    "futuro": {
+      "io": "creerò",
+      "tu": "creerai",
+      "lui/lei": "creerà",
+      "noi": "creeremo",
+      "voi": "creerete",
+      "loro": "creeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "crei",
+      "tu": "crei",
+      "lui/lei": "crei",
+      "noi": "creiamo",
+      "voi": "creiate",
+      "loro": "creino"
+    },
+    "condizionale": {
+      "io": "creerei",
+      "tu": "creeresti",
+      "lui/lei": "creerebbe",
+      "noi": "creeremmo",
+      "voi": "creereste",
+      "loro": "creerebbero"
+    },
+    "imperativo": {
+      "tu": "crea",
+      "lei": "crei",
+      "noi": "creiamo",
+      "voi": "create",
+      "loro": "creino"
+    }
+  },
+  "credere": {
+    "presente": {
+      "io": "credo",
+      "tu": "credi",
+      "lui/lei": "crede",
+      "noi": "crediamo",
+      "voi": "credete",
+      "loro": "credono"
+    },
+    "passatoProssimo": {
+      "io": "ho creduto",
+      "tu": "hai creduto",
+      "lui/lei": "ha creduto",
+      "noi": "abbiamo creduto",
+      "voi": "avete creduto",
+      "loro": "hanno creduto"
+    },
+    "imperfetto": {
+      "io": "credevo",
+      "tu": "credevi",
+      "lui/lei": "credeva",
+      "noi": "credevamo",
+      "voi": "credevate",
+      "loro": "credevano"
+    },
+    "futuro": {
+      "io": "crederò",
+      "tu": "crederai",
+      "lui/lei": "crederà",
+      "noi": "crederemo",
+      "voi": "crederete",
+      "loro": "crederanno"
+    },
+    "congiuntivoPresente": {
+      "io": "creda",
+      "tu": "creda",
+      "lui/lei": "creda",
+      "noi": "crediamo",
+      "voi": "crediate",
+      "loro": "credano"
+    },
+    "condizionale": {
+      "io": "crederei",
+      "tu": "crederesti",
+      "lui/lei": "crederebbe",
+      "noi": "crederemmo",
+      "voi": "credereste",
+      "loro": "crederebbero"
+    },
+    "imperativo": {
+      "tu": "credi",
+      "lei": "creda",
+      "noi": "crediamo",
+      "voi": "credete",
+      "loro": "credano"
+    }
+  },
+  "crepare": {
+    "presente": {
+      "io": "crepo",
+      "tu": "crepi",
+      "lui/lei": "crepa",
+      "noi": "crepiamo",
+      "voi": "crepate",
+      "loro": "crepano"
+    },
+    "passatoProssimo": {
+      "io": "sono crepato",
+      "tu": "sei crepato",
+      "lui/lei": "è crepato",
+      "noi": "siamo crepati",
+      "voi": "siete crepati",
+      "loro": "sono crepati"
+    },
+    "imperfetto": {
+      "io": "crepavo",
+      "tu": "crepavi",
+      "lui/lei": "crepava",
+      "noi": "crepavamo",
+      "voi": "crepavate",
+      "loro": "crepavano"
+    },
+    "futuro": {
+      "io": "creperò",
+      "tu": "creperai",
+      "lui/lei": "creperà",
+      "noi": "creperemo",
+      "voi": "creperete",
+      "loro": "creperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "crepi",
+      "tu": "crepi",
+      "lui/lei": "crepi",
+      "noi": "crepiamo",
+      "voi": "crepiate",
+      "loro": "crepino"
+    },
+    "condizionale": {
+      "io": "creperei",
+      "tu": "creperesti",
+      "lui/lei": "creperebbe",
+      "noi": "creperemmo",
+      "voi": "crepereste",
+      "loro": "creperebbero"
+    },
+    "imperativo": {
+      "tu": "crepa",
+      "lei": "crepi",
+      "noi": "crepiamo",
+      "voi": "crepate",
+      "loro": "crepino"
+    }
+  },
+  "crepitare": {
+    "presente": {
+      "io": "crepito",
+      "tu": "crepiti",
+      "lui/lei": "crepita",
+      "noi": "crepitiamo",
+      "voi": "crepitate",
+      "loro": "crepitano"
+    },
+    "passatoProssimo": {
+      "io": "ho crepitato",
+      "tu": "hai crepitato",
+      "lui/lei": "ha crepitato",
+      "noi": "abbiamo crepitato",
+      "voi": "avete crepitato",
+      "loro": "hanno crepitato"
+    },
+    "imperfetto": {
+      "io": "crepitavo",
+      "tu": "crepitavi",
+      "lui/lei": "crepitava",
+      "noi": "crepitavamo",
+      "voi": "crepitavate",
+      "loro": "crepitavano"
+    },
+    "futuro": {
+      "io": "crepiterò",
+      "tu": "crepiterai",
+      "lui/lei": "crepiterà",
+      "noi": "crepiteremo",
+      "voi": "crepiterete",
+      "loro": "crepiteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "crepiti",
+      "tu": "crepiti",
+      "lui/lei": "crepiti",
+      "noi": "crepitiamo",
+      "voi": "crepitiate",
+      "loro": "crepitino"
+    },
+    "condizionale": {
+      "io": "crepiterei",
+      "tu": "crepiteresti",
+      "lui/lei": "crepiterebbe",
+      "noi": "crepiteremmo",
+      "voi": "crepitereste",
+      "loro": "crepiterebbero"
+    },
+    "imperativo": {
+      "tu": "crepita",
+      "lei": "crepiti",
+      "noi": "crepitiamo",
+      "voi": "crepitate",
+      "loro": "crepitino"
+    }
+  },
+  "crescere": {
+    "presente": {
+      "io": "cresco",
+      "tu": "cresci",
+      "lui/lei": "cresce",
+      "noi": "cresciamo",
+      "voi": "crescete",
+      "loro": "crescono"
+    },
+    "passatoProssimo": {
+      "io": "sono cresciuto",
+      "tu": "sei cresciuto",
+      "lui/lei": "è cresciuto",
+      "noi": "siamo cresciuti",
+      "voi": "siete cresciuti",
+      "loro": "sono cresciuti"
+    },
+    "imperfetto": {
+      "io": "crescevo",
+      "tu": "crescevi",
+      "lui/lei": "cresceva",
+      "noi": "crescevamo",
+      "voi": "crescevate",
+      "loro": "crescevano"
+    },
+    "futuro": {
+      "io": "crescerò",
+      "tu": "crescerai",
+      "lui/lei": "crescerà",
+      "noi": "cresceremo",
+      "voi": "crescerete",
+      "loro": "cresceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "cresca",
+      "tu": "cresca",
+      "lui/lei": "cresca",
+      "noi": "cresciamo",
+      "voi": "cresciate",
+      "loro": "crescano"
+    },
+    "condizionale": {
+      "io": "crescerei",
+      "tu": "cresceresti",
+      "lui/lei": "crescerebbe",
+      "noi": "cresceremmo",
+      "voi": "crescereste",
+      "loro": "crescerebbero"
+    },
+    "imperativo": {
+      "tu": "cresci",
+      "lei": "cresca",
+      "noi": "cresciamo",
+      "voi": "crescete",
+      "loro": "crescano"
+    }
+  },
+  "cresimare": {
+    "presente": {
+      "io": "cresimo",
+      "tu": "cresimi",
+      "lui/lei": "cresima",
+      "noi": "cresimiamo",
+      "voi": "cresimate",
+      "loro": "cresimano"
+    },
+    "passatoProssimo": {
+      "io": "ho cresimato",
+      "tu": "hai cresimato",
+      "lui/lei": "ha cresimato",
+      "noi": "abbiamo cresimato",
+      "voi": "avete cresimato",
+      "loro": "hanno cresimato"
+    },
+    "imperfetto": {
+      "io": "cresimavo",
+      "tu": "cresimavi",
+      "lui/lei": "cresimava",
+      "noi": "cresimavamo",
+      "voi": "cresimavate",
+      "loro": "cresimavano"
+    },
+    "futuro": {
+      "io": "cresimerò",
+      "tu": "cresimerai",
+      "lui/lei": "cresimerà",
+      "noi": "cresimeremo",
+      "voi": "cresimerete",
+      "loro": "cresimeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "cresimi",
+      "tu": "cresimi",
+      "lui/lei": "cresimi",
+      "noi": "cresimiamo",
+      "voi": "cresimiate",
+      "loro": "cresimino"
+    },
+    "condizionale": {
+      "io": "cresimerei",
+      "tu": "cresimeresti",
+      "lui/lei": "cresimerebbe",
+      "noi": "cresimeremmo",
+      "voi": "cresimereste",
+      "loro": "cresimerebbero"
+    },
+    "imperativo": {
+      "tu": "cresima",
+      "lei": "cresimi",
+      "noi": "cresimiamo",
+      "voi": "cresimate",
+      "loro": "cresimino"
+    }
+  },
+  "criticare": {
+    "presente": {
+      "io": "critico",
+      "tu": "critichi",
+      "lui/lei": "critica",
+      "noi": "critichiamo",
+      "voi": "criticate",
+      "loro": "criticano"
+    },
+    "passatoProssimo": {
+      "io": "ho criticato",
+      "tu": "hai criticato",
+      "lui/lei": "ha criticato",
+      "noi": "abbiamo criticato",
+      "voi": "avete criticato",
+      "loro": "hanno criticato"
+    },
+    "imperfetto": {
+      "io": "criticavo",
+      "tu": "criticavi",
+      "lui/lei": "criticava",
+      "noi": "criticavamo",
+      "voi": "criticavate",
+      "loro": "criticavano"
+    },
+    "futuro": {
+      "io": "criticherò",
+      "tu": "criticherai",
+      "lui/lei": "criticherà",
+      "noi": "criticheremo",
+      "voi": "criticherete",
+      "loro": "criticheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "critichi",
+      "tu": "critichi",
+      "lui/lei": "critichi",
+      "noi": "critichiamo",
+      "voi": "critichiate",
+      "loro": "critichino"
+    },
+    "condizionale": {
+      "io": "criticherei",
+      "tu": "criticheresti",
+      "lui/lei": "criticherebbe",
+      "noi": "criticheremmo",
+      "voi": "critichereste",
+      "loro": "criticherebbero"
+    },
+    "imperativo": {
+      "tu": "critica",
+      "lei": "critichi",
+      "noi": "critichiamo",
+      "voi": "criticate",
+      "loro": "critichino"
+    }
+  },
+  "crocchiare": {
+    "presente": {
+      "io": "crocchio",
+      "tu": "crocchi",
+      "lui/lei": "crocchia",
+      "noi": "crocchiamo",
+      "voi": "crocchiate",
+      "loro": "crocchiano"
+    },
+    "passatoProssimo": {
+      "io": "ho crocchiato",
+      "tu": "hai crocchiato",
+      "lui/lei": "ha crocchiato",
+      "noi": "abbiamo crocchiato",
+      "voi": "avete crocchiato",
+      "loro": "hanno crocchiato"
+    },
+    "imperfetto": {
+      "io": "crocchiavo",
+      "tu": "crocchiavi",
+      "lui/lei": "crocchiava",
+      "noi": "crocchiavamo",
+      "voi": "crocchiavate",
+      "loro": "crocchiavano"
+    },
+    "futuro": {
+      "io": "crocchierò",
+      "tu": "crocchierai",
+      "lui/lei": "crocchierà",
+      "noi": "crocchieremo",
+      "voi": "crocchierete",
+      "loro": "crocchieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "crocchi",
+      "tu": "crocchi",
+      "lui/lei": "crocchi",
+      "noi": "crocchiamo",
+      "voi": "crocchiate",
+      "loro": "crocchino"
+    },
+    "condizionale": {
+      "io": "crocchierei",
+      "tu": "crocchieresti",
+      "lui/lei": "crocchierebbe",
+      "noi": "crocchieremmo",
+      "voi": "crocchiereste",
+      "loro": "crocchierebbero"
+    },
+    "imperativo": {
+      "tu": "crocchia",
+      "lei": "crocchi",
+      "noi": "crocchiamo",
+      "voi": "crocchiate",
+      "loro": "crocchino"
+    }
+  },
+  "crollare": {
+    "presente": {
+      "io": "crollo",
+      "tu": "crolli",
+      "lui/lei": "crolla",
+      "noi": "crolliamo",
+      "voi": "crollate",
+      "loro": "crollano"
+    },
+    "passatoProssimo": {
+      "io": "sono crollato",
+      "tu": "sei crollato",
+      "lui/lei": "è crollato",
+      "noi": "siamo crollati",
+      "voi": "siete crollati",
+      "loro": "sono crollati"
+    },
+    "imperfetto": {
+      "io": "crollavo",
+      "tu": "crollavi",
+      "lui/lei": "crollava",
+      "noi": "crollavamo",
+      "voi": "crollavate",
+      "loro": "crollavano"
+    },
+    "futuro": {
+      "io": "crollerò",
+      "tu": "crollerai",
+      "lui/lei": "crollerà",
+      "noi": "crolleremo",
+      "voi": "crollerete",
+      "loro": "crolleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "crolli",
+      "tu": "crolli",
+      "lui/lei": "crolli",
+      "noi": "crolliamo",
+      "voi": "crolliate",
+      "loro": "crollino"
+    },
+    "condizionale": {
+      "io": "crollerei",
+      "tu": "crolleresti",
+      "lui/lei": "crollerebbe",
+      "noi": "crolleremmo",
+      "voi": "crollereste",
+      "loro": "crollerebbero"
+    },
+    "imperativo": {
+      "tu": "crolla",
+      "lei": "crolli",
+      "noi": "crolliamo",
+      "voi": "crollate",
+      "loro": "crollino"
+    }
+  },
+  "cronometrare": {
+    "presente": {
+      "io": "cronometro",
+      "tu": "cronometri",
+      "lui/lei": "cronometra",
+      "noi": "cronometriamo",
+      "voi": "cronometrate",
+      "loro": "cronometrano"
+    },
+    "passatoProssimo": {
+      "io": "ho cronometrato",
+      "tu": "hai cronometrato",
+      "lui/lei": "ha cronometrato",
+      "noi": "abbiamo cronometrato",
+      "voi": "avete cronometrato",
+      "loro": "hanno cronometrato"
+    },
+    "imperfetto": {
+      "io": "cronometravo",
+      "tu": "cronometravi",
+      "lui/lei": "cronometrava",
+      "noi": "cronometravamo",
+      "voi": "cronometravate",
+      "loro": "cronometravano"
+    },
+    "futuro": {
+      "io": "cronometrerò",
+      "tu": "cronometrerai",
+      "lui/lei": "cronometrerà",
+      "noi": "cronometreremo",
+      "voi": "cronometrerete",
+      "loro": "cronometreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "cronometri",
+      "tu": "cronometri",
+      "lui/lei": "cronometri",
+      "noi": "cronometriamo",
+      "voi": "cronometriate",
+      "loro": "cronometrino"
+    },
+    "condizionale": {
+      "io": "cronometrerei",
+      "tu": "cronometreresti",
+      "lui/lei": "cronometrerebbe",
+      "noi": "cronometreremmo",
+      "voi": "cronometrereste",
+      "loro": "cronometrerebbero"
+    },
+    "imperativo": {
+      "tu": "cronometra",
+      "lei": "cronometri",
+      "noi": "cronometriamo",
+      "voi": "cronometrate",
+      "loro": "cronometrino"
+    }
+  },
+  "crucciare": {
+    "presente": {
+      "io": "cruccio",
+      "tu": "crucci",
+      "lui/lei": "cruccia",
+      "noi": "crucciamo",
+      "voi": "crucciate",
+      "loro": "crucciano"
+    },
+    "passatoProssimo": {
+      "io": "ho crucciato",
+      "tu": "hai crucciato",
+      "lui/lei": "ha crucciato",
+      "noi": "abbiamo crucciato",
+      "voi": "avete crucciato",
+      "loro": "hanno crucciato"
+    },
+    "imperfetto": {
+      "io": "crucciavo",
+      "tu": "crucciavi",
+      "lui/lei": "crucciava",
+      "noi": "crucciavamo",
+      "voi": "crucciavate",
+      "loro": "crucciavano"
+    },
+    "futuro": {
+      "io": "cruccerò",
+      "tu": "cruccerai",
+      "lui/lei": "cruccerà",
+      "noi": "crucceremo",
+      "voi": "cruccerete",
+      "loro": "crucceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "crucci",
+      "tu": "crucci",
+      "lui/lei": "crucci",
+      "noi": "crucciamo",
+      "voi": "crucciate",
+      "loro": "cruccino"
+    },
+    "condizionale": {
+      "io": "cruccerei",
+      "tu": "crucceresti",
+      "lui/lei": "cruccerebbe",
+      "noi": "crucceremmo",
+      "voi": "cruccereste",
+      "loro": "cruccerebbero"
+    },
+    "imperativo": {
+      "tu": "cruccia",
+      "lei": "crucci",
+      "noi": "crucciamo",
+      "voi": "crucciate",
+      "loro": "cruccino"
+    }
+  },
+  "cucinare": {
+    "presente": {
+      "io": "cucino",
+      "tu": "cucini",
+      "lui/lei": "cucina",
+      "noi": "cuciniamo",
+      "voi": "cucinate",
+      "loro": "cucinano"
+    },
+    "passatoProssimo": {
+      "io": "ho cucinato",
+      "tu": "hai cucinato",
+      "lui/lei": "ha cucinato",
+      "noi": "abbiamo cucinato",
+      "voi": "avete cucinato",
+      "loro": "hanno cucinato"
+    },
+    "imperfetto": {
+      "io": "cucinavo",
+      "tu": "cucinavi",
+      "lui/lei": "cucinava",
+      "noi": "cucinavamo",
+      "voi": "cucinavate",
+      "loro": "cucinavano"
+    },
+    "futuro": {
+      "io": "cucinerò",
+      "tu": "cucinerai",
+      "lui/lei": "cucinerà",
+      "noi": "cucineremo",
+      "voi": "cucinerete",
+      "loro": "cucineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "cucini",
+      "tu": "cucini",
+      "lui/lei": "cucini",
+      "noi": "cuciniamo",
+      "voi": "cuciniate",
+      "loro": "cucinino"
+    },
+    "condizionale": {
+      "io": "cucinerei",
+      "tu": "cucineresti",
+      "lui/lei": "cucinerebbe",
+      "noi": "cucineremmo",
+      "voi": "cucinereste",
+      "loro": "cucinerebbero"
+    },
+    "imperativo": {
+      "tu": "cucina",
+      "lei": "cucini",
+      "noi": "cuciniamo",
+      "voi": "cucinate",
+      "loro": "cucinino"
+    }
+  },
+  "cucire": {
+    "presente": {
+      "io": "cucio",
+      "tu": "cuci",
+      "lui/lei": "cuce",
+      "noi": "cuciamo",
+      "voi": "cucite",
+      "loro": "cuciono"
+    },
+    "passatoProssimo": {
+      "io": "ho cucito",
+      "tu": "hai cucito",
+      "lui/lei": "ha cucito",
+      "noi": "abbiamo cucito",
+      "voi": "avete cucito",
+      "loro": "hanno cucito"
+    },
+    "imperfetto": {
+      "io": "cucivo",
+      "tu": "cucivi",
+      "lui/lei": "cuciva",
+      "noi": "cucivamo",
+      "voi": "cucivate",
+      "loro": "cucivano"
+    },
+    "futuro": {
+      "io": "cucirò",
+      "tu": "cucirai",
+      "lui/lei": "cucirà",
+      "noi": "cuciremo",
+      "voi": "cucirete",
+      "loro": "cuciranno"
+    },
+    "congiuntivoPresente": {
+      "io": "cucia",
+      "tu": "cucia",
+      "lui/lei": "cucia",
+      "noi": "cuciamo",
+      "voi": "cuciate",
+      "loro": "cuciano"
+    },
+    "condizionale": {
+      "io": "cucirei",
+      "tu": "cuciresti",
+      "lui/lei": "cucirebbe",
+      "noi": "cuciremmo",
+      "voi": "cucireste",
+      "loro": "cucirebbero"
+    },
+    "imperativo": {
+      "tu": "cuci",
+      "lei": "cucia",
+      "noi": "cuciamo",
+      "voi": "cucite",
+      "loro": "cuciano"
+    }
+  },
+  "cullare": {
+    "presente": {
+      "io": "cullo",
+      "tu": "culli",
+      "lui/lei": "culla",
+      "noi": "culliamo",
+      "voi": "cullate",
+      "loro": "cullano"
+    },
+    "passatoProssimo": {
+      "io": "ho cullato",
+      "tu": "hai cullato",
+      "lui/lei": "ha cullato",
+      "noi": "abbiamo cullato",
+      "voi": "avete cullato",
+      "loro": "hanno cullato"
+    },
+    "imperfetto": {
+      "io": "cullavo",
+      "tu": "cullavi",
+      "lui/lei": "cullava",
+      "noi": "cullavamo",
+      "voi": "cullavate",
+      "loro": "cullavano"
+    },
+    "futuro": {
+      "io": "cullerò",
+      "tu": "cullerai",
+      "lui/lei": "cullerà",
+      "noi": "culleremo",
+      "voi": "cullerete",
+      "loro": "culleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "culli",
+      "tu": "culli",
+      "lui/lei": "culli",
+      "noi": "culliamo",
+      "voi": "culliate",
+      "loro": "cullino"
+    },
+    "condizionale": {
+      "io": "cullerei",
+      "tu": "culleresti",
+      "lui/lei": "cullerebbe",
+      "noi": "culleremmo",
+      "voi": "cullereste",
+      "loro": "cullerebbero"
+    },
+    "imperativo": {
+      "tu": "culla",
+      "lei": "culli",
+      "noi": "culliamo",
+      "voi": "cullate",
+      "loro": "cullino"
+    }
+  },
   "cuocere": {
     "presente": {
       "io": "cuocio",
@@ -5298,6 +12317,177 @@
       "noi": "cociamo",
       "voi": "cocete",
       "loro": "cuociano"
+    }
+  },
+  "curare": {
+    "presente": {
+      "io": "curo",
+      "tu": "curi",
+      "lui/lei": "cura",
+      "noi": "curiamo",
+      "voi": "curate",
+      "loro": "curano"
+    },
+    "passatoProssimo": {
+      "io": "ho curato",
+      "tu": "hai curato",
+      "lui/lei": "ha curato",
+      "noi": "abbiamo curato",
+      "voi": "avete curato",
+      "loro": "hanno curato"
+    },
+    "imperfetto": {
+      "io": "curavo",
+      "tu": "curavi",
+      "lui/lei": "curava",
+      "noi": "curavamo",
+      "voi": "curavate",
+      "loro": "curavano"
+    },
+    "futuro": {
+      "io": "curerò",
+      "tu": "curerai",
+      "lui/lei": "curerà",
+      "noi": "cureremo",
+      "voi": "curerete",
+      "loro": "cureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "curi",
+      "tu": "curi",
+      "lui/lei": "curi",
+      "noi": "curiamo",
+      "voi": "curiate",
+      "loro": "curino"
+    },
+    "condizionale": {
+      "io": "curerei",
+      "tu": "cureresti",
+      "lui/lei": "curerebbe",
+      "noi": "cureremmo",
+      "voi": "curereste",
+      "loro": "curerebbero"
+    },
+    "imperativo": {
+      "tu": "cura",
+      "lei": "curi",
+      "noi": "curiamo",
+      "voi": "curate",
+      "loro": "curino"
+    }
+  },
+  "curvare": {
+    "presente": {
+      "io": "curvo",
+      "tu": "curvi",
+      "lui/lei": "curva",
+      "noi": "curviamo",
+      "voi": "curvate",
+      "loro": "curvano"
+    },
+    "passatoProssimo": {
+      "io": "ho curvato",
+      "tu": "hai curvato",
+      "lui/lei": "ha curvato",
+      "noi": "abbiamo curvato",
+      "voi": "avete curvato",
+      "loro": "hanno curvato"
+    },
+    "imperfetto": {
+      "io": "curvavo",
+      "tu": "curvavi",
+      "lui/lei": "curvava",
+      "noi": "curvavamo",
+      "voi": "curvavate",
+      "loro": "curvavano"
+    },
+    "futuro": {
+      "io": "curverò",
+      "tu": "curverai",
+      "lui/lei": "curverà",
+      "noi": "curveremo",
+      "voi": "curverete",
+      "loro": "curveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "curvi",
+      "tu": "curvi",
+      "lui/lei": "curvi",
+      "noi": "curviamo",
+      "voi": "curviate",
+      "loro": "curvino"
+    },
+    "condizionale": {
+      "io": "curverei",
+      "tu": "curveresti",
+      "lui/lei": "curverebbe",
+      "noi": "curveremmo",
+      "voi": "curvereste",
+      "loro": "curverebbero"
+    },
+    "imperativo": {
+      "tu": "curva",
+      "lei": "curvi",
+      "noi": "curviamo",
+      "voi": "curvate",
+      "loro": "curvino"
+    }
+  },
+  "custodire": {
+    "presente": {
+      "io": "custodisco",
+      "tu": "custodisci",
+      "lui/lei": "custodisce",
+      "noi": "custodiamo",
+      "voi": "custodite",
+      "loro": "custodiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho custodito",
+      "tu": "hai custodito",
+      "lui/lei": "ha custodito",
+      "noi": "abbiamo custodito",
+      "voi": "avete custodito",
+      "loro": "hanno custodito"
+    },
+    "imperfetto": {
+      "io": "custodivo",
+      "tu": "custodivi",
+      "lui/lei": "custodiva",
+      "noi": "custodivamo",
+      "voi": "custodivate",
+      "loro": "custodivano"
+    },
+    "futuro": {
+      "io": "custodirò",
+      "tu": "custodirai",
+      "lui/lei": "custodirà",
+      "noi": "custodiremo",
+      "voi": "custodirete",
+      "loro": "custodiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "custodisca",
+      "tu": "custodisca",
+      "lui/lei": "custodisca",
+      "noi": "custodiamo",
+      "voi": "custodiate",
+      "loro": "custodiscano"
+    },
+    "condizionale": {
+      "io": "custodirei",
+      "tu": "custodiresti",
+      "lui/lei": "custodirebbe",
+      "noi": "custodiremmo",
+      "voi": "custodireste",
+      "loro": "custodirebbero"
+    },
+    "imperativo": {
+      "tu": "custodisci",
+      "lei": "custodisca",
+      "noi": "custodiamo",
+      "voi": "custodite",
+      "loro": "custodiscano"
     }
   }
 }

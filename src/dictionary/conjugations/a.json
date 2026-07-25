@@ -2621,6 +2621,63 @@
       "loro": "acconcino"
     }
   },
+  "acconciarsi": {
+    "presente": {
+      "io": "mi acconcio",
+      "tu": "ti acconci",
+      "lui/lei": "si acconcia",
+      "noi": "ci acconciamo",
+      "voi": "vi acconciate",
+      "loro": "si acconciano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono acconciato/a",
+      "tu": "ti sei acconciato/a",
+      "lui/lei": "si è acconciato/a",
+      "noi": "ci siamo acconciati/e",
+      "voi": "vi siete acconciati/e",
+      "loro": "si sono acconciati/e"
+    },
+    "imperfetto": {
+      "io": "mi acconciavo",
+      "tu": "ti acconciavi",
+      "lui/lei": "si acconciava",
+      "noi": "ci acconciavamo",
+      "voi": "vi acconciavate",
+      "loro": "si acconciavano"
+    },
+    "futuro": {
+      "io": "mi acconcerò",
+      "tu": "ti acconcerai",
+      "lui/lei": "si acconcerà",
+      "noi": "ci acconceremo",
+      "voi": "vi acconcerete",
+      "loro": "si acconceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi acconci",
+      "tu": "ti acconci",
+      "lui/lei": "si acconci",
+      "noi": "ci acconciamo",
+      "voi": "vi acconciate",
+      "loro": "si acconcino"
+    },
+    "condizionale": {
+      "io": "mi acconcerei",
+      "tu": "ti acconceresti",
+      "lui/lei": "si acconcerebbe",
+      "noi": "ci acconceremmo",
+      "voi": "vi acconcereste",
+      "loro": "si acconcerebbero"
+    },
+    "imperativo": {
+      "tu": "acconciati",
+      "lei": "si acconci",
+      "noi": "acconciamoci",
+      "voi": "acconciatevi",
+      "loro": "si acconcino"
+    }
+  },
   "accondiscendere": {
     "presente": {
       "io": "accondiscendo",
@@ -14055,6 +14112,63 @@
       "noi": "appuntiamo",
       "voi": "appuntate",
       "loro": "appuntino"
+    }
+  },
+  "appurare": {
+    "presente": {
+      "io": "appuro",
+      "tu": "appuri",
+      "lui/lei": "appura",
+      "noi": "appuriamo",
+      "voi": "appurate",
+      "loro": "appurano"
+    },
+    "passatoProssimo": {
+      "io": "ho appurato",
+      "tu": "hai appurato",
+      "lui/lei": "ha appurato",
+      "noi": "abbiamo appurato",
+      "voi": "avete appurato",
+      "loro": "hanno appurato"
+    },
+    "imperfetto": {
+      "io": "appuravo",
+      "tu": "appuravi",
+      "lui/lei": "appurava",
+      "noi": "appuravamo",
+      "voi": "appuravate",
+      "loro": "appuravano"
+    },
+    "futuro": {
+      "io": "appurerò",
+      "tu": "appurerai",
+      "lui/lei": "appurerà",
+      "noi": "appureremo",
+      "voi": "appurerete",
+      "loro": "appureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "appuri",
+      "tu": "appuri",
+      "lui/lei": "appuri",
+      "noi": "appuriamo",
+      "voi": "appuriate",
+      "loro": "appurino"
+    },
+    "condizionale": {
+      "io": "appurerei",
+      "tu": "appureresti",
+      "lui/lei": "appurerebbe",
+      "noi": "appureremmo",
+      "voi": "appurereste",
+      "loro": "appurerebbero"
+    },
+    "imperativo": {
+      "tu": "appura",
+      "lei": "appuri",
+      "noi": "appuriamo",
+      "voi": "appurate",
+      "loro": "appurino"
     }
   },
   "aprire": {

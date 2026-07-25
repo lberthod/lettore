@@ -1,0 +1,46 @@
+{
+  "yankee": {
+    "lemma": "yankee",
+    "pos": "nome/aggettivo (invariabile)",
+    "fr": "yankee, américain",
+    "definition_it": "termine, spesso informale, che indica gli statunitensi o ciò che è tipicamente americano",
+    "examples": [
+      {
+        "it": "Nel film il protagonista era un tipico yankee.",
+        "fr": "Dans le film, le protagoniste était un yankee typique."
+      }
+    ],
+    "synonyms": [
+      "americano"
+    ],
+    "isVerb": false
+  },
+  "yoga": {
+    "lemma": "yoga",
+    "pos": "nome (m., invariabile)",
+    "fr": "yoga",
+    "definition_it": "disciplina di origine indiana che unisce esercizi fisici, respirazione e meditazione per il benessere del corpo e della mente",
+    "examples": [
+      {
+        "it": "Fa yoga ogni mattina prima di colazione.",
+        "fr": "Elle fait du yoga chaque matin avant le petit-déjeuner."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "yogurt": {
+    "lemma": "yogurt",
+    "pos": "nome (m., invariabile)",
+    "fr": "yaourt",
+    "definition_it": "alimento cremoso ottenuto dalla fermentazione del latte tramite fermenti lattici",
+    "examples": [
+      {
+        "it": "A colazione mangio uno yogurt con la frutta.",
+        "fr": "Au petit-déjeuner, je mange un yaourt avec des fruits."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  }
+}

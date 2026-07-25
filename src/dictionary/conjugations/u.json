@@ -1,4 +1,61 @@
 {
+  "uccidere": {
+    "presente": {
+      "io": "uccido",
+      "tu": "uccidi",
+      "lui/lei": "uccide",
+      "noi": "uccidiamo",
+      "voi": "uccidete",
+      "loro": "uccidono"
+    },
+    "passatoProssimo": {
+      "io": "ho ucciso",
+      "tu": "hai ucciso",
+      "lui/lei": "ha ucciso",
+      "noi": "abbiamo ucciso",
+      "voi": "avete ucciso",
+      "loro": "hanno ucciso"
+    },
+    "imperfetto": {
+      "io": "uccidevo",
+      "tu": "uccidevi",
+      "lui/lei": "uccideva",
+      "noi": "uccidevamo",
+      "voi": "uccidevate",
+      "loro": "uccidevano"
+    },
+    "futuro": {
+      "io": "ucciderò",
+      "tu": "ucciderai",
+      "lui/lei": "ucciderà",
+      "noi": "uccideremo",
+      "voi": "ucciderete",
+      "loro": "uccideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "uccida",
+      "tu": "uccida",
+      "lui/lei": "uccida",
+      "noi": "uccidiamo",
+      "voi": "uccidiate",
+      "loro": "uccidano"
+    },
+    "condizionale": {
+      "io": "ucciderei",
+      "tu": "uccideresti",
+      "lui/lei": "ucciderebbe",
+      "noi": "uccideremmo",
+      "voi": "uccidereste",
+      "loro": "ucciderebbero"
+    },
+    "imperativo": {
+      "tu": "uccidi",
+      "lei": "uccida",
+      "noi": "uccidiamo",
+      "voi": "uccidete",
+      "loro": "uccidano"
+    }
+  },
   "udire": {
     "presente": {
       "io": "odo",
@@ -54,6 +111,63 @@
       "noi": "udiamo",
       "voi": "udite",
       "loro": "odano"
+    }
+  },
+  "usare": {
+    "presente": {
+      "io": "uso",
+      "tu": "usi",
+      "lui/lei": "usa",
+      "noi": "usiamo",
+      "voi": "usate",
+      "loro": "usano"
+    },
+    "passatoProssimo": {
+      "io": "ho usato",
+      "tu": "hai usato",
+      "lui/lei": "ha usato",
+      "noi": "abbiamo usato",
+      "voi": "avete usato",
+      "loro": "hanno usato"
+    },
+    "imperfetto": {
+      "io": "usavo",
+      "tu": "usavi",
+      "lui/lei": "usava",
+      "noi": "usavamo",
+      "voi": "usavate",
+      "loro": "usavano"
+    },
+    "futuro": {
+      "io": "userò",
+      "tu": "userai",
+      "lui/lei": "userà",
+      "noi": "useremo",
+      "voi": "userete",
+      "loro": "useranno"
+    },
+    "congiuntivoPresente": {
+      "io": "usi",
+      "tu": "usi",
+      "lui/lei": "usi",
+      "noi": "usiamo",
+      "voi": "usiate",
+      "loro": "usino"
+    },
+    "condizionale": {
+      "io": "userei",
+      "tu": "useresti",
+      "lui/lei": "userebbe",
+      "noi": "useremmo",
+      "voi": "usereste",
+      "loro": "userebbero"
+    },
+    "imperativo": {
+      "tu": "usa",
+      "lei": "usi",
+      "noi": "usiamo",
+      "voi": "usate",
+      "loro": "usino"
     }
   },
   "uscire": {
