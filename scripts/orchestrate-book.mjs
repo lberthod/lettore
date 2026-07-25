@@ -108,7 +108,7 @@ const book = {
 fs.writeFileSync(path.join(outDir, 'book.json'), JSON.stringify(book, null, 2) + '\n')
 
 // Index léger des livres, séparé de src/texts/index.json (concept différent :
-// voir LETTORE_EBOOK.md §4).
+// un livre a des chapitres, pas un lexique par entrée d'index).
 const indexFile = path.join(ROOT, 'src/books/index.json')
 const index = fs.existsSync(indexFile) ? JSON.parse(fs.readFileSync(indexFile, 'utf8')) : []
 const wordCount = chapters.reduce((n, c) => {

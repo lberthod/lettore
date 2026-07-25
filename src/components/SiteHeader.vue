@@ -52,6 +52,8 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
       <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">🗞 Notizie</RouterLink>
+      <RouterLink :to="{ name: 'dictionary' }">📕 Dizionario</RouterLink>
+      <RouterLink :to="{ name: 'verbs' }">🔤 Verbi</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">📖 Vocabulaire</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'words' }">
         ☆ Mes mots<span v-if="progress.favorites.length" class="count">{{

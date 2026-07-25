@@ -19,6 +19,8 @@ Leggendo est une **SPA Vue 3 essentiellement statique** : pas d'API de traductio
 │                         ├── CreateTextView  (« Créer son texte »)│
 │                         ├── MyTextsView     (« Mes textes »)     │
 │                         ├── WordsView       (mots favoris)       │
+│                         ├── DictionaryView  (Dizionario, pilote) │
+│                         ├── ConjugationView / VerbsView          │
 │                         ├── LoginView / ProfileView              │
 │                         ├── PricingView / AdminView              │
 │                         └── pages statiques (à-propos, méthode,  │
@@ -65,7 +67,7 @@ Chaque texte vit dans `src/texts/<id>.json` et embarque tout ce dont le lecteur 
 
 `src/texts/index.json` est l'index léger (titre, niveau CECR, extrait, nombre de mots, `genre`, `category`) importé statiquement : c'est lui qu'utilisent l'accueil, la bibliothèque et ses filtres, le garde de navigation du routeur et les balises SEO — sans charger le contenu des textes.
 
-La taxonomie du catalogue est définie dans [src/texts/category.json](src/texts/category.json) : niveaux (A1–C2), tailles (`corto` → `molto_lungo`), et deux dimensions orthogonales — **genre** (la forme : récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (le sujet : cuisine, voyages, montagne, histoire…). Ce fichier sert à la fois à l'UI (filtres, formulaire « Créer son texte ») et aux générateurs (hints de prompt, matrice curée). La stratégie derrière cette taxonomie est documentée dans [ANALYSE_CATEGORIES.md](ANALYSE_CATEGORIES.md).
+La taxonomie du catalogue est définie dans [src/texts/category.json](src/texts/category.json) : niveaux (A1–C2), tailles (`corto` → `molto_lungo`), et deux dimensions orthogonales — **genre** (la forme : récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (le sujet : cuisine, voyages, montagne, histoire…). Ce fichier sert à la fois à l'UI (filtres, formulaire « Créer son texte ») et aux générateurs (hints de prompt, matrice curée).
 
 Le chargement à la demande repose sur `import.meta.glob('../texts/*.json')` dans [ReaderView.vue](src/views/ReaderView.vue) : Vite génère un chunk par fichier, et le lecteur ne télécharge que le texte demandé. Les textes précédent et suivant sont préchargés pour une navigation instantanée.
 
@@ -95,6 +97,10 @@ Un utilisateur connecté décrit le texte qu'il veut (sujet, niveau, genre, thè
 - **[lib/generation.js](src/lib/generation.js)** : l'état du job vit au niveau module (pas dans une vue) pour que la génération continue pendant la navigation, et il est persisté dans `localStorage` pour reprendre le polling après un rechargement. À la fin, le texte est enregistré automatiquement dans Firestore.
 - **[lib/userTexts.js](src/lib/userTexts.js)** : texte complet dans `userTexts/{id}` (champ `owner`), index léger dans `users/{uid}.createdTexts` pour lister sans requête. Firestore est importé dynamiquement, comme le reste du SDK.
 - **Lecture** : `ReaderView` sert aussi les textes utilisateurs — si l'id n'est pas dans l'index du catalogue, il charge depuis Firestore via `loadUserText()`. La route `/condividi/:id` permet de partager un texte créé.
+
+## Dizionario : dictionnaire et conjugaison (pilote)
+
+`/dizionario`, `/coniugazione/:verbo` et `/verbi` servent un dictionnaire italien-français (définition, nature grammaticale, exemples, synonymes) et des tableaux de conjugaison complets, entièrement pré-générés — même principe que les textes : **aucun appel réseau/LLM au runtime**. Les données vivent dans `src/dictionary/` (`lemmas.json`, `conjugations.json`, `word-index.json` — ce dernier résout une forme fléchie rencontrée dans un texte, ex. « abbandonava », vers son lemme, ex. « abbandonare ») et sont lues via [lib/dictionary.js](src/lib/dictionary.js). Le bouton ℹ︎ de [TranslationOverlay](src/components/TranslationOverlay.vue) renvoie vers la fiche du mot cliqué en lecture. Contexte, choix de conception et volumétrie du dictionnaire complet à venir : [analyse.md](analyse.md).
 
 ## Le lecteur (ReaderView)
 

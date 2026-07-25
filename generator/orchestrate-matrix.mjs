@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Orchestrateur « matrice genre × thème » — basé sur src/texts/category.json
-// (voir ANALYSE_CATEGORIES.md). Contrairement à orchestrate.mjs (1 texte par
+// Orchestrateur « matrice genre × thème » — basé sur src/texts/category.json.
+// Contrairement à orchestrate.mjs (1 texte par
 // thème × niveau × taille, tous en genre "récit"), ce script parcourt la
 // liste curée `curatedMatrix` de category.json et garantit, pour chaque
 // combinaison genre × thème retenue : 1 texte par niveau × par taille.

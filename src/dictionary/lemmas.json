@@ -1,0 +1,514 @@
+{
+  "a": {
+    "lemma": "a",
+    "pos": "preposizione",
+    "fr": "à",
+    "definition_it": "parola che indica direzione, luogo, tempo o modo",
+    "examples": [
+      {
+        "it": "Vado a scuola ogni giorno.",
+        "fr": "Je vais à l'école tous les jours."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "a fondo": {
+    "lemma": "a fondo",
+    "pos": "locuzione avverbiale",
+    "fr": "à fond, en profondeur",
+    "definition_it": "in modo completo e approfondito",
+    "examples": [
+      {
+        "it": "Ha studiato il problema a fondo.",
+        "fr": "Il a étudié le problème à fond."
+      }
+    ],
+    "synonyms": [
+      "approfonditamente",
+      "completamente"
+    ],
+    "isVerb": false
+  },
+  "a volte": {
+    "lemma": "a volte",
+    "pos": "locuzione avverbiale",
+    "fr": "parfois",
+    "definition_it": "in alcune occasioni, non sempre",
+    "examples": [
+      {
+        "it": "A volte piove anche in estate.",
+        "fr": "Parfois il pleut même en été."
+      }
+    ],
+    "synonyms": [
+      "talvolta",
+      "qualche volta"
+    ],
+    "isVerb": false
+  },
+  "abate": {
+    "lemma": "abate",
+    "pos": "nome maschile",
+    "fr": "abbé",
+    "definition_it": "il superiore di un'abbazia o di un monastero",
+    "examples": [
+      {
+        "it": "L'abate accolse i pellegrini in convento.",
+        "fr": "L'abbé accueillit les pèlerins au couvent."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "abbadare": {
+    "lemma": "abbadare",
+    "pos": "verbo (intransitivo, arcaico)",
+    "fr": "faire attention à, s'occuper de",
+    "definition_it": "prestare attenzione a qualcosa o a qualcuno, occuparsene (forma antica di badare)",
+    "examples": [
+      {
+        "it": "Nessuno abbadava ai suoi lamenti.",
+        "fr": "Personne ne prêtait attention à ses plaintes."
+      }
+    ],
+    "synonyms": [
+      "badare",
+      "curarsi di"
+    ],
+    "isVerb": true
+  },
+  "abbagliante": {
+    "lemma": "abbagliante",
+    "pos": "aggettivo / nome maschile plurale",
+    "fr": "éblouissant / feux de route",
+    "definition_it": "che abbaglia con una luce troppo forte; al plurale, i fari dell'auto a luce intensa",
+    "examples": [
+      {
+        "it": "Ha lampeggiato con gli abbaglianti per farmi segno.",
+        "fr": "Il a fait des appels de phares avec ses feux de route pour me faire signe."
+      }
+    ],
+    "synonyms": [
+      "accecante"
+    ],
+    "isVerb": false
+  },
+  "abbagliare": {
+    "lemma": "abbagliare",
+    "pos": "verbo (transitivo)",
+    "fr": "éblouir",
+    "definition_it": "colpire gli occhi con una luce troppo intensa, impedendo di vedere bene",
+    "examples": [
+      {
+        "it": "I fari dell'auto mi hanno abbagliato.",
+        "fr": "Les phares de la voiture m'ont ébloui."
+      }
+    ],
+    "synonyms": [
+      "accecare"
+    ],
+    "isVerb": true
+  },
+  "abbaiare": {
+    "lemma": "abbaiare",
+    "pos": "verbo (intransitivo)",
+    "fr": "aboyer",
+    "definition_it": "emettere il verso tipico del cane",
+    "examples": [
+      {
+        "it": "Il cane abbaiava tutta la notte.",
+        "fr": "Le chien aboyait toute la nuit."
+      }
+    ],
+    "synonyms": [
+      "abbajare"
+    ],
+    "isVerb": true
+  },
+  "abbaiamento": {
+    "lemma": "abbaiamento",
+    "pos": "nome maschile",
+    "fr": "aboiement",
+    "definition_it": "il verso del cane, l'atto di abbaiare",
+    "examples": [
+      {
+        "it": "Si sentivano abbaiamenti in lontananza.",
+        "fr": "On entendait des aboiements au loin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "abballottare": {
+    "lemma": "abballottare",
+    "pos": "verbo (transitivo, raro/dialettale)",
+    "fr": "secouer, ballotter",
+    "definition_it": "scuotere qualcosa muovendolo in modo brusco e ripetuto",
+    "examples": [
+      {
+        "it": "Le onde abballottavano la barca.",
+        "fr": "Les vagues ballottaient la barque."
+      }
+    ],
+    "synonyms": [
+      "scuotere",
+      "sballottare"
+    ],
+    "isVerb": true
+  },
+  "abbandonare": {
+    "lemma": "abbandonare",
+    "pos": "verbe (transitif)",
+    "fr": "abandonner",
+    "definition_it": "lasciare qualcuno o qualcosa, smettere di occuparsene",
+    "examples": [
+      {
+        "it": "Ha abbandonato la casa dopo la guerra.",
+        "fr": "Il a abandonné la maison après la guerre."
+      }
+    ],
+    "synonyms": [
+      "lasciare",
+      "trascurare"
+    ],
+    "isVerb": true
+  },
+  "abbassare": {
+    "lemma": "abbassare",
+    "pos": "verbo (transitivo)",
+    "fr": "baisser, abaisser",
+    "definition_it": "portare qualcosa verso il basso o diminuirne l'intensità",
+    "examples": [
+      {
+        "it": "Ha abbassato la voce per non svegliare il bambino.",
+        "fr": "Il a baissé la voix pour ne pas réveiller l'enfant."
+      }
+    ],
+    "synonyms": [
+      "calare",
+      "diminuire"
+    ],
+    "isVerb": true
+  },
+  "abbasso": {
+    "lemma": "abbasso",
+    "pos": "avverbio / interiezione",
+    "fr": "en bas / à bas",
+    "definition_it": "verso il basso, oppure esclamazione di disapprovazione verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Abbasso la guerra!",
+        "fr": "À bas la guerre !"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "abbastanza": {
+    "lemma": "abbastanza",
+    "pos": "avverbio",
+    "fr": "assez",
+    "definition_it": "in misura sufficiente, non poco",
+    "examples": [
+      {
+        "it": "Ho mangiato abbastanza, grazie.",
+        "fr": "J'ai assez mangé, merci."
+      }
+    ],
+    "synonyms": [
+      "sufficientemente"
+    ],
+    "isVerb": false
+  },
+  "abbattere": {
+    "lemma": "abbattere",
+    "pos": "verbo (transitivo)",
+    "fr": "abattre",
+    "definition_it": "far cadere qualcosa con la forza, distruggere, oppure scoraggiare profondamente",
+    "examples": [
+      {
+        "it": "Hanno abbattuto il vecchio ponte.",
+        "fr": "Ils ont abattu le vieux pont."
+      }
+    ],
+    "synonyms": [
+      "demolire",
+      "atterrare"
+    ],
+    "isVerb": true
+  },
+  "abbecedario": {
+    "lemma": "abbecedario",
+    "pos": "nome maschile",
+    "fr": "abécédaire",
+    "definition_it": "libro per imparare le lettere dell'alfabeto",
+    "examples": [
+      {
+        "it": "Il bambino imparava a leggere sull'abbecedario.",
+        "fr": "L'enfant apprenait à lire dans son abécédaire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "abbellire": {
+    "lemma": "abbellire",
+    "pos": "verbo (transitivo)",
+    "fr": "embellir",
+    "definition_it": "rendere più bello qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Hanno abbellito la piazza con nuovi fiori.",
+        "fr": "Ils ont embelli la place avec de nouvelles fleurs."
+      }
+    ],
+    "synonyms": [
+      "ornare",
+      "adornare"
+    ],
+    "isVerb": true
+  },
+  "avere": {
+    "lemma": "avere",
+    "pos": "verbo (ausiliare/transitivo)",
+    "fr": "avoir",
+    "definition_it": "possedere qualcosa, oppure verbo ausiliare usato per formare i tempi composti",
+    "examples": [
+      {
+        "it": "Abbiamo un nuovo libro di italiano.",
+        "fr": "Nous avons un nouveau livre d'italien."
+      }
+    ],
+    "synonyms": [
+      "possedere"
+    ],
+    "isVerb": true
+  },
+  "fare": {
+    "lemma": "fare",
+    "pos": "verbo (transitivo)",
+    "fr": "faire",
+    "definition_it": "compiere un'azione, produrre o realizzare qualcosa",
+    "examples": [
+      {
+        "it": "Ha fatto i compiti prima di cena.",
+        "fr": "Il a fait ses devoirs avant le dîner."
+      }
+    ],
+    "synonyms": [
+      "compiere",
+      "realizzare"
+    ],
+    "isVerb": true
+  },
+  "abbigliamento": {
+    "lemma": "abbigliamento",
+    "pos": "nome maschile",
+    "fr": "habillement, vêtements",
+    "definition_it": "l'insieme dei vestiti che una persona indossa",
+    "examples": [
+      {
+        "it": "Questo negozio vende abbigliamento sportivo.",
+        "fr": "Ce magasin vend des vêtements de sport."
+      }
+    ],
+    "synonyms": [
+      "vestiario"
+    ],
+    "isVerb": false
+  },
+  "abbigliare": {
+    "lemma": "abbigliare",
+    "pos": "verbo (transitivo, letterario)",
+    "fr": "habiller, vêtir",
+    "definition_it": "vestire qualcuno, spesso in modo elegante o particolare",
+    "examples": [
+      {
+        "it": "La sarta abbigliava la sposa con cura.",
+        "fr": "La couturière habillait la mariée avec soin."
+      }
+    ],
+    "synonyms": [
+      "vestire"
+    ],
+    "isVerb": true
+  },
+  "abbinamento": {
+    "lemma": "abbinamento",
+    "pos": "nome maschile",
+    "fr": "association, accord",
+    "definition_it": "l'azione di mettere insieme due o più cose che si accompagnano bene",
+    "examples": [
+      {
+        "it": "L'abbinamento tra vino e formaggio era perfetto.",
+        "fr": "L'accord entre le vin et le fromage était parfait."
+      }
+    ],
+    "synonyms": [
+      "accostamento"
+    ],
+    "isVerb": false
+  },
+  "abbinare": {
+    "lemma": "abbinare",
+    "pos": "verbo (transitivo)",
+    "fr": "associer, assortir",
+    "definition_it": "mettere insieme due o più cose in modo che si accompagnino bene",
+    "examples": [
+      {
+        "it": "Ha abbinato la giacca blu ai pantaloni grigi.",
+        "fr": "Il a assorti la veste bleue au pantalon gris."
+      }
+    ],
+    "synonyms": [
+      "accostare",
+      "associare"
+    ],
+    "isVerb": true
+  },
+  "abbisognare": {
+    "lemma": "abbisognare",
+    "pos": "verbo (intransitivo)",
+    "fr": "avoir besoin de, falloir",
+    "definition_it": "avere bisogno di qualcosa",
+    "examples": [
+      {
+        "it": "Il progetto abbisognava di più tempo.",
+        "fr": "Le projet avait besoin de plus de temps."
+      }
+    ],
+    "synonyms": [
+      "necessitare"
+    ],
+    "isVerb": true
+  },
+  "abboccare": {
+    "lemma": "abboccare",
+    "pos": "verbo (intransitivo)",
+    "fr": "mordre à l'hameçon, se laisser tromper",
+    "definition_it": "riferito al pesce, prendere l'esca; per estensione, lasciarsi ingannare",
+    "examples": [
+      {
+        "it": "Il pesce ha abboccato subito all'amo.",
+        "fr": "Le poisson a mordu tout de suite à l'hameçon."
+      }
+    ],
+    "synonyms": [
+      "cascarci"
+    ],
+    "isVerb": true
+  },
+  "abbonamento": {
+    "lemma": "abbonamento",
+    "pos": "nome maschile",
+    "fr": "abonnement",
+    "definition_it": "contratto che permette di usare un servizio per un certo periodo pagando una somma fissa",
+    "examples": [
+      {
+        "it": "Ho fatto l'abbonamento al teatro per un anno.",
+        "fr": "J'ai pris un abonnement au théâtre pour un an."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "abbonato": {
+    "lemma": "abbonato",
+    "pos": "nome / aggettivo",
+    "fr": "abonné",
+    "definition_it": "chi ha sottoscritto un abbonamento a un servizio",
+    "examples": [
+      {
+        "it": "Gli abbonati ricevono la rivista ogni mese.",
+        "fr": "Les abonnés reçoivent la revue chaque mois."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "abbondante": {
+    "lemma": "abbondante",
+    "pos": "aggettivo",
+    "fr": "abondant",
+    "definition_it": "presente in grande quantità",
+    "examples": [
+      {
+        "it": "Abbiamo mangiato una cena abbondante.",
+        "fr": "Nous avons mangé un dîner abondant."
+      }
+    ],
+    "synonyms": [
+      "copioso",
+      "ricco"
+    ],
+    "isVerb": false
+  },
+  "abbondanza": {
+    "lemma": "abbondanza",
+    "pos": "nome femminile",
+    "fr": "abondance",
+    "definition_it": "grande quantità di qualcosa",
+    "examples": [
+      {
+        "it": "In quella regione c'è abbondanza di frutta.",
+        "fr": "Dans cette région, il y a abondance de fruits."
+      }
+    ],
+    "synonyms": [
+      "ricchezza",
+      "copia"
+    ],
+    "isVerb": false
+  },
+  "abbozzare": {
+    "lemma": "abbozzare",
+    "pos": "verbo (transitivo)",
+    "fr": "ébaucher, esquisser",
+    "definition_it": "tracciare le linee generali di qualcosa senza definirne i dettagli",
+    "examples": [
+      {
+        "it": "L'artista ha abbozzato il disegno in pochi minuti.",
+        "fr": "L'artiste a esquissé le dessin en quelques minutes."
+      }
+    ],
+    "synonyms": [
+      "schizzare",
+      "delineare"
+    ],
+    "isVerb": true
+  },
+  "abbracciare": {
+    "lemma": "abbracciare",
+    "pos": "verbo (transitivo)",
+    "fr": "embrasser, étreindre",
+    "definition_it": "stringere qualcuno tra le braccia in segno di affetto",
+    "examples": [
+      {
+        "it": "I due amici si sono abbracciati con gioia.",
+        "fr": "Les deux amis se sont embrassés avec joie."
+      }
+    ],
+    "synonyms": [
+      "stringere",
+      "cingere"
+    ],
+    "isVerb": true
+  },
+  "abbracciamento": {
+    "lemma": "abbracciamento",
+    "pos": "nome maschile (letterario/arcaico)",
+    "fr": "étreinte, embrassement",
+    "definition_it": "l'atto di abbracciare, stretta affettuosa",
+    "examples": [
+      {
+        "it": "Gli abbracciamenti tra i parenti commossero tutti.",
+        "fr": "Les embrassades entre les proches émurent tout le monde."
+      }
+    ],
+    "synonyms": [
+      "abbraccio"
+    ],
+    "isVerb": false
+  }
+}

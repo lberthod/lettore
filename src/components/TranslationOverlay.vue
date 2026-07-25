@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+
 defineProps({
   x: Number,
   y: Number,
@@ -50,6 +52,15 @@ defineEmits(['close', 'speak', 'favorite'])
       >
         {{ isFavorite ? '★' : '☆' }}
       </button>
+      <RouterLink
+        v-if="!isSentence && original"
+        class="more"
+        :to="{ name: 'dictionary', params: { word: original } }"
+        title="En savoir plus (dictionnaire)"
+        aria-label="En savoir plus (dictionnaire)"
+      >
+        ℹ︎
+      </RouterLink>
     </div>
   </div>
 </template>
@@ -172,6 +183,20 @@ defineEmits(['close', 'speak', 'favorite'])
 
 .fav:hover,
 .fav.active {
+  opacity: 1;
+}
+
+.more {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0 0.15rem;
+  margin-left: 0.25rem;
+  opacity: 0.7;
+  vertical-align: -1px;
+}
+
+.more:hover {
   opacity: 1;
 }
 </style>

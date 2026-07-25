@@ -82,3 +82,7 @@ VPS.md
 
 # Identifiants FTP de déploiement (jamais commités, seul .example l'est)
 scripts/.env.deploy
+
+# Données intermédiaires/scratch de génération (reproductibles via les
+# scripts, pas la source de vérité — voir src/dictionary/ pour le résultat)
+scripts/data/

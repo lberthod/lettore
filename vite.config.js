@@ -52,7 +52,7 @@ const FREE_CLASSICI_PREVIEW_BOOK_IDS = [
 // accessible sans abonnement payant : le reste du catalogue et de Classici
 // est chargé à la demande et mis en cache après un accès autorisé (voir
 // runtimeCaching ci-dessous) — évite de télécharger tout le catalogue payant
-// dès l'installation de la PWA (correctauditgpt.md, Sprint 9.2).
+// dès l'installation de la PWA.
 function lockedContentIgnorePatterns() {
   const freeTextIds = new Set(pickFreeTextIds())
   const textsIndex = readJson('src/texts/index.json')

@@ -1,5 +1,5 @@
 // Génère un texte gradué d'actualité à partir d'un article RSS italien
-// (formule Premium+, voir PREMIUM_PLUS_ANALYSIS.md). Même pipeline que
+// (formule Premium+). Même pipeline que
 // generate.mjs (génération → validation de couverture lexicale → réparation),
 // avec un system prompt qui impose la reformulation fidèle (jamais de
 // republication de l'article source) et interdit d'inventer des faits.

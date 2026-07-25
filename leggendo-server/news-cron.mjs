@@ -1,7 +1,7 @@
 // Cron VPS — génère UN texte d'actualité par exécution (planifié 3×/jour,
 // voir crontab en bas de fichier), pour la formule Premium+. Pool partagé :
-// un seul texte par niveau/run, pas un appel par abonné (voir
-// PREMIUM_PLUS_ANALYSIS.md §2.2 sur l'impact coût de cette architecture).
+// un seul texte par niveau/run, pas un appel par abonné (impact coût direct
+// de cette architecture).
 //
 // Usage : node news-cron.mjs
 // Nécessite les mêmes variables d'environnement que server.mjs

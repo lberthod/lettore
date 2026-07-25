@@ -1,5 +1,5 @@
 // Charge la taxonomie à deux dimensions (genre × thème) depuis
-// src/texts/category.json — voir ANALYSE_CATEGORIES.md à la racine du repo.
+// src/texts/category.json.
 
 import fs from 'node:fs'
 import path from 'node:path'

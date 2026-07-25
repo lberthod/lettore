@@ -14,10 +14,11 @@ Application web de lecture pour apprendre l'italien : des textes gradués en ita
 - ✍️ **Créer son texte** : un utilisateur connecté demande un texte sur mesure (sujet, niveau, genre, taille) — généré par LLM sur le VPS, enregistré dans Firestore, retrouvable dans « Mes textes »
 - 👤 **Comptes Firebase** (facultatifs) : 6 textes en aperçu gratuit pour les visiteurs, catalogue complet réservé à Premium et au-dessus
 - 📖 **Classici** : 16 œuvres classiques du domaine public (texte authentique, non simplifié) — 2 livres en entier et le premier chapitre de quelques autres en aperçu gratuit dès la connexion, le reste réservé à Premium IA et Enseignant
+- 📕 **Dizionario** *(pilote)* : dictionnaire italien-français (définition, nature grammaticale, exemples, synonymes) et tableaux de conjugaison complets, pré-générés et servis en statique — voir [analyse.md](analyse.md)
 - 📱 **PWA installable** : service worker actif, app et textes disponibles hors ligne
 - ⚡ **Chargement à la demande** : chaque texte est un chunk séparé (via `import.meta.glob`)
 
-L'architecture détaillée (modules, flux de données, principes) est décrite dans [ARCHITECTURE.md](ARCHITECTURE.md). La stratégie de taxonomie du contenu est dans [ANALYSE_CATEGORIES.md](ANALYSE_CATEGORIES.md).
+L'architecture détaillée (modules, flux de données, principes) est décrite dans [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Stack technique
 
@@ -49,18 +50,22 @@ Le build est généré dans `dist/`, servi par Firebase Hosting (SPA avec rewrit
 ```
 src/
 ├── views/                  # Home, Library (bibliothèque), Reader, CreateText,
-│                           # MyTexts, Words, Login/Profile, Pricing, Admin,
+│                           # MyTexts, Words, Dictionary, Conjugation, Verbs,
+│                           # Login/Profile, Pricing, Admin,
 │                           # pages statiques (à-propos, méthode, CGU…)
 ├── components/             # TranslationOverlay, QuizSection, header/footer…
 ├── texts/
 │   ├── index.json          # Index des textes (titre, niveau, genre, thème…)
 │   ├── category.json       # Taxonomie : niveaux, tailles, genres, thèmes
 │   └── *.json              # Un fichier par texte : paragraphes + lexique
+├── dictionary/              # Dizionario (pilote) : lemmes, conjugaisons,
+│                           # index forme fléchie → lemme (JSON statique)
 ├── lib/
 │   ├── firebase.js/auth.js # Firebase (chargé à la demande si configuré)
 │   ├── access.js           # Aperçu gratuit / accès connecté / admin
 │   ├── generation.js       # État de la génération « Créer son texte »
 │   ├── userTexts.js        # Persistance Firestore des textes créés
+│   ├── dictionary.js       # Lookup dans src/dictionary/ (aucun réseau)
 │   └── stripe.js           # Payment Links (freemium)
 ├── translate.js            # Recherche locale dans le lexique du texte
 ├── tts.js                  # Synthèse vocale (Web Speech API, voix italienne)

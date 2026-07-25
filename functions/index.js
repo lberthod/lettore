@@ -190,8 +190,8 @@ const REAUTH_MAX_AGE_S = 5 * 60
 // Suppression de son propre compte (RGPD / demande explicite). Supprime les
 // textes créés, le document de profil, puis le compte Firebase Auth
 // lui-même. L'abonnement Stripe éventuel n'est pas résilié automatiquement
-// (aucun identifiant client/abonnement n'est encore persisté côté serveur,
-// voir Sprint 2 de correctauditgpt.md) — le client doit prévenir l'utilisateur.
+// (aucun identifiant client/abonnement n'est encore persisté côté serveur)
+// — le client doit prévenir l'utilisateur.
 export const deleteAccount = onCall(async (request) => {
   if (!request.auth) {
     throw new HttpsError('unauthenticated', 'Connexion requise.')

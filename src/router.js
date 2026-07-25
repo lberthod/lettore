@@ -187,6 +187,36 @@ const router = createRouter({
       meta: { ...findRoute('/vocabolario'), requiresAuth: true },
     },
     {
+      path: '/dizionario/:word?',
+      name: 'dictionary',
+      component: () => import('./views/DictionaryView.vue'),
+      props: true,
+      meta: {
+        title: 'Dizionario — Leggendo',
+        description:
+          'Dictionnaire italien-français : définition, nature grammaticale, exemples et conjugaison pour chaque mot.',
+      },
+    },
+    {
+      path: '/coniugazione/:verbo',
+      name: 'conjugation',
+      component: () => import('./views/ConjugationView.vue'),
+      props: true,
+      meta: {
+        title: 'Coniugazione — Leggendo',
+        description: 'Tableau de conjugaison complet des verbes italiens.',
+      },
+    },
+    {
+      path: '/verbi',
+      name: 'verbs',
+      component: () => import('./views/VerbsView.vue'),
+      meta: {
+        title: 'Verbi italiani — Leggendo',
+        description: 'Tous les verbes italiens du dictionnaire, avec leur table de conjugaison complète.',
+      },
+    },
+    {
       path: '/admin',
       name: 'admin',
       component: () => import('./views/AdminView.vue'),

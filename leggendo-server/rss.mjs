@@ -1,8 +1,7 @@
 // Récupération d'actualités italiennes via RSS — pas de dépendance npm
 // (extraction par regex, suffisante pour du RSS 2.0 standard). Utilisé par
-// news-cron.mjs pour la formule Premium+ (voir PREMIUM_PLUS_ANALYSIS.md, §4 :
-// RSS choisi plutôt qu'une API news payante, pour rester en italien natif et
-// éviter tout coût récurrent).
+// news-cron.mjs pour la formule Premium+ : RSS choisi plutôt qu'une API news
+// payante, pour rester en italien natif et éviter tout coût récurrent.
 
 // Flux généralistes ANSA — pas de clé API requise.
 export const RSS_FEEDS = [

@@ -1,5 +1,5 @@
 // Schéma et helpers pour l'annotation de chapitres de livres du domaine
-// public (voir LETTORE_EBOOK.md). Contrairement à scripts/lib/schema.mjs
+// public. Contrairement à scripts/lib/schema.mjs
 // (génération d'un texte depuis un sujet), ici le texte italien est fixe :
 // l'agent Claude ne produit QUE le lexique, les phrases traduites et le quiz.
 

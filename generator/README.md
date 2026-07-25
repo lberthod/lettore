@@ -5,7 +5,7 @@ Scripts **Node.js autonomes** (zéro dépendance npm, `fetch` natif — Node ≥
 | Script | Base | Génère |
 |---|---|---|
 | [`orchestrate.mjs`](orchestrate.mjs) | 12 thèmes (`config.mjs`) | 1 texte par thème × niveau × taille (240 cases, genre implicite = récit) |
-| [`orchestrate-matrix.mjs`](orchestrate-matrix.mjs) | `src/texts/category.json` (`curatedMatrix`) | 1 texte par genre × thème × niveau × taille, sur la liste curée de l'analyse [ANALYSE_CATEGORIES.md](../ANALYSE_CATEGORIES.md) |
+| [`orchestrate-matrix.mjs`](orchestrate-matrix.mjs) | `src/texts/category.json` (`curatedMatrix`) | 1 texte par genre × thème × niveau × taille, sur la liste curée du catalogue |
 
 **`orchestrate-matrix.mjs` est le script à privilégier** : il couvre la dimension `genre` (dialogue, poésie, fable, SF, giallo, documentaire, théâtre, pratique…) en plus du thème, sans exploser en produit cartésien (22 combinaisons curées, pas 12 × 10). Par défaut il couvre les niveaux **A1, A2, B1, B2** (C1 exclu) × les tailles **court, moyen, long** (`molto_lungo` exclu) — soit **93 cellules**, ajustable via `--levels`/`--sizes`.
 

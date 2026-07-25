@@ -1,6 +1,6 @@
 {
   "$schema_version": 1,
-  "description": "Base de taxonomie du Lettore Italiano — deux dimensions orthogonales : genre (la forme du texte) et theme (le sujet). Chaque texte porte un genre + un theme. Voir ANALYSE_CATEGORIES.md.",
+  "description": "Base de taxonomie du Lettore Italiano — deux dimensions orthogonales : genre (la forme du texte) et theme (le sujet). Chaque texte porte un genre + un theme.",
   "levels": ["A1", "A2", "B1", "B2", "C1"],
   "sizes": [
     { "id": "corto", "name": "Court", "targetWords": 150, "min": 60, "max": 200 },
