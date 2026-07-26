@@ -6050,6 +6050,23 @@
     ],
     "isVerb": true
   },
+  "brulichìio": {
+    "lemma": "brulichìio",
+    "pos": "sostantivo maschile",
+    "fr": "grouillement, bourdonnement (de voix, d'insetti)",
+    "definition_it": "rumore continuo e confuso prodotto da qualcosa che brulica, come una folla o un insieme di insetti",
+    "examples": [
+      {
+        "it": "Si sentiva il brulichìio della folla in piazza.",
+        "fr": "On entendait le grouillement bruyant de la foule sur la place."
+      }
+    ],
+    "synonyms": [
+      "formicolio",
+      "brusio"
+    ],
+    "isVerb": false
+  },
   "brulichio": {
     "lemma": "brulichio",
     "pos": "sostantivo maschile",

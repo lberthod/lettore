@@ -3,7 +3,7 @@
 // ci-dessous) — deux comptes utilisés sur le même navigateur ne partagent
 // jamais leur progression.
 
-import { reactive, watch } from 'vue'
+import { reactive, ref, watch } from 'vue'
 import { currentUser } from './lib/auth.js'
 
 // Clé historique (avant l'isolation par UID), conservée comme espace des
@@ -54,15 +54,20 @@ function stateFor(uid) {
       localStorage.removeItem(BASE_KEY)
     }
   }
-  return normalize(load(uid))
+  const saved = load(uid)
+  // Lu avant `normalize`, qui ajoute toujours une valeur par défaut, et remis à
+  // jour ici pour chaque compte : la réponse dépend de l'espace localStorage
+  // actif, pas de celui présent au chargement de la page.
+  hasLocalTtsRate.value = 'ttsRate' in saved
+  return normalize(saved)
 }
-
-let activeUid = currentUser.value?.uid || null
-const initialState = stateFor(activeUid)
 
 // Permet à progressSync de savoir si l'utilisateur a déjà choisi une
 // vitesse audio localement, avant d'appliquer une valeur distante.
-export const hasLocalTtsRate = 'ttsRate' in load(activeUid)
+export const hasLocalTtsRate = ref(false)
+
+let activeUid = currentUser.value?.uid || null
+const initialState = stateFor(activeUid)
 
 export const progress = reactive(initialState)
 

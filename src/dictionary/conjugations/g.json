@@ -1,0 +1,3373 @@
+{
+  "gabbare": {
+    "presente": {
+      "io": "gabbo",
+      "tu": "gabbi",
+      "lui/lei": "gabba",
+      "noi": "gabbiamo",
+      "voi": "gabbate",
+      "loro": "gabbano"
+    },
+    "passatoProssimo": {
+      "io": "ho gabbato",
+      "tu": "hai gabbato",
+      "lui/lei": "ha gabbato",
+      "noi": "abbiamo gabbato",
+      "voi": "avete gabbato",
+      "loro": "hanno gabbato"
+    },
+    "imperfetto": {
+      "io": "gabbavo",
+      "tu": "gabbavi",
+      "lui/lei": "gabbava",
+      "noi": "gabbavamo",
+      "voi": "gabbavate",
+      "loro": "gabbavano"
+    },
+    "futuro": {
+      "io": "gabberò",
+      "tu": "gabberai",
+      "lui/lei": "gabberà",
+      "noi": "gabberemo",
+      "voi": "gabberete",
+      "loro": "gabberanno"
+    },
+    "congiuntivoPresente": {
+      "io": "gabbi",
+      "tu": "gabbi",
+      "lui/lei": "gabbi",
+      "noi": "gabbiamo",
+      "voi": "gabbiate",
+      "loro": "gabbino"
+    },
+    "condizionale": {
+      "io": "gabberei",
+      "tu": "gabberesti",
+      "lui/lei": "gabberebbe",
+      "noi": "gabberemmo",
+      "voi": "gabbereste",
+      "loro": "gabberebbero"
+    },
+    "imperativo": {
+      "tu": "gabba",
+      "lei": "gabbi",
+      "noi": "gabbiamo",
+      "voi": "gabbate",
+      "loro": "gabbino"
+    }
+  },
+  "galleggiare": {
+    "presente": {
+      "io": "galleggio",
+      "tu": "galleggi",
+      "lui/lei": "galleggia",
+      "noi": "galleggiamo",
+      "voi": "galleggiate",
+      "loro": "galleggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho galleggiato",
+      "tu": "hai galleggiato",
+      "lui/lei": "ha galleggiato",
+      "noi": "abbiamo galleggiato",
+      "voi": "avete galleggiato",
+      "loro": "hanno galleggiato"
+    },
+    "imperfetto": {
+      "io": "galleggiavo",
+      "tu": "galleggiavi",
+      "lui/lei": "galleggiava",
+      "noi": "galleggiavamo",
+      "voi": "galleggiavate",
+      "loro": "galleggiavano"
+    },
+    "futuro": {
+      "io": "galleggerò",
+      "tu": "galleggerai",
+      "lui/lei": "galleggerà",
+      "noi": "galleggeremo",
+      "voi": "galleggerete",
+      "loro": "galleggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "galleggi",
+      "tu": "galleggi",
+      "lui/lei": "galleggi",
+      "noi": "galleggiamo",
+      "voi": "galleggiate",
+      "loro": "galleggino"
+    },
+    "condizionale": {
+      "io": "galleggerei",
+      "tu": "galleggeresti",
+      "lui/lei": "galleggerebbe",
+      "noi": "galleggeremmo",
+      "voi": "galleggereste",
+      "loro": "galleggerebbero"
+    },
+    "imperativo": {
+      "tu": "galleggia",
+      "lei": "galleggi",
+      "noi": "galleggiamo",
+      "voi": "galleggiate",
+      "loro": "galleggino"
+    }
+  },
+  "galoppare": {
+    "presente": {
+      "io": "galoppo",
+      "tu": "galoppi",
+      "lui/lei": "galoppa",
+      "noi": "galoppiamo",
+      "voi": "galoppate",
+      "loro": "galoppano"
+    },
+    "passatoProssimo": {
+      "io": "ho galoppato",
+      "tu": "hai galoppato",
+      "lui/lei": "ha galoppato",
+      "noi": "abbiamo galoppato",
+      "voi": "avete galoppato",
+      "loro": "hanno galoppato"
+    },
+    "imperfetto": {
+      "io": "galoppavo",
+      "tu": "galoppavi",
+      "lui/lei": "galoppava",
+      "noi": "galoppavamo",
+      "voi": "galoppavate",
+      "loro": "galoppavano"
+    },
+    "futuro": {
+      "io": "galopperò",
+      "tu": "galopperai",
+      "lui/lei": "galopperà",
+      "noi": "galopperemo",
+      "voi": "galopperete",
+      "loro": "galopperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "galoppi",
+      "tu": "galoppi",
+      "lui/lei": "galoppi",
+      "noi": "galoppiamo",
+      "voi": "galoppiate",
+      "loro": "galoppino"
+    },
+    "condizionale": {
+      "io": "galopperei",
+      "tu": "galopperesti",
+      "lui/lei": "galopperebbe",
+      "noi": "galopperemmo",
+      "voi": "galoppereste",
+      "loro": "galopperebbero"
+    },
+    "imperativo": {
+      "tu": "galoppa",
+      "lei": "galoppi",
+      "noi": "galoppiamo",
+      "voi": "galoppate",
+      "loro": "galoppino"
+    }
+  },
+  "garantire": {
+    "presente": {
+      "io": "garantisco",
+      "tu": "garantisci",
+      "lui/lei": "garantisce",
+      "noi": "garantiamo",
+      "voi": "garantite",
+      "loro": "garantiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho garantito",
+      "tu": "hai garantito",
+      "lui/lei": "ha garantito",
+      "noi": "abbiamo garantito",
+      "voi": "avete garantito",
+      "loro": "hanno garantito"
+    },
+    "imperfetto": {
+      "io": "garantivo",
+      "tu": "garantivi",
+      "lui/lei": "garantiva",
+      "noi": "garantivamo",
+      "voi": "garantivate",
+      "loro": "garantivano"
+    },
+    "futuro": {
+      "io": "garantirò",
+      "tu": "garantirai",
+      "lui/lei": "garantirà",
+      "noi": "garantiremo",
+      "voi": "garantirete",
+      "loro": "garantiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "garantisca",
+      "tu": "garantisca",
+      "lui/lei": "garantisca",
+      "noi": "garantiamo",
+      "voi": "garantiate",
+      "loro": "garantiscano"
+    },
+    "condizionale": {
+      "io": "garantirei",
+      "tu": "garantiresti",
+      "lui/lei": "garantirebbe",
+      "noi": "garantiremmo",
+      "voi": "garantireste",
+      "loro": "garantirebbero"
+    },
+    "imperativo": {
+      "tu": "garantisci",
+      "lei": "garantisca",
+      "noi": "garantiamo",
+      "voi": "garantite",
+      "loro": "garantiscano"
+    }
+  },
+  "garbare": {
+    "presente": {
+      "io": "garbo",
+      "tu": "garbi",
+      "lui/lei": "garba",
+      "noi": "garbiamo",
+      "voi": "garbate",
+      "loro": "garbano"
+    },
+    "passatoProssimo": {
+      "io": "sono garbato",
+      "tu": "sei garbato",
+      "lui/lei": "è garbato",
+      "noi": "siamo garbati",
+      "voi": "siete garbati",
+      "loro": "sono garbati"
+    },
+    "imperfetto": {
+      "io": "garbavo",
+      "tu": "garbavi",
+      "lui/lei": "garbava",
+      "noi": "garbavamo",
+      "voi": "garbavate",
+      "loro": "garbavano"
+    },
+    "futuro": {
+      "io": "garberò",
+      "tu": "garberai",
+      "lui/lei": "garberà",
+      "noi": "garberemo",
+      "voi": "garberete",
+      "loro": "garberanno"
+    },
+    "congiuntivoPresente": {
+      "io": "garbi",
+      "tu": "garbi",
+      "lui/lei": "garbi",
+      "noi": "garbiamo",
+      "voi": "garbiate",
+      "loro": "garbino"
+    },
+    "condizionale": {
+      "io": "garberei",
+      "tu": "garberesti",
+      "lui/lei": "garberebbe",
+      "noi": "garberemmo",
+      "voi": "garbereste",
+      "loro": "garberebbero"
+    },
+    "imperativo": {
+      "tu": "garba",
+      "lei": "garbi",
+      "noi": "garbiamo",
+      "voi": "garbate",
+      "loro": "garbino"
+    }
+  },
+  "gareggiare": {
+    "presente": {
+      "io": "gareggio",
+      "tu": "gareggi",
+      "lui/lei": "gareggia",
+      "noi": "gareggiamo",
+      "voi": "gareggiate",
+      "loro": "gareggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho gareggiato",
+      "tu": "hai gareggiato",
+      "lui/lei": "ha gareggiato",
+      "noi": "abbiamo gareggiato",
+      "voi": "avete gareggiato",
+      "loro": "hanno gareggiato"
+    },
+    "imperfetto": {
+      "io": "gareggiavo",
+      "tu": "gareggiavi",
+      "lui/lei": "gareggiava",
+      "noi": "gareggiavamo",
+      "voi": "gareggiavate",
+      "loro": "gareggiavano"
+    },
+    "futuro": {
+      "io": "gareggerò",
+      "tu": "gareggerai",
+      "lui/lei": "gareggerà",
+      "noi": "gareggeremo",
+      "voi": "gareggerete",
+      "loro": "gareggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gareggi",
+      "tu": "gareggi",
+      "lui/lei": "gareggi",
+      "noi": "gareggiamo",
+      "voi": "gareggiate",
+      "loro": "gareggino"
+    },
+    "condizionale": {
+      "io": "gareggerei",
+      "tu": "gareggeresti",
+      "lui/lei": "gareggerebbe",
+      "noi": "gareggeremmo",
+      "voi": "gareggereste",
+      "loro": "gareggerebbero"
+    },
+    "imperativo": {
+      "tu": "gareggia",
+      "lei": "gareggi",
+      "noi": "gareggiamo",
+      "voi": "gareggiate",
+      "loro": "gareggino"
+    }
+  },
+  "gastigare": {
+    "presente": {
+      "io": "gastigo",
+      "tu": "gastighi",
+      "lui/lei": "gastiga",
+      "noi": "gastighiamo",
+      "voi": "gastigate",
+      "loro": "gastigano"
+    },
+    "passatoProssimo": {
+      "io": "ho gastigato",
+      "tu": "hai gastigato",
+      "lui/lei": "ha gastigato",
+      "noi": "abbiamo gastigato",
+      "voi": "avete gastigato",
+      "loro": "hanno gastigato"
+    },
+    "imperfetto": {
+      "io": "gastigavo",
+      "tu": "gastigavi",
+      "lui/lei": "gastigava",
+      "noi": "gastigavamo",
+      "voi": "gastigavate",
+      "loro": "gastigavano"
+    },
+    "futuro": {
+      "io": "gastigherò",
+      "tu": "gastigherai",
+      "lui/lei": "gastigherà",
+      "noi": "gastigheremo",
+      "voi": "gastigherete",
+      "loro": "gastigheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gastighi",
+      "tu": "gastighi",
+      "lui/lei": "gastighi",
+      "noi": "gastighiamo",
+      "voi": "gastighiate",
+      "loro": "gastighino"
+    },
+    "condizionale": {
+      "io": "gastigherei",
+      "tu": "gastigheresti",
+      "lui/lei": "gastigherebbe",
+      "noi": "gastigheremmo",
+      "voi": "gastighereste",
+      "loro": "gastigherebbero"
+    },
+    "imperativo": {
+      "tu": "gastiga",
+      "lei": "gastighi",
+      "noi": "gastighiamo",
+      "voi": "gastigate",
+      "loro": "gastighino"
+    }
+  },
+  "gelare": {
+    "presente": {
+      "io": "gelo",
+      "tu": "geli",
+      "lui/lei": "gela",
+      "noi": "geliamo",
+      "voi": "gelate",
+      "loro": "gelano"
+    },
+    "passatoProssimo": {
+      "io": "ho gelato",
+      "tu": "hai gelato",
+      "lui/lei": "ha gelato",
+      "noi": "abbiamo gelato",
+      "voi": "avete gelato",
+      "loro": "hanno gelato"
+    },
+    "imperfetto": {
+      "io": "gelavo",
+      "tu": "gelavi",
+      "lui/lei": "gelava",
+      "noi": "gelavamo",
+      "voi": "gelavate",
+      "loro": "gelavano"
+    },
+    "futuro": {
+      "io": "gelerò",
+      "tu": "gelerai",
+      "lui/lei": "gelerà",
+      "noi": "geleremo",
+      "voi": "gelerete",
+      "loro": "geleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "geli",
+      "tu": "geli",
+      "lui/lei": "geli",
+      "noi": "geliamo",
+      "voi": "geliate",
+      "loro": "gelino"
+    },
+    "condizionale": {
+      "io": "gelerei",
+      "tu": "geleresti",
+      "lui/lei": "gelerebbe",
+      "noi": "geleremmo",
+      "voi": "gelereste",
+      "loro": "gelerebbero"
+    },
+    "imperativo": {
+      "tu": "gela",
+      "lei": "geli",
+      "noi": "geliamo",
+      "voi": "gelate",
+      "loro": "gelino"
+    }
+  },
+  "gemere": {
+    "presente": {
+      "io": "gemo",
+      "tu": "gemi",
+      "lui/lei": "geme",
+      "noi": "gemiamo",
+      "voi": "gemete",
+      "loro": "gemono"
+    },
+    "passatoProssimo": {
+      "io": "ho gemuto",
+      "tu": "hai gemuto",
+      "lui/lei": "ha gemuto",
+      "noi": "abbiamo gemuto",
+      "voi": "avete gemuto",
+      "loro": "hanno gemuto"
+    },
+    "imperfetto": {
+      "io": "gemevo",
+      "tu": "gemevi",
+      "lui/lei": "gemeva",
+      "noi": "gemevamo",
+      "voi": "gemevate",
+      "loro": "gemevano"
+    },
+    "futuro": {
+      "io": "gemerò",
+      "tu": "gemerai",
+      "lui/lei": "gemerà",
+      "noi": "gemeremo",
+      "voi": "gemerete",
+      "loro": "gemeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gema",
+      "tu": "gema",
+      "lui/lei": "gema",
+      "noi": "gemiamo",
+      "voi": "gemiate",
+      "loro": "gemano"
+    },
+    "condizionale": {
+      "io": "gemerei",
+      "tu": "gemeresti",
+      "lui/lei": "gemerebbe",
+      "noi": "gemeremmo",
+      "voi": "gemereste",
+      "loro": "gemerebbero"
+    },
+    "imperativo": {
+      "tu": "gemi",
+      "lei": "gema",
+      "noi": "gemiamo",
+      "voi": "gemete",
+      "loro": "gemano"
+    }
+  },
+  "generare": {
+    "presente": {
+      "io": "genero",
+      "tu": "generi",
+      "lui/lei": "genera",
+      "noi": "generiamo",
+      "voi": "generate",
+      "loro": "generano"
+    },
+    "passatoProssimo": {
+      "io": "ho generato",
+      "tu": "hai generato",
+      "lui/lei": "ha generato",
+      "noi": "abbiamo generato",
+      "voi": "avete generato",
+      "loro": "hanno generato"
+    },
+    "imperfetto": {
+      "io": "generavo",
+      "tu": "generavi",
+      "lui/lei": "generava",
+      "noi": "generavamo",
+      "voi": "generavate",
+      "loro": "generavano"
+    },
+    "futuro": {
+      "io": "genererò",
+      "tu": "genererai",
+      "lui/lei": "genererà",
+      "noi": "genereremo",
+      "voi": "genererete",
+      "loro": "genereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "generi",
+      "tu": "generi",
+      "lui/lei": "generi",
+      "noi": "generiamo",
+      "voi": "generiate",
+      "loro": "generino"
+    },
+    "condizionale": {
+      "io": "genererei",
+      "tu": "genereresti",
+      "lui/lei": "genererebbe",
+      "noi": "genereremmo",
+      "voi": "generereste",
+      "loro": "genererebbero"
+    },
+    "imperativo": {
+      "tu": "genera",
+      "lei": "generi",
+      "noi": "generiamo",
+      "voi": "generate",
+      "loro": "generino"
+    }
+  },
+  "germogliare": {
+    "presente": {
+      "io": "germoglio",
+      "tu": "germogli",
+      "lui/lei": "germoglia",
+      "noi": "germogliamo",
+      "voi": "germogliate",
+      "loro": "germogliano"
+    },
+    "passatoProssimo": {
+      "io": "sono germogliato/a",
+      "tu": "sei germogliato/a",
+      "lui/lei": "è germogliato/a",
+      "noi": "siamo germogliati/e",
+      "voi": "siete germogliati/e",
+      "loro": "sono germogliati/e"
+    },
+    "imperfetto": {
+      "io": "germogliavo",
+      "tu": "germogliavi",
+      "lui/lei": "germogliava",
+      "noi": "germogliavamo",
+      "voi": "germogliavate",
+      "loro": "germogliavano"
+    },
+    "futuro": {
+      "io": "germoglierò",
+      "tu": "germoglierai",
+      "lui/lei": "germoglierà",
+      "noi": "germoglieremo",
+      "voi": "germoglierete",
+      "loro": "germoglieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "germogli",
+      "tu": "germogli",
+      "lui/lei": "germogli",
+      "noi": "germogliamo",
+      "voi": "germogliate",
+      "loro": "germoglino"
+    },
+    "condizionale": {
+      "io": "germoglierei",
+      "tu": "germoglieresti",
+      "lui/lei": "germoglierebbe",
+      "noi": "germoglieremmo",
+      "voi": "germogliereste",
+      "loro": "germoglierebbero"
+    },
+    "imperativo": {
+      "tu": "germoglia",
+      "lei": "germogli",
+      "noi": "germogliamo",
+      "voi": "germogliate",
+      "loro": "germoglino"
+    }
+  },
+  "gesticolare": {
+    "presente": {
+      "io": "gesticolo",
+      "tu": "gesticoli",
+      "lui/lei": "gesticola",
+      "noi": "gesticoliamo",
+      "voi": "gesticolate",
+      "loro": "gesticolano"
+    },
+    "passatoProssimo": {
+      "io": "ho gesticolato",
+      "tu": "hai gesticolato",
+      "lui/lei": "ha gesticolato",
+      "noi": "abbiamo gesticolato",
+      "voi": "avete gesticolato",
+      "loro": "hanno gesticolato"
+    },
+    "imperfetto": {
+      "io": "gesticolavo",
+      "tu": "gesticolavi",
+      "lui/lei": "gesticolava",
+      "noi": "gesticolavamo",
+      "voi": "gesticolavate",
+      "loro": "gesticolavano"
+    },
+    "futuro": {
+      "io": "gesticolerò",
+      "tu": "gesticolerai",
+      "lui/lei": "gesticolerà",
+      "noi": "gesticoleremo",
+      "voi": "gesticolerete",
+      "loro": "gesticoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gesticoli",
+      "tu": "gesticoli",
+      "lui/lei": "gesticoli",
+      "noi": "gesticoliamo",
+      "voi": "gesticoliate",
+      "loro": "gesticolino"
+    },
+    "condizionale": {
+      "io": "gesticolerei",
+      "tu": "gesticoleresti",
+      "lui/lei": "gesticolerebbe",
+      "noi": "gesticoleremmo",
+      "voi": "gesticolereste",
+      "loro": "gesticolerebbero"
+    },
+    "imperativo": {
+      "tu": "gesticola",
+      "lei": "gesticoli",
+      "noi": "gesticoliamo",
+      "voi": "gesticolate",
+      "loro": "gesticolino"
+    }
+  },
+  "gestire": {
+    "presente": {
+      "io": "gestisco",
+      "tu": "gestisci",
+      "lui/lei": "gestisce",
+      "noi": "gestiamo",
+      "voi": "gestite",
+      "loro": "gestiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho gestito",
+      "tu": "hai gestito",
+      "lui/lei": "ha gestito",
+      "noi": "abbiamo gestito",
+      "voi": "avete gestito",
+      "loro": "hanno gestito"
+    },
+    "imperfetto": {
+      "io": "gestivo",
+      "tu": "gestivi",
+      "lui/lei": "gestiva",
+      "noi": "gestivamo",
+      "voi": "gestivate",
+      "loro": "gestivano"
+    },
+    "futuro": {
+      "io": "gestirò",
+      "tu": "gestirai",
+      "lui/lei": "gestirà",
+      "noi": "gestiremo",
+      "voi": "gestirete",
+      "loro": "gestiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gestisca",
+      "tu": "gestisca",
+      "lui/lei": "gestisca",
+      "noi": "gestiamo",
+      "voi": "gestiate",
+      "loro": "gestiscano"
+    },
+    "condizionale": {
+      "io": "gestirei",
+      "tu": "gestiresti",
+      "lui/lei": "gestirebbe",
+      "noi": "gestiremmo",
+      "voi": "gestireste",
+      "loro": "gestirebbero"
+    },
+    "imperativo": {
+      "tu": "gestisci",
+      "lei": "gestisca",
+      "noi": "gestiamo",
+      "voi": "gestite",
+      "loro": "gestiscano"
+    }
+  },
+  "gettare": {
+    "presente": {
+      "io": "getto",
+      "tu": "getti",
+      "lui/lei": "getta",
+      "noi": "gettiamo",
+      "voi": "gettate",
+      "loro": "gettano"
+    },
+    "passatoProssimo": {
+      "io": "ho gettato",
+      "tu": "hai gettato",
+      "lui/lei": "ha gettato",
+      "noi": "abbiamo gettato",
+      "voi": "avete gettato",
+      "loro": "hanno gettato"
+    },
+    "imperfetto": {
+      "io": "gettavo",
+      "tu": "gettavi",
+      "lui/lei": "gettava",
+      "noi": "gettavamo",
+      "voi": "gettavate",
+      "loro": "gettavano"
+    },
+    "futuro": {
+      "io": "getterò",
+      "tu": "getterai",
+      "lui/lei": "getterà",
+      "noi": "getteremo",
+      "voi": "getterete",
+      "loro": "getteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "getti",
+      "tu": "getti",
+      "lui/lei": "getti",
+      "noi": "gettiamo",
+      "voi": "gettiate",
+      "loro": "gettino"
+    },
+    "condizionale": {
+      "io": "getterei",
+      "tu": "getteresti",
+      "lui/lei": "getterebbe",
+      "noi": "getteremmo",
+      "voi": "gettereste",
+      "loro": "getterebbero"
+    },
+    "imperativo": {
+      "tu": "getta",
+      "lei": "getti",
+      "noi": "gettiamo",
+      "voi": "gettate",
+      "loro": "gettino"
+    }
+  },
+  "ghermire": {
+    "presente": {
+      "io": "ghermisco",
+      "tu": "ghermisci",
+      "lui/lei": "ghermisce",
+      "noi": "ghermiamo",
+      "voi": "ghermite",
+      "loro": "ghermiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho ghermito",
+      "tu": "hai ghermito",
+      "lui/lei": "ha ghermito",
+      "noi": "abbiamo ghermito",
+      "voi": "avete ghermito",
+      "loro": "hanno ghermito"
+    },
+    "imperfetto": {
+      "io": "ghermivo",
+      "tu": "ghermivi",
+      "lui/lei": "ghermiva",
+      "noi": "ghermivamo",
+      "voi": "ghermivate",
+      "loro": "ghermivano"
+    },
+    "futuro": {
+      "io": "ghermirò",
+      "tu": "ghermirai",
+      "lui/lei": "ghermirà",
+      "noi": "ghermiremo",
+      "voi": "ghermirete",
+      "loro": "ghermiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ghermisca",
+      "tu": "ghermisca",
+      "lui/lei": "ghermisca",
+      "noi": "ghermiamo",
+      "voi": "ghermiate",
+      "loro": "ghermiscano"
+    },
+    "condizionale": {
+      "io": "ghermirei",
+      "tu": "ghermiresti",
+      "lui/lei": "ghermirebbe",
+      "noi": "ghermiremmo",
+      "voi": "ghermireste",
+      "loro": "ghermirebbero"
+    },
+    "imperativo": {
+      "tu": "ghermisci",
+      "lei": "ghermisca",
+      "noi": "ghermiamo",
+      "voi": "ghermite",
+      "loro": "ghermiscano"
+    }
+  },
+  "ghiacciare": {
+    "presente": {
+      "io": "ghiaccio",
+      "tu": "ghiacci",
+      "lui/lei": "ghiaccia",
+      "noi": "ghiacciamo",
+      "voi": "ghiacciate",
+      "loro": "ghiacciano"
+    },
+    "passatoProssimo": {
+      "io": "sono ghiacciato/a",
+      "tu": "sei ghiacciato/a",
+      "lui/lei": "è ghiacciato/a",
+      "noi": "siamo ghiacciati/e",
+      "voi": "siete ghiacciati/e",
+      "loro": "sono ghiacciati/e"
+    },
+    "imperfetto": {
+      "io": "ghiacciavo",
+      "tu": "ghiacciavi",
+      "lui/lei": "ghiacciava",
+      "noi": "ghiacciavamo",
+      "voi": "ghiacciavate",
+      "loro": "ghiacciavano"
+    },
+    "futuro": {
+      "io": "ghiaccerò",
+      "tu": "ghiaccerai",
+      "lui/lei": "ghiaccerà",
+      "noi": "ghiacceremo",
+      "voi": "ghiaccerete",
+      "loro": "ghiacceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ghiacci",
+      "tu": "ghiacci",
+      "lui/lei": "ghiacci",
+      "noi": "ghiacciamo",
+      "voi": "ghiacciate",
+      "loro": "ghiaccino"
+    },
+    "condizionale": {
+      "io": "ghiaccerei",
+      "tu": "ghiacceresti",
+      "lui/lei": "ghiaccerebbe",
+      "noi": "ghiacceremmo",
+      "voi": "ghiaccereste",
+      "loro": "ghiaccerebbero"
+    },
+    "imperativo": {
+      "tu": "ghiaccia",
+      "lei": "ghiacci",
+      "noi": "ghiacciamo",
+      "voi": "ghiacciate",
+      "loro": "ghiaccino"
+    }
+  },
+  "ghignare": {
+    "presente": {
+      "io": "ghigno",
+      "tu": "ghigni",
+      "lui/lei": "ghigna",
+      "noi": "ghigniamo",
+      "voi": "ghignate",
+      "loro": "ghignano"
+    },
+    "passatoProssimo": {
+      "io": "ho ghignato",
+      "tu": "hai ghignato",
+      "lui/lei": "ha ghignato",
+      "noi": "abbiamo ghignato",
+      "voi": "avete ghignato",
+      "loro": "hanno ghignato"
+    },
+    "imperfetto": {
+      "io": "ghignavo",
+      "tu": "ghignavi",
+      "lui/lei": "ghignava",
+      "noi": "ghignavamo",
+      "voi": "ghignavate",
+      "loro": "ghignavano"
+    },
+    "futuro": {
+      "io": "ghignerò",
+      "tu": "ghignerai",
+      "lui/lei": "ghignerà",
+      "noi": "ghigneremo",
+      "voi": "ghignerete",
+      "loro": "ghigneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ghigni",
+      "tu": "ghigni",
+      "lui/lei": "ghigni",
+      "noi": "ghigniamo",
+      "voi": "ghigniate",
+      "loro": "ghignino"
+    },
+    "condizionale": {
+      "io": "ghignerei",
+      "tu": "ghigneresti",
+      "lui/lei": "ghignerebbe",
+      "noi": "ghigneremmo",
+      "voi": "ghignereste",
+      "loro": "ghignerebbero"
+    },
+    "imperativo": {
+      "tu": "ghigna",
+      "lei": "ghigni",
+      "noi": "ghigniamo",
+      "voi": "ghignate",
+      "loro": "ghignino"
+    }
+  },
+  "giacere": {
+    "presente": {
+      "io": "giaccio",
+      "tu": "giaci",
+      "lui/lei": "giace",
+      "noi": "giacciamo",
+      "voi": "giacete",
+      "loro": "giacciono"
+    },
+    "passatoProssimo": {
+      "io": "sono giaciuto",
+      "tu": "sei giaciuto",
+      "lui/lei": "è giaciuto",
+      "noi": "siamo giaciuti",
+      "voi": "siete giaciuti",
+      "loro": "sono giaciuti"
+    },
+    "imperfetto": {
+      "io": "giacevo",
+      "tu": "giacevi",
+      "lui/lei": "giaceva",
+      "noi": "giacevamo",
+      "voi": "giacevate",
+      "loro": "giacevano"
+    },
+    "futuro": {
+      "io": "giacerò",
+      "tu": "giacerai",
+      "lui/lei": "giacerà",
+      "noi": "giaceremo",
+      "voi": "giacerete",
+      "loro": "giaceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giaccia",
+      "tu": "giaccia",
+      "lui/lei": "giaccia",
+      "noi": "giacciamo",
+      "voi": "giacciate",
+      "loro": "giacciano"
+    },
+    "condizionale": {
+      "io": "giacerei",
+      "tu": "giaceresti",
+      "lui/lei": "giacerebbe",
+      "noi": "giaceremmo",
+      "voi": "giacereste",
+      "loro": "giacerebbero"
+    },
+    "imperativo": {
+      "tu": "giaci",
+      "lei": "giaccia",
+      "noi": "giacciamo",
+      "voi": "giacete",
+      "loro": "giacciano"
+    }
+  },
+  "giocare": {
+    "presente": {
+      "io": "gioco",
+      "tu": "giochi",
+      "lui/lei": "gioca",
+      "noi": "giochiamo",
+      "voi": "giocate",
+      "loro": "giocano"
+    },
+    "passatoProssimo": {
+      "io": "ho giocato",
+      "tu": "hai giocato",
+      "lui/lei": "ha giocato",
+      "noi": "abbiamo giocato",
+      "voi": "avete giocato",
+      "loro": "hanno giocato"
+    },
+    "imperfetto": {
+      "io": "giocavo",
+      "tu": "giocavi",
+      "lui/lei": "giocava",
+      "noi": "giocavamo",
+      "voi": "giocavate",
+      "loro": "giocavano"
+    },
+    "futuro": {
+      "io": "giocherò",
+      "tu": "giocherai",
+      "lui/lei": "giocherà",
+      "noi": "giocheremo",
+      "voi": "giocherete",
+      "loro": "giocheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giochi",
+      "tu": "giochi",
+      "lui/lei": "giochi",
+      "noi": "giochiamo",
+      "voi": "giochiate",
+      "loro": "giochino"
+    },
+    "condizionale": {
+      "io": "giocherei",
+      "tu": "giocheresti",
+      "lui/lei": "giocherebbe",
+      "noi": "giocheremmo",
+      "voi": "giochereste",
+      "loro": "giocherebbero"
+    },
+    "imperativo": {
+      "tu": "gioca",
+      "lei": "giochi",
+      "noi": "giochiamo",
+      "voi": "giocate",
+      "loro": "giochino"
+    }
+  },
+  "giovare": {
+    "presente": {
+      "io": "giovo",
+      "tu": "giovi",
+      "lui/lei": "giova",
+      "noi": "gioviamo",
+      "voi": "giovate",
+      "loro": "giovano"
+    },
+    "passatoProssimo": {
+      "io": "ho giovato",
+      "tu": "hai giovato",
+      "lui/lei": "ha giovato",
+      "noi": "abbiamo giovato",
+      "voi": "avete giovato",
+      "loro": "hanno giovato"
+    },
+    "imperfetto": {
+      "io": "giovavo",
+      "tu": "giovavi",
+      "lui/lei": "giovava",
+      "noi": "giovavamo",
+      "voi": "giovavate",
+      "loro": "giovavano"
+    },
+    "futuro": {
+      "io": "gioverò",
+      "tu": "gioverai",
+      "lui/lei": "gioverà",
+      "noi": "gioveremo",
+      "voi": "gioverete",
+      "loro": "gioveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giovi",
+      "tu": "giovi",
+      "lui/lei": "giovi",
+      "noi": "gioviamo",
+      "voi": "gioviate",
+      "loro": "giovino"
+    },
+    "condizionale": {
+      "io": "gioverei",
+      "tu": "gioveresti",
+      "lui/lei": "gioverebbe",
+      "noi": "gioveremmo",
+      "voi": "giovereste",
+      "loro": "gioverebbero"
+    },
+    "imperativo": {
+      "tu": "giova",
+      "lei": "giovi",
+      "noi": "gioviamo",
+      "voi": "giovate",
+      "loro": "giovino"
+    }
+  },
+  "girare": {
+    "presente": {
+      "io": "giro",
+      "tu": "giri",
+      "lui/lei": "gira",
+      "noi": "giriamo",
+      "voi": "girate",
+      "loro": "girano"
+    },
+    "passatoProssimo": {
+      "io": "ho girato",
+      "tu": "hai girato",
+      "lui/lei": "ha girato",
+      "noi": "abbiamo girato",
+      "voi": "avete girato",
+      "loro": "hanno girato"
+    },
+    "imperfetto": {
+      "io": "giravo",
+      "tu": "giravi",
+      "lui/lei": "girava",
+      "noi": "giravamo",
+      "voi": "giravate",
+      "loro": "giravano"
+    },
+    "futuro": {
+      "io": "girerò",
+      "tu": "girerai",
+      "lui/lei": "girerà",
+      "noi": "gireremo",
+      "voi": "girerete",
+      "loro": "gireranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giri",
+      "tu": "giri",
+      "lui/lei": "giri",
+      "noi": "giriamo",
+      "voi": "giriate",
+      "loro": "girino"
+    },
+    "condizionale": {
+      "io": "girerei",
+      "tu": "gireresti",
+      "lui/lei": "girerebbe",
+      "noi": "gireremmo",
+      "voi": "girereste",
+      "loro": "girerebbero"
+    },
+    "imperativo": {
+      "tu": "gira",
+      "lei": "giri",
+      "noi": "giriamo",
+      "voi": "girate",
+      "loro": "girino"
+    }
+  },
+  "gire": {
+    "presente": {
+      "io": "gisco",
+      "tu": "gisci",
+      "lui/lei": "gisce",
+      "noi": "giamo",
+      "voi": "gite",
+      "loro": "giscono"
+    },
+    "passatoProssimo": {
+      "io": "sono gito",
+      "tu": "sei gito",
+      "lui/lei": "è gito",
+      "noi": "siamo giti",
+      "voi": "siete giti",
+      "loro": "sono giti"
+    },
+    "imperfetto": {
+      "io": "givo",
+      "tu": "givi",
+      "lui/lei": "giva",
+      "noi": "givamo",
+      "voi": "givate",
+      "loro": "givano"
+    },
+    "futuro": {
+      "io": "girò",
+      "tu": "girai",
+      "lui/lei": "girà",
+      "noi": "giremo",
+      "voi": "girete",
+      "loro": "giranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gisca",
+      "tu": "gisca",
+      "lui/lei": "gisca",
+      "noi": "giamo",
+      "voi": "giate",
+      "loro": "giscano"
+    },
+    "condizionale": {
+      "io": "girei",
+      "tu": "giresti",
+      "lui/lei": "girebbe",
+      "noi": "giremmo",
+      "voi": "gireste",
+      "loro": "girebbero"
+    },
+    "imperativo": {
+      "tu": "gisci",
+      "lei": "gisca",
+      "noi": "giamo",
+      "voi": "gite",
+      "loro": "giscano"
+    }
+  },
+  "girovagare": {
+    "presente": {
+      "io": "girovago",
+      "tu": "girovaghi",
+      "lui/lei": "girovaga",
+      "noi": "girovaghiamo",
+      "voi": "girovagate",
+      "loro": "girovagano"
+    },
+    "passatoProssimo": {
+      "io": "ho girovagato",
+      "tu": "hai girovagato",
+      "lui/lei": "ha girovagato",
+      "noi": "abbiamo girovagato",
+      "voi": "avete girovagato",
+      "loro": "hanno girovagato"
+    },
+    "imperfetto": {
+      "io": "girovagavo",
+      "tu": "girovagavi",
+      "lui/lei": "girovagava",
+      "noi": "girovagavamo",
+      "voi": "girovagavate",
+      "loro": "girovagavano"
+    },
+    "futuro": {
+      "io": "girovagherò",
+      "tu": "girovagherai",
+      "lui/lei": "girovagherà",
+      "noi": "girovagheremo",
+      "voi": "girovagherete",
+      "loro": "girovagheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "girovaghi",
+      "tu": "girovaghi",
+      "lui/lei": "girovaghi",
+      "noi": "girovaghiamo",
+      "voi": "girovaghiate",
+      "loro": "girovaghino"
+    },
+    "condizionale": {
+      "io": "girovagherei",
+      "tu": "girovagheresti",
+      "lui/lei": "girovagherebbe",
+      "noi": "girovagheremmo",
+      "voi": "girovaghereste",
+      "loro": "girovagherebbero"
+    },
+    "imperativo": {
+      "tu": "girovaga",
+      "lei": "girovaghi",
+      "noi": "girovaghiamo",
+      "voi": "girovagate",
+      "loro": "girovaghino"
+    }
+  },
+  "giubilare": {
+    "presente": {
+      "io": "giubilo",
+      "tu": "giubili",
+      "lui/lei": "giubila",
+      "noi": "giubiliamo",
+      "voi": "giubilate",
+      "loro": "giubilano"
+    },
+    "passatoProssimo": {
+      "io": "ho giubilato",
+      "tu": "hai giubilato",
+      "lui/lei": "ha giubilato",
+      "noi": "abbiamo giubilato",
+      "voi": "avete giubilato",
+      "loro": "hanno giubilato"
+    },
+    "imperfetto": {
+      "io": "giubilavo",
+      "tu": "giubilavi",
+      "lui/lei": "giubilava",
+      "noi": "giubilavamo",
+      "voi": "giubilavate",
+      "loro": "giubilavano"
+    },
+    "futuro": {
+      "io": "giubilerò",
+      "tu": "giubilerai",
+      "lui/lei": "giubilerà",
+      "noi": "giubileremo",
+      "voi": "giubilerete",
+      "loro": "giubileranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giubili",
+      "tu": "giubili",
+      "lui/lei": "giubili",
+      "noi": "giubiliamo",
+      "voi": "giubiliate",
+      "loro": "giubilino"
+    },
+    "condizionale": {
+      "io": "giubilerei",
+      "tu": "giubileresti",
+      "lui/lei": "giubilerebbe",
+      "noi": "giubileremmo",
+      "voi": "giubilereste",
+      "loro": "giubilerebbero"
+    },
+    "imperativo": {
+      "tu": "giubila",
+      "lei": "giubili",
+      "noi": "giubiliamo",
+      "voi": "giubilate",
+      "loro": "giubilino"
+    }
+  },
+  "giudicare": {
+    "presente": {
+      "io": "giudico",
+      "tu": "giudichi",
+      "lui/lei": "giudica",
+      "noi": "giudichiamo",
+      "voi": "giudicate",
+      "loro": "giudicano"
+    },
+    "passatoProssimo": {
+      "io": "ho giudicato",
+      "tu": "hai giudicato",
+      "lui/lei": "ha giudicato",
+      "noi": "abbiamo giudicato",
+      "voi": "avete giudicato",
+      "loro": "hanno giudicato"
+    },
+    "imperfetto": {
+      "io": "giudicavo",
+      "tu": "giudicavi",
+      "lui/lei": "giudicava",
+      "noi": "giudicavamo",
+      "voi": "giudicavate",
+      "loro": "giudicavano"
+    },
+    "futuro": {
+      "io": "giudicherò",
+      "tu": "giudicherai",
+      "lui/lei": "giudicherà",
+      "noi": "giudicheremo",
+      "voi": "giudicherete",
+      "loro": "giudicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giudichi",
+      "tu": "giudichi",
+      "lui/lei": "giudichi",
+      "noi": "giudichiamo",
+      "voi": "giudichiate",
+      "loro": "giudichino"
+    },
+    "condizionale": {
+      "io": "giudicherei",
+      "tu": "giudicheresti",
+      "lui/lei": "giudicherebbe",
+      "noi": "giudicheremmo",
+      "voi": "giudichereste",
+      "loro": "giudicherebbero"
+    },
+    "imperativo": {
+      "tu": "giudica",
+      "lei": "giudichi",
+      "noi": "giudichiamo",
+      "voi": "giudicate",
+      "loro": "giudichino"
+    }
+  },
+  "giungere": {
+    "presente": {
+      "io": "giungo",
+      "tu": "giungi",
+      "lui/lei": "giunge",
+      "noi": "giungiamo",
+      "voi": "giungete",
+      "loro": "giungono"
+    },
+    "passatoProssimo": {
+      "io": "sono giunto",
+      "tu": "sei giunto",
+      "lui/lei": "è giunto",
+      "noi": "siamo giunti",
+      "voi": "siete giunti",
+      "loro": "sono giunti"
+    },
+    "imperfetto": {
+      "io": "giungevo",
+      "tu": "giungevi",
+      "lui/lei": "giungeva",
+      "noi": "giungevamo",
+      "voi": "giungevate",
+      "loro": "giungevano"
+    },
+    "futuro": {
+      "io": "giungerò",
+      "tu": "giungerai",
+      "lui/lei": "giungerà",
+      "noi": "giungeremo",
+      "voi": "giungerete",
+      "loro": "giungeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giunga",
+      "tu": "giunga",
+      "lui/lei": "giunga",
+      "noi": "giungiamo",
+      "voi": "giungiate",
+      "loro": "giungano"
+    },
+    "condizionale": {
+      "io": "giungerei",
+      "tu": "giungeresti",
+      "lui/lei": "giungerebbe",
+      "noi": "giungeremmo",
+      "voi": "giungereste",
+      "loro": "giungerebbero"
+    },
+    "imperativo": {
+      "tu": "giungi",
+      "lei": "giunga",
+      "noi": "giungiamo",
+      "voi": "giungete",
+      "loro": "giungano"
+    }
+  },
+  "giurare": {
+    "presente": {
+      "io": "giuro",
+      "tu": "giuri",
+      "lui/lei": "giura",
+      "noi": "giuriamo",
+      "voi": "giurate",
+      "loro": "giurano"
+    },
+    "passatoProssimo": {
+      "io": "ho giurato",
+      "tu": "hai giurato",
+      "lui/lei": "ha giurato",
+      "noi": "abbiamo giurato",
+      "voi": "avete giurato",
+      "loro": "hanno giurato"
+    },
+    "imperfetto": {
+      "io": "giuravo",
+      "tu": "giuravi",
+      "lui/lei": "giurava",
+      "noi": "giuravamo",
+      "voi": "giuravate",
+      "loro": "giuravano"
+    },
+    "futuro": {
+      "io": "giurerò",
+      "tu": "giurerai",
+      "lui/lei": "giurerà",
+      "noi": "giureremo",
+      "voi": "giurerete",
+      "loro": "giureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giuri",
+      "tu": "giuri",
+      "lui/lei": "giuri",
+      "noi": "giuriamo",
+      "voi": "giuriate",
+      "loro": "giurino"
+    },
+    "condizionale": {
+      "io": "giurerei",
+      "tu": "giureresti",
+      "lui/lei": "giurerebbe",
+      "noi": "giureremmo",
+      "voi": "giurereste",
+      "loro": "giurerebbero"
+    },
+    "imperativo": {
+      "tu": "giura",
+      "lei": "giuri",
+      "noi": "giuriamo",
+      "voi": "giurate",
+      "loro": "giurino"
+    }
+  },
+  "giustificare": {
+    "presente": {
+      "io": "giustifico",
+      "tu": "giustifichi",
+      "lui/lei": "giustifica",
+      "noi": "giustifichiamo",
+      "voi": "giustificate",
+      "loro": "giustificano"
+    },
+    "passatoProssimo": {
+      "io": "ho giustificato",
+      "tu": "hai giustificato",
+      "lui/lei": "ha giustificato",
+      "noi": "abbiamo giustificato",
+      "voi": "avete giustificato",
+      "loro": "hanno giustificato"
+    },
+    "imperfetto": {
+      "io": "giustificavo",
+      "tu": "giustificavi",
+      "lui/lei": "giustificava",
+      "noi": "giustificavamo",
+      "voi": "giustificavate",
+      "loro": "giustificavano"
+    },
+    "futuro": {
+      "io": "giustificherò",
+      "tu": "giustificherai",
+      "lui/lei": "giustificherà",
+      "noi": "giustificheremo",
+      "voi": "giustificherete",
+      "loro": "giustificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giustifichi",
+      "tu": "giustifichi",
+      "lui/lei": "giustifichi",
+      "noi": "giustifichiamo",
+      "voi": "giustifichiate",
+      "loro": "giustifichino"
+    },
+    "condizionale": {
+      "io": "giustificherei",
+      "tu": "giustificheresti",
+      "lui/lei": "giustificherebbe",
+      "noi": "giustificheremmo",
+      "voi": "giustifichereste",
+      "loro": "giustificherebbero"
+    },
+    "imperativo": {
+      "tu": "giustifica",
+      "lei": "giustifichi",
+      "noi": "giustifichiamo",
+      "voi": "giustificate",
+      "loro": "giustifichino"
+    }
+  },
+  "giustiziare": {
+    "presente": {
+      "io": "giustizio",
+      "tu": "giustizi",
+      "lui/lei": "giustizia",
+      "noi": "giustiziamo",
+      "voi": "giustiziate",
+      "loro": "giustiziano"
+    },
+    "passatoProssimo": {
+      "io": "ho giustiziato",
+      "tu": "hai giustiziato",
+      "lui/lei": "ha giustiziato",
+      "noi": "abbiamo giustiziato",
+      "voi": "avete giustiziato",
+      "loro": "hanno giustiziato"
+    },
+    "imperfetto": {
+      "io": "giustiziavo",
+      "tu": "giustiziavi",
+      "lui/lei": "giustiziava",
+      "noi": "giustiziavamo",
+      "voi": "giustiziavate",
+      "loro": "giustiziavano"
+    },
+    "futuro": {
+      "io": "giustizierò",
+      "tu": "giustizierai",
+      "lui/lei": "giustizierà",
+      "noi": "giustizieremo",
+      "voi": "giustizierete",
+      "loro": "giustizieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "giustizi",
+      "tu": "giustizi",
+      "lui/lei": "giustizi",
+      "noi": "giustiziamo",
+      "voi": "giustiziate",
+      "loro": "giustizino"
+    },
+    "condizionale": {
+      "io": "giustizierei",
+      "tu": "giustizieresti",
+      "lui/lei": "giustizierebbe",
+      "noi": "giustizieremmo",
+      "voi": "giustiziereste",
+      "loro": "giustizierebbero"
+    },
+    "imperativo": {
+      "tu": "giustizia",
+      "lei": "giustizi",
+      "noi": "giustiziamo",
+      "voi": "giustiziate",
+      "loro": "giustizino"
+    }
+  },
+  "gloriare": {
+    "presente": {
+      "io": "glorio",
+      "tu": "glori",
+      "lui/lei": "gloria",
+      "noi": "gloriamo",
+      "voi": "gloriate",
+      "loro": "gloriano"
+    },
+    "passatoProssimo": {
+      "io": "ho gloriato",
+      "tu": "hai gloriato",
+      "lui/lei": "ha gloriato",
+      "noi": "abbiamo gloriato",
+      "voi": "avete gloriato",
+      "loro": "hanno gloriato"
+    },
+    "imperfetto": {
+      "io": "gloriavo",
+      "tu": "gloriavi",
+      "lui/lei": "gloriava",
+      "noi": "gloriavamo",
+      "voi": "gloriavate",
+      "loro": "gloriavano"
+    },
+    "futuro": {
+      "io": "glorierò",
+      "tu": "glorierai",
+      "lui/lei": "glorierà",
+      "noi": "glorieremo",
+      "voi": "glorierete",
+      "loro": "glorieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "glori",
+      "tu": "glori",
+      "lui/lei": "glori",
+      "noi": "gloriamo",
+      "voi": "gloriate",
+      "loro": "glorino"
+    },
+    "condizionale": {
+      "io": "glorierei",
+      "tu": "glorieresti",
+      "lui/lei": "glorierebbe",
+      "noi": "glorieremmo",
+      "voi": "gloriereste",
+      "loro": "glorierebbero"
+    },
+    "imperativo": {
+      "tu": "gloria",
+      "lei": "glori",
+      "noi": "gloriamo",
+      "voi": "gloriate",
+      "loro": "glorino"
+    }
+  },
+  "gocciare": {
+    "presente": {
+      "io": "goccio",
+      "tu": "gocci",
+      "lui/lei": "goccia",
+      "noi": "gocciamo",
+      "voi": "gocciate",
+      "loro": "gocciano"
+    },
+    "passatoProssimo": {
+      "io": "ho gocciato",
+      "tu": "hai gocciato",
+      "lui/lei": "ha gocciato",
+      "noi": "abbiamo gocciato",
+      "voi": "avete gocciato",
+      "loro": "hanno gocciato"
+    },
+    "imperfetto": {
+      "io": "gocciavo",
+      "tu": "gocciavi",
+      "lui/lei": "gocciava",
+      "noi": "gocciavamo",
+      "voi": "gocciavate",
+      "loro": "gocciavano"
+    },
+    "futuro": {
+      "io": "goccerò",
+      "tu": "goccerai",
+      "lui/lei": "goccerà",
+      "noi": "gocceremo",
+      "voi": "goccerete",
+      "loro": "gocceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gocci",
+      "tu": "gocci",
+      "lui/lei": "gocci",
+      "noi": "gocciamo",
+      "voi": "gocciate",
+      "loro": "goccino"
+    },
+    "condizionale": {
+      "io": "goccerei",
+      "tu": "gocceresti",
+      "lui/lei": "goccerebbe",
+      "noi": "gocceremmo",
+      "voi": "goccereste",
+      "loro": "goccerebbero"
+    },
+    "imperativo": {
+      "tu": "goccia",
+      "lei": "gocci",
+      "noi": "gocciamo",
+      "voi": "gocciate",
+      "loro": "goccino"
+    }
+  },
+  "gocciolare": {
+    "presente": {
+      "io": "gocciolo",
+      "tu": "goccioli",
+      "lui/lei": "gocciola",
+      "noi": "goccioliamo",
+      "voi": "gocciolate",
+      "loro": "gocciolano"
+    },
+    "passatoProssimo": {
+      "io": "ho gocciolato",
+      "tu": "hai gocciolato",
+      "lui/lei": "ha gocciolato",
+      "noi": "abbiamo gocciolato",
+      "voi": "avete gocciolato",
+      "loro": "hanno gocciolato"
+    },
+    "imperfetto": {
+      "io": "gocciolavo",
+      "tu": "gocciolavi",
+      "lui/lei": "gocciolava",
+      "noi": "gocciolavamo",
+      "voi": "gocciolavate",
+      "loro": "gocciolavano"
+    },
+    "futuro": {
+      "io": "gocciolerò",
+      "tu": "gocciolerai",
+      "lui/lei": "gocciolerà",
+      "noi": "goccioleremo",
+      "voi": "gocciolerete",
+      "loro": "goccioleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "goccioli",
+      "tu": "goccioli",
+      "lui/lei": "goccioli",
+      "noi": "goccioliamo",
+      "voi": "goccioliate",
+      "loro": "gocciolino"
+    },
+    "condizionale": {
+      "io": "gocciolerei",
+      "tu": "goccioleresti",
+      "lui/lei": "gocciolerebbe",
+      "noi": "goccioleremmo",
+      "voi": "gocciolereste",
+      "loro": "gocciolerebbero"
+    },
+    "imperativo": {
+      "tu": "gocciola",
+      "lei": "goccioli",
+      "noi": "goccioliamo",
+      "voi": "gocciolate",
+      "loro": "gocciolino"
+    }
+  },
+  "godere": {
+    "presente": {
+      "io": "godo",
+      "tu": "godi",
+      "lui/lei": "gode",
+      "noi": "godiamo",
+      "voi": "godete",
+      "loro": "godono"
+    },
+    "passatoProssimo": {
+      "io": "ho goduto",
+      "tu": "hai goduto",
+      "lui/lei": "ha goduto",
+      "noi": "abbiamo goduto",
+      "voi": "avete goduto",
+      "loro": "hanno goduto"
+    },
+    "imperfetto": {
+      "io": "godevo",
+      "tu": "godevi",
+      "lui/lei": "godeva",
+      "noi": "godevamo",
+      "voi": "godevate",
+      "loro": "godevano"
+    },
+    "futuro": {
+      "io": "godrò",
+      "tu": "godrai",
+      "lui/lei": "godrà",
+      "noi": "godremo",
+      "voi": "godrete",
+      "loro": "godranno"
+    },
+    "congiuntivoPresente": {
+      "io": "goda",
+      "tu": "goda",
+      "lui/lei": "goda",
+      "noi": "godiamo",
+      "voi": "godiate",
+      "loro": "godano"
+    },
+    "condizionale": {
+      "io": "godrei",
+      "tu": "godresti",
+      "lui/lei": "godrebbe",
+      "noi": "godremmo",
+      "voi": "godreste",
+      "loro": "godrebbero"
+    },
+    "imperativo": {
+      "tu": "godi",
+      "lei": "goda",
+      "noi": "godiamo",
+      "voi": "godete",
+      "loro": "godano"
+    }
+  },
+  "gonfiare": {
+    "presente": {
+      "io": "gonfio",
+      "tu": "gonfi",
+      "lui/lei": "gonfia",
+      "noi": "gonfiamo",
+      "voi": "gonfiate",
+      "loro": "gonfiano"
+    },
+    "passatoProssimo": {
+      "io": "ho gonfiato",
+      "tu": "hai gonfiato",
+      "lui/lei": "ha gonfiato",
+      "noi": "abbiamo gonfiato",
+      "voi": "avete gonfiato",
+      "loro": "hanno gonfiato"
+    },
+    "imperfetto": {
+      "io": "gonfiavo",
+      "tu": "gonfiavi",
+      "lui/lei": "gonfiava",
+      "noi": "gonfiavamo",
+      "voi": "gonfiavate",
+      "loro": "gonfiavano"
+    },
+    "futuro": {
+      "io": "gonfierò",
+      "tu": "gonfierai",
+      "lui/lei": "gonfierà",
+      "noi": "gonfieremo",
+      "voi": "gonfierete",
+      "loro": "gonfieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gonfi",
+      "tu": "gonfi",
+      "lui/lei": "gonfi",
+      "noi": "gonfiamo",
+      "voi": "gonfiate",
+      "loro": "gonfino"
+    },
+    "condizionale": {
+      "io": "gonfierei",
+      "tu": "gonfieresti",
+      "lui/lei": "gonfierebbe",
+      "noi": "gonfieremmo",
+      "voi": "gonfiereste",
+      "loro": "gonfierebbero"
+    },
+    "imperativo": {
+      "tu": "gonfia",
+      "lei": "gonfi",
+      "noi": "gonfiamo",
+      "voi": "gonfiate",
+      "loro": "gonfino"
+    },
+    "passatoRemoto": {
+      "io": "gonfiai",
+      "tu": "gonfiasti",
+      "lui/lei": "gonfiò",
+      "noi": "gonfiammo",
+      "voi": "gonfiaste",
+      "loro": "gonfiarono"
+    }
+  },
+  "gongolare": {
+    "presente": {
+      "io": "gongolo",
+      "tu": "gongoli",
+      "lui/lei": "gongola",
+      "noi": "gongoliamo",
+      "voi": "gongolate",
+      "loro": "gongolano"
+    },
+    "passatoProssimo": {
+      "io": "ho gongolato",
+      "tu": "hai gongolato",
+      "lui/lei": "ha gongolato",
+      "noi": "abbiamo gongolato",
+      "voi": "avete gongolato",
+      "loro": "hanno gongolato"
+    },
+    "imperfetto": {
+      "io": "gongolavo",
+      "tu": "gongolavi",
+      "lui/lei": "gongolava",
+      "noi": "gongolavamo",
+      "voi": "gongolavate",
+      "loro": "gongolavano"
+    },
+    "futuro": {
+      "io": "gongolerò",
+      "tu": "gongolerai",
+      "lui/lei": "gongolerà",
+      "noi": "gongoleremo",
+      "voi": "gongolerete",
+      "loro": "gongoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gongoli",
+      "tu": "gongoli",
+      "lui/lei": "gongoli",
+      "noi": "gongoliamo",
+      "voi": "gongoliate",
+      "loro": "gongolino"
+    },
+    "condizionale": {
+      "io": "gongolerei",
+      "tu": "gongoleresti",
+      "lui/lei": "gongolerebbe",
+      "noi": "gongoleremmo",
+      "voi": "gongolereste",
+      "loro": "gongolerebbero"
+    },
+    "imperativo": {
+      "tu": "gongola",
+      "lei": "gongoli",
+      "noi": "gongoliamo",
+      "voi": "gongolate",
+      "loro": "gongolino"
+    }
+  },
+  "gorgogliare": {
+    "presente": {
+      "io": "gorgoglio",
+      "tu": "gorgogli",
+      "lui/lei": "gorgoglia",
+      "noi": "gorgogliamo",
+      "voi": "gorgogliate",
+      "loro": "gorgogliano"
+    },
+    "passatoProssimo": {
+      "io": "ho gorgogliato",
+      "tu": "hai gorgogliato",
+      "lui/lei": "ha gorgogliato",
+      "noi": "abbiamo gorgogliato",
+      "voi": "avete gorgogliato",
+      "loro": "hanno gorgogliato"
+    },
+    "imperfetto": {
+      "io": "gorgogliavo",
+      "tu": "gorgogliavi",
+      "lui/lei": "gorgogliava",
+      "noi": "gorgogliavamo",
+      "voi": "gorgogliavate",
+      "loro": "gorgogliavano"
+    },
+    "futuro": {
+      "io": "gorgoglierò",
+      "tu": "gorgoglierai",
+      "lui/lei": "gorgoglierà",
+      "noi": "gorgoglieremo",
+      "voi": "gorgoglierete",
+      "loro": "gorgoglieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gorgogli",
+      "tu": "gorgogli",
+      "lui/lei": "gorgogli",
+      "noi": "gorgogliamo",
+      "voi": "gorgogliate",
+      "loro": "gorgoglino"
+    },
+    "condizionale": {
+      "io": "gorgoglierei",
+      "tu": "gorgoglieresti",
+      "lui/lei": "gorgoglierebbe",
+      "noi": "gorgoglieremmo",
+      "voi": "gorgogliereste",
+      "loro": "gorgoglierebbero"
+    },
+    "imperativo": {
+      "tu": "gorgoglia",
+      "lei": "gorgogli",
+      "noi": "gorgogliamo",
+      "voi": "gorgogliate",
+      "loro": "gorgoglino"
+    }
+  },
+  "governare": {
+    "presente": {
+      "io": "governo",
+      "tu": "governi",
+      "lui/lei": "governa",
+      "noi": "governiamo",
+      "voi": "governate",
+      "loro": "governano"
+    },
+    "passatoProssimo": {
+      "io": "ho governato",
+      "tu": "hai governato",
+      "lui/lei": "ha governato",
+      "noi": "abbiamo governato",
+      "voi": "avete governato",
+      "loro": "hanno governato"
+    },
+    "imperfetto": {
+      "io": "governavo",
+      "tu": "governavi",
+      "lui/lei": "governava",
+      "noi": "governavamo",
+      "voi": "governavate",
+      "loro": "governavano"
+    },
+    "futuro": {
+      "io": "governerò",
+      "tu": "governerai",
+      "lui/lei": "governerà",
+      "noi": "governeremo",
+      "voi": "governerete",
+      "loro": "governeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "governi",
+      "tu": "governi",
+      "lui/lei": "governi",
+      "noi": "governiamo",
+      "voi": "governiate",
+      "loro": "governino"
+    },
+    "condizionale": {
+      "io": "governerei",
+      "tu": "governeresti",
+      "lui/lei": "governerebbe",
+      "noi": "governeremmo",
+      "voi": "governereste",
+      "loro": "governerebbero"
+    },
+    "imperativo": {
+      "tu": "governa",
+      "lei": "governi",
+      "noi": "governiamo",
+      "voi": "governate",
+      "loro": "governino"
+    }
+  },
+  "gracchiare": {
+    "presente": {
+      "io": "gracchio",
+      "tu": "gracchi",
+      "lui/lei": "gracchia",
+      "noi": "gracchiamo",
+      "voi": "gracchiate",
+      "loro": "gracchiano"
+    },
+    "passatoProssimo": {
+      "io": "ho gracchiato",
+      "tu": "hai gracchiato",
+      "lui/lei": "ha gracchiato",
+      "noi": "abbiamo gracchiato",
+      "voi": "avete gracchiato",
+      "loro": "hanno gracchiato"
+    },
+    "imperfetto": {
+      "io": "gracchiavo",
+      "tu": "gracchiavi",
+      "lui/lei": "gracchiava",
+      "noi": "gracchiavamo",
+      "voi": "gracchiavate",
+      "loro": "gracchiavano"
+    },
+    "futuro": {
+      "io": "gracchierò",
+      "tu": "gracchierai",
+      "lui/lei": "gracchierà",
+      "noi": "gracchieremo",
+      "voi": "gracchierete",
+      "loro": "gracchieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gracchi",
+      "tu": "gracchi",
+      "lui/lei": "gracchi",
+      "noi": "gracchiamo",
+      "voi": "gracchiate",
+      "loro": "gracchino"
+    },
+    "condizionale": {
+      "io": "gracchierei",
+      "tu": "gracchieresti",
+      "lui/lei": "gracchierebbe",
+      "noi": "gracchieremmo",
+      "voi": "gracchiereste",
+      "loro": "gracchierebbero"
+    },
+    "imperativo": {
+      "tu": "gracchia",
+      "lei": "gracchi",
+      "noi": "gracchiamo",
+      "voi": "gracchiate",
+      "loro": "gracchino"
+    }
+  },
+  "gradire": {
+    "presente": {
+      "io": "gradisco",
+      "tu": "gradisci",
+      "lui/lei": "gradisce",
+      "noi": "gradiamo",
+      "voi": "gradite",
+      "loro": "gradiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho gradito",
+      "tu": "hai gradito",
+      "lui/lei": "ha gradito",
+      "noi": "abbiamo gradito",
+      "voi": "avete gradito",
+      "loro": "hanno gradito"
+    },
+    "imperfetto": {
+      "io": "gradivo",
+      "tu": "gradivi",
+      "lui/lei": "gradiva",
+      "noi": "gradivamo",
+      "voi": "gradivate",
+      "loro": "gradivano"
+    },
+    "futuro": {
+      "io": "gradirò",
+      "tu": "gradirai",
+      "lui/lei": "gradirà",
+      "noi": "gradiremo",
+      "voi": "gradirete",
+      "loro": "gradiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gradisca",
+      "tu": "gradisca",
+      "lui/lei": "gradisca",
+      "noi": "gradiamo",
+      "voi": "gradiate",
+      "loro": "gradiscano"
+    },
+    "condizionale": {
+      "io": "gradirei",
+      "tu": "gradiresti",
+      "lui/lei": "gradirebbe",
+      "noi": "gradiremmo",
+      "voi": "gradireste",
+      "loro": "gradirebbero"
+    },
+    "imperativo": {
+      "tu": "gradisci",
+      "lei": "gradisca",
+      "noi": "gradiamo",
+      "voi": "gradite",
+      "loro": "gradiscano"
+    }
+  },
+  "graffiare": {
+    "presente": {
+      "io": "graffio",
+      "tu": "graffi",
+      "lui/lei": "graffia",
+      "noi": "graffiamo",
+      "voi": "graffiate",
+      "loro": "graffiano"
+    },
+    "passatoProssimo": {
+      "io": "ho graffiato",
+      "tu": "hai graffiato",
+      "lui/lei": "ha graffiato",
+      "noi": "abbiamo graffiato",
+      "voi": "avete graffiato",
+      "loro": "hanno graffiato"
+    },
+    "imperfetto": {
+      "io": "graffiavo",
+      "tu": "graffiavi",
+      "lui/lei": "graffiava",
+      "noi": "graffiavamo",
+      "voi": "graffiavate",
+      "loro": "graffiavano"
+    },
+    "futuro": {
+      "io": "graffierò",
+      "tu": "graffierai",
+      "lui/lei": "graffierà",
+      "noi": "graffieremo",
+      "voi": "graffierete",
+      "loro": "graffieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "graffi",
+      "tu": "graffi",
+      "lui/lei": "graffi",
+      "noi": "graffiamo",
+      "voi": "graffiate",
+      "loro": "graffino"
+    },
+    "condizionale": {
+      "io": "graffierei",
+      "tu": "graffieresti",
+      "lui/lei": "graffierebbe",
+      "noi": "graffieremmo",
+      "voi": "graffiereste",
+      "loro": "graffierebbero"
+    },
+    "imperativo": {
+      "tu": "graffia",
+      "lei": "graffi",
+      "noi": "graffiamo",
+      "voi": "graffiate",
+      "loro": "graffino"
+    }
+  },
+  "grandinare": {
+    "presente": {
+      "io": "grandino",
+      "tu": "grandini",
+      "lui/lei": "grandina",
+      "noi": "grandiniamo",
+      "voi": "grandinate",
+      "loro": "grandinano"
+    },
+    "passatoProssimo": {
+      "io": "ho grandinato",
+      "tu": "hai grandinato",
+      "lui/lei": "ha grandinato",
+      "noi": "abbiamo grandinato",
+      "voi": "avete grandinato",
+      "loro": "hanno grandinato"
+    },
+    "imperfetto": {
+      "io": "grandinavo",
+      "tu": "grandinavi",
+      "lui/lei": "grandinava",
+      "noi": "grandinavamo",
+      "voi": "grandinavate",
+      "loro": "grandinavano"
+    },
+    "futuro": {
+      "io": "grandinerò",
+      "tu": "grandinerai",
+      "lui/lei": "grandinerà",
+      "noi": "grandineremo",
+      "voi": "grandinerete",
+      "loro": "grandineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "grandini",
+      "tu": "grandini",
+      "lui/lei": "grandini",
+      "noi": "grandiniamo",
+      "voi": "grandiniate",
+      "loro": "grandinino"
+    },
+    "condizionale": {
+      "io": "grandinerei",
+      "tu": "grandineresti",
+      "lui/lei": "grandinerebbe",
+      "noi": "grandineremmo",
+      "voi": "grandinereste",
+      "loro": "grandinerebbero"
+    },
+    "imperativo": {
+      "tu": "grandina",
+      "lei": "grandini",
+      "noi": "grandiniamo",
+      "voi": "grandinate",
+      "loro": "grandinino"
+    }
+  },
+  "grattare": {
+    "presente": {
+      "io": "gratto",
+      "tu": "gratti",
+      "lui/lei": "gratta",
+      "noi": "grattiamo",
+      "voi": "grattate",
+      "loro": "grattano"
+    },
+    "passatoProssimo": {
+      "io": "ho grattato",
+      "tu": "hai grattato",
+      "lui/lei": "ha grattato",
+      "noi": "abbiamo grattato",
+      "voi": "avete grattato",
+      "loro": "hanno grattato"
+    },
+    "imperfetto": {
+      "io": "grattavo",
+      "tu": "grattavi",
+      "lui/lei": "grattava",
+      "noi": "grattavamo",
+      "voi": "grattavate",
+      "loro": "grattavano"
+    },
+    "futuro": {
+      "io": "gratterò",
+      "tu": "gratterai",
+      "lui/lei": "gratterà",
+      "noi": "gratteremo",
+      "voi": "gratterete",
+      "loro": "gratteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gratti",
+      "tu": "gratti",
+      "lui/lei": "gratti",
+      "noi": "grattiamo",
+      "voi": "grattiate",
+      "loro": "grattino"
+    },
+    "condizionale": {
+      "io": "gratterei",
+      "tu": "gratteresti",
+      "lui/lei": "gratterebbe",
+      "noi": "gratteremmo",
+      "voi": "grattereste",
+      "loro": "gratterebbero"
+    },
+    "imperativo": {
+      "tu": "gratta",
+      "lei": "gratti",
+      "noi": "grattiamo",
+      "voi": "grattate",
+      "loro": "grattino"
+    }
+  },
+  "grattarsi": {
+    "presente": {
+      "io": "mi gratto",
+      "tu": "ti gratti",
+      "lui/lei": "si gratta",
+      "noi": "ci grattiamo",
+      "voi": "vi grattate",
+      "loro": "si grattano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono grattato/a",
+      "tu": "ti sei grattato/a",
+      "lui/lei": "si è grattato/a",
+      "noi": "ci siamo grattati/e",
+      "voi": "vi siete grattati/e",
+      "loro": "si sono grattati/e"
+    },
+    "imperfetto": {
+      "io": "mi grattavo",
+      "tu": "ti grattavi",
+      "lui/lei": "si grattava",
+      "noi": "ci grattavamo",
+      "voi": "vi grattavate",
+      "loro": "si grattavano"
+    },
+    "futuro": {
+      "io": "mi gratterò",
+      "tu": "ti gratterai",
+      "lui/lei": "si gratterà",
+      "noi": "ci gratteremo",
+      "voi": "vi gratterete",
+      "loro": "si gratteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi gratti",
+      "tu": "ti gratti",
+      "lui/lei": "si gratti",
+      "noi": "ci grattiamo",
+      "voi": "vi grattiate",
+      "loro": "si grattino"
+    },
+    "condizionale": {
+      "io": "mi gratterei",
+      "tu": "ti gratteresti",
+      "lui/lei": "si gratterebbe",
+      "noi": "ci gratteremmo",
+      "voi": "vi grattereste",
+      "loro": "si gratterebbero"
+    },
+    "imperativo": {
+      "tu": "grattati",
+      "lei": "si gratti",
+      "noi": "grattiamoci",
+      "voi": "grattatevi",
+      "loro": "si grattino"
+    }
+  },
+  "grattugiare": {
+    "presente": {
+      "io": "grattugio",
+      "tu": "grattugi",
+      "lui/lei": "grattugia",
+      "noi": "grattugiamo",
+      "voi": "grattugiate",
+      "loro": "grattugiano"
+    },
+    "passatoProssimo": {
+      "io": "ho grattugiato",
+      "tu": "hai grattugiato",
+      "lui/lei": "ha grattugiato",
+      "noi": "abbiamo grattugiato",
+      "voi": "avete grattugiato",
+      "loro": "hanno grattugiato"
+    },
+    "imperfetto": {
+      "io": "grattugiavo",
+      "tu": "grattugiavi",
+      "lui/lei": "grattugiava",
+      "noi": "grattugiavamo",
+      "voi": "grattugiavate",
+      "loro": "grattugiavano"
+    },
+    "futuro": {
+      "io": "grattugerò",
+      "tu": "grattugerai",
+      "lui/lei": "grattugerà",
+      "noi": "grattugeremo",
+      "voi": "grattugerete",
+      "loro": "grattugeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "grattugi",
+      "tu": "grattugi",
+      "lui/lei": "grattugi",
+      "noi": "grattugiamo",
+      "voi": "grattugiate",
+      "loro": "grattugino"
+    },
+    "condizionale": {
+      "io": "grattugerei",
+      "tu": "grattugeresti",
+      "lui/lei": "grattugerebbe",
+      "noi": "grattugeremmo",
+      "voi": "grattugereste",
+      "loro": "grattugerebbero"
+    },
+    "imperativo": {
+      "tu": "grattugia",
+      "lei": "grattugi",
+      "noi": "grattugiamo",
+      "voi": "grattugiate",
+      "loro": "grattugino"
+    }
+  },
+  "gravare": {
+    "presente": {
+      "io": "gravo",
+      "tu": "gravi",
+      "lui/lei": "grava",
+      "noi": "graviamo",
+      "voi": "gravate",
+      "loro": "gravano"
+    },
+    "passatoProssimo": {
+      "io": "ho gravato",
+      "tu": "hai gravato",
+      "lui/lei": "ha gravato",
+      "noi": "abbiamo gravato",
+      "voi": "avete gravato",
+      "loro": "hanno gravato"
+    },
+    "imperfetto": {
+      "io": "gravavo",
+      "tu": "gravavi",
+      "lui/lei": "gravava",
+      "noi": "gravavamo",
+      "voi": "gravavate",
+      "loro": "gravavano"
+    },
+    "futuro": {
+      "io": "graverò",
+      "tu": "graverai",
+      "lui/lei": "graverà",
+      "noi": "graveremo",
+      "voi": "graverete",
+      "loro": "graveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gravi",
+      "tu": "gravi",
+      "lui/lei": "gravi",
+      "noi": "graviamo",
+      "voi": "graviate",
+      "loro": "gravino"
+    },
+    "condizionale": {
+      "io": "graverei",
+      "tu": "graveresti",
+      "lui/lei": "graverebbe",
+      "noi": "graveremmo",
+      "voi": "gravereste",
+      "loro": "graverebbero"
+    },
+    "imperativo": {
+      "tu": "grava",
+      "lei": "gravi",
+      "noi": "graviamo",
+      "voi": "gravate",
+      "loro": "gravino"
+    }
+  },
+  "graziare": {
+    "presente": {
+      "io": "grazio",
+      "tu": "grazi",
+      "lui/lei": "grazia",
+      "noi": "graziamo",
+      "voi": "graziate",
+      "loro": "graziano"
+    },
+    "passatoProssimo": {
+      "io": "ho graziato",
+      "tu": "hai graziato",
+      "lui/lei": "ha graziato",
+      "noi": "abbiamo graziato",
+      "voi": "avete graziato",
+      "loro": "hanno graziato"
+    },
+    "imperfetto": {
+      "io": "graziavo",
+      "tu": "graziavi",
+      "lui/lei": "graziava",
+      "noi": "graziavamo",
+      "voi": "graziavate",
+      "loro": "graziavano"
+    },
+    "futuro": {
+      "io": "grazierò",
+      "tu": "grazierai",
+      "lui/lei": "grazierà",
+      "noi": "grazieremo",
+      "voi": "grazierete",
+      "loro": "grazieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "grazi",
+      "tu": "grazi",
+      "lui/lei": "grazi",
+      "noi": "graziamo",
+      "voi": "graziate",
+      "loro": "grazino"
+    },
+    "condizionale": {
+      "io": "grazierei",
+      "tu": "grazieresti",
+      "lui/lei": "grazierebbe",
+      "noi": "grazieremmo",
+      "voi": "graziereste",
+      "loro": "grazierebbero"
+    },
+    "imperativo": {
+      "tu": "grazia",
+      "lei": "grazi",
+      "noi": "graziamo",
+      "voi": "graziate",
+      "loro": "grazino"
+    }
+  },
+  "gremire": {
+    "presente": {
+      "io": "gremisco",
+      "tu": "gremisci",
+      "lui/lei": "gremisce",
+      "noi": "gremiamo",
+      "voi": "gremite",
+      "loro": "gremiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho gremito",
+      "tu": "hai gremito",
+      "lui/lei": "ha gremito",
+      "noi": "abbiamo gremito",
+      "voi": "avete gremito",
+      "loro": "hanno gremito"
+    },
+    "imperfetto": {
+      "io": "gremivo",
+      "tu": "gremivi",
+      "lui/lei": "gremiva",
+      "noi": "gremivamo",
+      "voi": "gremivate",
+      "loro": "gremivano"
+    },
+    "futuro": {
+      "io": "gremirò",
+      "tu": "gremirai",
+      "lui/lei": "gremirà",
+      "noi": "gremiremo",
+      "voi": "gremirete",
+      "loro": "gremiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gremisca",
+      "tu": "gremisca",
+      "lui/lei": "gremisca",
+      "noi": "gremiamo",
+      "voi": "gremiate",
+      "loro": "gremiscano"
+    },
+    "condizionale": {
+      "io": "gremirei",
+      "tu": "gremiresti",
+      "lui/lei": "gremirebbe",
+      "noi": "gremiremmo",
+      "voi": "gremireste",
+      "loro": "gremirebbero"
+    },
+    "imperativo": {
+      "tu": "gremisci",
+      "lei": "gremisca",
+      "noi": "gremiamo",
+      "voi": "gremite",
+      "loro": "gremiscano"
+    }
+  },
+  "gridare": {
+    "presente": {
+      "io": "grido",
+      "tu": "gridi",
+      "lui/lei": "grida",
+      "noi": "gridiamo",
+      "voi": "gridate",
+      "loro": "gridano"
+    },
+    "passatoProssimo": {
+      "io": "ho gridato",
+      "tu": "hai gridato",
+      "lui/lei": "ha gridato",
+      "noi": "abbiamo gridato",
+      "voi": "avete gridato",
+      "loro": "hanno gridato"
+    },
+    "imperfetto": {
+      "io": "gridavo",
+      "tu": "gridavi",
+      "lui/lei": "gridava",
+      "noi": "gridavamo",
+      "voi": "gridavate",
+      "loro": "gridavano"
+    },
+    "futuro": {
+      "io": "griderò",
+      "tu": "griderai",
+      "lui/lei": "griderà",
+      "noi": "grideremo",
+      "voi": "griderete",
+      "loro": "grideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gridi",
+      "tu": "gridi",
+      "lui/lei": "gridi",
+      "noi": "gridiamo",
+      "voi": "gridiate",
+      "loro": "gridino"
+    },
+    "condizionale": {
+      "io": "griderei",
+      "tu": "grideresti",
+      "lui/lei": "griderebbe",
+      "noi": "grideremmo",
+      "voi": "gridereste",
+      "loro": "griderebbero"
+    },
+    "imperativo": {
+      "tu": "grida",
+      "lei": "gridi",
+      "noi": "gridiamo",
+      "voi": "gridate",
+      "loro": "gridino"
+    }
+  },
+  "grondare": {
+    "presente": {
+      "io": "grondo",
+      "tu": "grondi",
+      "lui/lei": "gronda",
+      "noi": "grondiamo",
+      "voi": "grondate",
+      "loro": "grondano"
+    },
+    "passatoProssimo": {
+      "io": "ho grondato",
+      "tu": "hai grondato",
+      "lui/lei": "ha grondato",
+      "noi": "abbiamo grondato",
+      "voi": "avete grondato",
+      "loro": "hanno grondato"
+    },
+    "imperfetto": {
+      "io": "grondavo",
+      "tu": "grondavi",
+      "lui/lei": "grondava",
+      "noi": "grondavamo",
+      "voi": "grondavate",
+      "loro": "grondavano"
+    },
+    "futuro": {
+      "io": "gronderò",
+      "tu": "gronderai",
+      "lui/lei": "gronderà",
+      "noi": "gronderemo",
+      "voi": "gronderete",
+      "loro": "gronderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "grondi",
+      "tu": "grondi",
+      "lui/lei": "grondi",
+      "noi": "grondiamo",
+      "voi": "grondiate",
+      "loro": "grondino"
+    },
+    "condizionale": {
+      "io": "gronderei",
+      "tu": "gronderesti",
+      "lui/lei": "gronderebbe",
+      "noi": "gronderemmo",
+      "voi": "grondereste",
+      "loro": "gronderebbero"
+    },
+    "imperativo": {
+      "tu": "gronda",
+      "lei": "grondi",
+      "noi": "grondiamo",
+      "voi": "grondate",
+      "loro": "grondino"
+    }
+  },
+  "grufolare": {
+    "presente": {
+      "io": "grufolo",
+      "tu": "grufoli",
+      "lui/lei": "grufola",
+      "noi": "grufoliamo",
+      "voi": "grufolate",
+      "loro": "grufolano"
+    },
+    "passatoProssimo": {
+      "io": "ho grufolato",
+      "tu": "hai grufolato",
+      "lui/lei": "ha grufolato",
+      "noi": "abbiamo grufolato",
+      "voi": "avete grufolato",
+      "loro": "hanno grufolato"
+    },
+    "imperfetto": {
+      "io": "grufolavo",
+      "tu": "grufolavi",
+      "lui/lei": "grufolava",
+      "noi": "grufolavamo",
+      "voi": "grufolavate",
+      "loro": "grufolavano"
+    },
+    "futuro": {
+      "io": "grufolerò",
+      "tu": "grufolerai",
+      "lui/lei": "grufolerà",
+      "noi": "grufoleremo",
+      "voi": "grufolerete",
+      "loro": "grufoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "grufoli",
+      "tu": "grufoli",
+      "lui/lei": "grufoli",
+      "noi": "grufoliamo",
+      "voi": "grufoliate",
+      "loro": "grufolino"
+    },
+    "condizionale": {
+      "io": "grufolerei",
+      "tu": "grufoleresti",
+      "lui/lei": "grufolerebbe",
+      "noi": "grufoleremmo",
+      "voi": "grufolereste",
+      "loro": "grufolerebbero"
+    },
+    "imperativo": {
+      "tu": "grufola",
+      "lei": "grufoli",
+      "noi": "grufoliamo",
+      "voi": "grufolate",
+      "loro": "grufolino"
+    }
+  },
+  "guadagnare": {
+    "presente": {
+      "io": "guadagno",
+      "tu": "guadagni",
+      "lui/lei": "guadagna",
+      "noi": "guadagniamo",
+      "voi": "guadagnate",
+      "loro": "guadagnano"
+    },
+    "passatoProssimo": {
+      "io": "ho guadagnato",
+      "tu": "hai guadagnato",
+      "lui/lei": "ha guadagnato",
+      "noi": "abbiamo guadagnato",
+      "voi": "avete guadagnato",
+      "loro": "hanno guadagnato"
+    },
+    "imperfetto": {
+      "io": "guadagnavo",
+      "tu": "guadagnavi",
+      "lui/lei": "guadagnava",
+      "noi": "guadagnavamo",
+      "voi": "guadagnavate",
+      "loro": "guadagnavano"
+    },
+    "futuro": {
+      "io": "guadagnerò",
+      "tu": "guadagnerai",
+      "lui/lei": "guadagnerà",
+      "noi": "guadagneremo",
+      "voi": "guadagnerete",
+      "loro": "guadagneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "guadagni",
+      "tu": "guadagni",
+      "lui/lei": "guadagni",
+      "noi": "guadagniamo",
+      "voi": "guadagniate",
+      "loro": "guadagnino"
+    },
+    "condizionale": {
+      "io": "guadagnerei",
+      "tu": "guadagneresti",
+      "lui/lei": "guadagnerebbe",
+      "noi": "guadagneremmo",
+      "voi": "guadagnereste",
+      "loro": "guadagnerebbero"
+    },
+    "imperativo": {
+      "tu": "guadagna",
+      "lei": "guadagni",
+      "noi": "guadagniamo",
+      "voi": "guadagnate",
+      "loro": "guadagnino"
+    }
+  },
+  "guaire": {
+    "presente": {
+      "io": "guaisco",
+      "tu": "guaisci",
+      "lui/lei": "guaisce",
+      "noi": "guaiamo",
+      "voi": "guaite",
+      "loro": "guaiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho guaito",
+      "tu": "hai guaito",
+      "lui/lei": "ha guaito",
+      "noi": "abbiamo guaito",
+      "voi": "avete guaito",
+      "loro": "hanno guaito"
+    },
+    "imperfetto": {
+      "io": "guaivo",
+      "tu": "guaivi",
+      "lui/lei": "guaiva",
+      "noi": "guaivamo",
+      "voi": "guaivate",
+      "loro": "guaivano"
+    },
+    "futuro": {
+      "io": "guairò",
+      "tu": "guairai",
+      "lui/lei": "guairà",
+      "noi": "guairemo",
+      "voi": "guairete",
+      "loro": "guairanno"
+    },
+    "congiuntivoPresente": {
+      "io": "guaisca",
+      "tu": "guaisca",
+      "lui/lei": "guaisca",
+      "noi": "guaiamo",
+      "voi": "guaiate",
+      "loro": "guaiscano"
+    },
+    "condizionale": {
+      "io": "guairei",
+      "tu": "guairesti",
+      "lui/lei": "guairebbe",
+      "noi": "guairemmo",
+      "voi": "guaireste",
+      "loro": "guairebbero"
+    },
+    "imperativo": {
+      "tu": "guaisci",
+      "lei": "guaisca",
+      "noi": "guaiamo",
+      "voi": "guaite",
+      "loro": "guaiscano"
+    }
+  },
+  "guardare": {
+    "presente": {
+      "io": "guardo",
+      "tu": "guardi",
+      "lui/lei": "guarda",
+      "noi": "guardiamo",
+      "voi": "guardate",
+      "loro": "guardano"
+    },
+    "passatoProssimo": {
+      "io": "ho guardato",
+      "tu": "hai guardato",
+      "lui/lei": "ha guardato",
+      "noi": "abbiamo guardato",
+      "voi": "avete guardato",
+      "loro": "hanno guardato"
+    },
+    "imperfetto": {
+      "io": "guardavo",
+      "tu": "guardavi",
+      "lui/lei": "guardava",
+      "noi": "guardavamo",
+      "voi": "guardavate",
+      "loro": "guardavano"
+    },
+    "futuro": {
+      "io": "guarderò",
+      "tu": "guarderai",
+      "lui/lei": "guarderà",
+      "noi": "guarderemo",
+      "voi": "guarderete",
+      "loro": "guarderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "guardi",
+      "tu": "guardi",
+      "lui/lei": "guardi",
+      "noi": "guardiamo",
+      "voi": "guardiate",
+      "loro": "guardino"
+    },
+    "condizionale": {
+      "io": "guarderei",
+      "tu": "guarderesti",
+      "lui/lei": "guarderebbe",
+      "noi": "guarderemmo",
+      "voi": "guardereste",
+      "loro": "guarderebbero"
+    },
+    "imperativo": {
+      "tu": "guarda",
+      "lei": "guardi",
+      "noi": "guardiamo",
+      "voi": "guardate",
+      "loro": "guardino"
+    }
+  },
+  "guarire": {
+    "presente": {
+      "io": "guarisco",
+      "tu": "guarisci",
+      "lui/lei": "guarisce",
+      "noi": "guariamo",
+      "voi": "guarite",
+      "loro": "guariscono"
+    },
+    "passatoProssimo": {
+      "io": "sono guarito/a",
+      "tu": "sei guarito/a",
+      "lui/lei": "è guarito/a",
+      "noi": "siamo guariti/e",
+      "voi": "siete guariti/e",
+      "loro": "sono guariti/e"
+    },
+    "imperfetto": {
+      "io": "guarivo",
+      "tu": "guarivi",
+      "lui/lei": "guariva",
+      "noi": "guarivamo",
+      "voi": "guarivate",
+      "loro": "guarivano"
+    },
+    "futuro": {
+      "io": "guarirò",
+      "tu": "guarirai",
+      "lui/lei": "guarirà",
+      "noi": "guariremo",
+      "voi": "guarirete",
+      "loro": "guariranno"
+    },
+    "congiuntivoPresente": {
+      "io": "guarisca",
+      "tu": "guarisca",
+      "lui/lei": "guarisca",
+      "noi": "guariamo",
+      "voi": "guariate",
+      "loro": "guariscano"
+    },
+    "condizionale": {
+      "io": "guarirei",
+      "tu": "guariresti",
+      "lui/lei": "guarirebbe",
+      "noi": "guariremmo",
+      "voi": "guarireste",
+      "loro": "guarirebbero"
+    },
+    "imperativo": {
+      "tu": "guarisci",
+      "lei": "guarisca",
+      "noi": "guariamo",
+      "voi": "guarite",
+      "loro": "guariscano"
+    }
+  },
+  "guastare": {
+    "presente": {
+      "io": "guasto",
+      "tu": "guasti",
+      "lui/lei": "guasta",
+      "noi": "guastiamo",
+      "voi": "guastate",
+      "loro": "guastano"
+    },
+    "passatoProssimo": {
+      "io": "ho guastato",
+      "tu": "hai guastato",
+      "lui/lei": "ha guastato",
+      "noi": "abbiamo guastato",
+      "voi": "avete guastato",
+      "loro": "hanno guastato"
+    },
+    "imperfetto": {
+      "io": "guastavo",
+      "tu": "guastavi",
+      "lui/lei": "guastava",
+      "noi": "guastavamo",
+      "voi": "guastavate",
+      "loro": "guastavano"
+    },
+    "futuro": {
+      "io": "guasterò",
+      "tu": "guasterai",
+      "lui/lei": "guasterà",
+      "noi": "guasteremo",
+      "voi": "guasterete",
+      "loro": "guasteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "guasti",
+      "tu": "guasti",
+      "lui/lei": "guasti",
+      "noi": "guastiamo",
+      "voi": "guastiate",
+      "loro": "guastino"
+    },
+    "condizionale": {
+      "io": "guasterei",
+      "tu": "guasteresti",
+      "lui/lei": "guasterebbe",
+      "noi": "guasteremmo",
+      "voi": "guastereste",
+      "loro": "guasterebbero"
+    },
+    "imperativo": {
+      "tu": "guasta",
+      "lei": "guasti",
+      "noi": "guastiamo",
+      "voi": "guastate",
+      "loro": "guastino"
+    }
+  },
+  "guatare": {
+    "presente": {
+      "io": "guato",
+      "tu": "guati",
+      "lui/lei": "guata",
+      "noi": "guatiamo",
+      "voi": "guatate",
+      "loro": "guatano"
+    },
+    "passatoProssimo": {
+      "io": "ho guatato",
+      "tu": "hai guatato",
+      "lui/lei": "ha guatato",
+      "noi": "abbiamo guatato",
+      "voi": "avete guatato",
+      "loro": "hanno guatato"
+    },
+    "imperfetto": {
+      "io": "guatavo",
+      "tu": "guatavi",
+      "lui/lei": "guatava",
+      "noi": "guatavamo",
+      "voi": "guatavate",
+      "loro": "guatavano"
+    },
+    "futuro": {
+      "io": "guaterò",
+      "tu": "guaterai",
+      "lui/lei": "guaterà",
+      "noi": "guateremo",
+      "voi": "guaterete",
+      "loro": "guateranno"
+    },
+    "congiuntivoPresente": {
+      "io": "guati",
+      "tu": "guati",
+      "lui/lei": "guati",
+      "noi": "guatiamo",
+      "voi": "guatiate",
+      "loro": "guatino"
+    },
+    "condizionale": {
+      "io": "guaterei",
+      "tu": "guateresti",
+      "lui/lei": "guaterebbe",
+      "noi": "guateremmo",
+      "voi": "guatereste",
+      "loro": "guaterebbero"
+    },
+    "imperativo": {
+      "tu": "guata",
+      "lei": "guati",
+      "noi": "guatiamo",
+      "voi": "guatate",
+      "loro": "guatino"
+    }
+  },
+  "guidare": {
+    "presente": {
+      "io": "guido",
+      "tu": "guidi",
+      "lui/lei": "guida",
+      "noi": "guidiamo",
+      "voi": "guidate",
+      "loro": "guidano"
+    },
+    "passatoProssimo": {
+      "io": "ho guidato",
+      "tu": "hai guidato",
+      "lui/lei": "ha guidato",
+      "noi": "abbiamo guidato",
+      "voi": "avete guidato",
+      "loro": "hanno guidato"
+    },
+    "imperfetto": {
+      "io": "guidavo",
+      "tu": "guidavi",
+      "lui/lei": "guidava",
+      "noi": "guidavamo",
+      "voi": "guidavate",
+      "loro": "guidavano"
+    },
+    "futuro": {
+      "io": "guiderò",
+      "tu": "guiderai",
+      "lui/lei": "guiderà",
+      "noi": "guideremo",
+      "voi": "guiderete",
+      "loro": "guideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "guidi",
+      "tu": "guidi",
+      "lui/lei": "guidi",
+      "noi": "guidiamo",
+      "voi": "guidiate",
+      "loro": "guidino"
+    },
+    "condizionale": {
+      "io": "guiderei",
+      "tu": "guideresti",
+      "lui/lei": "guiderebbe",
+      "noi": "guideremmo",
+      "voi": "guidereste",
+      "loro": "guiderebbero"
+    },
+    "imperativo": {
+      "tu": "guida",
+      "lei": "guidi",
+      "noi": "guidiamo",
+      "voi": "guidate",
+      "loro": "guidino"
+    }
+  },
+  "guizzare": {
+    "presente": {
+      "io": "guizzo",
+      "tu": "guizzi",
+      "lui/lei": "guizza",
+      "noi": "guizziamo",
+      "voi": "guizzate",
+      "loro": "guizzano"
+    },
+    "passatoProssimo": {
+      "io": "ho guizzato",
+      "tu": "hai guizzato",
+      "lui/lei": "ha guizzato",
+      "noi": "abbiamo guizzato",
+      "voi": "avete guizzato",
+      "loro": "hanno guizzato"
+    },
+    "imperfetto": {
+      "io": "guizzavo",
+      "tu": "guizzavi",
+      "lui/lei": "guizzava",
+      "noi": "guizzavamo",
+      "voi": "guizzavate",
+      "loro": "guizzavano"
+    },
+    "futuro": {
+      "io": "guizzerò",
+      "tu": "guizzerai",
+      "lui/lei": "guizzerà",
+      "noi": "guizzeremo",
+      "voi": "guizzerete",
+      "loro": "guizzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "guizzi",
+      "tu": "guizzi",
+      "lui/lei": "guizzi",
+      "noi": "guizziamo",
+      "voi": "guizziate",
+      "loro": "guizzino"
+    },
+    "condizionale": {
+      "io": "guizzerei",
+      "tu": "guizzeresti",
+      "lui/lei": "guizzerebbe",
+      "noi": "guizzeremmo",
+      "voi": "guizzereste",
+      "loro": "guizzerebbero"
+    },
+    "imperativo": {
+      "tu": "guizza",
+      "lei": "guizzi",
+      "noi": "guizziamo",
+      "voi": "guizzate",
+      "loro": "guizzino"
+    }
+  },
+  "gustare": {
+    "presente": {
+      "io": "gusto",
+      "tu": "gusti",
+      "lui/lei": "gusta",
+      "noi": "gustiamo",
+      "voi": "gustate",
+      "loro": "gustano"
+    },
+    "passatoProssimo": {
+      "io": "ho gustato",
+      "tu": "hai gustato",
+      "lui/lei": "ha gustato",
+      "noi": "abbiamo gustato",
+      "voi": "avete gustato",
+      "loro": "hanno gustato"
+    },
+    "imperfetto": {
+      "io": "gustavo",
+      "tu": "gustavi",
+      "lui/lei": "gustava",
+      "noi": "gustavamo",
+      "voi": "gustavate",
+      "loro": "gustavano"
+    },
+    "futuro": {
+      "io": "gusterò",
+      "tu": "gusterai",
+      "lui/lei": "gusterà",
+      "noi": "gusteremo",
+      "voi": "gusterete",
+      "loro": "gusteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "gusti",
+      "tu": "gusti",
+      "lui/lei": "gusti",
+      "noi": "gustiamo",
+      "voi": "gustiate",
+      "loro": "gustino"
+    },
+    "condizionale": {
+      "io": "gusterei",
+      "tu": "gusteresti",
+      "lui/lei": "gusterebbe",
+      "noi": "gusteremmo",
+      "voi": "gustereste",
+      "loro": "gusterebbero"
+    },
+    "imperativo": {
+      "tu": "gusta",
+      "lei": "gusti",
+      "noi": "gustiamo",
+      "voi": "gustate",
+      "loro": "gustino"
+    }
+  }
+}

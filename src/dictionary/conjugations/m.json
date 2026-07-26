@@ -1,0 +1,3365 @@
+{
+  "macchinare": {
+    "presente": {
+      "io": "macchino",
+      "tu": "macchini",
+      "lui/lei": "macchina",
+      "noi": "macchiniamo",
+      "voi": "macchinate",
+      "loro": "macchinano"
+    },
+    "passatoProssimo": {
+      "io": "ho macchinato",
+      "tu": "hai macchinato",
+      "lui/lei": "ha macchinato",
+      "noi": "abbiamo macchinato",
+      "voi": "avete macchinato",
+      "loro": "hanno macchinato"
+    },
+    "imperfetto": {
+      "io": "macchinavo",
+      "tu": "macchinavi",
+      "lui/lei": "macchinava",
+      "noi": "macchinavamo",
+      "voi": "macchinavate",
+      "loro": "macchinavano"
+    },
+    "futuro": {
+      "io": "macchinerò",
+      "tu": "macchinerai",
+      "lui/lei": "macchinerà",
+      "noi": "macchineremo",
+      "voi": "macchinerete",
+      "loro": "macchineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "macchini",
+      "tu": "macchini",
+      "lui/lei": "macchini",
+      "noi": "macchiniamo",
+      "voi": "macchiniate",
+      "loro": "macchinino"
+    },
+    "condizionale": {
+      "io": "macchinerei",
+      "tu": "macchineresti",
+      "lui/lei": "macchinerebbe",
+      "noi": "macchineremmo",
+      "voi": "macchinereste",
+      "loro": "macchinerebbero"
+    },
+    "imperativo": {
+      "tu": "macchina",
+      "lei": "macchini",
+      "noi": "macchiniamo",
+      "voi": "macchinate",
+      "loro": "macchinino"
+    }
+  },
+  "macinare": {
+    "presente": {
+      "io": "macino",
+      "tu": "macini",
+      "lui/lei": "macina",
+      "noi": "maciniamo",
+      "voi": "macinate",
+      "loro": "macinano"
+    },
+    "passatoProssimo": {
+      "io": "ho macinato",
+      "tu": "hai macinato",
+      "lui/lei": "ha macinato",
+      "noi": "abbiamo macinato",
+      "voi": "avete macinato",
+      "loro": "hanno macinato"
+    },
+    "imperfetto": {
+      "io": "macinavo",
+      "tu": "macinavi",
+      "lui/lei": "macinava",
+      "noi": "macinavamo",
+      "voi": "macinavate",
+      "loro": "macinavano"
+    },
+    "futuro": {
+      "io": "macinerò",
+      "tu": "macinerai",
+      "lui/lei": "macinerà",
+      "noi": "macineremo",
+      "voi": "macinerete",
+      "loro": "macineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "macini",
+      "tu": "macini",
+      "lui/lei": "macini",
+      "noi": "maciniamo",
+      "voi": "maciniate",
+      "loro": "macinino"
+    },
+    "condizionale": {
+      "io": "macinerei",
+      "tu": "macineresti",
+      "lui/lei": "macinerebbe",
+      "noi": "macineremmo",
+      "voi": "macinereste",
+      "loro": "macinerebbero"
+    },
+    "imperativo": {
+      "tu": "macina",
+      "lei": "macini",
+      "noi": "maciniamo",
+      "voi": "macinate",
+      "loro": "macinino"
+    }
+  },
+  "maciullare": {
+    "presente": {
+      "io": "maciullo",
+      "tu": "maciulli",
+      "lui/lei": "maciulla",
+      "noi": "maciulliamo",
+      "voi": "maciullate",
+      "loro": "maciullano"
+    },
+    "passatoProssimo": {
+      "io": "ho maciullato",
+      "tu": "hai maciullato",
+      "lui/lei": "ha maciullato",
+      "noi": "abbiamo maciullato",
+      "voi": "avete maciullato",
+      "loro": "hanno maciullato"
+    },
+    "imperfetto": {
+      "io": "maciullavo",
+      "tu": "maciullavi",
+      "lui/lei": "maciullava",
+      "noi": "maciullavamo",
+      "voi": "maciullavate",
+      "loro": "maciullavano"
+    },
+    "futuro": {
+      "io": "maciullerò",
+      "tu": "maciullerai",
+      "lui/lei": "maciullerà",
+      "noi": "maciulleremo",
+      "voi": "maciullerete",
+      "loro": "maciulleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "maciulli",
+      "tu": "maciulli",
+      "lui/lei": "maciulli",
+      "noi": "maciulliamo",
+      "voi": "maciulliate",
+      "loro": "maciullino"
+    },
+    "condizionale": {
+      "io": "maciullerei",
+      "tu": "maciulleresti",
+      "lui/lei": "maciullerebbe",
+      "noi": "maciulleremmo",
+      "voi": "maciullereste",
+      "loro": "maciullerebbero"
+    },
+    "imperativo": {
+      "tu": "maciulla",
+      "lei": "maciulli",
+      "noi": "maciulliamo",
+      "voi": "maciullate",
+      "loro": "maciullino"
+    }
+  },
+  "malmenare": {
+    "presente": {
+      "io": "malmeno",
+      "tu": "malmeni",
+      "lui/lei": "malmena",
+      "noi": "malmeniamo",
+      "voi": "malmenate",
+      "loro": "malmenano"
+    },
+    "passatoProssimo": {
+      "io": "ho malmenato",
+      "tu": "hai malmenato",
+      "lui/lei": "ha malmenato",
+      "noi": "abbiamo malmenato",
+      "voi": "avete malmenato",
+      "loro": "hanno malmenato"
+    },
+    "imperfetto": {
+      "io": "malmenavo",
+      "tu": "malmenavi",
+      "lui/lei": "malmenava",
+      "noi": "malmenavamo",
+      "voi": "malmenavate",
+      "loro": "malmenavano"
+    },
+    "futuro": {
+      "io": "malmenerò",
+      "tu": "malmenerai",
+      "lui/lei": "malmenerà",
+      "noi": "malmeneremo",
+      "voi": "malmenerete",
+      "loro": "malmeneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "malmeni",
+      "tu": "malmeni",
+      "lui/lei": "malmeni",
+      "noi": "malmeniamo",
+      "voi": "malmeniate",
+      "loro": "malmenino"
+    },
+    "condizionale": {
+      "io": "malmenerei",
+      "tu": "malmeneresti",
+      "lui/lei": "malmenerebbe",
+      "noi": "malmeneremmo",
+      "voi": "malmenereste",
+      "loro": "malmenerebbero"
+    },
+    "imperativo": {
+      "tu": "malmena",
+      "lei": "malmeni",
+      "noi": "malmeniamo",
+      "voi": "malmenate",
+      "loro": "malmenino"
+    }
+  },
+  "maltrattare": {
+    "presente": {
+      "io": "maltratto",
+      "tu": "maltratti",
+      "lui/lei": "maltratta",
+      "noi": "maltrattiamo",
+      "voi": "maltrattate",
+      "loro": "maltrattano"
+    },
+    "passatoProssimo": {
+      "io": "ho maltrattato",
+      "tu": "hai maltrattato",
+      "lui/lei": "ha maltrattato",
+      "noi": "abbiamo maltrattato",
+      "voi": "avete maltrattato",
+      "loro": "hanno maltrattato"
+    },
+    "imperfetto": {
+      "io": "maltrattavo",
+      "tu": "maltrattavi",
+      "lui/lei": "maltrattava",
+      "noi": "maltrattavamo",
+      "voi": "maltrattavate",
+      "loro": "maltrattavano"
+    },
+    "futuro": {
+      "io": "maltratterò",
+      "tu": "maltratterai",
+      "lui/lei": "maltratterà",
+      "noi": "maltratteremo",
+      "voi": "maltratterete",
+      "loro": "maltratteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "maltratti",
+      "tu": "maltratti",
+      "lui/lei": "maltratti",
+      "noi": "maltrattiamo",
+      "voi": "maltrattiate",
+      "loro": "maltrattino"
+    },
+    "condizionale": {
+      "io": "maltratterei",
+      "tu": "maltratteresti",
+      "lui/lei": "maltratterebbe",
+      "noi": "maltratteremmo",
+      "voi": "maltrattereste",
+      "loro": "maltratterebbero"
+    },
+    "imperativo": {
+      "tu": "maltratta",
+      "lei": "maltratti",
+      "noi": "maltrattiamo",
+      "voi": "maltrattate",
+      "loro": "maltrattino"
+    }
+  },
+  "mancare": {
+    "presente": {
+      "io": "manco",
+      "tu": "manchi",
+      "lui/lei": "manca",
+      "noi": "manchiamo",
+      "voi": "mancate",
+      "loro": "mancano"
+    },
+    "passatoProssimo": {
+      "io": "sono mancato/a",
+      "tu": "sei mancato/a",
+      "lui/lei": "è mancato/a",
+      "noi": "siamo mancati/e",
+      "voi": "siete mancati/e",
+      "loro": "sono mancati/e"
+    },
+    "imperfetto": {
+      "io": "mancavo",
+      "tu": "mancavi",
+      "lui/lei": "mancava",
+      "noi": "mancavamo",
+      "voi": "mancavate",
+      "loro": "mancavano"
+    },
+    "futuro": {
+      "io": "mancherò",
+      "tu": "mancherai",
+      "lui/lei": "mancherà",
+      "noi": "mancheremo",
+      "voi": "mancherete",
+      "loro": "mancheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "manchi",
+      "tu": "manchi",
+      "lui/lei": "manchi",
+      "noi": "manchiamo",
+      "voi": "manchiate",
+      "loro": "manchino"
+    },
+    "condizionale": {
+      "io": "mancherei",
+      "tu": "mancheresti",
+      "lui/lei": "mancherebbe",
+      "noi": "mancheremmo",
+      "voi": "manchereste",
+      "loro": "mancherebbero"
+    },
+    "imperativo": {
+      "tu": "manca",
+      "lei": "manchi",
+      "noi": "manchiamo",
+      "voi": "mancate",
+      "loro": "manchino"
+    }
+  },
+  "mandare": {
+    "presente": {
+      "io": "mando",
+      "tu": "mandi",
+      "lui/lei": "manda",
+      "noi": "mandiamo",
+      "voi": "mandate",
+      "loro": "mandano"
+    },
+    "passatoProssimo": {
+      "io": "ho mandato",
+      "tu": "hai mandato",
+      "lui/lei": "ha mandato",
+      "noi": "abbiamo mandato",
+      "voi": "avete mandato",
+      "loro": "hanno mandato"
+    },
+    "imperfetto": {
+      "io": "mandavo",
+      "tu": "mandavi",
+      "lui/lei": "mandava",
+      "noi": "mandavamo",
+      "voi": "mandavate",
+      "loro": "mandavano"
+    },
+    "futuro": {
+      "io": "manderò",
+      "tu": "manderai",
+      "lui/lei": "manderà",
+      "noi": "manderemo",
+      "voi": "manderete",
+      "loro": "manderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "mandi",
+      "tu": "mandi",
+      "lui/lei": "mandi",
+      "noi": "mandiamo",
+      "voi": "mandiate",
+      "loro": "mandino"
+    },
+    "condizionale": {
+      "io": "manderei",
+      "tu": "manderesti",
+      "lui/lei": "manderebbe",
+      "noi": "manderemmo",
+      "voi": "mandereste",
+      "loro": "manderebbero"
+    },
+    "imperativo": {
+      "tu": "manda",
+      "lei": "mandi",
+      "noi": "mandiamo",
+      "voi": "mandate",
+      "loro": "mandino"
+    }
+  },
+  "maneggiare": {
+    "presente": {
+      "io": "maneggio",
+      "tu": "maneggi",
+      "lui/lei": "maneggia",
+      "noi": "maneggiamo",
+      "voi": "maneggiate",
+      "loro": "maneggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho maneggiato",
+      "tu": "hai maneggiato",
+      "lui/lei": "ha maneggiato",
+      "noi": "abbiamo maneggiato",
+      "voi": "avete maneggiato",
+      "loro": "hanno maneggiato"
+    },
+    "imperfetto": {
+      "io": "maneggiavo",
+      "tu": "maneggiavi",
+      "lui/lei": "maneggiava",
+      "noi": "maneggiavamo",
+      "voi": "maneggiavate",
+      "loro": "maneggiavano"
+    },
+    "futuro": {
+      "io": "maneggerò",
+      "tu": "maneggerai",
+      "lui/lei": "maneggerà",
+      "noi": "maneggeremo",
+      "voi": "maneggerete",
+      "loro": "maneggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "maneggi",
+      "tu": "maneggi",
+      "lui/lei": "maneggi",
+      "noi": "maneggiamo",
+      "voi": "maneggiate",
+      "loro": "maneggino"
+    },
+    "condizionale": {
+      "io": "maneggerei",
+      "tu": "maneggeresti",
+      "lui/lei": "maneggerebbe",
+      "noi": "maneggeremmo",
+      "voi": "maneggereste",
+      "loro": "maneggerebbero"
+    },
+    "imperativo": {
+      "tu": "maneggia",
+      "lei": "maneggi",
+      "noi": "maneggiamo",
+      "voi": "maneggiate",
+      "loro": "maneggino"
+    }
+  },
+  "mangiare": {
+    "presente": {
+      "io": "mangio",
+      "tu": "mangi",
+      "lui/lei": "mangia",
+      "noi": "mangiamo",
+      "voi": "mangiate",
+      "loro": "mangiano"
+    },
+    "passatoProssimo": {
+      "io": "ho mangiato",
+      "tu": "hai mangiato",
+      "lui/lei": "ha mangiato",
+      "noi": "abbiamo mangiato",
+      "voi": "avete mangiato",
+      "loro": "hanno mangiato"
+    },
+    "imperfetto": {
+      "io": "mangiavo",
+      "tu": "mangiavi",
+      "lui/lei": "mangiava",
+      "noi": "mangiavamo",
+      "voi": "mangiavate",
+      "loro": "mangiavano"
+    },
+    "futuro": {
+      "io": "mangerò",
+      "tu": "mangerai",
+      "lui/lei": "mangerà",
+      "noi": "mangeremo",
+      "voi": "mangerete",
+      "loro": "mangeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mangi",
+      "tu": "mangi",
+      "lui/lei": "mangi",
+      "noi": "mangiamo",
+      "voi": "mangiate",
+      "loro": "mangino"
+    },
+    "condizionale": {
+      "io": "mangerei",
+      "tu": "mangeresti",
+      "lui/lei": "mangerebbe",
+      "noi": "mangeremmo",
+      "voi": "mangereste",
+      "loro": "mangerebbero"
+    },
+    "imperativo": {
+      "tu": "mangia",
+      "lei": "mangi",
+      "noi": "mangiamo",
+      "voi": "mangiate",
+      "loro": "mangino"
+    }
+  },
+  "manicare": {
+    "presente": {
+      "io": "manico",
+      "tu": "manichi",
+      "lui/lei": "manica",
+      "noi": "manichiamo",
+      "voi": "manicate",
+      "loro": "manicano"
+    },
+    "passatoProssimo": {
+      "io": "ho manicato",
+      "tu": "hai manicato",
+      "lui/lei": "ha manicato",
+      "noi": "abbiamo manicato",
+      "voi": "avete manicato",
+      "loro": "hanno manicato"
+    },
+    "imperfetto": {
+      "io": "manicavo",
+      "tu": "manicavi",
+      "lui/lei": "manicava",
+      "noi": "manicavamo",
+      "voi": "manicavate",
+      "loro": "manicavano"
+    },
+    "futuro": {
+      "io": "manicherò",
+      "tu": "manicherai",
+      "lui/lei": "manicherà",
+      "noi": "manicheremo",
+      "voi": "manicherete",
+      "loro": "manicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "manichi",
+      "tu": "manichi",
+      "lui/lei": "manichi",
+      "noi": "manichiamo",
+      "voi": "manichiate",
+      "loro": "manichino"
+    },
+    "condizionale": {
+      "io": "manicherei",
+      "tu": "manicheresti",
+      "lui/lei": "manicherebbe",
+      "noi": "manicheremmo",
+      "voi": "manichereste",
+      "loro": "manicherebbero"
+    },
+    "imperativo": {
+      "tu": "manica",
+      "lei": "manichi",
+      "noi": "manichiamo",
+      "voi": "manicate",
+      "loro": "manichino"
+    }
+  },
+  "manifestare": {
+    "presente": {
+      "io": "manifesto",
+      "tu": "manifesti",
+      "lui/lei": "manifesta",
+      "noi": "manifestiamo",
+      "voi": "manifestate",
+      "loro": "manifestano"
+    },
+    "passatoProssimo": {
+      "io": "ho manifestato",
+      "tu": "hai manifestato",
+      "lui/lei": "ha manifestato",
+      "noi": "abbiamo manifestato",
+      "voi": "avete manifestato",
+      "loro": "hanno manifestato"
+    },
+    "imperfetto": {
+      "io": "manifestavo",
+      "tu": "manifestavi",
+      "lui/lei": "manifestava",
+      "noi": "manifestavamo",
+      "voi": "manifestavate",
+      "loro": "manifestavano"
+    },
+    "futuro": {
+      "io": "manifesterò",
+      "tu": "manifesterai",
+      "lui/lei": "manifesterà",
+      "noi": "manifesteremo",
+      "voi": "manifesterete",
+      "loro": "manifesteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "manifesti",
+      "tu": "manifesti",
+      "lui/lei": "manifesti",
+      "noi": "manifestiamo",
+      "voi": "manifestiate",
+      "loro": "manifestino"
+    },
+    "condizionale": {
+      "io": "manifesterei",
+      "tu": "manifesteresti",
+      "lui/lei": "manifesterebbe",
+      "noi": "manifesteremmo",
+      "voi": "manifestereste",
+      "loro": "manifesterebbero"
+    },
+    "imperativo": {
+      "tu": "manifesta",
+      "lei": "manifesti",
+      "noi": "manifestiamo",
+      "voi": "manifestate",
+      "loro": "manifestino"
+    }
+  },
+  "manipolare": {
+    "presente": {
+      "io": "manipolo",
+      "tu": "manipoli",
+      "lui/lei": "manipola",
+      "noi": "manipoliamo",
+      "voi": "manipolate",
+      "loro": "manipolano"
+    },
+    "passatoProssimo": {
+      "io": "ho manipolato",
+      "tu": "hai manipolato",
+      "lui/lei": "ha manipolato",
+      "noi": "abbiamo manipolato",
+      "voi": "avete manipolato",
+      "loro": "hanno manipolato"
+    },
+    "imperfetto": {
+      "io": "manipolavo",
+      "tu": "manipolavi",
+      "lui/lei": "manipolava",
+      "noi": "manipolavamo",
+      "voi": "manipolavate",
+      "loro": "manipolavano"
+    },
+    "futuro": {
+      "io": "manipolerò",
+      "tu": "manipolerai",
+      "lui/lei": "manipolerà",
+      "noi": "manipoleremo",
+      "voi": "manipolerete",
+      "loro": "manipoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "manipoli",
+      "tu": "manipoli",
+      "lui/lei": "manipoli",
+      "noi": "manipoliamo",
+      "voi": "manipoliate",
+      "loro": "manipolino"
+    },
+    "condizionale": {
+      "io": "manipolerei",
+      "tu": "manipoleresti",
+      "lui/lei": "manipolerebbe",
+      "noi": "manipoleremmo",
+      "voi": "manipolereste",
+      "loro": "manipolerebbero"
+    },
+    "imperativo": {
+      "tu": "manipola",
+      "lei": "manipoli",
+      "noi": "manipoliamo",
+      "voi": "manipolate",
+      "loro": "manipolino"
+    }
+  },
+  "manomettere": {
+    "presente": {
+      "io": "manometto",
+      "tu": "manometti",
+      "lui/lei": "manomette",
+      "noi": "manomettiamo",
+      "voi": "manomettete",
+      "loro": "manomettono"
+    },
+    "passatoProssimo": {
+      "io": "ho manomesso",
+      "tu": "hai manomesso",
+      "lui/lei": "ha manomesso",
+      "noi": "abbiamo manomesso",
+      "voi": "avete manomesso",
+      "loro": "hanno manomesso"
+    },
+    "imperfetto": {
+      "io": "manomettevo",
+      "tu": "manomettevi",
+      "lui/lei": "manometteva",
+      "noi": "manomettevamo",
+      "voi": "manomettevate",
+      "loro": "manomettevano"
+    },
+    "futuro": {
+      "io": "manometterò",
+      "tu": "manometterai",
+      "lui/lei": "manometterà",
+      "noi": "manometteremo",
+      "voi": "manometterete",
+      "loro": "manometteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "manometta",
+      "tu": "manometta",
+      "lui/lei": "manometta",
+      "noi": "manomettiamo",
+      "voi": "manomettiate",
+      "loro": "manomettano"
+    },
+    "condizionale": {
+      "io": "manometterei",
+      "tu": "manometteresti",
+      "lui/lei": "manometterebbe",
+      "noi": "manometteremmo",
+      "voi": "manomettereste",
+      "loro": "manometterebbero"
+    },
+    "imperativo": {
+      "tu": "manometti",
+      "lei": "manometta",
+      "noi": "manomettiamo",
+      "voi": "manomettete",
+      "loro": "manomettano"
+    }
+  },
+  "mantenere": {
+    "presente": {
+      "io": "mantengo",
+      "tu": "mantieni",
+      "lui/lei": "mantiene",
+      "noi": "manteniamo",
+      "voi": "mantenete",
+      "loro": "mantengono"
+    },
+    "passatoProssimo": {
+      "io": "ho mantenuto",
+      "tu": "hai mantenuto",
+      "lui/lei": "ha mantenuto",
+      "noi": "abbiamo mantenuto",
+      "voi": "avete mantenuto",
+      "loro": "hanno mantenuto"
+    },
+    "imperfetto": {
+      "io": "mantenevo",
+      "tu": "mantenevi",
+      "lui/lei": "manteneva",
+      "noi": "mantenevamo",
+      "voi": "mantenevate",
+      "loro": "mantenevano"
+    },
+    "futuro": {
+      "io": "manterrò",
+      "tu": "manterrai",
+      "lui/lei": "manterrà",
+      "noi": "manterremo",
+      "voi": "manterrete",
+      "loro": "manterranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mantenga",
+      "tu": "mantenga",
+      "lui/lei": "mantenga",
+      "noi": "manteniamo",
+      "voi": "manteniate",
+      "loro": "mantengano"
+    },
+    "condizionale": {
+      "io": "manterrei",
+      "tu": "manterresti",
+      "lui/lei": "manterrebbe",
+      "noi": "manterremmo",
+      "voi": "manterreste",
+      "loro": "manterrebbero"
+    },
+    "imperativo": {
+      "tu": "mantieni",
+      "lei": "mantenga",
+      "noi": "manteniamo",
+      "voi": "mantenete",
+      "loro": "mantengano"
+    }
+  },
+  "marciare": {
+    "presente": {
+      "io": "marcio",
+      "tu": "marci",
+      "lui/lei": "marcia",
+      "noi": "marciamo",
+      "voi": "marciate",
+      "loro": "marciano"
+    },
+    "passatoProssimo": {
+      "io": "ho marciato",
+      "tu": "hai marciato",
+      "lui/lei": "ha marciato",
+      "noi": "abbiamo marciato",
+      "voi": "avete marciato",
+      "loro": "hanno marciato"
+    },
+    "imperfetto": {
+      "io": "marciavo",
+      "tu": "marciavi",
+      "lui/lei": "marciava",
+      "noi": "marciavamo",
+      "voi": "marciavate",
+      "loro": "marciavano"
+    },
+    "futuro": {
+      "io": "marcerò",
+      "tu": "marcerai",
+      "lui/lei": "marcerà",
+      "noi": "marceremo",
+      "voi": "marcerete",
+      "loro": "marceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "marci",
+      "tu": "marci",
+      "lui/lei": "marci",
+      "noi": "marciamo",
+      "voi": "marciate",
+      "loro": "marcino"
+    },
+    "condizionale": {
+      "io": "marcerei",
+      "tu": "marceresti",
+      "lui/lei": "marcerebbe",
+      "noi": "marceremmo",
+      "voi": "marcereste",
+      "loro": "marcerebbero"
+    },
+    "imperativo": {
+      "tu": "marcia",
+      "lei": "marci",
+      "noi": "marciamo",
+      "voi": "marciate",
+      "loro": "marcino"
+    }
+  },
+  "marcire": {
+    "presente": {
+      "io": "marcisco",
+      "tu": "marcisci",
+      "lui/lei": "marcisce",
+      "noi": "marciamo",
+      "voi": "marcite",
+      "loro": "marciscono"
+    },
+    "passatoProssimo": {
+      "io": "sono marcito/a",
+      "tu": "sei marcito/a",
+      "lui/lei": "è marcito/a",
+      "noi": "siamo marciti/e",
+      "voi": "siete marciti/e",
+      "loro": "sono marciti/e"
+    },
+    "imperfetto": {
+      "io": "marcivo",
+      "tu": "marcivi",
+      "lui/lei": "marciva",
+      "noi": "marcivamo",
+      "voi": "marcivate",
+      "loro": "marcivano"
+    },
+    "futuro": {
+      "io": "marcirò",
+      "tu": "marcirai",
+      "lui/lei": "marcirà",
+      "noi": "marciremo",
+      "voi": "marcirete",
+      "loro": "marciranno"
+    },
+    "congiuntivoPresente": {
+      "io": "marcisca",
+      "tu": "marcisca",
+      "lui/lei": "marcisca",
+      "noi": "marciamo",
+      "voi": "marciate",
+      "loro": "marciscano"
+    },
+    "condizionale": {
+      "io": "marcirei",
+      "tu": "marciresti",
+      "lui/lei": "marcirebbe",
+      "noi": "marciremmo",
+      "voi": "marcireste",
+      "loro": "marcirebbero"
+    },
+    "imperativo": {
+      "tu": "marcisci",
+      "lei": "marcisca",
+      "noi": "marciamo",
+      "voi": "marcite",
+      "loro": "marciscano"
+    }
+  },
+  "marinare": {
+    "presente": {
+      "io": "marino",
+      "tu": "marini",
+      "lui/lei": "marina",
+      "noi": "mariniamo",
+      "voi": "marinate",
+      "loro": "marinano"
+    },
+    "passatoProssimo": {
+      "io": "ho marinato",
+      "tu": "hai marinato",
+      "lui/lei": "ha marinato",
+      "noi": "abbiamo marinato",
+      "voi": "avete marinato",
+      "loro": "hanno marinato"
+    },
+    "imperfetto": {
+      "io": "marinavo",
+      "tu": "marinavi",
+      "lui/lei": "marinava",
+      "noi": "marinavamo",
+      "voi": "marinavate",
+      "loro": "marinavano"
+    },
+    "futuro": {
+      "io": "marinerò",
+      "tu": "marinerai",
+      "lui/lei": "marinerà",
+      "noi": "marineremo",
+      "voi": "marinerete",
+      "loro": "marineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "marini",
+      "tu": "marini",
+      "lui/lei": "marini",
+      "noi": "mariniamo",
+      "voi": "mariniate",
+      "loro": "marinino"
+    },
+    "condizionale": {
+      "io": "marinerei",
+      "tu": "marineresti",
+      "lui/lei": "marinerebbe",
+      "noi": "marineremmo",
+      "voi": "marinereste",
+      "loro": "marinerebbero"
+    },
+    "imperativo": {
+      "tu": "marina",
+      "lei": "marini",
+      "noi": "mariniamo",
+      "voi": "marinate",
+      "loro": "marinino"
+    }
+  },
+  "maritare": {
+    "presente": {
+      "io": "marito",
+      "tu": "mariti",
+      "lui/lei": "marita",
+      "noi": "maritiamo",
+      "voi": "maritate",
+      "loro": "maritano"
+    },
+    "passatoProssimo": {
+      "io": "ho maritato",
+      "tu": "hai maritato",
+      "lui/lei": "ha maritato",
+      "noi": "abbiamo maritato",
+      "voi": "avete maritato",
+      "loro": "hanno maritato"
+    },
+    "imperfetto": {
+      "io": "maritavo",
+      "tu": "maritavi",
+      "lui/lei": "maritava",
+      "noi": "maritavamo",
+      "voi": "maritavate",
+      "loro": "maritavano"
+    },
+    "futuro": {
+      "io": "mariterò",
+      "tu": "mariterai",
+      "lui/lei": "mariterà",
+      "noi": "mariteremo",
+      "voi": "mariterete",
+      "loro": "mariteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mariti",
+      "tu": "mariti",
+      "lui/lei": "mariti",
+      "noi": "maritiamo",
+      "voi": "maritiate",
+      "loro": "maritino"
+    },
+    "condizionale": {
+      "io": "mariterei",
+      "tu": "mariteresti",
+      "lui/lei": "mariterebbe",
+      "noi": "mariteremmo",
+      "voi": "maritereste",
+      "loro": "mariterebbero"
+    },
+    "imperativo": {
+      "tu": "marita",
+      "lei": "mariti",
+      "noi": "maritiamo",
+      "voi": "maritate",
+      "loro": "maritino"
+    }
+  },
+  "martirare": {
+    "presente": {
+      "io": "martiro",
+      "tu": "martiri",
+      "lui/lei": "martira",
+      "noi": "martiriamo",
+      "voi": "martirate",
+      "loro": "martirano"
+    },
+    "passatoProssimo": {
+      "io": "ho martirato",
+      "tu": "hai martirato",
+      "lui/lei": "ha martirato",
+      "noi": "abbiamo martirato",
+      "voi": "avete martirato",
+      "loro": "hanno martirato"
+    },
+    "imperfetto": {
+      "io": "martiravo",
+      "tu": "martiravi",
+      "lui/lei": "martirava",
+      "noi": "martiravamo",
+      "voi": "martiravate",
+      "loro": "martiravano"
+    },
+    "futuro": {
+      "io": "martirerò",
+      "tu": "martirerai",
+      "lui/lei": "martirerà",
+      "noi": "martireremo",
+      "voi": "martirerete",
+      "loro": "martireranno"
+    },
+    "congiuntivoPresente": {
+      "io": "martiri",
+      "tu": "martiri",
+      "lui/lei": "martiri",
+      "noi": "martiriamo",
+      "voi": "martiriate",
+      "loro": "martirino"
+    },
+    "condizionale": {
+      "io": "martirerei",
+      "tu": "martireresti",
+      "lui/lei": "martirerebbe",
+      "noi": "martireremmo",
+      "voi": "martirereste",
+      "loro": "martirerebbero"
+    },
+    "imperativo": {
+      "tu": "martira",
+      "lui/lei": "martiri",
+      "noi": "martiriamo",
+      "voi": "martirate",
+      "loro": "martirino"
+    }
+  },
+  "mascherare": {
+    "presente": {
+      "io": "maschero",
+      "tu": "mascheri",
+      "lui/lei": "maschera",
+      "noi": "mascheriamo",
+      "voi": "mascherate",
+      "loro": "mascherano"
+    },
+    "passatoProssimo": {
+      "io": "ho mascherato",
+      "tu": "hai mascherato",
+      "lui/lei": "ha mascherato",
+      "noi": "abbiamo mascherato",
+      "voi": "avete mascherato",
+      "loro": "hanno mascherato"
+    },
+    "imperfetto": {
+      "io": "mascheravo",
+      "tu": "mascheravi",
+      "lui/lei": "mascherava",
+      "noi": "mascheravamo",
+      "voi": "mascheravate",
+      "loro": "mascheravano"
+    },
+    "futuro": {
+      "io": "maschererò",
+      "tu": "maschererai",
+      "lui/lei": "maschererà",
+      "noi": "maschereremo",
+      "voi": "maschererete",
+      "loro": "maschereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mascheri",
+      "tu": "mascheri",
+      "lui/lei": "mascheri",
+      "noi": "mascheriamo",
+      "voi": "mascheriate",
+      "loro": "mascherino"
+    },
+    "condizionale": {
+      "io": "maschererei",
+      "tu": "maschereresti",
+      "lui/lei": "maschererebbe",
+      "noi": "maschereremmo",
+      "voi": "mascherereste",
+      "loro": "maschererebbero"
+    },
+    "imperativo": {
+      "tu": "maschera",
+      "lui/lei": "mascheri",
+      "noi": "mascheriamo",
+      "voi": "mascherate",
+      "loro": "mascherino"
+    }
+  },
+  "masticare": {
+    "presente": {
+      "io": "mastico",
+      "tu": "mastichi",
+      "lui/lei": "mastica",
+      "noi": "mastichiamo",
+      "voi": "masticate",
+      "loro": "masticano"
+    },
+    "passatoProssimo": {
+      "io": "ho masticato",
+      "tu": "hai masticato",
+      "lui/lei": "ha masticato",
+      "noi": "abbiamo masticato",
+      "voi": "avete masticato",
+      "loro": "hanno masticato"
+    },
+    "imperfetto": {
+      "io": "masticavo",
+      "tu": "masticavi",
+      "lui/lei": "masticava",
+      "noi": "masticavamo",
+      "voi": "masticavate",
+      "loro": "masticavano"
+    },
+    "futuro": {
+      "io": "masticherò",
+      "tu": "masticherai",
+      "lui/lei": "masticherà",
+      "noi": "masticheremo",
+      "voi": "masticherete",
+      "loro": "masticheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mastichi",
+      "tu": "mastichi",
+      "lui/lei": "mastichi",
+      "noi": "mastichiamo",
+      "voi": "mastichiate",
+      "loro": "mastichino"
+    },
+    "condizionale": {
+      "io": "masticherei",
+      "tu": "masticheresti",
+      "lui/lei": "masticherebbe",
+      "noi": "masticheremmo",
+      "voi": "mastichereste",
+      "loro": "masticherebbero"
+    },
+    "imperativo": {
+      "tu": "mastica",
+      "lui/lei": "mastichi",
+      "noi": "mastichiamo",
+      "voi": "masticate",
+      "loro": "mastichino"
+    }
+  },
+  "maturare": {
+    "presente": {
+      "io": "maturo",
+      "tu": "maturi",
+      "lui/lei": "matura",
+      "noi": "maturiamo",
+      "voi": "maturate",
+      "loro": "maturano"
+    },
+    "passatoProssimo": {
+      "io": "sono maturato",
+      "tu": "sei maturato",
+      "lui/lei": "è maturato",
+      "noi": "siamo maturati",
+      "voi": "siete maturati",
+      "loro": "sono maturati"
+    },
+    "imperfetto": {
+      "io": "maturavo",
+      "tu": "maturavi",
+      "lui/lei": "maturava",
+      "noi": "maturavamo",
+      "voi": "maturavate",
+      "loro": "maturavano"
+    },
+    "futuro": {
+      "io": "maturerò",
+      "tu": "maturerai",
+      "lui/lei": "maturerà",
+      "noi": "matureremo",
+      "voi": "maturerete",
+      "loro": "matureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "maturi",
+      "tu": "maturi",
+      "lui/lei": "maturi",
+      "noi": "maturiamo",
+      "voi": "maturiate",
+      "loro": "maturino"
+    },
+    "condizionale": {
+      "io": "maturerei",
+      "tu": "matureresti",
+      "lui/lei": "maturerebbe",
+      "noi": "matureremmo",
+      "voi": "maturereste",
+      "loro": "maturerebbero"
+    },
+    "imperativo": {
+      "tu": "matura",
+      "lui/lei": "maturi",
+      "noi": "maturiamo",
+      "voi": "maturate",
+      "loro": "maturino"
+    }
+  },
+  "meditare": {
+    "presente": {
+      "io": "medito",
+      "tu": "mediti",
+      "lui/lei": "medita",
+      "noi": "meditiamo",
+      "voi": "meditate",
+      "loro": "meditano"
+    },
+    "passatoProssimo": {
+      "io": "ho meditato",
+      "tu": "hai meditato",
+      "lui/lei": "ha meditato",
+      "noi": "abbiamo meditato",
+      "voi": "avete meditato",
+      "loro": "hanno meditato"
+    },
+    "imperfetto": {
+      "io": "meditavo",
+      "tu": "meditavi",
+      "lui/lei": "meditava",
+      "noi": "meditavamo",
+      "voi": "meditavate",
+      "loro": "meditavano"
+    },
+    "futuro": {
+      "io": "mediterò",
+      "tu": "mediterai",
+      "lui/lei": "mediterà",
+      "noi": "mediteremo",
+      "voi": "mediterete",
+      "loro": "mediteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mediti",
+      "tu": "mediti",
+      "lui/lei": "mediti",
+      "noi": "meditiamo",
+      "voi": "meditiate",
+      "loro": "meditino"
+    },
+    "condizionale": {
+      "io": "mediterei",
+      "tu": "mediteresti",
+      "lui/lei": "mediterebbe",
+      "noi": "mediteremmo",
+      "voi": "meditereste",
+      "loro": "mediterebbero"
+    },
+    "imperativo": {
+      "tu": "medita",
+      "lui/lei": "mediti",
+      "noi": "meditiamo",
+      "voi": "meditate",
+      "loro": "meditino"
+    }
+  },
+  "menare": {
+    "presente": {
+      "io": "meno",
+      "tu": "meni",
+      "lui/lei": "mena",
+      "noi": "meniamo",
+      "voi": "menate",
+      "loro": "menano"
+    },
+    "passatoProssimo": {
+      "io": "ho menato",
+      "tu": "hai menato",
+      "lui/lei": "ha menato",
+      "noi": "abbiamo menato",
+      "voi": "avete menato",
+      "loro": "hanno menato"
+    },
+    "imperfetto": {
+      "io": "menavo",
+      "tu": "menavi",
+      "lui/lei": "menava",
+      "noi": "menavamo",
+      "voi": "menavate",
+      "loro": "menavano"
+    },
+    "futuro": {
+      "io": "menerò",
+      "tu": "menerai",
+      "lui/lei": "menerà",
+      "noi": "meneremo",
+      "voi": "menerete",
+      "loro": "meneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "meni",
+      "tu": "meni",
+      "lui/lei": "meni",
+      "noi": "meniamo",
+      "voi": "meniate",
+      "loro": "menino"
+    },
+    "condizionale": {
+      "io": "menerei",
+      "tu": "meneresti",
+      "lui/lei": "menerebbe",
+      "noi": "meneremmo",
+      "voi": "menereste",
+      "loro": "menerebbero"
+    },
+    "imperativo": {
+      "tu": "mena",
+      "lui/lei": "meni",
+      "noi": "meniamo",
+      "voi": "menate",
+      "loro": "menino"
+    }
+  },
+  "mentire": {
+    "presente": {
+      "io": "mento",
+      "tu": "menti",
+      "lui/lei": "mente",
+      "noi": "mentiamo",
+      "voi": "mentite",
+      "loro": "mentono"
+    },
+    "passatoProssimo": {
+      "io": "ho mentito",
+      "tu": "hai mentito",
+      "lui/lei": "ha mentito",
+      "noi": "abbiamo mentito",
+      "voi": "avete mentito",
+      "loro": "hanno mentito"
+    },
+    "imperfetto": {
+      "io": "mentivo",
+      "tu": "mentivi",
+      "lui/lei": "mentiva",
+      "noi": "mentivamo",
+      "voi": "mentivate",
+      "loro": "mentivano"
+    },
+    "futuro": {
+      "io": "mentirò",
+      "tu": "mentirai",
+      "lui/lei": "mentirà",
+      "noi": "mentiremo",
+      "voi": "mentirete",
+      "loro": "mentiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "menta",
+      "tu": "menta",
+      "lui/lei": "menta",
+      "noi": "mentiamo",
+      "voi": "mentiate",
+      "loro": "mentano"
+    },
+    "condizionale": {
+      "io": "mentirei",
+      "tu": "mentiresti",
+      "lui/lei": "mentirebbe",
+      "noi": "mentiremmo",
+      "voi": "mentireste",
+      "loro": "mentirebbero"
+    },
+    "imperativo": {
+      "tu": "menti",
+      "lei": "menta",
+      "noi": "mentiamo",
+      "voi": "mentite",
+      "loro": "mentano"
+    }
+  },
+  "meravigliare": {
+    "presente": {
+      "io": "meraviglio",
+      "tu": "meravigli",
+      "lui/lei": "meraviglia",
+      "noi": "meravigliamo",
+      "voi": "meravigliate",
+      "loro": "meravigliano"
+    },
+    "passatoProssimo": {
+      "io": "ho meravigliato",
+      "tu": "hai meravigliato",
+      "lui/lei": "ha meravigliato",
+      "noi": "abbiamo meravigliato",
+      "voi": "avete meravigliato",
+      "loro": "hanno meravigliato"
+    },
+    "imperfetto": {
+      "io": "meravigliavo",
+      "tu": "meravigliavi",
+      "lui/lei": "meravigliava",
+      "noi": "meravigliavamo",
+      "voi": "meravigliavate",
+      "loro": "meravigliavano"
+    },
+    "futuro": {
+      "io": "meraviglierò",
+      "tu": "meraviglierai",
+      "lui/lei": "meraviglierà",
+      "noi": "meraviglieremo",
+      "voi": "meraviglierete",
+      "loro": "meraviglieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "meravigli",
+      "tu": "meravigli",
+      "lui/lei": "meravigli",
+      "noi": "meravigliamo",
+      "voi": "meravigliate",
+      "loro": "meraviglino"
+    },
+    "condizionale": {
+      "io": "meraviglierei",
+      "tu": "meraviglieresti",
+      "lui/lei": "meraviglierebbe",
+      "noi": "meraviglieremmo",
+      "voi": "meravigliereste",
+      "loro": "meraviglierebbero"
+    },
+    "imperativo": {
+      "tu": "meraviglia",
+      "lei": "meravigli",
+      "noi": "meravigliamo",
+      "voi": "meravigliate",
+      "loro": "meraviglino"
+    }
+  },
+  "meritare": {
+    "presente": {
+      "io": "merito",
+      "tu": "meriti",
+      "lui/lei": "merita",
+      "noi": "meritiamo",
+      "voi": "meritate",
+      "loro": "meritano"
+    },
+    "passatoProssimo": {
+      "io": "ho meritato",
+      "tu": "hai meritato",
+      "lui/lei": "ha meritato",
+      "noi": "abbiamo meritato",
+      "voi": "avete meritato",
+      "loro": "hanno meritato"
+    },
+    "imperfetto": {
+      "io": "meritavo",
+      "tu": "meritavi",
+      "lui/lei": "meritava",
+      "noi": "meritavamo",
+      "voi": "meritavate",
+      "loro": "meritavano"
+    },
+    "futuro": {
+      "io": "meriterò",
+      "tu": "meriterai",
+      "lui/lei": "meriterà",
+      "noi": "meriteremo",
+      "voi": "meriterete",
+      "loro": "meriteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "meriti",
+      "tu": "meriti",
+      "lui/lei": "meriti",
+      "noi": "meritiamo",
+      "voi": "meritiate",
+      "loro": "meritino"
+    },
+    "condizionale": {
+      "io": "meriterei",
+      "tu": "meriteresti",
+      "lui/lei": "meriterebbe",
+      "noi": "meriteremmo",
+      "voi": "meritereste",
+      "loro": "meriterebbero"
+    },
+    "imperativo": {
+      "tu": "merita",
+      "lui/lei": "meriti",
+      "noi": "meritiamo",
+      "voi": "meritate",
+      "loro": "meritino"
+    }
+  },
+  "mescere": {
+    "presente": {
+      "io": "mesco",
+      "tu": "mesci",
+      "lui/lei": "mesce",
+      "noi": "mesciamo",
+      "voi": "mescete",
+      "loro": "mescono"
+    },
+    "passatoProssimo": {
+      "io": "ho mesciuto",
+      "tu": "hai mesciuto",
+      "lui/lei": "ha mesciuto",
+      "noi": "abbiamo mesciuto",
+      "voi": "avete mesciuto",
+      "loro": "hanno mesciuto"
+    },
+    "imperfetto": {
+      "io": "mescevo",
+      "tu": "mescevi",
+      "lui/lei": "mesceva",
+      "noi": "mescevamo",
+      "voi": "mescevate",
+      "loro": "mescevano"
+    },
+    "futuro": {
+      "io": "mescerò",
+      "tu": "mescerai",
+      "lui/lei": "mescerà",
+      "noi": "mesceremo",
+      "voi": "mescerete",
+      "loro": "mesceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mesca",
+      "tu": "mesca",
+      "lui/lei": "mesca",
+      "noi": "mesciamo",
+      "voi": "mesciate",
+      "loro": "mescano"
+    },
+    "condizionale": {
+      "io": "mescerei",
+      "tu": "mesceresti",
+      "lui/lei": "mescerebbe",
+      "noi": "mesceremmo",
+      "voi": "mescereste",
+      "loro": "mescerebbero"
+    },
+    "imperativo": {
+      "tu": "mesci",
+      "lui/lei": "mesca",
+      "noi": "mesciamo",
+      "voi": "mescete",
+      "loro": "mescano"
+    }
+  },
+  "mescolare": {
+    "presente": {
+      "io": "mescolo",
+      "tu": "mescoli",
+      "lui/lei": "mescola",
+      "noi": "mescoliamo",
+      "voi": "mescolate",
+      "loro": "mescolano"
+    },
+    "passatoProssimo": {
+      "io": "ho mescolato",
+      "tu": "hai mescolato",
+      "lui/lei": "ha mescolato",
+      "noi": "abbiamo mescolato",
+      "voi": "avete mescolato",
+      "loro": "hanno mescolato"
+    },
+    "imperfetto": {
+      "io": "mescolavo",
+      "tu": "mescolavi",
+      "lui/lei": "mescolava",
+      "noi": "mescolavamo",
+      "voi": "mescolavate",
+      "loro": "mescolavano"
+    },
+    "futuro": {
+      "io": "mescolerò",
+      "tu": "mescolerai",
+      "lui/lei": "mescolerà",
+      "noi": "mescoleremo",
+      "voi": "mescolerete",
+      "loro": "mescoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mescoli",
+      "tu": "mescoli",
+      "lui/lei": "mescoli",
+      "noi": "mescoliamo",
+      "voi": "mescoliate",
+      "loro": "mescolino"
+    },
+    "condizionale": {
+      "io": "mescolerei",
+      "tu": "mescoleresti",
+      "lui/lei": "mescolerebbe",
+      "noi": "mescoleremmo",
+      "voi": "mescolereste",
+      "loro": "mescolerebbero"
+    },
+    "imperativo": {
+      "tu": "mescola",
+      "lui/lei": "mescoli",
+      "noi": "mescoliamo",
+      "voi": "mescolate",
+      "loro": "mescolino"
+    }
+  },
+  "mettere": {
+    "presente": {
+      "io": "metto",
+      "tu": "metti",
+      "lui/lei": "mette",
+      "noi": "mettiamo",
+      "voi": "mettete",
+      "loro": "mettono"
+    },
+    "passatoProssimo": {
+      "io": "ho messo",
+      "tu": "hai messo",
+      "lui/lei": "ha messo",
+      "noi": "abbiamo messo",
+      "voi": "avete messo",
+      "loro": "hanno messo"
+    },
+    "imperfetto": {
+      "io": "mettevo",
+      "tu": "mettevi",
+      "lui/lei": "metteva",
+      "noi": "mettevamo",
+      "voi": "mettevate",
+      "loro": "mettevano"
+    },
+    "futuro": {
+      "io": "metterò",
+      "tu": "metterai",
+      "lui/lei": "metterà",
+      "noi": "metteremo",
+      "voi": "metterete",
+      "loro": "metteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "metta",
+      "tu": "metta",
+      "lui/lei": "metta",
+      "noi": "mettiamo",
+      "voi": "mettiate",
+      "loro": "mettano"
+    },
+    "condizionale": {
+      "io": "metterei",
+      "tu": "metteresti",
+      "lui/lei": "metterebbe",
+      "noi": "metteremmo",
+      "voi": "mettereste",
+      "loro": "metterebbero"
+    },
+    "imperativo": {
+      "tu": "metti",
+      "lei": "metta",
+      "noi": "mettiamo",
+      "voi": "mettete",
+      "loro": "mettano"
+    }
+  },
+  "mettersi": {
+    "presente": {
+      "io": "mi metto",
+      "tu": "ti metti",
+      "lui/lei": "si mette",
+      "noi": "ci mettiamo",
+      "voi": "vi mettete",
+      "loro": "si mettono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono messo",
+      "tu": "ti sei messo",
+      "lui/lei": "si è messo",
+      "noi": "ci siamo messi",
+      "voi": "vi siete messi",
+      "loro": "si sono messi"
+    },
+    "imperfetto": {
+      "io": "mi mettevo",
+      "tu": "ti mettevi",
+      "lui/lei": "si metteva",
+      "noi": "ci mettevamo",
+      "voi": "vi mettevate",
+      "loro": "si mettevano"
+    },
+    "futuro": {
+      "io": "mi metterò",
+      "tu": "ti metterai",
+      "lui/lei": "si metterà",
+      "noi": "ci metteremo",
+      "voi": "vi metterete",
+      "loro": "si metteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi metta",
+      "tu": "ti metta",
+      "lui/lei": "si metta",
+      "noi": "ci mettiamo",
+      "voi": "vi mettiate",
+      "loro": "si mettano"
+    },
+    "condizionale": {
+      "io": "mi metterei",
+      "tu": "ti metteresti",
+      "lui/lei": "si metterebbe",
+      "noi": "ci metteremmo",
+      "voi": "vi mettereste",
+      "loro": "si metterebbero"
+    },
+    "imperativo": {
+      "tu": "mettiti",
+      "lui/lei": "si metta",
+      "noi": "mettiamoci",
+      "voi": "mettetevi",
+      "loro": "si mettano"
+    }
+  },
+  "miagolare": {
+    "presente": {
+      "io": "miagolo",
+      "tu": "miagoli",
+      "lui/lei": "miagola",
+      "noi": "miagoliamo",
+      "voi": "miagolate",
+      "loro": "miagolano"
+    },
+    "passatoProssimo": {
+      "io": "ho miagolato",
+      "tu": "hai miagolato",
+      "lui/lei": "ha miagolato",
+      "noi": "abbiamo miagolato",
+      "voi": "avete miagolato",
+      "loro": "hanno miagolato"
+    },
+    "imperfetto": {
+      "io": "miagolavo",
+      "tu": "miagolavi",
+      "lui/lei": "miagolava",
+      "noi": "miagolavamo",
+      "voi": "miagolavate",
+      "loro": "miagolavano"
+    },
+    "futuro": {
+      "io": "miagolerò",
+      "tu": "miagolerai",
+      "lui/lei": "miagolerà",
+      "noi": "miagoleremo",
+      "voi": "miagolerete",
+      "loro": "miagoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "miagoli",
+      "tu": "miagoli",
+      "lui/lei": "miagoli",
+      "noi": "miagoliamo",
+      "voi": "miagoliate",
+      "loro": "miagolino"
+    },
+    "condizionale": {
+      "io": "miagolerei",
+      "tu": "miagoleresti",
+      "lui/lei": "miagolerebbe",
+      "noi": "miagoleremmo",
+      "voi": "miagolereste",
+      "loro": "miagolerebbero"
+    },
+    "imperativo": {
+      "tu": "miagola",
+      "lui/lei": "miagoli",
+      "noi": "miagoliamo",
+      "voi": "miagolate",
+      "loro": "miagolino"
+    }
+  },
+  "mietere": {
+    "presente": {
+      "io": "mieto",
+      "tu": "mieti",
+      "lui/lei": "miete",
+      "noi": "mietiamo",
+      "voi": "mietete",
+      "loro": "mietono"
+    },
+    "passatoProssimo": {
+      "io": "ho mietuto",
+      "tu": "hai mietuto",
+      "lui/lei": "ha mietuto",
+      "noi": "abbiamo mietuto",
+      "voi": "avete mietuto",
+      "loro": "hanno mietuto"
+    },
+    "imperfetto": {
+      "io": "mietevo",
+      "tu": "mietevi",
+      "lui/lei": "mieteva",
+      "noi": "mietevamo",
+      "voi": "mietevate",
+      "loro": "mietevano"
+    },
+    "futuro": {
+      "io": "mieterò",
+      "tu": "mieterai",
+      "lui/lei": "mieterà",
+      "noi": "mieteremo",
+      "voi": "mieterete",
+      "loro": "mieteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mieta",
+      "tu": "mieta",
+      "lui/lei": "mieta",
+      "noi": "mietiamo",
+      "voi": "mietiate",
+      "loro": "mietano"
+    },
+    "condizionale": {
+      "io": "mieterei",
+      "tu": "mieteresti",
+      "lui/lei": "mieterebbe",
+      "noi": "mieteremmo",
+      "voi": "mietereste",
+      "loro": "mieterebbero"
+    },
+    "imperativo": {
+      "tu": "mieti",
+      "lei": "mieta",
+      "noi": "mietiamo",
+      "voi": "mietete",
+      "loro": "mietano"
+    }
+  },
+  "migliorare": {
+    "presente": {
+      "io": "miglioro",
+      "tu": "migliori",
+      "lui/lei": "migliora",
+      "noi": "miglioriamo",
+      "voi": "migliorate",
+      "loro": "migliorano"
+    },
+    "passatoProssimo": {
+      "io": "ho migliorato",
+      "tu": "hai migliorato",
+      "lui/lei": "ha migliorato",
+      "noi": "abbiamo migliorato",
+      "voi": "avete migliorato",
+      "loro": "hanno migliorato"
+    },
+    "imperfetto": {
+      "io": "miglioravo",
+      "tu": "miglioravi",
+      "lui/lei": "migliorava",
+      "noi": "miglioravamo",
+      "voi": "miglioravate",
+      "loro": "miglioravano"
+    },
+    "futuro": {
+      "io": "migliorerò",
+      "tu": "migliorerai",
+      "lui/lei": "migliorerà",
+      "noi": "miglioreremo",
+      "voi": "migliorerete",
+      "loro": "miglioreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "migliori",
+      "tu": "migliori",
+      "lui/lei": "migliori",
+      "noi": "miglioriamo",
+      "voi": "miglioriate",
+      "loro": "migliorino"
+    },
+    "condizionale": {
+      "io": "migliorerei",
+      "tu": "miglioreresti",
+      "lui/lei": "migliorerebbe",
+      "noi": "miglioreremmo",
+      "voi": "migliorereste",
+      "loro": "migliorerebbero"
+    },
+    "imperativo": {
+      "tu": "migliora",
+      "lei": "migliori",
+      "noi": "miglioriamo",
+      "voi": "migliorate",
+      "loro": "migliorino"
+    }
+  },
+  "migrare": {
+    "presente": {
+      "io": "migro",
+      "tu": "migri",
+      "lui/lei": "migra",
+      "noi": "migriamo",
+      "voi": "migrate",
+      "loro": "migrano"
+    },
+    "passatoProssimo": {
+      "io": "sono migrato",
+      "tu": "sei migrato",
+      "lui/lei": "è migrato",
+      "noi": "siamo migrati",
+      "voi": "siete migrati",
+      "loro": "sono migrati"
+    },
+    "imperfetto": {
+      "io": "migravo",
+      "tu": "migravi",
+      "lui/lei": "migrava",
+      "noi": "migravamo",
+      "voi": "migravate",
+      "loro": "migravano"
+    },
+    "futuro": {
+      "io": "migrerò",
+      "tu": "migrerai",
+      "lui/lei": "migrerà",
+      "noi": "migreremo",
+      "voi": "migrerete",
+      "loro": "migreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "migri",
+      "tu": "migri",
+      "lui/lei": "migri",
+      "noi": "migriamo",
+      "voi": "migriate",
+      "loro": "migrino"
+    },
+    "condizionale": {
+      "io": "migrerei",
+      "tu": "migreresti",
+      "lui/lei": "migrerebbe",
+      "noi": "migreremmo",
+      "voi": "migrereste",
+      "loro": "migrerebbero"
+    },
+    "imperativo": {
+      "tu": "migra",
+      "lui/lei": "migri",
+      "noi": "migriamo",
+      "voi": "migrate",
+      "loro": "migrino"
+    }
+  },
+  "minacciare": {
+    "presente": {
+      "io": "minaccio",
+      "tu": "minacci",
+      "lui/lei": "minaccia",
+      "noi": "minacciamo",
+      "voi": "minacciate",
+      "loro": "minacciano"
+    },
+    "passatoProssimo": {
+      "io": "ho minacciato",
+      "tu": "hai minacciato",
+      "lui/lei": "ha minacciato",
+      "noi": "abbiamo minacciato",
+      "voi": "avete minacciato",
+      "loro": "hanno minacciato"
+    },
+    "imperfetto": {
+      "io": "minacciavo",
+      "tu": "minacciavi",
+      "lui/lei": "minacciava",
+      "noi": "minacciavamo",
+      "voi": "minacciavate",
+      "loro": "minacciavano"
+    },
+    "futuro": {
+      "io": "minaccerò",
+      "tu": "minaccerai",
+      "lui/lei": "minaccerà",
+      "noi": "minacceremo",
+      "voi": "minaccerete",
+      "loro": "minacceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "minacci",
+      "tu": "minacci",
+      "lui/lei": "minacci",
+      "noi": "minacciamo",
+      "voi": "minacciate",
+      "loro": "minaccino"
+    },
+    "condizionale": {
+      "io": "minaccerei",
+      "tu": "minacceresti",
+      "lui/lei": "minaccerebbe",
+      "noi": "minacceremmo",
+      "voi": "minaccereste",
+      "loro": "minaccerebbero"
+    },
+    "imperativo": {
+      "tu": "minaccia",
+      "lui/lei": "minacci",
+      "noi": "minacciamo",
+      "voi": "minacciate",
+      "loro": "minaccino"
+    }
+  },
+  "minimizzare": {
+    "presente": {
+      "io": "minimizzo",
+      "tu": "minimizzi",
+      "lui/lei": "minimizza",
+      "noi": "minimizziamo",
+      "voi": "minimizzate",
+      "loro": "minimizzano"
+    },
+    "passatoProssimo": {
+      "io": "ho minimizzato",
+      "tu": "hai minimizzato",
+      "lui/lei": "ha minimizzato",
+      "noi": "abbiamo minimizzato",
+      "voi": "avete minimizzato",
+      "loro": "hanno minimizzato"
+    },
+    "imperfetto": {
+      "io": "minimizzavo",
+      "tu": "minimizzavi",
+      "lui/lei": "minimizzava",
+      "noi": "minimizzavamo",
+      "voi": "minimizzavate",
+      "loro": "minimizzavano"
+    },
+    "futuro": {
+      "io": "minimizzerò",
+      "tu": "minimizzerai",
+      "lui/lei": "minimizzerà",
+      "noi": "minimizzeremo",
+      "voi": "minimizzerete",
+      "loro": "minimizzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "minimizzi",
+      "tu": "minimizzi",
+      "lui/lei": "minimizzi",
+      "noi": "minimizziamo",
+      "voi": "minimizziate",
+      "loro": "minimizzino"
+    },
+    "condizionale": {
+      "io": "minimizzerei",
+      "tu": "minimizzeresti",
+      "lui/lei": "minimizzerebbe",
+      "noi": "minimizzeremmo",
+      "voi": "minimizzereste",
+      "loro": "minimizzerebbero"
+    },
+    "imperativo": {
+      "tu": "minimizza",
+      "lei": "minimizzi",
+      "noi": "minimizziamo",
+      "voi": "minimizzate",
+      "loro": "minimizzino"
+    }
+  },
+  "mirare": {
+    "presente": {
+      "io": "miro",
+      "tu": "miri",
+      "lui/lei": "mira",
+      "noi": "miriamo",
+      "voi": "mirate",
+      "loro": "mirano"
+    },
+    "passatoProssimo": {
+      "io": "ho mirato",
+      "tu": "hai mirato",
+      "lui/lei": "ha mirato",
+      "noi": "abbiamo mirato",
+      "voi": "avete mirato",
+      "loro": "hanno mirato"
+    },
+    "imperfetto": {
+      "io": "miravo",
+      "tu": "miravi",
+      "lui/lei": "mirava",
+      "noi": "miravamo",
+      "voi": "miravate",
+      "loro": "miravano"
+    },
+    "futuro": {
+      "io": "mirerò",
+      "tu": "mirerai",
+      "lui/lei": "mirerà",
+      "noi": "mireremo",
+      "voi": "mirerete",
+      "loro": "mireranno"
+    },
+    "congiuntivoPresente": {
+      "io": "miri",
+      "tu": "miri",
+      "lui/lei": "miri",
+      "noi": "miriamo",
+      "voi": "miriate",
+      "loro": "mirino"
+    },
+    "condizionale": {
+      "io": "mirerei",
+      "tu": "mireresti",
+      "lui/lei": "mirerebbe",
+      "noi": "mireremmo",
+      "voi": "mirereste",
+      "loro": "mirerebbero"
+    },
+    "imperativo": {
+      "tu": "mira",
+      "lui/lei": "miri",
+      "noi": "miriamo",
+      "voi": "mirate",
+      "loro": "mirino"
+    }
+  },
+  "mischiare": {
+    "presente": {
+      "io": "mischio",
+      "tu": "mischi",
+      "lui/lei": "mischia",
+      "noi": "mischiamo",
+      "voi": "mischiate",
+      "loro": "mischiano"
+    },
+    "passatoProssimo": {
+      "io": "ho mischiato",
+      "tu": "hai mischiato",
+      "lui/lei": "ha mischiato",
+      "noi": "abbiamo mischiato",
+      "voi": "avete mischiato",
+      "loro": "hanno mischiato"
+    },
+    "imperfetto": {
+      "io": "mischiavo",
+      "tu": "mischiavi",
+      "lui/lei": "mischiava",
+      "noi": "mischiavamo",
+      "voi": "mischiavate",
+      "loro": "mischiavano"
+    },
+    "futuro": {
+      "io": "mischierò",
+      "tu": "mischierai",
+      "lui/lei": "mischierà",
+      "noi": "mischieremo",
+      "voi": "mischierete",
+      "loro": "mischieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mischi",
+      "tu": "mischi",
+      "lui/lei": "mischi",
+      "noi": "mischiamo",
+      "voi": "mischiate",
+      "loro": "mischino"
+    },
+    "condizionale": {
+      "io": "mischierei",
+      "tu": "mischieresti",
+      "lui/lei": "mischierebbe",
+      "noi": "mischieremmo",
+      "voi": "mischiereste",
+      "loro": "mischierebbero"
+    },
+    "imperativo": {
+      "tu": "mischia",
+      "lui/lei": "mischi",
+      "noi": "mischiamo",
+      "voi": "mischiate",
+      "loro": "mischino"
+    }
+  },
+  "misurare": {
+    "presente": {
+      "io": "misuro",
+      "tu": "misuri",
+      "lui/lei": "misura",
+      "noi": "misuriamo",
+      "voi": "misurate",
+      "loro": "misurano"
+    },
+    "passatoProssimo": {
+      "io": "ho misurato",
+      "tu": "hai misurato",
+      "lui/lei": "ha misurato",
+      "noi": "abbiamo misurato",
+      "voi": "avete misurato",
+      "loro": "hanno misurato"
+    },
+    "imperfetto": {
+      "io": "misuravo",
+      "tu": "misuravi",
+      "lui/lei": "misurava",
+      "noi": "misuravamo",
+      "voi": "misuravate",
+      "loro": "misuravano"
+    },
+    "futuro": {
+      "io": "misurerò",
+      "tu": "misurerai",
+      "lui/lei": "misurerà",
+      "noi": "misureremo",
+      "voi": "misurerete",
+      "loro": "misureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "misuri",
+      "tu": "misuri",
+      "lui/lei": "misuri",
+      "noi": "misuriamo",
+      "voi": "misuriate",
+      "loro": "misurino"
+    },
+    "condizionale": {
+      "io": "misurerei",
+      "tu": "misureresti",
+      "lui/lei": "misurerebbe",
+      "noi": "misureremmo",
+      "voi": "misurereste",
+      "loro": "misurerebbero"
+    },
+    "imperativo": {
+      "tu": "misura",
+      "lui/lei": "misuri",
+      "noi": "misuriamo",
+      "voi": "misurate",
+      "loro": "misurino"
+    }
+  },
+  "modellare": {
+    "presente": {
+      "io": "modello",
+      "tu": "modelli",
+      "lui/lei": "modella",
+      "noi": "modelliamo",
+      "voi": "modellate",
+      "loro": "modellano"
+    },
+    "passatoProssimo": {
+      "io": "ho modellato",
+      "tu": "hai modellato",
+      "lui/lei": "ha modellato",
+      "noi": "abbiamo modellato",
+      "voi": "avete modellato",
+      "loro": "hanno modellato"
+    },
+    "imperfetto": {
+      "io": "modellavo",
+      "tu": "modellavi",
+      "lui/lei": "modellava",
+      "noi": "modellavamo",
+      "voi": "modellavate",
+      "loro": "modellavano"
+    },
+    "futuro": {
+      "io": "modellerò",
+      "tu": "modellerai",
+      "lui/lei": "modellerà",
+      "noi": "modelleremo",
+      "voi": "modellerete",
+      "loro": "modelleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "modelli",
+      "tu": "modelli",
+      "lui/lei": "modelli",
+      "noi": "modelliamo",
+      "voi": "modelliate",
+      "loro": "modellino"
+    },
+    "condizionale": {
+      "io": "modellerei",
+      "tu": "modelleresti",
+      "lui/lei": "modellerebbe",
+      "noi": "modelleremmo",
+      "voi": "modellereste",
+      "loro": "modellerebbero"
+    },
+    "imperativo": {
+      "tu": "modella",
+      "lui/lei": "modelli",
+      "noi": "modelliamo",
+      "voi": "modellate",
+      "loro": "modellino"
+    }
+  },
+  "modificare": {
+    "presente": {
+      "io": "modifico",
+      "tu": "modifichi",
+      "lui/lei": "modifica",
+      "noi": "modifichiamo",
+      "voi": "modificate",
+      "loro": "modificano"
+    },
+    "passatoProssimo": {
+      "io": "ho modificato",
+      "tu": "hai modificato",
+      "lui/lei": "ha modificato",
+      "noi": "abbiamo modificato",
+      "voi": "avete modificato",
+      "loro": "hanno modificato"
+    },
+    "imperfetto": {
+      "io": "modificavo",
+      "tu": "modificavi",
+      "lui/lei": "modificava",
+      "noi": "modificavamo",
+      "voi": "modificavate",
+      "loro": "modificavano"
+    },
+    "futuro": {
+      "io": "modificherò",
+      "tu": "modificherai",
+      "lui/lei": "modificherà",
+      "noi": "modificheremo",
+      "voi": "modificherete",
+      "loro": "modificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "modifichi",
+      "tu": "modifichi",
+      "lui/lei": "modifichi",
+      "noi": "modifichiamo",
+      "voi": "modifichiate",
+      "loro": "modifichino"
+    },
+    "condizionale": {
+      "io": "modificherei",
+      "tu": "modificheresti",
+      "lui/lei": "modificherebbe",
+      "noi": "modificheremmo",
+      "voi": "modifichereste",
+      "loro": "modificherebbero"
+    },
+    "imperativo": {
+      "tu": "modifica",
+      "lui/lei": "modifichi",
+      "noi": "modifichiamo",
+      "voi": "modificate",
+      "loro": "modifichino"
+    }
+  },
+  "molestare": {
+    "presente": {
+      "io": "molesto",
+      "tu": "molesti",
+      "lui/lei": "molesta",
+      "noi": "molestiamo",
+      "voi": "molestate",
+      "loro": "molestano"
+    },
+    "passatoProssimo": {
+      "io": "ho molestato",
+      "tu": "hai molestato",
+      "lui/lei": "ha molestato",
+      "noi": "abbiamo molestato",
+      "voi": "avete molestato",
+      "loro": "hanno molestato"
+    },
+    "imperfetto": {
+      "io": "molestavo",
+      "tu": "molestavi",
+      "lui/lei": "molestava",
+      "noi": "molestavamo",
+      "voi": "molestavate",
+      "loro": "molestavano"
+    },
+    "futuro": {
+      "io": "molesterò",
+      "tu": "molesterai",
+      "lui/lei": "molesterà",
+      "noi": "molesteremo",
+      "voi": "molesterete",
+      "loro": "molesteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "molesti",
+      "tu": "molesti",
+      "lui/lei": "molesti",
+      "noi": "molestiamo",
+      "voi": "molestiate",
+      "loro": "molestino"
+    },
+    "condizionale": {
+      "io": "molesterei",
+      "tu": "molesteresti",
+      "lui/lei": "molesterebbe",
+      "noi": "molesteremmo",
+      "voi": "molestereste",
+      "loro": "molesterebbero"
+    },
+    "imperativo": {
+      "tu": "molesta",
+      "lei": "molesti",
+      "noi": "molestiamo",
+      "voi": "molestate",
+      "loro": "molestino"
+    }
+  },
+  "moltiplicare": {
+    "presente": {
+      "io": "moltiplico",
+      "tu": "moltiplichi",
+      "lui/lei": "moltiplica",
+      "noi": "moltiplichiamo",
+      "voi": "moltiplicate",
+      "loro": "moltiplicano"
+    },
+    "passatoProssimo": {
+      "io": "ho moltiplicato",
+      "tu": "hai moltiplicato",
+      "lui/lei": "ha moltiplicato",
+      "noi": "abbiamo moltiplicato",
+      "voi": "avete moltiplicato",
+      "loro": "hanno moltiplicato"
+    },
+    "imperfetto": {
+      "io": "moltiplicavo",
+      "tu": "moltiplicavi",
+      "lui/lei": "moltiplicava",
+      "noi": "moltiplicavamo",
+      "voi": "moltiplicavate",
+      "loro": "moltiplicavano"
+    },
+    "futuro": {
+      "io": "moltiplicherò",
+      "tu": "moltiplicherai",
+      "lui/lei": "moltiplicherà",
+      "noi": "moltiplicheremo",
+      "voi": "moltiplicherete",
+      "loro": "moltiplicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "moltiplichi",
+      "tu": "moltiplichi",
+      "lui/lei": "moltiplichi",
+      "noi": "moltiplichiamo",
+      "voi": "moltiplichiate",
+      "loro": "moltiplichino"
+    },
+    "condizionale": {
+      "io": "moltiplicherei",
+      "tu": "moltiplicheresti",
+      "lui/lei": "moltiplicherebbe",
+      "noi": "moltiplicheremmo",
+      "voi": "moltiplichereste",
+      "loro": "moltiplicherebbero"
+    },
+    "imperativo": {
+      "tu": "moltiplica",
+      "lui/lei": "moltiplichi",
+      "noi": "moltiplichiamo",
+      "voi": "moltiplicate",
+      "loro": "moltiplichino"
+    }
+  },
+  "montare": {
+    "presente": {
+      "io": "monto",
+      "tu": "monti",
+      "lui/lei": "monta",
+      "noi": "montiamo",
+      "voi": "montate",
+      "loro": "montano"
+    },
+    "passatoProssimo": {
+      "io": "ho montato",
+      "tu": "hai montato",
+      "lui/lei": "ha montato",
+      "noi": "abbiamo montato",
+      "voi": "avete montato",
+      "loro": "hanno montato"
+    },
+    "imperfetto": {
+      "io": "montavo",
+      "tu": "montavi",
+      "lui/lei": "montava",
+      "noi": "montavamo",
+      "voi": "montavate",
+      "loro": "montavano"
+    },
+    "futuro": {
+      "io": "monterò",
+      "tu": "monterai",
+      "lui/lei": "monterà",
+      "noi": "monteremo",
+      "voi": "monterete",
+      "loro": "monteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "monti",
+      "tu": "monti",
+      "lui/lei": "monti",
+      "noi": "montiamo",
+      "voi": "montiate",
+      "loro": "montino"
+    },
+    "condizionale": {
+      "io": "monterei",
+      "tu": "monteresti",
+      "lui/lei": "monterebbe",
+      "noi": "monteremmo",
+      "voi": "montereste",
+      "loro": "monterebbero"
+    },
+    "imperativo": {
+      "tu": "monta",
+      "lui/lei": "monti",
+      "noi": "montiamo",
+      "voi": "montate",
+      "loro": "montino"
+    }
+  },
+  "mordere": {
+    "presente": {
+      "io": "mordo",
+      "tu": "mordi",
+      "lui/lei": "morde",
+      "noi": "mordiamo",
+      "voi": "mordete",
+      "loro": "mordono"
+    },
+    "passatoProssimo": {
+      "io": "ho morso",
+      "tu": "hai morso",
+      "lui/lei": "ha morso",
+      "noi": "abbiamo morso",
+      "voi": "avete morso",
+      "loro": "hanno morso"
+    },
+    "imperfetto": {
+      "io": "mordevo",
+      "tu": "mordevi",
+      "lui/lei": "mordeva",
+      "noi": "mordevamo",
+      "voi": "mordevate",
+      "loro": "mordevano"
+    },
+    "futuro": {
+      "io": "morderò",
+      "tu": "morderai",
+      "lui/lei": "morderà",
+      "noi": "morderemo",
+      "voi": "morderete",
+      "loro": "morderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "morda",
+      "tu": "morda",
+      "lui/lei": "morda",
+      "noi": "mordiamo",
+      "voi": "mordiate",
+      "loro": "mordano"
+    },
+    "condizionale": {
+      "io": "morderei",
+      "tu": "morderesti",
+      "lui/lei": "morderebbe",
+      "noi": "morderemmo",
+      "voi": "mordereste",
+      "loro": "morderebbero"
+    },
+    "imperativo": {
+      "tu": "mordi",
+      "lui/lei": "morda",
+      "noi": "mordiamo",
+      "voi": "mordete",
+      "loro": "mordano"
+    }
+  },
+  "morire": {
+    "presente": {
+      "io": "muoio",
+      "tu": "muori",
+      "lui/lei": "muore",
+      "noi": "moriamo",
+      "voi": "morite",
+      "loro": "muoiono"
+    },
+    "passatoProssimo": {
+      "io": "sono morto",
+      "tu": "sei morto",
+      "lui/lei": "è morto",
+      "noi": "siamo morti",
+      "voi": "siete morti",
+      "loro": "sono morti"
+    },
+    "imperfetto": {
+      "io": "morivo",
+      "tu": "morivi",
+      "lui/lei": "moriva",
+      "noi": "morivamo",
+      "voi": "morivate",
+      "loro": "morivano"
+    },
+    "futuro": {
+      "io": "morirò",
+      "tu": "morirai",
+      "lui/lei": "morirà",
+      "noi": "moriremo",
+      "voi": "morirete",
+      "loro": "moriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "muoia",
+      "tu": "muoia",
+      "lui/lei": "muoia",
+      "noi": "moriamo",
+      "voi": "moriate",
+      "loro": "muoiano"
+    },
+    "condizionale": {
+      "io": "morirei",
+      "tu": "moriresti",
+      "lui/lei": "morirebbe",
+      "noi": "moriremmo",
+      "voi": "morireste",
+      "loro": "morirebbero"
+    },
+    "imperativo": {
+      "tu": "muori",
+      "lui/lei": "muoia",
+      "noi": "moriamo",
+      "voi": "morite",
+      "loro": "muoiano"
+    }
+  },
+  "mormorare": {
+    "presente": {
+      "io": "mormoro",
+      "tu": "mormori",
+      "lui/lei": "mormora",
+      "noi": "mormoriamo",
+      "voi": "mormorate",
+      "loro": "mormorano"
+    },
+    "passatoProssimo": {
+      "io": "ho mormorato",
+      "tu": "hai mormorato",
+      "lui/lei": "ha mormorato",
+      "noi": "abbiamo mormorato",
+      "voi": "avete mormorato",
+      "loro": "hanno mormorato"
+    },
+    "imperfetto": {
+      "io": "mormoravo",
+      "tu": "mormoravi",
+      "lui/lei": "mormorava",
+      "noi": "mormoravamo",
+      "voi": "mormoravate",
+      "loro": "mormoravano"
+    },
+    "futuro": {
+      "io": "mormorerò",
+      "tu": "mormorerai",
+      "lui/lei": "mormorerà",
+      "noi": "mormoreremo",
+      "voi": "mormorerete",
+      "loro": "mormoreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mormori",
+      "tu": "mormori",
+      "lui/lei": "mormori",
+      "noi": "mormoriamo",
+      "voi": "mormoriate",
+      "loro": "mormorino"
+    },
+    "condizionale": {
+      "io": "mormorerei",
+      "tu": "mormoreresti",
+      "lui/lei": "mormorerebbe",
+      "noi": "mormoreremmo",
+      "voi": "mormorereste",
+      "loro": "mormorerebbero"
+    },
+    "imperativo": {
+      "tu": "mormora",
+      "lei": "mormori",
+      "noi": "mormoriamo",
+      "voi": "mormorate",
+      "loro": "mormorino"
+    }
+  },
+  "mortificare": {
+    "presente": {
+      "io": "mortifico",
+      "tu": "mortifichi",
+      "lui/lei": "mortifica",
+      "noi": "mortifichiamo",
+      "voi": "mortificate",
+      "loro": "mortificano"
+    },
+    "passatoProssimo": {
+      "io": "ho mortificato",
+      "tu": "hai mortificato",
+      "lui/lei": "ha mortificato",
+      "noi": "abbiamo mortificato",
+      "voi": "avete mortificato",
+      "loro": "hanno mortificato"
+    },
+    "imperfetto": {
+      "io": "mortificavo",
+      "tu": "mortificavi",
+      "lui/lei": "mortificava",
+      "noi": "mortificavamo",
+      "voi": "mortificavate",
+      "loro": "mortificavano"
+    },
+    "futuro": {
+      "io": "mortificherò",
+      "tu": "mortificherai",
+      "lui/lei": "mortificherà",
+      "noi": "mortificheremo",
+      "voi": "mortificherete",
+      "loro": "mortificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mortifichi",
+      "tu": "mortifichi",
+      "lui/lei": "mortifichi",
+      "noi": "mortifichiamo",
+      "voi": "mortifichiate",
+      "loro": "mortifichino"
+    },
+    "condizionale": {
+      "io": "mortificherei",
+      "tu": "mortificheresti",
+      "lui/lei": "mortificherebbe",
+      "noi": "mortificheremmo",
+      "voi": "mortifichereste",
+      "loro": "mortificherebbero"
+    },
+    "imperativo": {
+      "tu": "mortifica",
+      "lei": "mortifichi",
+      "noi": "mortifichiamo",
+      "voi": "mortificate",
+      "loro": "mortifichino"
+    }
+  },
+  "mostrare": {
+    "presente": {
+      "io": "mostro",
+      "tu": "mostri",
+      "lui/lei": "mostra",
+      "noi": "mostriamo",
+      "voi": "mostrate",
+      "loro": "mostrano"
+    },
+    "passatoProssimo": {
+      "io": "ho mostrato",
+      "tu": "hai mostrato",
+      "lui/lei": "ha mostrato",
+      "noi": "abbiamo mostrato",
+      "voi": "avete mostrato",
+      "loro": "hanno mostrato"
+    },
+    "imperfetto": {
+      "io": "mostravo",
+      "tu": "mostravi",
+      "lui/lei": "mostrava",
+      "noi": "mostravamo",
+      "voi": "mostravate",
+      "loro": "mostravano"
+    },
+    "futuro": {
+      "io": "mostrerò",
+      "tu": "mostrerai",
+      "lui/lei": "mostrerà",
+      "noi": "mostreremo",
+      "voi": "mostrerete",
+      "loro": "mostreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mostri",
+      "tu": "mostri",
+      "lui/lei": "mostri",
+      "noi": "mostriamo",
+      "voi": "mostriate",
+      "loro": "mostrino"
+    },
+    "condizionale": {
+      "io": "mostrerei",
+      "tu": "mostreresti",
+      "lui/lei": "mostrerebbe",
+      "noi": "mostreremmo",
+      "voi": "mostrereste",
+      "loro": "mostrerebbero"
+    },
+    "imperativo": {
+      "tu": "mostra",
+      "lei": "mostri",
+      "noi": "mostriamo",
+      "voi": "mostrate",
+      "loro": "mostrino"
+    }
+  },
+  "motteggiare": {
+    "presente": {
+      "io": "motteggio",
+      "tu": "motteggi",
+      "lui/lei": "motteggia",
+      "noi": "motteggiamo",
+      "voi": "motteggiate",
+      "loro": "motteggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho motteggiato",
+      "tu": "hai motteggiato",
+      "lui/lei": "ha motteggiato",
+      "noi": "abbiamo motteggiato",
+      "voi": "avete motteggiato",
+      "loro": "hanno motteggiato"
+    },
+    "imperfetto": {
+      "io": "motteggiavo",
+      "tu": "motteggiavi",
+      "lui/lei": "motteggiava",
+      "noi": "motteggiavamo",
+      "voi": "motteggiavate",
+      "loro": "motteggiavano"
+    },
+    "futuro": {
+      "io": "motteggerò",
+      "tu": "motteggerai",
+      "lui/lei": "motteggerà",
+      "noi": "motteggeremo",
+      "voi": "motteggerete",
+      "loro": "motteggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "motteggi",
+      "tu": "motteggi",
+      "lui/lei": "motteggi",
+      "noi": "motteggiamo",
+      "voi": "motteggiate",
+      "loro": "motteggino"
+    },
+    "condizionale": {
+      "io": "motteggerei",
+      "tu": "motteggeresti",
+      "lui/lei": "motteggerebbe",
+      "noi": "motteggeremmo",
+      "voi": "motteggereste",
+      "loro": "motteggerebbero"
+    },
+    "imperativo": {
+      "tu": "motteggia",
+      "lei": "motteggi",
+      "noi": "motteggiamo",
+      "voi": "motteggiate",
+      "loro": "motteggino"
+    }
+  },
+  "mozzare": {
+    "presente": {
+      "io": "mozzo",
+      "tu": "mozzi",
+      "lui/lei": "mozza",
+      "noi": "mozziamo",
+      "voi": "mozzate",
+      "loro": "mozzano"
+    },
+    "passatoProssimo": {
+      "io": "ho mozzato",
+      "tu": "hai mozzato",
+      "lui/lei": "ha mozzato",
+      "noi": "abbiamo mozzato",
+      "voi": "avete mozzato",
+      "loro": "hanno mozzato"
+    },
+    "imperfetto": {
+      "io": "mozzavo",
+      "tu": "mozzavi",
+      "lui/lei": "mozzava",
+      "noi": "mozzavamo",
+      "voi": "mozzavate",
+      "loro": "mozzavano"
+    },
+    "futuro": {
+      "io": "mozzerò",
+      "tu": "mozzerai",
+      "lui/lei": "mozzerà",
+      "noi": "mozzeremo",
+      "voi": "mozzerete",
+      "loro": "mozzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mozzi",
+      "tu": "mozzi",
+      "lui/lei": "mozzi",
+      "noi": "mozziamo",
+      "voi": "mozziate",
+      "loro": "mozzino"
+    },
+    "condizionale": {
+      "io": "mozzerei",
+      "tu": "mozzeresti",
+      "lui/lei": "mozzerebbe",
+      "noi": "mozzeremmo",
+      "voi": "mozzereste",
+      "loro": "mozzerebbero"
+    },
+    "imperativo": {
+      "tu": "mozza",
+      "lui/lei": "mozzi",
+      "noi": "mozziamo",
+      "voi": "mozzate",
+      "loro": "mozzino"
+    }
+  },
+  "mugghiare": {
+    "presente": {
+      "io": "mugghio",
+      "tu": "mugghi",
+      "lui/lei": "mugghia",
+      "noi": "mugghiamo",
+      "voi": "mugghiate",
+      "loro": "mugghiano"
+    },
+    "passatoProssimo": {
+      "io": "ho mugghiato",
+      "tu": "hai mugghiato",
+      "lui/lei": "ha mugghiato",
+      "noi": "abbiamo mugghiato",
+      "voi": "avete mugghiato",
+      "loro": "hanno mugghiato"
+    },
+    "imperfetto": {
+      "io": "mugghiavo",
+      "tu": "mugghiavi",
+      "lui/lei": "mugghiava",
+      "noi": "mugghiavamo",
+      "voi": "mugghiavate",
+      "loro": "mugghiavano"
+    },
+    "futuro": {
+      "io": "mugghierò",
+      "tu": "mugghierai",
+      "lui/lei": "mugghierà",
+      "noi": "mugghieremo",
+      "voi": "mugghierete",
+      "loro": "mugghieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mugghi",
+      "tu": "mugghi",
+      "lui/lei": "mugghi",
+      "noi": "mugghiamo",
+      "voi": "mugghiate",
+      "loro": "mugghino"
+    },
+    "condizionale": {
+      "io": "mugghierei",
+      "tu": "mugghieresti",
+      "lui/lei": "mugghierebbe",
+      "noi": "mugghieremmo",
+      "voi": "mugghiereste",
+      "loro": "mugghierebbero"
+    },
+    "imperativo": {
+      "tu": "mugghia",
+      "lui/lei": "mugghi",
+      "noi": "mugghiamo",
+      "voi": "mugghiate",
+      "loro": "mugghino"
+    }
+  },
+  "mugolare": {
+    "presente": {
+      "io": "mugolo",
+      "tu": "mugoli",
+      "lui/lei": "mugola",
+      "noi": "mugoliamo",
+      "voi": "mugolate",
+      "loro": "mugolano"
+    },
+    "passatoProssimo": {
+      "io": "ho mugolato",
+      "tu": "hai mugolato",
+      "lui/lei": "ha mugolato",
+      "noi": "abbiamo mugolato",
+      "voi": "avete mugolato",
+      "loro": "hanno mugolato"
+    },
+    "imperfetto": {
+      "io": "mugolavo",
+      "tu": "mugolavi",
+      "lui/lei": "mugolava",
+      "noi": "mugolavamo",
+      "voi": "mugolavate",
+      "loro": "mugolavano"
+    },
+    "futuro": {
+      "io": "mugolerò",
+      "tu": "mugolerai",
+      "lui/lei": "mugolerà",
+      "noi": "mugoleremo",
+      "voi": "mugolerete",
+      "loro": "mugoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mugoli",
+      "tu": "mugoli",
+      "lui/lei": "mugoli",
+      "noi": "mugoliamo",
+      "voi": "mugoliate",
+      "loro": "mugolino"
+    },
+    "condizionale": {
+      "io": "mugolerei",
+      "tu": "mugoleresti",
+      "lui/lei": "mugolerebbe",
+      "noi": "mugoleremmo",
+      "voi": "mugolereste",
+      "loro": "mugolerebbero"
+    },
+    "imperativo": {
+      "tu": "mugola",
+      "lui/lei": "mugoli",
+      "noi": "mugoliamo",
+      "voi": "mugolate",
+      "loro": "mugolino"
+    }
+  },
+  "mungere": {
+    "presente": {
+      "io": "mungo",
+      "tu": "mungi",
+      "lui/lei": "munge",
+      "noi": "mungiamo",
+      "voi": "mungete",
+      "loro": "mungono"
+    },
+    "passatoProssimo": {
+      "io": "ho munto",
+      "tu": "hai munto",
+      "lui/lei": "ha munto",
+      "noi": "abbiamo munto",
+      "voi": "avete munto",
+      "loro": "hanno munto"
+    },
+    "imperfetto": {
+      "io": "mungevo",
+      "tu": "mungevi",
+      "lui/lei": "mungeva",
+      "noi": "mungevamo",
+      "voi": "mungevate",
+      "loro": "mungevano"
+    },
+    "futuro": {
+      "io": "mungerò",
+      "tu": "mungerai",
+      "lui/lei": "mungerà",
+      "noi": "mungeremo",
+      "voi": "mungerete",
+      "loro": "mungeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "munga",
+      "tu": "munga",
+      "lui/lei": "munga",
+      "noi": "mungiamo",
+      "voi": "mungiate",
+      "loro": "mungano"
+    },
+    "condizionale": {
+      "io": "mungerei",
+      "tu": "mungeresti",
+      "lui/lei": "mungerebbe",
+      "noi": "mungeremmo",
+      "voi": "mungereste",
+      "loro": "mungerebbero"
+    },
+    "imperativo": {
+      "tu": "mungi",
+      "lui/lei": "munga",
+      "noi": "mungiamo",
+      "voi": "mungete",
+      "loro": "mungano"
+    }
+  },
+  "munire": {
+    "presente": {
+      "io": "munisco",
+      "tu": "munisci",
+      "lui/lei": "munisce",
+      "noi": "muniamo",
+      "voi": "munite",
+      "loro": "muniscono"
+    },
+    "passatoProssimo": {
+      "io": "ho munito",
+      "tu": "hai munito",
+      "lui/lei": "ha munito",
+      "noi": "abbiamo munito",
+      "voi": "avete munito",
+      "loro": "hanno munito"
+    },
+    "imperfetto": {
+      "io": "munivo",
+      "tu": "munivi",
+      "lui/lei": "muniva",
+      "noi": "munivamo",
+      "voi": "munivate",
+      "loro": "munivano"
+    },
+    "futuro": {
+      "io": "munirò",
+      "tu": "munirai",
+      "lui/lei": "munirà",
+      "noi": "muniremo",
+      "voi": "munirete",
+      "loro": "muniranno"
+    },
+    "congiuntivoPresente": {
+      "io": "munisca",
+      "tu": "munisca",
+      "lui/lei": "munisca",
+      "noi": "muniamo",
+      "voi": "muniate",
+      "loro": "muniscano"
+    },
+    "condizionale": {
+      "io": "munirei",
+      "tu": "muniresti",
+      "lui/lei": "munirebbe",
+      "noi": "muniremmo",
+      "voi": "munireste",
+      "loro": "munirebbero"
+    },
+    "imperativo": {
+      "tu": "munisci",
+      "lui/lei": "munisca",
+      "noi": "muniamo",
+      "voi": "munite",
+      "loro": "muniscano"
+    }
+  },
+  "muovere": {
+    "presente": {
+      "io": "muovo",
+      "tu": "muovi",
+      "lui/lei": "muove",
+      "noi": "muoviamo",
+      "voi": "muovete",
+      "loro": "muovono"
+    },
+    "passatoProssimo": {
+      "io": "ho mosso",
+      "tu": "hai mosso",
+      "lui/lei": "ha mosso",
+      "noi": "abbiamo mosso",
+      "voi": "avete mosso",
+      "loro": "hanno mosso"
+    },
+    "imperfetto": {
+      "io": "muovevo",
+      "tu": "muovevi",
+      "lui/lei": "muoveva",
+      "noi": "muovevamo",
+      "voi": "muovevate",
+      "loro": "muovevano"
+    },
+    "futuro": {
+      "io": "muoverò",
+      "tu": "muoverai",
+      "lui/lei": "muoverà",
+      "noi": "muoveremo",
+      "voi": "muoverete",
+      "loro": "muoveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "muova",
+      "tu": "muova",
+      "lui/lei": "muova",
+      "noi": "muoviamo",
+      "voi": "muoviate",
+      "loro": "muovano"
+    },
+    "condizionale": {
+      "io": "muoverei",
+      "tu": "muoveresti",
+      "lui/lei": "muoverebbe",
+      "noi": "muoveremmo",
+      "voi": "muovereste",
+      "loro": "muoverebbero"
+    },
+    "imperativo": {
+      "tu": "muovi",
+      "lei": "muova",
+      "noi": "muoviamo",
+      "voi": "muovete",
+      "loro": "muovano"
+    }
+  },
+  "murare": {
+    "presente": {
+      "io": "muro",
+      "tu": "muri",
+      "lui/lei": "mura",
+      "noi": "muriamo",
+      "voi": "murate",
+      "loro": "murano"
+    },
+    "passatoProssimo": {
+      "io": "ho murato",
+      "tu": "hai murato",
+      "lui/lei": "ha murato",
+      "noi": "abbiamo murato",
+      "voi": "avete murato",
+      "loro": "hanno murato"
+    },
+    "imperfetto": {
+      "io": "muravo",
+      "tu": "muravi",
+      "lui/lei": "murava",
+      "noi": "muravamo",
+      "voi": "muravate",
+      "loro": "muravano"
+    },
+    "futuro": {
+      "io": "murerò",
+      "tu": "murerai",
+      "lui/lei": "murerà",
+      "noi": "mureremo",
+      "voi": "murerete",
+      "loro": "mureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "muri",
+      "tu": "muri",
+      "lui/lei": "muri",
+      "noi": "muriamo",
+      "voi": "muriate",
+      "loro": "murino"
+    },
+    "condizionale": {
+      "io": "murerei",
+      "tu": "mureresti",
+      "lui/lei": "murerebbe",
+      "noi": "mureremmo",
+      "voi": "murereste",
+      "loro": "murerebbero"
+    },
+    "imperativo": {
+      "tu": "mura",
+      "lui/lei": "muri",
+      "noi": "muriamo",
+      "voi": "murate",
+      "loro": "murino"
+    }
+  },
+  "mutare": {
+    "presente": {
+      "io": "muto",
+      "tu": "muti",
+      "lui/lei": "muta",
+      "noi": "mutiamo",
+      "voi": "mutate",
+      "loro": "mutano"
+    },
+    "passatoProssimo": {
+      "io": "ho mutato",
+      "tu": "hai mutato",
+      "lui/lei": "ha mutato",
+      "noi": "abbiamo mutato",
+      "voi": "avete mutato",
+      "loro": "hanno mutato"
+    },
+    "imperfetto": {
+      "io": "mutavo",
+      "tu": "mutavi",
+      "lui/lei": "mutava",
+      "noi": "mutavamo",
+      "voi": "mutavate",
+      "loro": "mutavano"
+    },
+    "futuro": {
+      "io": "muterò",
+      "tu": "muterai",
+      "lui/lei": "muterà",
+      "noi": "muteremo",
+      "voi": "muterete",
+      "loro": "muteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "muti",
+      "tu": "muti",
+      "lui/lei": "muti",
+      "noi": "mutiamo",
+      "voi": "mutiate",
+      "loro": "mutino"
+    },
+    "condizionale": {
+      "io": "muterei",
+      "tu": "muteresti",
+      "lui/lei": "muterebbe",
+      "noi": "muteremmo",
+      "voi": "mutereste",
+      "loro": "muterebbero"
+    },
+    "imperativo": {
+      "tu": "muta",
+      "lui/lei": "muti",
+      "noi": "mutiamo",
+      "voi": "mutate",
+      "loro": "mutino"
+    }
+  }
+}

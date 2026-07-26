@@ -2,8 +2,12 @@
 //
 // - ping             : healthcheck HTTPS (vérifie que le déploiement fonctionne)
 // - stripeWebhook    : reçoit les événements Stripe et pose les custom claims
-//                      `premium`/`role` sur l'utilisateur (lus par firestore.rules
-//                      et par le VPS), via PRICE_ROLE_MAP (Price ID → rôle).
+//                      `premium`/`role`/`periodEnd` sur l'utilisateur (lus par
+//                      firestore.rules et par le VPS), via PRICE_ROLE_MAP
+//                      (Price ID → rôle). `periodEnd` (fin de la période de
+//                      facturation en cours) ancre le renouvellement des
+//                      crédits de génération sur la vraie date de
+//                      renouvellement Stripe (voir leggendo-server/quota.mjs).
 // - adminListUsers   : liste les comptes (réservé à ADMIN_EMAIL).
 // - adminSetUserRole : change le rôle d'un compte à la main (réservé à
 //                      ADMIN_EMAIL) — en attendant que Stripe soit branché.
@@ -22,9 +26,10 @@
 import { onRequest, onCall, HttpsError } from 'firebase-functions/v2/https'
 import { defineSecret } from 'firebase-functions/params'
 import { setGlobalOptions } from 'firebase-functions/v2'
+import functionsV1 from 'firebase-functions/v1'
 import { initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
-import { getFirestore } from 'firebase-admin/firestore'
+import { getFirestore, FieldValue } from 'firebase-admin/firestore'
 import { ROLES, requireAdmin, roleForPriceId } from './roles.mjs'
 
 initializeApp()
@@ -38,16 +43,64 @@ export const ping = onRequest((req, res) => {
   res.json({ ok: true, service: 'leggendo-functions' })
 })
 
+// --- Surveillance des créations de comptes ---
+// Chaque compte gratuit reçoit une génération d'essai : une rafale
+// d'inscriptions est donc le premier signe visible d'une tentative de
+// pillage du fournisseur IA (voir leggendo-server/TODO_SECURITE.md).
+// Cette fonction ne bloque rien — bloquer une inscription demanderait une
+// fonction `beforeUserCreated`, qui exige Identity Platform. Elle compte les
+// créations par heure dans `signupStats` et journalise une alerte au-delà du
+// seuil ; le compteur est aussi consultable pour un tableau de bord.
+// Déclencheur Auth v1 : les triggers v2 sur `user.create` n'existent pas hors
+// Identity Platform, d'où le mélange v1/v2 assumé dans ce fichier.
+// Constantes volontairement non exportées : tout export de ce fichier est
+// analysé par le déployeur Firebase comme une fonction candidate.
+const SIGNUPS_ALERT_PER_HOUR = Number(process.env.SIGNUPS_ALERT_PER_HOUR || 30)
+const SIGNUP_STATS = 'signupStats'
+
+// Clé horaire UTC (YYYY-MM-DDTHH) — un document par heure, purgeable à la
+// main ; volume négligeable (24 documents par jour).
+function hourKey(date) {
+  return date.toISOString().slice(0, 13)
+}
+
+export const onUserCreated = functionsV1
+  .region('europe-west1')
+  .auth.user()
+  .onCreate(async (user) => {
+    const db = getFirestore()
+    const ref = db.collection(SIGNUP_STATS).doc(hourKey(new Date()))
+    try {
+      await ref.set(
+        { count: FieldValue.increment(1), updatedAt: Date.now() },
+        { merge: true }
+      )
+      const count = (await ref.get()).data()?.count || 0
+      if (count >= SIGNUPS_ALERT_PER_HOUR) {
+        console.warn(
+          `⚠ ALERTE ABUS : ${count} créations de comptes dans l'heure (seuil ${SIGNUPS_ALERT_PER_HOUR}) — dernière : ${user.email || user.uid}`
+        )
+      }
+    } catch (err) {
+      // Ne jamais faire échouer une inscription légitime pour un compteur.
+      console.error('Comptage des inscriptions impossible :', err)
+    }
+  })
+
 // Pose (ou retire) le rôle et le claim `premium` associé sur un utilisateur.
 // `role` est optionnel : si absent, seul `premium` est mis à jour (cas d'un
-// Price ID non encore répertorié dans PRICE_ROLE_MAP).
-async function applyRole(uid, premium, role) {
+// Price ID non encore répertorié dans PRICE_ROLE_MAP). `periodEnd` (secondes
+// epoch, `subscription.current_period_end` côté Stripe) sert d'ancre de
+// renouvellement des crédits (voir leggendo-server/quota.mjs) — omis, le
+// claim existant n'est pas modifié.
+async function applyRole(uid, premium, role, periodEnd) {
   const auth = getAuth()
   const user = await auth.getUser(uid)
   await auth.setCustomUserClaims(uid, {
     ...(user.customClaims || {}),
     premium,
     ...(role ? { role } : {}),
+    ...(periodEnd !== undefined ? { periodEnd } : {}),
   })
 }
 
@@ -95,17 +148,30 @@ export const stripeWebhook = onRequest(
             session.metadata?.firebaseUid || session.client_reference_id
           if (uid) {
             const role = await roleForSession(stripe, session)
-            await applyRole(uid, true, role)
+            let periodEnd
             // Recopie l'uid (et le rôle, pour la résiliation) sur
             // l'abonnement : customer.subscription.deleted ne reçoit que les
             // métadonnées de l'abonnement, pas celles de la session — sans
-            // cela la résiliation ne retirerait jamais les droits.
+            // cela la résiliation ne retirerait jamais les droits. La même
+            // réponse donne `current_period_end`, utilisé comme ancre de
+            // renouvellement des crédits (voir leggendo-server/quota.mjs).
             if (session.subscription) {
-              await stripe.subscriptions.update(session.subscription, {
+              const sub = await stripe.subscriptions.update(session.subscription, {
                 metadata: { firebaseUid: uid, ...(role ? { role } : {}) },
               })
+              periodEnd = sub.current_period_end
             }
+            await applyRole(uid, true, role, periodEnd)
           }
+          break
+        }
+        // Renouvellement, changement de formule, etc. → resynchronise la fin
+        // de période, seule donnée qui doit changer à chaque cycle réel de
+        // l'abonnement (voir README_TARIFICATION.md, § Règles des crédits).
+        case 'customer.subscription.updated': {
+          const sub = event.data.object
+          const uid = sub.metadata?.firebaseUid
+          if (uid) await applyRole(uid, true, sub.metadata?.role, sub.current_period_end)
           break
         }
         // Abonnement annulé/expiré → droits retirés (retour au rôle gratuit).
@@ -188,10 +254,14 @@ export const adminSetUserRole = onCall(async (request) => {
 const REAUTH_MAX_AGE_S = 5 * 60
 
 // Suppression de son propre compte (RGPD / demande explicite). Supprime les
-// textes créés, le document de profil, puis le compte Firebase Auth
-// lui-même. L'abonnement Stripe éventuel n'est pas résilié automatiquement
-// (aucun identifiant client/abonnement n'est encore persisté côté serveur)
-// — le client doit prévenir l'utilisateur.
+// textes créés, le document de profil, les quotas/jobs de génération du VPS
+// (même projet Firestore que leggendo-server, voir leggendo-server/jobs.mjs),
+// puis le compte Firebase Auth lui-même. Les entrées `generationLogs` ne sont
+// pas supprimées (mesure des coûts IA, README_TARIFICATION.md) mais sont
+// anonymisées : uid et email retirés, seules les métriques agrégées restent.
+// L'abonnement Stripe éventuel n'est pas résilié automatiquement (aucun
+// identifiant client/abonnement n'est encore persisté côté serveur) — le
+// client doit prévenir l'utilisateur.
 export const deleteAccount = onCall(async (request) => {
   if (!request.auth) {
     throw new HttpsError('unauthenticated', 'Connexion requise.')
@@ -208,13 +278,28 @@ export const deleteAccount = onCall(async (request) => {
   const db = getFirestore()
   const auth = getAuth()
 
-  const textsSnap = await db.collection('userTexts').where('owner', '==', uid).get()
-  const refs = [...textsSnap.docs.map((d) => d.ref), db.collection('users').doc(uid)]
-  // Firestore limite un batch à 500 écritures : peu probable ici, mais on
-  // découpe par sécurité plutôt que de supposer un nombre de textes borné.
-  for (let i = 0; i < refs.length; i += 400) {
+  const [textsSnap, jobsSnap, logsSnap] = await Promise.all([
+    db.collection('userTexts').where('owner', '==', uid).get(),
+    db.collection('leggendoJobs').where('uid', '==', uid).get(),
+    db.collection('generationLogs').where('uid', '==', uid).get(),
+  ])
+
+  // Firestore limite un batch à 500 écritures ; peu probable en pratique
+  // (textes + jobs + logs d'un seul compte), mais on découpe par sécurité
+  // plutôt que de supposer un volume borné.
+  const writes = [
+    ...textsSnap.docs.map((d) => ({ ref: d.ref, op: 'delete' })),
+    ...jobsSnap.docs.map((d) => ({ ref: d.ref, op: 'delete' })),
+    { ref: db.collection('users').doc(uid), op: 'delete' },
+    { ref: db.collection('leggendoQuotas').doc(uid), op: 'delete' },
+    ...logsSnap.docs.map((d) => ({ ref: d.ref, op: 'anonymize' })),
+  ]
+  for (let i = 0; i < writes.length; i += 400) {
     const batch = db.batch()
-    refs.slice(i, i + 400).forEach((ref) => batch.delete(ref))
+    writes.slice(i, i + 400).forEach(({ ref, op }) => {
+      if (op === 'delete') batch.delete(ref)
+      else batch.update(ref, { uid: null, email: null, anonymizedAt: Date.now() })
+    })
     await batch.commit()
   }
 

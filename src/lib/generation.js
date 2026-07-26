@@ -5,7 +5,7 @@
 // Firestore automatiquement, quelle que soit la vue affichée.
 
 import { reactive } from 'vue'
-import { getAuthInstance } from './firebase.js'
+import { getAuthInstance, getAppCheckToken } from './firebase.js'
 import { saveUserText } from './userTexts.js'
 import { networkErrorMessage } from './network.js'
 
@@ -52,7 +52,15 @@ function startClock() {
 }
 
 function persistJob() {
-  if (generation.status === 'working' && generation.jobId) {
+  // On garde le job en localStorage tant que le résultat n'est pas
+  // confirmé enregistré côté Firestore : un texte généré avec succès mais
+  // pas encore sauvegardé doit rester récupérable après un rechargement
+  // (le crédit a déjà été consommé côté serveur).
+  const keep =
+    generation.jobId &&
+    ((generation.status === 'working' || generation.status === 'done') &&
+      generation.saveState !== 'saved')
+  if (keep) {
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
@@ -72,15 +80,31 @@ async function getIdToken() {
   return (await auth?.currentUser?.getIdToken()) || null
 }
 
+// En-têtes communs aux appels de l'API VPS : identité (ID token Firebase) et
+// provenance (jeton App Check — les SDK Firebase l'attachent d'eux-mêmes,
+// mais pas nos `fetch` maison, voir leggendo-server/appcheck.mjs). Renvoie
+// null quand l'utilisateur n'est pas connecté : l'API refuserait de toute
+// façon, autant ne pas partir.
+async function apiHeaders(extra) {
+  const [idToken, appCheckToken] = await Promise.all([
+    getIdToken(),
+    getAppCheckToken(),
+  ])
+  if (!idToken) return null
+  return {
+    ...extra,
+    Authorization: `Bearer ${idToken}`,
+    ...(appCheckToken ? { 'X-Firebase-AppCheck': appCheckToken } : {}),
+  }
+}
+
 // Se rattache à la génération active côté serveur (jobId perdu après un
 // rechargement, autre onglet…). Renvoie true si un job a été retrouvé.
 export async function attachActiveJob() {
   try {
-    const idToken = await getIdToken()
-    if (!idToken) return false
-    const res = await fetch(`${API_BASE}/my-job`, {
-      headers: { Authorization: `Bearer ${idToken}` },
-    })
+    const headers = await apiHeaders()
+    if (!headers) return false
+    const res = await fetch(`${API_BASE}/my-job`, { headers })
     const data = await res.json().catch(() => ({}))
     if (!res.ok || !data.jobId) return false
     stopTimers()
@@ -104,12 +128,10 @@ export async function attachActiveJob() {
 // (README_TARIFICATION.md, § Règles des crédits). Le serveur reste la seule
 // source de vérité ; ceci n'est qu'un affichage informatif.
 export async function fetchQuota() {
-  const idToken = await getIdToken()
-  if (!idToken) return null
+  const headers = await apiHeaders()
+  if (!headers) return null
   try {
-    const res = await fetch(`${API_BASE}/quota`, {
-      headers: { Authorization: `Bearer ${idToken}` },
-    })
+    const res = await fetch(`${API_BASE}/quota`, { headers })
     if (!res.ok) return null
     return await res.json()
   } catch {
@@ -129,16 +151,12 @@ export async function startGeneration(payload) {
   startClock()
 
   try {
-    const auth = await getAuthInstance()
-    const idToken = await auth?.currentUser?.getIdToken()
-    if (!idToken) throw new Error('Connectez-vous pour créer un texte.')
+    const headers = await apiHeaders({ 'Content-Type': 'application/json' })
+    if (!headers) throw new Error('Connectez-vous pour créer un texte.')
 
     const res = await fetch(`${API_BASE}/generate`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${idToken}`,
-      },
+      headers,
       body: JSON.stringify(payload),
     })
     const data = await res.json().catch(() => ({}))
@@ -160,9 +178,8 @@ function poll() {
   clearTimeout(pollTimer)
   pollTimer = setTimeout(async () => {
     try {
-      const idToken = await getIdToken()
       const res = await fetch(`${API_BASE}/jobs/${generation.jobId}`, {
-        headers: idToken ? { Authorization: `Bearer ${idToken}` } : {},
+        headers: (await apiHeaders()) || {},
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`)
@@ -204,6 +221,10 @@ export async function saveResult() {
       [err?.code, err?.message || String(err)].filter(Boolean).join(' — ')
     generation.saveState = 'error'
   }
+  // Une fois enregistré, le job n'a plus besoin d'être récupérable ; sinon
+  // (erreur) on le garde en localStorage pour pouvoir réessayer après un
+  // rechargement (voir persistJob()).
+  persistJob()
 }
 
 // Reprend le sondage d'un job encore actif après un rechargement de page.

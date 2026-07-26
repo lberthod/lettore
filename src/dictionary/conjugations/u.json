@@ -1,4 +1,118 @@
 {
+  "ubbidire": {
+    "presente": {
+      "io": "ubbidisco",
+      "tu": "ubbidisci",
+      "lui/lei": "ubbidisce",
+      "noi": "ubbidiamo",
+      "voi": "ubbidite",
+      "loro": "ubbidiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho ubbidito",
+      "tu": "hai ubbidito",
+      "lui/lei": "ha ubbidito",
+      "noi": "abbiamo ubbidito",
+      "voi": "avete ubbidito",
+      "loro": "hanno ubbidito"
+    },
+    "imperfetto": {
+      "io": "ubbidivo",
+      "tu": "ubbidivi",
+      "lui/lei": "ubbidiva",
+      "noi": "ubbidivamo",
+      "voi": "ubbidivate",
+      "loro": "ubbidivano"
+    },
+    "futuro": {
+      "io": "ubbidirò",
+      "tu": "ubbidirai",
+      "lui/lei": "ubbidirà",
+      "noi": "ubbidiremo",
+      "voi": "ubbidirete",
+      "loro": "ubbidiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ubbidisca",
+      "tu": "ubbidisca",
+      "lui/lei": "ubbidisca",
+      "noi": "ubbidiamo",
+      "voi": "ubbidiate",
+      "loro": "ubbidiscano"
+    },
+    "condizionale": {
+      "io": "ubbidirei",
+      "tu": "ubbidiresti",
+      "lui/lei": "ubbidirebbe",
+      "noi": "ubbidiremmo",
+      "voi": "ubbidireste",
+      "loro": "ubbidirebbero"
+    },
+    "imperativo": {
+      "tu": "ubbidisci",
+      "lei": "ubbidisca",
+      "noi": "ubbidiamo",
+      "voi": "ubbidite",
+      "loro": "ubbidiscano"
+    }
+  },
+  "ubriacare": {
+    "presente": {
+      "io": "ubriaco",
+      "tu": "ubriachi",
+      "lui/lei": "ubriaca",
+      "noi": "ubriachiamo",
+      "voi": "ubriacate",
+      "loro": "ubriacano"
+    },
+    "passatoProssimo": {
+      "io": "ho ubriacato",
+      "tu": "hai ubriacato",
+      "lui/lei": "ha ubriacato",
+      "noi": "abbiamo ubriacato",
+      "voi": "avete ubriacato",
+      "loro": "hanno ubriacato"
+    },
+    "imperfetto": {
+      "io": "ubriacavo",
+      "tu": "ubriacavi",
+      "lui/lei": "ubriacava",
+      "noi": "ubriacavamo",
+      "voi": "ubriacavate",
+      "loro": "ubriacavano"
+    },
+    "futuro": {
+      "io": "ubriacherò",
+      "tu": "ubriacherai",
+      "lui/lei": "ubriacherà",
+      "noi": "ubriacheremo",
+      "voi": "ubriacherete",
+      "loro": "ubriacheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ubriachi",
+      "tu": "ubriachi",
+      "lui/lei": "ubriachi",
+      "noi": "ubriachiamo",
+      "voi": "ubriachiate",
+      "loro": "ubriachino"
+    },
+    "condizionale": {
+      "io": "ubriacherei",
+      "tu": "ubriacheresti",
+      "lui/lei": "ubriacherebbe",
+      "noi": "ubriacheremmo",
+      "voi": "ubriachereste",
+      "loro": "ubriacherebbero"
+    },
+    "imperativo": {
+      "tu": "ubriaca",
+      "lei": "ubriachi",
+      "noi": "ubriachiamo",
+      "voi": "ubriacate",
+      "loro": "ubriachino"
+    }
+  },
   "uccidere": {
     "presente": {
       "io": "uccido",
@@ -56,6 +170,63 @@
       "loro": "uccidano"
     }
   },
+  "uccidersi": {
+    "presente": {
+      "io": "mi uccido",
+      "tu": "ti uccidi",
+      "lui/lei": "si uccide",
+      "noi": "ci uccidiamo",
+      "voi": "vi uccidete",
+      "loro": "si uccidono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono ucciso",
+      "tu": "ti sei ucciso",
+      "lui/lei": "si è ucciso",
+      "noi": "ci siamo uccisi",
+      "voi": "vi siete uccisi",
+      "loro": "si sono uccisi"
+    },
+    "imperfetto": {
+      "io": "mi uccidevo",
+      "tu": "ti uccidevi",
+      "lui/lei": "si uccideva",
+      "noi": "ci uccidevamo",
+      "voi": "vi uccidevate",
+      "loro": "si uccidevano"
+    },
+    "futuro": {
+      "io": "mi ucciderò",
+      "tu": "ti ucciderai",
+      "lui/lei": "si ucciderà",
+      "noi": "ci uccideremo",
+      "voi": "vi ucciderete",
+      "loro": "si uccideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi uccida",
+      "tu": "ti uccida",
+      "lui/lei": "si uccida",
+      "noi": "ci uccidiamo",
+      "voi": "vi uccidiate",
+      "loro": "si uccidano"
+    },
+    "condizionale": {
+      "io": "mi ucciderei",
+      "tu": "ti uccideresti",
+      "lui/lei": "si ucciderebbe",
+      "noi": "ci uccideremmo",
+      "voi": "vi uccidereste",
+      "loro": "si ucciderebbero"
+    },
+    "imperativo": {
+      "tu": "ucciditi",
+      "lei": "si uccida",
+      "noi": "uccidiamoci",
+      "voi": "uccidetevi",
+      "loro": "si uccidano"
+    }
+  },
   "udire": {
     "presente": {
       "io": "odo",
@@ -111,6 +282,291 @@
       "noi": "udiamo",
       "voi": "udite",
       "loro": "odano"
+    }
+  },
+  "umiliare": {
+    "presente": {
+      "io": "umilio",
+      "tu": "umili",
+      "lui/lei": "umilia",
+      "noi": "umiliamo",
+      "voi": "umiliate",
+      "loro": "umiliano"
+    },
+    "passatoProssimo": {
+      "io": "ho umiliato",
+      "tu": "hai umiliato",
+      "lui/lei": "ha umiliato",
+      "noi": "abbiamo umiliato",
+      "voi": "avete umiliato",
+      "loro": "hanno umiliato"
+    },
+    "imperfetto": {
+      "io": "umiliavo",
+      "tu": "umiliavi",
+      "lui/lei": "umiliava",
+      "noi": "umiliavamo",
+      "voi": "umiliavate",
+      "loro": "umiliavano"
+    },
+    "futuro": {
+      "io": "umilierò",
+      "tu": "umilierai",
+      "lui/lei": "umilierà",
+      "noi": "umilieremo",
+      "voi": "umilierete",
+      "loro": "umilieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "umilii",
+      "tu": "umilii",
+      "lui/lei": "umilii",
+      "noi": "umiliamo",
+      "voi": "umiliate",
+      "loro": "umilino"
+    },
+    "condizionale": {
+      "io": "umilierei",
+      "tu": "umilieresti",
+      "lui/lei": "umilierebbe",
+      "noi": "umilieremmo",
+      "voi": "umiliereste",
+      "loro": "umilierebbero"
+    },
+    "imperativo": {
+      "tu": "umilia",
+      "lei": "umilii",
+      "noi": "umiliamo",
+      "voi": "umiliate",
+      "loro": "umilino"
+    }
+  },
+  "unificare": {
+    "presente": {
+      "io": "unifico",
+      "tu": "unifichi",
+      "lui/lei": "unifica",
+      "noi": "unifichiamo",
+      "voi": "unificate",
+      "loro": "unificano"
+    },
+    "passatoProssimo": {
+      "io": "ho unificato",
+      "tu": "hai unificato",
+      "lui/lei": "ha unificato",
+      "noi": "abbiamo unificato",
+      "voi": "avete unificato",
+      "loro": "hanno unificato"
+    },
+    "imperfetto": {
+      "io": "unificavo",
+      "tu": "unificavi",
+      "lui/lei": "unificava",
+      "noi": "unificavamo",
+      "voi": "unificavate",
+      "loro": "unificavano"
+    },
+    "futuro": {
+      "io": "unificherò",
+      "tu": "unificherai",
+      "lui/lei": "unificherà",
+      "noi": "unificheremo",
+      "voi": "unificherete",
+      "loro": "unificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "unifichi",
+      "tu": "unifichi",
+      "lui/lei": "unifichi",
+      "noi": "unifichiamo",
+      "voi": "unifichiate",
+      "loro": "unifichino"
+    },
+    "condizionale": {
+      "io": "unificherei",
+      "tu": "unificheresti",
+      "lui/lei": "unificherebbe",
+      "noi": "unificheremmo",
+      "voi": "unifichereste",
+      "loro": "unificherebbero"
+    },
+    "imperativo": {
+      "tu": "unifica",
+      "lei": "unifichi",
+      "noi": "unifichiamo",
+      "voi": "unificate",
+      "loro": "unifichino"
+    }
+  },
+  "unire": {
+    "presente": {
+      "io": "unisco",
+      "tu": "unisci",
+      "lui/lei": "unisce",
+      "noi": "uniamo",
+      "voi": "unite",
+      "loro": "uniscono"
+    },
+    "passatoProssimo": {
+      "io": "ho unito",
+      "tu": "hai unito",
+      "lui/lei": "ha unito",
+      "noi": "abbiamo unito",
+      "voi": "avete unito",
+      "loro": "hanno unito"
+    },
+    "imperfetto": {
+      "io": "univo",
+      "tu": "univi",
+      "lui/lei": "univa",
+      "noi": "univamo",
+      "voi": "univate",
+      "loro": "univano"
+    },
+    "futuro": {
+      "io": "unirò",
+      "tu": "unirai",
+      "lui/lei": "unirà",
+      "noi": "uniremo",
+      "voi": "unirete",
+      "loro": "uniranno"
+    },
+    "congiuntivoPresente": {
+      "io": "unisca",
+      "tu": "unisca",
+      "lui/lei": "unisca",
+      "noi": "uniamo",
+      "voi": "uniate",
+      "loro": "uniscano"
+    },
+    "condizionale": {
+      "io": "unirei",
+      "tu": "uniresti",
+      "lui/lei": "unirebbe",
+      "noi": "uniremmo",
+      "voi": "unireste",
+      "loro": "unirebbero"
+    },
+    "imperativo": {
+      "tu": "unisci",
+      "lei": "unisca",
+      "noi": "uniamo",
+      "voi": "unite",
+      "loro": "uniscano"
+    }
+  },
+  "urlare": {
+    "presente": {
+      "io": "urlo",
+      "tu": "urli",
+      "lui/lei": "urla",
+      "noi": "urliamo",
+      "voi": "urlate",
+      "loro": "urlano"
+    },
+    "passatoProssimo": {
+      "io": "ho urlato",
+      "tu": "hai urlato",
+      "lui/lei": "ha urlato",
+      "noi": "abbiamo urlato",
+      "voi": "avete urlato",
+      "loro": "hanno urlato"
+    },
+    "imperfetto": {
+      "io": "urlavo",
+      "tu": "urlavi",
+      "lui/lei": "urlava",
+      "noi": "urlavamo",
+      "voi": "urlavate",
+      "loro": "urlavano"
+    },
+    "futuro": {
+      "io": "urlerò",
+      "tu": "urlerai",
+      "lui/lei": "urlerà",
+      "noi": "urleremo",
+      "voi": "urlerete",
+      "loro": "urleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "urli",
+      "tu": "urli",
+      "lui/lei": "urli",
+      "noi": "urliamo",
+      "voi": "urliate",
+      "loro": "urlino"
+    },
+    "condizionale": {
+      "io": "urlerei",
+      "tu": "urleresti",
+      "lui/lei": "urlerebbe",
+      "noi": "urleremmo",
+      "voi": "urlereste",
+      "loro": "urlerebbero"
+    },
+    "imperativo": {
+      "tu": "urla",
+      "lei": "urli",
+      "noi": "urliamo",
+      "voi": "urlate",
+      "loro": "urlino"
+    }
+  },
+  "urtare": {
+    "presente": {
+      "io": "urto",
+      "tu": "urti",
+      "lui/lei": "urta",
+      "noi": "urtiamo",
+      "voi": "urtate",
+      "loro": "urtano"
+    },
+    "passatoProssimo": {
+      "io": "ho urtato",
+      "tu": "hai urtato",
+      "lui/lei": "ha urtato",
+      "noi": "abbiamo urtato",
+      "voi": "avete urtato",
+      "loro": "hanno urtato"
+    },
+    "imperfetto": {
+      "io": "urtavo",
+      "tu": "urtavi",
+      "lui/lei": "urtava",
+      "noi": "urtavamo",
+      "voi": "urtavate",
+      "loro": "urtavano"
+    },
+    "futuro": {
+      "io": "urterò",
+      "tu": "urterai",
+      "lui/lei": "urterà",
+      "noi": "urteremo",
+      "voi": "urterete",
+      "loro": "urteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "urti",
+      "tu": "urti",
+      "lui/lei": "urti",
+      "noi": "urtiamo",
+      "voi": "urtiate",
+      "loro": "urtino"
+    },
+    "condizionale": {
+      "io": "urterei",
+      "tu": "urteresti",
+      "lui/lei": "urterebbe",
+      "noi": "urteremmo",
+      "voi": "urtereste",
+      "loro": "urterebbero"
+    },
+    "imperativo": {
+      "tu": "urta",
+      "lei": "urti",
+      "noi": "urtiamo",
+      "voi": "urtate",
+      "loro": "urtino"
     }
   },
   "usare": {
@@ -225,6 +681,120 @@
       "noi": "usciamo",
       "voi": "uscite",
       "loro": "escano"
+    }
+  },
+  "ustolare": {
+    "presente": {
+      "io": "ustolo",
+      "tu": "ustoli",
+      "lui/lei": "ustola",
+      "noi": "ustoliamo",
+      "voi": "ustolate",
+      "loro": "ustolano"
+    },
+    "passatoProssimo": {
+      "io": "ho ustolato",
+      "tu": "hai ustolato",
+      "lui/lei": "ha ustolato",
+      "noi": "abbiamo ustolato",
+      "voi": "avete ustolato",
+      "loro": "hanno ustolato"
+    },
+    "imperfetto": {
+      "io": "ustolavo",
+      "tu": "ustolavi",
+      "lui/lei": "ustolava",
+      "noi": "ustolavamo",
+      "voi": "ustolavate",
+      "loro": "ustolavano"
+    },
+    "futuro": {
+      "io": "ustolerò",
+      "tu": "ustolerai",
+      "lui/lei": "ustolerà",
+      "noi": "ustoleremo",
+      "voi": "ustolerete",
+      "loro": "ustoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ustoli",
+      "tu": "ustoli",
+      "lui/lei": "ustoli",
+      "noi": "ustoliamo",
+      "voi": "ustoliate",
+      "loro": "ustolino"
+    },
+    "condizionale": {
+      "io": "ustolerei",
+      "tu": "ustoleresti",
+      "lui/lei": "ustolerebbe",
+      "noi": "ustoleremmo",
+      "voi": "ustolereste",
+      "loro": "ustolerebbero"
+    },
+    "imperativo": {
+      "tu": "ustola",
+      "lei": "ustoli",
+      "noi": "ustoliamo",
+      "voi": "ustolate",
+      "loro": "ustolino"
+    }
+  },
+  "utilizzare": {
+    "presente": {
+      "io": "utilizzo",
+      "tu": "utilizzi",
+      "lui/lei": "utilizza",
+      "noi": "utilizziamo",
+      "voi": "utilizzate",
+      "loro": "utilizzano"
+    },
+    "passatoProssimo": {
+      "io": "ho utilizzato",
+      "tu": "hai utilizzato",
+      "lui/lei": "ha utilizzato",
+      "noi": "abbiamo utilizzato",
+      "voi": "avete utilizzato",
+      "loro": "hanno utilizzato"
+    },
+    "imperfetto": {
+      "io": "utilizzavo",
+      "tu": "utilizzavi",
+      "lui/lei": "utilizzava",
+      "noi": "utilizzavamo",
+      "voi": "utilizzavate",
+      "loro": "utilizzavano"
+    },
+    "futuro": {
+      "io": "utilizzerò",
+      "tu": "utilizzerai",
+      "lui/lei": "utilizzerà",
+      "noi": "utilizzeremo",
+      "voi": "utilizzerete",
+      "loro": "utilizzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "utilizzi",
+      "tu": "utilizzi",
+      "lui/lei": "utilizzi",
+      "noi": "utilizziamo",
+      "voi": "utilizziate",
+      "loro": "utilizzino"
+    },
+    "condizionale": {
+      "io": "utilizzerei",
+      "tu": "utilizzeresti",
+      "lui/lei": "utilizzerebbe",
+      "noi": "utilizzeremmo",
+      "voi": "utilizzereste",
+      "loro": "utilizzerebbero"
+    },
+    "imperativo": {
+      "tu": "utilizza",
+      "lei": "utilizzi",
+      "noi": "utilizziamo",
+      "voi": "utilizzate",
+      "loro": "utilizzino"
     }
   }
 }

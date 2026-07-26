@@ -16,12 +16,15 @@ import { fileURLToPath } from 'node:url'
 import { initializeApp, applicationDefault } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
 import { getAuth } from 'firebase-admin/auth'
+import { getAppCheck } from 'firebase-admin/app-check'
 import { generateUserText } from './generate.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
 import { QuotaExceededError, creditCost } from './quota.mjs'
 import { createJobStore, ActiveJobError } from './jobs.mjs'
 import { buildTaxonomyIndex, parseRequest, slugify } from './validate.mjs'
+import { createAppCheckGuard } from './appcheck.mjs'
+import { clientIp, createIpLimiter, createRateWindow } from './ratelimit.mjs'
 
 // Authentification du SDK Admin via un compte de service dédié (rôle Cloud
 // Datastore User) — le VPS n'est pas un runtime GCP géré, donc pas de
@@ -57,19 +60,69 @@ const { themeById, genreById, sizeById } = buildTaxonomyIndex(taxonomy)
 
 // --- Vérification du token Firebase ---
 // Le SDK admin vérifie la signature et relit les custom claims (role,
-// premium — posés côté Cloud Functions, voir functions/index.js) en un seul
-// appel local, sans round-trip vers identitytoolkit.
+// premium, periodEnd — posés côté Cloud Functions, voir functions/index.js)
+// en un seul appel local, sans round-trip vers identitytoolkit.
 async function verifyIdToken(idToken) {
   try {
     const decoded = await auth.verifyIdToken(idToken)
     return {
       uid: decoded.uid,
       email: decoded.email,
+      // Adresse confirmée par un clic sur le lien envoyé à l'inscription
+      // (toujours vrai pour une connexion Google). Conditionne l'essai
+      // gratuit, voir quota.mjs.
+      emailVerified: decoded.email_verified === true,
       role: decoded.role || (decoded.premium ? 'premium' : 'gratuit'),
       premium: Boolean(decoded.premium),
+      // Fin de la période d'abonnement Stripe en cours (secondes epoch) —
+      // ancre le renouvellement des crédits sur la vraie date de
+      // renouvellement plutôt que sur le mois civil, voir quota.mjs.
+      periodEnd: decoded.periodEnd || null,
     }
   } catch {
     return null
+  }
+}
+
+// --- Attestation App Check (appcheck.mjs) ---
+// Prouve que la requête vient bien de notre application web, pas d'un script
+// muni d'un compte valide. Désactivée par défaut : tant que la clé reCAPTCHA
+// n'est pas créée en console Firebase, l'app n'envoie aucun jeton et
+// l'enforcement bloquerait tout le trafic légitime. Séquence recommandée :
+// `soft` (observation dans les logs) puis `enforce`.
+const appCheckGuard = createAppCheckGuard({
+  mode: process.env.APP_CHECK_MODE || 'off',
+  verifyToken: (token) => getAppCheck().verifyToken(token),
+})
+
+// --- Limite complémentaire par IP (ratelimit.mjs) ---
+// Le quota est par compte, et un compte gratuit se crée en quelques
+// secondes : sans plafond par origine réseau, une boucle
+// inscription → essai → inscription consomme le fournisseur LLM sans limite.
+// `TRUST_PROXY=0` si le serveur n'est plus derrière Caddy (sinon un client
+// pourrait choisir son IP via X-Forwarded-For).
+const TRUST_PROXY = process.env.TRUST_PROXY !== '0'
+const ipLimiter = createIpLimiter({
+  windowMs: Number(process.env.IP_WINDOW_MS) || undefined,
+  maxTrialAccounts: Number(process.env.MAX_TRIAL_ACCOUNTS_PER_IP) || undefined,
+  maxGenerations: Number(process.env.MAX_GENERATIONS_PER_IP) || undefined,
+})
+setInterval(() => ipLimiter.sweep(), 10 * 60 * 1000).unref()
+
+// --- Alerte « activité anormale » ---
+// Ne refuse rien : signale dans les logs du service une rafale d'essais
+// gratuits (le motif d'une ferme à comptes) pour qu'elle soit vue avant que
+// la facture ne la révèle. À surveiller via `journalctl -u leggendo-api`.
+const TRIAL_ALERT_PER_HOUR = Number(process.env.TRIAL_ALERT_PER_HOUR || 20)
+const trialRate = createRateWindow({ windowMs: 60 * 60 * 1000 })
+
+function watchTrialRate(user, ip) {
+  if (user.role !== 'gratuit') return
+  const count = trialRate.hit()
+  if (count >= TRIAL_ALERT_PER_HOUR && count % TRIAL_ALERT_PER_HOUR === 0) {
+    console.warn(
+      `⚠ ALERTE ABUS : ${count} générations d'essai gratuites dans la dernière heure (seuil ${TRIAL_ALERT_PER_HOUR}) — dernière depuis ${ip}, compte ${user.email || user.uid}`
+    )
   }
 }
 
@@ -143,6 +196,26 @@ function sendJson(res, status, body, origin) {
   res.end(payload)
 }
 
+// Contrôle d'accès commun à toutes les routes authentifiées : identité
+// (ID token Firebase) *et* provenance (App Check). Renvoie `{ user }` ou
+// `{ error: { status, message } }`, jamais les deux.
+async function authenticate(req, route) {
+  const header = req.headers.authorization || ''
+  const idToken = header.startsWith('Bearer ') ? header.slice(7) : ''
+  if (!idToken) {
+    return { error: { status: 401, message: 'Connexion requise.' } }
+  }
+  const user = await verifyIdToken(idToken)
+  if (!user) {
+    return { error: { status: 401, message: 'Session invalide ou expirée, reconnectez-vous.' } }
+  }
+  const appCheckError = await appCheckGuard(req.headers['x-firebase-appcheck'], route)
+  if (appCheckError) {
+    return { error: { status: 401, message: appCheckError } }
+  }
+  return { user }
+}
+
 function readBody(req, limit = 32 * 1024) {
   return new Promise((resolve, reject) => {
     let size = 0
@@ -172,7 +245,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(204, {
       'Access-Control-Allow-Origin': origin,
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Firebase-AppCheck',
       'Access-Control-Max-Age': '86400',
       Vary: 'Origin',
       ...SECURITY_HEADERS,
@@ -202,15 +275,9 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (req.method === 'POST' && url.pathname === '/leggendo/generate') {
-      const auth = req.headers.authorization || ''
-      const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
-      if (!idToken) {
-        send(401, { error: 'Connexion requise.' })
-        return
-      }
-      const user = await verifyIdToken(idToken)
-      if (!user) {
-        send(401, { error: 'Session invalide ou expirée, reconnectez-vous.' })
+      const { user, error: authError } = await authenticate(req, 'generate')
+      if (authError) {
+        send(authError.status, { error: authError.message })
         return
       }
 
@@ -230,6 +297,21 @@ const server = http.createServer(async (req, res) => {
         send(400, { error: errors.join(' ; ') })
         return
       }
+      // Plafond par origine réseau, en plus du quota par compte : c'est lui
+      // qui borne une boucle inscription → essai → inscription (voir
+      // ratelimit.mjs). Vérifié avant la réservation, enregistré seulement
+      // si celle-ci réussit — une demande refusée n'a rien coûté en IA.
+      const ip = clientIp(req, { trustProxy: TRUST_PROXY })
+      const isTrial = user.role === 'gratuit'
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrial })
+      if (ipError) {
+        console.warn(
+          `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError}`
+        )
+        send(429, { error: ipError })
+        return
+      }
+
       const jobId = crypto.randomUUID()
       const jobRef = jobStore.jobsCollection.doc(jobId)
       let q
@@ -242,14 +324,25 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
+      ipLimiter.record(ip, { uid: user.uid, trial: isTrial })
+      watchTrialRate(user, ip)
       console.log(
         `[job ${jobId}] ${user.email || user.uid} (${user.role}) — ${theme.id}/${genre.id} ${level} ${size.id} « ${title} » — crédits ${JSON.stringify(q)}`
       )
       const startedAt = Date.now()
 
       // Génération en tâche de fond ; le client sonde /leggendo/jobs/<id>.
+      // Toutes les écritures de statut passent par jobStore : elles ne
+      // s'appliquent que si le job est encore actif. Une génération qui
+      // dépasse JOB_STUCK_MS (un appel GLM peut durer 8 min et être retenté,
+      // voir llm.mjs) est clôturée et remboursée entre-temps par /my-job ou
+      // par la demande suivante — elle ne doit alors ni écraser ce statut ni
+      // livrer son résultat, qui serait offert.
       ;(async () => {
-        await jobRef.update({ status: 'running' })
+        if (!(await jobStore.markRunning(jobId))) {
+          console.warn(`[job ${jobId}] déjà clôturé avant le démarrage — génération abandonnée`)
+          return
+        }
         const usage = []
         try {
           const textData = await generateUserText({
@@ -262,17 +355,34 @@ const server = http.createServer(async (req, res) => {
             size,
             usage,
           })
-          await jobRef.update({ status: 'done', result: textData })
-          console.log(`[job ${jobId}] terminé (${textData.wordCount} mots)`)
-          await logGeneration({ user, size, level, jobId, status: 'done', startedAt, usage })
+          if (await jobStore.finishJob(jobId, textData)) {
+            console.log(`[job ${jobId}] terminé (${textData.wordCount} mots)`)
+            await logGeneration({ user, size, level, jobId, status: 'done', startedAt, usage })
+          } else {
+            // Le crédit a déjà été rendu : le résultat est jeté plutôt que
+            // livré gratuitement. Les tokens ont bien été consommés, donc la
+            // génération reste journalisée (suivi des coûts).
+            console.warn(`[job ${jobId}] clôturé entre-temps (délai dépassé) — résultat abandonné`)
+            await logGeneration({
+              user,
+              size,
+              level,
+              jobId,
+              status: 'discarded',
+              startedAt,
+              usage,
+              error: 'Job clôturé et remboursé avant la fin de la génération.',
+            })
+          }
         } catch (err) {
-          await jobRef.update({ status: 'error', error: err.message })
-          console.error(`[job ${jobId}] échec : ${err.message}`)
           // Une génération qui échoue pour une raison technique ne consomme
-          // pas de crédit (README_TARIFICATION.md).
-          await jobStore.refundCredit(user, size.id).catch((e) =>
-            console.error(`[job ${jobId}] échec du remboursement de crédit :`, e)
+          // pas de crédit (README_TARIFICATION.md) : failJob clôture le job
+          // et rembourse dans la même transaction, sans jamais rembourser
+          // deux fois si le job avait déjà été clôturé.
+          await jobStore.failJob(jobId, err.message).catch((e) =>
+            console.error(`[job ${jobId}] échec de la clôture/du remboursement :`, e)
           )
+          console.error(`[job ${jobId}] échec : ${err.message}`)
           await logGeneration({ user, size, level, jobId, status: 'error', startedAt, usage, error: err.message })
         }
       })()
@@ -284,11 +394,9 @@ const server = http.createServer(async (req, res) => {
     // Solde de crédits de génération, à afficher avant de lancer une
     // génération (README_TARIFICATION.md, § Règles des crédits).
     if (req.method === 'GET' && url.pathname === '/leggendo/quota') {
-      const authHeader = req.headers.authorization || ''
-      const idToken = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : ''
-      const user = idToken ? await verifyIdToken(idToken) : null
-      if (!user) {
-        send(401, { error: 'Connexion requise.' })
+      const { user, error: authError } = await authenticate(req, 'quota')
+      if (authError) {
+        send(authError.status, { error: authError.message })
         return
       }
       send(200, await jobStore.getQuotaStatus(user))
@@ -299,11 +407,9 @@ const server = http.createServer(async (req, res) => {
     // génération en cours quand il a perdu le jobId (rechargement, autre
     // appareil) au lieu de rester bloqué sur « déjà en cours, patientez ».
     if (req.method === 'GET' && url.pathname === '/leggendo/my-job') {
-      const auth = req.headers.authorization || ''
-      const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
-      const user = idToken ? await verifyIdToken(idToken) : null
-      if (!user) {
-        send(401, { error: 'Connexion requise.' })
+      const { user, error: authError } = await authenticate(req, 'my-job')
+      if (authError) {
+        send(authError.status, { error: authError.message })
         return
       }
       const active = await jobStore.activeJobFor(user.uid)
@@ -324,11 +430,9 @@ const server = http.createServer(async (req, res) => {
     const jobMatch = url.pathname.match(/^\/leggendo\/jobs\/([a-f0-9-]{36})$/)
     if (req.method === 'GET' && jobMatch) {
       // Le résultat n'est remis qu'au propriétaire du job : token exigé
-      const auth = req.headers.authorization || ''
-      const idToken = auth.startsWith('Bearer ') ? auth.slice(7) : ''
-      const user = idToken ? await verifyIdToken(idToken) : null
-      if (!user) {
-        send(401, { error: 'Connexion requise.' })
+      const { user, error: authError } = await authenticate(req, 'jobs')
+      if (authError) {
+        send(authError.status, { error: authError.message })
         return
       }
       const job = await jobStore.jobFor(user.uid, jobMatch[1])

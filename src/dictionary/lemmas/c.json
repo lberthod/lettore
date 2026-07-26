@@ -6907,6 +6907,23 @@
     ],
     "isVerb": false
   },
+  "chiacchierìio": {
+    "lemma": "chiacchierìio",
+    "pos": "sostantivo maschile",
+    "fr": "bavardage continu, papotage",
+    "definition_it": "il parlare continuo e confuso di più persone insieme, spesso di poco interesse",
+    "examples": [
+      {
+        "it": "Dalla sala arrivava un chiacchierìio incessante.",
+        "fr": "Un bavardage incessant venait de la salle."
+      }
+    ],
+    "synonyms": [
+      "cicaleccio",
+      "vociare"
+    ],
+    "isVerb": false
+  },
   "chiacchierio": {
     "lemma": "chiacchierio",
     "pos": "nome (m)",
@@ -6955,6 +6972,23 @@
     "synonyms": [
       "nominare",
       "convocare"
+    ],
+    "isVerb": true
+  },
+  "chiamarsi": {
+    "lemma": "chiamarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'appeler, se nommer",
+    "definition_it": "Avere un certo nome o essere indicato con una certa parola.",
+    "examples": [
+      {
+        "it": "Il ragazzo nuovo si chiama Matteo.",
+        "fr": "Le nouveau garçon s'appelle Matteo."
+      }
+    ],
+    "synonyms": [
+      "denominarsi",
+      "essere detto"
     ],
     "isVerb": true
   },

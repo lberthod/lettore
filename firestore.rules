@@ -18,6 +18,47 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // --- Contenu réservé du catalogue ---
+    // Ces documents remplacent les chunks JavaScript publics d'autrefois :
+    // le contenu payant n'est plus dans le build (voir vite.config.js), il
+    // n'est servi qu'ici, après vérification du rôle. C'est donc la seule et
+    // vraie barrière d'accès — les gardes de route côté client ne protègent
+    // que l'affichage. Écriture réservée à l'Admin SDK
+    // (scripts/sync-content.mjs).
+    //
+    // Payload : le JSON du texte est stocké dans un unique champ `data`
+    // (chaîne), exempté d'index dans firestore.indexes.json — les maps
+    // `words`/`sentences` éclatées produiraient des centaines d'entrées
+    // d'index par document, et un gros chapitre dépasserait la taille
+    // maximale d'une entrée d'index.
+
+    // Catalogue de textes : formules Premium et au-dessus
+    // (cf. hasCatalogAccess() dans src/lib/access.js).
+    match /catalogTexts/{textId} {
+      allow read: if request.auth != null
+        && request.auth.token.role in ['premium', 'premium_plus', 'enseignant'];
+      allow write: if false;
+    }
+
+    // Chapitres de Classici : réservés à Premium IA et Enseignant
+    // (cf. hasClassiciAccess()). L'aperçu gratuit (deux fables entières et
+    // le premier chapitre de quelques livres) reste dans le build public et
+    // n'a donc aucun document ici.
+    match /bookChapters/{chapterId} {
+      allow read: if request.auth != null
+        && request.auth.token.role in ['premium_plus', 'enseignant'];
+      allow write: if false;
+    }
+
+    // Agrégats calculés lors de la synchronisation du contenu (vocabulaire
+    // du corpus par niveau) : servent la page d'administration, qui ne peut
+    // plus recalculer ces statistiques en téléchargeant tout le catalogue.
+    match /contentStats/{statId} {
+      allow read: if request.auth != null
+        && request.auth.token.email == 'lberthod@gmail.com';
+      allow write: if false;
+    }
+
     // Profil utilisateur : liste des textes créés (« Créer son texte »,
     // voir src/lib/userTexts.js) et progression synchronisée (lecture,
     // favoris, préférences — voir src/lib/progressSync.js). Chacun ne lit et
@@ -40,21 +81,51 @@ service cloud.firestore {
     // rendre publics (`public: true`, formule Enseignant) pour les partager
     // via une URL sans que le lecteur ait besoin d'un compte Leggendo.
     match /userTexts/{textId} {
-      // Validation de forme minimale (pas une réplique du schéma Ajv du
-      // VPS) : rejette les documents grossièrement malformés ou
-      // disproportionnés plutôt que de tout accepter dès que `owner`
-      // correspond à l'appelant.
+      // Validation de forme (pas une réplique du schéma Ajv du VPS) : liste
+      // fermée de clés + bornes de cardinalité, pour qu'un client modifié ne
+      // puisse ni injecter des champs arbitraires ni stocker des documents
+      // disproportionnés. Le format attendu est celui de toTextData()
+      // (leggendo-server/schema.mjs), enrichi par saveUserText() avec
+      // `owner`, `public` et `createdAt`.
+      //
+      // Limite du langage des règles : pas de boucle ni de map/reduce — on ne
+      // peut pas borner chaque paragraphe, chaque question ou chaque entrée
+      // de `words`/`sentences` individuellement. Les cardinalités ci-dessous
+      // cadrent la structure ; la taille totale reste plafonnée par Firestore
+      // (1 Mio par document, 1 Mio par champ). Les bornes sont larges par
+      // rapport au générateur : la plus grande taille produite est
+      // « molto_lungo » (~1300 mots, cf. leggendo-server/category.json).
+      function validUserText(d) {
+        return d.keys().hasAll(['owner', 'public', 'title', 'level',
+                                'paragraphs', 'questions', 'words', 'sentences'])
+          && d.keys().hasOnly(['owner', 'public', 'createdAt', 'id', 'title',
+                               'level', 'paragraphs', 'questions', 'words',
+                               'sentences', 'category', 'genre', 'size',
+                               'wordCount', 'excerpt'])
+          && d.title is string && d.title.size() <= 200
+          && d.level in ['A1', 'A2', 'B1', 'B2', 'C1']
+          && d.paragraphs is list && d.paragraphs.size() <= 60
+          && d.questions is list && d.questions.size() <= 20
+          && d.words is map && d.words.size() <= 3000
+          && d.sentences is map && d.sentences.size() <= 500
+          // Champs facultatifs (absents des textes les plus anciens ou quand
+          // le générateur ne les renseigne pas, comme `genre`).
+          // `size` est aussi le nom d'une méthode des maps : notation
+          // entre crochets obligatoire pour viser le champ.
+          && (!('id' in d) || (d.id is string && d.id.size() <= 200))
+          && (!('category' in d) || (d.category is string && d.category.size() <= 64))
+          && (!('genre' in d) || (d.genre is string && d.genre.size() <= 64))
+          && (!('size' in d) || (d['size'] is string && d['size'].size() <= 64))
+          && (!('excerpt' in d) || (d.excerpt is string && d.excerpt.size() <= 300))
+          && (!('wordCount' in d) || (d.wordCount is int && d.wordCount >= 0
+                                      && d.wordCount <= 50000))
+          && (!('createdAt' in d) || d.createdAt is timestamp);
+      }
+
       allow create: if request.auth != null
         && request.resource.data.owner == request.auth.uid
         && request.resource.data.public == false
-        && request.resource.data.level in ['A1', 'A2', 'B1', 'B2', 'C1']
-        && request.resource.data.title is string
-        && request.resource.data.title.size() <= 200
-        && request.resource.data.paragraphs is list
-        && request.resource.data.paragraphs.size() <= 60
-        && request.resource.data.questions is list
-        && request.resource.data.words is map
-        && request.resource.data.sentences is map;
+        && validUserText(request.resource.data);
       allow read: if resource.data.public == true
         || (request.auth != null && resource.data.owner == request.auth.uid);
       allow delete: if request.auth != null

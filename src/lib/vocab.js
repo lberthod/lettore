@@ -1,7 +1,12 @@
-// Statistiques de vocabulaire du corpus : agrège le lexique (mot → traduction)
-// de chaque texte de src/texts/*.json, par niveau CECR.
-
-const textModules = import.meta.glob('../texts/*.json', { import: 'default' })
+// Agrégation du vocabulaire du corpus (lexique mot → traduction de chaque
+// texte), par niveau CECR.
+//
+// Module volontairement pur (ni Vue, ni Firebase, ni accès disque) : il
+// tourne côté Node dans scripts/sync-content.mjs, qui parcourt les fichiers
+// du catalogue et publie le résultat dans Firestore (`contentStats`). La page
+// d'administration lit cet agrégat au lieu de recalculer — le contenu réservé
+// n'étant plus dans le build, le recalcul côté navigateur téléchargerait tout
+// le catalogue (462 lectures Firestore).
 
 export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
@@ -12,7 +17,7 @@ export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 // suffixe numérique parfois ajouté par la génération pour éviter une
 // collision de clé JSON quand un même mot apparaît deux fois dans un texte
 // avec deux sens différents (ex. « cosa2 » à côté de « cosa »).
-function normalizeWord(word) {
+export function normalizeWord(word) {
   return word
     .normalize('NFC')
     .trim()
@@ -41,35 +46,34 @@ function addWord(map, word, translation) {
   }
 }
 
-export async function computeVocabStats() {
+// Accumulateur : on lui passe chaque texte du corpus ({ level, words }), il
+// rend les listes triées par niveau et l'ensemble global.
+export function createVocabAggregator() {
   const byLevel = new Map(LEVELS.map((level) => [level, new Map()]))
   const overall = new Map()
-
-  for (const path in textModules) {
-    if (!/\/[a-z0-9_]+\.json$/i.test(path) || path.endsWith('index.json') || path.endsWith('category.json')) {
-      continue
-    }
-    const data = await textModules[path]()
-    if (!data?.words || !LEVELS.includes(data.level)) continue
-
-    const levelMap = byLevel.get(data.level)
-    for (const [rawWord, translation] of Object.entries(data.words)) {
-      const word = normalizeWord(rawWord)
-      addWord(overall, word, translation)
-      addWord(levelMap, word, translation)
-    }
-  }
 
   const toSortedList = (map) =>
     [...map.entries()]
       .map(([word, translation]) => ({ word, translation }))
       .sort((a, b) => a.word.localeCompare(b.word, 'it'))
 
-  const levels = LEVELS.map((level) => {
-    const words = toSortedList(byLevel.get(level))
-    return { level, count: words.length, words }
-  })
-
-  const words = toSortedList(overall)
-  return { totalCount: words.length, words, levels }
+  return {
+    add(text) {
+      if (!text?.words || !LEVELS.includes(text.level)) return
+      const levelMap = byLevel.get(text.level)
+      for (const [rawWord, translation] of Object.entries(text.words)) {
+        const word = normalizeWord(rawWord)
+        addWord(overall, word, translation)
+        addWord(levelMap, word, translation)
+      }
+    },
+    result() {
+      const levels = LEVELS.map((level) => {
+        const words = toSortedList(byLevel.get(level))
+        return { level, count: words.length, words }
+      })
+      const words = toSortedList(overall)
+      return { totalCount: words.length, words, levels }
+    },
+  }
 }

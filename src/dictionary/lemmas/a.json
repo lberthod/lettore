@@ -61,6 +61,23 @@
     "synonyms": [],
     "isVerb": false
   },
+  "abbaco": {
+    "lemma": "abbaco",
+    "pos": "nome (m.)",
+    "fr": "abaque, boulier, calcul élémentaire",
+    "definition_it": "antico strumento con palline che scorrono su fili, usato per fare i conti; per estensione, l'arte di calcolare",
+    "examples": [
+      {
+        "it": "Da bambino imparò a contare con l'abbaco.",
+        "fr": "Enfant, il apprit à compter avec le boulier."
+      }
+    ],
+    "synonyms": [
+      "pallottoliere",
+      "aritmetica"
+    ],
+    "isVerb": false
+  },
   "abbadare": {
     "lemma": "abbadare",
     "pos": "verbo (intransitivo, arcaico)",
@@ -365,6 +382,24 @@
       "necessitare"
     ],
     "isVerb": true
+  },
+  "abboccamento": {
+    "lemma": "abboccamento",
+    "pos": "nome (maschile)",
+    "fr": "entrevue, entretien",
+    "definition_it": "incontro fra due o più persone per discutere di un affare o di una questione importante.",
+    "examples": [
+      {
+        "it": "I due ministri ebbero un breve abboccamento prima della riunione.",
+        "fr": "Les deux ministres eurent un bref entretien avant la réunion."
+      }
+    ],
+    "synonyms": [
+      "colloquio",
+      "incontro",
+      "conversazione"
+    ],
+    "isVerb": false
   },
   "abboccare": {
     "lemma": "abboccare",
@@ -1447,6 +1482,24 @@
     "synonyms": [],
     "isVerb": false
   },
+  "accidioso": {
+    "lemma": "accidioso",
+    "pos": "aggettivo",
+    "fr": "indolent, apathique",
+    "definition_it": "che è preso dall'accidia, cioè da pigrizia e indifferenza verso ogni cosa",
+    "examples": [
+      {
+        "it": "Trascorreva le giornate in un'accidiosa immobilità.",
+        "fr": "Il passait ses journées dans une immobilité indolente."
+      }
+    ],
+    "synonyms": [
+      "pigro",
+      "apatico",
+      "indolente"
+    ],
+    "isVerb": false
+  },
   "accigliarsi": {
     "lemma": "accigliarsi",
     "pos": "verbo (riflessivo)",
@@ -1478,6 +1531,24 @@
     "synonyms": [
       "affinché",
       "perché"
+    ],
+    "isVerb": false
+  },
+  "acciottolato": {
+    "lemma": "acciottolato",
+    "pos": "sostantivo (m.)",
+    "fr": "pavage de galets, pavé",
+    "definition_it": "pavimentazione stradale formata da ciottoli disposti uno accanto all'altro",
+    "examples": [
+      {
+        "it": "Le ruote del carro sobbalzavano sull'acciottolato del vicolo.",
+        "fr": "Les roues de la charrette cahotaient sur le pavé de la ruelle."
+      }
+    ],
+    "synonyms": [
+      "selciato",
+      "pavimentazione",
+      "lastricato"
     ],
     "isVerb": false
   },
@@ -2180,6 +2251,24 @@
     "synonyms": [],
     "isVerb": false
   },
+  "acquietare": {
+    "lemma": "acquietare",
+    "pos": "verbo (transitivo e riflessivo)",
+    "fr": "calmer, apaiser ; se calmer (acquietarsi)",
+    "definition_it": "Far tornare calmo qualcuno che è agitato, arrabbiato o spaventato; nella forma riflessiva, tornare tranquilli.",
+    "examples": [
+      {
+        "it": "Le sue parole gentili acquietarono il bambino spaventato.",
+        "fr": "Ses paroles gentilles calmèrent l'enfant effrayé."
+      }
+    ],
+    "synonyms": [
+      "calmare",
+      "placare",
+      "tranquillizzare"
+    ],
+    "isVerb": true
+  },
   "acquirente": {
     "lemma": "acquirente",
     "pos": "nome",
@@ -2242,6 +2331,22 @@
     ],
     "synonyms": [
       "compera"
+    ],
+    "isVerb": false
+  },
+  "acquolina": {
+    "lemma": "acquolina",
+    "pos": "nome (f.)",
+    "fr": "eau à la bouche, salive",
+    "definition_it": "saliva che viene in bocca quando si vede o si sente il profumo di qualcosa di buono da mangiare",
+    "examples": [
+      {
+        "it": "Il profumo del pane appena sfornato mi fa venire l'acquolina in bocca.",
+        "fr": "L'odeur du pain qui sort du four me met l'eau à la bouche."
+      }
+    ],
+    "synonyms": [
+      "saliva"
     ],
     "isVerb": false
   },
@@ -3088,6 +3193,23 @@
     ],
     "isVerb": true
   },
+  "adunarsi": {
+    "lemma": "adunarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se rassembler, se réunir",
+    "definition_it": "venire insieme in uno stesso luogo formando un gruppo",
+    "examples": [
+      {
+        "it": "La folla si aduna in piazza prima del discorso.",
+        "fr": "La foule se rassemble sur la place avant le discours."
+      }
+    ],
+    "synonyms": [
+      "radunarsi",
+      "riunirsi"
+    ],
+    "isVerb": true
+  },
   "adunco": {
     "lemma": "adunco",
     "pos": "aggettivo",
@@ -3723,6 +3845,23 @@
     ],
     "isVerb": true
   },
+  "affinamento": {
+    "lemma": "affinamento",
+    "pos": "sostantivo maschile",
+    "fr": "affinage, perfectionnement",
+    "definition_it": "il lavoro lento con cui si rende una cosa più pura, più fine o migliore",
+    "examples": [
+      {
+        "it": "L'affinamento del vino dura due anni in botte.",
+        "fr": "L'affinage du vin dure deux ans en fût."
+      }
+    ],
+    "synonyms": [
+      "perfezionamento",
+      "miglioramento"
+    ],
+    "isVerb": false
+  },
   "affinare": {
     "lemma": "affinare",
     "pos": "verbo (transitivo)",
@@ -3787,6 +3926,23 @@
     "synonyms": [
       "emergere",
       "spuntare"
+    ],
+    "isVerb": true
+  },
+  "affisarsi": {
+    "lemma": "affisarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "fixer du regard, contempler intensément",
+    "definition_it": "guardare con attenzione insistente, senza staccare gli occhi (uso letterario e antico)",
+    "examples": [
+      {
+        "it": "I pellegrini si affisarono nella luce lontana.",
+        "fr": "Les pèlerins fixèrent du regard la lumière lointaine."
+      }
+    ],
+    "synonyms": [
+      "fissarsi",
+      "contemplare"
     ],
     "isVerb": true
   },
@@ -3876,6 +4032,24 @@
     ],
     "isVerb": true
   },
+  "affliggersi": {
+    "lemma": "affliggersi",
+    "pos": "verbo (riflessivo, irregolare)",
+    "fr": "s'affliger, se tourmenter",
+    "definition_it": "provare tristezza o preoccupazione profonda per qualcosa",
+    "examples": [
+      {
+        "it": "Me n'affliggevo ogni volta che ci pensavo.",
+        "fr": "Je m'en affligeais chaque fois que j'y pensais."
+      }
+    ],
+    "synonyms": [
+      "addolorarsi",
+      "tormentarsi",
+      "rattristarsi"
+    ],
+    "isVerb": true
+  },
   "afflitto": {
     "lemma": "afflitto",
     "pos": "aggettivo",
@@ -3927,6 +4101,24 @@
       "accasciarsi",
       "sgonfiarsi",
       "cedere"
+    ],
+    "isVerb": true
+  },
+  "affluire": {
+    "lemma": "affluire",
+    "pos": "verbo (intransitivo)",
+    "fr": "affluer, converger, monter (le sang)",
+    "definition_it": "arrivare in gran numero o in grande quantità verso un punto",
+    "examples": [
+      {
+        "it": "Il sangue le affluì al viso e diventò tutta rossa.",
+        "fr": "Le sang lui monta au visage et elle devint toute rouge."
+      }
+    ],
+    "synonyms": [
+      "confluire",
+      "riversarsi",
+      "accorrere"
     ],
     "isVerb": true
   },
@@ -4133,6 +4325,23 @@
     "synonyms": [],
     "isVerb": false
   },
+  "agenda": {
+    "lemma": "agenda",
+    "pos": "sostantivo (f.)",
+    "fr": "agenda, ordre du jour",
+    "definition_it": "quaderno in cui si annotano gli impegni; per estensione, l'insieme delle questioni da trattare",
+    "examples": [
+      {
+        "it": "Ho segnato l'appuntamento in agenda.",
+        "fr": "J'ai noté le rendez-vous dans mon agenda."
+      }
+    ],
+    "synonyms": [
+      "taccuino",
+      "diario"
+    ],
+    "isVerb": false
+  },
   "agente": {
     "lemma": "agente",
     "pos": "sostantivo (m/f)",
@@ -4184,6 +4393,23 @@
     ],
     "isVerb": true
   },
+  "aggelare": {
+    "lemma": "aggelare",
+    "pos": "verbo (intransitivo)",
+    "fr": "se glacer, geler, se figer de froid",
+    "definition_it": "diventare freddo come il ghiaccio, anche per la paura (uso letterario)",
+    "examples": [
+      {
+        "it": "A quelle parole il sangue le aggelava nelle vene.",
+        "fr": "À ces mots, le sang se glaçait dans ses veines."
+      }
+    ],
+    "synonyms": [
+      "gelare",
+      "raggelare"
+    ],
+    "isVerb": true
+  },
   "aggetto": {
     "lemma": "aggetto",
     "pos": "sostantivo (m)",
@@ -4199,6 +4425,23 @@
       "sporgenza"
     ],
     "isVerb": false
+  },
+  "agghiacciare": {
+    "lemma": "agghiacciare",
+    "pos": "verbo (transitivo)",
+    "fr": "glacer, figer d'effroi",
+    "definition_it": "far provare un freddo improvviso o un forte spavento che blocca",
+    "examples": [
+      {
+        "it": "Quel grido nella notte agghiacciava tutti gli ospiti.",
+        "fr": "Ce cri dans la nuit glaçait tous les hôtes."
+      }
+    ],
+    "synonyms": [
+      "raggelare",
+      "terrorizzare"
+    ],
+    "isVerb": true
   },
   "agghindato": {
     "lemma": "agghindato",
@@ -4265,6 +4508,23 @@
     "synonyms": [
       "circondare",
       "girare intorno"
+    ],
+    "isVerb": true
+  },
+  "aggirarsi": {
+    "lemma": "aggirarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "rôder, errer, se situer autour de",
+    "definition_it": "andare qua e là in un luogo senza una meta precisa, oppure avere un valore approssimativo",
+    "examples": [
+      {
+        "it": "Un cane randagio si aggira intorno al mercato.",
+        "fr": "Un chien errant rôde autour du marché."
+      }
+    ],
+    "synonyms": [
+      "vagare",
+      "girovagare"
     ],
     "isVerb": true
   },
@@ -4437,6 +4697,40 @@
     ],
     "isVerb": true
   },
+  "aggregarsi": {
+    "lemma": "aggregarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se joindre, s'agréger, se regrouper",
+    "definition_it": "unirsi a un gruppo già formato per farne parte",
+    "examples": [
+      {
+        "it": "Molti curiosi si aggregano al corteo lungo la strada.",
+        "fr": "Beaucoup de curieux se joignent au cortège le long de la rue."
+      }
+    ],
+    "synonyms": [
+      "unirsi",
+      "associarsi"
+    ],
+    "isVerb": true
+  },
+  "aggressione": {
+    "lemma": "aggressione",
+    "pos": "sostantivo (f.)",
+    "fr": "agression",
+    "definition_it": "attacco violento e improvviso contro una persona o uno Stato",
+    "examples": [
+      {
+        "it": "L'aggressione è avvenuta in pieno giorno.",
+        "fr": "L'agression a eu lieu en plein jour."
+      }
+    ],
+    "synonyms": [
+      "assalto",
+      "attacco"
+    ],
+    "isVerb": false
+  },
   "aggressivo": {
     "lemma": "aggressivo",
     "pos": "aggettivo",
@@ -4451,6 +4745,23 @@
     "synonyms": [
       "violento",
       "ostile"
+    ],
+    "isVerb": false
+  },
+  "aggressore": {
+    "lemma": "aggressore",
+    "pos": "sostantivo maschile",
+    "fr": "agresseur, assaillant",
+    "definition_it": "persona che attacca per prima qualcuno con violenza",
+    "examples": [
+      {
+        "it": "La vittima non ha riconosciuto il suo aggressore.",
+        "fr": "La victime n'a pas reconnu son agresseur."
+      }
+    ],
+    "synonyms": [
+      "assalitore",
+      "attaccante"
     ],
     "isVerb": false
   },
@@ -4801,6 +5112,24 @@
     "synonyms": [],
     "isVerb": false
   },
+  "agognare": {
+    "lemma": "agognare",
+    "pos": "verbo (transitivo)",
+    "fr": "convoiter, aspirer à",
+    "definition_it": "desiderare intensamente qualcosa che non si possiede",
+    "examples": [
+      {
+        "it": "Agogna da anni un posto sicuro.",
+        "fr": "Il convoite depuis des années un poste sûr."
+      }
+    ],
+    "synonyms": [
+      "bramare",
+      "desiderare",
+      "ambire"
+    ],
+    "isVerb": true
+  },
   "agonia": {
     "lemma": "agonia",
     "pos": "nome femminile",
@@ -5061,6 +5390,23 @@
     "synonyms": [],
     "isVerb": false
   },
+  "aia": {
+    "lemma": "aia",
+    "pos": "sostantivo femminile",
+    "fr": "aire (de battage), cour de ferme",
+    "definition_it": "spazio piano e battuto davanti alla casa di campagna, dove un tempo si trebbiava il grano e girano le galline",
+    "examples": [
+      {
+        "it": "Nell'aia le galline beccavano i chicchi rimasti a terra.",
+        "fr": "Dans la cour de la ferme, les poules picoraient les grains restés par terre."
+      }
+    ],
+    "synonyms": [
+      "cortile",
+      "spiazzo"
+    ],
+    "isVerb": false
+  },
   "aio": {
     "lemma": "aio",
     "pos": "sostantivo maschile (antiquato)",
@@ -5141,6 +5487,24 @@
       "assistere",
       "sostenere",
       "soccorrere"
+    ],
+    "isVerb": true
+  },
+  "aiutarsi": {
+    "lemma": "aiutarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'aider, s'entraider, se débrouiller",
+    "definition_it": "Dare sostegno a se stessi o darselo a vicenda per superare una difficoltà.",
+    "examples": [
+      {
+        "it": "Chi si aiuta da solo trova sempre una via d'uscita.",
+        "fr": "Celui qui s'aide lui-même trouve toujours une issue."
+      }
+    ],
+    "synonyms": [
+      "sostenersi",
+      "arrangiarsi",
+      "soccorrersi"
     ],
     "isVerb": true
   },
@@ -5660,6 +6024,24 @@
     ],
     "isVerb": true
   },
+  "alito": {
+    "lemma": "alito",
+    "pos": "sostantivo maschile",
+    "fr": "haleine, souffle",
+    "definition_it": "l'aria che esce dalla bocca quando si respira; per estensione, un soffio leggerissimo di vento",
+    "examples": [
+      {
+        "it": "Non c'era un alito di vento sulla spiaggia.",
+        "fr": "Il n'y avait pas un souffle de vent sur la plage."
+      }
+    ],
+    "synonyms": [
+      "fiato",
+      "soffio",
+      "respiro"
+    ],
+    "isVerb": false
+  },
   "alla deriva": {
     "lemma": "alla deriva",
     "pos": "locuzione avverbiale",
@@ -5690,6 +6072,23 @@
     "synonyms": [
       "di mattina",
       "al mattino"
+    ],
+    "isVerb": false
+  },
+  "alla rinfusa": {
+    "lemma": "alla rinfusa",
+    "pos": "locuzione (avverbiale)",
+    "fr": "pêle-mêle, en vrac, en désordre",
+    "definition_it": "In modo disordinato, senza alcun ordine o criterio.",
+    "examples": [
+      {
+        "it": "Ha buttato tutti i vestiti alla rinfusa nella valigia.",
+        "fr": "Elle a jeté tous les vêtements pêle-mêle dans la valise."
+      }
+    ],
+    "synonyms": [
+      "disordinatamente",
+      "confusamente"
     ],
     "isVerb": false
   },
@@ -5945,6 +6344,24 @@
     "synonyms": [
       "gioia",
       "allegria"
+    ],
+    "isVerb": false
+  },
+  "allegria": {
+    "lemma": "allegria",
+    "pos": "sostantivo femminile",
+    "fr": "joie, gaieté, entrain",
+    "definition_it": "stato d'animo lieto, che fa ridere e stare bene insieme agli altri",
+    "examples": [
+      {
+        "it": "I bambini riempiono la casa di allegria.",
+        "fr": "Les enfants remplissent la maison de joie."
+      }
+    ],
+    "synonyms": [
+      "gioia",
+      "letizia",
+      "buonumore"
     ],
     "isVerb": false
   },
@@ -6255,6 +6672,24 @@
     ],
     "isVerb": true
   },
+  "allontanarsi": {
+    "lemma": "allontanarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'éloigner, s'en aller, s'écarter",
+    "definition_it": "Andare via da un luogo o da una persona, aumentando la distanza.",
+    "examples": [
+      {
+        "it": "Dopo la lite si allontanò senza salutare nessuno.",
+        "fr": "Après la dispute, il s'éloigna sans saluer personne."
+      }
+    ],
+    "synonyms": [
+      "scostarsi",
+      "andarsene",
+      "distanziarsi"
+    ],
+    "isVerb": true
+  },
   "allora": {
     "lemma": "allora",
     "pos": "avverbio / congiunzione",
@@ -6336,6 +6771,24 @@
     "synonyms": [
       "prolungare",
       "stendere"
+    ],
+    "isVerb": true
+  },
+  "allungarsi": {
+    "lemma": "allungarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'allonger, s'étirer, se prolonger",
+    "definition_it": "Diventare più lungo nello spazio o durare più a lungo nel tempo.",
+    "examples": [
+      {
+        "it": "Al tramonto le ombre degli alberi si allungavano sul prato.",
+        "fr": "Au coucher du soleil, les ombres des arbres s'allongeaient sur le pré."
+      }
+    ],
+    "synonyms": [
+      "distendersi",
+      "protrarsi",
+      "estendersi"
     ],
     "isVerb": true
   },
@@ -6468,6 +6921,23 @@
     "synonyms": [
       "parecchio",
       "piuttosto"
+    ],
+    "isVerb": false
+  },
+  "altalena": {
+    "lemma": "altalena",
+    "pos": "sostantivo femminile",
+    "fr": "balançoire, bascule ; alternance",
+    "definition_it": "gioco fatto di una tavola o di un sedile appeso, che va su e giù o avanti e indietro; si dice anche di cose che cambiano di continuo",
+    "examples": [
+      {
+        "it": "Al parco mia figlia vuole sempre salire sull'altalena.",
+        "fr": "Au parc, ma fille veut toujours monter sur la balançoire."
+      }
+    ],
+    "synonyms": [
+      "dondolo",
+      "alternanza"
     ],
     "isVerb": false
   },
@@ -6615,6 +7085,23 @@
     "synonyms": [
       "pomposo",
       "roboante"
+    ],
+    "isVerb": false
+  },
+  "altitudine": {
+    "lemma": "altitudine",
+    "pos": "sostantivo femminile",
+    "fr": "altitude",
+    "definition_it": "distanza in verticale di un luogo rispetto al livello del mare",
+    "examples": [
+      {
+        "it": "Il rifugio si trova a duemila metri di altitudine.",
+        "fr": "Le refuge se trouve à deux mille mètres d'altitude."
+      }
+    ],
+    "synonyms": [
+      "quota",
+      "elevazione"
     ],
     "isVerb": false
   },
@@ -6832,6 +7319,24 @@
     "synonyms": [
       "sollevare",
       "innalzare"
+    ],
+    "isVerb": true
+  },
+  "alzarsi": {
+    "lemma": "alzarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se lever, se dresser, monter",
+    "definition_it": "Passare dalla posizione seduta o sdraiata a quella eretta, oppure salire verso l'alto.",
+    "examples": [
+      {
+        "it": "Si alzò di scatto e corse verso la finestra.",
+        "fr": "Il se leva d'un bond et courut vers la fenêtre."
+      }
+    ],
+    "synonyms": [
+      "sollevarsi",
+      "levarsi",
+      "rizzarsi"
     ],
     "isVerb": true
   },
@@ -7380,6 +7885,24 @@
       "stare male"
     ],
     "isVerb": true
+  },
+  "ammalato": {
+    "lemma": "ammalato",
+    "pos": "aggettivo e sostantivo maschile",
+    "fr": "malade",
+    "definition_it": "che ha perso la salute e ha bisogno di cure; anche la persona stessa che si trova in questo stato",
+    "examples": [
+      {
+        "it": "L'ammalato riposa e beve molta acqua.",
+        "fr": "Le malade se repose et boit beaucoup d'eau."
+      }
+    ],
+    "synonyms": [
+      "malato",
+      "infermo",
+      "sofferente"
+    ],
+    "isVerb": false
   },
   "ammalizzire": {
     "lemma": "ammalizzire",
@@ -8084,6 +8607,22 @@
     "synonyms": [],
     "isVerb": false
   },
+  "anca": {
+    "lemma": "anca",
+    "pos": "sostantivo (f.)",
+    "fr": "hanche",
+    "definition_it": "la parte laterale del corpo compresa tra la vita e la coscia",
+    "examples": [
+      {
+        "it": "Cadendo dalle scale si è fratturato l'anca.",
+        "fr": "En tombant dans l'escalier, il s'est fracturé la hanche."
+      }
+    ],
+    "synonyms": [
+      "fianco"
+    ],
+    "isVerb": false
+  },
   "anche": {
     "lemma": "anche",
     "pos": "congiunzione/avverbio",
@@ -8100,6 +8639,23 @@
       "altresì"
     ],
     "isVerb": false
+  },
+  "ancidere": {
+    "lemma": "ancidere",
+    "pos": "verbo (transitivo)",
+    "fr": "tuer, occire (littéraire, archaïque)",
+    "definition_it": "Forma antica e letteraria per togliere la vita a qualcuno.",
+    "examples": [
+      {
+        "it": "Nel poema il cavaliere ancise il drago con un solo colpo.",
+        "fr": "Dans le poème, le chevalier occit le dragon d'un seul coup."
+      }
+    ],
+    "synonyms": [
+      "uccidere",
+      "ammazzare"
+    ],
+    "isVerb": true
   },
   "ancora": {
     "lemma": "ancora",
@@ -8183,6 +8739,23 @@
     "synonyms": [
       "viavai",
       "trambusto"
+    ],
+    "isVerb": false
+  },
+  "androne": {
+    "lemma": "androne",
+    "pos": "sostantivo maschile",
+    "fr": "hall d'entrée, porche",
+    "definition_it": "corridoio ampio all'ingresso di un palazzo, che porta dalla strada al cortile o alle scale",
+    "examples": [
+      {
+        "it": "Nell'androne del palazzo c'era un odore di pioggia.",
+        "fr": "Dans le hall de l'immeuble, il y avait une odeur de pluie."
+      }
+    ],
+    "synonyms": [
+      "atrio",
+      "ingresso"
     ],
     "isVerb": false
   },
@@ -8444,6 +9017,24 @@
     ],
     "isVerb": true
   },
+  "angusto": {
+    "lemma": "angusto",
+    "pos": "aggettivo",
+    "fr": "étroit, exigu, borné",
+    "definition_it": "che ha poco spazio, stretto e scomodo; detto anche di idee chiuse e limitate",
+    "examples": [
+      {
+        "it": "Vivevano in una stanza angusta, senza finestre.",
+        "fr": "Ils vivaient dans une pièce exiguë, sans fenêtres."
+      }
+    ],
+    "synonyms": [
+      "stretto",
+      "ristretto",
+      "limitato"
+    ],
+    "isVerb": false
+  },
   "anima": {
     "lemma": "anima",
     "pos": "sostantivo (f.)",
@@ -8541,6 +9132,24 @@
     "synonyms": [
       "conduttrice",
       "organizzatrice"
+    ],
+    "isVerb": false
+  },
+  "animazione": {
+    "lemma": "animazione",
+    "pos": "sostantivo femminile",
+    "fr": "animation, entrain",
+    "definition_it": "grande vivacità di un luogo pieno di gente; anche la tecnica che fa muovere i disegni in un film",
+    "examples": [
+      {
+        "it": "La piazza era piena di animazione durante la festa.",
+        "fr": "La place était pleine d'animation pendant la fête."
+      }
+    ],
+    "synonyms": [
+      "vivacità",
+      "movimento",
+      "brio"
     ],
     "isVerb": false
   },
@@ -8680,6 +9289,24 @@
     ],
     "isVerb": true
   },
+  "annebbiarsi": {
+    "lemma": "annebbiarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'embrumer, se troubler, s'obscurcir",
+    "definition_it": "Coprirsi di nebbia o perdere chiarezza, detto anche della vista e della mente.",
+    "examples": [
+      {
+        "it": "Con la febbre la vista gli si annebbiava di continuo.",
+        "fr": "Avec la fièvre, sa vue se troublait sans cesse."
+      }
+    ],
+    "synonyms": [
+      "offuscarsi",
+      "appannarsi",
+      "oscurarsi"
+    ],
+    "isVerb": true
+  },
   "annegare": {
     "lemma": "annegare",
     "pos": "verbo (intransitivo/transitivo, ausiliare essere/avere)",
@@ -8693,6 +9320,23 @@
     ],
     "synonyms": [
       "affogare"
+    ],
+    "isVerb": true
+  },
+  "annegarsi": {
+    "lemma": "annegarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se noyer",
+    "definition_it": "Morire sott'acqua, spesso per propria volontà, senza riuscire a respirare.",
+    "examples": [
+      {
+        "it": "Racconta che il protagonista si annega nel fiume per disperazione.",
+        "fr": "Il raconte que le protagoniste se noie dans le fleuve par désespoir."
+      }
+    ],
+    "synonyms": [
+      "affogarsi",
+      "sommergersi"
     ],
     "isVerb": true
   },
@@ -8928,6 +9572,23 @@
     ],
     "isVerb": true
   },
+  "annullamento": {
+    "lemma": "annullamento",
+    "pos": "sostantivo maschile",
+    "fr": "annulation",
+    "definition_it": "il fatto di togliere validità a qualcosa che era stato deciso o prenotato",
+    "examples": [
+      {
+        "it": "L'annullamento del volo ha rovinato le nostre vacanze.",
+        "fr": "L'annulation du vol a gâché nos vacances."
+      }
+    ],
+    "synonyms": [
+      "cancellazione",
+      "revoca"
+    ],
+    "isVerb": false
+  },
   "annullare": {
     "lemma": "annullare",
     "pos": "verbo (transitivo)",
@@ -8942,6 +9603,24 @@
     "synonyms": [
       "cancellare",
       "invalidare"
+    ],
+    "isVerb": true
+  },
+  "annullarsi": {
+    "lemma": "annullarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'annuler, s'anéantir, disparaître",
+    "definition_it": "Perdere ogni valore o consistenza fino a sparire del tutto.",
+    "examples": [
+      {
+        "it": "Davanti a quel silenzio ogni rumore si annulla.",
+        "fr": "Devant ce silence, tout bruit s'annule."
+      }
+    ],
+    "synonyms": [
+      "dissolversi",
+      "svanire",
+      "azzerarsi"
     ],
     "isVerb": true
   },
@@ -8975,6 +9654,42 @@
     ],
     "synonyms": [
       "comunicato",
+      "avviso"
+    ],
+    "isVerb": false
+  },
+  "annunziarsi": {
+    "lemma": "annunziarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'annoncer, se manifester",
+    "definition_it": "Farsi riconoscere in anticipo con qualche segno, forma letteraria di annunciarsi.",
+    "examples": [
+      {
+        "it": "La primavera si annunziava con i primi fiori sui rami.",
+        "fr": "Le printemps s'annonçait avec les premières fleurs sur les branches."
+      }
+    ],
+    "synonyms": [
+      "preannunciarsi",
+      "manifestarsi",
+      "presentarsi"
+    ],
+    "isVerb": true
+  },
+  "annunzio": {
+    "lemma": "annunzio",
+    "pos": "sostantivo maschile",
+    "fr": "annonce, nouvelle",
+    "definition_it": "notizia che viene comunicata a qualcuno; forma letteraria di annuncio",
+    "examples": [
+      {
+        "it": "Il messaggero portò l'annunzio della vittoria.",
+        "fr": "Le messager apporta l'annonce de la victoire."
+      }
+    ],
+    "synonyms": [
+      "annuncio",
+      "notizia",
       "avviso"
     ],
     "isVerb": false
@@ -9432,6 +10147,23 @@
     ],
     "isVerb": false
   },
+  "antipatia": {
+    "lemma": "antipatia",
+    "pos": "sostantivo femminile",
+    "fr": "antipathie, aversion",
+    "definition_it": "sentimento di rifiuto verso una persona o una cosa che non ci piace",
+    "examples": [
+      {
+        "it": "Provo una certa antipatia per il nuovo vicino.",
+        "fr": "J'éprouve une certaine antipathie pour le nouveau voisin."
+      }
+    ],
+    "synonyms": [
+      "avversione",
+      "repulsione"
+    ],
+    "isVerb": false
+  },
   "antiquaria": {
     "lemma": "antiquaria",
     "pos": "sostantivo femminile",
@@ -9497,6 +10229,20 @@
       "etnologo",
       "studioso dell'uomo"
     ],
+    "isVerb": false
+  },
+  "anulare": {
+    "lemma": "anulare",
+    "pos": "sostantivo maschile",
+    "fr": "annulaire (doigt)",
+    "definition_it": "il quarto dito della mano, quello dove di solito si porta la fede",
+    "examples": [
+      {
+        "it": "Porta un piccolo diamante all'anulare sinistro.",
+        "fr": "Elle porte un petit diamant à l'annulaire gauche."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "anzi": {
@@ -9666,6 +10412,23 @@
     ],
     "isVerb": false
   },
+  "apoteosi": {
+    "lemma": "apoteosi",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "apothéose, consécration",
+    "definition_it": "momento di gloria e di trionfo massimo, in cui qualcuno o qualcosa viene esaltato al punto più alto",
+    "examples": [
+      {
+        "it": "Il concerto si è chiuso nell'apoteosi degli applausi.",
+        "fr": "Le concert s'est terminé dans l'apothéose des applaudissements."
+      }
+    ],
+    "synonyms": [
+      "trionfo",
+      "glorificazione"
+    ],
+    "isVerb": false
+  },
   "apotropaico": {
     "lemma": "apotropaico",
     "pos": "aggettivo",
@@ -9713,6 +10476,24 @@
     "synonyms": [
       "soddisfare",
       "gratificare"
+    ],
+    "isVerb": true
+  },
+  "appalesarsi": {
+    "lemma": "appalesarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se révéler, se manifester, apparaître",
+    "definition_it": "Diventare evidente o mostrarsi apertamente, in tono letterario.",
+    "examples": [
+      {
+        "it": "La verità si appalesa solo a chi sa attendere.",
+        "fr": "La vérité se révèle seulement à qui sait attendre."
+      }
+    ],
+    "synonyms": [
+      "rivelarsi",
+      "palesarsi",
+      "manifestarsi"
     ],
     "isVerb": true
   },
@@ -9798,6 +10579,24 @@
     "synonyms": [
       "preparare",
       "allestire"
+    ],
+    "isVerb": true
+  },
+  "apparecchiarsi": {
+    "lemma": "apparecchiarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se préparer, s'apprêter",
+    "definition_it": "Mettersi in ordine e pronti per qualcosa che sta per accadere.",
+    "examples": [
+      {
+        "it": "La città si apparecchiava alla festa con luci e bandiere.",
+        "fr": "La ville se préparait à la fête avec des lumières et des drapeaux."
+      }
+    ],
+    "synonyms": [
+      "prepararsi",
+      "accingersi",
+      "disporsi"
     ],
     "isVerb": true
   },
@@ -9987,6 +10786,24 @@
       "coinvolgere"
     ],
     "isVerb": true
+  },
+  "appassionato": {
+    "lemma": "appassionato",
+    "pos": "aggettivo",
+    "fr": "passionné, fervent",
+    "definition_it": "che ama molto qualcosa e ci mette tutto il cuore",
+    "examples": [
+      {
+        "it": "Mio fratello è un lettore appassionato di romanzi storici.",
+        "fr": "Mon frère est un lecteur passionné de romans historiques."
+      }
+    ],
+    "synonyms": [
+      "entusiasta",
+      "ardente",
+      "fervido"
+    ],
+    "isVerb": false
   },
   "appassire": {
     "lemma": "appassire",
@@ -10255,6 +11072,24 @@
     "synonyms": [
       "incollare",
       "attaccare"
+    ],
+    "isVerb": true
+  },
+  "appiccicarsi": {
+    "lemma": "appiccicarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se coller, adhérer, s'accrocher",
+    "definition_it": "Attaccarsi a una superficie o a una persona senza staccarsi facilmente.",
+    "examples": [
+      {
+        "it": "La camicia bagnata gli si appiccicava alla schiena.",
+        "fr": "La chemise mouillée lui collait au dos."
+      }
+    ],
+    "synonyms": [
+      "attaccarsi",
+      "incollarsi",
+      "aderire"
     ],
     "isVerb": true
   },
@@ -10765,6 +11600,23 @@
     ],
     "isVerb": true
   },
+  "approssimazione": {
+    "lemma": "approssimazione",
+    "pos": "sostantivo femminile",
+    "fr": "approximation, à-peu-près",
+    "definition_it": "calcolo o giudizio non esatto, che si avvicina soltanto al valore vero",
+    "examples": [
+      {
+        "it": "Ti do la cifra con una certa approssimazione.",
+        "fr": "Je te donne le chiffre avec une certaine approximation."
+      }
+    ],
+    "synonyms": [
+      "stima",
+      "arrotondamento"
+    ],
+    "isVerb": false
+  },
   "approvare": {
     "lemma": "approvare",
     "pos": "verbo (transitivo)",
@@ -11115,6 +11967,23 @@
     "synonyms": [],
     "isVerb": false
   },
+  "arbitro": {
+    "lemma": "arbitro",
+    "pos": "sostantivo maschile",
+    "fr": "arbitre",
+    "definition_it": "persona che fa rispettare le regole in una partita o decide chi ha ragione in una lite",
+    "examples": [
+      {
+        "it": "L'arbitro ha fischiato la fine della partita.",
+        "fr": "L'arbitre a sifflé la fin du match."
+      }
+    ],
+    "synonyms": [
+      "giudice",
+      "mediatore"
+    ],
+    "isVerb": false
+  },
   "arboscello": {
     "lemma": "arboscello",
     "pos": "sostantivo (maschile)",
@@ -11279,6 +12148,24 @@
     "synonyms": [],
     "isVerb": false
   },
+  "arcifanfano": {
+    "lemma": "arcifanfano",
+    "pos": "nome (maschile)",
+    "fr": "grand vantard, fanfaron de première",
+    "definition_it": "parola scherzosa che indica chi si dà arie di grande importanza e racconta vanterie.",
+    "examples": [
+      {
+        "it": "Non credere a quell'arcifanfano: si vanta sempre di imprese mai compiute.",
+        "fr": "Ne crois pas ce grand vantard : il se vante toujours d'exploits jamais accomplis."
+      }
+    ],
+    "synonyms": [
+      "fanfarone",
+      "spaccone",
+      "millantatore"
+    ],
+    "isVerb": false
+  },
   "arcigno": {
     "lemma": "arcigno",
     "pos": "aggettivo",
@@ -11293,6 +12180,22 @@
     "synonyms": [
       "severo",
       "burbero"
+    ],
+    "isVerb": false
+  },
+  "arcivescovo": {
+    "lemma": "arcivescovo",
+    "pos": "sostantivo maschile",
+    "fr": "archevêque",
+    "definition_it": "capo religioso cattolico che guida un territorio più importante di quello di un vescovo",
+    "examples": [
+      {
+        "it": "L'arcivescovo ha celebrato la messa in cattedrale.",
+        "fr": "L'archevêque a célébré la messe dans la cathédrale."
+      }
+    ],
+    "synonyms": [
+      "prelato"
     ],
     "isVerb": false
   },
@@ -11406,6 +12309,24 @@
     "synonyms": [
       "coraggioso",
       "audace"
+    ],
+    "isVerb": false
+  },
+  "ardore": {
+    "lemma": "ardore",
+    "pos": "sostantivo maschile",
+    "fr": "ardeur, fougue",
+    "definition_it": "grande calore, sia del fuoco sia dei sentimenti forti",
+    "examples": [
+      {
+        "it": "Difese le sue idee con ardore.",
+        "fr": "Il défendit ses idées avec ardeur."
+      }
+    ],
+    "synonyms": [
+      "passione",
+      "fervore",
+      "slancio"
     ],
     "isVerb": false
   },
@@ -12046,6 +12967,23 @@
     ],
     "isVerb": true
   },
+  "arrestarsi": {
+    "lemma": "arrestarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'arrêter, s'immobiliser",
+    "definition_it": "smettere di muoversi o di procedere, restando fermi",
+    "examples": [
+      {
+        "it": "Il treno si arrestò con un lungo stridore davanti alla banchina.",
+        "fr": "Le train s'arrêta dans un long crissement devant le quai."
+      }
+    ],
+    "synonyms": [
+      "fermarsi",
+      "bloccarsi"
+    ],
+    "isVerb": true
+  },
   "arresto": {
     "lemma": "arresto",
     "pos": "nome (maschile)",
@@ -12277,6 +13215,24 @@
     ],
     "isVerb": false
   },
+  "arroganza": {
+    "lemma": "arroganza",
+    "pos": "sostantivo femminile",
+    "fr": "arrogance, insolence",
+    "definition_it": "modo di fare di chi si crede superiore e tratta male gli altri",
+    "examples": [
+      {
+        "it": "Rispose con arroganza a tutte le domande.",
+        "fr": "Il répondit avec arrogance à toutes les questions."
+      }
+    ],
+    "synonyms": [
+      "superbia",
+      "prepotenza",
+      "alterigia"
+    ],
+    "isVerb": false
+  },
   "arrossire": {
     "lemma": "arrossire",
     "pos": "verbo (intransitivo)",
@@ -12368,6 +13324,23 @@
     ],
     "synonyms": [
       "approssimare"
+    ],
+    "isVerb": true
+  },
+  "arrovellarsi": {
+    "lemma": "arrovellarsi",
+    "pos": "verbo (riflessivo, regolare)",
+    "fr": "se creuser la tête, se tourmenter",
+    "definition_it": "pensare a lungo e con fatica a un problema, tormentandosi la mente",
+    "examples": [
+      {
+        "it": "Mi arrovello da giorni su questa domanda.",
+        "fr": "Je me creuse la tête depuis des jours sur cette question."
+      }
+    ],
+    "synonyms": [
+      "tormentarsi",
+      "lambiccarsi"
     ],
     "isVerb": true
   },
@@ -12483,6 +13456,24 @@
     "synonyms": [],
     "isVerb": false
   },
+  "artefice": {
+    "lemma": "artefice",
+    "pos": "sostantivo maschile e femminile",
+    "fr": "artisan (d'une chose), auteur, créateur",
+    "definition_it": "chi crea o realizza qualcosa ed è la causa principale di un risultato",
+    "examples": [
+      {
+        "it": "È stata lei l'artefice di questo successo.",
+        "fr": "C'est elle l'artisan de ce succès."
+      }
+    ],
+    "synonyms": [
+      "autore",
+      "creatore",
+      "promotore"
+    ],
+    "isVerb": false
+  },
   "articolare": {
     "lemma": "articolare",
     "pos": "aggettivo",
@@ -12573,6 +13564,23 @@
     ],
     "synonyms": [
       "fatto a mano"
+    ],
+    "isVerb": false
+  },
+  "artigianalità": {
+    "lemma": "artigianalità",
+    "pos": "sostantivo (f.)",
+    "fr": "caractère artisanal, savoir-faire artisanal",
+    "definition_it": "la qualità di ciò che è realizzato a mano, con cura e competenza",
+    "examples": [
+      {
+        "it": "Questo mobile rivela un'artigianalità ormai rara.",
+        "fr": "Ce meuble révèle un savoir-faire artisanal désormais rare."
+      }
+    ],
+    "synonyms": [
+      "manualità",
+      "maestria"
     ],
     "isVerb": false
   },
@@ -12725,6 +13733,23 @@
     "synonyms": [],
     "isVerb": false
   },
+  "ascia": {
+    "lemma": "ascia",
+    "pos": "sostantivo femminile",
+    "fr": "hache",
+    "definition_it": "attrezzo con lama pesante e manico di legno, usato per tagliare la legna",
+    "examples": [
+      {
+        "it": "Il boscaiolo affilò l'ascia prima di lavorare.",
+        "fr": "Le bûcheron aiguisa la hache avant de travailler."
+      }
+    ],
+    "synonyms": [
+      "accetta",
+      "scure"
+    ],
+    "isVerb": false
+  },
   "asciata": {
     "lemma": "asciata",
     "pos": "sostantivo (f.)",
@@ -12835,6 +13860,23 @@
       "imputare"
     ],
     "isVerb": true
+  },
+  "asfalto": {
+    "lemma": "asfalto",
+    "pos": "sostantivo maschile",
+    "fr": "asphalte, bitume",
+    "definition_it": "materiale nero e duro con cui si copre la superficie delle strade",
+    "examples": [
+      {
+        "it": "Con il caldo l'asfalto si era quasi sciolto.",
+        "fr": "Avec la chaleur, l'asphalte avait presque fondu."
+      }
+    ],
+    "synonyms": [
+      "bitume",
+      "catrame"
+    ],
+    "isVerb": false
   },
   "asilo": {
     "lemma": "asilo",
@@ -13326,6 +14368,24 @@
     "synonyms": [],
     "isVerb": false
   },
+  "assenso": {
+    "lemma": "assenso",
+    "pos": "sostantivo maschile",
+    "fr": "assentiment, accord, consentement",
+    "definition_it": "risposta positiva con cui una persona dice di sì a una proposta o a una richiesta",
+    "examples": [
+      {
+        "it": "Il padre diede il suo assenso al matrimonio con un cenno del capo.",
+        "fr": "Le père donna son assentiment au mariage d'un signe de tête."
+      }
+    ],
+    "synonyms": [
+      "consenso",
+      "approvazione",
+      "permesso"
+    ],
+    "isVerb": false
+  },
   "assente": {
     "lemma": "assente",
     "pos": "aggettivo",
@@ -13700,6 +14760,23 @@
     "synonyms": [
       "sottomettere",
       "dominare"
+    ],
+    "isVerb": true
+  },
+  "assoggettarsi": {
+    "lemma": "assoggettarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se soumettre, se plier à",
+    "definition_it": "accettare di stare sotto il potere o le regole di qualcuno",
+    "examples": [
+      {
+        "it": "Chi entra nell'ordine si assoggetta a una disciplina severa.",
+        "fr": "Celui qui entre dans l'ordre se soumet à une discipline sévère."
+      }
+    ],
+    "synonyms": [
+      "sottomettersi",
+      "piegarsi"
     ],
     "isVerb": true
   },
@@ -14305,6 +15382,23 @@
     ],
     "isVerb": true
   },
+  "attaccarsi": {
+    "lemma": "attaccarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'accrocher, s'attacher, se coller",
+    "definition_it": "restare unito a qualcosa o a qualcuno stringendolo o aderendovi",
+    "examples": [
+      {
+        "it": "Il bambino si attaccò alla gonna della madre e non la lasciò più.",
+        "fr": "L'enfant s'accrocha à la jupe de sa mère et ne la lâcha plus."
+      }
+    ],
+    "synonyms": [
+      "aggrapparsi",
+      "aderire"
+    ],
+    "isVerb": true
+  },
   "attaccatura": {
     "lemma": "attaccatura",
     "pos": "nome femminile",
@@ -14389,6 +15483,22 @@
     ],
     "isVerb": false
   },
+  "attemparsi": {
+    "lemma": "attemparsi",
+    "pos": "verbo (riflessivo, letterario)",
+    "fr": "vieillir, prendre de l'âge",
+    "definition_it": "diventare vecchio con il passare degli anni",
+    "examples": [
+      {
+        "it": "Mi attempo, ma continuo a lavorare con piacere.",
+        "fr": "Je prends de l'âge, mais je continue à travailler avec plaisir."
+      }
+    ],
+    "synonyms": [
+      "invecchiare"
+    ],
+    "isVerb": true
+  },
   "attendere": {
     "lemma": "attendere",
     "pos": "verbo (transitivo)",
@@ -14468,6 +15578,23 @@
     ],
     "synonyms": [
       "minacciare"
+    ],
+    "isVerb": true
+  },
+  "attentarsi": {
+    "lemma": "attentarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "oser, se risquer à (littéraire)",
+    "definition_it": "avere il coraggio di fare una cosa difficile o rischiosa",
+    "examples": [
+      {
+        "it": "Nessuno si attentava a contraddire il vecchio maestro.",
+        "fr": "Personne n'osait contredire le vieux maître."
+      }
+    ],
+    "synonyms": [
+      "osare",
+      "arrischiarsi"
     ],
     "isVerb": true
   },
@@ -14689,6 +15816,24 @@
       "richiamare"
     ],
     "isVerb": true
+  },
+  "attitudine": {
+    "lemma": "attitudine",
+    "pos": "sostantivo (f.)",
+    "fr": "aptitude, disposition, prédisposition",
+    "definition_it": "disposizione naturale che rende una persona capace di riuscire bene in una certa attività",
+    "examples": [
+      {
+        "it": "Ha una spiccata attitudine per la musica.",
+        "fr": "Il a une nette aptitude pour la musique."
+      }
+    ],
+    "synonyms": [
+      "predisposizione",
+      "inclinazione",
+      "talento"
+    ],
+    "isVerb": false
   },
   "attivamente": {
     "lemma": "attivamente",
@@ -14958,6 +16103,23 @@
     ],
     "isVerb": false
   },
+  "attristarsi": {
+    "lemma": "attristarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'attrister, devenir triste",
+    "definition_it": "diventare triste per un fatto doloroso",
+    "examples": [
+      {
+        "it": "Si attrista ogni volta che parla del suo paese lontano.",
+        "fr": "Il s'attriste chaque fois qu'il parle de son pays lointain."
+      }
+    ],
+    "synonyms": [
+      "rattristarsi",
+      "affliggersi"
+    ],
+    "isVerb": true
+  },
   "attrito": {
     "lemma": "attrito",
     "pos": "nome maschile",
@@ -15188,6 +16350,24 @@
       "accrescere"
     ],
     "isVerb": true
+  },
+  "aura": {
+    "lemma": "aura",
+    "pos": "sostantivo femminile",
+    "fr": "brise légère ; aura, atmosphère",
+    "definition_it": "aria leggera che si muove piano; in senso figurato, l'atmosfera particolare che sembra circondare una persona o un luogo",
+    "examples": [
+      {
+        "it": "Intorno a lei c'era un'aura di mistero.",
+        "fr": "Autour d'elle il y avait une aura de mystère."
+      }
+    ],
+    "synonyms": [
+      "brezza",
+      "alone",
+      "atmosfera"
+    ],
+    "isVerb": false
   },
   "auricolare": {
     "lemma": "auricolare",
@@ -15596,6 +16776,20 @@
     ],
     "isVerb": false
   },
+  "autostop": {
+    "lemma": "autostop",
+    "pos": "sostantivo maschile (invariabile)",
+    "fr": "auto-stop",
+    "definition_it": "modo di viaggiare senza pagare, fermando con un gesto della mano le automobili di passaggio per farsi accompagnare",
+    "examples": [
+      {
+        "it": "Da giovane girava l'Europa in autostop.",
+        "fr": "Quand il était jeune, il parcourait l'Europe en auto-stop."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "autostrada": {
     "lemma": "autostrada",
     "pos": "nome femminile",
@@ -15774,6 +16968,22 @@
     ],
     "isVerb": false
   },
+  "avemaria": {
+    "lemma": "avemaria",
+    "pos": "sostantivo femminile",
+    "fr": "Ave Maria, « Je vous salue Marie » ; angélus du soir",
+    "definition_it": "preghiera cristiana rivolta alla Madonna; indica anche il suono delle campane al tramonto",
+    "examples": [
+      {
+        "it": "La nonna recitava un'avemaria prima di dormire.",
+        "fr": "La grand-mère récitait un Ave Maria avant de dormir."
+      }
+    ],
+    "synonyms": [
+      "preghiera"
+    ],
+    "isVerb": false
+  },
   "avercela": {
     "lemma": "avercela",
     "pos": "verbo pronominale (locuzione idiomatica)",
@@ -15923,6 +17133,23 @@
     ],
     "isVerb": true
   },
+  "avvallarsi": {
+    "lemma": "avvallarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'affaisser, descendre, s'enfoncer",
+    "definition_it": "scendere verso il basso formando un avvallamento o un pendio",
+    "examples": [
+      {
+        "it": "Il terreno si avvalla dolcemente fino al fiume.",
+        "fr": "Le terrain s'affaisse doucement jusqu'à la rivière."
+      }
+    ],
+    "synonyms": [
+      "abbassarsi",
+      "sprofondare"
+    ],
+    "isVerb": true
+  },
   "avvampare": {
     "lemma": "avvampare",
     "pos": "verbo (intransitivo, regolare)",
@@ -15974,6 +17201,22 @@
     ],
     "isVerb": true
   },
+  "avvelenatore": {
+    "lemma": "avvelenatore",
+    "pos": "sostantivo maschile",
+    "fr": "empoisonneur",
+    "definition_it": "persona che dà a qualcuno una sostanza dannosa per fargli del male o per ucciderlo",
+    "examples": [
+      {
+        "it": "La polizia cercava l'avvelenatore in tutta la città.",
+        "fr": "La police cherchait l'empoisonneur dans toute la ville."
+      }
+    ],
+    "synonyms": [
+      "assassino"
+    ],
+    "isVerb": false
+  },
   "avvenimento": {
     "lemma": "avvenimento",
     "pos": "nome (maschile)",
@@ -16023,6 +17266,23 @@
     "synonyms": [
       "scagliare",
       "lanciarsi"
+    ],
+    "isVerb": true
+  },
+  "avventarsi": {
+    "lemma": "avventarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se jeter sur, se ruer, foncer",
+    "definition_it": "lanciarsi con forza e improvvisamente contro qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "I cani si avventarono sul ladro che scappava.",
+        "fr": "Les chiens se jetèrent sur le voleur qui s'enfuyait."
+      }
+    ],
+    "synonyms": [
+      "scagliarsi",
+      "gettarsi"
     ],
     "isVerb": true
   },
@@ -16214,6 +17474,23 @@
     ],
     "isVerb": true
   },
+  "avviarsi": {
+    "lemma": "avviarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se mettre en route, s'acheminer",
+    "definition_it": "cominciare a camminare verso un luogo",
+    "examples": [
+      {
+        "it": "Salutò tutti e si avviò verso casa a piedi.",
+        "fr": "Il salua tout le monde et se mit en route vers la maison à pied."
+      }
+    ],
+    "synonyms": [
+      "incamminarsi",
+      "dirigersi"
+    ],
+    "isVerb": true
+  },
   "avvicinare": {
     "lemma": "avvicinare",
     "pos": "verbo (transitivo/pronominale)",
@@ -16227,6 +17504,23 @@
     ],
     "synonyms": [
       "accostare"
+    ],
+    "isVerb": true
+  },
+  "avvicinarsi": {
+    "lemma": "avvicinarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'approcher, se rapprocher",
+    "definition_it": "andare più vicino a una persona o a un luogo",
+    "examples": [
+      {
+        "it": "Si avvicinò alla finestra per vedere meglio la strada.",
+        "fr": "Il s'approcha de la fenêtre pour mieux voir la rue."
+      }
+    ],
+    "synonyms": [
+      "accostarsi",
+      "appressarsi"
     ],
     "isVerb": true
   },
@@ -16297,6 +17591,23 @@
       "abbracciare"
     ],
     "isVerb": true
+  },
+  "avvio": {
+    "lemma": "avvio",
+    "pos": "sostantivo maschile",
+    "fr": "démarrage, mise en route, début",
+    "definition_it": "momento in cui una macchina si mette in moto o un'attività comincia",
+    "examples": [
+      {
+        "it": "L'avvio dei lavori è previsto per settembre.",
+        "fr": "Le démarrage des travaux est prévu pour septembre."
+      }
+    ],
+    "synonyms": [
+      "inizio",
+      "partenza"
+    ],
+    "isVerb": false
   },
   "avvisare": {
     "lemma": "avvisare",

@@ -6,7 +6,7 @@ Application web de lecture pour apprendre l'italien : des textes gradués en ita
 
 ## Fonctionnalités
 
-- 📚 **454 textes en italien**, du A1 au C2, classés sur deux dimensions : **genre** (récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (cuisine, voyages, montagne, histoire, société…) — taxonomie définie dans `src/texts/category.json`
+- 📚 **460 textes en italien**, du A1 au C2, classés sur deux dimensions : **genre** (récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (cuisine, voyages, montagne, histoire, société…) — taxonomie définie dans `src/texts/category.json`
 - 🗂️ **Bibliothèque** avec filtres par niveau, genre et thème
 - 👆 **Traduction au clic** : cliquer sur un mot affiche sa traduction française ; possibilité de traduire la phrase entière
 - 🔊 **Lecture audio** en italien (voix it-IT via la Web Speech API), avec pause/reprise et trois vitesses
@@ -111,7 +111,7 @@ Voir [generator/README.md](generator/README.md) (pipeline catalogue, cron VPS), 
 
 ## Classici : catalogue de livres
 
-Section `/classici`, distincte des 454 textes gradués : des œuvres du domaine public en texte authentique (non simplifié), chapitre par chapitre, avec les mêmes fonctionnalités que le lecteur (traduction au clic, audio, quiz). Chaque livre est un manifeste `book.json` + un chunk JSON par chapitre dans `src/books/<id>/`, référencés dans `src/books/index.json`.
+Section `/classici`, distincte des 460 textes gradués : des œuvres du domaine public en texte authentique (non simplifié), chapitre par chapitre, avec les mêmes fonctionnalités que le lecteur (traduction au clic, audio, quiz). Chaque livre est un manifeste `book.json` + un chunk JSON par chapitre dans `src/books/<id>/`, référencés dans `src/books/index.json`.
 
 | Livre | Auteur | Niveau | Chapitres | Accès |
 |---|---|---|---:|---|

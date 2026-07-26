@@ -2,35 +2,55 @@
 import { computed, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
-import { computeVocabStats } from '../lib/vocab.js'
+import { loadVocabSummary, loadVocabLevel } from '../lib/admin.js'
 
+// Les statistiques sont précalculées lors de la synchronisation du contenu
+// (npm run sync:content) et lues ici : le contenu réservé n'étant plus dans
+// le build, les recalculer côté navigateur demanderait de télécharger tout
+// le catalogue depuis Firestore.
 const loading = ref(true)
 const error = ref('')
 const stats = ref(null)
 const openLevel = ref('')
 const search = ref('')
+const levelWords = ref({}) // liste des mots par niveau, chargée à la demande
 
 onMounted(async () => {
   try {
-    stats.value = await computeVocabStats()
+    stats.value = await loadVocabSummary()
+    if (!stats.value) {
+      error.value =
+        'Aucune statistique publiée — lancez « npm run sync:content » pour les calculer.'
+    }
   } catch (err) {
-    console.error('computeVocabStats a échoué :', err)
-    error.value = 'Impossible de calculer le vocabulaire du corpus.'
+    console.error('Lecture des statistiques de vocabulaire échouée :', err)
+    error.value = 'Impossible de lire le vocabulaire du corpus.'
   } finally {
     loading.value = false
   }
 })
 
-function toggleLevel(level) {
-  openLevel.value = openLevel.value === level ? '' : level
+async function toggleLevel(level) {
+  if (openLevel.value === level) {
+    openLevel.value = ''
+    return
+  }
+  openLevel.value = level
+  if (levelWords.value[level]) return
+  try {
+    levelWords.value = { ...levelWords.value, [level]: await loadVocabLevel(level) }
+  } catch (err) {
+    console.error(`Lecture du niveau ${level} échouée :`, err)
+    error.value = `Impossible de charger les mots du niveau ${level}.`
+  }
 }
 
 const filteredWords = computed(() => {
-  const level = stats.value?.levels.find((l) => l.level === openLevel.value)
-  if (!level) return []
+  const words = levelWords.value[openLevel.value]
+  if (!words) return []
   const q = search.value.trim().toLowerCase()
-  if (!q) return level.words
-  return level.words.filter(
+  if (!q) return words
+  return words.filter(
     (w) => w.word.includes(q) || w.translation?.toLowerCase().includes(q)
   )
 })
@@ -42,6 +62,7 @@ const filteredWords = computed(() => {
       <RouterLink :to="{ name: 'admin' }" class="tab" exact-active-class="active">Comptes</RouterLink>
       <RouterLink :to="{ name: 'admin-words' }" class="tab active">Mots</RouterLink>
       <RouterLink :to="{ name: 'admin-texts' }" class="tab" exact-active-class="active">Textes</RouterLink>
+      <RouterLink :to="{ name: 'admin-dictionary' }" class="tab" exact-active-class="active">Dizionario</RouterLink>
     </nav>
 
     <p v-if="error" class="notice error">⚠ {{ error }}</p>
@@ -83,12 +104,13 @@ const filteredWords = computed(() => {
             <span class="translation">{{ w.translation }}</span>
           </li>
         </ul>
-        <p v-if="!filteredWords.length" class="hint">Aucun mot ne correspond à ce filtre.</p>
+        <p v-if="!levelWords[openLevel]" class="hint">Chargement des mots du niveau…</p>
+        <p v-else-if="!filteredWords.length" class="hint">Aucun mot ne correspond à ce filtre.</p>
       </template>
       <p v-else class="hint">Cliquez sur un niveau pour afficher la liste des mots.</p>
     </template>
 
-    <p v-else-if="loading" class="hint">Calcul du vocabulaire du corpus…</p>
+    <p v-else-if="loading" class="hint">Chargement du vocabulaire du corpus…</p>
   </SceneLayout>
 </template>
 

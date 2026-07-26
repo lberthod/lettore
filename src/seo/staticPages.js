@@ -79,6 +79,11 @@ export const ROUTES = [
     title: 'Administration · Textes — Leggendo',
     noindex: true,
   },
+  {
+    path: '/admin/dizionario',
+    title: 'Administration · Dizionario — Leggendo',
+    noindex: true,
+  },
 ]
 
 export function findRoute(path) {

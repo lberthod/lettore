@@ -2,7 +2,8 @@
 // L'autorisation réelle est vérifiée côté serveur sur l'e-mail du compte
 // (ADMIN_EMAIL) : ce module ne fait que relayer les appels.
 
-import { getFunctionsInstance, getAuthInstance } from './firebase.js'
+import { getFunctionsInstance, getAuthInstance, getDbInstance } from './firebase.js'
+import { refreshUserRole } from './access.js'
 
 async function callable(name) {
   // Sur un rechargement direct de /admin, Firebase Auth restaure la session
@@ -29,8 +30,40 @@ export async function listUsers() {
   return data.users
 }
 
+// --- Statistiques de vocabulaire du corpus ---
+// Précalculées par scripts/sync-content.mjs et stockées dans `contentStats`,
+// lisible du seul compte admin (firestore.rules). Le contenu réservé n'étant
+// plus embarqué dans le build, la page admin ne peut plus les recalculer sans
+// télécharger tout le catalogue.
+
+async function contentStat(docId) {
+  const [db, fs] = await Promise.all([
+    getDbInstance(),
+    import('firebase/firestore'),
+  ])
+  if (!db) return null
+  const snap = await fs.getDoc(fs.doc(db, 'contentStats', docId))
+  return snap.exists() ? snap.data() : null
+}
+
+// { totalCount, levels: [{ level, count }], updatedAt } — ou null si la
+// synchronisation n'a jamais été lancée.
+export function loadVocabSummary() {
+  return contentStat('vocab-summary')
+}
+
+// Liste complète des mots d'un niveau : [{ word, translation }].
+export async function loadVocabLevel(level) {
+  const stat = await contentStat(`vocab-${level}`)
+  return stat?.data ? JSON.parse(stat.data) : []
+}
+
 // Change le rôle d'un compte : 'gratuit' | 'premium' | 'enseignant'.
 export async function setUserRole(uid, role) {
   const fn = await callable('adminSetUserRole')
   await fn({ uid, role })
+  // Rôle changé sur son propre compte : le token en cache porte encore
+  // l'ancienne claim, on le renouvelle tout de suite.
+  const auth = await getAuthInstance()
+  if (auth?.currentUser?.uid === uid) await refreshUserRole()
 }

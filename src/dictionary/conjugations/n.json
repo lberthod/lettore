@@ -1,0 +1,1189 @@
+{
+  "narrare": {
+    "presente": {
+      "io": "narro",
+      "tu": "narri",
+      "lui/lei": "narra",
+      "noi": "narriamo",
+      "voi": "narrate",
+      "loro": "narrano"
+    },
+    "passatoProssimo": {
+      "io": "ho narrato",
+      "tu": "hai narrato",
+      "lui/lei": "ha narrato",
+      "noi": "abbiamo narrato",
+      "voi": "avete narrato",
+      "loro": "hanno narrato"
+    },
+    "imperfetto": {
+      "io": "narravo",
+      "tu": "narravi",
+      "lui/lei": "narrava",
+      "noi": "narravamo",
+      "voi": "narravate",
+      "loro": "narravano"
+    },
+    "futuro": {
+      "io": "narrerò",
+      "tu": "narrerai",
+      "lui/lei": "narrerà",
+      "noi": "narreremo",
+      "voi": "narrerete",
+      "loro": "narreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "narri",
+      "tu": "narri",
+      "lui/lei": "narri",
+      "noi": "narriamo",
+      "voi": "narriate",
+      "loro": "narrino"
+    },
+    "condizionale": {
+      "io": "narrerei",
+      "tu": "narreresti",
+      "lui/lei": "narrerebbe",
+      "noi": "narreremmo",
+      "voi": "narrereste",
+      "loro": "narrerebbero"
+    },
+    "imperativo": {
+      "tu": "narra",
+      "lui/lei": "narri",
+      "noi": "narriamo",
+      "voi": "narrate",
+      "loro": "narrino"
+    }
+  },
+  "nascere": {
+    "presente": {
+      "io": "nasco",
+      "tu": "nasci",
+      "lui/lei": "nasce",
+      "noi": "nasciamo",
+      "voi": "nascete",
+      "loro": "nascono"
+    },
+    "passatoProssimo": {
+      "io": "sono nato",
+      "tu": "sei nato",
+      "lui/lei": "è nato",
+      "noi": "siamo nati",
+      "voi": "siete nati",
+      "loro": "sono nati"
+    },
+    "imperfetto": {
+      "io": "nascevo",
+      "tu": "nascevi",
+      "lui/lei": "nasceva",
+      "noi": "nascevamo",
+      "voi": "nascevate",
+      "loro": "nascevano"
+    },
+    "futuro": {
+      "io": "nascerò",
+      "tu": "nascerai",
+      "lui/lei": "nascerà",
+      "noi": "nasceremo",
+      "voi": "nascerete",
+      "loro": "nasceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nasca",
+      "tu": "nasca",
+      "lui/lei": "nasca",
+      "noi": "nasciamo",
+      "voi": "nasciate",
+      "loro": "nascano"
+    },
+    "condizionale": {
+      "io": "nascerei",
+      "tu": "nasceresti",
+      "lui/lei": "nascerebbe",
+      "noi": "nasceremmo",
+      "voi": "nascereste",
+      "loro": "nascerebbero"
+    },
+    "imperativo": {
+      "tu": "nasci",
+      "lui/lei": "nasca",
+      "noi": "nasciamo",
+      "voi": "nascete",
+      "loro": "nascano"
+    }
+  },
+  "nascondere": {
+    "presente": {
+      "io": "nascondo",
+      "tu": "nascondi",
+      "lui/lei": "nasconde",
+      "noi": "nascondiamo",
+      "voi": "nascondete",
+      "loro": "nascondono"
+    },
+    "passatoProssimo": {
+      "io": "ho nascosto",
+      "tu": "hai nascosto",
+      "lui/lei": "ha nascosto",
+      "noi": "abbiamo nascosto",
+      "voi": "avete nascosto",
+      "loro": "hanno nascosto"
+    },
+    "imperfetto": {
+      "io": "nascondevo",
+      "tu": "nascondevi",
+      "lui/lei": "nascondeva",
+      "noi": "nascondevamo",
+      "voi": "nascondevate",
+      "loro": "nascondevano"
+    },
+    "futuro": {
+      "io": "nasconderò",
+      "tu": "nasconderai",
+      "lui/lei": "nasconderà",
+      "noi": "nasconderemo",
+      "voi": "nasconderete",
+      "loro": "nasconderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "nasconda",
+      "tu": "nasconda",
+      "lui/lei": "nasconda",
+      "noi": "nascondiamo",
+      "voi": "nascondiate",
+      "loro": "nascondano"
+    },
+    "condizionale": {
+      "io": "nasconderei",
+      "tu": "nasconderesti",
+      "lui/lei": "nasconderebbe",
+      "noi": "nasconderemmo",
+      "voi": "nascondereste",
+      "loro": "nasconderebbero"
+    },
+    "imperativo": {
+      "tu": "nascondi",
+      "lui/lei": "nasconda",
+      "noi": "nascondiamo",
+      "voi": "nascondete",
+      "loro": "nascondano"
+    }
+  },
+  "naufragare": {
+    "presente": {
+      "io": "naufrago",
+      "tu": "naufraghi",
+      "lui/lei": "naufraga",
+      "noi": "naufraghiamo",
+      "voi": "naufragate",
+      "loro": "naufragano"
+    },
+    "passatoProssimo": {
+      "io": "sono naufragato",
+      "tu": "sei naufragato",
+      "lui/lei": "è naufragato",
+      "noi": "siamo naufragati",
+      "voi": "siete naufragati",
+      "loro": "sono naufragati"
+    },
+    "imperfetto": {
+      "io": "naufragavo",
+      "tu": "naufragavi",
+      "lui/lei": "naufragava",
+      "noi": "naufragavamo",
+      "voi": "naufragavate",
+      "loro": "naufragavano"
+    },
+    "futuro": {
+      "io": "naufragherò",
+      "tu": "naufragherai",
+      "lui/lei": "naufragherà",
+      "noi": "naufragheremo",
+      "voi": "naufragherete",
+      "loro": "naufragheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "naufraghi",
+      "tu": "naufraghi",
+      "lui/lei": "naufraghi",
+      "noi": "naufraghiamo",
+      "voi": "naufraghiate",
+      "loro": "naufraghino"
+    },
+    "condizionale": {
+      "io": "naufragherei",
+      "tu": "naufragheresti",
+      "lui/lei": "naufragherebbe",
+      "noi": "naufragheremmo",
+      "voi": "naufraghereste",
+      "loro": "naufragherebbero"
+    },
+    "imperativo": {
+      "tu": "naufraga",
+      "lui/lei": "naufraghi",
+      "noi": "naufraghiamo",
+      "voi": "naufragate",
+      "loro": "naufraghino"
+    }
+  },
+  "nauseare": {
+    "presente": {
+      "io": "nauseo",
+      "tu": "nausei",
+      "lui/lei": "nausea",
+      "noi": "nauseiamo",
+      "voi": "nauseate",
+      "loro": "nauseano"
+    },
+    "passatoProssimo": {
+      "io": "ho nauseato",
+      "tu": "hai nauseato",
+      "lui/lei": "ha nauseato",
+      "noi": "abbiamo nauseato",
+      "voi": "avete nauseato",
+      "loro": "hanno nauseato"
+    },
+    "imperfetto": {
+      "io": "nauseavo",
+      "tu": "nauseavi",
+      "lui/lei": "nauseava",
+      "noi": "nauseavamo",
+      "voi": "nauseavate",
+      "loro": "nauseavano"
+    },
+    "futuro": {
+      "io": "nauseerò",
+      "tu": "nauseerai",
+      "lui/lei": "nauseerà",
+      "noi": "nauseeremo",
+      "voi": "nauseerete",
+      "loro": "nauseeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nausei",
+      "tu": "nausei",
+      "lui/lei": "nausei",
+      "noi": "nauseiamo",
+      "voi": "nauseiate",
+      "loro": "nauseino"
+    },
+    "condizionale": {
+      "io": "nauseerei",
+      "tu": "nauseeresti",
+      "lui/lei": "nauseerebbe",
+      "noi": "nauseeremmo",
+      "voi": "nauseereste",
+      "loro": "nauseerebbero"
+    },
+    "imperativo": {
+      "tu": "nausea",
+      "lui/lei": "nausei",
+      "noi": "nauseiamo",
+      "voi": "nauseate",
+      "loro": "nauseino"
+    }
+  },
+  "necessitare": {
+    "presente": {
+      "io": "necessito",
+      "tu": "necessiti",
+      "lui/lei": "necessita",
+      "noi": "necessitiamo",
+      "voi": "necessitate",
+      "loro": "necessitano"
+    },
+    "passatoProssimo": {
+      "io": "ho necessitato",
+      "tu": "hai necessitato",
+      "lui/lei": "ha necessitato",
+      "noi": "abbiamo necessitato",
+      "voi": "avete necessitato",
+      "loro": "hanno necessitato"
+    },
+    "imperfetto": {
+      "io": "necessitavo",
+      "tu": "necessitavi",
+      "lui/lei": "necessitava",
+      "noi": "necessitavamo",
+      "voi": "necessitavate",
+      "loro": "necessitavano"
+    },
+    "futuro": {
+      "io": "necessiterò",
+      "tu": "necessiterai",
+      "lui/lei": "necessiterà",
+      "noi": "necessiteremo",
+      "voi": "necessiterete",
+      "loro": "necessiteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "necessiti",
+      "tu": "necessiti",
+      "lui/lei": "necessiti",
+      "noi": "necessitiamo",
+      "voi": "necessitiate",
+      "loro": "necessitino"
+    },
+    "condizionale": {
+      "io": "necessiterei",
+      "tu": "necessiteresti",
+      "lui/lei": "necessiterebbe",
+      "noi": "necessiteremmo",
+      "voi": "necessitereste",
+      "loro": "necessiterebbero"
+    },
+    "imperativo": {
+      "tu": "necessita",
+      "lui/lei": "necessiti",
+      "noi": "necessitiamo",
+      "voi": "necessitate",
+      "loro": "necessitino"
+    }
+  },
+  "negare": {
+    "presente": {
+      "io": "nego",
+      "tu": "neghi",
+      "lui/lei": "nega",
+      "noi": "neghiamo",
+      "voi": "negate",
+      "loro": "negano"
+    },
+    "passatoProssimo": {
+      "io": "ho negato",
+      "tu": "hai negato",
+      "lui/lei": "ha negato",
+      "noi": "abbiamo negato",
+      "voi": "avete negato",
+      "loro": "hanno negato"
+    },
+    "imperfetto": {
+      "io": "negavo",
+      "tu": "negavi",
+      "lui/lei": "negava",
+      "noi": "negavamo",
+      "voi": "negavate",
+      "loro": "negavano"
+    },
+    "futuro": {
+      "io": "negherò",
+      "tu": "negherai",
+      "lui/lei": "negherà",
+      "noi": "negheremo",
+      "voi": "negherete",
+      "loro": "negheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "neghi",
+      "tu": "neghi",
+      "lui/lei": "neghi",
+      "noi": "neghiamo",
+      "voi": "neghiate",
+      "loro": "neghino"
+    },
+    "condizionale": {
+      "io": "negherei",
+      "tu": "negheresti",
+      "lui/lei": "negherebbe",
+      "noi": "negheremmo",
+      "voi": "neghereste",
+      "loro": "negherebbero"
+    },
+    "imperativo": {
+      "tu": "nega",
+      "lui/lei": "neghi",
+      "noi": "neghiamo",
+      "voi": "negate",
+      "loro": "neghino"
+    }
+  },
+  "negoziare": {
+    "presente": {
+      "io": "negozio",
+      "tu": "negozi",
+      "lui/lei": "negozia",
+      "noi": "negoziamo",
+      "voi": "negoziate",
+      "loro": "negoziano"
+    },
+    "passatoProssimo": {
+      "io": "ho negoziato",
+      "tu": "hai negoziato",
+      "lui/lei": "ha negoziato",
+      "noi": "abbiamo negoziato",
+      "voi": "avete negoziato",
+      "loro": "hanno negoziato"
+    },
+    "imperfetto": {
+      "io": "negoziavo",
+      "tu": "negoziavi",
+      "lui/lei": "negoziava",
+      "noi": "negoziavamo",
+      "voi": "negoziavate",
+      "loro": "negoziavano"
+    },
+    "futuro": {
+      "io": "negozierò",
+      "tu": "negozierai",
+      "lui/lei": "negozierà",
+      "noi": "negozieremo",
+      "voi": "negozierete",
+      "loro": "negozieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "negozi",
+      "tu": "negozi",
+      "lui/lei": "negozi",
+      "noi": "negoziamo",
+      "voi": "negoziate",
+      "loro": "negozino"
+    },
+    "condizionale": {
+      "io": "negozierei",
+      "tu": "negozieresti",
+      "lui/lei": "negozierebbe",
+      "noi": "negozieremmo",
+      "voi": "negoziereste",
+      "loro": "negozierebbero"
+    },
+    "imperativo": {
+      "tu": "negozia",
+      "lui/lei": "negozi",
+      "noi": "negoziamo",
+      "voi": "negoziate",
+      "loro": "negozino"
+    }
+  },
+  "nevicare": {
+    "presente": {
+      "io": "nevico",
+      "tu": "nevichi",
+      "lui/lei": "nevica",
+      "noi": "nevichiamo",
+      "voi": "nevicate",
+      "loro": "nevicano"
+    },
+    "passatoProssimo": {
+      "lui/lei": "è nevicato (ha nevicato)",
+      "loro": "sono nevicati"
+    },
+    "imperfetto": {
+      "io": "nevicavo",
+      "tu": "nevicavi",
+      "lui/lei": "nevicava",
+      "noi": "nevicavamo",
+      "voi": "nevicavate",
+      "loro": "nevicavano"
+    },
+    "futuro": {
+      "io": "nevicherò",
+      "tu": "nevicherai",
+      "lui/lei": "nevicherà",
+      "noi": "nevicheremo",
+      "voi": "nevicherete",
+      "loro": "nevicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nevichi",
+      "tu": "nevichi",
+      "lui/lei": "nevichi",
+      "noi": "nevichiamo",
+      "voi": "nevichiate",
+      "loro": "nevichino"
+    },
+    "condizionale": {
+      "io": "nevicherei",
+      "tu": "nevicheresti",
+      "lui/lei": "nevicherebbe",
+      "noi": "nevicheremmo",
+      "voi": "nevichereste",
+      "loro": "nevicherebbero"
+    },
+    "imperativo": {}
+  },
+  "nidificare": {
+    "presente": {
+      "io": "nidifico",
+      "tu": "nidifichi",
+      "lui/lei": "nidifica",
+      "noi": "nidifichiamo",
+      "voi": "nidificate",
+      "loro": "nidificano"
+    },
+    "passatoProssimo": {
+      "io": "ho nidificato",
+      "tu": "hai nidificato",
+      "lui/lei": "ha nidificato",
+      "noi": "abbiamo nidificato",
+      "voi": "avete nidificato",
+      "loro": "hanno nidificato"
+    },
+    "imperfetto": {
+      "io": "nidificavo",
+      "tu": "nidificavi",
+      "lui/lei": "nidificava",
+      "noi": "nidificavamo",
+      "voi": "nidificavate",
+      "loro": "nidificavano"
+    },
+    "futuro": {
+      "io": "nidificherò",
+      "tu": "nidificherai",
+      "lui/lei": "nidificherà",
+      "noi": "nidificheremo",
+      "voi": "nidificherete",
+      "loro": "nidificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nidifichi",
+      "tu": "nidifichi",
+      "lui/lei": "nidifichi",
+      "noi": "nidifichiamo",
+      "voi": "nidifichiate",
+      "loro": "nidifichino"
+    },
+    "condizionale": {
+      "io": "nidificherei",
+      "tu": "nidificheresti",
+      "lui/lei": "nidificherebbe",
+      "noi": "nidificheremmo",
+      "voi": "nidifichereste",
+      "loro": "nidificherebbero"
+    },
+    "imperativo": {
+      "tu": "nidifica",
+      "lei": "nidifichi",
+      "noi": "nidifichiamo",
+      "voi": "nidificate",
+      "loro": "nidifichino"
+    }
+  },
+  "nitrire": {
+    "presente": {
+      "io": "nitrisco",
+      "tu": "nitrisci",
+      "lui/lei": "nitrisce",
+      "noi": "nitriamo",
+      "voi": "nitrite",
+      "loro": "nitriscono"
+    },
+    "passatoProssimo": {
+      "io": "ho nitrito",
+      "tu": "hai nitrito",
+      "lui/lei": "ha nitrito",
+      "noi": "abbiamo nitrito",
+      "voi": "avete nitrito",
+      "loro": "hanno nitrito"
+    },
+    "imperfetto": {
+      "io": "nitrivo",
+      "tu": "nitrivi",
+      "lui/lei": "nitriva",
+      "noi": "nitrivamo",
+      "voi": "nitrivate",
+      "loro": "nitrivano"
+    },
+    "futuro": {
+      "io": "nitrirò",
+      "tu": "nitrirai",
+      "lui/lei": "nitrirà",
+      "noi": "nitriremo",
+      "voi": "nitrirete",
+      "loro": "nitriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nitrisca",
+      "tu": "nitrisca",
+      "lui/lei": "nitrisca",
+      "noi": "nitriamo",
+      "voi": "nitriate",
+      "loro": "nitriscano"
+    },
+    "condizionale": {
+      "io": "nitrirei",
+      "tu": "nitriresti",
+      "lui/lei": "nitrirebbe",
+      "noi": "nitriremmo",
+      "voi": "nitrireste",
+      "loro": "nitrirebbero"
+    },
+    "imperativo": {
+      "tu": "nitrisci",
+      "lui/lei": "nitrisca",
+      "noi": "nitriamo",
+      "voi": "nitrite",
+      "loro": "nitriscano"
+    }
+  },
+  "nobilitare": {
+    "presente": {
+      "io": "nobilito",
+      "tu": "nobiliti",
+      "lui/lei": "nobilita",
+      "noi": "nobilitiamo",
+      "voi": "nobilitate",
+      "loro": "nobilitano"
+    },
+    "passatoProssimo": {
+      "io": "ho nobilitato",
+      "tu": "hai nobilitato",
+      "lui/lei": "ha nobilitato",
+      "noi": "abbiamo nobilitato",
+      "voi": "avete nobilitato",
+      "loro": "hanno nobilitato"
+    },
+    "imperfetto": {
+      "io": "nobilitavo",
+      "tu": "nobilitavi",
+      "lui/lei": "nobilitava",
+      "noi": "nobilitavamo",
+      "voi": "nobilitavate",
+      "loro": "nobilitavano"
+    },
+    "futuro": {
+      "io": "nobiliterò",
+      "tu": "nobiliterai",
+      "lui/lei": "nobiliterà",
+      "noi": "nobiliteremo",
+      "voi": "nobiliterete",
+      "loro": "nobiliteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nobiliti",
+      "tu": "nobiliti",
+      "lui/lei": "nobiliti",
+      "noi": "nobilitiamo",
+      "voi": "nobilitiate",
+      "loro": "nobilitino"
+    },
+    "condizionale": {
+      "io": "nobiliterei",
+      "tu": "nobiliteresti",
+      "lui/lei": "nobiliterebbe",
+      "noi": "nobiliteremmo",
+      "voi": "nobilitereste",
+      "loro": "nobiliterebbero"
+    },
+    "imperativo": {
+      "tu": "nobilita",
+      "lui/lei": "nobiliti",
+      "noi": "nobilitiamo",
+      "voi": "nobilitate",
+      "loro": "nobilitino"
+    }
+  },
+  "noleggiare": {
+    "presente": {
+      "io": "noleggio",
+      "tu": "noleggi",
+      "lui/lei": "noleggia",
+      "noi": "noleggiamo",
+      "voi": "noleggiate",
+      "loro": "noleggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho noleggiato",
+      "tu": "hai noleggiato",
+      "lui/lei": "ha noleggiato",
+      "noi": "abbiamo noleggiato",
+      "voi": "avete noleggiato",
+      "loro": "hanno noleggiato"
+    },
+    "imperfetto": {
+      "io": "noleggiavo",
+      "tu": "noleggiavi",
+      "lui/lei": "noleggiava",
+      "noi": "noleggiavamo",
+      "voi": "noleggiavate",
+      "loro": "noleggiavano"
+    },
+    "futuro": {
+      "io": "noleggerò",
+      "tu": "noleggerai",
+      "lui/lei": "noleggerà",
+      "noi": "noleggeremo",
+      "voi": "noleggerete",
+      "loro": "noleggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "noleggi",
+      "tu": "noleggi",
+      "lui/lei": "noleggi",
+      "noi": "noleggiamo",
+      "voi": "noleggiate",
+      "loro": "noleggino"
+    },
+    "condizionale": {
+      "io": "noleggerei",
+      "tu": "noleggeresti",
+      "lui/lei": "noleggerebbe",
+      "noi": "noleggeremmo",
+      "voi": "noleggereste",
+      "loro": "noleggerebbero"
+    },
+    "imperativo": {
+      "tu": "noleggia",
+      "lui/lei": "noleggi",
+      "noi": "noleggiamo",
+      "voi": "noleggiate",
+      "loro": "noleggino"
+    }
+  },
+  "nomare": {
+    "presente": {
+      "io": "nomo",
+      "tu": "nomi",
+      "lui/lei": "noma",
+      "noi": "nomiamo",
+      "voi": "nomate",
+      "loro": "nomano"
+    },
+    "passatoProssimo": {
+      "io": "ho nomato",
+      "tu": "hai nomato",
+      "lui/lei": "ha nomato",
+      "noi": "abbiamo nomato",
+      "voi": "avete nomato",
+      "loro": "hanno nomato"
+    },
+    "imperfetto": {
+      "io": "nomavo",
+      "tu": "nomavi",
+      "lui/lei": "nomava",
+      "noi": "nomavamo",
+      "voi": "nomavate",
+      "loro": "nomavano"
+    },
+    "futuro": {
+      "io": "nomerò",
+      "tu": "nomerai",
+      "lui/lei": "nomerà",
+      "noi": "nomeremo",
+      "voi": "nomerete",
+      "loro": "nomeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nomi",
+      "tu": "nomi",
+      "lui/lei": "nomi",
+      "noi": "nomiamo",
+      "voi": "nomiate",
+      "loro": "nomino"
+    },
+    "condizionale": {
+      "io": "nomerei",
+      "tu": "nomeresti",
+      "lui/lei": "nomerebbe",
+      "noi": "nomeremmo",
+      "voi": "nomereste",
+      "loro": "nomerebbero"
+    },
+    "imperativo": {
+      "tu": "noma",
+      "lui/lei": "nomi",
+      "noi": "nomiamo",
+      "voi": "nomate",
+      "loro": "nomino"
+    }
+  },
+  "nominare": {
+    "presente": {
+      "io": "nomino",
+      "tu": "nomini",
+      "lui/lei": "nomina",
+      "noi": "nominiamo",
+      "voi": "nominate",
+      "loro": "nominano"
+    },
+    "passatoProssimo": {
+      "io": "ho nominato",
+      "tu": "hai nominato",
+      "lui/lei": "ha nominato",
+      "noi": "abbiamo nominato",
+      "voi": "avete nominato",
+      "loro": "hanno nominato"
+    },
+    "imperfetto": {
+      "io": "nominavo",
+      "tu": "nominavi",
+      "lui/lei": "nominava",
+      "noi": "nominavamo",
+      "voi": "nominavate",
+      "loro": "nominavano"
+    },
+    "futuro": {
+      "io": "nominerò",
+      "tu": "nominerai",
+      "lui/lei": "nominerà",
+      "noi": "nomineremo",
+      "voi": "nominerete",
+      "loro": "nomineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nomini",
+      "tu": "nomini",
+      "lui/lei": "nomini",
+      "noi": "nominiamo",
+      "voi": "nominiate",
+      "loro": "nominino"
+    },
+    "condizionale": {
+      "io": "nominerei",
+      "tu": "nomineresti",
+      "lui/lei": "nominerebbe",
+      "noi": "nomineremmo",
+      "voi": "nominereste",
+      "loro": "nominerebbero"
+    },
+    "imperativo": {
+      "tu": "nomina",
+      "lui/lei": "nomini",
+      "noi": "nominiamo",
+      "voi": "nominate",
+      "loro": "nominino"
+    }
+  },
+  "notare": {
+    "presente": {
+      "io": "noto",
+      "tu": "noti",
+      "lui/lei": "nota",
+      "noi": "notiamo",
+      "voi": "notate",
+      "loro": "notano"
+    },
+    "passatoProssimo": {
+      "io": "ho notato",
+      "tu": "hai notato",
+      "lui/lei": "ha notato",
+      "noi": "abbiamo notato",
+      "voi": "avete notato",
+      "loro": "hanno notato"
+    },
+    "imperfetto": {
+      "io": "notavo",
+      "tu": "notavi",
+      "lui/lei": "notava",
+      "noi": "notavamo",
+      "voi": "notavate",
+      "loro": "notavano"
+    },
+    "futuro": {
+      "io": "noterò",
+      "tu": "noterai",
+      "lui/lei": "noterà",
+      "noi": "noteremo",
+      "voi": "noterete",
+      "loro": "noteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "noti",
+      "tu": "noti",
+      "lui/lei": "noti",
+      "noi": "notiamo",
+      "voi": "notiate",
+      "loro": "notino"
+    },
+    "condizionale": {
+      "io": "noterei",
+      "tu": "noteresti",
+      "lui/lei": "noterebbe",
+      "noi": "noteremmo",
+      "voi": "notereste",
+      "loro": "noterebbero"
+    },
+    "imperativo": {
+      "tu": "nota",
+      "lui/lei": "noti",
+      "noi": "notiamo",
+      "voi": "notate",
+      "loro": "notino"
+    }
+  },
+  "notificare": {
+    "presente": {
+      "io": "notifico",
+      "tu": "notifichi",
+      "lui/lei": "notifica",
+      "noi": "notifichiamo",
+      "voi": "notificate",
+      "loro": "notificano"
+    },
+    "passatoProssimo": {
+      "io": "ho notificato",
+      "tu": "hai notificato",
+      "lui/lei": "ha notificato",
+      "noi": "abbiamo notificato",
+      "voi": "avete notificato",
+      "loro": "hanno notificato"
+    },
+    "imperfetto": {
+      "io": "notificavo",
+      "tu": "notificavi",
+      "lui/lei": "notificava",
+      "noi": "notificavamo",
+      "voi": "notificavate",
+      "loro": "notificavano"
+    },
+    "futuro": {
+      "io": "notificherò",
+      "tu": "notificherai",
+      "lui/lei": "notificherà",
+      "noi": "notificheremo",
+      "voi": "notificherete",
+      "loro": "notificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "notifichi",
+      "tu": "notifichi",
+      "lui/lei": "notifichi",
+      "noi": "notifichiamo",
+      "voi": "notifichiate",
+      "loro": "notifichino"
+    },
+    "condizionale": {
+      "io": "notificherei",
+      "tu": "notificheresti",
+      "lui/lei": "notificherebbe",
+      "noi": "notificheremmo",
+      "voi": "notifichereste",
+      "loro": "notificherebbero"
+    },
+    "imperativo": {
+      "tu": "notifica",
+      "lui/lei": "notifichi",
+      "noi": "notifichiamo",
+      "voi": "notificate",
+      "loro": "notifichino"
+    }
+  },
+  "numerare": {
+    "presente": {
+      "io": "numero",
+      "tu": "numeri",
+      "lui/lei": "numera",
+      "noi": "numeriamo",
+      "voi": "numerate",
+      "loro": "numerano"
+    },
+    "passatoProssimo": {
+      "io": "ho numerato",
+      "tu": "hai numerato",
+      "lui/lei": "ha numerato",
+      "noi": "abbiamo numerato",
+      "voi": "avete numerato",
+      "loro": "hanno numerato"
+    },
+    "imperfetto": {
+      "io": "numeravo",
+      "tu": "numeravi",
+      "lui/lei": "numerava",
+      "noi": "numeravamo",
+      "voi": "numeravate",
+      "loro": "numeravano"
+    },
+    "futuro": {
+      "io": "numererò",
+      "tu": "numererai",
+      "lui/lei": "numererà",
+      "noi": "numereremo",
+      "voi": "numererete",
+      "loro": "numereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "numeri",
+      "tu": "numeri",
+      "lui/lei": "numeri",
+      "noi": "numeriamo",
+      "voi": "numeriate",
+      "loro": "numerino"
+    },
+    "condizionale": {
+      "io": "numererei",
+      "tu": "numereresti",
+      "lui/lei": "numererebbe",
+      "noi": "numereremmo",
+      "voi": "numerereste",
+      "loro": "numererebbero"
+    },
+    "imperativo": {
+      "tu": "numera",
+      "lui/lei": "numeri",
+      "noi": "numeriamo",
+      "voi": "numerate",
+      "loro": "numerino"
+    }
+  },
+  "nuocere": {
+    "presente": {
+      "io": "nuoccio",
+      "tu": "nuoci",
+      "lui/lei": "nuoce",
+      "noi": "nuociamo",
+      "voi": "nuocete",
+      "loro": "nuocciono"
+    },
+    "passatoProssimo": {
+      "io": "ho nociuto",
+      "tu": "hai nociuto",
+      "lui/lei": "ha nociuto",
+      "noi": "abbiamo nociuto",
+      "voi": "avete nociuto",
+      "loro": "hanno nociuto"
+    },
+    "imperfetto": {
+      "io": "nuocevo",
+      "tu": "nuocevi",
+      "lui/lei": "nuoceva",
+      "noi": "nuocevamo",
+      "voi": "nuocevate",
+      "loro": "nuocevano"
+    },
+    "futuro": {
+      "io": "nuocerò",
+      "tu": "nuocerai",
+      "lui/lei": "nuocerà",
+      "noi": "nuoceremo",
+      "voi": "nuocerete",
+      "loro": "nuoceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nuoccia",
+      "tu": "nuoccia",
+      "lui/lei": "nuoccia",
+      "noi": "nuociamo",
+      "voi": "nuociate",
+      "loro": "nuocciano"
+    },
+    "condizionale": {
+      "io": "nuocerei",
+      "tu": "nuoceresti",
+      "lui/lei": "nuocerebbe",
+      "noi": "nuoceremmo",
+      "voi": "nuocereste",
+      "loro": "nuocerebbero"
+    },
+    "imperativo": {
+      "tu": "nuoci",
+      "lui/lei": "nuoccia",
+      "noi": "nuociamo",
+      "voi": "nuocete",
+      "loro": "nuocciano"
+    }
+  },
+  "nuotare": {
+    "presente": {
+      "io": "nuoto",
+      "tu": "nuoti",
+      "lui/lei": "nuota",
+      "noi": "nuotiamo",
+      "voi": "nuotate",
+      "loro": "nuotano"
+    },
+    "passatoProssimo": {
+      "io": "ho nuotato",
+      "tu": "hai nuotato",
+      "lui/lei": "ha nuotato",
+      "noi": "abbiamo nuotato",
+      "voi": "avete nuotato",
+      "loro": "hanno nuotato"
+    },
+    "imperfetto": {
+      "io": "nuotavo",
+      "tu": "nuotavi",
+      "lui/lei": "nuotava",
+      "noi": "nuotavamo",
+      "voi": "nuotavate",
+      "loro": "nuotavano"
+    },
+    "futuro": {
+      "io": "nuoterò",
+      "tu": "nuoterai",
+      "lui/lei": "nuoterà",
+      "noi": "nuoteremo",
+      "voi": "nuoterete",
+      "loro": "nuoteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nuoti",
+      "tu": "nuoti",
+      "lui/lei": "nuoti",
+      "noi": "nuotiamo",
+      "voi": "nuotiate",
+      "loro": "nuotino"
+    },
+    "condizionale": {
+      "io": "nuoterei",
+      "tu": "nuoteresti",
+      "lui/lei": "nuoterebbe",
+      "noi": "nuoteremmo",
+      "voi": "nuotereste",
+      "loro": "nuoterebbero"
+    },
+    "imperativo": {
+      "tu": "nuota",
+      "lui/lei": "nuoti",
+      "noi": "nuotiamo",
+      "voi": "nuotate",
+      "loro": "nuotino"
+    }
+  },
+  "nutrire": {
+    "presente": {
+      "io": "nutro",
+      "tu": "nutri",
+      "lui/lei": "nutre",
+      "noi": "nutriamo",
+      "voi": "nutrite",
+      "loro": "nutrono"
+    },
+    "passatoProssimo": {
+      "io": "ho nutrito",
+      "tu": "hai nutrito",
+      "lui/lei": "ha nutrito",
+      "noi": "abbiamo nutrito",
+      "voi": "avete nutrito",
+      "loro": "hanno nutrito"
+    },
+    "imperfetto": {
+      "io": "nutrivo",
+      "tu": "nutrivi",
+      "lui/lei": "nutriva",
+      "noi": "nutrivamo",
+      "voi": "nutrivate",
+      "loro": "nutrivano"
+    },
+    "futuro": {
+      "io": "nutrirò",
+      "tu": "nutrirai",
+      "lui/lei": "nutrirà",
+      "noi": "nutriremo",
+      "voi": "nutrirete",
+      "loro": "nutriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "nutra",
+      "tu": "nutra",
+      "lui/lei": "nutra",
+      "noi": "nutriamo",
+      "voi": "nutriate",
+      "loro": "nutrano"
+    },
+    "condizionale": {
+      "io": "nutrirei",
+      "tu": "nutriresti",
+      "lui/lei": "nutrirebbe",
+      "noi": "nutriremmo",
+      "voi": "nutrireste",
+      "loro": "nutrirebbero"
+    },
+    "imperativo": {
+      "tu": "nutri",
+      "lui/lei": "nutra",
+      "noi": "nutriamo",
+      "voi": "nutrite",
+      "loro": "nutrano"
+    }
+  }
+}

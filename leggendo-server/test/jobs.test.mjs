@@ -10,7 +10,7 @@ function makeStore() {
 
 test('reserveJob crée le job et consomme l\'essai gratuit dans la même opération', async () => {
   const store = makeStore()
-  const user = { uid: 'u1', role: 'gratuit', premium: false }
+  const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
   const jobRef = store.jobsCollection.doc('job-1')
   const q = await store.reserveJob(user, jobRef, 'Mon titre', 'corto')
   assert.equal(q.trialUsed, true)
@@ -23,7 +23,7 @@ test('reserveJob crée le job et consomme l\'essai gratuit dans la même opérat
 
 test('reserveJob refuse et ne crée rien quand l\'essai gratuit est déjà consommé', async () => {
   const store = makeStore()
-  const user = { uid: 'u1', role: 'gratuit', premium: false }
+  const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
 
   await store.reserveJob(user, store.jobsCollection.doc('job-0'), 'Titre 0', 'corto')
   await store.jobsCollection.doc('job-0').update({ status: 'done' })
@@ -51,30 +51,89 @@ test('reserveJob consomme le coût en crédits selon la taille (Premium IA)', as
   assert.equal(q.monthlyUsed, 3) // "lungo" coûte 3 crédits
 })
 
-test('refundCredit rembourse un crédit consommé (Premium IA) après un échec technique', async () => {
+test('failJob rembourse un crédit consommé (Premium IA) après un échec technique', async () => {
   const store = makeStore()
   const user = { uid: 'u3', role: 'premium_plus', premium: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
-  await store.refundCredit(user, 'lungo')
+  assert.equal(await store.failJob('job-1', 'GLM indisponible'), true)
 
   const status = await store.getQuotaStatus(user)
   assert.equal(status.used, 0)
   assert.equal(status.remaining, MONTHLY_CREDITS.premium_plus)
+
+  const job = await store.jobsCollection.doc('job-1').get()
+  assert.equal(job.data().status, 'error')
+  assert.equal(job.data().error, 'GLM indisponible')
 })
 
-test('refundCredit restaure l\'essai gratuit après un échec technique', async () => {
+test('failJob restaure l\'essai gratuit après un échec technique', async () => {
   const store = makeStore()
-  const user = { uid: 'u1', role: 'gratuit', premium: false }
+  const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'corto')
-  await store.refundCredit(user, 'corto')
+  await store.failJob('job-1', 'échec technique')
 
   const status = await store.getQuotaStatus(user)
   assert.equal(status.remaining, 1)
 
   // L'essai est de nouveau utilisable après remboursement.
-  await store.jobsCollection.doc('job-1').update({ status: 'done' })
   const q = await store.reserveJob(user, store.jobsCollection.doc('job-2'), 'Titre 2', 'corto')
   assert.equal(q.trialUsed, true)
+})
+
+test('failJob ne rembourse qu\'une fois, même appelé plusieurs fois', async () => {
+  const store = makeStore()
+  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
+
+  assert.equal(await store.failJob('job-1', 'échec 1'), true)
+  assert.equal(await store.failJob('job-1', 'échec 2'), false, 'le job est déjà clôturé')
+
+  const status = await store.getQuotaStatus(user)
+  assert.equal(status.used, 0, 'un seul remboursement, pas de crédit offert en plus')
+  const job = await store.jobsCollection.doc('job-1').get()
+  assert.equal(job.data().error, 'échec 1', 'le second appel ne réécrit pas le job')
+})
+
+test('finishJob livre le résultat tant que le job est actif', async () => {
+  const store = makeStore()
+  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
+
+  assert.equal(await store.markRunning('job-1'), true)
+  assert.equal(await store.finishJob('job-1', { text: 'ciao' }), true)
+
+  const job = await store.jobsCollection.doc('job-1').get()
+  assert.equal(job.data().status, 'done')
+  assert.deepEqual(job.data().result, { text: 'ciao' })
+})
+
+test('finishJob ne livre pas le résultat d\'un job déjà clôturé et remboursé', async () => {
+  const store = makeStore()
+  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
+  await store.markRunning('job-1')
+
+  // Génération interminable : le job est déclaré bloqué et remboursé (par
+  // /my-job ou par la demande suivante) pendant que GLM répond encore.
+  await store.jobsCollection.doc('job-1').update({ createdAt: Date.now() - JOB_STUCK_MS - 1000 })
+  assert.equal(await store.activeJobFor('u3'), null)
+  assert.equal((await store.getQuotaStatus(user)).used, 0, 'le crédit a bien été rendu')
+
+  assert.equal(await store.finishJob('job-1', { text: 'ciao' }), false)
+  const job = await store.jobsCollection.doc('job-1').get()
+  assert.equal(job.data().status, 'error', 'le job reste en erreur')
+  assert.equal(job.data().result, undefined, 'aucun texte livré gratuitement')
+})
+
+test('markRunning ne réactive pas un job déjà clôturé', async () => {
+  const store = makeStore()
+  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
+  await store.failJob('job-1', 'clôturé entre-temps')
+
+  assert.equal(await store.markRunning('job-1'), false)
+  const job = await store.jobsCollection.doc('job-1').get()
+  assert.equal(job.data().status, 'error')
 })
 
 test('getQuotaStatus n\'écrit rien et ne consomme aucun crédit', async () => {
@@ -86,7 +145,7 @@ test('getQuotaStatus n\'écrit rien et ne consomme aucun crédit', async () => {
 
 test('activeJobFor retrouve le job en cours puis ne retrouve plus rien une fois terminé', async () => {
   const store = makeStore()
-  const user = { uid: 'u1', role: 'gratuit', premium: false }
+  const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
   const jobRef = store.jobsCollection.doc('job-1')
   await store.reserveJob(user, jobRef, 'Mon titre', 'corto')
 

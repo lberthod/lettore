@@ -4,20 +4,9 @@
 // sans requête. Firestore est importé dynamiquement, comme le reste du SDK :
 // rien ne pèse sur le bundle tant qu'on ne s'en sert pas.
 
-import { getFirebaseApp, firebaseReady } from './firebase.js'
-import { getAuthInstance } from './firebase.js'
-
-let dbPromise = null
-
-function getDb() {
-  if (!firebaseReady) return Promise.resolve(null)
-  if (!dbPromise) {
-    dbPromise = Promise.all([getFirebaseApp(), import('firebase/firestore')]).then(
-      ([app, { getFirestore }]) => getFirestore(app)
-    )
-  }
-  return dbPromise
-}
+// L'instance Firestore (avec son cache persistant) est partagée avec les
+// autres modules — voir getDbInstance() dans firebase.js.
+import { getDbInstance as getDb, getAuthInstance } from './firebase.js'
 
 async function requireUser() {
   const auth = await getAuthInstance()
@@ -27,21 +16,25 @@ async function requireUser() {
 }
 
 // Enregistre un texte généré : document complet + entrée dans l'index du
-// profil. Renvoie l'entrée d'index créée.
+// profil, dans une transaction (les deux écritures réussissent ou échouent
+// ensemble, pas de texte orphelin en cas de panne entre les deux ; et la
+// lecture-réécriture de l'index ne peut pas écraser un partage ou une
+// suppression faits depuis un autre onglet — cf. setUserTextPublic).
+// Idempotent par `textData.id` : un appel rejoué après un rechargement de
+// page (voir generation.js, résultat récupéré mais pas encore confirmé
+// enregistré) remplace l'entrée existante au lieu de la dupliquer dans
+// l'index — createdAt variant à chaque appel, arrayUnion() ne suffirait pas
+// à dédupliquer.
 export async function saveUserText(textData) {
   const [db, fs, user] = await Promise.all([
     getDb(),
     import('firebase/firestore'),
     requireUser(),
   ])
-  const { doc, setDoc, serverTimestamp, arrayUnion } = fs
+  const { doc, runTransaction, serverTimestamp } = fs
 
-  await setDoc(doc(db, 'userTexts', textData.id), {
-    ...textData,
-    owner: user.uid,
-    public: false,
-    createdAt: serverTimestamp(),
-  })
+  const userRef = doc(db, 'users', user.uid)
+  const textRef = doc(db, 'userTexts', textData.id)
 
   const entry = {
     id: textData.id,
@@ -52,13 +45,25 @@ export async function saveUserText(textData) {
     genre: textData.genre ?? null,
     size: textData.size ?? null,
     public: false,
-    createdAt: Date.now(), // serverTimestamp interdit dans arrayUnion
+    createdAt: Date.now(),
   }
-  await setDoc(
-    doc(db, 'users', user.uid),
-    { createdTexts: arrayUnion(entry) },
-    { merge: true }
-  )
+
+  await runTransaction(db, async (tx) => {
+    const snap = await tx.get(userRef)
+    const existing = snap.exists() ? snap.data().createdTexts || [] : []
+    tx.set(textRef, {
+      ...textData,
+      owner: user.uid,
+      public: false,
+      createdAt: serverTimestamp(),
+    })
+    tx.set(
+      userRef,
+      { createdTexts: [...existing.filter((e) => e.id !== entry.id), entry] },
+      { merge: true }
+    )
+  })
+
   return entry
 }
 
@@ -92,36 +97,46 @@ export async function loadUserText(id) {
 
 // Rend un texte public ou privé (partage par URL, sans compte requis pour le
 // lecteur). Seul l'auteur peut modifier ce champ (voir firestore.rules).
+// Transaction : lit puis réécrit l'index dans la même opération atomique,
+// pour que deux onglets ne s'écrasent pas mutuellement (read-modify-write).
 export async function setUserTextPublic(id, isPublic) {
   const [db, fs, user] = await Promise.all([
     getDb(),
     import('firebase/firestore'),
     requireUser(),
   ])
-  const { doc, updateDoc, getDoc, setDoc } = fs
-  await updateDoc(doc(db, 'userTexts', id), { public: isPublic })
-
+  const { doc, runTransaction } = fs
   const userRef = doc(db, 'users', user.uid)
-  const snap = await getDoc(userRef)
-  const entries = (snap.exists() ? snap.data().createdTexts || [] : []).map((e) =>
-    e.id === id ? { ...e, public: isPublic } : e
-  )
-  await setDoc(userRef, { createdTexts: entries }, { merge: true })
+  const textRef = doc(db, 'userTexts', id)
+
+  await runTransaction(db, async (tx) => {
+    const snap = await tx.get(userRef)
+    const entries = (snap.exists() ? snap.data().createdTexts || [] : []).map((e) =>
+      e.id === id ? { ...e, public: isPublic } : e
+    )
+    tx.update(textRef, { public: isPublic })
+    tx.set(userRef, { createdTexts: entries }, { merge: true })
+  })
 }
 
-// Supprime un texte créé (document + entrée d'index).
+// Supprime un texte créé (document + entrée d'index), dans une transaction
+// pour éviter les mêmes écrasements concurrents que setUserTextPublic.
 export async function deleteUserText(id) {
   const [db, fs, user] = await Promise.all([
     getDb(),
     import('firebase/firestore'),
     requireUser(),
   ])
-  const { doc, getDoc, setDoc, deleteDoc } = fs
-  await deleteDoc(doc(db, 'userTexts', id))
+  const { doc, runTransaction } = fs
   const userRef = doc(db, 'users', user.uid)
-  const snap = await getDoc(userRef)
-  const entries = (snap.exists() ? snap.data().createdTexts || [] : []).filter(
-    (e) => e.id !== id
-  )
-  await setDoc(userRef, { createdTexts: entries }, { merge: true })
+  const textRef = doc(db, 'userTexts', id)
+
+  await runTransaction(db, async (tx) => {
+    const snap = await tx.get(userRef)
+    const entries = (snap.exists() ? snap.data().createdTexts || [] : []).filter(
+      (e) => e.id !== id
+    )
+    tx.delete(textRef)
+    tx.set(userRef, { createdTexts: entries }, { merge: true })
+  })
 }

@@ -7,12 +7,15 @@
 // - Premium IA (rôle technique `premium_plus`) : 30 crédits par mois.
 // - Enseignant : 100 crédits par mois (inclut les droits Premium IA).
 // Coût par taille de texte (CREDIT_COST). Une génération qui échoue pour une
-// raison technique ne consomme pas de crédit — voir `refundCredit` dans
-// jobs.mjs, appelé quand un job se termine en erreur.
+// raison technique ne consomme pas de crédit — voir `failJob` dans jobs.mjs,
+// qui clôture le job et le rembourse dans la même transaction.
 
 export const FREE_TRIAL_CREDITS = 1
 export const MONTHLY_CREDITS = { premium_plus: 30, enseignant: 100 }
 export const CREDIT_COST = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
+
+export const EMAIL_NOT_VERIFIED =
+  'Vérifiez votre adresse e-mail pour lancer votre génération d’essai : un lien vous a été envoyé à l’inscription.'
 
 export function creditCost(sizeId) {
   return CREDIT_COST[sizeId] ?? 1
@@ -22,16 +25,30 @@ export function monthKey(now = new Date()) {
   return now.toISOString().slice(0, 7) // YYYY-MM
 }
 
-export function freshQuota(now = new Date()) {
-  return { trialUsed: false, monthlyUsed: 0, monthlyMonth: monthKey(now) }
+// Ancre de la période de crédits en cours. Priorité à `user.periodEnd` — la
+// date de fin de période Stripe (claim Firebase posée par
+// functions/index.js à partir de `subscription.current_period_end`) : elle
+// change à chaque renouvellement réel de l'abonnement, donc comparer cette
+// valeur à celle stockée dans le quota suffit à détecter un nouveau cycle,
+// quel que soit le jour du mois où l'abonnement a été souscrit (voir
+// README_TARIFICATION.md, § Règles des crédits). Pour un compte sans
+// abonnement Stripe (essai gratuit, rôle attribué à la main), on retombe sur
+// le mois civil UTC faute de date de référence.
+function periodAnchor(user, now) {
+  return user?.periodEnd ? `stripe:${user.periodEnd}` : monthKey(now)
 }
 
-// Remet à zéro le compteur mensuel si on a changé de mois. Le crédit d'essai
-// gratuit, lui, n'est jamais remis à zéro (c'est un capital à vie, pas
-// périodique).
-export function resetIfStale(q, now = new Date()) {
-  if (q.monthlyMonth !== monthKey(now)) {
-    q.monthlyMonth = monthKey(now)
+export function freshQuota(user, now = new Date()) {
+  return { trialUsed: false, monthlyUsed: 0, periodAnchor: periodAnchor(user, now) }
+}
+
+// Remet à zéro le compteur mensuel si on a changé de période de facturation.
+// Le crédit d'essai gratuit, lui, n'est jamais remis à zéro (c'est un
+// capital à vie, pas périodique).
+export function resetIfStale(user, q, now = new Date()) {
+  const anchor = periodAnchor(user, now)
+  if (q.periodAnchor !== anchor) {
+    q.periodAnchor = anchor
     q.monthlyUsed = 0
   }
   return q
@@ -61,6 +78,15 @@ export function quotaError(user, q, sizeId) {
   if (q.trialUsed) {
     return 'Génération d’essai déjà utilisée — passez à Premium IA pour continuer à créer vos propres textes.'
   }
+  // …et seulement une fois l'adresse e-mail vérifiée. C'est l'essai gratuit
+  // qui rend l'inscription en masse rentable pour un attaquant (un compte
+  // jetable = une génération payée par nous) : exiger une boîte aux lettres
+  // réelle casse l'automatisation à faible coût. Les rôles payants ne sont
+  // pas soumis à ce contrôle — ils ont déjà passé Stripe, et l'adresse de
+  // facturation peut différer de celle du compte Firebase.
+  if (!user.emailVerified) {
+    return EMAIL_NOT_VERIFIED
+  }
   return null
 }
 
@@ -76,7 +102,15 @@ export function quotaStatus(user, q) {
   if (user.role === 'premium') {
     return { type: 'no_access' }
   }
-  return { type: 'trial', used: q.trialUsed ? 1 : 0, remaining: q.trialUsed ? 0 : FREE_TRIAL_CREDITS }
+  // `emailVerified` sert à l'affichage : l'app invite à vérifier l'adresse
+  // avant de proposer le bouton plutôt que de laisser partir une requête
+  // qui sera refusée (voir quotaError et CreateTextView.vue).
+  return {
+    type: 'trial',
+    used: q.trialUsed ? 1 : 0,
+    remaining: q.trialUsed ? 0 : FREE_TRIAL_CREDITS,
+    emailVerified: Boolean(user.emailVerified),
+  }
 }
 
 export class QuotaExceededError extends Error {}

@@ -110,6 +110,7 @@ const fragileGenreCells = computed(() =>
       <RouterLink :to="{ name: 'admin' }" class="tab" exact-active-class="active">Comptes</RouterLink>
       <RouterLink :to="{ name: 'admin-words' }" class="tab" exact-active-class="active">Mots</RouterLink>
       <RouterLink :to="{ name: 'admin-texts' }" class="tab active">Textes</RouterLink>
+      <RouterLink :to="{ name: 'admin-dictionary' }" class="tab" exact-active-class="active">Dizionario</RouterLink>
     </nav>
 
     <div class="stats">

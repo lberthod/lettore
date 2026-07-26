@@ -20,7 +20,7 @@ if (!phase) {
   process.exit(1)
 }
 
-const CONTRACTION_RE = /^(all|dell|nell|sull|dall|coll)'(.+)$/
+const CONTRACTION_RE = /^(all|dell|nell|sull|dall|coll|quell|degli|dagli|negli|agli|sugli|sull|nient|sant|bell|quest|un|l|d|gl)'(.+)$/
 
 const allWords = JSON.parse(readFileSync(path.join(ROOT, 'scripts', 'data', 'dictionary-words.json'), 'utf8')).map((w) => w.word)
 const { wordIndex } = loadShardedDictionary()

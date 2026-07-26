@@ -95,8 +95,20 @@ dans `access.js`, il faut la répercuter à la main dans `prerender.mjs`.**
 
 ## À chaque déploiement
 
-- [ ] `npm run build` (génère sitemap/robots puis prérend automatiquement —
-      rien à lancer à part ça).
+L'ordre compte : le contenu réservé n'est plus dans le build (voir
+ARCHITECTURE.md, « Le contenu : les textes »), il doit être présent dans
+Firestore **avant** que la nouvelle version du site n'y accède.
+
+- [ ] `firebase deploy --only firestore` si `firestore.rules` ou
+      `firestore.indexes.json` ont changé (les exemptions d'index sur le champ
+      `data` sont indispensables : sans elles, la synchronisation échoue sur
+      les gros chapitres).
+- [ ] `export GOOGLE_APPLICATION_CREDENTIALS=…` puis `npm run sync:content`
+      (ajouter `--dry-run` pour vérifier d'abord, `--prune` après un retrait
+      de texte du catalogue). Ne réécrit que ce qui a changé.
+- [ ] `npm run build` (génère sitemap/robots, prérend, puis vérifie qu'aucun
+      contenu réservé ne se trouve dans `dist/` — le build échoue si c'est le
+      cas).
 - [ ] Upload du contenu de `dist/` vers la racine web Infomaniak en SFTP.
 - [ ] Vérifier après upload : `https://leggendo.fr/robots.txt`,
       `https://leggendo.fr/sitemap.xml`, et qu'une page texte

@@ -32,7 +32,7 @@ export function createJobStore(db) {
 
   // Recrédite dans `q` (objet quota déjà lu, pas encore réécrit) le coût
   // d'un job qu'on s'apprête à clôturer — utilisé aussi bien par
-  // reserveJob (job bloqué détecté au passage) que par refundCredit.
+  // reserveJob (job bloqué détecté au passage) que par failJob.
   function refundInto(q, role, sizeId) {
     if (role === 'premium_plus' || role === 'enseignant') {
       q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - creditCost(sizeId))
@@ -54,7 +54,7 @@ export function createJobStore(db) {
     const query = activeJobQuery(user.uid)
     return db.runTransaction(async (tx) => {
       const [quotaDoc, activeSnap] = await Promise.all([tx.get(quotaRef), tx.get(query)])
-      const q = resetIfStale(quotaDoc.exists ? quotaDoc.data() : freshQuota())
+      const q = resetIfStale(user, quotaDoc.exists ? quotaDoc.data() : freshQuota(user))
 
       if (!activeSnap.empty) {
         const activeDoc = activeSnap.docs[0]
@@ -89,19 +89,70 @@ export function createJobStore(db) {
     })
   }
 
-  // Rembourse le crédit consommé par `reserveJob` quand la génération
-  // échoue pour une raison technique (README_TARIFICATION.md : « une
-  // génération qui échoue [...] ne consomme pas de crédit »). Une nouvelle
-  // tentative automatique interne (retry GLM) ne compte pas comme une
-  // génération séparée — elle fait partie du même job, donc du même coût.
-  async function refundCredit(user, sizeId) {
-    const quotaRef = quotasCollection.doc(user.uid)
-    await db.runTransaction(async (tx) => {
-      const quotaDoc = await tx.get(quotaRef)
-      if (!quotaDoc.exists) return
-      const q = quotaDoc.data()
-      refundInto(q, user.role, sizeId)
-      tx.set(quotaRef, q)
+  // Clôture un job en erreur et rembourse son crédit dans la même
+  // transaction (README_TARIFICATION.md : « une génération qui échoue [...]
+  // ne consomme pas de crédit »). Une nouvelle tentative automatique interne
+  // (retry GLM) ne compte pas comme une génération séparée — elle fait partie
+  // du même job, donc du même coût.
+  //
+  // Deux garde-fous, tous deux nécessaires :
+  //  - la clôture n'a lieu que si le job est encore actif, sinon une
+  //    génération très longue viendrait écraser un job déjà clôturé ;
+  //  - le remboursement est borné par `creditRefundedAt`, posé dans la même
+  //    transaction, donc jamais rejoué (y compris si reserveJob a clôturé ce
+  //    job entre-temps).
+  // Renvoie true si c'est bien cet appel qui a clôturé le job.
+  async function failJob(jobId, message) {
+    const jobRef = jobsCollection.doc(jobId)
+    return db.runTransaction(async (tx) => {
+      const jobDoc = await tx.get(jobRef)
+      if (!jobDoc.exists) return false
+      const job = jobDoc.data()
+      if (job.status !== 'pending' && job.status !== 'running') return false
+      // Toutes les lectures avant la moindre écriture : Firestore refuse un
+      // tx.get() qui suit un tx.update() dans la même transaction.
+      const refundable = Boolean(!job.creditRefundedAt && job.sizeId && job.uid)
+      const quotaRef = refundable ? quotasCollection.doc(job.uid) : null
+      const quotaDoc = refundable ? await tx.get(quotaRef) : null
+      tx.update(jobRef, { status: 'error', error: message, creditRefundedAt: Date.now() })
+      if (quotaDoc && quotaDoc.exists) {
+        const q = quotaDoc.data()
+        // Le rôle enregistré à la réservation, pas celui du token courant :
+        // c'est lui qui a déterminé le débit, donc lui qui détermine le
+        // remboursement (un changement d'abonnement entre-temps ne doit pas
+        // recréditer la mauvaise ligne).
+        refundInto(q, job.role, job.sizeId)
+        tx.set(quotaRef, q)
+      }
+      return true
+    })
+  }
+
+  // Symétrique de failJob pour le succès : n'écrit le résultat que si le job
+  // est encore actif. Un job déjà clôturé a vu son crédit remboursé — le
+  // repasser en `done` livrerait la génération gratuitement.
+  async function finishJob(jobId, result) {
+    const jobRef = jobsCollection.doc(jobId)
+    return db.runTransaction(async (tx) => {
+      const jobDoc = await tx.get(jobRef)
+      if (!jobDoc.exists) return false
+      const job = jobDoc.data()
+      if (job.status !== 'pending' && job.status !== 'running') return false
+      tx.update(jobRef, { status: 'done', result, finishedAt: Date.now() })
+      return true
+    })
+  }
+
+  // Passe le job en `running` au démarrage effectif de la génération — même
+  // condition que ci-dessus : un job clôturé entre la réservation et le
+  // démarrage ne doit pas redevenir actif (il reverrouillerait le compte).
+  async function markRunning(jobId) {
+    const jobRef = jobsCollection.doc(jobId)
+    return db.runTransaction(async (tx) => {
+      const jobDoc = await tx.get(jobRef)
+      if (!jobDoc.exists || jobDoc.data().status !== 'pending') return false
+      tx.update(jobRef, { status: 'running' })
+      return true
     })
   }
 
@@ -110,7 +161,7 @@ export function createJobStore(db) {
   // prochaine vraie réservation.
   async function getQuotaStatus(user) {
     const quotaDoc = await quotasCollection.doc(user.uid).get()
-    const q = resetIfStale(quotaDoc.exists ? quotaDoc.data() : freshQuota())
+    const q = resetIfStale(user, quotaDoc.exists ? quotaDoc.data() : freshQuota(user))
     return quotaStatus(user, q)
   }
 
@@ -123,34 +174,12 @@ export function createJobStore(db) {
     await batch.commit()
   }
 
-  // Clôture un job détecté bloqué en dehors du chemin reserveJob (ex. lu via
-  // /my-job) et rembourse son crédit — transaction dédiée sur jobRef +
-  // quotaRef, protégée par `creditRefundedAt` pour ne jamais rembourser deux
-  // fois, y compris si reserveJob a entre-temps déjà clôturé ce même job.
-  async function closeStuckJob(id, job) {
-    const jobRef = jobsCollection.doc(id)
-    const quotaRef = quotasCollection.doc(job.uid)
-    await db.runTransaction(async (tx) => {
-      const freshDoc = await tx.get(jobRef)
-      if (!freshDoc.exists) return
-      const freshJob = freshDoc.data()
-      if (freshJob.status !== 'pending' && freshJob.status !== 'running') return
-      tx.update(jobRef, { status: 'error', error: STUCK_JOB_ERROR, creditRefundedAt: Date.now() })
-      if (!freshJob.creditRefundedAt && freshJob.sizeId) {
-        const quotaDoc = await tx.get(quotaRef)
-        if (quotaDoc.exists) {
-          const q = quotaDoc.data()
-          refundInto(q, freshJob.role, freshJob.sizeId)
-          tx.set(quotaRef, q)
-        }
-      }
-    })
-  }
-
   async function isActive(id, job) {
     if (job.status !== 'pending' && job.status !== 'running') return false
     if (Date.now() - job.createdAt > JOB_STUCK_MS) {
-      await closeStuckJob(id, job)
+      // Job bloqué détecté en dehors du chemin reserveJob (ex. lu via
+      // /my-job) : même clôture conditionnelle + remboursement idempotent.
+      await failJob(id, STUCK_JOB_ERROR)
       return false
     }
     return true
@@ -174,5 +203,15 @@ export function createJobStore(db) {
     return job && job.uid === uid ? job : null
   }
 
-  return { jobsCollection, reserveJob, refundCredit, getQuotaStatus, pruneJobs, activeJobFor, jobFor }
+  return {
+    jobsCollection,
+    reserveJob,
+    markRunning,
+    finishJob,
+    failJob,
+    getQuotaStatus,
+    pruneJobs,
+    activeJobFor,
+    jobFor,
+  }
 }

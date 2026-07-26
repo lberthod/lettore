@@ -69,13 +69,17 @@ Chaque texte vit dans `src/texts/<id>.json` et embarque tout ce dont le lecteur 
 
 La taxonomie du catalogue est définie dans [src/texts/category.json](src/texts/category.json) : niveaux (A1–C2), tailles (`corto` → `molto_lungo`), et deux dimensions orthogonales — **genre** (la forme : récit, dialogue, poésie, fable, SF, giallo, théâtre, lettre/journal, documentaire, pratique) × **thème** (le sujet : cuisine, voyages, montagne, histoire…). Ce fichier sert à la fois à l'UI (filtres, formulaire « Créer son texte ») et aux générateurs (hints de prompt, matrice curée).
 
-Le chargement à la demande repose sur `import.meta.glob('../texts/*.json')` dans [ReaderView.vue](src/views/ReaderView.vue) : Vite génère un chunk par fichier, et le lecteur ne télécharge que le texte demandé. Les textes précédent et suivant sont préchargés pour une navigation instantanée.
+**Seul l'aperçu gratuit est embarqué dans le build.** Un chunk JavaScript public reste téléchargeable par qui en connaît l'URL : tant que tout le catalogue était émis dans `dist/`, les gardes de route ne protégeaient que l'affichage. Le plugin `virtual:free-content` de [vite.config.js](vite.config.js) ne génère donc des `import()` que pour les 6 textes d'exemple et les chapitres de Classici gratuits (frontière calculée dans [catalogAccess.js](src/lib/catalogAccess.js), partagée avec les scripts via [scripts/lib/free-content.mjs](scripts/lib/free-content.mjs)). Le reste du catalogue vit dans Firestore (`catalogTexts`, `bookChapters`) et n'est servi qu'après vérification du rôle par [firestore.rules](firestore.rules) — c'est la seule barrière réelle.
+
+Côté app, tout passe par [protectedContent.js](src/lib/protectedContent.js) (`loadCatalogText`, `loadBookChapter`) : chunk local pour l'aperçu gratuit, document Firestore sinon, avec mémorisation en session (les textes précédent et suivant restent préchargés pour une navigation instantanée). Le hors-ligne est assuré par le cache persistant de l'instance Firestore partagée ([firebase.js](src/lib/firebase.js)) : un texte lu une fois avec autorisation reste lisible sans réseau.
+
+Publication : `npm run sync:content` ([scripts/sync-content.mjs](scripts/sync-content.mjs)) pousse les fichiers réservés vers Firestore (idempotent par empreinte SHA-256). Garde-fou : `npm run build` échoue si un contenu réservé réapparaît dans `dist/` ([scripts/check-build-leaks.mjs](scripts/check-build-leaks.mjs)).
 
 ### Production du catalogue : `generator/`
 
 Le catalogue est produit par LLM (GLM, endpoint compatible OpenAI) avec des scripts Node **sans dépendance npm**, pensés pour tourner en cron sur le VPS. Le script principal, [generator/orchestrate-matrix.mjs](generator/orchestrate-matrix.mjs), remplit la matrice curée genre × thème × niveau × taille de `category.json`. Invariant central, commun à tous les générateurs : la **couverture lexicale totale** — chaque mot et chaque phrase du texte doit avoir sa traduction, validé en reproduisant exactement le découpage du lecteur (`ReaderView`/`translate.js`), avec passes de réparation automatiques ; sinon le texte est rejeté. Sortie : `src/texts/<id>.json` + mise à jour de `index.json`. Voir [generator/README.md](generator/README.md).
 
-Le dossier `scripts/` contient l'ancien pipeline (API Claude, structured outputs) et les outils de publication Firestore (`draft → published`, [firestore.rules](firestore.rules)) — voir [scripts/README.md](scripts/README.md). Ce circuit Firestore-catalogue reste la direction envisagée pour servir les textes premium hors build, mais n'est pas branché côté app : aujourd'hui tout le catalogue est embarqué et l'accès est contrôlé côté client (voir « Accès » ci-dessous).
+Le dossier `scripts/` contient l'ancien pipeline (API Claude, structured outputs) et ses outils de publication Firestore (`draft → published` dans la collection `texts`, [firestore.rules](firestore.rules)) — voir [scripts/README.md](scripts/README.md). Ce circuit-là n'est pas branché côté app ; c'est `sync-content.mjs` (collections `catalogTexts`/`bookChapters`, ci-dessus) qui sert aujourd'hui le contenu réservé.
 
 ### Textes à la demande : « Créer son texte » (`leggendo-server/`)
 
@@ -137,6 +141,7 @@ Sur les stores (voir README, phase 3), cette brique sera remplacée par les acha
 
 ## Build et déploiement
 
-- **Vite 6** : `npm run build` → `dist/`, avec code-splitting automatique (une entrée + un chunk par vue lazy + un chunk par texte).
+- **Vite 6** : `npm run build` → `dist/`, avec code-splitting automatique (une entrée + un chunk par vue lazy + un chunk par contenu **gratuit**). Le `postbuild` prérend les pages SEO puis vérifie qu'aucun contenu réservé n'a fuité dans `dist/`.
 - **Firebase Hosting** : sert `dist/` en statique avec rewrite de toutes les routes vers `index.html`.
-- **PWA** : `vite-plugin-pwa` est actif (`registerType: 'autoUpdate'`) : manifest + service worker, précache de l'app et des textes — l'ensemble fonctionne hors ligne une fois chargé.
+- **Firestore** : contenu réservé (`npm run sync:content` à lancer **avant** le déploiement du hosting, après `firebase deploy --only firestore` pour les règles et les exemptions d'index).
+- **PWA** : `vite-plugin-pwa` est actif (`registerType: 'autoUpdate'`) : manifest + service worker, précache de l'app et de l'aperçu gratuit. Le contenu réservé, lui, est mis en cache par Firestore une fois lu — l'app reste utilisable hors ligne.

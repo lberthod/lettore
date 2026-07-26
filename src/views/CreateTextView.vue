@@ -10,6 +10,11 @@ import {
   resumeGeneration,
   fetchQuota,
 } from '../lib/generation.js'
+import {
+  sendVerificationEmail,
+  refreshEmailVerified,
+  errorMessage,
+} from '../lib/auth.js'
 
 const theme = ref('vita_quotidiana')
 const genre = ref('racconto')
@@ -30,13 +35,59 @@ watch(() => generation.status, (s) => {
   if (s === 'done' || s === 'error') refreshQuota()
 })
 
+// L'essai gratuit exige une adresse confirmée (leggendo-server/quota.mjs) :
+// sans cela, créer des comptes jetables en série suffirait à consommer le
+// fournisseur IA. Comparaison stricte à false : un serveur qui ne renvoie pas
+// encore le champ ne doit pas bloquer l'écran, c'est lui qui tranche.
+const needsVerification = computed(
+  () => quota.value?.type === 'trial' && quota.value.emailVerified === false
+)
+
 const sizeCost = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
 const canGenerate = computed(() => {
   if (!quota.value) return true // pas chargé : ne bloque pas, le serveur tranchera
   if (quota.value.type === 'no_access') return false
-  if (quota.value.type === 'trial') return quota.value.remaining > 0
+  if (quota.value.type === 'trial') {
+    return quota.value.remaining > 0 && !needsVerification.value
+  }
   return quota.value.remaining >= (sizeCost[size.value] || 1)
 })
+
+// Bandeau de vérification d'adresse : renvoi du lien, puis relecture du
+// quota une fois l'adresse confirmée (le serveur lit `email_verified` dans
+// l'ID token, qu'il faut donc renouveler — voir refreshEmailVerified).
+const verifyBusy = ref(false)
+const verifyInfo = ref('')
+const verifyError = ref('')
+
+async function resendVerification() {
+  verifyBusy.value = true
+  verifyInfo.value = verifyError.value = ''
+  try {
+    await sendVerificationEmail()
+    verifyInfo.value = 'Lien renvoyé — vérifiez votre boîte de réception (et les indésirables).'
+  } catch (e) {
+    verifyError.value = errorMessage(e)
+  } finally {
+    verifyBusy.value = false
+  }
+}
+
+async function checkVerification() {
+  verifyBusy.value = true
+  verifyInfo.value = verifyError.value = ''
+  try {
+    const verified = await refreshEmailVerified()
+    await refreshQuota()
+    if (!verified) {
+      verifyError.value = 'Adresse pas encore confirmée : ouvrez le lien reçu par e-mail, puis réessayez.'
+    }
+  } catch (e) {
+    verifyError.value = errorMessage(e)
+  } finally {
+    verifyBusy.value = false
+  }
+}
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1']
 const working = computed(() => generation.status === 'working')
@@ -119,6 +170,25 @@ function answer(qi, oi) {
       <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink> — votre
       formule actuelle ne l'inclut pas.
     </p>
+    <div
+      v-else-if="needsVerification && quota.remaining > 0"
+      class="quota-banner blocked"
+    >
+      <p class="verify-line">
+        Confirmez votre adresse e-mail pour débloquer votre génération d'essai :
+        un lien vous a été envoyé à l'inscription.
+      </p>
+      <p class="verify-actions">
+        <button type="button" class="link-btn" :disabled="verifyBusy" @click="resendVerification">
+          Renvoyer le lien
+        </button>
+        <button type="button" class="link-btn" :disabled="verifyBusy" @click="checkVerification">
+          J'ai confirmé mon adresse
+        </button>
+      </p>
+      <p v-if="verifyInfo" class="verify-info">{{ verifyInfo }}</p>
+      <p v-if="verifyError" class="verify-error">{{ verifyError }}</p>
+    </div>
     <p v-else-if="quota?.type === 'trial'" class="quota-banner">
       {{ quota.remaining > 0
         ? 'Il vous reste votre génération d’essai gratuite.'
@@ -371,6 +441,34 @@ function answer(qi, oi) {
   background: rgba(163, 58, 42, 0.08);
   border-color: rgba(163, 58, 42, 0.3);
   color: #a33a2a;
+}
+
+.verify-line,
+.verify-actions,
+.verify-info,
+.verify-error {
+  margin: 0;
+}
+
+.verify-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.verify-info {
+  margin-top: 0.4rem;
+  color: #3d7a3d;
+}
+
+.verify-error {
+  margin-top: 0.4rem;
+}
+
+.link-btn[disabled] {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .story {

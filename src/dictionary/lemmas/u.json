@@ -1,4 +1,40 @@
 {
+  "ubbediente": {
+    "lemma": "ubbediente",
+    "pos": "aggettivo",
+    "fr": "obéissant, docile",
+    "definition_it": "variante di ubbidiente: che esegue volentieri gli ordini e si sottomette alle regole.",
+    "examples": [
+      {
+        "it": "Erano bambini ubbedienti e rispettosi.",
+        "fr": "C'étaient des enfants obéissants et respectueux."
+      }
+    ],
+    "synonyms": [
+      "ubbidiente",
+      "obbediente",
+      "docile"
+    ],
+    "isVerb": false
+  },
+  "ubbidiente": {
+    "lemma": "ubbidiente",
+    "pos": "aggettivo",
+    "fr": "obéissant, docile, soumis",
+    "definition_it": "che ubbidisce, che si conforma senza opporsi alla volontà o agli ordini di un altro.",
+    "examples": [
+      {
+        "it": "Il cane, ubbidiente, si fermò al primo richiamo.",
+        "fr": "Le chien, obéissant, s'arrêta au premier appel."
+      }
+    ],
+    "synonyms": [
+      "obbediente",
+      "docile",
+      "sottomesso"
+    ],
+    "isVerb": false
+  },
   "ubbidienza": {
     "lemma": "ubbidienza",
     "pos": "nome femminile",
@@ -12,6 +48,110 @@
     ],
     "synonyms": [
       "obbedienza"
+    ],
+    "isVerb": false
+  },
+  "ubbidire": {
+    "lemma": "ubbidire",
+    "pos": "verbo (intransitivo)",
+    "fr": "obéir, se soumettre à",
+    "definition_it": "fare ciò che un altro comanda o conformarsi a una regola; per estensione, rispondere docilmente a un comando.",
+    "examples": [
+      {
+        "it": "I soldati ubbidirono senza discutere.",
+        "fr": "Les soldats obéirent sans discuter."
+      }
+    ],
+    "synonyms": [
+      "obbedire",
+      "sottomettersi",
+      "rispettare"
+    ],
+    "isVerb": true
+  },
+  "ubriacare": {
+    "lemma": "ubriacare",
+    "pos": "verbo (transitivo)",
+    "fr": "enivrer, saouler",
+    "definition_it": "far bere a qualcuno tanto alcol da fargli perdere lucidità; per estensione, stordire o esaltare.",
+    "examples": [
+      {
+        "it": "Quel vino forte lo ubriacò in pochi bicchieri.",
+        "fr": "Ce vin fort l'enivra en quelques verres."
+      }
+    ],
+    "synonyms": [
+      "inebriare",
+      "stordire"
+    ],
+    "isVerb": true
+  },
+  "ubriaco": {
+    "lemma": "ubriaco",
+    "pos": "aggettivo",
+    "fr": "ivre, saoul",
+    "definition_it": "che ha bevuto troppo alcol e ha perso il controllo di sé; per estensione, esaltato da un sentimento.",
+    "examples": [
+      {
+        "it": "Due uomini ubriachi cantavano in mezzo alla strada.",
+        "fr": "Deux hommes ivres chantaient au milieu de la rue."
+      }
+    ],
+    "synonyms": [
+      "brillo",
+      "alticcio",
+      "ebbro"
+    ],
+    "isVerb": false
+  },
+  "uccellaccio": {
+    "lemma": "uccellaccio",
+    "pos": "sostantivo (m.)",
+    "fr": "vilain oiseau, oiseau de malheur",
+    "definition_it": "uccello grande e brutto, spesso considerato di cattivo augurio",
+    "examples": [
+      {
+        "it": "Un uccellaccio nero gracchiava sul tetto della casa.",
+        "fr": "Un vilain oiseau noir croassait sur le toit de la maison."
+      }
+    ],
+    "synonyms": [
+      "corvo",
+      "avvoltoio"
+    ],
+    "isVerb": false
+  },
+  "uccelletto": {
+    "lemma": "uccelletto",
+    "pos": "sostantivo (m.)",
+    "fr": "petit oiseau, oiselet",
+    "definition_it": "uccello di piccole dimensioni, spesso giovane",
+    "examples": [
+      {
+        "it": "Gli uccelletti cinguettavano tra le foglie.",
+        "fr": "Les petits oiseaux gazouillaient parmi les feuilles."
+      }
+    ],
+    "synonyms": [
+      "uccellino",
+      "passero"
+    ],
+    "isVerb": false
+  },
+  "uccellino": {
+    "lemma": "uccellino",
+    "pos": "sostantivo (m.)",
+    "fr": "petit oiseau, oisillon",
+    "definition_it": "piccolo uccello, spesso appena nato o molto giovane",
+    "examples": [
+      {
+        "it": "L'uccellino è caduto dal nido.",
+        "fr": "L'oisillon est tombé du nid."
+      }
+    ],
+    "synonyms": [
+      "uccelletto",
+      "pulcino"
     ],
     "isVerb": false
   },
@@ -47,6 +187,40 @@
     ],
     "isVerb": true
   },
+  "uccidersi": {
+    "lemma": "uccidersi",
+    "pos": "verbo (riflessivo)",
+    "fr": "se tuer, se suicider",
+    "definition_it": "Togliersi volontariamente la vita, oppure darsi la morte a vicenda.",
+    "examples": [
+      {
+        "it": "Il protagonista del romanzo s'uccise per disperazione.",
+        "fr": "Le protagoniste du roman se tua par désespoir."
+      }
+    ],
+    "synonyms": [
+      "suicidarsi",
+      "ammazzarsi"
+    ],
+    "isVerb": true
+  },
+  "udienza": {
+    "lemma": "udienza",
+    "pos": "sostantivo (f.)",
+    "fr": "audience, séance",
+    "definition_it": "incontro concesso da un'autorità oppure seduta pubblica di un tribunale",
+    "examples": [
+      {
+        "it": "Le udienze del processo si terranno la prossima settimana.",
+        "fr": "Les audiences du procès auront lieu la semaine prochaine."
+      }
+    ],
+    "synonyms": [
+      "seduta",
+      "colloquio"
+    ],
+    "isVerb": false
+  },
   "udire": {
     "lemma": "udire",
     "pos": "verbo (transitivo, irregolare)",
@@ -64,6 +238,75 @@
     ],
     "isVerb": true
   },
+  "udito": {
+    "lemma": "udito",
+    "pos": "sostantivo (m.)",
+    "fr": "ouïe, audition",
+    "definition_it": "il senso che permette di percepire i suoni.",
+    "examples": [
+      {
+        "it": "Con l'età il suo udito si è indebolito.",
+        "fr": "Avec l'âge, son ouïe s'est affaiblie."
+      }
+    ],
+    "synonyms": [
+      "orecchio"
+    ],
+    "isVerb": false
+  },
+  "uditorio": {
+    "lemma": "uditorio",
+    "pos": "sostantivo (m.)",
+    "fr": "auditoire, public",
+    "definition_it": "l'insieme delle persone che ascoltano un discorso o un concerto.",
+    "examples": [
+      {
+        "it": "L'uditorio applaudì a lungo l'oratore.",
+        "fr": "L'auditoire applaudit longuement l'orateur."
+      }
+    ],
+    "synonyms": [
+      "pubblico",
+      "platea",
+      "assemblea"
+    ],
+    "isVerb": false
+  },
+  "ufficiale": {
+    "lemma": "ufficiale",
+    "pos": "aggettivo",
+    "fr": "officiel ; officier",
+    "definition_it": "che proviene da un'autorità riconosciuta ed è quindi valido; come sostantivo maschile, chi ha un grado superiore nell'esercito.",
+    "examples": [
+      {
+        "it": "La notizia non è ancora ufficiale.",
+        "fr": "La nouvelle n'est pas encore officielle."
+      }
+    ],
+    "synonyms": [
+      "autorizzato",
+      "formale",
+      "pubblico"
+    ],
+    "isVerb": false
+  },
+  "ufficialmente": {
+    "lemma": "ufficialmente",
+    "pos": "avverbio",
+    "fr": "officiellement",
+    "definition_it": "in modo ufficiale, con il riconoscimento di un'autorità.",
+    "examples": [
+      {
+        "it": "Il progetto è stato ufficialmente approvato.",
+        "fr": "Le projet a été officiellement approuvé."
+      }
+    ],
+    "synonyms": [
+      "formalmente",
+      "pubblicamente"
+    ],
+    "isVerb": false
+  },
   "ufficio": {
     "lemma": "ufficio",
     "pos": "nome maschile",
@@ -77,6 +320,24 @@
     ],
     "synonyms": [
       "studio"
+    ],
+    "isVerb": false
+  },
+  "uffizio": {
+    "lemma": "uffizio",
+    "pos": "sostantivo (m.)",
+    "fr": "office, charge (forme ancienne de « ufficio »)",
+    "definition_it": "forma antica e letteraria di ufficio, cioè incarico, funzione o servizio religioso.",
+    "examples": [
+      {
+        "it": "Adempì con onore al suo uffizio di giudice.",
+        "fr": "Il remplit avec honneur sa charge de juge."
+      }
+    ],
+    "synonyms": [
+      "ufficio",
+      "incarico",
+      "funzione"
     ],
     "isVerb": false
   },
@@ -97,6 +358,178 @@
     ],
     "isVerb": false
   },
+  "uggioso": {
+    "lemma": "uggioso",
+    "pos": "aggettivo",
+    "fr": "ennuyeux, maussade, morne",
+    "definition_it": "che dà noia o tristezza; detto anche del tempo grigio e piovoso",
+    "examples": [
+      {
+        "it": "Era una giornata uggiosa, con pioggia fine e cielo grigio.",
+        "fr": "C'était une journée maussade, avec une pluie fine et un ciel gris."
+      }
+    ],
+    "synonyms": [
+      "noioso",
+      "tedioso",
+      "grigio"
+    ],
+    "isVerb": false
+  },
+  "uguaglianza": {
+    "lemma": "uguaglianza",
+    "pos": "sostantivo femminile",
+    "fr": "égalité, parité",
+    "definition_it": "la condizione in cui tutte le persone hanno gli stessi diritti e lo stesso valore; anche il fatto che due cose siano identiche",
+    "examples": [
+      {
+        "it": "La Costituzione difende l'uguaglianza fra i cittadini.",
+        "fr": "La Constitution défend l'égalité entre les citoyens."
+      }
+    ],
+    "synonyms": [
+      "parità",
+      "equità",
+      "identità"
+    ],
+    "isVerb": false
+  },
+  "uguale": {
+    "lemma": "uguale",
+    "pos": "aggettivo",
+    "fr": "égal, identique, pareil",
+    "definition_it": "che ha la stessa forma, la stessa quantità o lo stesso valore di un altro.",
+    "examples": [
+      {
+        "it": "I due fratelli hanno un carattere uguale.",
+        "fr": "Les deux frères ont un caractère identique."
+      }
+    ],
+    "synonyms": [
+      "identico",
+      "pari",
+      "simile"
+    ],
+    "isVerb": false
+  },
+  "ugualmente": {
+    "lemma": "ugualmente",
+    "pos": "avverbio",
+    "fr": "également, quand même",
+    "definition_it": "in modo uguale, oppure comunque, nonostante tutto",
+    "examples": [
+      {
+        "it": "Anche se pioveva, siamo usciti ugualmente.",
+        "fr": "Même s'il pleuvait, nous sommes sortis quand même."
+      }
+    ],
+    "synonyms": [
+      "comunque",
+      "lo stesso"
+    ],
+    "isVerb": false
+  },
+  "uh": {
+    "lemma": "uh",
+    "pos": "interiezione",
+    "fr": "oh, ah, hein",
+    "definition_it": "esclamazione che esprime sorpresa, disappunto o dolore improvviso.",
+    "examples": [
+      {
+        "it": "Uh, che spavento mi hai fatto prendere!",
+        "fr": "Oh, quelle peur tu m'as faite !"
+      }
+    ],
+    "synonyms": [
+      "oh",
+      "ahi"
+    ],
+    "isVerb": false
+  },
+  "uhm": {
+    "lemma": "uhm",
+    "pos": "interiezione",
+    "fr": "hum, mouais",
+    "definition_it": "esclamazione che esprime dubbio, perplessità o riflessione.",
+    "examples": [
+      {
+        "it": "Uhm, non ne sono così sicuro.",
+        "fr": "Hum, je n'en suis pas si sûr."
+      }
+    ],
+    "synonyms": [
+      "mah",
+      "boh"
+    ],
+    "isVerb": false
+  },
+  "uliveto": {
+    "lemma": "uliveto",
+    "pos": "sostantivo maschile",
+    "fr": "oliveraie",
+    "definition_it": "campo piantato con molti alberi che danno le olive",
+    "examples": [
+      {
+        "it": "Al tramonto passeggiamo nell'uliveto dietro casa.",
+        "fr": "Au coucher du soleil, nous nous promenons dans l'oliveraie derrière la maison."
+      }
+    ],
+    "synonyms": [
+      "oliveto"
+    ],
+    "isVerb": false
+  },
+  "ulivo": {
+    "lemma": "ulivo",
+    "pos": "sostantivo (m.)",
+    "fr": "olivier",
+    "definition_it": "albero sempreverde tipico del Mediterraneo, dal cui frutto si ricava l'olio.",
+    "examples": [
+      {
+        "it": "All'ombra dell'ulivo c'era una vecchia panchina.",
+        "fr": "À l'ombre de l'olivier se trouvait un vieux banc."
+      }
+    ],
+    "synonyms": [
+      "olivo"
+    ],
+    "isVerb": false
+  },
+  "ulteriore": {
+    "lemma": "ulteriore",
+    "pos": "aggettivo",
+    "fr": "ultérieur, supplémentaire, nouveau",
+    "definition_it": "che si aggiunge a quanto già esiste o che viene dopo nel tempo.",
+    "examples": [
+      {
+        "it": "Serve un ulteriore controllo prima della consegna.",
+        "fr": "Un contrôle supplémentaire est nécessaire avant la livraison."
+      }
+    ],
+    "synonyms": [
+      "successivo",
+      "aggiuntivo",
+      "supplementare"
+    ],
+    "isVerb": false
+  },
+  "ultimamente": {
+    "lemma": "ultimamente",
+    "pos": "avverbio",
+    "fr": "dernièrement, ces derniers temps",
+    "definition_it": "nel periodo di tempo più recente, negli ultimi tempi.",
+    "examples": [
+      {
+        "it": "Ultimamente non lo vedo più in giro.",
+        "fr": "Dernièrement, je ne le vois plus dans le coin."
+      }
+    ],
+    "synonyms": [
+      "recentemente",
+      "di recente"
+    ],
+    "isVerb": false
+  },
   "ultimo": {
     "lemma": "ultimo",
     "pos": "aggettivo",
@@ -113,6 +546,39 @@
     ],
     "isVerb": false
   },
+  "ultra": {
+    "lemma": "ultra",
+    "pos": "aggettivo",
+    "fr": "ultra, extrémiste",
+    "definition_it": "invariabile, che porta una posizione o una qualità al grado estremo.",
+    "examples": [
+      {
+        "it": "Sostiene posizioni politiche ultra.",
+        "fr": "Il soutient des positions politiques ultra."
+      }
+    ],
+    "synonyms": [
+      "estremista",
+      "radicale"
+    ],
+    "isVerb": false
+  },
+  "umami": {
+    "lemma": "umami",
+    "pos": "sostantivo (m.)",
+    "fr": "umami",
+    "definition_it": "il quinto gusto fondamentale, sapido e intenso, tipico di brodi, formaggi stagionati e salsa di soia.",
+    "examples": [
+      {
+        "it": "Il parmigiano ha un forte sapore di umami.",
+        "fr": "Le parmesan a un fort goût d'umami."
+      }
+    ],
+    "synonyms": [
+      "sapidità"
+    ],
+    "isVerb": false
+  },
   "umanità": {
     "lemma": "umanità",
     "pos": "nome femminile",
@@ -122,6 +588,37 @@
       {
         "it": "Dobbiamo mostrare umanità verso chi soffre.",
         "fr": "Nous devons montrer de l'humanité envers ceux qui souffrent."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "umano": {
+    "lemma": "umano",
+    "pos": "aggettivo (anche sostantivo maschile)",
+    "fr": "humain ; compréhensif",
+    "definition_it": "che riguarda l'uomo o la sua natura; detto anche di chi è gentile e comprensivo verso gli altri",
+    "examples": [
+      {
+        "it": "È umano sbagliare qualche volta.",
+        "fr": "Il est humain de se tromper parfois."
+      }
+    ],
+    "synonyms": [
+      "comprensivo",
+      "benevolo"
+    ],
+    "isVerb": false
+  },
+  "umidità": {
+    "lemma": "umidità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "humidité",
+    "definition_it": "la quantità di acqua presente nell'aria o dentro un materiale",
+    "examples": [
+      {
+        "it": "In estate l'umidità rende l'aria pesante.",
+        "fr": "En été, l'humidité rend l'air lourd."
       }
     ],
     "synonyms": [],
@@ -143,6 +640,112 @@
     ],
     "isVerb": false
   },
+  "umile": {
+    "lemma": "umile",
+    "pos": "aggettivo",
+    "fr": "humble, modeste, simple",
+    "definition_it": "detto di chi non si vanta e non si crede superiore agli altri; detto anche di una cosa semplice e povera",
+    "examples": [
+      {
+        "it": "Nonostante il successo, è rimasto un uomo umile.",
+        "fr": "Malgré le succès, il est resté un homme humble."
+      }
+    ],
+    "synonyms": [
+      "modesto",
+      "semplice",
+      "dimesso"
+    ],
+    "isVerb": false
+  },
+  "umiliante": {
+    "lemma": "umiliante",
+    "pos": "aggettivo",
+    "fr": "humiliant",
+    "definition_it": "che offende la dignità di una persona facendola sentire inferiore",
+    "examples": [
+      {
+        "it": "La squadra subì una sconfitta umiliante.",
+        "fr": "L'équipe a subi une défaite humiliante."
+      }
+    ],
+    "synonyms": [
+      "mortificante",
+      "avvilente",
+      "degradante"
+    ],
+    "isVerb": false
+  },
+  "umiliare": {
+    "lemma": "umiliare",
+    "pos": "verbo (transitivo)",
+    "fr": "humilier, mortifier",
+    "definition_it": "ferire l'orgoglio di qualcuno facendolo sentire inferiore o indegno",
+    "examples": [
+      {
+        "it": "Non voleva umiliare l'avversario davanti al pubblico.",
+        "fr": "Il ne voulait pas humilier son adversaire devant le public."
+      }
+    ],
+    "synonyms": [
+      "mortificare",
+      "avvilire",
+      "offendere"
+    ],
+    "isVerb": true
+  },
+  "umiliazione": {
+    "lemma": "umiliazione",
+    "pos": "sostantivo femminile",
+    "fr": "humiliation, affront",
+    "definition_it": "la vergogna che si prova quando qualcuno ci tratta male o ci fa sentire piccoli davanti agli altri",
+    "examples": [
+      {
+        "it": "Perdere così davanti a tutti fu una vera umiliazione.",
+        "fr": "Perdre ainsi devant tout le monde fut une véritable humiliation."
+      }
+    ],
+    "synonyms": [
+      "mortificazione",
+      "offesa",
+      "onta"
+    ],
+    "isVerb": false
+  },
+  "umilmente": {
+    "lemma": "umilmente",
+    "pos": "avverbio",
+    "fr": "humblement",
+    "definition_it": "in modo umile, senza superbia né pretese",
+    "examples": [
+      {
+        "it": "Chiese umilmente scusa a tutti i presenti.",
+        "fr": "Il demanda humblement pardon à toutes les personnes présentes."
+      }
+    ],
+    "synonyms": [
+      "modestamente",
+      "dimessamente"
+    ],
+    "isVerb": false
+  },
+  "umiltà": {
+    "lemma": "umiltà",
+    "pos": "sostantivo (f.)",
+    "fr": "humilité",
+    "definition_it": "la qualità di chi riconosce i propri limiti e non si mette in mostra",
+    "examples": [
+      {
+        "it": "Accettò il premio con grande umiltà.",
+        "fr": "Il accepta le prix avec une grande humilité."
+      }
+    ],
+    "synonyms": [
+      "modestia",
+      "semplicità"
+    ],
+    "isVerb": false
+  },
   "umore": {
     "lemma": "umore",
     "pos": "nome maschile",
@@ -155,6 +758,41 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "umorismo": {
+    "lemma": "umorismo",
+    "pos": "sostantivo maschile",
+    "fr": "humour",
+    "definition_it": "la capacità di vedere e di mostrare il lato divertente delle cose",
+    "examples": [
+      {
+        "it": "Racconta le sue disavventure con molto umorismo.",
+        "fr": "Il raconte ses mésaventures avec beaucoup d'humour."
+      }
+    ],
+    "synonyms": [
+      "spirito",
+      "comicità",
+      "ironia"
+    ],
+    "isVerb": false
+  },
+  "un po'": {
+    "lemma": "un po'",
+    "pos": "avverbio",
+    "fr": "un peu",
+    "definition_it": "in quantità o misura piccola; alquanto, per un breve tempo",
+    "examples": [
+      {
+        "it": "Aspetta un po', arrivo subito.",
+        "fr": "Attends un peu, j'arrive tout de suite."
+      }
+    ],
+    "synonyms": [
+      "alquanto",
+      "leggermente"
+    ],
     "isVerb": false
   },
   "unanimità": {
@@ -170,6 +808,85 @@
     ],
     "synonyms": [
       "consenso"
+    ],
+    "isVerb": false
+  },
+  "uncino": {
+    "lemma": "uncino",
+    "pos": "sostantivo (m.)",
+    "fr": "crochet",
+    "definition_it": "ferro ricurvo e appuntito che serve ad appendere o ad afferrare oggetti",
+    "examples": [
+      {
+        "it": "Appese la giacca bagnata a un uncino.",
+        "fr": "Il accrocha sa veste mouillée à un crochet."
+      }
+    ],
+    "synonyms": [
+      "gancio",
+      "rampino"
+    ],
+    "isVerb": false
+  },
+  "undicesimo": {
+    "lemma": "undicesimo",
+    "pos": "aggettivo numerale ordinale / nome (maschile)",
+    "fr": "onzième",
+    "definition_it": "che occupa il numero undici in una serie, dopo il decimo",
+    "examples": [
+      {
+        "it": "Abita all'undicesimo piano di questo palazzo.",
+        "fr": "Il habite au onzième étage de cet immeuble."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "undici": {
+    "lemma": "undici",
+    "pos": "aggettivo",
+    "fr": "onze",
+    "definition_it": "numero naturale che segue il dieci e precede il dodici",
+    "examples": [
+      {
+        "it": "Mio figlio compie undici anni domani.",
+        "fr": "Mon fils fête ses onze ans demain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "unghia": {
+    "lemma": "unghia",
+    "pos": "sostantivo femminile",
+    "fr": "ongle, griffe",
+    "definition_it": "la parte dura che cresce sulla punta delle dita delle mani e dei piedi",
+    "examples": [
+      {
+        "it": "Si è rotta un'unghia aprendo la scatola.",
+        "fr": "Elle s'est cassé un ongle en ouvrant la boîte."
+      }
+    ],
+    "synonyms": [
+      "artiglio"
+    ],
+    "isVerb": false
+  },
+  "unicamente": {
+    "lemma": "unicamente",
+    "pos": "avverbio",
+    "fr": "uniquement, seulement",
+    "definition_it": "in modo esclusivo, senza nient'altro oltre a ciò che si indica.",
+    "examples": [
+      {
+        "it": "Lo faccio unicamente per te.",
+        "fr": "Je le fais uniquement pour toi."
+      }
+    ],
+    "synonyms": [
+      "soltanto",
+      "esclusivamente",
+      "solamente"
     ],
     "isVerb": false
   },
@@ -190,6 +907,42 @@
     ],
     "isVerb": false
   },
+  "unificare": {
+    "lemma": "unificare",
+    "pos": "verbo (transitivo)",
+    "fr": "unifier, uniformiser",
+    "definition_it": "riunire in un solo insieme cose o parti prima separate, rendendole omogenee.",
+    "examples": [
+      {
+        "it": "Il re riuscì a unificare il paese.",
+        "fr": "Le roi réussit à unifier le pays."
+      }
+    ],
+    "synonyms": [
+      "unire",
+      "uniformare",
+      "accorpare"
+    ],
+    "isVerb": true
+  },
+  "uniforme": {
+    "lemma": "uniforme",
+    "pos": "sostantivo femminile e aggettivo",
+    "fr": "uniforme (vêtement) ; uniforme, régulier, constant",
+    "definition_it": "come nome, vestito uguale per tutte le persone di un gruppo, come i soldati o gli studenti; come aggettivo, che resta sempre uguale, senza differenze né cambiamenti",
+    "examples": [
+      {
+        "it": "I ragazzi della scuola indossano un'uniforme blu.",
+        "fr": "Les élèves de l'école portent un uniforme bleu."
+      }
+    ],
+    "synonyms": [
+      "divisa",
+      "costante",
+      "regolare"
+    ],
+    "isVerb": false
+  },
   "unione": {
     "lemma": "unione",
     "pos": "sostantivo femminile",
@@ -206,6 +959,24 @@
       "alleanza"
     ],
     "isVerb": false
+  },
+  "unire": {
+    "lemma": "unire",
+    "pos": "verbo (transitivo)",
+    "fr": "unir, joindre, relier",
+    "definition_it": "mettere insieme due o più cose o persone in modo che formino un tutto unico.",
+    "examples": [
+      {
+        "it": "Un ponte unisce le due rive del fiume.",
+        "fr": "Un pont relie les deux rives du fleuve."
+      }
+    ],
+    "synonyms": [
+      "collegare",
+      "congiungere",
+      "legare"
+    ],
+    "isVerb": true
   },
   "unisono": {
     "lemma": "unisono",
@@ -237,6 +1008,24 @@
     ],
     "isVerb": false
   },
+  "universale": {
+    "lemma": "universale",
+    "pos": "aggettivo",
+    "fr": "universel",
+    "definition_it": "che riguarda tutti gli uomini o tutte le cose, senza eccezioni",
+    "examples": [
+      {
+        "it": "La musica è un linguaggio universale.",
+        "fr": "La musique est un langage universel."
+      }
+    ],
+    "synonyms": [
+      "generale",
+      "globale",
+      "mondiale"
+    ],
+    "isVerb": false
+  },
   "università": {
     "lemma": "università",
     "pos": "nome femminile",
@@ -250,6 +1039,22 @@
     ],
     "synonyms": [
       "ateneo"
+    ],
+    "isVerb": false
+  },
+  "universitario": {
+    "lemma": "universitario",
+    "pos": "aggettivo",
+    "fr": "universitaire",
+    "definition_it": "che appartiene o si riferisce all'università",
+    "examples": [
+      {
+        "it": "Mia sorella frequenta i corsi universitari di medicina.",
+        "fr": "Ma sœur suit les cours universitaires de médecine."
+      }
+    ],
+    "synonyms": [
+      "accademico"
     ],
     "isVerb": false
   },
@@ -281,6 +1086,59 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "unquanche": {
+    "lemma": "unquanche",
+    "pos": "avverbio",
+    "fr": "jamais, en aucun temps",
+    "definition_it": "forma antica e letteraria che significa «mai», «in nessun tempo»",
+    "examples": [
+      {
+        "it": "Unquanche vidi cosa così bella.",
+        "fr": "Jamais je ne vis chose aussi belle."
+      }
+    ],
+    "synonyms": [
+      "mai",
+      "unqua"
+    ],
+    "isVerb": false
+  },
+  "unto": {
+    "lemma": "unto",
+    "pos": "aggettivo",
+    "fr": "gras, graisseux, huileux",
+    "definition_it": "coperto o impregnato di olio o di grasso",
+    "examples": [
+      {
+        "it": "Aveva le mani unte di olio.",
+        "fr": "Il avait les mains grasses d'huile."
+      }
+    ],
+    "synonyms": [
+      "grasso",
+      "oleoso",
+      "untuoso"
+    ],
+    "isVerb": false
+  },
+  "untuoso": {
+    "lemma": "untuoso",
+    "pos": "aggettivo",
+    "fr": "onctueux, graisseux, mielleux",
+    "definition_it": "che è grasso al tatto; in senso figurato, che è falsamente gentile e servile",
+    "examples": [
+      {
+        "it": "Il commerciante mi accolse con un sorriso untuoso.",
+        "fr": "Le commerçant m'accueillit avec un sourire mielleux."
+      }
+    ],
+    "synonyms": [
+      "oleoso",
+      "melenso",
+      "servile"
+    ],
     "isVerb": false
   },
   "uomo": {
@@ -315,6 +1173,60 @@
     "synonyms": [],
     "isVerb": false
   },
+  "uragano": {
+    "lemma": "uragano",
+    "pos": "sostantivo (m.)",
+    "fr": "ouragan",
+    "definition_it": "violentissimo vento ciclonico accompagnato da piogge e distruzione",
+    "examples": [
+      {
+        "it": "L'uragano ha devastato i villaggi della costa.",
+        "fr": "L'ouragan a dévasté les villages de la côte."
+      }
+    ],
+    "synonyms": [
+      "ciclone",
+      "tempesta",
+      "bufera"
+    ],
+    "isVerb": false
+  },
+  "urbano": {
+    "lemma": "urbano",
+    "pos": "aggettivo",
+    "fr": "urbain, citadin ; courtois",
+    "definition_it": "che riguarda la città; detto anche di persona cortese e civile nei modi",
+    "examples": [
+      {
+        "it": "I trasporti urbani funzionano anche di notte.",
+        "fr": "Les transports urbains fonctionnent aussi la nuit."
+      }
+    ],
+    "synonyms": [
+      "cittadino",
+      "civico",
+      "cortese"
+    ],
+    "isVerb": false
+  },
+  "urgente": {
+    "lemma": "urgente",
+    "pos": "aggettivo",
+    "fr": "urgent, pressant",
+    "definition_it": "che richiede di essere fatto o risolto senza alcun ritardo",
+    "examples": [
+      {
+        "it": "Ho ricevuto un messaggio urgente dal direttore.",
+        "fr": "J'ai reçu un message urgent du directeur."
+      }
+    ],
+    "synonyms": [
+      "impellente",
+      "pressante",
+      "improrogabile"
+    ],
+    "isVerb": false
+  },
   "urgenza": {
     "lemma": "urgenza",
     "pos": "nome femminile",
@@ -329,6 +1241,41 @@
     "synonyms": [],
     "isVerb": false
   },
+  "urina": {
+    "lemma": "urina",
+    "pos": "sostantivo (f.)",
+    "fr": "urine",
+    "definition_it": "liquido prodotto dai reni ed eliminato dall'organismo attraverso la vescica",
+    "examples": [
+      {
+        "it": "Il medico ha chiesto un esame delle urine.",
+        "fr": "Le médecin a demandé une analyse d'urine."
+      }
+    ],
+    "synonyms": [
+      "orina",
+      "piscio"
+    ],
+    "isVerb": false
+  },
+  "urlare": {
+    "lemma": "urlare",
+    "pos": "verbo (intransitivo)",
+    "fr": "crier, hurler",
+    "definition_it": "emettere grida forti e prolungate, per dolore, rabbia o paura",
+    "examples": [
+      {
+        "it": "I bambini urlavano di gioia nel cortile.",
+        "fr": "Les enfants criaient de joie dans la cour."
+      }
+    ],
+    "synonyms": [
+      "gridare",
+      "strillare",
+      "berciare"
+    ],
+    "isVerb": true
+  },
   "urlo": {
     "lemma": "urlo",
     "pos": "nome maschile (plurale irregolare femminile: urla, anche urli)",
@@ -342,6 +1289,60 @@
     ],
     "synonyms": [
       "grido"
+    ],
+    "isVerb": false
+  },
+  "urtare": {
+    "lemma": "urtare",
+    "pos": "verbo (transitivo)",
+    "fr": "heurter, cogner, froisser",
+    "definition_it": "colpire qualcosa o qualcuno muovendosi contro di esso; in senso figurato, infastidire o offendere",
+    "examples": [
+      {
+        "it": "Nel buio ho urtato lo spigolo del tavolo.",
+        "fr": "Dans le noir, j'ai heurté le coin de la table."
+      }
+    ],
+    "synonyms": [
+      "cozzare",
+      "sbattere",
+      "infastidire"
+    ],
+    "isVerb": true
+  },
+  "urto": {
+    "lemma": "urto",
+    "pos": "sostantivo (m.)",
+    "fr": "choc, heurt, collision",
+    "definition_it": "colpo violento prodotto da due corpi che si scontrano; per estensione, contrasto tra persone o idee",
+    "examples": [
+      {
+        "it": "L'urto tra le due auto è stato molto violento.",
+        "fr": "Le choc entre les deux voitures a été très violent."
+      }
+    ],
+    "synonyms": [
+      "scontro",
+      "collisione",
+      "colpo"
+    ],
+    "isVerb": false
+  },
+  "usanza": {
+    "lemma": "usanza",
+    "pos": "sostantivo femminile",
+    "fr": "coutume, usage, tradition",
+    "definition_it": "modo di fare che si ripete da molto tempo in un luogo, in un gruppo o in una famiglia",
+    "examples": [
+      {
+        "it": "In questo paese c'è l'usanza di accendere un grande fuoco a gennaio.",
+        "fr": "Dans ce village, il y a la coutume d'allumer un grand feu en janvier."
+      }
+    ],
+    "synonyms": [
+      "consuetudine",
+      "tradizione",
+      "costume"
     ],
     "isVerb": false
   },
@@ -425,6 +1426,22 @@
     "synonyms": [],
     "isVerb": false
   },
+  "usignuolo": {
+    "lemma": "usignuolo",
+    "pos": "sostantivo (m.)",
+    "fr": "rossignol",
+    "definition_it": "piccolo uccello bruno famoso per il suo canto notturno",
+    "examples": [
+      {
+        "it": "Di notte si sente il canto dell'usignuolo.",
+        "fr": "La nuit, on entend le chant du rossignol."
+      }
+    ],
+    "synonyms": [
+      "rosignolo"
+    ],
+    "isVerb": false
+  },
   "uso": {
     "lemma": "uso",
     "pos": "nome maschile",
@@ -441,6 +1458,94 @@
       "utilizzo"
     ],
     "isVerb": false
+  },
+  "ustolare": {
+    "lemma": "ustolare",
+    "pos": "verbo (intransitivo)",
+    "fr": "geindre de convoitise, quémander",
+    "definition_it": "mugolare o guaire per il desiderio di qualcosa, specialmente di cibo",
+    "examples": [
+      {
+        "it": "Il cane stava ustolando davanti alla tavola imbandita.",
+        "fr": "Le chien geignait de convoitise devant la table dressée."
+      }
+    ],
+    "synonyms": [
+      "mugolare",
+      "guaire"
+    ],
+    "isVerb": true
+  },
+  "utente": {
+    "lemma": "utente",
+    "pos": "sostantivo (m.)",
+    "fr": "usager, utilisateur",
+    "definition_it": "persona che si serve di un servizio, di un impianto o di un programma",
+    "examples": [
+      {
+        "it": "Gli utenti del treno protestano per i ritardi.",
+        "fr": "Les usagers du train protestent contre les retards."
+      }
+    ],
+    "synonyms": [
+      "fruitore",
+      "consumatore"
+    ],
+    "isVerb": false
+  },
+  "utile": {
+    "lemma": "utile",
+    "pos": "aggettivo",
+    "fr": "utile",
+    "definition_it": "che serve a qualcosa e porta un vantaggio concreto",
+    "examples": [
+      {
+        "it": "I tuoi consigli sono stati molto utili.",
+        "fr": "Tes conseils ont été très utiles."
+      }
+    ],
+    "synonyms": [
+      "vantaggioso",
+      "proficuo",
+      "efficace"
+    ],
+    "isVerb": false
+  },
+  "utilità": {
+    "lemma": "utilità",
+    "pos": "sostantivo (f.)",
+    "fr": "utilité",
+    "definition_it": "la qualità di ciò che è utile, cioè il vantaggio che se ne ricava",
+    "examples": [
+      {
+        "it": "Nessuno mette in dubbio l'utilità di questo strumento.",
+        "fr": "Personne ne met en doute l'utilité de cet outil."
+      }
+    ],
+    "synonyms": [
+      "vantaggio",
+      "giovamento",
+      "convenienza"
+    ],
+    "isVerb": false
+  },
+  "utilizzare": {
+    "lemma": "utilizzare",
+    "pos": "verbo (transitivo)",
+    "fr": "utiliser, employer",
+    "definition_it": "impiegare qualcosa traendone il massimo profitto",
+    "examples": [
+      {
+        "it": "Stiamo utilizzando materiali riciclati.",
+        "fr": "Nous utilisons des matériaux recyclés."
+      }
+    ],
+    "synonyms": [
+      "usare",
+      "adoperare",
+      "sfruttare"
+    ],
+    "isVerb": true
   },
   "uva": {
     "lemma": "uva",

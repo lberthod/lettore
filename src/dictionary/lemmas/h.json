@@ -1,4 +1,50 @@
 {
+  "hackathon": {
+    "lemma": "hackathon",
+    "pos": "nome (m. invariabile)",
+    "fr": "hackathon, marathon de programmation",
+    "definition_it": "incontro di uno o più giorni in cui gruppi di programmatori lavorano insieme per creare un progetto informatico",
+    "examples": [
+      {
+        "it": "Ha partecipato a un hackathon organizzato dall'università.",
+        "fr": "Il a participé à un hackathon organisé par l'université."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "hacker": {
+    "lemma": "hacker",
+    "pos": "nome (m. e f. invariabile)",
+    "fr": "hacker, pirate informatique",
+    "definition_it": "persona molto esperta di computer che riesce a entrare nei sistemi informatici altrui, a volte per rubare dati",
+    "examples": [
+      {
+        "it": "Un hacker è riuscito a entrare nel sito dell'azienda.",
+        "fr": "Un hacker a réussi à pénétrer dans le site de l'entreprise."
+      }
+    ],
+    "synonyms": [
+      "pirata informatico"
+    ],
+    "isVerb": false
+  },
+  "hamburger": {
+    "lemma": "hamburger",
+    "pos": "nome (m., invariabile)",
+    "fr": "hamburger, steak haché",
+    "definition_it": "polpetta piatta di carne tritata, cotta alla piastra e spesso servita dentro un panino tondo",
+    "examples": [
+      {
+        "it": "A pranzo ho mangiato un hamburger con le patatine.",
+        "fr": "À midi, j'ai mangé un hamburger avec des frites."
+      }
+    ],
+    "synonyms": [
+      "svizzera"
+    ],
+    "isVerb": false
+  },
   "hotel": {
     "lemma": "hotel",
     "pos": "nome maschile",

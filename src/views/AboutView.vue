@@ -2,13 +2,10 @@
 import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
-import textsIndex from '../texts/index.json'
+// Totaux calculés au build (voir le plugin leggendo-catalog dans vite.config.js)
+import { catalogStats } from 'virtual:catalog'
 
-const textCount = textsIndex.length
-const levels = [...new Set(textsIndex.map((t) => t.level))].sort()
-const levelRange = `${levels[0]} → ${levels[levels.length - 1]}`
-const categoryCount = new Set(textsIndex.map((t) => t.category)).size
-const totalWords = textsIndex.reduce((sum, t) => sum + (t.wordCount || 0), 0)
+const { count: textCount, levelRange, categoryCount, totalWords } = catalogStats
 const totalWordsLabel = computed(() =>
   totalWords >= 1000 ? `${Math.floor(totalWords / 1000)} 000+` : String(totalWords)
 )

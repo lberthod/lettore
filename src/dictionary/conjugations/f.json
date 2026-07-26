@@ -1,4 +1,346 @@
 {
+  "fabbricare": {
+    "presente": {
+      "io": "fabbrico",
+      "tu": "fabbrichi",
+      "lui/lei": "fabbrica",
+      "noi": "fabbrichiamo",
+      "voi": "fabbricate",
+      "loro": "fabbricano"
+    },
+    "passatoProssimo": {
+      "io": "ho fabbricato",
+      "tu": "hai fabbricato",
+      "lui/lei": "ha fabbricato",
+      "noi": "abbiamo fabbricato",
+      "voi": "avete fabbricato",
+      "loro": "hanno fabbricato"
+    },
+    "imperfetto": {
+      "io": "fabbricavo",
+      "tu": "fabbricavi",
+      "lui/lei": "fabbricava",
+      "noi": "fabbricavamo",
+      "voi": "fabbricavate",
+      "loro": "fabbricavano"
+    },
+    "futuro": {
+      "io": "fabbricherò",
+      "tu": "fabbricherai",
+      "lui/lei": "fabbricherà",
+      "noi": "fabbricheremo",
+      "voi": "fabbricherete",
+      "loro": "fabbricheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fabbrichi",
+      "tu": "fabbrichi",
+      "lui/lei": "fabbrichi",
+      "noi": "fabbrichiamo",
+      "voi": "fabbrichiate",
+      "loro": "fabbrichino"
+    },
+    "condizionale": {
+      "io": "fabbricherei",
+      "tu": "fabbricheresti",
+      "lui/lei": "fabbricherebbe",
+      "noi": "fabbricheremmo",
+      "voi": "fabbrichereste",
+      "loro": "fabbricherebbero"
+    },
+    "imperativo": {
+      "tu": "fabbrica",
+      "lei": "fabbrichi",
+      "noi": "fabbrichiamo",
+      "voi": "fabbricate",
+      "loro": "fabbrichino"
+    }
+  },
+  "falciare": {
+    "presente": {
+      "io": "falcio",
+      "tu": "falci",
+      "lui/lei": "falcia",
+      "noi": "falciamo",
+      "voi": "falciate",
+      "loro": "falciano"
+    },
+    "passatoProssimo": {
+      "io": "ho falciato",
+      "tu": "hai falciato",
+      "lui/lei": "ha falciato",
+      "noi": "abbiamo falciato",
+      "voi": "avete falciato",
+      "loro": "hanno falciato"
+    },
+    "imperfetto": {
+      "io": "falciavo",
+      "tu": "falciavi",
+      "lui/lei": "falciava",
+      "noi": "falciavamo",
+      "voi": "falciavate",
+      "loro": "falciavano"
+    },
+    "futuro": {
+      "io": "falcerò",
+      "tu": "falcerai",
+      "lui/lei": "falcerà",
+      "noi": "falceremo",
+      "voi": "falcerete",
+      "loro": "falceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "falci",
+      "tu": "falci",
+      "lui/lei": "falci",
+      "noi": "falciamo",
+      "voi": "falciate",
+      "loro": "falcino"
+    },
+    "condizionale": {
+      "io": "falcerei",
+      "tu": "falceresti",
+      "lui/lei": "falcerebbe",
+      "noi": "falceremmo",
+      "voi": "falcereste",
+      "loro": "falcerebbero"
+    },
+    "imperativo": {
+      "tu": "falcia",
+      "lei": "falci",
+      "noi": "falciamo",
+      "voi": "falciate",
+      "loro": "falcino"
+    }
+  },
+  "fallire": {
+    "presente": {
+      "io": "fallisco",
+      "tu": "fallisci",
+      "lui/lei": "fallisce",
+      "noi": "falliamo",
+      "voi": "fallite",
+      "loro": "falliscono"
+    },
+    "passatoProssimo": {
+      "io": "sono fallito",
+      "tu": "sei fallito",
+      "lui/lei": "è fallito",
+      "noi": "siamo falliti",
+      "voi": "siete falliti",
+      "loro": "sono falliti"
+    },
+    "imperfetto": {
+      "io": "fallivo",
+      "tu": "fallivi",
+      "lui/lei": "falliva",
+      "noi": "fallivamo",
+      "voi": "fallivate",
+      "loro": "fallivano"
+    },
+    "futuro": {
+      "io": "fallirò",
+      "tu": "fallirai",
+      "lui/lei": "fallirà",
+      "noi": "falliremo",
+      "voi": "fallirete",
+      "loro": "falliranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fallisca",
+      "tu": "fallisca",
+      "lui/lei": "fallisca",
+      "noi": "falliamo",
+      "voi": "falliate",
+      "loro": "falliscano"
+    },
+    "condizionale": {
+      "io": "fallirei",
+      "tu": "falliresti",
+      "lui/lei": "fallirebbe",
+      "noi": "falliremmo",
+      "voi": "fallireste",
+      "loro": "fallirebbero"
+    },
+    "imperativo": {
+      "tu": "fallisci",
+      "lei": "fallisca",
+      "noi": "falliamo",
+      "voi": "fallite",
+      "loro": "falliscano"
+    }
+  },
+  "falsificare": {
+    "presente": {
+      "io": "falsifico",
+      "tu": "falsifichi",
+      "lui/lei": "falsifica",
+      "noi": "falsifichiamo",
+      "voi": "falsificate",
+      "loro": "falsificano"
+    },
+    "passatoProssimo": {
+      "io": "ho falsificato",
+      "tu": "hai falsificato",
+      "lui/lei": "ha falsificato",
+      "noi": "abbiamo falsificato",
+      "voi": "avete falsificato",
+      "loro": "hanno falsificato"
+    },
+    "imperfetto": {
+      "io": "falsificavo",
+      "tu": "falsificavi",
+      "lui/lei": "falsificava",
+      "noi": "falsificavamo",
+      "voi": "falsificavate",
+      "loro": "falsificavano"
+    },
+    "futuro": {
+      "io": "falsificherò",
+      "tu": "falsificherai",
+      "lui/lei": "falsificherà",
+      "noi": "falsificheremo",
+      "voi": "falsificherete",
+      "loro": "falsificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "falsifichi",
+      "tu": "falsifichi",
+      "lui/lei": "falsifichi",
+      "noi": "falsifichiamo",
+      "voi": "falsifichiate",
+      "loro": "falsifichino"
+    },
+    "condizionale": {
+      "io": "falsificherei",
+      "tu": "falsificheresti",
+      "lui/lei": "falsificherebbe",
+      "noi": "falsificheremmo",
+      "voi": "falsifichereste",
+      "loro": "falsificherebbero"
+    },
+    "imperativo": {
+      "tu": "falsifica",
+      "lei": "falsifichi",
+      "noi": "falsifichiamo",
+      "voi": "falsificate",
+      "loro": "falsifichino"
+    }
+  },
+  "fantasticare": {
+    "presente": {
+      "io": "fantastico",
+      "tu": "fantastichi",
+      "lui/lei": "fantastica",
+      "noi": "fantastichiamo",
+      "voi": "fantasticate",
+      "loro": "fantasticano"
+    },
+    "passatoProssimo": {
+      "io": "ho fantasticato",
+      "tu": "hai fantasticato",
+      "lui/lei": "ha fantasticato",
+      "noi": "abbiamo fantasticato",
+      "voi": "avete fantasticato",
+      "loro": "hanno fantasticato"
+    },
+    "imperfetto": {
+      "io": "fantasticavo",
+      "tu": "fantasticavi",
+      "lui/lei": "fantasticava",
+      "noi": "fantasticavamo",
+      "voi": "fantasticavate",
+      "loro": "fantasticavano"
+    },
+    "futuro": {
+      "io": "fantasticherò",
+      "tu": "fantasticherai",
+      "lui/lei": "fantasticherà",
+      "noi": "fantasticheremo",
+      "voi": "fantasticherete",
+      "loro": "fantasticheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fantastichi",
+      "tu": "fantastichi",
+      "lui/lei": "fantastichi",
+      "noi": "fantastichiamo",
+      "voi": "fantastichiate",
+      "loro": "fantastichino"
+    },
+    "condizionale": {
+      "io": "fantasticherei",
+      "tu": "fantasticheresti",
+      "lui/lei": "fantasticherebbe",
+      "noi": "fantasticheremmo",
+      "voi": "fantastichereste",
+      "loro": "fantasticherebbero"
+    },
+    "imperativo": {
+      "tu": "fantastica",
+      "lei": "fantastichi",
+      "noi": "fantastichiamo",
+      "voi": "fantasticate",
+      "loro": "fantastichino"
+    }
+  },
+  "farcela": {
+    "presente": {
+      "io": "ce la faccio",
+      "tu": "ce la fai",
+      "lui/lei": "ce la fa",
+      "noi": "ce la facciamo",
+      "voi": "ce la fate",
+      "loro": "ce la fanno"
+    },
+    "passatoProssimo": {
+      "io": "ce l'ho fatta",
+      "tu": "ce l'hai fatta",
+      "lui/lei": "ce l'ha fatta",
+      "noi": "ce l'abbiamo fatta",
+      "voi": "ce l'avete fatta",
+      "loro": "ce l'hanno fatta"
+    },
+    "imperfetto": {
+      "io": "ce la facevo",
+      "tu": "ce la facevi",
+      "lui/lei": "ce la faceva",
+      "noi": "ce la facevamo",
+      "voi": "ce la facevate",
+      "loro": "ce la facevano"
+    },
+    "futuro": {
+      "io": "ce la farò",
+      "tu": "ce la farai",
+      "lui/lei": "ce la farà",
+      "noi": "ce la faremo",
+      "voi": "ce la farete",
+      "loro": "ce la faranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ce la faccia",
+      "tu": "ce la faccia",
+      "lui/lei": "ce la faccia",
+      "noi": "ce la facciamo",
+      "voi": "ce la facciate",
+      "loro": "ce la facciano"
+    },
+    "condizionale": {
+      "io": "ce la farei",
+      "tu": "ce la faresti",
+      "lui/lei": "ce la farebbe",
+      "noi": "ce la faremmo",
+      "voi": "ce la fareste",
+      "loro": "ce la farebbero"
+    },
+    "imperativo": {
+      "tu": "ce la fai",
+      "lei": "ce la faccia",
+      "noi": "ce la facciamo",
+      "voi": "ce la fate",
+      "loro": "ce la facciano"
+    }
+  },
   "fare": {
     "presente": {
       "io": "faccio",
@@ -54,6 +396,3670 @@
       "noi": "facciamo",
       "voi": "fate",
       "loro": "facciano"
+    }
+  },
+  "farneticare": {
+    "presente": {
+      "io": "farnetico",
+      "tu": "farnetichi",
+      "lui/lei": "farnetica",
+      "noi": "farnetichiamo",
+      "voi": "farneticate",
+      "loro": "farneticano"
+    },
+    "passatoProssimo": {
+      "io": "ho farneticato",
+      "tu": "hai farneticato",
+      "lui/lei": "ha farneticato",
+      "noi": "abbiamo farneticato",
+      "voi": "avete farneticato",
+      "loro": "hanno farneticato"
+    },
+    "imperfetto": {
+      "io": "farneticavo",
+      "tu": "farneticavi",
+      "lui/lei": "farneticava",
+      "noi": "farneticavamo",
+      "voi": "farneticavate",
+      "loro": "farneticavano"
+    },
+    "futuro": {
+      "io": "farneticherò",
+      "tu": "farneticherai",
+      "lui/lei": "farneticherà",
+      "noi": "farneticheremo",
+      "voi": "farneticherete",
+      "loro": "farneticheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "farnetichi",
+      "tu": "farnetichi",
+      "lui/lei": "farnetichi",
+      "noi": "farnetichiamo",
+      "voi": "farnetichiate",
+      "loro": "farnetichino"
+    },
+    "condizionale": {
+      "io": "farneticherei",
+      "tu": "farneticheresti",
+      "lui/lei": "farneticherebbe",
+      "noi": "farneticheremmo",
+      "voi": "farnetichereste",
+      "loro": "farneticherebbero"
+    },
+    "imperativo": {
+      "tu": "farnetica",
+      "lei": "farnetichi",
+      "noi": "farnetichiamo",
+      "voi": "farneticate",
+      "loro": "farnetichino"
+    }
+  },
+  "fasciare": {
+    "presente": {
+      "io": "fascio",
+      "tu": "fasci",
+      "lui/lei": "fascia",
+      "noi": "fasciamo",
+      "voi": "fasciate",
+      "loro": "fasciano"
+    },
+    "passatoProssimo": {
+      "io": "ho fasciato",
+      "tu": "hai fasciato",
+      "lui/lei": "ha fasciato",
+      "noi": "abbiamo fasciato",
+      "voi": "avete fasciato",
+      "loro": "hanno fasciato"
+    },
+    "imperfetto": {
+      "io": "fasciavo",
+      "tu": "fasciavi",
+      "lui/lei": "fasciava",
+      "noi": "fasciavamo",
+      "voi": "fasciavate",
+      "loro": "fasciavano"
+    },
+    "futuro": {
+      "io": "fascerò",
+      "tu": "fascerai",
+      "lui/lei": "fascerà",
+      "noi": "fasceremo",
+      "voi": "fascerete",
+      "loro": "fasceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fasci",
+      "tu": "fasci",
+      "lui/lei": "fasci",
+      "noi": "fasciamo",
+      "voi": "fasciate",
+      "loro": "fascino"
+    },
+    "condizionale": {
+      "io": "fascerei",
+      "tu": "fasceresti",
+      "lui/lei": "fascerebbe",
+      "noi": "fasceremmo",
+      "voi": "fascereste",
+      "loro": "fascerebbero"
+    },
+    "imperativo": {
+      "tu": "fascia",
+      "lei": "fasci",
+      "noi": "fasciamo",
+      "voi": "fasciate",
+      "loro": "fascino"
+    }
+  },
+  "faticare": {
+    "presente": {
+      "io": "fatico",
+      "tu": "fatichi",
+      "lui/lei": "fatica",
+      "noi": "fatichiamo",
+      "voi": "faticate",
+      "loro": "faticano"
+    },
+    "passatoProssimo": {
+      "io": "ho faticato",
+      "tu": "hai faticato",
+      "lui/lei": "ha faticato",
+      "noi": "abbiamo faticato",
+      "voi": "avete faticato",
+      "loro": "hanno faticato"
+    },
+    "imperfetto": {
+      "io": "faticavo",
+      "tu": "faticavi",
+      "lui/lei": "faticava",
+      "noi": "faticavamo",
+      "voi": "faticavate",
+      "loro": "faticavano"
+    },
+    "futuro": {
+      "io": "faticherò",
+      "tu": "faticherai",
+      "lui/lei": "faticherà",
+      "noi": "faticheremo",
+      "voi": "faticherete",
+      "loro": "faticheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fatichi",
+      "tu": "fatichi",
+      "lui/lei": "fatichi",
+      "noi": "fatichiamo",
+      "voi": "fatichiate",
+      "loro": "fatichino"
+    },
+    "condizionale": {
+      "io": "faticherei",
+      "tu": "faticheresti",
+      "lui/lei": "faticherebbe",
+      "noi": "faticheremmo",
+      "voi": "fatichereste",
+      "loro": "faticherebbero"
+    },
+    "imperativo": {
+      "tu": "fatica",
+      "lei": "fatichi",
+      "noi": "fatichiamo",
+      "voi": "faticate",
+      "loro": "fatichino"
+    }
+  },
+  "favellare": {
+    "presente": {
+      "io": "favello",
+      "tu": "favelli",
+      "lui/lei": "favella",
+      "noi": "favelliamo",
+      "voi": "favellate",
+      "loro": "favellano"
+    },
+    "passatoProssimo": {
+      "io": "ho favellato",
+      "tu": "hai favellato",
+      "lui/lei": "ha favellato",
+      "noi": "abbiamo favellato",
+      "voi": "avete favellato",
+      "loro": "hanno favellato"
+    },
+    "imperfetto": {
+      "io": "favellavo",
+      "tu": "favellavi",
+      "lui/lei": "favellava",
+      "noi": "favellavamo",
+      "voi": "favellavate",
+      "loro": "favellavano"
+    },
+    "futuro": {
+      "io": "favellerò",
+      "tu": "favellerai",
+      "lui/lei": "favellerà",
+      "noi": "favelleremo",
+      "voi": "favellerete",
+      "loro": "favelleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "favelli",
+      "tu": "favelli",
+      "lui/lei": "favelli",
+      "noi": "favelliamo",
+      "voi": "favelliate",
+      "loro": "favellino"
+    },
+    "condizionale": {
+      "io": "favellerei",
+      "tu": "favelleresti",
+      "lui/lei": "favellerebbe",
+      "noi": "favelleremmo",
+      "voi": "favellereste",
+      "loro": "favellerebbero"
+    },
+    "imperativo": {
+      "tu": "favella",
+      "lei": "favelli",
+      "noi": "favelliamo",
+      "voi": "favellate",
+      "loro": "favellino"
+    }
+  },
+  "favorire": {
+    "presente": {
+      "io": "favorisco",
+      "tu": "favorisci",
+      "lui/lei": "favorisce",
+      "noi": "favoriamo",
+      "voi": "favorite",
+      "loro": "favoriscono"
+    },
+    "passatoProssimo": {
+      "io": "ho favorito",
+      "tu": "hai favorito",
+      "lui/lei": "ha favorito",
+      "noi": "abbiamo favorito",
+      "voi": "avete favorito",
+      "loro": "hanno favorito"
+    },
+    "imperfetto": {
+      "io": "favorivo",
+      "tu": "favorivi",
+      "lui/lei": "favoriva",
+      "noi": "favorivamo",
+      "voi": "favorivate",
+      "loro": "favorivano"
+    },
+    "futuro": {
+      "io": "favorirò",
+      "tu": "favorirai",
+      "lui/lei": "favorirà",
+      "noi": "favoriremo",
+      "voi": "favorirete",
+      "loro": "favoriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "favorisca",
+      "tu": "favorisca",
+      "lui/lei": "favorisca",
+      "noi": "favoriamo",
+      "voi": "favoriate",
+      "loro": "favoriscano"
+    },
+    "condizionale": {
+      "io": "favorirei",
+      "tu": "favoriresti",
+      "lui/lei": "favorirebbe",
+      "noi": "favoriremmo",
+      "voi": "favorireste",
+      "loro": "favorirebbero"
+    },
+    "imperativo": {
+      "tu": "favorisci",
+      "lei": "favorisca",
+      "noi": "favoriamo",
+      "voi": "favorite",
+      "loro": "favoriscano"
+    }
+  },
+  "felicitare": {
+    "presente": {
+      "io": "felicito",
+      "tu": "feliciti",
+      "lui/lei": "felicita",
+      "noi": "felicitiamo",
+      "voi": "felicitate",
+      "loro": "felicitano"
+    },
+    "passatoProssimo": {
+      "io": "ho felicitato",
+      "tu": "hai felicitato",
+      "lui/lei": "ha felicitato",
+      "noi": "abbiamo felicitato",
+      "voi": "avete felicitato",
+      "loro": "hanno felicitato"
+    },
+    "imperfetto": {
+      "io": "felicitavo",
+      "tu": "felicitavi",
+      "lui/lei": "felicitava",
+      "noi": "felicitavamo",
+      "voi": "felicitavate",
+      "loro": "felicitavano"
+    },
+    "futuro": {
+      "io": "feliciterò",
+      "tu": "feliciterai",
+      "lui/lei": "feliciterà",
+      "noi": "feliciteremo",
+      "voi": "feliciterete",
+      "loro": "feliciteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "feliciti",
+      "tu": "feliciti",
+      "lui/lei": "feliciti",
+      "noi": "felicitiamo",
+      "voi": "felicitiate",
+      "loro": "felicitino"
+    },
+    "condizionale": {
+      "io": "feliciterei",
+      "tu": "feliciteresti",
+      "lui/lei": "feliciterebbe",
+      "noi": "feliciteremmo",
+      "voi": "felicitereste",
+      "loro": "feliciterebbero"
+    },
+    "imperativo": {
+      "tu": "felicita",
+      "lei": "feliciti",
+      "noi": "felicitiamo",
+      "voi": "felicitate",
+      "loro": "felicitino"
+    }
+  },
+  "ferire": {
+    "presente": {
+      "io": "ferisco",
+      "tu": "ferisci",
+      "lui/lei": "ferisce",
+      "noi": "feriamo",
+      "voi": "ferite",
+      "loro": "feriscono"
+    },
+    "passatoProssimo": {
+      "io": "ho ferito",
+      "tu": "hai ferito",
+      "lui/lei": "ha ferito",
+      "noi": "abbiamo ferito",
+      "voi": "avete ferito",
+      "loro": "hanno ferito"
+    },
+    "imperfetto": {
+      "io": "ferivo",
+      "tu": "ferivi",
+      "lui/lei": "feriva",
+      "noi": "ferivamo",
+      "voi": "ferivate",
+      "loro": "ferivano"
+    },
+    "futuro": {
+      "io": "ferirò",
+      "tu": "ferirai",
+      "lui/lei": "ferirà",
+      "noi": "feriremo",
+      "voi": "ferirete",
+      "loro": "feriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ferisca",
+      "tu": "ferisca",
+      "lui/lei": "ferisca",
+      "noi": "feriamo",
+      "voi": "feriate",
+      "loro": "feriscano"
+    },
+    "condizionale": {
+      "io": "ferirei",
+      "tu": "feriresti",
+      "lui/lei": "ferirebbe",
+      "noi": "feriremmo",
+      "voi": "ferireste",
+      "loro": "ferirebbero"
+    },
+    "imperativo": {
+      "tu": "ferisci",
+      "lei": "ferisca",
+      "noi": "feriamo",
+      "voi": "ferite",
+      "loro": "feriscano"
+    }
+  },
+  "fermare": {
+    "presente": {
+      "io": "fermo",
+      "tu": "fermi",
+      "lui/lei": "ferma",
+      "noi": "fermiamo",
+      "voi": "fermate",
+      "loro": "fermano"
+    },
+    "passatoProssimo": {
+      "io": "ho fermato",
+      "tu": "hai fermato",
+      "lui/lei": "ha fermato",
+      "noi": "abbiamo fermato",
+      "voi": "avete fermato",
+      "loro": "hanno fermato"
+    },
+    "imperfetto": {
+      "io": "fermavo",
+      "tu": "fermavi",
+      "lui/lei": "fermava",
+      "noi": "fermavamo",
+      "voi": "fermavate",
+      "loro": "fermavano"
+    },
+    "futuro": {
+      "io": "fermerò",
+      "tu": "fermerai",
+      "lui/lei": "fermerà",
+      "noi": "fermeremo",
+      "voi": "fermerete",
+      "loro": "fermeranno"
+    },
+    "passatoRemoto": {
+      "io": "fermai",
+      "tu": "fermasti",
+      "lui/lei": "fermò",
+      "noi": "fermammo",
+      "voi": "fermaste",
+      "loro": "fermarono"
+    },
+    "congiuntivoPresente": {
+      "io": "fermi",
+      "tu": "fermi",
+      "lui/lei": "fermi",
+      "noi": "fermiamo",
+      "voi": "fermiate",
+      "loro": "fermino"
+    },
+    "congiuntivoImperfetto": {
+      "io": "fermassi",
+      "tu": "fermassi",
+      "lui/lei": "fermasse",
+      "noi": "fermassimo",
+      "voi": "fermaste",
+      "loro": "fermassero"
+    },
+    "condizionale": {
+      "io": "fermerei",
+      "tu": "fermeresti",
+      "lui/lei": "fermerebbe",
+      "noi": "fermeremmo",
+      "voi": "fermereste",
+      "loro": "fermerebbero"
+    },
+    "imperativo": {
+      "tu": "ferma",
+      "lei": "fermi",
+      "noi": "fermiamo",
+      "voi": "fermate",
+      "loro": "fermino"
+    }
+  },
+  "fermentare": {
+    "presente": {
+      "io": "fermento",
+      "tu": "fermenti",
+      "lui/lei": "fermenta",
+      "noi": "fermentiamo",
+      "voi": "fermentate",
+      "loro": "fermentano"
+    },
+    "passatoProssimo": {
+      "io": "ho fermentato",
+      "tu": "hai fermentato",
+      "lui/lei": "ha fermentato",
+      "noi": "abbiamo fermentato",
+      "voi": "avete fermentato",
+      "loro": "hanno fermentato"
+    },
+    "imperfetto": {
+      "io": "fermentavo",
+      "tu": "fermentavi",
+      "lui/lei": "fermentava",
+      "noi": "fermentavamo",
+      "voi": "fermentavate",
+      "loro": "fermentavano"
+    },
+    "futuro": {
+      "io": "fermenterò",
+      "tu": "fermenterai",
+      "lui/lei": "fermenterà",
+      "noi": "fermenteremo",
+      "voi": "fermenterete",
+      "loro": "fermenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fermenti",
+      "tu": "fermenti",
+      "lui/lei": "fermenti",
+      "noi": "fermentiamo",
+      "voi": "fermentiate",
+      "loro": "fermentino"
+    },
+    "condizionale": {
+      "io": "fermenterei",
+      "tu": "fermenteresti",
+      "lui/lei": "fermenterebbe",
+      "noi": "fermenteremmo",
+      "voi": "fermentereste",
+      "loro": "fermenterebbero"
+    },
+    "imperativo": {
+      "tu": "fermenta",
+      "lei": "fermenti",
+      "noi": "fermentiamo",
+      "voi": "fermentate",
+      "loro": "fermentino"
+    }
+  },
+  "festeggiare": {
+    "presente": {
+      "io": "festeggio",
+      "tu": "festeggi",
+      "lui/lei": "festeggia",
+      "noi": "festeggiamo",
+      "voi": "festeggiate",
+      "loro": "festeggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho festeggiato",
+      "tu": "hai festeggiato",
+      "lui/lei": "ha festeggiato",
+      "noi": "abbiamo festeggiato",
+      "voi": "avete festeggiato",
+      "loro": "hanno festeggiato"
+    },
+    "imperfetto": {
+      "io": "festeggiavo",
+      "tu": "festeggiavi",
+      "lui/lei": "festeggiava",
+      "noi": "festeggiavamo",
+      "voi": "festeggiavate",
+      "loro": "festeggiavano"
+    },
+    "futuro": {
+      "io": "festeggerò",
+      "tu": "festeggerai",
+      "lui/lei": "festeggerà",
+      "noi": "festeggeremo",
+      "voi": "festeggerete",
+      "loro": "festeggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "festeggi",
+      "tu": "festeggi",
+      "lui/lei": "festeggi",
+      "noi": "festeggiamo",
+      "voi": "festeggiate",
+      "loro": "festeggino"
+    },
+    "condizionale": {
+      "io": "festeggerei",
+      "tu": "festeggeresti",
+      "lui/lei": "festeggerebbe",
+      "noi": "festeggeremmo",
+      "voi": "festeggereste",
+      "loro": "festeggerebbero"
+    },
+    "imperativo": {
+      "tu": "festeggia",
+      "lei": "festeggi",
+      "noi": "festeggiamo",
+      "voi": "festeggiate",
+      "loro": "festeggino"
+    }
+  },
+  "fiaccare": {
+    "presente": {
+      "io": "fiacco",
+      "tu": "fiacchi",
+      "lui/lei": "fiacca",
+      "noi": "fiacchiamo",
+      "voi": "fiaccate",
+      "loro": "fiaccano"
+    },
+    "passatoProssimo": {
+      "io": "ho fiaccato",
+      "tu": "hai fiaccato",
+      "lui/lei": "ha fiaccato",
+      "noi": "abbiamo fiaccato",
+      "voi": "avete fiaccato",
+      "loro": "hanno fiaccato"
+    },
+    "imperfetto": {
+      "io": "fiaccavo",
+      "tu": "fiaccavi",
+      "lui/lei": "fiaccava",
+      "noi": "fiaccavamo",
+      "voi": "fiaccavate",
+      "loro": "fiaccavano"
+    },
+    "futuro": {
+      "io": "fiaccherò",
+      "tu": "fiaccherai",
+      "lui/lei": "fiaccherà",
+      "noi": "fiaccheremo",
+      "voi": "fiaccherete",
+      "loro": "fiaccheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fiacchi",
+      "tu": "fiacchi",
+      "lui/lei": "fiacchi",
+      "noi": "fiacchiamo",
+      "voi": "fiacchiate",
+      "loro": "fiacchino"
+    },
+    "condizionale": {
+      "io": "fiaccherei",
+      "tu": "fiaccheresti",
+      "lui/lei": "fiaccherebbe",
+      "noi": "fiaccheremmo",
+      "voi": "fiacchereste",
+      "loro": "fiaccherebbero"
+    },
+    "imperativo": {
+      "tu": "fiacca",
+      "lei": "fiacchi",
+      "noi": "fiacchiamo",
+      "voi": "fiaccate",
+      "loro": "fiacchino"
+    }
+  },
+  "fiatare": {
+    "presente": {
+      "io": "fiato",
+      "tu": "fiati",
+      "lui/lei": "fiata",
+      "noi": "fiatiamo",
+      "voi": "fiatate",
+      "loro": "fiatano"
+    },
+    "passatoProssimo": {
+      "io": "ho fiatato",
+      "tu": "hai fiatato",
+      "lui/lei": "ha fiatato",
+      "noi": "abbiamo fiatato",
+      "voi": "avete fiatato",
+      "loro": "hanno fiatato"
+    },
+    "imperfetto": {
+      "io": "fiatavo",
+      "tu": "fiatavi",
+      "lui/lei": "fiatava",
+      "noi": "fiatavamo",
+      "voi": "fiatavate",
+      "loro": "fiatavano"
+    },
+    "futuro": {
+      "io": "fiaterò",
+      "tu": "fiaterai",
+      "lui/lei": "fiaterà",
+      "noi": "fiateremo",
+      "voi": "fiaterete",
+      "loro": "fiateranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fiati",
+      "tu": "fiati",
+      "lui/lei": "fiati",
+      "noi": "fiatiamo",
+      "voi": "fiatiate",
+      "loro": "fiatino"
+    },
+    "condizionale": {
+      "io": "fiaterei",
+      "tu": "fiateresti",
+      "lui/lei": "fiaterebbe",
+      "noi": "fiateremmo",
+      "voi": "fiatereste",
+      "loro": "fiaterebbero"
+    },
+    "imperativo": {
+      "tu": "fiata",
+      "lei": "fiati",
+      "noi": "fiatiamo",
+      "voi": "fiatate",
+      "loro": "fiatino"
+    }
+  },
+  "ficcare": {
+    "presente": {
+      "io": "ficco",
+      "tu": "ficchi",
+      "lui/lei": "ficca",
+      "noi": "ficchiamo",
+      "voi": "ficcate",
+      "loro": "ficcano"
+    },
+    "passatoProssimo": {
+      "io": "ho ficcato",
+      "tu": "hai ficcato",
+      "lui/lei": "ha ficcato",
+      "noi": "abbiamo ficcato",
+      "voi": "avete ficcato",
+      "loro": "hanno ficcato"
+    },
+    "imperfetto": {
+      "io": "ficcavo",
+      "tu": "ficcavi",
+      "lui/lei": "ficcava",
+      "noi": "ficcavamo",
+      "voi": "ficcavate",
+      "loro": "ficcavano"
+    },
+    "futuro": {
+      "io": "ficcherò",
+      "tu": "ficcherai",
+      "lui/lei": "ficcherà",
+      "noi": "ficcheremo",
+      "voi": "ficcherete",
+      "loro": "ficcheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ficchi",
+      "tu": "ficchi",
+      "lui/lei": "ficchi",
+      "noi": "ficchiamo",
+      "voi": "ficchiate",
+      "loro": "ficchino"
+    },
+    "condizionale": {
+      "io": "ficcherei",
+      "tu": "ficcheresti",
+      "lui/lei": "ficcherebbe",
+      "noi": "ficcheremmo",
+      "voi": "ficchereste",
+      "loro": "ficcherebbero"
+    },
+    "imperativo": {
+      "tu": "ficca",
+      "lei": "ficchi",
+      "noi": "ficchiamo",
+      "voi": "ficcate",
+      "loro": "ficchino"
+    }
+  },
+  "fidanzarsi": {
+    "presente": {
+      "io": "mi fidanzo",
+      "tu": "ti fidanzi",
+      "lui/lei": "si fidanza",
+      "noi": "ci fidanziamo",
+      "voi": "vi fidanzate",
+      "loro": "si fidanzano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono fidanzato/a",
+      "tu": "ti sei fidanzato/a",
+      "lui/lei": "si è fidanzato/a",
+      "noi": "ci siamo fidanzati/e",
+      "voi": "vi siete fidanzati/e",
+      "loro": "si sono fidanzati/e"
+    },
+    "imperfetto": {
+      "io": "mi fidanzavo",
+      "tu": "ti fidanzavi",
+      "lui/lei": "si fidanzava",
+      "noi": "ci fidanzavamo",
+      "voi": "vi fidanzavate",
+      "loro": "si fidanzavano"
+    },
+    "futuro": {
+      "io": "mi fidanzerò",
+      "tu": "ti fidanzerai",
+      "lui/lei": "si fidanzerà",
+      "noi": "ci fidanzeremo",
+      "voi": "vi fidanzerete",
+      "loro": "si fidanzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi fidanzi",
+      "tu": "ti fidanzi",
+      "lui/lei": "si fidanzi",
+      "noi": "ci fidanziamo",
+      "voi": "vi fidanziate",
+      "loro": "si fidanzino"
+    },
+    "condizionale": {
+      "io": "mi fidanzerei",
+      "tu": "ti fidanzeresti",
+      "lui/lei": "si fidanzerebbe",
+      "noi": "ci fidanzeremmo",
+      "voi": "vi fidanzereste",
+      "loro": "si fidanzerebbero"
+    },
+    "imperativo": {
+      "tu": "fidanzati",
+      "lei": "si fidanzi",
+      "noi": "fidanziamoci",
+      "voi": "fidanzatevi",
+      "loro": "si fidanzino"
+    }
+  },
+  "fidarsi": {
+    "presente": {
+      "io": "mi fido",
+      "tu": "ti fidi",
+      "lui/lei": "si fida",
+      "noi": "ci fidiamo",
+      "voi": "vi fidate",
+      "loro": "si fidano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono fidato/a",
+      "tu": "ti sei fidato/a",
+      "lui/lei": "si è fidato/a",
+      "noi": "ci siamo fidati/e",
+      "voi": "vi siete fidati/e",
+      "loro": "si sono fidati/e"
+    },
+    "imperfetto": {
+      "io": "mi fidavo",
+      "tu": "ti fidavi",
+      "lui/lei": "si fidava",
+      "noi": "ci fidavamo",
+      "voi": "vi fidavate",
+      "loro": "si fidavano"
+    },
+    "futuro": {
+      "io": "mi fiderò",
+      "tu": "ti fiderai",
+      "lui/lei": "si fiderà",
+      "noi": "ci fideremo",
+      "voi": "vi fiderete",
+      "loro": "si fideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi fidi",
+      "tu": "ti fidi",
+      "lui/lei": "si fidi",
+      "noi": "ci fidiamo",
+      "voi": "vi fidiate",
+      "loro": "si fidino"
+    },
+    "condizionale": {
+      "io": "mi fiderei",
+      "tu": "ti fideresti",
+      "lui/lei": "si fiderebbe",
+      "noi": "ci fideremmo",
+      "voi": "vi fidereste",
+      "loro": "si fiderebbero"
+    },
+    "imperativo": {
+      "tu": "fidati",
+      "lei": "si fidi",
+      "noi": "fidiamoci",
+      "voi": "fidatevi",
+      "loro": "si fidino"
+    }
+  },
+  "figgere": {
+    "presente": {
+      "io": "figgo",
+      "tu": "figgi",
+      "lui/lei": "figge",
+      "noi": "figgiamo",
+      "voi": "figgete",
+      "loro": "figgono"
+    },
+    "passatoProssimo": {
+      "io": "ho fitto",
+      "tu": "hai fitto",
+      "lui/lei": "ha fitto",
+      "noi": "abbiamo fitto",
+      "voi": "avete fitto",
+      "loro": "hanno fitto"
+    },
+    "imperfetto": {
+      "io": "figgevo",
+      "tu": "figgevi",
+      "lui/lei": "figgeva",
+      "noi": "figgevamo",
+      "voi": "figgevate",
+      "loro": "figgevano"
+    },
+    "futuro": {
+      "io": "figgerò",
+      "tu": "figgerai",
+      "lui/lei": "figgerà",
+      "noi": "figgeremo",
+      "voi": "figgerete",
+      "loro": "figgeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "figga",
+      "tu": "figga",
+      "lui/lei": "figga",
+      "noi": "figgiamo",
+      "voi": "figgiate",
+      "loro": "figgano"
+    },
+    "condizionale": {
+      "io": "figgerei",
+      "tu": "figgeresti",
+      "lui/lei": "figgerebbe",
+      "noi": "figgeremmo",
+      "voi": "figgereste",
+      "loro": "figgerebbero"
+    },
+    "imperativo": {
+      "tu": "figgi",
+      "lei": "figga",
+      "noi": "figgiamo",
+      "voi": "figgete",
+      "loro": "figgano"
+    }
+  },
+  "figurare": {
+    "presente": {
+      "io": "figuro",
+      "tu": "figuri",
+      "lui/lei": "figura",
+      "noi": "figuriamo",
+      "voi": "figurate",
+      "loro": "figurano"
+    },
+    "passatoProssimo": {
+      "io": "ho figurato",
+      "tu": "hai figurato",
+      "lui/lei": "ha figurato",
+      "noi": "abbiamo figurato",
+      "voi": "avete figurato",
+      "loro": "hanno figurato"
+    },
+    "imperfetto": {
+      "io": "figuravo",
+      "tu": "figuravi",
+      "lui/lei": "figurava",
+      "noi": "figuravamo",
+      "voi": "figuravate",
+      "loro": "figuravano"
+    },
+    "futuro": {
+      "io": "figurerò",
+      "tu": "figurerai",
+      "lui/lei": "figurerà",
+      "noi": "figureremo",
+      "voi": "figurerete",
+      "loro": "figureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "figuri",
+      "tu": "figuri",
+      "lui/lei": "figuri",
+      "noi": "figuriamo",
+      "voi": "figuriate",
+      "loro": "figurino"
+    },
+    "condizionale": {
+      "io": "figurerei",
+      "tu": "figureresti",
+      "lui/lei": "figurerebbe",
+      "noi": "figureremmo",
+      "voi": "figurereste",
+      "loro": "figurerebbero"
+    },
+    "imperativo": {
+      "tu": "figura",
+      "lei": "figuri",
+      "noi": "figuriamo",
+      "voi": "figurate",
+      "loro": "figurino"
+    }
+  },
+  "figurarsi": {
+    "presente": {
+      "io": "mi figuro",
+      "tu": "ti figuri",
+      "lui/lei": "si figura",
+      "noi": "ci figuriamo",
+      "voi": "vi figurate",
+      "loro": "si figurano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono figurato/a",
+      "tu": "ti sei figurato/a",
+      "lui/lei": "si è figurato/a",
+      "noi": "ci siamo figurati/e",
+      "voi": "vi siete figurati/e",
+      "loro": "si sono figurati/e"
+    },
+    "imperfetto": {
+      "io": "mi figuravo",
+      "tu": "ti figuravi",
+      "lui/lei": "si figurava",
+      "noi": "ci figuravamo",
+      "voi": "vi figuravate",
+      "loro": "si figuravano"
+    },
+    "futuro": {
+      "io": "mi figurerò",
+      "tu": "ti figurerai",
+      "lui/lei": "si figurerà",
+      "noi": "ci figureremo",
+      "voi": "vi figurerete",
+      "loro": "si figureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi figuri",
+      "tu": "ti figuri",
+      "lui/lei": "si figuri",
+      "noi": "ci figuriamo",
+      "voi": "vi figuriate",
+      "loro": "si figurino"
+    },
+    "condizionale": {
+      "io": "mi figurerei",
+      "tu": "ti figureresti",
+      "lui/lei": "si figurerebbe",
+      "noi": "ci figureremmo",
+      "voi": "vi figurereste",
+      "loro": "si figurerebbero"
+    },
+    "imperativo": {
+      "tu": "figurati",
+      "lei": "si figuri",
+      "noi": "figuriamoci",
+      "voi": "figuratevi",
+      "loro": "si figurino"
+    }
+  },
+  "filare": {
+    "presente": {
+      "io": "filo",
+      "tu": "fili",
+      "lui/lei": "fila",
+      "noi": "filiamo",
+      "voi": "filate",
+      "loro": "filano"
+    },
+    "passatoProssimo": {
+      "io": "ho filato",
+      "tu": "hai filato",
+      "lui/lei": "ha filato",
+      "noi": "abbiamo filato",
+      "voi": "avete filato",
+      "loro": "hanno filato"
+    },
+    "imperfetto": {
+      "io": "filavo",
+      "tu": "filavi",
+      "lui/lei": "filava",
+      "noi": "filavamo",
+      "voi": "filavate",
+      "loro": "filavano"
+    },
+    "futuro": {
+      "io": "filerò",
+      "tu": "filerai",
+      "lui/lei": "filerà",
+      "noi": "fileremo",
+      "voi": "filerete",
+      "loro": "fileranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fili",
+      "tu": "fili",
+      "lui/lei": "fili",
+      "noi": "filiamo",
+      "voi": "filiate",
+      "loro": "filino"
+    },
+    "condizionale": {
+      "io": "filerei",
+      "tu": "fileresti",
+      "lui/lei": "filerebbe",
+      "noi": "fileremmo",
+      "voi": "filereste",
+      "loro": "filerebbero"
+    },
+    "imperativo": {
+      "tu": "fila",
+      "lei": "fili",
+      "noi": "filiamo",
+      "voi": "filate",
+      "loro": "filino"
+    }
+  },
+  "filmare": {
+    "presente": {
+      "io": "filmo",
+      "tu": "filmi",
+      "lui/lei": "filma",
+      "noi": "filmiamo",
+      "voi": "filmate",
+      "loro": "filmano"
+    },
+    "passatoProssimo": {
+      "io": "ho filmato",
+      "tu": "hai filmato",
+      "lui/lei": "ha filmato",
+      "noi": "abbiamo filmato",
+      "voi": "avete filmato",
+      "loro": "hanno filmato"
+    },
+    "imperfetto": {
+      "io": "filmavo",
+      "tu": "filmavi",
+      "lui/lei": "filmava",
+      "noi": "filmavamo",
+      "voi": "filmavate",
+      "loro": "filmavano"
+    },
+    "futuro": {
+      "io": "filmerò",
+      "tu": "filmerai",
+      "lui/lei": "filmerà",
+      "noi": "filmeremo",
+      "voi": "filmerete",
+      "loro": "filmeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "filmi",
+      "tu": "filmi",
+      "lui/lei": "filmi",
+      "noi": "filmiamo",
+      "voi": "filmiate",
+      "loro": "filmino"
+    },
+    "condizionale": {
+      "io": "filmerei",
+      "tu": "filmeresti",
+      "lui/lei": "filmerebbe",
+      "noi": "filmeremmo",
+      "voi": "filmereste",
+      "loro": "filmerebbero"
+    },
+    "imperativo": {
+      "tu": "filma",
+      "lei": "filmi",
+      "noi": "filmiamo",
+      "voi": "filmate",
+      "loro": "filmino"
+    }
+  },
+  "finanziare": {
+    "presente": {
+      "io": "finanzio",
+      "tu": "finanzi",
+      "lui/lei": "finanzia",
+      "noi": "finanziamo",
+      "voi": "finanziate",
+      "loro": "finanziano"
+    },
+    "passatoProssimo": {
+      "io": "ho finanziato",
+      "tu": "hai finanziato",
+      "lui/lei": "ha finanziato",
+      "noi": "abbiamo finanziato",
+      "voi": "avete finanziato",
+      "loro": "hanno finanziato"
+    },
+    "imperfetto": {
+      "io": "finanziavo",
+      "tu": "finanziavi",
+      "lui/lei": "finanziava",
+      "noi": "finanziavamo",
+      "voi": "finanziavate",
+      "loro": "finanziavano"
+    },
+    "futuro": {
+      "io": "finanzierò",
+      "tu": "finanzierai",
+      "lui/lei": "finanzierà",
+      "noi": "finanzieremo",
+      "voi": "finanzierete",
+      "loro": "finanzieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "finanzi",
+      "tu": "finanzi",
+      "lui/lei": "finanzi",
+      "noi": "finanziamo",
+      "voi": "finanziate",
+      "loro": "finanzino"
+    },
+    "condizionale": {
+      "io": "finanzierei",
+      "tu": "finanzieresti",
+      "lui/lei": "finanzierebbe",
+      "noi": "finanzieremmo",
+      "voi": "finanziereste",
+      "loro": "finanzierebbero"
+    },
+    "imperativo": {
+      "tu": "finanzia",
+      "lei": "finanzi",
+      "noi": "finanziamo",
+      "voi": "finanziate",
+      "loro": "finanzino"
+    }
+  },
+  "fingere": {
+    "presente": {
+      "io": "fingo",
+      "tu": "fingi",
+      "lui/lei": "finge",
+      "noi": "fingiamo",
+      "voi": "fingete",
+      "loro": "fingono"
+    },
+    "passatoProssimo": {
+      "io": "ho finto",
+      "tu": "hai finto",
+      "lui/lei": "ha finto",
+      "noi": "abbiamo finto",
+      "voi": "avete finto",
+      "loro": "hanno finto"
+    },
+    "imperfetto": {
+      "io": "fingevo",
+      "tu": "fingevi",
+      "lui/lei": "fingeva",
+      "noi": "fingevamo",
+      "voi": "fingevate",
+      "loro": "fingevano"
+    },
+    "futuro": {
+      "io": "fingerò",
+      "tu": "fingerai",
+      "lui/lei": "fingerà",
+      "noi": "fingeremo",
+      "voi": "fingerete",
+      "loro": "fingeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "finga",
+      "tu": "finga",
+      "lui/lei": "finga",
+      "noi": "fingiamo",
+      "voi": "fingiate",
+      "loro": "fingano"
+    },
+    "condizionale": {
+      "io": "fingerei",
+      "tu": "fingeresti",
+      "lui/lei": "fingerebbe",
+      "noi": "fingeremmo",
+      "voi": "fingereste",
+      "loro": "fingerebbero"
+    },
+    "imperativo": {
+      "tu": "fingi",
+      "lei": "finga",
+      "noi": "fingiamo",
+      "voi": "fingete",
+      "loro": "fingano"
+    }
+  },
+  "finire": {
+    "presente": {
+      "io": "finisco",
+      "tu": "finisci",
+      "lui/lei": "finisce",
+      "noi": "finiamo",
+      "voi": "finite",
+      "loro": "finiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho finito",
+      "tu": "hai finito",
+      "lui/lei": "ha finito",
+      "noi": "abbiamo finito",
+      "voi": "avete finito",
+      "loro": "hanno finito"
+    },
+    "imperfetto": {
+      "io": "finivo",
+      "tu": "finivi",
+      "lui/lei": "finiva",
+      "noi": "finivamo",
+      "voi": "finivate",
+      "loro": "finivano"
+    },
+    "futuro": {
+      "io": "finirò",
+      "tu": "finirai",
+      "lui/lei": "finirà",
+      "noi": "finiremo",
+      "voi": "finirete",
+      "loro": "finiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "finisca",
+      "tu": "finisca",
+      "lui/lei": "finisca",
+      "noi": "finiamo",
+      "voi": "finiate",
+      "loro": "finiscano"
+    },
+    "condizionale": {
+      "io": "finirei",
+      "tu": "finiresti",
+      "lui/lei": "finirebbe",
+      "noi": "finiremmo",
+      "voi": "finireste",
+      "loro": "finirebbero"
+    },
+    "imperativo": {
+      "tu": "finisci",
+      "lei": "finisca",
+      "noi": "finiamo",
+      "voi": "finite",
+      "loro": "finiscano"
+    }
+  },
+  "fiorire": {
+    "presente": {
+      "io": "fiorisco",
+      "tu": "fiorisci",
+      "lui/lei": "fiorisce",
+      "noi": "fioriamo",
+      "voi": "fiorite",
+      "loro": "fioriscono"
+    },
+    "passatoProssimo": {
+      "io": "sono fiorito",
+      "tu": "sei fiorito",
+      "lui/lei": "è fiorito",
+      "noi": "siamo fioriti",
+      "voi": "siete fioriti",
+      "loro": "sono fioriti"
+    },
+    "imperfetto": {
+      "io": "fiorivo",
+      "tu": "fiorivi",
+      "lui/lei": "fioriva",
+      "noi": "fiorivamo",
+      "voi": "fiorivate",
+      "loro": "fiorivano"
+    },
+    "futuro": {
+      "io": "fiorirò",
+      "tu": "fiorirai",
+      "lui/lei": "fiorirà",
+      "noi": "fioriremo",
+      "voi": "fiorirete",
+      "loro": "fioriranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fiorisca",
+      "tu": "fiorisca",
+      "lui/lei": "fiorisca",
+      "noi": "fioriamo",
+      "voi": "fioriate",
+      "loro": "fioriscano"
+    },
+    "condizionale": {
+      "io": "fiorirei",
+      "tu": "fioriresti",
+      "lui/lei": "fiorirebbe",
+      "noi": "fioriremmo",
+      "voi": "fiorireste",
+      "loro": "fiorirebbero"
+    },
+    "imperativo": {
+      "tu": "fiorisci",
+      "lei": "fiorisca",
+      "noi": "fioriamo",
+      "voi": "fiorite",
+      "loro": "fioriscano"
+    }
+  },
+  "firmare": {
+    "presente": {
+      "io": "firmo",
+      "tu": "firmi",
+      "lui/lei": "firma",
+      "noi": "firmiamo",
+      "voi": "firmate",
+      "loro": "firmano"
+    },
+    "passatoProssimo": {
+      "io": "ho firmato",
+      "tu": "hai firmato",
+      "lui/lei": "ha firmato",
+      "noi": "abbiamo firmato",
+      "voi": "avete firmato",
+      "loro": "hanno firmato"
+    },
+    "imperfetto": {
+      "io": "firmavo",
+      "tu": "firmavi",
+      "lui/lei": "firmava",
+      "noi": "firmavamo",
+      "voi": "firmavate",
+      "loro": "firmavano"
+    },
+    "futuro": {
+      "io": "firmerò",
+      "tu": "firmerai",
+      "lui/lei": "firmerà",
+      "noi": "firmeremo",
+      "voi": "firmerete",
+      "loro": "firmeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "firmi",
+      "tu": "firmi",
+      "lui/lei": "firmi",
+      "noi": "firmiamo",
+      "voi": "firmiate",
+      "loro": "firmino"
+    },
+    "condizionale": {
+      "io": "firmerei",
+      "tu": "firmeresti",
+      "lui/lei": "firmerebbe",
+      "noi": "firmeremmo",
+      "voi": "firmereste",
+      "loro": "firmerebbero"
+    },
+    "imperativo": {
+      "tu": "firma",
+      "lei": "firmi",
+      "noi": "firmiamo",
+      "voi": "firmate",
+      "loro": "firmino"
+    }
+  },
+  "fischiare": {
+    "presente": {
+      "io": "fischio",
+      "tu": "fischi",
+      "lui/lei": "fischia",
+      "noi": "fischiamo",
+      "voi": "fischiate",
+      "loro": "fischiano"
+    },
+    "passatoProssimo": {
+      "io": "ho fischiato",
+      "tu": "hai fischiato",
+      "lui/lei": "ha fischiato",
+      "noi": "abbiamo fischiato",
+      "voi": "avete fischiato",
+      "loro": "hanno fischiato"
+    },
+    "imperfetto": {
+      "io": "fischiavo",
+      "tu": "fischiavi",
+      "lui/lei": "fischiava",
+      "noi": "fischiavamo",
+      "voi": "fischiavate",
+      "loro": "fischiavano"
+    },
+    "futuro": {
+      "io": "fischierò",
+      "tu": "fischierai",
+      "lui/lei": "fischierà",
+      "noi": "fischieremo",
+      "voi": "fischierete",
+      "loro": "fischieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fischi",
+      "tu": "fischi",
+      "lui/lei": "fischi",
+      "noi": "fischiamo",
+      "voi": "fischiate",
+      "loro": "fischino"
+    },
+    "condizionale": {
+      "io": "fischierei",
+      "tu": "fischieresti",
+      "lui/lei": "fischierebbe",
+      "noi": "fischieremmo",
+      "voi": "fischiereste",
+      "loro": "fischierebbero"
+    },
+    "imperativo": {
+      "tu": "fischia",
+      "lei": "fischi",
+      "noi": "fischiamo",
+      "voi": "fischiate",
+      "loro": "fischino"
+    }
+  },
+  "fissare": {
+    "presente": {
+      "io": "fisso",
+      "tu": "fissi",
+      "lui/lei": "fissa",
+      "noi": "fissiamo",
+      "voi": "fissate",
+      "loro": "fissano"
+    },
+    "passatoProssimo": {
+      "io": "ho fissato",
+      "tu": "hai fissato",
+      "lui/lei": "ha fissato",
+      "noi": "abbiamo fissato",
+      "voi": "avete fissato",
+      "loro": "hanno fissato"
+    },
+    "imperfetto": {
+      "io": "fissavo",
+      "tu": "fissavi",
+      "lui/lei": "fissava",
+      "noi": "fissavamo",
+      "voi": "fissavate",
+      "loro": "fissavano"
+    },
+    "futuro": {
+      "io": "fisserò",
+      "tu": "fisserai",
+      "lui/lei": "fisserà",
+      "noi": "fisseremo",
+      "voi": "fisserete",
+      "loro": "fisseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fissi",
+      "tu": "fissi",
+      "lui/lei": "fissi",
+      "noi": "fissiamo",
+      "voi": "fissiate",
+      "loro": "fissino"
+    },
+    "condizionale": {
+      "io": "fisserei",
+      "tu": "fisseresti",
+      "lui/lei": "fisserebbe",
+      "noi": "fisseremmo",
+      "voi": "fissereste",
+      "loro": "fisserebbero"
+    },
+    "imperativo": {
+      "tu": "fissa",
+      "lei": "fissi",
+      "noi": "fissiamo",
+      "voi": "fissate",
+      "loro": "fissino"
+    }
+  },
+  "fiutare": {
+    "presente": {
+      "io": "fiuto",
+      "tu": "fiuti",
+      "lui/lei": "fiuta",
+      "noi": "fiutiamo",
+      "voi": "fiutate",
+      "loro": "fiutano"
+    },
+    "passatoProssimo": {
+      "io": "ho fiutato",
+      "tu": "hai fiutato",
+      "lui/lei": "ha fiutato",
+      "noi": "abbiamo fiutato",
+      "voi": "avete fiutato",
+      "loro": "hanno fiutato"
+    },
+    "imperfetto": {
+      "io": "fiutavo",
+      "tu": "fiutavi",
+      "lui/lei": "fiutava",
+      "noi": "fiutavamo",
+      "voi": "fiutavate",
+      "loro": "fiutavano"
+    },
+    "futuro": {
+      "io": "fiuterò",
+      "tu": "fiuterai",
+      "lui/lei": "fiuterà",
+      "noi": "fiuteremo",
+      "voi": "fiuterete",
+      "loro": "fiuteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fiuti",
+      "tu": "fiuti",
+      "lui/lei": "fiuti",
+      "noi": "fiutiamo",
+      "voi": "fiutiate",
+      "loro": "fiutino"
+    },
+    "condizionale": {
+      "io": "fiuterei",
+      "tu": "fiuteresti",
+      "lui/lei": "fiuterebbe",
+      "noi": "fiuteremmo",
+      "voi": "fiutereste",
+      "loro": "fiuterebbero"
+    },
+    "imperativo": {
+      "tu": "fiuta",
+      "lei": "fiuti",
+      "noi": "fiutiamo",
+      "voi": "fiutate",
+      "loro": "fiutino"
+    }
+  },
+  "fluire": {
+    "presente": {
+      "io": "fluisco",
+      "tu": "fluisci",
+      "lui/lei": "fluisce",
+      "noi": "fluiamo",
+      "voi": "fluite",
+      "loro": "fluiscono"
+    },
+    "passatoProssimo": {
+      "io": "sono fluito",
+      "tu": "sei fluito",
+      "lui/lei": "è fluito",
+      "noi": "siamo fluiti",
+      "voi": "siete fluiti",
+      "loro": "sono fluiti"
+    },
+    "imperfetto": {
+      "io": "fluivo",
+      "tu": "fluivi",
+      "lui/lei": "fluiva",
+      "noi": "fluivamo",
+      "voi": "fluivate",
+      "loro": "fluivano"
+    },
+    "futuro": {
+      "io": "fluirò",
+      "tu": "fluirai",
+      "lui/lei": "fluirà",
+      "noi": "fluiremo",
+      "voi": "fluirete",
+      "loro": "fluiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fluisca",
+      "tu": "fluisca",
+      "lui/lei": "fluisca",
+      "noi": "fluiamo",
+      "voi": "fluiate",
+      "loro": "fluiscano"
+    },
+    "condizionale": {
+      "io": "fluirei",
+      "tu": "fluiresti",
+      "lui/lei": "fluirebbe",
+      "noi": "fluiremmo",
+      "voi": "fluireste",
+      "loro": "fluirebbero"
+    },
+    "imperativo": {
+      "tu": "fluisci",
+      "lei": "fluisca",
+      "noi": "fluiamo",
+      "voi": "fluite",
+      "loro": "fluiscano"
+    }
+  },
+  "foderare": {
+    "presente": {
+      "io": "fodero",
+      "tu": "foderi",
+      "lui/lei": "fodera",
+      "noi": "foderiamo",
+      "voi": "foderate",
+      "loro": "foderano"
+    },
+    "passatoProssimo": {
+      "io": "ho foderato",
+      "tu": "hai foderato",
+      "lui/lei": "ha foderato",
+      "noi": "abbiamo foderato",
+      "voi": "avete foderato",
+      "loro": "hanno foderato"
+    },
+    "imperfetto": {
+      "io": "foderavo",
+      "tu": "foderavi",
+      "lui/lei": "foderava",
+      "noi": "foderavamo",
+      "voi": "foderavate",
+      "loro": "foderavano"
+    },
+    "futuro": {
+      "io": "foderò",
+      "tu": "foderai",
+      "lui/lei": "foderà",
+      "noi": "foderemo",
+      "voi": "foderete",
+      "loro": "foderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "foderi",
+      "tu": "foderi",
+      "lui/lei": "foderi",
+      "noi": "foderiamo",
+      "voi": "foderiate",
+      "loro": "foderino"
+    },
+    "condizionale": {
+      "io": "fodererei",
+      "tu": "fodereresti",
+      "lui/lei": "fodererebbe",
+      "noi": "fodereremmo",
+      "voi": "foderereste",
+      "loro": "fodererebbero"
+    },
+    "imperativo": {
+      "tu": "fodera",
+      "lei": "foderi",
+      "noi": "foderiamo",
+      "voi": "foderate",
+      "loro": "foderino"
+    }
+  },
+  "foggiare": {
+    "presente": {
+      "io": "foggio",
+      "tu": "foggi",
+      "lui/lei": "foggia",
+      "noi": "foggiamo",
+      "voi": "foggiate",
+      "loro": "foggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho foggiato",
+      "tu": "hai foggiato",
+      "lui/lei": "ha foggiato",
+      "noi": "abbiamo foggiato",
+      "voi": "avete foggiato",
+      "loro": "hanno foggiato"
+    },
+    "imperfetto": {
+      "io": "foggiavo",
+      "tu": "foggiavi",
+      "lui/lei": "foggiava",
+      "noi": "foggiavamo",
+      "voi": "foggiavate",
+      "loro": "foggiavano"
+    },
+    "futuro": {
+      "io": "foggerò",
+      "tu": "foggerai",
+      "lui/lei": "foggerà",
+      "noi": "foggeremo",
+      "voi": "foggerete",
+      "loro": "foggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "foggi",
+      "tu": "foggi",
+      "lui/lei": "foggi",
+      "noi": "foggiamo",
+      "voi": "foggiate",
+      "loro": "foggino"
+    },
+    "condizionale": {
+      "io": "foggerei",
+      "tu": "foggeresti",
+      "lui/lei": "foggerebbe",
+      "noi": "foggeremmo",
+      "voi": "foggereste",
+      "loro": "foggerebbero"
+    },
+    "imperativo": {
+      "tu": "foggia",
+      "lei": "foggi",
+      "noi": "foggiamo",
+      "voi": "foggiate",
+      "loro": "foggino"
+    }
+  },
+  "fondare": {
+    "presente": {
+      "io": "fondo",
+      "tu": "fondi",
+      "lui/lei": "fonda",
+      "noi": "fondiamo",
+      "voi": "fondate",
+      "loro": "fondano"
+    },
+    "passatoProssimo": {
+      "io": "ho fondato",
+      "tu": "hai fondato",
+      "lui/lei": "ha fondato",
+      "noi": "abbiamo fondato",
+      "voi": "avete fondato",
+      "loro": "hanno fondato"
+    },
+    "imperfetto": {
+      "io": "fondavo",
+      "tu": "fondavi",
+      "lui/lei": "fondava",
+      "noi": "fondavamo",
+      "voi": "fondavate",
+      "loro": "fondavano"
+    },
+    "futuro": {
+      "io": "fonderò",
+      "tu": "fonderai",
+      "lui/lei": "fonderà",
+      "noi": "fonderemo",
+      "voi": "fonderete",
+      "loro": "fonderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "fondi",
+      "tu": "fondi",
+      "lui/lei": "fondi",
+      "noi": "fondiamo",
+      "voi": "fondiate",
+      "loro": "fondino"
+    },
+    "condizionale": {
+      "io": "fonderei",
+      "tu": "fonderesti",
+      "lui/lei": "fonderebbe",
+      "noi": "fonderemmo",
+      "voi": "fondereste",
+      "loro": "fonderebbero"
+    },
+    "imperativo": {
+      "tu": "fonda",
+      "lei": "fondi",
+      "noi": "fondiamo",
+      "voi": "fondate",
+      "loro": "fondino"
+    }
+  },
+  "fondere": {
+    "presente": {
+      "io": "fondo",
+      "tu": "fondi",
+      "lui/lei": "fonde",
+      "noi": "fondiamo",
+      "voi": "fondete",
+      "loro": "fondono"
+    },
+    "passatoProssimo": {
+      "io": "ho fuso",
+      "tu": "hai fuso",
+      "lui/lei": "ha fuso",
+      "noi": "abbiamo fuso",
+      "voi": "avete fuso",
+      "loro": "hanno fuso"
+    },
+    "imperfetto": {
+      "io": "fondevo",
+      "tu": "fondevi",
+      "lui/lei": "fondeva",
+      "noi": "fondevamo",
+      "voi": "fondevate",
+      "loro": "fondevano"
+    },
+    "futuro": {
+      "io": "fonderò",
+      "tu": "fonderai",
+      "lui/lei": "fonderà",
+      "noi": "fonderemo",
+      "voi": "fonderete",
+      "loro": "fonderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "fonda",
+      "tu": "fonda",
+      "lui/lei": "fonda",
+      "noi": "fondiamo",
+      "voi": "fondiate",
+      "loro": "fondano"
+    },
+    "condizionale": {
+      "io": "fonderei",
+      "tu": "fonderesti",
+      "lui/lei": "fonderebbe",
+      "noi": "fonderemmo",
+      "voi": "fondereste",
+      "loro": "fonderebbero"
+    },
+    "imperativo": {
+      "tu": "fondi",
+      "lei": "fonda",
+      "noi": "fondiamo",
+      "voi": "fondete",
+      "loro": "fondano"
+    }
+  },
+  "forare": {
+    "presente": {
+      "io": "foro",
+      "tu": "fori",
+      "lui/lei": "fora",
+      "noi": "foriamo",
+      "voi": "forate",
+      "loro": "forano"
+    },
+    "passatoProssimo": {
+      "io": "ho forato",
+      "tu": "hai forato",
+      "lui/lei": "ha forato",
+      "noi": "abbiamo forato",
+      "voi": "avete forato",
+      "loro": "hanno forato"
+    },
+    "imperfetto": {
+      "io": "foravo",
+      "tu": "foravi",
+      "lui/lei": "forava",
+      "noi": "foravamo",
+      "voi": "foravate",
+      "loro": "foravano"
+    },
+    "futuro": {
+      "io": "forerò",
+      "tu": "forerai",
+      "lui/lei": "forerà",
+      "noi": "foreremo",
+      "voi": "forerete",
+      "loro": "foreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fori",
+      "tu": "fori",
+      "lui/lei": "fori",
+      "noi": "foriamo",
+      "voi": "foriate",
+      "loro": "forino"
+    },
+    "condizionale": {
+      "io": "forerei",
+      "tu": "foreresti",
+      "lui/lei": "forerebbe",
+      "noi": "foreremmo",
+      "voi": "forereste",
+      "loro": "forerebbero"
+    },
+    "imperativo": {
+      "tu": "fora",
+      "lei": "fori",
+      "noi": "foriamo",
+      "voi": "forate",
+      "loro": "forino"
+    }
+  },
+  "forbire": {
+    "presente": {
+      "io": "forbisco",
+      "tu": "forbisci",
+      "lui/lei": "forbisce",
+      "noi": "forbiamo",
+      "voi": "forbite",
+      "loro": "forbiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho forbito",
+      "tu": "hai forbito",
+      "lui/lei": "ha forbito",
+      "noi": "abbiamo forbito",
+      "voi": "avete forbito",
+      "loro": "hanno forbito"
+    },
+    "imperfetto": {
+      "io": "forbivo",
+      "tu": "forbivi",
+      "lui/lei": "forbiva",
+      "noi": "forbivamo",
+      "voi": "forbivate",
+      "loro": "forbivano"
+    },
+    "futuro": {
+      "io": "forbirò",
+      "tu": "forbirai",
+      "lui/lei": "forbirà",
+      "noi": "forbiremo",
+      "voi": "forbirete",
+      "loro": "forbiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "forbisca",
+      "tu": "forbisca",
+      "lui/lei": "forbisca",
+      "noi": "forbiamo",
+      "voi": "forbiate",
+      "loro": "forbiscano"
+    },
+    "condizionale": {
+      "io": "forbirei",
+      "tu": "forbiresti",
+      "lui/lei": "forbirebbe",
+      "noi": "forbiremmo",
+      "voi": "forbireste",
+      "loro": "forbirebbero"
+    },
+    "imperativo": {
+      "tu": "forbisci",
+      "lei": "forbisca",
+      "noi": "forbiamo",
+      "voi": "forbite",
+      "loro": "forbiscano"
+    }
+  },
+  "forgiare": {
+    "presente": {
+      "io": "forgio",
+      "tu": "forgi",
+      "lui/lei": "forgia",
+      "noi": "forgiamo",
+      "voi": "forgiate",
+      "loro": "forgiano"
+    },
+    "passatoProssimo": {
+      "io": "ho forgiato",
+      "tu": "hai forgiato",
+      "lui/lei": "ha forgiato",
+      "noi": "abbiamo forgiato",
+      "voi": "avete forgiato",
+      "loro": "hanno forgiato"
+    },
+    "imperfetto": {
+      "io": "forgiavo",
+      "tu": "forgiavi",
+      "lui/lei": "forgiava",
+      "noi": "forgiavamo",
+      "voi": "forgiavate",
+      "loro": "forgiavano"
+    },
+    "futuro": {
+      "io": "forgerò",
+      "tu": "forgerai",
+      "lui/lei": "forgerà",
+      "noi": "forgeremo",
+      "voi": "forgerete",
+      "loro": "forgeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "forgi",
+      "tu": "forgi",
+      "lui/lei": "forgi",
+      "noi": "forgiamo",
+      "voi": "forgiate",
+      "loro": "forgino"
+    },
+    "condizionale": {
+      "io": "forgerei",
+      "tu": "forgeresti",
+      "lui/lei": "forgerebbe",
+      "noi": "forgeremmo",
+      "voi": "forgereste",
+      "loro": "forgerebbero"
+    },
+    "imperativo": {
+      "tu": "forgia",
+      "lei": "forgi",
+      "noi": "forgiamo",
+      "voi": "forgiate",
+      "loro": "forgino"
+    }
+  },
+  "formare": {
+    "presente": {
+      "io": "formo",
+      "tu": "formi",
+      "lui/lei": "forma",
+      "noi": "formiamo",
+      "voi": "formate",
+      "loro": "formano"
+    },
+    "passatoProssimo": {
+      "io": "ho formato",
+      "tu": "hai formato",
+      "lui/lei": "ha formato",
+      "noi": "abbiamo formato",
+      "voi": "avete formato",
+      "loro": "hanno formato"
+    },
+    "imperfetto": {
+      "io": "formavo",
+      "tu": "formavi",
+      "lui/lei": "formava",
+      "noi": "formavamo",
+      "voi": "formavate",
+      "loro": "formavano"
+    },
+    "futuro": {
+      "io": "formerò",
+      "tu": "formerai",
+      "lui/lei": "formerà",
+      "noi": "formeremo",
+      "voi": "formerete",
+      "loro": "formeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "formi",
+      "tu": "formi",
+      "lui/lei": "formi",
+      "noi": "formiamo",
+      "voi": "formiate",
+      "loro": "formino"
+    },
+    "condizionale": {
+      "io": "formerei",
+      "tu": "formeresti",
+      "lui/lei": "formerebbe",
+      "noi": "formeremmo",
+      "voi": "formereste",
+      "loro": "formerebbero"
+    },
+    "imperativo": {
+      "tu": "forma",
+      "lei": "formi",
+      "noi": "formiamo",
+      "voi": "formate",
+      "loro": "formino"
+    }
+  },
+  "formicolare": {
+    "presente": {
+      "io": "formicolo",
+      "tu": "formicoli",
+      "lui/lei": "formicola",
+      "noi": "formicoliamo",
+      "voi": "formicolate",
+      "loro": "formicolano"
+    },
+    "passatoProssimo": {
+      "io": "ho formicolato",
+      "tu": "hai formicolato",
+      "lui/lei": "ha formicolato",
+      "noi": "abbiamo formicolato",
+      "voi": "avete formicolato",
+      "loro": "hanno formicolato"
+    },
+    "imperfetto": {
+      "io": "formicolavo",
+      "tu": "formicolavi",
+      "lui/lei": "formicolava",
+      "noi": "formicolavamo",
+      "voi": "formicolavate",
+      "loro": "formicolavano"
+    },
+    "futuro": {
+      "io": "formicolerò",
+      "tu": "formicolerai",
+      "lui/lei": "formicolerà",
+      "noi": "formicoleremo",
+      "voi": "formicolerete",
+      "loro": "formicoleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "formicoli",
+      "tu": "formicoli",
+      "lui/lei": "formicoli",
+      "noi": "formicoliamo",
+      "voi": "formicoliate",
+      "loro": "formicolino"
+    },
+    "condizionale": {
+      "io": "formicolerei",
+      "tu": "formicoleresti",
+      "lui/lei": "formicolerebbe",
+      "noi": "formicoleremmo",
+      "voi": "formicolereste",
+      "loro": "formicolerebbero"
+    },
+    "imperativo": {
+      "tu": "formicola",
+      "lei": "formicoli",
+      "noi": "formicoliamo",
+      "voi": "formicolate",
+      "loro": "formicolino"
+    }
+  },
+  "formulare": {
+    "presente": {
+      "io": "formulo",
+      "tu": "formuli",
+      "lui/lei": "formula",
+      "noi": "formuliamo",
+      "voi": "formulate",
+      "loro": "formulano"
+    },
+    "passatoProssimo": {
+      "io": "ho formulato",
+      "tu": "hai formulato",
+      "lui/lei": "ha formulato",
+      "noi": "abbiamo formulato",
+      "voi": "avete formulato",
+      "loro": "hanno formulato"
+    },
+    "imperfetto": {
+      "io": "formulavo",
+      "tu": "formulavi",
+      "lui/lei": "formulava",
+      "noi": "formulavamo",
+      "voi": "formulavate",
+      "loro": "formulavano"
+    },
+    "futuro": {
+      "io": "formulerò",
+      "tu": "formulerai",
+      "lui/lei": "formulerà",
+      "noi": "formuleremo",
+      "voi": "formulerete",
+      "loro": "formuleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "formuli",
+      "tu": "formuli",
+      "lui/lei": "formuli",
+      "noi": "formuliamo",
+      "voi": "formuliate",
+      "loro": "formulino"
+    },
+    "condizionale": {
+      "io": "formulerei",
+      "tu": "formuleresti",
+      "lui/lei": "formulerebbe",
+      "noi": "formuleremmo",
+      "voi": "formulereste",
+      "loro": "formulerebbero"
+    },
+    "imperativo": {
+      "tu": "formula",
+      "lei": "formuli",
+      "noi": "formuliamo",
+      "voi": "formulate",
+      "loro": "formulino"
+    }
+  },
+  "fornire": {
+    "presente": {
+      "io": "fornisco",
+      "tu": "fornisci",
+      "lui/lei": "fornisce",
+      "noi": "forniamo",
+      "voi": "fornite",
+      "loro": "forniscono"
+    },
+    "passatoProssimo": {
+      "io": "ho fornito",
+      "tu": "hai fornito",
+      "lui/lei": "ha fornito",
+      "noi": "abbiamo fornito",
+      "voi": "avete fornito",
+      "loro": "hanno fornito"
+    },
+    "imperfetto": {
+      "io": "fornivo",
+      "tu": "fornivi",
+      "lui/lei": "forniva",
+      "noi": "fornivamo",
+      "voi": "fornivate",
+      "loro": "fornivano"
+    },
+    "futuro": {
+      "io": "fornirò",
+      "tu": "fornirai",
+      "lui/lei": "fornirà",
+      "noi": "forniremo",
+      "voi": "fornirete",
+      "loro": "forniranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fornisca",
+      "tu": "fornisca",
+      "lui/lei": "fornisca",
+      "noi": "forniamo",
+      "voi": "forniate",
+      "loro": "forniscano"
+    },
+    "condizionale": {
+      "io": "fornirei",
+      "tu": "forniresti",
+      "lui/lei": "fornirebbe",
+      "noi": "forniremmo",
+      "voi": "fornireste",
+      "loro": "fornirebbero"
+    },
+    "imperativo": {
+      "tu": "fornisci",
+      "lei": "fornisca",
+      "noi": "forniamo",
+      "voi": "fornite",
+      "loro": "forniscano"
+    }
+  },
+  "forzare": {
+    "presente": {
+      "io": "forzo",
+      "tu": "forzi",
+      "lui/lei": "forza",
+      "noi": "forziamo",
+      "voi": "forzate",
+      "loro": "forzano"
+    },
+    "passatoProssimo": {
+      "io": "ho forzato",
+      "tu": "hai forzato",
+      "lui/lei": "ha forzato",
+      "noi": "abbiamo forzato",
+      "voi": "avete forzato",
+      "loro": "hanno forzato"
+    },
+    "imperfetto": {
+      "io": "forzavo",
+      "tu": "forzavi",
+      "lui/lei": "forzava",
+      "noi": "forzavamo",
+      "voi": "forzavate",
+      "loro": "forzavano"
+    },
+    "futuro": {
+      "io": "forzerò",
+      "tu": "forzerai",
+      "lui/lei": "forzerà",
+      "noi": "forzeremo",
+      "voi": "forzerete",
+      "loro": "forzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "forzi",
+      "tu": "forzi",
+      "lui/lei": "forzi",
+      "noi": "forziamo",
+      "voi": "forziate",
+      "loro": "forzino"
+    },
+    "condizionale": {
+      "io": "forzerei",
+      "tu": "forzeresti",
+      "lui/lei": "forzerebbe",
+      "noi": "forzeremmo",
+      "voi": "forzereste",
+      "loro": "forzerebbero"
+    },
+    "imperativo": {
+      "tu": "forza",
+      "lei": "forzi",
+      "noi": "forziamo",
+      "voi": "forzate",
+      "loro": "forzino"
+    }
+  },
+  "fotografare": {
+    "presente": {
+      "io": "fotografo",
+      "tu": "fotografi",
+      "lui/lei": "fotografa",
+      "noi": "fotografiamo",
+      "voi": "fotografate",
+      "loro": "fotografano"
+    },
+    "passatoProssimo": {
+      "io": "ho fotografato",
+      "tu": "hai fotografato",
+      "lui/lei": "ha fotografato",
+      "noi": "abbiamo fotografato",
+      "voi": "avete fotografato",
+      "loro": "hanno fotografato"
+    },
+    "imperfetto": {
+      "io": "fotografavo",
+      "tu": "fotografavi",
+      "lui/lei": "fotografava",
+      "noi": "fotografavamo",
+      "voi": "fotografavate",
+      "loro": "fotografavano"
+    },
+    "futuro": {
+      "io": "fotograferò",
+      "tu": "fotograferai",
+      "lui/lei": "fotograferà",
+      "noi": "fotograferemo",
+      "voi": "fotograferete",
+      "loro": "fotograferanno"
+    },
+    "congiuntivoPresente": {
+      "io": "fotografi",
+      "tu": "fotografi",
+      "lui/lei": "fotografi",
+      "noi": "fotografiamo",
+      "voi": "fotografiate",
+      "loro": "fotografino"
+    },
+    "condizionale": {
+      "io": "fotograferei",
+      "tu": "fotograferesti",
+      "lui/lei": "fotograferebbe",
+      "noi": "fotograferemmo",
+      "voi": "fotografereste",
+      "loro": "fotograferebbero"
+    },
+    "imperativo": {
+      "tu": "fotografa",
+      "lei": "fotografi",
+      "noi": "fotografiamo",
+      "voi": "fotografate",
+      "loro": "fotografino"
+    }
+  },
+  "fraintendere": {
+    "presente": {
+      "io": "fraintendo",
+      "tu": "fraintendi",
+      "lui/lei": "fraintende",
+      "noi": "fraintendiamo",
+      "voi": "fraintendete",
+      "loro": "fraintendono"
+    },
+    "passatoProssimo": {
+      "io": "ho frainteso",
+      "tu": "hai frainteso",
+      "lui/lei": "ha frainteso",
+      "noi": "abbiamo frainteso",
+      "voi": "avete frainteso",
+      "loro": "hanno frainteso"
+    },
+    "imperfetto": {
+      "io": "fraintendevo",
+      "tu": "fraintendevi",
+      "lui/lei": "fraintendeva",
+      "noi": "fraintendevamo",
+      "voi": "fraintendevate",
+      "loro": "fraintendevano"
+    },
+    "futuro": {
+      "io": "fraintenderò",
+      "tu": "fraintenderai",
+      "lui/lei": "fraintenderà",
+      "noi": "fraintenderemo",
+      "voi": "fraintenderete",
+      "loro": "fraintenderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "fraintenda",
+      "tu": "fraintenda",
+      "lui/lei": "fraintenda",
+      "noi": "fraintendiamo",
+      "voi": "fraintendiate",
+      "loro": "fraintendano"
+    },
+    "condizionale": {
+      "io": "fraintenderei",
+      "tu": "fraintenderesti",
+      "lui/lei": "fraintenderebbe",
+      "noi": "fraintenderemmo",
+      "voi": "fraintendereste",
+      "loro": "fraintenderebbero"
+    },
+    "imperativo": {
+      "tu": "fraintendi",
+      "lei": "fraintenda",
+      "noi": "fraintendiamo",
+      "voi": "fraintendete",
+      "loro": "fraintendano"
+    }
+  },
+  "frammentare": {
+    "presente": {
+      "io": "frammento",
+      "tu": "frammenti",
+      "lui/lei": "frammenta",
+      "noi": "frammentiamo",
+      "voi": "frammentate",
+      "loro": "frammentano"
+    },
+    "passatoProssimo": {
+      "io": "ho frammentato",
+      "tu": "hai frammentato",
+      "lui/lei": "ha frammentato",
+      "noi": "abbiamo frammentato",
+      "voi": "avete frammentato",
+      "loro": "hanno frammentato"
+    },
+    "imperfetto": {
+      "io": "frammentavo",
+      "tu": "frammentavi",
+      "lui/lei": "frammentava",
+      "noi": "frammentavamo",
+      "voi": "frammentavate",
+      "loro": "frammentavano"
+    },
+    "futuro": {
+      "io": "frammenterò",
+      "tu": "frammenterai",
+      "lui/lei": "frammenterà",
+      "noi": "frammenteremo",
+      "voi": "frammenterete",
+      "loro": "frammenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frammenti",
+      "tu": "frammenti",
+      "lui/lei": "frammenti",
+      "noi": "frammentiamo",
+      "voi": "frammentiate",
+      "loro": "frammentino"
+    },
+    "condizionale": {
+      "io": "frammenterei",
+      "tu": "frammenteresti",
+      "lui/lei": "frammenterebbe",
+      "noi": "frammenteremmo",
+      "voi": "frammentereste",
+      "loro": "frammenterebbero"
+    },
+    "imperativo": {
+      "tu": "frammenta",
+      "lei": "frammenti",
+      "noi": "frammentiamo",
+      "voi": "frammentate",
+      "loro": "frammentino"
+    }
+  },
+  "frantumare": {
+    "presente": {
+      "io": "frantumo",
+      "tu": "frantumi",
+      "lui/lei": "frantuma",
+      "noi": "frantumiamo",
+      "voi": "frantumate",
+      "loro": "frantumano"
+    },
+    "passatoProssimo": {
+      "io": "ho frantumato",
+      "tu": "hai frantumato",
+      "lui/lei": "ha frantumato",
+      "noi": "abbiamo frantumato",
+      "voi": "avete frantumato",
+      "loro": "hanno frantumato"
+    },
+    "imperfetto": {
+      "io": "frantumavo",
+      "tu": "frantumavi",
+      "lui/lei": "frantumava",
+      "noi": "frantumavamo",
+      "voi": "frantumavate",
+      "loro": "frantumavano"
+    },
+    "futuro": {
+      "io": "frantumerò",
+      "tu": "frantumerai",
+      "lui/lei": "frantumerà",
+      "noi": "frantumeremo",
+      "voi": "frantumerete",
+      "loro": "frantumeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frantumi",
+      "tu": "frantumi",
+      "lui/lei": "frantumi",
+      "noi": "frantumiamo",
+      "voi": "frantumiate",
+      "loro": "frantumino"
+    },
+    "condizionale": {
+      "io": "frantumerei",
+      "tu": "frantumeresti",
+      "lui/lei": "frantumerebbe",
+      "noi": "frantumeremmo",
+      "voi": "frantumereste",
+      "loro": "frantumerebbero"
+    },
+    "imperativo": {
+      "tu": "frantuma",
+      "lei": "frantumi",
+      "noi": "frantumiamo",
+      "voi": "frantumate",
+      "loro": "frantumino"
+    }
+  },
+  "frastornare": {
+    "presente": {
+      "io": "frastorno",
+      "tu": "frastorni",
+      "lui/lei": "frastorna",
+      "noi": "frastorniamo",
+      "voi": "frastornate",
+      "loro": "frastornano"
+    },
+    "passatoProssimo": {
+      "io": "ho frastornato",
+      "tu": "hai frastornato",
+      "lui/lei": "ha frastornato",
+      "noi": "abbiamo frastornato",
+      "voi": "avete frastornato",
+      "loro": "hanno frastornato"
+    },
+    "imperfetto": {
+      "io": "frastornavo",
+      "tu": "frastornavi",
+      "lui/lei": "frastornava",
+      "noi": "frastornavamo",
+      "voi": "frastornavate",
+      "loro": "frastornavano"
+    },
+    "futuro": {
+      "io": "frastornerò",
+      "tu": "frastornerai",
+      "lui/lei": "frastornerà",
+      "noi": "frastorneremo",
+      "voi": "frastornerete",
+      "loro": "frastorneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frastorni",
+      "tu": "frastorni",
+      "lui/lei": "frastorni",
+      "noi": "frastorniamo",
+      "voi": "frastorniate",
+      "loro": "frastornino"
+    },
+    "condizionale": {
+      "io": "frastornerei",
+      "tu": "frastorneresti",
+      "lui/lei": "frastornerebbe",
+      "noi": "frastorneremmo",
+      "voi": "frastornereste",
+      "loro": "frastornerebbero"
+    },
+    "imperativo": {
+      "tu": "frastorna",
+      "lei": "frastorni",
+      "noi": "frastorniamo",
+      "voi": "frastornate",
+      "loro": "frastornino"
+    }
+  },
+  "fratturarsi": {
+    "presente": {
+      "io": "mi fratturo",
+      "tu": "ti fratturi",
+      "lui/lei": "si frattura",
+      "noi": "ci fratturiamo",
+      "voi": "vi fratturate",
+      "loro": "si fratturano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono fratturato/a",
+      "tu": "ti sei fratturato/a",
+      "lui/lei": "si è fratturato/a",
+      "noi": "ci siamo fratturati/e",
+      "voi": "vi siete fratturati/e",
+      "loro": "si sono fratturati/e"
+    },
+    "imperfetto": {
+      "io": "mi fratturavo",
+      "tu": "ti fratturavi",
+      "lui/lei": "si fratturava",
+      "noi": "ci fratturavamo",
+      "voi": "vi fratturavate",
+      "loro": "si fratturavano"
+    },
+    "futuro": {
+      "io": "mi fratturerò",
+      "tu": "ti fratturerai",
+      "lui/lei": "si fratturerà",
+      "noi": "ci frattureremo",
+      "voi": "vi fratturerete",
+      "loro": "si frattureranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi fratturi",
+      "tu": "ti fratturi",
+      "lui/lei": "si fratturi",
+      "noi": "ci fratturiamo",
+      "voi": "vi fratturiate",
+      "loro": "si fratturino"
+    },
+    "condizionale": {
+      "io": "mi fratturerei",
+      "tu": "ti frattureresti",
+      "lui/lei": "si fratturerebbe",
+      "noi": "ci frattureremmo",
+      "voi": "vi fratturereste",
+      "loro": "si fratturerebbero"
+    },
+    "imperativo": {
+      "tu": "fratturati",
+      "lei": "si fratturi",
+      "noi": "fratturiamoci",
+      "voi": "fratturatevi",
+      "loro": "si fratturino"
+    }
+  },
+  "fregiare": {
+    "presente": {
+      "io": "fregio",
+      "tu": "fregi",
+      "lui/lei": "fregia",
+      "noi": "fregiamo",
+      "voi": "fregiate",
+      "loro": "fregiano"
+    },
+    "passatoProssimo": {
+      "io": "ho fregiato",
+      "tu": "hai fregiato",
+      "lui/lei": "ha fregiato",
+      "noi": "abbiamo fregiato",
+      "voi": "avete fregiato",
+      "loro": "hanno fregiato"
+    },
+    "imperfetto": {
+      "io": "fregiavo",
+      "tu": "fregiavi",
+      "lui/lei": "fregiava",
+      "noi": "fregiavamo",
+      "voi": "fregiavate",
+      "loro": "fregiavano"
+    },
+    "futuro": {
+      "io": "fregerò",
+      "tu": "fregerai",
+      "lui/lei": "fregerà",
+      "noi": "fregeremo",
+      "voi": "fregerete",
+      "loro": "fregeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fregi",
+      "tu": "fregi",
+      "lui/lei": "fregi",
+      "noi": "fregiamo",
+      "voi": "fregiate",
+      "loro": "fregino"
+    },
+    "condizionale": {
+      "io": "fregerei",
+      "tu": "fregeresti",
+      "lui/lei": "fregerebbe",
+      "noi": "fregeremmo",
+      "voi": "fregereste",
+      "loro": "fregerebbero"
+    },
+    "imperativo": {
+      "tu": "fregia",
+      "lei": "fregi",
+      "noi": "fregiamo",
+      "voi": "fregiate",
+      "loro": "fregino"
+    }
+  },
+  "fremere": {
+    "presente": {
+      "io": "fremo",
+      "tu": "fremi",
+      "lui/lei": "freme",
+      "noi": "fremiamo",
+      "voi": "fremete",
+      "loro": "fremono"
+    },
+    "passatoProssimo": {
+      "io": "ho fremuto",
+      "tu": "hai fremuto",
+      "lui/lei": "ha fremuto",
+      "noi": "abbiamo fremuto",
+      "voi": "avete fremuto",
+      "loro": "hanno fremuto"
+    },
+    "imperfetto": {
+      "io": "fremevo",
+      "tu": "fremevi",
+      "lui/lei": "fremeva",
+      "noi": "fremevamo",
+      "voi": "fremevate",
+      "loro": "fremevano"
+    },
+    "futuro": {
+      "io": "fremerò",
+      "tu": "fremerai",
+      "lui/lei": "fremerà",
+      "noi": "fremeremo",
+      "voi": "fremerete",
+      "loro": "fremeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frema",
+      "tu": "frema",
+      "lui/lei": "frema",
+      "noi": "fremiamo",
+      "voi": "fremiate",
+      "loro": "fremano"
+    },
+    "condizionale": {
+      "io": "fremerei",
+      "tu": "fremeresti",
+      "lui/lei": "fremerebbe",
+      "noi": "fremeremmo",
+      "voi": "fremereste",
+      "loro": "fremerebbero"
+    },
+    "imperativo": {
+      "tu": "fremi",
+      "lei": "frema",
+      "noi": "fremiamo",
+      "voi": "fremete",
+      "loro": "fremano"
+    }
+  },
+  "frenare": {
+    "presente": {
+      "io": "freno",
+      "tu": "freni",
+      "lui/lei": "frena",
+      "noi": "freniamo",
+      "voi": "frenate",
+      "loro": "frenano"
+    },
+    "passatoProssimo": {
+      "io": "ho frenato",
+      "tu": "hai frenato",
+      "lui/lei": "ha frenato",
+      "noi": "abbiamo frenato",
+      "voi": "avete frenato",
+      "loro": "hanno frenato"
+    },
+    "imperfetto": {
+      "io": "frenavo",
+      "tu": "frenavi",
+      "lui/lei": "frenava",
+      "noi": "frenavamo",
+      "voi": "frenavate",
+      "loro": "frenavano"
+    },
+    "futuro": {
+      "io": "frenerò",
+      "tu": "frenerai",
+      "lui/lei": "frenerà",
+      "noi": "freneremo",
+      "voi": "frenerete",
+      "loro": "freneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "freni",
+      "tu": "freni",
+      "lui/lei": "freni",
+      "noi": "freniamo",
+      "voi": "freniate",
+      "loro": "frenino"
+    },
+    "condizionale": {
+      "io": "frenerei",
+      "tu": "freneresti",
+      "lui/lei": "frenerebbe",
+      "noi": "freneremmo",
+      "voi": "frenereste",
+      "loro": "frenerebbero"
+    },
+    "imperativo": {
+      "tu": "frena",
+      "lei": "freni",
+      "noi": "freniamo",
+      "voi": "frenate",
+      "loro": "frenino"
+    }
+  },
+  "frequentare": {
+    "presente": {
+      "io": "frequento",
+      "tu": "frequenti",
+      "lui/lei": "frequenta",
+      "noi": "frequentiamo",
+      "voi": "frequentate",
+      "loro": "frequentano"
+    },
+    "passatoProssimo": {
+      "io": "ho frequentato",
+      "tu": "hai frequentato",
+      "lui/lei": "ha frequentato",
+      "noi": "abbiamo frequentato",
+      "voi": "avete frequentato",
+      "loro": "hanno frequentato"
+    },
+    "imperfetto": {
+      "io": "frequentavo",
+      "tu": "frequentavi",
+      "lui/lei": "frequentava",
+      "noi": "frequentavamo",
+      "voi": "frequentavate",
+      "loro": "frequentavano"
+    },
+    "futuro": {
+      "io": "frequenterò",
+      "tu": "frequenterai",
+      "lui/lei": "frequenterà",
+      "noi": "frequenteremo",
+      "voi": "frequenterete",
+      "loro": "frequenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frequenti",
+      "tu": "frequenti",
+      "lui/lei": "frequenti",
+      "noi": "frequentiamo",
+      "voi": "frequentiate",
+      "loro": "frequentino"
+    },
+    "condizionale": {
+      "io": "frequenterei",
+      "tu": "frequenteresti",
+      "lui/lei": "frequenterebbe",
+      "noi": "frequenteremmo",
+      "voi": "frequentereste",
+      "loro": "frequenterebbero"
+    },
+    "imperativo": {
+      "tu": "frequenta",
+      "lei": "frequenti",
+      "noi": "frequentiamo",
+      "voi": "frequentate",
+      "loro": "frequentino"
+    }
+  },
+  "friggere": {
+    "presente": {
+      "io": "friggo",
+      "tu": "friggi",
+      "lui/lei": "frigge",
+      "noi": "friggiamo",
+      "voi": "friggete",
+      "loro": "friggono"
+    },
+    "passatoProssimo": {
+      "io": "ho fritto",
+      "tu": "hai fritto",
+      "lui/lei": "ha fritto",
+      "noi": "abbiamo fritto",
+      "voi": "avete fritto",
+      "loro": "hanno fritto"
+    },
+    "imperfetto": {
+      "io": "friggevo",
+      "tu": "friggevi",
+      "lui/lei": "friggeva",
+      "noi": "friggevamo",
+      "voi": "friggevate",
+      "loro": "friggevano"
+    },
+    "futuro": {
+      "io": "friggerò",
+      "tu": "friggerai",
+      "lui/lei": "friggerà",
+      "noi": "friggeremo",
+      "voi": "friggerete",
+      "loro": "friggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frigga",
+      "tu": "frigga",
+      "lui/lei": "frigga",
+      "noi": "friggiamo",
+      "voi": "friggiate",
+      "loro": "friggano"
+    },
+    "condizionale": {
+      "io": "friggerei",
+      "tu": "friggeresti",
+      "lui/lei": "friggerebbe",
+      "noi": "friggeremmo",
+      "voi": "friggereste",
+      "loro": "friggerebbero"
+    },
+    "imperativo": {
+      "tu": "friggi",
+      "lei": "frigga",
+      "noi": "friggiamo",
+      "voi": "friggete",
+      "loro": "friggano"
+    }
+  },
+  "frizzare": {
+    "presente": {
+      "io": "frizzo",
+      "tu": "frizzi",
+      "lui/lei": "frizza",
+      "noi": "frizziamo",
+      "voi": "frizzate",
+      "loro": "frizzano"
+    },
+    "passatoProssimo": {
+      "io": "ho frizzato",
+      "tu": "hai frizzato",
+      "lui/lei": "ha frizzato",
+      "noi": "abbiamo frizzato",
+      "voi": "avete frizzato",
+      "loro": "hanno frizzato"
+    },
+    "imperfetto": {
+      "io": "frizzavo",
+      "tu": "frizzavi",
+      "lui/lei": "frizzava",
+      "noi": "frizzavamo",
+      "voi": "frizzavate",
+      "loro": "frizzavano"
+    },
+    "futuro": {
+      "io": "frizzerò",
+      "tu": "frizzerai",
+      "lui/lei": "frizzerà",
+      "noi": "frizzeremo",
+      "voi": "frizzerete",
+      "loro": "frizzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frizzi",
+      "tu": "frizzi",
+      "lui/lei": "frizzi",
+      "noi": "frizziamo",
+      "voi": "frizziate",
+      "loro": "frizzino"
+    },
+    "condizionale": {
+      "io": "frizzerei",
+      "tu": "frizzeresti",
+      "lui/lei": "frizzerebbe",
+      "noi": "frizzeremmo",
+      "voi": "frizzereste",
+      "loro": "frizzerebbero"
+    },
+    "imperativo": {
+      "tu": "frizza",
+      "lei": "frizzi",
+      "noi": "frizziamo",
+      "voi": "frizzate",
+      "loro": "frizzino"
+    }
+  },
+  "frodare": {
+    "presente": {
+      "io": "frodo",
+      "tu": "frodi",
+      "lui/lei": "froda",
+      "noi": "frodiamo",
+      "voi": "frodate",
+      "loro": "frodano"
+    },
+    "passatoProssimo": {
+      "io": "ho frodato",
+      "tu": "hai frodato",
+      "lui/lei": "ha frodato",
+      "noi": "abbiamo frodato",
+      "voi": "avete frodato",
+      "loro": "hanno frodato"
+    },
+    "imperfetto": {
+      "io": "frodavo",
+      "tu": "frodavi",
+      "lui/lei": "frodava",
+      "noi": "frodavamo",
+      "voi": "frodavate",
+      "loro": "frodavano"
+    },
+    "futuro": {
+      "io": "froderò",
+      "tu": "froderai",
+      "lui/lei": "froderà",
+      "noi": "froderemo",
+      "voi": "froderete",
+      "loro": "froderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "frodi",
+      "tu": "frodi",
+      "lui/lei": "frodi",
+      "noi": "frodiamo",
+      "voi": "frodiate",
+      "loro": "frodino"
+    },
+    "condizionale": {
+      "io": "froderei",
+      "tu": "froderesti",
+      "lui/lei": "froderebbe",
+      "noi": "froderemmo",
+      "voi": "frodereste",
+      "loro": "froderebbero"
+    },
+    "imperativo": {
+      "tu": "froda",
+      "lei": "frodi",
+      "noi": "frodiamo",
+      "voi": "frodate",
+      "loro": "frodino"
+    }
+  },
+  "fronteggiare": {
+    "presente": {
+      "io": "fronteggio",
+      "tu": "fronteggi",
+      "lui/lei": "fronteggia",
+      "noi": "fronteggiamo",
+      "voi": "fronteggiate",
+      "loro": "fronteggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho fronteggiato",
+      "tu": "hai fronteggiato",
+      "lui/lei": "ha fronteggiato",
+      "noi": "abbiamo fronteggiato",
+      "voi": "avete fronteggiato",
+      "loro": "hanno fronteggiato"
+    },
+    "imperfetto": {
+      "io": "fronteggiavo",
+      "tu": "fronteggiavi",
+      "lui/lei": "fronteggiava",
+      "noi": "fronteggiavamo",
+      "voi": "fronteggiavate",
+      "loro": "fronteggiavano"
+    },
+    "futuro": {
+      "io": "fronteggerò",
+      "tu": "fronteggerai",
+      "lui/lei": "fronteggerà",
+      "noi": "fronteggeremo",
+      "voi": "fronteggerete",
+      "loro": "fronteggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fronteggi",
+      "tu": "fronteggi",
+      "lui/lei": "fronteggi",
+      "noi": "fronteggiamo",
+      "voi": "fronteggiate",
+      "loro": "fronteggino"
+    },
+    "condizionale": {
+      "io": "fronteggerei",
+      "tu": "fronteggeresti",
+      "lui/lei": "fronteggerebbe",
+      "noi": "fronteggeremmo",
+      "voi": "fronteggereste",
+      "loro": "fronteggerebbero"
+    },
+    "imperativo": {
+      "tu": "fronteggia",
+      "lei": "fronteggi",
+      "noi": "fronteggiamo",
+      "voi": "fronteggiate",
+      "loro": "fronteggino"
+    }
+  },
+  "frugare": {
+    "presente": {
+      "io": "frugo",
+      "tu": "frughi",
+      "lui/lei": "fruga",
+      "noi": "frughiamo",
+      "voi": "frugate",
+      "loro": "frugano"
+    },
+    "passatoProssimo": {
+      "io": "ho frugato",
+      "tu": "hai frugato",
+      "lui/lei": "ha frugato",
+      "noi": "abbiamo frugato",
+      "voi": "avete frugato",
+      "loro": "hanno frugato"
+    },
+    "imperfetto": {
+      "io": "frugavo",
+      "tu": "frugavi",
+      "lui/lei": "frugava",
+      "noi": "frugavamo",
+      "voi": "frugavate",
+      "loro": "frugavano"
+    },
+    "futuro": {
+      "io": "frugherò",
+      "tu": "frugherai",
+      "lui/lei": "frugherà",
+      "noi": "frugheremo",
+      "voi": "frugherete",
+      "loro": "frugheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frughi",
+      "tu": "frughi",
+      "lui/lei": "frughi",
+      "noi": "frughiamo",
+      "voi": "frughiate",
+      "loro": "frughino"
+    },
+    "condizionale": {
+      "io": "frugherei",
+      "tu": "frugheresti",
+      "lui/lei": "frugherebbe",
+      "noi": "frugheremmo",
+      "voi": "frughereste",
+      "loro": "frugherebbero"
+    },
+    "imperativo": {
+      "tu": "fruga",
+      "lei": "frughi",
+      "noi": "frughiamo",
+      "voi": "frugate",
+      "loro": "frughino"
+    }
+  },
+  "frustare": {
+    "presente": {
+      "io": "frusto",
+      "tu": "frusti",
+      "lui/lei": "frusta",
+      "noi": "frustiamo",
+      "voi": "frustate",
+      "loro": "frustano"
+    },
+    "passatoProssimo": {
+      "io": "ho frustato",
+      "tu": "hai frustato",
+      "lui/lei": "ha frustato",
+      "noi": "abbiamo frustato",
+      "voi": "avete frustato",
+      "loro": "hanno frustato"
+    },
+    "imperfetto": {
+      "io": "frustavo",
+      "tu": "frustavi",
+      "lui/lei": "frustava",
+      "noi": "frustavamo",
+      "voi": "frustavate",
+      "loro": "frustavano"
+    },
+    "futuro": {
+      "io": "frusterò",
+      "tu": "frusterai",
+      "lui/lei": "frusterà",
+      "noi": "frusteremo",
+      "voi": "frusterete",
+      "loro": "frusteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frusti",
+      "tu": "frusti",
+      "lui/lei": "frusti",
+      "noi": "frustiamo",
+      "voi": "frustiate",
+      "loro": "frustino"
+    },
+    "condizionale": {
+      "io": "frusterei",
+      "tu": "frusteresti",
+      "lui/lei": "frusterebbe",
+      "noi": "frusteremmo",
+      "voi": "frustereste",
+      "loro": "frusterebbero"
+    },
+    "imperativo": {
+      "tu": "frusta",
+      "lei": "frusti",
+      "noi": "frustiamo",
+      "voi": "frustate",
+      "loro": "frustino"
+    }
+  },
+  "fruttare": {
+    "presente": {
+      "io": "frutto",
+      "tu": "frutti",
+      "lui/lei": "frutta",
+      "noi": "fruttiamo",
+      "voi": "fruttate",
+      "loro": "fruttano"
+    },
+    "passatoProssimo": {
+      "io": "ho fruttato",
+      "tu": "hai fruttato",
+      "lui/lei": "ha fruttato",
+      "noi": "abbiamo fruttato",
+      "voi": "avete fruttato",
+      "loro": "hanno fruttato"
+    },
+    "imperfetto": {
+      "io": "fruttavo",
+      "tu": "fruttavi",
+      "lui/lei": "fruttava",
+      "noi": "fruttavamo",
+      "voi": "fruttavate",
+      "loro": "fruttavano"
+    },
+    "futuro": {
+      "io": "frutterò",
+      "tu": "frutterai",
+      "lui/lei": "frutterà",
+      "noi": "frutteremo",
+      "voi": "frutterete",
+      "loro": "frutteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "frutti",
+      "tu": "frutti",
+      "lui/lei": "frutti",
+      "noi": "fruttiamo",
+      "voi": "fruttiate",
+      "loro": "fruttino"
+    },
+    "condizionale": {
+      "io": "frutterei",
+      "tu": "frutteresti",
+      "lui/lei": "frutterebbe",
+      "noi": "frutteremmo",
+      "voi": "fruttereste",
+      "loro": "frutterebbero"
+    },
+    "imperativo": {
+      "tu": "frutta",
+      "lei": "frutti",
+      "noi": "fruttiamo",
+      "voi": "fruttate",
+      "loro": "fruttino"
+    }
+  },
+  "fucilare": {
+    "presente": {
+      "io": "fucilo",
+      "tu": "fucili",
+      "lui/lei": "fucila",
+      "noi": "fuciliamo",
+      "voi": "fucilate",
+      "loro": "fucilano"
+    },
+    "passatoProssimo": {
+      "io": "ho fucilato",
+      "tu": "hai fucilato",
+      "lui/lei": "ha fucilato",
+      "noi": "abbiamo fucilato",
+      "voi": "avete fucilato",
+      "loro": "hanno fucilato"
+    },
+    "imperfetto": {
+      "io": "fucilavo",
+      "tu": "fucilavi",
+      "lui/lei": "fucilava",
+      "noi": "fucilavamo",
+      "voi": "fucilavate",
+      "loro": "fucilavano"
+    },
+    "futuro": {
+      "io": "fucilerò",
+      "tu": "fucilerai",
+      "lui/lei": "fucilerà",
+      "noi": "fucileremo",
+      "voi": "fucilerete",
+      "loro": "fucileranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fucili",
+      "tu": "fucili",
+      "lui/lei": "fucili",
+      "noi": "fuciliamo",
+      "voi": "fuciliate",
+      "loro": "fucilino"
+    },
+    "condizionale": {
+      "io": "fucilerei",
+      "tu": "fucileresti",
+      "lui/lei": "fucilerebbe",
+      "noi": "fucileremmo",
+      "voi": "fucilereste",
+      "loro": "fucilerebbero"
+    },
+    "imperativo": {
+      "tu": "fucila",
+      "lei": "fucili",
+      "noi": "fuciliamo",
+      "voi": "fucilate",
+      "loro": "fucilino"
+    }
+  },
+  "fugare": {
+    "presente": {
+      "io": "fugo",
+      "tu": "fughi",
+      "lui/lei": "fuga",
+      "noi": "fughiamo",
+      "voi": "fugate",
+      "loro": "fugano"
+    },
+    "passatoProssimo": {
+      "io": "ho fugato",
+      "tu": "hai fugato",
+      "lui/lei": "ha fugato",
+      "noi": "abbiamo fugato",
+      "voi": "avete fugato",
+      "loro": "hanno fugato"
+    },
+    "imperfetto": {
+      "io": "fugavo",
+      "tu": "fugavi",
+      "lui/lei": "fugava",
+      "noi": "fugavamo",
+      "voi": "fugavate",
+      "loro": "fugavano"
+    },
+    "futuro": {
+      "io": "fugherò",
+      "tu": "fugherai",
+      "lui/lei": "fugherà",
+      "noi": "fugheremo",
+      "voi": "fugherete",
+      "loro": "fugheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fughi",
+      "tu": "fughi",
+      "lui/lei": "fughi",
+      "noi": "fughiamo",
+      "voi": "fughiate",
+      "loro": "fughino"
+    },
+    "condizionale": {
+      "io": "fugherei",
+      "tu": "fugheresti",
+      "lui/lei": "fugherebbe",
+      "noi": "fugheremmo",
+      "voi": "fughereste",
+      "loro": "fugherebbero"
+    },
+    "imperativo": {
+      "tu": "fuga",
+      "lei": "fughi",
+      "noi": "fughiamo",
+      "voi": "fugate",
+      "loro": "fughino"
+    }
+  },
+  "fuggire": {
+    "presente": {
+      "io": "fuggo",
+      "tu": "fuggi",
+      "lui/lei": "fugge",
+      "noi": "fuggiamo",
+      "voi": "fuggite",
+      "loro": "fuggono"
+    },
+    "passatoProssimo": {
+      "io": "sono fuggito",
+      "tu": "sei fuggito",
+      "lui/lei": "è fuggito",
+      "noi": "siamo fuggiti",
+      "voi": "siete fuggiti",
+      "loro": "sono fuggiti"
+    },
+    "imperfetto": {
+      "io": "fuggivo",
+      "tu": "fuggivi",
+      "lui/lei": "fuggiva",
+      "noi": "fuggivamo",
+      "voi": "fuggivate",
+      "loro": "fuggivano"
+    },
+    "futuro": {
+      "io": "fuggirò",
+      "tu": "fuggirai",
+      "lui/lei": "fuggirà",
+      "noi": "fuggiremo",
+      "voi": "fuggirete",
+      "loro": "fuggiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fugga",
+      "tu": "fugga",
+      "lui/lei": "fugga",
+      "noi": "fuggiamo",
+      "voi": "fuggiate",
+      "loro": "fuggano"
+    },
+    "condizionale": {
+      "io": "fuggirei",
+      "tu": "fuggiresti",
+      "lui/lei": "fuggirebbe",
+      "noi": "fuggiremmo",
+      "voi": "fuggireste",
+      "loro": "fuggirebbero"
+    },
+    "imperativo": {
+      "tu": "fuggi",
+      "lei": "fugga",
+      "noi": "fuggiamo",
+      "voi": "fuggite",
+      "loro": "fuggano"
+    }
+  },
+  "fulminare": {
+    "presente": {
+      "io": "fulmino",
+      "tu": "fulmini",
+      "lui/lei": "fulmina",
+      "noi": "fulminiamo",
+      "voi": "fulminate",
+      "loro": "fulminano"
+    },
+    "passatoProssimo": {
+      "io": "ho fulminato",
+      "tu": "hai fulminato",
+      "lui/lei": "ha fulminato",
+      "noi": "abbiamo fulminato",
+      "voi": "avete fulminato",
+      "loro": "hanno fulminato"
+    },
+    "imperfetto": {
+      "io": "fulminavo",
+      "tu": "fulminavi",
+      "lui/lei": "fulminava",
+      "noi": "fulminavamo",
+      "voi": "fulminavate",
+      "loro": "fulminavano"
+    },
+    "futuro": {
+      "io": "fulminerò",
+      "tu": "fulminerai",
+      "lui/lei": "fulminerà",
+      "noi": "fulmineremo",
+      "voi": "fulminerete",
+      "loro": "fulmineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fulmini",
+      "tu": "fulmini",
+      "lui/lei": "fulmini",
+      "noi": "fulminiamo",
+      "voi": "fulminiate",
+      "loro": "fulminino"
+    },
+    "condizionale": {
+      "io": "fulminerei",
+      "tu": "fulmineresti",
+      "lui/lei": "fulminerebbe",
+      "noi": "fulmineremmo",
+      "voi": "fulminereste",
+      "loro": "fulminerebbero"
+    },
+    "imperativo": {
+      "tu": "fulmina",
+      "lei": "fulmini",
+      "noi": "fulminiamo",
+      "voi": "fulminate",
+      "loro": "fulminino"
+    }
+  },
+  "fumare": {
+    "presente": {
+      "io": "fumo",
+      "tu": "fumi",
+      "lui/lei": "fuma",
+      "noi": "fumiamo",
+      "voi": "fumate",
+      "loro": "fumano"
+    },
+    "passatoProssimo": {
+      "io": "ho fumato",
+      "tu": "hai fumato",
+      "lui/lei": "ha fumato",
+      "noi": "abbiamo fumato",
+      "voi": "avete fumato",
+      "loro": "hanno fumato"
+    },
+    "imperfetto": {
+      "io": "fumavo",
+      "tu": "fumavi",
+      "lui/lei": "fumava",
+      "noi": "fumavamo",
+      "voi": "fumavate",
+      "loro": "fumavano"
+    },
+    "futuro": {
+      "io": "fumerò",
+      "tu": "fumerai",
+      "lui/lei": "fumerà",
+      "noi": "fumeremo",
+      "voi": "fumerete",
+      "loro": "fumeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "fumi",
+      "tu": "fumi",
+      "lui/lei": "fumi",
+      "noi": "fumiamo",
+      "voi": "fumiate",
+      "loro": "fumino"
+    },
+    "condizionale": {
+      "io": "fumerei",
+      "tu": "fumeresti",
+      "lui/lei": "fumerebbe",
+      "noi": "fumeremmo",
+      "voi": "fumereste",
+      "loro": "fumerebbero"
+    },
+    "imperativo": {
+      "tu": "fuma",
+      "lei": "fumi",
+      "noi": "fumiamo",
+      "voi": "fumate",
+      "loro": "fumino"
+    }
+  },
+  "funzionare": {
+    "presente": {
+      "io": "funziono",
+      "tu": "funzioni",
+      "lui/lei": "funziona",
+      "noi": "funzioniamo",
+      "voi": "funzionate",
+      "loro": "funzionano"
+    },
+    "passatoProssimo": {
+      "io": "ho funzionato",
+      "tu": "hai funzionato",
+      "lui/lei": "ha funzionato",
+      "noi": "abbiamo funzionato",
+      "voi": "avete funzionato",
+      "loro": "hanno funzionato"
+    },
+    "imperfetto": {
+      "io": "funzionavo",
+      "tu": "funzionavi",
+      "lui/lei": "funzionava",
+      "noi": "funzionavamo",
+      "voi": "funzionavate",
+      "loro": "funzionavano"
+    },
+    "futuro": {
+      "io": "funzionerò",
+      "tu": "funzionerai",
+      "lui/lei": "funzionerà",
+      "noi": "funzioneremo",
+      "voi": "funzionerete",
+      "loro": "funzioneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "funzioni",
+      "tu": "funzioni",
+      "lui/lei": "funzioni",
+      "noi": "funzioniamo",
+      "voi": "funzioniate",
+      "loro": "funzionino"
+    },
+    "condizionale": {
+      "io": "funzionerei",
+      "tu": "funzioneresti",
+      "lui/lei": "funzionerebbe",
+      "noi": "funzioneremmo",
+      "voi": "funzionereste",
+      "loro": "funzionerebbero"
+    },
+    "imperativo": {
+      "tu": "funziona",
+      "lei": "funzioni",
+      "noi": "funzioniamo",
+      "voi": "funzionate",
+      "loro": "funzionino"
     }
   }
 }

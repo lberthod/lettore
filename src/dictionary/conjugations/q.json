@@ -1,0 +1,173 @@
+{
+  "quadrare": {
+    "presente": {
+      "io": "quadro",
+      "tu": "quadri",
+      "lui/lei": "quadra",
+      "noi": "quadriamo",
+      "voi": "quadrate",
+      "loro": "quadrano"
+    },
+    "passatoProssimo": {
+      "io": "ho quadrato",
+      "tu": "hai quadrato",
+      "lui/lei": "ha quadrato",
+      "noi": "abbiamo quadrato",
+      "voi": "avete quadrato",
+      "loro": "hanno quadrato"
+    },
+    "imperfetto": {
+      "io": "quadravo",
+      "tu": "quadravi",
+      "lui/lei": "quadrava",
+      "noi": "quadravamo",
+      "voi": "quadravate",
+      "loro": "quadravano"
+    },
+    "futuro": {
+      "io": "quadrerò",
+      "tu": "quadrerai",
+      "lui/lei": "quadrerà",
+      "noi": "quadreremo",
+      "voi": "quadrerete",
+      "loro": "quadreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "quadri",
+      "tu": "quadri",
+      "lui/lei": "quadri",
+      "noi": "quadriamo",
+      "voi": "quadriate",
+      "loro": "quadrino"
+    },
+    "condizionale": {
+      "io": "quadrerei",
+      "tu": "quadreresti",
+      "lui/lei": "quadrerebbe",
+      "noi": "quadreremmo",
+      "voi": "quadrereste",
+      "loro": "quadrerebbero"
+    },
+    "imperativo": {
+      "tu": "quadra",
+      "lei": "quadri",
+      "noi": "quadriamo",
+      "voi": "quadrate",
+      "loro": "quadrino"
+    }
+  },
+  "qualificare": {
+    "presente": {
+      "io": "qualifico",
+      "tu": "qualifichi",
+      "lui/lei": "qualifica",
+      "noi": "qualifichiamo",
+      "voi": "qualificate",
+      "loro": "qualificano"
+    },
+    "passatoProssimo": {
+      "io": "ho qualificato",
+      "tu": "hai qualificato",
+      "lui/lei": "ha qualificato",
+      "noi": "abbiamo qualificato",
+      "voi": "avete qualificato",
+      "loro": "hanno qualificato"
+    },
+    "imperfetto": {
+      "io": "qualificavo",
+      "tu": "qualificavi",
+      "lui/lei": "qualificava",
+      "noi": "qualificavamo",
+      "voi": "qualificavate",
+      "loro": "qualificavano"
+    },
+    "futuro": {
+      "io": "qualificherò",
+      "tu": "qualificherai",
+      "lui/lei": "qualificherà",
+      "noi": "qualificheremo",
+      "voi": "qualificherete",
+      "loro": "qualificheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "qualifichi",
+      "tu": "qualifichi",
+      "lui/lei": "qualifichi",
+      "noi": "qualifichiamo",
+      "voi": "qualifichiate",
+      "loro": "qualifichino"
+    },
+    "condizionale": {
+      "io": "qualificherei",
+      "tu": "qualificheresti",
+      "lui/lei": "qualificherebbe",
+      "noi": "qualificheremmo",
+      "voi": "qualifichereste",
+      "loro": "qualificherebbero"
+    },
+    "imperativo": {
+      "tu": "qualifica",
+      "lei": "qualifichi",
+      "noi": "qualifichiamo",
+      "voi": "qualificate",
+      "loro": "qualifichino"
+    }
+  },
+  "quietare": {
+    "presente": {
+      "io": "quieto",
+      "tu": "quieti",
+      "lui/lei": "quieta",
+      "noi": "quietiamo",
+      "voi": "quietate",
+      "loro": "quietano"
+    },
+    "passatoProssimo": {
+      "io": "ho quietato",
+      "tu": "hai quietato",
+      "lui/lei": "ha quietato",
+      "noi": "abbiamo quietato",
+      "voi": "avete quietato",
+      "loro": "hanno quietato"
+    },
+    "imperfetto": {
+      "io": "quietavo",
+      "tu": "quietavi",
+      "lui/lei": "quietava",
+      "noi": "quietavamo",
+      "voi": "quietavate",
+      "loro": "quietavano"
+    },
+    "futuro": {
+      "io": "quieterò",
+      "tu": "quieterai",
+      "lui/lei": "quieterà",
+      "noi": "quieteremo",
+      "voi": "quieterete",
+      "loro": "quieteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "quieti",
+      "tu": "quieti",
+      "lui/lei": "quieti",
+      "noi": "quietiamo",
+      "voi": "quietiate",
+      "loro": "quietino"
+    },
+    "condizionale": {
+      "io": "quieterei",
+      "tu": "quieteresti",
+      "lui/lei": "quieterebbe",
+      "noi": "quieteremmo",
+      "voi": "quietereste",
+      "loro": "quieterebbero"
+    },
+    "imperativo": {
+      "tu": "quieta",
+      "lei": "quieti",
+      "noi": "quietiamo",
+      "voi": "quietate",
+      "loro": "quietino"
+    }
+  }
+}

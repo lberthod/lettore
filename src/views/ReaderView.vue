@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
+import { RouterLink, useRouter, useRoute } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import TranslationOverlay from '../components/TranslationOverlay.vue'
 import { lookupWord, lookupSentence } from '../translate.js'
@@ -23,30 +23,31 @@ import {
   toggleVocabText,
 } from '../progress.js'
 import { currentUser } from '../lib/auth.js'
+import { isCatalogText, loadCatalogText } from '../lib/protectedContent.js'
 
 const props = defineProps({
   id: { type: String, required: true },
 })
 
 const router = useRouter()
-
-// Chaque texte (paragraphes + lexique) est un chunk séparé, chargé à la demande
-const textModules = import.meta.glob('../texts/*.json', {
-  import: 'default',
-})
+const route = useRoute()
 
 const currentText = ref(null)
 
 async function loadText(id) {
-  const loader = textModules[`../texts/${id}.json`]
-  // Hors catalogue : texte créé par l'utilisateur, ou texte d'actualité
-  // Premium+ (leggendo-server/news-cron.mjs), tous deux persistés dans
-  // Firestore — on essaie l'un puis l'autre.
-  let data = loader ? await loader() : null
-  if (!data && !loader) {
+  // /condividi/:id (partage public) ne doit jamais résoudre un id du
+  // catalogue payant : seuls les documents Firestore marqués `public: true`
+  // (texte utilisateur ou actualité) sont concernés, sans quoi l'id d'un
+  // texte payant suffirait à en afficher le contenu sans autorisation.
+  const isSharedRoute = route.name === 'shared-text'
+  const fromCatalog = !isSharedRoute && isCatalogText(id)
+  // Aperçu gratuit : chunk embarqué dans le build. Reste du catalogue :
+  // document Firestore, lu seulement si les règles autorisent le rôle.
+  let data = fromCatalog ? await loadCatalogText(id) : null
+  if (!data && !fromCatalog) {
     data = await (await import('../lib/userTexts.js')).loadUserText(id)
   }
-  if (!data && !loader) {
+  if (!data && !fromCatalog) {
     data = await (await import('../lib/newsTexts.js')).loadNewsText(id)
   }
   if (!data) {
@@ -60,10 +61,12 @@ async function loadText(id) {
   }
 }
 
-// Précharge les chunks des textes précédent/suivant : navigation instantanée
+// Précharge les textes précédent/suivant : navigation instantanée. Le
+// préchargement n'a lieu qu'après un accès autorisé au texte courant, et
+// passe par le même contrôle d'accès (mémorisé côté loadCatalogText).
 function preloadNeighbors() {
   for (const t of [prevText.value, nextText.value]) {
-    if (t) textModules[`../texts/${t.id}.json`]?.()
+    if (t) loadCatalogText(t.id)
   }
 }
 

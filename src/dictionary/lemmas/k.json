@@ -1,0 +1,35 @@
+{
+  "karma": {
+    "lemma": "karma",
+    "pos": "nome (m.)",
+    "fr": "karma",
+    "definition_it": "nelle religioni indiane, l'insieme delle azioni di una persona, che determina la sua vita futura",
+    "examples": [
+      {
+        "it": "Secondo lui il karma ripaga sempre chi fa del bene.",
+        "fr": "Selon lui, le karma récompense toujours celui qui fait le bien."
+      }
+    ],
+    "synonyms": [
+      "destino"
+    ],
+    "isVerb": false
+  },
+  "khan": {
+    "lemma": "khan",
+    "pos": "nome (m.)",
+    "fr": "khan (souverain mongol ou turc)",
+    "definition_it": "titolo che portavano i capi e i sovrani dei popoli mongoli e turchi",
+    "examples": [
+      {
+        "it": "Il khan ricevette gli ambasciatori nella sua grande tenda.",
+        "fr": "Le khan reçut les ambassadeurs dans sa grande tente."
+      }
+    ],
+    "synonyms": [
+      "sovrano",
+      "condottiero"
+    ],
+    "isVerb": false
+  }
+}

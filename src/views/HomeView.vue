@@ -1,20 +1,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import textsIndex from '../texts/index.json'
+// Totaux calculés au build (voir le plugin leggendo-catalog dans
+// vite.config.js) : l'accueil affiche trois chiffres, elle n'a pas à embarquer
+// le catalogue entier dans le bundle d'entrée.
+import { catalogStats } from 'virtual:catalog'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
-const levels = [...new Set(textsIndex.map((t) => t.level))].sort()
-const levelRange = `${levels[0]} → ${levels[levels.length - 1]}`
-
-// Nombre de catégories effectivement représentées dans les textes
-const categoryCount = new Set(textsIndex.map((t) => t.category)).size
-
-// Éventail des tailles, du texte le plus court au plus long (en mots)
-const wordCounts = textsIndex.map((t) => t.wordCount)
-const minWords = Math.min(...wordCounts)
-const maxWords = Math.max(...wordCounts)
+// Éventail des niveaux, des catégories représentées et des tailles de texte
+const { levelRange, categoryCount, minWords, maxWords } = catalogStats
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
 const floatingWords = [

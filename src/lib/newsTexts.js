@@ -3,19 +3,7 @@
 // Même pattern que userTexts.js : Firestore importé à la demande, rien ne
 // pèse sur le bundle tant qu'on ne s'en sert pas.
 
-import { getFirebaseApp, firebaseReady } from './firebase.js'
-
-let dbPromise = null
-
-function getDb() {
-  if (!firebaseReady) return Promise.resolve(null)
-  if (!dbPromise) {
-    dbPromise = Promise.all([getFirebaseApp(), import('firebase/firestore')]).then(
-      ([app, { getFirestore }]) => getFirestore(app)
-    )
-  }
-  return dbPromise
-}
+import { getDbInstance as getDb } from './firebase.js'
 
 // Les plus récents d'abord. Les règles Firestore refusent la lecture si
 // l'utilisateur n'a pas le rôle Premium+ (voir firestore.rules).

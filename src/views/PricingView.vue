@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 import { useRouter } from 'vue-router'
 import { plans, stripeReady, checkoutUrl } from '../lib/stripe.js'
 import { currentUser } from '../lib/auth.js'
+import { markRoleMayHaveChanged } from '../lib/access.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
@@ -20,7 +21,9 @@ function subscribe(plan) {
     return
   }
   // Payment Link Stripe : redirection vers la page de paiement hébergée,
-  // avec client_reference_id pour que le webhook active le bon compte.
+  // avec client_reference_id pour que le webhook active le bon compte. Au
+  // retour, le token devra être renouvelé de force pour voir le nouveau rôle.
+  markRoleMayHaveChanged()
   window.location.href = checkoutUrl(link, currentUser.value)
 }
 

@@ -24,6 +24,25 @@ watch(
 const menuOpen = ref(false)
 const route = useRoute()
 watch(() => route.fullPath, () => (menuOpen.value = false))
+
+// Sous-menu « Lessico » : regroupe les outils lexicaux pour désencombrer la barre
+const dictMenuOpen = ref(false)
+const dictMenuEl = ref(null)
+const dictNames = ['dictionary', 'verbs', 'vocabulary']
+const dictActive = computed(() => dictNames.includes(route.name))
+watch(() => route.fullPath, () => (dictMenuOpen.value = false))
+
+// Fermeture au clic extérieur : le focusout ne suffit pas, les liens ne
+// reçoivent pas le focus au clic sous Safari/Firefox (macOS)
+function onDocumentClick(event) {
+  if (dictMenuOpen.value && !dictMenuEl.value?.contains(event.target)) {
+    dictMenuOpen.value = false
+  }
+}
+watch(dictMenuOpen, (open) => {
+  if (open) document.addEventListener('click', onDocumentClick)
+  else document.removeEventListener('click', onDocumentClick)
+})
 </script>
 
 <template>
@@ -52,9 +71,21 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
       <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">🗞 Notizie</RouterLink>
-      <RouterLink :to="{ name: 'dictionary' }">📕 Dizionario</RouterLink>
-      <RouterLink :to="{ name: 'verbs' }">🔤 Verbi</RouterLink>
-      <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">📖 Vocabulaire</RouterLink>
+      <div ref="dictMenuEl" class="chrome-dropdown" :class="{ open: dictMenuOpen, active: dictActive }">
+        <button
+          type="button"
+          class="chrome-dropdown-toggle"
+          :aria-expanded="dictMenuOpen"
+          @click="dictMenuOpen = !dictMenuOpen"
+        >
+          Lessico <span class="caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="chrome-dropdown-menu">
+          <RouterLink :to="{ name: 'dictionary' }">Dizionario</RouterLink>
+          <RouterLink :to="{ name: 'verbs' }">Verbi</RouterLink>
+          <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">Vocabulaire</RouterLink>
+        </div>
+      </div>
       <RouterLink v-if="loggedIn" :to="{ name: 'words' }">
         ☆ Mes mots<span v-if="progress.favorites.length" class="count">{{
           progress.favorites.length
@@ -72,7 +103,7 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
 <style scoped>
 .chrome {
   position: relative;
-  z-index: 2;
+  z-index: 60;
   padding: 1.1rem 1.5rem 0;
 }
 
@@ -179,6 +210,76 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
   font-weight: 700;
 }
 
+.chrome-dropdown {
+  position: relative;
+}
+
+.chrome-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 44px;
+  color: #6b6156;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.92rem;
+  font-family: inherit;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.chrome-dropdown-toggle:hover,
+.chrome-dropdown.open .chrome-dropdown-toggle {
+  color: #b0692e;
+}
+
+.chrome-dropdown.active .chrome-dropdown-toggle {
+  color: #b0692e;
+  border-bottom-color: #b0692e;
+}
+
+.caret {
+  font-size: 0.7em;
+  transition: transform 0.15s;
+}
+
+.chrome-dropdown.open .caret {
+  transform: rotate(180deg);
+}
+
+.chrome-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  min-width: 10rem;
+  margin-top: 0.3rem;
+  padding: 0.4rem;
+  background: #fffaf3;
+  border: 1px solid rgba(176, 105, 46, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(44, 38, 32, 0.12);
+  z-index: 3;
+}
+
+.chrome-dropdown.open .chrome-dropdown-menu {
+  display: flex;
+}
+
+.chrome-dropdown-menu a {
+  min-height: 38px;
+  padding: 0.2rem 0.4rem;
+  border-bottom: none !important;
+  border-radius: 6px;
+}
+
+.chrome-dropdown-menu a:hover {
+  background: rgba(176, 105, 46, 0.08);
+}
+
 .count {
   display: inline-block;
   min-width: 1.3em;
@@ -220,6 +321,27 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
 
   .chrome-nav a.router-link-exact-active {
     border-bottom-color: rgba(176, 105, 46, 0.12);
+  }
+
+  .chrome-dropdown-toggle {
+    display: none;
+  }
+
+  .chrome-dropdown-menu {
+    display: flex;
+    position: static;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .chrome-dropdown-menu a {
+    justify-content: flex-start;
+    padding: 0.5rem 0.2rem;
+    border-bottom: 1px solid rgba(176, 105, 46, 0.12) !important;
   }
 }
 </style>

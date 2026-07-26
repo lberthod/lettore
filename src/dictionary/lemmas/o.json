@@ -1,4 +1,142 @@
 {
+  "o": {
+    "lemma": "o",
+    "pos": "congiunzione",
+    "fr": "ou",
+    "definition_it": "parola che unisce due possibilità tra cui si deve scegliere",
+    "examples": [
+      {
+        "it": "Preferisci il caffè o il tè?",
+        "fr": "Tu préfères le café ou le thé ?"
+      }
+    ],
+    "synonyms": [
+      "oppure",
+      "ovvero"
+    ],
+    "isVerb": false
+  },
+  "obbediente": {
+    "lemma": "obbediente",
+    "pos": "aggettivo",
+    "fr": "obéissant, docile",
+    "definition_it": "che fa volentieri quello che gli viene ordinato",
+    "examples": [
+      {
+        "it": "È un bambino obbediente e tranquillo.",
+        "fr": "C'est un enfant obéissant et calme."
+      }
+    ],
+    "synonyms": [
+      "ubbidiente",
+      "docile"
+    ],
+    "isVerb": false
+  },
+  "obbedienza": {
+    "lemma": "obbedienza",
+    "pos": "sostantivo femminile",
+    "fr": "obéissance",
+    "definition_it": "il fatto di fare ciò che viene ordinato da chi ha autorità",
+    "examples": [
+      {
+        "it": "I soldati devono cieca obbedienza agli ordini del generale.",
+        "fr": "Les soldats doivent une obéissance aveugle aux ordres du général."
+      }
+    ],
+    "synonyms": [
+      "ubbidienza",
+      "sottomissione"
+    ],
+    "isVerb": false
+  },
+  "obbedire": {
+    "lemma": "obbedire",
+    "pos": "verbo (intransitivo, regolare in -isc-)",
+    "fr": "obéir",
+    "definition_it": "fare quello che un'altra persona ordina o comanda",
+    "examples": [
+      {
+        "it": "Il cane obbedisce sempre al suo padrone.",
+        "fr": "Le chien obéit toujours à son maître."
+      }
+    ],
+    "synonyms": [
+      "ubbidire",
+      "sottomettersi"
+    ],
+    "isVerb": true
+  },
+  "obbiettare": {
+    "lemma": "obbiettare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "objecter, rétorquer",
+    "definition_it": "rispondere a qualcuno dicendo una ragione contraria a quello che ha detto",
+    "examples": [
+      {
+        "it": "Nessuno ha osato obbiettare nulla al direttore.",
+        "fr": "Personne n'a osé objecter quoi que ce soit au directeur."
+      }
+    ],
+    "synonyms": [
+      "obiettare",
+      "replicare",
+      "contestare"
+    ],
+    "isVerb": true
+  },
+  "obbligare": {
+    "lemma": "obbligare",
+    "pos": "verbo (transitivo)",
+    "fr": "obliger, forcer, contraindre",
+    "definition_it": "far fare a qualcuno una cosa che non vuole, con la forza o con le regole",
+    "examples": [
+      {
+        "it": "La pioggia ci obbligò a restare in casa.",
+        "fr": "La pluie nous a obligés à rester à la maison."
+      }
+    ],
+    "synonyms": [
+      "costringere",
+      "forzare",
+      "imporre"
+    ],
+    "isVerb": true
+  },
+  "obbligatorio": {
+    "lemma": "obbligatorio",
+    "pos": "aggettivo",
+    "fr": "obligatoire",
+    "definition_it": "che si deve fare per legge o per regola, senza poter scegliere",
+    "examples": [
+      {
+        "it": "In Italia la scuola è obbligatoria fino a sedici anni.",
+        "fr": "En Italie, l'école est obligatoire jusqu'à seize ans."
+      }
+    ],
+    "synonyms": [
+      "imposto",
+      "vincolante"
+    ],
+    "isVerb": false
+  },
+  "obbligazione": {
+    "lemma": "obbligazione",
+    "pos": "sostantivo femminile",
+    "fr": "obligation ; obligation (titre financier)",
+    "definition_it": "dovere giuridico verso qualcuno; anche titolo che rappresenta un prestito a una società o allo Stato",
+    "examples": [
+      {
+        "it": "Ha investito i suoi risparmi in obbligazioni dello Stato.",
+        "fr": "Il a investi ses économies dans des obligations d'État."
+      }
+    ],
+    "synonyms": [
+      "impegno",
+      "titolo"
+    ],
+    "isVerb": false
+  },
   "obbligo": {
     "lemma": "obbligo",
     "pos": "sostantivo (m.)",
@@ -16,6 +154,38 @@
     ],
     "isVerb": false
   },
+  "obelisco": {
+    "lemma": "obelisco",
+    "pos": "sostantivo maschile",
+    "fr": "obélisque",
+    "definition_it": "alta colonna di pietra a quattro lati che finisce a punta",
+    "examples": [
+      {
+        "it": "In mezzo alla piazza si alza un antico obelisco egizio.",
+        "fr": "Au milieu de la place se dresse un ancien obélisque égyptien."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "obiettivo": {
+    "lemma": "obiettivo",
+    "pos": "sostantivo maschile",
+    "fr": "objectif, but",
+    "definition_it": "risultato che si vuole raggiungere; anche la lente di una macchina fotografica",
+    "examples": [
+      {
+        "it": "Il nostro obiettivo è finire il lavoro entro venerdì.",
+        "fr": "Notre objectif est de finir le travail avant vendredi."
+      }
+    ],
+    "synonyms": [
+      "scopo",
+      "meta",
+      "fine"
+    ],
+    "isVerb": false
+  },
   "oblio": {
     "lemma": "oblio",
     "pos": "sostantivo (maschile)",
@@ -29,6 +199,56 @@
     ],
     "synonyms": [
       "dimenticanza"
+    ],
+    "isVerb": false
+  },
+  "obliquo": {
+    "lemma": "obliquo",
+    "pos": "aggettivo",
+    "fr": "oblique, de biais",
+    "definition_it": "che non è dritto né orizzontale, ma inclinato di lato",
+    "examples": [
+      {
+        "it": "Una luce obliqua entrava dalla finestra.",
+        "fr": "Une lumière oblique entrait par la fenêtre."
+      }
+    ],
+    "synonyms": [
+      "inclinato",
+      "sghembo"
+    ],
+    "isVerb": false
+  },
+  "obsoleto": {
+    "lemma": "obsoleto",
+    "pos": "aggettivo",
+    "fr": "obsolète, désuet",
+    "definition_it": "che non si usa più perché è troppo vecchio o superato da cose nuove",
+    "examples": [
+      {
+        "it": "Questi computer sono ormai obsoleti.",
+        "fr": "Ces ordinateurs sont désormais obsolètes."
+      }
+    ],
+    "synonyms": [
+      "antiquato",
+      "superato"
+    ],
+    "isVerb": false
+  },
+  "oca": {
+    "lemma": "oca",
+    "pos": "sostantivo femminile",
+    "fr": "oie",
+    "definition_it": "uccello grande con il collo lungo e le zampe palmate, che vive vicino all'acqua",
+    "examples": [
+      {
+        "it": "Nel cortile della fattoria c'erano tre oche bianche.",
+        "fr": "Dans la cour de la ferme il y avait trois oies blanches."
+      }
+    ],
+    "synonyms": [
+      "papera"
     ],
     "isVerb": false
   },
@@ -49,6 +269,38 @@
     ],
     "isVerb": false
   },
+  "occhiaccio": {
+    "lemma": "occhiaccio",
+    "pos": "sostantivo maschile (peggiorativo di occhio)",
+    "fr": "gros vilain œil ; regard mauvais",
+    "definition_it": "occhio brutto o sgradevole; al plurale, sguardo cattivo e minaccioso",
+    "examples": [
+      {
+        "it": "Mi guardava con certi occhiacci che facevano paura.",
+        "fr": "Il me regardait avec de tels yeux mauvais que ça faisait peur."
+      }
+    ],
+    "synonyms": [
+      "sguardo torvo"
+    ],
+    "isVerb": false
+  },
+  "occhiaia": {
+    "lemma": "occhiaia",
+    "pos": "sostantivo femminile",
+    "fr": "cerne (sous les yeux)",
+    "definition_it": "segno scuro sotto l'occhio, che appare quando si è stanchi o non si dorme",
+    "examples": [
+      {
+        "it": "Dopo la notte in bianco aveva le occhiaie profonde.",
+        "fr": "Après sa nuit blanche, elle avait des cernes profonds."
+      }
+    ],
+    "synonyms": [
+      "borse sotto gli occhi"
+    ],
+    "isVerb": false
+  },
   "occhiali": {
     "lemma": "occhiali",
     "pos": "nome maschile plurale",
@@ -58,6 +310,53 @@
       {
         "it": "Ha dimenticato gli occhiali a casa.",
         "fr": "Il a oublié ses lunettes à la maison."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "occhiare": {
+    "lemma": "occhiare",
+    "pos": "verbo (transitivo, regolare, letterario)",
+    "fr": "regarder, lorgner",
+    "definition_it": "forma antica e letteraria per «guardare, dare un'occhiata a qualcuno o qualcosa»",
+    "examples": [
+      {
+        "it": "I passanti occhiarono la vetrina con curiosità.",
+        "fr": "Les passants lorgnèrent la vitrine avec curiosité."
+      }
+    ],
+    "synonyms": [
+      "guardare",
+      "adocchiare"
+    ],
+    "isVerb": true
+  },
+  "occhiata": {
+    "lemma": "occhiata",
+    "pos": "sostantivo (femminile)",
+    "fr": "coup d'œil, regard",
+    "definition_it": "il fatto di guardare qualcosa per poco tempo",
+    "examples": [
+      {
+        "it": "Mi ha dato solo un'occhiata veloce al foglio.",
+        "fr": "Il n'a jeté qu'un coup d'œil rapide à la feuille."
+      }
+    ],
+    "synonyms": [
+      "sguardo"
+    ],
+    "isVerb": false
+  },
+  "occhiataccia": {
+    "lemma": "occhiataccia",
+    "pos": "sostantivo (femminile)",
+    "fr": "regard noir, œillade furieuse",
+    "definition_it": "occhiata cattiva, piena di rabbia o di disapprovazione",
+    "examples": [
+      {
+        "it": "La maestra gli lanciò un'occhiataccia e lui tacque.",
+        "fr": "La maîtresse lui lança un regard noir et il se tut."
       }
     ],
     "synonyms": [],
@@ -91,6 +390,34 @@
     "synonyms": [],
     "isVerb": false
   },
+  "occhione": {
+    "lemma": "occhione",
+    "pos": "sostantivo (maschile)",
+    "fr": "grand œil, grands yeux",
+    "definition_it": "occhio grande; al plurale indica occhi molto grandi ed espressivi",
+    "examples": [
+      {
+        "it": "La bambina mi guardava con due occhioni neri.",
+        "fr": "La fillette me regardait avec deux grands yeux noirs."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "occidentale": {
+    "lemma": "occidentale",
+    "pos": "aggettivo",
+    "fr": "occidental, de l'ouest",
+    "definition_it": "che si trova a ovest o che riguarda i paesi dell'Occidente",
+    "examples": [
+      {
+        "it": "La costa occidentale dell'isola è più selvaggia.",
+        "fr": "La côte occidentale de l'île est plus sauvage."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "occidente": {
     "lemma": "occidente",
     "pos": "nome maschile",
@@ -104,6 +431,23 @@
     ],
     "synonyms": [
       "ovest"
+    ],
+    "isVerb": false
+  },
+  "occisione": {
+    "lemma": "occisione",
+    "pos": "sostantivo (femminile, letterario)",
+    "fr": "meurtre, tuerie",
+    "definition_it": "parola antica e letteraria per «uccisione», il fatto di dare la morte a qualcuno",
+    "examples": [
+      {
+        "it": "Il poema racconta le occisioni della battaglia.",
+        "fr": "Le poème raconte les tueries de la bataille."
+      }
+    ],
+    "synonyms": [
+      "uccisione",
+      "strage"
     ],
     "isVerb": false
   },
@@ -124,6 +468,23 @@
     ],
     "isVerb": false
   },
+  "occorrere": {
+    "lemma": "occorrere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "falloir, être nécessaire",
+    "definition_it": "essere necessario; si usa spesso in forma impersonale per dire che serve qualcosa",
+    "examples": [
+      {
+        "it": "Occorrono due ore per arrivare in città.",
+        "fr": "Il faut deux heures pour arriver en ville."
+      }
+    ],
+    "synonyms": [
+      "servire",
+      "bisognare"
+    ],
+    "isVerb": true
+  },
   "occupare": {
     "lemma": "occupare",
     "pos": "verbo (transitivo, regolare)",
@@ -138,6 +499,23 @@
     "synonyms": [
       "invadere",
       "impegnare"
+    ],
+    "isVerb": true
+  },
+  "occuparsi": {
+    "lemma": "occuparsi",
+    "pos": "verbo (riflessivo, regolare)",
+    "fr": "s'occuper (de)",
+    "definition_it": "dedicare tempo e attenzione a una persona o a un lavoro; si usa con «di»",
+    "examples": [
+      {
+        "it": "Mi occupo io dei biglietti per il treno.",
+        "fr": "Je m'occupe moi-même des billets de train."
+      }
+    ],
+    "synonyms": [
+      "curare",
+      "badare"
     ],
     "isVerb": true
   },
@@ -158,6 +536,102 @@
     ],
     "isVerb": false
   },
+  "oceano": {
+    "lemma": "oceano",
+    "pos": "sostantivo maschile",
+    "fr": "océan",
+    "definition_it": "enorme distesa di acqua salata che separa i continenti",
+    "examples": [
+      {
+        "it": "L'aereo ha attraversato l'oceano in otto ore.",
+        "fr": "L'avion a traversé l'océan en huit heures."
+      }
+    ],
+    "synonyms": [
+      "mare"
+    ],
+    "isVerb": false
+  },
+  "oculare": {
+    "lemma": "oculare",
+    "pos": "sostantivo maschile (anche aggettivo)",
+    "fr": "oculaire",
+    "definition_it": "lente di un microscopio o di un cannocchiale in cui si guarda; come aggettivo, che riguarda l'occhio",
+    "examples": [
+      {
+        "it": "Ha avvicinato l'occhio all'oculare del microscopio.",
+        "fr": "Il a approché son œil de l'oculaire du microscope."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "oculista": {
+    "lemma": "oculista",
+    "pos": "nome (maschile e femminile)",
+    "fr": "ophtalmologue, oculiste",
+    "definition_it": "medico che cura le malattie degli occhi e controlla la vista",
+    "examples": [
+      {
+        "it": "Domani vado dall'oculista per gli occhiali nuovi.",
+        "fr": "Demain je vais chez l'ophtalmologue pour de nouvelles lunettes."
+      }
+    ],
+    "synonyms": [
+      "oftalmologo"
+    ],
+    "isVerb": false
+  },
+  "od": {
+    "lemma": "od",
+    "pos": "congiunzione",
+    "fr": "ou (forme de « o » devant une voyelle)",
+    "definition_it": "forma della congiunzione \"o\" usata davanti a una parola che comincia per vocale, soprattutto per o-",
+    "examples": [
+      {
+        "it": "Hanno telefonato sette od otto persone.",
+        "fr": "Sept ou huit personnes ont téléphoné."
+      }
+    ],
+    "synonyms": [
+      "o",
+      "oppure"
+    ],
+    "isVerb": false
+  },
+  "ode": {
+    "lemma": "ode",
+    "pos": "nome (femminile)",
+    "fr": "ode",
+    "definition_it": "poesia lirica scritta per lodare o celebrare una persona, un fatto o un sentimento",
+    "examples": [
+      {
+        "it": "Il poeta ha scritto un'ode alla libertà.",
+        "fr": "Le poète a écrit une ode à la liberté."
+      }
+    ],
+    "synonyms": [
+      "poesia",
+      "canto"
+    ],
+    "isVerb": false
+  },
+  "odiare": {
+    "lemma": "odiare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "haïr, détester",
+    "definition_it": "provare un sentimento molto forte di antipatia o di rifiuto verso qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Odio alzarmi presto la domenica.",
+        "fr": "Je déteste me lever tôt le dimanche."
+      }
+    ],
+    "synonyms": [
+      "detestare"
+    ],
+    "isVerb": true
+  },
   "odio": {
     "lemma": "odio",
     "pos": "nome maschile",
@@ -172,6 +646,22 @@
     "synonyms": [
       "avversione",
       "rancore"
+    ],
+    "isVerb": false
+  },
+  "odiosamente": {
+    "lemma": "odiosamente",
+    "pos": "avverbio",
+    "fr": "odieusement",
+    "definition_it": "in modo odioso, che provoca antipatia o disgusto",
+    "examples": [
+      {
+        "it": "Si è comportato odiosamente con tutti.",
+        "fr": "Il s'est comporté odieusement avec tout le monde."
+      }
+    ],
+    "synonyms": [
+      "detestabilmente"
     ],
     "isVerb": false
   },
@@ -209,6 +699,91 @@
     ],
     "isVerb": false
   },
+  "odorino": {
+    "lemma": "odorino",
+    "pos": "sostantivo maschile (diminutivo)",
+    "fr": "petite odeur, fumet agréable",
+    "definition_it": "odore leggero e piacevole, spesso di cibo",
+    "examples": [
+      {
+        "it": "Che odorino viene dal forno!",
+        "fr": "Quelle bonne petite odeur vient du four !"
+      }
+    ],
+    "synonyms": [
+      "profumino"
+    ],
+    "isVerb": false
+  },
+  "odoroso": {
+    "lemma": "odoroso",
+    "pos": "aggettivo",
+    "fr": "odorant, parfumé",
+    "definition_it": "che manda un odore, di solito gradevole",
+    "examples": [
+      {
+        "it": "Il giardino è pieno di fiori odorosi.",
+        "fr": "Le jardin est plein de fleurs odorantes."
+      }
+    ],
+    "synonyms": [
+      "profumato",
+      "aromatico"
+    ],
+    "isVerb": false
+  },
+  "offendere": {
+    "lemma": "offendere",
+    "pos": "verbo (transitivo)",
+    "fr": "offenser, vexer, blesser (moralement)",
+    "definition_it": "dire o fare qualcosa che ferisce l'orgoglio o i sentimenti di una persona",
+    "examples": [
+      {
+        "it": "Non volevo offendere nessuno con quella battuta.",
+        "fr": "Je ne voulais offenser personne avec cette plaisanterie."
+      }
+    ],
+    "synonyms": [
+      "insultare",
+      "ferire",
+      "umiliare"
+    ],
+    "isVerb": true
+  },
+  "offerente": {
+    "lemma": "offerente",
+    "pos": "nome / aggettivo (invariabile nel genere)",
+    "fr": "offrant, enchérisseur",
+    "definition_it": "persona che fa un'offerta, cioè che propone una somma di denaro o un dono",
+    "examples": [
+      {
+        "it": "Il quadro è stato venduto al migliore offerente.",
+        "fr": "Le tableau a été vendu au plus offrant."
+      }
+    ],
+    "synonyms": [
+      "proponente"
+    ],
+    "isVerb": false
+  },
+  "offerta": {
+    "lemma": "offerta",
+    "pos": "sostantivo femminile",
+    "fr": "offre, proposition, don",
+    "definition_it": "quello che si propone o si dà a qualcuno: una somma di denaro, un prezzo speciale, un dono",
+    "examples": [
+      {
+        "it": "Il negozio ha fatto un'offerta molto vantaggiosa sui libri.",
+        "fr": "Le magasin a fait une offre très avantageuse sur les livres."
+      }
+    ],
+    "synonyms": [
+      "proposta",
+      "dono",
+      "promozione"
+    ],
+    "isVerb": false
+  },
   "offesa": {
     "lemma": "offesa",
     "pos": "sostantivo (f.)",
@@ -225,6 +800,60 @@
       "affronto"
     ],
     "isVerb": false
+  },
+  "offizio": {
+    "lemma": "offizio",
+    "pos": "nome (maschile, forma antica di «ufficio»)",
+    "fr": "office, charge, fonction",
+    "definition_it": "forma antica di «ufficio»: compito o funzione che una persona deve svolgere; anche la preghiera quotidiana dei religiosi",
+    "examples": [
+      {
+        "it": "Il frate recitava l'offizio prima dell'alba.",
+        "fr": "Le moine récitait l'office avant l'aube."
+      }
+    ],
+    "synonyms": [
+      "ufficio",
+      "compito",
+      "carica"
+    ],
+    "isVerb": false
+  },
+  "offrire": {
+    "lemma": "offrire",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "offrir, proposer",
+    "definition_it": "dare qualcosa a qualcuno senza chiedere niente in cambio, oppure proporre qualcosa a chi la può accettare",
+    "examples": [
+      {
+        "it": "Ti posso offrire un caffè?",
+        "fr": "Je peux t'offrir un café ?"
+      }
+    ],
+    "synonyms": [
+      "donare",
+      "regalare",
+      "proporre"
+    ],
+    "isVerb": true
+  },
+  "offuscare": {
+    "lemma": "offuscare",
+    "pos": "verbo (transitivo, regolare -are)",
+    "fr": "obscurcir, ternir, embrumer",
+    "definition_it": "rendere meno chiaro o meno luminoso; in senso figurato, indebolire la mente o la fama di qualcuno",
+    "examples": [
+      {
+        "it": "La nebbia offusca la vista della valle.",
+        "fr": "Le brouillard obscurcit la vue de la vallée."
+      }
+    ],
+    "synonyms": [
+      "oscurare",
+      "annebbiare",
+      "appannare"
+    ],
+    "isVerb": true
   },
   "oggetto": {
     "lemma": "oggetto",
@@ -259,6 +888,24 @@
     ],
     "isVerb": false
   },
+  "oggimai": {
+    "lemma": "oggimai",
+    "pos": "avverbio (letterario, antico)",
+    "fr": "désormais, maintenant",
+    "definition_it": "forma antica e letteraria di «ormai»: da questo momento in poi, a questo punto",
+    "examples": [
+      {
+        "it": "Oggimai è troppo tardi per tornare indietro.",
+        "fr": "Désormais il est trop tard pour revenir en arrière."
+      }
+    ],
+    "synonyms": [
+      "ormai",
+      "oramai",
+      "adesso"
+    ],
+    "isVerb": false
+  },
   "ogni": {
     "lemma": "ogni",
     "pos": "aggettivo indefinito",
@@ -275,6 +922,157 @@
     ],
     "isVerb": false
   },
+  "ogni cosa": {
+    "lemma": "ogni cosa",
+    "pos": "locuzione pronominale",
+    "fr": "tout, toute chose",
+    "definition_it": "tutte le cose, senza escluderne nessuna",
+    "examples": [
+      {
+        "it": "Ha preparato ogni cosa per la partenza.",
+        "fr": "Il a tout préparé pour le départ."
+      }
+    ],
+    "synonyms": [
+      "tutto",
+      "il tutto"
+    ],
+    "isVerb": false
+  },
+  "ognuno": {
+    "lemma": "ognuno",
+    "pos": "pronome indefinito",
+    "fr": "chacun, tout le monde",
+    "definition_it": "ogni singola persona di un gruppo, presa una per una",
+    "examples": [
+      {
+        "it": "Ognuno deve fare la sua parte.",
+        "fr": "Chacun doit faire sa part."
+      }
+    ],
+    "synonyms": [
+      "ciascuno",
+      "chiunque",
+      "tutti"
+    ],
+    "isVerb": false
+  },
+  "oh": {
+    "lemma": "oh",
+    "pos": "interiezione",
+    "fr": "oh !",
+    "definition_it": "esclamazione che esprime sorpresa, gioia, dolore o serve a richiamare l'attenzione",
+    "examples": [
+      {
+        "it": "Oh, che bella sorpresa!",
+        "fr": "Oh, quelle belle surprise !"
+      }
+    ],
+    "synonyms": [
+      "ah",
+      "eh"
+    ],
+    "isVerb": false
+  },
+  "ohi": {
+    "lemma": "ohi",
+    "pos": "interiezione",
+    "fr": "aïe !, ouille !",
+    "definition_it": "esclamazione che si usa quando si sente un dolore improvviso o un fastidio",
+    "examples": [
+      {
+        "it": "Ohi, mi sono fatto male al piede!",
+        "fr": "Aïe, je me suis fait mal au pied !"
+      }
+    ],
+    "synonyms": [
+      "ahi",
+      "ahia"
+    ],
+    "isVerb": false
+  },
+  "ohibò": {
+    "lemma": "ohibò",
+    "pos": "interiezione (letteraria, scherzosa)",
+    "fr": "fi donc !, oh là là !",
+    "definition_it": "esclamazione un po' antica che esprime meraviglia, disapprovazione o incredulità",
+    "examples": [
+      {
+        "it": "Ohibò, non credevo che dicesse una cosa simile!",
+        "fr": "Fi donc, je ne croyais pas qu'il dirait une chose pareille !"
+      }
+    ],
+    "synonyms": [
+      "ohimè",
+      "diamine"
+    ],
+    "isVerb": false
+  },
+  "ohimè": {
+    "lemma": "ohimè",
+    "pos": "interiezione",
+    "fr": "hélas !, pauvre de moi !",
+    "definition_it": "esclamazione che esprime dolore, pena o dispiacere per qualcosa di brutto",
+    "examples": [
+      {
+        "it": "Ohimè, ho perso di nuovo le chiavi!",
+        "fr": "Hélas, j'ai encore perdu mes clés !"
+      }
+    ],
+    "synonyms": [
+      "ahimè",
+      "purtroppo"
+    ],
+    "isVerb": false
+  },
+  "ok": {
+    "lemma": "ok",
+    "pos": "interiezione / avverbio (invariabile)",
+    "fr": "d'accord, OK",
+    "definition_it": "parola usata per dire che si è d'accordo o che una cosa va bene",
+    "examples": [
+      {
+        "it": "Ok, ci vediamo domani alle otto.",
+        "fr": "OK, on se voit demain à huit heures."
+      }
+    ],
+    "synonyms": [
+      "va bene",
+      "d'accordo"
+    ],
+    "isVerb": false
+  },
+  "olà": {
+    "lemma": "olà",
+    "pos": "interiezione (antica, letteraria)",
+    "fr": "holà !, hé là !",
+    "definition_it": "esclamazione antica usata per chiamare qualcuno o per fermarlo",
+    "examples": [
+      {
+        "it": "Olà, chi va là?",
+        "fr": "Holà, qui va là ?"
+      }
+    ],
+    "synonyms": [
+      "ehilà",
+      "ehi"
+    ],
+    "isVerb": false
+  },
+  "olfattivo": {
+    "lemma": "olfattivo",
+    "pos": "aggettivo",
+    "fr": "olfactif",
+    "definition_it": "che riguarda l'olfatto, cioè il senso con cui si sentono gli odori",
+    "examples": [
+      {
+        "it": "Il vino ha un profilo olfattivo molto intenso.",
+        "fr": "Le vin a un profil olfactif très intense."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "olfatto": {
     "lemma": "olfatto",
     "pos": "nome maschile",
@@ -284,6 +1082,36 @@
       {
         "it": "Il cane ha un olfatto molto sviluppato.",
         "fr": "Le chien a un odorat très développé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "olimpiade": {
+    "lemma": "olimpiade",
+    "pos": "sostantivo femminile",
+    "fr": "olympiade, Jeux olympiques (au pluriel)",
+    "definition_it": "grande manifestazione sportiva internazionale che si tiene ogni quattro anni; al plurale indica i Giochi olimpici",
+    "examples": [
+      {
+        "it": "Le olimpiadi invernali si svolgeranno in Italia.",
+        "fr": "Les Jeux olympiques d'hiver se dérouleront en Italie."
+      }
+    ],
+    "synonyms": [
+      "giochi olimpici"
+    ],
+    "isVerb": false
+  },
+  "olimpico": {
+    "lemma": "olimpico",
+    "pos": "aggettivo",
+    "fr": "olympique",
+    "definition_it": "che riguarda i Giochi olimpici o il monte Olimpo; detto anche di una calma perfetta e serena",
+    "examples": [
+      {
+        "it": "Ha vinto la medaglia d'oro olimpica nei cento metri.",
+        "fr": "Il a gagné la médaille d'or olympique sur cent mètres."
       }
     ],
     "synonyms": [],
@@ -317,6 +1145,54 @@
     "synonyms": [],
     "isVerb": false
   },
+  "olivina": {
+    "lemma": "olivina",
+    "pos": "sostantivo femminile",
+    "fr": "olivine (minéral)",
+    "definition_it": "minerale di colore verde, comune nelle rocce vulcaniche, usato a volte come pietra ornamentale",
+    "examples": [
+      {
+        "it": "Nella lava si trovano piccoli cristalli di olivina.",
+        "fr": "Dans la lave, on trouve de petits cristaux d'olivine."
+      }
+    ],
+    "synonyms": [
+      "peridoto"
+    ],
+    "isVerb": false
+  },
+  "olivo": {
+    "lemma": "olivo",
+    "pos": "sostantivo maschile",
+    "fr": "olivier",
+    "definition_it": "albero mediterraneo dalle foglie grigio-verdi che produce le olive",
+    "examples": [
+      {
+        "it": "Sulla collina crescono vecchi olivi.",
+        "fr": "Sur la colline poussent de vieux oliviers."
+      }
+    ],
+    "synonyms": [
+      "ulivo"
+    ],
+    "isVerb": false
+  },
+  "olografico": {
+    "lemma": "olografico",
+    "pos": "aggettivo",
+    "fr": "holographique ; olographe (testament)",
+    "definition_it": "che riguarda l'ologramma; in diritto, detto di un testamento scritto tutto a mano da chi lo fa",
+    "examples": [
+      {
+        "it": "Il notaio ha letto il testamento olografico del nonno.",
+        "fr": "Le notaire a lu le testament olographe du grand-père."
+      }
+    ],
+    "synonyms": [
+      "olografo"
+    ],
+    "isVerb": false
+  },
   "ologramma": {
     "lemma": "ologramma",
     "pos": "nome maschile",
@@ -329,6 +1205,108 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "oltraggio": {
+    "lemma": "oltraggio",
+    "pos": "sostantivo maschile",
+    "fr": "outrage, offense",
+    "definition_it": "offesa grave fatta a qualcuno con parole o azioni, che ne colpisce l'onore",
+    "examples": [
+      {
+        "it": "È stato condannato per oltraggio a pubblico ufficiale.",
+        "fr": "Il a été condamné pour outrage à agent."
+      }
+    ],
+    "synonyms": [
+      "offesa",
+      "affronto",
+      "ingiuria"
+    ],
+    "isVerb": false
+  },
+  "oltraggioso": {
+    "lemma": "oltraggioso",
+    "pos": "aggettivo",
+    "fr": "outrageant, offensant",
+    "definition_it": "che offende in modo grave la dignità o l'onore di una persona",
+    "examples": [
+      {
+        "it": "Ha usato parole oltraggiose contro i suoi colleghi.",
+        "fr": "Il a employé des mots outrageants contre ses collègues."
+      }
+    ],
+    "synonyms": [
+      "offensivo",
+      "ingiurioso"
+    ],
+    "isVerb": false
+  },
+  "oltre": {
+    "lemma": "oltre",
+    "pos": "preposizione / avverbio",
+    "fr": "au-delà de, plus loin que ; en plus de",
+    "definition_it": "indica un punto più lontano nello spazio o nel tempo, oppure qualcosa in più rispetto a un limite",
+    "examples": [
+      {
+        "it": "Il paese si trova oltre il fiume.",
+        "fr": "Le village se trouve au-delà de la rivière."
+      }
+    ],
+    "synonyms": [
+      "al di là di",
+      "più in là"
+    ],
+    "isVerb": false
+  },
+  "oltreoceano": {
+    "lemma": "oltreoceano",
+    "pos": "avverbio / sostantivo maschile",
+    "fr": "outre-mer, outre-Atlantique",
+    "definition_it": "al di là dell'oceano, cioè nei paesi lontani raggiungibili attraversando il mare",
+    "examples": [
+      {
+        "it": "Molti italiani sono emigrati oltreoceano.",
+        "fr": "Beaucoup d'Italiens ont émigré outre-Atlantique."
+      }
+    ],
+    "synonyms": [
+      "oltremare"
+    ],
+    "isVerb": false
+  },
+  "omaccio": {
+    "lemma": "omaccio",
+    "pos": "nome (maschile)",
+    "fr": "sale type, gros bonhomme antipathique",
+    "definition_it": "uomo grosso e sgradevole, dall'aspetto o dai modi brutali",
+    "examples": [
+      {
+        "it": "Quell'omaccio spaventava tutti i bambini del cortile.",
+        "fr": "Ce sale type effrayait tous les enfants de la cour."
+      }
+    ],
+    "synonyms": [
+      "energumeno",
+      "bruto"
+    ],
+    "isVerb": false
+  },
+  "omaggio": {
+    "lemma": "omaggio",
+    "pos": "sostantivo maschile",
+    "fr": "hommage ; cadeau, article offert",
+    "definition_it": "segno di rispetto o di ammirazione verso qualcuno; anche piccolo regalo offerto gratuitamente",
+    "examples": [
+      {
+        "it": "Il concerto è un omaggio al grande compositore.",
+        "fr": "Le concert est un hommage au grand compositeur."
+      }
+    ],
+    "synonyms": [
+      "tributo",
+      "dono"
+    ],
     "isVerb": false
   },
   "ombra": {
@@ -345,6 +1323,121 @@
     "synonyms": [],
     "isVerb": false
   },
+  "ombreggiare": {
+    "lemma": "ombreggiare",
+    "pos": "verbo (transitivo, regolare in -are)",
+    "fr": "ombrager, ombrer",
+    "definition_it": "fare ombra su un luogo; nel disegno, scurire alcune parti per dare l'idea del rilievo",
+    "examples": [
+      {
+        "it": "I pini ombreggiano il viale in estate.",
+        "fr": "Les pins ombragent l'allée en été."
+      }
+    ],
+    "synonyms": [
+      "riparare",
+      "sfumare"
+    ],
+    "isVerb": true
+  },
+  "ombrello": {
+    "lemma": "ombrello",
+    "pos": "sostantivo maschile",
+    "fr": "parapluie",
+    "definition_it": "oggetto con un manico e una tela che si apre per ripararsi dalla pioggia",
+    "examples": [
+      {
+        "it": "Prendi l'ombrello, sta per piovere.",
+        "fr": "Prends le parapluie, il va pleuvoir."
+      }
+    ],
+    "synonyms": [
+      "parapioggia"
+    ],
+    "isVerb": false
+  },
+  "ombrellone": {
+    "lemma": "ombrellone",
+    "pos": "sostantivo maschile",
+    "fr": "parasol",
+    "definition_it": "grande telo aperto su un palo che si mette in spiaggia o in giardino per fare ombra",
+    "examples": [
+      {
+        "it": "Abbiamo affittato un ombrellone e due sdraio.",
+        "fr": "Nous avons loué un parasol et deux transats."
+      }
+    ],
+    "synonyms": [
+      "parasole"
+    ],
+    "isVerb": false
+  },
+  "ombroso": {
+    "lemma": "ombroso",
+    "pos": "aggettivo",
+    "fr": "ombragé ; ombrageux, susceptible",
+    "definition_it": "pieno di ombra; detto di persona, che si offende o si spaventa facilmente",
+    "examples": [
+      {
+        "it": "Ci siamo fermati in un viale ombroso.",
+        "fr": "Nous nous sommes arrêtés dans une allée ombragée."
+      }
+    ],
+    "synonyms": [
+      "ombreggiato",
+      "diffidente"
+    ],
+    "isVerb": false
+  },
+  "omerico": {
+    "lemma": "omerico",
+    "pos": "aggettivo",
+    "fr": "homérique",
+    "definition_it": "che riguarda Omero e i suoi poemi; per estensione, grandioso e memorabile",
+    "examples": [
+      {
+        "it": "La poesia omerica racconta guerre ed eroi.",
+        "fr": "La poésie homérique raconte des guerres et des héros."
+      }
+    ],
+    "synonyms": [
+      "epico"
+    ],
+    "isVerb": false
+  },
+  "omertà": {
+    "lemma": "omertà",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "loi du silence, omerta",
+    "definition_it": "regola non scritta per cui chi sa qualcosa di un delitto non parla con la polizia, per paura o per complicità",
+    "examples": [
+      {
+        "it": "Nessuno ha voluto testimoniare: nel paese vige ancora l'omertà.",
+        "fr": "Personne n'a voulu témoigner : au village, la loi du silence règne encore."
+      }
+    ],
+    "synonyms": [
+      "legge del silenzio",
+      "connivenza"
+    ],
+    "isVerb": false
+  },
+  "ometto": {
+    "lemma": "ometto",
+    "pos": "sostantivo maschile",
+    "fr": "petit homme, bonhomme",
+    "definition_it": "uomo di statura molto bassa; si dice anche, con simpatia, di un bambino che si comporta da grande",
+    "examples": [
+      {
+        "it": "Un ometto con il cappello grigio bussò alla porta.",
+        "fr": "Un petit homme au chapeau gris frappa à la porte."
+      }
+    ],
+    "synonyms": [
+      "omino"
+    ],
+    "isVerb": false
+  },
   "omino": {
     "lemma": "omino",
     "pos": "sostantivo maschile",
@@ -358,6 +1451,23 @@
     ],
     "synonyms": [],
     "isVerb": false
+  },
+  "omologare": {
+    "lemma": "omologare",
+    "pos": "verbo (transitivo, regolare -are)",
+    "fr": "homologuer, certifier",
+    "definition_it": "riconoscere ufficialmente che una cosa rispetta le regole o le norme previste",
+    "examples": [
+      {
+        "it": "Hanno omologato il nuovo casco per le gare.",
+        "fr": "Ils ont homologué le nouveau casque pour les compétitions."
+      }
+    ],
+    "synonyms": [
+      "certificare",
+      "approvare"
+    ],
+    "isVerb": true
   },
   "omologazione": {
     "lemma": "omologazione",
@@ -408,6 +1518,23 @@
     ],
     "isVerb": false
   },
+  "ondata": {
+    "lemma": "ondata",
+    "pos": "sostantivo (femminile)",
+    "fr": "vague, déferlante",
+    "definition_it": "grande onda del mare; in senso figurato, arrivo improvviso e forte di qualcosa",
+    "examples": [
+      {
+        "it": "Un'ondata di caldo ha colpito tutta la penisola.",
+        "fr": "Une vague de chaleur a frappé toute la péninsule."
+      }
+    ],
+    "synonyms": [
+      "onda",
+      "flusso"
+    ],
+    "isVerb": false
+  },
   "ondeggiare": {
     "lemma": "ondeggiare",
     "pos": "verbo",
@@ -422,6 +1549,163 @@
     "synonyms": [
       "oscillare",
       "dondolare"
+    ],
+    "isVerb": true
+  },
+  "ondulato": {
+    "lemma": "ondulato",
+    "pos": "aggettivo (participio di ondulare)",
+    "fr": "ondulé",
+    "definition_it": "che forma curve morbide e regolari, come le onde",
+    "examples": [
+      {
+        "it": "Ha i capelli lunghi e ondulati.",
+        "fr": "Elle a les cheveux longs et ondulés."
+      }
+    ],
+    "synonyms": [
+      "mosso",
+      "sinuoso"
+    ],
+    "isVerb": false
+  },
+  "onere": {
+    "lemma": "onere",
+    "pos": "sostantivo (maschile)",
+    "fr": "charge, obligation",
+    "definition_it": "peso, spesa o dovere che una persona deve sostenere",
+    "examples": [
+      {
+        "it": "L'onere della prova spetta a chi accusa.",
+        "fr": "La charge de la preuve incombe à celui qui accuse."
+      }
+    ],
+    "synonyms": [
+      "carico",
+      "obbligo"
+    ],
+    "isVerb": false
+  },
+  "oneroso": {
+    "lemma": "oneroso",
+    "pos": "aggettivo",
+    "fr": "onéreux, coûteux",
+    "definition_it": "che costa molto o che richiede un grande impegno",
+    "examples": [
+      {
+        "it": "I lavori sono stati più onerosi del previsto.",
+        "fr": "Les travaux ont été plus onéreux que prévu."
+      }
+    ],
+    "synonyms": [
+      "costoso",
+      "gravoso"
+    ],
+    "isVerb": false
+  },
+  "onestà": {
+    "lemma": "onestà",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "honnêteté, probité",
+    "definition_it": "qualità di chi dice la verità, non ruba e non inganna gli altri",
+    "examples": [
+      {
+        "it": "Ha risposto con grande onestà, anche se la verità gli costava cara.",
+        "fr": "Il a répondu avec une grande honnêteté, même si la vérité lui coûtait cher."
+      }
+    ],
+    "synonyms": [
+      "lealtà",
+      "rettitudine",
+      "sincerità"
+    ],
+    "isVerb": false
+  },
+  "onestamente": {
+    "lemma": "onestamente",
+    "pos": "avverbio",
+    "fr": "honnêtement, franchement",
+    "definition_it": "in modo onesto, dicendo la verità e senza imbrogliare",
+    "examples": [
+      {
+        "it": "Onestamente, non so cosa risponderti.",
+        "fr": "Honnêtement, je ne sais pas quoi te répondre."
+      }
+    ],
+    "synonyms": [
+      "sinceramente",
+      "lealmente",
+      "francamente"
+    ],
+    "isVerb": false
+  },
+  "onesto": {
+    "lemma": "onesto",
+    "pos": "aggettivo",
+    "fr": "honnête",
+    "definition_it": "che dice la verità e rispetta le regole, senza ingannare gli altri",
+    "examples": [
+      {
+        "it": "È una persona onesta: non ti mentirebbe mai.",
+        "fr": "C'est une personne honnête : elle ne te mentirait jamais."
+      }
+    ],
+    "synonyms": [
+      "sincero",
+      "corretto"
+    ],
+    "isVerb": false
+  },
+  "online": {
+    "lemma": "online",
+    "pos": "aggettivo e avverbio (invariabile, anglicismo)",
+    "fr": "en ligne",
+    "definition_it": "collegato a internet; che si fa attraverso la rete",
+    "examples": [
+      {
+        "it": "Ho comprato il biglietto online.",
+        "fr": "J'ai acheté le billet en ligne."
+      }
+    ],
+    "synonyms": [
+      "in rete",
+      "in linea"
+    ],
+    "isVerb": false
+  },
+  "onorabilità": {
+    "lemma": "onorabilità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "honorabilité, respectabilité",
+    "definition_it": "condizione di chi gode di buona fama e merita la stima degli altri",
+    "examples": [
+      {
+        "it": "L'articolo del giornale ha messo in dubbio l'onorabilità del sindaco.",
+        "fr": "L'article du journal a mis en doute l'honorabilité du maire."
+      }
+    ],
+    "synonyms": [
+      "rispettabilità",
+      "buona reputazione",
+      "decoro"
+    ],
+    "isVerb": false
+  },
+  "onorare": {
+    "lemma": "onorare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "honorer, rendre hommage à",
+    "definition_it": "mostrare grande rispetto e stima verso una persona o una cosa importante",
+    "examples": [
+      {
+        "it": "La città onora ogni anno i suoi caduti.",
+        "fr": "La ville honore chaque année ses morts au combat."
+      }
+    ],
+    "synonyms": [
+      "rispettare",
+      "celebrare",
+      "omaggiare"
     ],
     "isVerb": true
   },
@@ -441,6 +1725,95 @@
     ],
     "isVerb": false
   },
+  "onorevole": {
+    "lemma": "onorevole",
+    "pos": "aggettivo e sostantivo (maschile e femminile)",
+    "fr": "honorable ; député(e) (titre parlementaire)",
+    "definition_it": "che merita onore e rispetto; in Italia è anche il titolo dato ai membri del Parlamento",
+    "examples": [
+      {
+        "it": "L'onorevole ha parlato davanti alla Camera.",
+        "fr": "Le député a parlé devant la Chambre."
+      }
+    ],
+    "synonyms": [
+      "rispettabile",
+      "degno",
+      "deputato"
+    ],
+    "isVerb": false
+  },
+  "onorificenza": {
+    "lemma": "onorificenza",
+    "pos": "sostantivo femminile",
+    "fr": "distinction, décoration honorifique",
+    "definition_it": "titolo o medaglia che lo Stato dà a chi ha fatto qualcosa di importante",
+    "examples": [
+      {
+        "it": "Il presidente ha consegnato le onorificenze ai volontari.",
+        "fr": "Le président a remis les décorations aux bénévoles."
+      }
+    ],
+    "synonyms": [
+      "decorazione",
+      "medaglia",
+      "riconoscimento"
+    ],
+    "isVerb": false
+  },
+  "onta": {
+    "lemma": "onta",
+    "pos": "sostantivo femminile (letterario)",
+    "fr": "honte, opprobre, affront",
+    "definition_it": "grande vergogna pubblica o offesa che colpisce l'onore di qualcuno",
+    "examples": [
+      {
+        "it": "Quella sconfitta fu un'onta per tutta la famiglia.",
+        "fr": "Cette défaite fut une honte pour toute la famille."
+      }
+    ],
+    "synonyms": [
+      "vergogna",
+      "disonore",
+      "affronto"
+    ],
+    "isVerb": false
+  },
+  "opacità": {
+    "lemma": "opacità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "opacité",
+    "definition_it": "la qualità di ciò che è opaco, che non lascia passare la luce; in senso figurato, mancanza di chiarezza",
+    "examples": [
+      {
+        "it": "L'opacità dei conti pubblici preoccupa i cittadini.",
+        "fr": "L'opacité des comptes publics inquiète les citoyens."
+      }
+    ],
+    "synonyms": [
+      "oscurità",
+      "mancanza di trasparenza"
+    ],
+    "isVerb": false
+  },
+  "opaco": {
+    "lemma": "opaco",
+    "pos": "aggettivo",
+    "fr": "opaque, mat",
+    "definition_it": "che non lascia passare la luce e non brilla",
+    "examples": [
+      {
+        "it": "Il vetro del bagno è opaco.",
+        "fr": "La vitre de la salle de bains est opaque."
+      }
+    ],
+    "synonyms": [
+      "scuro",
+      "offuscato",
+      "non trasparente"
+    ],
+    "isVerb": false
+  },
   "opera": {
     "lemma": "opera",
     "pos": "nome femminile",
@@ -455,6 +1828,57 @@
     "synonyms": [
       "lavoro",
       "creazione"
+    ],
+    "isVerb": false
+  },
+  "operaio": {
+    "lemma": "operaio",
+    "pos": "sostantivo maschile (femminile: operaia)",
+    "fr": "ouvrier, ouvrière",
+    "definition_it": "persona che lavora con le mani in una fabbrica o in un cantiere, alle dipendenze di un'azienda",
+    "examples": [
+      {
+        "it": "Mio nonno era un operaio della fabbrica di automobili.",
+        "fr": "Mon grand-père était ouvrier à l'usine automobile."
+      }
+    ],
+    "synonyms": [
+      "lavoratore",
+      "manovale"
+    ],
+    "isVerb": false
+  },
+  "operare": {
+    "lemma": "operare",
+    "pos": "verbo (transitivo e intransitivo, regolare)",
+    "fr": "opérer, agir, œuvrer",
+    "definition_it": "fare qualcosa di concreto, agire; in medicina, curare qualcuno con un intervento chirurgico",
+    "examples": [
+      {
+        "it": "Il medico ha deciso di operare subito il paziente.",
+        "fr": "Le médecin a décidé d'opérer le patient immédiatement."
+      }
+    ],
+    "synonyms": [
+      "agire",
+      "lavorare"
+    ],
+    "isVerb": true
+  },
+  "operatore": {
+    "lemma": "operatore",
+    "pos": "sostantivo (maschile)",
+    "fr": "opérateur, technicien",
+    "definition_it": "persona che fa funzionare una macchina o che svolge un'attività in un settore preciso",
+    "examples": [
+      {
+        "it": "L'operatore della telecamera segue tutta la scena.",
+        "fr": "L'opérateur de la caméra suit toute la scène."
+      }
+    ],
+    "synonyms": [
+      "addetto",
+      "tecnico"
     ],
     "isVerb": false
   },
@@ -489,6 +1913,23 @@
     ],
     "isVerb": false
   },
+  "opporre": {
+    "lemma": "opporre",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "opposer",
+    "definition_it": "mettere una cosa o una ragione contro un'altra per resistere o rifiutare",
+    "examples": [
+      {
+        "it": "Il ragazzo non oppone nessuna resistenza.",
+        "fr": "Le garçon n'oppose aucune résistance."
+      }
+    ],
+    "synonyms": [
+      "contrapporre",
+      "obiettare"
+    ],
+    "isVerb": true
+  },
   "opporsi": {
     "lemma": "opporsi",
     "pos": "verbo",
@@ -505,6 +1946,108 @@
       "resistere"
     ],
     "isVerb": true
+  },
+  "opportunamente": {
+    "lemma": "opportunamente",
+    "pos": "avverbio",
+    "fr": "opportunément, à propos, comme il faut",
+    "definition_it": "in modo adatto alla situazione e al momento giusto",
+    "examples": [
+      {
+        "it": "Il testo è stato opportunamente corretto prima della stampa.",
+        "fr": "Le texte a été opportunément corrigé avant l'impression."
+      }
+    ],
+    "synonyms": [
+      "adeguatamente",
+      "convenientemente"
+    ],
+    "isVerb": false
+  },
+  "opportunità": {
+    "lemma": "opportunità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "occasion, opportunité",
+    "definition_it": "momento o situazione favorevole per fare qualcosa che si desidera",
+    "examples": [
+      {
+        "it": "Questo viaggio è un'opportunità che non voglio perdere.",
+        "fr": "Ce voyage est une occasion que je ne veux pas manquer."
+      }
+    ],
+    "synonyms": [
+      "occasione",
+      "possibilità"
+    ],
+    "isVerb": false
+  },
+  "opportuno": {
+    "lemma": "opportuno",
+    "pos": "aggettivo",
+    "fr": "opportun, approprié",
+    "definition_it": "che arriva o si fa al momento giusto e nel modo giusto",
+    "examples": [
+      {
+        "it": "Non mi sembra opportuno parlarne adesso.",
+        "fr": "Il ne me semble pas opportun d'en parler maintenant."
+      }
+    ],
+    "synonyms": [
+      "adatto",
+      "conveniente"
+    ],
+    "isVerb": false
+  },
+  "oppositore": {
+    "lemma": "oppositore",
+    "pos": "sostantivo (maschile)",
+    "fr": "opposant, adversaire",
+    "definition_it": "persona che si dichiara contro un'idea, un governo o una decisione",
+    "examples": [
+      {
+        "it": "Gli oppositori del progetto hanno organizzato una protesta.",
+        "fr": "Les opposants au projet ont organisé une manifestation."
+      }
+    ],
+    "synonyms": [
+      "avversario",
+      "contestatore"
+    ],
+    "isVerb": false
+  },
+  "opposizione": {
+    "lemma": "opposizione",
+    "pos": "sostantivo (femminile)",
+    "fr": "opposition",
+    "definition_it": "il fatto di essere contro qualcosa; in politica, i partiti che non governano",
+    "examples": [
+      {
+        "it": "I partiti di opposizione hanno votato contro la legge.",
+        "fr": "Les partis d'opposition ont voté contre la loi."
+      }
+    ],
+    "synonyms": [
+      "resistenza",
+      "contrasto"
+    ],
+    "isVerb": false
+  },
+  "opposto": {
+    "lemma": "opposto",
+    "pos": "aggettivo / sostantivo (maschile) — participio passato di «opporre»",
+    "fr": "opposé, contraire",
+    "definition_it": "che sta dall'altra parte o che ha un significato completamente contrario",
+    "examples": [
+      {
+        "it": "La casa si trova sulla riva opposta del fiume.",
+        "fr": "La maison se trouve sur la rive opposée du fleuve."
+      }
+    ],
+    "synonyms": [
+      "contrario",
+      "inverso"
+    ],
+    "isVerb": false
   },
   "oppressione": {
     "lemma": "oppressione",
@@ -523,6 +2066,91 @@
     ],
     "isVerb": false
   },
+  "opprimere": {
+    "lemma": "opprimere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "opprimer, accabler",
+    "definition_it": "far pesare su qualcuno un potere, un peso o un dolore che toglie libertà",
+    "examples": [
+      {
+        "it": "Il caldo ci opprime da giorni.",
+        "fr": "La chaleur nous accable depuis des jours."
+      }
+    ],
+    "synonyms": [
+      "schiacciare",
+      "tiranneggiare"
+    ],
+    "isVerb": true
+  },
+  "oppure": {
+    "lemma": "oppure",
+    "pos": "congiunzione",
+    "fr": "ou bien, ou alors",
+    "definition_it": "unisce due possibilità tra cui si può scegliere",
+    "examples": [
+      {
+        "it": "Puoi venire oggi oppure domani.",
+        "fr": "Tu peux venir aujourd'hui ou bien demain."
+      }
+    ],
+    "synonyms": [
+      "o",
+      "ovvero"
+    ],
+    "isVerb": false
+  },
+  "ops": {
+    "lemma": "ops",
+    "pos": "interiezione",
+    "fr": "oups",
+    "definition_it": "esclamazione informale che si usa dopo un piccolo errore o incidente",
+    "examples": [
+      {
+        "it": "Ops, ho rotto un bicchiere!",
+        "fr": "Oups, j'ai cassé un verre !"
+      }
+    ],
+    "synonyms": [
+      "oplà"
+    ],
+    "isVerb": false
+  },
+  "opuscolo": {
+    "lemma": "opuscolo",
+    "pos": "nome (maschile)",
+    "fr": "brochure, opuscule",
+    "definition_it": "piccolo libro di poche pagine, spesso informativo o pubblicitario",
+    "examples": [
+      {
+        "it": "All'ingresso del museo danno un opuscolo gratuito.",
+        "fr": "À l'entrée du musée on donne une brochure gratuite."
+      }
+    ],
+    "synonyms": [
+      "depliant",
+      "libretto"
+    ],
+    "isVerb": false
+  },
+  "opzione": {
+    "lemma": "opzione",
+    "pos": "sostantivo (f.)",
+    "fr": "option, choix",
+    "definition_it": "possibilità di scegliere tra più alternative",
+    "examples": [
+      {
+        "it": "Abbiamo ancora un'opzione migliore da valutare.",
+        "fr": "Nous avons encore une meilleure option à évaluer."
+      }
+    ],
+    "synonyms": [
+      "scelta",
+      "alternativa",
+      "facoltà"
+    ],
+    "isVerb": false
+  },
   "ora": {
     "lemma": "ora",
     "pos": "nome femminile",
@@ -535,6 +2163,74 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "oralmente": {
+    "lemma": "oralmente",
+    "pos": "avverbio",
+    "fr": "oralement, de vive voix",
+    "definition_it": "a voce, parlando e non scrivendo",
+    "examples": [
+      {
+        "it": "L'esame si svolge oralmente davanti a due professori.",
+        "fr": "L'examen se déroule oralement devant deux professeurs."
+      }
+    ],
+    "synonyms": [
+      "a voce",
+      "verbalmente"
+    ],
+    "isVerb": false
+  },
+  "oramai": {
+    "lemma": "oramai",
+    "pos": "avverbio",
+    "fr": "désormais, maintenant",
+    "definition_it": "a questo punto, dopo tutto quello che è successo (forma equivalente a «ormai»)",
+    "examples": [
+      {
+        "it": "Oramai è troppo tardi per cambiare idea.",
+        "fr": "Désormais il est trop tard pour changer d'avis."
+      }
+    ],
+    "synonyms": [
+      "ormai",
+      "ormai adesso"
+    ],
+    "isVerb": false
+  },
+  "orario": {
+    "lemma": "orario",
+    "pos": "sostantivo maschile",
+    "fr": "horaire, emploi du temps",
+    "definition_it": "indicazione delle ore in cui una cosa comincia e finisce, o in cui passano treni e autobus",
+    "examples": [
+      {
+        "it": "Controlla l'orario dei treni prima di partire.",
+        "fr": "Vérifie l'horaire des trains avant de partir."
+      }
+    ],
+    "synonyms": [
+      "tabella di marcia",
+      "programma"
+    ],
+    "isVerb": false
+  },
+  "orazione": {
+    "lemma": "orazione",
+    "pos": "nome (femminile)",
+    "fr": "prière ; discours",
+    "definition_it": "preghiera rivolta a Dio, oppure discorso solenne detto in pubblico",
+    "examples": [
+      {
+        "it": "La nonna recita un'orazione ogni sera.",
+        "fr": "La grand-mère récite une prière chaque soir."
+      }
+    ],
+    "synonyms": [
+      "preghiera",
+      "discorso"
+    ],
     "isVerb": false
   },
   "orchestra": {
@@ -553,6 +2249,20 @@
     ],
     "isVerb": false
   },
+  "orchidea": {
+    "lemma": "orchidea",
+    "pos": "nome (femminile)",
+    "fr": "orchidée",
+    "definition_it": "pianta con fiori eleganti e colorati, spesso tenuta in casa",
+    "examples": [
+      {
+        "it": "Le orchidee bianche sono sul davanzale.",
+        "fr": "Les orchidées blanches sont sur le rebord de la fenêtre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "orco": {
     "lemma": "orco",
     "pos": "nome maschile",
@@ -566,6 +2276,76 @@
     ],
     "synonyms": [
       "mostro"
+    ],
+    "isVerb": false
+  },
+  "ordigno": {
+    "lemma": "ordigno",
+    "pos": "nome (maschile)",
+    "fr": "engin, dispositif (explosif)",
+    "definition_it": "apparecchio o congegno, oggi soprattutto un dispositivo esplosivo",
+    "examples": [
+      {
+        "it": "La polizia ha trovato un ordigno vicino alla stazione.",
+        "fr": "La police a trouvé un engin près de la gare."
+      }
+    ],
+    "synonyms": [
+      "congegno",
+      "aggeggio"
+    ],
+    "isVerb": false
+  },
+  "ordinare": {
+    "lemma": "ordinare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "ordonner, commander, ranger",
+    "definition_it": "chiedere qualcosa con autorità; oppure mettere le cose in ordine o richiedere un prodotto",
+    "examples": [
+      {
+        "it": "Ordina sempre la stessa pizza.",
+        "fr": "Il commande toujours la même pizza."
+      }
+    ],
+    "synonyms": [
+      "comandare",
+      "sistemare"
+    ],
+    "isVerb": true
+  },
+  "ordinario": {
+    "lemma": "ordinario",
+    "pos": "aggettivo",
+    "fr": "ordinaire, courant, banal",
+    "definition_it": "che è normale, comune, senza niente di speciale",
+    "examples": [
+      {
+        "it": "È una giornata ordinaria, senza sorprese.",
+        "fr": "C'est une journée ordinaire, sans surprises."
+      }
+    ],
+    "synonyms": [
+      "comune",
+      "normale",
+      "abituale"
+    ],
+    "isVerb": false
+  },
+  "ordinato": {
+    "lemma": "ordinato",
+    "pos": "aggettivo (participio passato di ordinare)",
+    "fr": "ordonné, rangé, bien organisé",
+    "definition_it": "che è messo in ordine, sistemato con cura; detto di persona, che tiene tutto al suo posto",
+    "examples": [
+      {
+        "it": "La sua camera è sempre pulita e ordinata.",
+        "fr": "Sa chambre est toujours propre et rangée."
+      }
+    ],
+    "synonyms": [
+      "sistemato",
+      "preciso",
+      "metodico"
     ],
     "isVerb": false
   },
@@ -586,6 +2366,38 @@
     ],
     "isVerb": false
   },
+  "ordire": {
+    "lemma": "ordire",
+    "pos": "verbo (transitivo, regolare -isc-)",
+    "fr": "ourdir, tramer",
+    "definition_it": "preparare i fili sul telaio per tessere; in senso figurato, preparare in segreto un piano contro qualcuno",
+    "examples": [
+      {
+        "it": "I congiurati avevano ordito un complotto contro il re.",
+        "fr": "Les conjurés avaient ourdi un complot contre le roi."
+      }
+    ],
+    "synonyms": [
+      "tramare",
+      "macchinare",
+      "tessere"
+    ],
+    "isVerb": true
+  },
+  "orecchietta": {
+    "lemma": "orecchietta",
+    "pos": "sostantivo (femminile, spesso al plurale)",
+    "fr": "orecchiette (pâtes en forme de petite oreille)",
+    "definition_it": "tipo di pasta pugliese piccola e rotonda, con la forma di un piccolo orecchio",
+    "examples": [
+      {
+        "it": "In Puglia si mangiano le orecchiette con le cime di rapa.",
+        "fr": "Dans les Pouilles, on mange les orecchiette aux fanes de navet."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "orecchio": {
     "lemma": "orecchio",
     "pos": "nome maschile",
@@ -598,6 +2410,202 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "orefice": {
+    "lemma": "orefice",
+    "pos": "sostantivo (maschile e femminile)",
+    "fr": "orfèvre, bijoutier",
+    "definition_it": "persona che lavora l'oro e gli altri metalli preziosi o che vende gioielli",
+    "examples": [
+      {
+        "it": "Ho portato l'anello dall'orefice per farlo riparare.",
+        "fr": "J'ai apporté la bague chez l'orfèvre pour la faire réparer."
+      }
+    ],
+    "synonyms": [
+      "gioielliere",
+      "orafo"
+    ],
+    "isVerb": false
+  },
+  "oretta": {
+    "lemma": "oretta",
+    "pos": "sostantivo (femminile, diminutivo di ora)",
+    "fr": "petite heure, environ une heure",
+    "definition_it": "un'ora circa, un tempo breve vicino a sessanta minuti",
+    "examples": [
+      {
+        "it": "Aspettami qui, torno tra un'oretta.",
+        "fr": "Attends-moi ici, je reviens dans une petite heure."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "orfano": {
+    "lemma": "orfano",
+    "pos": "sostantivo e aggettivo",
+    "fr": "orphelin, orpheline",
+    "definition_it": "bambino o ragazzo che ha perso il padre, la madre o tutti e due",
+    "examples": [
+      {
+        "it": "La bambina è rimasta orfana da piccola ed è cresciuta con la nonna.",
+        "fr": "La petite fille est devenue orpheline très jeune et a grandi avec sa grand-mère."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "organetto": {
+    "lemma": "organetto",
+    "pos": "nome (maschile)",
+    "fr": "petit orgue, accordéon diatonique, orgue de Barbarie",
+    "definition_it": "piccolo strumento musicale a mantice, simile a una fisarmonica, usato spesso nella musica popolare",
+    "examples": [
+      {
+        "it": "Alla festa del paese un vecchio suonava l'organetto.",
+        "fr": "À la fête du village, un vieil homme jouait de l'accordéon."
+      }
+    ],
+    "synonyms": [
+      "fisarmonica"
+    ],
+    "isVerb": false
+  },
+  "organico": {
+    "lemma": "organico",
+    "pos": "aggettivo (maschile singolare)",
+    "fr": "organique",
+    "definition_it": "che riguarda gli esseri viventi o gli organi del corpo; anche: formato da parti ben unite tra loro",
+    "examples": [
+      {
+        "it": "In giardino usiamo solo concime organico.",
+        "fr": "Au jardin, nous n'utilisons que de l'engrais organique."
+      }
+    ],
+    "synonyms": [
+      "naturale"
+    ],
+    "isVerb": false
+  },
+  "organizzare": {
+    "lemma": "organizzare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "organiser",
+    "definition_it": "preparare e mettere in ordine le parti di qualcosa perché funzioni bene",
+    "examples": [
+      {
+        "it": "Vogliamo organizzare una festa a sorpresa per Marta.",
+        "fr": "Nous voulons organiser une fête surprise pour Marta."
+      }
+    ],
+    "synonyms": [
+      "preparare",
+      "allestire",
+      "ordinare"
+    ],
+    "isVerb": true
+  },
+  "organizzativo": {
+    "lemma": "organizzativo",
+    "pos": "aggettivo (maschile singolare)",
+    "fr": "organisationnel, d'organisation",
+    "definition_it": "che riguarda il modo di organizzare il lavoro o un'attività",
+    "examples": [
+      {
+        "it": "Il ritardo è dovuto a un problema organizzativo.",
+        "fr": "Le retard est dû à un problème d'organisation."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "organizzatore": {
+    "lemma": "organizzatore",
+    "pos": "sostantivo maschile (femminile: organizzatrice)",
+    "fr": "organisateur, organisatrice",
+    "definition_it": "chi prepara e coordina una festa, un viaggio o un altro avvenimento",
+    "examples": [
+      {
+        "it": "L'organizzatore del concerto ha spiegato le regole al pubblico.",
+        "fr": "L'organisateur du concert a expliqué les règles au public."
+      }
+    ],
+    "synonyms": [
+      "coordinatore",
+      "promotore"
+    ],
+    "isVerb": false
+  },
+  "organizzazione": {
+    "lemma": "organizzazione",
+    "pos": "sostantivo femminile",
+    "fr": "organisation, structure",
+    "definition_it": "il modo in cui si prepara e si mette in ordine un lavoro; anche gruppo di persone unite per uno stesso scopo",
+    "examples": [
+      {
+        "it": "L'organizzazione della festa ci ha preso due settimane.",
+        "fr": "L'organisation de la fête nous a pris deux semaines."
+      }
+    ],
+    "synonyms": [
+      "gestione",
+      "ente",
+      "associazione"
+    ],
+    "isVerb": false
+  },
+  "orgasmo": {
+    "lemma": "orgasmo",
+    "pos": "sostantivo maschile",
+    "fr": "orgasme ; agitation intense (figuré)",
+    "definition_it": "momento di massimo piacere nel rapporto sessuale; in senso figurato, stato di forte agitazione",
+    "examples": [
+      {
+        "it": "La città era in orgasmo per l'arrivo del campione.",
+        "fr": "La ville était en effervescence à cause de l'arrivée du champion."
+      }
+    ],
+    "synonyms": [
+      "eccitazione",
+      "fermento"
+    ],
+    "isVerb": false
+  },
+  "orgoglio": {
+    "lemma": "orgoglio",
+    "pos": "sostantivo maschile",
+    "fr": "fierté, orgueil",
+    "definition_it": "sentimento di grande soddisfazione per ciò che si è o si è fatto; a volte anche stima eccessiva di sé",
+    "examples": [
+      {
+        "it": "Guardava il figlio con orgoglio mentre riceveva il diploma.",
+        "fr": "Il regardait son fils avec fierté pendant qu'il recevait son diplôme."
+      }
+    ],
+    "synonyms": [
+      "fierezza",
+      "superbia",
+      "amor proprio"
+    ],
+    "isVerb": false
+  },
+  "orgoglioso": {
+    "lemma": "orgoglioso",
+    "pos": "aggettivo",
+    "fr": "fier, orgueilleux",
+    "definition_it": "che prova orgoglio, che è contento e soddisfatto di sé o di qualcuno",
+    "examples": [
+      {
+        "it": "Sua madre è molto orgogliosa di lei.",
+        "fr": "Sa mère est très fière d'elle."
+      }
+    ],
+    "synonyms": [
+      "fiero",
+      "soddisfatto"
+    ],
     "isVerb": false
   },
   "oriente": {
@@ -617,6 +2625,57 @@
     ],
     "isVerb": false
   },
+  "originale": {
+    "lemma": "originale",
+    "pos": "aggettivo / sostantivo maschile",
+    "fr": "original",
+    "definition_it": "che è il primo, non è una copia; oppure che è nuovo e diverso dal solito",
+    "examples": [
+      {
+        "it": "Ho letto il romanzo in lingua originale.",
+        "fr": "J'ai lu le roman en version originale."
+      }
+    ],
+    "synonyms": [
+      "autentico",
+      "innovativo"
+    ],
+    "isVerb": false
+  },
+  "originariamente": {
+    "lemma": "originariamente",
+    "pos": "avverbio",
+    "fr": "à l'origine, initialement",
+    "definition_it": "all'inizio, nel momento in cui una cosa è nata o è stata fatta",
+    "examples": [
+      {
+        "it": "Originariamente il palazzo era un convento.",
+        "fr": "À l'origine, le palais était un couvent."
+      }
+    ],
+    "synonyms": [
+      "inizialmente",
+      "in origine"
+    ],
+    "isVerb": false
+  },
+  "originario": {
+    "lemma": "originario",
+    "pos": "aggettivo",
+    "fr": "originaire, d'origine",
+    "definition_it": "che viene da un certo luogo, o che esisteva all'inizio",
+    "examples": [
+      {
+        "it": "La sua famiglia è originaria della Sicilia.",
+        "fr": "Sa famille est originaire de Sicile."
+      }
+    ],
+    "synonyms": [
+      "nativo",
+      "iniziale"
+    ],
+    "isVerb": false
+  },
   "origine": {
     "lemma": "origine",
     "pos": "nome femminile",
@@ -631,6 +2690,71 @@
     "synonyms": [
       "provenienza",
       "principio"
+    ],
+    "isVerb": false
+  },
+  "origliare": {
+    "lemma": "origliare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "écouter aux portes, épier une conversation",
+    "definition_it": "ascoltare di nascosto quello che dicono gli altri, senza farsi vedere",
+    "examples": [
+      {
+        "it": "L'ho sorpreso mentre stava origliando dietro la porta.",
+        "fr": "Je l'ai surpris en train d'écouter aux portes."
+      }
+    ],
+    "synonyms": [
+      "spiare",
+      "ascoltare di nascosto"
+    ],
+    "isVerb": true
+  },
+  "orinatoio": {
+    "lemma": "orinatoio",
+    "pos": "sostantivo maschile",
+    "fr": "urinoir",
+    "definition_it": "sanitario fissato al muro, nei bagni pubblici, dove gli uomini possono urinare",
+    "examples": [
+      {
+        "it": "Nel bagno della stazione c'erano tre orinatoi.",
+        "fr": "Dans les toilettes de la gare, il y avait trois urinoirs."
+      }
+    ],
+    "synonyms": [
+      "pisciatoio"
+    ],
+    "isVerb": false
+  },
+  "oriundo": {
+    "lemma": "oriundo",
+    "pos": "aggettivo / sostantivo maschile",
+    "fr": "d'origine étrangère (par ses ancêtres), oriundo",
+    "definition_it": "persona nata in un paese ma che ha antenati di un altro paese",
+    "examples": [
+      {
+        "it": "In quella squadra giocavano molti oriundi italiani.",
+        "fr": "Dans cette équipe jouaient beaucoup de joueurs d'origine italienne."
+      }
+    ],
+    "synonyms": [
+      "discendente"
+    ],
+    "isVerb": false
+  },
+  "orizzontale": {
+    "lemma": "orizzontale",
+    "pos": "aggettivo",
+    "fr": "horizontal",
+    "definition_it": "che è disteso e parallelo alla linea dell'orizzonte, cioè al terreno",
+    "examples": [
+      {
+        "it": "Traccia una linea orizzontale sul foglio.",
+        "fr": "Trace une ligne horizontale sur la feuille."
+      }
+    ],
+    "synonyms": [
+      "disteso"
     ],
     "isVerb": false
   },
@@ -668,6 +2792,88 @@
     ],
     "isVerb": false
   },
+  "orma": {
+    "lemma": "orma",
+    "pos": "sostantivo femminile",
+    "fr": "trace, empreinte (de pas)",
+    "definition_it": "il segno lasciato sul terreno da un piede o da una zampa",
+    "examples": [
+      {
+        "it": "Sulla neve si vedevano le orme di un cane.",
+        "fr": "Sur la neige, on voyait les empreintes d'un chien."
+      }
+    ],
+    "synonyms": [
+      "impronta",
+      "traccia"
+    ],
+    "isVerb": false
+  },
+  "ormai": {
+    "lemma": "ormai",
+    "pos": "avverbio",
+    "fr": "désormais, maintenant, à ce stade",
+    "definition_it": "indica che si è arrivati a un punto dopo il quale la situazione non può più cambiare; la forma «omai» è antica e poetica",
+    "examples": [
+      {
+        "it": "Ormai è troppo tardi per tornare indietro.",
+        "fr": "Désormais il est trop tard pour faire marche arrière."
+      }
+    ],
+    "synonyms": [
+      "oramai",
+      "omai"
+    ],
+    "isVerb": false
+  },
+  "ormone": {
+    "lemma": "ormone",
+    "pos": "sostantivo maschile",
+    "fr": "hormone",
+    "definition_it": "sostanza prodotta dal corpo che regola la crescita e molte funzioni dell'organismo",
+    "examples": [
+      {
+        "it": "Durante l'adolescenza gli ormoni cambiano il corpo.",
+        "fr": "Pendant l'adolescence, les hormones transforment le corps."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ornamento": {
+    "lemma": "ornamento",
+    "pos": "sostantivo (maschile)",
+    "fr": "ornement, décoration",
+    "definition_it": "oggetto o elemento che serve a rendere più bello qualcosa",
+    "examples": [
+      {
+        "it": "L'albero di Natale è pieno di ornamenti colorati.",
+        "fr": "Le sapin de Noël est plein d'ornements colorés."
+      }
+    ],
+    "synonyms": [
+      "decorazione",
+      "abbellimento"
+    ],
+    "isVerb": false
+  },
+  "ornare": {
+    "lemma": "ornare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "orner, décorer",
+    "definition_it": "aggiungere elementi belli a una cosa per renderla più gradevole",
+    "examples": [
+      {
+        "it": "Hanno ornato la chiesa con fiori bianchi.",
+        "fr": "Ils ont orné l'église avec des fleurs blanches."
+      }
+    ],
+    "synonyms": [
+      "decorare",
+      "abbellire"
+    ],
+    "isVerb": true
+  },
   "oro": {
     "lemma": "oro",
     "pos": "nome maschile",
@@ -680,6 +2886,71 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "orologiaio": {
+    "lemma": "orologiaio",
+    "pos": "sostantivo maschile (femminile: orologiaia)",
+    "fr": "horloger, horlogère",
+    "definition_it": "artigiano che costruisce, ripara e vende gli strumenti per misurare il tempo",
+    "examples": [
+      {
+        "it": "Ho portato la sveglia rotta dall'orologiaio in centro.",
+        "fr": "J'ai apporté le réveil cassé chez l'horloger du centre-ville."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "orologio": {
+    "lemma": "orologio",
+    "pos": "sostantivo maschile",
+    "fr": "montre, horloge, pendule",
+    "definition_it": "strumento che serve a misurare e a indicare le ore e i minuti",
+    "examples": [
+      {
+        "it": "Il mio orologio va avanti di cinque minuti.",
+        "fr": "Ma montre avance de cinq minutes."
+      }
+    ],
+    "synonyms": [
+      "cronometro",
+      "pendola"
+    ],
+    "isVerb": false
+  },
+  "orranza": {
+    "lemma": "orranza",
+    "pos": "sostantivo (femminile, arcaico/letterario)",
+    "fr": "honneur, hommage",
+    "definition_it": "parola antica che significa onore o segno di rispetto verso qualcuno",
+    "examples": [
+      {
+        "it": "I poeti antichi rendevano orranza ai grandi maestri.",
+        "fr": "Les poètes anciens rendaient hommage aux grands maîtres."
+      }
+    ],
+    "synonyms": [
+      "onore",
+      "omaggio"
+    ],
+    "isVerb": false
+  },
+  "orrendo": {
+    "lemma": "orrendo",
+    "pos": "aggettivo",
+    "fr": "horrible, affreux",
+    "definition_it": "che fa molta paura o è molto brutto da vedere",
+    "examples": [
+      {
+        "it": "Ho fatto un sogno orrendo questa notte.",
+        "fr": "J'ai fait un rêve horrible cette nuit."
+      }
+    ],
+    "synonyms": [
+      "orribile",
+      "spaventoso"
+    ],
     "isVerb": false
   },
   "orribile": {
@@ -696,6 +2967,22 @@
     "synonyms": [
       "terribile",
       "spaventoso"
+    ],
+    "isVerb": false
+  },
+  "orribilmente": {
+    "lemma": "orribilmente",
+    "pos": "avverbio",
+    "fr": "horriblement, affreusement",
+    "definition_it": "in modo orribile, molto male",
+    "examples": [
+      {
+        "it": "Ha cantato orribilmente, ma tutti hanno applaudito.",
+        "fr": "Il a chanté horriblement, mais tout le monde a applaudi."
+      }
+    ],
+    "synonyms": [
+      "terribilmente"
     ],
     "isVerb": false
   },
@@ -716,6 +3003,38 @@
     ],
     "isVerb": false
   },
+  "orsacchiotto": {
+    "lemma": "orsacchiotto",
+    "pos": "sostantivo (maschile)",
+    "fr": "ourson, ours en peluche",
+    "definition_it": "piccolo orso, oppure il giocattolo di stoffa a forma di orso",
+    "examples": [
+      {
+        "it": "La bambina dorme sempre con il suo orsacchiotto.",
+        "fr": "La petite fille dort toujours avec son ours en peluche."
+      }
+    ],
+    "synonyms": [
+      "orsetto"
+    ],
+    "isVerb": false
+  },
+  "orsetto": {
+    "lemma": "orsetto",
+    "pos": "sostantivo (maschile)",
+    "fr": "petit ours, ourson",
+    "definition_it": "orso piccolo o giovane; anche il pupazzo a forma di orso",
+    "examples": [
+      {
+        "it": "Nel negozio vendono orsetti di peluche molto morbidi.",
+        "fr": "Dans le magasin, ils vendent des oursons en peluche très doux."
+      }
+    ],
+    "synonyms": [
+      "orsacchiotto"
+    ],
+    "isVerb": false
+  },
   "orso": {
     "lemma": "orso",
     "pos": "sostantivo (m.)",
@@ -728,6 +3047,39 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "ortaggio": {
+    "lemma": "ortaggio",
+    "pos": "sostantivo (maschile)",
+    "fr": "légume",
+    "definition_it": "pianta dell'orto che si mangia, come il pomodoro o la zucchina",
+    "examples": [
+      {
+        "it": "Al mercato compro sempre ortaggi freschi di stagione.",
+        "fr": "Au marché, j'achète toujours des légumes frais de saison."
+      }
+    ],
+    "synonyms": [
+      "verdura"
+    ],
+    "isVerb": false
+  },
+  "orticello": {
+    "lemma": "orticello",
+    "pos": "sostantivo maschile (diminutivo di orto)",
+    "fr": "petit potager, petit jardin",
+    "definition_it": "piccolo pezzo di terra dove si coltivano verdure e erbe per la casa",
+    "examples": [
+      {
+        "it": "Nell'orticello dietro casa coltiva pomodori e basilico.",
+        "fr": "Dans le petit potager derrière la maison, il cultive des tomates et du basilic."
+      }
+    ],
+    "synonyms": [
+      "orto",
+      "giardinetto"
+    ],
     "isVerb": false
   },
   "orto": {
@@ -746,6 +3098,20 @@
     ],
     "isVerb": false
   },
+  "ortografico": {
+    "lemma": "ortografico",
+    "pos": "aggettivo",
+    "fr": "orthographique",
+    "definition_it": "che riguarda il modo corretto di scrivere le parole",
+    "examples": [
+      {
+        "it": "Nel tema ci sono due errori ortografici.",
+        "fr": "Dans la rédaction, il y a deux fautes d'orthographe."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "ortolano": {
     "lemma": "ortolano",
     "pos": "sostantivo (m.)",
@@ -762,6 +3128,94 @@
     ],
     "isVerb": false
   },
+  "osanna": {
+    "lemma": "osanna",
+    "pos": "sostantivo (maschile) / interiezione",
+    "fr": "hosanna",
+    "definition_it": "grido di lode e di gioia usato nelle preghiere e nei canti religiosi; per estensione, elogio entusiastico",
+    "examples": [
+      {
+        "it": "La folla accolse il re con osanna e canti.",
+        "fr": "La foule accueillit le roi avec des hosannas et des chants."
+      }
+    ],
+    "synonyms": [
+      "acclamazione",
+      "elogio"
+    ],
+    "isVerb": false
+  },
+  "osare": {
+    "lemma": "osare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "oser",
+    "definition_it": "avere il coraggio di fare o dire qualcosa di difficile o rischioso",
+    "examples": [
+      {
+        "it": "Nessuno osa dire la verità al direttore.",
+        "fr": "Personne n'ose dire la vérité au directeur."
+      }
+    ],
+    "synonyms": [
+      "ardire",
+      "azzardarsi"
+    ],
+    "isVerb": true
+  },
+  "oscenità": {
+    "lemma": "oscenità",
+    "pos": "sostantivo (f.)",
+    "fr": "obscénité, indécence",
+    "definition_it": "carattere di ciò che offende il pudore; parola o atto osceno",
+    "examples": [
+      {
+        "it": "Non tollero simili oscenità in casa mia.",
+        "fr": "Je ne tolère pas de telles obscénités chez moi."
+      }
+    ],
+    "synonyms": [
+      "volgarità",
+      "indecenza",
+      "turpitudine"
+    ],
+    "isVerb": false
+  },
+  "oscillare": {
+    "lemma": "oscillare",
+    "pos": "verbo (intransitivo, regolare -are)",
+    "fr": "osciller, balancer, varier",
+    "definition_it": "muoversi avanti e indietro intorno a un punto fisso; anche variare tra due limiti senza decidersi",
+    "examples": [
+      {
+        "it": "I prezzi oscillano tra dieci e quindici euro.",
+        "fr": "Les prix oscillent entre dix et quinze euros."
+      }
+    ],
+    "synonyms": [
+      "dondolare",
+      "variare",
+      "esitare"
+    ],
+    "isVerb": true
+  },
+  "oscurarsi": {
+    "lemma": "oscurarsi",
+    "pos": "verbo (riflessivo)",
+    "fr": "s'obscurcir, s'assombrir",
+    "definition_it": "Diventare buio o cupo, perdere luce.",
+    "examples": [
+      {
+        "it": "I vetri della finestra s'oscuravano al tramonto.",
+        "fr": "Les vitres de la fenêtre s'obscurcissaient au coucher du soleil."
+      }
+    ],
+    "synonyms": [
+      "annerirsi",
+      "offuscarsi",
+      "rabbuiarsi"
+    ],
+    "isVerb": true
+  },
   "oscurità": {
     "lemma": "oscurità",
     "pos": "sostantivo femminile (invariabile)",
@@ -776,6 +3230,24 @@
     "synonyms": [
       "buio",
       "tenebra"
+    ],
+    "isVerb": false
+  },
+  "oscuro": {
+    "lemma": "oscuro",
+    "pos": "aggettivo",
+    "fr": "obscur, sombre",
+    "definition_it": "che ha poca o nessuna luce; in senso figurato, difficile da capire o poco conosciuto",
+    "examples": [
+      {
+        "it": "La stanza era oscura e piena di polvere.",
+        "fr": "La pièce était sombre et pleine de poussière."
+      }
+    ],
+    "synonyms": [
+      "buio",
+      "tenebroso",
+      "incomprensibile"
     ],
     "isVerb": false
   },
@@ -812,6 +3284,22 @@
     ],
     "isVerb": false
   },
+  "ospitalità": {
+    "lemma": "ospitalità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "hospitalité, accueil",
+    "definition_it": "il fatto di accogliere qualcuno in casa propria e di trattarlo bene",
+    "examples": [
+      {
+        "it": "Vi ringrazio per la vostra ospitalità: sono stato benissimo.",
+        "fr": "Je vous remercie de votre hospitalité : je me suis très bien senti."
+      }
+    ],
+    "synonyms": [
+      "accoglienza"
+    ],
+    "isVerb": false
+  },
   "ospitare": {
     "lemma": "ospitare",
     "pos": "verbo (transitivo, regolare)",
@@ -828,6 +3316,124 @@
       "alloggiare"
     ],
     "isVerb": true
+  },
+  "ospite": {
+    "lemma": "ospite",
+    "pos": "sostantivo (maschile/femminile)",
+    "fr": "invité, hôte",
+    "definition_it": "persona che è ricevuta e accolta in casa di qualcuno; a volte anche chi accoglie",
+    "examples": [
+      {
+        "it": "Abbiamo un ospite a cena stasera.",
+        "fr": "Nous avons un invité à dîner ce soir."
+      }
+    ],
+    "synonyms": [
+      "invitato",
+      "visitatore"
+    ],
+    "isVerb": false
+  },
+  "ospizio": {
+    "lemma": "ospizio",
+    "pos": "sostantivo (maschile)",
+    "fr": "hospice, maison de retraite",
+    "definition_it": "casa dove vivono e sono assistite persone anziane o povere",
+    "examples": [
+      {
+        "it": "Sua nonna vive in un ospizio vicino al mare.",
+        "fr": "Sa grand-mère vit dans un hospice près de la mer."
+      }
+    ],
+    "synonyms": [
+      "ricovero",
+      "casa di riposo"
+    ],
+    "isVerb": false
+  },
+  "osseo": {
+    "lemma": "osseo",
+    "pos": "aggettivo",
+    "fr": "osseux",
+    "definition_it": "che riguarda le ossa o che è fatto di osso",
+    "examples": [
+      {
+        "it": "La struttura ossea del piede è molto complessa.",
+        "fr": "La structure osseuse du pied est très complexe."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ossequio": {
+    "lemma": "ossequio",
+    "pos": "sostantivo maschile",
+    "fr": "déférence, hommage ; respects (pluriel)",
+    "definition_it": "segno di grande rispetto verso una persona importante; al plurale, saluti molto formali",
+    "examples": [
+      {
+        "it": "Porga i miei ossequi alla signora contessa.",
+        "fr": "Présentez mes respects à madame la comtesse."
+      }
+    ],
+    "synonyms": [
+      "riverenza",
+      "deferenza",
+      "rispetto"
+    ],
+    "isVerb": false
+  },
+  "osservabile": {
+    "lemma": "osservabile",
+    "pos": "aggettivo",
+    "fr": "observable",
+    "definition_it": "che si può vedere o notare, di solito con attenzione o con uno strumento",
+    "examples": [
+      {
+        "it": "La cometa è osservabile anche senza telescopio.",
+        "fr": "La comète est observable même sans télescope."
+      }
+    ],
+    "synonyms": [
+      "visibile",
+      "percettibile"
+    ],
+    "isVerb": false
+  },
+  "osservare": {
+    "lemma": "osservare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "observer, regarder attentivement ; respecter (une règle) ; faire remarquer",
+    "definition_it": "guardare con attenzione per capire meglio; anche rispettare una regola, oppure far notare qualcosa a voce",
+    "examples": [
+      {
+        "it": "Il maestro osservava i bambini che giocavano in cortile.",
+        "fr": "Le maître observait les enfants qui jouaient dans la cour."
+      }
+    ],
+    "synonyms": [
+      "guardare",
+      "esaminare",
+      "rispettare"
+    ],
+    "isVerb": true
+  },
+  "osservatore": {
+    "lemma": "osservatore",
+    "pos": "sostantivo (maschile)",
+    "fr": "observateur",
+    "definition_it": "persona che guarda con attenzione una cosa o una situazione, spesso senza intervenire",
+    "examples": [
+      {
+        "it": "Gli osservatori internazionali hanno seguito le elezioni.",
+        "fr": "Les observateurs internationaux ont suivi les élections."
+      }
+    ],
+    "synonyms": [
+      "spettatore",
+      "testimone"
+    ],
+    "isVerb": false
   },
   "osservatorio": {
     "lemma": "osservatorio",
@@ -860,6 +3466,74 @@
     ],
     "isVerb": false
   },
+  "ossessionare": {
+    "lemma": "ossessionare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "obséder, hanter",
+    "definition_it": "occupare in modo continuo e fastidioso la mente di qualcuno, senza lasciarlo tranquillo",
+    "examples": [
+      {
+        "it": "È ossessionata dall'idea di arrivare sempre in ritardo.",
+        "fr": "Elle est obsédée par l'idée d'arriver toujours en retard."
+      }
+    ],
+    "synonyms": [
+      "tormentare",
+      "assillare",
+      "perseguitare"
+    ],
+    "isVerb": true
+  },
+  "ossesso": {
+    "lemma": "ossesso",
+    "pos": "aggettivo",
+    "fr": "possédé, forcené",
+    "definition_it": "che è dominato da uno spirito maligno o da un'idea fissa, al punto di perdere il controllo",
+    "examples": [
+      {
+        "it": "Gridava come un ossesso in mezzo alla strada.",
+        "fr": "Il criait comme un possédé au milieu de la rue."
+      }
+    ],
+    "synonyms": [
+      "indemoniato",
+      "invasato",
+      "forsennato"
+    ],
+    "isVerb": false
+  },
+  "ossia": {
+    "lemma": "ossia",
+    "pos": "congiunzione",
+    "fr": "c'est-à-dire, ou plutôt",
+    "definition_it": "si usa per spiegare meglio o correggere quello che si è appena detto",
+    "examples": [
+      {
+        "it": "Arriverò domani, ossia lunedì mattina.",
+        "fr": "J'arriverai demain, c'est-à-dire lundi matin."
+      }
+    ],
+    "synonyms": [
+      "cioè",
+      "ovvero",
+      "vale a dire"
+    ],
+    "isVerb": false
+  },
+  "ossigeno": {
+    "lemma": "ossigeno",
+    "pos": "sostantivo maschile",
+    "fr": "oxygène",
+    "definition_it": "gas dell'aria, senza colore né odore, necessario per respirare e perché una cosa bruci",
+    "examples": [
+      {
+        "it": "In alta montagna c'è meno ossigeno e si respira con fatica.",
+        "fr": "En haute montagne, il y a moins d'oxygène et on respire avec peine."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "osso": {
     "lemma": "osso",
     "pos": "nome maschile",
@@ -890,6 +3564,40 @@
     ],
     "isVerb": false
   },
+  "ostaggio": {
+    "lemma": "ostaggio",
+    "pos": "sostantivo maschile",
+    "fr": "otage",
+    "definition_it": "persona presa e tenuta prigioniera per costringere altri a fare quello che si chiede",
+    "examples": [
+      {
+        "it": "I rapitori hanno liberato l'ostaggio dopo tre giorni.",
+        "fr": "Les ravisseurs ont libéré l'otage au bout de trois jours."
+      }
+    ],
+    "synonyms": [
+      "prigioniero"
+    ],
+    "isVerb": false
+  },
+  "ostare": {
+    "lemma": "ostare",
+    "pos": "verbo (intransitivo, difettivo, formale)",
+    "fr": "faire obstacle, s'opposer à",
+    "definition_it": "essere un ostacolo, impedire qualcosa; si usa quasi solo nella lingua burocratica e nelle forme «nulla osta» e «non ostante»",
+    "examples": [
+      {
+        "it": "Nulla osta alla firma del contratto.",
+        "fr": "Rien ne s'oppose à la signature du contrat."
+      }
+    ],
+    "synonyms": [
+      "opporsi",
+      "impedire",
+      "ostacolare"
+    ],
+    "isVerb": true
+  },
   "oste": {
     "lemma": "oste",
     "pos": "nome maschile",
@@ -903,6 +3611,40 @@
     ],
     "synonyms": [
       "locandiere"
+    ],
+    "isVerb": false
+  },
+  "ostello": {
+    "lemma": "ostello",
+    "pos": "sostantivo maschile",
+    "fr": "auberge (de jeunesse)",
+    "definition_it": "luogo semplice ed economico dove i viaggiatori possono dormire, spesso in camere condivise",
+    "examples": [
+      {
+        "it": "In città ci sono due ostelli per la gioventù.",
+        "fr": "En ville, il y a deux auberges de jeunesse."
+      }
+    ],
+    "synonyms": [
+      "alloggio",
+      "rifugio"
+    ],
+    "isVerb": false
+  },
+  "ostentazione": {
+    "lemma": "ostentazione",
+    "pos": "nome (femminile)",
+    "fr": "ostentation, étalage",
+    "definition_it": "il fatto di mostrare con orgoglio esagerato quello che si ha o che si sa, per farsi ammirare",
+    "examples": [
+      {
+        "it": "Parlava dei suoi successi con evidente ostentazione.",
+        "fr": "Il parlait de ses succès avec une ostentation évidente."
+      }
+    ],
+    "synonyms": [
+      "esibizione",
+      "sfoggio"
     ],
     "isVerb": false
   },
@@ -923,6 +3665,320 @@
     ],
     "isVerb": false
   },
+  "ostile": {
+    "lemma": "ostile",
+    "pos": "aggettivo",
+    "fr": "hostile",
+    "definition_it": "che si comporta come un nemico o che si mostra contrario a qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Il pubblico era ostile alla squadra ospite.",
+        "fr": "Le public était hostile à l'équipe visiteuse."
+      }
+    ],
+    "synonyms": [
+      "nemico",
+      "contrario",
+      "avverso"
+    ],
+    "isVerb": false
+  },
+  "ostilità": {
+    "lemma": "ostilità",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "hostilité, animosité ; hostilités (pluriel)",
+    "definition_it": "atteggiamento di chi tratta qualcuno come un nemico; al plurale, i combattimenti di una guerra",
+    "examples": [
+      {
+        "it": "Mi accolse con freddezza, quasi con ostilità.",
+        "fr": "Il m'accueillit avec froideur, presque avec hostilité."
+      }
+    ],
+    "synonyms": [
+      "avversione",
+      "inimicizia",
+      "antipatia"
+    ],
+    "isVerb": false
+  },
+  "ostinarsi": {
+    "lemma": "ostinarsi",
+    "pos": "verbo (riflessivo, regolare)",
+    "fr": "s'obstiner, s'entêter",
+    "definition_it": "continuare a volere una cosa o a fare qualcosa anche quando gli altri dicono di no o quando è inutile",
+    "examples": [
+      {
+        "it": "Si ostina a non chiedere aiuto a nessuno.",
+        "fr": "Il s'obstine à ne demander l'aide de personne."
+      }
+    ],
+    "synonyms": [
+      "insistere",
+      "intestardirsi",
+      "impuntarsi"
+    ],
+    "isVerb": true
+  },
+  "ostinatamente": {
+    "lemma": "ostinatamente",
+    "pos": "avverbio",
+    "fr": "obstinément, avec entêtement",
+    "definition_it": "in modo ostinato, continuando senza cambiare idea",
+    "examples": [
+      {
+        "it": "Rifiutava ostinatamente di parlare con noi.",
+        "fr": "Il refusait obstinément de parler avec nous."
+      }
+    ],
+    "synonyms": [
+      "testardamente",
+      "caparbiamente"
+    ],
+    "isVerb": false
+  },
+  "ostinato": {
+    "lemma": "ostinato",
+    "pos": "aggettivo",
+    "fr": "obstiné, têtu",
+    "definition_it": "che non cambia mai idea e continua a fare quello che ha deciso",
+    "examples": [
+      {
+        "it": "È una ragazza ostinata: non rinuncia mai al suo progetto.",
+        "fr": "C'est une fille obstinée : elle ne renonce jamais à son projet."
+      }
+    ],
+    "synonyms": [
+      "testardo",
+      "caparbio",
+      "cocciuto"
+    ],
+    "isVerb": false
+  },
+  "ostinazione": {
+    "lemma": "ostinazione",
+    "pos": "sostantivo femminile",
+    "fr": "obstination, entêtement, acharnement",
+    "definition_it": "l'atteggiamento di chi continua a volere qualcosa e non cambia idea, anche quando è difficile o inutile",
+    "examples": [
+      {
+        "it": "Con grande ostinazione ha imparato a suonare il violino da solo.",
+        "fr": "Avec une grande obstination, il a appris à jouer du violon tout seul."
+      }
+    ],
+    "synonyms": [
+      "caparbietà",
+      "testardaggine",
+      "tenacia"
+    ],
+    "isVerb": false
+  },
+  "ottanta": {
+    "lemma": "ottanta",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingts",
+    "definition_it": "il numero che viene dopo settantanove e prima di ottantuno (80)",
+    "examples": [
+      {
+        "it": "Mia nonna ha compiuto ottanta anni ieri.",
+        "fr": "Ma grand-mère a eu quatre-vingts ans hier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantacinque": {
+    "lemma": "ottantacinque",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt-cinq",
+    "definition_it": "il numero che viene dopo ottantaquattro e prima di ottantasei (85)",
+    "examples": [
+      {
+        "it": "La corsa dura ottantacinque minuti in tutto.",
+        "fr": "La course dure quatre-vingt-cinq minutes en tout."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantadue": {
+    "lemma": "ottantadue",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt-deux",
+    "definition_it": "il numero che viene dopo ottantuno e prima di ottantatré (82)",
+    "examples": [
+      {
+        "it": "Il vecchio maestro morì a ottantadue anni.",
+        "fr": "Le vieux maître mourut à quatre-vingt-deux ans."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantaduemila": {
+    "lemma": "ottantaduemila",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt-deux mille",
+    "definition_it": "il numero formato da ottantadue volte mille (82 000)",
+    "examples": [
+      {
+        "it": "L'azienda ha venduto ottantaduemila copie del libro.",
+        "fr": "L'entreprise a vendu quatre-vingt-deux mille exemplaires du livre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantamila": {
+    "lemma": "ottantamila",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt mille",
+    "definition_it": "il numero formato da ottanta volte mille (80 000)",
+    "examples": [
+      {
+        "it": "Allo stadio c'erano ottantamila persone.",
+        "fr": "Il y avait quatre-vingt mille personnes au stade."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantasei": {
+    "lemma": "ottantasei",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt-six",
+    "definition_it": "il numero che viene dopo ottantacinque e prima di ottantasette (86)",
+    "examples": [
+      {
+        "it": "Abbiamo contato ottantasei uccelli sul lago.",
+        "fr": "Nous avons compté quatre-vingt-six oiseaux sur le lac."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantunmila": {
+    "lemma": "ottantunmila",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt-un mille",
+    "definition_it": "il numero formato da ottantuno volte mille (81 000)",
+    "examples": [
+      {
+        "it": "La città conta ottantunmila abitanti.",
+        "fr": "La ville compte quatre-vingt-un mille habitants."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottantuno": {
+    "lemma": "ottantuno",
+    "pos": "aggettivo numerale (invariabile)",
+    "fr": "quatre-vingt-un",
+    "definition_it": "il numero che viene dopo ottanta e prima di ottantadue (81)",
+    "examples": [
+      {
+        "it": "Nella scatola ci sono ottantuno bottoni colorati.",
+        "fr": "Dans la boîte il y a quatre-vingt-un boutons colorés."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottavo": {
+    "lemma": "ottavo",
+    "pos": "aggettivo numerale ordinale (anche sostantivo)",
+    "fr": "huitième ; octave (musique), huitain",
+    "definition_it": "che occupa il posto numero otto in una serie; come nome indica anche una delle otto parti uguali di un intero, oppure, al femminile, un gruppo di otto versi o un intervallo musicale",
+    "examples": [
+      {
+        "it": "Abitiamo all'ottavo piano di un palazzo moderno.",
+        "fr": "Nous habitons au huitième étage d'un immeuble moderne."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottenere": {
+    "lemma": "ottenere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "obtenir",
+    "definition_it": "riuscire ad avere una cosa dopo averla chiesta o dopo aver fatto uno sforzo",
+    "examples": [
+      {
+        "it": "Dopo molti tentativi ha ottenuto il permesso di partire.",
+        "fr": "Après plusieurs tentatives, il a obtenu la permission de partir."
+      }
+    ],
+    "synonyms": [
+      "conseguire",
+      "raggiungere",
+      "ricevere"
+    ],
+    "isVerb": true
+  },
+  "ottimizzazione": {
+    "lemma": "ottimizzazione",
+    "pos": "sostantivo (femminile)",
+    "fr": "optimisation",
+    "definition_it": "il lavoro di rendere una cosa migliore, più veloce o meno costosa",
+    "examples": [
+      {
+        "it": "L'ottimizzazione del sito ha ridotto i tempi di caricamento.",
+        "fr": "L'optimisation du site a réduit les temps de chargement."
+      }
+    ],
+    "synonyms": [
+      "miglioramento",
+      "perfezionamento"
+    ],
+    "isVerb": false
+  },
+  "ottimo": {
+    "lemma": "ottimo",
+    "pos": "aggettivo",
+    "fr": "excellent, très bon",
+    "definition_it": "molto buono, migliore di tutti gli altri; è il superlativo di «buono»",
+    "examples": [
+      {
+        "it": "Questa pizza è ottima, complimenti al cuoco!",
+        "fr": "Cette pizza est excellente, félicitations au cuisinier !"
+      }
+    ],
+    "synonyms": [
+      "eccellente",
+      "perfetto",
+      "splendido"
+    ],
+    "isVerb": false
+  },
+  "otto": {
+    "lemma": "otto",
+    "pos": "numerale (aggettivo/sostantivo maschile)",
+    "fr": "huit",
+    "definition_it": "il numero che viene dopo il sette e prima del nove",
+    "examples": [
+      {
+        "it": "Il treno parte alle otto in punto.",
+        "fr": "Le train part à huit heures pile."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ottobre": {
+    "lemma": "ottobre",
+    "pos": "sostantivo (maschile)",
+    "fr": "octobre",
+    "definition_it": "il decimo mese dell'anno, tra settembre e novembre",
+    "examples": [
+      {
+        "it": "In ottobre le foglie diventano gialle e rosse.",
+        "fr": "En octobre, les feuilles deviennent jaunes et rouges."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "ottocento": {
     "lemma": "ottocento",
     "pos": "sostantivo maschile / aggettivo numerale",
@@ -937,6 +3993,22 @@
     "synonyms": [],
     "isVerb": false
   },
+  "ottomano": {
+    "lemma": "ottomano",
+    "pos": "aggettivo (anche sostantivo maschile)",
+    "fr": "ottoman",
+    "definition_it": "che riguarda l'antico impero dei Turchi, durato dal Medioevo fino al 1922",
+    "examples": [
+      {
+        "it": "L'impero ottomano dominò a lungo il Mediterraneo orientale.",
+        "fr": "L'Empire ottoman a longtemps dominé la Méditerranée orientale."
+      }
+    ],
+    "synonyms": [
+      "turco"
+    ],
+    "isVerb": false
+  },
   "ottone": {
     "lemma": "ottone",
     "pos": "nome maschile",
@@ -949,6 +4021,143 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "otturare": {
+    "lemma": "otturare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "boucher, obturer",
+    "definition_it": "chiudere un buco o un passaggio con qualcosa, così che niente possa passare",
+    "examples": [
+      {
+        "it": "Il dentista ha otturato il dente cariato.",
+        "fr": "Le dentiste a obturé la dent cariée."
+      }
+    ],
+    "synonyms": [
+      "tappare",
+      "chiudere",
+      "ostruire"
+    ],
+    "isVerb": true
+  },
+  "ovale": {
+    "lemma": "ovale",
+    "pos": "aggettivo / sostantivo maschile",
+    "fr": "ovale",
+    "definition_it": "che ha la forma allungata e tonda di un uovo",
+    "examples": [
+      {
+        "it": "Il tavolo della sala è ovale.",
+        "fr": "La table de la salle est ovale."
+      }
+    ],
+    "synonyms": [
+      "ellittico"
+    ],
+    "isVerb": false
+  },
+  "ove": {
+    "lemma": "ove",
+    "pos": "avverbio/congiunzione (letterario)",
+    "fr": "où ; si (littéraire)",
+    "definition_it": "parola antica e letteraria che significa «dove»; a volte vuol dire anche «se, nel caso in cui»",
+    "examples": [
+      {
+        "it": "Torniamo nel luogo ove ci siamo conosciuti.",
+        "fr": "Retournons à l'endroit où nous nous sommes rencontrés."
+      }
+    ],
+    "synonyms": [
+      "dove",
+      "laddove",
+      "qualora"
+    ],
+    "isVerb": false
+  },
+  "ovest": {
+    "lemma": "ovest",
+    "pos": "sostantivo maschile",
+    "fr": "ouest",
+    "definition_it": "punto cardinale dove il sole tramonta, opposto all'est",
+    "examples": [
+      {
+        "it": "La finestra della cucina guarda a ovest.",
+        "fr": "La fenêtre de la cuisine donne à l'ouest."
+      }
+    ],
+    "synonyms": [
+      "occidente",
+      "ponente"
+    ],
+    "isVerb": false
+  },
+  "ovunque": {
+    "lemma": "ovunque",
+    "pos": "avverbio",
+    "fr": "partout, où que ce soit",
+    "definition_it": "in ogni luogo, in tutti i posti",
+    "examples": [
+      {
+        "it": "Ti seguirei ovunque.",
+        "fr": "Je te suivrais partout."
+      }
+    ],
+    "synonyms": [
+      "dappertutto",
+      "dovunque"
+    ],
+    "isVerb": false
+  },
+  "ovvero": {
+    "lemma": "ovvero",
+    "pos": "congiunzione",
+    "fr": "c'est-à-dire, ou bien",
+    "definition_it": "si usa per spiegare meglio quello che si è appena detto o per indicare un'altra possibilità",
+    "examples": [
+      {
+        "it": "Arriverò domani, ovvero il tre marzo.",
+        "fr": "J'arriverai demain, c'est-à-dire le trois mars."
+      }
+    ],
+    "synonyms": [
+      "cioè",
+      "oppure"
+    ],
+    "isVerb": false
+  },
+  "ovviare": {
+    "lemma": "ovviare",
+    "pos": "verbo (intransitivo, regolare -iare)",
+    "fr": "remédier à, parer à, obvier",
+    "definition_it": "trovare un rimedio a un problema o evitare una difficoltà (si usa con la preposizione «a»)",
+    "examples": [
+      {
+        "it": "Abbiamo comprato una stufa per ovviare al freddo.",
+        "fr": "Nous avons acheté un poêle pour remédier au froid."
+      }
+    ],
+    "synonyms": [
+      "rimediare",
+      "porre rimedio"
+    ],
+    "isVerb": true
+  },
+  "ovvio": {
+    "lemma": "ovvio",
+    "pos": "aggettivo",
+    "fr": "évident, qui va de soi",
+    "definition_it": "che si capisce subito, senza bisogno di spiegazioni",
+    "examples": [
+      {
+        "it": "La risposta mi sembra ovvia.",
+        "fr": "La réponse me semble évidente."
+      }
+    ],
+    "synonyms": [
+      "evidente",
+      "scontato"
+    ],
     "isVerb": false
   },
   "ozio": {

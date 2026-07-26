@@ -75,6 +75,7 @@ const formatDate = (iso) =>
       <RouterLink :to="{ name: 'admin' }" class="tab active">Comptes</RouterLink>
       <RouterLink :to="{ name: 'admin-words' }" class="tab" exact-active-class="active">Mots</RouterLink>
       <RouterLink :to="{ name: 'admin-texts' }" class="tab" exact-active-class="active">Textes</RouterLink>
+      <RouterLink :to="{ name: 'admin-dictionary' }" class="tab" exact-active-class="active">Dizionario</RouterLink>
     </nav>
 
     <p v-if="error" class="notice error">⚠ {{ error }}</p>

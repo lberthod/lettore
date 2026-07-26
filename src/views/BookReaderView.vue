@@ -22,6 +22,7 @@ import {
 import { authReady, currentUser } from '../lib/auth.js'
 import { firebaseReady } from '../lib/firebase.js'
 import { hasClassiciAccess, isFreeClassiciChapter } from '../lib/access.js'
+import { loadBookChapter } from '../lib/protectedContent.js'
 
 const props = defineProps({
   bookId: { type: String, required: true },
@@ -42,10 +43,11 @@ async function checkChapterAccess(bookId, chapterId) {
   return hasClassiciAccess()
 }
 
-// Un livre = un manifeste (book.json) + un chunk séparé par chapitre —
-// même principe de chargement à la demande que ReaderView pour les textes.
+// Un livre = un manifeste (book.json) + un chapitre chargé à la demande.
+// Seuls les manifestes (métadonnées publiques) sont embarqués dans le build ;
+// le contenu des chapitres passe par protectedContent.js — chapitres de
+// l'aperçu gratuit compris, pour n'avoir qu'un seul chemin de chargement.
 const bookModules = import.meta.glob('../books/*/book.json', { import: 'default' })
-const chapterModules = import.meta.glob('../books/*/*.json', { import: 'default' })
 
 const book = ref(null)
 const currentChapter = ref(null)
@@ -69,8 +71,7 @@ async function loadChapter(bookId, chapterId) {
     router.replace(redirect)
     return
   }
-  const loader = chapterModules[`../books/${bookId}/${bookId}-${chapterId}.json`]
-  const data = loader ? await loader() : null
+  const data = await loadBookChapter(bookId, chapterId)
   if (!data) {
     router.replace({ name: 'books' })
     return
@@ -83,7 +84,7 @@ async function loadChapter(bookId, chapterId) {
 
 function preloadNeighbors() {
   for (const c of [prevChapter.value, nextChapter.value]) {
-    if (c) chapterModules[`../books/${props.bookId}/${props.bookId}-${c.id}.json`]?.()
+    if (c) loadBookChapter(props.bookId, c.id)
   }
 }
 

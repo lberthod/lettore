@@ -20,6 +20,7 @@ Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebas
 Garde-fous :
 
 - **Auth** : l'ID token Firebase (header `Authorization: Bearer …`) est vérifié via `firebase-admin/auth` (`verifyIdToken`). Le rôle (`gratuit` / `premium` / `premium_plus` / `enseignant`) est relu depuis les custom claims embarqués dans le token (posés côté Cloud Functions, voir [functions/index.js](../functions/index.js)).
+- **Anti-abus de l'essai IA** (voir [TODO_SECURITE.md](TODO_SECURITE.md), § P1) : l'essai gratuit exige une adresse e-mail vérifiée (`email_verified` du token, `quota.mjs`) ; App Check (`appcheck.mjs`) atteste que la requête vient bien de l'app, pas d'un script — modes `off`/`soft`/`enforce` via `APP_CHECK_MODE` ; un plafond par IP (`ratelimit.mjs`) borne le nombre de comptes d'essai distincts et le nombre total de générations par 24 h, indépendamment du quota par compte.
 - **Crédits de génération** (barème défini dans [README_TARIFICATION.md](../README_TARIFICATION.md), logique dans `quota.mjs`, persistés dans Firestore — collection `leggendoQuotas`, un document par `uid`) :
   - `gratuit` : 1 génération d'essai, à vie, jamais renouvelée ;
   - `premium` : **aucun accès** à la génération (formule lecture uniquement — `premium_plus`, alias commercial « Premium IA », est requis) ;
@@ -27,7 +28,7 @@ Garde-fous :
   - `enseignant` : 100 crédits par mois (rôle le plus élevé, inclut les droits `premium_plus`) ;
   - coût par taille de texte : `corto`=1, `medio`=2, `lungo`=3, `molto_lungo`=4 crédits ;
   - la vérification, la consommation du crédit et la création du job se font dans une **même transaction Firestore** : une panne d'écriture ou une requête concurrente ne peut ni faire perdre un crédit ni permettre deux générations simultanées ;
-  - **remboursement automatique** (`jobStore.refundCredit`) si le job se termine en erreur — une génération qui échoue pour une raison technique ne consomme pas de crédit ;
+  - **remboursement automatique** (`jobStore.failJob`) si le job se termine en erreur — une génération qui échoue pour une raison technique ne consomme pas de crédit ; la clôture du job et le remboursement se font dans la même transaction, conditionnée au statut du job (`pending`/`running`), donc jamais rejoués ;
   - solde consultable via `GET /leggendo/quota`, sans consommation (affiché côté app avant de lancer une génération, voir [CreateTextView.vue](../src/views/CreateTextView.vue)).
 - **Mesure des coûts IA** (`logGeneration` dans `server.mjs`, collection Firestore `generationLogs`) : chaque génération enregistre uid, rôle, niveau, taille, coût en crédits, nombre d'appels au modèle, tokens consommés et coût estimé (`ESTIMATED_COST_PER_1K_TOKENS_USD`, approximatif) — une alerte est loguée si le coût estimé d'une génération dépasse 0.50 $.
 - **Un seul job actif par compte** ; jobs persistés dans Firestore (collection `leggendoJobs`, survivent à un redémarrage du VPS), purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels GLM).
@@ -46,6 +47,11 @@ Garde-fous :
 | `GLM_BASE_URL` | endpoint Zhipu AI | endpoint chat completions (compatible OpenAI) |
 | `GLM_FALLBACK_URL` | endpoint Z.ai | bascule automatique en cas d'erreur réseau sur l'endpoint principal |
 | `GLM_TIMEOUT_MS` | 8 min | timeout par appel GLM |
+| `APP_CHECK_MODE` | `off` | `off` (désactivé) / `soft` (vérifié + journalisé, jamais refusé) / `enforce` (refuse les requêtes non attestées) — voir [TODO_SECURITE.md](TODO_SECURITE.md) |
+| `TRUST_PROXY` | `1` | passer à `0` si le serveur n'est plus derrière Caddy (sinon `X-Forwarded-For` devient falsifiable par le client) |
+| `MAX_TRIAL_ACCOUNTS_PER_IP` | 5 | comptes d'essai distincts autorisés par IP sur 24 h |
+| `MAX_GENERATIONS_PER_IP` | 40 | générations totales (tous rôles) autorisées par IP sur 24 h |
+| `TRIAL_ALERT_PER_HOUR` | 20 | seuil de générations d'essai/heure au-delà duquel une alerte est journalisée |
 
 En prod, ces variables sont posées via `leggendo-api.env` (copie de [leggendo-api.env.example](leggendo-api.env.example)), chargé par le service systemd — voir [Déploiement](#déploiement).
 

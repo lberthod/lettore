@@ -21,6 +21,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
+import { EXAMPLE_COUNT, pickExampleTexts } from '../src/lib/catalogAccess.js'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
 const srcDir = path.join(root, '../src')
@@ -36,31 +37,7 @@ const textsIndex = JSON.parse(
   readFileSync(path.join(srcDir, 'texts/index.json'), 'utf8')
 )
 
-// Doit rester synchronisé avec src/lib/access.js (pickExamples/EXAMPLE_COUNT).
-// Dupliqué ici car access.js importe des modules navigateur (auth, firebase)
-// qui ne peuvent pas tourner sous Node.
-function pickFreeExampleIds(count = 6) {
-  const byLevel = {}
-  for (const t of textsIndex) (byLevel[t.level] ??= []).push(t)
-  const levels = Object.keys(byLevel).sort()
-  const picks = []
-  let i = 0
-  while (picks.length < count) {
-    let added = false
-    for (const lv of levels) {
-      const t = byLevel[lv][i]
-      if (t) {
-        picks.push(t.id)
-        added = true
-        if (picks.length === count) break
-      }
-    }
-    if (!added) break
-    i++
-  }
-  return picks
-}
-const FREE_IDS = new Set(pickFreeExampleIds())
+const FREE_IDS = new Set(pickExampleTexts(textsIndex, EXAMPLE_COUNT).map((t) => t.id))
 
 function escapeHtml(str = '') {
   return String(str)
@@ -199,7 +176,7 @@ for (const route of ROUTES) {
 
   // /textes : catalogue complet en HTML statique, groupé par niveau, avec un
   // vrai lien <a> vers chaque texte (découverte + maillage interne pour les
-  // 454 pages du catalogue, y compris pour les robots sans JS).
+  // pages du catalogue, y compris pour les robots sans JS).
   if (route.path === '/textes') {
     const byLevel = {}
     for (const t of textsIndex) (byLevel[t.level] ??= []).push(t)

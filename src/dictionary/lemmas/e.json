@@ -1,4 +1,60 @@
 {
+  "e": {
+    "lemma": "e",
+    "pos": "congiunzione",
+    "fr": "et",
+    "definition_it": "congiunzione che unisce due parole o frasi con significato simile",
+    "examples": [
+      {
+        "it": "Vado al mercato e compro il pane.",
+        "fr": "Je vais au marché et j'achète du pain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "e-mail": {
+    "lemma": "e-mail",
+    "pos": "sostantivo femminile invariabile",
+    "fr": "e-mail, courriel",
+    "definition_it": "messaggio inviato tramite internet da un indirizzo elettronico a un altro",
+    "examples": [
+      {
+        "it": "Ti ho mandato una e-mail ieri sera.",
+        "fr": "Je t'ai envoyé un e-mail hier soir."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ebano": {
+    "lemma": "ebano",
+    "pos": "sostantivo maschile",
+    "fr": "ébène",
+    "definition_it": "legno nero, pesante e molto duro di un albero dei paesi caldi, usato per mobili di pregio e strumenti musicali",
+    "examples": [
+      {
+        "it": "I tasti neri del pianoforte erano di ebano.",
+        "fr": "Les touches noires du piano étaient en ébène."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ebbene": {
+    "lemma": "ebbene",
+    "pos": "congiunzione/avverbio",
+    "fr": "eh bien",
+    "definition_it": "espressione usata per introdurre una domanda, una conclusione o una conseguenza",
+    "examples": [
+      {
+        "it": "Ebbene, cosa ne pensi?",
+        "fr": "Eh bien, qu'en penses-tu ?"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "ebbrezza": {
     "lemma": "ebbrezza",
     "pos": "nome femminile",
@@ -13,6 +69,108 @@
     "synonyms": [
       "ubriachezza"
     ],
+    "isVerb": false
+  },
+  "ebbro": {
+    "lemma": "ebbro",
+    "pos": "aggettivo",
+    "fr": "ivre, enivré",
+    "definition_it": "che è sotto l'effetto dell'alcol o di una forte emozione",
+    "examples": [
+      {
+        "it": "Era ebbro di gioia per la notizia.",
+        "fr": "Il était ivre de joie à cette nouvelle."
+      }
+    ],
+    "synonyms": [
+      "ebro"
+    ],
+    "isVerb": false
+  },
+  "ebollizione": {
+    "lemma": "ebollizione",
+    "pos": "sostantivo femminile",
+    "fr": "ébullition",
+    "definition_it": "il fenomeno per cui un liquido, riscaldato, comincia a bollire",
+    "examples": [
+      {
+        "it": "L'acqua ha raggiunto l'ebollizione.",
+        "fr": "L'eau a atteint l'ébullition."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ebreo": {
+    "lemma": "ebreo",
+    "pos": "sostantivo/aggettivo",
+    "fr": "juif",
+    "definition_it": "che appartiene al popolo e alla cultura ebraica",
+    "examples": [
+      {
+        "it": "Il popolo ebreo ha una lunga storia.",
+        "fr": "Le peuple juif a une longue histoire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ebrezza": {
+    "lemma": "ebrezza",
+    "pos": "sostantivo femminile",
+    "fr": "ivresse",
+    "definition_it": "stato di chi ha bevuto troppo alcol, oppure forte eccitazione emotiva",
+    "examples": [
+      {
+        "it": "Guidava in stato di ebrezza.",
+        "fr": "Il conduisait en état d'ivresse."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ebro": {
+    "lemma": "ebro",
+    "pos": "aggettivo (letterario)",
+    "fr": "ivre, enivré (forme littéraire)",
+    "definition_it": "forma letteraria di 'ebbro', pieno di gioia o alterato dall'alcol",
+    "examples": [
+      {
+        "it": "Il poeta si sentiva ebro di felicità.",
+        "fr": "Le poète se sentait ivre de bonheur."
+      }
+    ],
+    "synonyms": [
+      "ebbro"
+    ],
+    "isVerb": false
+  },
+  "eccedere": {
+    "lemma": "eccedere",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "excéder, abuser de",
+    "definition_it": "superare un limite normale o ragionevole",
+    "examples": [
+      {
+        "it": "Non bisogna eccedere con l'alcol.",
+        "fr": "Il ne faut pas abuser de l'alcool."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "eccellente": {
+    "lemma": "eccellente",
+    "pos": "aggettivo",
+    "fr": "excellent",
+    "definition_it": "di qualità molto alta, ottimo",
+    "examples": [
+      {
+        "it": "Questo ristorante è eccellente.",
+        "fr": "Ce restaurant est excellent."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "eccellentissimo": {
@@ -32,6 +190,132 @@
     ],
     "isVerb": false
   },
+  "eccellenza": {
+    "lemma": "eccellenza",
+    "pos": "sostantivo femminile",
+    "fr": "excellence",
+    "definition_it": "qualità di ciò che è eccellente, di altissimo livello",
+    "examples": [
+      {
+        "it": "Il ristorante è famoso per l'eccellenza dei suoi piatti.",
+        "fr": "Le restaurant est célèbre pour l'excellence de ses plats."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccessivamente": {
+    "lemma": "eccessivamente",
+    "pos": "avverbio",
+    "fr": "excessivement",
+    "definition_it": "in modo eccessivo, oltre il limite normale",
+    "examples": [
+      {
+        "it": "Ha reagito eccessivamente a una critica innocua.",
+        "fr": "Il a réagi excessivement à une critique anodine."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccessivo": {
+    "lemma": "eccessivo",
+    "pos": "aggettivo",
+    "fr": "excessif",
+    "definition_it": "che supera la misura normale o accettabile",
+    "examples": [
+      {
+        "it": "Il prezzo del biglietto è eccessivo.",
+        "fr": "Le prix du billet est excessif."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccesso": {
+    "lemma": "eccesso",
+    "pos": "sostantivo maschile",
+    "fr": "excès",
+    "definition_it": "quantità che supera il limite normale o ragionevole",
+    "examples": [
+      {
+        "it": "Bere in eccesso fa male alla salute.",
+        "fr": "Boire avec excès nuit à la santé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccetera": {
+    "lemma": "eccetera",
+    "pos": "locuzione avverbiale",
+    "fr": "et cetera, etc.",
+    "definition_it": "espressione che indica la continuazione di un elenco non completato",
+    "examples": [
+      {
+        "it": "Compra frutta, verdura, ecc.",
+        "fr": "Achète des fruits, des légumes, etc."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccezionale": {
+    "lemma": "eccezionale",
+    "pos": "aggettivo",
+    "fr": "exceptionnel",
+    "definition_it": "che si distingue per qualità superiore, raro e straordinario",
+    "examples": [
+      {
+        "it": "Ha ottenuto un risultato eccezionale all'esame.",
+        "fr": "Il a obtenu un résultat exceptionnel à l'examen."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccezionalmente": {
+    "lemma": "eccezionalmente",
+    "pos": "avverbio",
+    "fr": "exceptionnellement",
+    "definition_it": "in modo eccezionale, raramente o fuori dal comune",
+    "examples": [
+      {
+        "it": "Oggi il negozio è eccezionalmente chiuso.",
+        "fr": "Aujourd'hui le magasin est exceptionnellement fermé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccezione": {
+    "lemma": "eccezione",
+    "pos": "sostantivo femminile",
+    "fr": "exception",
+    "definition_it": "caso che si discosta dalla regola generale",
+    "examples": [
+      {
+        "it": "Tutti sono arrivati puntuali, senza eccezione.",
+        "fr": "Tout le monde est arrivé à l'heure, sans exception."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccitare": {
+    "lemma": "eccitare",
+    "pos": "verbo (transitivo)",
+    "fr": "exciter",
+    "definition_it": "provocare in qualcuno un forte stato di emozione, agitazione o entusiasmo",
+    "examples": [
+      {
+        "it": "La notizia ha eccitato tutti i presenti.",
+        "fr": "La nouvelle a excité tous les présents."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
   "eccitazione": {
     "lemma": "eccitazione",
     "pos": "sostantivo (f)",
@@ -47,6 +331,146 @@
       "agitazione",
       "entusiasmo"
     ],
+    "isVerb": false
+  },
+  "ecco": {
+    "lemma": "ecco",
+    "pos": "avverbio/interiezione",
+    "fr": "voici, voilà",
+    "definition_it": "parola che si usa per indicare o presentare qualcosa o qualcuno",
+    "examples": [
+      {
+        "it": "Ecco il libro che cercavi.",
+        "fr": "Voici le livre que tu cherchais."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eccome": {
+    "lemma": "eccome",
+    "pos": "avverbio",
+    "fr": "et comment, vraiment",
+    "definition_it": "usato per rafforzare un'affermazione, con il significato di 'certamente, e come!'",
+    "examples": [
+      {
+        "it": "Ti piace questo film? Eccome!",
+        "fr": "Tu aimes ce film ? Et comment !"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eco": {
+    "lemma": "eco",
+    "pos": "nome (femminile, plurale irregolare: gli echi)",
+    "fr": "écho",
+    "definition_it": "ripetizione di un suono causata dal suo riflesso su una superficie",
+    "examples": [
+      {
+        "it": "Nella valle si sentiva l'eco della sua voce.",
+        "fr": "Dans la vallée on entendait l'écho de sa voix."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ecologico": {
+    "lemma": "ecologico",
+    "pos": "aggettivo",
+    "fr": "écologique",
+    "definition_it": "che riguarda l'ecologia o che rispetta l'ambiente",
+    "examples": [
+      {
+        "it": "Usiamo detersivi ecologici per non inquinare.",
+        "fr": "Nous utilisons des détergents écologiques pour ne pas polluer."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "economia": {
+    "lemma": "economia",
+    "pos": "nome (femminile)",
+    "fr": "économie",
+    "definition_it": "insieme delle attività di produzione, scambio e consumo di beni in una società",
+    "examples": [
+      {
+        "it": "L'economia italiana è cresciuta quest'anno.",
+        "fr": "L'économie italienne a progressé cette année."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "economicamente": {
+    "lemma": "economicamente",
+    "pos": "avverbio",
+    "fr": "économiquement",
+    "definition_it": "dal punto di vista economico, in modo economico",
+    "examples": [
+      {
+        "it": "Dopo la laurea è diventata economicamente indipendente.",
+        "fr": "Après son diplôme, elle est devenue économiquement indépendante."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "economico": {
+    "lemma": "economico",
+    "pos": "aggettivo",
+    "fr": "économique",
+    "definition_it": "relativo all'economia, oppure che costa poco denaro",
+    "examples": [
+      {
+        "it": "Ho trovato un albergo molto economico vicino al centro.",
+        "fr": "J'ai trouvé un hôtel très bon marché près du centre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "economista": {
+    "lemma": "economista",
+    "pos": "nome (maschile/femminile)",
+    "fr": "économiste",
+    "definition_it": "persona esperta di economia, che studia i fenomeni economici",
+    "examples": [
+      {
+        "it": "Gli economisti prevedono una crescita lenta per il prossimo anno.",
+        "fr": "Les économistes prévoient une croissance lente pour l'année prochaine."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "economo": {
+    "lemma": "economo",
+    "pos": "nome/aggettivo",
+    "fr": "économe",
+    "definition_it": "persona che amministra le spese di un'istituzione, oppure che spende con parsimonia",
+    "examples": [
+      {
+        "it": "L'economo del collegio gestisce con cura il bilancio.",
+        "fr": "L'économe du collège gère le budget avec soin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ecosistema": {
+    "lemma": "ecosistema",
+    "pos": "nome (maschile)",
+    "fr": "écosystème",
+    "definition_it": "insieme degli organismi viventi e dell'ambiente naturale in cui vivono e interagiscono",
+    "examples": [
+      {
+        "it": "L'inquinamento danneggia gravemente l'ecosistema marino.",
+        "fr": "La pollution endommage gravement l'écosystème marin."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "edicola": {
@@ -65,6 +489,34 @@
     ],
     "isVerb": false
   },
+  "edicolante": {
+    "lemma": "edicolante",
+    "pos": "nome (maschile/femminile)",
+    "fr": "marchand(e) de journaux",
+    "definition_it": "persona che vende giornali, riviste e altri articoli in un'edicola",
+    "examples": [
+      {
+        "it": "L'edicolante mi ha dato il giornale di oggi.",
+        "fr": "Le marchand de journaux m'a donné le journal du jour."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "edificare": {
+    "lemma": "edificare",
+    "pos": "verbo (transitivo, 1a coniugazione)",
+    "fr": "édifier, construire",
+    "definition_it": "costruire un edificio o una struttura",
+    "examples": [
+      {
+        "it": "Hanno edificato una nuova scuola in periferia.",
+        "fr": "Ils ont construit une nouvelle école en périphérie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
   "edificio": {
     "lemma": "edificio",
     "pos": "nome maschile",
@@ -79,6 +531,103 @@
     "synonyms": [
       "palazzo",
       "costruzione"
+    ],
+    "isVerb": false
+  },
+  "editare": {
+    "lemma": "editare",
+    "pos": "verbo (transitivo)",
+    "fr": "éditer, publier",
+    "definition_it": "curare e pubblicare un testo o un contenuto",
+    "examples": [
+      {
+        "it": "La casa editrice edita romanzi contemporanei.",
+        "fr": "La maison d'édition publie des romans contemporains."
+      }
+    ],
+    "synonyms": [
+      "pubblicare"
+    ],
+    "isVerb": true
+  },
+  "editore": {
+    "lemma": "editore",
+    "pos": "sostantivo maschile",
+    "fr": "éditeur, maison d'édition",
+    "definition_it": "persona o azienda che pubblica e mette in vendita libri, giornali o riviste",
+    "examples": [
+      {
+        "it": "L'editore ha accettato di pubblicare il suo primo romanzo.",
+        "fr": "L'éditeur a accepté de publier son premier roman."
+      }
+    ],
+    "synonyms": [
+      "casa editrice",
+      "stampatore"
+    ],
+    "isVerb": false
+  },
+  "edizione": {
+    "lemma": "edizione",
+    "pos": "nome (f.)",
+    "fr": "édition",
+    "definition_it": "pubblicazione di un testo o di un'opera, oppure una singola manifestazione periodica",
+    "examples": [
+      {
+        "it": "Ho comprato la nuova edizione del dizionario.",
+        "fr": "J'ai acheté la nouvelle édition du dictionnaire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "educare": {
+    "lemma": "educare",
+    "pos": "verbo (transitivo)",
+    "fr": "éduquer",
+    "definition_it": "formare qualcuno insegnando valori, comportamenti e conoscenze",
+    "examples": [
+      {
+        "it": "I genitori educano i figli con pazienza.",
+        "fr": "Les parents éduquent leurs enfants avec patience."
+      }
+    ],
+    "synonyms": [
+      "formare",
+      "istruire"
+    ],
+    "isVerb": true
+  },
+  "educatamente": {
+    "lemma": "educatamente",
+    "pos": "avverbio",
+    "fr": "poliment",
+    "definition_it": "in modo educato, con buone maniere",
+    "examples": [
+      {
+        "it": "Il bambino ha chiesto educatamente il permesso.",
+        "fr": "L'enfant a poliment demandé la permission."
+      }
+    ],
+    "synonyms": [
+      "gentilmente"
+    ],
+    "isVerb": false
+  },
+  "educato": {
+    "lemma": "educato",
+    "pos": "aggettivo",
+    "fr": "poli, bien élevé",
+    "definition_it": "che si comporta con buone maniere e rispetto verso gli altri",
+    "examples": [
+      {
+        "it": "È un ragazzo molto educato.",
+        "fr": "C'est un garçon très poli."
+      }
+    ],
+    "synonyms": [
+      "cortese",
+      "gentile"
     ],
     "isVerb": false
   },
@@ -99,6 +648,87 @@
     ],
     "isVerb": false
   },
+  "effeminato": {
+    "lemma": "effeminato",
+    "pos": "aggettivo",
+    "fr": "efféminé",
+    "definition_it": "che ha modi o aspetto considerati tipicamente femminili in un uomo",
+    "examples": [
+      {
+        "it": "Alcuni lo criticavano per il suo modo di fare effeminato.",
+        "fr": "Certains le critiquaient pour ses manières efféminées."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "effettivo": {
+    "lemma": "effettivo",
+    "pos": "aggettivo",
+    "fr": "effectif, réel",
+    "definition_it": "che esiste realmente, concreto e non solo apparente",
+    "examples": [
+      {
+        "it": "Il costo effettivo è più alto del previsto.",
+        "fr": "Le coût effectif est plus élevé que prévu."
+      }
+    ],
+    "synonyms": [
+      "reale",
+      "concreto"
+    ],
+    "isVerb": false
+  },
+  "effetto": {
+    "lemma": "effetto",
+    "pos": "nome (m.)",
+    "fr": "effet",
+    "definition_it": "conseguenza o risultato prodotto da una causa",
+    "examples": [
+      {
+        "it": "La medicina ha avuto un effetto immediato.",
+        "fr": "Le médicament a eu un effet immédiat."
+      }
+    ],
+    "synonyms": [
+      "conseguenza",
+      "risultato"
+    ],
+    "isVerb": false
+  },
+  "effettuale": {
+    "lemma": "effettuale",
+    "pos": "aggettivo",
+    "fr": "effectif, factuel",
+    "definition_it": "che riguarda i fatti concreti così come si presentano nella realtà, e non come dovrebbero essere",
+    "examples": [
+      {
+        "it": "Lo storico analizza la verità effettuale degli eventi.",
+        "fr": "L'historien analyse la vérité effective des événements."
+      }
+    ],
+    "synonyms": [
+      "reale"
+    ],
+    "isVerb": false
+  },
+  "effettuare": {
+    "lemma": "effettuare",
+    "pos": "verbo (transitivo)",
+    "fr": "effectuer, réaliser",
+    "definition_it": "mettere in pratica, realizzare un'azione o un'operazione",
+    "examples": [
+      {
+        "it": "L'azienda ha effettuato il pagamento in tempo.",
+        "fr": "L'entreprise a effectué le paiement à temps."
+      }
+    ],
+    "synonyms": [
+      "compiere",
+      "realizzare"
+    ],
+    "isVerb": true
+  },
   "effettuazione": {
     "lemma": "effettuazione",
     "pos": "nome femminile",
@@ -116,6 +746,119 @@
     ],
     "isVerb": false
   },
+  "efficace": {
+    "lemma": "efficace",
+    "pos": "aggettivo",
+    "fr": "efficace",
+    "definition_it": "che produce l'effetto desiderato, che funziona bene",
+    "examples": [
+      {
+        "it": "Questo metodo di studio è molto efficace.",
+        "fr": "Cette méthode d'étude est très efficace."
+      }
+    ],
+    "synonyms": [
+      "utile",
+      "valido"
+    ],
+    "isVerb": false
+  },
+  "efficacia": {
+    "lemma": "efficacia",
+    "pos": "nome (f.)",
+    "fr": "efficacité",
+    "definition_it": "capacità di produrre l'effetto desiderato",
+    "examples": [
+      {
+        "it": "Gli scienziati hanno dimostrato l'efficacia del vaccino.",
+        "fr": "Les scientifiques ont démontré l'efficacité du vaccin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "efficiente": {
+    "lemma": "efficiente",
+    "pos": "aggettivo",
+    "fr": "efficace, performant",
+    "definition_it": "che funziona bene ottenendo buoni risultati con il minimo sforzo o spreco",
+    "examples": [
+      {
+        "it": "Il nuovo sistema è più efficiente del precedente.",
+        "fr": "Le nouveau système est plus efficace que le précédent."
+      }
+    ],
+    "synonyms": [
+      "produttivo"
+    ],
+    "isVerb": false
+  },
+  "efficienza": {
+    "lemma": "efficienza",
+    "pos": "nome (f.)",
+    "fr": "efficacité, rendement",
+    "definition_it": "capacità di ottenere buoni risultati con il minimo sforzo, tempo o spreco di risorse",
+    "examples": [
+      {
+        "it": "L'efficienza energetica riduce i costi.",
+        "fr": "L'efficacité énergétique réduit les coûts."
+      }
+    ],
+    "synonyms": [
+      "rendimento"
+    ],
+    "isVerb": false
+  },
+  "effimero": {
+    "lemma": "effimero",
+    "pos": "aggettivo",
+    "fr": "éphémère",
+    "definition_it": "che dura molto poco tempo",
+    "examples": [
+      {
+        "it": "Il successo di quella canzone fu effimero.",
+        "fr": "Le succès de cette chanson fut éphémère."
+      }
+    ],
+    "synonyms": [
+      "passeggero",
+      "breve"
+    ],
+    "isVerb": false
+  },
+  "egli": {
+    "lemma": "egli",
+    "pos": "pronome personale (letterario)",
+    "fr": "il (lui)",
+    "definition_it": "pronome personale soggetto di terza persona singolare maschile, usato soprattutto nello scritto formale o letterario",
+    "examples": [
+      {
+        "it": "Egli disse la verità.",
+        "fr": "Il a dit la vérité."
+      }
+    ],
+    "synonyms": [
+      "lui"
+    ],
+    "isVerb": false
+  },
+  "egregio": {
+    "lemma": "egregio",
+    "pos": "aggettivo",
+    "fr": "éminent, distingué",
+    "definition_it": "che si distingue per qualità o meriti; usato spesso come formula di cortesia nelle lettere",
+    "examples": [
+      {
+        "it": "Egregio professore, La ringrazio per la Sua disponibilità.",
+        "fr": "Cher professeur, je vous remercie de votre disponibilité."
+      }
+    ],
+    "synonyms": [
+      "illustre",
+      "insigne"
+    ],
+    "isVerb": false
+  },
   "egro": {
     "lemma": "egro",
     "pos": "aggettivo (letterario, arcaico)",
@@ -130,6 +873,116 @@
     "synonyms": [
       "malato"
     ],
+    "isVerb": false
+  },
+  "eguale": {
+    "lemma": "eguale",
+    "pos": "aggettivo",
+    "fr": "égal",
+    "definition_it": "che ha le stesse caratteristiche, quantità o valore di un altro; uguale",
+    "examples": [
+      {
+        "it": "Tutti gli uomini sono eguali davanti alla legge.",
+        "fr": "Tous les hommes sont égaux devant la loi."
+      }
+    ],
+    "synonyms": [
+      "uguale",
+      "pari"
+    ],
+    "isVerb": false
+  },
+  "eh": {
+    "lemma": "eh",
+    "pos": "interiezione",
+    "fr": "eh, hein",
+    "definition_it": "esclamazione usata per esprimere sorpresa, dubbio o per richiamare l'attenzione",
+    "examples": [
+      {
+        "it": "Eh, cosa hai detto?",
+        "fr": "Eh, qu'est-ce que tu as dit ?"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ehi": {
+    "lemma": "ehi",
+    "pos": "interiezione",
+    "fr": "hé, eh",
+    "definition_it": "esclamazione usata per chiamare qualcuno o attirare la sua attenzione",
+    "examples": [
+      {
+        "it": "Ehi, aspettami!",
+        "fr": "Hé, attends-moi !"
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elaborare": {
+    "lemma": "elaborare",
+    "pos": "verbo (transitivo)",
+    "fr": "élaborer",
+    "definition_it": "sviluppare un'idea, un progetto o un dato con cura, lavorandoci a lungo",
+    "examples": [
+      {
+        "it": "Il team elabora una nuova strategia.",
+        "fr": "L'équipe élabore une nouvelle stratégie."
+      }
+    ],
+    "synonyms": [
+      "sviluppare",
+      "lavorare"
+    ],
+    "isVerb": true
+  },
+  "elaborato": {
+    "lemma": "elaborato",
+    "pos": "aggettivo (participio passato)",
+    "fr": "élaboré, travaillé",
+    "definition_it": "realizzato con grande cura e complessità, frutto di un lavoro accurato",
+    "examples": [
+      {
+        "it": "Ha presentato un piano molto elaborato.",
+        "fr": "Il a présenté un plan très élaboré."
+      }
+    ],
+    "synonyms": [
+      "complesso",
+      "ricercato"
+    ],
+    "isVerb": false
+  },
+  "elaborazione": {
+    "lemma": "elaborazione",
+    "pos": "sostantivo femminile",
+    "fr": "élaboration, traitement",
+    "definition_it": "il processo di sviluppo, lavorazione o trattamento di dati, idee o materiali",
+    "examples": [
+      {
+        "it": "L'elaborazione dei dati richiede tempo.",
+        "fr": "Le traitement des données demande du temps."
+      }
+    ],
+    "synonyms": [
+      "lavorazione",
+      "trattamento"
+    ],
+    "isVerb": false
+  },
+  "elefante": {
+    "lemma": "elefante",
+    "pos": "sostantivo maschile",
+    "fr": "éléphant",
+    "definition_it": "grande mammifero erbivoro con proboscide e zanne, il più grande animale terrestre",
+    "examples": [
+      {
+        "it": "L'elefante vive in Africa e in Asia.",
+        "fr": "L'éléphant vit en Afrique et en Asie."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "elegante": {
@@ -164,6 +1017,68 @@
     ],
     "isVerb": false
   },
+  "eleggere": {
+    "lemma": "eleggere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "élire",
+    "definition_it": "scegliere qualcuno tramite votazione per ricoprire una carica",
+    "examples": [
+      {
+        "it": "I cittadini eleggono il presidente.",
+        "fr": "Les citoyens élisent le président."
+      }
+    ],
+    "synonyms": [
+      "scegliere",
+      "nominare"
+    ],
+    "isVerb": true
+  },
+  "elegia": {
+    "lemma": "elegia",
+    "pos": "sostantivo femminile",
+    "fr": "élégie",
+    "definition_it": "componimento poetico di tono malinconico, spesso dedicato a un lutto o a un ricordo",
+    "examples": [
+      {
+        "it": "Il poeta scrisse un'elegia per l'amico scomparso.",
+        "fr": "Le poète écrivit une élégie pour l'ami disparu."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elementare": {
+    "lemma": "elementare",
+    "pos": "aggettivo",
+    "fr": "élémentaire",
+    "definition_it": "molto semplice, di base, facile da capire",
+    "examples": [
+      {
+        "it": "Questo è un concetto elementare di matematica.",
+        "fr": "C'est un concept élémentaire de mathématiques."
+      }
+    ],
+    "synonyms": [
+      "semplice",
+      "basilare"
+    ],
+    "isVerb": false
+  },
+  "elemento": {
+    "lemma": "elemento",
+    "pos": "sostantivo (maschile)",
+    "fr": "élément",
+    "definition_it": "parte o componente che costituisce un insieme più grande",
+    "examples": [
+      {
+        "it": "Ogni elemento del gruppo ha un ruolo importante.",
+        "fr": "Chaque élément du groupe a un rôle important."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "elemosina": {
     "lemma": "elemosina",
     "pos": "nome femminile",
@@ -180,6 +1095,240 @@
     ],
     "isVerb": false
   },
+  "elencare": {
+    "lemma": "elencare",
+    "pos": "verbo (transitivo)",
+    "fr": "énumérer, lister",
+    "definition_it": "scrivere o dire una serie di cose una dopo l'altra",
+    "examples": [
+      {
+        "it": "Ho elencato tutti i partecipanti alla riunione.",
+        "fr": "J'ai énuméré tous les participants à la réunion."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "elenco": {
+    "lemma": "elenco",
+    "pos": "sostantivo (maschile)",
+    "fr": "liste",
+    "definition_it": "serie di nomi o cose scritte una dopo l'altra",
+    "examples": [
+      {
+        "it": "Ho scritto l'elenco della spesa.",
+        "fr": "J'ai écrit la liste des courses."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elettorale": {
+    "lemma": "elettorale",
+    "pos": "aggettivo",
+    "fr": "électoral",
+    "definition_it": "che riguarda le elezioni",
+    "examples": [
+      {
+        "it": "La campagna elettorale è iniziata ieri.",
+        "fr": "La campagne électorale a commencé hier."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elettricità": {
+    "lemma": "elettricità",
+    "pos": "sostantivo (femminile)",
+    "fr": "électricité",
+    "definition_it": "forma di energia usata per far funzionare macchine e apparecchi",
+    "examples": [
+      {
+        "it": "In quella zona manca l'elettricità da due giorni.",
+        "fr": "Dans cette zone, il n'y a pas d'électricité depuis deux jours."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elettrico": {
+    "lemma": "elettrico",
+    "pos": "aggettivo",
+    "fr": "électrique",
+    "definition_it": "che funziona con l'elettricità o riguarda l'elettricità",
+    "examples": [
+      {
+        "it": "Ho comprato una macchina elettrica nuova.",
+        "fr": "J'ai acheté une nouvelle voiture électrique."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elettrificare": {
+    "lemma": "elettrificare",
+    "pos": "verbo (transitivo)",
+    "fr": "électrifier",
+    "definition_it": "dotare di impianti elettrici, far funzionare con l'elettricità",
+    "examples": [
+      {
+        "it": "Hanno elettrificato la linea ferroviaria.",
+        "fr": "Ils ont électrifié la ligne ferroviaire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "elettrizzare": {
+    "lemma": "elettrizzare",
+    "pos": "verbo (transitivo)",
+    "fr": "électriser",
+    "definition_it": "caricare di elettricità, oppure entusiasmare fortemente qualcuno",
+    "examples": [
+      {
+        "it": "Il pubblico era elettrizzato dallo spettacolo.",
+        "fr": "Le public était électrisé par le spectacle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "elettrodomestico": {
+    "lemma": "elettrodomestico",
+    "pos": "sostantivo (maschile)",
+    "fr": "appareil électroménager",
+    "definition_it": "apparecchio elettrico usato in casa, come frigorifero o lavatrice",
+    "examples": [
+      {
+        "it": "In cucina ci sono molti elettrodomestici utili.",
+        "fr": "Dans la cuisine, il y a de nombreux appareils électroménagers utiles."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elettronico": {
+    "lemma": "elettronico",
+    "pos": "aggettivo",
+    "fr": "électronique",
+    "definition_it": "che funziona grazie a circuiti e componenti elettronici",
+    "examples": [
+      {
+        "it": "Ho ricevuto una fattura elettronica via email.",
+        "fr": "J'ai reçu une facture électronique par email."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "elevare": {
+    "lemma": "elevare",
+    "pos": "verbo (transitivo)",
+    "fr": "élever, hausser",
+    "definition_it": "aumentare l'altezza, il livello o l'importanza di qualcosa",
+    "examples": [
+      {
+        "it": "Il governo ha elevato le tasse.",
+        "fr": "Le gouvernement a augmenté les impôts."
+      }
+    ],
+    "synonyms": [
+      "alzare",
+      "innalzare"
+    ],
+    "isVerb": true
+  },
+  "elezione": {
+    "lemma": "elezione",
+    "pos": "nome (f.)",
+    "fr": "élection",
+    "definition_it": "processo con cui i cittadini scelgono una persona per una carica pubblica votando",
+    "examples": [
+      {
+        "it": "Le elezioni si terranno a maggio.",
+        "fr": "Les élections auront lieu en mai."
+      }
+    ],
+    "synonyms": [
+      "votazione"
+    ],
+    "isVerb": false
+  },
+  "elicottero": {
+    "lemma": "elicottero",
+    "pos": "nome (m.)",
+    "fr": "hélicoptère",
+    "definition_it": "aeromobile che vola grazie a rotori orizzontali",
+    "examples": [
+      {
+        "it": "L'elicottero è atterrato sul tetto dell'ospedale.",
+        "fr": "L'hélicoptère a atterri sur le toit de l'hôpital."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eliminare": {
+    "lemma": "eliminare",
+    "pos": "verbo (transitivo)",
+    "fr": "éliminer",
+    "definition_it": "far scomparire qualcosa o escludere qualcuno da una competizione o da un elenco",
+    "examples": [
+      {
+        "it": "Hanno eliminato la squadra al primo turno.",
+        "fr": "Ils ont éliminé l'équipe au premier tour."
+      }
+    ],
+    "synonyms": [
+      "escludere",
+      "togliere"
+    ],
+    "isVerb": true
+  },
+  "elio": {
+    "lemma": "elio",
+    "pos": "nome (m.)",
+    "fr": "hélium",
+    "definition_it": "gas nobile leggero e incolore, usato ad esempio per gonfiare i palloncini",
+    "examples": [
+      {
+        "it": "Il palloncino è gonfio di elio.",
+        "fr": "Le ballon est gonflé à l'hélium."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ella": {
+    "lemma": "ella",
+    "pos": "pronome (f.)",
+    "fr": "elle (forme littéraire)",
+    "definition_it": "pronome personale soggetto di terza persona singolare femminile, usato in stile formale o letterario",
+    "examples": [
+      {
+        "it": "Ella disse che sarebbe tornata.",
+        "fr": "Elle dit qu'elle reviendrait."
+      }
+    ],
+    "synonyms": [
+      "lei"
+    ],
+    "isVerb": false
+  },
+  "elle": {
+    "lemma": "elle",
+    "pos": "nome (f.)",
+    "fr": "la lettre L",
+    "definition_it": "nome della dodicesima lettera dell'alfabeto italiano, 'l'",
+    "examples": [
+      {
+        "it": "La parola inizia con una elle.",
+        "fr": "Le mot commence par un L."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "elmo": {
     "lemma": "elmo",
     "pos": "sostantivo maschile",
@@ -193,6 +1342,153 @@
     ],
     "synonyms": [
       "casco"
+    ],
+    "isVerb": false
+  },
+  "elogiare": {
+    "lemma": "elogiare",
+    "pos": "verbo (transitivo)",
+    "fr": "faire l'éloge de, louer",
+    "definition_it": "lodare pubblicamente qualcuno o qualcosa per i suoi meriti",
+    "examples": [
+      {
+        "it": "Il professore ha elogiato il suo impegno.",
+        "fr": "Le professeur a fait l'éloge de son engagement."
+      }
+    ],
+    "synonyms": [
+      "lodare",
+      "esaltare"
+    ],
+    "isVerb": true
+  },
+  "elogio": {
+    "lemma": "elogio",
+    "pos": "nome (m.)",
+    "fr": "éloge",
+    "definition_it": "discorso o parole che esprimono lode e apprezzamento verso qualcuno",
+    "examples": [
+      {
+        "it": "Ha ricevuto un elogio per il suo lavoro.",
+        "fr": "Il a reçu un éloge pour son travail."
+      }
+    ],
+    "synonyms": [
+      "lode"
+    ],
+    "isVerb": false
+  },
+  "eloquente": {
+    "lemma": "eloquente",
+    "pos": "aggettivo",
+    "fr": "éloquent",
+    "definition_it": "che si esprime con facilità e persuasione, oppure molto significativo di per sé",
+    "examples": [
+      {
+        "it": "Il suo sguardo era più eloquente delle parole.",
+        "fr": "Son regard était plus éloquent que les mots."
+      }
+    ],
+    "synonyms": [
+      "persuasivo"
+    ],
+    "isVerb": false
+  },
+  "eloquenza": {
+    "lemma": "eloquenza",
+    "pos": "nome (f.)",
+    "fr": "éloquence",
+    "definition_it": "capacità di parlare in modo persuasivo, chiaro ed efficace",
+    "examples": [
+      {
+        "it": "Ha convinto tutti grazie alla sua eloquenza.",
+        "fr": "Il a convaincu tout le monde grâce à son éloquence."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eludere": {
+    "lemma": "eludere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "éluder, échapper à",
+    "definition_it": "evitare abilmente qualcosa, sfuggire a un controllo o a una regola",
+    "examples": [
+      {
+        "it": "Ha cercato di eludere la sorveglianza della polizia.",
+        "fr": "Il a essayé d'échapper à la surveillance de la police."
+      }
+    ],
+    "synonyms": [
+      "evitare",
+      "sfuggire"
+    ],
+    "isVerb": true
+  },
+  "email": {
+    "lemma": "email",
+    "pos": "nome (femminile o maschile, invariabile)",
+    "fr": "email, courriel",
+    "definition_it": "messaggio scritto inviato tramite internet",
+    "examples": [
+      {
+        "it": "Ti ho mandato un'email con tutti i dettagli.",
+        "fr": "Je t'ai envoyé un email avec tous les détails."
+      }
+    ],
+    "synonyms": [
+      "posta elettronica"
+    ],
+    "isVerb": false
+  },
+  "emanare": {
+    "lemma": "emanare",
+    "pos": "verbo (transitivo e intransitivo)",
+    "fr": "émaner, dégager",
+    "definition_it": "mandare fuori un odore, una luce o un'energia; oppure emettere ufficialmente una legge o un decreto",
+    "examples": [
+      {
+        "it": "Il governo emana una nuova legge sulla sicurezza.",
+        "fr": "Le gouvernement promulgue une nouvelle loi sur la sécurité."
+      }
+    ],
+    "synonyms": [
+      "emettere",
+      "diffondere"
+    ],
+    "isVerb": true
+  },
+  "emarginato": {
+    "lemma": "emarginato",
+    "pos": "aggettivo/participio passato, nome",
+    "fr": "marginalisé, exclu",
+    "definition_it": "escluso dalla società o da un gruppo",
+    "examples": [
+      {
+        "it": "Gli emarginati faticano a trovare un lavoro.",
+        "fr": "Les marginalisés ont du mal à trouver un emploi."
+      }
+    ],
+    "synonyms": [
+      "escluso",
+      "isolato"
+    ],
+    "isVerb": false
+  },
+  "emblematico": {
+    "lemma": "emblematico",
+    "pos": "aggettivo",
+    "fr": "emblématique",
+    "definition_it": "che rappresenta in modo evidente e significativo qualcosa",
+    "examples": [
+      {
+        "it": "Questo caso è emblematico dei problemi della città.",
+        "fr": "Ce cas est emblématique des problèmes de la ville."
+      }
+    ],
+    "synonyms": [
+      "significativo",
+      "rappresentativo"
     ],
     "isVerb": false
   },
@@ -212,6 +1508,54 @@
     ],
     "isVerb": false
   },
+  "embrione": {
+    "lemma": "embrione",
+    "pos": "nome (maschile)",
+    "fr": "embryon",
+    "definition_it": "organismo nelle prime fasi dello sviluppo, prima di nascere",
+    "examples": [
+      {
+        "it": "Gli embrioni si sviluppano nell'utero.",
+        "fr": "Les embryons se développent dans l'utérus."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "emergenza": {
+    "lemma": "emergenza",
+    "pos": "nome (femminile)",
+    "fr": "urgence",
+    "definition_it": "situazione improvvisa e grave che richiede un intervento immediato",
+    "examples": [
+      {
+        "it": "L'ospedale gestisce molte emergenze ogni giorno.",
+        "fr": "L'hôpital gère de nombreuses urgences chaque jour."
+      }
+    ],
+    "synonyms": [
+      "urgenza",
+      "crisi"
+    ],
+    "isVerb": false
+  },
+  "emettere": {
+    "lemma": "emettere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "émettre",
+    "definition_it": "mandare fuori un suono, una luce, un gas o un documento ufficiale",
+    "examples": [
+      {
+        "it": "La banca emise un nuovo assegno per il cliente.",
+        "fr": "La banque émit un nouveau chèque pour le client."
+      }
+    ],
+    "synonyms": [
+      "emanare",
+      "produrre"
+    ],
+    "isVerb": true
+  },
   "emigrante": {
     "lemma": "emigrante",
     "pos": "sostantivo (m/f)",
@@ -228,6 +1572,22 @@
     ],
     "isVerb": false
   },
+  "emigrato": {
+    "lemma": "emigrato",
+    "pos": "nome/aggettivo, participio passato",
+    "fr": "émigré",
+    "definition_it": "persona che ha lasciato il proprio paese per andare a vivere altrove",
+    "examples": [
+      {
+        "it": "Molti italiani emigrati sono partiti per l'America.",
+        "fr": "De nombreux Italiens émigrés sont partis pour l'Amérique."
+      }
+    ],
+    "synonyms": [
+      "espatriato"
+    ],
+    "isVerb": false
+  },
   "emigrazione": {
     "lemma": "emigrazione",
     "pos": "sostantivo (f)",
@@ -241,6 +1601,150 @@
     ],
     "synonyms": [
       "esodo"
+    ],
+    "isVerb": false
+  },
+  "eminente": {
+    "lemma": "eminente",
+    "pos": "aggettivo",
+    "fr": "éminent",
+    "definition_it": "di grande importanza o autorità in un campo",
+    "examples": [
+      {
+        "it": "Il congresso riunisce eminenti studiosi da tutto il mondo.",
+        "fr": "Le congrès réunit d'éminents chercheurs du monde entier."
+      }
+    ],
+    "synonyms": [
+      "illustre",
+      "insigne"
+    ],
+    "isVerb": false
+  },
+  "emisperio": {
+    "lemma": "emisperio",
+    "pos": "sostantivo maschile (letterario)",
+    "fr": "hémisphère (forme poétique)",
+    "definition_it": "parola antica e poetica per indicare metà del cielo o metà della superficie terrestre",
+    "examples": [
+      {
+        "it": "Il poeta guarda le stelle dell'altro emisperio.",
+        "fr": "Le poète regarde les étoiles de l'autre hémisphère."
+      }
+    ],
+    "synonyms": [
+      "emisfero"
+    ],
+    "isVerb": false
+  },
+  "emissione": {
+    "lemma": "emissione",
+    "pos": "nome (femminile)",
+    "fr": "émission",
+    "definition_it": "atto di emettere qualcosa, come gas, suoni o documenti",
+    "examples": [
+      {
+        "it": "Le emissioni di CO2 devono diminuire.",
+        "fr": "Les émissions de CO2 doivent diminuer."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "emorroissa": {
+    "lemma": "emorroissa",
+    "pos": "nome (femminile, raro, termine biblico)",
+    "fr": "hémorroïsse (femme souffrant d'hémorragies, terme biblique)",
+    "definition_it": "nel racconto evangelico, la donna affetta da un flusso di sangue guarita da Gesù",
+    "examples": [
+      {
+        "it": "Il Vangelo racconta la guarigione dell'emorroissa.",
+        "fr": "L'Évangile raconte la guérison de l'hémorroïsse."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "emotivo": {
+    "lemma": "emotivo",
+    "pos": "aggettivo",
+    "fr": "émotif",
+    "definition_it": "relativo alle emozioni, oppure che si emoziona facilmente",
+    "examples": [
+      {
+        "it": "È una persona molto emotiva.",
+        "fr": "C'est une personne très émotive."
+      }
+    ],
+    "synonyms": [
+      "sentimentale"
+    ],
+    "isVerb": false
+  },
+  "emozionale": {
+    "lemma": "emozionale",
+    "pos": "aggettivo",
+    "fr": "émotionnel",
+    "definition_it": "relativo alle emozioni",
+    "examples": [
+      {
+        "it": "Ha vissuto un momento emozionale molto forte.",
+        "fr": "Il a vécu un moment émotionnel très fort."
+      }
+    ],
+    "synonyms": [
+      "emotivo"
+    ],
+    "isVerb": false
+  },
+  "emozionante": {
+    "lemma": "emozionante",
+    "pos": "aggettivo",
+    "fr": "émouvant, palpitant",
+    "definition_it": "che provoca una forte emozione",
+    "examples": [
+      {
+        "it": "È stata una partita davvero emozionante.",
+        "fr": "Ce fut un match vraiment palpitant."
+      }
+    ],
+    "synonyms": [
+      "appassionante",
+      "toccante"
+    ],
+    "isVerb": false
+  },
+  "emozionare": {
+    "lemma": "emozionare",
+    "pos": "verbo (transitivo)",
+    "fr": "émouvoir",
+    "definition_it": "suscitare una forte emozione in qualcuno",
+    "examples": [
+      {
+        "it": "Il film emoziona tutti gli spettatori.",
+        "fr": "Le film émeut tous les spectateurs."
+      }
+    ],
+    "synonyms": [
+      "commuovere",
+      "turbare"
+    ],
+    "isVerb": true
+  },
+  "emozionato": {
+    "lemma": "emozionato",
+    "pos": "aggettivo (participio passato)",
+    "fr": "ému, excité",
+    "definition_it": "che prova o mostra una forte emozione",
+    "examples": [
+      {
+        "it": "Era molto emozionato prima dell'esame.",
+        "fr": "Il était très ému avant l'examen."
+      }
+    ],
+    "synonyms": [
+      "commosso",
+      "agitato"
     ],
     "isVerb": false
   },
@@ -261,6 +1765,23 @@
     ],
     "isVerb": false
   },
+  "emporio": {
+    "lemma": "emporio",
+    "pos": "sostantivo maschile",
+    "fr": "magasin général, bazar",
+    "definition_it": "grande negozio dove si vendono molti tipi di merci diverse",
+    "examples": [
+      {
+        "it": "In paese c'era un emporio che vendeva di tutto.",
+        "fr": "Au village, il y avait un bazar qui vendait de tout."
+      }
+    ],
+    "synonyms": [
+      "bazar",
+      "magazzino"
+    ],
+    "isVerb": false
+  },
   "encomio": {
     "lemma": "encomio",
     "pos": "nome maschile",
@@ -275,6 +1796,23 @@
     "synonyms": [
       "elogio",
       "lode"
+    ],
+    "isVerb": false
+  },
+  "energetico": {
+    "lemma": "energetico",
+    "pos": "aggettivo",
+    "fr": "énergétique",
+    "definition_it": "che riguarda l'energia o che dà energia",
+    "examples": [
+      {
+        "it": "Ha bevuto una bevanda energetica prima della corsa.",
+        "fr": "Il a bu une boisson énergétique avant la course."
+      }
+    ],
+    "synonyms": [
+      "tonificante",
+      "vigoroso"
     ],
     "isVerb": false
   },
@@ -295,6 +1833,138 @@
     ],
     "isVerb": false
   },
+  "energicamente": {
+    "lemma": "energicamente",
+    "pos": "avverbio",
+    "fr": "énergiquement",
+    "definition_it": "in modo energico, con forza e decisione",
+    "examples": [
+      {
+        "it": "Ha reagito energicamente alle critiche.",
+        "fr": "Il a réagi énergiquement aux critiques."
+      }
+    ],
+    "synonyms": [
+      "vigorosamente",
+      "decisamente"
+    ],
+    "isVerb": false
+  },
+  "enfasi": {
+    "lemma": "enfasi",
+    "pos": "sostantivo (f, invariabile)",
+    "fr": "emphase, insistance",
+    "definition_it": "modo di parlare o scrivere che sottolinea con forza un concetto",
+    "examples": [
+      {
+        "it": "Ha parlato con grande enfasi del suo successo.",
+        "fr": "Il a parlé de son succès avec beaucoup d'emphase."
+      }
+    ],
+    "synonyms": [
+      "accento",
+      "rilievo"
+    ],
+    "isVerb": false
+  },
+  "enigma": {
+    "lemma": "enigma",
+    "pos": "sostantivo (m)",
+    "fr": "énigme",
+    "definition_it": "problema o situazione difficile da spiegare o risolvere",
+    "examples": [
+      {
+        "it": "La sua sparizione resta un enigma.",
+        "fr": "Sa disparition reste une énigme."
+      }
+    ],
+    "synonyms": [
+      "mistero",
+      "rebus"
+    ],
+    "isVerb": false
+  },
+  "enigmatico": {
+    "lemma": "enigmatico",
+    "pos": "aggettivo",
+    "fr": "énigmatique",
+    "definition_it": "che è difficile da capire, misterioso",
+    "examples": [
+      {
+        "it": "Il suo sorriso enigmatico non rivelava nulla.",
+        "fr": "Son sourire énigmatique ne révélait rien."
+      }
+    ],
+    "synonyms": [
+      "misterioso",
+      "criptico"
+    ],
+    "isVerb": false
+  },
+  "ennesimo": {
+    "lemma": "ennesimo",
+    "pos": "aggettivo",
+    "fr": "énième",
+    "definition_it": "che si ripete per l'ennesima volta, molto numeroso nella serie",
+    "examples": [
+      {
+        "it": "È il suo ennesimo tentativo di smettere di fumare.",
+        "fr": "C'est sa énième tentative d'arrêter de fumer."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "enologo": {
+    "lemma": "enologo",
+    "pos": "sostantivo maschile",
+    "fr": "œnologue",
+    "definition_it": "persona che studia il vino e segue tutte le fasi della sua preparazione in cantina",
+    "examples": [
+      {
+        "it": "L'enologo assaggia il vino prima di metterlo in bottiglia.",
+        "fr": "L'œnologue goûte le vin avant de le mettre en bouteille."
+      }
+    ],
+    "synonyms": [
+      "esperto di vini"
+    ],
+    "isVerb": false
+  },
+  "enorme": {
+    "lemma": "enorme",
+    "pos": "aggettivo",
+    "fr": "énorme",
+    "definition_it": "molto grande, di dimensioni fuori dal comune",
+    "examples": [
+      {
+        "it": "Hanno costruito un edificio enorme.",
+        "fr": "Ils ont construit un bâtiment énorme."
+      }
+    ],
+    "synonyms": [
+      "gigantesco",
+      "colossale"
+    ],
+    "isVerb": false
+  },
+  "enormemente": {
+    "lemma": "enormemente",
+    "pos": "avverbio",
+    "fr": "énormément",
+    "definition_it": "in modo molto grande, moltissimo",
+    "examples": [
+      {
+        "it": "Il prezzo è aumentato enormemente.",
+        "fr": "Le prix a énormément augmenté."
+      }
+    ],
+    "synonyms": [
+      "moltissimo",
+      "immensamente"
+    ],
+    "isVerb": false
+  },
   "enormità": {
     "lemma": "enormità",
     "pos": "nome femminile invariabile",
@@ -309,6 +1979,68 @@
     "synonyms": [
       "grandezza",
       "esagerazione"
+    ],
+    "isVerb": false
+  },
+  "enoteca": {
+    "lemma": "enoteca",
+    "pos": "sostantivo (f.)",
+    "fr": "œnothèque, bar à vin, cave à vin",
+    "definition_it": "locale in cui si conservano, si vendono e si degustano vini di qualità",
+    "examples": [
+      {
+        "it": "Abbiamo cenato in un'enoteca del centro storico.",
+        "fr": "Nous avons dîné dans un bar à vin du centre historique."
+      }
+    ],
+    "synonyms": [
+      "cantina",
+      "vineria"
+    ],
+    "isVerb": false
+  },
+  "enrosadira": {
+    "lemma": "enrosadira",
+    "pos": "sostantivo (f)",
+    "fr": "enrosadira (rougeoiement des Dolomites)",
+    "definition_it": "fenomeno naturale per cui le rocce delle Dolomiti diventano rosa al tramonto",
+    "examples": [
+      {
+        "it": "Al tramonto abbiamo ammirato l'enrosadira delle Dolomiti.",
+        "fr": "Au coucher du soleil, nous avons admiré l'enrosadira des Dolomites."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "entanglement": {
+    "lemma": "entanglement",
+    "pos": "sostantivo (m, forestierismo)",
+    "fr": "intrication quantique",
+    "definition_it": "in fisica, fenomeno per cui due particelle restano collegate anche a grande distanza",
+    "examples": [
+      {
+        "it": "Gli scienziati hanno studiato l'entanglement tra due fotoni.",
+        "fr": "Les scientifiques ont étudié l'intrication entre deux photons."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ente": {
+    "lemma": "ente",
+    "pos": "sostantivo (m)",
+    "fr": "organisme, entité",
+    "definition_it": "organizzazione pubblica o privata con una funzione specifica",
+    "examples": [
+      {
+        "it": "L'ente si occupa della gestione del parco.",
+        "fr": "L'organisme s'occupe de la gestion du parc."
+      }
+    ],
+    "synonyms": [
+      "organismo",
+      "istituzione"
     ],
     "isVerb": false
   },
@@ -399,6 +2131,121 @@
     ],
     "isVerb": false
   },
+  "entusiasmare": {
+    "lemma": "entusiasmare",
+    "pos": "verbo (transitivo)",
+    "fr": "enthousiasmer",
+    "definition_it": "suscitare grande interesse o gioia in qualcuno",
+    "examples": [
+      {
+        "it": "Il film entusiasma tutti gli spettatori.",
+        "fr": "Le film enthousiasme tous les spectateurs."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "entusiasmo": {
+    "lemma": "entusiasmo",
+    "pos": "sostantivo (m.)",
+    "fr": "enthousiasme",
+    "definition_it": "sentimento di forte gioia e interesse per qualcosa",
+    "examples": [
+      {
+        "it": "Ha accettato la proposta con grande entusiasmo.",
+        "fr": "Il a accepté la proposition avec grand enthousiasme."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "entusiasta": {
+    "lemma": "entusiasta",
+    "pos": "aggettivo",
+    "fr": "enthousiaste",
+    "definition_it": "che prova o mostra entusiasmo per qualcosa",
+    "examples": [
+      {
+        "it": "È entusiasta del nuovo lavoro.",
+        "fr": "Il est enthousiaste à propos de son nouveau travail."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "enunciare": {
+    "lemma": "enunciare",
+    "pos": "verbo (transitivo, regolare in -ciare)",
+    "fr": "énoncer, formuler",
+    "definition_it": "dire o esporre in modo chiaro e ordinato un'idea, una regola o un principio",
+    "examples": [
+      {
+        "it": "Il professore enuncia il teorema con parole semplici.",
+        "fr": "Le professeur énonce le théorème avec des mots simples."
+      }
+    ],
+    "synonyms": [
+      "formulare",
+      "esporre"
+    ],
+    "isVerb": true
+  },
+  "enunciato": {
+    "lemma": "enunciato",
+    "pos": "sostantivo (m.)",
+    "fr": "énoncé",
+    "definition_it": "frase o proposizione che esprime un'affermazione o un problema",
+    "examples": [
+      {
+        "it": "L'enunciato del problema non era chiaro.",
+        "fr": "L'énoncé du problème n'était pas clair."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "enzima": {
+    "lemma": "enzima",
+    "pos": "sostantivo (m.)",
+    "fr": "enzyme",
+    "definition_it": "sostanza proteica che accelera le reazioni chimiche negli organismi viventi",
+    "examples": [
+      {
+        "it": "Gli enzimi digestivi aiutano a scomporre il cibo.",
+        "fr": "Les enzymes digestives aident à décomposer les aliments."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eolico": {
+    "lemma": "eolico",
+    "pos": "aggettivo",
+    "fr": "éolien",
+    "definition_it": "che riguarda il vento o l'energia prodotta dal vento",
+    "examples": [
+      {
+        "it": "Le pale eoliche girano sulla collina.",
+        "fr": "Les éoliennes tournent sur la colline."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "epidemia": {
+    "lemma": "epidemia",
+    "pos": "sostantivo (f.)",
+    "fr": "épidémie",
+    "definition_it": "diffusione rapida di una malattia infettiva tra molte persone",
+    "examples": [
+      {
+        "it": "L'epidemia ha colpito tutta la regione.",
+        "fr": "L'épidémie a touché toute la région."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "epifania": {
     "lemma": "epifania",
     "pos": "sostantivo (f)",
@@ -414,6 +2261,48 @@
       "rivelazione",
       "manifestazione"
     ],
+    "isVerb": false
+  },
+  "epilettico": {
+    "lemma": "epilettico",
+    "pos": "aggettivo",
+    "fr": "épileptique",
+    "definition_it": "relativo all'epilessia o che ne soffre",
+    "examples": [
+      {
+        "it": "Ha avuto una crisi epilettica improvvisa.",
+        "fr": "Il a eu une crise d'épilepsie soudaine."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "episodico": {
+    "lemma": "episodico",
+    "pos": "aggettivo",
+    "fr": "épisodique",
+    "definition_it": "che avviene in modo occasionale e non continuo",
+    "examples": [
+      {
+        "it": "Sono comparsi febbri episodiche durante l'inverno.",
+        "fr": "Des fièvres épisodiques sont apparues durant l'hiver."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "episodio": {
+    "lemma": "episodio",
+    "pos": "sostantivo (m.)",
+    "fr": "épisode",
+    "definition_it": "fatto isolato che accade in un certo momento, o parte di una serie",
+    "examples": [
+      {
+        "it": "Ho visto l'ultimo episodio della serie.",
+        "fr": "J'ai vu le dernier épisode de la série."
+      }
+    ],
+    "synonyms": [],
     "isVerb": false
   },
   "epoca": {
@@ -433,6 +2322,193 @@
     ],
     "isVerb": false
   },
+  "eppure": {
+    "lemma": "eppure",
+    "pos": "congiunzione",
+    "fr": "et pourtant",
+    "definition_it": "usato per introdurre un contrasto rispetto a quanto detto prima",
+    "examples": [
+      {
+        "it": "Eppure aveva promesso di venire.",
+        "fr": "Et pourtant il avait promis de venir."
+      }
+    ],
+    "synonyms": [
+      "tuttavia",
+      "però"
+    ],
+    "isVerb": false
+  },
+  "equestre": {
+    "lemma": "equestre",
+    "pos": "aggettivo",
+    "fr": "équestre",
+    "definition_it": "relativo ai cavalli o all'equitazione",
+    "examples": [
+      {
+        "it": "Ha partecipato a uno spettacolo equestre.",
+        "fr": "Il a participé à un spectacle équestre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "equilibrato": {
+    "lemma": "equilibrato",
+    "pos": "aggettivo",
+    "fr": "équilibré",
+    "definition_it": "che mantiene un buon equilibrio, calmo e ragionevole",
+    "examples": [
+      {
+        "it": "È una persona molto equilibrata.",
+        "fr": "C'est une personne très équilibrée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "equilibrio": {
+    "lemma": "equilibrio",
+    "pos": "sostantivo (m.)",
+    "fr": "équilibre",
+    "definition_it": "stato di stabilità in cui le forze si compensano",
+    "examples": [
+      {
+        "it": "Ha perso l'equilibrio ed è caduto.",
+        "fr": "Il a perdu l'équilibre et il est tombé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "equipaggiamento": {
+    "lemma": "equipaggiamento",
+    "pos": "sostantivo (m.)",
+    "fr": "équipement",
+    "definition_it": "insieme degli strumenti e degli oggetti necessari per un'attività",
+    "examples": [
+      {
+        "it": "Abbiamo controllato tutto l'equipaggiamento prima della spedizione.",
+        "fr": "Nous avons vérifié tout l'équipement avant l'expédition."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "equipaggio": {
+    "lemma": "equipaggio",
+    "pos": "sostantivo (m.)",
+    "fr": "équipage",
+    "definition_it": "gruppo di persone che lavora su una nave o un aereo",
+    "examples": [
+      {
+        "it": "L'equipaggio è salito a bordo prima della partenza.",
+        "fr": "L'équipage est monté à bord avant le départ."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "equiparabile": {
+    "lemma": "equiparabile",
+    "pos": "aggettivo",
+    "fr": "comparable",
+    "definition_it": "che si può considerare uguale o simile a qualcos'altro",
+    "examples": [
+      {
+        "it": "Il suo talento è equiparabile a quello di un professionista.",
+        "fr": "Son talent est comparable à celui d'un professionnel."
+      }
+    ],
+    "synonyms": [
+      "paragonabile"
+    ],
+    "isVerb": false
+  },
+  "equiparare": {
+    "lemma": "equiparare",
+    "pos": "verbo (transitivo)",
+    "fr": "assimiler, mettre sur le même plan",
+    "definition_it": "considerare due cose o persone come uguali dal punto di vista di valore o diritti",
+    "examples": [
+      {
+        "it": "La legge ha equiparato i due contratti.",
+        "fr": "La loi a mis les deux contrats sur le même plan."
+      }
+    ],
+    "synonyms": [
+      "paragonare"
+    ],
+    "isVerb": true
+  },
+  "equità": {
+    "lemma": "equità",
+    "pos": "nome (f.)",
+    "fr": "équité",
+    "definition_it": "il trattare tutte le persone in modo giusto e imparziale",
+    "examples": [
+      {
+        "it": "Il giudice ha agito con equità.",
+        "fr": "Le juge a agi avec équité."
+      }
+    ],
+    "synonyms": [
+      "giustizia",
+      "imparzialità"
+    ],
+    "isVerb": false
+  },
+  "equivalere": {
+    "lemma": "equivalere",
+    "pos": "verbo (intransitivo)",
+    "fr": "équivaloir",
+    "definition_it": "avere lo stesso valore, significato o effetto di qualcos'altro",
+    "examples": [
+      {
+        "it": "Un chilo equivale a mille grammi.",
+        "fr": "Un kilo équivaut à mille grammes."
+      }
+    ],
+    "synonyms": [
+      "corrispondere",
+      "eguagliare"
+    ],
+    "isVerb": true
+  },
+  "equivoco": {
+    "lemma": "equivoco",
+    "pos": "aggettivo",
+    "fr": "équivoque",
+    "definition_it": "che si presta a più interpretazioni, ambiguo o sospetto",
+    "examples": [
+      {
+        "it": "Ha usato un tono equivoco durante la riunione.",
+        "fr": "Il a utilisé un ton équivoque pendant la réunion."
+      }
+    ],
+    "synonyms": [
+      "ambiguo",
+      "dubbio"
+    ],
+    "isVerb": false
+  },
+  "equo": {
+    "lemma": "equo",
+    "pos": "aggettivo",
+    "fr": "équitable",
+    "definition_it": "giusto, imparziale, che rispetta i diritti di tutti",
+    "examples": [
+      {
+        "it": "Vogliamo un compenso equo per tutti i lavoratori.",
+        "fr": "Nous voulons une rémunération équitable pour tous les travailleurs."
+      }
+    ],
+    "synonyms": [
+      "giusto",
+      "imparziale"
+    ],
+    "isVerb": false
+  },
   "erba": {
     "lemma": "erba",
     "pos": "nome femminile",
@@ -445,6 +2521,56 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "erbaggio": {
+    "lemma": "erbaggio",
+    "pos": "nome (m.)",
+    "fr": "légume vert",
+    "definition_it": "ortaggio a foglia verde usato in cucina",
+    "examples": [
+      {
+        "it": "Al mercato ho comprato erbaggi freschi.",
+        "fr": "Au marché j'ai acheté des légumes verts frais."
+      }
+    ],
+    "synonyms": [
+      "verdura",
+      "ortaggio"
+    ],
+    "isVerb": false
+  },
+  "erborinato": {
+    "lemma": "erborinato",
+    "pos": "aggettivo/nome (m.)",
+    "fr": "persillé (fromage)",
+    "definition_it": "tipo di formaggio con venature di muffa verde-blu al suo interno",
+    "examples": [
+      {
+        "it": "Il gorgonzola è un formaggio erborinato.",
+        "fr": "Le gorgonzola est un fromage persillé."
+      }
+    ],
+    "synonyms": [
+      "formaggio venato"
+    ],
+    "isVerb": false
+  },
+  "erboso": {
+    "lemma": "erboso",
+    "pos": "aggettivo",
+    "fr": "herbeux",
+    "definition_it": "coperto d'erba",
+    "examples": [
+      {
+        "it": "Abbiamo fatto un picnic in un prato erboso.",
+        "fr": "Nous avons pique-niqué dans un pré herbeux."
+      }
+    ],
+    "synonyms": [
+      "verde",
+      "coperto d'erba"
+    ],
     "isVerb": false
   },
   "erede": {
@@ -478,6 +2604,162 @@
     ],
     "isVerb": false
   },
+  "ereditare": {
+    "lemma": "ereditare",
+    "pos": "verbo (transitivo)",
+    "fr": "hériter",
+    "definition_it": "ricevere beni, denaro o caratteristiche da qualcuno, spesso dopo la sua morte",
+    "examples": [
+      {
+        "it": "Ha ereditato la casa dai nonni.",
+        "fr": "Il a hérité la maison de ses grands-parents."
+      }
+    ],
+    "synonyms": [
+      "ricevere in eredità"
+    ],
+    "isVerb": true
+  },
+  "eresia": {
+    "lemma": "eresia",
+    "pos": "nome (f)",
+    "fr": "hérésie",
+    "definition_it": "opinione religiosa contraria alla dottrina ufficiale della Chiesa",
+    "examples": [
+      {
+        "it": "Fu accusato di eresia dal tribunale.",
+        "fr": "Il a été accusé d'hérésie par le tribunal."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ergonomico": {
+    "lemma": "ergonomico",
+    "pos": "aggettivo",
+    "fr": "ergonomique",
+    "definition_it": "progettato per adattarsi comodamente al corpo umano",
+    "examples": [
+      {
+        "it": "La sedia ergonomica riduce il mal di schiena.",
+        "fr": "La chaise ergonomique réduit les maux de dos."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "erigere": {
+    "lemma": "erigere",
+    "pos": "verbo (transitivo)",
+    "fr": "ériger",
+    "definition_it": "costruire un edificio o un monumento, spesso in modo solenne",
+    "examples": [
+      {
+        "it": "Decisero di erigere un monumento ai caduti.",
+        "fr": "Ils décidèrent d'ériger un monument aux morts."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "ermetico": {
+    "lemma": "ermetico",
+    "pos": "aggettivo",
+    "fr": "hermétique",
+    "definition_it": "chiuso perfettamente, che non lascia passare aria o liquidi; anche difficile da capire",
+    "examples": [
+      {
+        "it": "Il barattolo ha un tappo ermetico.",
+        "fr": "Le pot a un couvercle hermétique."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eroe": {
+    "lemma": "eroe",
+    "pos": "nome (m)",
+    "fr": "héros",
+    "definition_it": "persona ammirata per il coraggio o per azioni straordinarie",
+    "examples": [
+      {
+        "it": "Fu accolto come un eroe al suo ritorno.",
+        "fr": "Il fut accueilli comme un héros à son retour."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eroicamente": {
+    "lemma": "eroicamente",
+    "pos": "avverbio",
+    "fr": "héroïquement",
+    "definition_it": "in modo eroico, con grande coraggio",
+    "examples": [
+      {
+        "it": "Combatté eroicamente fino alla fine.",
+        "fr": "Il combattit héroïquement jusqu'à la fin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "eroico": {
+    "lemma": "eroico",
+    "pos": "aggettivo",
+    "fr": "héroïque",
+    "definition_it": "che dimostra grande coraggio, degno di un eroe",
+    "examples": [
+      {
+        "it": "Compì un gesto eroico per salvare il bambino.",
+        "fr": "Il accomplit un geste héroïque pour sauver l'enfant."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "erosione": {
+    "lemma": "erosione",
+    "pos": "nome (f)",
+    "fr": "érosion",
+    "definition_it": "consumo lento della superficie terrestre causato da acqua, vento o ghiaccio",
+    "examples": [
+      {
+        "it": "L'erosione ha modificato la forma della costa.",
+        "fr": "L'érosion a modifié la forme de la côte."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "errabondo": {
+    "lemma": "errabondo",
+    "pos": "aggettivo",
+    "fr": "errant, vagabond",
+    "definition_it": "che vaga senza una meta precisa",
+    "examples": [
+      {
+        "it": "Un cane errabondo girava per le strade.",
+        "fr": "Un chien errant tournait dans les rues."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "errante": {
+    "lemma": "errante",
+    "pos": "aggettivo",
+    "fr": "errant",
+    "definition_it": "che si muove senza una destinazione fissa, vagabondo",
+    "examples": [
+      {
+        "it": "I cavalieri erranti cercavano avventure.",
+        "fr": "Les chevaliers errants cherchaient des aventures."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "errare": {
     "lemma": "errare",
     "pos": "verbo (intransitivo/transitivo, regolare)",
@@ -495,6 +2777,34 @@
     ],
     "isVerb": true
   },
+  "errato": {
+    "lemma": "errato",
+    "pos": "aggettivo",
+    "fr": "erroné, faux",
+    "definition_it": "che contiene un errore, sbagliato",
+    "examples": [
+      {
+        "it": "Il calcolo era errato.",
+        "fr": "Le calcul était erroné."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "erre": {
+    "lemma": "erre",
+    "pos": "sostantivo femminile (invariabile)",
+    "fr": "le r (lettre R)",
+    "definition_it": "il nome della lettera R dell'alfabeto italiano",
+    "examples": [
+      {
+        "it": "Da bambino non riusciva a pronunciare bene l'erre.",
+        "fr": "Enfant, il n'arrivait pas à bien prononcer le r."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "errore": {
     "lemma": "errore",
     "pos": "nome maschile",
@@ -511,6 +2821,75 @@
     ],
     "isVerb": false
   },
+  "erta": {
+    "lemma": "erta",
+    "pos": "sostantivo femminile",
+    "fr": "côte raide, montée; (all'erta) sur ses gardes",
+    "definition_it": "salita molto ripida di una strada o di un sentiero; nell'espressione «stare all'erta» vuol dire fare molta attenzione",
+    "examples": [
+      {
+        "it": "Salimmo l'erta con fatica, sotto il sole.",
+        "fr": "Nous avons monté la côte avec peine, sous le soleil."
+      }
+    ],
+    "synonyms": [
+      "salita",
+      "pendio",
+      "costa"
+    ],
+    "isVerb": false
+  },
+  "erto": {
+    "lemma": "erto",
+    "pos": "aggettivo",
+    "fr": "escarpé, raide",
+    "definition_it": "che sale ripido, difficile da salire",
+    "examples": [
+      {
+        "it": "Il sentiero era erto e faticoso.",
+        "fr": "Le sentier était escarpé et fatigant."
+      }
+    ],
+    "synonyms": [
+      "ripido",
+      "scosceso"
+    ],
+    "isVerb": false
+  },
+  "erudito": {
+    "lemma": "erudito",
+    "pos": "aggettivo",
+    "fr": "érudit, savant",
+    "definition_it": "che possiede molta cultura e conoscenza",
+    "examples": [
+      {
+        "it": "Era un uomo molto erudito.",
+        "fr": "C'était un homme très érudit."
+      }
+    ],
+    "synonyms": [
+      "colto",
+      "dotto"
+    ],
+    "isVerb": false
+  },
+  "erudizione": {
+    "lemma": "erudizione",
+    "pos": "nome femminile",
+    "fr": "érudition",
+    "definition_it": "grande conoscenza acquisita con lo studio",
+    "examples": [
+      {
+        "it": "Il professore stupiva tutti per la sua erudizione.",
+        "fr": "Le professeur étonnait tout le monde par son érudition."
+      }
+    ],
+    "synonyms": [
+      "cultura",
+      "sapienza"
+    ],
+    "isVerb": false
+  },
   "eruzione": {
     "lemma": "eruzione",
     "pos": "nome femminile",
@@ -524,6 +2903,74 @@
     ],
     "synonyms": [],
     "isVerb": false
+  },
+  "esagerare": {
+    "lemma": "esagerare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "exagérer",
+    "definition_it": "presentare qualcosa in modo più grande o intenso della realtà",
+    "examples": [
+      {
+        "it": "Ha esagerato la gravità del problema.",
+        "fr": "Il a exagéré la gravité du problème."
+      }
+    ],
+    "synonyms": [
+      "ingigantire",
+      "gonfiare"
+    ],
+    "isVerb": true
+  },
+  "esagitazione": {
+    "lemma": "esagitazione",
+    "pos": "sostantivo femminile",
+    "fr": "surexcitation, agitation extrême",
+    "definition_it": "stato di agitazione molto forte, in cui una persona non riesce a stare calma",
+    "examples": [
+      {
+        "it": "Nell'esagitazione del momento nessuno capiva più niente.",
+        "fr": "Dans la surexcitation du moment, personne ne comprenait plus rien."
+      }
+    ],
+    "synonyms": [
+      "frenesia",
+      "eccitazione"
+    ],
+    "isVerb": false
+  },
+  "esalare": {
+    "lemma": "esalare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "exhaler",
+    "definition_it": "emettere un odore, un vapore o un respiro",
+    "examples": [
+      {
+        "it": "Il fiore esalava un profumo dolce.",
+        "fr": "La fleur exhalait un doux parfum."
+      }
+    ],
+    "synonyms": [
+      "emanare",
+      "emettere"
+    ],
+    "isVerb": true
+  },
+  "esaltare": {
+    "lemma": "esaltare",
+    "pos": "verbo transitivo",
+    "fr": "exalter",
+    "definition_it": "lodare con grande entusiasmo, mettere in risalto",
+    "examples": [
+      {
+        "it": "Il discorso esaltava il coraggio dei soldati.",
+        "fr": "Le discours exaltait le courage des soldats."
+      }
+    ],
+    "synonyms": [
+      "glorificare",
+      "celebrare"
+    ],
+    "isVerb": true
   },
   "esame": {
     "lemma": "esame",
@@ -542,6 +2989,40 @@
     ],
     "isVerb": false
   },
+  "esaminare": {
+    "lemma": "esaminare",
+    "pos": "verbo transitivo",
+    "fr": "examiner",
+    "definition_it": "osservare con attenzione per capire o valutare",
+    "examples": [
+      {
+        "it": "Il medico esaminava il paziente con cura.",
+        "fr": "Le médecin examinait le patient avec soin."
+      }
+    ],
+    "synonyms": [
+      "osservare",
+      "analizzare"
+    ],
+    "isVerb": true
+  },
+  "esasperare": {
+    "lemma": "esasperare",
+    "pos": "verbo transitivo",
+    "fr": "exaspérer",
+    "definition_it": "far perdere la pazienza, irritare fortemente",
+    "examples": [
+      {
+        "it": "Quella lentezza esasperava tutti i presenti.",
+        "fr": "Cette lenteur exaspérait tous les présents."
+      }
+    ],
+    "synonyms": [
+      "irritare",
+      "infastidire"
+    ],
+    "isVerb": true
+  },
   "esasperazione": {
     "lemma": "esasperazione",
     "pos": "nome femminile",
@@ -556,6 +3037,73 @@
     "synonyms": [
       "irritazione",
       "nervosismo"
+    ],
+    "isVerb": false
+  },
+  "esattamente": {
+    "lemma": "esattamente",
+    "pos": "avverbio",
+    "fr": "exactement",
+    "definition_it": "in modo preciso, senza errori o approssimazioni",
+    "examples": [
+      {
+        "it": "Non so esattamente dove sia.",
+        "fr": "Je ne sais pas exactement où il est."
+      }
+    ],
+    "synonyms": [
+      "precisamente"
+    ],
+    "isVerb": false
+  },
+  "esatto": {
+    "lemma": "esatto",
+    "pos": "aggettivo",
+    "fr": "exact",
+    "definition_it": "che corrisponde perfettamente alla verità o alla realtà, senza errori",
+    "examples": [
+      {
+        "it": "Il conto è esatto.",
+        "fr": "Le compte est exact."
+      }
+    ],
+    "synonyms": [
+      "preciso",
+      "corretto"
+    ],
+    "isVerb": false
+  },
+  "esaudire": {
+    "lemma": "esaudire",
+    "pos": "verbo (transitivo)",
+    "fr": "exaucer",
+    "definition_it": "accogliere e realizzare un desiderio, una richiesta o una preghiera",
+    "examples": [
+      {
+        "it": "Il suo desiderio fu esaudito.",
+        "fr": "Son souhait fut exaucé."
+      }
+    ],
+    "synonyms": [
+      "soddisfare",
+      "accontentare"
+    ],
+    "isVerb": true
+  },
+  "esausto": {
+    "lemma": "esausto",
+    "pos": "aggettivo",
+    "fr": "épuisé",
+    "definition_it": "completamente stanco, senza più energie",
+    "examples": [
+      {
+        "it": "Dopo la corsa era esausto.",
+        "fr": "Après la course, il était épuisé."
+      }
+    ],
+    "synonyms": [
+      "stanchissimo",
+      "sfinito"
     ],
     "isVerb": false
   },
@@ -575,6 +3123,90 @@
     ],
     "isVerb": false
   },
+  "esclamare": {
+    "lemma": "esclamare",
+    "pos": "verbo (transitivo/intransitivo)",
+    "fr": "s'exclamer, s'écrier",
+    "definition_it": "dire qualcosa con forza ed emozione, spesso ad alta voce",
+    "examples": [
+      {
+        "it": "«Che bello!», esclamò felice.",
+        "fr": "« Comme c'est beau ! », s'exclama-t-il, heureux."
+      }
+    ],
+    "synonyms": [
+      "gridare",
+      "urlare"
+    ],
+    "isVerb": true
+  },
+  "esclamazione": {
+    "lemma": "esclamazione",
+    "pos": "nome (f.)",
+    "fr": "exclamation",
+    "definition_it": "grido o espressione che manifesta una forte emozione",
+    "examples": [
+      {
+        "it": "Lanciò un'esclamazione di sorpresa.",
+        "fr": "Il poussa une exclamation de surprise."
+      }
+    ],
+    "synonyms": [
+      "grido"
+    ],
+    "isVerb": false
+  },
+  "escludere": {
+    "lemma": "escludere",
+    "pos": "verbo (transitivo)",
+    "fr": "exclure",
+    "definition_it": "non far entrare o non far partecipare qualcuno o qualcosa",
+    "examples": [
+      {
+        "it": "Hanno deciso di escludere lui dalla squadra.",
+        "fr": "Ils ont décidé de l'exclure de l'équipe."
+      }
+    ],
+    "synonyms": [
+      "eliminare",
+      "scartare"
+    ],
+    "isVerb": true
+  },
+  "esclusivo": {
+    "lemma": "esclusivo",
+    "pos": "aggettivo",
+    "fr": "exclusif",
+    "definition_it": "che riguarda una sola persona o cosa e non è condiviso con altri",
+    "examples": [
+      {
+        "it": "Ha un rapporto esclusivo con i suoi clienti.",
+        "fr": "Il a une relation exclusive avec ses clients."
+      }
+    ],
+    "synonyms": [
+      "unico",
+      "riservato"
+    ],
+    "isVerb": false
+  },
+  "escogitare": {
+    "lemma": "escogitare",
+    "pos": "verbo (transitivo)",
+    "fr": "imaginer, concevoir",
+    "definition_it": "inventare con astuzia un piano, un'idea o una soluzione",
+    "examples": [
+      {
+        "it": "Escogitò un piano per uscire dal guaio.",
+        "fr": "Il imagina un plan pour sortir de l'embarras."
+      }
+    ],
+    "synonyms": [
+      "ideare",
+      "inventare"
+    ],
+    "isVerb": true
+  },
   "escursione": {
     "lemma": "escursione",
     "pos": "sostantivo (f)",
@@ -589,6 +3221,189 @@
     "synonyms": [
       "gita",
       "passeggiata"
+    ],
+    "isVerb": false
+  },
+  "escursionista": {
+    "lemma": "escursionista",
+    "pos": "sostantivo (maschile/femminile)",
+    "fr": "randonneur, randonneuse",
+    "definition_it": "persona che fa escursioni, di solito a piedi in montagna o in natura",
+    "examples": [
+      {
+        "it": "Molti escursionisti salgono su questo sentiero ogni estate.",
+        "fr": "De nombreux randonneurs empruntent ce sentier chaque été."
+      }
+    ],
+    "synonyms": [
+      "camminatore"
+    ],
+    "isVerb": false
+  },
+  "escursionistico": {
+    "lemma": "escursionistico",
+    "pos": "aggettivo",
+    "fr": "de randonnée",
+    "definition_it": "relativo alle escursioni, in particolare quelle a piedi in montagna",
+    "examples": [
+      {
+        "it": "Il sentiero escursionistico è ben segnalato.",
+        "fr": "Le sentier de randonnée est bien balisé."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esecutore": {
+    "lemma": "esecutore",
+    "pos": "sostantivo maschile",
+    "fr": "exécutant, interprète, exécuteur",
+    "definition_it": "chi realizza concretamente un ordine, un progetto o un brano musicale pensato da altri",
+    "examples": [
+      {
+        "it": "L'esecutore del concerto era un giovane pianista.",
+        "fr": "L'interprète du concert était un jeune pianiste."
+      }
+    ],
+    "synonyms": [
+      "interprete",
+      "realizzatore"
+    ],
+    "isVerb": false
+  },
+  "esecuzione": {
+    "lemma": "esecuzione",
+    "pos": "sostantivo femminile",
+    "fr": "exécution",
+    "definition_it": "l'atto di eseguire, cioè di svolgere o portare a termine qualcosa",
+    "examples": [
+      {
+        "it": "L'esecuzione del progetto è iniziata ieri.",
+        "fr": "L'exécution du projet a commencé hier."
+      }
+    ],
+    "synonyms": [
+      "realizzazione",
+      "svolgimento"
+    ],
+    "isVerb": false
+  },
+  "eseguire": {
+    "lemma": "eseguire",
+    "pos": "verbo (transitivo)",
+    "fr": "exécuter, réaliser",
+    "definition_it": "portare a termine un'azione, un ordine o un compito seguendo istruzioni precise",
+    "examples": [
+      {
+        "it": "Il tecnico eseguì il lavoro in poche ore.",
+        "fr": "Le technicien a exécuté le travail en quelques heures."
+      }
+    ],
+    "synonyms": [
+      "realizzare",
+      "compiere"
+    ],
+    "isVerb": true
+  },
+  "esempio": {
+    "lemma": "esempio",
+    "pos": "sostantivo maschile",
+    "fr": "exemple",
+    "definition_it": "caso concreto usato per spiegare, dimostrare o illustrare qualcosa",
+    "examples": [
+      {
+        "it": "Ti faccio subito un esempio semplice.",
+        "fr": "Je vais tout de suite te donner un exemple simple."
+      }
+    ],
+    "synonyms": [
+      "caso",
+      "modello"
+    ],
+    "isVerb": false
+  },
+  "esemplare": {
+    "lemma": "esemplare",
+    "pos": "aggettivo",
+    "fr": "exemplaire",
+    "definition_it": "che serve da modello perfetto di comportamento o di qualità",
+    "examples": [
+      {
+        "it": "Il suo comportamento è stato esemplare.",
+        "fr": "Son comportement a été exemplaire."
+      }
+    ],
+    "synonyms": [
+      "modello",
+      "perfetto"
+    ],
+    "isVerb": false
+  },
+  "esente": {
+    "lemma": "esente",
+    "pos": "aggettivo",
+    "fr": "exempt, exonéré",
+    "definition_it": "che non è soggetto a un obbligo, un pagamento o un rischio",
+    "examples": [
+      {
+        "it": "Questo prodotto è esente da tasse.",
+        "fr": "Ce produit est exonéré de taxes."
+      }
+    ],
+    "synonyms": [
+      "esonerato",
+      "libero"
+    ],
+    "isVerb": false
+  },
+  "esenzione": {
+    "lemma": "esenzione",
+    "pos": "nome (f.)",
+    "fr": "exonération, exemption",
+    "definition_it": "condizione di essere esente da un obbligo, un pagamento o un dovere",
+    "examples": [
+      {
+        "it": "Ha ottenuto l'esenzione dal pagamento del ticket.",
+        "fr": "Il a obtenu l'exonération du paiement du ticket."
+      }
+    ],
+    "synonyms": [
+      "dispensa",
+      "esonero"
+    ],
+    "isVerb": false
+  },
+  "esercitare": {
+    "lemma": "esercitare",
+    "pos": "verbo (transitivo)",
+    "fr": "exercer",
+    "definition_it": "svolgere con regolarità un'attività, una professione o un'influenza",
+    "examples": [
+      {
+        "it": "Da anni esercita la professione di medico.",
+        "fr": "Depuis des années il exerce la profession de médecin."
+      }
+    ],
+    "synonyms": [
+      "praticare",
+      "svolgere"
+    ],
+    "isVerb": true
+  },
+  "esercito": {
+    "lemma": "esercito",
+    "pos": "nome (m.)",
+    "fr": "armée",
+    "definition_it": "insieme organizzato di soldati al servizio di uno stato",
+    "examples": [
+      {
+        "it": "L'esercito ha occupato la città.",
+        "fr": "L'armée a occupé la ville."
+      }
+    ],
+    "synonyms": [
+      "truppe",
+      "forze armate"
     ],
     "isVerb": false
   },
@@ -609,6 +3424,40 @@
     ],
     "isVerb": false
   },
+  "esibire": {
+    "lemma": "esibire",
+    "pos": "verbo (transitivo)",
+    "fr": "exhiber, montrer",
+    "definition_it": "mostrare qualcosa apertamente, spesso per dimostrarlo o presentarlo",
+    "examples": [
+      {
+        "it": "Ha dovuto esibire un documento all'ingresso.",
+        "fr": "Il a dû montrer une pièce d'identité à l'entrée."
+      }
+    ],
+    "synonyms": [
+      "mostrare",
+      "presentare"
+    ],
+    "isVerb": true
+  },
+  "esigenza": {
+    "lemma": "esigenza",
+    "pos": "nome (f.)",
+    "fr": "exigence, besoin",
+    "definition_it": "bisogno o necessità che richiede una risposta o una soluzione",
+    "examples": [
+      {
+        "it": "Bisogna tener conto delle esigenze di ogni cliente.",
+        "fr": "Il faut tenir compte des besoins de chaque client."
+      }
+    ],
+    "synonyms": [
+      "bisogno",
+      "necessità"
+    ],
+    "isVerb": false
+  },
   "esigere": {
     "lemma": "esigere",
     "pos": "verbo (transitivo, irregolare)",
@@ -623,6 +3472,74 @@
     "synonyms": [
       "pretendere",
       "richiedere"
+    ],
+    "isVerb": true
+  },
+  "esiguo": {
+    "lemma": "esiguo",
+    "pos": "aggettivo",
+    "fr": "exigu, minime",
+    "definition_it": "molto piccolo o scarso in quantità",
+    "examples": [
+      {
+        "it": "Il budget a disposizione era esiguo.",
+        "fr": "Le budget disponible était minime."
+      }
+    ],
+    "synonyms": [
+      "scarso",
+      "minimo"
+    ],
+    "isVerb": false
+  },
+  "esilarante": {
+    "lemma": "esilarante",
+    "pos": "aggettivo",
+    "fr": "hilarant, e",
+    "definition_it": "che provoca una risata intensa, molto divertente",
+    "examples": [
+      {
+        "it": "Il film era davvero esilarante.",
+        "fr": "Le film était vraiment hilarant."
+      }
+    ],
+    "synonyms": [
+      "divertentissimo",
+      "comico"
+    ],
+    "isVerb": false
+  },
+  "esile": {
+    "lemma": "esile",
+    "pos": "aggettivo",
+    "fr": "fluet, grêle, mince",
+    "definition_it": "molto sottile, magro o debole nell'aspetto",
+    "examples": [
+      {
+        "it": "Aveva un corpo esile e fragile.",
+        "fr": "Il avait un corps fluet et fragile."
+      }
+    ],
+    "synonyms": [
+      "sottile",
+      "gracile"
+    ],
+    "isVerb": false
+  },
+  "esiliare": {
+    "lemma": "esiliare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "exiler",
+    "definition_it": "costringere qualcuno a lasciare la propria patria come punizione",
+    "examples": [
+      {
+        "it": "Il re decise di esiliare i suoi oppositori politici.",
+        "fr": "Le roi décida d'exiler ses opposants politiques."
+      }
+    ],
+    "synonyms": [
+      "deportare",
+      "bandire"
     ],
     "isVerb": true
   },
@@ -673,6 +3590,48 @@
     ],
     "isVerb": false
   },
+  "esistere": {
+    "lemma": "esistere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "exister",
+    "definition_it": "avere realtà, essere presente nel mondo",
+    "examples": [
+      {
+        "it": "Questo problema non esiste più.",
+        "fr": "Ce problème n'existe plus."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "esitante": {
+    "lemma": "esitante",
+    "pos": "aggettivo",
+    "fr": "hésitant",
+    "definition_it": "che mostra incertezza o esitazione nel parlare o nell'agire",
+    "examples": [
+      {
+        "it": "Rispose con voce esitante.",
+        "fr": "Il répondit d'une voix hésitante."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esitare": {
+    "lemma": "esitare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "hésiter",
+    "definition_it": "essere incerto prima di agire o decidere, per dubbio o timore",
+    "examples": [
+      {
+        "it": "Non esitare a chiedere aiuto se ne hai bisogno.",
+        "fr": "N'hésite pas à demander de l'aide si tu en as besoin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
   "esitazione": {
     "lemma": "esitazione",
     "pos": "nome femminile",
@@ -689,6 +3648,157 @@
       "dubbio"
     ],
     "isVerb": false
+  },
+  "esito": {
+    "lemma": "esito",
+    "pos": "sostantivo maschile",
+    "fr": "résultat, issue",
+    "definition_it": "il modo in cui una situazione si conclude, il risultato finale",
+    "examples": [
+      {
+        "it": "L'esito dell'esame sarà comunicato domani.",
+        "fr": "Le résultat de l'examen sera communiqué demain."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esodo": {
+    "lemma": "esodo",
+    "pos": "sostantivo maschile",
+    "fr": "exode",
+    "definition_it": "l'allontanamento in massa di persone da un luogo",
+    "examples": [
+      {
+        "it": "L'esodo estivo blocca le autostrade.",
+        "fr": "L'exode estival bloque les autoroutes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esorbitante": {
+    "lemma": "esorbitante",
+    "pos": "aggettivo",
+    "fr": "exorbitant",
+    "definition_it": "che supera di molto la misura normale, eccessivo, soprattutto riferito a prezzi",
+    "examples": [
+      {
+        "it": "Ha pagato una cifra esorbitante per quella casa.",
+        "fr": "Il a payé une somme exorbitante pour cette maison."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esorcizzare": {
+    "lemma": "esorcizzare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "exorciser",
+    "definition_it": "liberare qualcuno o qualcosa da uno spirito maligno attraverso un rito religioso, o in senso figurato superare una paura",
+    "examples": [
+      {
+        "it": "Il prete ha cercato di esorcizzare la casa infestata.",
+        "fr": "Le prêtre a essayé d'exorciser la maison hantée."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "esordiente": {
+    "lemma": "esordiente",
+    "pos": "sostantivo e aggettivo",
+    "fr": "débutant",
+    "definition_it": "chi si presenta per la prima volta in un'attività, soprattutto artistica o sportiva",
+    "examples": [
+      {
+        "it": "È un regista esordiente molto promettente.",
+        "fr": "C'est un réalisateur débutant très prometteur."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "esortare": {
+    "lemma": "esortare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "exhorter, encourager",
+    "definition_it": "spingere con parole qualcuno a fare qualcosa, incoraggiare con insistenza",
+    "examples": [
+      {
+        "it": "Il professore esortò gli studenti a impegnarsi di più.",
+        "fr": "Le professeur exhorta les étudiants à s'engager davantage."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": true
+  },
+  "esortazione": {
+    "lemma": "esortazione",
+    "pos": "sostantivo femminile",
+    "fr": "exhortation, encouragement, appel",
+    "definition_it": "parole calde e convincenti con cui si spinge qualcuno a fare qualcosa di utile o di giusto",
+    "examples": [
+      {
+        "it": "Il maestro concluse il discorso con un'esortazione allo studio.",
+        "fr": "Le maître conclut son discours par une exhortation à l'étude."
+      }
+    ],
+    "synonyms": [
+      "incitamento",
+      "invito",
+      "incoraggiamento"
+    ],
+    "isVerb": false
+  },
+  "esoso": {
+    "lemma": "esoso",
+    "pos": "aggettivo",
+    "fr": "avide, exorbitant (prix)",
+    "definition_it": "che chiede prezzi troppo alti, avido di guadagno",
+    "examples": [
+      {
+        "it": "Quel negozio ha prezzi esosi.",
+        "fr": "Ce magasin a des prix exorbitants."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "espediente": {
+    "lemma": "espediente",
+    "pos": "sostantivo (m.)",
+    "fr": "expédient, subterfuge",
+    "definition_it": "mezzo o soluzione usata per risolvere rapidamente un problema, spesso in modo provvisorio",
+    "examples": [
+      {
+        "it": "Ha trovato un espediente per finire il lavoro in tempo.",
+        "fr": "Il a trouvé un expédient pour finir le travail à temps."
+      }
+    ],
+    "synonyms": [
+      "rimedio",
+      "trucco",
+      "stratagemma"
+    ],
+    "isVerb": false
+  },
+  "espellere": {
+    "lemma": "espellere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "expulser",
+    "definition_it": "mandare via qualcuno da un luogo o da un gruppo con la forza o con una decisione ufficiale",
+    "examples": [
+      {
+        "it": "La scuola ha deciso di espellere lo studente.",
+        "fr": "L'école a décidé d'expulser l'élève."
+      }
+    ],
+    "synonyms": [
+      "cacciare",
+      "allontanare"
+    ],
+    "isVerb": true
   },
   "esperienza": {
     "lemma": "esperienza",
@@ -707,6 +3817,297 @@
     ],
     "isVerb": false
   },
+  "esperimento": {
+    "lemma": "esperimento",
+    "pos": "sostantivo (m.)",
+    "fr": "expérience, expérimentation",
+    "definition_it": "prova fatta per verificare un'ipotesi o studiare un fenomeno",
+    "examples": [
+      {
+        "it": "Gli scienziati hanno condotto diversi esperimenti in laboratorio.",
+        "fr": "Les scientifiques ont mené plusieurs expériences en laboratoire."
+      }
+    ],
+    "synonyms": [
+      "prova",
+      "test"
+    ],
+    "isVerb": false
+  },
+  "esperto": {
+    "lemma": "esperto",
+    "pos": "aggettivo/sostantivo",
+    "fr": "expert, e",
+    "definition_it": "che ha grande conoscenza o abilità in un campo specifico, grazie a esperienza e studio",
+    "examples": [
+      {
+        "it": "È un esperto di informatica molto stimato.",
+        "fr": "C'est un expert en informatique très estimé."
+      }
+    ],
+    "synonyms": [
+      "competente",
+      "specialista"
+    ],
+    "isVerb": false
+  },
+  "espiazione": {
+    "lemma": "espiazione",
+    "pos": "sostantivo (f.)",
+    "fr": "expiation",
+    "definition_it": "atto di scontare una colpa attraverso una pena o un sacrificio",
+    "examples": [
+      {
+        "it": "Cercava l'espiazione dei suoi peccati.",
+        "fr": "Il cherchait l'expiation de ses péchés."
+      }
+    ],
+    "synonyms": [
+      "penitenza",
+      "riparazione"
+    ],
+    "isVerb": false
+  },
+  "espilazione": {
+    "lemma": "espilazione",
+    "pos": "sostantivo (f., raro/giuridico)",
+    "fr": "détournement, spoliation",
+    "definition_it": "sottrazione illecita di beni altrui, termine raro di uso giuridico o letterario",
+    "examples": [
+      {
+        "it": "Fu accusato di espilazione dei beni ereditari.",
+        "fr": "Il fut accusé de détournement des biens hérités."
+      }
+    ],
+    "synonyms": [
+      "appropriazione indebita",
+      "spoliazione"
+    ],
+    "isVerb": false
+  },
+  "espletare": {
+    "lemma": "espletare",
+    "pos": "verbo (transitivo, regolare, 1a coniugazione)",
+    "fr": "accomplir, mener à bien",
+    "definition_it": "portare a termine un compito, una pratica o una funzione",
+    "examples": [
+      {
+        "it": "Deve espletare alcune pratiche burocratiche prima di partire.",
+        "fr": "Il doit accomplir quelques démarches administratives avant de partir."
+      }
+    ],
+    "synonyms": [
+      "compiere",
+      "svolgere",
+      "eseguire"
+    ],
+    "isVerb": true
+  },
+  "esplicitamente": {
+    "lemma": "esplicitamente",
+    "pos": "avverbio",
+    "fr": "explicitement",
+    "definition_it": "in modo chiaro e diretto, senza lasciare dubbi",
+    "examples": [
+      {
+        "it": "Ha dichiarato esplicitamente le sue intenzioni.",
+        "fr": "Il a déclaré explicitement ses intentions."
+      }
+    ],
+    "synonyms": [
+      "chiaramente",
+      "apertamente"
+    ],
+    "isVerb": false
+  },
+  "esplodere": {
+    "lemma": "esplodere",
+    "pos": "verbo (intransitivo, irregolare, 2a coniugazione)",
+    "fr": "exploser",
+    "definition_it": "scoppiare violentemente, spesso con forte rumore e distruzione",
+    "examples": [
+      {
+        "it": "La bomba esplode a pochi metri dall'edificio.",
+        "fr": "La bombe explose à quelques mètres du bâtiment."
+      }
+    ],
+    "synonyms": [
+      "scoppiare",
+      "detonare"
+    ],
+    "isVerb": true
+  },
+  "esplorare": {
+    "lemma": "esplorare",
+    "pos": "verbo (transitivo, regolare, 1a coniugazione)",
+    "fr": "explorer",
+    "definition_it": "percorrere o esaminare un luogo o un argomento sconosciuto per conoscerlo meglio",
+    "examples": [
+      {
+        "it": "Gli piace esplorare posti nuovi durante i viaggi.",
+        "fr": "Il aime explorer de nouveaux endroits pendant ses voyages."
+      }
+    ],
+    "synonyms": [
+      "scoprire",
+      "indagare"
+    ],
+    "isVerb": true
+  },
+  "esploratore": {
+    "lemma": "esploratore",
+    "pos": "sostantivo (m.)",
+    "fr": "explorateur",
+    "definition_it": "persona che viaggia per scoprire luoghi poco conosciuti",
+    "examples": [
+      {
+        "it": "Gli esploratori attraversarono la foresta amazzonica.",
+        "fr": "Les explorateurs traversèrent la forêt amazonienne."
+      }
+    ],
+    "synonyms": [
+      "viaggiatore",
+      "scopritore"
+    ],
+    "isVerb": false
+  },
+  "esplorazione": {
+    "lemma": "esplorazione",
+    "pos": "nome (f)",
+    "fr": "exploration",
+    "definition_it": "attività di esplorare, cioè di visitare un luogo per conoscerlo meglio",
+    "examples": [
+      {
+        "it": "L'esplorazione della grotta è durata tutto il giorno.",
+        "fr": "L'exploration de la grotte a duré toute la journée."
+      }
+    ],
+    "synonyms": [
+      "ricerca",
+      "spedizione"
+    ],
+    "isVerb": false
+  },
+  "esporre": {
+    "lemma": "esporre",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "exposer",
+    "definition_it": "mostrare qualcosa al pubblico, oppure spiegare un'idea con chiarezza",
+    "examples": [
+      {
+        "it": "Il museo espone dipinti del Rinascimento.",
+        "fr": "Le musée expose des tableaux de la Renaissance."
+      }
+    ],
+    "synonyms": [
+      "mostrare",
+      "esibire",
+      "illustrare"
+    ],
+    "isVerb": true
+  },
+  "esporsi": {
+    "lemma": "esporsi",
+    "pos": "verbo pronominale (irregolare)",
+    "fr": "s'exposer, se compromettre",
+    "definition_it": "mettersi in una situazione di rischio o di visibilità, esprimendo apertamente la propria opinione",
+    "examples": [
+      {
+        "it": "Non voleva esporsi troppo durante la discussione.",
+        "fr": "Il ne voulait pas trop s'exposer pendant la discussion."
+      }
+    ],
+    "synonyms": [
+      "rischiare",
+      "compromettersi"
+    ],
+    "isVerb": true
+  },
+  "esposizione": {
+    "lemma": "esposizione",
+    "pos": "nome (f)",
+    "fr": "exposition",
+    "definition_it": "manifestazione pubblica in cui si mostrano oggetti, opere d'arte o prodotti",
+    "examples": [
+      {
+        "it": "La città ospita una grande esposizione di arte moderna.",
+        "fr": "La ville accueille une grande exposition d'art moderne."
+      }
+    ],
+    "synonyms": [
+      "mostra",
+      "fiera"
+    ],
+    "isVerb": false
+  },
+  "espressamente": {
+    "lemma": "espressamente",
+    "pos": "avverbio",
+    "fr": "expressément",
+    "definition_it": "in modo chiaro ed esplicito, senza lasciare dubbi",
+    "examples": [
+      {
+        "it": "Il direttore ha vietato espressamente l'ingresso senza biglietto.",
+        "fr": "Le directeur a expressément interdit l'entrée sans billet."
+      }
+    ],
+    "synonyms": [
+      "esplicitamente",
+      "chiaramente"
+    ],
+    "isVerb": false
+  },
+  "espressione": {
+    "lemma": "espressione",
+    "pos": "nome (f)",
+    "fr": "expression",
+    "definition_it": "modo di manifestare un pensiero o un sentimento, oppure aspetto del viso",
+    "examples": [
+      {
+        "it": "Il suo viso aveva un'espressione di sorpresa.",
+        "fr": "Son visage avait une expression de surprise."
+      }
+    ],
+    "synonyms": [
+      "manifestazione",
+      "sguardo"
+    ],
+    "isVerb": false
+  },
+  "espressivo": {
+    "lemma": "espressivo",
+    "pos": "aggettivo",
+    "fr": "expressif",
+    "definition_it": "che esprime bene sentimenti o idee, ricco di espressione",
+    "examples": [
+      {
+        "it": "Ha uno sguardo molto espressivo.",
+        "fr": "Il a un regard très expressif."
+      }
+    ],
+    "synonyms": [
+      "eloquente",
+      "significativo"
+    ],
+    "isVerb": false
+  },
+  "esprimere": {
+    "lemma": "esprimere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "exprimer",
+    "definition_it": "manifestare un pensiero, un sentimento o un'opinione con parole o gesti",
+    "examples": [
+      {
+        "it": "Vuole esprimere la sua gratitudine a tutti gli amici.",
+        "fr": "Elle veut exprimer sa gratitude à tous ses amis."
+      }
+    ],
+    "synonyms": [
+      "manifestare",
+      "comunicare"
+    ],
+    "isVerb": true
+  },
   "espulsione": {
     "lemma": "espulsione",
     "pos": "nome femminile",
@@ -724,6 +4125,22 @@
     ],
     "isVerb": false
   },
+  "essa": {
+    "lemma": "essa",
+    "pos": "pronome personale",
+    "fr": "elle",
+    "definition_it": "pronome personale di terza persona singolare femminile, usato per riferirsi a una cosa o persona già nominata",
+    "examples": [
+      {
+        "it": "Essa è una donna molto forte.",
+        "fr": "Elle est une femme très forte."
+      }
+    ],
+    "synonyms": [
+      "lei"
+    ],
+    "isVerb": false
+  },
   "esse": {
     "lemma": "esse",
     "pos": "pronome personale",
@@ -737,6 +4154,23 @@
     ],
     "synonyms": [
       "loro"
+    ],
+    "isVerb": false
+  },
+  "essenziale": {
+    "lemma": "essenziale",
+    "pos": "aggettivo",
+    "fr": "essentiel",
+    "definition_it": "che è indispensabile, fondamentale, senza il quale qualcosa non può esistere o funzionare",
+    "examples": [
+      {
+        "it": "L'acqua è essenziale per la vita.",
+        "fr": "L'eau est essentielle pour la vie."
+      }
+    ],
+    "synonyms": [
+      "fondamentale",
+      "indispensabile"
     ],
     "isVerb": false
   },
@@ -790,6 +4224,73 @@
     ],
     "isVerb": false
   },
+  "essiccazione": {
+    "lemma": "essiccazione",
+    "pos": "nome femminile",
+    "fr": "dessiccation, séchage",
+    "definition_it": "processo con cui si toglie l'umidità o l'acqua da qualcosa",
+    "examples": [
+      {
+        "it": "L'essiccazione della frutta permette di conservarla più a lungo.",
+        "fr": "Le séchage des fruits permet de les conserver plus longtemps."
+      }
+    ],
+    "synonyms": [
+      "disidratazione"
+    ],
+    "isVerb": false
+  },
+  "esso": {
+    "lemma": "esso",
+    "pos": "pronome personale",
+    "fr": "il, lui, cela (pour les choses ou animaux)",
+    "definition_it": "pronome che sostituisce un nome di cosa o animale già nominato",
+    "examples": [
+      {
+        "it": "Ho letto il libro e esso mi è piaciuto molto.",
+        "fr": "J'ai lu le livre et il m'a beaucoup plu."
+      }
+    ],
+    "synonyms": [
+      "lui",
+      "quello"
+    ],
+    "isVerb": false
+  },
+  "est": {
+    "lemma": "est",
+    "pos": "nome maschile invariabile",
+    "fr": "est",
+    "definition_it": "uno dei quattro punti cardinali, dove sorge il sole",
+    "examples": [
+      {
+        "it": "Il sole sorge a est.",
+        "fr": "Le soleil se lève à l'est."
+      }
+    ],
+    "synonyms": [
+      "levante",
+      "oriente"
+    ],
+    "isVerb": false
+  },
+  "estasi": {
+    "lemma": "estasi",
+    "pos": "nome femminile invariabile",
+    "fr": "extase",
+    "definition_it": "stato di grande felicità o emozione intensa che fa perdere il contatto con la realtà",
+    "examples": [
+      {
+        "it": "Rimase in estasi davanti al panorama.",
+        "fr": "Il resta en extase devant le panorama."
+      }
+    ],
+    "synonyms": [
+      "rapimento",
+      "incanto"
+    ],
+    "isVerb": false
+  },
   "estate": {
     "lemma": "estate",
     "pos": "nome femminile",
@@ -802,6 +4303,90 @@
       }
     ],
     "synonyms": [],
+    "isVerb": false
+  },
+  "estendere": {
+    "lemma": "estendere",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "étendre",
+    "definition_it": "allargare, ampliare qualcosa nello spazio, nel tempo o nel significato",
+    "examples": [
+      {
+        "it": "L'azienda estende la propria attività anche all'estero.",
+        "fr": "L'entreprise étend aussi son activité à l'étranger."
+      }
+    ],
+    "synonyms": [
+      "ampliare",
+      "allargare"
+    ],
+    "isVerb": true
+  },
+  "estensione": {
+    "lemma": "estensione",
+    "pos": "nome femminile",
+    "fr": "extension, étendue",
+    "definition_it": "l'atto di estendere o il grado in cui qualcosa si estende nello spazio o nel tempo",
+    "examples": [
+      {
+        "it": "Il parco ha un'estensione di dieci ettari.",
+        "fr": "Le parc a une superficie de dix hectares."
+      }
+    ],
+    "synonyms": [
+      "ampiezza",
+      "superficie"
+    ],
+    "isVerb": false
+  },
+  "estenuare": {
+    "lemma": "estenuare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "épuiser, exténuer",
+    "definition_it": "togliere quasi tutte le forze fisiche o mentali a qualcuno",
+    "examples": [
+      {
+        "it": "La lunga marcia li aveva estenuati.",
+        "fr": "La longue marche les avait exténués."
+      }
+    ],
+    "synonyms": [
+      "sfinire",
+      "spossare"
+    ],
+    "isVerb": true
+  },
+  "esteriore": {
+    "lemma": "esteriore",
+    "pos": "aggettivo",
+    "fr": "extérieur",
+    "definition_it": "che si trova o si vede all'esterno, in superficie, non nell'intimo",
+    "examples": [
+      {
+        "it": "Il suo aspetto esteriore nascondeva una grande tristezza.",
+        "fr": "Son apparence extérieure cachait une grande tristesse."
+      }
+    ],
+    "synonyms": [
+      "esterno",
+      "superficiale"
+    ],
+    "isVerb": false
+  },
+  "esteriormente": {
+    "lemma": "esteriormente",
+    "pos": "avverbio",
+    "fr": "extérieurement, en apparence",
+    "definition_it": "nell'aspetto esterno, in apparenza, non nella sostanza",
+    "examples": [
+      {
+        "it": "Esteriormente sembrava calmo, ma dentro era agitato.",
+        "fr": "Extérieurement il semblait calme, mais intérieurement il était agité."
+      }
+    ],
+    "synonyms": [
+      "apparentemente"
+    ],
     "isVerb": false
   },
   "esterno": {
@@ -836,6 +4421,54 @@
     ],
     "isVerb": false
   },
+  "esterrefatto": {
+    "lemma": "esterrefatto",
+    "pos": "aggettivo",
+    "fr": "stupéfait, effaré",
+    "definition_it": "che prova grande stupore o sgomento improvviso",
+    "examples": [
+      {
+        "it": "È rimasto esterrefatto davanti a quella notizia.",
+        "fr": "Il est resté stupéfait devant cette nouvelle."
+      }
+    ],
+    "synonyms": [
+      "sbigottito",
+      "sconcertato"
+    ],
+    "isVerb": false
+  },
+  "esteso": {
+    "lemma": "esteso",
+    "pos": "aggettivo (participio di estendere)",
+    "fr": "étendu, vaste",
+    "definition_it": "che occupa una grande superficie o si prolunga a lungo",
+    "examples": [
+      {
+        "it": "Il parco è molto esteso.",
+        "fr": "Le parc est très étendu."
+      }
+    ],
+    "synonyms": [
+      "vasto",
+      "ampio"
+    ],
+    "isVerb": false
+  },
+  "estetica": {
+    "lemma": "estetica",
+    "pos": "nome (f)",
+    "fr": "esthétique",
+    "definition_it": "disciplina che studia il bello e l'arte, oppure l'aspetto esteriore di qualcosa",
+    "examples": [
+      {
+        "it": "Si è iscritta a un corso di estetica.",
+        "fr": "Elle s'est inscrite à un cours d'esthétique."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "estinto": {
     "lemma": "estinto",
     "pos": "aggettivo/sostantivo (m)",
@@ -853,6 +4486,36 @@
     ],
     "isVerb": false
   },
+  "estinzione": {
+    "lemma": "estinzione",
+    "pos": "sostantivo femminile",
+    "fr": "extinction, disparition; remboursement (d'une dette)",
+    "definition_it": "il fatto che una specie animale o vegetale sparisca per sempre dalla Terra; indica anche il pagamento completo di un debito",
+    "examples": [
+      {
+        "it": "Molte specie di uccelli rischiano l'estinzione.",
+        "fr": "De nombreuses espèces d'oiseaux risquent l'extinction."
+      }
+    ],
+    "synonyms": [
+      "scomparsa"
+    ],
+    "isVerb": false
+  },
+  "estivo": {
+    "lemma": "estivo",
+    "pos": "aggettivo",
+    "fr": "estival, d'été",
+    "definition_it": "relativo all'estate",
+    "examples": [
+      {
+        "it": "Le vacanze estive iniziano a giugno.",
+        "fr": "Les vacances d'été commencent en juin."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
   "esto": {
     "lemma": "esto",
     "pos": "aggettivo/pronome dimostrativo (forma arcaica e letteraria)",
@@ -866,6 +4529,102 @@
     ],
     "synonyms": [
       "questo"
+    ],
+    "isVerb": false
+  },
+  "estraneità": {
+    "lemma": "estraneità",
+    "pos": "nome (f)",
+    "fr": "extranéité, absence d'implication",
+    "definition_it": "condizione di essere estraneo a qualcosa, di non essere coinvolto",
+    "examples": [
+      {
+        "it": "Ha dimostrato la sua estraneità ai fatti.",
+        "fr": "Il a démontré son absence d'implication dans les faits."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "estraneo": {
+    "lemma": "estraneo",
+    "pos": "aggettivo / nome",
+    "fr": "étranger, extérieur",
+    "definition_it": "che non appartiene a un gruppo, non coinvolto, sconosciuto",
+    "examples": [
+      {
+        "it": "Un uomo estraneo si è avvicinato alla porta.",
+        "fr": "Un homme étranger s'est approché de la porte."
+      }
+    ],
+    "synonyms": [
+      "sconosciuto"
+    ],
+    "isVerb": false
+  },
+  "estrarre": {
+    "lemma": "estrarre",
+    "pos": "verbo (transitivo, irregolare)",
+    "fr": "extraire",
+    "definition_it": "tirare fuori qualcosa da un luogo o da un insieme",
+    "examples": [
+      {
+        "it": "Il dentista deve estrarre un dente.",
+        "fr": "Le dentiste doit extraire une dent."
+      }
+    ],
+    "synonyms": [
+      "tirare fuori",
+      "cavare"
+    ],
+    "isVerb": true
+  },
+  "estratto": {
+    "lemma": "estratto",
+    "pos": "nome (m)",
+    "fr": "extrait, relevé",
+    "definition_it": "parte tolta da un insieme più grande, sunto o documento ufficiale",
+    "examples": [
+      {
+        "it": "Ha chiesto un estratto conto in banca.",
+        "fr": "Il a demandé un relevé de compte à la banque."
+      }
+    ],
+    "synonyms": [
+      "sunto"
+    ],
+    "isVerb": false
+  },
+  "estremamente": {
+    "lemma": "estremamente",
+    "pos": "avverbio",
+    "fr": "extrêmement",
+    "definition_it": "in modo estremo, molto intensamente",
+    "examples": [
+      {
+        "it": "È stato estremamente gentile con noi.",
+        "fr": "Il a été extrêmement gentil avec nous."
+      }
+    ],
+    "synonyms": [
+      "moltissimo"
+    ],
+    "isVerb": false
+  },
+  "estremità": {
+    "lemma": "estremità",
+    "pos": "nome (f)",
+    "fr": "extrémité",
+    "definition_it": "parte finale o punto più lontano di qualcosa",
+    "examples": [
+      {
+        "it": "Il sentiero finisce all'estremità del bosco.",
+        "fr": "Le sentier se termine à l'extrémité du bois."
+      }
+    ],
+    "synonyms": [
+      "punta",
+      "capo"
     ],
     "isVerb": false
   },
@@ -886,6 +4645,41 @@
     ],
     "isVerb": false
   },
+  "estro": {
+    "lemma": "estro",
+    "pos": "sostantivo maschile",
+    "fr": "inspiration, verve, fantaisie",
+    "definition_it": "capacità improvvisa di creare qualcosa di originale, tipica degli artisti; anche la voglia improvvisa di fare una cosa",
+    "examples": [
+      {
+        "it": "Il pittore lavora solo quando gli viene l'estro.",
+        "fr": "Le peintre travaille seulement quand l'inspiration lui vient."
+      }
+    ],
+    "synonyms": [
+      "ispirazione",
+      "fantasia",
+      "capriccio"
+    ],
+    "isVerb": false
+  },
+  "estroso": {
+    "lemma": "estroso",
+    "pos": "aggettivo",
+    "fr": "fantasque, plein de fantaisie",
+    "definition_it": "che ha estro, cioè fantasia creativa e originalità",
+    "examples": [
+      {
+        "it": "Ha un'idea molto estrosa per la scenografia.",
+        "fr": "Elle a une idée très fantasque pour la scénographie."
+      }
+    ],
+    "synonyms": [
+      "fantasioso",
+      "creativo"
+    ],
+    "isVerb": false
+  },
   "esule": {
     "lemma": "esule",
     "pos": "nome maschile e femminile / aggettivo",
@@ -903,6 +4697,57 @@
     ],
     "isVerb": false
   },
+  "esultante": {
+    "lemma": "esultante",
+    "pos": "aggettivo",
+    "fr": "exultant, jubilant",
+    "definition_it": "pieno di gioia ed entusiasmo, che esulta",
+    "examples": [
+      {
+        "it": "La folla esultante ha festeggiato la vittoria.",
+        "fr": "La foule exultante a fêté la victoire."
+      }
+    ],
+    "synonyms": [
+      "gioioso",
+      "trionfante"
+    ],
+    "isVerb": false
+  },
+  "esultanza": {
+    "lemma": "esultanza",
+    "pos": "sostantivo femminile",
+    "fr": "exultation, liesse",
+    "definition_it": "grande gioia ed entusiasmo manifestati apertamente",
+    "examples": [
+      {
+        "it": "Il gol è stato accolto con grande esultanza.",
+        "fr": "Le but a été accueilli avec une grande exultation."
+      }
+    ],
+    "synonyms": [
+      "giubilo",
+      "tripudio"
+    ],
+    "isVerb": false
+  },
+  "esultare": {
+    "lemma": "esultare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "exulter, jubiler",
+    "definition_it": "manifestare una gioia intensa e incontenibile",
+    "examples": [
+      {
+        "it": "I tifosi hanno esultato per il gol vincente.",
+        "fr": "Les supporters ont exulté pour le but victorieux."
+      }
+    ],
+    "synonyms": [
+      "gioire",
+      "giubilare"
+    ],
+    "isVerb": true
+  },
   "età": {
     "lemma": "età",
     "pos": "nome femminile",
@@ -916,6 +4761,56 @@
     ],
     "synonyms": [
       "anni"
+    ],
+    "isVerb": false
+  },
+  "etere": {
+    "lemma": "etere",
+    "pos": "sostantivo maschile",
+    "fr": "éther, ondes (radio/TV); ciel",
+    "definition_it": "in poesia, l'aria alta e limpida del cielo; oggi indica anche lo spazio in cui viaggiano le onde della radio e della televisione",
+    "examples": [
+      {
+        "it": "La voce dello speaker viaggia nell'etere fino alle nostre radio.",
+        "fr": "La voix du présentateur voyage dans les ondes jusqu'à nos radios."
+      }
+    ],
+    "synonyms": [
+      "aria",
+      "cielo"
+    ],
+    "isVerb": false
+  },
+  "eternità": {
+    "lemma": "eternità",
+    "pos": "sostantivo femminile",
+    "fr": "éternité",
+    "definition_it": "tempo senza fine, durata infinita",
+    "examples": [
+      {
+        "it": "Mi sembra passata un'eternità.",
+        "fr": "Il me semble qu'une éternité s'est écoulée."
+      }
+    ],
+    "synonyms": [
+      "perpetuità"
+    ],
+    "isVerb": false
+  },
+  "eterno": {
+    "lemma": "eterno",
+    "pos": "aggettivo",
+    "fr": "éternel",
+    "definition_it": "che non ha inizio né fine, che dura per sempre",
+    "examples": [
+      {
+        "it": "Promettono un amore eterno.",
+        "fr": "Ils promettent un amour éternel."
+      }
+    ],
+    "synonyms": [
+      "perenne",
+      "immortale"
     ],
     "isVerb": false
   },
@@ -934,6 +4829,207 @@
       "conformismo"
     ],
     "isVerb": false
+  },
+  "eterogeneo": {
+    "lemma": "eterogeneo",
+    "pos": "aggettivo",
+    "fr": "hétérogène",
+    "definition_it": "composto da elementi diversi tra loro",
+    "examples": [
+      {
+        "it": "Il gruppo di studenti era molto eterogeneo.",
+        "fr": "Le groupe d'étudiants était très hétérogène."
+      }
+    ],
+    "synonyms": [
+      "vario",
+      "misto"
+    ],
+    "isVerb": false
+  },
+  "etichetta": {
+    "lemma": "etichetta",
+    "pos": "sostantivo femminile",
+    "fr": "étiquette",
+    "definition_it": "piccolo cartellino con informazioni attaccato a un oggetto, oppure insieme di regole di comportamento formale",
+    "examples": [
+      {
+        "it": "Ha letto l'etichetta prima di comprare il prodotto.",
+        "fr": "Elle a lu l'étiquette avant d'acheter le produit."
+      }
+    ],
+    "synonyms": [
+      "cartellino"
+    ],
+    "isVerb": false
+  },
+  "etichettare": {
+    "lemma": "etichettare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "étiqueter",
+    "definition_it": "applicare un'etichetta a qualcosa, oppure classificare qualcuno o qualcosa con un giudizio semplificato",
+    "examples": [
+      {
+        "it": "Hanno etichettato tutti i barattoli in dispensa.",
+        "fr": "Ils ont étiqueté tous les pots du garde-manger."
+      }
+    ],
+    "synonyms": [
+      "classificare",
+      "contrassegnare"
+    ],
+    "isVerb": true
+  },
+  "etico": {
+    "lemma": "etico",
+    "pos": "aggettivo",
+    "fr": "éthique",
+    "definition_it": "che riguarda l'etica, cioè i principi morali del comportamento",
+    "examples": [
+      {
+        "it": "L'azienda segue un codice etico rigoroso.",
+        "fr": "L'entreprise suit un code éthique rigoureux."
+      }
+    ],
+    "synonyms": [
+      "morale"
+    ],
+    "isVerb": false
+  },
+  "etiope": {
+    "lemma": "etiope",
+    "pos": "aggettivo/sostantivo",
+    "fr": "éthiopien",
+    "definition_it": "che appartiene o è originario dell'Etiopia",
+    "examples": [
+      {
+        "it": "Il ristorante etiope serve un caffè ottimo.",
+        "fr": "Le restaurant éthiopien sert un excellent café."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "etrusco": {
+    "lemma": "etrusco",
+    "pos": "aggettivo/sostantivo",
+    "fr": "étrusque",
+    "definition_it": "che appartiene all'antico popolo dell'Etruria, o relativo a esso",
+    "examples": [
+      {
+        "it": "Abbiamo visitato una tomba etrusca.",
+        "fr": "Nous avons visité une tombe étrusque."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "ettaro": {
+    "lemma": "ettaro",
+    "pos": "sostantivo maschile",
+    "fr": "hectare",
+    "definition_it": "unità di misura di superficie pari a diecimila metri quadrati",
+    "examples": [
+      {
+        "it": "La tenuta si estende su cento ettari.",
+        "fr": "Le domaine s'étend sur cent hectares."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "etterno": {
+    "lemma": "etterno",
+    "pos": "aggettivo",
+    "fr": "éternel (forme poétique)",
+    "definition_it": "forma poetica e arcaica dell'aggettivo \"eterno\", usata soprattutto in testi letterari antichi come Dante",
+    "examples": [
+      {
+        "it": "Per me si va nell'etterno dolore.",
+        "fr": "Par moi on va vers la douleur éternelle."
+      }
+    ],
+    "synonyms": [
+      "eterno"
+    ],
+    "isVerb": false
+  },
+  "euforia": {
+    "lemma": "euforia",
+    "pos": "nome, sostantivo femminile",
+    "fr": "euphorie",
+    "definition_it": "sensazione intensa di gioia e benessere, a volte eccessiva",
+    "examples": [
+      {
+        "it": "Dopo la vittoria c'era euforia in tutta la squadra.",
+        "fr": "Après la victoire, il y avait de l'euphorie dans toute l'équipe."
+      }
+    ],
+    "synonyms": [
+      "gioia",
+      "esultanza"
+    ],
+    "isVerb": false
+  },
+  "euro": {
+    "lemma": "euro",
+    "pos": "nome, sostantivo maschile",
+    "fr": "euro",
+    "definition_it": "moneta ufficiale di molti paesi dell'Unione Europea",
+    "examples": [
+      {
+        "it": "Questo libro costa quindici euro.",
+        "fr": "Ce livre coûte quinze euros."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "europeo": {
+    "lemma": "europeo",
+    "pos": "aggettivo/nome",
+    "fr": "européen",
+    "definition_it": "che appartiene o si riferisce all'Europa, o persona originaria dell'Europa",
+    "examples": [
+      {
+        "it": "L'Unione Europea comprende molti paesi europei.",
+        "fr": "L'Union européenne comprend de nombreux pays européens."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "evacuare": {
+    "lemma": "evacuare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "évacuer",
+    "definition_it": "far uscire persone da un luogo pericoloso per metterle in salvo",
+    "examples": [
+      {
+        "it": "I pompieri hanno fatto evacuare il palazzo in fiamme.",
+        "fr": "Les pompiers ont fait évacuer l'immeuble en flammes."
+      }
+    ],
+    "synonyms": [
+      "sgomberare"
+    ],
+    "isVerb": true
+  },
+  "evaporare": {
+    "lemma": "evaporare",
+    "pos": "verbo (intransitivo, regolare)",
+    "fr": "s'évaporer",
+    "definition_it": "trasformarsi da liquido in vapore, oppure sparire poco a poco",
+    "examples": [
+      {
+        "it": "L'acqua evapora quando viene riscaldata.",
+        "fr": "L'eau s'évapore quand elle est chauffée."
+      }
+    ],
+    "synonyms": [
+      "svanire"
+    ],
+    "isVerb": true
   },
   "eventificazione": {
     "lemma": "eventificazione",
@@ -983,6 +5079,22 @@
     ],
     "isVerb": false
   },
+  "eventualmente": {
+    "lemma": "eventualmente",
+    "pos": "avverbio",
+    "fr": "éventuellement",
+    "definition_it": "nel caso in cui ciò accada, se necessario",
+    "examples": [
+      {
+        "it": "Eventualmente possiamo rimandare la riunione.",
+        "fr": "Éventuellement, nous pouvons reporter la réunion."
+      }
+    ],
+    "synonyms": [
+      "se necessario"
+    ],
+    "isVerb": false
+  },
   "eversione": {
     "lemma": "eversione",
     "pos": "nome femminile",
@@ -996,6 +5108,175 @@
     ],
     "synonyms": [
       "sovversione"
+    ],
+    "isVerb": false
+  },
+  "evidente": {
+    "lemma": "evidente",
+    "pos": "aggettivo",
+    "fr": "évident",
+    "definition_it": "chiaro e facile da capire o vedere, senza dubbio",
+    "examples": [
+      {
+        "it": "Era evidente che non diceva la verità.",
+        "fr": "Il était évident qu'il ne disait pas la vérité."
+      }
+    ],
+    "synonyms": [
+      "chiaro",
+      "ovvio"
+    ],
+    "isVerb": false
+  },
+  "evidentemente": {
+    "lemma": "evidentemente",
+    "pos": "avverbio",
+    "fr": "évidemment",
+    "definition_it": "in modo chiaro e sicuro, senza dubbio",
+    "examples": [
+      {
+        "it": "Evidentemente qualcuno ha dimenticato di chiudere la porta.",
+        "fr": "Évidemment, quelqu'un a oublié de fermer la porte."
+      }
+    ],
+    "synonyms": [
+      "chiaramente",
+      "ovviamente"
+    ],
+    "isVerb": false
+  },
+  "evitare": {
+    "lemma": "evitare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "éviter",
+    "definition_it": "fare in modo di non incontrare qualcosa o qualcuno, o di non far succedere qualcosa",
+    "examples": [
+      {
+        "it": "Cerca sempre di evitare le discussioni inutili.",
+        "fr": "Il essaie toujours d'éviter les discussions inutiles."
+      }
+    ],
+    "synonyms": [
+      "schivare"
+    ],
+    "isVerb": true
+  },
+  "evocare": {
+    "lemma": "evocare",
+    "pos": "verbo (transitivo, regolare)",
+    "fr": "évoquer",
+    "definition_it": "richiamare alla mente un ricordo, un'immagine o un'idea",
+    "examples": [
+      {
+        "it": "Questa canzone evoca ricordi d'infanzia.",
+        "fr": "Cette chanson évoque des souvenirs d'enfance."
+      }
+    ],
+    "synonyms": [
+      "richiamare",
+      "suscitare"
+    ],
+    "isVerb": true
+  },
+  "evocazione": {
+    "lemma": "evocazione",
+    "pos": "nome (femminile)",
+    "fr": "évocation",
+    "definition_it": "l'atto di richiamare alla mente o di far apparire con le parole persone, immagini o ricordi.",
+    "examples": [
+      {
+        "it": "Il racconto è un'evocazione precisa della sua infanzia in campagna.",
+        "fr": "Le récit est une évocation précise de son enfance à la campagne."
+      }
+    ],
+    "synonyms": [
+      "rievocazione",
+      "richiamo"
+    ],
+    "isVerb": false
+  },
+  "evoluzione": {
+    "lemma": "evoluzione",
+    "pos": "sostantivo femminile",
+    "fr": "évolution",
+    "definition_it": "processo graduale di sviluppo o trasformazione nel tempo",
+    "examples": [
+      {
+        "it": "L'evoluzione della tecnologia è molto rapida.",
+        "fr": "L'évolution de la technologie est très rapide."
+      }
+    ],
+    "synonyms": [
+      "sviluppo",
+      "progresso"
+    ],
+    "isVerb": false
+  },
+  "evolvere": {
+    "lemma": "evolvere",
+    "pos": "verbo (intransitivo, irregolare)",
+    "fr": "évoluer",
+    "definition_it": "cambiare gradualmente, svilupparsi in modo progressivo",
+    "examples": [
+      {
+        "it": "La situazione si è evoluta molto negli ultimi mesi.",
+        "fr": "La situation a beaucoup évolué ces derniers mois."
+      }
+    ],
+    "synonyms": [
+      "svilupparsi",
+      "trasformarsi"
+    ],
+    "isVerb": true
+  },
+  "evviva": {
+    "lemma": "evviva",
+    "pos": "interiezione",
+    "fr": "hourra, vive",
+    "definition_it": "esclamazione che esprime gioia, entusiasmo o approvazione",
+    "examples": [
+      {
+        "it": "Evviva, abbiamo vinto la partita!",
+        "fr": "Hourra, nous avons gagné le match !"
+      }
+    ],
+    "synonyms": [
+      "viva",
+      "urrà"
+    ],
+    "isVerb": false
+  },
+  "ex": {
+    "lemma": "ex",
+    "pos": "prefisso / aggettivo invariabile",
+    "fr": "ex, ancien",
+    "definition_it": "che ha ricoperto in passato un ruolo o una posizione, ma non più adesso",
+    "examples": [
+      {
+        "it": "Ho incontrato il mio ex al supermercato.",
+        "fr": "J'ai rencontré mon ex au supermarché."
+      }
+    ],
+    "synonyms": [
+      "ex-",
+      "ancien"
+    ],
+    "isVerb": false
+  },
+  "extra": {
+    "lemma": "extra",
+    "pos": "aggettivo invariabile / avverbio",
+    "fr": "extra, supplémentaire",
+    "definition_it": "che è aggiunto in più rispetto al normale, oppure di qualità superiore",
+    "examples": [
+      {
+        "it": "Abbiamo bisogno di sedie extra per la festa.",
+        "fr": "Nous avons besoin de chaises supplémentaires pour la fête."
+      }
+    ],
+    "synonyms": [
+      "supplementare",
+      "aggiuntivo"
     ],
     "isVerb": false
   }

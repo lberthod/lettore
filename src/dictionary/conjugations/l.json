@@ -1,0 +1,2168 @@
+{
+  "lacerare": {
+    "presente": {
+      "io": "lacero",
+      "tu": "laceri",
+      "lui/lei": "lacera",
+      "noi": "laceriamo",
+      "voi": "lacerate",
+      "loro": "lacerano"
+    },
+    "passatoProssimo": {
+      "io": "ho lacerato",
+      "tu": "hai lacerato",
+      "lui/lei": "ha lacerato",
+      "noi": "abbiamo lacerato",
+      "voi": "avete lacerato",
+      "loro": "hanno lacerato"
+    },
+    "imperfetto": {
+      "io": "laceravo",
+      "tu": "laceravi",
+      "lui/lei": "lacerava",
+      "noi": "laceravamo",
+      "voi": "laceravate",
+      "loro": "laceravano"
+    },
+    "futuro": {
+      "io": "lacererò",
+      "tu": "lacererai",
+      "lui/lei": "lacererà",
+      "noi": "lacereremo",
+      "voi": "lacererete",
+      "loro": "lacereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "laceri",
+      "tu": "laceri",
+      "lui/lei": "laceri",
+      "noi": "laceriamo",
+      "voi": "laceriate",
+      "loro": "lacerino"
+    },
+    "condizionale": {
+      "io": "lacererei",
+      "tu": "lacereresti",
+      "lui/lei": "lacererebbe",
+      "noi": "lacereremmo",
+      "voi": "lacerereste",
+      "loro": "lacererebbero"
+    },
+    "imperativo": {
+      "tu": "lacera",
+      "lei": "laceri",
+      "noi": "laceriamo",
+      "voi": "lacerate",
+      "loro": "lacerino"
+    }
+  },
+  "lacrimare": {
+    "presente": {
+      "io": "lacrimo",
+      "tu": "lacrimi",
+      "lui/lei": "lacrima",
+      "noi": "lacrimiamo",
+      "voi": "lacrimate",
+      "loro": "lacrimano"
+    },
+    "passatoProssimo": {
+      "io": "ho lacrimato",
+      "tu": "hai lacrimato",
+      "lui/lei": "ha lacrimato",
+      "noi": "abbiamo lacrimato",
+      "voi": "avete lacrimato",
+      "loro": "hanno lacrimato"
+    },
+    "imperfetto": {
+      "io": "lacrimavo",
+      "tu": "lacrimavi",
+      "lui/lei": "lacrimava",
+      "noi": "lacrimavamo",
+      "voi": "lacrimavate",
+      "loro": "lacrimavano"
+    },
+    "futuro": {
+      "io": "lacrimerò",
+      "tu": "lacrimerai",
+      "lui/lei": "lacrimerà",
+      "noi": "lacrimeremo",
+      "voi": "lacrimerete",
+      "loro": "lacrimeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lacrimi",
+      "tu": "lacrimi",
+      "lui/lei": "lacrimi",
+      "noi": "lacrimiamo",
+      "voi": "lacrimiate",
+      "loro": "lacrimino"
+    },
+    "condizionale": {
+      "io": "lacrimerei",
+      "tu": "lacrimeresti",
+      "lui/lei": "lacrimerebbe",
+      "noi": "lacrimeremmo",
+      "voi": "lacrimereste",
+      "loro": "lacrimerebbero"
+    },
+    "imperativo": {
+      "tu": "lacrima",
+      "lei": "lacrimi",
+      "noi": "lacrimiamo",
+      "voi": "lacrimate",
+      "loro": "lacrimino"
+    }
+  },
+  "lagnarsi": {
+    "presente": {
+      "io": "mi lagno",
+      "tu": "ti lagni",
+      "lui/lei": "si lagna",
+      "noi": "ci lagniamo",
+      "voi": "vi lagnate",
+      "loro": "si lagnano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono lagnato/a",
+      "tu": "ti sei lagnato/a",
+      "lui/lei": "si è lagnato/a",
+      "noi": "ci siamo lagnati/e",
+      "voi": "vi siete lagnati/e",
+      "loro": "si sono lagnati/e"
+    },
+    "imperfetto": {
+      "io": "mi lagnavo",
+      "tu": "ti lagnavi",
+      "lui/lei": "si lagnava",
+      "noi": "ci lagnavamo",
+      "voi": "vi lagnavate",
+      "loro": "si lagnavano"
+    },
+    "futuro": {
+      "io": "mi lagnerò",
+      "tu": "ti lagnerai",
+      "lui/lei": "si lagnerà",
+      "noi": "ci lagneremo",
+      "voi": "vi lagnerete",
+      "loro": "si lagneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi lagni",
+      "tu": "ti lagni",
+      "lui/lei": "si lagni",
+      "noi": "ci lagniamo",
+      "voi": "vi lagniate",
+      "loro": "si lagnino"
+    },
+    "condizionale": {
+      "io": "mi lagnerei",
+      "tu": "ti lagneresti",
+      "lui/lei": "si lagnerebbe",
+      "noi": "ci lagneremmo",
+      "voi": "vi lagnereste",
+      "loro": "si lagnerebbero"
+    },
+    "imperativo": {
+      "tu": "lagnati",
+      "lei": "si lagni",
+      "noi": "lagniamoci",
+      "voi": "lagnatevi",
+      "loro": "si lagnino"
+    }
+  },
+  "lamentare": {
+    "presente": {
+      "io": "lamento",
+      "tu": "lamenti",
+      "lui/lei": "lamenta",
+      "noi": "lamentiamo",
+      "voi": "lamentate",
+      "loro": "lamentano"
+    },
+    "passatoProssimo": {
+      "io": "ho lamentato",
+      "tu": "hai lamentato",
+      "lui/lei": "ha lamentato",
+      "noi": "abbiamo lamentato",
+      "voi": "avete lamentato",
+      "loro": "hanno lamentato"
+    },
+    "imperfetto": {
+      "io": "lamentavo",
+      "tu": "lamentavi",
+      "lui/lei": "lamentava",
+      "noi": "lamentavamo",
+      "voi": "lamentavate",
+      "loro": "lamentavano"
+    },
+    "futuro": {
+      "io": "lamenterò",
+      "tu": "lamenterai",
+      "lui/lei": "lamenterà",
+      "noi": "lamenteremo",
+      "voi": "lamenterete",
+      "loro": "lamenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lamenti",
+      "tu": "lamenti",
+      "lui/lei": "lamenti",
+      "noi": "lamentiamo",
+      "voi": "lamentiate",
+      "loro": "lamentino"
+    },
+    "condizionale": {
+      "io": "lamenterei",
+      "tu": "lamenteresti",
+      "lui/lei": "lamenterebbe",
+      "noi": "lamenteremmo",
+      "voi": "lamentereste",
+      "loro": "lamenterebbero"
+    },
+    "imperativo": {
+      "tu": "lamenta",
+      "lei": "lamenti",
+      "noi": "lamentiamo",
+      "voi": "lamentate",
+      "loro": "lamentino"
+    }
+  },
+  "lampeggiare": {
+    "presente": {
+      "io": "lampeggio",
+      "tu": "lampeggi",
+      "lui/lei": "lampeggia",
+      "noi": "lampeggiamo",
+      "voi": "lampeggiate",
+      "loro": "lampeggiano"
+    },
+    "passatoProssimo": {
+      "io": "ho lampeggiato",
+      "tu": "hai lampeggiato",
+      "lui/lei": "ha lampeggiato",
+      "noi": "abbiamo lampeggiato",
+      "voi": "avete lampeggiato",
+      "loro": "hanno lampeggiato"
+    },
+    "imperfetto": {
+      "io": "lampeggiavo",
+      "tu": "lampeggiavi",
+      "lui/lei": "lampeggiava",
+      "noi": "lampeggiavamo",
+      "voi": "lampeggiavate",
+      "loro": "lampeggiavano"
+    },
+    "futuro": {
+      "io": "lampeggerò",
+      "tu": "lampeggerai",
+      "lui/lei": "lampeggerà",
+      "noi": "lampeggeremo",
+      "voi": "lampeggerete",
+      "loro": "lampeggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lampeggi",
+      "tu": "lampeggi",
+      "lui/lei": "lampeggi",
+      "noi": "lampeggiamo",
+      "voi": "lampeggiate",
+      "loro": "lampeggino"
+    },
+    "condizionale": {
+      "io": "lampeggerei",
+      "tu": "lampeggeresti",
+      "lui/lei": "lampeggerebbe",
+      "noi": "lampeggeremmo",
+      "voi": "lampeggereste",
+      "loro": "lampeggerebbero"
+    },
+    "imperativo": {
+      "tu": "lampeggia",
+      "lei": "lampeggi",
+      "noi": "lampeggiamo",
+      "voi": "lampeggiate",
+      "loro": "lampeggino"
+    }
+  },
+  "lanciare": {
+    "presente": {
+      "io": "lancio",
+      "tu": "lanci",
+      "lui/lei": "lancia",
+      "noi": "lanciamo",
+      "voi": "lanciate",
+      "loro": "lanciano"
+    },
+    "passatoProssimo": {
+      "io": "ho lanciato",
+      "tu": "hai lanciato",
+      "lui/lei": "ha lanciato",
+      "noi": "abbiamo lanciato",
+      "voi": "avete lanciato",
+      "loro": "hanno lanciato"
+    },
+    "imperfetto": {
+      "io": "lanciavo",
+      "tu": "lanciavi",
+      "lui/lei": "lanciava",
+      "noi": "lanciavamo",
+      "voi": "lanciavate",
+      "loro": "lanciavano"
+    },
+    "futuro": {
+      "io": "lancerò",
+      "tu": "lancerai",
+      "lui/lei": "lancerà",
+      "noi": "lanceremo",
+      "voi": "lancerete",
+      "loro": "lanceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lanci",
+      "tu": "lanci",
+      "lui/lei": "lanci",
+      "noi": "lanciamo",
+      "voi": "lanciate",
+      "loro": "lancino"
+    },
+    "condizionale": {
+      "io": "lancerei",
+      "tu": "lanceresti",
+      "lui/lei": "lancerebbe",
+      "noi": "lanceremmo",
+      "voi": "lancereste",
+      "loro": "lancerebbero"
+    },
+    "imperativo": {
+      "tu": "lancia",
+      "lei": "lanci",
+      "noi": "lanciamo",
+      "voi": "lanciate",
+      "loro": "lancino"
+    }
+  },
+  "languire": {
+    "presente": {
+      "io": "languisco",
+      "tu": "languisci",
+      "lui/lei": "languisce",
+      "noi": "languiamo",
+      "voi": "languite",
+      "loro": "languiscono"
+    },
+    "passatoProssimo": {
+      "io": "ho languito",
+      "tu": "hai languito",
+      "lui/lei": "ha languito",
+      "noi": "abbiamo languito",
+      "voi": "avete languito",
+      "loro": "hanno languito"
+    },
+    "imperfetto": {
+      "io": "languivo",
+      "tu": "languivi",
+      "lui/lei": "languiva",
+      "noi": "languivamo",
+      "voi": "languivate",
+      "loro": "languivano"
+    },
+    "futuro": {
+      "io": "languirò",
+      "tu": "languirai",
+      "lui/lei": "languirà",
+      "noi": "languiremo",
+      "voi": "languirete",
+      "loro": "languiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "languisca",
+      "tu": "languisca",
+      "lui/lei": "languisca",
+      "noi": "languiamo",
+      "voi": "languiate",
+      "loro": "languiscano"
+    },
+    "condizionale": {
+      "io": "languirei",
+      "tu": "languiresti",
+      "lui/lei": "languirebbe",
+      "noi": "languiremmo",
+      "voi": "languireste",
+      "loro": "languirebbero"
+    },
+    "imperativo": {
+      "tu": "languisci",
+      "lei": "languisca",
+      "noi": "languiamo",
+      "voi": "languite",
+      "loro": "languiscano"
+    }
+  },
+  "lapidare": {
+    "presente": {
+      "io": "lapido",
+      "tu": "lapidi",
+      "lui/lei": "lapida",
+      "noi": "lapidiamo",
+      "voi": "lapidate",
+      "loro": "lapidano"
+    },
+    "passatoProssimo": {
+      "io": "ho lapidato",
+      "tu": "hai lapidato",
+      "lui/lei": "ha lapidato",
+      "noi": "abbiamo lapidato",
+      "voi": "avete lapidato",
+      "loro": "hanno lapidato"
+    },
+    "imperfetto": {
+      "io": "lapidavo",
+      "tu": "lapidavi",
+      "lui/lei": "lapidava",
+      "noi": "lapidavamo",
+      "voi": "lapidavate",
+      "loro": "lapidavano"
+    },
+    "futuro": {
+      "io": "lapiderò",
+      "tu": "lapiderai",
+      "lui/lei": "lapiderà",
+      "noi": "lapideremo",
+      "voi": "lapiderete",
+      "loro": "lapideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lapidi",
+      "tu": "lapidi",
+      "lui/lei": "lapidi",
+      "noi": "lapidiamo",
+      "voi": "lapidiate",
+      "loro": "lapidino"
+    },
+    "condizionale": {
+      "io": "lapiderei",
+      "tu": "lapideresti",
+      "lui/lei": "lapiderebbe",
+      "noi": "lapideremmo",
+      "voi": "lapidereste",
+      "loro": "lapiderebbero"
+    },
+    "imperativo": {
+      "tu": "lapida",
+      "lei": "lapidi",
+      "noi": "lapidiamo",
+      "voi": "lapidate",
+      "loro": "lapidino"
+    }
+  },
+  "lasciare": {
+    "presente": {
+      "io": "lascio",
+      "tu": "lasci",
+      "lui/lei": "lascia",
+      "noi": "lasciamo",
+      "voi": "lasciate",
+      "loro": "lasciano"
+    },
+    "passatoProssimo": {
+      "io": "ho lasciato",
+      "tu": "hai lasciato",
+      "lui/lei": "ha lasciato",
+      "noi": "abbiamo lasciato",
+      "voi": "avete lasciato",
+      "loro": "hanno lasciato"
+    },
+    "imperfetto": {
+      "io": "lasciavo",
+      "tu": "lasciavi",
+      "lui/lei": "lasciava",
+      "noi": "lasciavamo",
+      "voi": "lasciavate",
+      "loro": "lasciavano"
+    },
+    "futuro": {
+      "io": "lascerò",
+      "tu": "lascerai",
+      "lui/lei": "lascerà",
+      "noi": "lasceremo",
+      "voi": "lascerete",
+      "loro": "lasceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lasci",
+      "tu": "lasci",
+      "lui/lei": "lasci",
+      "noi": "lasciamo",
+      "voi": "lasciate",
+      "loro": "lascino"
+    },
+    "condizionale": {
+      "io": "lascerei",
+      "tu": "lasceresti",
+      "lui/lei": "lascerebbe",
+      "noi": "lasceremmo",
+      "voi": "lascereste",
+      "loro": "lascerebbero"
+    },
+    "imperativo": {
+      "tu": "lascia",
+      "lei": "lasci",
+      "noi": "lasciamo",
+      "voi": "lasciate",
+      "loro": "lascino"
+    }
+  },
+  "lastricare": {
+    "presente": {
+      "io": "lastrico",
+      "tu": "lastrichi",
+      "lui/lei": "lastrica",
+      "noi": "lastrichiamo",
+      "voi": "lastricate",
+      "loro": "lastricano"
+    },
+    "passatoProssimo": {
+      "io": "ho lastricato",
+      "tu": "hai lastricato",
+      "lui/lei": "ha lastricato",
+      "noi": "abbiamo lastricato",
+      "voi": "avete lastricato",
+      "loro": "hanno lastricato"
+    },
+    "imperfetto": {
+      "io": "lastricavo",
+      "tu": "lastricavi",
+      "lui/lei": "lastricava",
+      "noi": "lastricavamo",
+      "voi": "lastricavate",
+      "loro": "lastricavano"
+    },
+    "futuro": {
+      "io": "lastricherò",
+      "tu": "lastricherai",
+      "lui/lei": "lastricherà",
+      "noi": "lastricheremo",
+      "voi": "lastricherete",
+      "loro": "lastricheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lastrichi",
+      "tu": "lastrichi",
+      "lui/lei": "lastrichi",
+      "noi": "lastrichiamo",
+      "voi": "lastrichiate",
+      "loro": "lastrichino"
+    },
+    "condizionale": {
+      "io": "lastricherei",
+      "tu": "lastricheresti",
+      "lui/lei": "lastricherebbe",
+      "noi": "lastricheremmo",
+      "voi": "lastrichereste",
+      "loro": "lastricherebbero"
+    },
+    "imperativo": {
+      "tu": "lastrica",
+      "lei": "lastrichi",
+      "noi": "lastrichiamo",
+      "voi": "lastricate",
+      "loro": "lastrichino"
+    }
+  },
+  "latrare": {
+    "presente": {
+      "io": "latro",
+      "tu": "latri",
+      "lui/lei": "latra",
+      "noi": "latriamo",
+      "voi": "latrate",
+      "loro": "latrano"
+    },
+    "passatoProssimo": {
+      "io": "ho latrato",
+      "tu": "hai latrato",
+      "lui/lei": "ha latrato",
+      "noi": "abbiamo latrato",
+      "voi": "avete latrato",
+      "loro": "hanno latrato"
+    },
+    "imperfetto": {
+      "io": "latravo",
+      "tu": "latravi",
+      "lui/lei": "latrava",
+      "noi": "latravamo",
+      "voi": "latravate",
+      "loro": "latravano"
+    },
+    "futuro": {
+      "io": "latrerò",
+      "tu": "latrerai",
+      "lui/lei": "latrerà",
+      "noi": "latreremo",
+      "voi": "latrerete",
+      "loro": "latreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "latri",
+      "tu": "latri",
+      "lui/lei": "latri",
+      "noi": "latriamo",
+      "voi": "latriate",
+      "loro": "latrino"
+    },
+    "condizionale": {
+      "io": "latrerei",
+      "tu": "latreresti",
+      "lui/lei": "latrerebbe",
+      "noi": "latreremmo",
+      "voi": "latrereste",
+      "loro": "latrerebbero"
+    },
+    "imperativo": {
+      "tu": "latra",
+      "lei": "latri",
+      "noi": "latriamo",
+      "voi": "latrate",
+      "loro": "latrino"
+    }
+  },
+  "laurearsi": {
+    "presente": {
+      "io": "mi laureo",
+      "tu": "ti laurei",
+      "lui/lei": "si laurea",
+      "noi": "ci laureiamo",
+      "voi": "vi laureate",
+      "loro": "si laureano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono laureato/a",
+      "tu": "ti sei laureato/a",
+      "lui/lei": "si è laureato/a",
+      "noi": "ci siamo laureati/e",
+      "voi": "vi siete laureati/e",
+      "loro": "si sono laureati/e"
+    },
+    "imperfetto": {
+      "io": "mi laureavo",
+      "tu": "ti laureavi",
+      "lui/lei": "si laureava",
+      "noi": "ci laureavamo",
+      "voi": "vi laureavate",
+      "loro": "si laureavano"
+    },
+    "futuro": {
+      "io": "mi laureerò",
+      "tu": "ti laureerai",
+      "lui/lei": "si laureerà",
+      "noi": "ci laureeremo",
+      "voi": "vi laureerete",
+      "loro": "si laureeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi laurei",
+      "tu": "ti laurei",
+      "lui/lei": "si laurei",
+      "noi": "ci laureiamo",
+      "voi": "vi laureiate",
+      "loro": "si laureino"
+    },
+    "condizionale": {
+      "io": "mi laureerei",
+      "tu": "ti laureeresti",
+      "lui/lei": "si laureerebbe",
+      "noi": "ci laureeremmo",
+      "voi": "vi laureereste",
+      "loro": "si laureerebbero"
+    },
+    "imperativo": {
+      "tu": "laureati",
+      "lei": "si laurei",
+      "noi": "laureiamoci",
+      "voi": "laureatevi",
+      "loro": "si laureino"
+    }
+  },
+  "lavare": {
+    "presente": {
+      "io": "lavo",
+      "tu": "lavi",
+      "lui/lei": "lava",
+      "noi": "laviamo",
+      "voi": "lavate",
+      "loro": "lavano"
+    },
+    "passatoProssimo": {
+      "io": "ho lavato",
+      "tu": "hai lavato",
+      "lui/lei": "ha lavato",
+      "noi": "abbiamo lavato",
+      "voi": "avete lavato",
+      "loro": "hanno lavato"
+    },
+    "imperfetto": {
+      "io": "lavavo",
+      "tu": "lavavi",
+      "lui/lei": "lavava",
+      "noi": "lavavamo",
+      "voi": "lavavate",
+      "loro": "lavavano"
+    },
+    "futuro": {
+      "io": "laverò",
+      "tu": "laverai",
+      "lui/lei": "laverà",
+      "noi": "laveremo",
+      "voi": "laverete",
+      "loro": "laveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lavi",
+      "tu": "lavi",
+      "lui/lei": "lavi",
+      "noi": "laviamo",
+      "voi": "laviate",
+      "loro": "lavino"
+    },
+    "condizionale": {
+      "io": "laverei",
+      "tu": "laveresti",
+      "lui/lei": "laverebbe",
+      "noi": "laveremmo",
+      "voi": "lavereste",
+      "loro": "laverebbero"
+    },
+    "imperativo": {
+      "tu": "lava",
+      "lei": "lavi",
+      "noi": "laviamo",
+      "voi": "lavate",
+      "loro": "lavino"
+    }
+  },
+  "lavarsi": {
+    "presente": {
+      "io": "mi lavo",
+      "tu": "ti lavi",
+      "lui/lei": "si lava",
+      "noi": "ci laviamo",
+      "voi": "vi lavate",
+      "loro": "si lavano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono lavato/a",
+      "tu": "ti sei lavato/a",
+      "lui/lei": "si è lavato/a",
+      "noi": "ci siamo lavati/e",
+      "voi": "vi siete lavati/e",
+      "loro": "si sono lavati/e"
+    },
+    "imperfetto": {
+      "io": "mi lavavo",
+      "tu": "ti lavavi",
+      "lui/lei": "si lavava",
+      "noi": "ci lavavamo",
+      "voi": "vi lavavate",
+      "loro": "si lavavano"
+    },
+    "futuro": {
+      "io": "mi laverò",
+      "tu": "ti laverai",
+      "lui/lei": "si laverà",
+      "noi": "ci laveremo",
+      "voi": "vi laverete",
+      "loro": "si laveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi lavi",
+      "tu": "ti lavi",
+      "lui/lei": "si lavi",
+      "noi": "ci laviamo",
+      "voi": "vi laviate",
+      "loro": "si lavino"
+    },
+    "condizionale": {
+      "io": "mi laverei",
+      "tu": "ti laveresti",
+      "lui/lei": "si laverebbe",
+      "noi": "ci laveremmo",
+      "voi": "vi lavereste",
+      "loro": "si laverebbero"
+    },
+    "imperativo": {
+      "tu": "lavati",
+      "lei": "si lavi",
+      "noi": "laviamoci",
+      "voi": "lavatevi",
+      "loro": "si lavino"
+    }
+  },
+  "lavorare": {
+    "presente": {
+      "io": "lavoro",
+      "tu": "lavori",
+      "lui/lei": "lavora",
+      "noi": "lavoriamo",
+      "voi": "lavorate",
+      "loro": "lavorano"
+    },
+    "passatoProssimo": {
+      "io": "ho lavorato",
+      "tu": "hai lavorato",
+      "lui/lei": "ha lavorato",
+      "noi": "abbiamo lavorato",
+      "voi": "avete lavorato",
+      "loro": "hanno lavorato"
+    },
+    "imperfetto": {
+      "io": "lavoravo",
+      "tu": "lavoravi",
+      "lui/lei": "lavorava",
+      "noi": "lavoravamo",
+      "voi": "lavoravate",
+      "loro": "lavoravano"
+    },
+    "futuro": {
+      "io": "lavorerò",
+      "tu": "lavorerai",
+      "lui/lei": "lavorerà",
+      "noi": "lavoreremo",
+      "voi": "lavorerete",
+      "loro": "lavoreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lavori",
+      "tu": "lavori",
+      "lui/lei": "lavori",
+      "noi": "lavoriamo",
+      "voi": "lavoriate",
+      "loro": "lavorino"
+    },
+    "condizionale": {
+      "io": "lavorerei",
+      "tu": "lavoreresti",
+      "lui/lei": "lavorerebbe",
+      "noi": "lavoreremmo",
+      "voi": "lavorereste",
+      "loro": "lavorerebbero"
+    },
+    "imperativo": {
+      "tu": "lavora",
+      "lei": "lavori",
+      "noi": "lavoriamo",
+      "voi": "lavorate",
+      "loro": "lavorino"
+    }
+  },
+  "leccare": {
+    "presente": {
+      "io": "lecco",
+      "tu": "lecchi",
+      "lui/lei": "lecca",
+      "noi": "lecchiamo",
+      "voi": "leccate",
+      "loro": "leccano"
+    },
+    "passatoProssimo": {
+      "io": "ho leccato",
+      "tu": "hai leccato",
+      "lui/lei": "ha leccato",
+      "noi": "abbiamo leccato",
+      "voi": "avete leccato",
+      "loro": "hanno leccato"
+    },
+    "imperfetto": {
+      "io": "leccavo",
+      "tu": "leccavi",
+      "lui/lei": "leccava",
+      "noi": "leccavamo",
+      "voi": "leccavate",
+      "loro": "leccavano"
+    },
+    "futuro": {
+      "io": "leccherò",
+      "tu": "leccherai",
+      "lui/lei": "leccherà",
+      "noi": "leccheremo",
+      "voi": "leccherete",
+      "loro": "leccheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lecchi",
+      "tu": "lecchi",
+      "lui/lei": "lecchi",
+      "noi": "lecchiamo",
+      "voi": "lecchiate",
+      "loro": "lecchino"
+    },
+    "condizionale": {
+      "io": "leccherei",
+      "tu": "leccheresti",
+      "lui/lei": "leccherebbe",
+      "noi": "leccheremmo",
+      "voi": "lecchereste",
+      "loro": "leccherebbero"
+    },
+    "imperativo": {
+      "tu": "lecca",
+      "lei": "lecchi",
+      "noi": "lecchiamo",
+      "voi": "leccate",
+      "loro": "lecchino"
+    }
+  },
+  "legare": {
+    "presente": {
+      "io": "lego",
+      "tu": "leghi",
+      "lui/lei": "lega",
+      "noi": "leghiamo",
+      "voi": "legate",
+      "loro": "legano"
+    },
+    "passatoProssimo": {
+      "io": "ho legato",
+      "tu": "hai legato",
+      "lui/lei": "ha legato",
+      "noi": "abbiamo legato",
+      "voi": "avete legato",
+      "loro": "hanno legato"
+    },
+    "imperfetto": {
+      "io": "legavo",
+      "tu": "legavi",
+      "lui/lei": "legava",
+      "noi": "legavamo",
+      "voi": "legavate",
+      "loro": "legavano"
+    },
+    "futuro": {
+      "io": "legherò",
+      "tu": "legherai",
+      "lui/lei": "legherà",
+      "noi": "legheremo",
+      "voi": "legherete",
+      "loro": "legheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "leghi",
+      "tu": "leghi",
+      "lui/lei": "leghi",
+      "noi": "leghiamo",
+      "voi": "leghiate",
+      "loro": "leghino"
+    },
+    "condizionale": {
+      "io": "legherei",
+      "tu": "legheresti",
+      "lui/lei": "legherebbe",
+      "noi": "legheremmo",
+      "voi": "leghereste",
+      "loro": "legherebbero"
+    },
+    "imperativo": {
+      "tu": "lega",
+      "lei": "leghi",
+      "noi": "leghiamo",
+      "voi": "legate",
+      "loro": "leghino"
+    }
+  },
+  "leggere": {
+    "presente": {
+      "io": "leggo",
+      "tu": "leggi",
+      "lui/lei": "legge",
+      "noi": "leggiamo",
+      "voi": "leggete",
+      "loro": "leggono"
+    },
+    "passatoProssimo": {
+      "io": "ho letto",
+      "tu": "hai letto",
+      "lui/lei": "ha letto",
+      "noi": "abbiamo letto",
+      "voi": "avete letto",
+      "loro": "hanno letto"
+    },
+    "imperfetto": {
+      "io": "leggevo",
+      "tu": "leggevi",
+      "lui/lei": "leggeva",
+      "noi": "leggevamo",
+      "voi": "leggevate",
+      "loro": "leggevano"
+    },
+    "futuro": {
+      "io": "leggerò",
+      "tu": "leggerai",
+      "lui/lei": "leggerà",
+      "noi": "leggeremo",
+      "voi": "leggerete",
+      "loro": "leggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "legga",
+      "tu": "legga",
+      "lui/lei": "legga",
+      "noi": "leggiamo",
+      "voi": "leggiate",
+      "loro": "leggano"
+    },
+    "condizionale": {
+      "io": "leggerei",
+      "tu": "leggeresti",
+      "lui/lei": "leggerebbe",
+      "noi": "leggeremmo",
+      "voi": "leggereste",
+      "loro": "leggerebbero"
+    },
+    "imperativo": {
+      "tu": "leggi",
+      "lei": "legga",
+      "noi": "leggiamo",
+      "voi": "leggete",
+      "loro": "leggano"
+    }
+  },
+  "leggiucchiare": {
+    "presente": {
+      "io": "leggiucchio",
+      "tu": "leggiucchi",
+      "lui/lei": "leggiucchia",
+      "noi": "leggiucchiamo",
+      "voi": "leggiucchiate",
+      "loro": "leggiucchiano"
+    },
+    "passatoProssimo": {
+      "io": "ho leggiucchiato",
+      "tu": "hai leggiucchiato",
+      "lui/lei": "ha leggiucchiato",
+      "noi": "abbiamo leggiucchiato",
+      "voi": "avete leggiucchiato",
+      "loro": "hanno leggiucchiato"
+    },
+    "imperfetto": {
+      "io": "leggiucchiavo",
+      "tu": "leggiucchiavi",
+      "lui/lei": "leggiucchiava",
+      "noi": "leggiucchiavamo",
+      "voi": "leggiucchiavate",
+      "loro": "leggiucchiavano"
+    },
+    "futuro": {
+      "io": "leggiucchierò",
+      "tu": "leggiucchierai",
+      "lui/lei": "leggiucchierà",
+      "noi": "leggiucchieremo",
+      "voi": "leggiucchierete",
+      "loro": "leggiucchieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "leggiucchi",
+      "tu": "leggiucchi",
+      "lui/lei": "leggiucchi",
+      "noi": "leggiucchiamo",
+      "voi": "leggiucchiate",
+      "loro": "leggiucchino"
+    },
+    "condizionale": {
+      "io": "leggiucchierei",
+      "tu": "leggiucchieresti",
+      "lui/lei": "leggiucchierebbe",
+      "noi": "leggiucchieremmo",
+      "voi": "leggiucchiereste",
+      "loro": "leggiucchierebbero"
+    },
+    "imperativo": {
+      "tu": "leggiucchia",
+      "lei": "leggiucchi",
+      "noi": "leggiucchiamo",
+      "voi": "leggiucchiate",
+      "loro": "leggiucchino"
+    }
+  },
+  "legittimare": {
+    "presente": {
+      "io": "legittimo",
+      "tu": "legittimi",
+      "lui/lei": "legittima",
+      "noi": "legittimiamo",
+      "voi": "legittimate",
+      "loro": "legittimano"
+    },
+    "passatoProssimo": {
+      "io": "ho legittimato",
+      "tu": "hai legittimato",
+      "lui/lei": "ha legittimato",
+      "noi": "abbiamo legittimato",
+      "voi": "avete legittimato",
+      "loro": "hanno legittimato"
+    },
+    "imperfetto": {
+      "io": "legittimavo",
+      "tu": "legittimavi",
+      "lui/lei": "legittimava",
+      "noi": "legittimavamo",
+      "voi": "legittimavate",
+      "loro": "legittimavano"
+    },
+    "futuro": {
+      "io": "legittimerò",
+      "tu": "legittimerai",
+      "lui/lei": "legittimerà",
+      "noi": "legittimeremo",
+      "voi": "legittimerete",
+      "loro": "legittimeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "legittimi",
+      "tu": "legittimi",
+      "lui/lei": "legittimi",
+      "noi": "legittimiamo",
+      "voi": "legittimiate",
+      "loro": "legittimino"
+    },
+    "condizionale": {
+      "io": "legittimerei",
+      "tu": "legittimeresti",
+      "lui/lei": "legittimerebbe",
+      "noi": "legittimeremmo",
+      "voi": "legittimereste",
+      "loro": "legittimerebbero"
+    },
+    "imperativo": {
+      "tu": "legittima",
+      "lei": "legittimi",
+      "noi": "legittimiamo",
+      "voi": "legittimate",
+      "loro": "legittimino"
+    }
+  },
+  "levare": {
+    "presente": {
+      "io": "levo",
+      "tu": "levi",
+      "lui/lei": "leva",
+      "noi": "leviamo",
+      "voi": "levate",
+      "loro": "levano"
+    },
+    "passatoProssimo": {
+      "io": "ho levato",
+      "tu": "hai levato",
+      "lui/lei": "ha levato",
+      "noi": "abbiamo levato",
+      "voi": "avete levato",
+      "loro": "hanno levato"
+    },
+    "imperfetto": {
+      "io": "levavo",
+      "tu": "levavi",
+      "lui/lei": "levava",
+      "noi": "levavamo",
+      "voi": "levavate",
+      "loro": "levavano"
+    },
+    "futuro": {
+      "io": "leverò",
+      "tu": "leverai",
+      "lui/lei": "leverà",
+      "noi": "leveremo",
+      "voi": "leverete",
+      "loro": "leveranno"
+    },
+    "congiuntivoPresente": {
+      "io": "levi",
+      "tu": "levi",
+      "lui/lei": "levi",
+      "noi": "leviamo",
+      "voi": "leviate",
+      "loro": "levino"
+    },
+    "condizionale": {
+      "io": "leverei",
+      "tu": "leveresti",
+      "lui/lei": "leverebbe",
+      "noi": "leveremmo",
+      "voi": "levereste",
+      "loro": "leverebbero"
+    },
+    "imperativo": {
+      "tu": "leva",
+      "lei": "levi",
+      "noi": "leviamo",
+      "voi": "levate",
+      "loro": "levino"
+    }
+  },
+  "levigare": {
+    "presente": {
+      "io": "levigo",
+      "tu": "levighi",
+      "lui/lei": "leviga",
+      "noi": "levighiamo",
+      "voi": "levigate",
+      "loro": "levigano"
+    },
+    "passatoProssimo": {
+      "io": "ho levigato",
+      "tu": "hai levigato",
+      "lui/lei": "ha levigato",
+      "noi": "abbiamo levigato",
+      "voi": "avete levigato",
+      "loro": "hanno levigato"
+    },
+    "imperfetto": {
+      "io": "levigavo",
+      "tu": "levigavi",
+      "lui/lei": "levigava",
+      "noi": "levigavamo",
+      "voi": "levigavate",
+      "loro": "levigavano"
+    },
+    "futuro": {
+      "io": "levigherò",
+      "tu": "levigherai",
+      "lui/lei": "levigherà",
+      "noi": "levigheremo",
+      "voi": "levigherete",
+      "loro": "levigheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "levighi",
+      "tu": "levighi",
+      "lui/lei": "levighi",
+      "noi": "levighiamo",
+      "voi": "levighiate",
+      "loro": "levighino"
+    },
+    "condizionale": {
+      "io": "levigherei",
+      "tu": "levigheresti",
+      "lui/lei": "levigherebbe",
+      "noi": "levigheremmo",
+      "voi": "levighereste",
+      "loro": "levigherebbero"
+    },
+    "imperativo": {
+      "tu": "leviga",
+      "lei": "levighi",
+      "noi": "levighiamo",
+      "voi": "levigate",
+      "loro": "levighino"
+    }
+  },
+  "liberare": {
+    "presente": {
+      "io": "libero",
+      "tu": "liberi",
+      "lui/lei": "libera",
+      "noi": "liberiamo",
+      "voi": "liberate",
+      "loro": "liberano"
+    },
+    "passatoProssimo": {
+      "io": "ho liberato",
+      "tu": "hai liberato",
+      "lui/lei": "ha liberato",
+      "noi": "abbiamo liberato",
+      "voi": "avete liberato",
+      "loro": "hanno liberato"
+    },
+    "imperfetto": {
+      "io": "liberavo",
+      "tu": "liberavi",
+      "lui/lei": "liberava",
+      "noi": "liberavamo",
+      "voi": "liberavate",
+      "loro": "liberavano"
+    },
+    "futuro": {
+      "io": "libererò",
+      "tu": "libererai",
+      "lui/lei": "libererà",
+      "noi": "libereremo",
+      "voi": "libererete",
+      "loro": "libereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "liberi",
+      "tu": "liberi",
+      "lui/lei": "liberi",
+      "noi": "liberiamo",
+      "voi": "liberiate",
+      "loro": "liberino"
+    },
+    "condizionale": {
+      "io": "libererei",
+      "tu": "libereresti",
+      "lui/lei": "libererebbe",
+      "noi": "libereremmo",
+      "voi": "liberereste",
+      "loro": "libererebbero"
+    },
+    "imperativo": {
+      "tu": "libera",
+      "lei": "liberi",
+      "noi": "liberiamo",
+      "voi": "liberate",
+      "loro": "liberino"
+    }
+  },
+  "liberarsi": {
+    "presente": {
+      "io": "mi libero",
+      "tu": "ti liberi",
+      "lui/lei": "si libera",
+      "noi": "ci liberiamo",
+      "voi": "vi liberate",
+      "loro": "si liberano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono liberato/a",
+      "tu": "ti sei liberato/a",
+      "lui/lei": "si è liberato/a",
+      "noi": "ci siamo liberati/e",
+      "voi": "vi siete liberati/e",
+      "loro": "si sono liberati/e"
+    },
+    "imperfetto": {
+      "io": "mi liberavo",
+      "tu": "ti liberavi",
+      "lui/lei": "si liberava",
+      "noi": "ci liberavamo",
+      "voi": "vi liberavate",
+      "loro": "si liberavano"
+    },
+    "futuro": {
+      "io": "mi libererò",
+      "tu": "ti libererai",
+      "lui/lei": "si libererà",
+      "noi": "ci libereremo",
+      "voi": "vi libererete",
+      "loro": "si libereranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi liberi",
+      "tu": "ti liberi",
+      "lui/lei": "si liberi",
+      "noi": "ci liberiamo",
+      "voi": "vi liberiate",
+      "loro": "si liberino"
+    },
+    "condizionale": {
+      "io": "mi libererei",
+      "tu": "ti libereresti",
+      "lui/lei": "si libererebbe",
+      "noi": "ci libereremmo",
+      "voi": "vi liberereste",
+      "loro": "si libererebbero"
+    },
+    "imperativo": {
+      "tu": "liberati",
+      "lei": "si liberi",
+      "noi": "liberiamoci",
+      "voi": "liberatevi",
+      "loro": "si liberino"
+    }
+  },
+  "librare": {
+    "presente": {
+      "io": "libro",
+      "tu": "libri",
+      "lui/lei": "libra",
+      "noi": "libriamo",
+      "voi": "librate",
+      "loro": "librano"
+    },
+    "passatoProssimo": {
+      "io": "ho librato",
+      "tu": "hai librato",
+      "lui/lei": "ha librato",
+      "noi": "abbiamo librato",
+      "voi": "avete librato",
+      "loro": "hanno librato"
+    },
+    "imperfetto": {
+      "io": "libravo",
+      "tu": "libravi",
+      "lui/lei": "librava",
+      "noi": "libravamo",
+      "voi": "libravate",
+      "loro": "libravano"
+    },
+    "futuro": {
+      "io": "librerò",
+      "tu": "librerai",
+      "lui/lei": "librerà",
+      "noi": "libreremo",
+      "voi": "librerete",
+      "loro": "libreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "libri",
+      "tu": "libri",
+      "lui/lei": "libri",
+      "noi": "libriamo",
+      "voi": "libriate",
+      "loro": "librino"
+    },
+    "condizionale": {
+      "io": "librerei",
+      "tu": "libreresti",
+      "lui/lei": "librerebbe",
+      "noi": "libreremmo",
+      "voi": "librereste",
+      "loro": "librerebbero"
+    },
+    "imperativo": {
+      "tu": "libra",
+      "lei": "libri",
+      "noi": "libriamo",
+      "voi": "librate",
+      "loro": "librino"
+    }
+  },
+  "licenziare": {
+    "presente": {
+      "io": "licenzio",
+      "tu": "licenzi",
+      "lui/lei": "licenzia",
+      "noi": "licenziamo",
+      "voi": "licenziate",
+      "loro": "licenziano"
+    },
+    "passatoProssimo": {
+      "io": "ho licenziato",
+      "tu": "hai licenziato",
+      "lui/lei": "ha licenziato",
+      "noi": "abbiamo licenziato",
+      "voi": "avete licenziato",
+      "loro": "hanno licenziato"
+    },
+    "imperfetto": {
+      "io": "licenziavo",
+      "tu": "licenziavi",
+      "lui/lei": "licenziava",
+      "noi": "licenziavamo",
+      "voi": "licenziavate",
+      "loro": "licenziavano"
+    },
+    "futuro": {
+      "io": "licenzierò",
+      "tu": "licenzierai",
+      "lui/lei": "licenzierà",
+      "noi": "licenzieremo",
+      "voi": "licenzierete",
+      "loro": "licenzieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "licenzi",
+      "tu": "licenzi",
+      "lui/lei": "licenzi",
+      "noi": "licenziamo",
+      "voi": "licenziate",
+      "loro": "licenzino"
+    },
+    "condizionale": {
+      "io": "licenzierei",
+      "tu": "licenzieresti",
+      "lui/lei": "licenzierebbe",
+      "noi": "licenzieremmo",
+      "voi": "licenziereste",
+      "loro": "licenzierebbero"
+    },
+    "imperativo": {
+      "tu": "licenzia",
+      "lei": "licenzi",
+      "noi": "licenziamo",
+      "voi": "licenziate",
+      "loro": "licenzino"
+    }
+  },
+  "limare": {
+    "presente": {
+      "io": "limo",
+      "tu": "limi",
+      "lui/lei": "lima",
+      "noi": "limiamo",
+      "voi": "limate",
+      "loro": "limano"
+    },
+    "passatoProssimo": {
+      "io": "ho limato",
+      "tu": "hai limato",
+      "lui/lei": "ha limato",
+      "noi": "abbiamo limato",
+      "voi": "avete limato",
+      "loro": "hanno limato"
+    },
+    "imperfetto": {
+      "io": "limavo",
+      "tu": "limavi",
+      "lui/lei": "limava",
+      "noi": "limavamo",
+      "voi": "limavate",
+      "loro": "limavano"
+    },
+    "futuro": {
+      "io": "limerò",
+      "tu": "limerai",
+      "lui/lei": "limerà",
+      "noi": "limeremo",
+      "voi": "limerete",
+      "loro": "limeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "limi",
+      "tu": "limi",
+      "lui/lei": "limi",
+      "noi": "limiamo",
+      "voi": "limiate",
+      "loro": "limino"
+    },
+    "condizionale": {
+      "io": "limerei",
+      "tu": "limeresti",
+      "lui/lei": "limerebbe",
+      "noi": "limeremmo",
+      "voi": "limereste",
+      "loro": "limerebbero"
+    },
+    "imperativo": {
+      "tu": "lima",
+      "lei": "limi",
+      "noi": "limiamo",
+      "voi": "limate",
+      "loro": "limino"
+    }
+  },
+  "limitare": {
+    "presente": {
+      "io": "limito",
+      "tu": "limiti",
+      "lui/lei": "limita",
+      "noi": "limitiamo",
+      "voi": "limitate",
+      "loro": "limitano"
+    },
+    "passatoProssimo": {
+      "io": "ho limitato",
+      "tu": "hai limitato",
+      "lui/lei": "ha limitato",
+      "noi": "abbiamo limitato",
+      "voi": "avete limitato",
+      "loro": "hanno limitato"
+    },
+    "imperfetto": {
+      "io": "limitavo",
+      "tu": "limitavi",
+      "lui/lei": "limitava",
+      "noi": "limitavamo",
+      "voi": "limitavate",
+      "loro": "limitavano"
+    },
+    "futuro": {
+      "io": "limiterò",
+      "tu": "limiterai",
+      "lui/lei": "limiterà",
+      "noi": "limiteremo",
+      "voi": "limiterete",
+      "loro": "limiteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "limiti",
+      "tu": "limiti",
+      "lui/lei": "limiti",
+      "noi": "limitiamo",
+      "voi": "limitiate",
+      "loro": "limitino"
+    },
+    "condizionale": {
+      "io": "limiterei",
+      "tu": "limiteresti",
+      "lui/lei": "limiterebbe",
+      "noi": "limiteremmo",
+      "voi": "limitereste",
+      "loro": "limiterebbero"
+    },
+    "imperativo": {
+      "tu": "limita",
+      "lei": "limiti",
+      "noi": "limitiamo",
+      "voi": "limitate",
+      "loro": "limitino"
+    }
+  },
+  "liquidare": {
+    "presente": {
+      "io": "liquido",
+      "tu": "liquidi",
+      "lui/lei": "liquida",
+      "noi": "liquidiamo",
+      "voi": "liquidate",
+      "loro": "liquidano"
+    },
+    "passatoProssimo": {
+      "io": "ho liquidato",
+      "tu": "hai liquidato",
+      "lui/lei": "ha liquidato",
+      "noi": "abbiamo liquidato",
+      "voi": "avete liquidato",
+      "loro": "hanno liquidato"
+    },
+    "imperfetto": {
+      "io": "liquidavo",
+      "tu": "liquidavi",
+      "lui/lei": "liquidava",
+      "noi": "liquidavamo",
+      "voi": "liquidavate",
+      "loro": "liquidavano"
+    },
+    "futuro": {
+      "io": "liquiderò",
+      "tu": "liquiderai",
+      "lui/lei": "liquiderà",
+      "noi": "liquideremo",
+      "voi": "liquiderete",
+      "loro": "liquideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "liquidi",
+      "tu": "liquidi",
+      "lui/lei": "liquidi",
+      "noi": "liquidiamo",
+      "voi": "liquidiate",
+      "loro": "liquidino"
+    },
+    "condizionale": {
+      "io": "liquiderei",
+      "tu": "liquideresti",
+      "lui/lei": "liquiderebbe",
+      "noi": "liquideremmo",
+      "voi": "liquidereste",
+      "loro": "liquiderebbero"
+    },
+    "imperativo": {
+      "tu": "liquida",
+      "lei": "liquidi",
+      "noi": "liquidiamo",
+      "voi": "liquidate",
+      "loro": "liquidino"
+    }
+  },
+  "lisciare": {
+    "presente": {
+      "io": "liscio",
+      "tu": "lisci",
+      "lui/lei": "liscia",
+      "noi": "lisciamo",
+      "voi": "lisciate",
+      "loro": "lisciano"
+    },
+    "passatoProssimo": {
+      "io": "ho lisciato",
+      "tu": "hai lisciato",
+      "lui/lei": "ha lisciato",
+      "noi": "abbiamo lisciato",
+      "voi": "avete lisciato",
+      "loro": "hanno lisciato"
+    },
+    "imperfetto": {
+      "io": "lisciavo",
+      "tu": "lisciavi",
+      "lui/lei": "lisciava",
+      "noi": "lisciavamo",
+      "voi": "lisciavate",
+      "loro": "lisciavano"
+    },
+    "futuro": {
+      "io": "liscerò",
+      "tu": "liscerai",
+      "lui/lei": "liscerà",
+      "noi": "lisceremo",
+      "voi": "liscerete",
+      "loro": "lisceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lisci",
+      "tu": "lisci",
+      "lui/lei": "lisci",
+      "noi": "lisciamo",
+      "voi": "lisciate",
+      "loro": "liscino"
+    },
+    "condizionale": {
+      "io": "liscerei",
+      "tu": "lisceresti",
+      "lui/lei": "liscerebbe",
+      "noi": "lisceremmo",
+      "voi": "liscereste",
+      "loro": "liscerebbero"
+    },
+    "imperativo": {
+      "tu": "liscia",
+      "lei": "lisci",
+      "noi": "lisciamo",
+      "voi": "lisciate",
+      "loro": "liscino"
+    }
+  },
+  "litigare": {
+    "presente": {
+      "io": "litigo",
+      "tu": "litighi",
+      "lui/lei": "litiga",
+      "noi": "litighiamo",
+      "voi": "litigate",
+      "loro": "litigano"
+    },
+    "passatoProssimo": {
+      "io": "ho litigato",
+      "tu": "hai litigato",
+      "lui/lei": "ha litigato",
+      "noi": "abbiamo litigato",
+      "voi": "avete litigato",
+      "loro": "hanno litigato"
+    },
+    "imperfetto": {
+      "io": "litigavo",
+      "tu": "litigavi",
+      "lui/lei": "litigava",
+      "noi": "litigavamo",
+      "voi": "litigavate",
+      "loro": "litigavano"
+    },
+    "futuro": {
+      "io": "litigherò",
+      "tu": "litigherai",
+      "lui/lei": "litigherà",
+      "noi": "litigheremo",
+      "voi": "litigherete",
+      "loro": "litigheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "litighi",
+      "tu": "litighi",
+      "lui/lei": "litighi",
+      "noi": "litighiamo",
+      "voi": "litighiate",
+      "loro": "litighino"
+    },
+    "condizionale": {
+      "io": "litigherei",
+      "tu": "litigheresti",
+      "lui/lei": "litigherebbe",
+      "noi": "litigheremmo",
+      "voi": "litighereste",
+      "loro": "litigherebbero"
+    },
+    "imperativo": {
+      "tu": "litiga",
+      "lei": "litighi",
+      "noi": "litighiamo",
+      "voi": "litigate",
+      "loro": "litighino"
+    }
+  },
+  "lodare": {
+    "presente": {
+      "io": "lodo",
+      "tu": "lodi",
+      "lui/lei": "loda",
+      "noi": "lodiamo",
+      "voi": "lodate",
+      "loro": "lodano"
+    },
+    "passatoProssimo": {
+      "io": "ho lodato",
+      "tu": "hai lodato",
+      "lui/lei": "ha lodato",
+      "noi": "abbiamo lodato",
+      "voi": "avete lodato",
+      "loro": "hanno lodato"
+    },
+    "imperfetto": {
+      "io": "lodavo",
+      "tu": "lodavi",
+      "lui/lei": "lodava",
+      "noi": "lodavamo",
+      "voi": "lodavate",
+      "loro": "lodavano"
+    },
+    "futuro": {
+      "io": "loderò",
+      "tu": "loderai",
+      "lui/lei": "loderà",
+      "noi": "loderemo",
+      "voi": "loderete",
+      "loro": "loderanno"
+    },
+    "congiuntivoPresente": {
+      "io": "lodi",
+      "tu": "lodi",
+      "lui/lei": "lodi",
+      "noi": "lodiamo",
+      "voi": "lodiate",
+      "loro": "lodino"
+    },
+    "condizionale": {
+      "io": "loderei",
+      "tu": "loderesti",
+      "lui/lei": "loderebbe",
+      "noi": "loderemmo",
+      "voi": "lodereste",
+      "loro": "loderebbero"
+    },
+    "imperativo": {
+      "tu": "loda",
+      "lei": "lodi",
+      "noi": "lodiamo",
+      "voi": "lodate",
+      "loro": "lodino"
+    }
+  },
+  "logorare": {
+    "presente": {
+      "io": "logoro",
+      "tu": "logori",
+      "lui/lei": "logora",
+      "noi": "logoriamo",
+      "voi": "logorate",
+      "loro": "logorano"
+    },
+    "passatoProssimo": {
+      "io": "ho logorato",
+      "tu": "hai logorato",
+      "lui/lei": "ha logorato",
+      "noi": "abbiamo logorato",
+      "voi": "avete logorato",
+      "loro": "hanno logorato"
+    },
+    "imperfetto": {
+      "io": "logoravo",
+      "tu": "logoravi",
+      "lui/lei": "logorava",
+      "noi": "logoravamo",
+      "voi": "logoravate",
+      "loro": "logoravano"
+    },
+    "futuro": {
+      "io": "logorerò",
+      "tu": "logorerai",
+      "lui/lei": "logorerà",
+      "noi": "logoreremo",
+      "voi": "logorerete",
+      "loro": "logoreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "logori",
+      "tu": "logori",
+      "lui/lei": "logori",
+      "noi": "logoriamo",
+      "voi": "logoriate",
+      "loro": "logorino"
+    },
+    "condizionale": {
+      "io": "logorerei",
+      "tu": "logoreresti",
+      "lui/lei": "logorerebbe",
+      "noi": "logoreremmo",
+      "voi": "logorereste",
+      "loro": "logorerebbero"
+    },
+    "imperativo": {
+      "tu": "logora",
+      "lei": "logori",
+      "noi": "logoriamo",
+      "voi": "logorate",
+      "loro": "logorino"
+    }
+  },
+  "lottare": {
+    "presente": {
+      "io": "lotto",
+      "tu": "lotti",
+      "lui/lei": "lotta",
+      "noi": "lottiamo",
+      "voi": "lottate",
+      "loro": "lottano"
+    },
+    "passatoProssimo": {
+      "io": "ho lottato",
+      "tu": "hai lottato",
+      "lui/lei": "ha lottato",
+      "noi": "abbiamo lottato",
+      "voi": "avete lottato",
+      "loro": "hanno lottato"
+    },
+    "imperfetto": {
+      "io": "lottavo",
+      "tu": "lottavi",
+      "lui/lei": "lottava",
+      "noi": "lottavamo",
+      "voi": "lottavate",
+      "loro": "lottavano"
+    },
+    "futuro": {
+      "io": "lotterò",
+      "tu": "lotterai",
+      "lui/lei": "lotterà",
+      "noi": "lotteremo",
+      "voi": "lotterete",
+      "loro": "lotteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lotti",
+      "tu": "lotti",
+      "lui/lei": "lotti",
+      "noi": "lottiamo",
+      "voi": "lottiate",
+      "loro": "lottino"
+    },
+    "condizionale": {
+      "io": "lotterei",
+      "tu": "lotteresti",
+      "lui/lei": "lotterebbe",
+      "noi": "lotteremmo",
+      "voi": "lottereste",
+      "loro": "lotterebbero"
+    },
+    "imperativo": {
+      "tu": "lotta",
+      "lei": "lotti",
+      "noi": "lottiamo",
+      "voi": "lottate",
+      "loro": "lottino"
+    }
+  },
+  "luccicare": {
+    "presente": {
+      "io": "luccico",
+      "tu": "luccichi",
+      "lui/lei": "luccica",
+      "noi": "luccichiamo",
+      "voi": "luccicate",
+      "loro": "luccicano"
+    },
+    "passatoProssimo": {
+      "io": "ho luccicato",
+      "tu": "hai luccicato",
+      "lui/lei": "ha luccicato",
+      "noi": "abbiamo luccicato",
+      "voi": "avete luccicato",
+      "loro": "hanno luccicato"
+    },
+    "imperfetto": {
+      "io": "luccicavo",
+      "tu": "luccicavi",
+      "lui/lei": "luccicava",
+      "noi": "luccicavamo",
+      "voi": "luccicavate",
+      "loro": "luccicavano"
+    },
+    "futuro": {
+      "io": "luccicherò",
+      "tu": "luccicherai",
+      "lui/lei": "luccicherà",
+      "noi": "luccicheremo",
+      "voi": "luccicherete",
+      "loro": "luccicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "luccichi",
+      "tu": "luccichi",
+      "lui/lei": "luccichi",
+      "noi": "luccichiamo",
+      "voi": "luccichiate",
+      "loro": "luccichino"
+    },
+    "condizionale": {
+      "io": "luccicherei",
+      "tu": "luccicheresti",
+      "lui/lei": "luccicherebbe",
+      "noi": "luccicheremmo",
+      "voi": "luccichereste",
+      "loro": "luccicherebbero"
+    },
+    "imperativo": {
+      "tu": "luccica",
+      "lei": "luccichi",
+      "noi": "luccichiamo",
+      "voi": "luccicate",
+      "loro": "luccichino"
+    }
+  },
+  "lusingare": {
+    "presente": {
+      "io": "lusingo",
+      "tu": "lusinghi",
+      "lui/lei": "lusinga",
+      "noi": "lusinghiamo",
+      "voi": "lusingate",
+      "loro": "lusingano"
+    },
+    "passatoProssimo": {
+      "io": "ho lusingato",
+      "tu": "hai lusingato",
+      "lui/lei": "ha lusingato",
+      "noi": "abbiamo lusingato",
+      "voi": "avete lusingato",
+      "loro": "hanno lusingato"
+    },
+    "imperfetto": {
+      "io": "lusingavo",
+      "tu": "lusingavi",
+      "lui/lei": "lusingava",
+      "noi": "lusingavamo",
+      "voi": "lusingavate",
+      "loro": "lusingavano"
+    },
+    "futuro": {
+      "io": "lusingherò",
+      "tu": "lusingherai",
+      "lui/lei": "lusingherà",
+      "noi": "lusingheremo",
+      "voi": "lusingherete",
+      "loro": "lusingheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lusinghi",
+      "tu": "lusinghi",
+      "lui/lei": "lusinghi",
+      "noi": "lusinghiamo",
+      "voi": "lusinghiate",
+      "loro": "lusinghino"
+    },
+    "condizionale": {
+      "io": "lusingherei",
+      "tu": "lusingheresti",
+      "lui/lei": "lusingherebbe",
+      "noi": "lusingheremmo",
+      "voi": "lusinghereste",
+      "loro": "lusingherebbero"
+    },
+    "imperativo": {
+      "tu": "lusinga",
+      "lei": "lusinghi",
+      "noi": "lusinghiamo",
+      "voi": "lusingate",
+      "loro": "lusinghino"
+    }
+  },
+  "lussare": {
+    "presente": {
+      "io": "lusso",
+      "tu": "lussi",
+      "lui/lei": "lussa",
+      "noi": "lussiamo",
+      "voi": "lussate",
+      "loro": "lussano"
+    },
+    "passatoProssimo": {
+      "io": "ho lussato",
+      "tu": "hai lussato",
+      "lui/lei": "ha lussato",
+      "noi": "abbiamo lussato",
+      "voi": "avete lussato",
+      "loro": "hanno lussato"
+    },
+    "imperfetto": {
+      "io": "lussavo",
+      "tu": "lussavi",
+      "lui/lei": "lussava",
+      "noi": "lussavamo",
+      "voi": "lussavate",
+      "loro": "lussavano"
+    },
+    "futuro": {
+      "io": "lusserò",
+      "tu": "lusserai",
+      "lui/lei": "lusserà",
+      "noi": "lusseremo",
+      "voi": "lusserete",
+      "loro": "lusseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lussi",
+      "tu": "lussi",
+      "lui/lei": "lussi",
+      "noi": "lussiamo",
+      "voi": "lussiate",
+      "loro": "lussino"
+    },
+    "condizionale": {
+      "io": "lusserei",
+      "tu": "lusseresti",
+      "lui/lei": "lusserebbe",
+      "noi": "lusseremmo",
+      "voi": "lussereste",
+      "loro": "lusserebbero"
+    },
+    "imperativo": {
+      "tu": "lussa",
+      "lei": "lussi",
+      "noi": "lussiamo",
+      "voi": "lussate",
+      "loro": "lussino"
+    }
+  },
+  "lustrare": {
+    "presente": {
+      "io": "lustro",
+      "tu": "lustri",
+      "lui/lei": "lustra",
+      "noi": "lustriamo",
+      "voi": "lustrate",
+      "loro": "lustrano"
+    },
+    "passatoProssimo": {
+      "io": "ho lustrato",
+      "tu": "hai lustrato",
+      "lui/lei": "ha lustrato",
+      "noi": "abbiamo lustrato",
+      "voi": "avete lustrato",
+      "loro": "hanno lustrato"
+    },
+    "imperfetto": {
+      "io": "lustravo",
+      "tu": "lustravi",
+      "lui/lei": "lustrava",
+      "noi": "lustravamo",
+      "voi": "lustravate",
+      "loro": "lustravano"
+    },
+    "futuro": {
+      "io": "lustrerò",
+      "tu": "lustrerai",
+      "lui/lei": "lustrerà",
+      "noi": "lustreremo",
+      "voi": "lustrerete",
+      "loro": "lustreranno"
+    },
+    "congiuntivoPresente": {
+      "io": "lustri",
+      "tu": "lustri",
+      "lui/lei": "lustri",
+      "noi": "lustriamo",
+      "voi": "lustriate",
+      "loro": "lustrino"
+    },
+    "condizionale": {
+      "io": "lustrerei",
+      "tu": "lustreresti",
+      "lui/lei": "lustrerebbe",
+      "noi": "lustreremmo",
+      "voi": "lustrereste",
+      "loro": "lustrerebbero"
+    },
+    "imperativo": {
+      "tu": "lustra",
+      "lei": "lustri",
+      "noi": "lustriamo",
+      "voi": "lustrate",
+      "loro": "lustrino"
+    }
+  }
+}

@@ -76,6 +76,97 @@ test('texts : écriture toujours refusée côté client', async () => {
   )
 })
 
+// --- meta/index : index public des textes publiés ---
+
+test('meta/index : lecture publique, écriture refusée', async () => {
+  await seed((db) => setDoc(doc(db, 'meta/index'), { texts: [] }))
+  await assertSucceeds(getDoc(doc(asAnon(), 'meta/index')))
+  await assertFails(setDoc(doc(asOwner('u1', { role: 'enseignant' }), 'meta/index'), { texts: [] }))
+})
+
+// --- catalogTexts/{id} : catalogue réservé, Premium et au-dessus ---
+//
+// Ces trois collections sont la vraie barrière d'accès au contenu payant
+// depuis qu'il a quitté le build (voir vite.config.js et
+// scripts/check-build-leaks.mjs) : elles sont testées ici parce qu'une
+// permission trop large y rendrait à nouveau le catalogue téléchargeable.
+
+test('catalogTexts : lecture refusée sans authentification ni rôle', async () => {
+  await seed((db) => setDoc(doc(db, 'catalogTexts/miracolo'), { data: '{}' }))
+  await assertFails(getDoc(doc(asAnon(), 'catalogTexts/miracolo')))
+  await assertFails(getDoc(doc(asOwner('u1', {}), 'catalogTexts/miracolo')))
+  await assertFails(getDoc(doc(asOwner('u1', { role: 'gratuit' }), 'catalogTexts/miracolo')))
+})
+
+test('catalogTexts : lecture autorisée pour premium, premium_plus et enseignant', async () => {
+  await seed((db) => setDoc(doc(db, 'catalogTexts/miracolo'), { data: '{}' }))
+  for (const role of ['premium', 'premium_plus', 'enseignant']) {
+    await assertSucceeds(getDoc(doc(asOwner('u1', { role }), 'catalogTexts/miracolo')))
+  }
+})
+
+test('catalogTexts : écriture toujours refusée côté client', async () => {
+  await assertFails(
+    setDoc(doc(asOwner('u1', { role: 'enseignant' }), 'catalogTexts/hack'), { data: '{}' })
+  )
+})
+
+test('catalogTexts : suppression toujours refusée côté client', async () => {
+  await seed((db) => setDoc(doc(db, 'catalogTexts/miracolo'), { data: '{}' }))
+  await assertFails(deleteDoc(doc(asOwner('u1', { role: 'enseignant' }), 'catalogTexts/miracolo')))
+})
+
+// --- bookChapters/{id} : Classici, Premium IA et Enseignant seulement ---
+
+test('bookChapters : lecture refusée sans rôle suffisant', async () => {
+  await seed((db) => setDoc(doc(db, 'bookChapters/pinocchio__02'), { data: '{}' }))
+  await assertFails(getDoc(doc(asAnon(), 'bookChapters/pinocchio__02')))
+  await assertFails(getDoc(doc(asOwner('u1', {}), 'bookChapters/pinocchio__02')))
+  // Premium simple donne accès au catalogue mais pas aux Classici : c'est
+  // l'écart entre les deux collections qui sépare les formules.
+  await assertFails(getDoc(doc(asOwner('u1', { role: 'premium' }), 'bookChapters/pinocchio__02')))
+})
+
+test('bookChapters : lecture autorisée pour premium_plus et enseignant', async () => {
+  await seed((db) => setDoc(doc(db, 'bookChapters/pinocchio__02'), { data: '{}' }))
+  for (const role of ['premium_plus', 'enseignant']) {
+    await assertSucceeds(getDoc(doc(asOwner('u1', { role }), 'bookChapters/pinocchio__02')))
+  }
+})
+
+test('bookChapters : écriture toujours refusée côté client', async () => {
+  await assertFails(
+    setDoc(doc(asOwner('u1', { role: 'enseignant' }), 'bookChapters/hack'), { data: '{}' })
+  )
+})
+
+// --- contentStats/{id} : agrégats de vocabulaire, administration seule ---
+
+test('contentStats : lecture refusée hors compte administrateur', async () => {
+  await seed((db) => setDoc(doc(db, 'contentStats/vocab-A1'), { count: 10 }))
+  await assertFails(getDoc(doc(asAnon(), 'contentStats/vocab-A1')))
+  await assertFails(getDoc(doc(asOwner('u1', {}), 'contentStats/vocab-A1')))
+  // Le rôle le plus élevé ne suffit pas : seul l'e-mail admin ouvre la porte.
+  await assertFails(
+    getDoc(doc(asOwner('u1', { role: 'enseignant', email: 'autre@exemple.fr' }), 'contentStats/vocab-A1'))
+  )
+})
+
+test('contentStats : lecture autorisée pour le compte administrateur', async () => {
+  await seed((db) => setDoc(doc(db, 'contentStats/vocab-A1'), { count: 10 }))
+  await assertSucceeds(
+    getDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com' }), 'contentStats/vocab-A1'))
+  )
+})
+
+test('contentStats : écriture refusée même pour l’administrateur', async () => {
+  await assertFails(
+    setDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com' }), 'contentStats/vocab-A1'), {
+      count: 0,
+    })
+  )
+})
+
 // --- users/{uid} : profil, createdTexts + progress uniquement ---
 
 test('users : lecture réservée au propriétaire', async () => {
@@ -110,16 +201,24 @@ test('users : un autre compte ne peut pas écrire', async () => {
 
 // --- userTexts/{id} : textes créés par l'utilisateur ---
 
+// Reflète ce qu'écrit saveUserText() : la sortie de toTextData() du VPS
+// (leggendo-server/schema.mjs) plus owner / public / createdAt.
 function validUserText(overrides = {}) {
   return {
     owner: 'u1',
     public: false,
+    id: 'un-titre',
     level: 'A2',
     title: 'Un titre',
     paragraphs: ['Un paragraphe.'],
-    questions: [],
-    words: {},
-    sentences: {},
+    questions: [{ q: 'Perché ?', options: ['a', 'b', 'c'], correct: 0 }],
+    words: { un: 'un', paragraphe: 'paragraphe' },
+    sentences: { 'Un paragraphe.': 'Un paragraphe.' },
+    category: 'vita_quotidiana',
+    genre: 'racconto',
+    size: 'corto',
+    wordCount: 2,
+    excerpt: 'Un paragraphe.',
     ...overrides,
   }
 }
@@ -159,6 +258,68 @@ test('userTexts : trop de paragraphes refusé', async () => {
     setDoc(
       doc(asOwner('u1', {}), 'userTexts/t1'),
       validUserText({ paragraphs: Array.from({ length: 61 }, () => 'p') })
+    )
+  )
+})
+
+test('userTexts : création valide sans les champs facultatifs', async () => {
+  const minimal = validUserText()
+  for (const key of ['id', 'category', 'genre', 'size', 'wordCount', 'excerpt']) {
+    delete minimal[key]
+  }
+  await assertSucceeds(setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), minimal))
+})
+
+test('userTexts : champ obligatoire manquant refusé', async () => {
+  const incomplete = validUserText()
+  delete incomplete.sentences
+  await assertFails(setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), incomplete))
+})
+
+test('userTexts : champ hors liste blanche refusé', async () => {
+  await assertFails(
+    setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), validUserText({ role: 'enseignant' }))
+  )
+})
+
+test('userTexts : trop de questions refusé', async () => {
+  await assertFails(
+    setDoc(
+      doc(asOwner('u1', {}), 'userTexts/t1'),
+      validUserText({
+        questions: Array.from({ length: 21 }, () => ({ q: 'q', options: ['a'], correct: 0 })),
+      })
+    )
+  )
+})
+
+test('userTexts : lexique surdimensionné refusé', async () => {
+  const words = {}
+  for (let i = 0; i <= 3000; i++) words[`w${i}`] = 'x'
+  await assertFails(
+    setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), validUserText({ words }))
+  )
+})
+
+test('userTexts : trop de phrases refusé', async () => {
+  const sentences = {}
+  for (let i = 0; i <= 500; i++) sentences[`Phrase ${i}.`] = 'x'
+  await assertFails(
+    setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), validUserText({ sentences }))
+  )
+})
+
+test('userTexts : champ facultatif mal typé refusé', async () => {
+  await assertFails(
+    setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), validUserText({ wordCount: 'beaucoup' }))
+  )
+  await assertFails(
+    setDoc(doc(asOwner('u1', {}), 'userTexts/t1'), validUserText({ size: { id: 'corto' } }))
+  )
+  await assertFails(
+    setDoc(
+      doc(asOwner('u1', {}), 'userTexts/t1'),
+      validUserText({ excerpt: 'x'.repeat(301) })
     )
   )
 })

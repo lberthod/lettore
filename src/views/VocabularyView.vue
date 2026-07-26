@@ -13,9 +13,7 @@ import {
   toggleVocabText,
 } from '../progress.js'
 
-// Chaque texte du catalogue est un chunk séparé, chargé à la demande —
-// mêmes chunks que ReaderView.vue (le cache du bundler est partagé).
-const textModules = import.meta.glob('../texts/*.json', { import: 'default' })
+import { isCatalogText, loadCatalogText } from '../lib/protectedContent.js'
 
 const loading = ref(true)
 const texts = ref([]) // [{ id, title, words }] des textes ajoutés au mode vocabulaire
@@ -24,9 +22,12 @@ async function loadTexts() {
   loading.value = true
   const loaded = await Promise.all(
     progress.vocabTexts.map(async (id) => {
-      const loader = textModules[`../texts/${id}.json`]
-      const data = loader
-        ? await loader()
+      // Texte du catalogue (aperçu gratuit embarqué, reste servi par
+      // Firestore selon le rôle) ou texte créé par l'utilisateur — jamais
+      // les deux : un accès refusé au catalogue ne doit pas déclencher une
+      // seconde lecture, vouée à l'échec, dans userTexts.
+      const data = isCatalogText(id)
+        ? await loadCatalogText(id)
         : await (await import('../lib/userTexts.js')).loadUserText(id)
       return data ? { id, title: data.title, words: data.words || {} } : null
     })

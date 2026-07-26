@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { nextTick } from 'vue'
 import { currentUser } from './lib/auth.js'
-import { progress, markRead } from './progress.js'
+import { progress, markRead, hasLocalTtsRate } from './progress.js'
 
 // progress.js est un singleton (état de module) : ces tests s'enchaînent
 // comme un scénario réel de connexion/déconnexion plutôt que d'isoler
@@ -49,6 +49,24 @@ describe('progress.js — isolation de la progression par compte', () => {
     currentUser.value = { uid: 'user-d' }
     await nextTick()
     expect(progress.readTexts).toEqual([])
+  })
+
+  // hasLocalTtsRate décide si progressSync applique la vitesse audio distante :
+  // évalué pour le mauvais compte, il ferait fuiter le réglage d'un espace vers
+  // un autre (ou écraserait celui du compte connecté).
+  it('la préférence audio locale est réévaluée à chaque changement de compte', async () => {
+    currentUser.value = { uid: 'user-f' }
+    await nextTick()
+    progress.ttsRate = 1.2
+    await nextTick()
+
+    currentUser.value = { uid: 'user-g' }
+    await nextTick()
+    expect(hasLocalTtsRate.value).toBe(false)
+
+    currentUser.value = { uid: 'user-f' }
+    await nextTick()
+    expect(hasLocalTtsRate.value).toBe(true)
   })
 
   it('la déconnexion repart sur un espace anonyme vide', async () => {

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from './views/HomeView.vue'
-import textsIndex from './texts/index.json'
+// Seuls les identifiants, pas le catalogue complet : le routeur est dans le
+// bundle d'entrée (voir le plugin leggendo-catalog dans vite.config.js).
+import { catalogIds } from 'virtual:catalog'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
 import {
@@ -11,6 +13,8 @@ import {
   isFreeClassiciChapter,
 } from './lib/access.js'
 import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION, findRoute } from './seo/staticPages.js'
+
+const catalogIdSet = new Set(catalogIds)
 
 const router = createRouter({
   history: createWebHistory(),
@@ -34,7 +38,7 @@ const router = createRouter({
       component: () => import('./views/ReaderView.vue'),
       props: true,
       beforeEnter: async (to) => {
-        const inCatalog = textsIndex.some((t) => t.id === to.params.id)
+        const inCatalog = catalogIdSet.has(to.params.id)
         const isExample = EXAMPLE_TEXT_IDS.includes(to.params.id)
         if (!firebaseReady) {
           if (!inCatalog) return { name: 'library' }
@@ -246,6 +250,16 @@ const router = createRouter({
         if (!isAdmin()) return { name: 'home' }
       },
     },
+    {
+      path: '/admin/dizionario',
+      name: 'admin-dictionary',
+      component: () => import('./views/AdminDictionaryView.vue'),
+      meta: { ...findRoute('/admin/dizionario'), requiresAuth: true },
+      beforeEnter: async () => {
+        await authReady
+        if (!isAdmin()) return { name: 'home' }
+      },
+    },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   scrollBehavior() {
@@ -262,23 +276,33 @@ router.beforeEach(async (to) => {
   }
 })
 
-router.afterEach((to) => {
-  let title = to.meta.title
-  let description = to.meta.description
-
-  // Le lecteur : titre et description tirés de l'index des textes
-  if (to.name === 'reader') {
-    const text = textsIndex.find((t) => t.id === to.params.id)
-    if (text) {
-      title = `${text.title} — texte en italien ${text.level} avec traduction française`
-      description = `« ${text.excerpt} » — Lisez ce texte en italien (niveau ${text.level}, ~${text.wordCount} mots) avec traduction française au clic et lecture audio.`
-    }
-  }
-
+function setMeta(title, description) {
   document.title = title || DEFAULT_TITLE
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute('content', description || DEFAULT_DESCRIPTION)
+}
+
+// Le lecteur : titre et description tirés de l'index des textes. L'index
+// complet (127 kB) est chargé à la demande — il n'entre pas dans le bundle
+// d'entrée, et le chunk est de toute façon déjà demandé par ReaderView, qui
+// l'importe pour la navigation entre textes. La page prérendue porte déjà les
+// bonnes balises : cette mise à jour ne sert qu'à la navigation interne.
+async function applyReaderMeta(to) {
+  const { default: textsIndex } = await import('./texts/index.json')
+  const text = textsIndex.find((t) => t.id === to.params.id)
+  // Une autre navigation a pu aboutir pendant le chargement : ne pas écraser
+  // le titre de la page réellement affichée.
+  if (!text || router.currentRoute.value.fullPath !== to.fullPath) return
+  setMeta(
+    `${text.title} — texte en italien ${text.level} avec traduction française`,
+    `« ${text.excerpt} » — Lisez ce texte en italien (niveau ${text.level}, ~${text.wordCount} mots) avec traduction française au clic et lecture audio.`
+  )
+}
+
+router.afterEach((to) => {
+  setMeta(to.meta.title, to.meta.description)
+  if (to.name === 'reader') applyReaderMeta(to)
 
   // URL canonique : évite le contenu dupliqué (query strings, redirections)
   // et donne aux moteurs une adresse stable même si le domaine de dev diffère.

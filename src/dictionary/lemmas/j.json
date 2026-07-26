@@ -1,0 +1,30 @@
+{
+  "jazz": {
+    "lemma": "jazz",
+    "pos": "nome maschile (invariabile)",
+    "fr": "jazz",
+    "definition_it": "genere musicale nato negli Stati Uniti tra gli afroamericani, con ritmi liberi e molta improvvisazione",
+    "examples": [
+      {
+        "it": "Ogni giovedì suonano jazz in quel piccolo locale.",
+        "fr": "Chaque jeudi, ils jouent du jazz dans ce petit bar."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "juke-box": {
+    "lemma": "juke-box",
+    "pos": "nome (m.)",
+    "fr": "juke-box",
+    "definition_it": "apparecchio che si trova nei bar: si mette una moneta, si sceglie una canzone e la musica parte",
+    "examples": [
+      {
+        "it": "Nel bar c'era un vecchio juke-box che suonava canzoni degli anni Sessanta.",
+        "fr": "Dans le bar il y avait un vieux juke-box qui passait des chansons des années soixante."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  }
+}

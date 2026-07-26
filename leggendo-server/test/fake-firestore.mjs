@@ -104,10 +104,27 @@ export class FakeFirestore {
     return new FakeBatch()
   }
   async runTransaction(fn) {
+    // Firestore impose que toutes les lectures d'une transaction précèdent
+    // ses écritures (sinon tx.get() lève) : on reproduit la contrainte, sans
+    // quoi le faux Firestore validerait du code qui casse en production.
+    let hasWritten = false
     const tx = {
-      get: (ref) => ref.get(),
-      set: (ref, data) => ref.set(data),
-      update: (ref, patch) => ref.update(patch),
+      get: (ref) => {
+        if (hasWritten) {
+          throw new Error(
+            'Firestore transactions require all reads to be executed before all writes.'
+          )
+        }
+        return ref.get()
+      },
+      set: (ref, data) => {
+        hasWritten = true
+        return ref.set(data)
+      },
+      update: (ref, patch) => {
+        hasWritten = true
+        return ref.update(patch)
+      },
     }
     return fn(tx)
   }

@@ -58,9 +58,15 @@ export function writeWordIndexShards(wordIndex) {
   writeShardDir('word-index', wordIndex)
 }
 
+// meta.json (quelques octets) et entries.json (lemma+fr+isVerb, sans `pos`
+// ni les autres champs déjà présents dans les shards `lemmas/*.json`) sont
+// deux fichiers séparés, et non plus `{ meta, entries }` dans un seul
+// index.json : la plupart des pages qui affichent des statistiques
+// (dictionaryEntryCount, dictionaryStats) n'ont besoin que de meta.json, pas
+// des ~4800 entrées — voir src/lib/dictionary.js.
 export function rebuildIndex(lemmas, conjugations, wordIndex) {
   const entries = Object.values(lemmas)
-    .map(({ lemma, pos, fr, isVerb }) => ({ lemma, pos, fr, isVerb: !!isVerb }))
+    .map(({ lemma, fr, isVerb }) => ({ lemma, fr, isVerb: !!isVerb }))
     .sort((a, b) => a.lemma.localeCompare(b.lemma, 'it'))
   const meta = {
     lemmaCount: entries.length,
@@ -68,5 +74,6 @@ export function rebuildIndex(lemmas, conjugations, wordIndex) {
     conjugatedVerbCount: Object.keys(conjugations).length,
     indexedFormCount: Object.keys(wordIndex).length,
   }
-  writeFileSync(path.join(DICT_DIR, 'index.json'), JSON.stringify({ meta, entries }, null, 2) + '\n')
+  writeFileSync(path.join(DICT_DIR, 'meta.json'), JSON.stringify(meta, null, 2) + '\n')
+  writeFileSync(path.join(DICT_DIR, 'entries.json'), JSON.stringify(entries, null, 2) + '\n')
 }

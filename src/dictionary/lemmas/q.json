@@ -1,0 +1,1188 @@
+{
+  "qua": {
+    "lemma": "qua",
+    "pos": "avverbio",
+    "fr": "ici, par ici",
+    "definition_it": "in questo luogo, vicino a chi parla",
+    "examples": [
+      {
+        "it": "Vieni qua, ti devo dire una cosa.",
+        "fr": "Viens ici, j'ai quelque chose à te dire."
+      }
+    ],
+    "synonyms": [
+      "qui"
+    ],
+    "isVerb": false
+  },
+  "quaderno": {
+    "lemma": "quaderno",
+    "pos": "nome (maschile)",
+    "fr": "cahier",
+    "definition_it": "insieme di fogli uniti insieme, che si usa per scrivere o per fare esercizi",
+    "examples": [
+      {
+        "it": "Ho comprato un quaderno nuovo per le lezioni di italiano.",
+        "fr": "J'ai acheté un nouveau cahier pour les cours d'italien."
+      }
+    ],
+    "synonyms": [
+      "taccuino",
+      "blocco"
+    ],
+    "isVerb": false
+  },
+  "quadrante": {
+    "lemma": "quadrante",
+    "pos": "nome (maschile)",
+    "fr": "cadran ; quadrant (quart de cercle)",
+    "definition_it": "superficie di un orologio o di uno strumento su cui sono segnati i numeri; anche ciascuna delle quattro parti di un cerchio",
+    "examples": [
+      {
+        "it": "Le lancette segnavano le tre sul quadrante dell'orologio.",
+        "fr": "Les aiguilles indiquaient trois heures sur le cadran de l'horloge."
+      }
+    ],
+    "synonyms": [
+      "mostra",
+      "settore"
+    ],
+    "isVerb": false
+  },
+  "quadrare": {
+    "lemma": "quadrare",
+    "pos": "verbo (intransitivo)",
+    "fr": "concorder, être juste, tomber juste ; convenir",
+    "definition_it": "risultare esatto e senza errori, soprattutto parlando di conti o di ragionamenti",
+    "examples": [
+      {
+        "it": "I conti non quadrano: manca qualcosa.",
+        "fr": "Les comptes ne tombent pas juste : il manque quelque chose."
+      }
+    ],
+    "synonyms": [
+      "tornare",
+      "corrispondere",
+      "coincidere"
+    ],
+    "isVerb": true
+  },
+  "quadrato": {
+    "lemma": "quadrato",
+    "pos": "nome (maschile)",
+    "fr": "carré",
+    "definition_it": "figura geometrica con quattro lati uguali e quattro angoli retti; si dice anche di ciò che ha questa forma",
+    "examples": [
+      {
+        "it": "Il bambino ha disegnato un quadrato perfetto sul foglio.",
+        "fr": "L'enfant a dessiné un carré parfait sur la feuille."
+      }
+    ],
+    "synonyms": [
+      "riquadro"
+    ],
+    "isVerb": false
+  },
+  "quadretto": {
+    "lemma": "quadretto",
+    "pos": "nome (maschile)",
+    "fr": "petit carreau ; petit tableau, scène",
+    "definition_it": "piccolo quadrato, come quelli stampati su certi fogli; anche piccolo quadro o breve scena di vita",
+    "examples": [
+      {
+        "it": "Scrivi sul foglio a quadretti, così le righe restano dritte.",
+        "fr": "Écris sur la feuille à petits carreaux, ainsi les lignes restent droites."
+      }
+    ],
+    "synonyms": [
+      "quadratino",
+      "riquadro",
+      "scenetta"
+    ],
+    "isVerb": false
+  },
+  "quadriennio": {
+    "lemma": "quadriennio",
+    "pos": "nome (maschile)",
+    "fr": "période de quatre ans, quadriennat",
+    "definition_it": "periodo di quattro anni",
+    "examples": [
+      {
+        "it": "Il piano di studi copre un quadriennio completo.",
+        "fr": "Le programme d'études couvre une période complète de quatre ans."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quadro": {
+    "lemma": "quadro",
+    "pos": "nome (maschile)",
+    "fr": "tableau, peinture ; cadre (situation, personnel)",
+    "definition_it": "opera di pittura su tela o su tavola, di solito chiusa in una cornice; anche insieme di elementi che descrivono una situazione",
+    "examples": [
+      {
+        "it": "Nel salotto è appeso un quadro di un pittore veneziano.",
+        "fr": "Dans le salon est accroché un tableau d'un peintre vénitien."
+      }
+    ],
+    "synonyms": [
+      "dipinto",
+      "tela",
+      "pittura"
+    ],
+    "isVerb": false
+  },
+  "quadrupede": {
+    "lemma": "quadrupede",
+    "pos": "nome (maschile)",
+    "fr": "quadrupède",
+    "definition_it": "animale che cammina su quattro zampe",
+    "examples": [
+      {
+        "it": "Il cavallo è un quadrupede robusto e veloce.",
+        "fr": "Le cheval est un quadrupède robuste et rapide."
+      }
+    ],
+    "synonyms": [
+      "bestia"
+    ],
+    "isVerb": false
+  },
+  "quaggiù": {
+    "lemma": "quaggiù",
+    "pos": "avverbio",
+    "fr": "ici-bas, en bas ici",
+    "definition_it": "in questo luogo che sta in basso; anche su questa terra, nella vita terrena",
+    "examples": [
+      {
+        "it": "Quaggiù nella valle fa molto più caldo che in montagna.",
+        "fr": "Ici en bas, dans la vallée, il fait bien plus chaud qu'à la montagne."
+      }
+    ],
+    "synonyms": [
+      "qua",
+      "qui sotto"
+    ],
+    "isVerb": false
+  },
+  "qualche": {
+    "lemma": "qualche",
+    "pos": "aggettivo",
+    "fr": "quelque, quelques, un peu de",
+    "definition_it": "indica una quantità piccola e imprecisa ed è sempre seguito da un nome singolare",
+    "examples": [
+      {
+        "it": "Ho ancora qualche domanda da farti.",
+        "fr": "J'ai encore quelques questions à te poser."
+      }
+    ],
+    "synonyms": [
+      "alcuni",
+      "un po' di"
+    ],
+    "isVerb": false
+  },
+  "qualcos'altro": {
+    "lemma": "qualcos'altro",
+    "pos": "locuzione",
+    "fr": "quelque chose d'autre, autre chose",
+    "definition_it": "locuzione pronominale che indica una cosa diversa da quella di cui si è parlato.",
+    "examples": [
+      {
+        "it": "Non ho fame, ma berrei volentieri qualcos'altro.",
+        "fr": "Je n'ai pas faim, mais je boirais volontiers autre chose."
+      }
+    ],
+    "synonyms": [
+      "altro"
+    ],
+    "isVerb": false
+  },
+  "qualcosa": {
+    "lemma": "qualcosa",
+    "pos": "pronome",
+    "fr": "quelque chose",
+    "definition_it": "pronome indefinito che indica una cosa non precisata o sconosciuta.",
+    "examples": [
+      {
+        "it": "Ho comprato qualcosa da mangiare per stasera.",
+        "fr": "J'ai acheté quelque chose à manger pour ce soir."
+      }
+    ],
+    "synonyms": [
+      "qualche cosa",
+      "alcunché"
+    ],
+    "isVerb": false
+  },
+  "qualcuno": {
+    "lemma": "qualcuno",
+    "pos": "pronome",
+    "fr": "quelqu'un ; quelques-uns, certains",
+    "definition_it": "pronome indefinito che indica una persona non precisata o un piccolo numero di persone o cose.",
+    "examples": [
+      {
+        "it": "Qualcuno ha bussato alla porta, ma non c'era nessuno.",
+        "fr": "Quelqu'un a frappé à la porte, mais il n'y avait personne."
+      }
+    ],
+    "synonyms": [
+      "uno",
+      "taluno",
+      "alcuni"
+    ],
+    "isVerb": false
+  },
+  "quale": {
+    "lemma": "quale",
+    "pos": "pronome",
+    "fr": "quel, quelle ; lequel, laquelle ; qui, que",
+    "definition_it": "serve a chiedere o a indicare di che tipo è una persona o una cosa; introduce anche una frase relativa",
+    "examples": [
+      {
+        "it": "Non so quale libro scegliere fra questi due.",
+        "fr": "Je ne sais pas quel livre choisir entre ces deux-là."
+      }
+    ],
+    "synonyms": [
+      "che",
+      "chi"
+    ],
+    "isVerb": false
+  },
+  "qualificare": {
+    "lemma": "qualificare",
+    "pos": "verbo (transitivo)",
+    "fr": "qualifier, définir ; former, habiliter",
+    "definition_it": "attribuire a una persona o a una cosa una qualità, un titolo o una definizione che ne indica il valore.",
+    "examples": [
+      {
+        "it": "Il giudice ha qualificato il fatto come un reato grave.",
+        "fr": "Le juge a qualifié le fait de délit grave."
+      }
+    ],
+    "synonyms": [
+      "definire",
+      "designare",
+      "abilitare"
+    ],
+    "isVerb": true
+  },
+  "qualificato": {
+    "lemma": "qualificato",
+    "pos": "aggettivo",
+    "fr": "qualifié, compétent",
+    "definition_it": "che possiede la preparazione o i titoli necessari per svolgere un lavoro o un compito.",
+    "examples": [
+      {
+        "it": "Cerchiamo un tecnico qualificato per il montaggio degli impianti.",
+        "fr": "Nous cherchons un technicien qualifié pour le montage des installations."
+      }
+    ],
+    "synonyms": [
+      "competente",
+      "esperto",
+      "abilitato"
+    ],
+    "isVerb": false
+  },
+  "qualità": {
+    "lemma": "qualità",
+    "pos": "nome (femminile)",
+    "fr": "qualité ; caractéristique, propriété",
+    "definition_it": "il valore di una cosa o l'insieme delle caratteristiche che distinguono una persona o un oggetto.",
+    "examples": [
+      {
+        "it": "Questo tessuto è di ottima qualità e dura molti anni.",
+        "fr": "Ce tissu est d'excellente qualité et dure de nombreuses années."
+      }
+    ],
+    "synonyms": [
+      "pregio",
+      "caratteristica",
+      "dote"
+    ],
+    "isVerb": false
+  },
+  "qualmente": {
+    "lemma": "qualmente",
+    "pos": "avverbio",
+    "fr": "comment, de quelle manière",
+    "definition_it": "in che modo; parola letteraria e antica, usata soprattutto nella locuzione «come e qualmente».",
+    "examples": [
+      {
+        "it": "Gli raccontò come e qualmente era andata tutta la faccenda.",
+        "fr": "Il lui raconta comment et de quelle manière toute l'affaire s'était déroulée."
+      }
+    ],
+    "synonyms": [
+      "come",
+      "in che modo"
+    ],
+    "isVerb": false
+  },
+  "qualora": {
+    "lemma": "qualora",
+    "pos": "congiunzione",
+    "fr": "au cas où, si",
+    "definition_it": "nel caso in cui; introduce una condizione e si usa con il congiuntivo.",
+    "examples": [
+      {
+        "it": "Qualora tu non potessi venire, avvisami per tempo.",
+        "fr": "Au cas où tu ne pourrais pas venir, préviens-moi à temps."
+      }
+    ],
+    "synonyms": [
+      "se",
+      "nel caso che",
+      "ove"
+    ],
+    "isVerb": false
+  },
+  "qualsiasi": {
+    "lemma": "qualsiasi",
+    "pos": "aggettivo",
+    "fr": "n'importe quel, quelconque, tout",
+    "definition_it": "aggettivo indefinito invariabile che indica una persona o una cosa senza distinzione, presa a caso.",
+    "examples": [
+      {
+        "it": "Puoi telefonarmi a qualsiasi ora del giorno.",
+        "fr": "Tu peux me téléphoner à n'importe quelle heure de la journée."
+      }
+    ],
+    "synonyms": [
+      "qualunque",
+      "ogni"
+    ],
+    "isVerb": false
+  },
+  "qualunque": {
+    "lemma": "qualunque",
+    "pos": "aggettivo",
+    "fr": "n'importe quel, quel que soit, tout",
+    "definition_it": "aggettivo indefinito invariabile che indica una persona o una cosa qualsiasi, senza sceglierla.",
+    "examples": [
+      {
+        "it": "Qualunque cosa succeda, io resterò al tuo fianco.",
+        "fr": "Quoi qu'il arrive, je resterai à tes côtés."
+      }
+    ],
+    "synonyms": [
+      "qualsiasi",
+      "ogni"
+    ],
+    "isVerb": false
+  },
+  "qualvolta": {
+    "lemma": "qualvolta",
+    "pos": "avverbio",
+    "fr": "fois (dans la locution « ogni qualvolta » : chaque fois que)",
+    "definition_it": "parola usata solo nella locuzione «ogni qualvolta», che significa «tutte le volte che».",
+    "examples": [
+      {
+        "it": "Ogni qualvolta lo incontro, mi saluta con affetto.",
+        "fr": "Chaque fois que je le rencontre, il me salue affectueusement."
+      }
+    ],
+    "synonyms": [
+      "ogni volta che",
+      "tutte le volte che"
+    ],
+    "isVerb": false
+  },
+  "quand'anche": {
+    "lemma": "quand'anche",
+    "pos": "congiunzione",
+    "fr": "même si, quand bien même",
+    "definition_it": "anche se, seppure; introduce un'ipotesi che non cambia il risultato e si usa con il congiuntivo.",
+    "examples": [
+      {
+        "it": "Quand'anche fosse vero, non cambierebbe nulla.",
+        "fr": "Même si c'était vrai, cela ne changerait rien."
+      }
+    ],
+    "synonyms": [
+      "anche se",
+      "seppure",
+      "ancorché"
+    ],
+    "isVerb": false
+  },
+  "quando": {
+    "lemma": "quando",
+    "pos": "congiunzione",
+    "fr": "quand, lorsque",
+    "definition_it": "nel momento in cui; si usa per indicare il tempo di un'azione o per chiedere in che momento avviene.",
+    "examples": [
+      {
+        "it": "Quando arrivò a casa, era già buio.",
+        "fr": "Quand il arriva à la maison, il faisait déjà nuit."
+      }
+    ],
+    "synonyms": [
+      "allorché",
+      "mentre",
+      "nel momento in cui"
+    ],
+    "isVerb": false
+  },
+  "quantistico": {
+    "lemma": "quantistico",
+    "pos": "aggettivo",
+    "fr": "quantique",
+    "definition_it": "che riguarda i quanti, cioè le piccolissime quantità di energia studiate dalla fisica moderna.",
+    "examples": [
+      {
+        "it": "La meccanica quantistica descrive il comportamento delle particelle.",
+        "fr": "La mécanique quantique décrit le comportement des particules."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quantità": {
+    "lemma": "quantità",
+    "pos": "nome (femminile)",
+    "fr": "quantité",
+    "definition_it": "misura di quanto c'è di una cosa: il numero o la porzione che si può contare o pesare.",
+    "examples": [
+      {
+        "it": "Aggiungi una piccola quantità di sale all'acqua.",
+        "fr": "Ajoute une petite quantité de sel à l'eau."
+      }
+    ],
+    "synonyms": [
+      "dose",
+      "misura",
+      "numero"
+    ],
+    "isVerb": false
+  },
+  "quanto": {
+    "lemma": "quanto",
+    "pos": "aggettivo/pronome/avverbio",
+    "fr": "combien, combien de ; autant que",
+    "definition_it": "parola usata per chiedere o indicare la quantità, il numero o la misura di qualcosa.",
+    "examples": [
+      {
+        "it": "Quanti anni hai?",
+        "fr": "Quel âge as-tu ?"
+      }
+    ],
+    "synonyms": [
+      "che quantità di"
+    ],
+    "isVerb": false
+  },
+  "quantunque": {
+    "lemma": "quantunque",
+    "pos": "congiunzione",
+    "fr": "bien que, quoique",
+    "definition_it": "introduce una frase che esprime un'obiezione al fatto principale senza impedirlo; vuole il congiuntivo.",
+    "examples": [
+      {
+        "it": "Quantunque fosse stanco, continuò a lavorare fino a sera.",
+        "fr": "Bien qu'il fût fatigué, il continua à travailler jusqu'au soir."
+      }
+    ],
+    "synonyms": [
+      "benché",
+      "sebbene",
+      "nonostante"
+    ],
+    "isVerb": false
+  },
+  "quaranta": {
+    "lemma": "quaranta",
+    "pos": "aggettivo numerale cardinale (invariabile)",
+    "fr": "quarante",
+    "definition_it": "il numero che segue trentanove e precede quarantuno.",
+    "examples": [
+      {
+        "it": "La riunione è durata quaranta minuti.",
+        "fr": "La réunion a duré quarante minutes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quarantacinque": {
+    "lemma": "quarantacinque",
+    "pos": "aggettivo numerale cardinale (invariabile)",
+    "fr": "quarante-cinq",
+    "definition_it": "il numero che segue quarantaquattro e precede quarantasei.",
+    "examples": [
+      {
+        "it": "Il film dura un'ora e quarantacinque minuti.",
+        "fr": "Le film dure une heure et quarante-cinq minutes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quarantadue": {
+    "lemma": "quarantadue",
+    "pos": "aggettivo numerale cardinale (invariabile)",
+    "fr": "quarante-deux",
+    "definition_it": "il numero che segue quarantuno e precede quarantatré.",
+    "examples": [
+      {
+        "it": "Mia sorella ha compiuto quarantadue anni la settimana scorsa.",
+        "fr": "Ma sœur a eu quarante-deux ans la semaine dernière."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quarantamila": {
+    "lemma": "quarantamila",
+    "pos": "aggettivo numerale cardinale (invariabile)",
+    "fr": "quarante mille",
+    "definition_it": "il numero che corrisponde a quaranta volte mille.",
+    "examples": [
+      {
+        "it": "Allo stadio c'erano quarantamila persone.",
+        "fr": "Il y avait quarante mille personnes au stade."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quarantaquattro": {
+    "lemma": "quarantaquattro",
+    "pos": "aggettivo numerale cardinale (invariabile)",
+    "fr": "quarante-quatre",
+    "definition_it": "il numero che segue quarantatré e precede quarantacinque.",
+    "examples": [
+      {
+        "it": "Porta scarpe numero quarantaquattro.",
+        "fr": "Il chausse du quarante-quatre."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quarantenne": {
+    "lemma": "quarantenne",
+    "pos": "aggettivo / nome (maschile e femminile)",
+    "fr": "quadragénaire, âgé de quarante ans",
+    "definition_it": "che ha circa quarant'anni di età; la persona che ha questa età.",
+    "examples": [
+      {
+        "it": "Un quarantenne molto sportivo ha vinto la gara.",
+        "fr": "Un quadragénaire très sportif a gagné la course."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quarantesimo": {
+    "lemma": "quarantesimo",
+    "pos": "aggettivo numerale ordinale",
+    "fr": "quarantième",
+    "definition_it": "che occupa il posto numero quaranta in una serie.",
+    "examples": [
+      {
+        "it": "Domani festeggia il suo quarantesimo compleanno.",
+        "fr": "Demain, il fête son quarantième anniversaire."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quaresima": {
+    "lemma": "quaresima",
+    "pos": "nome (femminile)",
+    "fr": "carême",
+    "definition_it": "periodo di quaranta giorni di penitenza che, nella tradizione cristiana, prepara alla Pasqua.",
+    "examples": [
+      {
+        "it": "Durante la Quaresima molti fedeli non mangiano carne il venerdì.",
+        "fr": "Pendant le carême, beaucoup de fidèles ne mangent pas de viande le vendredi."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quartiere": {
+    "lemma": "quartiere",
+    "pos": "nome (maschile)",
+    "fr": "quartier",
+    "definition_it": "ciascuna delle parti in cui è divisa una città.",
+    "examples": [
+      {
+        "it": "Vivo in un quartiere tranquillo, vicino al parco.",
+        "fr": "J'habite dans un quartier tranquille, près du parc."
+      }
+    ],
+    "synonyms": [
+      "rione",
+      "zona",
+      "borgata"
+    ],
+    "isVerb": false
+  },
+  "quarto": {
+    "lemma": "quarto",
+    "pos": "aggettivo numerale ordinale / nome (maschile)",
+    "fr": "quatrième ; quart",
+    "definition_it": "che viene dopo il terzo; come nome, ciascuna delle quattro parti uguali di un intero.",
+    "examples": [
+      {
+        "it": "Abito al quarto piano e il treno parte alle tre e un quarto.",
+        "fr": "J'habite au quatrième étage et le train part à trois heures et quart."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quasi": {
+    "lemma": "quasi",
+    "pos": "avverbio",
+    "fr": "presque, à peu près",
+    "definition_it": "poco meno di; non del tutto, ma molto vicino a una quantità o a una condizione.",
+    "examples": [
+      {
+        "it": "È quasi mezzanotte e il lavoro è quasi finito.",
+        "fr": "Il est presque minuit et le travail est presque fini."
+      }
+    ],
+    "synonyms": [
+      "pressoché",
+      "circa",
+      "all'incirca"
+    ],
+    "isVerb": false
+  },
+  "quassù": {
+    "lemma": "quassù",
+    "pos": "avverbio",
+    "fr": "ici en haut, là-haut (près de celui qui parle)",
+    "definition_it": "in questo luogo che si trova in alto, vicino a chi parla.",
+    "examples": [
+      {
+        "it": "Sali quassù: da qui si vede tutto il paese.",
+        "fr": "Monte ici en haut : d'ici on voit tout le village."
+      }
+    ],
+    "synonyms": [
+      "qua sopra"
+    ],
+    "isVerb": false
+  },
+  "quattordici": {
+    "lemma": "quattordici",
+    "pos": "aggettivo numerale cardinale (invariabile)",
+    "fr": "quatorze",
+    "definition_it": "il numero che segue tredici e precede quindici.",
+    "examples": [
+      {
+        "it": "Il torneo comincia il quattordici luglio.",
+        "fr": "Le tournoi commence le quatorze juillet."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quattrino": {
+    "lemma": "quattrino",
+    "pos": "nome (maschile)",
+    "fr": "sou, piécette ; (au pluriel) argent, sous",
+    "definition_it": "antica moneta italiana di piccolo valore; al plurale indica il denaro in generale.",
+    "examples": [
+      {
+        "it": "Non aveva più un quattrino in tasca.",
+        "fr": "Il n'avait plus un sou en poche."
+      }
+    ],
+    "synonyms": [
+      "soldo",
+      "denaro",
+      "moneta"
+    ],
+    "isVerb": false
+  },
+  "quattrinuccio": {
+    "lemma": "quattrinuccio",
+    "pos": "nome (maschile)",
+    "fr": "petit sou, maigre pécule",
+    "definition_it": "diminutivo di quattrino: piccola somma di denaro, guadagnata o risparmiata con fatica.",
+    "examples": [
+      {
+        "it": "Metteva da parte i suoi quattrinucci per comprare una casa.",
+        "fr": "Il mettait de côté ses petits sous pour acheter une maison."
+      }
+    ],
+    "synonyms": [
+      "quattrino",
+      "soldino"
+    ],
+    "isVerb": false
+  },
+  "quattro": {
+    "lemma": "quattro",
+    "pos": "aggettivo numerale / nome (maschile)",
+    "fr": "quatre",
+    "definition_it": "il numero cardinale che segue il tre e precede il cinque.",
+    "examples": [
+      {
+        "it": "Abbiamo aspettato quattro ore sotto la pioggia.",
+        "fr": "Nous avons attendu quatre heures sous la pluie."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quattrocento": {
+    "lemma": "quattrocento",
+    "pos": "aggettivo numerale / nome (maschile)",
+    "fr": "quatre cents ; (le Quattrocento) le quinzième siècle",
+    "definition_it": "il numero 400; scritto con la maiuscola indica il quindicesimo secolo, cioè gli anni dal 1400 al 1499.",
+    "examples": [
+      {
+        "it": "Questo quadro è stato dipinto nel Quattrocento.",
+        "fr": "Ce tableau a été peint au quinzième siècle."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quattrocentosettantasei": {
+    "lemma": "quattrocentosettantasei",
+    "pos": "aggettivo numerale",
+    "fr": "quatre cent soixante-seize",
+    "definition_it": "il numero 476, cioè quattrocento più settantasei.",
+    "examples": [
+      {
+        "it": "L'Impero romano d'Occidente cadde nel quattrocentosettantasei.",
+        "fr": "L'Empire romain d'Occident tomba en quatre cent soixante-seize."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quattromila": {
+    "lemma": "quattromila",
+    "pos": "aggettivo numerale",
+    "fr": "quatre mille",
+    "definition_it": "il numero 4000, cioè quattro volte mille.",
+    "examples": [
+      {
+        "it": "Allo stadio c'erano quattromila persone.",
+        "fr": "Il y avait quatre mille personnes au stade."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quattromilaottocento": {
+    "lemma": "quattromilaottocento",
+    "pos": "aggettivo numerale",
+    "fr": "quatre mille huit cents",
+    "definition_it": "il numero 4800, cioè quattromila più ottocento.",
+    "examples": [
+      {
+        "it": "Il rifugio si trova a quattromilaottocento metri di altitudine.",
+        "fr": "Le refuge se trouve à quatre mille huit cents mètres d'altitude."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quello": {
+    "lemma": "quello",
+    "pos": "aggettivo/pronome dimostrativo",
+    "fr": "ce, cet, cette, ces (là-bas) ; celui-là, celle-là",
+    "definition_it": "indica una persona o una cosa lontana da chi parla e da chi ascolta; davanti al nome prende le forme quel, quello, quell', quei, quegli, quella, quelle.",
+    "examples": [
+      {
+        "it": "Quel ragazzo abita in quella casa in fondo alla strada.",
+        "fr": "Ce garçon-là habite dans cette maison au bout de la rue."
+      }
+    ],
+    "synonyms": [
+      "codesto"
+    ],
+    "isVerb": false
+  },
+  "quercia": {
+    "lemma": "quercia",
+    "pos": "nome (femminile)",
+    "fr": "chêne",
+    "definition_it": "Grande albero dal legno molto duro e resistente, che produce le ghiande.",
+    "examples": [
+      {
+        "it": "Davanti alla casa cresce una quercia secolare.",
+        "fr": "Devant la maison pousse un chêne centenaire."
+      }
+    ],
+    "synonyms": [
+      "rovere",
+      "farnia",
+      "leccio"
+    ],
+    "isVerb": false
+  },
+  "querciolo": {
+    "lemma": "querciolo",
+    "pos": "nome (maschile)",
+    "fr": "jeune chêne, chêneau",
+    "definition_it": "Quercia giovane, ancora piccola e sottile.",
+    "examples": [
+      {
+        "it": "Lungo il sentiero spuntavano alcuni quercioli.",
+        "fr": "Le long du sentier poussaient quelques jeunes chênes."
+      }
+    ],
+    "synonyms": [
+      "quercia"
+    ],
+    "isVerb": false
+  },
+  "querela": {
+    "lemma": "querela",
+    "pos": "nome (femminile)",
+    "fr": "plainte (en justice) ; plainte, lamentation (littéraire)",
+    "definition_it": "Atto con cui la persona offesa chiede all'autorità di punire chi ha commesso un reato; in senso letterario, lamento.",
+    "examples": [
+      {
+        "it": "Ha presentato querela contro il suo vicino.",
+        "fr": "Il a porté plainte contre son voisin."
+      }
+    ],
+    "synonyms": [
+      "denuncia",
+      "lagnanza",
+      "lamento"
+    ],
+    "isVerb": false
+  },
+  "questione": {
+    "lemma": "questione",
+    "pos": "nome (femminile)",
+    "fr": "question, problème ; affaire ; dispute",
+    "definition_it": "Argomento o problema di cui si discute e che si cerca di risolvere.",
+    "examples": [
+      {
+        "it": "La questione è più complicata di quanto sembri.",
+        "fr": "La question est plus compliquée qu'il n'y paraît."
+      }
+    ],
+    "synonyms": [
+      "problema",
+      "faccenda",
+      "controversia"
+    ],
+    "isVerb": false
+  },
+  "questo": {
+    "lemma": "questo",
+    "pos": "aggettivo (dimostrativo)",
+    "fr": "ce, cet, cette, ces ; celui-ci, ceci",
+    "definition_it": "Indica una persona o una cosa vicina a chi parla, nello spazio o nel tempo.",
+    "examples": [
+      {
+        "it": "Questo libro è più interessante di quello.",
+        "fr": "Ce livre-ci est plus intéressant que celui-là."
+      }
+    ],
+    "synonyms": [
+      "codesto"
+    ],
+    "isVerb": false
+  },
+  "questura": {
+    "lemma": "questura",
+    "pos": "nome (femminile)",
+    "fr": "commissariat central de police, préfecture de police",
+    "definition_it": "Ufficio principale della polizia in una città, diretto dal questore.",
+    "examples": [
+      {
+        "it": "Ha denunciato il furto alla questura.",
+        "fr": "Il a déclaré le vol au commissariat central."
+      }
+    ],
+    "synonyms": [
+      "commissariato",
+      "polizia"
+    ],
+    "isVerb": false
+  },
+  "questurino": {
+    "lemma": "questurino",
+    "pos": "nome (maschile)",
+    "fr": "flic, agent de police",
+    "definition_it": "Agente di polizia; è una parola familiare, spesso usata con tono spregiativo.",
+    "examples": [
+      {
+        "it": "Due questurini in borghese sorvegliavano la piazza.",
+        "fr": "Deux flics en civil surveillaient la place."
+      }
+    ],
+    "synonyms": [
+      "poliziotto",
+      "agente",
+      "sbirro"
+    ],
+    "isVerb": false
+  },
+  "queto": {
+    "lemma": "queto",
+    "pos": "aggettivo",
+    "fr": "calme, tranquille, paisible",
+    "definition_it": "Che sta tranquillo e non fa rumore; è la forma letteraria di «quieto».",
+    "examples": [
+      {
+        "it": "Il mare era queto e la barca scivolava piano.",
+        "fr": "La mer était calme et la barque glissait doucement."
+      }
+    ],
+    "synonyms": [
+      "quieto",
+      "tranquillo",
+      "calmo"
+    ],
+    "isVerb": false
+  },
+  "qui": {
+    "lemma": "qui",
+    "pos": "avverbio",
+    "fr": "ici",
+    "definition_it": "In questo luogo, vicino a chi parla.",
+    "examples": [
+      {
+        "it": "Aspettami qui, torno subito.",
+        "fr": "Attends-moi ici, je reviens tout de suite."
+      }
+    ],
+    "synonyms": [
+      "qua"
+    ],
+    "isVerb": false
+  },
+  "quietamente": {
+    "lemma": "quietamente",
+    "pos": "avverbio",
+    "fr": "calmement, tranquillement, paisiblement",
+    "definition_it": "In modo calmo e silenzioso, senza agitazione.",
+    "examples": [
+      {
+        "it": "Il vecchio aspettava quietamente seduto davanti alla porta.",
+        "fr": "Le vieil homme attendait tranquillement, assis devant la porte."
+      }
+    ],
+    "synonyms": [
+      "tranquillamente",
+      "placidamente",
+      "serenamente"
+    ],
+    "isVerb": false
+  },
+  "quietare": {
+    "lemma": "quietare",
+    "pos": "verbo (transitivo)",
+    "fr": "apaiser, calmer ; (se) calmer, s'apaiser (quietarsi)",
+    "definition_it": "Far tornare calmo qualcuno o qualcosa, togliere l'agitazione o il rumore.",
+    "examples": [
+      {
+        "it": "La madre cantava piano per quietare il bambino che piangeva.",
+        "fr": "La mère chantait doucement pour apaiser l'enfant qui pleurait."
+      }
+    ],
+    "synonyms": [
+      "calmare",
+      "placare",
+      "tranquillizzare"
+    ],
+    "isVerb": true
+  },
+  "quiete": {
+    "lemma": "quiete",
+    "pos": "nome (femminile)",
+    "fr": "calme, tranquillité, quiétude, repos",
+    "definition_it": "Condizione di calma e di silenzio, assenza di movimento o di rumore.",
+    "examples": [
+      {
+        "it": "Dopo la tempesta tornò la quiete sul villaggio.",
+        "fr": "Après la tempête, le calme revint sur le village."
+      }
+    ],
+    "synonyms": [
+      "calma",
+      "tranquillità",
+      "pace"
+    ],
+    "isVerb": false
+  },
+  "quieto": {
+    "lemma": "quieto",
+    "pos": "aggettivo",
+    "fr": "calme, tranquille, paisible",
+    "definition_it": "Che sta fermo e senza rumore, che non è agitato né turbato.",
+    "examples": [
+      {
+        "it": "Il lago era quieto e non si muoveva una foglia.",
+        "fr": "Le lac était calme et pas une feuille ne bougeait."
+      }
+    ],
+    "synonyms": [
+      "tranquillo",
+      "calmo",
+      "placido"
+    ],
+    "isVerb": false
+  },
+  "quinci": {
+    "lemma": "quinci",
+    "pos": "avverbio",
+    "fr": "d'ici, de ce lieu ; désormais (archaïque)",
+    "definition_it": "Parola antica e letteraria che significa \"di qui\", \"da questo luogo\".",
+    "examples": [
+      {
+        "it": "Quinci si sale al monte per un sentiero stretto.",
+        "fr": "D'ici, on monte à la montagne par un sentier étroit."
+      }
+    ],
+    "synonyms": [
+      "di qui",
+      "da qui"
+    ],
+    "isVerb": false
+  },
+  "quindi": {
+    "lemma": "quindi",
+    "pos": "congiunzione",
+    "fr": "donc, par conséquent ; ensuite, puis",
+    "definition_it": "Introduce la conseguenza di ciò che si è detto prima; può anche indicare ciò che viene dopo nel tempo.",
+    "examples": [
+      {
+        "it": "Pioveva forte, quindi siamo rimasti a casa.",
+        "fr": "Il pleuvait fort, donc nous sommes restés à la maison."
+      }
+    ],
+    "synonyms": [
+      "dunque",
+      "perciò",
+      "poi"
+    ],
+    "isVerb": false
+  },
+  "quindici": {
+    "lemma": "quindici",
+    "pos": "aggettivo",
+    "fr": "quinze",
+    "definition_it": "Numero che viene dopo il quattordici e prima del sedici.",
+    "examples": [
+      {
+        "it": "Il treno parte tra quindici minuti.",
+        "fr": "Le train part dans quinze minutes."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quinto": {
+    "lemma": "quinto",
+    "pos": "aggettivo",
+    "fr": "cinquième ; (nom) cinquième (partie)",
+    "definition_it": "Che occupa il posto numero cinque in una serie; indica anche una delle cinque parti uguali di un intero.",
+    "examples": [
+      {
+        "it": "Abita al quinto piano di un vecchio palazzo.",
+        "fr": "Il habite au cinquième étage d'un vieil immeuble."
+      }
+    ],
+    "synonyms": [],
+    "isVerb": false
+  },
+  "quivi": {
+    "lemma": "quivi",
+    "pos": "avverbio",
+    "fr": "là, en ce lieu (archaïque)",
+    "definition_it": "Parola antica e letteraria che significa \"lì\", \"in quel luogo\".",
+    "examples": [
+      {
+        "it": "Quivi il pellegrino si fermò a riposare.",
+        "fr": "Là, le pèlerin s'arrêta pour se reposer."
+      }
+    ],
+    "synonyms": [
+      "lì",
+      "là",
+      "ivi"
+    ],
+    "isVerb": false
+  },
+  "quondam": {
+    "lemma": "quondam",
+    "pos": "avverbio",
+    "fr": "feu, jadis, autrefois (latinisme, devant le nom d'un défunt)",
+    "definition_it": "Latinismo usato davanti al nome di una persona morta, con il valore di \"il fu\", \"un tempo\".",
+    "examples": [
+      {
+        "it": "L'atto era intestato a Giovanni Rossi, quondam Pietro.",
+        "fr": "L'acte était établi au nom de Giovanni Rossi, feu Pietro."
+      }
+    ],
+    "synonyms": [
+      "fu",
+      "già"
+    ],
+    "isVerb": false
+  },
+  "quota": {
+    "lemma": "quota",
+    "pos": "nome (femminile)",
+    "fr": "part, quote-part, cotisation ; altitude",
+    "definition_it": "Parte che spetta a ciascuno di una somma o di un insieme; indica anche l'altezza di un luogo sul livello del mare.",
+    "examples": [
+      {
+        "it": "Ognuno ha pagato la propria quota per la cena.",
+        "fr": "Chacun a payé sa part pour le dîner."
+      }
+    ],
+    "synonyms": [
+      "parte",
+      "porzione",
+      "altitudine"
+    ],
+    "isVerb": false
+  },
+  "quotazione": {
+    "lemma": "quotazione",
+    "pos": "nome (femminile)",
+    "fr": "cotation, cours (d'une valeur) ; cote, estimation",
+    "definition_it": "Il prezzo di un titolo o di un bene sul mercato in un certo momento.",
+    "examples": [
+      {
+        "it": "La quotazione dell'oro è salita in poche settimane.",
+        "fr": "La cotation de l'or a monté en quelques semaines."
+      }
+    ],
+    "synonyms": [
+      "valutazione",
+      "prezzo",
+      "stima"
+    ],
+    "isVerb": false
+  },
+  "quotidiano": {
+    "lemma": "quotidiano",
+    "pos": "aggettivo",
+    "fr": "quotidien, journalier ; (nom masculin) quotidien, journal",
+    "definition_it": "Che accade o si ripete ogni giorno; come sostantivo, il giornale che esce ogni giorno.",
+    "examples": [
+      {
+        "it": "La lettura è ormai parte della mia vita quotidiana.",
+        "fr": "La lecture fait désormais partie de ma vie quotidienne."
+      }
+    ],
+    "synonyms": [
+      "giornaliero",
+      "abituale",
+      "consueto"
+    ],
+    "isVerb": false
+  }
+}

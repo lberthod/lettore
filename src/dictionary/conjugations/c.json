@@ -2906,6 +2906,63 @@
       "loro": "chiamino"
     }
   },
+  "chiamarsi": {
+    "presente": {
+      "io": "mi chiamo",
+      "tu": "ti chiami",
+      "lui/lei": "si chiama",
+      "noi": "ci chiamiamo",
+      "voi": "vi chiamate",
+      "loro": "si chiamano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono chiamato/a",
+      "tu": "ti sei chiamato/a",
+      "lui/lei": "si è chiamato/a",
+      "noi": "ci siamo chiamati/e",
+      "voi": "vi siete chiamati/e",
+      "loro": "si sono chiamati/e"
+    },
+    "imperfetto": {
+      "io": "mi chiamavo",
+      "tu": "ti chiamavi",
+      "lui/lei": "si chiamava",
+      "noi": "ci chiamavamo",
+      "voi": "vi chiamavate",
+      "loro": "si chiamavano"
+    },
+    "futuro": {
+      "io": "mi chiamerò",
+      "tu": "ti chiamerai",
+      "lui/lei": "si chiamerà",
+      "noi": "ci chiameremo",
+      "voi": "vi chiamerete",
+      "loro": "si chiameranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi chiami",
+      "tu": "ti chiami",
+      "lui/lei": "si chiami",
+      "noi": "ci chiamiamo",
+      "voi": "vi chiamiate",
+      "loro": "si chiamino"
+    },
+    "condizionale": {
+      "io": "mi chiamerei",
+      "tu": "ti chiameresti",
+      "lui/lei": "si chiamerebbe",
+      "noi": "ci chiameremmo",
+      "voi": "vi chiamereste",
+      "loro": "si chiamerebbero"
+    },
+    "imperativo": {
+      "tu": "chiamati",
+      "lei": "si chiami",
+      "noi": "chiamiamoci",
+      "voi": "chiamatevi",
+      "loro": "si chiamino"
+    }
+  },
   "chiarire": {
     "presente": {
       "io": "chiarisco",

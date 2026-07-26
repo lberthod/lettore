@@ -2,14 +2,37 @@
 // grammaticale, exemples, synonymes) + tables de conjugaison, pré-générées
 // une fois par lots (voir scripts/prepare-batch.mjs) puis stockées ici en
 // JSON statique, shardé par initiale. Aucun appel réseau/LLM au runtime.
-import indexData from '../dictionary/index.json'
+//
+// meta.json (quelques octets) et entries.json (~270 kB minifiés : lemma, fr,
+// isVerb pour chaque mot — pas `pos` ni les autres champs, déjà dans les
+// shards lemmas/*.json) sont deux fichiers séparés plutôt qu'un seul
+// index.json, et chargés à la demande (loadCatalog ci-dessous) plutôt
+// qu'importés en haut de ce module : la conjugaison d'un verbe (getConjugation)
+// ou la fiche d'un mot précis (lookupDictionary) n'ont besoin ni de l'un ni de
+// l'autre, seulement des shards par initiale — les en embarquer dans le même
+// chunk aurait fait payer aux pages qui affichent une seule fiche le poids
+// des ~4800 entrées que seules la recherche et les pages de listing lisent.
 import { shardKey } from '../dictionary/shard-key.js'
 
 const lemmaShards = import.meta.glob('../dictionary/lemmas/*.json', { import: 'default' })
 const conjugationShards = import.meta.glob('../dictionary/conjugations/*.json', { import: 'default' })
 const wordIndexShards = import.meta.glob('../dictionary/word-index/*.json', { import: 'default' })
 
-const entryByLemma = new Map(indexData.entries.map((e) => [e.lemma, e]))
+let catalogPromise = null
+
+function loadCatalog() {
+  if (!catalogPromise) {
+    catalogPromise = Promise.all([
+      import('../dictionary/meta.json'),
+      import('../dictionary/entries.json'),
+    ]).then(([{ default: meta }, { default: entries }]) => ({
+      meta,
+      entries,
+      entryByLemma: new Map(entries.map((e) => [e.lemma, e])),
+    }))
+  }
+  return catalogPromise
+}
 
 function normalize(word) {
   return word
@@ -25,12 +48,14 @@ async function loadShard(shards, dir, key) {
 }
 
 // Résout n'importe quelle forme rencontrée dans un texte (ex. « abbandonava »)
-// vers son lemme (« abbandonare »).
+// vers son lemme (« abbandonare »). Le shard de son initiale suffit : chaque
+// lemme y est indexé vers lui-même en plus de ses formes fléchies (voir
+// scripts/dictionary-shards.mjs), donc un lemme entré tel quel s'y résout
+// déjà sans repli sur la liste complète des entrées.
 async function resolveLemma(word) {
   const key = normalize(word)
   const wi = await loadShard(wordIndexShards, 'word-index', shardKey(key))
-  if (wi[key]) return wi[key]
-  return entryByLemma.has(key) ? key : null
+  return wi[key] || null
 }
 
 export async function lookupDictionary(word) {
@@ -57,8 +82,9 @@ export async function getConjugation(verb) {
 export async function searchDictionary(query) {
   const q = normalize(query)
   if (!q) return []
+  const { entries, entryByLemma } = await loadCatalog()
   const matched = new Map()
-  for (const e of indexData.entries) {
+  for (const e of entries) {
     if (e.fr.toLowerCase().includes(q)) matched.set(e.lemma, e)
   }
   const wi = await loadShard(wordIndexShards, 'word-index', shardKey(q))
@@ -68,18 +94,18 @@ export async function searchDictionary(query) {
   return [...matched.values()].sort((a, b) => a.lemma.localeCompare(b.lemma, 'it'))
 }
 
-export function allLemmas() {
-  return indexData.entries
+export async function allLemmas() {
+  return (await loadCatalog()).entries
 }
 
-export function allVerbs() {
-  return indexData.entries.filter((l) => l.isVerb)
+export async function allVerbs() {
+  return (await loadCatalog()).entries.filter((l) => l.isVerb)
 }
 
-export function dictionaryEntryCount() {
-  return indexData.meta.lemmaCount
+export async function dictionaryEntryCount() {
+  return (await loadCatalog()).meta.lemmaCount
 }
 
-export function dictionaryStats() {
-  return { ...indexData.meta }
+export async function dictionaryStats() {
+  return { ...(await loadCatalog()).meta }
 }

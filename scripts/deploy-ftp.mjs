@@ -1,6 +1,20 @@
 #!/usr/bin/env node
-// Build le site puis envoie le contenu de dist/ sur l'hébergement FTP Infomaniak.
+// Synchronise le contenu réservé vers Firestore, build le site, puis envoie le
+// contenu de dist/ sur l'hébergement FTP Infomaniak.
 // Identifiants lus depuis scripts/.env.deploy (jamais commité, voir .env.deploy.example).
+//
+// Les trois étapes forment un tout : depuis que le catalogue réservé a quitté
+// le build (plugin `virtual:free-content`, vite.config.js), le site déployé va
+// chercher ses textes dans Firestore. Uploader dist/ sans avoir synchronisé
+// laisse un déploiement techniquement valide mais sans catalogue — d'où
+// l'enchaînement automatique ici plutôt qu'une étape manuelle à ne pas oublier.
+//
+// Usage :
+//   node scripts/deploy-ftp.mjs [--skip-build] [--skip-sync] [--prune]
+//
+//   --skip-build  réutilise le dist/ existant
+//   --skip-sync   n'écrit pas dans Firestore (build/upload seuls)
+//   --prune       supprime aussi les documents Firestore devenus orphelins
 
 import { existsSync, readFileSync } from 'node:fs'
 import { readdir, stat } from 'node:fs/promises'
@@ -55,6 +69,35 @@ for (const key of ['host', 'user', 'password']) {
 }
 
 const skipBuild = process.argv.includes('--skip-build')
+const skipSync = process.argv.includes('--skip-sync')
+const prune = process.argv.includes('--prune')
+
+// La synchronisation passe en premier : le catalogue doit être en place dans
+// Firestore avant que le nouveau build ne soit servi, et un problème
+// d'identifiants doit interrompre le déploiement avant le coût d'un build.
+if (!skipSync) {
+  // Le compte de service peut être déclaré dans scripts/.env.deploy comme les
+  // identifiants FTP, plutôt que d'imposer un export dans chaque terminal.
+  if (!process.env.GOOGLE_APPLICATION_CREDENTIALS && fileEnv.GOOGLE_APPLICATION_CREDENTIALS) {
+    process.env.GOOGLE_APPLICATION_CREDENTIALS = fileEnv.GOOGLE_APPLICATION_CREDENTIALS
+  }
+  if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    console.error(
+      "GOOGLE_APPLICATION_CREDENTIALS non défini : impossible de synchroniser le\n" +
+        'contenu réservé vers Firestore. Renseigne-le dans scripts/.env.deploy ou en\n' +
+        "variable d'environnement (voir scripts/README.md).\n" +
+        'Pour déployer malgré tout un contenu déjà synchronisé : --skip-sync.'
+    )
+    process.exit(1)
+  }
+  console.log('→ npm run sync:content')
+  execSync(`node scripts/sync-content.mjs${prune ? ' --prune' : ''}`, {
+    cwd: rootDir,
+    stdio: 'inherit',
+  })
+} else {
+  console.warn('⚠ --skip-sync : le contenu réservé de Firestore n’est pas mis à jour.')
+}
 
 if (!skipBuild) {
   console.log('→ npm run build')

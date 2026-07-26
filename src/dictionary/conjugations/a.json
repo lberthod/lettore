@@ -3476,6 +3476,63 @@
       "loro": "accusino"
     }
   },
+  "acquietare": {
+    "presente": {
+      "io": "acquieto",
+      "tu": "acquieti",
+      "lui/lei": "acquieta",
+      "noi": "acquietiamo",
+      "voi": "acquietate",
+      "loro": "acquietano"
+    },
+    "passatoProssimo": {
+      "io": "ho acquietato",
+      "tu": "hai acquietato",
+      "lui/lei": "ha acquietato",
+      "noi": "abbiamo acquietato",
+      "voi": "avete acquietato",
+      "loro": "hanno acquietato"
+    },
+    "imperfetto": {
+      "io": "acquietavo",
+      "tu": "acquietavi",
+      "lui/lei": "acquietava",
+      "noi": "acquietavamo",
+      "voi": "acquietavate",
+      "loro": "acquietavano"
+    },
+    "futuro": {
+      "io": "acquieterò",
+      "tu": "acquieterai",
+      "lui/lei": "acquieterà",
+      "noi": "acquieteremo",
+      "voi": "acquieterete",
+      "loro": "acquieteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "acquieti",
+      "tu": "acquieti",
+      "lui/lei": "acquieti",
+      "noi": "acquietiamo",
+      "voi": "acquietiate",
+      "loro": "acquietino"
+    },
+    "condizionale": {
+      "io": "acquieterei",
+      "tu": "acquieteresti",
+      "lui/lei": "acquieterebbe",
+      "noi": "acquieteremmo",
+      "voi": "acquietereste",
+      "loro": "acquieterebbero"
+    },
+    "imperativo": {
+      "tu": "acquieta",
+      "lei": "acquieti",
+      "noi": "acquietiamo",
+      "voi": "acquietate",
+      "loro": "acquietino"
+    }
+  },
   "acquisire": {
     "presente": {
       "io": "acquisisco",
@@ -4958,6 +5015,63 @@
       "loro": "adunino"
     }
   },
+  "adunarsi": {
+    "presente": {
+      "io": "mi aduno",
+      "tu": "ti aduni",
+      "lui/lei": "si aduna",
+      "noi": "ci aduniamo",
+      "voi": "vi adunate",
+      "loro": "si adunano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono adunato",
+      "tu": "ti sei adunato",
+      "lui/lei": "si è adunato",
+      "noi": "ci siamo adunati",
+      "voi": "vi siete adunati",
+      "loro": "si sono adunati"
+    },
+    "imperfetto": {
+      "io": "mi adunavo",
+      "tu": "ti adunavi",
+      "lui/lei": "si adunava",
+      "noi": "ci adunavamo",
+      "voi": "vi adunavate",
+      "loro": "si adunavano"
+    },
+    "futuro": {
+      "io": "mi adunerò",
+      "tu": "ti adunerai",
+      "lui/lei": "si adunerà",
+      "noi": "ci aduneremo",
+      "voi": "vi adunerete",
+      "loro": "si aduneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi aduni",
+      "tu": "ti aduni",
+      "lui/lei": "si aduni",
+      "noi": "ci aduniamo",
+      "voi": "vi aduniate",
+      "loro": "si adunino"
+    },
+    "condizionale": {
+      "io": "mi adunerei",
+      "tu": "ti aduneresti",
+      "lui/lei": "si adunerebbe",
+      "noi": "ci aduneremmo",
+      "voi": "vi adunereste",
+      "loro": "si adunerebbero"
+    },
+    "imperativo": {
+      "tu": "adunati",
+      "lei": "si aduni",
+      "noi": "aduniamoci",
+      "voi": "adunatevi",
+      "loro": "si adunino"
+    }
+  },
   "adunghiare": {
     "presente": {
       "io": "adunghio",
@@ -5984,6 +6098,63 @@
       "loro": "affiorino"
     }
   },
+  "affisarsi": {
+    "presente": {
+      "io": "mi affiso",
+      "tu": "ti affisi",
+      "lui/lei": "si affisa",
+      "noi": "ci affisiamo",
+      "voi": "vi affisate",
+      "loro": "si affisano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono affisato",
+      "tu": "ti sei affisato",
+      "lui/lei": "si è affisato",
+      "noi": "ci siamo affisati",
+      "voi": "vi siete affisati",
+      "loro": "si sono affisati"
+    },
+    "imperfetto": {
+      "io": "mi affisavo",
+      "tu": "ti affisavi",
+      "lui/lei": "si affisava",
+      "noi": "ci affisavamo",
+      "voi": "vi affisavate",
+      "loro": "si affisavano"
+    },
+    "futuro": {
+      "io": "mi affiserò",
+      "tu": "ti affiserai",
+      "lui/lei": "si affiserà",
+      "noi": "ci affiseremo",
+      "voi": "vi affiserete",
+      "loro": "si affiseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi affisi",
+      "tu": "ti affisi",
+      "lui/lei": "si affisi",
+      "noi": "ci affisiamo",
+      "voi": "vi affisiate",
+      "loro": "si affisino"
+    },
+    "condizionale": {
+      "io": "mi affiserei",
+      "tu": "ti affiseresti",
+      "lui/lei": "si affiserebbe",
+      "noi": "ci affiseremmo",
+      "voi": "vi affisereste",
+      "loro": "si affiserebbero"
+    },
+    "imperativo": {
+      "tu": "affisati",
+      "lei": "si affisi",
+      "noi": "affisiamoci",
+      "voi": "affisatevi",
+      "loro": "si affisino"
+    }
+  },
   "affittare": {
     "presente": {
       "io": "affitto",
@@ -6098,6 +6269,63 @@
       "loro": "affliggano"
     }
   },
+  "affliggersi": {
+    "presente": {
+      "io": "mi affliggo",
+      "tu": "ti affliggi",
+      "lui/lei": "si affligge",
+      "noi": "ci affliggiamo",
+      "voi": "vi affliggete",
+      "loro": "si affliggono"
+    },
+    "passatoProssimo": {
+      "io": "mi sono afflitto",
+      "tu": "ti sei afflitto",
+      "lui/lei": "si è afflitto",
+      "noi": "ci siamo afflitti",
+      "voi": "vi siete afflitti",
+      "loro": "si sono afflitti"
+    },
+    "imperfetto": {
+      "io": "mi affliggevo",
+      "tu": "ti affliggevi",
+      "lui/lei": "si affliggeva",
+      "noi": "ci affliggevamo",
+      "voi": "vi affliggevate",
+      "loro": "si affliggevano"
+    },
+    "futuro": {
+      "io": "mi affliggerò",
+      "tu": "ti affliggerai",
+      "lui/lei": "si affliggerà",
+      "noi": "ci affliggeremo",
+      "voi": "vi affliggerete",
+      "loro": "si affliggeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi affligga",
+      "tu": "ti affligga",
+      "lui/lei": "si affligga",
+      "noi": "ci affliggiamo",
+      "voi": "vi affliggiate",
+      "loro": "si affliggano"
+    },
+    "condizionale": {
+      "io": "mi affliggerei",
+      "tu": "ti affliggeresti",
+      "lui/lei": "si affliggerebbe",
+      "noi": "ci affliggeremmo",
+      "voi": "vi affliggereste",
+      "loro": "si affliggerebbero"
+    },
+    "imperativo": {
+      "tu": "affliggiti",
+      "lui/lei": "si affligga",
+      "noi": "affliggiamoci",
+      "voi": "affliggetevi",
+      "loro": "si affliggano"
+    }
+  },
   "afflosciarsi": {
     "presente": {
       "io": "mi affloscio",
@@ -6153,6 +6381,63 @@
       "noi": "afflosciamoci",
       "voi": "afflosciatevi",
       "loro": "si affloscino"
+    }
+  },
+  "affluire": {
+    "presente": {
+      "io": "affluisco",
+      "tu": "affluisci",
+      "lui/lei": "affluisce",
+      "noi": "affluiamo",
+      "voi": "affluite",
+      "loro": "affluiscono"
+    },
+    "passatoProssimo": {
+      "io": "sono affluito/a",
+      "tu": "sei affluito/a",
+      "lui/lei": "è affluito/a",
+      "noi": "siamo affluiti/e",
+      "voi": "siete affluiti/e",
+      "loro": "sono affluiti/e"
+    },
+    "imperfetto": {
+      "io": "affluivo",
+      "tu": "affluivi",
+      "lui/lei": "affluiva",
+      "noi": "affluivamo",
+      "voi": "affluivate",
+      "loro": "affluivano"
+    },
+    "futuro": {
+      "io": "affluirò",
+      "tu": "affluirai",
+      "lui/lei": "affluirà",
+      "noi": "affluiremo",
+      "voi": "affluirete",
+      "loro": "affluiranno"
+    },
+    "congiuntivoPresente": {
+      "io": "affluisca",
+      "tu": "affluisca",
+      "lui/lei": "affluisca",
+      "noi": "affluiamo",
+      "voi": "affluiate",
+      "loro": "affluiscano"
+    },
+    "condizionale": {
+      "io": "affluirei",
+      "tu": "affluiresti",
+      "lui/lei": "affluirebbe",
+      "noi": "affluiremmo",
+      "voi": "affluireste",
+      "loro": "affluirebbero"
+    },
+    "imperativo": {
+      "tu": "affluisci",
+      "lei": "affluisca",
+      "noi": "affluiamo",
+      "voi": "affluite",
+      "loro": "affluiscano"
     }
   },
   "affogare": {
@@ -6611,6 +6896,120 @@
       "loro": "aggancino"
     }
   },
+  "aggelare": {
+    "presente": {
+      "io": "aggelo",
+      "tu": "aggeli",
+      "lui/lei": "aggela",
+      "noi": "aggeliamo",
+      "voi": "aggelate",
+      "loro": "aggelano"
+    },
+    "passatoProssimo": {
+      "io": "sono aggelato",
+      "tu": "sei aggelato",
+      "lui/lei": "è aggelato",
+      "noi": "siamo aggelati",
+      "voi": "siete aggelati",
+      "loro": "sono aggelati"
+    },
+    "imperfetto": {
+      "io": "aggelavo",
+      "tu": "aggelavi",
+      "lui/lei": "aggelava",
+      "noi": "aggelavamo",
+      "voi": "aggelavate",
+      "loro": "aggelavano"
+    },
+    "futuro": {
+      "io": "aggelerò",
+      "tu": "aggelerai",
+      "lui/lei": "aggelerà",
+      "noi": "aggeleremo",
+      "voi": "aggelerete",
+      "loro": "aggeleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "aggeli",
+      "tu": "aggeli",
+      "lui/lei": "aggeli",
+      "noi": "aggeliamo",
+      "voi": "aggeliate",
+      "loro": "aggelino"
+    },
+    "condizionale": {
+      "io": "aggelerei",
+      "tu": "aggeleresti",
+      "lui/lei": "aggelerebbe",
+      "noi": "aggeleremmo",
+      "voi": "aggelereste",
+      "loro": "aggelerebbero"
+    },
+    "imperativo": {
+      "tu": "aggela",
+      "lei": "aggeli",
+      "noi": "aggeliamo",
+      "voi": "aggelate",
+      "loro": "aggelino"
+    }
+  },
+  "agghiacciare": {
+    "presente": {
+      "io": "agghiaccio",
+      "tu": "agghiacci",
+      "lui/lei": "agghiaccia",
+      "noi": "agghiacciamo",
+      "voi": "agghiacciate",
+      "loro": "agghiacciano"
+    },
+    "passatoProssimo": {
+      "io": "ho agghiacciato",
+      "tu": "hai agghiacciato",
+      "lui/lei": "ha agghiacciato",
+      "noi": "abbiamo agghiacciato",
+      "voi": "avete agghiacciato",
+      "loro": "hanno agghiacciato"
+    },
+    "imperfetto": {
+      "io": "agghiacciavo",
+      "tu": "agghiacciavi",
+      "lui/lei": "agghiacciava",
+      "noi": "agghiacciavamo",
+      "voi": "agghiacciavate",
+      "loro": "agghiacciavano"
+    },
+    "futuro": {
+      "io": "agghiaccerò",
+      "tu": "agghiaccerai",
+      "lui/lei": "agghiaccerà",
+      "noi": "agghiacceremo",
+      "voi": "agghiaccerete",
+      "loro": "agghiacceranno"
+    },
+    "congiuntivoPresente": {
+      "io": "agghiacci",
+      "tu": "agghiacci",
+      "lui/lei": "agghiacci",
+      "noi": "agghiacciamo",
+      "voi": "agghiacciate",
+      "loro": "agghiaccino"
+    },
+    "condizionale": {
+      "io": "agghiaccerei",
+      "tu": "agghiacceresti",
+      "lui/lei": "agghiaccerebbe",
+      "noi": "agghiacceremmo",
+      "voi": "agghiaccereste",
+      "loro": "agghiaccerebbero"
+    },
+    "imperativo": {
+      "tu": "agghiaccia",
+      "lei": "agghiacci",
+      "noi": "agghiacciamo",
+      "voi": "agghiacciate",
+      "loro": "agghiaccino"
+    }
+  },
   "aggiornare": {
     "presente": {
       "io": "aggiorno",
@@ -6723,6 +7122,63 @@
       "noi": "aggiriamo",
       "voi": "aggirate",
       "loro": "aggirino"
+    }
+  },
+  "aggirarsi": {
+    "presente": {
+      "io": "mi aggiro",
+      "tu": "ti aggiri",
+      "lui/lei": "si aggira",
+      "noi": "ci aggiriamo",
+      "voi": "vi aggirate",
+      "loro": "si aggirano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono aggirato",
+      "tu": "ti sei aggirato",
+      "lui/lei": "si è aggirato",
+      "noi": "ci siamo aggirati",
+      "voi": "vi siete aggirati",
+      "loro": "si sono aggirati"
+    },
+    "imperfetto": {
+      "io": "mi aggiravo",
+      "tu": "ti aggiravi",
+      "lui/lei": "si aggirava",
+      "noi": "ci aggiravamo",
+      "voi": "vi aggiravate",
+      "loro": "si aggiravano"
+    },
+    "futuro": {
+      "io": "mi aggirerò",
+      "tu": "ti aggirerai",
+      "lui/lei": "si aggirerà",
+      "noi": "ci aggireremo",
+      "voi": "vi aggirerete",
+      "loro": "si aggireranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi aggiri",
+      "tu": "ti aggiri",
+      "lui/lei": "si aggiri",
+      "noi": "ci aggiriamo",
+      "voi": "vi aggiriate",
+      "loro": "si aggirino"
+    },
+    "condizionale": {
+      "io": "mi aggirerei",
+      "tu": "ti aggireresti",
+      "lui/lei": "si aggirerebbe",
+      "noi": "ci aggireremmo",
+      "voi": "vi aggirereste",
+      "loro": "si aggirerebbero"
+    },
+    "imperativo": {
+      "tu": "aggirati",
+      "lei": "si aggiri",
+      "noi": "aggiriamoci",
+      "voi": "aggiratevi",
+      "loro": "si aggirino"
     }
   },
   "aggiudicare": {
@@ -7122,6 +7578,63 @@
       "noi": "aggraviamo",
       "voi": "aggravate",
       "loro": "aggravino"
+    }
+  },
+  "aggregarsi": {
+    "presente": {
+      "io": "mi aggrego",
+      "tu": "ti aggreghi",
+      "lui/lei": "si aggrega",
+      "noi": "ci aggreghiamo",
+      "voi": "vi aggregate",
+      "loro": "si aggregano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono aggregato",
+      "tu": "ti sei aggregato",
+      "lui/lei": "si è aggregato",
+      "noi": "ci siamo aggregati",
+      "voi": "vi siete aggregati",
+      "loro": "si sono aggregati"
+    },
+    "imperfetto": {
+      "io": "mi aggregavo",
+      "tu": "ti aggregavi",
+      "lui/lei": "si aggregava",
+      "noi": "ci aggregavamo",
+      "voi": "vi aggregavate",
+      "loro": "si aggregavano"
+    },
+    "futuro": {
+      "io": "mi aggregherò",
+      "tu": "ti aggregherai",
+      "lui/lei": "si aggregherà",
+      "noi": "ci aggregheremo",
+      "voi": "vi aggregherete",
+      "loro": "si aggregheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi aggreghi",
+      "tu": "ti aggreghi",
+      "lui/lei": "si aggreghi",
+      "noi": "ci aggreghiamo",
+      "voi": "vi aggreghiate",
+      "loro": "si aggreghino"
+    },
+    "condizionale": {
+      "io": "mi aggregherei",
+      "tu": "ti aggregheresti",
+      "lui/lei": "si aggregherebbe",
+      "noi": "ci aggregheremmo",
+      "voi": "vi aggreghereste",
+      "loro": "si aggregherebbero"
+    },
+    "imperativo": {
+      "tu": "aggregati",
+      "lei": "si aggreghi",
+      "noi": "aggreghiamoci",
+      "voi": "aggregatevi",
+      "loro": "si aggreghino"
     }
   },
   "aggrondare": {
@@ -7580,6 +8093,63 @@
       "loro": "si agitino"
     }
   },
+  "agognare": {
+    "presente": {
+      "io": "agogno",
+      "tu": "agogni",
+      "lui/lei": "agogna",
+      "noi": "agogniamo",
+      "voi": "agognate",
+      "loro": "agognano"
+    },
+    "passatoProssimo": {
+      "io": "ho agognato",
+      "tu": "hai agognato",
+      "lui/lei": "ha agognato",
+      "noi": "abbiamo agognato",
+      "voi": "avete agognato",
+      "loro": "hanno agognato"
+    },
+    "imperfetto": {
+      "io": "agognavo",
+      "tu": "agognavi",
+      "lui/lei": "agognava",
+      "noi": "agognavamo",
+      "voi": "agognavate",
+      "loro": "agognavano"
+    },
+    "futuro": {
+      "io": "agognerò",
+      "tu": "agognerai",
+      "lui/lei": "agognerà",
+      "noi": "agogneremo",
+      "voi": "agognerete",
+      "loro": "agogneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "agogni",
+      "tu": "agogni",
+      "lui/lei": "agogni",
+      "noi": "agogniamo",
+      "voi": "agogniate",
+      "loro": "agognino"
+    },
+    "condizionale": {
+      "io": "agognerei",
+      "tu": "agogneresti",
+      "lui/lei": "agognerebbe",
+      "noi": "agogneremmo",
+      "voi": "agognereste",
+      "loro": "agognerebbero"
+    },
+    "imperativo": {
+      "tu": "agogna",
+      "lei": "agogni",
+      "noi": "agogniamo",
+      "voi": "agognate",
+      "loro": "agognino"
+    }
+  },
   "agonizzare": {
     "presente": {
       "io": "agonizzo",
@@ -7692,6 +8262,63 @@
       "noi": "aiutiamo",
       "voi": "aiutate",
       "loro": "aiutino"
+    }
+  },
+  "aiutarsi": {
+    "presente": {
+      "io": "mi aiuto",
+      "tu": "ti aiuti",
+      "lui/lei": "si aiuta",
+      "noi": "ci aiutiamo",
+      "voi": "vi aiutate",
+      "loro": "si aiutano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono aiutato",
+      "tu": "ti sei aiutato",
+      "lui/lei": "si è aiutato",
+      "noi": "ci siamo aiutati",
+      "voi": "vi siete aiutati",
+      "loro": "si sono aiutati"
+    },
+    "imperfetto": {
+      "io": "mi aiutavo",
+      "tu": "ti aiutavi",
+      "lui/lei": "si aiutava",
+      "noi": "ci aiutavamo",
+      "voi": "vi aiutavate",
+      "loro": "si aiutavano"
+    },
+    "futuro": {
+      "io": "mi aiuterò",
+      "tu": "ti aiuterai",
+      "lui/lei": "si aiuterà",
+      "noi": "ci aiuteremo",
+      "voi": "vi aiuterete",
+      "loro": "si aiuteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi aiuti",
+      "tu": "ti aiuti",
+      "lui/lei": "si aiuti",
+      "noi": "ci aiutiamo",
+      "voi": "vi aiutiate",
+      "loro": "si aiutino"
+    },
+    "condizionale": {
+      "io": "mi aiuterei",
+      "tu": "ti aiuteresti",
+      "lui/lei": "si aiuterebbe",
+      "noi": "ci aiuteremmo",
+      "voi": "vi aiutereste",
+      "loro": "si aiuterebbero"
+    },
+    "imperativo": {
+      "tu": "aiutati",
+      "lei": "si aiuti",
+      "noi": "aiutiamoci",
+      "voi": "aiutatevi",
+      "loro": "si aiutino"
     }
   },
   "aizzare": {
@@ -8869,6 +9496,63 @@
       "loro": "allontanino"
     }
   },
+  "allontanarsi": {
+    "presente": {
+      "io": "mi allontano",
+      "tu": "ti allontani",
+      "lui/lei": "si allontana",
+      "noi": "ci allontaniamo",
+      "voi": "vi allontanate",
+      "loro": "si allontanano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono allontanato",
+      "tu": "ti sei allontanato",
+      "lui/lei": "si è allontanato",
+      "noi": "ci siamo allontanati",
+      "voi": "vi siete allontanati",
+      "loro": "si sono allontanati"
+    },
+    "imperfetto": {
+      "io": "mi allontanavo",
+      "tu": "ti allontanavi",
+      "lui/lei": "si allontanava",
+      "noi": "ci allontanavamo",
+      "voi": "vi allontanavate",
+      "loro": "si allontanavano"
+    },
+    "futuro": {
+      "io": "mi allontanerò",
+      "tu": "ti allontanerai",
+      "lui/lei": "si allontanerà",
+      "noi": "ci allontaneremo",
+      "voi": "vi allontanerete",
+      "loro": "si allontaneranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi allontani",
+      "tu": "ti allontani",
+      "lui/lei": "si allontani",
+      "noi": "ci allontaniamo",
+      "voi": "vi allontaniate",
+      "loro": "si allontanino"
+    },
+    "condizionale": {
+      "io": "mi allontanerei",
+      "tu": "ti allontaneresti",
+      "lui/lei": "si allontanerebbe",
+      "noi": "ci allontaneremmo",
+      "voi": "vi allontanereste",
+      "loro": "si allontanerebbero"
+    },
+    "imperativo": {
+      "tu": "allontanati",
+      "lei": "si allontani",
+      "noi": "allontaniamoci",
+      "voi": "allontanatevi",
+      "loro": "si allontanino"
+    }
+  },
   "alludere": {
     "presente": {
       "io": "alludo",
@@ -8981,6 +9665,63 @@
       "noi": "allunghiamo",
       "voi": "allungate",
       "loro": "allunghino"
+    }
+  },
+  "allungarsi": {
+    "presente": {
+      "io": "mi allungo",
+      "tu": "ti allunghi",
+      "lui/lei": "si allunga",
+      "noi": "ci allunghiamo",
+      "voi": "vi allungate",
+      "loro": "si allungano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono allungato",
+      "tu": "ti sei allungato",
+      "lui/lei": "si è allungato",
+      "noi": "ci siamo allungati",
+      "voi": "vi siete allungati",
+      "loro": "si sono allungati"
+    },
+    "imperfetto": {
+      "io": "mi allungavo",
+      "tu": "ti allungavi",
+      "lui/lei": "si allungava",
+      "noi": "ci allungavamo",
+      "voi": "vi allungavate",
+      "loro": "si allungavano"
+    },
+    "futuro": {
+      "io": "mi allungherò",
+      "tu": "ti allungherai",
+      "lui/lei": "si allungherà",
+      "noi": "ci allungheremo",
+      "voi": "vi allungherete",
+      "loro": "si allungheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi allunghi",
+      "tu": "ti allunghi",
+      "lui/lei": "si allunghi",
+      "noi": "ci allunghiamo",
+      "voi": "vi allunghiate",
+      "loro": "si allunghino"
+    },
+    "condizionale": {
+      "io": "mi allungherei",
+      "tu": "ti allungheresti",
+      "lui/lei": "si allungherebbe",
+      "noi": "ci allungheremmo",
+      "voi": "vi allunghereste",
+      "loro": "si allungherebbero"
+    },
+    "imperativo": {
+      "tu": "allungati",
+      "lei": "si allunghi",
+      "noi": "allunghiamoci",
+      "voi": "allungatevi",
+      "loro": "si allunghino"
     }
   },
   "almanaccare": {
@@ -9209,6 +9950,63 @@
       "noi": "alziamo",
       "voi": "alzate",
       "loro": "alzino"
+    }
+  },
+  "alzarsi": {
+    "presente": {
+      "io": "mi alzo",
+      "tu": "ti alzi",
+      "lui/lei": "si alza",
+      "noi": "ci alziamo",
+      "voi": "vi alzate",
+      "loro": "si alzano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono alzato",
+      "tu": "ti sei alzato",
+      "lui/lei": "si è alzato",
+      "noi": "ci siamo alzati",
+      "voi": "vi siete alzati",
+      "loro": "si sono alzati"
+    },
+    "imperfetto": {
+      "io": "mi alzavo",
+      "tu": "ti alzavi",
+      "lui/lei": "si alzava",
+      "noi": "ci alzavamo",
+      "voi": "vi alzavate",
+      "loro": "si alzavano"
+    },
+    "futuro": {
+      "io": "mi alzerò",
+      "tu": "ti alzerai",
+      "lui/lei": "si alzerà",
+      "noi": "ci alzeremo",
+      "voi": "vi alzerete",
+      "loro": "si alzeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi alzi",
+      "tu": "ti alzi",
+      "lui/lei": "si alzi",
+      "noi": "ci alziamo",
+      "voi": "vi alziate",
+      "loro": "si alzino"
+    },
+    "condizionale": {
+      "io": "mi alzerei",
+      "tu": "ti alzeresti",
+      "lui/lei": "si alzerebbe",
+      "noi": "ci alzeremmo",
+      "voi": "vi alzereste",
+      "loro": "si alzerebbero"
+    },
+    "imperativo": {
+      "tu": "alzati",
+      "lei": "si alzi",
+      "noi": "alziamoci",
+      "voi": "alzatevi",
+      "loro": "si alzino"
     }
   },
   "amare": {
@@ -10522,6 +11320,63 @@
       "loro": "analizzino"
     }
   },
+  "ancidere": {
+    "presente": {
+      "io": "ancido",
+      "tu": "ancidi",
+      "lui/lei": "ancide",
+      "noi": "ancidiamo",
+      "voi": "ancidete",
+      "loro": "ancidono"
+    },
+    "passatoProssimo": {
+      "io": "ho anciso",
+      "tu": "hai anciso",
+      "lui/lei": "ha anciso",
+      "noi": "abbiamo anciso",
+      "voi": "avete anciso",
+      "loro": "hanno anciso"
+    },
+    "imperfetto": {
+      "io": "ancidevo",
+      "tu": "ancidevi",
+      "lui/lei": "ancideva",
+      "noi": "ancidevamo",
+      "voi": "ancidevate",
+      "loro": "ancidevano"
+    },
+    "futuro": {
+      "io": "anciderò",
+      "tu": "anciderai",
+      "lui/lei": "anciderà",
+      "noi": "ancideremo",
+      "voi": "anciderete",
+      "loro": "ancideranno"
+    },
+    "congiuntivoPresente": {
+      "io": "ancida",
+      "tu": "ancida",
+      "lui/lei": "ancida",
+      "noi": "ancidiamo",
+      "voi": "ancidiate",
+      "loro": "ancidano"
+    },
+    "condizionale": {
+      "io": "anciderei",
+      "tu": "ancideresti",
+      "lui/lei": "anciderebbe",
+      "noi": "ancideremmo",
+      "voi": "ancidereste",
+      "loro": "anciderebbero"
+    },
+    "imperativo": {
+      "tu": "ancidi",
+      "lei": "ancida",
+      "noi": "ancidiamo",
+      "voi": "ancidete",
+      "loro": "ancidano"
+    }
+  },
   "ancorare": {
     "presente": {
       "io": "ancoro",
@@ -11035,6 +11890,63 @@
       "loro": "annebbino"
     }
   },
+  "annebbiarsi": {
+    "presente": {
+      "io": "mi annebbio",
+      "tu": "ti annebbi",
+      "lui/lei": "si annebbia",
+      "noi": "ci annebbiamo",
+      "voi": "vi annebbiate",
+      "loro": "si annebbiano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono annebbiato",
+      "tu": "ti sei annebbiato",
+      "lui/lei": "si è annebbiato",
+      "noi": "ci siamo annebbiati",
+      "voi": "vi siete annebbiati",
+      "loro": "si sono annebbiati"
+    },
+    "imperfetto": {
+      "io": "mi annebbiavo",
+      "tu": "ti annebbiavi",
+      "lui/lei": "si annebbiava",
+      "noi": "ci annebbiavamo",
+      "voi": "vi annebbiavate",
+      "loro": "si annebbiavano"
+    },
+    "futuro": {
+      "io": "mi annebbierò",
+      "tu": "ti annebbierai",
+      "lui/lei": "si annebbierà",
+      "noi": "ci annebbieremo",
+      "voi": "vi annebbierete",
+      "loro": "si annebbieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi annebbi",
+      "tu": "ti annebbi",
+      "lui/lei": "si annebbi",
+      "noi": "ci annebbiamo",
+      "voi": "vi annebbiate",
+      "loro": "si annebbino"
+    },
+    "condizionale": {
+      "io": "mi annebbierei",
+      "tu": "ti annebbieresti",
+      "lui/lei": "si annebbierebbe",
+      "noi": "ci annebbieremmo",
+      "voi": "vi annebbiereste",
+      "loro": "si annebbierebbero"
+    },
+    "imperativo": {
+      "tu": "annebbiati",
+      "lei": "si annebbi",
+      "noi": "annebbiamoci",
+      "voi": "annebbiatevi",
+      "loro": "si annebbino"
+    }
+  },
   "annegare": {
     "presente": {
       "io": "annego",
@@ -11090,6 +12002,63 @@
       "noi": "anneghiamo",
       "voi": "annegate",
       "loro": "anneghino"
+    }
+  },
+  "annegarsi": {
+    "presente": {
+      "io": "mi annego",
+      "tu": "ti anneghi",
+      "lui/lei": "si annega",
+      "noi": "ci anneghiamo",
+      "voi": "vi annegate",
+      "loro": "si annegano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono annegato",
+      "tu": "ti sei annegato",
+      "lui/lei": "si è annegato",
+      "noi": "ci siamo annegati",
+      "voi": "vi siete annegati",
+      "loro": "si sono annegati"
+    },
+    "imperfetto": {
+      "io": "mi annegavo",
+      "tu": "ti annegavi",
+      "lui/lei": "si annegava",
+      "noi": "ci annegavamo",
+      "voi": "vi annegavate",
+      "loro": "si annegavano"
+    },
+    "futuro": {
+      "io": "mi annegherò",
+      "tu": "ti annegherai",
+      "lui/lei": "si annegherà",
+      "noi": "ci annegheremo",
+      "voi": "vi annegherete",
+      "loro": "si annegheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi anneghi",
+      "tu": "ti anneghi",
+      "lui/lei": "si anneghi",
+      "noi": "ci anneghiamo",
+      "voi": "vi anneghiate",
+      "loro": "si anneghino"
+    },
+    "condizionale": {
+      "io": "mi annegherei",
+      "tu": "ti annegheresti",
+      "lui/lei": "si annegherebbe",
+      "noi": "ci annegheremmo",
+      "voi": "vi anneghereste",
+      "loro": "si annegherebbero"
+    },
+    "imperativo": {
+      "tu": "annegati",
+      "lei": "si anneghi",
+      "noi": "anneghiamoci",
+      "voi": "annegatevi",
+      "loro": "si anneghino"
     }
   },
   "annerire": {
@@ -11662,6 +12631,63 @@
       "loro": "annullino"
     }
   },
+  "annullarsi": {
+    "presente": {
+      "io": "mi annullo",
+      "tu": "ti annulli",
+      "lui/lei": "si annulla",
+      "noi": "ci annulliamo",
+      "voi": "vi annullate",
+      "loro": "si annullano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono annullato",
+      "tu": "ti sei annullato",
+      "lui/lei": "si è annullato",
+      "noi": "ci siamo annullati",
+      "voi": "vi siete annullati",
+      "loro": "si sono annullati"
+    },
+    "imperfetto": {
+      "io": "mi annullavo",
+      "tu": "ti annullavi",
+      "lui/lei": "si annullava",
+      "noi": "ci annullavamo",
+      "voi": "vi annullavate",
+      "loro": "si annullavano"
+    },
+    "futuro": {
+      "io": "mi annullerò",
+      "tu": "ti annullerai",
+      "lui/lei": "si annullerà",
+      "noi": "ci annulleremo",
+      "voi": "vi annullerete",
+      "loro": "si annulleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi annulli",
+      "tu": "ti annulli",
+      "lui/lei": "si annulli",
+      "noi": "ci annulliamo",
+      "voi": "vi annulliate",
+      "loro": "si annullino"
+    },
+    "condizionale": {
+      "io": "mi annullerei",
+      "tu": "ti annulleresti",
+      "lui/lei": "si annullerebbe",
+      "noi": "ci annulleremmo",
+      "voi": "vi annullereste",
+      "loro": "si annullerebbero"
+    },
+    "imperativo": {
+      "tu": "annullati",
+      "lei": "si annulli",
+      "noi": "annulliamoci",
+      "voi": "annullatevi",
+      "loro": "si annullino"
+    }
+  },
   "annunciare": {
     "presente": {
       "io": "annuncio",
@@ -11717,6 +12743,63 @@
       "noi": "annunciamo",
       "voi": "annunciate",
       "loro": "annuncino"
+    }
+  },
+  "annunziarsi": {
+    "presente": {
+      "io": "mi annunzio",
+      "tu": "ti annunzi",
+      "lui/lei": "si annunzia",
+      "noi": "ci annunziamo",
+      "voi": "vi annunziate",
+      "loro": "si annunziano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono annunziato",
+      "tu": "ti sei annunziato",
+      "lui/lei": "si è annunziato",
+      "noi": "ci siamo annunziati",
+      "voi": "vi siete annunziati",
+      "loro": "si sono annunziati"
+    },
+    "imperfetto": {
+      "io": "mi annunziavo",
+      "tu": "ti annunziavi",
+      "lui/lei": "si annunziava",
+      "noi": "ci annunziavamo",
+      "voi": "vi annunziavate",
+      "loro": "si annunziavano"
+    },
+    "futuro": {
+      "io": "mi annunzierò",
+      "tu": "ti annunzierai",
+      "lui/lei": "si annunzierà",
+      "noi": "ci annunzieremo",
+      "voi": "vi annunzierete",
+      "loro": "si annunzieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi annunzi",
+      "tu": "ti annunzi",
+      "lui/lei": "si annunzi",
+      "noi": "ci annunziamo",
+      "voi": "vi annunziate",
+      "loro": "si annunzino"
+    },
+    "condizionale": {
+      "io": "mi annunzierei",
+      "tu": "ti annunzieresti",
+      "lui/lei": "si annunzierebbe",
+      "noi": "ci annunzieremmo",
+      "voi": "vi annunziereste",
+      "loro": "si annunzierebbero"
+    },
+    "imperativo": {
+      "tu": "annunziati",
+      "lei": "si annunzi",
+      "noi": "annunziamoci",
+      "voi": "annunziatevi",
+      "loro": "si annunzino"
     }
   },
   "annusare": {
@@ -12061,6 +13144,63 @@
       "loro": "appaghino"
     }
   },
+  "appalesarsi": {
+    "presente": {
+      "io": "mi appaleso",
+      "tu": "ti appalesi",
+      "lui/lei": "si appalesa",
+      "noi": "ci appalesiamo",
+      "voi": "vi appalesate",
+      "loro": "si appalesano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono appalesato",
+      "tu": "ti sei appalesato",
+      "lui/lei": "si è appalesato",
+      "noi": "ci siamo appalesati",
+      "voi": "vi siete appalesati",
+      "loro": "si sono appalesati"
+    },
+    "imperfetto": {
+      "io": "mi appalesavo",
+      "tu": "ti appalesavi",
+      "lui/lei": "si appalesava",
+      "noi": "ci appalesavamo",
+      "voi": "vi appalesavate",
+      "loro": "si appalesavano"
+    },
+    "futuro": {
+      "io": "mi appaleserò",
+      "tu": "ti appaleserai",
+      "lui/lei": "si appaleserà",
+      "noi": "ci appaleseremo",
+      "voi": "vi appaleserete",
+      "loro": "si appaleseranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi appalesi",
+      "tu": "ti appalesi",
+      "lui/lei": "si appalesi",
+      "noi": "ci appalesiamo",
+      "voi": "vi appalesiate",
+      "loro": "si appalesino"
+    },
+    "condizionale": {
+      "io": "mi appaleserei",
+      "tu": "ti appaleseresti",
+      "lui/lei": "si appaleserebbe",
+      "noi": "ci appaleseremmo",
+      "voi": "vi appalesereste",
+      "loro": "si appaleserebbero"
+    },
+    "imperativo": {
+      "tu": "appalesati",
+      "lei": "si appalesi",
+      "noi": "appalesiamoci",
+      "voi": "appalesatevi",
+      "loro": "si appalesino"
+    }
+  },
   "appannare": {
     "presente": {
       "io": "appanno",
@@ -12173,6 +13313,63 @@
       "noi": "apparecchiamo",
       "voi": "apparecchiate",
       "loro": "apparecchino"
+    }
+  },
+  "apparecchiarsi": {
+    "presente": {
+      "io": "mi apparecchio",
+      "tu": "ti apparecchi",
+      "lui/lei": "si apparecchia",
+      "noi": "ci apparecchiamo",
+      "voi": "vi apparecchiate",
+      "loro": "si apparecchiano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono apparecchiato",
+      "tu": "ti sei apparecchiato",
+      "lui/lei": "si è apparecchiato",
+      "noi": "ci siamo apparecchiati",
+      "voi": "vi siete apparecchiati",
+      "loro": "si sono apparecchiati"
+    },
+    "imperfetto": {
+      "io": "mi apparecchiavo",
+      "tu": "ti apparecchiavi",
+      "lui/lei": "si apparecchiava",
+      "noi": "ci apparecchiavamo",
+      "voi": "vi apparecchiavate",
+      "loro": "si apparecchiavano"
+    },
+    "futuro": {
+      "io": "mi apparecchierò",
+      "tu": "ti apparecchierai",
+      "lui/lei": "si apparecchierà",
+      "noi": "ci apparecchieremo",
+      "voi": "vi apparecchierete",
+      "loro": "si apparecchieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi apparecchi",
+      "tu": "ti apparecchi",
+      "lui/lei": "si apparecchi",
+      "noi": "ci apparecchiamo",
+      "voi": "vi apparecchiate",
+      "loro": "si apparecchino"
+    },
+    "condizionale": {
+      "io": "mi apparecchierei",
+      "tu": "ti apparecchieresti",
+      "lui/lei": "si apparecchierebbe",
+      "noi": "ci apparecchieremmo",
+      "voi": "vi apparecchiereste",
+      "loro": "si apparecchierebbero"
+    },
+    "imperativo": {
+      "tu": "apparecchiati",
+      "lei": "si apparecchi",
+      "noi": "apparecchiamoci",
+      "voi": "apparecchiatevi",
+      "loro": "si apparecchino"
     }
   },
   "apparire": {
@@ -13029,6 +14226,63 @@
       "noi": "appiccichiamo",
       "voi": "appiccicate",
       "loro": "appiccichino"
+    }
+  },
+  "appiccicarsi": {
+    "presente": {
+      "io": "mi appiccico",
+      "tu": "ti appiccichi",
+      "lui/lei": "si appiccica",
+      "noi": "ci appiccichiamo",
+      "voi": "vi appiccicate",
+      "loro": "si appiccicano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono appiccicato",
+      "tu": "ti sei appiccicato",
+      "lui/lei": "si è appiccicato",
+      "noi": "ci siamo appiccicati",
+      "voi": "vi siete appiccicati",
+      "loro": "si sono appiccicati"
+    },
+    "imperfetto": {
+      "io": "mi appiccicavo",
+      "tu": "ti appiccicavi",
+      "lui/lei": "si appiccicava",
+      "noi": "ci appiccicavamo",
+      "voi": "vi appiccicavate",
+      "loro": "si appiccicavano"
+    },
+    "futuro": {
+      "io": "mi appiccicherò",
+      "tu": "ti appiccicherai",
+      "lui/lei": "si appiccicherà",
+      "noi": "ci appiccicheremo",
+      "voi": "vi appiccicherete",
+      "loro": "si appiccicheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi appiccichi",
+      "tu": "ti appiccichi",
+      "lui/lei": "si appiccichi",
+      "noi": "ci appiccichiamo",
+      "voi": "vi appiccichiate",
+      "loro": "si appiccichino"
+    },
+    "condizionale": {
+      "io": "mi appiccicherei",
+      "tu": "ti appiccicheresti",
+      "lui/lei": "si appiccicherebbe",
+      "noi": "ci appiccicheremmo",
+      "voi": "vi appiccichereste",
+      "loro": "si appiccicherebbero"
+    },
+    "imperativo": {
+      "tu": "appiccicati",
+      "lei": "si appiccichi",
+      "noi": "appiccichiamoci",
+      "voi": "appiccicatevi",
+      "loro": "si appiccichino"
     }
   },
   "appigliarsi": {
@@ -15197,6 +16451,63 @@
       "loro": "arrestino"
     }
   },
+  "arrestarsi": {
+    "presente": {
+      "io": "mi arresto",
+      "tu": "ti arresti",
+      "lui/lei": "si arresta",
+      "noi": "ci arrestiamo",
+      "voi": "vi arrestate",
+      "loro": "si arrestano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono arrestato",
+      "tu": "ti sei arrestato",
+      "lui/lei": "si è arrestato",
+      "noi": "ci siamo arrestati",
+      "voi": "vi siete arrestati",
+      "loro": "si sono arrestati"
+    },
+    "imperfetto": {
+      "io": "mi arrestavo",
+      "tu": "ti arrestavi",
+      "lui/lei": "si arrestava",
+      "noi": "ci arrestavamo",
+      "voi": "vi arrestavate",
+      "loro": "si arrestavano"
+    },
+    "futuro": {
+      "io": "mi arresterò",
+      "tu": "ti arresterai",
+      "lui/lei": "si arresterà",
+      "noi": "ci arresteremo",
+      "voi": "vi arresterete",
+      "loro": "si arresteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi arresti",
+      "tu": "ti arresti",
+      "lui/lei": "si arresti",
+      "noi": "ci arrestiamo",
+      "voi": "vi arrestiate",
+      "loro": "si arrestino"
+    },
+    "condizionale": {
+      "io": "mi arresterei",
+      "tu": "ti arresteresti",
+      "lui/lei": "si arresterebbe",
+      "noi": "ci arresteremmo",
+      "voi": "vi arrestereste",
+      "loro": "si arresterebbero"
+    },
+    "imperativo": {
+      "tu": "arrestati",
+      "lei": "si arresti",
+      "noi": "arrestiamoci",
+      "voi": "arrestatevi",
+      "loro": "si arrestino"
+    }
+  },
   "arretrare": {
     "presente": {
       "io": "arretro",
@@ -15936,6 +17247,63 @@
       "noi": "arrotondiamo",
       "voi": "arrotondate",
       "loro": "arrotondino"
+    }
+  },
+  "arrovellarsi": {
+    "presente": {
+      "io": "mi arrovello",
+      "tu": "ti arrovelli",
+      "lui/lei": "si arrovella",
+      "noi": "ci arrovelliamo",
+      "voi": "vi arrovellate",
+      "loro": "si arrovellano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono arrovellato",
+      "tu": "ti sei arrovellato",
+      "lui/lei": "si è arrovellato",
+      "noi": "ci siamo arrovellati",
+      "voi": "vi siete arrovellati",
+      "loro": "si sono arrovellati"
+    },
+    "imperfetto": {
+      "io": "mi arrovellavo",
+      "tu": "ti arrovellavi",
+      "lui/lei": "si arrovellava",
+      "noi": "ci arrovellavamo",
+      "voi": "vi arrovellavate",
+      "loro": "si arrovellavano"
+    },
+    "futuro": {
+      "io": "mi arrovellerò",
+      "tu": "ti arrovellerai",
+      "lui/lei": "si arrovellerà",
+      "noi": "ci arrovelleremo",
+      "voi": "vi arrovellerete",
+      "loro": "si arrovelleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi arrovelli",
+      "tu": "ti arrovelli",
+      "lui/lei": "si arrovelli",
+      "noi": "ci arrovelliamo",
+      "voi": "vi arrovelliate",
+      "loro": "si arrovellino"
+    },
+    "condizionale": {
+      "io": "mi arrovellerei",
+      "tu": "ti arrovelleresti",
+      "lui/lei": "si arrovellerebbe",
+      "noi": "ci arrovelleremmo",
+      "voi": "vi arrovellereste",
+      "loro": "si arrovellerebbero"
+    },
+    "imperativo": {
+      "tu": "arrovellati",
+      "lui/lei": "si arrovelli",
+      "noi": "arrovelliamoci",
+      "voi": "arrovellatevi",
+      "loro": "si arrovellino"
     }
   },
   "arrovesciare": {
@@ -17534,6 +18902,63 @@
       "loro": "assoggettino"
     }
   },
+  "assoggettarsi": {
+    "presente": {
+      "io": "mi assoggetto",
+      "tu": "ti assoggetti",
+      "lui/lei": "si assoggetta",
+      "noi": "ci assoggettiamo",
+      "voi": "vi assoggettate",
+      "loro": "si assoggettano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono assoggettato",
+      "tu": "ti sei assoggettato",
+      "lui/lei": "si è assoggettato",
+      "noi": "ci siamo assoggettati",
+      "voi": "vi siete assoggettati",
+      "loro": "si sono assoggettati"
+    },
+    "imperfetto": {
+      "io": "mi assoggettavo",
+      "tu": "ti assoggettavi",
+      "lui/lei": "si assoggettava",
+      "noi": "ci assoggettavamo",
+      "voi": "vi assoggettavate",
+      "loro": "si assoggettavano"
+    },
+    "futuro": {
+      "io": "mi assoggetterò",
+      "tu": "ti assoggetterai",
+      "lui/lei": "si assoggetterà",
+      "noi": "ci assoggetteremo",
+      "voi": "vi assoggetterete",
+      "loro": "si assoggetteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi assoggetti",
+      "tu": "ti assoggetti",
+      "lui/lei": "si assoggetti",
+      "noi": "ci assoggettiamo",
+      "voi": "vi assoggettiate",
+      "loro": "si assoggettino"
+    },
+    "condizionale": {
+      "io": "mi assoggetterei",
+      "tu": "ti assoggetteresti",
+      "lui/lei": "si assoggetterebbe",
+      "noi": "ci assoggetteremmo",
+      "voi": "vi assoggettereste",
+      "loro": "si assoggetterebbero"
+    },
+    "imperativo": {
+      "tu": "assoggettati",
+      "lei": "si assoggetti",
+      "noi": "assoggettiamoci",
+      "voi": "assoggettatevi",
+      "loro": "si assoggettino"
+    }
+  },
   "assomigliare": {
     "presente": {
       "io": "assomiglio",
@@ -17933,6 +19358,63 @@
       "loro": "attacchino"
     }
   },
+  "attaccarsi": {
+    "presente": {
+      "io": "mi attacco",
+      "tu": "ti attacchi",
+      "lui/lei": "si attacca",
+      "noi": "ci attacchiamo",
+      "voi": "vi attaccate",
+      "loro": "si attaccano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono attaccato",
+      "tu": "ti sei attaccato",
+      "lui/lei": "si è attaccato",
+      "noi": "ci siamo attaccati",
+      "voi": "vi siete attaccati",
+      "loro": "si sono attaccati"
+    },
+    "imperfetto": {
+      "io": "mi attaccavo",
+      "tu": "ti attaccavi",
+      "lui/lei": "si attaccava",
+      "noi": "ci attaccavamo",
+      "voi": "vi attaccavate",
+      "loro": "si attaccavano"
+    },
+    "futuro": {
+      "io": "mi attaccherò",
+      "tu": "ti attaccherai",
+      "lui/lei": "si attaccherà",
+      "noi": "ci attaccheremo",
+      "voi": "vi attaccherete",
+      "loro": "si attaccheranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi attacchi",
+      "tu": "ti attacchi",
+      "lui/lei": "si attacchi",
+      "noi": "ci attacchiamo",
+      "voi": "vi attacchiate",
+      "loro": "si attacchino"
+    },
+    "condizionale": {
+      "io": "mi attaccherei",
+      "tu": "ti attaccheresti",
+      "lui/lei": "si attaccherebbe",
+      "noi": "ci attaccheremmo",
+      "voi": "vi attacchereste",
+      "loro": "si attaccherebbero"
+    },
+    "imperativo": {
+      "tu": "attaccati",
+      "lei": "si attacchi",
+      "noi": "attacchiamoci",
+      "voi": "attaccatevi",
+      "loro": "si attacchino"
+    }
+  },
   "attanagliare": {
     "presente": {
       "io": "attanaglio",
@@ -18045,6 +19527,63 @@
       "noi": "attecchiamo",
       "voi": "attecchite",
       "loro": "attecchiscano"
+    }
+  },
+  "attemparsi": {
+    "presente": {
+      "io": "mi attempo",
+      "tu": "ti attempi",
+      "lui/lei": "si attempa",
+      "noi": "ci attempiamo",
+      "voi": "vi attempate",
+      "loro": "si attempano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono attempato/a",
+      "tu": "ti sei attempato/a",
+      "lui/lei": "si è attempato/a",
+      "noi": "ci siamo attempati/e",
+      "voi": "vi siete attempati/e",
+      "loro": "si sono attempati/e"
+    },
+    "imperfetto": {
+      "io": "mi attempavo",
+      "tu": "ti attempavi",
+      "lui/lei": "si attempava",
+      "noi": "ci attempavamo",
+      "voi": "vi attempavate",
+      "loro": "si attempavano"
+    },
+    "futuro": {
+      "io": "mi attemperò",
+      "tu": "ti attemperai",
+      "lui/lei": "si attemperà",
+      "noi": "ci attemperemo",
+      "voi": "vi attemperete",
+      "loro": "si attemperanno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi attempi",
+      "tu": "ti attempi",
+      "lui/lei": "si attempi",
+      "noi": "ci attempiamo",
+      "voi": "vi attempiate",
+      "loro": "si attempino"
+    },
+    "condizionale": {
+      "io": "mi attemperei",
+      "tu": "ti attemperesti",
+      "lui/lei": "si attemperebbe",
+      "noi": "ci attemperemmo",
+      "voi": "vi attempereste",
+      "loro": "si attemperebbero"
+    },
+    "imperativo": {
+      "tu": "attempati",
+      "lei": "si attempi",
+      "noi": "attempiamoci",
+      "voi": "attempatevi",
+      "loro": "si attempino"
     }
   },
   "attendere": {
@@ -18273,6 +19812,63 @@
       "noi": "attentiamo",
       "voi": "attentate",
       "loro": "attentino"
+    }
+  },
+  "attentarsi": {
+    "presente": {
+      "io": "mi attento",
+      "tu": "ti attenti",
+      "lui/lei": "si attenta",
+      "noi": "ci attentiamo",
+      "voi": "vi attentate",
+      "loro": "si attentano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono attentato",
+      "tu": "ti sei attentato",
+      "lui/lei": "si è attentato",
+      "noi": "ci siamo attentati",
+      "voi": "vi siete attentati",
+      "loro": "si sono attentati"
+    },
+    "imperfetto": {
+      "io": "mi attentavo",
+      "tu": "ti attentavi",
+      "lui/lei": "si attentava",
+      "noi": "ci attentavamo",
+      "voi": "vi attentavate",
+      "loro": "si attentavano"
+    },
+    "futuro": {
+      "io": "mi attenterò",
+      "tu": "ti attenterai",
+      "lui/lei": "si attenterà",
+      "noi": "ci attenteremo",
+      "voi": "vi attenterete",
+      "loro": "si attenteranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi attenti",
+      "tu": "ti attenti",
+      "lui/lei": "si attenti",
+      "noi": "ci attentiamo",
+      "voi": "vi attentiate",
+      "loro": "si attentino"
+    },
+    "condizionale": {
+      "io": "mi attenterei",
+      "tu": "ti attenteresti",
+      "lui/lei": "si attenterebbe",
+      "noi": "ci attenteremmo",
+      "voi": "vi attentereste",
+      "loro": "si attenterebbero"
+    },
+    "imperativo": {
+      "tu": "attentati",
+      "lei": "si attenti",
+      "noi": "attentiamoci",
+      "voi": "attentatevi",
+      "loro": "si attentino"
     }
   },
   "attenuare": {
@@ -18959,6 +20555,63 @@
       "loro": "attribuiscano"
     }
   },
+  "attristarsi": {
+    "presente": {
+      "io": "mi attristo",
+      "tu": "ti attristi",
+      "lui/lei": "si attrista",
+      "noi": "ci attristiamo",
+      "voi": "vi attristate",
+      "loro": "si attristano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono attristato",
+      "tu": "ti sei attristato",
+      "lui/lei": "si è attristato",
+      "noi": "ci siamo attristati",
+      "voi": "vi siete attristati",
+      "loro": "si sono attristati"
+    },
+    "imperfetto": {
+      "io": "mi attristavo",
+      "tu": "ti attristavi",
+      "lui/lei": "si attristava",
+      "noi": "ci attristavamo",
+      "voi": "vi attristavate",
+      "loro": "si attristavano"
+    },
+    "futuro": {
+      "io": "mi attristerò",
+      "tu": "ti attristerai",
+      "lui/lei": "si attristerà",
+      "noi": "ci attristeremo",
+      "voi": "vi attristerete",
+      "loro": "si attristeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi attristi",
+      "tu": "ti attristi",
+      "lui/lei": "si attristi",
+      "noi": "ci attristiamo",
+      "voi": "vi attristiate",
+      "loro": "si attristino"
+    },
+    "condizionale": {
+      "io": "mi attristerei",
+      "tu": "ti attristeresti",
+      "lui/lei": "si attristerebbe",
+      "noi": "ci attristeremmo",
+      "voi": "vi attristereste",
+      "loro": "si attristerebbero"
+    },
+    "imperativo": {
+      "tu": "attristati",
+      "lei": "si attristi",
+      "noi": "attristiamoci",
+      "voi": "attristatevi",
+      "loro": "si attristino"
+    }
+  },
   "attuare": {
     "presente": {
       "io": "attuo",
@@ -19529,6 +21182,63 @@
       "loro": "si avvalgano"
     }
   },
+  "avvallarsi": {
+    "presente": {
+      "io": "mi avvallo",
+      "tu": "ti avvalli",
+      "lui/lei": "si avvalla",
+      "noi": "ci avvalliamo",
+      "voi": "vi avvallate",
+      "loro": "si avvallano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono avvallato",
+      "tu": "ti sei avvallato",
+      "lui/lei": "si è avvallato",
+      "noi": "ci siamo avvallati",
+      "voi": "vi siete avvallati",
+      "loro": "si sono avvallati"
+    },
+    "imperfetto": {
+      "io": "mi avvallavo",
+      "tu": "ti avvallavi",
+      "lui/lei": "si avvallava",
+      "noi": "ci avvallavamo",
+      "voi": "vi avvallavate",
+      "loro": "si avvallavano"
+    },
+    "futuro": {
+      "io": "mi avvallerò",
+      "tu": "ti avvallerai",
+      "lui/lei": "si avvallerà",
+      "noi": "ci avvalleremo",
+      "voi": "vi avvallerete",
+      "loro": "si avvalleranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi avvalli",
+      "tu": "ti avvalli",
+      "lui/lei": "si avvalli",
+      "noi": "ci avvalliamo",
+      "voi": "vi avvalliate",
+      "loro": "si avvallino"
+    },
+    "condizionale": {
+      "io": "mi avvallerei",
+      "tu": "ti avvalleresti",
+      "lui/lei": "si avvallerebbe",
+      "noi": "ci avvalleremmo",
+      "voi": "vi avvallereste",
+      "loro": "si avvallerebbero"
+    },
+    "imperativo": {
+      "tu": "avvallati",
+      "lei": "si avvalli",
+      "noi": "avvalliamoci",
+      "voi": "avvallatevi",
+      "loro": "si avvallino"
+    }
+  },
   "avvampare": {
     "presente": {
       "io": "avvampo",
@@ -19812,6 +21522,63 @@
       "noi": "avventiamo",
       "voi": "avventate",
       "loro": "avventino"
+    }
+  },
+  "avventarsi": {
+    "presente": {
+      "io": "mi avvento",
+      "tu": "ti avventi",
+      "lui/lei": "si avventa",
+      "noi": "ci avventiamo",
+      "voi": "vi avventate",
+      "loro": "si avventano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono avventato",
+      "tu": "ti sei avventato",
+      "lui/lei": "si è avventato",
+      "noi": "ci siamo avventati",
+      "voi": "vi siete avventati",
+      "loro": "si sono avventati"
+    },
+    "imperfetto": {
+      "io": "mi avventavo",
+      "tu": "ti avventavi",
+      "lui/lei": "si avventava",
+      "noi": "ci avventavamo",
+      "voi": "vi avventavate",
+      "loro": "si avventavano"
+    },
+    "futuro": {
+      "io": "mi avventerò",
+      "tu": "ti avventerai",
+      "lui/lei": "si avventerà",
+      "noi": "ci avventeremo",
+      "voi": "vi avventerete",
+      "loro": "si avventeranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi avventi",
+      "tu": "ti avventi",
+      "lui/lei": "si avventi",
+      "noi": "ci avventiamo",
+      "voi": "vi avventiate",
+      "loro": "si avventino"
+    },
+    "condizionale": {
+      "io": "mi avventerei",
+      "tu": "ti avventeresti",
+      "lui/lei": "si avventerebbe",
+      "noi": "ci avventeremmo",
+      "voi": "vi avventereste",
+      "loro": "si avventerebbero"
+    },
+    "imperativo": {
+      "tu": "avventati",
+      "lei": "si avventi",
+      "noi": "avventiamoci",
+      "voi": "avventatevi",
+      "loro": "si avventino"
     }
   },
   "avventurarsi": {
@@ -20099,6 +21866,63 @@
       "loro": "avviino"
     }
   },
+  "avviarsi": {
+    "presente": {
+      "io": "mi avvio",
+      "tu": "ti avvii",
+      "lui/lei": "si avvia",
+      "noi": "ci avviamo",
+      "voi": "vi avviate",
+      "loro": "si avviano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono avviato",
+      "tu": "ti sei avviato",
+      "lui/lei": "si è avviato",
+      "noi": "ci siamo avviati",
+      "voi": "vi siete avviati",
+      "loro": "si sono avviati"
+    },
+    "imperfetto": {
+      "io": "mi avviavo",
+      "tu": "ti avviavi",
+      "lui/lei": "si avviava",
+      "noi": "ci avviavamo",
+      "voi": "vi avviavate",
+      "loro": "si avviavano"
+    },
+    "futuro": {
+      "io": "mi avvierò",
+      "tu": "ti avvierai",
+      "lui/lei": "si avvierà",
+      "noi": "ci avvieremo",
+      "voi": "vi avvierete",
+      "loro": "si avvieranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi avvii",
+      "tu": "ti avvii",
+      "lui/lei": "si avvii",
+      "noi": "ci avviamo",
+      "voi": "vi avviate",
+      "loro": "si avviino"
+    },
+    "condizionale": {
+      "io": "mi avvierei",
+      "tu": "ti avvieresti",
+      "lui/lei": "si avvierebbe",
+      "noi": "ci avvieremmo",
+      "voi": "vi avviereste",
+      "loro": "si avvierebbero"
+    },
+    "imperativo": {
+      "tu": "avviati",
+      "lei": "si avvii",
+      "noi": "avviamoci",
+      "voi": "avviatevi",
+      "loro": "si avviino"
+    }
+  },
   "avvicinare": {
     "presente": {
       "io": "avvicino",
@@ -20154,6 +21978,63 @@
       "noi": "avviciniamo",
       "voi": "avvicinate",
       "loro": "avvicinino"
+    }
+  },
+  "avvicinarsi": {
+    "presente": {
+      "io": "mi avvicino",
+      "tu": "ti avvicini",
+      "lui/lei": "si avvicina",
+      "noi": "ci avviciniamo",
+      "voi": "vi avvicinate",
+      "loro": "si avvicinano"
+    },
+    "passatoProssimo": {
+      "io": "mi sono avvicinato",
+      "tu": "ti sei avvicinato",
+      "lui/lei": "si è avvicinato",
+      "noi": "ci siamo avvicinati",
+      "voi": "vi siete avvicinati",
+      "loro": "si sono avvicinati"
+    },
+    "imperfetto": {
+      "io": "mi avvicinavo",
+      "tu": "ti avvicinavi",
+      "lui/lei": "si avvicinava",
+      "noi": "ci avvicinavamo",
+      "voi": "vi avvicinavate",
+      "loro": "si avvicinavano"
+    },
+    "futuro": {
+      "io": "mi avvicinerò",
+      "tu": "ti avvicinerai",
+      "lui/lei": "si avvicinerà",
+      "noi": "ci avvicineremo",
+      "voi": "vi avvicinerete",
+      "loro": "si avvicineranno"
+    },
+    "congiuntivoPresente": {
+      "io": "mi avvicini",
+      "tu": "ti avvicini",
+      "lui/lei": "si avvicini",
+      "noi": "ci avviciniamo",
+      "voi": "vi avviciniate",
+      "loro": "si avvicinino"
+    },
+    "condizionale": {
+      "io": "mi avvicinerei",
+      "tu": "ti avvicineresti",
+      "lui/lei": "si avvicinerebbe",
+      "noi": "ci avvicineremmo",
+      "voi": "vi avvicinereste",
+      "loro": "si avvicinerebbero"
+    },
+    "imperativo": {
+      "tu": "avvicinati",
+      "lei": "si avvicini",
+      "noi": "avviciniamoci",
+      "voi": "avvicinatevi",
+      "loro": "si avvicinino"
     }
   },
   "avvinghiare": {

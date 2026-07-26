@@ -22,16 +22,25 @@ const formatDate = (ts) =>
       })
     : ''
 
+const loadTexts = async () => {
+  loading.value = true
+  loadError.value = ''
+  try {
+    texts.value = await listNewsTexts()
+  } catch (err) {
+    loadError.value = networkErrorMessage(err) || ''
+  } finally {
+    loading.value = false
+  }
+}
+
 onMounted(async () => {
   premiumPlus.value = await isPremiumPlus()
   if (premiumPlus.value) {
-    try {
-      texts.value = await listNewsTexts()
-    } catch (err) {
-      loadError.value = networkErrorMessage(err) || ''
-    }
+    await loadTexts()
+  } else {
+    loading.value = false
   }
-  loading.value = false
 })
 </script>
 
@@ -60,7 +69,7 @@ onMounted(async () => {
     <template v-else>
       <p v-if="loadError" class="job error">
         ⚠ {{ loadError }}
-        <button type="button" class="link-btn" @click="loading = true; listNewsTexts().then(t => { texts = t; loading = false }).catch(() => { loading = false })">
+        <button type="button" class="link-btn" @click="loadTexts">
           réessayer
         </button>
       </p>
