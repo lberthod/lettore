@@ -42,3 +42,26 @@ export function roleForPriceId(priceId) {
   }
   return role
 }
+
+// Correspondance ID produit Google Play (souscriptions) → rôle Leggendo.
+// Les ID ci-dessous sont ceux utilisés par le client (src/lib/billing.js) —
+// il faut créer des souscriptions avec exactement ces ID dans Play Console
+// (Monétiser > Produits > Abonnements) avant que l'achat in-app fonctionne.
+// Voir apkdoc.md, § Google Play Billing.
+export const PLAY_PRODUCT_ROLE_MAP = {
+  premium_monthly: 'premium',
+  premium_annual: 'premium',
+  premium_plus_monthly: 'premium_plus',
+  premium_plus_annual: 'premium_plus',
+  enseignant_monthly: 'enseignant',
+  enseignant_annual: 'enseignant',
+}
+
+export function roleForProductId(productId) {
+  if (!productId) return undefined
+  const role = PLAY_PRODUCT_ROLE_MAP[productId]
+  if (!role) {
+    console.warn('Product ID Google Play non répertorié :', productId)
+  }
+  return role
+}

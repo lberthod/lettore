@@ -86,3 +86,18 @@ scripts/.env.deploy
 # Données intermédiaires/scratch de génération (reproductibles via les
 # scripts, pas la source de vérité — voir src/dictionary/ pour le résultat)
 scripts/data/
+
+# Android (Capacitor) — build local, jamais commité
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/captures/
+android/app/release/
+*.aab
+*.apk
+
+# Secrets Android : jamais commités (clé de signature, config Firebase native)
+android/keystore/
+android/app/google-services.json
+android/keystore.properties

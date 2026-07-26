@@ -108,9 +108,32 @@ export async function login(email, password) {
   return cred.user
 }
 
+// `signInWithPopup` n'existe pas dans la WebView Android (pas de fenêtre
+// popup) : sur mobile natif, on passe par le SDK natif Firebase Auth
+// (@capacitor-firebase/authentication, Google Sign-In natif) puis on
+// rejoue l'identifiant obtenu dans le SDK JS avec `signInWithCredential`,
+// pour que le reste de l'app (onAuthStateChanged, currentUser, règles
+// Firestore) continue de fonctionner exactement comme sur le web.
 export async function loginWithGoogle() {
   const auth = await requireAuth()
-  const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
+  const { Capacitor } = await import('@capacitor/core')
+  const { signInWithCredential, signInWithPopup, GoogleAuthProvider } =
+    await import('firebase/auth')
+
+  if (Capacitor.isNativePlatform()) {
+    const { FirebaseAuthentication } = await import(
+      '@capacitor-firebase/authentication'
+    )
+    const result = await FirebaseAuthentication.signInWithGoogle()
+    const idToken = result.credential?.idToken
+    if (!idToken) {
+      throw new Error('Connexion Google annulée ou incomplète.')
+    }
+    const credential = GoogleAuthProvider.credential(idToken)
+    const cred = await signInWithCredential(auth, credential)
+    return cred.user
+  }
+
   const cred = await signInWithPopup(auth, new GoogleAuthProvider())
   return cred.user
 }
@@ -123,6 +146,13 @@ export async function resetPassword(email) {
 
 export async function logout() {
   const auth = await requireAuth()
+  const { Capacitor } = await import('@capacitor/core')
+  if (Capacitor.isNativePlatform()) {
+    const { FirebaseAuthentication } = await import(
+      '@capacitor-firebase/authentication'
+    )
+    await FirebaseAuthentication.signOut()
+  }
   const { signOut } = await import('firebase/auth')
   await signOut(auth)
 }

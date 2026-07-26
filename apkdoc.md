@@ -1,186 +1,202 @@
-# Leggendo → APK / Google Play : analyse et plan de déploiement
+# Leggendo → APK / Google Play : analyse et suivi de déploiement
 
-Ce document analyse l'état actuel du projet **Leggendo** (web Vue 3 + PWA)
-et liste ce qu'il faut faire, concrètement, pour produire un APK/AAB
-publiable sur le Google Play Store. Il complète — sans le remplacer — le
-paragraphe « Phase 3 — Stores » du [README.md](README.md#phase-3--stores-apk--ipa-via-capacitor),
-qui reste la source de vérité sur la stratégie produit.
+Mise à jour le 2026-07-26. Ce document remplace la version d'analyse initiale :
+le travail de code décrit en section 1 est **fait et commité**. Les sections
+suivantes listent précisément ce qui reste — et pourquoi certaines étapes
+n'ont pas pu être terminées depuis cet environnement.
 
-Rédigé le 2026-07-26 après lecture du code (`src/`, `vite.config.js`,
-`package.json`, `firebase.js`, `auth.js`, `tts.js`, `stripe.js`).
+## 0. Résumé — ce qui bloque encore un envoi sur le Play Store
 
-## 1. État actuel
+1. **Aucun SDK Android ni build Gradle n'a pu tourner ici** : le dépôt Maven
+   Google (`dl.google.com`), nécessaire au plugin Gradle Android lui-même,
+   est refusé par la politique réseau de cet environnement (403). Le build
+   (`gradlew bundleRelease`) doit être lancé ailleurs — poste local avec
+   Android Studio, ou CI (voir § 4).
+2. **`google-services.json` manquant** : à télécharger depuis la Console
+   Firebase après y avoir enregistré l'app Android (package
+   `ch.loicberthod.leggendo`) — nécessite ton compte Firebase.
+3. **Souscriptions Google Play non créées** : le code d'achat in-app est en
+   place mais ne peut rien vendre tant que les produits n'existent pas dans
+   Play Console (nécessite le compte Play Console, 25 $).
+4. **Clé de signature générée ici** : `leggendo-release.jks` t'a été envoyée
+   directement dans le chat (fichier + mot de passe). **Sauvegarde-la
+   immédiatement** — ce conteneur est éphémère, une fois la session
+   terminée elle est perdue si tu ne l'as pas récupérée.
 
-Le projet est une **PWA** (Vue 3 + Vite + `vite-plugin-pwa`), pas une app
-native, et **aucun outillage mobile n'est présent** :
+## 1. Ce qui a été fait (commité sur `claude/apk-playstore-deployment-rzueus`)
 
-- Pas de Capacitor, Cordova, ou dossier `android/` dans le repo.
-- Pas de dépendance `@capacitor/*` dans `package.json`.
-- Le manifest PWA (`vite.config.js:143-160`) n'a qu'une seule icône
-  **SVG** (`/favicon.svg`) — Android exige des PNG à plusieurs résolutions
-  pour l'icône de lancement et l'icône adaptative.
-- L'app tourne 100 % côté client, contenu premium excepté (servi par
-  Firestore après vérification du rôle), avec un petit serveur Node sur
-  VPS (`leggendo-server/`) pour « Créer son texte ».
+### Intégration Capacitor
+- `npx cap init` + `npx cap add android` → dossier `android/` créé et
+  committé (projet Gradle standard, `appId: ch.loicberthod.leggendo`).
+- `capacitor.config.json` (pas `.ts` — la résolution TS du CLI Capacitor
+  échouait avec `"type": "module"` dans `package.json` ; JSON est
+  fonctionnellement identique et plus simple ici).
 
-**Conclusion : le projet n'est pas prêt à être packagé.** Il faut d'abord
-intégrer Capacitor, puis résoudre plusieurs incompatibilités WebView
-identifiées ci-dessous avant de pouvoir générer un APK/AAB fonctionnel.
+### Bloquant #1 résolu — Google Sign-In natif
+- `src/lib/auth.js` : `loginWithGoogle()` bascule sur
+  `@capacitor-firebase/authentication` (Google Sign-In natif Android) quand
+  `Capacitor.isNativePlatform()`, puis rejoue l'identifiant obtenu dans le
+  SDK JS Firebase via `signInWithCredential` — le reste de l'app
+  (`onAuthStateChanged`, `currentUser`, règles Firestore) continue de
+  fonctionner à l'identique. `logout()` déconnecte aussi le SDK natif.
+- **Reste à faire (toi, dans la Console Firebase)** : une fois
+  `google-services.json` téléchargé et l'empreinte SHA-1/SHA-256 du
+  keystore (voir § 3) ajoutée à l'app Android dans Firebase, le Google
+  Sign-In natif doit fonctionner sans changement de code.
 
-## 2. Bloquants techniques identifiés (à corriger avant build)
+### Bloquant #2 résolu — TTS natif
+- `src/tts.js` : réécrit pour utiliser
+  `@capacitor-community/text-to-speech` (moteur TTS Android natif) sur
+  mobile, `speechSynthesis` sur le web. Même API exportée
+  (`speakItalian`/`stopSpeaking`/`pauseSpeaking`/`resumeSpeaking`/`ttsSupported`),
+  aucune vue n'a eu besoin d'être modifiée.
+- **Limite assumée** : Android TTS n'a pas de pause/reprise native
+  (contrairement à `speechSynthesis`) — `pauseSpeaking()` fait un arrêt
+  complet sur mobile, `resumeSpeaking()` y est un no-op. À vérifier à
+  l'usage ; acceptable pour un premier envoi.
 
-| # | Bloquant | Fichier | Détail |
-|---|---|---|---|
-| 1 | **Google Sign-In via popup** | `src/lib/auth.js:113-114` | `signInWithPopup(auth, new GoogleAuthProvider())` — les popups n'existent pas dans une WebView Android. Il faut `@capacitor-firebase/authentication` (plugin natif Google Sign-In) ou, a minima, brancher `signInWithRedirect` avec un fallback natif via `Capacitor.isNativePlatform()`. |
-| 2 | **Synthèse vocale (TTS)** | `src/tts.js` | Entièrement basé sur `window.speechSynthesis` (Web Speech API). Cette API **n'existe pas** dans la WebView Android système (elle n'est disponible que dans Chrome plein écran). Sans correctif, la lecture audio — fonctionnalité phare de l'app — sera silencieuse sur mobile natif. Il faut `@capacitor-community/text-to-speech`, activé conditionnellement (`Capacitor.isNativePlatform()`), en gardant `speakItalian`/`stopSpeaking`/`pauseSpeaking`/`resumeSpeaking` comme façade commune. |
-| 3 | **Paiement Stripe** | `src/lib/stripe.js` | Les Payment Links Stripe pointent vers le web. Apple interdit systématiquement ce circuit pour du contenu numérique in-app ; **Google est plus tolérant mais l'exige aussi pour les abonnements consommés dans l'app** (Politique Paiements et abonnements du Play Store). Deux options : (a) ne PAS exposer d'écran d'abonnement dans l'APK — renvoyer vers le site web pour s'abonner (lecture seule dans l'app pour les comptes déjà premium), ce qui reste conforme ; ou (b) intégrer Google Play Billing (`@capacitor-community/in-app-purchases` ou RevenueCat). L'option (a) est nettement plus rapide pour un premier envoi. |
-| 4 | **Icônes PWA incomplètes** | `vite.config.js:152-159` | Une seule icône SVG `any/any`. Android (via Capacitor) a besoin d'un jeu de PNG (icône adaptative 108×108dp avec zone de sécurité 66×66dp, plus les tailles legacy 48–512px) et d'un icône Play Store 512×512 PNG 32-bit. À générer depuis `public/favicon.svg`. |
-| 5 | **App Check / reCAPTCHA v3** | `src/lib/firebase.js:23,42-53` | reCAPTCHA v3 (`ReCaptchaV3Provider`) suppose un contexte navigateur avec rendu du widget invisible ; dans une WebView ça fonctionne generalement mais avec des faux négatifs plus fréquents. À tester en conditions réelles ; prévoir de passer à `ReCaptchaEnterpriseProvider` ou au provider natif (Play Integrity via `@capacitor-firebase/app-check`) si le taux d'échec est trop élevé. |
-| 6 | **Domaine autorisé Firebase Auth** | Console Firebase | Un WebView Capacitor sert l'app depuis `https://localhost` (scheme Capacitor par défaut) ou un scheme personnalisé, pas depuis `leggendo-*.web.app` / le domaine custom. Il faut ajouter ce domaine dans Firebase Console → Authentication → Settings → Authorized domains, sans quoi la connexion échoue silencieusement. |
+### Bloquant #3 résolu — paiement (Google Play Billing, pas Stripe dans l'app)
+- `functions/roles.mjs` : `PLAY_PRODUCT_ROLE_MAP` + `roleForProductId()`,
+  miroir de `PRICE_ROLE_MAP`/`roleForPriceId()` existant pour Stripe.
+- `functions/index.js` : nouvelle fonction callable `verifyPlayPurchase` —
+  reçoit `productId` + `purchaseToken` du client, vérifie l'achat auprès de
+  l'API Android Publisher (jamais confiance dans un jeton côté client seul),
+  puis pose le rôle Firebase (même `applyRole()` que le webhook Stripe).
+- `functions/package.json` : dépendance `googleapis` ajoutée.
+- `src/lib/billing.js` (nouveau) : wrapper autour de `cordova-plugin-purchase`
+  — enregistre les 6 produits (`premium_monthly`, `premium_annual`,
+  `premium_plus_monthly`, `premium_plus_annual`, `enseignant_monthly`,
+  `enseignant_annual`), lance l'achat, appelle `verifyPlayPurchase` avant de
+  finaliser la transaction.
+- `src/lib/stripe.js` : chaque formule a maintenant un `productId` en plus du
+  `paymentLink` Stripe.
+- `src/views/PricingView.vue` : sur mobile natif, le bouton « S'abonner »
+  déclenche Play Billing au lieu de rediriger vers un lien de paiement web
+  (interdit par Google pour du contenu numérique in-app).
+- **Reste à faire (toi, dans Play Console)** : créer les 6 souscriptions
+  avec **exactement** ces ID produit (Monétiser → Produits → Abonnements),
+  et exécuter `firebase functions:secrets:set GOOGLE_PLAY_SERVICE_ACCOUNT`
+  avec la clé JSON d'un compte de service Play Console (rôle *Voir les
+  infos financières, gérer les commandes et rembourser les abonnements* au
+  minimum) — voir Play Console → Configuration de l'API.
+- **Limite assumée (v2)** : le renouvellement/l'annulation automatiques
+  hors ouverture de l'app ne sont pas couverts (demanderait les *Real-time
+  Developer Notifications*, Pub/Sub) — le rôle est revérifié à chaque achat
+  ou réouverture, ce qui suffit pour un lancement.
 
-## 3. Bloquants déjà résolus (bon point)
+### Icônes et splash screen
+- `assets/icon.png` (1024×1024) et `assets/splash.png` (2732×2732) générés
+  depuis `public/favicon.svg` via `sharp` (rasterisation SVG→PNG).
+- `npx capacitor-assets generate --android` a produit tous les mipmaps
+  (icône adaptative + legacy) et les splash screens (clair/sombre,
+  portrait/paysage) dans `android/app/src/main/res/`.
 
-- **Suppression de compte** : implémentée (`src/views/ProfileView.vue`,
-  `deleteAccount()` dans `src/lib/auth.js`) — obligation Google Play
-  respectée. ✅
-- **Fonctionnement hors ligne** : le catalogue gratuit est bundlé, le
-  cache Firestore persistant (`firebase.js:109-131`) permet de relire un
-  texte premium déjà ouvert hors connexion. Bon socle pour une app
-  mobile. ✅
-- **Chargement à la demande** (`import.meta.glob`, chunks par texte) :
-  limite la taille du bundle initial, donc de l'APK. ✅
+### Config Android / Firebase
+- `strings.xml`, `AndroidManifest.xml`, permission `INTERNET` : générés par
+  défaut par `cap add android`, corrects tels quels.
+- `android/app/build.gradle` : applique déjà conditionnellement le plugin
+  `google-services` seulement si `google-services.json` existe (patch
+  automatique du plugin `@capacitor-firebase/authentication`) — le projet
+  compile sans, mais le Google Sign-In natif ne fonctionnera qu'une fois le
+  fichier ajouté.
+- Domaine Capacitor à ajouter dans Firebase Console → Authentication →
+  Settings → Authorized domains (voir § 2).
 
-## 4. Plan de mise en œuvre
+### Signature de release
+- `android/keystore/leggendo-release.jks` généré (RSA 2048, validité
+  ~27 ans), alias `leggendo`. **Envoyé directement dans le chat** avec son
+  mot de passe (`keystore-credentials.txt`) — à sauvegarder ailleurs
+  immédiatement, ni le fichier ni le mot de passe ne sont commités dans Git.
+- `android/keystore.properties` (gitignoré) référence le keystore ;
+  `android/app/build.gradle` configure `signingConfigs.release`
+  automatiquement s'il est présent, sans casser le build s'il est absent
+  (utile en CI avant que le secret y soit configuré).
+- Empreintes du certificat (à ajouter dans Firebase Console et Play Console) :
+  - SHA1 : `2B:FA:D1:3B:D1:C3:5C:92:2F:63:58:FD:DA:F4:7F:93:7A:31:01:3A`
+  - SHA256 : `14:79:D0:9D:A6:99:33:22:4E:16:48:5A:C9:C6:BA:0C:F7:FC:21:D1:57:20:AC:39:73:B1:CC:14:02:7E:04:64`
 
-### Étape 0 — Pré-requis compte et outillage
+### Build web + sync
+- `npm run build` (470 pages prérendues, `dist/` ≈ 14 Mo) et
+  `npx cap sync android` exécutés avec succès — le projet Android embarque
+  bien le dernier build web.
+- `npm test` (26 tests) passe toujours après les changements.
 
-- Compte Google Play Console (25 $, paiement unique).
-- Android Studio + Android SDK (API 34+ recommandé, `minSdkVersion` 22+
-  pour Capacitor 6/7) installés sur la machine qui buildera l'APK/AAB —
-  **pas possible depuis ce conteneur sans SDK Android**, à faire en local
-  ou via une CI (GitHub Actions avec `android-actions/setup-android`).
-- Un keystore de signature (`.jks`), généré une fois et conservé
-  précieusement (perte = impossibilité de mettre à jour l'app sur le
-  Store).
+## 2. Pourquoi le build Android n'a pas pu être terminé ici
 
-### Étape 1 — Intégration Capacitor
+Tentative de build (`./gradlew help`) :
 
-```bash
-npm install @capacitor/core @capacitor/android
-npm install -D @capacitor/cli
-npx cap init "Leggendo" "ch.loicberthod.leggendo" --web-dir=dist
-npx cap add android
+```
+Could not resolve com.android.tools.build:gradle:8.13.0.
+  Could not GET 'https://dl.google.com/dl/android/maven2/...'.
+  Received status code 403 from server: Forbidden
 ```
 
-- `appId` à choisir définitivement avant la première publication (non
-  modifiable ensuite sans republier sous un nouvel identifiant).
-- `capacitor.config.ts` : `webDir: 'dist'`, garder `server.androidScheme:
-  'https'` (par défaut) pour que les cookies/IndexedDB Firestore se
-  comportent comme sur le web.
+`dl.google.com` sert à la fois le SDK Android et le dépôt Maven Google
+(classpath du plugin Gradle Android, `androidx.*`, Google Play Billing...) —
+c'est un blocage de la politique réseau de cet environnement d'exécution
+distant, pas un problème de configuration du projet. Le build doit se faire
+sur une machine (locale ou CI) avec accès à `dl.google.com`.
 
-### Étape 2 — Corriger les 3 bloquants WebView (section 2, #1–#3)
+## 3. Ce qu'il te reste à faire, dans l'ordre
 
-1. Ajouter `@capacitor-firebase/authentication`, brancher Google
-   Sign-In natif derrière `Capacitor.isNativePlatform()` dans
-   `src/lib/auth.js`, en gardant le chemin web (`signInWithPopup`)
-   inchangé.
-2. Ajouter `@capacitor-community/text-to-speech`, faire de `src/tts.js`
-   une façade qui route vers le plugin natif sur mobile et vers
-   `speechSynthesis` sur le web — signature des fonctions exportées
-   inchangée pour ne pas toucher les appelants (`ReaderView`, etc.).
-3. Dans l'APK v1 : masquer/adapter l'écran Abonnement pour rediriger
-   vers le site web (pas de Payment Link Stripe cliqué dans la WebView).
+1. **Sauvegarder le keystore** envoyé dans le chat
+   (`leggendo-release.jks` + mot de passe) dans un coffre-fort de mots de
+   passe. Sans lui, impossible de publier une mise à jour de l'app plus tard.
+2. **Cloner/récupérer la branche** `claude/apk-playstore-deployment-rzueus`
+   en local, replacer `keystore.properties` à la racine de `android/` et
+   `leggendo-release.jks` dans `android/keystore/` (tous deux gitignorés,
+   à toi de les gérer).
+3. **Firebase Console** :
+   - Ajouter une app Android (package `ch.loicberthod.leggendo`, empreinte
+     SHA-1 ci-dessus) au projet `leggendo-dbb84`.
+   - Télécharger `google-services.json`, le placer dans `android/app/`.
+   - Authentication → Settings → Authorized domains : ajouter le domaine
+     utilisé par la WebView Capacitor (`localhost` par défaut avec
+     `androidScheme: https`).
+4. **Build local** (Android Studio installé, ou `sdkmanager` en ligne de
+   commande) :
+   ```bash
+   npm run build
+   npx cap sync android
+   cd android
+   ./gradlew bundleRelease   # produit android/app/build/outputs/bundle/release/app-release.aab
+   ```
+   Tester d'abord sur émulateur/device (`npx cap open android` → Run) :
+   connexion Google, lecture, traduction, audio (TTS natif), quiz, mots
+   favoris, Classici, suppression de compte, mode avion.
+5. **Play Console** (compte 25 $, une fois) :
+   - Créer l'app, remplir le *Data Safety form* (email, UID Firebase,
+     progression de lecture stockée localement + Firestore).
+   - Monétiser → Produits → Abonnements : créer les 6 souscriptions avec
+     les ID exacts listés en § 1 (Google Play Billing).
+   - Configuration de l'API → créer un compte de service, exporter sa clé
+     JSON, puis :
+     ```bash
+     firebase functions:secrets:set GOOGLE_PLAY_SERVICE_ACCOUNT
+     # coller le contenu du fichier JSON
+     firebase deploy --only functions:verifyPlayPurchase
+     ```
+   - Politique de confidentialité publiée et liée (vérifier si une page CGU
+     existe déjà dans `src/views/` — sinon l'écrire avant soumission).
+   - Icône 512×512, feature graphic 1024×500, captures d'écran téléphone.
+   - Uploader `app-release.aab` en **test interne** d'abord, valider
+     l'installation réelle, puis promouvoir en production.
 
-### Étape 3 — Icônes et assets
+## 4. Alternative : builder via CI plutôt qu'en local
 
-- Générer les PNG depuis `public/favicon.svg` (Android Studio Image
-  Asset Studio, ou `@capacitor/assets`) : icône adaptative
-  (foreground/background 108×108dp), icône Play Store 512×512, splash
-  screen.
-- `npx @capacitor/assets generate --android` une fois les sources prêtes
-  dans un dossier `assets/` (`icon.png` 1024×1024, `splash.png`
-  2732×2732).
+Si `dl.google.com` est accessible depuis GitHub Actions (généralement oui),
+un workflow `android-actions/setup-android` + `gradlew bundleRelease` peut
+remplacer l'étape 4 ci-dessus, avec le keystore et
+`GOOGLE_PLAY_SERVICE_ACCOUNT` en secrets GitHub plutôt qu'en fichiers
+locaux. Non mis en place dans cette session (pas demandé) — à faire si tu
+préfères ce chemin plutôt qu'Android Studio en local.
 
-### Étape 4 — Config Firebase / réseau
+## 5. Limites connues, assumées pour un premier envoi
 
-- Ajouter le domaine Capacitor (`localhost` par défaut, ou domaine
-  custom si configuré) aux domaines autorisés Firebase Auth.
-- Vérifier `firestore.rules` et App Check en conditions WebView réelles
-  (device physique ou émulateur), en particulier le flux `getAppCheckToken()`
-  utilisé pour les appels `fetch` vers l'API VPS (`generation.js`).
-- `leggendo-server/appcheck.mjs` : confirmer que le mode d'application
-  (`enforce`) n'est pas activé tant que le taux de succès App Check en
-  WebView n'est pas validé.
-
-### Étape 5 — Build et test local
-
-```bash
-npm run build          # génère dist/
-npx cap sync android
-npx cap open android    # ouvre Android Studio
-```
-
-Dans Android Studio : lancer sur émulateur puis device physique, tester
-le parcours complet — connexion (email + Google), lecture d'un texte,
-clic-traduction, audio (TTS natif), quiz, mots favoris, Classici,
-suppression de compte, comportement hors ligne (mode avion).
-
-### Étape 6 — Signature et génération de l'AAB
-
-Google Play exige un **Android App Bundle (.aab)**, pas un APK brut,
-pour toute nouvelle app :
-
-```bash
-cd android
-./gradlew bundleRelease
-```
-
-Signer avec le keystore de l'étape 0 (configuré dans
-`android/app/build.gradle`, `signingConfigs`). Conserver le keystore et
-son mot de passe hors du repo Git (`.gitignore` déjà présent — vérifier
-qu'aucun `*.jks`/`*.keystore` n'y est jamais commité).
-
-### Étape 7 — Fiche Play Store
-
-- **Data Safety form** : lister précisément les données collectées
-  (email, UID Firebase, progression de lecture stockée en localStorage +
-  Firestore) — cf. tableau du README, ligne « Data Safety ».
-- Politique de confidentialité (URL publique — vérifier si une page CGU
-  existe déjà, sinon en écrire une avant soumission).
-- Catégorie : Éducation. Classification de contenu (questionnaire IARC).
-- Captures d'écran (téléphone obligatoire, tablette recommandé), icône
-  512×512, image de présentation (feature graphic) 1024×500.
-
-### Étape 8 — Soumission et revue
-
-- Premier envoi en **test interne** (Play Console) avant production —
-  permet de valider l'installation réelle sur des devices avant la revue
-  publique.
-- Délai de revue Google Play : généralement quelques heures à 2-3 jours
-  pour une première soumission.
-
-## 5. Ce qui peut attendre une v2
-
-- Paiement in-app complet (Google Play Billing) pour vendre l'abonnement
-  directement dans l'app, une fois la traction validée (cf. README,
-  Phase 1).
-- Notifications push (pas de besoin identifié dans le produit actuel).
-- Version iOS (IPA) : nécessite en plus Sign in with Apple (règle 4.8) et
-  un compte Apple Developer (99 $/an) — hors périmètre de ce document,
-  qui couvre uniquement Android/Play Store comme demandé.
-
-## 6. Résumé — check-list avant premier APK/AAB
-
-- [ ] Capacitor installé, `npx cap add android` fait, projet buildable
-- [ ] Google Sign-In natif (plus de `signInWithPopup` en mobile)
-- [ ] TTS natif branché (plus de dépendance à `speechSynthesis` en mobile)
-- [ ] Écran Abonnement adapté (pas de lien de paiement web cliquable dans l'APK)
-- [ ] Icônes PNG + splash screen générés
-- [ ] Domaine Capacitor ajouté aux domaines autorisés Firebase Auth
-- [ ] App Check validé en conditions WebView réelles
-- [ ] Test manuel complet sur device physique (parcours listé Étape 5)
-- [ ] Keystore de signature généré et sauvegardé en lieu sûr
-- [ ] AAB signé généré (`bundleRelease`)
-- [ ] Politique de confidentialité publiée et liée
-- [ ] Data Safety form rempli dans Play Console
-- [ ] Test interne Play Console avant soumission publique
+- Pas de renouvellement/annulation automatique des souscriptions Play sans
+  ouverture de l'app (pas de Real-time Developer Notifications) — v2.
+- Pas de pause/reprise audio native sur Android (limite de l'API TTS
+  Android elle-même) — `pauseSpeaking()` y arrête complètement la lecture.
+- Version iOS (IPA) non traitée : hors périmètre demandé (Play Store
+  uniquement). Nécessiterait en plus Sign in with Apple, compte Apple
+  Developer (99 $/an) — voir README.md § Phase 3.

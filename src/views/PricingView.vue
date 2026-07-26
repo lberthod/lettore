@@ -5,21 +5,43 @@ import { useRouter } from 'vue-router'
 import { plans, stripeReady, checkoutUrl } from '../lib/stripe.js'
 import { currentUser } from '../lib/auth.js'
 import { markRoleMayHaveChanged } from '../lib/access.js'
+import { billingSupported, purchase } from '../lib/billing.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
 const billing = ref('monthly') // 'monthly' | 'annual'
 const router = useRouter()
+const purchasing = ref(false)
+const purchaseError = ref('')
 
-function subscribe(plan) {
-  const link = plan[billing.value].paymentLink
-  if (!link) return
-  // Le paiement doit être rattaché à un compte : connexion d'abord,
-  // puis retour ici pour finaliser l'abonnement.
+// Sur mobile natif (Capacitor), pas de lien de paiement web cliquable dans
+// l'app : Google l'interdit pour du contenu numérique consommé dans l'app.
+// L'achat passe par Play Billing (src/lib/billing.js) ; sur le web, on garde
+// les Payment Links Stripe (src/lib/stripe.js) — voir apkdoc.md.
+async function subscribe(plan) {
   if (!currentUser.value) {
     router.push({ name: 'login', query: { redirect: '/abonnement' } })
     return
   }
+
+  if (billingSupported) {
+    const productId = plan[billing.value].productId
+    if (!productId) return
+    purchaseError.value = ''
+    purchasing.value = true
+    try {
+      await purchase(productId)
+      markRoleMayHaveChanged()
+    } catch (err) {
+      purchaseError.value = err?.message || "L'achat n'a pas abouti."
+    } finally {
+      purchasing.value = false
+    }
+    return
+  }
+
+  const link = plan[billing.value].paymentLink
+  if (!link) return
   // Payment Link Stripe : redirection vers la page de paiement hébergée,
   // avec client_reference_id pour que le webhook active le bon compte. Au
   // retour, le token devra être renouvelé de force pour voir le nouveau rôle.
@@ -146,11 +168,18 @@ onUnmounted(() => {
             <button
               v-if="plan[billing].paymentLink !== null"
               class="btn-hero"
-              :disabled="!plan[billing].paymentLink"
+              :disabled="purchasing || (billingSupported ? !plan[billing].productId : !plan[billing].paymentLink)"
               @click="subscribe(plan)"
             >
-              {{ plan[billing].paymentLink ? "S'abonner" : 'Bientôt disponible' }}
+              {{
+                purchasing
+                  ? 'Achat en cours…'
+                  : billingSupported || plan[billing].paymentLink
+                    ? "S'abonner"
+                    : 'Bientôt disponible'
+              }}
             </button>
+            <p v-if="purchaseError" class="purchase-error">{{ purchaseError }}</p>
             <RouterLink
               v-else-if="!currentUser"
               class="btn-ghost"
@@ -425,6 +454,12 @@ onUnmounted(() => {
   font-size: 0.9rem;
   font-weight: 600;
   color: #4a7c59;
+}
+
+.purchase-error {
+  margin: 0.4rem 0 0;
+  font-size: 0.78rem;
+  color: #b3261e;
 }
 
 /* --- Boutons (même langage que la home) --- */

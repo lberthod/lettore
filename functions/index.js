@@ -30,13 +30,24 @@ import functionsV1 from 'firebase-functions/v1'
 import { initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
-import { ROLES, requireAdmin, roleForPriceId } from './roles.mjs'
+import { ROLES, requireAdmin, roleForPriceId, roleForProductId } from './roles.mjs'
 
 initializeApp()
 setGlobalOptions({ region: 'europe-west1', maxInstances: 10 })
 
 const STRIPE_SECRET_KEY = defineSecret('STRIPE_SECRET_KEY')
 const STRIPE_WEBHOOK_SECRET = defineSecret('STRIPE_WEBHOOK_SECRET')
+
+// Clé JSON du compte de service Google Play (voir apkdoc.md, § Google Play
+// Billing) : Play Console > Configuration de l'API > créer un compte de
+// service avec le rôle "Voir les infos financières, gérer les commandes...",
+// exporter sa clé JSON, puis :
+//   firebase functions:secrets:set GOOGLE_PLAY_SERVICE_ACCOUNT
+// (coller le contenu du fichier JSON tel quel).
+const GOOGLE_PLAY_SERVICE_ACCOUNT = defineSecret('GOOGLE_PLAY_SERVICE_ACCOUNT')
+
+// Doit correspondre à l'appId de capacitor.config.json / android/app/build.gradle.
+const ANDROID_PACKAGE_NAME = 'ch.loicberthod.leggendo'
 
 // Healthcheck simple : confirme que les Functions sont en ligne.
 export const ping = onRequest((req, res) => {
@@ -190,6 +201,75 @@ export const stripeWebhook = onRequest(
       console.error('Erreur traitement webhook :', err)
       res.status(500).send('Internal error')
     }
+  }
+)
+
+// Vérifie un achat Google Play (souscription) et pose le rôle correspondant
+// — équivalent mobile de `stripeWebhook`, mais synchrone : le client appelle
+// cette fonction juste après un achat approuvé par Play Billing
+// (src/lib/billing.js), avant d'appeler `transaction.finish()`. La
+// vérification interroge l'API Android Publisher (source de vérité, un
+// jeton d'achat côté client n'est pas fiable en soi) plutôt que de faire
+// confiance à ce que l'app envoie.
+//
+// Le renouvellement/l'annulation automatiques (sans que l'utilisateur rouvre
+// l'app) ne sont PAS couverts ici : cela demande les Real-time Developer
+// Notifications (Pub/Sub) côté Play Console, non configurées — voir
+// apkdoc.md, § Limites connues. En l'état, le rôle est revérifié à chaque
+// ouverture de l'app tant que la souscription est active côté client.
+export const verifyPlayPurchase = onCall(
+  { secrets: [GOOGLE_PLAY_SERVICE_ACCOUNT] },
+  async (request) => {
+    const uid = request.auth?.uid
+    if (!uid) throw new HttpsError('unauthenticated', 'Connexion requise.')
+
+    const { productId, purchaseToken } = request.data || {}
+    if (!productId || !purchaseToken) {
+      throw new HttpsError('invalid-argument', 'productId et purchaseToken requis.')
+    }
+
+    const role = roleForProductId(productId)
+    if (!role) {
+      throw new HttpsError('invalid-argument', 'Produit inconnu : ' + productId)
+    }
+
+    const { google } = await import('googleapis')
+    let credentials
+    try {
+      credentials = JSON.parse(GOOGLE_PLAY_SERVICE_ACCOUNT.value())
+    } catch (err) {
+      console.error('GOOGLE_PLAY_SERVICE_ACCOUNT invalide (pas un JSON) :', err)
+      throw new HttpsError('internal', 'Vérification indisponible.')
+    }
+
+    const auth = new google.auth.GoogleAuth({
+      credentials,
+      scopes: ['https://www.googleapis.com/auth/androidpublisher'],
+    })
+    const androidpublisher = google.androidpublisher({ version: 'v3', auth })
+
+    let expiryTimeMillis
+    try {
+      const { data } = await androidpublisher.purchases.subscriptions.get({
+        packageName: ANDROID_PACKAGE_NAME,
+        subscriptionId: productId,
+        token: purchaseToken,
+      })
+      // paymentState 1 = paiement reçu ; 2 = essai gratuit ; 0 = en attente.
+      if (data.paymentState !== 1 && data.paymentState !== 2) {
+        throw new HttpsError('failed-precondition', 'Paiement non confirmé par Google Play.')
+      }
+      expiryTimeMillis = Number(data.expiryTimeMillis)
+    } catch (err) {
+      if (err instanceof HttpsError) throw err
+      console.error('Vérification Google Play échouée :', err)
+      throw new HttpsError('internal', 'Vérification Google Play impossible.')
+    }
+
+    const periodEnd = Math.floor(expiryTimeMillis / 1000)
+    await applyRole(uid, true, role, periodEnd)
+
+    return { ok: true, role, periodEnd }
   }
 )
 
