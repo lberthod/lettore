@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import { firebaseReady } from '../lib/firebase.js'
@@ -7,12 +7,21 @@ import {
   login,
   register,
   loginWithGoogle,
+  loginWithApple,
   resetPassword,
   errorMessage,
 } from '../lib/auth.js'
 
 const router = useRouter()
 const route = useRoute()
+
+// Sign in with Apple n'a de sens qu'en app native (règle App Store 4.8,
+// obligatoire dès qu'on propose Google) — inutile sur le web.
+const isNativeApp = ref(false)
+onMounted(async () => {
+  const { Capacitor } = await import('@capacitor/core')
+  isNativeApp.value = Capacitor.isNativePlatform()
+})
 
 const mode = ref('login') // 'login' | 'register' | 'reset'
 const email = ref('')
@@ -68,6 +77,19 @@ async function google() {
     busy.value = false
   }
 }
+
+async function apple() {
+  error.value = ''
+  busy.value = true
+  try {
+    await loginWithApple()
+    afterLogin()
+  } catch (e) {
+    error.value = errorMessage(e)
+  } finally {
+    busy.value = false
+  }
+}
 </script>
 
 <template>
@@ -112,6 +134,16 @@ async function google() {
         @click="google"
       >
         Continuer avec Google
+      </button>
+
+      <button
+        v-if="mode !== 'reset' && isNativeApp"
+        class="btn-secondary"
+        type="button"
+        :disabled="busy || !firebaseReady"
+        @click="apple"
+      >
+        Continuer avec Apple
       </button>
     </form>
 

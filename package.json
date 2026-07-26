@@ -9,6 +9,8 @@
     "build": "vite build",
     "postbuild": "node scripts/prerender.mjs && node scripts/check-build-leaks.mjs",
     "preview": "vite preview",
+    "build:ios": "vite build && npx cap sync ios",
+    "ios:open": "npx cap open ios",
     "generate:text": "node scripts/generate-text.mjs",
     "orchestrate": "node generator/orchestrate.mjs",
     "orchestrate:plan": "node generator/orchestrate.mjs --dry-run --all",
@@ -26,6 +28,12 @@
     "test:rules": "firebase emulators:exec --only firestore \"node --test test/firestore-rules.test.mjs\""
   },
   "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor-firebase/authentication": "^8.3.0",
+    "@capacitor/cli": "^8.4.2",
+    "@capacitor/core": "^8.4.2",
+    "@capacitor/ios": "^8.4.2",
+    "cordova-plugin-purchase": "^13.18.0",
     "firebase": "^12.16.0",
     "vue": "^3.5.13",
     "vue-router": "^4.6.4"

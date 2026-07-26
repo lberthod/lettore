@@ -22,10 +22,27 @@ export async function reauthenticateWithPassword(password) {
 export async function reauthenticateWithGoogle() {
   const auth = await getAuthInstance()
   const user = auth.currentUser
+  const { Capacitor } = await import('@capacitor/core')
+  if (Capacitor.isNativePlatform()) {
+    // `reauthenticateWithPopup` ne fonctionne pas en WebView native ; on
+    // repasse par le SDK natif, qui resynchronise la session côté JS.
+    const { FirebaseAuthentication } = await import(
+      '@capacitor-firebase/authentication'
+    )
+    await FirebaseAuthentication.signInWithGoogle()
+    return
+  }
   const { GoogleAuthProvider, reauthenticateWithPopup } = await import(
     'firebase/auth'
   )
   await reauthenticateWithPopup(user, new GoogleAuthProvider())
+}
+
+export async function reauthenticateWithApple() {
+  const { FirebaseAuthentication } = await import(
+    '@capacitor-firebase/authentication'
+  )
+  await FirebaseAuthentication.signInWithApple()
 }
 
 export async function deleteAccount() {

@@ -19,3 +19,14 @@ createApp(App).use(router).mount('#app')
 if (import.meta.env.PROD) {
   onIdle(() => getAnalyticsInstance())
 }
+
+// Service worker PWA : web uniquement. Dans l'app Capacitor, la WebView sert
+// déjà les fichiers embarqués localement — un SW n'apporte rien et pourrait
+// entrer en conflit avec le cycle de mise à jour natif de l'app.
+if (import.meta.env.PROD) {
+  import('@capacitor/core').then(async ({ Capacitor }) => {
+    if (Capacitor.isNativePlatform()) return
+    const { registerSW } = await import('virtual:pwa-register')
+    registerSW({ immediate: true })
+  })
+}

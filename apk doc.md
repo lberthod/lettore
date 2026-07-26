@@ -1,133 +1,153 @@
-# Déploiement iOS App Store — Analyse et plan d'action
+# Déploiement iOS App Store — État d'implémentation et étapes restantes
 
-> Document de travail pour transformer Leggendo (PWA Vue 3) en application iOS
-> distribuable sur l'App Store. Complète la section « Feuille de route : web →
-> PWA → stores » de [README.md](README.md).
+> Complète la section « Feuille de route : web → PWA → stores » de
+> [README.md](README.md). Choix retenus : approche **Capacitor**, paiement
+> **StoreKit natif direct** (pas de RevenueCat), bundle ID `com.leggendo.app`.
 
-## 1. État actuel du projet
+## 1. Ce qui a été implémenté (branche `claude/ios-appstore-apk-doc-ywtit7`)
 
-- **Stack** : Vue 3 + Vue Router 4 + Vite 6, PWA via `vite-plugin-pwa`
-  (manifest + service worker `autoUpdate`, cache offline des textes).
-- **Backend** : Firebase (Auth, Firestore, Hosting) + un petit serveur Node
-  (`leggendo-server/`) pour la génération de textes à la demande.
-- **Paiement** : Stripe Payment Links (freemium, 4 formules — voir
-  [README_TARIFICATION.md](README_TARIFICATION.md)).
-- **Aucun wrapper mobile natif** n'existe encore : pas de Capacitor, Cordova,
-  React Native, ni dossier `ios/`/`android/`. Le PWA est installable sur iOS
-  Safari (« Ajouter à l'écran d'accueil ») mais ce n'est pas un build App
-  Store.
-- **Icônes** : seul `public/favicon.svg` existe. Aucun jeu d'icônes PNG aux
-  formats iOS (nécessaires pour Capacitor/Xcode et l'App Store).
+### 1.1 Projet Xcode / Capacitor
+- `@capacitor/core`, `@capacitor/cli`, `@capacitor/ios` installés, projet
+  initialisé (`capacitor.config.json`) et plateforme `ios/` générée
+  (`npx cap add ios`).
+- Script `npm run build:ios` (`vite build && npx cap sync ios`) et
+  `npm run ios:open` (ouvre Xcode).
+- Service worker PWA **désactivé en contexte natif** (`vite.config.js` :
+  `injectRegister: false` + enregistrement conditionnel dans `src/main.js`
+  via `Capacitor.isNativePlatform()`) — la WebView sert déjà les fichiers
+  embarqués, un SW ferait doublon et pourrait interférer avec le cycle de
+  mise à jour natif.
 
-## 2. Approche recommandée : Capacitor
+### 1.2 Icônes et splash screen
+- Icône source 1024×1024 et splash 2732×2732 générés depuis
+  `public/favicon.svg` (livre aux couleurs italiennes).
+- Jeu complet d'icônes iOS + splash (clair/sombre) généré via
+  `@capacitor/assets` dans `ios/App/App/Assets.xcassets/`.
 
-Une seule codebase Vue, pas de réécriture native. Capacitor encapsule le
-build Vite (`dist/`) dans une WebView native iOS et donne accès aux API
-natives via des plugins (`Capacitor.isNativePlatform()` pour brancher du
-code spécifique mobile sans dupliquer l'app).
+### 1.3 Authentification native
+- `src/lib/auth.js` : `loginWithGoogle()` bascule sur
+  `@capacitor-firebase/authentication` (flux natif) quand
+  `Capacitor.isNativePlatform()`, web inchangé (`signInWithPopup`).
+- `loginWithApple()` ajouté (obligatoire, règle App Store 4.8 dès qu'une
+  autre connexion sociale est proposée) et branché dans `LoginView.vue`,
+  visible uniquement en app native.
+- `src/lib/account.js` : réauthentification avant suppression de compte
+  (`reauthenticateWithGoogle`/`reauthenticateWithApple`) adaptée au contexte
+  natif ; `ProfileView.vue` gère désormais le fournisseur `apple.com`.
+- Entitlement « Sign in with Apple » ajouté
+  (`ios/App/App/App.entitlements`, référencé dans `project.pbxproj` via
+  `CODE_SIGN_ENTITLEMENTS`).
 
-```bash
-npm install @capacitor/core @capacitor/cli @capacitor/ios
-npx cap init leggendo com.leggendo.app --web-dir=dist
-npm run build
-npx cap add ios
-npx cap sync ios
-npx cap open ios   # ouvre Xcode
-```
+### 1.4 Suppression de compte
+- Déjà présente avant ce travail : `src/lib/account.js` (`deleteAccount`) +
+  Cloud Function `deleteAccount` (`functions/index.js`) + UI dans
+  `ProfileView.vue`. Aucune modification nécessaire, juste vérifiée et
+  étendue au fournisseur Apple (réauthentification).
 
-## 3. Blocages techniques à corriger avant packaging
+### 1.5 TTS natif
+- `src/tts.js` réécrit : détecte `Capacitor.isNativePlatform()` et utilise
+  `@capacitor-community/text-to-speech` en natif, Web Speech API sur le web.
+  Limitation documentée dans le code : le plugin natif n'expose pas de vraie
+  pause/reprise (pause = stop côté natif).
 
-Ces points ont été identifiés en analysant `src/` — ils **cassent l'app**
-dans une WebView native si non traités :
+### 1.6 Paiement in-app (StoreKit natif, sans RevenueCat)
+- `cordova-plugin-purchase` installé (compatible Capacitor) — pont natif
+  StoreKit/Play Billing, pas de service tiers de gestion d'abonnement.
+- `src/lib/iap.js` : déclaration des 6 produits d'abonnement
+  (Premium/Premium IA/Enseignant × mensuel/annuel), initialisation du store,
+  achat, restauration, synchronisation du reçu avec le serveur.
+- `functions/roles.mjs` : `APPLE_PRODUCT_ROLE_MAP` (Product ID → rôle),
+  symétrique de `PRICE_ROLE_MAP` pour Stripe.
+- `functions/index.js` : Cloud Function `validateAppleReceipt` — valide le
+  reçu StoreKit auprès d'Apple (`verifyReceipt`, gère bascule sandbox/prod)
+  et pose le rôle Firestore/claims via `applyRole`, comme le fait déjà le
+  webhook Stripe.
+- `PricingView.vue` : bascule automatiquement entre Stripe (web) et StoreKit
+  (app native) au clic sur « S'abonner » ; bouton « Restaurer mes achats »
+  ajouté (exigé par Apple).
 
-| Problème | Fichier | Impact | Solution |
-|---|---|---|---|
-| `signInWithPopup` (Google Sign-In) | `src/lib/auth.js` | Les popups OAuth web ne fonctionnent pas dans une WebView native | Migrer vers `@capacitor-firebase/authentication` (flux natif) |
-| `speechSynthesis` (Web Speech API) | `src/tts.js` | API absente/instable en WebView | Utiliser `@capacitor-community/text-to-speech` |
-| Paiement Stripe (Payment Links) | `src/lib/stripe.js` | Apple **interdit** (règle 3.1.1) un système de paiement tiers pour du contenu numérique consommé dans l'app | Implémenter In-App Purchase via **StoreKit** ou **RevenueCat**, garder Stripe uniquement pour le canal web |
-| Pas de Sign in with Apple | `src/lib/auth.js` / vues Login | Règle Apple 4.8 : obligatoire dès qu'une autre connexion sociale (Google) est proposée | Ajouter `@capacitor-community/apple-sign-in` |
-| Pas de suppression de compte in-app | vues Profile/Login | Exigé par Apple (et Google) pour toute app avec création de compte | Ajouter un flux « Supprimer mon compte » (Firestore + Firebase Auth `deleteUser`) |
+## 2. Ce qui reste à faire — nécessite un Mac + Xcode + comptes Apple
 
-## 4. Checklist de préparation App Store
+Rien de ce qui suit ne peut être fait depuis cet environnement Linux
+(pas d'Xcode, pas de compte Apple Developer/App Store Connect configuré).
 
-### 4.1 Branchement Capacitor
-- [ ] `npm install @capacitor/core @capacitor/cli @capacitor/ios`
-- [ ] `npx cap init` + `npx cap add ios`
-- [ ] Script npm dédié : `"build:ios": "vite build && npx cap sync ios"`
-- [ ] Vérifier que le service worker PWA ne rentre pas en conflit avec la
-      WebView Capacitor (désactiver le SW en contexte natif via
-      `Capacitor.isNativePlatform()`)
+### 2.1 Comptes et accès
+- [ ] Créer/activer un compte **Apple Developer Program** (99 $/an).
+- [ ] Créer l'app dans **App Store Connect** avec le bundle ID
+      `com.leggendo.app` (ou l'identifiant réellement choisi).
+- [ ] Générer le **secret partagé App-Specific** (App Store Connect →
+      Utilisateurs et accès → Clés → Secret partagé) et le déployer :
+      `firebase functions:secrets:set APPLE_SHARED_SECRET`.
 
-### 4.2 Authentification & compte
-- [ ] Remplacer `signInWithPopup` par `@capacitor-firebase/authentication`
-- [ ] Ajouter Sign in with Apple (obligatoire, règle 4.8)
-- [ ] Ajouter la suppression de compte dans l'app (Profile)
+### 2.2 Firebase / Google Sign-In
+- [ ] Ajouter une app iOS dans la Console Firebase, télécharger
+      `GoogleService-Info.plist` et le glisser dans `ios/App/App/` via
+      Xcode (« Copy items if needed »).
+- [ ] Dans `ios/App/App/Info.plist`, remplacer
+      `REPLACE_WITH_REVERSED_CLIENT_ID` par la valeur `REVERSED_CLIENT_ID`
+      de ce même fichier (schéma d'URL requis pour le retour OAuth Google).
+- [ ] Activer le fournisseur **Apple** dans Firebase Auth (Console Firebase
+      → Authentication → Sign-in method).
 
-### 4.3 Paiement in-app
-- [ ] Choisir StoreKit natif ou RevenueCat (recommandé pour simplifier la
-      gestion des abonnements multi-plateformes)
-- [ ] Créer les produits d'abonnement dans App Store Connect (Premium,
-      Premium IA, Enseignant — mensuel)
-- [ ] Adapter `src/lib/stripe.js` : Stripe pour le web only, IAP pour iOS natif
-- [ ] Gérer la synchronisation des droits d'accès (Firestore) entre achat IAP
-      et logique `access.js` existante
+### 2.3 Xcode
+- [ ] Ouvrir `npm run ios:open`, configurer le **signing** (équipe Apple
+      Developer, certificats, provisioning profiles — `Automatic` est déjà
+      activé dans `project.pbxproj`).
+- [ ] Vérifier que la capacité **Sign in with Apple** apparaît dans
+      « Signing & Capabilities » (le fichier `App.entitlements` est déjà
+      référencé ; si Xcode ne la détecte pas automatiquement, l'ajouter via
+      le bouton « + Capability »).
+- [ ] `pod install` si CocoaPods est utilisé par certains plugins (sinon
+      Capacitor utilise Swift Package Manager, déjà configuré dans
+      `ios/App/CapApp-SPM/`).
 
-### 4.4 TTS natif
-- [ ] Remplacer `speechSynthesis` par `@capacitor-community/text-to-speech`
-      dans `src/tts.js`, avec fallback Web Speech API en contexte web
+### 2.4 App Store Connect — produits d'achat intégré
+- [ ] Créer les 6 abonnements auto-renouvelables avec **exactement** ces
+      Product ID (doivent matcher `src/lib/iap.js` et
+      `functions/roles.mjs`) :
+      `com.leggendo.app.premium.monthly`, `com.leggendo.app.premium.annual`,
+      `com.leggendo.app.premiumplus.monthly`,
+      `com.leggendo.app.premiumplus.annual`,
+      `com.leggendo.app.enseignant.monthly`,
+      `com.leggendo.app.enseignant.annual`.
+- [ ] Renseigner prix, groupe d'abonnement, période d'essai éventuelle.
+- [ ] Tester les achats en environnement **Sandbox** (compte testeur
+      Sandbox App Store Connect) avant soumission.
 
-### 4.5 Icônes, splash screen, métadonnées
-- [ ] Créer une icône source 1024×1024 (à partir de `favicon.svg`)
-- [ ] Générer le jeu complet d'icônes iOS + splash screens : utiliser
-      `@capacitor/assets` (`npx capacitor-assets generate`)
-- [ ] Rédiger la fiche App Store : nom, sous-titre, description, mots-clés,
-      captures d'écran (6.7", 6.5", iPad si supporté), catégorie
-      (Éducation), classification d'âge
+### 2.5 Conformité / fiche App Store
+- [ ] **Privacy Nutrition Labels** : données collectées via Firebase Auth
+      (email) et Firestore (progression de lecture, textes créés).
+- [ ] Politique de confidentialité accessible par URL publique.
+- [ ] CGU/CGV mentionnant le renouvellement automatique des abonnements
+      (obligatoire pour tout IAP).
+- [ ] Captures d'écran (6.7", 6.5", iPad si supporté), description,
+      mots-clés, catégorie **Éducation**, classification d'âge.
+- [ ] Compte de démonstration pour les reviewers Apple (accès Premium sans
+      paiement réel).
 
-### 4.6 Confidentialité / conformité
-- [ ] Remplir les **Privacy Nutrition Labels** (Apple) : données collectées
-      via Firebase Auth (email) et Firestore (progression de lecture)
-- [ ] Politique de confidentialité accessible (URL) — vérifier si déjà
-      présente sur le site web, sinon la créer
-- [ ] Vérifier CGU/CGV mentionnant les abonnements et leur renouvellement
-      automatique (obligatoire pour IAP)
+### 2.6 Build & soumission
+- [ ] `npm run build:ios`, archive dans Xcode (Product → Archive).
+- [ ] Validation puis upload vers App Store Connect (Xcode Organizer ou
+      Transporter).
+- [ ] Soumission pour review.
 
-### 4.7 Build & soumission
-- [ ] Compte Apple Developer Program actif (99 $/an)
-- [ ] Configurer signing (certificats, provisioning profiles) dans Xcode
-- [ ] Bundle ID cohérent (`com.leggendo.app` ou équivalent)
-- [ ] Build archive Xcode → validation → upload via Xcode ou Transporter
-- [ ] Soumission via App Store Connect, remplir toutes les métadonnées et
-      captures d'écran
-- [ ] Prévoir un compte de démonstration pour les reviewers Apple (accès aux
-      fonctionnalités premium sans paiement réel)
+## 3. Vérifications déjà faites dans cet environnement
 
-## 5. Ordre de priorité suggéré
+- `npm run build` : ✅ (build web inchangé, aucune régression).
+- `npx cap add ios` / `npx cap sync ios` : ✅ (projet Xcode généré, 3 plugins
+  natifs détectés : `@capacitor-firebase/authentication`,
+  `@capacitor-community/text-to-speech`, `cordova-plugin-purchase`).
+- `node --check` sur `functions/index.js` et `functions/roles.mjs` : ✅
+  (syntaxe valide — non déployé, nécessite les secrets Stripe/Apple).
 
-1. Authentification native (Apple + Google via Capacitor) — bloquant pour
-   tout le reste.
-2. In-App Purchase — bloquant réglementaire (règle 3.1.1), le plus long à
-   mettre en place (RevenueCat simplifie mais demande intégration + tests).
-3. TTS natif — fonctionnalité cœur de l'app (lecture assistée), à ne pas
-   perdre en release.
-4. Suppression de compte — rapide à implémenter, bloquant à la soumission.
-5. Icônes/splash/métadonnées — travail de packaging, peut être fait en
-   parallèle.
-6. Privacy labels & conformité — à finaliser juste avant soumission.
+Aucun test sur device ou simulateur iOS n'a pu être fait (pas d'Xcode dans
+cet environnement) : à valider en priorité une fois sur Mac, en particulier
+le flux d'achat StoreKit en Sandbox et Sign in with Apple.
 
-## 6. Coûts et délais estimatifs
+## 4. Notes
 
-- Apple Developer Program : 99 $/an
-- RevenueCat : gratuit jusqu'à 2 500 $ MRR, puis commission
-- Développement estimé : 2 à 4 semaines pour un développeur familier de
-  Capacitor, en fonction de la complexité de l'intégration IAP
-
-## 7. Notes
-
-- iOS est plus strict que Google Play sur les points 3 (paiement) et 4
-  (auth native) : les quatre premiers chantiers du tableau §3 sont
-  nécessaires pour iOS, alors qu'un premier APK Android peut passer avec
-  seulement le paiement in-app et le TTS natif (cf. README.md).
-- Ne pas lancer la phase Store avant d'avoir validé la traction commerciale
-  sur le web (Stripe ~3 % de frais vs 15–30 % de commission App Store),
-  comme indiqué dans la feuille de route du README.
+- iOS reste plus strict qu'Android sur le paiement et l'auth native ; les
+  chantiers de la section 2 sont incontournables pour passer la review
+  Apple, contrairement à un premier APK Android.
+- Le web (Stripe) n'est pas affecté : `stripe.js` reste utilisé tel quel
+  hors contexte natif.

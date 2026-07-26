@@ -13,6 +13,7 @@ import {
   authProvider,
   reauthenticateWithPassword,
   reauthenticateWithGoogle,
+  reauthenticateWithApple,
   deleteAccount,
 } from '../lib/account.js'
 
@@ -86,7 +87,8 @@ function cancelDelete() {
 
 async function confirmDelete() {
   deleteError.value = ''
-  if (provider.value !== 'google.com' && !deletePassword.value) {
+  const needsPassword = provider.value !== 'google.com' && provider.value !== 'apple.com'
+  if (needsPassword && !deletePassword.value) {
     deleteError.value = 'Mot de passe requis.'
     return
   }
@@ -94,6 +96,8 @@ async function confirmDelete() {
   try {
     if (provider.value === 'google.com') {
       await reauthenticateWithGoogle()
+    } else if (provider.value === 'apple.com') {
+      await reauthenticateWithApple()
     } else {
       await reauthenticateWithPassword(deletePassword.value)
     }

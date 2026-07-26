@@ -108,11 +108,40 @@ export async function login(email, password) {
   return cred.user
 }
 
+// `signInWithPopup` ne fonctionne pas dans une WebView native (Capacitor) :
+// pas de fenêtre popup, et le retour OAuth ne peut pas atteindre la page.
+// En contexte natif on passe par le SDK natif Google/Apple via
+// @capacitor-firebase/authentication, qui synchronise ensuite la session
+// avec le SDK JS Firebase (onAuthStateChanged se déclenche normalement).
+async function isNative() {
+  const { Capacitor } = await import('@capacitor/core')
+  return Capacitor.isNativePlatform()
+}
+
 export async function loginWithGoogle() {
   const auth = await requireAuth()
+  if (await isNative()) {
+    const { FirebaseAuthentication } = await import(
+      '@capacitor-firebase/authentication'
+    )
+    const result = await FirebaseAuthentication.signInWithGoogle()
+    return result.user
+  }
   const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
   const cred = await signInWithPopup(auth, new GoogleAuthProvider())
   return cred.user
+}
+
+// Obligatoire côté iOS (règle App Store 4.8) dès qu'une autre connexion
+// sociale (Google) est proposée. N'a de sens qu'en contexte natif : Safari
+// gère déjà "Se connecter avec Apple" via son propre flux web s'il le faut.
+export async function loginWithApple() {
+  await requireAuth()
+  const { FirebaseAuthentication } = await import(
+    '@capacitor-firebase/authentication'
+  )
+  const result = await FirebaseAuthentication.signInWithApple()
+  return result.user
 }
 
 export async function resetPassword(email) {

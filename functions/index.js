@@ -30,13 +30,17 @@ import functionsV1 from 'firebase-functions/v1'
 import { initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
-import { ROLES, requireAdmin, roleForPriceId } from './roles.mjs'
+import { ROLES, requireAdmin, roleForPriceId, roleForAppleProductId } from './roles.mjs'
 
 initializeApp()
 setGlobalOptions({ region: 'europe-west1', maxInstances: 10 })
 
 const STRIPE_SECRET_KEY = defineSecret('STRIPE_SECRET_KEY')
 const STRIPE_WEBHOOK_SECRET = defineSecret('STRIPE_WEBHOOK_SECRET')
+// « Shared Secret » App-Specific généré dans App Store Connect
+// (Utilisateurs et accès → Clés → Secret partagé App-Specific), nécessaire
+// pour valider les reçus d'abonnement auto-renouvelable.
+const APPLE_SHARED_SECRET = defineSecret('APPLE_SHARED_SECRET')
 
 // Healthcheck simple : confirme que les Functions sont en ligne.
 export const ping = onRequest((req, res) => {
@@ -307,3 +311,69 @@ export const deleteAccount = onCall(async (request) => {
 
   return { ok: true }
 })
+
+// Valide un reçu StoreKit (achat ou restauration) auprès des serveurs Apple
+// et pose le rôle correspondant, exactement comme `applyRole` le fait pour
+// Stripe côté web. Utilise l'API historique `verifyReceipt` (simple, un seul
+// secret requis) — à migrer vers l'App Store Server API (JWT + clé privée)
+// si Apple retire définitivement ce point d'entrée.
+//
+// Appelée depuis src/lib/iap.js après un achat ou une restauration.
+const APPLE_VERIFY_URL_PROD = 'https://buy.itunes.apple.com/verifyReceipt'
+const APPLE_VERIFY_URL_SANDBOX = 'https://sandbox.itunes.apple.com/verifyReceipt'
+
+async function verifyAppleReceipt(receiptData, sharedSecret, url = APPLE_VERIFY_URL_PROD) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      'receipt-data': receiptData,
+      password: sharedSecret,
+      'exclude-old-transactions': true,
+    }),
+  })
+  const body = await res.json()
+  // 21007 : reçu sandbox envoyé par erreur à l'URL de prod (fréquent en
+  // TestFlight) — on retente contre le bac à sable comme le recommande Apple.
+  if (body.status === 21007 && url === APPLE_VERIFY_URL_PROD) {
+    return verifyAppleReceipt(receiptData, sharedSecret, APPLE_VERIFY_URL_SANDBOX)
+  }
+  return body
+}
+
+export const validateAppleReceipt = onCall(
+  { secrets: [APPLE_SHARED_SECRET] },
+  async (request) => {
+    if (!request.auth) {
+      throw new HttpsError('unauthenticated', 'Connexion requise.')
+    }
+    const { receiptData } = request.data || {}
+    if (!receiptData) {
+      throw new HttpsError('invalid-argument', 'Reçu manquant.')
+    }
+
+    const body = await verifyAppleReceipt(receiptData, APPLE_SHARED_SECRET.value())
+    if (body.status !== 0) {
+      console.error('Reçu Apple invalide, status', body.status)
+      throw new HttpsError('failed-precondition', 'Reçu invalide.')
+    }
+
+    // `latest_receipt_info` liste tout l'historique d'abonnement ; on ne
+    // garde que la transaction non expirée la plus récente.
+    const entries = body.latest_receipt_info || []
+    const now = Date.now()
+    const active = entries
+      .filter((e) => Number(e.expires_date_ms) > now)
+      .sort((a, b) => Number(b.expires_date_ms) - Number(a.expires_date_ms))[0]
+
+    const uid = request.auth.uid
+    if (!active) {
+      await applyRole(uid, false, 'gratuit')
+      return { ok: true, active: false }
+    }
+
+    const role = roleForAppleProductId(active.product_id)
+    await applyRole(uid, true, role, Math.floor(Number(active.expires_date_ms) / 1000))
+    return { ok: true, active: true, role }
+  }
+)

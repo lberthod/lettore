@@ -86,3 +86,18 @@ scripts/.env.deploy
 # Données intermédiaires/scratch de génération (reproductibles via les
 # scripts, pas la source de vérité — voir src/dictionary/ pour le résultat)
 scripts/data/
+
+# iOS (Capacitor) — dépendances et artefacts de build, régénérés par
+# `pod install` / Xcode / `npm run build:ios`. Le projet Xcode (ios/App)
+# reste versionné, pas ces sous-dossiers.
+ios/App/Pods/
+ios/App/build/
+ios/App/DerivedData/
+ios/App/App/public/
+ios/.build/
+*.xcuserstate
+xcuserdata/
+
+# Icône/splash source générés à la volée (voir apk doc.md) — pas la source
+# de vérité, régénérables depuis public/favicon.svg.
+resources/
