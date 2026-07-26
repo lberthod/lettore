@@ -108,19 +108,24 @@ export async function login(email, password) {
   return cred.user
 }
 
-// `signInWithPopup` n'existe pas dans la WebView Android (pas de fenêtre
-// popup) : sur mobile natif, on passe par le SDK natif Firebase Auth
-// (@capacitor-firebase/authentication, Google Sign-In natif) puis on
+// `signInWithPopup` n'existe pas dans la WebView native (Android ou iOS) :
+// pas de fenêtre popup, et le retour OAuth ne peut pas atteindre la page. Sur
+// mobile natif, on passe par le SDK natif Firebase Auth
+// (@capacitor-firebase/authentication, Google/Apple Sign-In natifs) puis on
 // rejoue l'identifiant obtenu dans le SDK JS avec `signInWithCredential`,
 // pour que le reste de l'app (onAuthStateChanged, currentUser, règles
 // Firestore) continue de fonctionner exactement comme sur le web.
+async function isNative() {
+  const { Capacitor } = await import('@capacitor/core')
+  return Capacitor.isNativePlatform()
+}
+
 export async function loginWithGoogle() {
   const auth = await requireAuth()
-  const { Capacitor } = await import('@capacitor/core')
   const { signInWithCredential, signInWithPopup, GoogleAuthProvider } =
     await import('firebase/auth')
 
-  if (Capacitor.isNativePlatform()) {
+  if (await isNative()) {
     const { FirebaseAuthentication } = await import(
       '@capacitor-firebase/authentication'
     )
@@ -135,6 +140,30 @@ export async function loginWithGoogle() {
   }
 
   const cred = await signInWithPopup(auth, new GoogleAuthProvider())
+  return cred.user
+}
+
+// Obligatoire côté iOS (règle App Store 4.8) dès qu'une autre connexion
+// sociale (Google) est proposée. N'a de sens qu'en contexte natif : Safari
+// gère déjà "Se connecter avec Apple" via son propre flux web s'il le faut,
+// donc pas de branche web ici.
+export async function loginWithApple() {
+  const auth = await requireAuth()
+  const { signInWithCredential, OAuthProvider } = await import('firebase/auth')
+  const { FirebaseAuthentication } = await import(
+    '@capacitor-firebase/authentication'
+  )
+  const result = await FirebaseAuthentication.signInWithApple()
+  const idToken = result.credential?.idToken
+  if (!idToken) {
+    throw new Error('Connexion Apple annulée ou incomplète.')
+  }
+  const provider = new OAuthProvider('apple.com')
+  const credential = provider.credential({
+    idToken,
+    rawNonce: result.credential?.nonce,
+  })
+  const cred = await signInWithCredential(auth, credential)
   return cred.user
 }
 

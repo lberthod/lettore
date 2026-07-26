@@ -65,3 +65,24 @@ export function roleForProductId(productId) {
   }
   return role
 }
+
+// Correspondance Product ID App Store Connect → rôle Leggendo. Doit rester
+// synchronisé avec `appleProducts` dans src/lib/iap.js et avec les achats
+// intégrés créés dans App Store Connect.
+export const APPLE_PRODUCT_ROLE_MAP = {
+  'com.leggendo.app.premium.monthly': 'premium',
+  'com.leggendo.app.premium.annual': 'premium',
+  'com.leggendo.app.premiumplus.monthly': 'premium_plus',
+  'com.leggendo.app.premiumplus.annual': 'premium_plus',
+  'com.leggendo.app.enseignant.monthly': 'enseignant',
+  'com.leggendo.app.enseignant.annual': 'enseignant',
+}
+
+export function roleForAppleProductId(productId) {
+  if (!productId) return undefined
+  const role = APPLE_PRODUCT_ROLE_MAP[productId]
+  if (!role) {
+    console.warn('Product ID Apple non répertorié dans APPLE_PRODUCT_ROLE_MAP :', productId)
+  }
+  return role
+}

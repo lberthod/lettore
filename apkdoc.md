@@ -5,6 +5,10 @@ le travail de code décrit en section 1 est **fait et commité**. Les sections
 suivantes listent précisément ce qui reste — et pourquoi certaines étapes
 n'ont pas pu être terminées depuis cet environnement.
 
+> Voir aussi [apk doc.md](apk%20doc.md) pour le pendant iOS/App Store,
+> développé en parallèle et fusionné avec ce travail Android. `auth.js`,
+> `tts.js` et `PricingView.vue` gèrent maintenant les deux plateformes.
+
 ## 0. Résumé — ce qui bloque encore un envoi sur le Play Store
 
 1. **Aucun SDK Android ni build Gradle n'a pu tourner ici** : le dépôt Maven

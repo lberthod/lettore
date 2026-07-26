@@ -1,18 +1,23 @@
-// Synthèse vocale. Sur le web : Web Speech API du navigateur (aucune API
-// externe). Sur mobile natif (Capacitor/Android) : la WebView système
-// n'implémente pas `speechSynthesis`, on passe donc par le moteur TTS
-// natif Android via @capacitor-community/text-to-speech. La même API
-// (speakItalian/stopSpeaking/pauseSpeaking/resumeSpeaking/ttsSupported)
-// est exposée dans les deux cas, les vues n'ont rien à savoir de la
-// plateforme.
+// Synthèse vocale italienne.
+//
+// - Sur le web : Web Speech API du navigateur (aucune API externe).
+// - En app native (Capacitor/Android/iOS) : `speechSynthesis` n'existe pas
+//   dans la WebView, on passe donc par le plugin natif
+//   @capacitor-community/text-to-speech (moteur TTS du système).
+//
+// Limitation du plugin natif : pas de vraie pause/reprise (l'API native ne
+// l'expose pas) — `pauseSpeaking` y équivaut à `stopSpeaking`.
+
 import { Capacitor } from '@capacitor/core'
 
 const isNative = Capacitor.isNativePlatform()
 
-export const ttsSupported =
-  isNative || (typeof window !== 'undefined' && 'speechSynthesis' in window)
+export const ttsSupported = isNative
+  ? true
+  : typeof window !== 'undefined' && 'speechSynthesis' in window
 
 let voices = []
+let nativeSpeaking = false
 
 function refreshVoices() {
   voices = window.speechSynthesis.getVoices()
@@ -27,12 +32,9 @@ function italianVoice() {
   return voices.find((v) => v.lang.toLowerCase().startsWith('it')) || null
 }
 
-// Android TTS n'a pas de notion de pause/reprise (contrairement à
-// `speechSynthesis`) : seul stop() existe côté natif. `pauseSpeaking` y
-// est donc un arrêt complet, `resumeSpeaking` un no-op — un compromis
-// documenté plutôt qu'une fonctionnalité manquante silencieuse.
 async function speakNative(text, { rate = 0.9, onEnd } = {}) {
   const { TextToSpeech } = await import('@capacitor-community/text-to-speech')
+  nativeSpeaking = true
   try {
     await TextToSpeech.speak({
       text,
@@ -41,7 +43,10 @@ async function speakNative(text, { rate = 0.9, onEnd } = {}) {
       category: 'playback',
     })
   } finally {
-    if (onEnd) onEnd()
+    if (nativeSpeaking) {
+      nativeSpeaking = false
+      if (onEnd) onEnd()
+    }
   }
 }
 
@@ -67,14 +72,17 @@ export function speakItalian(text, { rate = 0.9, onEnd } = {}) {
 export function stopSpeaking() {
   if (!ttsSupported) return
   if (isNative) {
+    nativeSpeaking = false
     import('@capacitor-community/text-to-speech').then(({ TextToSpeech }) =>
-      TextToSpeech.stop()
+      TextToSpeech.stop(),
     )
     return
   }
   window.speechSynthesis.cancel()
 }
 
+// Pas de pause native fiable côté plugin : on arrête la lecture. Les vues
+// appelantes traitent l'état "en pause" côté UI indépendamment.
 export function pauseSpeaking() {
   if (!ttsSupported) return
   if (isNative) {
