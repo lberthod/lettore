@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import { getAuthInstance, firebaseReady } from './firebase.js'
 import { onIdle } from './idle.js'
+import { trackSignUp, trackLogin } from './analytics.js'
 
 export const currentUser = ref(null)
 
@@ -74,6 +75,7 @@ export async function register(email, password, displayName) {
   } catch (err) {
     console.warn("Envoi de l'e-mail de vérification :", err)
   }
+  trackSignUp('password')
   return cred.user
 }
 
@@ -105,6 +107,7 @@ export async function login(email, password) {
   const auth = await requireAuth()
   const { signInWithEmailAndPassword } = await import('firebase/auth')
   const cred = await signInWithEmailAndPassword(auth, email, password)
+  trackLogin('password')
   return cred.user
 }
 
@@ -112,6 +115,12 @@ export async function loginWithGoogle() {
   const auth = await requireAuth()
   const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
   const cred = await signInWithPopup(auth, new GoogleAuthProvider())
+  const { getAdditionalUserInfo } = await import('firebase/auth')
+  if (getAdditionalUserInfo(cred)?.isNewUser) {
+    trackSignUp('google')
+  } else {
+    trackLogin('google')
+  }
   return cred.user
 }
 

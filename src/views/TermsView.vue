@@ -32,21 +32,31 @@ import SceneLayout from '../components/SceneLayout.vue'
     <h2>4. Abonnements et paiement</h2>
     <p>
       Les abonnements sont facturés via Stripe, au choix mensuellement ou
-      annuellement. La devise (CHF ou EUR) est déterminée automatiquement
-      selon votre localisation.
+      annuellement. La devise (CHF ou EUR) est déterminée automatiquement par
+      Stripe selon votre localisation.
     </p>
     <ul>
       <li>
-        <strong>Premium</strong> — 5 CHF/mois ou 45 CHF/an (Suisse), 6 €/mois
-        ou 50 €/an (reste de l'Europe).
+        <strong>Premium</strong> — 7,90 €/mois ou 79 €/an (7,90 CHF/mois ou
+        79,90 CHF/an en Suisse). Accès à l'ensemble du catalogue.
       </li>
       <li>
-        <strong>Enseignant</strong> — 20 CHF/mois ou 200 CHF/an (Suisse),
-        25 €/mois ou 250 €/an (reste de l'Europe). Cette formule inclut tous
-        les avantages Premium ainsi que le partage gratuit et illimité des
+        <strong>Premium IA</strong> — 14,90 €/mois ou 149 €/an (même montant
+        en CHF). Inclut tout Premium ainsi que 30 crédits de génération de
+        textes par mois.
+      </li>
+      <li>
+        <strong>Enseignant</strong> — 24,90 €/mois ou 249 €/an (même montant
+        en CHF). Cette formule inclut tous les avantages Premium IA (100
+        crédits de génération par mois) ainsi que le partage gratuit des
         textes créés via une URL publique, accessible sans compte Leggendo.
       </li>
     </ul>
+    <p>
+      Les prix affichés sur la page d'abonnement et les présentes conditions
+      sont indicatifs ; le montant exact facturé est celui confirmé au
+      moment du paiement sur la page Stripe.
+    </p>
     <p>
       L'abonnement choisi se renouvelle automatiquement (chaque mois ou
       chaque année selon la formule) jusqu'à résiliation.

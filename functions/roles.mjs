@@ -27,9 +27,15 @@ export function requireAdmin(request) {
 // n'est pas dans cette table, le webhook retombe sur `premium: true` sans
 // préciser de rôle (comportement historique, non-régressif).
 export const PRICE_ROLE_MAP = {
-  // 'price_xxx': 'premium',
-  // 'price_yyy': 'premium_plus',
-  // 'price_zzz': 'enseignant',
+  // Premium
+  price_1Ty5I6KFCJv6x4JZL1Zgd7o0: 'premium', // mensuel
+  price_1Ty5MRKFCJv6x4JZD7yJmuhs: 'premium', // annuel
+  // Premium IA (premium_plus)
+  price_1Ty5N7KFCJv6x4JZUgnj5G63: 'premium_plus', // mensuel
+  price_1Ty5OTKFCJv6x4JZ2EeulBJ5: 'premium_plus', // annuel
+  // Enseignant
+  price_1Ty5OzKFCJv6x4JZ1rX7gC5X: 'enseignant', // mensuel
+  price_1Ty5QhKFCJv6x4JZccKwYT2K: 'enseignant', // annuel
 }
 
 // Résout le rôle associé à un Price ID Stripe ; avertit si le prix est

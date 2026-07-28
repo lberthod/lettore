@@ -5,6 +5,8 @@
 // Ce fichier ne doit dépendre d'aucune API navigateur (pas de `window` /
 // `document`) : il doit pouvoir être importé tel quel côté Node.
 
+import { LEVEL_LANDING_PAGES } from './landingPages.js'
+
 export const SITE_URL = 'https://leggendo.fr'
 
 export const DEFAULT_TITLE = "Leggendo — Apprendre l'italien par la lecture"
@@ -30,6 +32,21 @@ export const ROUTES = [
       "Tous les textes gradués en italien, de A1 à C2 : histoires courtes, culture, voyages. Traduction française au clic et lecture audio.",
     prerender: true,
   },
+  {
+    path: '/classici',
+    title: 'Classici del dominio pubblico — Leggendo',
+    description:
+      "Œuvres classiques italiennes du domaine public, en texte authentique : Pinocchio, Il Principe, Rosso Malpelo, Inferno... Traduction française au clic et lecture audio.",
+    prerender: true,
+  },
+  // Pages par niveau (GPTanalyse.md, § 10) : source unique dans
+  // landingPages.js, réutilisée aussi par LevelLandingView.vue.
+  ...LEVEL_LANDING_PAGES.map((p) => ({
+    path: p.path,
+    title: p.title,
+    description: p.description,
+    prerender: true,
+  })),
   {
     path: '/methode',
     title: "La méthode : apprendre l'italien par la lecture — Leggendo",

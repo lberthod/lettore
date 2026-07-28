@@ -24,6 +24,8 @@ import {
 } from '../progress.js'
 import { currentUser } from '../lib/auth.js'
 import { isCatalogText, loadCatalogText } from '../lib/protectedContent.js'
+import ContentPaywall from '../components/ContentPaywall.vue'
+import { trackTextOpened, trackReadingCompleted, trackWordTranslated } from '../lib/analytics.js'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -33,8 +35,13 @@ const router = useRouter()
 const route = useRoute()
 
 const currentText = ref(null)
+// Texte du catalogue existant mais dont la lecture complète est refusée par
+// Firestore (rôle insuffisant) : la fiche publique + le paywall s'affichent
+// au lieu de rediriger — voir src/router.js (route « reader »).
+const accessDenied = ref(false)
 
 async function loadText(id) {
+  accessDenied.value = false
   // /condividi/:id (partage public) ne doit jamais résoudre un id du
   // catalogue payant : seuls les documents Firestore marqués `public: true`
   // (texte utilisateur ou actualité) sont concernés, sans quoi l'id d'un
@@ -44,6 +51,12 @@ async function loadText(id) {
   // Aperçu gratuit : chunk embarqué dans le build. Reste du catalogue :
   // document Firestore, lu seulement si les règles autorisent le rôle.
   let data = fromCatalog ? await loadCatalogText(id) : null
+  if (!data && fromCatalog) {
+    // Fiche existante, lecture refusée : jamais de redirection (SEO), voir
+    // ContentPaywall.vue.
+    if (id === props.id) accessDenied.value = true
+    return
+  }
   if (!data && !fromCatalog) {
     data = await (await import('../lib/userTexts.js')).loadUserText(id)
   }
@@ -51,13 +64,18 @@ async function loadText(id) {
     data = await (await import('../lib/newsTexts.js')).loadNewsText(id)
   }
   if (!data) {
-    router.replace({ name: 'library' })
+    router.replace({ name: 'not-found' })
     return
   }
   // Navigation rapide : n'affiche que le texte encore demandé
   if (id === props.id) {
     currentText.value = data
     preloadNeighbors()
+    trackTextOpened({
+      textId: id,
+      level: textMeta.value?.level,
+      access: fromCatalog ? 'full' : 'private',
+    })
   }
 }
 
@@ -141,7 +159,10 @@ function openQuiz() {
 }
 
 function onQuizCompleted(score) {
-  if (score >= currentText.value.questions.length - 1) markRead(props.id)
+  if (score >= currentText.value.questions.length - 1) {
+    markRead(props.id)
+    trackReadingCompleted({ textId: props.id, level: textMeta.value?.level })
+  }
 }
 
 // --- Mode vocabulaire (réservé aux connectés) : un clic ajoute ce texte à la
@@ -268,6 +289,9 @@ function showTranslation(original, event, isSentence) {
     isSentence,
   }
 
+  if (!isSentence && result) {
+    trackWordTranslated({ textId: props.id, level: textMeta.value?.level })
+  }
   if (ttsEnabled.value) speak(original)
 }
 
@@ -395,7 +419,16 @@ onBeforeUnmount(() => {
 
 <template>
   <SceneLayout
-    v-if="currentText"
+    v-if="!currentText && accessDenied && textMeta"
+    :title="textMeta.title"
+    :tagline="tagline"
+    narrow
+  >
+    <p class="excerpt">{{ textMeta.excerpt }}</p>
+    <ContentPaywall placement="text" />
+  </SceneLayout>
+  <SceneLayout
+    v-else-if="currentText"
     :title="currentText.title"
     :tagline="tagline"
     bare
@@ -633,6 +666,12 @@ onBeforeUnmount(() => {
 .reader {
   text-align: left;
   margin-top: 1.4rem;
+}
+
+.excerpt {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(44, 38, 32, 0.8);
 }
 
 /* --- Barre d'outils --- */

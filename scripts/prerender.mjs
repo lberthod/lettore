@@ -21,7 +21,61 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
-import { EXAMPLE_COUNT, pickExampleTexts } from '../src/lib/catalogAccess.js'
+import {
+  EXAMPLE_COUNT,
+  pickExampleTexts,
+  isFreeClassiciChapter,
+} from '../src/lib/catalogAccess.js'
+// Module Node-safe (voir src/lib/stripe.js : isSwitzerland() protège son
+// accès à `navigator` par un try/catch) — permet de générer les vraies
+// cartes de prix ici plutôt que de dupliquer les montants à la main.
+import { plans } from '../src/lib/stripe.js'
+import { loadBooksIndex, loadBookManifest } from './lib/free-content.mjs'
+import { getSeoDictionaryEntries } from '../src/seo/dictionaryPages.js'
+import { getSeoConjugations } from '../src/seo/conjugationPages.js'
+import { LEVEL_LANDING_PAGES, findLevelLandingPage, pickFeaturedTexts } from '../src/seo/landingPages.js'
+
+// Les shards de conjugaison ne sont pas tous générés dans le même format
+// (constaté en pratique) : certains verbes utilisent des clés camelCase avec
+// un objet {personne: forme} (ex. "avere"), d'autres des clés snake_case
+// avec un tableau aligné sur PERSONS (ex. "essere") — normalizeTense()
+// ramène les deux formats à un objet {personne: forme} unique.
+const TENSE_ALIASES = {
+  presente: ['presente'],
+  passatoProssimo: ['passatoProssimo', 'passato_prossimo'],
+  imperfetto: ['imperfetto'],
+  futuro: ['futuro'],
+  congiuntivoPresente: ['congiuntivoPresente', 'congiuntivo_presente'],
+  condizionale: ['condizionale'],
+  imperativo: ['imperativo'],
+}
+const TENSE_LABELS = {
+  presente: 'Presente',
+  passatoProssimo: 'Passato prossimo',
+  imperfetto: 'Imperfetto',
+  futuro: 'Futuro',
+  congiuntivoPresente: 'Congiuntivo presente',
+  condizionale: 'Condizionale',
+  imperativo: 'Imperativo',
+}
+const PERSONS = ['io', 'tu', 'lui/lei', 'noi', 'voi', 'loro']
+const IMPERATIVE_PERSONS = ['tu', 'lei', 'noi', 'voi', 'loro']
+
+function normalizeTense(value) {
+  if (!value) return null
+  if (Array.isArray(value)) {
+    const persons = value.length === IMPERATIVE_PERSONS.length ? IMPERATIVE_PERSONS : PERSONS
+    return Object.fromEntries(persons.map((p, i) => [p, value[i]]))
+  }
+  return typeof value === 'object' ? value : null
+}
+
+function findTense(conjugation, canonicalKey) {
+  for (const key of TENSE_ALIASES[canonicalKey]) {
+    if (conjugation[key]) return normalizeTense(conjugation[key])
+  }
+  return null
+}
 
 const root = path.dirname(fileURLToPath(import.meta.url))
 const srcDir = path.join(root, '../src')
@@ -38,6 +92,20 @@ const textsIndex = JSON.parse(
 )
 
 const FREE_IDS = new Set(pickExampleTexts(textsIndex, EXAMPLE_COUNT).map((t) => t.id))
+const booksIndex = loadBooksIndex()
+
+// Mêmes totaux que virtual:catalog (vite.config.js, plugin leggendo-catalog),
+// recalculés ici à partir de la même source (texts/index.json) : ce script
+// tourne en Node, il ne peut pas importer un module virtuel Vite.
+const sortedLevels = [...new Set(textsIndex.map((t) => t.level))].sort()
+const wordCounts = textsIndex.map((t) => t.wordCount).filter(Boolean)
+const catalogStats = {
+  count: textsIndex.length,
+  levelRange: `${sortedLevels[0]} → ${sortedLevels[sortedLevels.length - 1]}`,
+  categoryCount: new Set(textsIndex.map((t) => t.category)).size,
+  minWords: Math.min(...wordCounts),
+  maxWords: Math.max(...wordCounts),
+}
 
 function escapeHtml(str = '') {
   return String(str)
@@ -148,10 +216,10 @@ for (const route of ROUTES) {
       })),
     })
   } else if (route.path === '/abonnement') {
-    // Prix de référence EUR — src/lib/stripe.js ajuste l'affichage en CHF
-    // pour les visiteurs suisses côté client, ce script (Node) ne peut pas
-    // reproduire cette détection (dépend de `navigator`). À resynchroniser
-    // à la main si les tarifs changent.
+    // Prix de référence EUR (le premier plan payant) — src/lib/stripe.js
+    // ajuste l'affichage en CHF pour les visiteurs suisses côté client ;
+    // Stripe lui-même choisit la devise réellement facturée au paiement.
+    const premium = plans.find((p) => p.id === 'premium')
     extraHead = jsonLd({
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -160,7 +228,7 @@ for (const route of ROUTES) {
         "Accès illimité à tous les textes gradués en italien (A1 à C2), traduction française au clic et lecture audio.",
       offers: {
         '@type': 'Offer',
-        price: '6',
+        price: (premium?.monthly.price.match(/[\d,.]+/)?.[0] || '').replace(',', '.'),
         priceCurrency: 'EUR',
         priceValidUntil: `${new Date().getUTCFullYear() + 1}-12-31`,
         url: canonical,
@@ -202,7 +270,264 @@ ${byLevel[lvl]
     )
   }
 
+  // --- Contenu réel pour les pages marketing (GPTanalyse.md, § 3) ---
+  // Duplication volontaire et courte de la proposition de valeur de
+  // HomeView.vue / AboutView.vue — voir le commentaire d'en-tête de ce
+  // script pour les limites de cette approche (pas un vrai SSR).
+  if (route.path === '/') {
+    html = withBody(
+      html,
+      `<h1>Leggendo — apprendre l'italien en lisant</h1>
+  <p>Des histoires à votre niveau, la traduction française d'un survol, l'audio d'un clic. Rien d'autre entre vous et la langue.</p>
+  <p>${catalogStats.categoryCount} catégories · niveaux ${escapeHtml(catalogStats.levelRange)} · ${catalogStats.minWords}–${catalogStats.maxWords} mots par texte.</p>
+  <ul>
+    <li>Lisez : des textes courts écrits pour votre niveau, de A1 à C2.</li>
+    <li>Comprenez tout : survolez un mot, cliquez une phrase, la traduction apparaît.</li>
+    <li>Écoutez l'italien : chaque texte se lit à voix haute, phrase par phrase.</li>
+  </ul>
+  <p><a href="/textes">Commencer à lire</a> · <a href="/methode">La méthode</a></p>`
+    )
+  } else if (route.path === '/methode') {
+    html = withBody(
+      html,
+      `<h1>La méthode Leggendo</h1>
+  <p>Leggendo s'appuie sur la lecture extensive : lire beaucoup, à un niveau où l'on comprend l'essentiel (~95 %) tout en rencontrant du vocabulaire nouveau — la zone où l'on progresse le plus (input compréhensible, Krashen).</p>
+  <ul>
+    <li>Choisissez un texte gradué de A1 à C2, classé selon le CECR.</li>
+    <li>Survolez les mots : la traduction française apparaît instantanément.</li>
+    <li>Cliquez une phrase (ou sa ponctuation) pour la traduire entièrement.</li>
+    <li>Écoutez le texte en même temps que vous le lisez, pour une double trace en mémoire.</li>
+  </ul>
+  <h2>Questions fréquentes</h2>
+  ${METHOD_FAQ.map((f) => `<h3>${escapeHtml(f.q)}</h3>\n  <p>${escapeHtml(f.a)}</p>`).join('\n  ')}`
+    )
+  } else if (route.path === '/abonnement') {
+    html = withBody(
+      html,
+      `<h1>Abonnements Leggendo</h1>
+  <p>Soutenez le projet et débloquez tous les textes avec la formule Premium.</p>
+  ${plans
+    .map((p) => {
+      const monthly = `${p.monthly.price}${p.monthly.period ? ' ' + p.monthly.period : ''}`
+      const annual = `${p.annual.price}${p.annual.period ? ' ' + p.annual.period : ''}`
+      const price = p.annual.price === p.monthly.price ? monthly : `${monthly} (ou ${annual})`
+      return `<section>
+    <h2>${escapeHtml(p.name)}</h2>
+    <p>${escapeHtml(price)}</p>
+    <ul>${p.features.map((f) => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
+  </section>`
+    })
+    .join('\n  ')}
+  <p>Paiement sécurisé par Stripe. Résiliable à tout moment.</p>`
+    )
+  } else if (route.path === '/classici') {
+    const body = booksIndex
+      .map(
+        (b) =>
+          `<li><a href="/classici/${b.id}/01">${escapeHtml(b.title)}</a> — ${escapeHtml(b.author)}, niveau ${escapeHtml(b.level)} (${b.chapterCount} chapitre${b.chapterCount > 1 ? 's' : ''})</li>`
+      )
+      .join('\n    ')
+    html = withBody(
+      html,
+      `<h1>Classici del dominio pubblico</h1>
+  <p>Des œuvres classiques italiennes du domaine public, en texte authentique (non simplifié) — traduction au clic, lecture audio et quiz de compréhension, chapitre par chapitre.</p>
+  <ul>\n    ${body}\n  </ul>`
+    )
+  } else if (route.path === '/a-propos') {
+    html = withBody(
+      html,
+      `<h1>À propos de Leggendo</h1>
+  <p>Leggendo est né d'un constat simple : on apprend une langue en la lisant beaucoup, à un niveau où l'on comprend l'essentiel. ${catalogStats.count} textes gradués, de ${escapeHtml(catalogStats.levelRange)}, avec traduction française au clic et lecture audio.</p>
+  <p><a href="/methode">Découvrir la méthode</a> · <a href="/textes">Voir les textes</a></p>`
+    )
+  } else if (LEVEL_LANDING_PAGES.some((p) => p.path === route.path)) {
+    // Pages par niveau (GPTanalyse.md, § 10) — même sélection éditoriale que
+    // src/views/LevelLandingView.vue (src/seo/landingPages.js).
+    const page = findLevelLandingPage(LEVEL_LANDING_PAGES.find((p) => p.path === route.path).level)
+    const featured = pickFeaturedTexts(textsIndex, page.level, 20)
+    html = withBody(
+      html,
+      `<h1>${escapeHtml(page.heading)}</h1>
+  <p>${escapeHtml(page.audience)}</p>
+  <p>${escapeHtml(page.difficulties)}</p>
+  <p>${escapeHtml(page.order)}</p>
+  <ul>
+${featured.map((t) => `    <li><a href="/testo/${t.id}">${escapeHtml(t.title)}</a> — ${escapeHtml(t.excerpt)}</li>`).join('\n')}
+  </ul>
+  <p><a href="/textes">Voir tous les textes ${escapeHtml(page.level)}</a></p>`
+    )
+  }
+
   writeRoute(route.path, html)
+  count++
+}
+
+// --- Pages de chapitres Classici : /classici/<bookId>/<chapterId> ---
+// Même logique que /testo/<id> : corps complet pour un chapitre gratuit,
+// extrait + paywall balisé sinon (voir isFreeClassiciChapter, la même
+// fonction que côté client dans src/router.js/BookReaderView.vue).
+for (const b of booksIndex) {
+  const manifest = loadBookManifest(b.id)
+  manifest.chapters.forEach((chapter, i) => {
+    const canonical = `${SITE_URL}/classici/${b.id}/${chapter.id}`
+    const title = `${chapter.title} — ${manifest.title} (Leggendo)`
+    const free = isFreeClassiciChapter(b.id, chapter.id)
+    const description = `${chapter.title} — chapitre ${i + 1}/${manifest.chapters.length} de « ${manifest.title} » (${manifest.author}), niveau ${manifest.level}. Traduction française au clic et lecture audio.`
+
+    const extraHead = jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'LearningResource',
+      name: `${manifest.title} — ${chapter.title}`,
+      description,
+      inLanguage: 'it',
+      learningResourceType: 'Classique italien adapté',
+      educationalLevel: manifest.level,
+      author: manifest.author,
+      isAccessibleForFree: free,
+      url: canonical,
+      isPartOf: { '@type': 'WebSite', name: 'Leggendo', url: SITE_URL },
+      ...(free
+        ? {}
+        : {
+            hasPart: {
+              '@type': 'WebPageElement',
+              isAccessibleForFree: false,
+              cssSelector: '.paywall',
+            },
+          }),
+    })
+
+    let html = patchHead(template, { title, description, canonical, extraHead })
+
+    let bodyContent
+    if (free) {
+      let paragraphs = []
+      try {
+        const full = JSON.parse(
+          readFileSync(
+            path.join(srcDir, `books/${b.id}/${b.id}-${chapter.id}.json`),
+            'utf8'
+          )
+        )
+        paragraphs = full.paragraphs || []
+      } catch {
+        // fichier introuvable (ne devrait pas arriver pour un chapitre gratuit)
+      }
+      bodyContent = `<p><a href="/classici">← Tutti i classici</a></p>
+  <h1>${escapeHtml(manifest.title)}</h1>
+  <p><strong>${escapeHtml(chapter.title)}</strong> · ${escapeHtml(manifest.author)} · niveau ${escapeHtml(manifest.level)}</p>
+  ${paragraphs.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n  ')}
+  <p><em>Traduction française au clic et lecture audio disponibles dans la version interactive ci-dessus.</em></p>`
+    } else {
+      bodyContent = `<p><a href="/classici">← Tutti i classici</a></p>
+  <h1>${escapeHtml(manifest.title)}</h1>
+  <p><strong>${escapeHtml(chapter.title)}</strong> · ${escapeHtml(manifest.author)} · niveau ${escapeHtml(manifest.level)}</p>
+  <div class="paywall">
+    <p>Ce chapitre fait partie du catalogue Classici complet, réservé aux abonné·es Premium IA et Enseignant.</p>
+    <p><a href="/abonnement">Voir les formules d'abonnement</a> · <a href="/connexion">Se connecter</a></p>
+  </div>`
+    }
+
+    html = withBody(html, bodyContent)
+    writeRoute(`/classici/${b.id}/${chapter.id}`, html)
+    count++
+  })
+}
+
+// --- Dictionnaire : /dizionario/<lemma> (premier lot, voir dictionaryPages.js) ---
+for (const entry of getSeoDictionaryEntries()) {
+  const canonical = `${SITE_URL}/dizionario/${encodeURIComponent(entry.lemma)}`
+  const title = `${entry.lemma} en italien : traduction, définition et exemples — Leggendo`
+  const description = `« ${entry.lemma} » (${entry.pos}) : ${entry.fr}. Définition, exemples et conjugaison sur Leggendo.`
+
+  const extraHead = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: entry.lemma,
+    description: entry.definition_it,
+    inDefinedTermSet: `${SITE_URL}/verbi`,
+    url: canonical,
+  })
+
+  let html = patchHead(template, { title, description, canonical, extraHead })
+  const examplesHtml = entry.examples
+    .map((ex) => `<li>${escapeHtml(ex.it)} — <em>${escapeHtml(ex.fr)}</em></li>`)
+    .join('\n    ')
+  const synonymsHtml = entry.synonyms?.length
+    ? `<p>Synonymes : ${entry.synonyms.map(escapeHtml).join(', ')}</p>`
+    : ''
+  const conjugationLink = entry.isVerb
+    ? `<p><a href="/coniugazione/${encodeURIComponent(entry.lemma)}">Voir la conjugaison de « ${escapeHtml(entry.lemma)} »</a></p>`
+    : ''
+
+  html = withBody(
+    html,
+    `<p><a href="/verbi">← Dizionario</a></p>
+  <h1>${escapeHtml(entry.lemma)}</h1>
+  <p><strong>${escapeHtml(entry.pos)}</strong> — ${escapeHtml(entry.fr)}</p>
+  <p>${escapeHtml(entry.definition_it)}</p>
+  <ul>\n    ${examplesHtml}\n  </ul>
+  ${synonymsHtml}
+  ${conjugationLink}`
+  )
+  writeRoute(`/dizionario/${entry.lemma}`, html)
+  count++
+}
+
+// --- Conjugaisons : /coniugazione/<verbo> (premier lot, voir conjugationPages.js) ---
+for (const { lemma, fr, conjugation } of getSeoConjugations()) {
+  const canonical = `${SITE_URL}/coniugazione/${encodeURIComponent(lemma)}`
+  const title = `Conjugaison de ${lemma} en italien — tableaux et exemples — Leggendo`
+  const description = `Conjugaison complète du verbe italien « ${lemma} » (${fr}) : présent, passé composé, imparfait, futur, conditionnel, subjonctif, impératif.`
+
+  const html = patchHead(template, { title, description, canonical, extraHead: '' })
+  const tables = Object.keys(TENSE_LABELS)
+    .map((tense) => ({ tense, forms: findTense(conjugation, tense) }))
+    .filter(({ forms }) => forms)
+    .map(({ tense, forms }) => {
+      const persons = tense === 'imperativo' ? IMPERATIVE_PERSONS : PERSONS
+      const rows = persons
+        .map((p) => `<li>${escapeHtml(p)} : ${escapeHtml(forms[p] || '—')}</li>`)
+        .join('')
+      return `<section>
+    <h2>${TENSE_LABELS[tense]}</h2>
+    <ul>${rows}</ul>
+  </section>`
+    })
+    .join('\n  ')
+
+  writeRoute(
+    `/coniugazione/${lemma}`,
+    withBody(
+      html,
+      `<p><a href="/dizionario/${encodeURIComponent(lemma)}">← Fiche « ${escapeHtml(lemma)} »</a></p>
+  <h1>Conjugaison de ${escapeHtml(lemma)}</h1>
+  <p>${escapeHtml(lemma)} — ${escapeHtml(fr)}</p>
+  ${tables}`
+    )
+  )
+  count++
+}
+
+// --- Page 404 : servie par public/.htaccess (ErrorDocument 404 /404.html)
+// pour les vraies URL inexistantes ; la route Vue « not-found » gère le cas
+// où le SPA est déjà chargé et navigue elle-même vers une URL inconnue.
+{
+  const html404 = patchHead(template, {
+    title: 'Page introuvable — Leggendo',
+    description: "Cette page n'existe pas ou plus.",
+    canonical: `${SITE_URL}/404`,
+    extraHead: '    <meta name="robots" content="noindex, follow" />\n',
+  })
+  writeRoute(
+    '/404',
+    withBody(
+      html404,
+      `<h1>Page introuvable</h1>
+  <p>Cette page n'existe pas ou plus.</p>
+  <p><a href="/textes">Voir les textes gratuits</a> · <a href="/dizionario">Ouvrir le dictionnaire</a></p>`
+    )
+  )
   count++
 }
 
@@ -226,6 +551,17 @@ for (const t of textsIndex) {
     isAccessibleForFree: free,
     url: canonical,
     isPartOf: { '@type': 'WebSite', name: 'Leggendo', url: SITE_URL },
+    // Balise le paywall (GPTanalyse.md, § 2) : le sélecteur cible la même
+    // classe que src/components/ContentPaywall.vue côté client.
+    ...(free
+      ? {}
+      : {
+          hasPart: {
+            '@type': 'WebPageElement',
+            isAccessibleForFree: false,
+            cssSelector: '.paywall',
+          },
+        }),
   })
 
   let html = patchHead(template, { title, description, canonical, extraHead })
@@ -253,8 +589,10 @@ for (const t of textsIndex) {
   <h1>${escapeHtml(t.title)}</h1>
   <p><strong>Niveau ${escapeHtml(t.level)}</strong> · ${escapeHtml(t.category)} · ${escapeHtml(t.genre)} · ~${t.wordCount} mots</p>
   <p>${escapeHtml(t.excerpt)}</p>
-  <p>Texte complet réservé aux abonné·es Leggendo.</p>
-  <p><a href="/abonnement">Voir les formules d'abonnement</a> · <a href="/connexion">Se connecter</a></p>`
+  <div class="paywall">
+    <p>Ce texte fait partie du catalogue complet, réservé aux abonné·es Leggendo.</p>
+    <p><a href="/abonnement">Voir les formules d'abonnement</a> · <a href="/connexion">Se connecter</a></p>
+  </div>`
   }
 
   html = withBody(html, bodyContent)

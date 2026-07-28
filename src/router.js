@@ -5,14 +5,10 @@ import HomeView from './views/HomeView.vue'
 import { catalogIds } from 'virtual:catalog'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
-import {
-  EXAMPLE_TEXT_IDS,
-  isAdmin,
-  hasCatalogAccess,
-  hasClassiciAccess,
-  isFreeClassiciChapter,
-} from './lib/access.js'
+import { isAdmin } from './lib/access.js'
 import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION, findRoute } from './seo/staticPages.js'
+import { LEVEL_LANDING_PAGES } from './seo/landingPages.js'
+import { trackPageView } from './lib/analytics.js'
 
 const catalogIdSet = new Set(catalogIds)
 
@@ -38,25 +34,20 @@ const router = createRouter({
       component: () => import('./views/ReaderView.vue'),
       props: true,
       beforeEnter: async (to) => {
-        const inCatalog = catalogIdSet.has(to.params.id)
-        const isExample = EXAMPLE_TEXT_IDS.includes(to.params.id)
-        if (!firebaseReady) {
-          if (!inCatalog) return { name: 'library' }
-          return
-        }
-        // Aperçu gratuit : toujours accessible, même sans compte.
-        if (inCatalog && isExample) return
-        // Hors aperçu : connexion requise (texte du catalogue réservé aux
-        // formules payantes, ou texte créé par l'utilisateur/actualité — le
-        // lecteur et les règles Firestore gèrent ce dernier cas).
+        // Texte du catalogue : toujours accessible, connecté ou non — les
+        // métadonnées publiques (titre, niveau, extrait) et un paywall
+        // s'affichent si le rôle ne permet pas la lecture complète (voir
+        // ReaderView.vue, qui traite le refus de Firestore comme un état
+        // d'affichage, pas comme une redirection). Bon pour le SEO : Google
+        // et tout visiteur anonyme voient une vraie page, jamais /connexion.
+        if (catalogIdSet.has(to.params.id)) return
+        if (!firebaseReady) return { name: 'not-found' }
+        // Hors catalogue (texte créé par un utilisateur, actualité) :
+        // connexion requise ; le rôle exact reste vérifié par les règles
+        // Firestore (ex. Notizie réservé à premium_plus/enseignant).
         await authReady
         if (!currentUser.value) {
           return { name: 'login', query: { redirect: to.fullPath } }
-        }
-        // Catalogue complet : réservé à Premium et au-dessus (README_TARIFICATION.md) —
-        // un compte gratuit connecté ne suffit pas.
-        if (inCatalog && !(await hasCatalogAccess())) {
-          return { name: 'pricing', query: { redirect: to.fullPath } }
         }
       },
     },
@@ -64,26 +55,16 @@ const router = createRouter({
       path: '/classici',
       name: 'books',
       component: () => import('./views/BooksView.vue'),
-      meta: { title: 'Classici del dominio pubblico — Leggendo' },
+      meta: findRoute('/classici'),
     },
     {
       path: '/classici/:bookId/:chapterId',
       name: 'book-reader',
       component: () => import('./views/BookReaderView.vue'),
       props: true,
-      beforeEnter: async (to) => {
-        if (!firebaseReady) return
-        // Classici (Premium IA/Enseignant) : connexion requise, sauf aperçu
-        // gratuit (deux livres entiers + premier chapitre de quelques autres).
-        await authReady
-        if (!currentUser.value) {
-          return { name: 'login', query: { redirect: to.fullPath } }
-        }
-        if (isFreeClassiciChapter(to.params.bookId, to.params.chapterId)) return
-        if (!(await hasClassiciAccess())) {
-          return { name: 'pricing', query: { redirect: to.fullPath } }
-        }
-      },
+      // Chapitre Classici : toujours accessible, comme /testo/:id ci-dessus —
+      // BookReaderView affiche les métadonnées publiques (titre, auteur,
+      // niveau) et un paywall quand la lecture complète n'est pas autorisée.
     },
     {
       path: '/condividi/:id',
@@ -95,6 +76,13 @@ const router = createRouter({
       props: true,
       meta: { title: 'Texte partagé — Leggendo' },
     },
+    ...LEVEL_LANDING_PAGES.map((p) => ({
+      path: p.path,
+      name: `level-${p.level.toLowerCase()}`,
+      component: () => import('./views/LevelLandingView.vue'),
+      props: { level: p.level },
+      meta: findRoute(p.path),
+    })),
     {
       path: '/a-propos',
       name: 'about',
@@ -260,7 +248,16 @@ const router = createRouter({
         if (!isAdmin()) return { name: 'home' }
       },
     },
-    { path: '/:pathMatch(.*)*', redirect: '/' },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('./views/NotFoundView.vue'),
+      meta: {
+        title: 'Page introuvable — Leggendo',
+        description: "Cette page n'existe pas ou plus.",
+        noindex: true,
+      },
+    },
   ],
   scrollBehavior() {
     return { top: 0 }
@@ -303,6 +300,11 @@ async function applyReaderMeta(to) {
 router.afterEach((to) => {
   setMeta(to.meta.title, to.meta.description)
   if (to.name === 'reader') applyReaderMeta(to)
+  // Analytics ne collecte pas automatiquement les navigations d'une SPA (pas
+  // de rechargement de page) — seule la toute première vue peut être comptée
+  // deux fois (collecte automatique du SDK + cet appel) : à vérifier en
+  // GA4 DebugView (voir GPTanalyse.md, § 5).
+  trackPageView(to.path, to.meta.title || DEFAULT_TITLE)
 
   // URL canonique : évite le contenu dupliqué (query strings, redirections)
   // et donne aux moteurs une adresse stable même si le domaine de dev diffère.

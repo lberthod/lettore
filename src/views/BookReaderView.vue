@@ -19,10 +19,9 @@ import {
   toggleFavorite,
   isRead,
 } from '../progress.js'
-import { authReady, currentUser } from '../lib/auth.js'
-import { firebaseReady } from '../lib/firebase.js'
-import { hasClassiciAccess, isFreeClassiciChapter } from '../lib/access.js'
 import { loadBookChapter } from '../lib/protectedContent.js'
+import ContentPaywall from '../components/ContentPaywall.vue'
+import { trackTextOpened } from '../lib/analytics.js'
 
 const props = defineProps({
   bookId: { type: String, required: true },
@@ -30,18 +29,6 @@ const props = defineProps({
 })
 
 const router = useRouter()
-
-// Le guard de route (`beforeEnter`) ne se redéclenche pas quand seuls les
-// params changent (ex. tourner la page dans le même livre) — on revérifie
-// donc ici à chaque chapitre, car l'accès gratuit ne couvre que certains
-// chapitres d'un même livre (voir isFreeClassiciChapter).
-async function checkChapterAccess(bookId, chapterId) {
-  if (!firebaseReady) return true
-  await authReady
-  if (!currentUser.value) return false
-  if (isFreeClassiciChapter(bookId, chapterId)) return true
-  return hasClassiciAccess()
-}
 
 // Un livre = un manifeste (book.json) + un chapitre chargé à la demande.
 // Seuls les manifestes (métadonnées publiques) sont embarqués dans le build ;
@@ -52,12 +39,16 @@ const bookModules = import.meta.glob('../books/*/book.json', { import: 'default'
 const book = ref(null)
 const currentChapter = ref(null)
 const summaryOpen = ref(false)
+// Chapitre existant mais lecture refusée par Firestore (rôle insuffisant) :
+// fiche publique (titre, auteur, niveau) + paywall, jamais de redirection
+// (voir src/router.js, route « book-reader »).
+const accessDenied = ref(false)
 
 async function loadBook(bookId) {
   const loader = bookModules[`../books/${bookId}/book.json`]
   const data = loader ? await loader() : null
   if (!data) {
-    router.replace({ name: 'books' })
+    router.replace({ name: 'not-found' })
     return null
   }
   book.value = data
@@ -65,20 +56,18 @@ async function loadBook(bookId) {
 }
 
 async function loadChapter(bookId, chapterId) {
-  if (!(await checkChapterAccess(bookId, chapterId))) {
-    const redirect = { name: currentUser.value ? 'pricing' : 'login' }
-    redirect.query = { redirect: router.currentRoute.value.fullPath }
-    router.replace(redirect)
-    return
-  }
+  accessDenied.value = false
   const data = await loadBookChapter(bookId, chapterId)
   if (!data) {
-    router.replace({ name: 'books' })
+    if (bookId === props.bookId && chapterId === props.chapterId) {
+      accessDenied.value = true
+    }
     return
   }
   if (bookId === props.bookId && chapterId === props.chapterId) {
     currentChapter.value = data
     preloadNeighbors()
+    trackTextOpened({ textId: `${bookId}-${chapterId}`, level: book.value?.level, access: 'full' })
   }
 }
 
@@ -109,6 +98,9 @@ const tagline = computed(() => {
   return parts.join(' · ')
 })
 const chapterReadId = computed(() => `${props.bookId}-${props.chapterId}`)
+const chapterMeta = computed(
+  () => book.value?.chapters.find((c) => c.id === props.chapterId) || null
+)
 
 // Découpage : paragraphes → phrases → mots (identique à ReaderView)
 const paragraphs = computed(() =>
@@ -383,7 +375,18 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <SceneLayout v-if="book && currentChapter" :title="book.title" :tagline="tagline" bare>
+  <SceneLayout
+    v-if="book && !currentChapter && accessDenied"
+    :title="book.title"
+    :tagline="tagline"
+    narrow
+  >
+    <p v-if="chapterMeta" class="excerpt">
+      Capitolo « {{ chapterMeta.title }} » — {{ book.author }}, niveau {{ book.level }}.
+    </p>
+    <ContentPaywall placement="classici" />
+  </SceneLayout>
+  <SceneLayout v-else-if="book && currentChapter" :title="book.title" :tagline="tagline" bare>
     <div class="reader">
       <div class="toolbar">
         <RouterLink class="back" :to="{ name: 'books' }">← Tutti i classici</RouterLink>
@@ -556,6 +559,12 @@ onBeforeUnmount(() => {
 .reader {
   text-align: left;
   margin-top: 1.4rem;
+}
+
+.excerpt {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(44, 38, 32, 0.8);
 }
 
 .toolbar {

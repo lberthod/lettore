@@ -1,5 +1,10 @@
 # Servi par Infomaniak (Apache) — équivalent du rewrite SPA de firebase.json
 
+# Vraie 404 HTTP pour les URL inexistantes (générée par scripts/prerender.mjs).
+# La route Vue « not-found » gère en plus le cas où le SPA est déjà chargé et
+# navigue lui-même vers une URL inconnue (pas de rechargement serveur dans ce cas).
+ErrorDocument 404 /404.html
+
 # HTTPS forcé
 RewriteEngine On
 RewriteCond %{HTTPS} off

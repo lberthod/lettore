@@ -86,3 +86,6 @@ scripts/.env.deploy
 # Données intermédiaires/scratch de génération (reproductibles via les
 # scripts, pas la source de vérité — voir src/dictionary/ pour le résultat)
 scripts/data/
+
+# macOS
+.DS_Store

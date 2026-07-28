@@ -9,6 +9,9 @@ import { writeFileSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
+import { loadBooksIndex, loadBookManifest } from './lib/free-content.mjs'
+import { getSeoDictionaryEntries } from '../src/seo/dictionaryPages.js'
+import { getSeoConjugations } from '../src/seo/conjugationPages.js'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
 const publicDir = path.join(root, '../public')
@@ -29,7 +32,36 @@ const textUrls = textsIndex.map((t) => ({
   priority: '0.7',
 }))
 
-const urls = [...staticUrls, ...textUrls]
+// Classici : une URL par chapitre, même logique que les textes (fiche
+// publique + paywall pour les chapitres non gratuits — voir prerender.mjs).
+const chapterUrls = loadBooksIndex().flatMap((book) =>
+  loadBookManifest(book.id).chapters.map((chapter) => ({
+    loc: `${SITE_URL}/classici/${book.id}/${chapter.id}`,
+    changefreq: 'monthly',
+    priority: '0.6',
+  }))
+)
+
+// Dictionnaire/conjugaison : premier lot seulement (voir dictionaryPages.js,
+// conjugationPages.js) — pas les ~11 275 lemmes du dictionnaire complet.
+const dictionaryUrls = getSeoDictionaryEntries().map((e) => ({
+  loc: `${SITE_URL}/dizionario/${encodeURIComponent(e.lemma)}`,
+  changefreq: 'yearly',
+  priority: '0.5',
+}))
+const conjugationUrls = getSeoConjugations().map((c) => ({
+  loc: `${SITE_URL}/coniugazione/${encodeURIComponent(c.lemma)}`,
+  changefreq: 'yearly',
+  priority: '0.5',
+}))
+
+const urls = [
+  ...staticUrls,
+  ...textUrls,
+  ...chapterUrls,
+  ...dictionaryUrls,
+  ...conjugationUrls,
+]
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

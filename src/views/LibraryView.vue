@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import textsIndex from '../texts/index.json'
 import taxonomy from '../texts/category.json'
@@ -47,7 +47,11 @@ const levelHints = {
   C1: 'C1 — Autonome : textes exigeants, nuances stylistiques, langue idiomatique et abstraite',
   C2: 'C2 — Maîtrise : registre littéraire et soutenu, ironie, références culturelles, syntaxe complexe',
 }
-const selectedLevel = ref('all')
+// Préselection depuis une page d'atterrissage par niveau (/textes-italien-a1
+// etc.) : le lien pointe vers /textes?level=A1, la sélection se fait ici.
+const route = useRoute()
+const levelFromQuery = typeof route.query.level === 'string' ? route.query.level : null
+const selectedLevel = ref(levelFromQuery && levels.includes(levelFromQuery) ? levelFromQuery : 'all')
 const selectedCategory = ref('all')
 const selectedGenre = ref('all')
 

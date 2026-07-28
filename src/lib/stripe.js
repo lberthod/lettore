@@ -6,7 +6,8 @@
 
 export const stripeConfig = {
   // Clé publique (pk_live_... ou pk_test_...), utile plus tard pour Checkout
-  publishableKey: '',
+  publishableKey:
+    'pk_live_51TDopGKFCJv6x4JZm9mfh2sW2hvpxPph1IkyPWn7vqsBxdbK9Dhh0d75AlvEMFtyHKIYnQJKDzk1zhAMkutqf5IS00ztZ2uumu',
 }
 
 // Abonnements facturés en CHF en Suisse et en EUR ailleurs en Europe.
@@ -34,14 +35,14 @@ export const premiumPlan = {
   name: 'Premium',
   highlight: true,
   monthly: {
-    price: swiss ? '6,90 CHF' : '7,90 €',
+    price: swiss ? '7,90 CHF' : '7,90 €',
     period: '/ mois',
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
+    paymentLink: 'https://buy.stripe.com/dRm00k2zz3bSc8zcQOfEk04',
   },
   annual: {
-    price: swiss ? '69 CHF' : '79 €',
+    price: swiss ? '79,90 CHF' : '79 €',
     period: '/ an',
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
+    paymentLink: 'https://buy.stripe.com/7sYeVe3DDfYEb4v4kifEk06',
   },
   features: [
     'Accès à l’ensemble du catalogue, tous niveaux (A1 à C2)',
@@ -60,14 +61,14 @@ export const premiumPlusPlan = {
   id: 'premium_plus',
   name: 'Premium IA',
   monthly: {
-    price: swiss ? '13,90 CHF' : '14,90 €',
+    price: swiss ? '14,90 CHF' : '14,90 €',
     period: '/ mois',
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
+    paymentLink: 'https://buy.stripe.com/9B6cN6ded4fW6Of6sqfEk02',
   },
   annual: {
-    price: swiss ? '139 CHF' : '149 €',
+    price: swiss ? '149 CHF' : '149 €',
     period: '/ an',
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
+    paymentLink: 'https://buy.stripe.com/7sYfZigqp7s8fkL8AyfEk05',
   },
   features: [
     'Tout le Premium',
@@ -82,14 +83,14 @@ export const teacherPlan = {
   id: 'enseignant',
   name: 'Enseignant',
   monthly: {
-    price: swiss ? '22,90 CHF' : '24,90 €',
+    price: swiss ? '24,90 CHF' : '24,90 €',
     period: '/ mois',
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (mensuel)
+    paymentLink: 'https://buy.stripe.com/eVq5kE0rr13K1tV7wufEk00',
   },
   annual: {
-    price: swiss ? '229 CHF' : '249 €',
+    price: swiss ? '249 CHF' : '249 €',
     period: '/ an',
-    paymentLink: '', // ← coller ici l'URL du Payment Link Stripe (annuel)
+    paymentLink: 'https://buy.stripe.com/dRm3cwfmlfYE4G7bMKfEk01',
   },
   features: [
     'Tout Premium IA (100 crédits de génération par mois)',
