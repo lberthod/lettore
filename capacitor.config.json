@@ -1,0 +1,8 @@
+{
+  "appId": "ch.loicberthod.leggendo",
+  "appName": "Leggendo",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -139,6 +139,10 @@ export default defineConfig({
     // hors ligne une fois utilisés, sans alourdir le précache initial.
     VitePWA({
       registerType: 'autoUpdate',
+      // Enregistrement manuel (voir src/main.js) : dans l'app Capacitor, la
+      // WebView sert déjà les fichiers locaux, un service worker n'a rien à
+      // apporter et peut entrer en conflit avec le cache natif.
+      injectRegister: false,
       includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'Leggendo',

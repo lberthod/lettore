@@ -38,11 +38,13 @@ export const premiumPlan = {
     price: swiss ? '7,90 CHF' : '7,90 €',
     period: '/ mois',
     paymentLink: 'https://buy.stripe.com/dRm00k2zz3bSc8zcQOfEk04',
+    productId: 'premium_monthly', // ← souscription Google Play (voir apkdoc.md)
   },
   annual: {
     price: swiss ? '79,90 CHF' : '79 €',
     period: '/ an',
     paymentLink: 'https://buy.stripe.com/7sYeVe3DDfYEb4v4kifEk06',
+    productId: 'premium_annual',
   },
   features: [
     'Accès à l’ensemble du catalogue, tous niveaux (A1 à C2)',
@@ -64,11 +66,13 @@ export const premiumPlusPlan = {
     price: swiss ? '14,90 CHF' : '14,90 €',
     period: '/ mois',
     paymentLink: 'https://buy.stripe.com/9B6cN6ded4fW6Of6sqfEk02',
+    productId: 'premium_plus_monthly',
   },
   annual: {
     price: swiss ? '149 CHF' : '149 €',
     period: '/ an',
     paymentLink: 'https://buy.stripe.com/7sYfZigqp7s8fkL8AyfEk05',
+    productId: 'premium_plus_annual',
   },
   features: [
     'Tout le Premium',
@@ -86,11 +90,13 @@ export const teacherPlan = {
     price: swiss ? '24,90 CHF' : '24,90 €',
     period: '/ mois',
     paymentLink: 'https://buy.stripe.com/eVq5kE0rr13K1tV7wufEk00',
+    productId: 'enseignant_monthly',
   },
   annual: {
     price: swiss ? '249 CHF' : '249 €',
     period: '/ an',
     paymentLink: 'https://buy.stripe.com/dRm3cwfmlfYE4G7bMKfEk01',
+    productId: 'enseignant_annual',
   },
   features: [
     'Tout Premium IA (100 crédits de génération par mois)',

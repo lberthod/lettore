@@ -48,3 +48,47 @@ export function roleForPriceId(priceId) {
   }
   return role
 }
+
+// Correspondance ID produit Google Play (souscriptions) → rôle Leggendo.
+// Les ID ci-dessous sont ceux utilisés par le client (src/lib/billing.js) —
+// il faut créer des souscriptions avec exactement ces ID dans Play Console
+// (Monétiser > Produits > Abonnements) avant que l'achat in-app fonctionne.
+// Voir apkdoc.md, § Google Play Billing.
+export const PLAY_PRODUCT_ROLE_MAP = {
+  premium_monthly: 'premium',
+  premium_annual: 'premium',
+  premium_plus_monthly: 'premium_plus',
+  premium_plus_annual: 'premium_plus',
+  enseignant_monthly: 'enseignant',
+  enseignant_annual: 'enseignant',
+}
+
+export function roleForProductId(productId) {
+  if (!productId) return undefined
+  const role = PLAY_PRODUCT_ROLE_MAP[productId]
+  if (!role) {
+    console.warn('Product ID Google Play non répertorié :', productId)
+  }
+  return role
+}
+
+// Correspondance Product ID App Store Connect → rôle Leggendo. Doit rester
+// synchronisé avec `appleProducts` dans src/lib/iap.js et avec les achats
+// intégrés créés dans App Store Connect.
+export const APPLE_PRODUCT_ROLE_MAP = {
+  'com.leggendo.app.premium.monthly': 'premium',
+  'com.leggendo.app.premium.annual': 'premium',
+  'com.leggendo.app.premiumplus.monthly': 'premium_plus',
+  'com.leggendo.app.premiumplus.annual': 'premium_plus',
+  'com.leggendo.app.enseignant.monthly': 'enseignant',
+  'com.leggendo.app.enseignant.annual': 'enseignant',
+}
+
+export function roleForAppleProductId(productId) {
+  if (!productId) return undefined
+  const role = APPLE_PRODUCT_ROLE_MAP[productId]
+  if (!role) {
+    console.warn('Product ID Apple non répertorié dans APPLE_PRODUCT_ROLE_MAP :', productId)
+  }
+  return role
+}

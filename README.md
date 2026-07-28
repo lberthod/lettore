@@ -165,15 +165,17 @@ conditions de lancement sont définis dans
 
 ### Phase 3 — Stores (APK / IPA via Capacitor)
 
-À lancer seulement une fois la traction validée. Prérequis de conformité identifiés :
+Le code est prêt côté iOS (projet Capacitor, voir [apk doc.md](apk%20doc.md)
+pour le détail et les étapes manuelles restantes — comptes Apple, Xcode,
+produits App Store Connect) :
 
-| Chantier | Pourquoi |
-|---|---|
-| Paiement in-app (RevenueCat / StoreKit / Play Billing) | Apple 3.1.1 et Google Play interdisent Stripe pour du contenu numérique dans l'app — Stripe reste pour le web |
-| Auth native (`@capacitor-firebase/authentication`) | `signInWithPopup` ne fonctionne pas en WebView |
-| Sign in with Apple | Règle Apple 4.8 : obligatoire dès qu'on propose Google Sign-In |
-| Suppression de compte dans l'app | Exigée par Apple et Google pour toute app avec création de compte |
-| TTS natif (`@capacitor-community/text-to-speech`) | `speechSynthesis` n'existe pas dans la WebView Android |
-| Data Safety (Google) + Privacy Labels (Apple) | Formulaires à remplir : Firebase Auth, données de progression |
+| Chantier | Pourquoi | État |
+|---|---|---|
+| Paiement in-app (StoreKit natif) | Apple 3.1.1 et Google Play interdisent Stripe pour du contenu numérique dans l'app — Stripe reste pour le web | ✅ code (`src/lib/iap.js`, `functions/index.js`) — produits à créer dans App Store Connect |
+| Auth native (`@capacitor-firebase/authentication`) | `signInWithPopup` ne fonctionne pas en WebView | ✅ code — `GoogleService-Info.plist` à ajouter dans Xcode |
+| Sign in with Apple | Règle Apple 4.8 : obligatoire dès qu'on propose Google Sign-In | ✅ code + entitlement — fournisseur à activer dans Firebase Auth |
+| Suppression de compte dans l'app | Exigée par Apple et Google pour toute app avec création de compte | ✅ déjà en place (`src/lib/account.js`) |
+| TTS natif (`@capacitor-community/text-to-speech`) | `speechSynthesis` n'existe pas dans la WebView Android | ✅ code (`src/tts.js`) |
+| Data Safety (Google) + Privacy Labels (Apple) | Formulaires à remplir : Firebase Auth, données de progression | ⏳ à faire dans App Store Connect / Play Console |
 
 Coûts : compte Apple Developer 99 $/an, Google Play 25 $ (unique). Google Play est plus permissif — un premier APK peut passer avec seulement le paiement in-app et le TTS natif ; pour iOS, les quatre premiers chantiers sont nécessaires.

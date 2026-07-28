@@ -89,3 +89,36 @@ scripts/data/
 
 # macOS
 .DS_Store
+
+# Android (Capacitor) — build local, jamais commité
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/captures/
+android/app/release/
+*.aab
+*.apk
+
+# Secrets Android : jamais commités (clé de signature, config Firebase native)
+android/keystore/
+android/app/google-services.json
+android/keystore.properties
+
+# iOS (Capacitor) — dépendances et artefacts de build, régénérés par
+# `pod install` / Xcode / `npm run build:ios`. Le projet Xcode (ios/App)
+# reste versionné, pas ces sous-dossiers.
+ios/App/Pods/
+ios/App/build/
+ios/App/DerivedData/
+ios/App/App/public/
+ios/.build/
+*.xcuserstate
+xcuserdata/
+
+# Secrets iOS : jamais commités (config Firebase native)
+ios/App/App/GoogleService-Info.plist
+
+# Icône/splash source générés à la volée (voir apk doc.md / apkdoc.md) — pas
+# la source de vérité, régénérables depuis public/favicon.svg.
+resources/

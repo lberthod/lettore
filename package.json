@@ -9,6 +9,8 @@
     "build": "vite build",
     "postbuild": "node scripts/prerender.mjs && node scripts/check-build-leaks.mjs",
     "preview": "vite preview",
+    "build:ios": "vite build && npx cap sync ios",
+    "ios:open": "npx cap open ios",
     "generate:text": "node scripts/generate-text.mjs",
     "orchestrate": "node generator/orchestrate.mjs",
     "orchestrate:plan": "node generator/orchestrate.mjs --dry-run --all",
@@ -26,17 +28,26 @@
     "test:rules": "firebase emulators:exec --only firestore \"node --test test/firestore-rules.test.mjs\""
   },
   "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor-firebase/authentication": "^8.3.0",
+    "@capacitor/android": "^8.4.2",
+    "@capacitor/core": "^8.4.2",
+    "@capacitor/ios": "^8.4.2",
+    "cordova-plugin-purchase": "^13.18.0",
     "firebase": "^12.16.0",
     "vue": "^3.5.13",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.112.5",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.4.2",
     "@firebase/rules-unit-testing": "^5.0.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "basic-ftp": "^6.0.2",
     "firebase-admin": "^14.2.0",
     "happy-dom": "^20.11.1",
+    "sharp": "^0.35.3",
     "vite": "^6.2.0",
     "vite-plugin-pwa": "^1.3.0",
     "vitest": "^4.1.10"

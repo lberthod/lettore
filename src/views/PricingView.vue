@@ -6,22 +6,89 @@ import { plans, stripeReady, checkoutUrl } from '../lib/stripe.js'
 import { currentUser } from '../lib/auth.js'
 import { markRoleMayHaveChanged } from '../lib/access.js'
 import { trackBeginCheckout } from '../lib/analytics.js'
+import { billingSupported, purchase } from '../lib/billing.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
 const billing = ref('monthly') // 'monthly' | 'annual'
 const router = useRouter()
+const purchasing = ref(false)
+const purchaseError = ref('')
+const restoring = ref(false)
 
-function subscribe(plan) {
-  const link = plan[billing.value].paymentLink
-  if (!link) return
-  // Le paiement doit être rattaché à un compte : connexion d'abord,
-  // puis retour ici pour finaliser l'abonnement.
+// Sur mobile natif (Capacitor), pas de lien de paiement web cliquable dans
+// l'app : Apple (règle 3.1.1) et Google interdisent Stripe pour du contenu
+// numérique consommé dans l'app. L'achat passe par Play Billing
+// (src/lib/billing.js, Android) ou StoreKit (src/lib/iap.js, iOS) ; sur le
+// web, on garde les Payment Links Stripe (src/lib/stripe.js) — voir
+// apkdoc.md (Android) et apk doc.md (iOS).
+const platform = ref('web')
+const isNativeApp = ref(false)
+onMounted(async () => {
+  document.body.style.overflow = 'hidden'
+  const { Capacitor } = await import('@capacitor/core')
+  platform.value = Capacitor.getPlatform()
+  isNativeApp.value = Capacitor.isNativePlatform()
+})
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
+
+function planToAppleProductKey(planId, cycle) {
+  // Fait le lien entre l'identifiant de formule (src/lib/stripe.js) et les
+  // clés de produits App Store Connect (src/lib/iap.js).
+  const map = {
+    premium: 'premium',
+    premium_plus: 'premium_plus',
+    enseignant: 'enseignant',
+  }
+  const base = map[planId]
+  if (!base) return null
+  return `${base}_${cycle === 'annual' ? 'annual' : 'monthly'}`
+}
+
+async function subscribe(plan) {
   if (!currentUser.value) {
     router.push({ name: 'login', query: { redirect: '/abonnement' } })
     return
   }
   trackBeginCheckout(plan.id, billing.value)
+
+  if (platform.value === 'android' && billingSupported) {
+    const productId = plan[billing.value].productId
+    if (!productId) return
+    purchaseError.value = ''
+    purchasing.value = true
+    try {
+      await purchase(productId)
+      markRoleMayHaveChanged()
+    } catch (err) {
+      purchaseError.value = err?.message || "L'achat n'a pas abouti."
+    } finally {
+      purchasing.value = false
+    }
+    return
+  }
+
+  if (platform.value === 'ios') {
+    const productKey = planToAppleProductKey(plan.id, billing.value)
+    if (!productKey) return
+    purchaseError.value = ''
+    purchasing.value = true
+    try {
+      const { purchase: purchaseIos } = await import('../lib/iap.js')
+      await purchaseIos(productKey)
+      markRoleMayHaveChanged()
+    } catch (err) {
+      purchaseError.value = err?.message || "L'achat a échoué."
+    } finally {
+      purchasing.value = false
+    }
+    return
+  }
+
+  const link = plan[billing.value].paymentLink
+  if (!link) return
   // Payment Link Stripe : redirection vers la page de paiement hébergée,
   // avec client_reference_id pour que le webhook active le bon compte. Au
   // retour, le token devra être renouvelé de force pour voir le nouveau rôle.
@@ -29,13 +96,22 @@ function subscribe(plan) {
   window.location.href = checkoutUrl(link, currentUser.value)
 }
 
-// Plein écran : on verrouille le défilement de la page (le panneau défile en interne)
-onMounted(() => {
-  document.body.style.overflow = 'hidden'
-})
-onUnmounted(() => {
-  document.body.style.overflow = ''
-})
+// Restauration des achats — exigée par Apple (règle 3.1.2) pour StoreKit.
+// Sans équivalent obligatoire côté Play (l'abonnement est déjà rattaché au
+// compte Google du terminal).
+async function restore() {
+  purchaseError.value = ''
+  restoring.value = true
+  try {
+    const { restorePurchases } = await import('../lib/iap.js')
+    await restorePurchases()
+    markRoleMayHaveChanged()
+  } catch (err) {
+    purchaseError.value = err?.message || 'Restauration impossible.'
+  } finally {
+    restoring.value = false
+  }
+}
 </script>
 
 <template>
@@ -105,10 +181,11 @@ onUnmounted(() => {
           Soutenez le projet et débloquez tous les textes avec la formule Premium.
         </p>
 
-        <p v-if="!stripeReady" class="notice">
+        <p v-if="!stripeReady && !isNativeApp" class="notice">
           Les formules payantes arrivent bientôt. En attendant, créez un compte
           gratuit pour découvrir la bibliothèque.
         </p>
+        <p v-if="purchaseError" class="notice">{{ purchaseError }}</p>
 
         <div class="billing-toggle" role="group" aria-label="Fréquence de facturation">
           <button
@@ -146,12 +223,23 @@ onUnmounted(() => {
               <li v-for="f in plan.features" :key="f">{{ f }}</li>
             </ul>
             <button
-              v-if="plan[billing].paymentLink !== null"
+              v-if="isNativeApp ? plan.id !== 'gratuit' : plan[billing].paymentLink !== null"
               class="btn-hero"
-              :disabled="!plan[billing].paymentLink"
+              :disabled="
+                purchasing ||
+                (platform === 'android'
+                  ? !plan[billing].productId
+                  : !isNativeApp && !plan[billing].paymentLink)
+              "
               @click="subscribe(plan)"
             >
-              {{ plan[billing].paymentLink ? "S'abonner" : 'Bientôt disponible' }}
+              {{
+                purchasing
+                  ? 'Achat en cours…'
+                  : isNativeApp || plan[billing].paymentLink
+                    ? "S'abonner"
+                    : 'Bientôt disponible'
+              }}
             </button>
             <RouterLink
               v-else-if="!currentUser"
@@ -165,7 +253,21 @@ onUnmounted(() => {
         </div>
 
         <p class="hint">
-          Paiement sécurisé par Stripe. Résiliable à tout moment. Voir les
+          <template v-if="platform === 'ios'">
+            Paiement sécurisé par Apple. Résiliable à tout moment dans les
+            réglages de votre compte Apple.
+            <button type="button" class="link-btn" :disabled="restoring" @click="restore">
+              Restaurer mes achats
+            </button>
+          </template>
+          <template v-else-if="platform === 'android'">
+            Paiement sécurisé par Google Play. Résiliable à tout moment dans
+            les réglages de votre compte Google Play.
+          </template>
+          <template v-else>
+            Paiement sécurisé par Stripe. Résiliable à tout moment.
+          </template>
+          Voir les
           <RouterLink :to="{ name: 'terms' }">conditions générales</RouterLink>.
         </p>
       </div>
@@ -487,6 +589,23 @@ onUnmounted(() => {
 
 .hint a {
   color: #8a5a2b;
+}
+
+.link-btn {
+  display: inline;
+  margin: 0 0 0 0.3rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: #8a5a2b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 @keyframes appear {
