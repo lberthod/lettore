@@ -311,6 +311,11 @@ watch(dictMenuOpen, (open) => {
 
   .chrome-nav.open {
     display: flex;
+    position: relative;
+    z-index: 1;
+    background: #faf6f0;
+    padding: 0 0.5rem 0.6rem;
+    box-shadow: 0 12px 24px rgba(44, 38, 32, 0.12);
   }
 
   .chrome-nav a {
