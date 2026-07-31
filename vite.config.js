@@ -203,5 +203,13 @@ export default defineConfig({
   },
   server: {
     port: Number(process.env.PORT) || 5173,
+    // En dev, /leggendo est proxifié vers l'API de prod : les appels restent
+    // en même origine, donc plus de contrainte CORS quel que soit le port local.
+    proxy: {
+      '/leggendo': {
+        target: 'https://api.loicberthod.ch',
+        changeOrigin: true,
+      },
+    },
   },
 })
