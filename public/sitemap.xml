@@ -2376,6 +2376,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://leggendo.fr/testo/al_bar_informale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leggendo.fr/testo/al_bar_formale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leggendo.fr/testo/telefonata_informale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leggendo.fr/testo/telefonata_formale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leggendo.fr/testo/invito_informale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leggendo.fr/testo/invito_formale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://leggendo.fr/classici/pinocchio/01</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

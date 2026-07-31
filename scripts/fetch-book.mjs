@@ -171,7 +171,7 @@ function htmlToParagraphs(html) {
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
       .replace(/&#x25ba;|&#9658;/g, '')
-      .replace(/\[p\.\s*\d+\s*modifica\]/gi, '')
+      .replace(/\[p\.\s*[ivxlcdm\d]+\s*modifica\]/gi, '')
     // Certaines pages (ex. Le novelle della nonna) mettent tout un récit dans
     // un seul <p>, les paragraphes/répliques n'étant séparés que par des
     // retours à la ligne littéraux (\n) plutôt que par des balises <p>
