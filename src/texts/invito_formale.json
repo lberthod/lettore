@@ -1,0 +1,112 @@
+{
+  "id": "invito_formale",
+  "title": "Un invito — formale (Lei)",
+  "level": "B1",
+  "genre": "dialogo",
+  "category": "registro",
+  "paragraphs": [
+    "— Buongiorno, dottor Ferri. Scusi se La disturbo, avrebbe un minuto?",
+    "— Buongiorno, Bianchi. Certo, mi dica pure.",
+    "— Venerdì sera organizziamo una piccola cena per festeggiare la fine del progetto. Ci farebbe piacere se venisse anche Lei.",
+    "— La ringrazio dell'invito, molto gentile. A che ora sarebbe?",
+    "— Verso le venti, al ristorante Da Mario. Se preferisce, Le mando i dettagli per email."
+  ],
+  "questions": [
+    {
+      "q": "Il dottor Ferri risponde « mi dica pure ». Perché dice « mi dica » e non « dimmi »?",
+      "options": [
+        "Perché « dimmi » è un errore di grammatica",
+        "Perché ha fretta e vuole essere breve",
+        "Perché i due colleghi si danno del Lei: « mi dica » è l'imperativo di cortesia"
+      ],
+      "correct": 2,
+      "explanation": "« Mi dica » est l'impératif de politesse (forme de Lei), utilisé entre collègues qui se vouvoient. « Dimmi » est la forme tutoyée, qu'on entend dans la version informelle de ce dialogue entre amis."
+    },
+    {
+      "q": "Con quale formula Bianchi invita il dottor Ferri?",
+      "options": [
+        "« Ci farebbe piacere se venisse anche Lei »",
+        "« Dai, vieni anche tu! »",
+        "« Deve assolutamente venire »"
+      ],
+      "correct": 0,
+      "explanation": "L'invitation formelle combine le conditionnel de courtoisie (« farebbe ») et le subjonctif imparfait (« se venisse ») : cela nous ferait plaisir si vous veniez. « Dai, vieni anche tu! » est la variante amicale."
+    },
+    {
+      "q": "Perché i colleghi organizzano una cena?",
+      "options": [
+        "Per il compleanno del dottor Ferri",
+        "Per festeggiare la fine del progetto",
+        "Per l'apertura del ristorante Da Mario"
+      ],
+      "correct": 1,
+      "explanation": "Bianchi explique « organizziamo una piccola cena per festeggiare la fine del progetto » : le dîner célèbre la fin du projet."
+    }
+  ],
+  "words": {
+    "a": "à",
+    "al": "au",
+    "anche": "aussi",
+    "avrebbe": "vous auriez (conditionnel de courtoisie)",
+    "bianchi": "Bianchi (nom de famille)",
+    "buongiorno": "bonjour (salutation formelle)",
+    "cena": "dîner",
+    "certo": "bien sûr",
+    "che": "que / quelle",
+    "ci": "nous (« ci farebbe piacere » = cela nous ferait plaisir)",
+    "da": "chez (« Da Mario » = nom du restaurant)",
+    "del": "du",
+    "dell'invito": "de l'invitation",
+    "dettagli": "détails",
+    "dica": "dites (« mi dica » = impératif de politesse, Lei)",
+    "disturbo": "je dérange",
+    "dottor": "docteur (titre de respect)",
+    "email": "e-mail / courriel",
+    "farebbe": "ferait (conditionnel de courtoisie)",
+    "ferri": "Ferri (nom de famille)",
+    "festeggiare": "fêter",
+    "fine": "fin",
+    "gentile": "gentil / aimable",
+    "i": "les",
+    "la": "vous (pronom direct de politesse : « La disturbo »)",
+    "le": "vous (pronom indirect de politesse) / les",
+    "lei": "vous (pronom de politesse)",
+    "mando": "j'envoie",
+    "mario": "Mario (prénom)",
+    "mi": "me / à moi",
+    "minuto": "minute",
+    "molto": "très",
+    "ora": "heure",
+    "organizziamo": "nous organisons",
+    "per": "pour",
+    "piacere": "plaisir",
+    "piccola": "petite",
+    "preferisce": "vous préférez (forme de politesse)",
+    "progetto": "projet",
+    "pure": "donc / je vous en prie (« mi dica pure » = allez-y, dites-moi)",
+    "ringrazio": "je remercie (« La ringrazio » = je vous remercie)",
+    "ristorante": "restaurant",
+    "sarebbe": "serait (conditionnel)",
+    "scusi": "excusez-moi (impératif de politesse)",
+    "se": "si",
+    "sera": "soir",
+    "un": "un",
+    "una": "une",
+    "venerdì": "vendredi",
+    "venisse": "vous veniez (subjonctif imparfait : « se venisse » = si vous veniez)",
+    "venti": "vingt (« le venti » = vingt heures)",
+    "verso": "vers"
+  },
+  "sentences": {
+    "— Buongiorno, dottor Ferri.": "— Bonjour, docteur Ferri.",
+    "Scusi se La disturbo, avrebbe un minuto?": "Excusez-moi de vous déranger, auriez-vous une minute ?",
+    "— Buongiorno, Bianchi.": "— Bonjour, Bianchi.",
+    "Certo, mi dica pure.": "Bien sûr, dites-moi, je vous en prie.",
+    "— Venerdì sera organizziamo una piccola cena per festeggiare la fine del progetto.": "— Vendredi soir, nous organisons un petit dîner pour fêter la fin du projet.",
+    "Ci farebbe piacere se venisse anche Lei.": "Cela nous ferait plaisir si vous veniez aussi.",
+    "— La ringrazio dell'invito, molto gentile.": "— Je vous remercie de l'invitation, c'est très aimable.",
+    "A che ora sarebbe?": "À quelle heure serait-ce ?",
+    "— Verso le venti, al ristorante Da Mario.": "— Vers vingt heures, au restaurant Da Mario.",
+    "Se preferisce, Le mando i dettagli per email.": "Si vous préférez, je vous envoie les détails par e-mail."
+  }
+}

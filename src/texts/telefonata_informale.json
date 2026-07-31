@@ -1,0 +1,109 @@
+{
+  "id": "telefonata_informale",
+  "title": "Una telefonata — informale (tu)",
+  "level": "A2",
+  "genre": "dialogo",
+  "category": "registro",
+  "paragraphs": [
+    "— Pronto? Ciao Giulia, sono Paolo. Ti disturbo?",
+    "— Ciao Paolo! No, figurati. Dimmi tutto.",
+    "— Senti, tu conosci gli orari della piscina? Domani volevo andare a nuotare.",
+    "— Aspetta un attimo, guardo sul sito. Ecco: apre alle otto e chiude alle dieci di sera.",
+    "— Perfetto, grazie mille! Sei un tesoro. Ci sentiamo presto, ciao!"
+  ],
+  "questions": [
+    {
+      "q": "Giulia risponde « figurati » e « dimmi tutto ». Che registro usa?",
+      "options": [
+        "Un registro molto formale",
+        "Un registro burocratico",
+        "Un registro informale, tra amici"
+      ],
+      "correct": 2,
+      "explanation": "« Figurati » (je t'en prie, pas de souci) et l'impératif « dimmi » (dis-moi) sont typiques du tutoiement entre amis. Au téléphone avec un bureau, on dirait « si figuri » et « mi dica » — voyez la version formelle de ce dialogue."
+    },
+    {
+      "q": "Che cosa vuole sapere Paolo?",
+      "options": [
+        "Gli orari della piscina",
+        "Il numero di telefono di Giulia",
+        "Il prezzo dei biglietti del cinema"
+      ],
+      "correct": 0,
+      "explanation": "Paolo demande « tu conosci gli orari della piscina? » : il veut aller nager demain et cherche les horaires."
+    },
+    {
+      "q": "Dove trova la risposta Giulia?",
+      "options": [
+        "Su un giornale",
+        "Sul sito della piscina",
+        "Chiede a sua madre"
+      ],
+      "correct": 1,
+      "explanation": "Giulia dit « aspetta un attimo, guardo sul sito » : elle consulte le site internet pour trouver les horaires."
+    }
+  ],
+  "words": {
+    "a": "à",
+    "alle": "à (heure : « alle otto » = à huit heures)",
+    "andare": "aller",
+    "apre": "elle ouvre",
+    "aspetta": "attends (impératif informel)",
+    "attimo": "instant (« un attimo » = un instant)",
+    "chiude": "elle ferme",
+    "ci": "nous (« ci sentiamo » = on s'appelle)",
+    "ciao": "salut (salutation informelle)",
+    "conosci": "tu connais",
+    "della": "de la",
+    "di": "de",
+    "dieci": "dix",
+    "dimmi": "dis-moi (impératif informel)",
+    "disturbo": "je dérange",
+    "domani": "demain",
+    "e": "et",
+    "ecco": "voilà",
+    "figurati": "je t'en prie / pas de souci (informel)",
+    "giulia": "Giulia (prénom)",
+    "gli": "les",
+    "grazie": "merci",
+    "guardo": "je regarde",
+    "mille": "mille (« grazie mille » = merci beaucoup)",
+    "no": "non",
+    "nuotare": "nager",
+    "orari": "horaires",
+    "otto": "huit",
+    "paolo": "Paolo (prénom)",
+    "perfetto": "parfait",
+    "piscina": "piscine",
+    "presto": "bientôt",
+    "pronto": "allô (au téléphone)",
+    "sei": "tu es",
+    "senti": "écoute (impératif informel)",
+    "sentiamo": "nous nous entendons (« ci sentiamo » = on s'appelle)",
+    "sera": "soir",
+    "sito": "site (internet)",
+    "sono": "je suis (« sono Paolo » = c'est Paolo)",
+    "sul": "sur le",
+    "tesoro": "trésor (« sei un tesoro » = tu es un ange)",
+    "ti": "te",
+    "tu": "tu (tutoiement, informel)",
+    "tutto": "tout",
+    "un": "un",
+    "volevo": "je voulais"
+  },
+  "sentences": {
+    "— Pronto?": "— Allô ?",
+    "Ciao Giulia, sono Paolo.": "Salut Giulia, c'est Paolo.",
+    "Ti disturbo?": "Je te dérange ?",
+    "— Ciao Paolo!": "— Salut Paolo !",
+    "No, figurati.": "Non, je t'en prie.",
+    "Dimmi tutto.": "Dis-moi tout.",
+    "— Senti, tu conosci gli orari della piscina?": "— Écoute, tu connais les horaires de la piscine ?",
+    "Domani volevo andare a nuotare.": "Demain, je voulais aller nager.",
+    "— Aspetta un attimo, guardo sul sito.": "— Attends un instant, je regarde sur le site.",
+    "Ecco: apre alle otto e chiude alle dieci di sera.": "Voilà : elle ouvre à huit heures et ferme à dix heures du soir.",
+    "— Perfetto, grazie mille!": "— Parfait, merci beaucoup !",
+    "Sei un tesoro.": "Tu es un ange.",
+    "Ci sentiamo presto, ciao!": "On s'appelle bientôt, salut !"
+  }
+}

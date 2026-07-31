@@ -265,6 +265,12 @@
       "name": "École, travail et ville",
       "icon": "🏙",
       "hint": "Études, Erasmus, monde du travail, vie urbaine, jeunes adultes."
+    },
+    {
+      "id": "registro",
+      "name": "Registres : tu et Lei",
+      "icon": "🤝",
+      "hint": "La même scène en deux versions, informelle (tu) et formelle (Lei) : salutations, impératifs de politesse, conditionnel de courtoisie."
     }
   ],
   "curatedMatrix": [

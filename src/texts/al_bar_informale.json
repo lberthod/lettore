@@ -1,0 +1,116 @@
+{
+  "id": "al_bar_informale",
+  "title": "Al bar — informale (tu)",
+  "level": "A2",
+  "genre": "dialogo",
+  "category": "registro",
+  "paragraphs": [
+    "— Ciao Marco! Anche tu qui? Siediti, dai, prendiamo qualcosa insieme.",
+    "— Ciao Anna! Volentieri, ho dieci minuti prima del lavoro. Cosa prendi tu?",
+    "— Per me un cappuccino. Senti, dammi un consiglio: cornetto semplice o al cioccolato?",
+    "— Prendi quello al cioccolato, sono buonissimi. Luca, ci porti due cappuccini e un cornetto, per favore?",
+    "— Grazie! Allora, ti va di venire alla festa di Sara sabato? Dai, vieni anche tu!"
+  ],
+  "questions": [
+    {
+      "q": "Anna dice « dammi un consiglio ». Perché usa « dammi » e non « mi dia »?",
+      "options": [
+        "Perché parla con un amico e usa il tu informale",
+        "Perché è arrabbiata con Marco",
+        "Perché « mi dia » non esiste in italiano"
+      ],
+      "correct": 0,
+      "explanation": "« Dammi » est l'impératif de la 2e personne (tu) : entre amis, on se tutoie. « Mi dia » est la forme de politesse (Lei), qu'on utiliserait avec un inconnu — comparez avec la version formelle de ce même dialogue."
+    },
+    {
+      "q": "Quanto tempo ha Marco prima del lavoro?",
+      "options": [
+        "Tutta la mattina",
+        "Dieci minuti",
+        "Un'ora"
+      ],
+      "correct": 1,
+      "explanation": "Marco dit « ho dieci minuti prima del lavoro » : il n'a que dix minutes avant le travail."
+    },
+    {
+      "q": "Che cosa propone Anna alla fine del dialogo?",
+      "options": [
+        "Di prendere un altro caffè",
+        "Di andare al lavoro insieme",
+        "Di venire alla festa di Sara sabato"
+      ],
+      "correct": 2,
+      "explanation": "Anna demande « ti va di venire alla festa di Sara sabato? » — « ti va di » (ça te dit de) est la façon informelle d'inviter quelqu'un."
+    }
+  ],
+  "words": {
+    "al": "au",
+    "alla": "à la",
+    "allora": "alors",
+    "anche": "aussi",
+    "anna": "Anna (prénom)",
+    "buonissimi": "excellents / très bons",
+    "cappuccini": "cappuccinos",
+    "cappuccino": "cappuccino",
+    "ci": "nous (pronom)",
+    "ciao": "salut (salutation informelle)",
+    "cioccolato": "chocolat",
+    "consiglio": "conseil",
+    "cornetto": "croissant",
+    "cosa": "quoi / que",
+    "dai": "allez ! (encouragement familier)",
+    "dammi": "donne-moi (impératif informel)",
+    "del": "du",
+    "di": "de",
+    "dieci": "dix",
+    "due": "deux",
+    "e": "et",
+    "favore": "faveur (« per favore » = s'il te plaît)",
+    "festa": "fête",
+    "grazie": "merci",
+    "ho": "j'ai",
+    "insieme": "ensemble",
+    "lavoro": "travail",
+    "luca": "Luca (prénom)",
+    "marco": "Marco (prénom)",
+    "me": "moi",
+    "minuti": "minutes",
+    "o": "ou",
+    "per": "pour",
+    "porti": "tu apportes",
+    "prendi": "tu prends / prends (impératif)",
+    "prendiamo": "nous prenons / prenons",
+    "prima": "avant",
+    "qualcosa": "quelque chose",
+    "quello": "celui-là",
+    "qui": "ici",
+    "sabato": "samedi",
+    "sara": "Sara (prénom)",
+    "semplice": "simple / nature",
+    "senti": "écoute (impératif informel)",
+    "siediti": "assieds-toi (impératif informel)",
+    "sono": "ils sont",
+    "ti": "te / à toi",
+    "tu": "tu (tutoiement, informel)",
+    "un": "un",
+    "va": "va (« ti va di » = ça te dit de)",
+    "venire": "venir",
+    "vieni": "tu viens / viens (impératif)",
+    "volentieri": "volontiers"
+  },
+  "sentences": {
+    "— Ciao Marco!": "— Salut Marco !",
+    "Anche tu qui?": "Toi aussi, tu es ici ?",
+    "Siediti, dai, prendiamo qualcosa insieme.": "Assieds-toi, allez, prenons quelque chose ensemble.",
+    "— Ciao Anna!": "— Salut Anna !",
+    "Volentieri, ho dieci minuti prima del lavoro.": "Volontiers, j'ai dix minutes avant le travail.",
+    "Cosa prendi tu?": "Qu'est-ce que tu prends, toi ?",
+    "— Per me un cappuccino.": "— Pour moi, un cappuccino.",
+    "Senti, dammi un consiglio: cornetto semplice o al cioccolato?": "Écoute, donne-moi un conseil : croissant nature ou au chocolat ?",
+    "— Prendi quello al cioccolato, sono buonissimi.": "— Prends celui au chocolat, ils sont excellents.",
+    "Luca, ci porti due cappuccini e un cornetto, per favore?": "Luca, tu nous apportes deux cappuccinos et un croissant, s'il te plaît ?",
+    "— Grazie!": "— Merci !",
+    "Allora, ti va di venire alla festa di Sara sabato?": "Alors, ça te dit de venir à la fête de Sara samedi ?",
+    "Dai, vieni anche tu!": "Allez, viens toi aussi !"
+  }
+}

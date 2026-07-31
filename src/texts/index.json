@@ -4598,5 +4598,65 @@
     "wordCount": 479,
     "category": "storia_moderna",
     "genre": "documentario"
+  },
+  {
+    "id": "al_bar_informale",
+    "title": "Al bar — informale (tu)",
+    "level": "A2",
+    "excerpt": "— Ciao Marco! Anche tu qui? Siediti, dai, prendiamo qualcosa insieme.",
+    "paragraphCount": 5,
+    "wordCount": 66,
+    "category": "registro",
+    "genre": "dialogo"
+  },
+  {
+    "id": "al_bar_formale",
+    "title": "Al bar — formale (Lei)",
+    "level": "A2",
+    "excerpt": "— Buongiorno, signora. Prego, si accomodi. Che cosa Le porto?",
+    "paragraphCount": 5,
+    "wordCount": 52,
+    "category": "registro",
+    "genre": "dialogo"
+  },
+  {
+    "id": "telefonata_informale",
+    "title": "Una telefonata — informale (tu)",
+    "level": "A2",
+    "excerpt": "— Pronto? Ciao Giulia, sono Paolo. Ti disturbo?",
+    "paragraphCount": 5,
+    "wordCount": 51,
+    "category": "registro",
+    "genre": "dialogo"
+  },
+  {
+    "id": "telefonata_formale",
+    "title": "Una telefonata — formale (Lei)",
+    "level": "B1",
+    "excerpt": "— Ufficio anagrafe del Comune di Verona, buongiorno. Come posso aiutarLa?",
+    "paragraphCount": 5,
+    "wordCount": 74,
+    "category": "registro",
+    "genre": "dialogo"
+  },
+  {
+    "id": "invito_informale",
+    "title": "Un invito — informale (tu)",
+    "level": "B1",
+    "excerpt": "— Ehi Chiara, aspetta! Ti devo chiedere una cosa.",
+    "paragraphCount": 5,
+    "wordCount": 64,
+    "category": "registro",
+    "genre": "dialogo"
+  },
+  {
+    "id": "invito_formale",
+    "title": "Un invito — formale (Lei)",
+    "level": "B1",
+    "excerpt": "— Buongiorno, dottor Ferri. Scusi se La disturbo, avrebbe un minuto?",
+    "paragraphCount": 5,
+    "wordCount": 59,
+    "category": "registro",
+    "genre": "dialogo"
   }
 ]

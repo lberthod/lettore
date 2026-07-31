@@ -1,0 +1,113 @@
+{
+  "id": "invito_informale",
+  "title": "Un invito — informale (tu)",
+  "level": "B1",
+  "genre": "dialogo",
+  "category": "registro",
+  "paragraphs": [
+    "— Ehi Chiara, aspetta! Ti devo chiedere una cosa.",
+    "— Dimmi, Luca. Che succede?",
+    "— Sabato faccio una grigliata a casa mia per il mio compleanno. Ti va di venire? Dai, porta anche il tuo ragazzo!",
+    "— Che bello! Certo che veniamo. Vuoi che porti qualcosa, un dolce o del vino?",
+    "— Porta quello che vuoi, l'importante è che ci sei. Allora ci vediamo sabato verso l'una, va bene?"
+  ],
+  "questions": [
+    {
+      "q": "Luca invita Chiara con « ti va di venire? ». Come farebbe lo stesso invito in un contesto formale?",
+      "options": [
+        "« Le andrebbe di venire? »",
+        "« Vieni subito! »",
+        "« Ti ordino di venire »"
+      ],
+      "correct": 0,
+      "explanation": "« Ti va di...? » (ça te dit de... ?) est la formule informelle. Avec une personne qu'on vouvoie, on emploie le pronom Le et le conditionnel de courtoisie : « Le andrebbe di venire? » — comparez avec la version formelle de ce dialogue."
+    },
+    {
+      "q": "Perché Luca organizza una grigliata?",
+      "options": [
+        "Per festeggiare una promozione al lavoro",
+        "Per il suo compleanno",
+        "Per salutare Chiara che parte"
+      ],
+      "correct": 1,
+      "explanation": "Luca dit « faccio una grigliata a casa mia per il mio compleanno » : il fête son anniversaire."
+    },
+    {
+      "q": "Che cosa risponde Luca alla domanda « vuoi che porti qualcosa? »",
+      "options": [
+        "Chiede un dolce al cioccolato",
+        "Dice di non portare niente",
+        "Dice di portare quello che vuole, l'importante è esserci"
+      ],
+      "correct": 2,
+      "explanation": "Luca répond « porta quello che vuoi, l'importante è che ci sei » : apporte ce que tu veux, l'important c'est que tu sois là — une réponse détendue, typique du registre amical."
+    }
+  ],
+  "words": {
+    "a": "à",
+    "allora": "alors",
+    "anche": "aussi",
+    "aspetta": "attends (impératif informel)",
+    "bello": "beau (« che bello! » = super !)",
+    "bene": "bien (« va bene? » = d'accord ?)",
+    "casa": "maison",
+    "certo": "bien sûr",
+    "che": "que / quel",
+    "chiara": "Chiara (prénom)",
+    "chiedere": "demander",
+    "ci": "nous / y (« ci sei » = tu es là)",
+    "compleanno": "anniversaire",
+    "cosa": "chose",
+    "dai": "allez ! (encouragement familier)",
+    "del": "du",
+    "devo": "je dois",
+    "di": "de",
+    "dimmi": "dis-moi (impératif informel)",
+    "dolce": "dessert / gâteau",
+    "ehi": "hé (interjection familière)",
+    "faccio": "je fais / j'organise",
+    "grigliata": "grillade / barbecue",
+    "il": "le",
+    "l'importante": "l'important",
+    "l'una": "une heure (« verso l'una » = vers treize heures)",
+    "luca": "Luca (prénom)",
+    "mia": "ma / à moi",
+    "mio": "mon",
+    "o": "ou",
+    "per": "pour",
+    "porta": "apporte (impératif informel)",
+    "porti": "j'apporte (subjonctif : « vuoi che porti » = tu veux que j'apporte)",
+    "qualcosa": "quelque chose",
+    "quello": "ce (« quello che vuoi » = ce que tu veux)",
+    "ragazzo": "petit ami / garçon",
+    "sabato": "samedi",
+    "sei": "tu es",
+    "succede": "il se passe (« che succede? » = qu'est-ce qui se passe ?)",
+    "ti": "te / à toi",
+    "tuo": "ton",
+    "un": "un",
+    "una": "une",
+    "va": "va (« ti va di » = ça te dit de)",
+    "vediamo": "nous voyons (« ci vediamo » = on se voit)",
+    "veniamo": "nous venons",
+    "venire": "venir",
+    "verso": "vers",
+    "vino": "vin",
+    "vuoi": "tu veux",
+    "è": "est"
+  },
+  "sentences": {
+    "— Ehi Chiara, aspetta!": "— Hé Chiara, attends !",
+    "Ti devo chiedere una cosa.": "Je dois te demander quelque chose.",
+    "— Dimmi, Luca.": "— Dis-moi, Luca.",
+    "Che succede?": "Qu'est-ce qui se passe ?",
+    "— Sabato faccio una grigliata a casa mia per il mio compleanno.": "— Samedi, j'organise un barbecue chez moi pour mon anniversaire.",
+    "Ti va di venire?": "Ça te dit de venir ?",
+    "Dai, porta anche il tuo ragazzo!": "Allez, amène aussi ton copain !",
+    "— Che bello!": "— Super !",
+    "Certo che veniamo.": "Bien sûr qu'on vient.",
+    "Vuoi che porti qualcosa, un dolce o del vino?": "Tu veux que j'apporte quelque chose, un dessert ou du vin ?",
+    "— Porta quello che vuoi, l'importante è che ci sei.": "— Apporte ce que tu veux, l'important c'est que tu sois là.",
+    "Allora ci vediamo sabato verso l'una, va bene?": "Alors on se voit samedi vers treize heures, d'accord ?"
+  }
+}

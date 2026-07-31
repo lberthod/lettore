@@ -1,0 +1,109 @@
+{
+  "id": "al_bar_formale",
+  "title": "Al bar — formale (Lei)",
+  "level": "A2",
+  "genre": "dialogo",
+  "category": "registro",
+  "paragraphs": [
+    "— Buongiorno, signora. Prego, si accomodi. Che cosa Le porto?",
+    "— Buongiorno. Vorrei un cappuccino, per favore. Scusi, avete anche i cornetti?",
+    "— Certo. Ne abbiamo alla crema e al cioccolato. Quale preferisce?",
+    "— Mi dia quello alla crema, grazie. Quanto Le devo?",
+    "— Sono tre euro in tutto. Ecco a Lei. Grazie e buona giornata, signora."
+  ],
+  "questions": [
+    {
+      "q": "La cliente dice « mi dia quello alla crema ». Perché non dice « dammi »?",
+      "options": [
+        "Perché « dammi » è troppo lungo",
+        "Perché parla con un cameriere che non conosce e usa il Lei di cortesia",
+        "Perché la cliente è straniera"
+      ],
+      "correct": 1,
+      "explanation": "« Mi dia » est l'impératif de politesse (subjonctif de Lei) : entre inconnus, en Italie, on se vouvoie. « Dammi » (impératif de tu) serait familier — comparez avec la version informelle de ce même dialogue."
+    },
+    {
+      "q": "Come saluta il cameriere all'inizio?",
+      "options": [
+        "Con « buongiorno, signora »",
+        "Con « ciao »",
+        "Con « ehi, tu »"
+      ],
+      "correct": 0,
+      "explanation": "Dans le registre formel, on salue avec « buongiorno » et un titre (« signora », « signore »), jamais avec « ciao », réservé aux amis et aux proches."
+    },
+    {
+      "q": "Quanto paga la cliente in tutto?",
+      "options": [
+        "Due euro e cinquanta",
+        "Quattro euro",
+        "Tre euro"
+      ],
+      "correct": 2,
+      "explanation": "Le serveur annonce « sono tre euro in tutto » : cela fait trois euros en tout."
+    }
+  ],
+  "words": {
+    "a": "à",
+    "abbiamo": "nous avons",
+    "accomodi": "installez-vous (« si accomodi » = impératif de politesse)",
+    "al": "au",
+    "alla": "à la",
+    "anche": "aussi",
+    "avete": "vous avez (pluriel)",
+    "buona": "bonne",
+    "buongiorno": "bonjour (salutation formelle)",
+    "cappuccino": "cappuccino",
+    "certo": "bien sûr",
+    "che": "que / quoi",
+    "cioccolato": "chocolat",
+    "cornetti": "croissants",
+    "cosa": "chose (« che cosa » = qu'est-ce que)",
+    "crema": "crème",
+    "devo": "je dois (« quanto Le devo? » = combien vous dois-je ?)",
+    "dia": "donnez (« mi dia » = impératif de politesse, Lei)",
+    "e": "et",
+    "ecco": "voici",
+    "euro": "euro",
+    "favore": "faveur (« per favore » = s'il vous plaît)",
+    "giornata": "journée",
+    "grazie": "merci",
+    "i": "les",
+    "in": "en (« in tutto » = en tout)",
+    "le": "vous (pronom indirect de politesse)",
+    "lei": "vous (pronom de politesse)",
+    "mi": "me / à moi",
+    "ne": "en (pronom : « ne abbiamo » = nous en avons)",
+    "per": "pour",
+    "porto": "j'apporte",
+    "preferisce": "vous préférez (forme de politesse)",
+    "prego": "je vous en prie",
+    "quale": "lequel / laquelle",
+    "quanto": "combien",
+    "quello": "celui-là",
+    "scusi": "excusez-moi (impératif de politesse)",
+    "si": "se (particule : « si accomodi »)",
+    "signora": "madame",
+    "sono": "ce sont (« sono tre euro » = ça fait trois euros)",
+    "tre": "trois",
+    "tutto": "tout",
+    "un": "un",
+    "vorrei": "je voudrais (conditionnel de courtoisie)"
+  },
+  "sentences": {
+    "— Buongiorno, signora.": "— Bonjour, madame.",
+    "Prego, si accomodi.": "Je vous en prie, installez-vous.",
+    "Che cosa Le porto?": "Qu'est-ce que je vous apporte ?",
+    "— Buongiorno.": "— Bonjour.",
+    "Vorrei un cappuccino, per favore.": "Je voudrais un cappuccino, s'il vous plaît.",
+    "Scusi, avete anche i cornetti?": "Excusez-moi, vous avez aussi des croissants ?",
+    "— Certo.": "— Bien sûr.",
+    "Ne abbiamo alla crema e al cioccolato.": "Nous en avons à la crème et au chocolat.",
+    "Quale preferisce?": "Lequel préférez-vous ?",
+    "— Mi dia quello alla crema, grazie.": "— Donnez-moi celui à la crème, merci.",
+    "Quanto Le devo?": "Combien vous dois-je ?",
+    "— Sono tre euro in tutto.": "— Ça fait trois euros en tout.",
+    "Ecco a Lei.": "Voici pour vous.",
+    "Grazie e buona giornata, signora.": "Merci et bonne journée, madame."
+  }
+}
