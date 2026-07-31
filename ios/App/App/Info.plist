@@ -47,6 +47,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<!-- Exercice de prononciation : micro + reconnaissance vocale (plugin
+	  @capacitor-community/speech-recognition). Sans ces deux descriptions,
+	  iOS refuse l'accès et l'app peut être rejetée à la review. -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Leggendo utilise le micro pour les exercices de prononciation : vous répétez une phrase en italien et l’app évalue les mots reconnus.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Leggendo utilise la reconnaissance vocale pour transcrire la phrase italienne que vous prononcez et vous indiquer les mots à retravailler.</string>
 	<!--
 	  TODO (Google Sign-In) : remplacer REPLACE_WITH_REVERSED_CLIENT_ID par la
 	  valeur "REVERSED_CLIENT_ID" du fichier GoogleService-Info.plist (à

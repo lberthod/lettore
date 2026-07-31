@@ -28,6 +28,7 @@
     "test:rules": "firebase emulators:exec --only firestore \"node --test test/firestore-rules.test.mjs\""
   },
   "dependencies": {
+    "@capacitor-community/speech-recognition": "^7.0.1",
     "@capacitor-community/text-to-speech": "^8.0.2",
     "@capacitor-firebase/authentication": "^8.3.0",
     "@capacitor/android": "^8.4.2",

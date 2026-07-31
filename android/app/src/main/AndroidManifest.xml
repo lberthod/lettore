@@ -32,4 +32,6 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Exercice de prononciation (@capacitor-community/speech-recognition) -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 </manifest>
