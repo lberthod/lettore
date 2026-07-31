@@ -42,7 +42,7 @@ Garde-fous :
 |---|---|---|
 | `PORT` | `8091` | port d'écoute |
 | `GOOGLE_APPLICATION_CREDENTIALS` | — | chemin vers la clé JSON du compte de service (accès Firestore + vérification des ID tokens, obligatoire) |
-| `ALLOWED_ORIGINS` | `https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173` | origines autorisées (CORS), séparées par des virgules |
+| `ALLOWED_ORIGINS` | `https://leggendo.fr,https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173` | origines autorisées (CORS), séparées par des virgules |
 | `GLM_API_KEY` | — | clé API GLM (obligatoire) |
 | `GLM_MODEL` | `glm-5.1` | modèle utilisé |
 | `GLM_BASE_URL` | endpoint Zhipu AI | endpoint chat completions (compatible OpenAI) |

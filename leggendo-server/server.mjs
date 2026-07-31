@@ -62,7 +62,7 @@ const PORT = Number(process.env.PORT || 8091)
 // authentifiés depuis le navigateur d'un utilisateur).
 const ALLOWED_ORIGINS = (
   process.env.ALLOWED_ORIGINS ||
-  'https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173'
+  'https://leggendo.fr,https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173'
 )
   .split(',')
   .map((o) => o.trim())
