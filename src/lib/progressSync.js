@@ -7,7 +7,7 @@
 // écritures rapprochées, ex. plusieurs mots favorisés d'affilée).
 
 import { watch } from 'vue'
-import { progress, hasLocalTtsRate } from '../progress.js'
+import { progress, hasLocalTtsRate, ACTIVITY_CAP } from '../progress.js'
 import { currentUser } from './auth.js'
 // Instance Firestore partagée (getDbInstance) et non `getFirestore` local :
 // c'est le seul point qui appelle `initializeFirestore` avec le cache
@@ -42,6 +42,57 @@ function mergeStreak(local, remote) {
   }
 }
 
+// Journal d'activité multi-appareils : union dédupliquée par timestamp (deux
+// événements réels ont quasi toujours des ts distincts ; un même événement vu
+// des deux côtés a exactement le même ts), triée chronologiquement puis
+// replafonnée aux ACTIVITY_CAP plus récents — même plafond qu'en local.
+function mergeActivity(local, remote) {
+  const byTs = new Map()
+  for (const a of [...remote, ...local]) {
+    if (a && typeof a.ts === 'number') byTs.set(a.ts, a)
+  }
+  return [...byTs.values()]
+    .sort((a, b) => a.ts - b.ts)
+    .slice(-ACTIVITY_CAP)
+}
+
+// Cartes d'erreur : union par id (l'id est un hash stable du contenu, donc la
+// même erreur signalée sur deux appareils fusionne d'elle-même). En conflit,
+// même esprit que mergeFavorites : on garde la boîte la plus avancée (le plus
+// de révisions réussies) et l'échéance la plus lointaine, sans écraser.
+function mergeErrorCards(local, remote) {
+  const byId = new Map(remote.map((c) => [c.id, c]))
+  for (const c of local) {
+    const existing = byId.get(c.id)
+    if (!existing) {
+      byId.set(c.id, c)
+    } else {
+      byId.set(c.id, {
+        ...existing,
+        ...c,
+        box: Math.max(c.box || 0, existing.box || 0),
+        due: Math.max(c.due || 0, existing.due || 0),
+        addedTs: Math.min(c.addedTs || Infinity, existing.addedTs || Infinity),
+      })
+    }
+  }
+  return [...byId.values()]
+}
+
+// Agrégats par compétence : recalculables et non additifs (les additionner
+// compterait deux fois les mêmes sessions). Choix : par compétence, on garde
+// le côté au lastTs le plus récent — l'appareil actif en dernier a les
+// agrégats les plus à jour, et toute imprécision se corrige au prochain
+// logActivity (qui recalcule les moyennes depuis le journal fusionné).
+function mergeSkills(local, remote) {
+  const merged = { ...remote }
+  for (const [skill, s] of Object.entries(local || {})) {
+    const r = merged[skill]
+    if (!r || (s.lastTs || 0) >= (r.lastTs || 0)) merged[skill] = s
+  }
+  return merged
+}
+
 // Laisse remonter les erreurs de lecture (hors ligne, permissions) : l'appelant
 // doit savoir que la fusion n'a pas eu lieu, car pousser après une lecture
 // ratée écraserait le distant (setDoc/merge remplace les tableaux entiers).
@@ -62,6 +113,12 @@ async function pullAndMerge(uid, db, fs, isStale) {
     ...new Set([...progress.vocabTexts, ...(remote.vocabTexts || [])]),
   ]
   progress.streak = mergeStreak(progress.streak, remote.streak)
+  progress.activity = mergeActivity(progress.activity, remote.activity || [])
+  progress.errorCards = mergeErrorCards(
+    progress.errorCards,
+    remote.errorCards || []
+  )
+  progress.skills = mergeSkills(progress.skills, remote.skills || {})
   if (!progress.hintDismissed && remote.hintDismissed) {
     progress.hintDismissed = true
   }
@@ -83,6 +140,9 @@ function pushLocal(uid, db, fs) {
         ttsRate: progress.ttsRate,
         hintDismissed: progress.hintDismissed,
         streak: progress.streak,
+        activity: progress.activity,
+        skills: progress.skills,
+        errorCards: progress.errorCards,
       },
     },
     { merge: true }

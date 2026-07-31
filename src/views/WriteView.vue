@@ -10,6 +10,7 @@ import {
   fetchTaxonomy,
   CORRECTION_MAX_CHARS,
 } from '../lib/correction.js'
+import { logActivity, addErrorCard } from '../progress.js'
 
 const text = ref('')
 
@@ -60,6 +61,24 @@ async function submit() {
   result.value = null
   try {
     result.value = await correctText(text.value)
+    // Capture pédagogique : la session compte dans le parcours (touchStreak
+    // est appelé par logActivity) et chaque erreur devient une carte de
+    // révision — dédupliquée par contenu dans addErrorCard.
+    const errors = Array.isArray(result.value.errors) ? result.value.errors : []
+    logActivity({
+      skill: 'scrittura',
+      level: result.value.level_estimate,
+      errorCount: errors.length,
+    })
+    for (const e of errors) {
+      addErrorCard({
+        original: e.original,
+        correction: e.correction,
+        explanation: e.explanation,
+        type: e.type,
+        source: 'scrivi',
+      })
+    }
     await nextTick()
     resultEl.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   } catch (err) {
@@ -158,6 +177,12 @@ const groupedErrors = computed(() => {
 
       <p v-if="!result.errors.length" class="no-errors">
         🎉 Bravissimo ! Aucune erreur relevée dans votre texte.
+      </p>
+      <p v-else class="review-note">
+        📌 {{ result.errors.length }}
+        erreur{{ result.errors.length > 1 ? 's' : '' }}
+        ajoutée{{ result.errors.length > 1 ? 's' : '' }} à vos révisions —
+        <RouterLink :to="{ name: 'words' }">réviser →</RouterLink>
       </p>
       <section v-for="group in groupedErrors" :key="group.type" class="error-group">
         <h3>
@@ -310,6 +335,15 @@ const groupedErrors = computed(() => {
 .no-errors {
   color: #3d7a3d;
   font-weight: 700;
+}
+
+.review-note {
+  color: #6b6156;
+  font-size: 0.88rem;
+}
+
+.review-note a {
+  color: #b0692e;
 }
 
 .error-group {

@@ -191,3 +191,109 @@ describe('initProgressSync — envoi de la fusion initiale', () => {
     expect(setDoc).not.toHaveBeenCalled()
   })
 })
+
+describe('initProgressSync — fusion du parcours (activity, errorCards, skills)', () => {
+  beforeEach(() => {
+    localStorage.clear()
+    getDoc.mockReset()
+    setDoc.mockReset()
+    setDoc.mockResolvedValue(undefined)
+  })
+
+  afterEach(async () => {
+    currentUser.value = null
+    await flush()
+  })
+
+  it('activity : union dédupliquée par ts, triée, et poussée vers Firestore', async () => {
+    const shared = { skill: 'lettura', ts: 1000 }
+    localStorage.setItem(
+      'lettore.progress.activite-fusion',
+      JSON.stringify({
+        activity: [shared, { skill: 'scrittura', ts: 3000 }],
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({ activity: [shared, { skill: 'dialogo', ts: 2000 }] })
+    )
+
+    await login('activite-fusion')
+
+    expect(progress.activity.map((a) => a.ts)).toEqual([1000, 2000, 3000])
+    expect(pushedProgress(setDoc.mock.calls[0]).activity).toHaveLength(3)
+  })
+
+  it('errorCards : union par id ; en conflit, boîte la plus haute et due le plus lointain', async () => {
+    localStorage.setItem(
+      'lettore.progress.cartes-fusion',
+      JSON.stringify({
+        errorCards: [
+          { id: 'aa', original: 'x', correction: 'y', box: 1, due: 500, addedTs: 1 },
+          { id: 'bb', original: 'l', correction: 'l2', box: 0, due: 0, addedTs: 2 },
+        ],
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        errorCards: [
+          { id: 'aa', original: 'x', correction: 'y', box: 3, due: 100, addedTs: 1 },
+          { id: 'cc', original: 'r', correction: 'r2', box: 2, due: 900, addedTs: 3 },
+        ],
+      })
+    )
+
+    await login('cartes-fusion')
+
+    expect(progress.errorCards).toHaveLength(3)
+    const merged = progress.errorCards.find((c) => c.id === 'aa')
+    expect(merged.box).toBe(3)
+    expect(merged.due).toBe(500)
+    expect(pushedProgress(setDoc.mock.calls[0]).errorCards).toHaveLength(3)
+  })
+
+  it('skills : par compétence, le côté au lastTs le plus récent gagne', async () => {
+    localStorage.setItem(
+      'lettore.progress.skills-fusion',
+      JSON.stringify({
+        skills: {
+          lettura: { count: 10, lastTs: 2000, avgScore: 0.8 },
+          dialogo: { count: 1, lastTs: 100, sessions: 1 },
+        },
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        skills: {
+          lettura: { count: 3, lastTs: 500, avgScore: 0.4 },
+          dialogo: { count: 5, lastTs: 900, sessions: 5 },
+          pronuncia: { count: 2, lastTs: 300, avgScore: 0.6 },
+        },
+      })
+    )
+
+    await login('skills-fusion')
+
+    expect(progress.skills.lettura).toEqual({ count: 10, lastTs: 2000, avgScore: 0.8 })
+    expect(progress.skills.dialogo).toEqual({ count: 5, lastTs: 900, sessions: 5 })
+    // Une compétence connue d'un seul côté est conservée telle quelle.
+    expect(progress.skills.pronuncia).toEqual({ count: 2, lastTs: 300, avgScore: 0.6 })
+    expect(pushedProgress(setDoc.mock.calls[0]).skills.pronuncia).toBeDefined()
+  })
+
+  it('tolère un document distant pré-parcours (sans activity/errorCards/skills)', async () => {
+    localStorage.setItem(
+      'lettore.progress.pre-parcours',
+      JSON.stringify({
+        activity: [{ skill: 'lettura', ts: 42 }],
+        errorCards: [{ id: 'zz', original: 'a', correction: 'b', box: 0, due: 0 }],
+      })
+    )
+    getDoc.mockResolvedValue(remoteSnap({ readTexts: ['distante'] }))
+
+    await login('pre-parcours')
+
+    expect(progress.activity).toHaveLength(1)
+    expect(progress.errorCards).toHaveLength(1)
+    expect(progress.skills).toEqual({})
+  })
+})

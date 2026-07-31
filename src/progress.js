@@ -28,6 +28,15 @@ const DAY = 24 * 60 * 60 * 1000
 const INTERVALS = [0, 1 * DAY, 3 * DAY, 7 * DAY, 14 * DAY, 30 * DAY]
 export const MAX_BOX = INTERVALS.length - 1
 
+// Journal d'activité : plafond du nombre d'événements conservés (les plus
+// récents gagnent). Assez pour alimenter les agrégats (fenêtres de 10-20)
+// et un historique affichable, sans faire gonfler localStorage/Firestore.
+export const ACTIVITY_CAP = 500
+
+// Cartes d'erreur SRS : plafond au-delà duquel on éjecte d'abord les cartes
+// les mieux maîtrisées (boîte la plus haute) et les plus anciennes.
+export const ERROR_CARDS_CAP = 200
+
 function normalize(saved) {
   return {
     readTexts: saved.readTexts || [], // ids des textes terminés (quiz réussi)
@@ -45,6 +54,11 @@ function normalize(saved) {
       longest: saved.streak?.longest || 0,
       lastActiveDate: saved.streak?.lastActiveDate || null,
     },
+    // Migration : les profils créés avant le parcours pédagogique reçoivent
+    // un journal, des agrégats et un paquet de cartes d'erreur vides.
+    activity: Array.isArray(saved.activity) ? saved.activity : [],
+    skills: saved.skills && typeof saved.skills === 'object' ? saved.skills : {},
+    errorCards: Array.isArray(saved.errorCards) ? saved.errorCards : [],
   }
 }
 
@@ -186,4 +200,177 @@ export function reviewWord(word, success) {
   if (!f) return
   f.box = success ? Math.min((f.box || 0) + 1, MAX_BOX) : 0
   f.due = Date.now() + INTERVALS[f.box]
+}
+
+// ---------------------------------------------------------------------------
+// Journal d'activité + agrégats par compétence
+// ---------------------------------------------------------------------------
+
+// Moyenne des ratios score/total (ou du score seul s'il n'y a pas de total)
+// sur les `windowSize` derniers événements d'une compétence qui portent un
+// score. Recalculée depuis le journal à chaque log : simple et toujours juste.
+function rollingAvgScore(skill, windowSize = 20) {
+  const scored = progress.activity.filter(
+    (a) => a.skill === skill && typeof a.score === 'number'
+  )
+  const recent = scored.slice(-windowSize)
+  if (!recent.length) return null
+  const sum = recent.reduce(
+    (acc, a) => acc + (a.total ? a.score / a.total : a.score),
+    0
+  )
+  return sum / recent.length
+}
+
+// Enregistre un événement d'apprentissage. `entry` = { skill, ...données
+// libres (textId, score, total, attempts, mode, level, errorCount…) } ;
+// `ts` est ajouté automatiquement. Met à jour les agrégats `progress.skills`
+// et la série quotidienne : une activité loggée = une journée active (les
+// vues n'ont plus à appeler touchStreak elles-mêmes).
+export function logActivity(entry) {
+  if (!entry || !entry.skill) return null
+  const event = { ...entry, ts: Date.now() }
+  progress.activity.push(event)
+  if (progress.activity.length > ACTIVITY_CAP) {
+    progress.activity.splice(0, progress.activity.length - ACTIVITY_CAP)
+  }
+
+  const skills = progress.skills
+  if (!skills[event.skill]) skills[event.skill] = { count: 0, lastTs: 0 }
+  const s = skills[event.skill]
+  s.count = (s.count || 0) + 1
+  s.lastTs = event.ts
+
+  // Agrégats spécifiques — volontairement minimaux et recalculables.
+  if (event.skill === 'lettura') {
+    const avg = rollingAvgScore('lettura')
+    if (avg !== null) s.avgScore = avg
+  } else if (event.skill === 'pronuncia') {
+    const avg = rollingAvgScore('pronuncia')
+    if (avg !== null) s.avgScore = avg
+  } else if (event.skill === 'scrittura') {
+    if (event.level) {
+      s.levels = [...(s.levels || []), event.level].slice(-10)
+    }
+    const errors =
+      typeof event.errorCount === 'number'
+        ? event.errorCount
+        : Array.isArray(event.errors)
+          ? event.errors.length
+          : 0
+    s.errorCount = (s.errorCount || 0) + errors
+  } else if (event.skill === 'dialogo') {
+    // Un événement loggé = une session de dialogue terminée.
+    s.sessions = (s.sessions || 0) + 1
+  }
+
+  touchStreak()
+  return event
+}
+
+// ---------------------------------------------------------------------------
+// Cartes d'erreur (répétition espacée des erreurs de production)
+// ---------------------------------------------------------------------------
+
+// Hash court et stable (djb2, base 36) de original+correction : la même
+// erreur re-signalée sur n'importe quel appareil produit le même id, ce qui
+// permet la déduplication locale ET la fusion multi-appareils par id.
+export function errorCardId(original, correction) {
+  const s = `${original || ''} ${correction || ''}`
+  let h = 5381
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h + s.charCodeAt(i)) | 0
+  }
+  return (h >>> 0).toString(36)
+}
+
+// Ajoute une carte d'erreur (boîte 0, révisable immédiatement). Déduplique
+// par id : refaire la même erreur ne crée pas de doublon (la carte existante,
+// avec sa boîte, reste — elle redeviendra due naturellement). Au-delà du
+// plafond, on éjecte d'abord les cartes les mieux maîtrisées (boîte la plus
+// haute) et, à boîte égale, les plus anciennes : on ne sacrifie jamais une
+// erreur encore fragile pour en garder une déjà sue.
+export function addErrorCard({ original, correction, explanation, type, source }) {
+  const id = errorCardId(original, correction)
+  const existing = progress.errorCards.find((c) => c.id === id)
+  if (existing) return existing
+  const card = {
+    id,
+    original,
+    correction,
+    explanation: explanation || '',
+    type: type || 'grammatica',
+    source: source || 'scrivi',
+    box: 0,
+    due: 0,
+    addedTs: Date.now(),
+  }
+  progress.errorCards.push(card)
+  while (progress.errorCards.length > ERROR_CARDS_CAP) {
+    let evict = 0
+    for (let i = 1; i < progress.errorCards.length; i++) {
+      const a = progress.errorCards[i]
+      const b = progress.errorCards[evict]
+      if (
+        (a.box || 0) > (b.box || 0) ||
+        ((a.box || 0) === (b.box || 0) && (a.addedTs || 0) < (b.addedTs || 0))
+      ) {
+        evict = i
+      }
+    }
+    progress.errorCards.splice(evict, 1)
+  }
+  return card
+}
+
+// Cartes d'erreur dont la révision est arrivée à échéance
+export function dueErrorCards() {
+  const now = Date.now()
+  return progress.errorCards.filter((c) => (c.due || 0) <= now)
+}
+
+// Même Leitner que reviewWord : réussite → boîte suivante (intervalle plus
+// long), échec → retour à la boîte 0.
+export function reviewErrorCard(id, success) {
+  const c = progress.errorCards.find((x) => x.id === id)
+  if (!c) return
+  c.box = success ? Math.min((c.box || 0) + 1, MAX_BOX) : 0
+  c.due = Date.now() + INTERVALS[c.box]
+}
+
+export function removeErrorCard(id) {
+  const i = progress.errorCards.findIndex((c) => c.id === id)
+  if (i >= 0) progress.errorCards.splice(i, 1)
+}
+
+// ---------------------------------------------------------------------------
+// Niveau mesuré
+// ---------------------------------------------------------------------------
+
+// Valeur la plus fréquente d'un tableau ; à égalité, la plus récente gagne.
+function modeOf(values) {
+  if (!values || !values.length) return null
+  const counts = new Map()
+  for (const v of values) counts.set(v, (counts.get(v) || 0) + 1)
+  let best = null
+  let bestCount = 0
+  // Parcours du plus récent au plus ancien : à égalité, le plus récent gagne.
+  for (let i = values.length - 1; i >= 0; i--) {
+    const c = counts.get(values[i])
+    if (c > bestCount) {
+      best = values[i]
+      bestCount = c
+    }
+  }
+  return best
+}
+
+// Niveau CECR effectivement MESURÉ (par les estimations du mode écriture),
+// pas un niveau déclaré ni deviné. `global` égale `scrittura` tant que
+// l'écriture est la seule compétence évaluée en niveau — le nom est honnête :
+// pas de fausse précision multi-compétences.
+export function measuredLevel() {
+  const levels = progress.skills.scrittura?.levels || []
+  const scrittura = modeOf(levels.slice(-5))
+  return { scrittura, global: scrittura }
 }

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 // Totaux calculés au build (voir le plugin leggendo-catalog dans
 // vite.config.js) : l'accueil affiche trois chiffres, elle n'a pas à embarquer
@@ -7,6 +7,10 @@ import { RouterLink } from 'vue-router'
 import { catalogStats } from 'virtual:catalog'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
+import { isLoggedIn, isPremiumPlus } from '../lib/access.js'
+import { currentUser } from '../lib/auth.js'
+import { progress } from '../progress.js'
+import { nextStep } from '../lib/percorso.js'
 
 // Éventail des niveaux, des catégories représentées et des tailles de texte
 const { levelRange, categoryCount, minWords, maxWords } = catalogStats
@@ -42,9 +46,25 @@ function lyr(depth) {
   }
 }
 
+// --- Il tuo percorso : l'unique action recommandée pour un utilisateur
+// connecté (src/lib/percorso.js). L'index des textes (127 kB) et le rôle
+// Premium IA sont chargés à la demande après le montage : la recommandation
+// s'affine quand ils arrivent, sans alourdir le bundle d'entrée.
+const loggedIn = computed(() => isLoggedIn())
+const textsIndex = ref([])
+const premiumIA = ref(false)
+const step = computed(() =>
+  nextStep(progress, { hasPremiumIA: premiumIA.value, texts: textsIndex.value })
+)
+
 // Plein écran : on verrouille le défilement de la page
-onMounted(() => {
+onMounted(async () => {
   document.body.style.overflow = 'hidden'
+  if (!loggedIn.value) return
+  import('../texts/index.json').then((m) => {
+    textsIndex.value = m.default
+  })
+  premiumIA.value = currentUser.value ? await isPremiumPlus() : false
 })
 onUnmounted(() => {
   document.body.style.overflow = ''
@@ -172,24 +192,45 @@ onUnmounted(() => {
         <h1 class="title">Legg<em>endo</em></h1>
         <p class="tagline">Apprendre l'italien en lisant</p>
 
-        <div class="badge">
-          <span class="pulse" aria-hidden="true"></span>
-          <span class="badge-text">{{ categoryCount }} catégories · {{ levelRange }} · {{ minWords }}–{{ maxWords }} mots</span>
+        <!-- Utilisateur connecté : une seule action explicite, la prochaine
+             étape du parcours (règles transparentes dans src/lib/percorso.js). -->
+        <div v-if="loggedIn" class="percorso">
+          <p class="percorso-eyebrow">
+            Il tuo percorso
+            <span
+              v-if="progress.streak.current > 0"
+              class="percorso-streak"
+              :title="`Série : ${progress.streak.current} jour${progress.streak.current > 1 ? 's' : ''} d'affilée`"
+            >
+              🔥 {{ progress.streak.current }}
+            </span>
+          </p>
+          <h2 class="percorso-title">{{ step.title }}</h2>
+          <p class="percorso-reason">{{ step.reason }}</p>
+          <RouterLink class="btn-hero" :to="step.to">{{ step.cta }} →</RouterLink>
         </div>
 
-        <p class="sub">
-          Des histoires à votre niveau, la traduction française d'un survol,
-          l'audio d'un clic. Rien d'autre entre vous et la langue.
-        </p>
+        <!-- Visiteur : héros inchangé -->
+        <template v-else>
+          <div class="badge">
+            <span class="pulse" aria-hidden="true"></span>
+            <span class="badge-text">{{ categoryCount }} catégories · {{ levelRange }} · {{ minWords }}–{{ maxWords }} mots</span>
+          </div>
 
-        <div class="actions">
-          <RouterLink class="btn-hero" :to="{ name: 'library' }">
-            Commencer à lire →
-          </RouterLink>
-          <RouterLink class="btn-ghost" :to="{ name: 'method' }">
-            La méthode
-          </RouterLink>
-        </div>
+          <p class="sub">
+            Des histoires à votre niveau, la traduction française d'un survol,
+            l'audio d'un clic. Rien d'autre entre vous et la langue.
+          </p>
+
+          <div class="actions">
+            <RouterLink class="btn-hero" :to="{ name: 'library' }">
+              Commencer à lire →
+            </RouterLink>
+            <RouterLink class="btn-ghost" :to="{ name: 'method' }">
+              La méthode
+            </RouterLink>
+          </div>
+        </template>
       </div>
     </div>
 
@@ -473,6 +514,60 @@ onUnmounted(() => {
   100% { box-shadow: 0 0 0 0 rgba(74, 124, 89, 0); }
 }
 
+/* --- Il tuo percorso (utilisateur connecté) --- */
+
+.percorso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1.5rem auto 0;
+  max-width: 440px;
+  padding: 1.1rem 1.5rem 1.3rem;
+  border: 1px solid rgba(176, 105, 46, 0.35);
+  border-radius: 16px;
+  background: rgba(250, 246, 240, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 8px 26px rgba(111, 71, 34, 0.12);
+  opacity: 0;
+  animation: appear 0.9s ease-out 1.1s forwards;
+}
+
+.percorso-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8a5a2b;
+}
+
+.percorso-streak {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #b0692e;
+  cursor: default;
+}
+
+.percorso-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #6f4722;
+}
+
+.percorso-reason {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(44, 38, 32, 0.72);
+}
+
 .sub {
   margin: 1.2rem 0 0;
   font-size: 1rem;
@@ -628,6 +723,11 @@ onUnmounted(() => {
   .badge {
     margin-top: 0.9rem;
   }
+
+  .percorso {
+    margin-top: 0.9rem;
+    padding: 0.8rem 1.1rem 1rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -644,6 +744,7 @@ onUnmounted(() => {
   .pulse,
   .sub,
   .actions,
+  .percorso,
   .features-band {
     animation: none;
     opacity: 1;

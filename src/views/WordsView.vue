@@ -1,47 +1,100 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { progress, dueFavorites, reviewWord, touchStreak, MAX_BOX } from '../progress.js'
+import {
+  progress,
+  dueFavorites,
+  reviewWord,
+  dueErrorCards,
+  reviewErrorCard,
+  removeErrorCard,
+  logActivity,
+  MAX_BOX,
+} from '../progress.js'
 import { ttsSupported, speakItalian } from '../tts.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
 // --- Session de révision (répétition espacée) ---
+// La file mélange deux sortes de cartes : les mots favoris dus, puis les
+// cartes d'erreur dues (productions fautives à corriger). Chaque élément est
+// { kind: 'word'|'error', item }.
 const reviewing = ref(false)
-const queue = ref([]) // mots de la session en cours
+const queue = ref([]) // cartes de la session en cours
 const current = ref(0)
 const revealed = ref(false)
 const sessionResults = ref({ known: 0, again: 0 })
+let reviewedCount = 0 // cartes effectivement répondues dans la session
 
-const dueCount = computed(() => dueFavorites().length)
-const currentWord = computed(() => queue.value[current.value] || null)
+const dueWords = computed(() => dueFavorites().length)
+const dueErrors = computed(() => dueErrorCards().length)
+const dueCount = computed(() => dueWords.value + dueErrors.value)
+const currentCard = computed(() => queue.value[current.value] || null)
+
+// Étiquettes des types de carte d'erreur (mêmes identifiants que le serveur).
+const TYPE_LABELS = {
+  grammatica: 'Grammatica',
+  lessico: 'Lessico',
+  registro: 'Registro',
+  ortografia: 'Ortografia',
+  pronuncia: 'Pronuncia',
+}
+function typeLabel(type) {
+  return TYPE_LABELS[type] || type || 'Errore'
+}
 
 function startReview() {
-  queue.value = [...dueFavorites()]
+  queue.value = [
+    ...dueFavorites().map((item) => ({ kind: 'word', item })),
+    ...dueErrorCards().map((item) => ({ kind: 'error', item })),
+  ]
   if (!queue.value.length) return
   current.value = 0
   revealed.value = false
   sessionResults.value = { known: 0, again: 0 }
+  reviewedCount = 0
   reviewing.value = true
 }
 
+function endSession() {
+  reviewing.value = false
+  queue.value = []
+  // Session terminée : journalisée dans le parcours (touchStreak est appelé
+  // automatiquement par logActivity) — sauf si rien n'a été répondu.
+  if (reviewedCount > 0) {
+    logActivity({ skill: 'vocabolario', reviewed: reviewedCount })
+  }
+}
+
 function answer(success) {
-  reviewWord(currentWord.value.word, success)
+  const card = currentCard.value
+  if (!card) return
+  if (card.kind === 'word') reviewWord(card.item.word, success)
+  else reviewErrorCard(card.item.id, success)
   sessionResults.value[success ? 'known' : 'again']++
+  reviewedCount++
   revealed.value = false
   if (current.value + 1 < queue.value.length) {
     current.value++
   } else {
-    // Session terminée : compte pour la série quotidienne.
-    reviewing.value = false
-    queue.value = []
-    touchStreak()
+    endSession()
   }
 }
 
+// Poubelle sur une carte d'erreur : la carte quitte le paquet ET la session
+// en cours, sans compter comme une réponse.
+function trashCurrentCard() {
+  const card = currentCard.value
+  if (!card || card.kind !== 'error') return
+  removeErrorCard(card.item.id)
+  queue.value.splice(current.value, 1)
+  revealed.value = false
+  if (current.value >= queue.value.length) endSession()
+}
+
+// Arrêt anticipé : les cartes déjà répondues comptent quand même.
 function stopReview() {
-  reviewing.value = false
-  queue.value = []
+  endSession()
 }
 
 // --- Liste complète ---
@@ -127,35 +180,64 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <p v-if="!progress.favorites.length" class="empty">
+      <p v-if="!progress.favorites.length && !progress.errorCards.length" class="empty">
         Aucun mot enregistré pour l'instant. Pendant la lecture, cliquez sur
         l'étoile ☆ dans la bulle de traduction pour ajouter un mot ici.<br />
         <RouterLink :to="{ name: 'library' }">Choisir un texte →</RouterLink>
       </p>
 
       <template v-else>
-        <!-- Session de révision -->
-        <div v-if="reviewing && currentWord" class="review-card">
+        <!-- Session de révision : mots favoris puis cartes d'erreur -->
+        <div v-if="reviewing && currentCard" class="review-card">
           <p class="review-progress">
-            Mot {{ current + 1 }} / {{ queue.length }}
+            Carte {{ current + 1 }} / {{ queue.length }}
           </p>
-          <p class="review-word">
-            {{ currentWord.word }}
-            <button
-              v-if="ttsSupported"
-              class="speak"
-              title="Écouter en italien"
-              @click="speak(currentWord.word)"
-            >
-              🔊
-            </button>
-          </p>
-          <p v-if="revealed" class="review-translation">
-            {{ currentWord.translation }}
-          </p>
+
+          <!-- Carte « mot » -->
+          <template v-if="currentCard.kind === 'word'">
+            <p class="review-word">
+              {{ currentCard.item.word }}
+              <button
+                v-if="ttsSupported"
+                class="speak"
+                title="Écouter en italien"
+                @click="speak(currentCard.item.word)"
+              >
+                🔊
+              </button>
+            </p>
+            <p v-if="revealed" class="review-translation">
+              {{ currentCard.item.translation }}
+            </p>
+          </template>
+
+          <!-- Carte « erreur » : recto = production fautive, verso =
+               correction + explication -->
+          <template v-else>
+            <p class="error-badge-row">
+              <span class="type-badge">{{ typeLabel(currentCard.item.type) }}</span>
+              <button
+                class="trash"
+                title="Supprimer cette carte"
+                aria-label="Supprimer cette carte de révision"
+                @click="trashCurrentCard"
+              >
+                🗑
+              </button>
+            </p>
+            <p class="review-error">{{ currentCard.item.original }}</p>
+            <p v-if="!revealed" class="error-prompt">Comment corriger ?</p>
+            <template v-else>
+              <p class="review-translation">{{ currentCard.item.correction }}</p>
+              <p v-if="currentCard.item.explanation" class="error-explanation">
+                {{ currentCard.item.explanation }}
+              </p>
+            </template>
+          </template>
+
           <div class="review-actions">
             <button v-if="!revealed" class="btn reveal" @click="revealed = true">
-              Afficher la traduction
+              {{ currentCard.kind === 'word' ? 'Afficher la traduction' : 'Afficher la correction' }}
             </button>
             <template v-else>
               <button class="btn known" @click="answer(true)">
@@ -175,9 +257,16 @@ onUnmounted(() => {
         <div v-else class="review-banner">
           <template v-if="dueCount">
             <span>
-              <strong>{{ dueCount }}</strong>
-              {{ dueCount > 1 ? 'mots à réviser' : 'mot à réviser' }}
-              aujourd'hui.
+              <template v-if="dueWords">
+                <strong>{{ dueWords }}</strong>
+                {{ dueWords > 1 ? 'mots' : 'mot' }}
+              </template>
+              <template v-if="dueWords && dueErrors"> et </template>
+              <template v-if="dueErrors">
+                <strong>{{ dueErrors }}</strong>
+                {{ dueErrors > 1 ? 'erreurs' : 'erreur' }}
+              </template>
+              à réviser aujourd'hui.
             </span>
             <button class="btn start" @click="startReview">
               Commencer la révision
@@ -366,6 +455,62 @@ onUnmounted(() => {
   font-size: 1.15rem;
   color: #4a7c59;
   font-weight: 600;
+}
+
+/* --- Carte d'erreur dans la session --- */
+.error-badge-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(176, 105, 46, 0.12);
+  border: 1px solid rgba(176, 105, 46, 0.4);
+  color: #6f4722;
+}
+
+.trash {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.1rem;
+  opacity: 0.55;
+}
+
+.trash:hover {
+  opacity: 1;
+}
+
+.review-error {
+  margin: 0 0 0.6rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #a34430;
+  text-decoration: line-through;
+  text-decoration-color: rgba(163, 68, 48, 0.55);
+}
+
+.error-prompt {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  color: #6b6156;
+  font-style: italic;
+}
+
+.error-explanation {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  color: #4a4238;
+  line-height: 1.55;
 }
 
 .review-actions {

@@ -19,6 +19,7 @@ import {
   loadSessionId,
   clearSessionId,
 } from '../lib/dialogue.js'
+import { logActivity, addErrorCard } from '../progress.js'
 
 // --- Solde de crédits (comme WriteView) : un dialogue coûte 2 crédits, à la
 // session — le serveur reste la seule source de vérité, affichage informatif.
@@ -134,6 +135,23 @@ async function finish() {
     phase.value = 'feedback'
     clearSessionId()
     stopSpeaking()
+    // Capture pédagogique : la session compte dans le parcours (touchStreak
+    // est appelé par logActivity) et chaque point du bilan devient une carte
+    // de révision. Le bilan ne classe pas ses remarques : 'lessico' par défaut.
+    logActivity({
+      skill: 'dialogo',
+      scenario: selectedScenario.value,
+      turns: turns.value.filter((t) => t.role === 'user').length,
+    })
+    for (const f of feedback.value) {
+      addErrorCard({
+        original: f.original,
+        correction: f.better,
+        explanation: f.explanation,
+        type: f.type || 'lessico',
+        source: 'dialogo',
+      })
+    }
   } catch (err) {
     error.value = err.message
   } finally {
@@ -343,6 +361,13 @@ function speak(text) {
         </p>
         <p class="feedback-explanation">{{ f.explanation }}</p>
       </div>
+
+      <p v-if="feedback && feedback.length" class="review-note">
+        📌 {{ feedback.length }}
+        erreur{{ feedback.length > 1 ? 's' : '' }}
+        ajoutée{{ feedback.length > 1 ? 's' : '' }} à vos révisions —
+        <RouterLink :to="{ name: 'words' }">réviser →</RouterLink>
+      </p>
 
       <div class="close-row">
         <button type="button" class="btn-primary" @click="restart">
@@ -640,6 +665,15 @@ function speak(text) {
   color: #4a4238;
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.review-note {
+  color: #6b6156;
+  font-size: 0.88rem;
+}
+
+.review-note a {
+  color: #b0692e;
 }
 
 .spinner {

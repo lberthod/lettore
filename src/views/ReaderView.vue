@@ -17,7 +17,7 @@ import QuizSection from '../components/QuizSection.vue'
 import {
   progress,
   markRead,
-  touchStreak,
+  logActivity,
   isFavorite,
   toggleFavorite,
   isInVocabMode,
@@ -168,9 +168,19 @@ function openQuiz() {
 }
 
 function onQuizCompleted(score) {
+  // Chaque quiz terminé est journalisé (score compris), réussi ou non : le
+  // parcours a besoin des tentatives, pas seulement des succès. touchStreak
+  // est appelé automatiquement par logActivity.
+  const mode = ascoltoRequested.value ? 'ascolto' : 'lettura'
+  logActivity({
+    skill: mode,
+    textId: props.id,
+    score,
+    total: currentText.value.questions.length,
+    mode,
+  })
   if (score >= currentText.value.questions.length - 1) {
     markRead(props.id)
-    touchStreak()
     trackReadingCompleted({ textId: props.id, level: textMeta.value?.level })
   }
 }

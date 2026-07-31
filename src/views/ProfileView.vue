@@ -16,15 +16,80 @@ import {
   reauthenticateWithApple,
   deleteAccount,
 } from '../lib/account.js'
-import { progress, dueFavorites } from '../progress.js'
+import { progress, dueFavorites, dueErrorCards, measuredLevel } from '../progress.js'
+import { weekSummary, daysAgoLabel } from '../lib/percorso.js'
 
 const router = useRouter()
 const error = ref('')
 
 // --- Dashboard de progression ---
-// dueFavorites dépend de Date.now() : recalculé via progress pour rester
-// réactif aux révisions faites pendant la session.
-const dueCount = computed(() => dueFavorites().length)
+// dueFavorites/dueErrorCards dépendent de Date.now() : recalculés via progress
+// pour rester réactifs aux révisions faites pendant la session.
+const dueCount = computed(() => dueFavorites().length + dueErrorCards().length)
+
+// Compteurs des 7 derniers jours (journal d'activité, src/lib/percorso.js).
+const week = computed(() => weekSummary(progress))
+
+// Une carte par compétence : compteur d'activités, dernière pratique et la
+// statistique propre à la compétence. Tout vient des agrégats progress.skills
+// — un profil neuf affiche simplement « Pas encore pratiqué ».
+const pct = (v) => `${Math.round(v * 100)} %`
+
+const skillRows = computed(() => {
+  const s = progress.skills
+  const lvl = measuredLevel()
+  // Nombre de productions réellement derrière l'estimation de niveau (fenêtre
+  // des 5 dernières) : annoncé honnêtement, pas de fausse précision.
+  const levelSample = Math.min((s.scrittura?.levels || []).length, 5)
+  const rows = [
+    {
+      id: 'lettura',
+      label: 'Lecture',
+      icon: '📖',
+      stat: s.lettura?.avgScore != null ? `Score moyen aux quiz : ${pct(s.lettura.avgScore)}` : null,
+    },
+    {
+      id: 'ascolto',
+      label: 'Écoute',
+      icon: '👂',
+      stat: s.ascolto?.count ? `${s.ascolto.count} écoute${s.ascolto.count > 1 ? 's' : ''} en mode ascolto` : null,
+    },
+    {
+      id: 'vocabolario',
+      label: 'Vocabulaire',
+      icon: '🗂️',
+      stat: `${progress.knownWords.length} mot${progress.knownWords.length > 1 ? 's' : ''} connus · ${dueCount.value} à réviser`,
+    },
+    {
+      id: 'scrittura',
+      label: 'Écriture',
+      icon: '✍️',
+      stat: lvl.scrittura
+        ? `Niveau ${lvl.scrittura} — estimation sur tes ${levelSample} dernières productions`
+        : null,
+    },
+    {
+      id: 'dialogo',
+      label: 'Dialogue',
+      icon: '💬',
+      stat: s.dialogo?.sessions
+        ? `${s.dialogo.sessions} session${s.dialogo.sessions > 1 ? 's' : ''} de dialogue`
+        : null,
+    },
+    {
+      id: 'pronuncia',
+      label: 'Prononciation',
+      icon: '🗣️',
+      stat: s.pronuncia?.avgScore != null ? `Score moyen : ${pct(s.pronuncia.avgScore)}` : null,
+    },
+  ]
+  return rows.map((r) => ({
+    ...r,
+    count: s[r.id]?.count || 0,
+    last: s[r.id]?.lastTs ? daysAgoLabel(s[r.id].lastTs) : null,
+    week: week.value[r.id] || 0,
+  }))
+})
 
 async function doLogout() {
   error.value = ''
@@ -172,11 +237,34 @@ async function confirmDelete() {
         <div class="stat">
           <span class="stat-value">{{ dueCount }}</span>
           <span class="stat-label">
-            {{ dueCount > 1 ? 'mots à réviser' : 'mot à réviser' }}
+            {{ dueCount > 1 ? 'éléments à réviser' : 'élément à réviser' }}
           </span>
           <RouterLink v-if="dueCount" class="stat-link" :to="{ name: 'words' }">
             Réviser →
           </RouterLink>
+        </div>
+      </div>
+
+      <h3 class="skills-title">Par compétence</h3>
+      <p class="skills-hint">
+        {{ week.total > 0
+          ? `${week.total} activité${week.total > 1 ? 's' : ''} ces 7 derniers jours.`
+          : 'Aucune activité ces 7 derniers jours — chaque exercice compté apparaîtra ici.' }}
+      </p>
+      <div class="skills">
+        <div v-for="row in skillRows" :key="row.id" class="skill" :class="{ empty: !row.count }">
+          <div class="skill-head">
+            <span class="skill-icon" aria-hidden="true">{{ row.icon }}</span>
+            <span class="skill-name">{{ row.label }}</span>
+            <span v-if="row.week" class="skill-week">{{ row.week }}× cette semaine</span>
+          </div>
+          <template v-if="row.count">
+            <p class="skill-meta">
+              {{ row.count }} activité{{ row.count > 1 ? 's' : '' }} · dernière : {{ row.last }}
+            </p>
+            <p v-if="row.stat" class="skill-stat">{{ row.stat }}</p>
+          </template>
+          <p v-else class="skill-meta">Pas encore pratiqué</p>
         </div>
       </div>
 
@@ -327,6 +415,80 @@ async function confirmDelete() {
 .stat-link {
   font-size: 0.8rem;
   color: #b0692e;
+}
+
+/* --- Dashboard par compétence --- */
+.skills-title {
+  margin: 0 0 0.15rem;
+  font-size: 0.98rem;
+  color: #6f4722;
+}
+
+.skills-hint {
+  margin: 0 0 0.7rem;
+  font-size: 0.82rem;
+  color: #6b6156;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+  margin: 0 0 1.6rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.skill.empty {
+  opacity: 0.65;
+}
+
+.skill-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.skill-icon {
+  font-size: 1rem;
+}
+
+.skill-name {
+  font-weight: 700;
+  color: #6f4722;
+  font-size: 0.92rem;
+}
+
+.skill-week {
+  margin-left: auto;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(176, 105, 46, 0.12);
+  color: #8a5a2b;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.skill-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b6156;
+}
+
+.skill-stat {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #b0692e;
+  font-weight: 600;
 }
 
 .danger-zone {

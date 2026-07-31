@@ -6,7 +6,7 @@
 //
 // Sans reconnaissance vocale (Firefox, WebView native), le composant ne
 // rend rien : la fonctionnalité disparaît sans erreur.
-import { ref, watch, onBeforeUnmount } from 'vue'
+import { ref, computed, watch, onBeforeUnmount } from 'vue'
 import { speakItalian, stopSpeaking, ttsSupported } from '../tts.js'
 import {
   isSupported,
@@ -14,6 +14,7 @@ import {
   stopListening,
 } from '../lib/speechRecognition.js'
 import { comparePhrases } from '../lib/textSimilarity.js'
+import { logActivity, addErrorCard } from '../progress.js'
 
 const props = defineProps({
   phrase: { type: String, required: true },
@@ -26,6 +27,28 @@ const listening = ref(false)
 const result = ref(null) // { score, words } de comparePhrases
 const transcript = ref('')
 const error = ref('') // message d'erreur affichable, '' si aucun
+const addedToReview = ref(false) // carte de révision déjà créée pour ce score
+
+// Mots de la phrase cible non reconnus dans la répétition
+const missedWords = computed(() =>
+  result.value
+    ? result.value.words.filter((w) => w.status === 'missed').map((w) => w.word)
+    : []
+)
+
+// Une seule carte pour toute la phrase (pas une par mot) : la correction est
+// la phrase cible complète, l'original la liste des mots ratés.
+function addMissedToReview() {
+  if (addedToReview.value || !missedWords.value.length) return
+  addErrorCard({
+    original: missedWords.value.join(', '),
+    correction: props.phrase,
+    explanation: 'Prononciation à retravailler',
+    type: 'pronuncia',
+    source: 'pronuncia',
+  })
+  addedToReview.value = true
+}
 
 function listen() {
   if (!ttsSupported) return
@@ -47,11 +70,15 @@ function repeat() {
   error.value = ''
   result.value = null
   transcript.value = ''
+  addedToReview.value = false
   listening.value = true
   startListening({
     onResult: (text) => {
       transcript.value = text
       result.value = comparePhrases(props.phrase, text)
+      // Chaque tentative notée alimente le parcours (touchStreak est appelé
+      // automatiquement par logActivity). Score sur 100.
+      logActivity({ skill: 'pronuncia', score: result.value.score })
     },
     onError: (code) => {
       if (code === 'not-allowed' || code === 'service-not-allowed') {
@@ -84,6 +111,7 @@ watch(
     result.value = null
     transcript.value = ''
     error.value = ''
+    addedToReview.value = false
   },
 )
 
@@ -133,6 +161,15 @@ onBeforeUnmount(() => {
         >
       </p>
       <p v-if="transcript" class="heard">Compris : « {{ transcript }} »</p>
+      <button
+        v-if="missedWords.length"
+        type="button"
+        class="add-review"
+        :disabled="addedToReview"
+        @click="addMissedToReview"
+      >
+        {{ addedToReview ? '✓ Ajouté à vos révisions' : '📌 Ajouter aux révisions' }}
+      </button>
     </div>
   </div>
 </template>
@@ -233,5 +270,30 @@ onBeforeUnmount(() => {
   margin: 0.4rem 0 0;
   font-size: 0.85rem;
   color: #7a7062;
+}
+
+.add-review {
+  margin-top: 0.6rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(176, 105, 46, 0.4);
+  border-radius: 999px;
+  background: rgba(176, 105, 46, 0.08);
+  color: #6f4722;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.add-review:hover:not(:disabled) {
+  background: rgba(176, 105, 46, 0.18);
+  border-color: #b0692e;
+}
+
+.add-review:disabled {
+  cursor: default;
+  color: #4a7c59;
+  border-color: rgba(74, 124, 89, 0.4);
+  background: rgba(74, 124, 89, 0.08);
 }
 </style>
