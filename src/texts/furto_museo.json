@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa era sparito dal museo?",
-      "options": ["Un quadro famoso", "Una statua antica", "Dei soldi"],
-      "correct": 0
+      "options": [
+        "Un quadro famoso",
+        "Una statua antica",
+        "Dei soldi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mancava un quadro famoso »."
     },
     {
       "q": "Che cosa aveva notato di strano l'ispettrice?",
-      "options": ["Una finestra rotta", "Il pavimento pulito davanti al quadro", "Una porta aperta"],
-      "correct": 1
+      "options": [
+        "Una finestra rotta",
+        "Il pavimento pulito davanti al quadro",
+        "Una porta aperta"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « il pavimento era pulito solo davanti a quel quadro »."
     },
     {
       "q": "Chi era il ladro?",
-      "options": ["Il direttore", "Un collezionista straniero", "Il custode"],
-      "correct": 2
+      "options": [
+        "Il direttore",
+        "Un collezionista straniero",
+        "Il custode"
+      ],
+      "correct": 2,
+      "explanation": "Le texte dit « Solo una persona aveva le chiavi e conosceva il codice dell'allarme: il custode »."
     }
   ],
   "words": {

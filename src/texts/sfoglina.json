@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Come riconosce Ines lo spessore giusto della sfoglia?",
-      "options": ["Al tatto, sfiorando la pasta con le mani", "Con una macchina speciale", "Misurandola con un righello"],
-      "correct": 0
+      "options": [
+        "Al tatto, sfiorando la pasta con le mani",
+        "Con una macchina speciale",
+        "Misurandola con un righello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que ses mains connaissent le bon épaisseur au toucher, en effleurant la pâte."
     },
     {
       "q": "Che cosa aveva lasciato Camilla per diventare apprendista?",
-      "options": ["Un lavoro sicuro a Milano, dopo una laurea in economia", "Un ristorante a Roma", "Una carriera da musicista"],
-      "correct": 0
+      "options": [
+        "Un lavoro sicuro a Milano, dopo una laurea in economia",
+        "Un ristorante a Roma",
+        "Una carriera da musicista"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle a laissé un travail sûr à Milan après une licence en économie."
     },
     {
       "q": "Quando i clienti fanno la fila davanti alla bottega?",
-      "options": ["La domenica mattina", "Il venerdì sera", "Soltanto a Natale"],
-      "correct": 0
+      "options": [
+        "La domenica mattina",
+        "Il venerdì sera",
+        "Soltanto a Natale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le dimanche matin les clients font encore la queue devant la boutique."
     }
   ],
   "words": {

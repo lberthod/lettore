@@ -30,18 +30,33 @@
   "questions": [
     {
       "q": "Chi è Nuvola?",
-      "options": ["Il gatto del signor Bruno", "Il cane della signora Rita", "Un gatto del portinaio"],
-      "correct": 0
+      "options": [
+        "Il gatto del signor Bruno",
+        "Il cane della signora Rita",
+        "Un gatto del portinaio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nuvola è il gatto del signor Bruno ». Donc Nuvola est le chat de M. Bruno."
     },
     {
       "q": "Dove trova il signor Bruno il gatto Nuvola?",
-      "options": ["In una scatola nel garage", "Sotto il letto", "In strada"],
-      "correct": 0
+      "options": [
+        "In una scatola nel garage",
+        "Sotto il letto",
+        "In strada"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Dentro la scatola dorme Nuvola! » dans le garage, donc il la trouve dans une boîte au garage."
     },
     {
       "q": "Perché Nuvola era nel garage?",
-      "options": ["Perché cercava un posto caldo per i suoi gattini", "Perché aveva fame", "Perché voleva giocare con la bicicletta"],
-      "correct": 0
+      "options": [
+        "Perché cercava un posto caldo per i suoi gattini",
+        "Perché aveva fame",
+        "Perché voleva giocare con la bicicletta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nuvola cercava un posto caldo e tranquillo per i suoi gattini », donc elle cherchait un endroit chaud pour ses chatons."
     }
   ],
   "words": {
@@ -162,7 +177,7 @@
     "al garage": "au garage",
     "vanno": "ils vont",
     "aprono": "ils ouvrent",
-    "porta": "porte",
+    "porta": "porte / il apporte",
     "piano piano": "tout doucement",
     "dentro": "dedans",
     "buio": "sombre",
@@ -192,7 +207,6 @@
     "morbida": "douce",
     "mette": "il met",
     "nella": "dans la",
-    "porta": "porte / il apporte",
     "po'": "peu",
     "latte": "lait",
     "ora": "maintenant",

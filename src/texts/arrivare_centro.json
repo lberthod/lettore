@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Da dove parte il percorso?",
-      "options": ["Dalla stazione", "Dall'aeroporto", "Dal centro"],
-      "correct": 0
+      "options": [
+        "Dalla stazione",
+        "Dall'aeroporto",
+        "Dal centro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte commence par « Vuoi andare in centro dalla stazione? », donc le parcours part de la gare."
     },
     {
       "q": "Dove bisogna girare all'uscita della stazione?",
-      "options": ["A sinistra", "A destra", "Dritto"],
-      "correct": 1
+      "options": [
+        "A sinistra",
+        "A destra",
+        "Dritto"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Esci dalla stazione e gira a destra », donc il faut tourner à droite à la sortie de la gare."
     },
     {
       "q": "Quanto dista il centro a piedi?",
-      "options": ["Cinque minuti", "Mezz'ora", "Un'ora"],
-      "correct": 0
+      "options": [
+        "Cinque minuti",
+        "Mezz'ora",
+        "Un'ora"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il centro è a cinque minuti a piedi », donc le centre est à cinq minutes à pied."
     }
   ],
   "words": {

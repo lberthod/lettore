@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si svolge la storia?",
-      "options": ["Sul lago di Como", "A Venezia", "In montagna"],
-      "correct": 0
+      "options": [
+        "Sul lago di Como",
+        "A Venezia",
+        "In montagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la nebbia avvolgeva il lago di Como, donc l'histoire se déroule sur le lac de Côme."
     },
     {
       "q": "Perché Ferri non crede al suicidio?",
-      "options": ["Perché non c'era il corpo", "Perché il cappotto era asciutto dopo una notte di pioggia", "Perché il biglietto era falso"],
-      "correct": 1
+      "options": [
+        "Perché non c'era il corpo",
+        "Perché il cappotto era asciutto dopo una notte di pioggia",
+        "Perché il biglietto era falso"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que le manteau était parfaitement sec alors que la nuit avait été pluvieuse, ce qui éveille les soupçons de Ferri."
     },
     {
       "q": "Qual era il vero movente?",
-      "options": ["La vendetta", "La gelosia", "Incassare un'eredità e sparire"],
-      "correct": 2
+      "options": [
+        "La vendetta",
+        "La gelosia",
+        "Incassare un'eredità e sparire"
+      ],
+      "correct": 2,
+      "explanation": "Le texte révèle qu'il s'agissait d'une mise en scène pour encaisser l'héritage et recommencer ailleurs."
     }
   ],
   "words": {

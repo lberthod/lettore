@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa non trova più la professoressa lunedì mattina?",
-      "options": ["Le copie dell'esame di matematica", "Il registro di classe", "I libri della biblioteca"],
-      "correct": 0
+      "options": [
+        "Le copie dell'esame di matematica",
+        "Il registro di classe",
+        "I libri della biblioteca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la professoressa ne trouve plus les copies de l'examen de mathématiques dans son armoire."
     },
     {
       "q": "Che cosa ricorda il custode della scuola?",
-      "options": ["Una luce accesa tardi la sera prima", "Un rumore di vetri rotti", "Una macchina sconosciuta nel parcheggio"],
-      "correct": 0
+      "options": [
+        "Una luce accesa tardi la sera prima",
+        "Un rumore di vetri rotti",
+        "Una macchina sconosciuta nel parcheggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le custode se souvient d'avoir vu une lumière allumée tard le soir précédent."
     },
     {
       "q": "Che cosa confessa Marco alla fine?",
-      "options": ["Di aver guardato le domande per paura di essere bocciato", "Di aver rubato le copie per venderle", "Di non sapere nulla di tutta la storia"],
-      "correct": 0
+      "options": [
+        "Di aver guardato le domande per paura di essere bocciato",
+        "Di aver rubato le copie per venderle",
+        "Di non sapere nulla di tutta la storia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Marco avait peur d'être recalé et avait copié seulement pour voir les questions."
     }
   ],
   "words": {

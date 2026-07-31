@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa ordina il cliente?",
-      "options": ["Un tè e un panino", "Un cappuccino e un cornetto", "Un caffè e una brioche"],
-      "correct": 1
+      "options": [
+        "Un tè e un panino",
+        "Un cappuccino e un cornetto",
+        "Un caffè e una brioche"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Un cappuccino e un cornetto, per favore », donc le client commande un cappuccino et un cornetto."
     },
     {
       "q": "Perché il cliente resta al banco?",
-      "options": ["Perché ha poco tempo", "Perché non ci sono tavolini", "Perché costa di meno"],
-      "correct": 0
+      "options": [
+        "Perché ha poco tempo",
+        "Perché non ci sono tavolini",
+        "Perché costa di meno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ho poco tempo », donc le client reste au comptoir car il a peu de temps."
     },
     {
       "q": "Ogni quanto viene il cliente in questo bar?",
-      "options": ["Una volta alla settimana", "Ogni mattina", "Solo la domenica"],
-      "correct": 1
+      "options": [
+        "Una volta alla settimana",
+        "Ogni mattina",
+        "Solo la domenica"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « vengo qui ogni mattina », donc le client vient tous les matins."
     }
   ],
   "words": {

@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Da quanti anni Elio fa la guida alpina?",
-      "options": ["Da trent'anni", "Da cinque anni", "Da dieci anni"],
-      "correct": 0
+      "options": [
+        "Da trent'anni",
+        "Da cinque anni",
+        "Da dieci anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Elio faceva la guida alpina da trent'anni », donc il est guide depuis trente ans."
     },
     {
       "q": "Perché i due clienti vogliono vedere il ghiacciaio?",
-      "options": ["Perché temono che scompaia del tutto", "Perché vogliono battere un record di salita", "Perché cercano minerali rari"],
-      "correct": 0
+      "options": [
+        "Perché temono che scompaia del tutto",
+        "Perché vogliono battere un record di salita",
+        "Perché cercano minerali rari"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils voulaient « vedere il ghiacciaio prima che scomparisse del tutto », donc ils craignent qu'il disparaisse."
     },
     {
       "q": "Che cosa fa Elio l'indomani?",
-      "options": ["Riparte verso il ghiacciaio prima dell'alba", "Decide di smettere per sempre", "Torna a Milano con i clienti"],
-      "correct": 0
+      "options": [
+        "Riparte verso il ghiacciaio prima dell'alba",
+        "Decide di smettere per sempre",
+        "Torna a Milano con i clienti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'indomani, molto prima dell'alba ... ripartì verso il ghiacciaio », donc il repart vers le glacier avant l'aube."
     }
   ],
   "words": {

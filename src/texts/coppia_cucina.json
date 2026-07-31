@@ -24,18 +24,33 @@
   "questions": [
     {
       "q": "Perché il sugo si è bruciato?",
-      "options": ["Perché nessuno dei due lo ha girato", "Perché Sara lo ha spento troppo presto", "Perché Marco ha usato la pentola sbagliata"],
-      "correct": 0
+      "options": [
+        "Perché nessuno dei due lo ha girato",
+        "Perché Sara lo ha spento troppo presto",
+        "Perché Marco ha usato la pentola sbagliata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte montre que ni l'un ni l'autre n'a tourné la sauce : Marco devait s'occuper de l'insalade et Sara était au téléphone."
     },
     {
       "q": "Cosa manca per completare la cena?",
-      "options": ["Il parmigiano", "Il basilico", "L'insalata"],
-      "correct": 0
+      "options": [
+        "Il parmigiano",
+        "Il basilico",
+        "L'insalata"
+      ],
+      "correct": 0,
+      "explanation": "Sara demande « E il parmigiano? L'hai comprato ieri? », et Marco répond qu'il pensait qu'elle l'avait acheté, donc il manque le parmesan."
     },
     {
       "q": "Come risolvono il problema del sapore bruciato?",
-      "options": ["Aggiungendo panna e basilico fresco", "Buttando via il sugo e ricominciando", "Ordinando la cena al ristorante"],
-      "correct": 0
+      "options": [
+        "Aggiungendo panna e basilico fresco",
+        "Buttando via il sugo e ricominciando",
+        "Ordinando la cena al ristorante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « aggiungiamo un po' di panna e basilico fresco, copriamo il sapore bruciato », donc ils ajoutent de la crème et du basilic frais."
     }
   ],
   "words": {

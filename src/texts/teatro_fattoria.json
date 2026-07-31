@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Di che cosa si vanta il gallo?",
-      "options": ["Di svegliare tutti con il suo canto", "Di dare il latte", "Di portare il contadino nei campi"],
-      "correct": 0
+      "options": [
+        "Di svegliare tutti con il suo canto",
+        "Di dare il latte",
+        "Di portare il contadino nei campi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sveglio tutti ogni mattina con il mio canto », donc le coq se vante de réveiller tout le monde avec son chant."
     },
     {
       "q": "Che cosa dà la pecora alla fattoria?",
-      "options": ["La lana per i maglioni", "Il latte per la colazione", "La forza per lavorare i campi"],
-      "correct": 0
+      "options": [
+        "La lana per i maglioni",
+        "Il latte per la colazione",
+        "La forza per lavorare i campi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Con la mia lana, tutti hanno maglioni caldi d'inverno », donc la brebis donne la laine pour les pulls."
     },
     {
       "q": "Come si conclude la discussione tra gli animali?",
-      "options": ["Capiscono che insieme rendono speciale la fattoria", "Continuano a litigare per sempre", "Il contadino li separa"],
-      "correct": 0
+      "options": [
+        "Capiscono che insieme rendono speciale la fattoria",
+        "Continuano a litigare per sempre",
+        "Il contadino li separa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sì, insieme rendiamo speciale questa fattoria », donc les animaux comprennent qu'ensemble ils rendent la ferme spéciale."
     }
   ],
   "words": {

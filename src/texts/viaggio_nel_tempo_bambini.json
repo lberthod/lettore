@@ -33,18 +33,33 @@
   "questions": [
     {
       "q": "Che cosa trovano Sofia e Leo in soffitta?",
-      "options": ["Un orologio antico", "Un libro vecchio", "Una bicicletta"],
-      "correct": 0
+      "options": [
+        "Un orologio antico",
+        "Un libro vecchio",
+        "Una bicicletta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Dentro la scatola c'è un orologio antico », donc ils trouvent une vieille horloge."
     },
     {
       "q": "Chi incontrano i bambini nel giardino con i fiori?",
-      "options": ["Il nonno da giovane", "Un robot", "Un uomo con vestiti argento"],
-      "correct": 0
+      "options": [
+        "Il nonno da giovane",
+        "Un robot",
+        "Un uomo con vestiti argento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « È il nonno, ma è giovane! », donc c'est le grand-père quand il était jeune."
     },
     {
       "q": "Perché i bambini tornano a casa?",
-      "options": ["Perché è ora di cena", "Perché hanno paura", "Perché piove"],
-      "correct": 0
+      "options": [
+        "Perché è ora di cena",
+        "Perché hanno paura",
+        "Perché piove"
+      ],
+      "correct": 0,
+      "explanation": "Sofia dit « Leo, dobbiamo tornare a casa per cena! », donc ils rentrent parce que c'est l'heure du dîner."
     }
   ],
   "words": {

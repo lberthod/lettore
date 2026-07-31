@@ -19,7 +19,8 @@
         "Perché fanno perdere tempo prezioso di allenamento",
         "Perché non hanno alcun effetto sul rendimento"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « senza recupero, il rischio di infortuni aumenta notevolmente », donc les jours de repos sont importants pour éviter les blessures."
     },
     {
       "q": "Che cosa caratterizza le settimane 5-8, la fase di costruzione?",
@@ -28,7 +29,8 @@
         "La totale assenza di corsa lunga domenicale",
         "Il dimezzamento del volume settimanale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Settimane 5-8 (fase di costruzione): si introduce un allenamento di qualità, come le ripetute in salita o il fartlek »."
     },
     {
       "q": "Che cosa consiglia il piano per il giorno della maratona?",
@@ -37,7 +39,8 @@
         "Di provare scarpe nuove mai indossate prima",
         "Di correre il lungo più veloce possibile"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Il giorno della maratona, parti con calma: un ritmo troppo veloce nei primi chilometri rovina spesso mesi di preparazione seria »."
     }
   ],
   "words": {

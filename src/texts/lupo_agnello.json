@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si trova l'agnello all'inizio della storia?",
-      "options": ["Su un pascolo di montagna", "In un bosco scuro", "Vicino a un fiume in città"],
-      "correct": 0
+      "options": [
+        "Su un pascolo di montagna",
+        "In un bosco scuro",
+        "Vicino a un fiume in città"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Su un alto pascolo di montagna, un agnello beveva », donc l'agnello se trouve sur un pascolo di montagna."
     },
     {
       "q": "Perché l'accusa del lupo sull'acqua sporca non ha senso?",
-      "options": ["Perché l'agnello beve più in basso del lupo", "Perché l'agnello non beve mai acqua", "Perché il lupo non beve acqua"],
-      "correct": 0
+      "options": [
+        "Perché l'agnello beve più in basso del lupo",
+        "Perché l'agnello non beve mai acqua",
+        "Perché il lupo non beve acqua"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « io bevo più in basso di te, l'acqua scende da te verso di me », donc l'agneau boit en aval du loup."
     },
     {
       "q": "Che cosa fa il lupo alla fine della storia?",
-      "options": ["Mangia comunque l'agnello", "Chiede scusa all'agnello", "Se ne va senza fare nulla"],
-      "correct": 0
+      "options": [
+        "Mangia comunque l'agnello",
+        "Chiede scusa all'agnello",
+        "Se ne va senza fare nulla"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « oggi ti mangio comunque. E lo fece », donc le loup mange l'agneau à la fin."
     }
   ],
   "words": {

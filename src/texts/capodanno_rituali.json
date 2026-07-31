@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa si crede propizino le lenticchie mangiate a Capodanno?",
-      "options": ["L'abbondanza economica", "La salute fisica", "La fortuna in amore"],
-      "correct": 0
+      "options": [
+        "L'abbondanza economica",
+        "La salute fisica",
+        "La fortuna in amore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que chaque lentille « propizi l'abbondanza per l'anno che verrà », ce qui correspond à l'abondance économique."
     },
     {
       "q": "In quale città era diffusa l'usanza di gettare oggetti vecchi dalla finestra?",
-      "options": ["Napoli", "Milano", "Torino"],
-      "correct": 0
+      "options": [
+        "Napoli",
+        "Milano",
+        "Torino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « A Napoli » était répandue l'usance de jeter des objets anciens par la fenêtre."
     },
     {
       "q": "Qual è, secondo il testo, il significato profondo di questi rituali di Capodanno?",
-      "options": ["Un tentativo simbolico di negoziare con l'incertezza del futuro", "Una semplice forma di intrattenimento moderno", "Un'invenzione pubblicitaria recente"],
-      "correct": 0
+      "options": [
+        "Un tentativo simbolico di negoziare con l'incertezza del futuro",
+        "Una semplice forma di intrattenimento moderno",
+        "Un'invenzione pubblicitaria recente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que « ciascun gesto era un tentativo di negoziare con l'incertezza », donc une tentative symbolique de négocier avec un futur incertain."
     }
   ],
   "words": {

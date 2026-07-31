@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Cosa succede a Davide durante la gara in discesa?",
-      "options": ["Cade e si frattura la gamba", "Vince la gara", "Si ritira per stanchezza"],
-      "correct": 0
+      "options": [
+        "Cade e si frattura la gamba",
+        "Vince la gara",
+        "Si ritira per stanchezza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Davide cadde violentemente, fratturandosi la gamba in tre punti », donc il tombe et se fracture la jambe."
     },
     {
       "q": "Chi convince Davide a tornare in sella?",
-      "options": ["Sua sorella", "Il suo allenatore", "Un giornalista"],
-      "correct": 0
+      "options": [
+        "Sua sorella",
+        "Il suo allenatore",
+        "Un giornalista"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Fu sua sorella a convincerlo a tornare in sella », donc c'est sa sœur qui le convainc."
     },
     {
       "q": "Cosa fa Davide oggi con la bicicletta?",
-      "options": ["Gira l'Italia con ragazzi feriti o malati per raccontare storie di sport", "Allena la squadra nazionale", "Vende biciclette in un negozio"],
-      "correct": 0
+      "options": [
+        "Gira l'Italia con ragazzi feriti o malati per raccontare storie di sport",
+        "Allena la squadra nazionale",
+        "Vende biciclette in un negozio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Davide gira l'Italia in bicicletta insieme a gruppi di ragazzi feriti o malati » pour « raccontare storie di sport »."
     }
   ],
   "words": {

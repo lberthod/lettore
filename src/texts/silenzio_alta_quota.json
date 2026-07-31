@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa toccano le cime bianche?",
-      "options": ["Le nuvole grigie", "Il cielo azzurro", "Il mare"],
-      "correct": 1
+      "options": [
+        "Le nuvole grigie",
+        "Il cielo azzurro",
+        "Il mare"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Le cime bianche toccano il cielo azzurro », donc les cimes touchent le ciel bleu."
     },
     {
       "q": "Quale animale vola nell'aria?",
-      "options": ["Un'aquila", "Una rondine", "Un corvo"],
-      "correct": 0
+      "options": [
+        "Un'aquila",
+        "Una rondine",
+        "Un corvo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Un'aquila disegna cerchi lenti nell'aria », donc c'est un aigle qui vole dans l'air."
     },
     {
       "q": "Che cosa ritrova l'uomo davanti a tanta pace?",
-      "options": ["La paura", "Se stesso", "La fretta"],
-      "correct": 1
+      "options": [
+        "La paura",
+        "Se stesso",
+        "La fretta"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « l'uomo, davanti a tanta pace, ritrova se stesso », donc il retrouve lui-même."
     }
   ],
   "words": {

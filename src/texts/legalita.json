@@ -234,7 +234,8 @@
         "Perché era il modo più comodo per non vederla",
         "Perché i magistrati l'avevano già sconfitta"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que c'était « le moyen le plus commode pour ne pas la voir »."
     },
     {
       "q": "Che cosa dimostrò il maxiprocesso del millenovecentottantasei?",
@@ -243,7 +244,8 @@
         "Che i mafiosi non collaboravano mai con la giustizia",
         "Che le tasse illegali erano ormai scomparse"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte indique que pour la première fois, l'État démontrait que la mafia pouvait être vaincue dans les tribunaux."
     },
     {
       "q": "Che cosa succede oggi ai beni confiscati alle cosche?",
@@ -252,7 +254,8 @@
         "Restano sotto il controllo dello stato senza uso",
         "Diventano scuole, cooperative e centri sociali"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit qu'aujourd'hui les biens confisqués aux clans deviennent des écoles, des coopératives et des centres sociaux."
     }
   ]
 }

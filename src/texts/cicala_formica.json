@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa la cicala durante l'estate?",
-      "options": ["Lavora e raccoglie il grano", "Canta e si diverte", "Dorme tutto il giorno"],
-      "correct": 1
+      "options": [
+        "Lavora e raccoglie il grano",
+        "Canta e si diverte",
+        "Dorme tutto il giorno"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit qu'elle « passait l'été à chanter » et que l'été est fait pour s'amuser."
     },
     {
       "q": "Perché la formica lavora tanto?",
-      "options": ["Per prepararsi all'inverno", "Per diventare ricca", "Per non annoiarsi"],
-      "correct": 0
+      "options": [
+        "Per prepararsi all'inverno",
+        "Per diventare ricca",
+        "Per non annoiarsi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle transporte des grains « pour se préparer pour l'hiver »."
     },
     {
       "q": "Qual è la morale della fiaba?",
-      "options": ["Il lavoro è inutile", "Bisogna pensare anche al domani", "L'estate dura per sempre"],
-      "correct": 1
+      "options": [
+        "Il lavoro è inutile",
+        "Bisogna pensare anche al domani",
+        "L'estate dura per sempre"
+      ],
+      "correct": 1,
+      "explanation": "La fourmi conclut : « La prochaine fois, pense aussi à demain », ce qui est la morale."
     }
   ],
   "words": {

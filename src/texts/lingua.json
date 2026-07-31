@@ -25,7 +25,8 @@
         "Perché tradusse il latino in tutti i dialetti regionali",
         "Perché conteneva il primo dizionario dell'italiano"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Dante écrivit la Divine Comédie « nel volgare di Firenze » et que son succès fit du florentin « il modello per tutti gli scrittori italiani »."
     },
     {
       "q": "Quando l'Italia si unì nel milleottocentosessantuno, quanti abitanti sapevano parlare italiano?",
@@ -34,7 +35,8 @@
         "Circa la metà della popolazione",
         "Meno del dieci per cento della popolazione"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que lors de l'unification, « meno del dieci per cento della popolazione sapesse parlare italiano »."
     },
     {
       "q": "Quale fu, secondo il testo, la vera rivoluzione per la diffusione dell'italiano parlato?",
@@ -43,7 +45,8 @@
         "La televisione, a partire dagli anni Cinquanta",
         "I primi dizionari del Cinquecento"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que « La vera rivoluzione arrivò con la televisione » à partir des années Cinquante."
     }
   ],
   "words": {

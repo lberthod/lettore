@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa male a Luca?",
-      "options": ["Le gambe", "La testa", "Le braccia"],
-      "correct": 0
+      "options": [
+        "Le gambe",
+        "La testa",
+        "Le braccia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mi fanno male un po' le gambe », donc ce sont les jambes."
     },
     {
       "q": "Che cosa deve fare Luca prima di scendere in campo?",
-      "options": ["Stretching", "Una doccia fredda", "Una lunga corsa"],
-      "correct": 0
+      "options": [
+        "Stretching",
+        "Una doccia fredda",
+        "Una lunga corsa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Devi fare stretching prima di scendere in campo », donc il doit faire des étirements."
     },
     {
       "q": "A che ora comincia la partita?",
-      "options": ["Alle sette", "Alle cinque", "A mezzanotte"],
-      "correct": 0
+      "options": [
+        "Alle sette",
+        "Alle cinque",
+        "A mezzanotte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Alle sette », donc la partita commence à sept heures."
     }
   ],
   "words": {

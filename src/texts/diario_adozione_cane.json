@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove ha trovato il cane la persona che scrive?",
-      "options": ["Vicino al canile", "In un negozio di animali", "Per strada in campagna"],
-      "correct": 0
+      "options": [
+        "Vicino al canile",
+        "In un negozio di animali",
+        "Per strada in campagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un cane randagio trovato vicino al canile », donc le chien a été trouvé près du chenil."
     },
     {
       "q": "Che cosa capisce la persona mercoledì?",
-      "options": ["Che deve avere pazienza con il cane", "Che il cane è troppo aggressivo", "Che deve restituirlo al canile"],
-      "correct": 0
+      "options": [
+        "Che deve avere pazienza con il cane",
+        "Che il cane è troppo aggressivo",
+        "Che deve restituirlo al canile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho capito che devo avere pazienza », donc la personne comprend qu'elle doit être patiente avec le chien."
     },
     {
       "q": "Che cosa fa Birra per la prima volta venerdì?",
-      "options": ["Scodinzola durante la passeggiata", "Abbaia contro un altro cane", "Scappa di casa"],
-      "correct": 0
+      "options": [
+        "Scodinzola durante la passeggiata",
+        "Abbaia contro un altro cane",
+        "Scappa di casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ha scodinzolato per la prima volta », donc Birra remue la queue pour la première fois pendant la promenade."
     }
   ],
   "words": {

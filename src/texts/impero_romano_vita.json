@@ -23,7 +23,8 @@
         "Alle terme",
         "Al Colosseo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les hommes vont au foro, la grande place, pour parler de politique et d'affaires."
     },
     {
       "q": "Che cosa fanno i romani alle terme?",
@@ -32,7 +33,8 @@
         "Si lavano, nuotano e incontrano gli amici",
         "Vanno a scuola"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit qu'aux termes, les gens se lavent, nagent et rencontrent des amis."
     },
     {
       "q": "Chi vanno a scuola nell'antica Roma?",
@@ -41,7 +43,8 @@
         "Solo i bambini delle famiglie che possono pagare un maestro",
         "Solo le bambine"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte précise que seuls les enfants des familles qui peuvent payer un maître vont à l'école."
     }
   ],
   "words": {

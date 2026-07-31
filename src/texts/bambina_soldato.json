@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Chi arriva davanti alla porta della bambina?",
-      "options": ["Un giovane soldato stanco e affamato", "Un mercante di stoffe", "Un vecchio amico di famiglia"],
-      "correct": 0
+      "options": [
+        "Un giovane soldato stanco e affamato",
+        "Un mercante di stoffe",
+        "Un vecchio amico di famiglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un giovane soldato stanco e affamato arrivò davanti alla loro porta »."
     },
     {
       "q": "Che cosa offre la bambina al soldato?",
-      "options": ["Il suo pezzo di pane", "Un bicchiere d'acqua", "Un paio di scarpe"],
-      "correct": 0
+      "options": [
+        "Il suo pezzo di pane",
+        "Un bicchiere d'acqua",
+        "Un paio di scarpe"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « gli offrì subito il suo pezzo di pane, l'unico che avevano »."
     },
     {
       "q": "Che cosa fa il soldato molti anni dopo?",
-      "options": ["Torna per ringraziarla con un cesto di pane", "Si trasferisce in un'altra città", "Dimentica completamente la bambina"],
-      "correct": 0
+      "options": [
+        "Torna per ringraziarla con un cesto di pane",
+        "Si trasferisce in un'altra città",
+        "Dimentica completamente la bambina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « era il soldato, tornato per ringraziarla » avec « un cesto di pane »."
     }
   ],
   "words": {

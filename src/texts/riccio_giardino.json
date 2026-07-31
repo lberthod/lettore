@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa fa il riccio quando ha paura?",
-      "options": ["Si chiude a palla e mostra le spine", "Scappa velocemente", "Morde il cane"],
-      "correct": 0
+      "options": [
+        "Si chiude a palla e mostra le spine",
+        "Scappa velocemente",
+        "Morde il cane"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Si chiude semplicemente a palla e mostra soltanto le sue spine », donc il se met en boule et montre ses piquants."
     },
     {
       "q": "Che cosa fa il riccio in inverno?",
-      "options": ["Fa un lungo sonno, chiamato letargo", "Va a vivere in città", "Cambia colore"],
-      "correct": 0
+      "options": [
+        "Fa un lungo sonno, chiamato letargo",
+        "Va a vivere in città",
+        "Cambia colore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « In inverno il riccio fa un lungo sonno, chiamato letargo », donc il fait un long sommeil appelé hibernation."
     },
     {
       "q": "Perché il riccio è utile per l'uomo?",
-      "options": ["Perché mangia gli insetti del giardino", "Perché produce il miele", "Perché caccia i topi in casa"],
-      "correct": 0
+      "options": [
+        "Perché mangia gli insetti del giardino",
+        "Perché produce il miele",
+        "Perché caccia i topi in casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il riccio è molto utile per l'uomo, perché mangia gli insetti che danneggiano le piante del giardino », donc il mange les insectes du jardin."
     }
   ],
   "words": {

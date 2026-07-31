@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa costruisce Tommaso nel garage?",
-      "options": ["Un robot per raccogliere la plastica", "Una bicicletta elettrica", "Un drone per fotografie"],
-      "correct": 0
+      "options": [
+        "Un robot per raccogliere la plastica",
+        "Una bicicletta elettrica",
+        "Un drone per fotografie"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il construit un petit robot capable de ramasser la plastique abandonnée."
     },
     {
       "q": "Chi aiuta Tommaso nel suo progetto?",
-      "options": ["Suo nonno, ex meccanico", "Un professore di scuola", "Un amico ingegnere"],
-      "correct": 0
+      "options": [
+        "Suo nonno, ex meccanico",
+        "Un professore di scuola",
+        "Un amico ingegnere"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que son grand-père, ancien mécanicien, l'aide avec patience."
     },
     {
       "q": "Che cosa capisce Tommaso alla fine?",
-      "options": ["Che la vera invenzione è la pazienza di non arrendersi", "Che deve vincere un premio", "Che il robot è inutile"],
-      "correct": 0
+      "options": [
+        "Che la vera invenzione è la pazienza di non arrendersi",
+        "Che deve vincere un premio",
+        "Che il robot è inutile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il comprend que sa vraie invention a été la patience de ne jamais abandonner."
     }
   ],
   "words": {

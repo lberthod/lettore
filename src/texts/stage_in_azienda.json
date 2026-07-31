@@ -25,7 +25,8 @@
         "Perde i documenti importanti dei clienti",
         "Arriva sistematicamente in ritardo ogni mattina"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'il envoie une newsletter promotionnelle avec une erreur évidente dans le nom de l'entreprise, répétée dans chaque ligne du texte."
     },
     {
       "q": "Come reagisce il direttore del reparto di fronte all'errore di Federico?",
@@ -34,7 +35,8 @@
         "Lo licenzia immediatamente senza ascoltarlo",
         "Lo ignora completamente per il resto dello stage"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le directeur, au lieu de le réprimander, lui raconte avec calme un de ses propres erreurs similaires et lui explique que l'erreur fait partie de l'apprentissage."
     },
     {
       "q": "Come cambia lo sguardo di Federico sul mondo del lavoro alla fine dello stage?",
@@ -43,7 +45,8 @@
         "Decide che non lavorerà mai più in un'azienda",
         "Rimane convinto che il lavoro sia solo fonte di ansia"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'à la fin du stage, il ne voit plus le travail comme un lieu hostile, mais comme un espace pour grandir en faisant des erreurs et en se corrigeant."
     }
   ],
   "words": {

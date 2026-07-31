@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quando va Marco a lezione di pittura?",
-      "options": ["Il sabato mattina", "La domenica sera", "Il lunedì"],
-      "correct": 0
+      "options": [
+        "Il sabato mattina",
+        "La domenica sera",
+        "Il lunedì"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il sabato mattina Marco va a lezione di pittura », donc c'est le samedi matin."
     },
     {
       "q": "Cosa nasce quando Marco mescola il rosso e il giallo?",
-      "options": ["L'arancione", "Il verde", "Il nero"],
-      "correct": 0
+      "options": [
+        "L'arancione",
+        "Il verde",
+        "Il nero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Marco mescola il rosso e il giallo. Nasce l'arancione! », donc l'orange naît."
     },
     {
       "q": "Come si sente Marco alla fine della lezione?",
-      "options": ["Molto contento", "Triste", "Stanco e annoiato"],
-      "correct": 0
+      "options": [
+        "Molto contento",
+        "Triste",
+        "Stanco e annoiato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Marco è molto contento e aspetta già il sabato prossimo », donc il est très content."
     }
   ],
   "words": {

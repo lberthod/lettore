@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Dove vuole andare il viaggiatore?",
-      "options": ["A Roma", "A Firenze", "A Venezia"],
-      "correct": 1
+      "options": [
+        "A Roma",
+        "A Firenze",
+        "A Venezia"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « vorrei un biglietto per Firenze », donc il veut aller à Florence."
     },
     {
       "q": "Quanto costa il biglietto?",
-      "options": ["Trenta euro", "Tredici euro", "Cinquanta euro"],
-      "correct": 0
+      "options": [
+        "Trenta euro",
+        "Tredici euro",
+        "Cinquanta euro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sono trenta euro », donc le billet coûte trente euros."
     },
     {
       "q": "Il viaggiatore deve cambiare treno?",
-      "options": ["Sì, due volte", "Sì, una volta", "No, il treno è diretto"],
-      "correct": 2
+      "options": [
+        "Sì, due volte",
+        "Sì, una volta",
+        "No, il treno è diretto"
+      ],
+      "correct": 2,
+      "explanation": "Le texte dit « No, è diretto », donc le voyageur n'a pas besoin de changer de train."
     }
   ],
   "words": {

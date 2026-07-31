@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Come sono descritte le gambe nel primo verso?",
-      "options": ["Di piombo, pesanti", "Leggere come piume", "Veloci come il vento"],
-      "correct": 0
+      "options": [
+        "Di piombo, pesanti",
+        "Leggere come piume",
+        "Veloci come il vento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « le gambe di piombo », donc les jambes sont lourdes comme du plomb."
     },
     {
       "q": "Contro chi corre il protagonista secondo la poesia?",
-      "options": ["Contro se stesso di ieri", "Contro un avversario forte", "Contro il tempo di un record mondiale"],
-      "correct": 0
+      "options": [
+        "Contro se stesso di ieri",
+        "Contro un avversario forte",
+        "Contro il tempo di un record mondiale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « corro soltanto contro me di ieri », donc il court contre lui-même d'hier."
     },
     {
       "q": "Che cosa trova il protagonista al traguardo?",
-      "options": ["Nessuna medaglia, solo la prova di avercela fatta", "Una medaglia d'oro", "Un trofeo importante"],
-      "correct": 0
+      "options": [
+        "Nessuna medaglia, solo la prova di avercela fatta",
+        "Una medaglia d'oro",
+        "Un trofeo importante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Al traguardo non ci sarà medaglia, solo la prova che potevo farcela », donc il n'y a pas de médaille, seulement la preuve d'y être arrivé."
     }
   ],
   "words": {

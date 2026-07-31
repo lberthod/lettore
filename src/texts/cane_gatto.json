@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come andavano d'accordo il cane e il gatto all'inizio?",
-      "options": ["Molto bene", "Non andavano mai d'accordo", "Erano indifferenti"],
-      "correct": 1
+      "options": [
+        "Molto bene",
+        "Non andavano mai d'accordo",
+        "Erano indifferenti"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « non andavano mai d'accordo », donc ils ne s'entendaient pas du tout."
     },
     {
       "q": "Che cosa succede a Micio durante il temporale?",
-      "options": ["Scappa via", "Resta intrappolato nella cantina allagata", "Sale sul tetto"],
-      "correct": 1
+      "options": [
+        "Scappa via",
+        "Resta intrappolato nella cantina allagata",
+        "Sale sul tetto"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « un temporale allagò la cantina dove Micio era rimasto intrappolato », donc Micio reste coincé dans la cave inondée."
     },
     {
       "q": "Che cosa diventano i due animali alla fine?",
-      "options": ["Nemici per sempre", "Inseparabili", "Indifferenti"],
-      "correct": 1
+      "options": [
+        "Nemici per sempre",
+        "Inseparabili",
+        "Indifferenti"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Da quel giorno, i due animali diventarono inseparabili », donc ils deviennent inséparables."
     }
   ],
   "words": {

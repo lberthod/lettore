@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Dove si corre il Palio di Siena?",
-      "options": ["Nella piazza del Campo", "Nello stadio comunale", "Fuori città"],
-      "correct": 0
+      "options": [
+        "Nella piazza del Campo",
+        "Nello stadio comunale",
+        "Fuori città"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « si corre nella piazza principale, il Campo »."
     },
     {
       "q": "Quante contrade partecipano a ogni Palio?",
-      "options": ["Dieci", "Diciassette", "Cinque"],
-      "correct": 0
+      "options": [
+        "Dieci",
+        "Diciassette",
+        "Cinque"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Solo dieci contrade partecipano a ogni Palio »."
     },
     {
       "q": "Come viene scelto il cavallo per ogni contrada?",
-      "options": ["Per sorteggio", "Per elezione", "Dal fantino"],
-      "correct": 0
+      "options": [
+        "Per sorteggio",
+        "Per elezione",
+        "Dal fantino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il cavallo viene assegnato per sorteggio »."
     }
   ],
   "words": {

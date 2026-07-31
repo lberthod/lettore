@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa è utile fare prima di preparare la valigia?",
-      "options": ["Una lista di quello che serve", "Un disegno", "Niente"],
-      "correct": 0
+      "options": [
+        "Una lista di quello che serve",
+        "Un disegno",
+        "Niente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Fai una lista di tutto quello che ti serve », donc il faut faire une liste de ce dont on a besoin."
     },
     {
       "q": "Dove vanno messi i vestiti pesanti?",
-      "options": ["Sul fondo", "Sopra tutto", "In una borsa a parte"],
-      "correct": 0
+      "options": [
+        "Sul fondo",
+        "Sopra tutto",
+        "In una borsa a parte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Metti i vestiti pesanti sul fondo », donc les vêtements lourds vont au fond."
     },
     {
       "q": "Quanti chili accettano molte compagnie aeree?",
-      "options": ["Venti chili", "Cinquanta chili", "Cinque chili"],
-      "correct": 0
+      "options": [
+        "Venti chili",
+        "Cinquanta chili",
+        "Cinque chili"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « molte compagnie aeree accettano solo venti chili », donc beaucoup de compagnies acceptent vingt kilos."
     }
   ],
   "words": {

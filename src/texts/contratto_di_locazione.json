@@ -21,7 +21,8 @@
         "Un anno, senza possibilità di rinnovo",
         "Dieci anni fissi e non rinnovabili"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le contrat est prévu pour une durée de quatre ans, renouvelable tacitement pour un nouveau quadriennat."
     },
     {
       "q": "A che cosa serve il deposito cauzionale versato dal conduttore?",
@@ -30,7 +31,8 @@
         "A pagare in anticipo l'intero canone annuale",
         "A coprire le spese di registrazione del contratto"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise que le dépôt de garantie garantit les obligations assumées et est restitué en déduisant les sommes éventuellement dues."
     },
     {
       "q": "Che cosa comporta, secondo la clausola risolutiva espressa, il mancato pagamento di due mensilità consecutive?",
@@ -39,7 +41,8 @@
         "Una semplice diffida senza conseguenze",
         "L'automatico dimezzamento del canone"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le non-paiement de deux mensualités consécutives entraîne la résolution de plein droit du contrat conformément à l'article 1456 du Code civil."
     }
   ],
   "words": {

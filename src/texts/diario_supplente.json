@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Quanto dura la supplenza della narratrice?",
-      "options": ["Tre mesi", "Un anno intero", "Due settimane"],
-      "correct": 0
+      "options": [
+        "Tre mesi",
+        "Un anno intero",
+        "Due settimane"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « una supplenza di tre mesi », donc la suppléance dure trois mois."
     },
     {
       "q": "Che cosa chiede Karim alla professoressa?",
-      "options": ["A che cosa serva Leopardi", "Di cambiare posto in classe", "Di annullare il compito"],
-      "correct": 0
+      "options": [
+        "A che cosa serva Leopardi",
+        "Di cambiare posto in classe",
+        "Di annullare il compito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mi ha chiesto ... a che cosa serva Leopardi », donc Karim demande à quoi sert Leopardi."
     },
     {
       "q": "Che cosa riceve la narratrice l'ultimo giorno?",
-      "options": ["Un quaderno pieno di dediche", "Una lettera del preside", "Un contratto a tempo indeterminato"],
-      "correct": 0
+      "options": [
+        "Un quaderno pieno di dediche",
+        "Una lettera del preside",
+        "Un contratto a tempo indeterminato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la classe mi ha regalato un quaderno pieno di dediche », donc elle reçoit un cahier plein de dédicaces."
     }
   ],
   "words": {

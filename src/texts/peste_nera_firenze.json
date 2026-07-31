@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Come descrive Frate Ambrogio la Firenze colpita dalla peste?",
-      "options": ["Come una città di spettri che la malattia non risparmia a nessuno", "Come una città ormai completamente guarita", "Come una città protetta dalla nobiltà"],
-      "correct": 0
+      "options": [
+        "Come una città di spettri che la malattia non risparmia a nessuno",
+        "Come una città ormai completamente guarita",
+        "Come una città protetta dalla nobiltà"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Florence est désormais une ville de spectres et que la peste n'épargne ni les riches ni les pauvres."
     },
     {
       "q": "Quali due spiegazioni della peste vengono citate nel dialogo?",
-      "options": ["Un castigo divino oppure miasmi corrotti dell'aria", "Un incantesimo e una cospirazione straniera", "Un errore dei medici e una carestia"],
-      "correct": 0
+      "options": [
+        "Un castigo divino oppure miasmi corrotti dell'aria",
+        "Un incantesimo e una cospirazione straniera",
+        "Un errore dei medici e una carestia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne d'un côté un châtiment divin et de l'autre les miasmes corrompus de l'air comme causes de la peste."
     },
     {
       "q": "Che cosa augura Frate Ambrogio per il futuro, nonostante la calamità?",
-      "options": ["Che nasca un mondo diverso, più consapevole della fragilità umana", "Che tutto torni esattamente come prima", "Che nessuno ricordi più la peste"],
-      "correct": 0
+      "options": [
+        "Che nasca un mondo diverso, più consapevole della fragilità umana",
+        "Che tutto torni esattamente come prima",
+        "Che nessuno ricordi più la peste"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que des cendres de cette calamité pourrait naître un monde différent, plus conscient de la fragilité humaine."
     }
   ],
   "words": {

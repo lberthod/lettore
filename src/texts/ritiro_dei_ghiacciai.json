@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Che cosa è successo sulla Marmolada nel 2022?",
-      "options": ["Il crollo di un seracco causato da temperature anomale", "Un'eruzione vulcanica improvvisa", "La costruzione di un nuovo rifugio"],
-      "correct": 0
+      "options": [
+        "Il crollo di un seracco causato da temperature anomale",
+        "Un'eruzione vulcanica improvvisa",
+        "La costruzione di un nuovo rifugio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'en 2022, « il crollo di un enorme seracco, provocato da temperature anomale » a causé une avalanche sur la Marmolada."
     },
     {
       "q": "Cosa sono i cosiddetti 'ghiacciai morti'?",
-      "options": ["Ghiacciai senza movimento, destinati a scomparire", "Ghiacciai artificiali creati dall'uomo", "Ghiacciai protetti da leggi speciali"],
-      "correct": 0
+      "options": [
+        "Ghiacciai senza movimento, destinati a scomparire",
+        "Ghiacciai artificiali creati dall'uomo",
+        "Ghiacciai protetti da leggi speciali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte définit les « ghiacciai morti » comme étant « privi cioè di movimento e destinati a scomparire »."
     },
     {
       "q": "Secondo gli esperti, cosa servirebbe per invertire davvero il processo di ritiro dei ghiacciai?",
-      "options": ["Una drastica riduzione delle emissioni di gas serra su scala globale", "Più teli geotessili in ogni vallata", "Il divieto totale di escursionismo estivo"],
-      "correct": 0
+      "options": [
+        "Una drastica riduzione delle emissioni di gas serra su scala globale",
+        "Più teli geotessili in ogni vallata",
+        "Il divieto totale di escursionismo estivo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que seule une « drastica riduzione delle emissioni di gas serra » pourrait inverser le processus à l'échelle globale."
     }
   ],
   "words": {
@@ -293,7 +308,6 @@
     "secondo": "selon",
     "seracco": "sérac",
     "serra": "serre",
-    "sé": "soi",
     "si": "se",
     "sono": "sont",
     "solo": "seulement",

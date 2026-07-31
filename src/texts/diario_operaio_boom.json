@@ -26,7 +26,8 @@
         "Un contratto per una casa in campagna",
         "Un prestito bancario per comprare un'automobile"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « ho firmato il contratto alla Pirelli... sarò d'ora in avanti un operaio specializzato »."
     },
     {
       "q": "Che cosa avverte il vecchio compagno comunista sul boom economico?",
@@ -35,7 +36,8 @@
         "Che il boom durerà per sempre senza problemi",
         "Che gli operai dovrebbero smettere subito di lavorare"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Attenzione, che il benessere di pochi anni non cancella la fatica di generazioni »."
     },
     {
       "q": "Quale timore esprime l'operaio nell'ultima pagina del diario?",
@@ -44,7 +46,8 @@
         "Che il televisore si guasti troppo presto",
         "Che la fabbrica chiuda definitivamente"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « una silenziosa perdita: quella di un mondo più povero, sì, ma forse più capace di riconoscersi in ciò che condivideva »."
     }
   ],
   "words": {

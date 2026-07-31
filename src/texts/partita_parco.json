@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Quando giocano i bambini al parco?",
-      "options": ["Il sabato", "Il lunedì", "La domenica"],
-      "correct": 0
+      "options": [
+        "Il sabato",
+        "Il lunedì",
+        "La domenica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « È sabato » et ils vont au parc, donc c'est le samedi."
     },
     {
       "q": "Chi fa un gol?",
-      "options": ["Sara", "Un amico", "La mamma"],
-      "correct": 0
+      "options": [
+        "Sara",
+        "Un amico",
+        "La mamma"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Sara « fa un gol »."
     },
     {
       "q": "Che cosa mangiano i bambini dopo la partita?",
-      "options": ["Un gelato", "Una pizza", "Un panino"],
-      "correct": 0
+      "options": [
+        "Un gelato",
+        "Una pizza",
+        "Un panino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils « mangiano un gelato » après le match."
     }
   ],
   "words": {

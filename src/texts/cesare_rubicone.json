@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Davanti a che cosa arriva Cesare con il suo esercito?",
-      "options": ["Un piccolo fiume, il Rubicone", "Una grande montagna", "Un castello"],
-      "correct": 0
+      "options": [
+        "Un piccolo fiume, il Rubicone",
+        "Una grande montagna",
+        "Un castello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il arrive « davanti a un piccolo fiume: il Rubicone »."
     },
     {
       "q": "Che cosa dice la legge?",
-      "options": ["Un generale non può portare i soldati oltre il fiume", "Un generale deve pagare una tassa", "Un generale deve tornare a casa"],
-      "correct": 0
+      "options": [
+        "Un generale non può portare i soldati oltre il fiume",
+        "Un generale deve pagare una tassa",
+        "Un generale deve tornare a casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un generale non può portare i suoi soldati oltre quel fiume »."
     },
     {
       "q": "Che cosa significa oggi «attraversare il Rubicone»?",
-      "options": ["Prendere una decisione senza ritorno", "Fare una lunga passeggiata", "Perdere una battaglia"],
-      "correct": 0
+      "options": [
+        "Prendere una decisione senza ritorno",
+        "Fare una lunga passeggiata",
+        "Perdere una battaglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « attraversa il Rubicone » signifie prendre « una decisione importante e senza ritorno »."
     }
   ],
   "words": {

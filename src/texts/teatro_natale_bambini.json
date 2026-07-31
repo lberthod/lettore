@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa vogliono fare i bambini?",
-      "options": ["L'albero di Natale", "Una torta di compleanno", "Un disegno per la scuola"],
-      "correct": 0
+      "options": [
+        "L'albero di Natale",
+        "Una torta di compleanno",
+        "Un disegno per la scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « possiamo fare l'albero di Natale oggi? », donc les enfants veulent faire le sapin de Noël."
     },
     {
       "q": "Che cosa vuole mettere Sara in cima all'albero?",
-      "options": ["La stella dorata", "Un angelo bianco", "Un fiocco rosso"],
-      "correct": 0
+      "options": [
+        "La stella dorata",
+        "Un angelo bianco",
+        "Un fiocco rosso"
+      ],
+      "correct": 0,
+      "explanation": "Sara dit « Io voglio mettere la stella dorata in cima all'albero! », donc elle veut mettre l'étoile dorée."
     },
     {
       "q": "Che cosa manca alla fine per finire l'albero?",
-      "options": ["La luce", "Un altro regalo", "Più palline"],
-      "correct": 0
+      "options": [
+        "La luce",
+        "Un altro regalo",
+        "Più palline"
+      ],
+      "correct": 0,
+      "explanation": "La maman dit « adesso manca solo la luce », donc il manque la lumière."
     }
   ],
   "words": {

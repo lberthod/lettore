@@ -23,7 +23,8 @@
         "Repubblica o regno",
         "Il colore della bandiera"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que la question du référendum est « vogliono ancora un re, oppure preferiscono una repubblica », donc le peuple vote pour choisir entre la république et le royaume."
     },
     {
       "q": "Chi vota per la prima volta nella storia d'Italia?",
@@ -32,7 +33,8 @@
         "Le donne",
         "I soldati"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « anche le donne per la prima volta nella storia d'Italia », donc les femmes votent pour la première fois."
     },
     {
       "q": "Che cosa festeggiano gli italiani il due giugno?",
@@ -41,7 +43,8 @@
         "Il compleanno del re",
         "La fine della guerra"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les Italiens « festeggiano questo giorno come la Festa della Repubblica », donc le 2 juin est la fête de la République."
     }
   ],
   "words": {

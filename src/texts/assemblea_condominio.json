@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Perché il dottor Rizzi si lamenta all'inizio?",
-      "options": ["Perché dal terrazzo cadono calcinacci sul suo balcone", "Perché l'affitto è troppo caro", "Perché i vicini fanno rumore di notte"],
-      "correct": 0
+      "options": [
+        "Perché dal terrazzo cadono calcinacci sul suo balcone",
+        "Perché l'affitto è troppo caro",
+        "Perché i vicini fanno rumore di notte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « dal terrazzo cadono calcinacci grossi come noci sul mio balcone »."
     },
     {
       "q": "Che cosa segnala lo studente?",
-      "options": ["Che l'ascensore si blocca tra il secondo e il terzo piano", "Che il portone resta sempre aperto", "Che il riscaldamento non funziona"],
-      "correct": 0
+      "options": [
+        "Che l'ascensore si blocca tra il secondo e il terzo piano",
+        "Che il portone resta sempre aperto",
+        "Che il riscaldamento non funziona"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « l'ascensore si blocca tra il secondo e il terzo piano »."
     },
     {
       "q": "Come si conclude l'assemblea?",
-      "options": ["Il rifacimento è approvato all'unanimità", "I lavori sono rinviati di un anno", "L'amministratore si dimette"],
-      "correct": 0
+      "options": [
+        "Il rifacimento è approvato all'unanimità",
+        "I lavori sono rinviati di un anno",
+        "L'amministratore si dimette"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « il rifacimento è approvato all'unanimità »."
     }
   ],
   "words": {

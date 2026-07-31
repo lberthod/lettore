@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Come si chiama il robot?",
-      "options": ["Bip", "Robo", "Zac"],
-      "correct": 0
+      "options": [
+        "Bip",
+        "Robo",
+        "Zac"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il robot si chiama Bip »."
     },
     {
       "q": "A che cosa giocano Nino e Bip?",
-      "options": ["A nascondino", "A calcio", "A carte"],
-      "correct": 0
+      "options": [
+        "A nascondino",
+        "A calcio",
+        "A carte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nino e Bip giocano a nascondino »."
     },
     {
       "q": "Che cosa non sa fare Bip?",
-      "options": ["Mangiare il gelato", "Contare fino a dieci", "Cercare Nino"],
-      "correct": 0
+      "options": [
+        "Mangiare il gelato",
+        "Contare fino a dieci",
+        "Cercare Nino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Bip non sa mangiare il gelato »."
     }
   ],
   "words": {

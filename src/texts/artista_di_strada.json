@@ -36,18 +36,33 @@
   "questions": [
     {
       "q": "Cosa disegna Pino con i suoi gessetti?",
-      "options": ["Fiori, animali e persone sulla strada", "Solo numeri e lettere", "Case e macchine"],
-      "correct": 0
+      "options": [
+        "Fiori, animali e persone sulla strada",
+        "Solo numeri e lettere",
+        "Case e macchine"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Disegnava fiori, animali e persone sulla strada grigia della piazza »."
     },
     {
       "q": "Cosa succede quando la gente guarda i disegni di Pino?",
-      "options": ["Le persone della città cominciano a parlare tra loro", "Le persone hanno paura e scappano", "I disegni spariscono subito"],
-      "correct": 0
+      "options": [
+        "Le persone della città cominciano a parlare tra loro",
+        "Le persone hanno paura e scappano",
+        "I disegni spariscono subito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le persone della città cominciano a parlare tra loro »."
     },
     {
       "q": "Qual è la morale della storia?",
-      "options": ["L'arte, anche semplice, può unire i cuori delle persone", "Solo gli artisti famosi sono importanti", "È meglio disegnare da soli, senza altre persone"],
-      "correct": 0
+      "options": [
+        "L'arte, anche semplice, può unire i cuori delle persone",
+        "Solo gli artisti famosi sono importanti",
+        "È meglio disegnare da soli, senza altre persone"
+      ],
+      "correct": 0,
+      "explanation": "La dernière phrase dit « Questa storia ci insegna che l'arte, anche la più semplice, può unire i cuori delle persone »."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove mette Marco la sua valigia alla stazione?",
-      "options": ["Vicino a una panchina", "Dentro il treno", "Nel bar della stazione"],
-      "correct": 0
+      "options": [
+        "Vicino a una panchina",
+        "Dentro il treno",
+        "Nel bar della stazione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Alla stazione mette la sua valigia blu vicino a una panchina », donc il la met près d'un banc."
     },
     {
       "q": "Come riconosce Marco la sua valigia?",
-      "options": ["È blu con una piccola stella gialla", "È rossa con un fiore", "È nera con le ruote"],
-      "correct": 0
+      "options": [
+        "È blu con una piccola stella gialla",
+        "È rossa con un fiore",
+        "È nera con le ruote"
+      ],
+      "correct": 0,
+      "explanation": "Marco répond « È blu, con una piccola stella gialla », donc il reconnaît sa valise grâce à cette description."
     },
     {
       "q": "Perché la signora anziana ha preso la valigia di Marco?",
-      "options": ["Perché ha una valigia uguale e si è confusa", "Perché vuole rubare la valigia", "Perché ha perso il suo treno"],
-      "correct": 0
+      "options": [
+        "Perché ha una valigia uguale e si è confusa",
+        "Perché vuole rubare la valigia",
+        "Perché ha perso il suo treno"
+      ],
+      "correct": 0,
+      "explanation": "La dame dit « Ho una valigia uguale e ho preso quella sbagliata », donc elle a pris la valise de Marco par confusion."
     }
   ],
   "words": {

@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Da quale città scrive Giulia?",
-      "options": ["Da Firenze", "Da Roma", "Da Venezia"],
-      "correct": 1
+      "options": [
+        "Da Firenze",
+        "Da Roma",
+        "Da Venezia"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « ti scrivo da Roma », donc Giulia écrit de Rome."
     },
     {
       "q": "Che cosa ha visto Giulia la mattina?",
-      "options": ["Il Colosseo", "I musei del Vaticano", "La Fontana di Trevi"],
-      "correct": 0
+      "options": [
+        "Il Colosseo",
+        "I musei del Vaticano",
+        "La Fontana di Trevi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Questa mattina ho visto il Colosseo », donc elle a vu le Colisée."
     },
     {
       "q": "Che cosa vuole fare Giulia domani?",
-      "options": ["Tornare a casa", "Visitare i musei del Vaticano", "Mangiare una pizza"],
-      "correct": 1
+      "options": [
+        "Tornare a casa",
+        "Visitare i musei del Vaticano",
+        "Mangiare una pizza"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Domani voglio visitare i musei del Vaticano », donc elle veut visiter les musées du Vatican."
     }
   ],
   "words": {

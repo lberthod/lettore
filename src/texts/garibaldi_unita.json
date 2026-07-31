@@ -19,7 +19,8 @@
         "I Soldati Verdi",
         "I Volontari Bianchi"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les soldats portent une chemise rouge et s'appellent « les Camicie Rosse »."
     },
     {
       "q": "Quale isola libera per prima Garibaldi?",
@@ -28,7 +29,8 @@
         "La Sicilia",
         "Capri"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que Garibaldi libère la Sicile puis tout le sud de l'Italie, donc la Sicile est la première île libérée."
     },
     {
       "q": "Che cosa diventa l'Italia grazie a Garibaldi e agli altri?",
@@ -37,7 +39,8 @@
         "Un impero",
         "Una colonia"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que grâce à Garibaldi et à d'autres hommes importants, l'Italie devient finalement un pays uni."
     }
   ],
   "words": {

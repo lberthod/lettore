@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa scelse Severino per la prima volta in trent'anni?",
-      "options": ["Di passare l'inverno da solo al rifugio", "Di vendere il rifugio", "Di aprire un albergo a valle"],
-      "correct": 0
+      "options": [
+        "Di passare l'inverno da solo al rifugio",
+        "Di vendere il rifugio",
+        "Di aprire un albergo a valle"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « per la prima volta in trent'anni aveva scelto di non scendere, di passare l'inverno lassù »."
     },
     {
       "q": "Quanto durò la tempesta di gennaio?",
-      "options": ["Tre giorni", "Una settimana intera", "Poche ore"],
-      "correct": 0
+      "options": [
+        "Tre giorni",
+        "Una settimana intera",
+        "Poche ore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « tre giorni di raffiche » à propos de la tempête de janvier."
     },
     {
       "q": "Che cosa capì Severino grazie alla solitudine?",
-      "options": ["Che era una riconciliazione, non un rifiuto degli altri", "Che odiava la montagna", "Che voleva trasferirsi in città"],
-      "correct": 0
+      "options": [
+        "Che era una riconciliazione, non un rifiuto degli altri",
+        "Che odiava la montagna",
+        "Che voleva trasferirsi in città"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la solitude « non era mai stata un rifiuto degli altri, bensì una riconciliazione »."
     }
   ],
   "words": {

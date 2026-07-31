@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Con chi va a scuola il bambino?",
-      "options": ["Con sua sorella", "Con il cane", "Da solo"],
-      "correct": 0
+      "options": [
+        "Con sua sorella",
+        "Con il cane",
+        "Da solo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Poi vado a scuola con mia sorella », donc il va à l'école avec sa sœur."
     },
     {
       "q": "Cosa fa il bambino nel pomeriggio?",
-      "options": ["I compiti con la mamma", "Gioca in cortile", "Va a dormire subito"],
-      "correct": 0
+      "options": [
+        "I compiti con la mamma",
+        "Gioca in cortile",
+        "Va a dormire subito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Faccio i compiti con mia mamma », donc il fait ses devoirs avec sa maman."
     },
     {
       "q": "Cosa fa il bambino prima di dormire?",
-      "options": ["Bacia la mamma e il papà", "Fa colazione", "Va a scuola"],
-      "correct": 0
+      "options": [
+        "Bacia la mamma e il papà",
+        "Fa colazione",
+        "Va a scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Prima di dormire, bacio la mamma e il papà », donc il embrasse sa maman et son papa."
     }
   ],
   "words": {

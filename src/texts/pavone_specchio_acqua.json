@@ -24,18 +24,33 @@
   "questions": [
     {
       "q": "Che cosa fa il pavone ogni mattina all'inizio della storia?",
-      "options": ["Aiuta le formiche a costruire il rifugio", "Contempla il proprio riflesso nell'acqua", "Vola sopra le statue del parco"],
-      "correct": 1
+      "options": [
+        "Aiuta le formiche a costruire il rifugio",
+        "Contempla il proprio riflesso nell'acqua",
+        "Vola sopra le statue del parco"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit qu'il se rend près d'une petite vasque d'eau limpide pour contempler son propre reflet."
     },
     {
       "q": "Che cosa rimprovera il merlo al pavone?",
-      "options": ["Di non condividere nulla con chi lo circonda", "Di cantare troppo forte", "Di non avere abbastanza piume colorate"],
-      "correct": 0
+      "options": [
+        "Di non condividere nulla con chi lo circonda",
+        "Di cantare troppo forte",
+        "Di non avere abbastanza piume colorate"
+      ],
+      "correct": 0,
+      "explanation": "Le merle lui reproche d'avoir refusé de partager son nid avec les oiseaux blessés et d'ignorer les fourmis, donc de ne rien partager avec son entourage."
     },
     {
       "q": "Che cosa impara il pavone durante l'inverno rigido?",
-      "options": ["Che la bellezza vale più della generosità", "Che la vera magnificenza include la capacità di donare agli altri", "Che è meglio vivere lontano dagli altri animali"],
-      "correct": 1
+      "options": [
+        "Che la bellezza vale più della generosità",
+        "Che la vera magnificenza include la capacità di donare agli altri",
+        "Che è meglio vivere lontano dagli altri animali"
+      ],
+      "correct": 1,
+      "explanation": "À la fin, le pavone comprend que la vraie magnificence se mesure dans la capacité de transformer ce qu'on possède en un don pour les autres."
     }
   ],
   "words": {

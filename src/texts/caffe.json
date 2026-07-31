@@ -217,7 +217,8 @@
         "Perché il rito italiano del caffè segue regole precise",
         "Perché dopo pranzo i bar italiani sono chiusi"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que le café est un rituel quotidien avec des règles précises, donc commander un cappuccino après le déjeuner va contre ces règles."
     },
     {
       "q": "Che cosa fece il papa quando assaggiò il caffè, considerato da alcuni una bevanda del diavolo?",
@@ -226,7 +227,8 @@
         "Lo fece bere solo agli intellettuali",
         "Lo trovò delizioso"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que le pape, après avoir goûté le café, le trouva délicieux."
     },
     {
       "q": "In che cosa consiste la tradizione napoletana del caffè sospeso?",
@@ -235,7 +237,8 @@
         "Bere il caffè accompagnato da un bicchiere d'acqua",
         "Offrire un caffè al barista quando si è felici"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte explique qu'une personne heureuse paie deux cafés : un pour elle et un pour un inconnu qui ne peut pas se l'offrir."
     }
   ]
 }

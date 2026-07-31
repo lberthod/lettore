@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa riescono a fare gli scienziati nel laboratorio?",
-      "options": ["Far nascere un piccolo dinosauro", "Costruire un robot animale", "Clonare un cane antico"],
-      "correct": 0
+      "options": [
+        "Far nascere un piccolo dinosauro",
+        "Costruire un robot animale",
+        "Clonare un cane antico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « gli scienziati riescono finalmente a far nascere un piccolo dinosauro »."
     },
     {
       "q": "Chi si occupa di Rex ogni pomeriggio?",
-      "options": ["Sofia, la nipote del professore", "Un assistente di laboratorio", "Nessuno in particolare"],
-      "correct": 0
+      "options": [
+        "Sofia, la nipote del professore",
+        "Un assistente di laboratorio",
+        "Nessuno in particolare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sofia, la nipote del professore, lo chiama Rex e passa ogni pomeriggio a giocare con lui »."
     },
     {
       "q": "Perché Rex scappa dal laboratorio?",
-      "options": ["Perché è stanco di stare sempre chiuso dentro", "Perché ha paura degli scienziati", "Perché cerca cibo nel bosco"],
-      "correct": 0
+      "options": [
+        "Perché è stanco di stare sempre chiuso dentro",
+        "Perché ha paura degli scienziati",
+        "Perché cerca cibo nel bosco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « semplicemente stanco di stare sempre chiuso dentro »."
     }
   ],
   "words": {

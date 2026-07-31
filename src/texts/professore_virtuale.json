@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa introduce il liceo di Marta nel 2060?",
-      "options": ["Un professore virtuale per storia dell'arte", "Un nuovo laboratorio di chimica", "Un programma di scambio internazionale"],
-      "correct": 0
+      "options": [
+        "Un professore virtuale per storia dell'arte",
+        "Un nuovo laboratorio di chimica",
+        "Un programma di scambio internazionale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le lycée de Marta introduit un professeur virtuel pour enseigner l'histoire de l'art."
     },
     {
       "q": "Che cosa nota Marta riguardo al professore virtuale?",
-      "options": ["Che non si emoziona mai davanti a un capolavoro", "Che commette spesso errori grossolani", "Che si rifiuta di rispondere alle domande"],
-      "correct": 0
+      "options": [
+        "Che non si emoziona mai davanti a un capolavoro",
+        "Che commette spesso errori grossolani",
+        "Che si rifiuta di rispondere alle domande"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Marta remarque que le professeur virtuel ne s'émeut jamais devant un chef-d'œuvre."
     },
     {
       "q": "Che cosa risponde il professore virtuale alla domanda di Marta?",
-      "options": ["Che può descrivere le emozioni ma non provarle", "Che le emozioni sono inutili per l'apprendimento", "Che presto imparerà a provare emozioni vere"],
-      "correct": 0
+      "options": [
+        "Che può descrivere le emozioni ma non provarle",
+        "Che le emozioni sono inutili per l'apprendimento",
+        "Che presto imparerà a provare emozioni vere"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le professeur répond qu'il peut décrire les émotions mais ne peut pas les ressentir."
     }
   ],
   "words": {

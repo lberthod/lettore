@@ -25,18 +25,33 @@
   "questions": [
     {
       "q": "Da quanto tempo la ragazza non tornava a Palermo?",
-      "options": ["Da un anno, da quando si è trasferita a Bologna per studiare", "Da dieci anni, per lavoro", "Da sei mesi, per una vacanza"],
-      "correct": 0
+      "options": [
+        "Da un anno, da quando si è trasferita a Bologna per studiare",
+        "Da dieci anni, per lavoro",
+        "Da sei mesi, per una vacanza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sto tornando a Palermo dopo un anno esatto: mi sono trasferita a Bologna per l'università »."
     },
     {
       "q": "Che lavoro ha fatto l'uomo per trentotto anni?",
-      "options": ["Ha lavorato sulla linea ferroviaria, prima come macchinista poi come capotreno", "Ha lavorato come pescatore sullo Stretto", "Ha lavorato come autista di traghetti"],
-      "correct": 0
+      "options": [
+        "Ha lavorato sulla linea ferroviaria, prima come macchinista poi come capotreno",
+        "Ha lavorato come pescatore sullo Stretto",
+        "Ha lavorato come autista di traghetti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « prima come macchinista e poi, negli ultimi tempi, come capotreno »."
     },
     {
       "q": "Che cosa succede al treno per attraversare lo Stretto di Messina?",
-      "options": ["Viene smontato in vagoni e caricato su un traghetto", "I passeggeri scendono e prendono un aereo", "Passa sopra un ponte costruito appositamente"],
-      "correct": 0
+      "options": [
+        "Viene smontato in vagoni e caricato su un traghetto",
+        "I passeggeri scendono e prendono un aereo",
+        "Passa sopra un ponte costruito appositamente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il treno verrà smontato in vagoni e caricato sul traghetto »."
     }
   ],
   "words": {

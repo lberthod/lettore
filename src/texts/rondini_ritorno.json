@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa faceva Ersilia ogni primavera?",
-      "options": ["Aspettava sotto il portico il ritorno delle rondini", "Ristrutturava le stalle del paese", "Vendeva insetticidi ai contadini"],
-      "correct": 0
+      "options": [
+        "Aspettava sotto il portico il ritorno delle rondini",
+        "Ristrutturava le stalle del paese",
+        "Vendeva insetticidi ai contadini"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « Ersilia tirava fuori la sedia impagliata e si metteva sotto il portico » pour attendre le retour des hirondelles."
     },
     {
       "q": "Perché un anno le rondini non tornarono?",
-      "options": ["Per gli insetticidi e le stalle ristrutturate senza aperture", "Per un inverno troppo lungo", "Perché il nido era stato distrutto da un temporale"],
-      "correct": 0
+      "options": [
+        "Per gli insetticidi e le stalle ristrutturate senza aperture",
+        "Per un inverno troppo lungo",
+        "Perché il nido era stato distrutto da un temporale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que « gli insetticidi avevano svuotato l'aria di insetti » et que les étables rénovées n'offraient plus « un solo pertugio ai nidi »."
     },
     {
       "q": "Quando tornarono infine le rondini?",
-      "options": ["Un mattino d'aprile, due anni dopo", "La settimana successiva", "Mai più"],
-      "correct": 0
+      "options": [
+        "Un mattino d'aprile, due anni dopo",
+        "La settimana successiva",
+        "Mai più"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que c'est « un mattino d'aprile del terzo anno » après deux printemps sans elles."
     }
   ],
   "words": {

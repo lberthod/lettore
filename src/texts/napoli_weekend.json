@@ -208,7 +208,8 @@
         "Perché ci è nata sua nonna",
         "Perché ci ha già passato molte vacanze da bambina"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « la città dove è nata la nonna di Sara », donc Naples est spéciale parce que sa grand-mère y est née."
     },
     {
       "q": "Che cosa hanno fatto Luca e Sara prima di mangiare la pizza?",
@@ -217,7 +218,8 @@
         "Sono saliti in funicolare fino al Vomero",
         "Hanno preso il treno per Pompei"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Hanno fatto mezz'ora di fila davanti a una pizzeria storica », donc ils ont fait la queue pendant trente minutes."
     },
     {
       "q": "Che cosa promette Sara alla nonna alla fine del weekend?",
@@ -226,7 +228,8 @@
         "Di tornare a Napoli ogni mese",
         "Di portarla con loro al prossimo viaggio a Napoli"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Quando torniamo, ha promesso Sara, ci vieni anche tu », donc Sara promet de l'emmener la prochaine fois."
     }
   ]
 }

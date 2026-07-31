@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Quando appariva la sirena al giovane pescatore?",
-      "options": ["Le sere di scirocco", "Le mattine d'inverno", "Nei giorni di pioggia"],
-      "correct": 0
+      "options": [
+        "Le sere di scirocco",
+        "Le mattine d'inverno",
+        "Nei giorni di pioggia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Turi voyait la sirène « ogni sera di scirocco »."
     },
     {
       "q": "Che cosa portava Turi alla sirena?",
-      "options": ["Pane fresco e un pugno di sale", "Pesci e monete d'oro", "Fiori e vino dolce"],
-      "correct": 0
+      "options": [
+        "Pane fresco e un pugno di sale",
+        "Pesci e monete d'oro",
+        "Fiori e vino dolce"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise : « Le portava pane fresco e un pugno di sale »."
     },
     {
       "q": "Che cosa accade alle barche di Cefalù dopo la scomparsa della sirena?",
-      "options": ["Ogni tempesta le risparmia", "Affondano tutte in mare", "Restano chiuse nel porto"],
-      "correct": 0
+      "options": [
+        "Ogni tempesta le risparmia",
+        "Affondano tutte in mare",
+        "Restano chiuse nel porto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « ogni tempesta che colpiva la costa risparmiava le barche di Cefalù »."
     }
   ],
   "words": {

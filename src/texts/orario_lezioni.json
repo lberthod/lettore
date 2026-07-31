@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quali materie ci sono il lunedì?",
-      "options": ["Italiano, matematica e scienze", "Storia, inglese e disegno", "Musica e geografia"],
-      "correct": 0
+      "options": [
+        "Italiano, matematica e scienze",
+        "Storia, inglese e disegno",
+        "Musica e geografia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Lunedì: italiano, matematica e scienze », donc ces matières sont le lundi."
     },
     {
       "q": "Che cosa c'è mercoledì oltre a matematica e geografia?",
-      "options": ["Disegno", "Educazione fisica", "Informatica"],
-      "correct": 0
+      "options": [
+        "Disegno",
+        "Educazione fisica",
+        "Informatica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mercoledì: matematica, geografia e disegno », donc en plus il y a le dessin."
     },
     {
       "q": "A che ora finiscono le lezioni?",
-      "options": ["All'una", "Alle tre", "A mezzogiorno"],
-      "correct": 0
+      "options": [
+        "All'una",
+        "Alle tre",
+        "A mezzogiorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « le lezioni finiscono all'una », donc elles se terminent à treize heures."
     }
   ],
   "words": {

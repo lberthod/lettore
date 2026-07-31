@@ -28,7 +28,8 @@
         "Di parlare troppo piano",
         "Di dimenticare le battute"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le public ne doit pas comprendre que tu souffres, il doit souffrir avec toi."
     },
     {
       "q": "Secondo Marco, che cosa cerca davvero il pubblico a teatro?",
@@ -37,7 +38,8 @@
         "Una lezione di storia",
         "Solo di divertirsi senza pensare"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le public cherche une menzogna bien racontée à laquelle croire pendant deux heures."
     },
     {
       "q": "Che cosa rappresenta la maschera secondo Elena alla fine della scena?",
@@ -46,7 +48,8 @@
         "Un semplice oggetto di scena senza significato",
         "Un simbolo di vigliaccheria dell'attore"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle prête une maschera à celui qui n'osait pas montrer son véritable visage."
     }
   ],
   "words": {

@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Dove abita la signora Rosa?",
-      "options": ["Al primo piano", "Al terzo piano", "In campagna"],
-      "correct": 0
+      "options": [
+        "Al primo piano",
+        "Al terzo piano",
+        "In campagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle habite seule au premier étage."
     },
     {
       "q": "Che cosa portano i bambini a Rosa?",
-      "options": ["La spesa", "I fiori", "Un libro"],
-      "correct": 0
+      "options": [
+        "La spesa",
+        "I fiori",
+        "Un libro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les enfants de l'immeuble portent les courses à Rosa."
     },
     {
       "q": "Quando mangia insieme il palazzo?",
-      "options": ["Il sabato", "Il lunedì", "La domenica"],
-      "correct": 0
+      "options": [
+        "Il sabato",
+        "Il lunedì",
+        "La domenica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le samedi tout l'immeuble mange ensemble."
     }
   ],
   "words": {

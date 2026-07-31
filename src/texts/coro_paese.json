@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Chi dirigeva il coro del paese?",
-      "options": ["Il maestro Bruno, un professore di musica in pensione", "Il parroco del villaggio", "Una giovane cantante"],
-      "correct": 0
+      "options": [
+        "Il maestro Bruno, un professore di musica in pensione",
+        "Il parroco del villaggio",
+        "Una giovane cantante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il maestro Bruno, un professore di musica in pensione, dirigeva il gruppo »."
     },
     {
       "q": "Quando si tenevano le prove del coro?",
-      "options": ["Ogni giovedì sera, nella sala parrocchiale", "Ogni domenica mattina, in piazza", "Ogni mese, a scuola"],
-      "correct": 0
+      "options": [
+        "Ogni giovedì sera, nella sala parrocchiale",
+        "Ogni domenica mattina, in piazza",
+        "Ogni mese, a scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « ogni giovedì sera, la sala parrocchiale si riempiva di voci »."
     },
     {
       "q": "Che cosa hanno capito tutti dopo il concerto?",
-      "options": ["Che cantare insieme unisce il paese", "Che il coro doveva chiudere", "Che la musica moderna è migliore"],
-      "correct": 0
+      "options": [
+        "Che cantare insieme unisce il paese",
+        "Che il coro doveva chiudere",
+        "Che la musica moderna è migliore"
+      ],
+      "correct": 0,
+      "explanation": "La dernière phrase du texte explique que « cantare insieme unisce il paese più di qualsiasi discorso »."
     }
   ],
   "words": {

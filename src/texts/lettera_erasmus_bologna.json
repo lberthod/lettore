@@ -22,7 +22,8 @@
         "Da tre mesi",
         "Da tre giorni"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « sono già passate tre settimane da quando sono arrivata a Bologna »."
     },
     {
       "q": "Con chi divide l'appartamento Chiara?",
@@ -31,7 +32,8 @@
         "Con i suoi genitori",
         "Con Marta, la studentessa bolognese"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Divido un appartamento con altre tre studentesse Erasmus »."
     },
     {
       "q": "Cosa ha imparato a fare Chiara a Bologna?",
@@ -40,7 +42,8 @@
         "A parlare perfettamente il giapponese",
         "A insegnare storia dell'arte all'università"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « ho imparato a fare i tortellini quasi come una vera bolognese »."
     }
   ],
   "words": {

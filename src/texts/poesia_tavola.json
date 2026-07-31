@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa profuma nella casa secondo la poesia?",
-      "options": ["Aglio e basilico", "Fiori freschi", "Legna bruciata"],
-      "correct": 0
+      "options": [
+        "Aglio e basilico",
+        "Fiori freschi",
+        "Legna bruciata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la casa profuma di aglio e basilico », donc la maison sent l'ail et le basilic."
     },
     {
       "q": "Come impasta la nonna secondo la poesia?",
-      "options": ["Col cuore, non solo con le mani", "Velocemente, senza pensare", "Con una macchina moderna"],
-      "correct": 0
+      "options": [
+        "Col cuore, non solo con le mani",
+        "Velocemente, senza pensare",
+        "Con una macchina moderna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nonna impasta col cuore, non con le mani », donc elle pétrit avec le cœur, pas seulement avec les mains."
     },
     {
       "q": "Che cosa rappresenta il pranzo secondo l'ultimo verso?",
-      "options": ["Una promessa che tiene unita la famiglia", "Solo un momento per mangiare", "Un'abitudine senza importanza"],
-      "correct": 0
+      "options": [
+        "Una promessa che tiene unita la famiglia",
+        "Solo un momento per mangiare",
+        "Un'abitudine senza importanza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Non è solo un pranzo, è una promessa: finché c'è tavola, la famiglia resta unita », donc le déjeuner représente une promesse qui maintient la famille unie."
     }
   ],
   "words": {

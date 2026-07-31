@@ -82,7 +82,8 @@
         "Tre",
         "Cinque"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « L'anno ha quattro stagioni », donc l'année a quatre saisons."
     },
     {
       "q": "Che cosa fanno i bambini in estate?",
@@ -91,7 +92,8 @@
         "Nuotano al mare o al lago",
         "Guardano le foglie rosse e gialle"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « I bambini nuotano al mare o al lago », donc les enfants nagent à la mer ou au lac."
     },
     {
       "q": "Che cosa bevono i bambini in inverno?",
@@ -100,7 +102,8 @@
         "L'acqua del lago",
         "La cioccolata calda"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « bevono cioccolata calda », donc les enfants boivent du chocolat chaud."
     }
   ]
 }

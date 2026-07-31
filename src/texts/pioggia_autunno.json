@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In quale stagione è ambientata la poesia?",
-      "options": ["In primavera", "In autunno", "In estate"],
-      "correct": 1
+      "options": [
+        "In primavera",
+        "In autunno",
+        "In estate"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « L'autunno veste il mondo di silenzio » et « Cadono le foglie gialle e rosse », donc la saison est l'automne."
     },
     {
       "q": "Che cosa fa il gatto?",
-      "options": ["Gioca con le foglie", "Dorme dietro il vetro", "Corre sotto la pioggia"],
-      "correct": 1
+      "options": [
+        "Gioca con le foglie",
+        "Dorme dietro il vetro",
+        "Corre sotto la pioggia"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Un gatto dorme dietro il vetro », donc le chat dort derrière la vitre."
     },
     {
       "q": "Dove sono le rondini?",
-      "options": ["Sono già partite", "Cantano sui tetti", "Dormono sui rami"],
-      "correct": 0
+      "options": [
+        "Sono già partite",
+        "Cantano sui tetti",
+        "Dormono sui rami"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le rondini sono già partite », donc les hirondelles sont déjà parties."
     }
   ],
   "words": {

@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Perché quella gara era speciale per Marta?",
-      "options": ["Era la sua ultima gara prima del ritiro sportivo", "Era la sua prima gara", "Era una gara amichevole senza classifica"],
-      "correct": 0
+      "options": [
+        "Era la sua ultima gara prima del ritiro sportivo",
+        "Era la sua prima gara",
+        "Era una gara amichevole senza classifica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « quella sarebbe stata la sua ultima gara » et qu'elle avait décidé de laisser son corps se reposer, donc c'était sa dernière course avant la retraite."
     },
     {
       "q": "Che cosa fece il volontario sconosciuto quando Marta si accasciò?",
-      "options": ["La rimise in piedi senza dire una parola", "Chiamò subito i soccorsi", "Le disse di abbandonare la gara"],
-      "correct": 0
+      "options": [
+        "La rimise in piedi senza dire una parola",
+        "Chiamò subito i soccorsi",
+        "Le disse di abbandonare la gara"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que le volontaire « l'aiutò a rialzarsi » sans dire un mot, donc il l'a remise debout en silence."
     },
     {
       "q": "Che cosa capisce Marta all'arrivo, nonostante la classifica ufficiale fosse già chiusa?",
-      "options": ["Che la vera vittoria non abita nel cronometro", "Che avrebbe dovuto correre più veloce", "Che non sarebbe più tornata a correre"],
-      "correct": 0
+      "options": [
+        "Che la vera vittoria non abita nel cronometro",
+        "Che avrebbe dovuto correre più veloce",
+        "Che non sarebbe più tornata a correre"
+      ],
+      "correct": 0,
+      "explanation": "Marta comprend que « la vittoria vera non abita nel cronometro », donc la vraie victoire ne se mesure pas au temps."
     }
   ],
   "words": {

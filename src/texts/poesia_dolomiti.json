@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "A che cosa vengono paragonate le montagne nella poesia?",
-      "options": ["Ad altari antichi", "A soldati in fila", "A onde del mare"],
-      "correct": 0
+      "options": [
+        "Ad altari antichi",
+        "A soldati in fila",
+        "A onde del mare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Non sono monti, sono altari antichi » : les montagnes sont comparées à d'anciens autels."
     },
     {
       "q": "Perché chi guarda le montagne tace, secondo la poesia?",
-      "options": ["Per pudore, davanti a tanta bellezza indifferente", "Perché ha troppo freddo per parlare", "Perché è vietato fare rumore"],
-      "correct": 0
+      "options": [
+        "Per pudore, davanti a tanta bellezza indifferente",
+        "Perché ha troppo freddo per parlare",
+        "Perché è vietato fare rumore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'on se tait « per pudore... davanti a tanta indifferente bellezza », donc par pudeur devant tant de beauté indifférente."
     },
     {
       "q": "Come vengono descritte le montagne nell'ultimo verso?",
-      "options": ["Come regine di un regno che non ci appartiene", "Come nemiche da conquistare", "Come rovine dimenticate"],
-      "correct": 0
+      "options": [
+        "Come regine di un regno che non ci appartiene",
+        "Come nemiche da conquistare",
+        "Come rovine dimenticate"
+      ],
+      "correct": 0,
+      "explanation": "Le dernier vers les appelle « regine pallide di un regno che non ci appartiene », c'est-à-dire des reines pâles d'un royaume qui ne nous appartient pas."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa il protagonista del romanzo?",
-      "options": ["Scrive lettere che non spedisce mai", "Viaggia per il mondo", "Lavora in un ristorante"],
-      "correct": 0
+      "options": [
+        "Scrive lettere che non spedisce mai",
+        "Viaggia per il mondo",
+        "Lavora in un ristorante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le protagoniste est un homme timide qui écrit des lettres qu'il n'envoie jamais."
     },
     {
       "q": "Come reagisce la sorella dopo aver ascoltato il capitolo?",
-      "options": ["Piange alla fine", "Si addormenta", "Ride molto"],
-      "correct": 0
+      "options": [
+        "Piange alla fine",
+        "Si addormenta",
+        "Ride molto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'à la fin, elle a pleuré."
     },
     {
       "q": "Che cosa sente lo scrittore domenica?",
-      "options": ["Che la storia merita di essere raccontata", "Che deve smettere di scrivere", "Che il romanzo è già finito"],
-      "correct": 0
+      "options": [
+        "Che la storia merita di essere raccontata",
+        "Che deve smettere di scrivere",
+        "Che il romanzo è già finito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il sent que cette histoire mérite d'être racontée jusqu'au bout."
     }
   ],
   "words": {

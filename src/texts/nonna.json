@@ -16,7 +16,8 @@
         "Ogni domenica",
         "Ogni lunedì"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Ogni domenica, Sofia va a pranzo dalla nonna », donc c'est chaque dimanche."
     },
     {
       "q": "Che cosa prepara la nonna?",
@@ -25,7 +26,8 @@
         "La torta di mele",
         "La pasta fatta in casa"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « La nonna prepara la pasta fatta in casa », donc elle prépare des pâtes faites maison."
     },
     {
       "q": "Che cosa racconta la nonna durante il pranzo?",
@@ -34,7 +36,8 @@
         "Le notizie del giornale",
         "Una ricetta nuova"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « la nonna racconta storie della sua infanzia », donc elle raconte des histoires de son enfance."
     }
   ],
   "words": {

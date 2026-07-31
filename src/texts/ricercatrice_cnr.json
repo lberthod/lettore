@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Dove ha lavorato Elena Ferraro quando ha scoperto il fungo?",
-      "options": ["Al CNR di Napoli", "In un'università americana", "In una discarica privata"],
-      "correct": 0
+      "options": [
+        "Al CNR di Napoli",
+        "In un'università americana",
+        "In una discarica privata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Elena Ferraro travaille « nei laboratori del CNR di Napoli » lors de sa découverte."
     },
     {
       "q": "Che cosa fanno gli enzimi prodotti dal fungo?",
-      "options": ["Spezzano i legami chimici del PET", "Producono nuova plastica", "Uccidono altri microrganismi"],
-      "correct": 0
+      "options": [
+        "Spezzano i legami chimici del PET",
+        "Producono nuova plastica",
+        "Uccidono altri microrganismi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que les enzymes produites par le champignon « spezzare i legami chimici del polimero », c'est-à-dire du PET."
     },
     {
       "q": "Qual è il principale limite attuale della scoperta?",
-      "options": ["Il processo è molto lento e difficile da industrializzare", "Il fungo è troppo raro da trovare", "Il fungo produce sostanze tossiche"],
-      "correct": 0
+      "options": [
+        "Il processo è molto lento e difficile da industrializzare",
+        "Il fungo è troppo raro da trovare",
+        "Il fungo produce sostanze tossiche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que le processus « è molto lento » et qu'il « richiede ancora anni di ricerca » pour une application industrielle."
     }
   ],
   "words": {

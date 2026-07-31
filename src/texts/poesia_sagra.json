@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa c'è sopra la piazza secondo la poesia?",
-      "options": ["Luci colorate", "Bandiere bianche", "Palloncini rossi"],
-      "correct": 0
+      "options": [
+        "Luci colorate",
+        "Bandiere bianche",
+        "Palloncini rossi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Luci colorate sopra la piazza », donc ce sont des lumières colorées au-dessus de la place."
     },
     {
       "q": "Che cosa fanno i bambini alla sagra?",
-      "options": ["Corrono tra le bancarelle", "Dormono in un angolo", "Aiutano a cucinare"],
-      "correct": 0
+      "options": [
+        "Corrono tra le bancarelle",
+        "Dormono in un angolo",
+        "Aiutano a cucinare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « I bambini corrono tra le bancarelle », donc les enfants courent entre les stands."
     },
     {
       "q": "Quanto dura la sagra secondo la poesia?",
-      "options": ["Solo tre giorni", "Un mese intero", "Tutto l'anno"],
-      "correct": 0
+      "options": [
+        "Solo tre giorni",
+        "Un mese intero",
+        "Tutto l'anno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La sagra dura solo tre giorni », donc la fête ne dure que trois jours."
     }
   ],
   "words": {

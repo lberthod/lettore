@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come viaggia la protagonista?",
-      "options": ["In treno con l'Interrail", "In aereo", "In autobus"],
-      "correct": 0
+      "options": [
+        "In treno con l'Interrail",
+        "In aereo",
+        "In autobus"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle fait 'un mese in treno' avec l'Interrail."
     },
     {
       "q": "Chi ha conosciuto a Firenze?",
-      "options": ["Due ragazzi tedeschi", "Un professore italiano", "Una famiglia francese"],
-      "correct": 0
+      "options": [
+        "Due ragazzi tedeschi",
+        "Un professore italiano",
+        "Una famiglia francese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : 'Ho conosciuto due ragazzi tedeschi'."
     },
     {
       "q": "Qual è l'ultima tappa del viaggio?",
-      "options": ["La Sicilia", "Milano", "Napoli"],
-      "correct": 0
+      "options": [
+        "La Sicilia",
+        "Milano",
+        "Napoli"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : 'Domani arriverò in Sicilia, l'ultima tappa del viaggio'."
     }
   ],
   "words": {

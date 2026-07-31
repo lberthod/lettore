@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa bisogna appendere sulle pareti?",
-      "options": ["Stelle filanti e palloncini", "Fotografie di famiglia", "Bandiere di altri paesi"],
-      "correct": 0
+      "options": [
+        "Stelle filanti e palloncini",
+        "Fotografie di famiglia",
+        "Bandiere di altri paesi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « appendete stelle filanti colorate e palloncini sulle pareti », donc il faut accrocher des guirlandes et des ballons aux murs."
     },
     {
       "q": "Che cosa devono fare gli invitati secondo la guida?",
-      "options": ["Venire mascherati con un costume a loro scelta", "Portare un regalo costoso", "Restare in silenzio durante la festa"],
-      "correct": 0
+      "options": [
+        "Venire mascherati con un costume a loro scelta",
+        "Portare un regalo costoso",
+        "Restare in silenzio durante la festa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « chiedete a tutti gli invitati di venire mascherati », donc les invités doivent venir déguisés avec un costume de leur choix."
     },
     {
       "q": "Dove bisogna lanciare i coriandoli?",
-      "options": ["Solo fuori casa", "Dentro la stanza principale", "Non bisogna mai lanciarli"],
-      "correct": 0
+      "options": [
+        "Solo fuori casa",
+        "Dentro la stanza principale",
+        "Non bisogna mai lanciarli"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « solo fuori casa », donc les confettis doivent être lancés seulement dehors."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si trovano le Dolomiti?",
-      "options": ["Nel nord-est dell'Italia", "In Sicilia", "In Francia"],
-      "correct": 0
+      "options": [
+        "Nel nord-est dell'Italia",
+        "In Sicilia",
+        "In Francia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le Dolomiti sono un gruppo di montagne situate nel nord-est dell'Italia », donc elles se trouvent dans le nord-est de l'Italie."
     },
     {
       "q": "Che cosa è l'«enrosadira»?",
-      "options": ["Un tipo di roccia", "Il fenomeno della roccia che si tinge di rosa al tramonto", "Una leggenda"],
-      "correct": 1
+      "options": [
+        "Un tipo di roccia",
+        "Il fenomeno della roccia che si tinge di rosa al tramonto",
+        "Una leggenda"
+      ],
+      "correct": 1,
+      "explanation": "Le texte explique que l'« enrosadira » est le phénomène où la roche se teinte de rose et d'orange au coucher du soleil."
     },
     {
       "q": "Nel 2009 le Dolomiti sono state dichiarate...",
-      "options": ["Parco nazionale", "Patrimonio dell'umanità dall'Unesco", "Zona protetta"],
-      "correct": 1
+      "options": [
+        "Parco nazionale",
+        "Patrimonio dell'umanità dall'Unesco",
+        "Zona protetta"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Nel duemilanove, le Dolomiti sono state dichiarate patrimonio dell'umanità dall'Unesco », donc en 2009 elles ont été déclarées patrimoine de l'humanité par l'Unesco."
     }
   ],
   "words": {

@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Quanti individui di orso marsicano sopravvivono secondo i censimenti recenti?",
-      "options": ["Meno di sessanta", "Circa cinquecento", "Più di mille"],
-      "correct": 0
+      "options": [
+        "Meno di sessanta",
+        "Circa cinquecento",
+        "Più di mille"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « gli individui superstiti sono ormai meno di sessanta », donc moins de soixante individus."
     },
     {
       "q": "Quale metodo usano alcuni allevatori esasperati per uccidere gli orsi?",
-      "options": ["Bocconi avvelenati disseminati nei pascoli", "Reti da pesca elettrificate", "Gabbie con esche sonore"],
-      "correct": 0
+      "options": [
+        "Bocconi avvelenati disseminati nei pascoli",
+        "Reti da pesca elettrificate",
+        "Gabbie con esche sonore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne que certains éleveurs « ricorrono ancora a bocconi avvelenati disseminati nei pascoli », donc des appâts empoisonnés dans les pâturages."
     },
     {
       "q": "Perché le condanne per bracconaggio restano rare?",
-      "options": ["Per l'omertà diffusa nei piccoli centri montani", "Perché non esistono leggi specifiche", "Perché i guardiaparco non pattugliano il territorio"],
-      "correct": 0
+      "options": [
+        "Per l'omertà diffusa nei piccoli centri montani",
+        "Perché non esistono leggi specifiche",
+        "Perché i guardiaparco non pattugliano il territorio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que « le indagini si scontrano con l'omertà diffusa nei piccoli centri montani », donc à cause de l'omertà."
     }
   ],
   "words": {

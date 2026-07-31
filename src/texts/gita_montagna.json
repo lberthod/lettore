@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Che cosa c'è nello zaino?",
-      "options": ["Un panino e l'acqua", "Un libro", "Una palla"],
-      "correct": 0
+      "options": [
+        "Un panino e l'acqua",
+        "Un libro",
+        "Una palla"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nello zaino c'è un panino e c'è l'acqua »."
     },
     {
       "q": "Che animali vedono sul prato?",
-      "options": ["Le marmotte", "I cani", "Le mucche"],
-      "correct": 0
+      "options": [
+        "Le marmotte",
+        "I cani",
+        "Le mucche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sul prato ci sono le marmotte »."
     },
     {
       "q": "Che cosa fa la mamma in cima?",
-      "options": ["Una foto", "Un disegno", "Una torta"],
-      "correct": 0
+      "options": [
+        "Una foto",
+        "Un disegno",
+        "Una torta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La mamma fa una foto in cima »."
     }
   ],
   "words": {

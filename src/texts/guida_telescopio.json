@@ -22,7 +22,8 @@
         "Perché in città non si può portare il telescopio",
         "Perché le stelle non esistono vicino alle città"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que l'inquinamento luminoso riduce enormemente il numero di stelle visibili, donc il vaut mieux être loin de la ville."
     },
     {
       "q": "Perché bisogna aspettare prima di usare il telescopio appena portato all'aperto?",
@@ -31,7 +32,8 @@
         "Perché serve un permesso speciale",
         "Perché il treppiede deve essere lavato"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte explique que lo strumento deve raggiungere la temperatura dell'aria esterna, altrimenti le immagini sono tremolanti."
     },
     {
       "q": "Che cosa consiglia la guida per proteggere la visione notturna?",
@@ -40,7 +42,8 @@
         "Guardare direttamente il sole con il telescopio",
         "Tenere sempre acceso lo schermo del telefono"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte recommande d'utiliser una torcia con luce rossa invece dello schermo del telefono, car elle perturbe moins la vision nocturne."
     }
   ],
   "words": {

@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Chi accompagna Marta e Giulia sul vulcano?",
-      "options": ["Rosa, una guida vulcanologica", "Un pescatore del paese", "Un gruppo di turisti tedeschi"],
-      "correct": 0
+      "options": [
+        "Rosa, una guida vulcanologica",
+        "Un pescatore del paese",
+        "Un gruppo di turisti tedeschi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Marta e Giulia avevano prenotato un'escursione serale con Rosa, una guida vulcanologica »."
     },
     {
       "q": "Che cosa succede a intervalli regolari durante la notte?",
-      "options": ["Un boato e una fontana di lapilli incandescenti", "Una forte pioggia improvvisa", "Il passaggio di un elicottero"],
-      "correct": 0
+      "options": [
+        "Un boato e una fontana di lapilli incandescenti",
+        "Una forte pioggia improvvisa",
+        "Il passaggio di un elicottero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « A intervalli regolari, un boato sordo saliva dal cratere e una fontana di lapilli incandescenti illuminava la notte »."
     },
     {
       "q": "Come termina la serata delle due amiche?",
-      "options": ["Con un bagno di mezzanotte in spiaggia", "Con una cena al ristorante", "Con il rientro immediato in traghetto"],
-      "correct": 0
+      "options": [
+        "Con un bagno di mezzanotte in spiaggia",
+        "Con una cena al ristorante",
+        "Con il rientro immediato in traghetto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « le due amiche si concessero un bagno di mezzanotte » en spiaggia."
     }
   ],
   "words": {

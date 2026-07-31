@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Chi scompare all'inizio della storia?",
-      "options": ["Il pinguino Pino", "Un leone dello zoo", "Un guardiano notturno"],
-      "correct": 0
+      "options": [
+        "Il pinguino Pino",
+        "Un leone dello zoo",
+        "Un guardiano notturno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il pinguino più famoso, Pino, è scomparso », donc le pingouin Pino a disparu."
     },
     {
       "q": "Che cosa notano gli ispettori esaminando le telecamere?",
-      "options": ["Un cancello lasciato aperto", "Un uomo sospetto vicino allo zoo", "Un buco nella recinzione"],
-      "correct": 0
+      "options": [
+        "Un cancello lasciato aperto",
+        "Un uomo sospetto vicino allo zoo",
+        "Un buco nella recinzione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que les inspecteurs « notano un cancello lasciato aperto »."
     },
     {
       "q": "Dove viene trovato Pino alla fine?",
-      "options": ["Vicino alla fontana del parco", "In un camion in autostrada", "Nascosto in un magazzino"],
-      "correct": 0
+      "options": [
+        "Vicino alla fontana del parco",
+        "In un camion in autostrada",
+        "Nascosto in un magazzino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « trovano Pino tranquillo vicino alla fontana del parco »."
     }
   ],
   "words": {

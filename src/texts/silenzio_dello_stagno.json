@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Perché lo stagno di Sant'Angelo era diventato silenzioso?",
-      "options": ["Perché le rane erano quasi scomparse", "Perché il paese aveva costruito una diga", "Perché i bambini non andavano più a giocare lì"],
-      "correct": 0
+      "options": [
+        "Perché le rane erano quasi scomparse",
+        "Perché il paese aveva costruito una diga",
+        "Perché i bambini non andavano più a giocare lì"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'étang était 'stranamente silenzioso' et que le pesticide était létal pour les œufs et les têtards, donc les grenouilles avaient presque disparu."
     },
     {
       "q": "Cosa scopre Elena analizzando i campioni d'acqua?",
-      "options": ["Che non c'era nessuna infezione, ma qualcosa non tornava", "Che l'acqua era completamente pulita e senza problemi", "Che le rane erano migrate in un altro stagno"],
-      "correct": 0
+      "options": [
+        "Che non c'era nessuna infezione, ma qualcosa non tornava",
+        "Che l'acqua era completamente pulita e senza problemi",
+        "Che le rane erano migrate in un altro stagno"
+      ],
+      "correct": 0,
+      "explanation": "Les analyses d'Elena excluaient toute infection fongique, l'eau était limpide et sans bactéries dangereuses, mais 'qualcosa non tornava'."
     },
     {
       "q": "Qual è la vera causa scoperta da Elena alla fine dell'indagine?",
-      "options": ["Un pesticida agricolo trasportato dalle piogge fino allo stagno", "Un batterio portato da uccelli migratori", "Un cambiamento naturale delle stagioni"],
-      "correct": 0
+      "options": [
+        "Un pesticida agricolo trasportato dalle piogge fino allo stagno",
+        "Un batterio portato da uccelli migratori",
+        "Un cambiamento naturale delle stagioni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que les pluies d'avril avaient 'trasportato residui chimici direttamente nel canale, e da lì fino allo stagno', ce qui désigne le pesticide agricole comme la vraie cause."
     }
   ],
   "words": {

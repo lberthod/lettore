@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove va in vacanza Elena?",
-      "options": ["In Sicilia", "In Toscana", "In Sardegna"],
-      "correct": 0
+      "options": [
+        "In Sicilia",
+        "In Toscana",
+        "In Sardegna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « In estate vado in vacanza in Sicilia con la mia famiglia », donc Elena va en Sicile."
     },
     {
       "q": "Cosa mangia Elena vicino al mercato di Palermo?",
-      "options": ["Un panino con le olive", "Una pizza", "Un gelato"],
-      "correct": 0
+      "options": [
+        "Un panino con le olive",
+        "Una pizza",
+        "Un gelato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Vicino al mercato mangiamo un panino con le olive », donc elle mange un panino con le olive."
     },
     {
       "q": "Cosa vede Elena da lontano sull'Etna?",
-      "options": ["Un po' di fumo bianco", "La neve", "Il mare"],
-      "correct": 0
+      "options": [
+        "Un po' di fumo bianco",
+        "La neve",
+        "Il mare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Da lontano vediamo un po' di fumo bianco », donc elle voit un peu de fumée blanche."
     }
   ],
   "words": {

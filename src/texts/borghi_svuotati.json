@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Perché chiudono le scuole dei borghi appenninici?",
-      "options": ["Per mancanza di alunni", "Per la vetustà degli edifici", "Per decisione dei sindaci"],
-      "correct": 0
+      "options": [
+        "Per mancanza di alunni",
+        "Per la vetustà degli edifici",
+        "Per decisione dei sindaci"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les écoles ferment « per mancanza di alunni », donc par manque d'élèves."
     },
     {
       "q": "Che cosa ha persuaso alcuni giovani a tornare nei borghi?",
-      "options": ["Il lavoro da remoto", "Il prezzo dei terreni agricoli", "L'apertura di nuove fabbriche"],
-      "correct": 0
+      "options": [
+        "Il lavoro da remoto",
+        "Il prezzo dei terreni agricoli",
+        "L'apertura di nuove fabbriche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que « il lavoro da remoto » a persuadé des jeunes à revenir dans les villages."
     },
     {
       "q": "Di quale retorica bisogna diffidare secondo il testo?",
-      "options": ["Di quella del borgo pittoresco", "Di quella della metropoli moderna", "Di quella del progresso tecnico"],
-      "correct": 0
+      "options": [
+        "Di quella del borgo pittoresco",
+        "Di quella della metropoli moderna",
+        "Di quella del progresso tecnico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme qu'il faut se méfier de « la retorica del borgo pittoresco »."
     }
   ],
   "words": {

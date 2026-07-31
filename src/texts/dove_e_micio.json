@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Chi è Micio?",
-      "options": ["Il gatto di Anna", "Il cane di Anna", "Un gattino nero"],
-      "correct": 0
+      "options": [
+        "Il gatto di Anna",
+        "Il cane di Anna",
+        "Un gattino nero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Micio è il gatto di Anna », donc Micio est le chat d'Anna."
     },
     {
       "q": "Che cosa vede Anna sul pavimento?",
-      "options": ["Piccole tracce", "Un topo", "Una scarpa"],
-      "correct": 0
+      "options": [
+        "Piccole tracce",
+        "Un topo",
+        "Una scarpa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ci sono piccole tracce sul pavimento », donc elle voit de petites traces."
     },
     {
       "q": "Dove dorme Micio?",
-      "options": ["Nel cesto del bucato", "Sotto il letto", "In giardino"],
-      "correct": 0
+      "options": [
+        "Nel cesto del bucato",
+        "Sotto il letto",
+        "In giardino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Anna guarda nel cesto del bucato... Micio dorme », donc Micio dort dans le panier à linge."
     }
   ],
   "words": {

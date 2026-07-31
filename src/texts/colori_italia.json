@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Quali sono i colori della bandiera italiana?",
-      "options": ["Verde, bianco e rosso", "Blu, bianco e rosso", "Verde, giallo e rosso"],
-      "correct": 0
+      "options": [
+        "Verde, bianco e rosso",
+        "Blu, bianco e rosso",
+        "Verde, giallo e rosso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les trois couleurs importantes sont « verde, bianco e rosso » et que ce sont les couleurs du drapeau italien."
     },
     {
       "q": "Di che colore è il sole al sud, secondo il testo?",
-      "options": ["Giallo", "Verde", "Blu"],
-      "correct": 0
+      "options": [
+        "Giallo",
+        "Verde",
+        "Blu"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Al sud il sole è giallo », donc le soleil est jaune dans le sud."
     },
     {
       "q": "Che colore ha la maglia del Napoli?",
-      "options": ["Azzurro", "Rosso", "Verde"],
-      "correct": 0
+      "options": [
+        "Azzurro",
+        "Rosso",
+        "Verde"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Napoli ha l'azzurro », donc la couleur du Napoli est l'azur."
     }
   ],
   "words": {

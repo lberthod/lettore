@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Perché Elio rifiuta l'offerta del costruttore?",
-      "options": ["Perché il tempo vero non si vende al metro quadro", "Perché la somma offerta era troppo bassa", "Perché vuole aprire un negozio di telefoni"],
-      "correct": 0
+      "options": [
+        "Perché il tempo vero non si vende al metro quadro",
+        "Perché la somma offerta era troppo bassa",
+        "Perché vuole aprire un negozio di telefoni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'Elio refuse parce que « il tempo vero non si vende al metro quadro », c'est-à-dire que le vrai temps ne se vend pas au mètre carré."
     },
     {
       "q": "Che cosa portano quasi sempre i clienti nella bottega?",
-      "options": ["Orologi ereditati dai loro defunti", "Telefoni da riparare", "Sveglie nuove da regolare"],
-      "correct": 0
+      "options": [
+        "Orologi ereditati dai loro defunti",
+        "Telefoni da riparare",
+        "Sveglie nuove da regolare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que les clients apportent presque toujours des orologi ereditati, comme la montre de la grand-mère ou le chronographe du père, donc des montres héritées de leurs défunts."
     },
     {
       "q": "Che cosa fa Elio la sera dopo aver abbassato la saracinesca?",
-      "options": ["Ascolta il ticchettio degli orologi appesi", "Conta i soldi della giornata", "Telefona al costruttore"],
-      "correct": 0
+      "options": [
+        "Ascolta il ticchettio degli orologi appesi",
+        "Conta i soldi della giornata",
+        "Telefona al costruttore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le soir, après avoir baissé le rideau de fer, Elio s'arrête pour écouter le tic-tac des dizaines d'horloges suspendues."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa era stato rubato nel ristorante?",
-      "options": ["Il quaderno segreto delle ricette", "Dei soldi", "Delle pentole"],
-      "correct": 0
+      "options": [
+        "Il quaderno segreto delle ricette",
+        "Dei soldi",
+        "Delle pentole"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « qualcuno aveva rubato il quaderno segreto delle ricette », donc c'est le carnet secret des recettes."
     },
     {
       "q": "Chi era il ladro?",
-      "options": ["Il cameriere Marco", "Il nuovo aiutante", "Lo chef Bianchi"],
-      "correct": 1
+      "options": [
+        "Il cameriere Marco",
+        "Il nuovo aiutante",
+        "Lo chef Bianchi"
+      ],
+      "correct": 1,
+      "explanation": "Le texte révèle que « il nuovo aiutante » photographiait le carnet, donc c'est lui le voleur."
     },
     {
       "q": "Che cosa voleva fare il ladro con le ricette?",
-      "options": ["Aprire un ristorante", "Venderle a un ristorante rivale", "Pubblicarle in un libro"],
-      "correct": 1
+      "options": [
+        "Aprire un ristorante",
+        "Venderle a un ristorante rivale",
+        "Pubblicarle in un libro"
+      ],
+      "correct": 1,
+      "explanation": "Le texte précise « L'uomo voleva vendere le ricette a un ristorante rivale », donc il voulait les vendre à un restaurant concurrent."
     }
   ],
   "words": {
@@ -103,8 +118,7 @@
     "una": "une",
     "vendere": "vendre",
     "vide": "vit",
-    "voleva": "voulait",
-    "era": "était"
+    "voleva": "voulait"
   },
   "sentences": {
     "Nel famoso ristorante dello chef Bianchi, qualcuno aveva rubato il quaderno segreto delle ricette.": "Dans le célèbre restaurant du chef Bianchi, quelqu'un avait volé le cahier secret des recettes.",

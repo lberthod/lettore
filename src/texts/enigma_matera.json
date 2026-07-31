@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si svolge la storia?",
-      "options": ["A Matera, nei Sassi", "A Venezia", "A Napoli"],
-      "correct": 0
+      "options": [
+        "A Matera, nei Sassi",
+        "A Venezia",
+        "A Napoli"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la commissaire Rondi arrive à Matera, dans les Sassi, pour un cas étrange."
     },
     {
       "q": "Che cosa trova Rondi dietro il vecchio muro?",
-      "options": ["Un tesoro", "Un passaggio segreto verso i cunicoli", "Una porta chiusa a chiave"],
-      "correct": 1
+      "options": [
+        "Un tesoro",
+        "Un passaggio segreto verso i cunicoli",
+        "Una porta chiusa a chiave"
+      ],
+      "correct": 1,
+      "explanation": "Le texte indique qu'elle trouve un passage secret caché derrière un vieux mur, qui mène vers des tunnels inconnus."
     },
     {
       "q": "Perché l'archeologo era entrato da solo nella grotta?",
-      "options": ["Voleva esplorare un antico acquedotto", "Cercava un rifugio per la notte", "Era scappato da un ladro"],
-      "correct": 0
+      "options": [
+        "Voleva esplorare un antico acquedotto",
+        "Cercava un rifugio per la notte",
+        "Era scappato da un ladro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'il confesse avoir voulu explorer seul un ancien aqueduc dont il avait découvert la carte."
     }
   ],
   "words": {

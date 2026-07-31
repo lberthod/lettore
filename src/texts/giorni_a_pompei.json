@@ -30,18 +30,33 @@
   "questions": [
     {
       "q": "Perché Pompei è una città speciale?",
-      "options": ["Perché è molto antica e un vulcano l'ha distrutta", "Perché è una città moderna", "Perché è vicino al mare"],
-      "correct": 0
+      "options": [
+        "Perché è molto antica e un vulcano l'ha distrutta",
+        "Perché è una città moderna",
+        "Perché è vicino al mare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Pompéi est très ancienne et qu'un volcan l'a détruite."
     },
     {
       "q": "Che cosa vede Luca nelle pietre delle strade?",
-      "options": ["I segni dei carri antichi", "I nomi dei re", "Dei disegni di animali"],
-      "correct": 0
+      "options": [
+        "I segni dei carri antichi",
+        "I nomi dei re",
+        "Dei disegni di animali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Luca voit les traces des chars anciens dans les pierres."
     },
     {
       "q": "Che cosa fa la famiglia a mezzogiorno?",
-      "options": ["Si ferma per il pranzo", "Torna subito a casa", "Va a nuotare nel mare"],
-      "correct": 0
+      "options": [
+        "Si ferma per il pranzo",
+        "Torna subito a casa",
+        "Va a nuotare nel mare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'à midi la famille s'arrête pour déjeuner."
     }
   ],
   "words": {

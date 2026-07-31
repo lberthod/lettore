@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanti anni compie Sofia?",
-      "options": ["Otto anni", "Sette anni", "Dieci anni"],
-      "correct": 0
+      "options": [
+        "Otto anni",
+        "Sette anni",
+        "Dieci anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Compie otto anni », donc elle fête ses huit ans."
     },
     {
       "q": "Quando è la festa?",
-      "options": ["Sabato pomeriggio", "Domenica mattina", "Venerdì sera"],
-      "correct": 0
+      "options": [
+        "Sabato pomeriggio",
+        "Domenica mattina",
+        "Venerdì sera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise « sabato pomeriggio » comme moment de la fête."
     },
     {
       "q": "Che cosa bisogna portare alla festa?",
-      "options": ["Solo la voglia di giocare e ballare", "Un regalo obbligatorio", "Da mangiare per tutti"],
-      "correct": 0
+      "options": [
+        "Solo la voglia di giocare e ballare",
+        "Un regalo obbligatorio",
+        "Da mangiare per tutti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique qu'il faut apporter « solo la voglia di giocare e ballare »."
     }
   ],
   "words": {

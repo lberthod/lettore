@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Di che cosa accusa il lupo l'agnello?",
-      "options": ["Di avergli rubato l'idea della sua applicazione", "Di aver rubato del cibo dal suo frigorifero", "Di aver copiato il suo abbigliamento"],
-      "correct": 0
+      "options": [
+        "Di avergli rubato l'idea della sua applicazione",
+        "Di aver rubato del cibo dal suo frigorifero",
+        "Di aver copiato il suo abbigliamento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Quell'agnello mi ha rubato tutto » : le loup accuse l'agneau de lui avoir volé l'idée de son application."
     },
     {
       "q": "Come reagisce il pubblico alla vicenda?",
-      "options": ["Sceglie subito la versione più semplice, senza aspettare il processo", "Attende con pazienza la sentenza del tribunale", "Ignora completamente la vicenda"],
-      "correct": 0
+      "options": [
+        "Sceglie subito la versione più semplice, senza aspettare il processo",
+        "Attende con pazienza la sentenza del tribunale",
+        "Ignora completamente la vicenda"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le public « scelse rapidamente da che parte stare » et aime les histoires simples, donc il choisit la version du loup sans attendre le procès."
     },
     {
       "q": "Qual è la morale amara del racconto?",
-      "options": ["Il potere non ha bisogno di avere ragione, gli basta parlare per primo", "La giustizia trionfa sempre alla fine", "Gli avvocati risolvono ogni conflitto rapidamente"],
-      "correct": 0
+      "options": [
+        "Il potere non ha bisogno di avere ragione, gli basta parlare per primo",
+        "La giustizia trionfa sempre alla fine",
+        "Gli avvocati risolvono ogni conflitto rapidamente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte conclut que « il potere non ha bisogno di avere ragione : gli basta arrivare per primo », ce qui signifie qu'il suffit de parler en premier."
     }
   ],
   "words": {
@@ -138,7 +153,6 @@
     "frase": "phrase",
     "frigorifero": "réfrigérateur",
     "gli": "les / lui",
-    "già": "déjà",
     "giornalisti": "journalistes",
     "giorno": "jour",
     "giovane": "jeune",

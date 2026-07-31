@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Quale formula si usa per aprire una lettera indirizzata a un'azienda?",
-      "options": ["Spettabile Ditta", "Caro amico", "Ciao a tutti"],
-      "correct": 0
+      "options": [
+        "Spettabile Ditta",
+        "Caro amico",
+        "Ciao a tutti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «a un ente si scrive “Spettabile Ditta”», donc c'est la formule pour une entreprise."
     },
     {
       "q": "Perché si scrive «La ringrazio» con la maiuscola?",
-      "options": ["Perché è la maiuscola di cortesia del Lei istituzionale", "Perché inizia una nuova frase", "Perché è un errore di stampa"],
-      "correct": 0
+      "options": [
+        "Perché è la maiuscola di cortesia del Lei istituzionale",
+        "Perché inizia una nuova frase",
+        "Perché è un errore di stampa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que la majuscule de courtoisie distingue le «Lei» institutionnel d'un simple pronom féminin."
     },
     {
       "q": "Che cosa criticava Calvino nel linguaggio burocratico?",
-      "options": ["L'uso di parole gonfie come «effettuare» al posto di «fare»", "L'uso del Lei nelle lettere formali", "La presenza dell'oggetto nella lettera"],
-      "correct": 0
+      "options": [
+        "L'uso di parole gonfie come «effettuare» al posto di «fare»",
+        "L'uso del Lei nelle lettere formali",
+        "La presenza dell'oggetto nella lettera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte cite Calvino qui préfère «fare» à «effettuare» et dénonce les mots ampoulés du langage bureaucratique."
     }
   ],
   "words": {

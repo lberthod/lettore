@@ -22,18 +22,33 @@
   "questions": [
     {
       "q": "Di che cosa si occupa Elena nella preparazione della sagra?",
-      "options": ["Organizzare il gruppo che raccoglie le castagne nei boschi", "Cucinare i dolci per la festa", "Dirigere la banda musicale del paese"],
-      "correct": 0
+      "options": [
+        "Organizzare il gruppo che raccoglie le castagne nei boschi",
+        "Cucinare i dolci per la festa",
+        "Dirigere la banda musicale del paese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Elena doit organiser le groupe de jeunes qui ramassera les châtaignes dans les bois voisins."
     },
     {
       "q": "Perché i ragazzi devono partire presto per raccogliere le castagne?",
-      "options": ["Perché i cinghiali arrivano prima e mangiano tutto", "Perché piove sempre nel pomeriggio", "Perché il mercato apre all'alba"],
-      "correct": 0
+      "options": [
+        "Perché i cinghiali arrivano prima e mangiano tutto",
+        "Perché piove sempre nel pomeriggio",
+        "Perché il mercato apre all'alba"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique qu'il faut partir tôt parce que les sangliers arrivent avant eux et mangent tout."
     },
     {
       "q": "Cosa fa il vecchio contadino sul palco durante la sera?",
-      "options": ["Racconta ai bambini come si coltivavano le castagne un tempo", "Vende le castagne arrostite ai turisti", "Insegna ai ragazzi a suonare la fisarmonica"],
-      "correct": 0
+      "options": [
+        "Racconta ai bambini come si coltivavano le castagne un tempo",
+        "Vende le castagne arrostite ai turisti",
+        "Insegna ai ragazzi a suonare la fisarmonica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un vieux paysan raconte aux enfants comment on cultivait les châtaignes autrefois."
     }
   ],
   "words": {

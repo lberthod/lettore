@@ -21,7 +21,8 @@
         "Insegna lingue straniere ai bambini",
         "Traduce documenti antichi in tempo reale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que l'Institut garde dans des cellules cryogéniques les voix de langues éteintes et qu'Elara les fait revivre grâce à l'intelligence artificielle."
     },
     {
       "q": "Che cosa accade di inaspettato durante l'elaborazione del rànnitu?",
@@ -30,7 +31,8 @@
         "Il sistema si blocca definitivamente",
         "L'algoritmo cancella tutti i dati"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que la voix synthétique « comincia a comporre versi che non compaiono in nessun archivio »."
     },
     {
       "q": "Perché Elara si rifiuta di spegnere il sistema?",
@@ -39,7 +41,8 @@
         "Vuole vendere la scoperta a un'altra azienda",
         "Non sa come funziona il programma"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'Elara craint qu'éteindre le système « ucciderebbe una seconda volta un popolo già scomparso »."
     }
   ],
   "words": {

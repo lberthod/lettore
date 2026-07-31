@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa vuole comprare il cliente?",
-      "options": ["Pane e olive", "Solo vino", "Un cavallo"],
-      "correct": 0
+      "options": [
+        "Pane e olive",
+        "Solo vino",
+        "Un cavallo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Vorrei del pane e anche delle olive, per favore », donc le client veut du pain et des olives."
     },
     {
       "q": "Quanto costa tutto insieme?",
-      "options": ["Due monete d'argento", "Dieci monete d'oro", "Niente, è gratis"],
-      "correct": 0
+      "options": [
+        "Due monete d'argento",
+        "Dieci monete d'oro",
+        "Niente, è gratis"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Costa due monete d'argento, non di più », donc tout coûte deux pièces d'argent."
     },
     {
       "q": "Che cosa chiede il figlio al mercante?",
-      "options": ["Una mela rossa", "Un pesce fresco", "Un libro antico"],
-      "correct": 0
+      "options": [
+        "Una mela rossa",
+        "Un pesce fresco",
+        "Un libro antico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Papà, posso avere anche una mela rossa? », donc le fils demande une pomme rouge."
     }
   ],
   "words": {

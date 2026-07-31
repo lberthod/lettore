@@ -21,7 +21,8 @@
         "Viene inaugurato il Duomo di Milano",
         "Comincia la Seconda guerra mondiale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les partisans lancent l'insurrection et que les citoyens sortent pour fêter la fin du conflit, donc ils fêtent la libération des nazifascistes."
     },
     {
       "q": "Cosa succede in Piazzale Loreto il 29 aprile?",
@@ -30,7 +31,8 @@
         "Si tiene un grande concerto di musica popolare",
         "Viene firmato un trattato di pace internazionale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise que le 29 avril, les corps de Mussolini et de quelques hiérarques fascistes sont exposés à Piazzale Loreto."
     },
     {
       "q": "Cosa rappresenta oggi il 25 aprile in Italia?",
@@ -39,13 +41,14 @@
         "Un giorno di lavoro come tutti gli altri",
         "La festa della fondazione di Milano"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte indique que depuis lors, le 25 avril devient la Fête de la Libération, une fête nationale."
     }
   ],
   "words": {
-    "1945": "1945",
     "25": "25",
     "29": "29",
+    "1945": "1945",
     "a": "à",
     "ai": "aux",
     "al": "au",

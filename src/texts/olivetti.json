@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa era l'Elea 9003?",
-      "options": ["Un calcolatore a transistor presentato nel millenovecentocinquantanove", "Una macchina per scrivere elettrica", "Un'automobile sperimentale"],
-      "correct": 0
+      "options": [
+        "Un calcolatore a transistor presentato nel millenovecentocinquantanove",
+        "Una macchina per scrivere elettrica",
+        "Un'automobile sperimentale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'Elea 9003, présenté en 1959, était l'un des premiers calculateurs au monde entièrement à transistors."
     },
     {
       "q": "A chi fu ceduta la divisione elettronica?",
-      "options": ["Alla General Electric", "Alla Fiat", "A un gruppo di banchieri francesi"],
-      "correct": 0
+      "options": [
+        "Alla General Electric",
+        "Alla Fiat",
+        "A un gruppo di banchieri francesi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'entreprise céda sa division électronique à l'américaine General Electric."
     },
     {
       "q": "Quale lezione insegna la vicenda dell'Olivetti?",
-      "options": ["Che l'innovazione muore per mancanza di coraggio, non di talento", "Che la tecnologia è sempre un lusso costoso", "Che le fabbriche devono restare piccole"],
-      "correct": 0
+      "options": [
+        "Che l'innovazione muore per mancanza di coraggio, non di talento",
+        "Che la tecnologia è sempre un lusso costoso",
+        "Che le fabbriche devono restare piccole"
+      ],
+      "correct": 0,
+      "explanation": "Le texte conclut que l'innovation meurt presque toujours par manque de courage, non de talent."
     }
   ],
   "words": {

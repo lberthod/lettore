@@ -38,12 +38,18 @@
         "Un uccello lo porta via",
         "Cade in un lago"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit «Bip cammina troppo lontano e non trova più la strada» avec le vento forte."
     },
     {
       "q": "Chi dice a Bip di seguire il fiume?",
-      "options": ["La mucca", "Il coniglio", "Le anatre"],
-      "correct": 0
+      "options": [
+        "La mucca",
+        "Il coniglio",
+        "Le anatre"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la mucca répond: «se segui il fiume, trovi il cavallo»."
     },
     {
       "q": "Dove trova finalmente Bip la sua casa?",
@@ -52,7 +58,8 @@
         "Dentro il bosco",
         "Vicino alla città"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit «Dietro la collina, Bip vede finalmente la sua casa» et le coniglio parlait de «vicino al lago piccolo»."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa Enzo ogni mattina?",
-      "options": ["Disegna ritratti ai turisti", "Vende quadri in un negozio", "Insegna disegno a scuola"],
-      "correct": 0
+      "options": [
+        "Disegna ritratti ai turisti",
+        "Vende quadri in un negozio",
+        "Insegna disegno a scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte raconte qu'Enzo dessine des portraits rapides aux touristes chaque matin pour quelques euros."
     },
     {
       "q": "Che cosa chiede la ragazza a Enzo?",
-      "options": ["Un ritratto dei suoi sogni", "Un ritratto del suo cane", "Una caricatura divertente"],
-      "correct": 0
+      "options": [
+        "Un ritratto dei suoi sogni",
+        "Un ritratto del suo cane",
+        "Una caricatura divertente"
+      ],
+      "correct": 0,
+      "explanation": "La jeune fille demande un portrait pas de son visage mais de ses rêves, comme le dit le texte."
     },
     {
       "q": "Che cosa capisce Enzo alla fine?",
-      "options": ["Che il suo vero talento è ascoltare le storie delle persone", "Che deve smettere di disegnare", "Che deve tornare a scuola"],
-      "correct": 0
+      "options": [
+        "Che il suo vero talento è ascoltare le storie delle persone",
+        "Che deve smettere di disegnare",
+        "Che deve tornare a scuola"
+      ],
+      "correct": 0,
+      "explanation": "À la fin, Enzo comprend que son vrai talent n'est pas de dessiner des visages, mais d'écouter les histoires des gens."
     }
   ],
   "words": {

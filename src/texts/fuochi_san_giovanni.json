@@ -50,18 +50,33 @@
   "questions": [
     {
       "q": "Cosa fanno tradizionalmente i ragazzi nella sezione \"Il salto\"?",
-      "options": ["Saltano tre volte il falò a piedi uniti per lasciarsi alle spalle la paura dell'anno passato", "Corrono intorno al fuoco senza fermarsi mai", "Spengono il fuoco versando l'acqua della rugiada"],
-      "correct": 0
+      "options": [
+        "Saltano tre volte il falò a piedi uniti per lasciarsi alle spalle la paura dell'anno passato",
+        "Corrono intorno al fuoco senza fermarsi mai",
+        "Spengono il fuoco versando l'acqua della rugiada"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « tre salti a piedi uniti, per lasciare nella cenere la paura dell'anno passato »."
     },
     {
       "q": "A cosa serve, secondo la tradizione descritta nella terza parte, la rugiada raccolta all'alba?",
-      "options": ["A guarire le ossa stanche e a rendere più chiara la pelle dei bambini", "A spegnere i falò rimasti accesi", "A preparare il pranzo della festa"],
-      "correct": 0
+      "options": [
+        "A guarire le ossa stanche e a rendere più chiara la pelle dei bambini",
+        "A spegnere i falò rimasti accesi",
+        "A preparare il pranzo della festa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que cette eau « guarisca le ossa stanche e renda più chiara la pelle dei bambini »."
     },
     {
       "q": "Qual è il \"vero fuoco\" a cui allude l'ultimo verso della poesia?",
-      "options": ["Non la fiamma visibile, ma ciò che si tramanda di generazione in generazione", "Il fuoco d'artificio finale della festa", "Il fuoco acceso in cucina per il pranzo del giorno dopo"],
-      "correct": 0
+      "options": [
+        "Non la fiamma visibile, ma ciò che si tramanda di generazione in generazione",
+        "Il fuoco d'artificio finale della festa",
+        "Il fuoco acceso in cucina per il pranzo del giorno dopo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « non la fiamma che si vede, ma quella che si tramanda »."
     }
   ],
   "words": {

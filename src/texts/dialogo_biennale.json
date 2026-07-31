@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa rimprovera lo scettico all'arte concettuale?",
-      "options": ["Che qualunque oggetto firmato da un artista celebre diventi un capolavoro milionario", "Che usi colori troppo vivaci", "Che imiti servilmente i pittori del passato"],
-      "correct": 0
+      "options": [
+        "Che qualunque oggetto firmato da un artista celebre diventi un capolavoro milionario",
+        "Che usi colori troppo vivaci",
+        "Che imiti servilmente i pittori del passato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Così qualunque cosa, purché la firmi un artista celebre, diventa un capolavoro e vale milioni »."
     },
     {
       "q": "Secondo il difensore, che cosa cambiò Duchamp?",
-      "options": ["Spostò l'arte dal fabbricare oggetti al gesto che cambia lo sguardo", "Inventò la pittura a olio", "Fondò la Biennale di Venezia"],
-      "correct": 0
+      "options": [
+        "Spostò l'arte dal fabbricare oggetti al gesto che cambia lo sguardo",
+        "Inventò la pittura a olio",
+        "Fondò la Biennale di Venezia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Da quando Duchamp espose un orinatoio firmato, l'arte non consiste più nel fabbricare oggetti belli, ma nello spostare lo sguardo di chi osserva »."
     },
     {
       "q": "Come si conclude la visita dei due amici?",
-      "options": ["Davanti al Tintoretto tacciono entrambi, e il difensore del concettuale lo ammette", "Litigano e se ne vanno separati", "Comprano la banana a un'asta"],
-      "correct": 0
+      "options": [
+        "Davanti al Tintoretto tacciono entrambi, e il difensore del concettuale lo ammette",
+        "Litigano e se ne vanno separati",
+        "Comprano la banana a un'asta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i due amici rimasero a lungo in silenzio » puis « lo ammetto: davanti a questo, qualunque teoria ammutolisce »."
     }
   ],
   "words": {

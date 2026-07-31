@@ -30,18 +30,33 @@
   "questions": [
     {
       "q": "Perché il candidato è arrivato in ritardo al colloquio?",
-      "options": ["A causa del traffico", "Perché si è svegliato tardi", "Perché ha sbagliato indirizzo"],
-      "correct": 0
+      "options": [
+        "A causa del traffico",
+        "Perché si è svegliato tardi",
+        "Perché ha sbagliato indirizzo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il traffico era davvero terribile » : le candidat est arrivé en retard à cause du trafic."
     },
     {
       "q": "Che cosa pensava il candidato che facesse l'azienda?",
-      "options": ["Elettrodomestici", "Consulenza finanziaria", "Automobili"],
-      "correct": 0
+      "options": [
+        "Elettrodomestici",
+        "Consulenza finanziaria",
+        "Automobili"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Producete... elettrodomestici, se non sbaglio? » : le candidat pensait que l'entreprise fabriquait des appareils électroménagers."
     },
     {
       "q": "Perché il candidato ha davvero lasciato il lavoro precedente?",
-      "options": ["È stato licenziato", "Ha trovato un lavoro migliore", "Voleva viaggiare"],
-      "correct": 0
+      "options": [
+        "È stato licenziato",
+        "Ha trovato un lavoro migliore",
+        "Voleva viaggiare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « In realtà mi hanno licenziato » : le candidat a vraiment été licencié."
     }
   ],
   "words": {

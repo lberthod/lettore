@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Con che cosa pagavano i nonni quando erano giovani?",
-      "options": ["Con la lira", "Con l'euro", "Con il dollaro"],
-      "correct": 0
+      "options": [
+        "Con la lira",
+        "Con l'euro",
+        "Con il dollaro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Pagavamo tutto con la lira! », donc ils payaient avec la lire."
     },
     {
       "q": "Perché i vicini venivano a casa dei nonni la sera?",
-      "options": ["Per guardare la prima televisione del quartiere", "Per mangiare la pizza", "Per usare il telefono"],
-      "correct": 0
+      "options": [
+        "Per guardare la prima televisione del quartiere",
+        "Per mangiare la pizza",
+        "Per usare il telefono"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les voisins venaient « per guardare la prima televisione del quartiere »."
     },
     {
       "q": "In quanto tempo arrivava una lettera?",
-      "options": ["In una settimana", "In un secondo", "In un mese"],
-      "correct": 0
+      "options": [
+        "In una settimana",
+        "In un secondo",
+        "In un mese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « una lettera arrivava dopo una settimana! », donc une lettre mettait une semaine."
     }
   ],
   "words": {

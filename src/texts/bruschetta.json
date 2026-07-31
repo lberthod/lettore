@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Per quante persone è la ricetta?",
-      "options": ["Due persone", "Quattro persone", "Sei persone"],
-      "correct": 1
+      "options": [
+        "Due persone",
+        "Quattro persone",
+        "Sei persone"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Ecco la ricetta per quattro persone »."
     },
     {
       "q": "Quanto tempo va il pane nel forno?",
-      "options": ["Cinque minuti", "Mezz'ora", "Un'ora"],
-      "correct": 0
+      "options": [
+        "Cinque minuti",
+        "Mezz'ora",
+        "Un'ora"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Metti le fette nel forno caldo per cinque minuti »."
     },
     {
       "q": "Che cosa si strofina sul pane caldo?",
-      "options": ["Il sale", "L'aglio", "Il basilico"],
-      "correct": 1
+      "options": [
+        "Il sale",
+        "L'aglio",
+        "Il basilico"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Strofina l'aglio sul pane caldo »."
     }
   ],
   "words": {

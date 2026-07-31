@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come descrive l'autore il centro di accoglienza il primo giorno?",
-      "options": ["Come un limbo sospeso tra partenza e arrivo", "Come un luogo accogliente e familiare", "Come una prigione sorvegliata"],
-      "correct": 0
+      "options": [
+        "Come un limbo sospeso tra partenza e arrivo",
+        "Come un luogo accogliente e familiare",
+        "Come una prigione sorvegliata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il centro di accoglienza assomiglia a un limbo sospeso: non si è più partiti, ma non si è ancora arrivati davvero », donc le centre est comme un limbo entre départ et arrivée."
     },
     {
       "q": "Che cosa scopre l'autore riguardo alla burocrazia italiana?",
-      "options": ["Che possiede una lentezza quasi filosofica", "Che è incredibilmente veloce ed efficiente", "Che non richiede alcun documento"],
-      "correct": 0
+      "options": [
+        "Che possiede una lentezza quasi filosofica",
+        "Che è incredibilmente veloce ed efficiente",
+        "Che non richiede alcun documento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la burocrazia italiana possiede una lentezza quasi filosofica », donc l'auteur découvre que la bureaucratie a une lenteur presque philosophique."
     },
     {
       "q": "Che cosa rappresenta, secondo l'ultimo paragrafo, il vero significato dell'integrazione?",
-      "options": ["Essere chiamato per nome per strada da qualcuno", "Ottenere la cittadinanza ufficiale", "Guadagnare abbastanza da tornare a casa"],
-      "correct": 0
+      "options": [
+        "Essere chiamato per nome per strada da qualcuno",
+        "Ottenere la cittadinanza ufficiale",
+        "Guadagnare abbastanza da tornare a casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « qualcuno mi saluta chiamandomi per nome: è forse questo, dopotutto, il vero significato della parola integrazione », donc être appelé par son nom dans la rue représente l'intégration."
     }
   ],
   "words": {

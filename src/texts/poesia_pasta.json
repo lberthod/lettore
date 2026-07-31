@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa bolle nella pentola?",
-      "options": ["Acqua con sale", "Latte", "Olio"],
-      "correct": 0
+      "options": [
+        "Acqua con sale",
+        "Latte",
+        "Olio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Acqua che bolle, sale nel piatto », donc c'est l'eau avec le sel qui bout."
     },
     {
       "q": "Di che colore è il sugo?",
-      "options": ["Rosso", "Verde", "Giallo"],
-      "correct": 0
+      "options": [
+        "Rosso",
+        "Verde",
+        "Giallo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « sugo rosso », donc le sugo est rouge."
     },
     {
       "q": "Chi sorride davanti al piatto di pasta?",
-      "options": ["La nonna", "Il gatto", "Il postino"],
-      "correct": 0
+      "options": [
+        "La nonna",
+        "Il gatto",
+        "Il postino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la nonna sorride », donc c'est la nonna qui sourit."
     }
   ],
   "words": {

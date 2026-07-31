@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa scopre Marta la mattina della gara?",
-      "options": ["Che i freni della sua bicicletta sono stati manomessi", "Che la gara è stata rimandata", "Che ha perso il pettorale"],
-      "correct": 0
+      "options": [
+        "Che i freni della sua bicicletta sono stati manomessi",
+        "Che la gara è stata rimandata",
+        "Che ha perso il pettorale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Marta scopre che i freni della sua bicicletta sono stati manomessi »."
     },
     {
       "q": "Chi aveva accesso al deposito biciclette quella notte?",
-      "options": ["Solo il giovane assistente", "Tutta la squadra", "Nessuno, era chiuso a chiave"],
-      "correct": 0
+      "options": [
+        "Solo il giovane assistente",
+        "Tutta la squadra",
+        "Nessuno, era chiuso a chiave"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « solo una persona aveva le chiavi del deposito biciclette quella notte », et il s'agit du jeune assistant."
     },
     {
       "q": "Come finisce la gara per Marta?",
-      "options": ["Vince comunque con una bicicletta di riserva", "Non riesce a partecipare", "Arriva ultima per il ritardo"],
-      "correct": 0
+      "options": [
+        "Vince comunque con una bicicletta di riserva",
+        "Non riesce a partecipare",
+        "Arriva ultima per il ritardo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Marta gareggia con una bicicletta di riserva e vince comunque la gara »."
     }
   ],
   "words": {

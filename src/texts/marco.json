@@ -16,7 +16,8 @@
         "Alle otto",
         "Alle sette"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Il treno per Firenze parte alle otto. »"
     },
     {
       "q": "Che cosa compra Marco al mercato?",
@@ -25,7 +26,8 @@
         "Pesce e verdure",
         "Solo il caffè"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Compra il pane fresco, un po' di formaggio e delle mele rosse. »"
     },
     {
       "q": "Che cosa fa Marco durante il viaggio in treno?",
@@ -34,7 +36,8 @@
         "Parla con una signora",
         "Legge il giornale e ascolta la musica"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Durante il viaggio, Marco legge il giornale e ascolta la musica. »"
     }
   ],
   "words": {

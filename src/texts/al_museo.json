@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Perché i due amici pagano il biglietto ridotto?",
-      "options": ["Perché sono studenti", "Perché è lunedì", "Perché hanno una tessera"],
-      "correct": 0
+      "options": [
+        "Perché sono studenti",
+        "Perché è lunedì",
+        "Perché hanno una tessera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ho preso il biglietto ridotto per noi due, perché siamo studenti », donc ils paient moins car ils sont étudiants."
     },
     {
       "q": "Che cosa dice Anna del quadro moderno?",
-      "options": ["Il suo gatto dipinge meglio", "È bellissimo", "È troppo caro"],
-      "correct": 0
+      "options": [
+        "Il suo gatto dipinge meglio",
+        "È bellissimo",
+        "È troppo caro"
+      ],
+      "correct": 0,
+      "explanation": "Anna dit « il mio gatto dipinge meglio » en parlant du tableau moderne."
     },
     {
       "q": "Che cosa vuole comprare l'amico al negozio del museo?",
-      "options": ["Un poster", "Un libro", "Un quadro"],
-      "correct": 0
+      "options": [
+        "Un poster",
+        "Un libro",
+        "Un quadro"
+      ],
+      "correct": 0,
+      "explanation": "L'amico dit « voglio comprare il poster al negozio del museo »."
     }
   ],
   "words": {

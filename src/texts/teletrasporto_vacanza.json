@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa bisogna fare per andare in vacanza nel 2085?",
-      "options": ["Entrare in una cabina e scegliere la destinazione", "Prendere un aereo tradizionale", "Guidare per molte ore"],
-      "correct": 0
+      "options": [
+        "Entrare in una cabina e scegliere la destinazione",
+        "Prendere un aereo tradizionale",
+        "Guidare per molte ore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il suffit d'entrer dans une petite cabine et de choisir la destination sur l'écran."
     },
     {
       "q": "Come si sente Giulia subito dopo il teletrasporto?",
-      "options": ["Un po' strana, con la testa leggera", "Perfettamente normale", "Molto stanca e triste"],
-      "correct": 0
+      "options": [
+        "Un po' strana, con la testa leggera",
+        "Perfettamente normale",
+        "Molto stanca e triste"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'au début elle se sent un peu bizarre, avec la tête légère."
     },
     {
       "q": "Perché Giulia deve restare una notte in più?",
-      "options": ["Perché la cabina ha un guasto tecnico", "Perché ha perso il biglietto", "Perché vuole restare apposta"],
-      "correct": 0
+      "options": [
+        "Perché la cabina ha un guasto tecnico",
+        "Perché ha perso il biglietto",
+        "Perché vuole restare apposta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le soir la cabine ne fonctionne pas à cause d'un petit problème technique."
     }
   ],
   "words": {

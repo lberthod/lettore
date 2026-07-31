@@ -25,7 +25,8 @@
         "L'essere umano, con la sua intelligenza e la sua libertà",
         "La conquista militare di nuovi territori"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que au centre de la vision des artistes et des penseurs de la Renaissance se trouve l'être humain avec son intelligence et sa liberté."
     },
     {
       "q": "Cosa pensava Michelangelo della scultura?",
@@ -34,7 +35,8 @@
         "Che fosse un'arte inferiore alla pittura",
         "Che il marmo dovesse sempre essere dipinto a colori"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte rapporte que Michel-Ange pensait que la statue existe déjà dans le marbre et que le sculpteur doit simplement la libérer."
     },
     {
       "q": "Perché la Gioconda si trova oggi al Louvre?",
@@ -43,7 +45,8 @@
         "Perché i Medici la vendettero al re di Francia",
         "Perché Leonardo la portò con sé quando andò a vivere in Francia"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte explique que Léonard emporta la Joconde avec lui en France, ce qui explique pourquoi elle se trouve aujourd'hui au Louvre."
     }
   ],
   "words": {

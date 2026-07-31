@@ -198,7 +198,8 @@
         "Lavare le teglie e pesare gli ingredienti",
         "Servire i clienti al banco"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit qu'au début Chiara devait « lavare le teglie e pesare gli ingredienti »."
     },
     {
       "q": "Perché Chiara si è addormentata sul tram?",
@@ -207,7 +208,8 @@
         "Perché aveva festeggiato con i colleghi",
         "Perché aveva lavorato anche di notte per i panettoni"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que Chiara et le signor Gallo « hanno lavorato anche di notte per due settimane » et qu'une fois elle s'est endormie sur le tram."
     },
     {
       "q": "Da dove viene l'idea della torta con cioccolato e pere?",
@@ -216,7 +218,8 @@
         "Da un suggerimento del signor Gallo",
         "Da un libro di pasticceria moderna"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Chiara a utilisé « la ricetta di sua nonna con un tocco moderno » pour la torta avec cioccolato e pere."
     }
   ]
 }

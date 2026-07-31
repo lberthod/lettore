@@ -19,7 +19,8 @@
         "Giocare a calcio",
         "Cucinare"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que, enfant, Léonard aime dessiner et observer la nature."
     },
     {
       "q": "Come si chiama il quadro più famoso di Leonardo?",
@@ -28,7 +29,8 @@
         "La Gioconda",
         "Il Rinascimento"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que le tableau le plus célèbre s'appelle « La Gioconda »."
     },
     {
       "q": "Dove muore Leonardo da Vinci?",
@@ -37,7 +39,8 @@
         "A Parigi",
         "In Francia"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit qu'il meurt en France."
     }
   ],
   "words": {

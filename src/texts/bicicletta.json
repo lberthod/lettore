@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Perché Matteo ha ricevuto la bicicletta?",
-      "options": ["Per il suo compleanno", "Per Natale", "Perché ha finito la scuola"],
-      "correct": 0
+      "options": [
+        "Per il suo compleanno",
+        "Per Natale",
+        "Perché ha finito la scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Matteo a reçu la bicyclette \"per il suo compleanno\", donc pour son anniversaire."
     },
     {
       "q": "Dove vanno Matteo e il papà in bicicletta?",
-      "options": ["Al lago", "Al mare", "In montagna"],
-      "correct": 0
+      "options": [
+        "Al lago",
+        "Al mare",
+        "In montagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le père propose \"andiamo al lago in bicicletta\", donc ils vont au lac."
     },
     {
       "q": "Cosa regala il signore gentile a Matteo?",
-      "options": ["Un piccolo pesce di legno", "Un cappello", "Una canna da pesca"],
-      "correct": 0
+      "options": [
+        "Un piccolo pesce di legno",
+        "Un cappello",
+        "Una canna da pesca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'\"un signore gentile regala a Matteo un piccolo pesce di legno\", donc le monsieur offre ce poisson en bois."
     }
   ],
   "words": {

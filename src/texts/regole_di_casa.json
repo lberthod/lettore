@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Quando bisogna evitare i rumori forti in casa?",
-      "options": ["Dalle ventitré alle otto del mattino", "Solo la domenica", "Durante tutto il giorno"],
-      "correct": 0
+      "options": [
+        "Dalle ventitré alle otto del mattino",
+        "Solo la domenica",
+        "Durante tutto il giorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique qu'il faut éviter les bruits forts « dalle ventitré alle otto del mattino »."
     },
     {
       "q": "Cosa devono fare i coinquilini se un ospite dorme più di due notti?",
-      "options": ["Farlo approvare da tutti", "Non dirlo a nessuno", "Chiedere un affitto extra"],
-      "correct": 0
+      "options": [
+        "Farlo approvare da tutti",
+        "Non dirlo a nessuno",
+        "Chiedere un affitto extra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que les invités qui dorment plus de deux nuits « devono essere approvati da tutti »."
     },
     {
       "q": "Come vengono divise le spese comuni?",
-      "options": ["In parti uguali tra i coinquilini", "Solo da chi guadagna di più", "Dal proprietario dell'appartamento"],
-      "correct": 0
+      "options": [
+        "In parti uguali tra i coinquilini",
+        "Solo da chi guadagna di più",
+        "Dal proprietario dell'appartamento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les dépenses communes « si dividono in parti uguali »."
     }
   ],
   "words": {

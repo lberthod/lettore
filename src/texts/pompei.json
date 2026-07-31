@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa distrusse la città di Pompei?",
-      "options": ["Un terremoto", "L'eruzione del Vesuvio", "Un'invasione"],
-      "correct": 1
+      "options": [
+        "Un terremoto",
+        "L'eruzione del Vesuvio",
+        "Un'invasione"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que « l'eruzione del Vesuvio seppellì » Pompei, donc c'est l'éruption du Vésuve qui a détruit la ville."
     },
     {
       "q": "Perché la catastrofe garantì la conservazione della città?",
-      "options": ["Perché la cenere sigillò tutto", "Perché nessuno tornò mai più", "Perché la città era di pietra"],
-      "correct": 0
+      "options": [
+        "Perché la cenere sigillò tutto",
+        "Perché nessuno tornò mai più",
+        "Perché la città era di pietra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « La cenere sigillò edifici, oggetti e persino i corpi », donc la cendre a tout scellé et conservé."
     },
     {
       "q": "Come furono ottenuti i calchi delle vittime?",
-      "options": ["Scolpendo la roccia", "Colando il gesso nelle cavità lasciate dai corpi", "Con antiche statue"],
-      "correct": 1
+      "options": [
+        "Scolpendo la roccia",
+        "Colando il gesso nelle cavità lasciate dai corpi",
+        "Con antiche statue"
+      ],
+      "correct": 1,
+      "explanation": "Le texte explique que les moulages ont été obtenus « colando il materiale nelle cavità lasciate dai corpi », donc en coulant le plâtre dans les cavités des corps."
     }
   ],
   "words": {

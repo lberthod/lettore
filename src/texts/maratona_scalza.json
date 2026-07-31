@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Perché Abebe Bikila corre la maratona a piedi nudi?",
-      "options": ["Perché le scarpe fornite gli procuravano vesciche", "Perché non aveva mai avuto scarpe", "Perché le regole olimpiche lo imponevano"],
-      "correct": 0
+      "options": [
+        "Perché le scarpe fornite gli procuravano vesciche",
+        "Perché non aveva mai avuto scarpe",
+        "Perché le regole olimpiche lo imponevano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les chaussures fournies par les organisateurs lui procuraient des vesciche, donc il a choisi de courir pieds nus."
     },
     {
       "q": "Quale coincidenza storica nota la narratrice riguardo al percorso della maratona?",
-      "options": ["Un soldato etiope trionfa nella città che aveva occupato la sua patria", "La gara passa vicino alla casa della narratrice", "Il percorso attraversa il paese natale di Bikila"],
-      "correct": 0
+      "options": [
+        "Un soldato etiope trionfa nella città che aveva occupato la sua patria",
+        "La gara passa vicino alla casa della narratrice",
+        "Il percorso attraversa il paese natale di Bikila"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne qu'un soldat de la garde impériale éthiopienne triomphait dans la ville qui avait occupé sa patrie, une coïncidence historique."
     },
     {
       "q": "Cosa succede quattro anni dopo, a Tokyo?",
-      "options": ["Bikila vince di nuovo, questa volta con le scarpe", "Bikila si ritira dallo sport", "Bikila perde la maratona"],
-      "correct": 0
+      "options": [
+        "Bikila vince di nuovo, questa volta con le scarpe",
+        "Bikila si ritira dallo sport",
+        "Bikila perde la maratona"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que quatre ans plus tard à Tokyo, Bikila court de nouveau, cette fois avec des chaussures, et gagne encore."
     }
   ],
   "words": {

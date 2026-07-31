@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove dorme il leone all'inizio?",
-      "options": ["Sotto un albero", "In una grotta", "Vicino al fiume"],
-      "correct": 0
+      "options": [
+        "Sotto un albero",
+        "In una grotta",
+        "Vicino al fiume"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Un leone dorme sotto un albero », donc le lion dort sous un arbre."
     },
     {
       "q": "Che cosa fa il leone con il topo?",
-      "options": ["Lo mangia", "Lo lascia libero", "Lo porta a casa"],
-      "correct": 1
+      "options": [
+        "Lo mangia",
+        "Lo lascia libero",
+        "Lo porta a casa"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « il leone ride, ma lo lascia libero », donc le lion le laisse partir."
     },
     {
       "q": "Come aiuta il topo il leone?",
-      "options": ["Chiama altri animali", "Rompe la rete con i denti", "Va a cercare un uomo"],
-      "correct": 1
+      "options": [
+        "Chiama altri animali",
+        "Rompe la rete con i denti",
+        "Va a cercare un uomo"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Con i denti rompe la rete », donc la souris casse le filet avec ses dents."
     }
   ],
   "words": {

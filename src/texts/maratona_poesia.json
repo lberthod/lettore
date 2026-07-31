@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cos'è, secondo la poesia, «il muro» del trentacinquesimo chilometro?",
-      "options": ["Una stanchezza pura, non un ostacolo fisico", "Un muro reale lungo il percorso", "Il traguardo della maratona"],
-      "correct": 0
+      "options": [
+        "Una stanchezza pura, non un ostacolo fisico",
+        "Un muro reale lungo il percorso",
+        "Il traguardo della maratona"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le mur est «non pietra ma stanchezza pura», donc une fatigue pure et non un obstacle physique."
     },
     {
       "q": "Che ruolo ha la folla ai bordi del percorso?",
-      "options": ["Sostiene il corridore come un respiro collettivo", "Cronometra il tempo di gara", "Distrae il corridore dal traguardo"],
-      "correct": 0
+      "options": [
+        "Sostiene il corridore come un respiro collettivo",
+        "Cronometra il tempo di gara",
+        "Distrae il corridore dal traguardo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la foule est «un solo respiro collettivo che ti sostiene», donc elle soutient le coureur."
     },
     {
       "q": "Che cosa significa, secondo la poesia, attraversare il traguardo?",
-      "options": ["Tornare a se stessi, non vincere il mondo", "Diventare famosi", "Dimenticare la fatica della corsa"],
-      "correct": 0
+      "options": [
+        "Tornare a se stessi, non vincere il mondo",
+        "Diventare famosi",
+        "Dimenticare la fatica della corsa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'«attraversarlo non è vincere il mondo, ma tornare a se stessi», donc c'est revenir à soi-même."
     }
   ],
   "words": {

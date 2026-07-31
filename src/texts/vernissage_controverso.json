@@ -27,18 +27,33 @@
   "questions": [
     {
       "q": "Come ha reagito il critico del Corriere davanti all'opera dell'artista?",
-      "options": ["L'ha stroncata duramente", "L'ha elogiata senza riserve", "Non ne ha ancora parlato"],
-      "correct": 0
+      "options": [
+        "L'ha stroncata duramente",
+        "L'ha elogiata senza riserve",
+        "Non ne ha ancora parlato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le critique « l'ha già stroncata », donc il l'a durement descendue."
     },
     {
       "q": "Da che cosa nasce l'opera centrale della mostra, con gli schermi rotti?",
-      "options": ["Dalla perdita dell'archivio del padre in un incendio", "Da un viaggio all'estero dell'artista", "Da una commissione pubblica del Comune"],
-      "correct": 0
+      "options": [
+        "Dalla perdita dell'archivio del padre in un incendio",
+        "Da un viaggio all'estero dell'artista",
+        "Da una commissione pubblica del Comune"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho perso l'intero archivio di mio padre in un incendio », donc l'œuvre naît de cette perte."
     },
     {
       "q": "Che cosa si augura l'artista per i visitatori della mostra?",
-      "options": ["Che escano con più domande di quante ne avevano all'ingresso", "Che comprino subito un'opera", "Che scrivano una recensione positiva"],
-      "correct": 0
+      "options": [
+        "Che escano con più domande di quante ne avevano all'ingresso",
+        "Che comprino subito un'opera",
+        "Che scrivano una recensione positiva"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « esca con più domande di quante ne avesse in ingresso », donc l'artiste souhaite que les visiteurs sortent avec plus de questions."
     }
   ],
   "words": {

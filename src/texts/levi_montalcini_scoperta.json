@@ -21,7 +21,8 @@
         "Perché decide di trasferirsi in America",
         "Perché non supera gli esami finali"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Esclusa dall'università a causa delle leggi razziali del 1938 », ce qui confirme que ce sont les lois raciales du régime fasciste qui l'ont exclue."
     },
     {
       "q": "Che cosa scopre Levi-Montalcini insieme a Stanley Cohen?",
@@ -30,7 +31,8 @@
         "Un nuovo vaccino contro il tifo",
         "La struttura del DNA"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Insieme al biochimico Stanley Cohen, la scienziata isola e caratterizza ... il fattore di crescita nervoso, noto come NGF », donc la découverte est bien celle du NGF."
     },
     {
       "q": "A che cosa dedica Levi-Montalcini gran parte della sua vita, oltre alla ricerca?",
@@ -39,7 +41,8 @@
         "Alla costruzione di ospedali militari",
         "Alla diffusione dello sport tra i giovani"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Levi-Montalcini dedica gran parte della vita alla promozione dell'istruzione femminile », ce qui justifie la réponse."
     }
   ],
   "words": {

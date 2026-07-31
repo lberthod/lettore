@@ -25,18 +25,33 @@
   "questions": [
     {
       "q": "Perché la tartaruga sfida la lepre?",
-      "options": ["Per vincere un premio", "Perché è stanca di sentirla vantarsi", "Perché vuole allenarsi"],
-      "correct": 1
+      "options": [
+        "Per vincere un premio",
+        "Perché è stanca di sentirla vantarsi",
+        "Perché vuole allenarsi"
+      ],
+      "correct": 1,
+      "explanation": "La tartaruga sfida la lepre perché è stanca di sentirla vantarsi, come dice il testo: «stanca di sentirla vantarsi ogni mattina»."
     },
     {
       "q": "Che cosa fa la lepre durante la gara?",
-      "options": ["Si ferma per riposare e si addormenta", "Corre senza mai fermarsi", "Aiuta la tartaruga"],
-      "correct": 0
+      "options": [
+        "Si ferma per riposare e si addormenta",
+        "Corre senza mai fermarsi",
+        "Aiuta la tartaruga"
+      ],
+      "correct": 0,
+      "explanation": "Durante la gara la lepre si ferma per riposare e si addormenta, come racconta il testo: «Si sdraiò sotto una quercia... e presto si addormentò»."
     },
     {
       "q": "Qual è la morale della fiaba?",
-      "options": ["La velocità conta più di tutto", "La costanza vale più della velocità", "Non bisogna mai fare gare"],
-      "correct": 1
+      "options": [
+        "La velocità conta più di tutto",
+        "La costanza vale più della velocità",
+        "Non bisogna mai fare gare"
+      ],
+      "correct": 1,
+      "explanation": "La morale è che la costanza vale più della velocità, come afferma la conclusione del testo: «la costanza vale più della velocità»."
     }
   ],
   "words": {

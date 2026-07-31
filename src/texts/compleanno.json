@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Quanti anni compie Giulia?",
-      "options": ["Nove anni", "Otto anni", "Dieci anni"],
-      "correct": 0
+      "options": [
+        "Nove anni",
+        "Otto anni",
+        "Dieci anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « compie nove anni », donc Giulia a neuf ans."
     },
     {
       "q": "Cosa fanno i bambini in giardino?",
-      "options": ["Una caccia al tesoro", "Una partita di calcio", "Un disegno"],
-      "correct": 0
+      "options": [
+        "Una caccia al tesoro",
+        "Una partita di calcio",
+        "Un disegno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Fanno una caccia al tesoro », donc les enfants font une chasse au trésor."
     },
     {
       "q": "Qual è il regalo della nonna?",
-      "options": ["Un piccolo orologio rosso", "Un libro di animali", "Un pallone"],
-      "correct": 0
+      "options": [
+        "Un piccolo orologio rosso",
+        "Un libro di animali",
+        "Un pallone"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un piccolo orologio rosso », donc le cadeau de la grand-mère est une petite montre rouge."
     }
   ],
   "words": {

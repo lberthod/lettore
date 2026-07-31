@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché il cliente cerca un nuovo telefono?",
-      "options": ["Il suo telefono è caduto in acqua", "Vuole regalarlo a un amico", "Il vecchio è troppo pesante"],
-      "correct": 0
+      "options": [
+        "Il suo telefono è caduto in acqua",
+        "Vuole regalarlo a un amico",
+        "Il vecchio è troppo pesante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Il mio è caduto in acqua e non si accende più »."
     },
     {
       "q": "Che cosa cerca il cliente nel nuovo telefono?",
-      "options": ["Una buona batteria e una fotocamera decente", "Il colore più elegante", "Il modello più costoso"],
-      "correct": 0
+      "options": [
+        "Una buona batteria e una fotocamera decente",
+        "Il colore più elegante",
+        "Il modello più costoso"
+      ],
+      "correct": 0,
+      "explanation": "Le client dit : « Vorrei qualcosa di semplice, con una buona batteria e una fotocamera decente »."
     },
     {
       "q": "Che cosa propone il commesso mentre trasferisce i dati?",
-      "options": ["Di scegliere una nuova cover", "Di aspettare fuori dal negozio", "Di tornare il giorno dopo"],
-      "correct": 0
+      "options": [
+        "Di scegliere una nuova cover",
+        "Di aspettare fuori dal negozio",
+        "Di tornare il giorno dopo"
+      ],
+      "correct": 0,
+      "explanation": "Le vendeur propose : « Intanto può scegliere una nuova cover, se vuole »."
     }
   ],
   "words": {

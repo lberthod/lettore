@@ -25,7 +25,8 @@
         "Aerei",
         "Navi da guerra"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que la Piaggio « durante la guerra costruiva aerei », donc elle fabriquait des avions."
     },
     {
       "q": "Perché la Fiat Seicento fu così importante?",
@@ -34,7 +35,8 @@
         "Perché era l'automobile più veloce d'Europa",
         "Perché veniva regalata agli operai delle fabbriche"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte affirme que pour la première fois, une famille ouvrière pouvait rêver d'acheter une voiture."
     },
     {
       "q": "Quali furono, secondo il testo, i costi del boom economico?",
@@ -43,7 +45,8 @@
         "La fine del cinema e della musica italiana",
         "Periferie cresciute male, inquinamento e perdita delle culture popolari"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte mentionne des banlieues mal construites, la pollution et la perte des cultures populaires comme coûts du boom."
     }
   ],
   "words": {

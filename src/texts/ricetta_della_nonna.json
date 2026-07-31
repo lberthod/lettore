@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Secondo la nonna, qual è il vero segreto di un buon ragù?",
-      "options": ["La pazienza di lasciarlo cuocere piano per ore", "Un ingrediente segreto e raro", "Cuocerlo velocemente a fuoco alto"],
-      "correct": 0
+      "options": [
+        "La pazienza di lasciarlo cuocere piano per ore",
+        "Un ingrediente segreto e raro",
+        "Cuocerlo velocemente a fuoco alto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le secret n'est pas un ingrédient spécial mais la patience de le laisser cuire doucement pendant des heures."
     },
     {
       "q": "Perché, secondo la nonna, alla fine si aggiunge il latte al ragù?",
-      "options": ["Perché rende la carne più morbida e toglie l'acidità del pomodoro", "Perché rende il ragù più liquido", "Perché sostituisce il vino rosso"],
-      "correct": 0
+      "options": [
+        "Perché rende la carne più morbida e toglie l'acidità del pomodoro",
+        "Perché rende il ragù più liquido",
+        "Perché sostituisce il vino rosso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le lait rend la viande plus tendre et enlève l'acidité de la tomate."
     },
     {
       "q": "Cosa consiglia la nonna riguardo alla preparazione del ragù?",
-      "options": ["Di prepararlo il giorno prima, perché riposando i sapori si uniscono meglio", "Di consumarlo subito appena cotto", "Di cuocerlo per soli trenta minuti"],
-      "correct": 0
+      "options": [
+        "Di prepararlo il giorno prima, perché riposando i sapori si uniscono meglio",
+        "Di consumarlo subito appena cotto",
+        "Di cuocerlo per soli trenta minuti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte conseille de le préparer la veille car en reposant une nuit au frigo, les saveurs se mélangent mieux."
     }
   ],
   "words": {

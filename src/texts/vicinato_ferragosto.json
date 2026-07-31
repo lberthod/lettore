@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Perché gli abitanti del palazzo organizzano il barbecue?",
-      "options": ["Perché nessuno è partito per le vacanze", "Perché è il compleanno della signora Amelia", "Perché il palazzo festeggia un anniversario"],
-      "correct": 0
+      "options": [
+        "Perché nessuno è partito per le vacanze",
+        "Perché è il compleanno della signora Amelia",
+        "Perché il palazzo festeggia un anniversario"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que cette année personne de l'immeuble n'est parti en vacances, donc ils organisent un barbecue."
     },
     {
       "q": "Chi ha l'idea del barbecue?",
-      "options": ["La signora Amelia", "Il signor Hassan", "Gli studenti universitari"],
-      "correct": 0
+      "options": [
+        "La signora Amelia",
+        "Il signor Hassan",
+        "Gli studenti universitari"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que c'est la signora Amelia qui a eu l'idée du barbecue sur la terrasse."
     },
     {
       "q": "Come cambia l'atmosfera tra i vicini durante la serata?",
-      "options": ["Le differenze di età e provenienza sembrano sparire", "I vicini litigano per il rumore", "Ognuno resta chiuso in casa propria"],
-      "correct": 0
+      "options": [
+        "Le differenze di età e provenienza sembrano sparire",
+        "I vicini litigano per il rumore",
+        "Ognuno resta chiuso in casa propria"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que devant le feu de la grille, les différences d'âge et de provenance semblaient disparaître."
     }
   ],
   "words": {

@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cosa rende speciale la colomba di Rosanna?",
-      "options": ["Il lievito madre e la lunga lievitazione", "Il prezzo molto basso", "La produzione industriale"],
-      "correct": 0
+      "options": [
+        "Il lievito madre e la lunga lievitazione",
+        "Il prezzo molto basso",
+        "La produzione industriale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle utilise « lievito madre, lunga lievitazione », ce qui rend sa colomba spéciale."
     },
     {
       "q": "Chi entra nel negozio di Rosanna un pomeriggio di marzo?",
-      "options": ["Un critico gastronomico in incognito", "Un giornalista sportivo", "Un fornitore di farina"],
-      "correct": 0
+      "options": [
+        "Un critico gastronomico in incognito",
+        "Un giornalista sportivo",
+        "Un fornitore di farina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'homme est « un critico gastronomico molto seguito, arrivato in incognito »."
     },
     {
       "q": "Che cosa succede dopo la pubblicazione dell'articolo?",
-      "options": ["Il telefono del laboratorio squilla continuamente", "Rosanna chiude il laboratorio", "Nessuno nota il cambiamento"],
-      "correct": 0
+      "options": [
+        "Il telefono del laboratorio squilla continuamente",
+        "Rosanna chiude il laboratorio",
+        "Nessuno nota il cambiamento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'après l'article, « il telefono del laboratorio non smette più di squillare »."
     }
   ],
   "words": {

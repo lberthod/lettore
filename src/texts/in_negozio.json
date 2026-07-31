@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa cerca il cliente?",
-      "options": ["Una maglietta", "Un paio di scarpe", "Un cappello"],
-      "correct": 0
+      "options": [
+        "Una maglietta",
+        "Un paio di scarpe",
+        "Un cappello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « cerco una maglietta », donc le client cherche un tee-shirt."
     },
     {
       "q": "Di che colore la vuole?",
-      "options": ["Rossa", "Blu", "Verde"],
-      "correct": 1
+      "options": [
+        "Rossa",
+        "Blu",
+        "Verde"
+      ],
+      "correct": 1,
+      "explanation": "Le client dit « La vorrei blu », donc il la veut bleue."
     },
     {
       "q": "Quanto costa la maglietta?",
-      "options": ["Dieci euro", "Venti euro", "Trenta euro"],
-      "correct": 1
+      "options": [
+        "Dieci euro",
+        "Venti euro",
+        "Trenta euro"
+      ],
+      "correct": 1,
+      "explanation": "Le vendeur répond « Venti euro », donc elle coûte vingt euros."
     }
   ],
   "words": {

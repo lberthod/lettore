@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Dove passa il cavo di cui parla la poesia?",
-      "options": ["Sotto il mare", "Sopra le montagne", "Dentro un tunnel"],
-      "correct": 0
+      "options": [
+        "Sotto il mare",
+        "Sopra le montagne",
+        "Dentro un tunnel"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Un cavo sottile sotto il mare », donc le câble passe sous la mer."
     },
     {
       "q": "Che cosa apre lo schermo acceso nella notte?",
-      "options": ["Finestre su mille vite", "Una porta segreta", "Un libro antico"],
-      "correct": 0
+      "options": [
+        "Finestre su mille vite",
+        "Una porta segreta",
+        "Un libro antico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « apre finestre su mille vite rotte », donc l'écran ouvre des fenêtres sur mille vies."
     },
     {
       "q": "Come descrive la poesia la relazione tra le persone connesse?",
-      "options": ["Vicine eppure lontane", "Sempre in conflitto", "Completamente indifferenti"],
-      "correct": 0
+      "options": [
+        "Vicine eppure lontane",
+        "Sempre in conflitto",
+        "Completamente indifferenti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Siamo vicini eppure lontani », donc les personnes sont proches et pourtant lointaines."
     }
   ],
   "words": {

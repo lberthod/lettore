@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa proteggeva la fata secondo la leggenda?",
-      "options": ["I prati fioriti della vallata", "Le pecore del pastore", "Le cime innevate delle montagne"],
-      "correct": 0
+      "options": [
+        "I prati fioriti della vallata",
+        "Le pecore del pastore",
+        "Le cime innevate delle montagne"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « una fata che proteggeva i prati fioriti della vallata », donc elle protégeait les prés fleuris de la vallée."
     },
     {
       "q": "Perché Nardo decise di tagliare tutti i fiori del prato?",
-      "options": ["Perché voleva vendere il fieno a un prezzo più alto", "Perché voleva costruire una casa", "Perché la fata glielo aveva ordinato"],
-      "correct": 0
+      "options": [
+        "Perché voleva vendere il fieno a un prezzo più alto",
+        "Perché voleva costruire una casa",
+        "Perché la fata glielo aveva ordinato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « se avesse tagliato tutti i fiori del prato più grande, avrebbe potuto vendere il fieno profumato a un prezzo molto più alto al mercato della città »."
     },
     {
       "q": "Come punì la fata il pastore?",
-      "options": ["Trasformò i fiori tagliati in pietre", "Fece sparire tutte le sue pecore", "Lo trasformò in una statua di ghiaccio"],
-      "correct": 0
+      "options": [
+        "Trasformò i fiori tagliati in pietre",
+        "Fece sparire tutte le sue pecore",
+        "Lo trasformò in una statua di ghiaccio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « trasformò all'istante tutti i fiori recisi in piccole pietre grigie, dure e fredde come il ghiaccio »."
     }
   ],
   "words": {

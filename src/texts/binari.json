@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa trasforma il paesaggio in un film silenzioso?",
-      "options": ["Il finestrino del treno", "Uno schermo del cinema", "Una macchina fotografica"],
-      "correct": 0
+      "options": [
+        "Il finestrino del treno",
+        "Uno schermo del cinema",
+        "Una macchina fotografica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"il finestrino trasforma il paesaggio in un film silenzioso\", donc c'est la vitre du train qui transforme le paysage."
     },
     {
       "q": "Con quale biglietto viaggia il poeta?",
-      "options": ["Con un biglietto di sola andata", "Con un biglietto di andata e ritorno", "Con un abbonamento annuale"],
-      "correct": 0
+      "options": [
+        "Con un biglietto di sola andata",
+        "Con un biglietto di andata e ritorno",
+        "Con un abbonamento annuale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"con un biglietto di sola andata\", donc le poète voyage avec un billet aller simple."
     },
     {
       "q": "Che cosa ha capito il poeta tra una stazione e l'altra?",
-      "options": ["Che arrivare è solo un altro modo di partire", "Che i treni sono sempre in ritardo", "Che è meglio restare a casa"],
-      "correct": 0
+      "options": [
+        "Che arrivare è solo un altro modo di partire",
+        "Che i treni sono sempre in ritardo",
+        "Che è meglio restare a casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"arrivare è solo un altro modo di partire\", donc le poète a compris qu'arriver est une autre façon de partir."
     }
   ],
   "words": {

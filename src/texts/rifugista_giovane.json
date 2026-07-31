@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Quanti anni ha Elena?",
-      "options": ["Venticinque", "Trenta", "Diciotto"],
-      "correct": 0
+      "options": [
+        "Venticinque",
+        "Trenta",
+        "Diciotto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Elena ha venticinque anni », donc elle a vingt-cinq ans."
     },
     {
       "q": "Che cosa prepara Elena ogni mattina?",
-      "options": ["La polenta", "La pizza", "Il pesce"],
-      "correct": 0
+      "options": [
+        "La polenta",
+        "La pizza",
+        "Il pesce"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ogni mattina Elena prepara la polenta », donc elle prépare la polenta."
     },
     {
       "q": "Che cosa guarda Elena la sera?",
-      "options": ["Le stelle", "La televisione", "Le fotografie"],
-      "correct": 0
+      "options": [
+        "Le stelle",
+        "La televisione",
+        "Le fotografie"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La sera lei guarda le stelle », donc elle regarde les étoiles."
     }
   ],
   "words": {

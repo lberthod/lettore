@@ -194,7 +194,8 @@
         "Perché il dottore gli dice che deve muoversi di più",
         "Perché la sua collega Anna corre ogni giorno"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « il dottore gli dice: deve muoversi di più, il suo cuore ha bisogno di esercizio », donc Paolo commence à courir sur les conseils du médecin."
     },
     {
       "q": "Cosa vede Paolo ai trenta chilometri della maratona?",
@@ -203,7 +204,8 @@
         "Il traguardo della gara",
         "La sua collega Anna che lo applaude"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Poi vede sua figlia con un cartello: forza papà, sei il mio eroe », donc aux trente kilomètres il voit sa fille avec un panneau."
     },
     {
       "q": "Come finisce la maratona per Paolo?",
@@ -212,7 +214,8 @@
         "Vince la gara",
         "Attraversa il traguardo dopo quattro ore e mezza"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Paolo attraversa il traguardo dopo quattro ore e mezza », donc il termine la maratone en franchissant la ligne d'arrivée après quatre heures et demie."
     }
   ]
 }

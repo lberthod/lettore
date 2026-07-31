@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Come si chiama il nuovo compagno di Sara?",
-      "options": ["Nio", "Leo", "Max"],
-      "correct": 0
+      "options": [
+        "Nio",
+        "Leo",
+        "Max"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Si chiama Nio »."
     },
     {
       "q": "Che cosa diventa blu ogni pomeriggio alle tre?",
-      "options": ["Gli occhi di Nio", "Le mani di Nio", "Il quaderno di Nio"],
-      "correct": 0
+      "options": [
+        "Gli occhi di Nio",
+        "Le mani di Nio",
+        "Il quaderno di Nio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni pomeriggio, alle tre, gli occhi di Nio diventano blu per un momento »."
     },
     {
       "q": "Che cosa fa Nio nel laboratorio segreto?",
-      "options": ["Studia i bambini per aiutarli meglio", "Ripara altri robot", "Gioca a calcio"],
-      "correct": 0
+      "options": [
+        "Studia i bambini per aiutarli meglio",
+        "Ripara altri robot",
+        "Gioca a calcio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nio studia ogni bambino per capire come aiutare meglio i ragazzi in difficoltà »."
     }
   ],
   "words": {

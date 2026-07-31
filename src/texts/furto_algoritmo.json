@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa è scomparso dai server di NovaMed la sera prima della presentazione?",
-      "options": ["Il codice sorgente dell'algoritmo di diagnosi precoce", "L'elenco degli investitori", "I fondi destinati agli stipendi"],
-      "correct": 0
+      "options": [
+        "Il codice sorgente dell'algoritmo di diagnosi precoce",
+        "L'elenco degli investitori",
+        "I fondi destinati agli stipendi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il codice sorgente dell'algoritmo di diagnosi precoce ... era semplicemente scomparso dai server aziendali »."
     },
     {
       "q": "Perché Anita Conti aveva copiato il codice su un server esterno?",
-      "options": ["Perché aveva scoperto che Bellini voleva vendere l'algoritmo a un gruppo che l'avrebbe bloccato", "Perché voleva rivenderlo lei stessa alla concorrenza", "Perché il codice conteneva un errore da correggere in segreto"],
-      "correct": 0
+      "options": [
+        "Perché aveva scoperto che Bellini voleva vendere l'algoritmo a un gruppo che l'avrebbe bloccato",
+        "Perché voleva rivenderlo lei stessa alla concorrenza",
+        "Perché il codice conteneva un errore da correggere in segreto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Anita avait découvert que « il fondatore stava trattando la vendita dell'intera azienda, algoritmo incluso, a un gruppo farmaceutico che aveva tutto l'interesse a bloccare quella tecnologia »."
     },
     {
       "q": "Come giudica infine Serra la vicenda?",
-      "options": ["Capisce che il vero reato non era quello inizialmente denunciato da Bellini", "Conclude che Anita è del tutto innocente e chiude subito il caso", "Decide che Bellini non ha alcuna responsabilità"],
-      "correct": 0
+      "options": [
+        "Capisce che il vero reato non era quello inizialmente denunciato da Bellini",
+        "Conclude che Anita è del tutto innocente e chiude subito il caso",
+        "Decide che Bellini non ha alcuna responsabilità"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Serra « cominciava a capire » que « il vero reato ... non era quello che tutti avevano gridato fin dall'inizio »."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa scompare dalla biblioteca?",
-      "options": ["Un raro manoscritto medievale", "Un dipinto rinascimentale", "Una collezione di monete antiche"],
-      "correct": 0
+      "options": [
+        "Un raro manoscritto medievale",
+        "Un dipinto rinascimentale",
+        "Una collezione di monete antiche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un raro manoscritto medievale scompare », donc c'est un rare manuscrit médiéval qui disparaît."
     },
     {
       "q": "Che cosa nota subito l'ispettore Bianchi?",
-      "options": ["Che l'allarme non è mai suonato", "Che manca una finestra rotta", "Che ci sono impronte digitali ovunque"],
-      "correct": 0
+      "options": [
+        "Che l'allarme non è mai suonato",
+        "Che manca una finestra rotta",
+        "Che ci sono impronte digitali ovunque"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'allarme non è mai suonato », donc Bianchi remarque que l'alarme n'a jamais sonné."
     },
     {
       "q": "Perché la restauratrice aveva nascosto il manoscritto?",
-      "options": ["Per proteggerlo da un compratore straniero", "Per venderlo lei stessa", "Per vendicarsi del direttore"],
-      "correct": 0
+      "options": [
+        "Per proteggerlo da un compratore straniero",
+        "Per venderlo lei stessa",
+        "Per vendicarsi del direttore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « per proteggerlo da un compratore straniero », donc elle l'avait caché pour le protéger d'un acheteur étranger."
     }
   ],
   "words": {

@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Che forma ha l'Italia?",
-      "options": ["La forma di uno stivale", "La forma di un cerchio", "La forma di una stella"],
-      "correct": 0
+      "options": [
+        "La forma di uno stivale",
+        "La forma di un cerchio",
+        "La forma di una stella"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Sembra uno stivale », donc l'Italie a la forme d'une botte."
     },
     {
       "q": "Quale città è la capitale dell'Italia?",
-      "options": ["Roma", "Milano", "Torino"],
-      "correct": 0
+      "options": [
+        "Roma",
+        "Milano",
+        "Torino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Roma è la capitale dell'Italia », donc la capitale est Rome."
     },
     {
       "q": "Quali sono le due grandi isole?",
-      "options": ["La Sicilia e la Sardegna", "Il nord e il sud", "Milano e Roma"],
-      "correct": 0
+      "options": [
+        "La Sicilia e la Sardegna",
+        "Il nord e il sud",
+        "Milano e Roma"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « due grandi isole: la Sicilia e la Sardegna », donc les deux grandes îles sont la Sicile et la Sardaigne."
     }
   ],
   "words": {

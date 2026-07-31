@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cosa mostra Luca a Sara?",
-      "options": ["Un nuovo drone", "Una bicicletta", "Un libro nuovo"],
-      "correct": 0
+      "options": [
+        "Un nuovo drone",
+        "Una bicicletta",
+        "Un libro nuovo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Guarda il mio nuovo drone », donc Luca montre un nouveau drone."
     },
     {
       "q": "Come controlla Luca il drone?",
-      "options": ["Con un telecomando", "Con la voce", "Con un computer"],
-      "correct": 0
+      "options": [
+        "Con un telecomando",
+        "Con la voce",
+        "Con un computer"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho un telecomando », donc Luca contrôle le drone avec une télécommande."
     },
     {
       "q": "Cosa vede Sara sullo schermo del telefono?",
-      "options": ["Il giardino dall'alto", "Un film", "Una fotografia vecchia"],
-      "correct": 0
+      "options": [
+        "Il giardino dall'alto",
+        "Un film",
+        "Una fotografia vecchia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « vedo il giardino dall'alto », donc Sara voit le jardin vu d'en haut."
     }
   ],
   "words": {

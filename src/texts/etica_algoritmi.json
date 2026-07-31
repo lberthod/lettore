@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Secondo il testo, qual è il problema principale degli algoritmi decisionali?",
-      "options": ["La loro opacità, più che la loro velocità", "Il fatto che siano troppo lenti", "Il loro costo eccessivo per le aziende"],
-      "correct": 0
+      "options": [
+        "La loro opacità, più che la loro velocità",
+        "Il fatto che siano troppo lenti",
+        "Il loro costo eccessivo per le aziende"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le problème n'est pas tant la vitesse avec laquelle ces décisions sont prises, mais leur opacité."
     },
     {
       "q": "Che cosa può accadere quando un algoritmo è addestrato su dati storici discriminatori?",
-      "options": ["Il sistema può ereditare e amplificare i pregiudizi presenti nei dati", "Il sistema corregge automaticamente ogni discriminazione", "Il sistema diventa completamente neutro"],
-      "correct": 0
+      "options": [
+        "Il sistema può ereditare e amplificare i pregiudizi presenti nei dati",
+        "Il sistema corregge automaticamente ogni discriminazione",
+        "Il sistema diventa completamente neutro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que ces systèmes héritent, et parfois amplifient, les préjugés présents dans les données historiques avec lesquelles ils ont été entraînés."
     },
     {
       "q": "Che cosa prevede l'AI Act europeo secondo il testo?",
-      "options": ["Obblighi di trasparenza e valutazioni di rischio per i sistemi ad alto impatto", "Il divieto totale di ogni algoritmo decisionale", "Nessuna regolamentazione specifica per l'intelligenza artificiale"],
-      "correct": 0
+      "options": [
+        "Obblighi di trasparenza e valutazioni di rischio per i sistemi ad alto impatto",
+        "Il divieto totale di ogni algoritmo decisionale",
+        "Nessuna regolamentazione specifica per l'intelligenza artificiale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que l'AI Act impose des obligations de transparence et des évaluations de risque pour les systèmes considérés comme à haut impact."
     }
   ],
   "words": {

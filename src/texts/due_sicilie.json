@@ -19,7 +19,8 @@
         "Il re Carlo di Borbone",
         "Giuseppe Garibaldi"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les contemporains appelaient Federico secondo di Svevia « stupor mundi », la merveille du monde."
     },
     {
       "q": "Quale primato ottenne il regno nel milleottocentotrentanove?",
@@ -28,7 +29,8 @@
         "La prima ferrovia italiana, tra Napoli e Portici",
         "Il primo teatro d'opera del mondo"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte indique que le royaume inaugura en 1839 la première voie ferrée italienne entre Naples et Portici."
     },
     {
       "q": "Perché il regno normanno di Palermo è descritto come sorprendentemente moderno?",
@@ -37,7 +39,8 @@
         "Perché il re parlava sei lingue",
         "Perché vi convivevano religioni diverse e i documenti erano scritti in più lingue"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte précise que le royaume normand de Palerme était moderne parce que chrétiens, musulmans et juifs y cohabitaient et que les documents officiels étaient rédigés en plusieurs langues."
     }
   ],
   "words": {

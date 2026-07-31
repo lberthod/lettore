@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cosa decise il consiglio comunale di Torreombrosa?",
-      "options": ["Bandire tutti gli orologi", "Costruire un nuovo campanile", "Vendere il tempo ai forestieri"],
-      "correct": 0
+      "options": [
+        "Bandire tutti gli orologi",
+        "Costruire un nuovo campanile",
+        "Vendere il tempo ai forestieri"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le conseil municipal décida de « bandire tutti gli orologi »."
     },
     {
       "q": "Come reagirono gli abitanti alla proposta del mercante?",
-      "options": ["Rifiutarono con cortesia", "Comprarono tutti gli orologi", "Lo cacciarono dal paese"],
-      "correct": 0
+      "options": [
+        "Rifiutarono con cortesia",
+        "Comprarono tutti gli orologi",
+        "Lo cacciarono dal paese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les habitants l'écoutèrent avec courtoisie, lui offrirent du vin et du pain, puis refusèrent."
     },
     {
       "q": "Perché i cittadini conservarono un orologio fermo sulla piazza?",
-      "options": ["Per ricordare ciò che avevano scelto di perdere", "Per misurare le ore di lavoro", "Per attirare i turisti curiosi"],
-      "correct": 0
+      "options": [
+        "Per ricordare ciò che avevano scelto di perdere",
+        "Per misurare le ore di lavoro",
+        "Per attirare i turisti curiosi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils ont conservé l'orologio « non per misurare le ore, ma per ricordare ciò che avevano scelto di perdere »."
     }
   ],
   "words": {

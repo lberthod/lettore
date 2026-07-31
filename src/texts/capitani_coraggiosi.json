@@ -24,18 +24,33 @@
   "questions": [
     {
       "q": "Che cosa ricordano Beppe e Nino della traversata del settantotto?",
-      "options": ["Una tempesta col libeccio al largo della Corsica", "Una regata vinta facilmente", "Un viaggio tranquillo senza problemi"],
-      "correct": 0
+      "options": [
+        "Una tempesta col libeccio al largo della Corsica",
+        "Una regata vinta facilmente",
+        "Un viaggio tranquillo senza problemi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « quando il libeccio ci prese di traverso al largo della Corsica » : ils se souviennent d'une tempête avec le libeccio au large de la Corse."
     },
     {
       "q": "Perché i due non parteciparono mai alla Route du Rhum?",
-      "options": ["Non avevano abbastanza denaro per l'iscrizione", "La barca non era pronta", "Non trovarono un equipaggio"],
-      "correct": 0
+      "options": [
+        "Non avevano abbastanza denaro per l'iscrizione",
+        "La barca non era pronta",
+        "Non trovarono un equipaggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « quella costava più di un anno di stipendio » : ils n'avaient pas assez d'argent pour payer l'iscrizione."
     },
     {
       "q": "Che cosa fanno alla fine Beppe e Nino con il giovane del bar?",
-      "options": ["Lo invitano a uscire in barca con loro", "Lo rimproverano per aver ascoltato", "Gli offrono un lavoro al bar"],
-      "correct": 0
+      "options": [
+        "Lo invitano a uscire in barca con loro",
+        "Lo rimproverano per aver ascoltato",
+        "Gli offrono un lavoro al bar"
+      ],
+      "correct": 0,
+      "explanation": "À la fin, Beppe lui dit « vieni con noi sabato » : ils l'invitent à sortir en bateau avec eux."
     }
   ],
   "words": {

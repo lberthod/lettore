@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Chi aiuta la nonna con il computer?",
-      "options": ["Il nipote Luca", "La zia", "Il papà"],
-      "correct": 0
+      "options": [
+        "Il nipote Luca",
+        "La zia",
+        "Il papà"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il nipote Luca aiuta la nonna »."
     },
     {
       "q": "Dove abita la zia?",
-      "options": ["In Argentina", "In Italia", "In Francia"],
-      "correct": 0
+      "options": [
+        "In Argentina",
+        "In Italia",
+        "In Francia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La zia abita in Argentina »."
     },
     {
       "q": "Che cosa guarda la nonna?",
-      "options": ["Le foto dei gatti", "Un film", "Le foto dei cani"],
-      "correct": 0
+      "options": [
+        "Le foto dei gatti",
+        "Un film",
+        "Le foto dei cani"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Poi la nonna guarda le foto dei gatti »."
     }
   ],
   "words": {

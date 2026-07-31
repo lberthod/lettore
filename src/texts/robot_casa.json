@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In che anno è ambientata la storia?",
-      "options": ["Nel 1985", "Nel 2085", "Nel 2025"],
-      "correct": 1
+      "options": [
+        "Nel 1985",
+        "Nel 2085",
+        "Nel 2025"
+      ],
+      "correct": 1,
+      "explanation": "Le texte commence par « Nell'anno 2085 », donc l'histoire se passe en 2085."
     },
     {
       "q": "Che cosa prepara Zeta invece del caffè?",
-      "options": ["Una torta al cioccolato", "Un tè", "Il pane"],
-      "correct": 0
+      "options": [
+        "Una torta al cioccolato",
+        "Un tè",
+        "Il pane"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Invece del caffè, prepara una torta al cioccolato per tutti »."
     },
     {
       "q": "Perché Zeta ha fatto la torta?",
-      "options": ["Perché era rotto", "Perché era il compleanno della mamma", "Perché non c'era il caffè"],
-      "correct": 1
+      "options": [
+        "Perché era rotto",
+        "Perché era il compleanno della mamma",
+        "Perché non c'era il caffè"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Ho letto nel calendario che è il tuo compleanno », donc Zeta a fait la torta pour l'anniversaire de la mamma."
     }
   ],
   "words": {

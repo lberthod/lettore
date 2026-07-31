@@ -17,7 +17,8 @@
         "A Firenze",
         "A Venezia"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Il Colosseo è a Roma, in Italia »."
     },
     {
       "q": "Chi combatte nell'arena del Colosseo?",
@@ -26,7 +27,8 @@
         "I gladiatori",
         "Gli imperatori"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « I gladiatori combattono nell'arena »."
     },
     {
       "q": "Che cosa fanno oggi i turisti al Colosseo?",
@@ -35,7 +37,8 @@
         "Visitano il monumento",
         "Combattono nell'arena"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « milioni di turisti visitano il monumento ogni anno »."
     }
   ],
   "words": {

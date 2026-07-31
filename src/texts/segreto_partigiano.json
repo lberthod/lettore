@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove viene trovata la lettera nascosta?",
-      "options": ["Dietro un camino murato in una casa di montagna", "Sotto il pavimento di una chiesa", "In una vecchia valigia in soffitta"],
-      "correct": 0
+      "options": [
+        "Dietro un camino murato in una casa di montagna",
+        "Sotto il pavimento di una chiesa",
+        "In una vecchia valigia in soffitta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « trovano una lettera nascosta dietro un camino murato » dans une vieille maison de montagne."
     },
     {
       "q": "Che cosa scopre la proprietaria consultando gli archivi comunali?",
-      "options": ["Che l'uomo accusato era in realtà innocente", "Che la lettera era falsa", "Che il partigiano era ancora vivo"],
-      "correct": 0
+      "options": [
+        "Che l'uomo accusato era in realtà innocente",
+        "Che la lettera era falsa",
+        "Che il partigiano era ancora vivo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « scopre che l'uomo accusato dal tradimento era in realtà innocente »."
     },
     {
       "q": "Che cosa decide di fare la donna alla fine?",
-      "options": ["Rendere pubblica la verità sul partigiano", "Distruggere la lettera per sempre", "Vendere la casa e la lettera"],
-      "correct": 0
+      "options": [
+        "Rendere pubblica la verità sul partigiano",
+        "Distruggere la lettera per sempre",
+        "Vendere la casa e la lettera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « decide di rendere pubblica la verità »."
     }
   ],
   "words": {

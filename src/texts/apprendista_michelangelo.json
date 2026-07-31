@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Chi è Filippo?",
-      "options": ["Un giovane apprendista nella bottega di Michelangelo", "Un ricco mercante fiorentino", "Un pittore già famoso in tutta Italia"],
-      "correct": 0
+      "options": [
+        "Un giovane apprendista nella bottega di Michelangelo",
+        "Un ricco mercante fiorentino",
+        "Un pittore già famoso in tutta Italia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il entre comme jeune apprenti dans la bottega de Michelangelo."
     },
     {
       "q": "Dove viene estratto il marmo che Filippo osserva?",
-      "options": ["A Carrara", "A Siena", "A Roma"],
-      "correct": 0
+      "options": [
+        "A Carrara",
+        "A Siena",
+        "A Roma"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Michelangelo porte Filippo à Carrara, où l'on extrait le marbre blanc."
     },
     {
       "q": "Che cosa spiega Michelangelo a Filippo riguardo alla scultura?",
-      "options": ["Che la forma è già nascosta nel marmo e va liberata con pazienza", "Che la scultura non richiede alcuna pazienza", "Che il marmo migliore proviene sempre da Firenze"],
-      "correct": 0
+      "options": [
+        "Che la forma è già nascosta nel marmo e va liberata con pazienza",
+        "Che la scultura non richiede alcuna pazienza",
+        "Che il marmo migliore proviene sempre da Firenze"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que chaque sculpture cache déjà une forme dans le bloc de marbre et qu'il faut la libérer avec patience."
     }
   ],
   "words": {

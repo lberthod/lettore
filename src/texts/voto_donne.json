@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quando votarono per la prima volta le donne italiane?",
-      "options": ["Nel 1946", "Nel 1900", "Nel 1968"],
-      "correct": 0
+      "options": [
+        "Nel 1946",
+        "Nel 1900",
+        "Nel 1968"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il due giugno del millenovecentoquarantasei, per la prima volta, le donne italiane votarono », donc c'était en 1946."
     },
     {
       "q": "Tra che cosa scelsero gli italiani in quel referendum?",
-      "options": ["Tra guerra e pace", "Tra monarchia e repubblica", "Tra due partiti"],
-      "correct": 1
+      "options": [
+        "Tra guerra e pace",
+        "Tra monarchia e repubblica",
+        "Tra due partiti"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Quel giorno gli italiani scelsero tra monarchia e repubblica »."
     },
     {
       "q": "Quante furono le prime donne elette in Parlamento?",
-      "options": ["Ventuno", "Cento", "Cinque"],
-      "correct": 0
+      "options": [
+        "Ventuno",
+        "Cento",
+        "Cinque"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le prime donne elette in Parlamento furono ventuno »."
     }
   ],
   "words": {

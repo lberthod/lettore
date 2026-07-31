@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Da dove deriva il nome Ferragosto?",
-      "options": ["Dalle Feriae Augusti volute dall'imperatore Augusto", "Da una festa medievale francese", "Dal nome di un santo spagnolo"],
-      "correct": 0
+      "options": [
+        "Dalle Feriae Augusti volute dall'imperatore Augusto",
+        "Da una festa medievale francese",
+        "Dal nome di un santo spagnolo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que ce sont les Feriae Augusti, le repos voulu par l'empereur Auguste, qui donnent leur nom à cette fête."
     },
     {
       "q": "Che cosa permisero i treni popolari degli anni Trenta?",
-      "options": ["A migliaia di famiglie operaie di vedere il mare o la montagna a prezzi ridotti", "Ai turisti stranieri di visitare Roma gratuitamente", "Agli agricoltori di trasportare i raccolti"],
-      "correct": 0
+      "options": [
+        "A migliaia di famiglie operaie di vedere il mare o la montagna a prezzi ridotti",
+        "Ai turisti stranieri di visitare Roma gratuitamente",
+        "Agli agricoltori di trasportare i raccolti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que les trains populaires ont permis à des milliers de familles ouvrières de voir la mer ou la montagne à prix réduits."
     },
     {
       "q": "Che cosa scopre chi rimane in città a Ferragosto?",
-      "options": ["Strade deserte e un silenzio insolito", "Traffico intenso e negozi affollati", "Grandi concerti in ogni piazza"],
-      "correct": 0
+      "options": [
+        "Strade deserte e un silenzio insolito",
+        "Traffico intenso e negozi affollati",
+        "Grandi concerti in ogni piazza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que celui qui reste en ville découvre un paysage irréel : des rues désertes et un silence inhabituel."
     }
   ],
   "words": {

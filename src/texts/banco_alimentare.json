@@ -20,7 +20,8 @@
         "Vanno al cinema",
         "Puliscono la casa"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Ogni sabato mattina, Marta e sua madre preparano una borsa di cibo » et qu'elles l'apportent au banco alimentare."
     },
     {
       "q": "Chi lavora al banco alimentare e saluta tutti con un sorriso?",
@@ -29,7 +30,8 @@
         "La madre di Marta",
         "Un poliziotto"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Al banco alimentare lavora Giorgio, un volontario simpatico » et qu'il « saluta ogni persona con un grande sorriso »."
     },
     {
       "q": "Che cosa capisce Marta alla fine della storia?",
@@ -38,7 +40,8 @@
         "Che deve studiare di più",
         "Che il banco alimentare è troppo lontano"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « aiutare gli altri non è complicato », ce qui correspond à la réponse."
     }
   ],
   "words": {
@@ -84,7 +87,7 @@
     "per": "pour",
     "chi": "celui qui",
     "ne": "en",
-    "ha": "(il/elle) a",
+    "ha": "(elle) a",
     "bisogno": "besoin",
     "settimana": "semaine",
     "tante": "beaucoup de",
@@ -148,7 +151,6 @@
     "il tempo": "le temps",
     "tempo": "temps",
     "ha imparato": "(elle) a appris",
-    "ha": "(elle) a",
     "imparato": "appris",
     "parlare": "parler",
     "grandi": "grands",

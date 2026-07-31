@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che consiglio dà la madre a proposito del basilico?",
-      "options": ["Di tenerlo sul balcone al sole, senza annaffiarlo troppo", "Di tenerlo dentro casa, al buio", "Di regalarlo alla nonna"],
-      "correct": 0
+      "options": [
+        "Di tenerlo sul balcone al sole, senza annaffiarlo troppo",
+        "Di tenerlo dentro casa, al buio",
+        "Di regalarlo alla nonna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit de tenir le basilique sur le balcon au soleil et de ne pas trop l'arroser, car il pourrirait."
     },
     {
       "q": "Che cosa fa di solito la nonna quando Elena la chiama la domenica?",
-      "options": ["Finge di essere impegnata ma poi resta al telefono a lungo", "Rifiuta di rispondere al telefono", "Chiede subito di richiamare più tardi"],
-      "correct": 0
+      "options": [
+        "Finge di essere impegnata ma poi resta al telefono a lungo",
+        "Rifiuta di rispondere al telefono",
+        "Chiede subito di richiamare più tardi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle fait semblant d'être occupée mais qu'elle reste ensuite au téléphone une heure entière."
     },
     {
       "q": "Che cosa promette la madre alla fine della lettera?",
-      "options": ["Che la porta resterà aperta, ma lei vivrà la propria vita senza aspettarla alla finestra", "Che chiuderà la casa e andrà a vivere altrove", "Che aspetterà sua figlia ogni sera alla finestra"],
-      "correct": 0
+      "options": [
+        "Che la porta resterà aperta, ma lei vivrà la propria vita senza aspettarla alla finestra",
+        "Che chiuderà la casa e andrà a vivere altrove",
+        "Che aspetterà sua figlia ogni sera alla finestra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la porte reste ouverte mais qu'elle ne l'attendra pas à la fenêtre et vivra sa propre vie."
     }
   ],
   "words": {

@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Che cosa guarda la famiglia alla televisione?",
-      "options": ["La sfilata", "Un film", "Una partita"],
-      "correct": 0
+      "options": [
+        "La sfilata",
+        "Un film",
+        "Una partita"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La famiglia guarda la sfilata alla televisione », donc la famille regarde le défilé."
     },
     {
       "q": "Quali colori ha la bandiera italiana?",
-      "options": ["Verde, bianco e rosso", "Blu, bianco e rosso", "Verde, giallo e rosso"],
-      "correct": 0
+      "options": [
+        "Verde, bianco e rosso",
+        "Blu, bianco e rosso",
+        "Verde, giallo e rosso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Gli aerei lasciano tre colori: verde, bianco e rosso. Come la bandiera italiana! », donc le drapeau italien est vert, blanc et rouge."
     },
     {
       "q": "Che cosa fanno gli italiani ora?",
-      "options": ["Votano", "Hanno un re", "Dormono"],
-      "correct": 0
+      "options": [
+        "Votano",
+        "Hanno un re",
+        "Dormono"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ora gli italiani votano », donc les Italiens votent."
     }
   ],
   "words": {

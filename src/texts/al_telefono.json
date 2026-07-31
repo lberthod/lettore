@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Chi telefona a Marta?",
-      "options": ["Luca", "Marco", "Paolo"],
-      "correct": 0
+      "options": [
+        "Luca",
+        "Marco",
+        "Paolo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ciao Marta, sono Luca », donc c'est Luca qui téléphone à Marta."
     },
     {
       "q": "Dove va Luca domani?",
-      "options": ["Al ristorante", "Al cinema", "A scuola"],
-      "correct": 1
+      "options": [
+        "Al ristorante",
+        "Al cinema",
+        "A scuola"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Domani vado al cinema », donc la réponse est « al cinema »."
     },
     {
       "q": "A che ora si vedono?",
-      "options": ["Alle sei", "Alle otto di sera", "A mezzogiorno"],
-      "correct": 1
+      "options": [
+        "Alle sei",
+        "Alle otto di sera",
+        "A mezzogiorno"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Alle otto di sera », donc ils se voient à huit heures du soir."
     }
   ],
   "words": {

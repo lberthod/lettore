@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa ricevono in regalo il sabato?",
-      "options": ["Il primo smartphone", "Una bicicletta nuova", "Un computer portatile"],
-      "correct": 0
+      "options": [
+        "Il primo smartphone",
+        "Una bicicletta nuova",
+        "Un computer portatile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Oggi i miei genitori mi hanno regalato il mio primo smartphone », donc le cadeau est le premier smartphone."
     },
     {
       "q": "Che cosa fa la persona domenica?",
-      "options": ["Scarica app e sceglie una suoneria", "Va al cinema con gli amici", "Studia per un esame"],
-      "correct": 0
+      "options": [
+        "Scarica app e sceglie una suoneria",
+        "Va al cinema con gli amici",
+        "Studia per un esame"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho passato tutto il giorno a scaricare app e a scegliere una nuova suoneria », donc il télécharge des applications et choisit une sonnerie."
     },
     {
       "q": "A chi scrive il primo messaggio?",
-      "options": ["Alla nonna", "Al fratello maggiore", "Al professore"],
-      "correct": 0
+      "options": [
+        "Alla nonna",
+        "Al fratello maggiore",
+        "Al professore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho scritto il primo messaggio alla nonna », donc il écrit le premier message à sa grand-mère."
     }
   ],
   "words": {

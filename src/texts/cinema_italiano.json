@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quale movimento nacque dopo la seconda guerra mondiale?",
-      "options": ["Il Neorealismo", "Il Romanticismo", "Il Futurismo"],
-      "correct": 0
+      "options": [
+        "Il Neorealismo",
+        "Il Romanticismo",
+        "Il Futurismo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Dopo la seconda guerra mondiale nacque il Neorealismo », donc le mouvement est le Néoréalisme."
     },
     {
       "q": "Come giravano spesso i registi del Neorealismo?",
-      "options": ["In grandi studi", "Per le strade con attori non professionisti", "Solo di notte"],
-      "correct": 1
+      "options": [
+        "In grandi studi",
+        "Per le strade con attori non professionisti",
+        "Solo di notte"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit : « giravano per le strade, spesso con attori non professionisti », donc ils tournaient dans les rues avec des acteurs non professionnels."
     },
     {
       "q": "Che tipo di film creò Fellini?",
-      "options": ["Film poetici e sognanti", "Solo documentari", "Film d'azione"],
-      "correct": 0
+      "options": [
+        "Film poetici e sognanti",
+        "Solo documentari",
+        "Film d'azione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Fellini crearono film poetici e sognanti », donc Fellini a créé des films poétiques et rêveurs."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Chi trova i due gemelli nel fiume?",
-      "options": ["Una lupa", "Un pescatore", "Un contadino"],
-      "correct": 0
+      "options": [
+        "Una lupa",
+        "Un pescatore",
+        "Un contadino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Una lupa trova i bambini », donc c'est la louve qui les trouve."
     },
     {
       "q": "Perché litigano Romolo e Remo?",
-      "options": ["Per il nome del cane", "Per dove costruire la città", "Per un gioco"],
-      "correct": 1
+      "options": [
+        "Per il nome del cane",
+        "Per dove costruire la città",
+        "Per un gioco"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « litigano: dove costruire la città? », donc ils se disputent pour savoir où construire la ville."
     },
     {
       "q": "Come si chiama la città costruita da Romolo?",
-      "options": ["Roma", "Napoli", "Milano"],
-      "correct": 0
+      "options": [
+        "Roma",
+        "Napoli",
+        "Milano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Romolo costruisce la città e la chiama Roma », donc la ville s'appelle Roma."
     }
   ],
   "words": {

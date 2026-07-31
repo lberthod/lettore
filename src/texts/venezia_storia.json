@@ -19,7 +19,8 @@
         "Alle grandi famiglie di mercanti",
         "Al re di Venezia"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit : « Il vero potere, però, apparteneva alle grandi famiglie di mercanti », donc la bonne réponse est « Alle grandi famiglie di mercanti »."
     },
     {
       "q": "Perché l'Arsenale di Venezia era considerato straordinario?",
@@ -28,7 +29,8 @@
         "Perché vi si costruivano soltanto gondole di lusso",
         "Perché era l'unico porto commerciale della laguna"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit : « Si dice che gli operai riuscissero a montare una nave completa in un solo giorno », donc l'Arsenale était considéré comme extraordinaire."
     },
     {
       "q": "Come finì la storia della Serenissima?",
@@ -37,7 +39,8 @@
         "Fu sconfitta dopo una lunga guerra contro i turchi",
         "Si arrese a Napoleone senza combattere"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit : « la Serenissima si arrese senza combattere » quand Napoléon a conquis la ville, donc elle s'est rendue à Napoléon sans combattre."
     }
   ],
   "words": {

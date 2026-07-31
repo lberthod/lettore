@@ -195,7 +195,8 @@
         "Camminare con le ciaspole nei boschi",
         "Riposarsi in albergo vicino alla stufa"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que maman Silvia préfère marcher avec des ciaspole (raquettes) dans les bois."
     },
     {
       "q": "Perché un pomeriggio la famiglia è rimasta un'ora in più al rifugio?",
@@ -204,7 +205,8 @@
         "Il maestro di sci era in ritardo",
         "Aveva nevicato così tanto che sono rimasti bloccati"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit qu'il avait tellement neigé qu'ils sont restés bloqués au refuge une heure de plus."
     },
     {
       "q": "Cosa capiamo del carattere di Lorenzo durante le lezioni di sci?",
@@ -213,7 +215,8 @@
         "Che preferisce giocare con la neve invece di sciare",
         "Che ha paura di scendere la pista blu"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Lorenzo tombait sans arrêt mais n'abandonnait jamais."
     }
   ]
 }

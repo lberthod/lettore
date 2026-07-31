@@ -24,7 +24,8 @@
         "Scaricare immediatamente l'applicazione dedicata",
         "Contattare un tecnico specializzato per l'autorizzazione"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit : « accertarsi che l'alimentazione elettrica dell'impianto di riscaldamento sia disattivata dal quadro generale ».}"
     },
     {
       "q": "Perché è consigliato annotare la disposizione dei terminali R, C, W e Y?",
@@ -33,7 +34,8 @@
         "Per calcolare il consumo energetico previsto",
         "Per registrare il dispositivo presso l'assistenza clienti"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit : « riportando su un foglio la disposizione originaria affinché il nuovo dispositivo venga cablato in maniera conforme allo schema dell'impianto preesistente ».}"
     },
     {
       "q": "Che cosa si deve fare se la connessione Wi-Fi non si stabilisce entro sessanta secondi?",
@@ -42,7 +44,8 @@
         "Restituire immediatamente il dispositivo al rivenditore",
         "Sostituire il modulo frontale con uno nuovo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit : « si consiglia di riavviare il router e di ripetere la procedura, verificando altresì che il dispositivo si trovi entro il raggio di copertura del segnale ».}"
     }
   ],
   "words": {

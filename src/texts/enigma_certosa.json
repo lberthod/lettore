@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa scoprono gli operai durante il restauro?",
-      "options": ["Un manoscritto medievale mai catalogato", "Un tesoro d'oro nascosto", "Un affresco sconosciuto"],
-      "correct": 0
+      "options": [
+        "Un manoscritto medievale mai catalogato",
+        "Un tesoro d'oro nascosto",
+        "Un affresco sconosciuto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les ouvriers découvrent un manuscrit médiéval jamais catalogué."
     },
     {
       "q": "Perché lo storico voleva vendere il manoscritto?",
-      "options": ["Perché aveva debiti accumulati", "Perché odiava la Certosa", "Perché voleva finanziare una ricerca scientifica"],
-      "correct": 0
+      "options": [
+        "Perché aveva debiti accumulati",
+        "Perché odiava la Certosa",
+        "Perché voleva finanziare una ricerca scientifica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'historien était désespéré à cause de dettes accumulées."
     },
     {
       "q": "Che cosa fa alla fine lo storico?",
-      "options": ["Restituisce il manoscritto e confessa tutto", "Fugge all'estero con il documento", "Nega ogni responsabilità"],
-      "correct": 0
+      "options": [
+        "Restituisce il manoscritto e confessa tutto",
+        "Fugge all'estero con il documento",
+        "Nega ogni responsabilità"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il décide finalement de restituer le manuscrit anonymement et de tout avouer à l'inspectrice."
     }
   ],
   "words": {

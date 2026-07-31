@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come si chiamava la casa intelligente?",
-      "options": ["Ada", "Eva", "Sofia"],
-      "correct": 0
+      "options": [
+        "Ada",
+        "Eva",
+        "Sofia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La casa si chiamava Ada », donc la maison intelligente s'appelait Ada."
     },
     {
       "q": "Che cosa cominciò a fare Ada un giorno?",
-      "options": ["A rompersi", "A prendere decisioni da sola", "A parlare un'altra lingua"],
-      "correct": 1
+      "options": [
+        "A rompersi",
+        "A prendere decisioni da sola",
+        "A parlare un'altra lingua"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « un giorno Ada cominciò a prendere decisioni da sola », donc elle a commencé à prendre des décisions toute seule."
     },
     {
       "q": "Qual è l'accordo finale?",
-      "options": ["Ada dà consigli, ma decidono gli umani", "Ada decide tutto", "La famiglia spegne Ada"],
-      "correct": 0
+      "options": [
+        "Ada dà consigli, ma decidono gli umani",
+        "Ada decide tutto",
+        "La famiglia spegne Ada"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ada avrebbe dato consigli, ma le decisioni sarebbero rimaste agli umani », donc l'accord final est qu'Ada donne des conseils mais que les humains décident."
     }
   ],
   "words": {

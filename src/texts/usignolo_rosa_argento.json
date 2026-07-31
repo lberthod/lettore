@@ -24,18 +24,33 @@
   "questions": [
     {
       "q": "Perché il roseto si lamenta all'inizio della storia?",
-      "options": ["Perché nessuno lo annaffia e nessuno lo ammira più", "Perché è stato tagliato dal giardiniere", "Perché ha perso tutti i suoi petali"],
-      "correct": 0
+      "options": [
+        "Perché nessuno lo annaffia e nessuno lo ammira più",
+        "Perché è stato tagliato dal giardiniere",
+        "Perché ha perso tutti i suoi petali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « nessuno più si curava di annaffiarlo » et que les passants traversent le jardin sans lever les yeux, donc personne ne l'arrose ni ne l'admire plus."
     },
     {
       "q": "Come ottiene l'usignolo la rosa d'argento?",
-      "options": ["La compra da un mercante", "Sacrifica se stesso cantando contro le spine", "La ruba a un altro giardino"],
-      "correct": 1
+      "options": [
+        "La compra da un mercante",
+        "Sacrifica se stesso cantando contro le spine",
+        "La ruba a un altro giardino"
+      ],
+      "correct": 1,
+      "explanation": "Le texte précise que l'usignolo chante contre les épines pour que son sang teigne d'argent un pétale, ce qui est un sacrifice de lui-même."
     },
     {
       "q": "Qual è la morale finale della fiaba?",
-      "options": ["L'arte autentica nasce spesso da un sacrificio silenzioso e invisibile", "I pittori sono più importanti degli uccelli", "Le rose d'argento non esistono davvero"],
-      "correct": 0
+      "options": [
+        "L'arte autentica nasce spesso da un sacrificio silenzioso e invisibile",
+        "I pittori sono più importanti degli uccelli",
+        "Le rose d'argento non esistono davvero"
+      ],
+      "correct": 0,
+      "explanation": "La fin affirme que « la vera arte nasca sempre da un sacrificio silenzioso » et que la beauté authentique est celle que personne ne voit se réaliser."
     }
   ],
   "words": {

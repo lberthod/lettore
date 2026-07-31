@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quale problema hanno i due turisti?",
-      "options": ["Non trovano il binario giusto", "Hanno perso il biglietto", "Il treno è già partito"],
-      "correct": 0
+      "options": [
+        "Non trovano il binario giusto",
+        "Hanno perso il biglietto",
+        "Il treno è già partito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « non troviamo il binario giusto », donc les deux touristes ont ce problème."
     },
     {
       "q": "Dove si trova il binario sette secondo la signora?",
-      "options": ["In fondo, dopo delle scale a destra", "Vicino all'uscita principale", "Al piano superiore"],
-      "correct": 0
+      "options": [
+        "In fondo, dopo delle scale a destra",
+        "Vicino all'uscita principale",
+        "Al piano superiore"
+      ],
+      "correct": 0,
+      "explanation": "La dame dit « È in fondo, dopo quelle scale a destra », donc le quai sept se trouve là."
     },
     {
       "q": "Che cosa ha dimenticato il secondo turista?",
-      "options": ["La valigia vicino alla biglietteria", "Il telefono in treno", "I biglietti nella tasca"],
-      "correct": 0
+      "options": [
+        "La valigia vicino alla biglietteria",
+        "Il telefono in treno",
+        "I biglietti nella tasca"
+      ],
+      "correct": 0,
+      "explanation": "Le deuxième touriste dit « ho lasciato la valigia vicino alla biglietteria », donc il a oublié sa valise près de la billetterie."
     }
   ],
   "words": {

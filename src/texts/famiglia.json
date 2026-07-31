@@ -79,7 +79,8 @@
         "Quindici anni",
         "Dieci anni"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Mi chiamo Luca e ho dieci anni », donc Luca a dix ans."
     },
     {
       "q": "Che lavoro fa il papà di Luca?",
@@ -88,7 +89,8 @@
         "Lavora in ospedale",
         "Gioca a calcio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « il papà fa il cuoco », donc le père est cuisinier."
     },
     {
       "q": "Che cosa fa la famiglia dopo cena?",
@@ -97,7 +99,8 @@
         "Guarda un film sul divano",
         "Disegna insieme"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Dopo cena guardiamo un film sul divano », donc ils regardent un film sur le canapé."
     }
   ]
 }

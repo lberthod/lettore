@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa vuole la bambina sul pane?",
-      "options": ["La marmellata", "Il formaggio", "Il prosciutto"],
-      "correct": 0
+      "options": [
+        "La marmellata",
+        "Il formaggio",
+        "Il prosciutto"
+      ],
+      "correct": 0,
+      "explanation": "La fillette dit « voglio anche la marmellata », donc elle veut de la confiture sur son pain."
     },
     {
       "q": "Perché il latte cade?",
-      "options": ["La bambina guarda il gatto", "Il papà è nervoso", "La mamma corre"],
-      "correct": 0
+      "options": [
+        "La bambina guarda il gatto",
+        "Il papà è nervoso",
+        "La mamma corre"
+      ],
+      "correct": 0,
+      "explanation": "La fillette dit « guardavo il gatto », donc le lait tombe parce qu'elle regardait le chat."
     },
     {
       "q": "Dove va la bambina con il papà?",
-      "options": ["A scuola", "Al parco", "Dal medico"],
-      "correct": 0
+      "options": [
+        "A scuola",
+        "Al parco",
+        "Dal medico"
+      ],
+      "correct": 0,
+      "explanation": "La fillette dit « oggi ho scuola » et demande à son papa d'y aller ensemble, donc elle va à l'école."
     }
   ],
   "words": {

@@ -18,7 +18,8 @@
         "Verde",
         "Blu"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Il bidone giallo è per la plastica », donc le bidon de la plastique est jaune."
     },
     {
       "q": "Che cosa mettiamo nel bidone dell'umido?",
@@ -27,7 +28,8 @@
         "La carta",
         "La plastica"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Nell'umido mettiamo i resti di cucina, come frutta e verdura », donc on met les restes de cuisine dans l'humide."
     },
     {
       "q": "Chi fa la raccolta differenziata con i genitori?",
@@ -36,7 +38,8 @@
         "I vicini di casa",
         "Solo gli adulti"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « i bambini fanno la raccolta differenziata con i genitori », donc ce sont les enfants qui la font avec leurs parents."
     }
   ],
   "words": {

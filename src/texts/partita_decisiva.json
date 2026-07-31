@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché la partita era importante?",
-      "options": ["Per vincere il campionato", "Per non retrocedere", "Era un'amichevole"],
-      "correct": 1
+      "options": [
+        "Per vincere il campionato",
+        "Per non retrocedere",
+        "Era un'amichevole"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que l'équipe « doveva vincere per non retrocedere », donc la victoire était nécessaire pour éviter la relégation."
     },
     {
       "q": "Quanti anni aveva Marco, il portiere?",
-      "options": ["Sedici", "Venti", "Diciotto"],
-      "correct": 0
+      "options": [
+        "Sedici",
+        "Venti",
+        "Diciotto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Marco « aveva solo sedici anni », donc il avait seize ans."
     },
     {
       "q": "Come finì la partita?",
-      "options": ["Con una sconfitta", "Zero a zero", "Con la vittoria della squadra del paese"],
-      "correct": 2
+      "options": [
+        "Con una sconfitta",
+        "Zero a zero",
+        "Con la vittoria della squadra del paese"
+      ],
+      "correct": 2,
+      "explanation": "Le texte dit qu'« un compagno segnò il gol della vittoria », donc l'équipe du village a gagné."
     }
   ],
   "words": {

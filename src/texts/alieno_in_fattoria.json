@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove atterra l'alieno?",
-      "options": ["In una fattoria", "In una città", "In un bosco"],
-      "correct": 0
+      "options": [
+        "In una fattoria",
+        "In una città",
+        "In un bosco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il atterrit dans une ferme."
     },
     {
       "q": "Come reagiscono le mucche quando vedono l'alieno?",
-      "options": ["Non hanno paura", "Scappano subito", "Si arrabbiano"],
-      "correct": 0
+      "options": [
+        "Non hanno paura",
+        "Scappano subito",
+        "Si arrabbiano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les vaches n'ont pas peur."
     },
     {
       "q": "Che cosa promette l'alieno alla fine?",
-      "options": ["Di tornare presto", "Di restare per sempre", "Di portare via gli animali"],
-      "correct": 0
+      "options": [
+        "Di tornare presto",
+        "Di restare per sempre",
+        "Di portare via gli animali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il promet de revenir bientôt."
     }
   ],
   "words": {

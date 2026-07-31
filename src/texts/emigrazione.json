@@ -25,7 +25,8 @@
         "Ricevevano subito la cittadinanza americana",
         "Venivano mandati direttamente a lavorare nelle miniere"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'à Ellis Island les médecins contrôlaient les nouveaux arrivés et que les malades risquaient d'être renvoyés."
     },
     {
       "q": "Chi erano i bambini dell'armadio?",
@@ -34,7 +35,8 @@
         "Bambini rimasti in Italia con i nonni",
         "Figli di lavoratori in Svizzera, entrati di nascosto, che vivevano nascosti in casa"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que c'étaient des enfants entrés clandestinement en Suisse, restés cachés à la maison."
     },
     {
       "q": "Cosa dice il testo degli spaghetti con le polpette?",
@@ -43,7 +45,8 @@
         "Nacquero a New York, dove gli emigrati potevano permettersi la carne",
         "Furono inventati dagli emigrati in Argentina"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit qu'ils sont nés à New York, où les émigrés pouvaient enfin s'offrir de la viande."
     }
   ],
   "words": {

@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Quale dettaglio rivelò a Elena che il fascicolo era un falso?",
-      "options": ["La filigrana dei fogli, prodotta soltanto dagli anni Ottanta", "Una firma mancante sui verbali", "La copertina strappata del fascicolo"],
-      "correct": 0
+      "options": [
+        "La filigrana dei fogli, prodotta soltanto dagli anni Ottanta",
+        "Una firma mancante sui verbali",
+        "La copertina strappata del fascicolo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la filigrane des feuilles appartenait à une papeterie qui n'avait commencé à produire que dans les années 1980, alors que le procès datait de 1949."
     },
     {
       "q": "Perché Ansaldo aveva nascosto il fascicolo autentico?",
-      "options": ["Per proteggere la memoria di un innocente condannato ingiustamente", "Per venderlo a un collezionista straniero", "Per coprire un errore commesso da lui stesso"],
-      "correct": 0
+      "options": [
+        "Per proteggere la memoria di un innocente condannato ingiustamente",
+        "Per venderlo a un collezionista straniero",
+        "Per coprire un errore commesso da lui stesso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Ansaldo cachait le fascicule authentique « affinché la memoria dell'innocente non venisse data in pasto a storici avidi di scandali », donc pour protéger la mémoire d'un innocent condamné injustement."
     },
     {
       "q": "Che cosa decise infine Elena?",
-      "options": ["Di pubblicare la verità solo dopo la morte dell'archivista", "Di distruggere entrambi i fascicoli", "Di rinunciare per sempre alla ricerca"],
-      "correct": 0
+      "options": [
+        "Di pubblicare la verità solo dopo la morte dell'archivista",
+        "Di distruggere entrambi i fascicoli",
+        "Di rinunciare per sempre alla ricerca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Elena « avrebbe atteso la morte del vecchio archivista prima di pubblicare », donc elle a décidé de publier la vérité seulement après la mort de l'archiviste."
     }
   ],
   "words": {

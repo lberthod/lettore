@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In che anno mio nonno comprò la Fiat Cinquecento?",
-      "options": ["Nel 1962", "Nel 1980", "Nel 1990"],
-      "correct": 0
+      "options": [
+        "Nel 1962",
+        "Nel 1980",
+        "Nel 1990"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Era il 1962 quando mio nonno comprò una Fiat Cinquecento », donc c'est en 1962."
     },
     {
       "q": "Dove andò la famiglia nel primo viaggio?",
-      "options": ["Al mare", "In montagna", "In città"],
-      "correct": 0
+      "options": [
+        "Al mare",
+        "In montagna",
+        "In città"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il primo viaggio della famiglia fu verso il mare », donc ils sont allés à la mer."
     },
     {
       "q": "Che cosa non esisteva ancora a quell'epoca?",
-      "options": ["La cintura di sicurezza", "Il clacson", "Il garage"],
-      "correct": 0
+      "options": [
+        "La cintura di sicurezza",
+        "Il clacson",
+        "Il garage"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « A quell'epoca non esisteva ancora la cintura di sicurezza », donc la ceinture de sécurité n'existait pas."
     }
   ],
   "words": {

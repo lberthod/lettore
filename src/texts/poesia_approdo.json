@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa promette ogni porto secondo la poesia?",
-      "options": ["Un ricominciare", "Una fine definitiva", "Un ritorno sicuro"],
-      "correct": 0
+      "options": [
+        "Un ricominciare",
+        "Una fine definitiva",
+        "Un ritorno sicuro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ogni porto promette un ricominciare », donc chaque port promet un nouveau départ."
     },
     {
       "q": "Che cosa cerca il narratore invece delle radici?",
-      "options": ["Soglie", "Ricchezze", "Certezze"],
-      "correct": 0
+      "options": [
+        "Soglie",
+        "Ricchezze",
+        "Certezze"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Non cerco più radici, cerco soglie », donc il cherche des seuils."
     },
     {
       "q": "Che cosa rappresenta la vera casa secondo l'ultimo verso?",
-      "options": ["Il continuo andare via", "Un edificio specifico", "La città natale"],
-      "correct": 0
+      "options": [
+        "Il continuo andare via",
+        "Un edificio specifico",
+        "La città natale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la vera casa ... ma questo continuo, dolce, andare via », donc la vraie maison est le fait de partir sans cesse."
     }
   ],
   "words": {

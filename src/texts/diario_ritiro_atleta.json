@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa annuncia l'autore all'inizio del diario?",
-      "options": ["Il proprio ritiro dal ciclismo professionistico", "La vittoria di una nuova corsa", "Il passaggio a una nuova squadra"],
-      "correct": 0
+      "options": [
+        "Il proprio ritiro dal ciclismo professionistico",
+        "La vittoria di una nuova corsa",
+        "Il passaggio a una nuova squadra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ho annunciato ufficialmente il mio ritiro dal ciclismo professionistico », donc l'auteur annonce son retrait du cyclisme professionnel."
     },
     {
       "q": "Che cosa avvertono i colleghi dell'autore?",
-      "options": ["Che seguirà una fase difficile legata all'identità di atleta", "Che dovrà pagare una penale per il ritiro", "Che non potrà più praticare sport"],
-      "correct": 0
+      "options": [
+        "Che seguirà una fase difficile legata all'identità di atleta",
+        "Che dovrà pagare una penale per il ritiro",
+        "Che non potrà più praticare sport"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Molti colleghi mi avvertono di una fase difficile che seguirà: l'identità di un atleta è spesso legata indissolubilmente alla competizione », donc les collègues avertissent d'une phase difficile."
     },
     {
       "q": "Che cosa prova l'autore, contrariamente alle aspettative?",
-      "options": ["Un senso di leggerezza", "Una tristezza insopportabile", "Una rabbia incontrollabile"],
-      "correct": 0
+      "options": [
+        "Un senso di leggerezza",
+        "Una tristezza insopportabile",
+        "Una rabbia incontrollabile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « provo soprattutto un senso di leggerezza », donc l'auteur ressent une sensation de légèreté."
     }
   ],
   "words": {

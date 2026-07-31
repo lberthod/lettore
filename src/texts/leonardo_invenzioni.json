@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In quale periodo viveva Leonardo?",
-      "options": ["Nel Medioevo", "Nel Rinascimento", "Nell'Ottocento"],
-      "correct": 1
+      "options": [
+        "Nel Medioevo",
+        "Nel Rinascimento",
+        "Nell'Ottocento"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Viveva nel Rinascimento », donc il vivait à la Renaissance."
     },
     {
       "q": "Perché osservava gli uccelli?",
-      "options": ["Per dipingerli", "Per progettare macchine volanti", "Per studiare la natura in generale"],
-      "correct": 1
+      "options": [
+        "Per dipingerli",
+        "Per progettare macchine volanti",
+        "Per studiare la natura in generale"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Osservava gli uccelli per progettare macchine volanti », donc il observait les oiseaux pour concevoir des machines volantes."
     },
     {
       "q": "Come scriveva le sue note?",
-      "options": ["Al contrario, da destra a sinistra", "In latino", "Con dei simboli segreti"],
-      "correct": 0
+      "options": [
+        "Al contrario, da destra a sinistra",
+        "In latino",
+        "Con dei simboli segreti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Scriveva le sue note al contrario, da destra a sinistra », donc il écrivait ses notes à l'envers, de droite à gauche."
     }
   ],
   "words": {
@@ -46,7 +61,6 @@
     "cinquecento": "seizième siècle (le « Cinquecento »)",
     "come": "comment",
     "con": "avec",
-    "confini": "frontières / limites",
     "confini": "limites",
     "contrario": "envers (« al contrario » = à l'envers)",
     "costruire": "construire",

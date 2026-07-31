@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa l'autore per cercare di addormentarsi?",
-      "options": ["Conta le pecore e respira lentamente", "Guarda video sul telefono per ore", "Esce a fare una passeggiata"],
-      "correct": 0
+      "options": [
+        "Conta le pecore e respira lentamente",
+        "Guarda video sul telefono per ore",
+        "Esce a fare una passeggiata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho contato le pecore, respirato lentamente » donc il compte les moutons et respire lentement."
     },
     {
       "q": "Che cosa fa l'autore alle quattro di notte?",
-      "options": ["Si alza per bere un bicchiere d'acqua", "Decide di alzarsi definitivamente", "Chiama un amico per parlare"],
-      "correct": 0
+      "options": [
+        "Si alza per bere un bicchiere d'acqua",
+        "Decide di alzarsi definitivamente",
+        "Chiama un amico per parlare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mi alzo per bere un bicchiere d'acqua » donc il se lève pour boire un verre d'eau."
     },
     {
       "q": "Qual è, secondo l'autore, la beffa più crudele alla fine?",
-      "options": ["Addormentarsi proprio quando deve alzarsi", "Non riuscire mai a dormire", "Svegliarsi troppo presto ogni giorno"],
-      "correct": 0
+      "options": [
+        "Addormentarsi proprio quando deve alzarsi",
+        "Non riuscire mai a dormire",
+        "Svegliarsi troppo presto ogni giorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mi addormento proprio quando dovrei alzarmi per affrontare la giornata » donc la pire ironie est de s'endormir au moment de se lever."
     }
   ],
   "words": {

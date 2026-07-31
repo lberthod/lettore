@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si trova l'ispettore Bruni all'inizio della storia?",
-      "options": ["Al lavoro a Roma", "In vacanza a Firenze", "A casa sua"],
-      "correct": 1
+      "options": [
+        "Al lavoro a Roma",
+        "In vacanza a Firenze",
+        "A casa sua"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « L'ispettore Bruni era in vacanza a Firenze », donc il est en vacances à Florence."
     },
     {
       "q": "Che cosa aveva visto la cameriera?",
-      "options": ["Un uomo con un cappello nero", "Una donna con una valigia", "Nessuno"],
-      "correct": 0
+      "options": [
+        "Un uomo con un cappello nero",
+        "Una donna con una valigia",
+        "Nessuno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La cameriera aveva visto un uomo con un cappello nero », donc elle a vu un homme avec un chapeau noir."
     },
     {
       "q": "Chi aveva preso la valigia?",
-      "options": ["La cameriera", "Un ladro sconosciuto", "Lo stesso proprietario"],
-      "correct": 2
+      "options": [
+        "La cameriera",
+        "Un ladro sconosciuto",
+        "Lo stesso proprietario"
+      ],
+      "correct": 2,
+      "explanation": "Le texte dit « L'uomo d'affari e il ladro erano la stessa persona », donc c'est le propriétaire lui-même qui a pris la valise."
     }
   ],
   "words": {

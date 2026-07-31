@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa travolge il narratore appena arrivato a Palermo?",
-      "options": ["La splendida decadenza della città", "Il traffico del porto", "Il caldo dell'estate"],
-      "correct": 0
+      "options": [
+        "La splendida decadenza della città",
+        "Il traffico del porto",
+        "Il caldo dell'estate"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la ville l'a « travolto con la sua splendida decadenza »."
     },
     {
       "q": "Chi osserva i visitatori nella cattedrale di Monreale?",
-      "options": ["Il Cristo Pantocratore dei mosaici", "Un coro di monaci", "Una guida turistica"],
-      "correct": 0
+      "options": [
+        "Il Cristo Pantocratore dei mosaici",
+        "Un coro di monaci",
+        "Una guida turistica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il Cristo Pantocratore osserva i visitatori » dans la cathédrale."
     },
     {
       "q": "Come si comporta il tempo nelle terre interne, secondo il diario?",
-      "options": ["Non scorre: si deposita strato dopo strato", "Corre più veloce che in città", "Si ferma soltanto d'inverno"],
-      "correct": 0
+      "options": [
+        "Non scorre: si deposita strato dopo strato",
+        "Corre più veloce che in città",
+        "Si ferma soltanto d'inverno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « il tempo non scorre: si deposita, strato dopo strato »."
     }
   ],
   "words": {

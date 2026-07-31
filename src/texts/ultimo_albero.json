@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Com'era diventata la Terra nel futuro?",
-      "options": ["Una città di metallo e vetro", "Un grande deserto", "Un mare infinito"],
-      "correct": 0
+      "options": [
+        "Una città di metallo e vetro",
+        "Un grande deserto",
+        "Un mare infinito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la Terre était devenue une grande ville de métal et de verre."
     },
     {
       "q": "Che cosa trova Tim nel cassetto del nonno?",
-      "options": ["Un piccolo seme", "Una foglia", "Una foto"],
-      "correct": 0
+      "options": [
+        "Un piccolo seme",
+        "Una foglia",
+        "Una foto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Tim trouve un petit seme dans un vieux tiroir du grand-père."
     },
     {
       "q": "Che cosa rappresenta l'albero alla fine?",
-      "options": ["Una nuova speranza", "Un pericolo", "Un ricordo triste"],
-      "correct": 0
+      "options": [
+        "Una nuova speranza",
+        "Un pericolo",
+        "Un ricordo triste"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que de cette graine est née une nouvelle espérance."
     }
   ],
   "words": {
@@ -103,8 +118,7 @@
     "verde": "verte",
     "vera": "vraie",
     "vetro": "verre",
-    "volevano": "voulaient",
-    "era": "était"
+    "volevano": "voulaient"
   },
   "sentences": {
     "Nel futuro, la Terra era diventata una grande città di metallo e vetro.": "Dans le futur, la Terre était devenue une grande ville de métal et de verre.",

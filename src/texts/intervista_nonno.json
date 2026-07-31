@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché la persona intervista il nonno?",
-      "options": ["Per un compito di scuola", "Per un articolo di giornale", "Per un video su internet"],
-      "correct": 0
+      "options": [
+        "Per un compito di scuola",
+        "Per un articolo di giornale",
+        "Per un video su internet"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"per un compito di scuola devo intervistarti\", donc c'est pour un devoir d'école."
     },
     {
       "q": "Come passavano le serate i vicini di casa del nonno?",
-      "options": ["Raccontando storie e giocando a carte", "Guardando la televisione insieme", "Ascoltando la radio in silenzio"],
-      "correct": 0
+      "options": [
+        "Raccontando storie e giocando a carte",
+        "Guardando la televisione insieme",
+        "Ascoltando la radio in silenzio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"Ci riunivamo tra vicini, davanti a casa, a raccontare storie e a giocare a carte\", donc en racontant des histoires et en jouant aux cartes."
     },
     {
       "q": "A che età cominciò a lavorare in fabbrica il nonno?",
-      "options": ["A quattordici anni", "A diciotto anni", "A venticinque anni"],
-      "correct": 0
+      "options": [
+        "A quattordici anni",
+        "A diciotto anni",
+        "A venticinque anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"A quattordici anni cominciai in fabbrica\", donc à quatorze ans."
     }
   ],
   "words": {

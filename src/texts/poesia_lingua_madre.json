@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "A che cosa è paragonata la lingua nella poesia?",
-      "options": ["A una radice", "A un fiume", "A una montagna"],
-      "correct": 0
+      "options": [
+        "A una radice",
+        "A un fiume",
+        "A una montagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « non sei soltanto suono, sei radice », donc la langue est comparée à une racine."
     },
     {
       "q": "Dove ritrova l'autore la lingua perduta?",
-      "options": ["In un canto e in un dialetto", "In un libro di scuola", "In un giornale"],
-      "correct": 0
+      "options": [
+        "In un canto e in un dialetto",
+        "In un libro di scuola",
+        "In un giornale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ti ritrovo in un canto, in un dialetto », donc il la retrouve dans un chant et un dialecte."
     },
     {
       "q": "Che cosa succede alla lingua secondo l'ultima strofa?",
-      "options": ["Cambia volto ma resta nel petto", "Scompare per sempre", "Diventa una lingua straniera"],
-      "correct": 0
+      "options": [
+        "Cambia volto ma resta nel petto",
+        "Scompare per sempre",
+        "Diventa una lingua straniera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « cambia volto e resta nel mio petto », donc elle change de visage mais reste dans la poitrine."
     }
   ],
   "words": {

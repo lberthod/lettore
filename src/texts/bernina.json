@@ -170,7 +170,8 @@
         "Da Sankt Moritz",
         "Da Milano"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « parte da Sankt Moritz per arrivare a Tirano »."
     },
     {
       "q": "Cosa c'è al passo del Bernina?",
@@ -179,7 +180,8 @@
         "I vigneti della Valtellina",
         "Una piazza piena di sole"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « c'è solo silenzio: neve, cielo azzurro e cime che brillano al sole »."
     },
     {
       "q": "Cosa fa Anna a Tirano?",
@@ -188,7 +190,8 @@
         "Sale su un battello con il nonno",
         "Si toglie la giacca e mangia una pizza con il nonno"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Anna si toglie la giacca e mangia una pizza con il nonno »."
     }
   ]
 }

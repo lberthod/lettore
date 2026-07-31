@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa faceva la folla nel Colosseo secondo la poesia?",
-      "options": ["Urlava in delirio", "Dormiva tranquilla", "Pregava in silenzio"],
-      "correct": 0
+      "options": [
+        "Urlava in delirio",
+        "Dormiva tranquilla",
+        "Pregava in silenzio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « urlava la folla in delirio », donc la foule criait dans le délire."
     },
     {
       "q": "Che cosa cresce oggi dove correva il sangue?",
-      "options": ["L'erba", "Un giardino di rose", "Nessuna pianta"],
-      "correct": 0
+      "options": [
+        "L'erba",
+        "Un giardino di rose",
+        "Nessuna pianta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'erba cresce dove correva il sangue », donc l'herbe pousse là où le sang coulait."
     },
     {
       "q": "Come viene descritto il Colosseo nell'ultimo verso?",
-      "options": ["Monumento alla gloria e alla sua ombra", "Un edificio dimenticato da tutti", "Una semplice rovina senza valore"],
-      "correct": 0
+      "options": [
+        "Monumento alla gloria e alla sua ombra",
+        "Un edificio dimenticato da tutti",
+        "Una semplice rovina senza valore"
+      ],
+      "correct": 0,
+      "explanation": "Le dernier vers décrit le Colisée comme « monumento alla gloria e alla sua ombra »."
     }
   ],
   "words": {

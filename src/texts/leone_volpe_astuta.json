@@ -23,18 +23,33 @@
   "questions": [
     {
       "q": "Quale stratagemma escogita il leone per procurarsi cibo?",
-      "options": ["Organizza una caccia collettiva", "Finge di essere gravemente malato", "Chiede aiuto agli altri animali"],
-      "correct": 1
+      "options": [
+        "Organizza una caccia collettiva",
+        "Finge di essere gravemente malato",
+        "Chiede aiuto agli altri animali"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que le lion se couche à l'entrée de sa tanière en 'fingendosi gravemente malato' pour attirer les animaux et les dévorer."
     },
     {
       "q": "Che cosa insospettisce la volpe?",
-      "options": ["L'odore proveniente dalla tana", "Le impronte che entrano ma non escono mai", "Il silenzio della foresta"],
-      "correct": 1
+      "options": [
+        "L'odore proveniente dalla tana",
+        "Le impronte che entrano ma non escono mai",
+        "Il silenzio della foresta"
+      ],
+      "correct": 1,
+      "explanation": "La volpe est intriguée par les traces qui entrent dans la tanière mais n'en ressortent pas ('numerose impronte conducevano verso l'interno, ma nessuna sembrava tornare indietro')."
     },
     {
       "q": "Qual è l'insegnamento finale della fiaba?",
-      "options": ["La forza è sempre più utile dell'intelligenza", "L'osservazione attenta permette di evitare gli inganni", "Bisogna sempre fidarsi dei propri sovrani"],
-      "correct": 1
+      "options": [
+        "La forza è sempre più utile dell'intelligenza",
+        "L'osservazione attenta permette di evitare gli inganni",
+        "Bisogna sempre fidarsi dei propri sovrani"
+      ],
+      "correct": 1,
+      "explanation": "Le texte indique que 'chi sa leggere i segni lasciati dagli altri raramente cade nella medesima trappola', donc l'observation attentive évite les pièges."
     }
   ],
   "words": {

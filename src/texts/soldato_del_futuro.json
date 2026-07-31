@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa impianta l'esercito ai soldati nel 2145?",
-      "options": ["Un chip che registra ogni battaglia", "Un'arma automatica", "Un dispositivo di comunicazione satellitare"],
-      "correct": 0
+      "options": [
+        "Un chip che registra ogni battaglia",
+        "Un'arma automatica",
+        "Un dispositivo di comunicazione satellitare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'esercito impianta ai soldati un chip che registra ogni battaglia », donc la bonne réponse est « Un chip che registra ogni battaglia »."
     },
     {
       "q": "Che cosa scopre Marco sui propri ricordi?",
-      "options": ["Che erano stati leggermente modificati dal chip", "Che erano completamente falsi", "Che erano stati cancellati per errore"],
-      "correct": 0
+      "options": [
+        "Che erano stati leggermente modificati dal chip",
+        "Che erano completamente falsi",
+        "Che erano stati cancellati per errore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « alcuni ricordi eroici ... erano stati leggermente modificati dal chip stesso », donc Marco découvre que ses souvenirs avaient été légèrement modifiés par la puce."
     },
     {
       "q": "Che cosa decide alla fine Marco?",
-      "options": ["Che non importa distinguere tra ricordi veri e modificati", "Di denunciare l'esercito per frode", "Di farsi rimuovere il chip immediatamente"],
-      "correct": 0
+      "options": [
+        "Che non importa distinguere tra ricordi veri e modificati",
+        "Di denunciare l'esercito per frode",
+        "Di farsi rimuovere il chip immediatamente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « decide che non importa più distinguere tra i due », donc il décide que peu importe de distinguer entre souvenirs vrais et modifiés."
     }
   ],
   "words": {

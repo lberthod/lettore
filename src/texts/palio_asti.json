@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Quale città ha il Palio più antico d'Italia, secondo il testo?",
-      "options": ["Asti", "Siena", "Legnano"],
-      "correct": 0
+      "options": [
+        "Asti",
+        "Siena",
+        "Legnano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « non è il Palio di Siena il più antico d'Italia » et que les premières traces écrites du Palio di Asti remontent à 1275, donc c'est Asti."
     },
     {
       "q": "In che anno risalgono le prime testimonianze scritte del Palio di Asti?",
-      "options": ["Al 1275", "Al 1550", "Al 1900"],
-      "correct": 0
+      "options": [
+        "Al 1275",
+        "Al 1550",
+        "Al 1900"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « le prime testimonianze scritte del Palio di Asti risalgono al 1275 »."
     },
     {
       "q": "Come vengono montati i cavalli durante la corsa?",
-      "options": ["A pelo, senza sella", "Con sella e staffe", "Trainati da un carro"],
-      "correct": 0
+      "options": [
+        "A pelo, senza sella",
+        "Con sella e staffe",
+        "Trainati da un carro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que « I fantini montano i cavalli senza sella, a pelo »."
     }
   ],
   "words": {

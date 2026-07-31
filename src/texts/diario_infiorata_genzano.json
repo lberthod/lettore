@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Da quanto tempo si celebra l'Infiorata di Genzano?",
-      "options": ["Da tre secoli, ogni anno dopo il Corpus Domini", "Da appena dieci anni", "Solo dal secolo scorso"],
-      "correct": 0
+      "options": [
+        "Da tre secoli, ogni anno dopo il Corpus Domini",
+        "Da appena dieci anni",
+        "Solo dal secolo scorso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Da tre secoli, ogni anno, la domenica dopo il Corpus Domini », donc l'Infiorata est célébrée depuis trois siècles chaque année après le Corpus Domini."
     },
     {
       "q": "Cosa risponde la narratrice al bambino che chiede se i fiori dureranno per sempre?",
-      "options": ["Che dureranno soltanto un giorno, fino alla processione", "Che i fiori sono finti e non appassiscono mai", "Che i fiori verranno raccolti e conservati"],
-      "correct": 0
+      "options": [
+        "Che dureranno soltanto un giorno, fino alla processione",
+        "Che i fiori sono finti e non appassiscono mai",
+        "Che i fiori verranno raccolti e conservati"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « sarebbero durati soltanto un giorno, il tempo della processione », donc la narratrice répond que les fleurs dureront un seul jour, le temps de la procession."
     },
     {
       "q": "Cosa fanno i bambini del paese subito dopo il passaggio della processione?",
-      "options": ["Si lanciano correndo sui petali, distruggendo il tappeto fiorito", "Raccolgono i petali per rivenderli ai turisti", "Aspettano in silenzio che gli adulti puliscano la strada"],
-      "correct": 0
+      "options": [
+        "Si lanciano correndo sui petali, distruggendo il tappeto fiorito",
+        "Raccolgono i petali per rivenderli ai turisti",
+        "Aspettano in silenzio che gli adulti puliscano la strada"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i bambini del paese si lanciano correndo sui petali », donc ils courent sur les pétales et détruisent le tapis fiorito."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove trova Sara il pacco?",
-      "options": ["Sotto il suo sedile", "In stazione", "Nel bagno del treno"],
-      "correct": 0
+      "options": [
+        "Sotto il suo sedile",
+        "In stazione",
+        "Nel bagno del treno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sara trova un pacco sotto il suo sedile »."
     },
     {
       "q": "Che cosa fanno per capire di chi è il pacco?",
-      "options": ["Aprono subito il pacco", "Controllano le telecamere", "Chiedono ai passeggeri"],
-      "correct": 1
+      "options": [
+        "Aprono subito il pacco",
+        "Controllano le telecamere",
+        "Chiedono ai passeggeri"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Insieme decidono di controllare le telecamere del vagone »."
     },
     {
       "q": "Che cosa c'era dentro il pacco?",
-      "options": ["Qualcosa di pericoloso", "Dei soldi", "Un regalo di compleanno"],
-      "correct": 2
+      "options": [
+        "Qualcosa di pericoloso",
+        "Dei soldi",
+        "Un regalo di compleanno"
+      ],
+      "correct": 2,
+      "explanation": "Le texte dit que c'était « il regalo di compleanno che un nonno voleva dare alla nipote »."
     }
   ],
   "words": {

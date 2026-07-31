@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Chi intraprendeva tipicamente il Grand Tour?",
-      "options": ["I giovani aristocratici del nord Europa", "I mercanti in cerca di nuovi affari", "I pellegrini religiosi"],
-      "correct": 0
+      "options": [
+        "I giovani aristocratici del nord Europa",
+        "I mercanti in cerca di nuovi affari",
+        "I pellegrini religiosi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « i giovani aristocratici del nord Europa intraprendevano il cosiddetto Grand Tour »."
     },
     {
       "q": "Quali città erano tappe obbligate del Grand Tour in Italia?",
-      "options": ["Roma, Firenze, Napoli e Venezia", "Solo Roma e Milano", "Torino e Genova"],
-      "correct": 0
+      "options": [
+        "Roma, Firenze, Napoli e Venezia",
+        "Solo Roma e Milano",
+        "Torino e Genova"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « Roma, Firenze, Napoli e Venezia erano tappe obbligate »."
     },
     {
       "q": "Che cosa contribuì a costruire il Grand Tour secondo il testo?",
-      "options": ["L'immagine dell'Italia come culla della civiltà occidentale", "Una rete di strade moderne", "Il declino del turismo europeo"],
-      "correct": 0
+      "options": [
+        "L'immagine dell'Italia come culla della civiltà occidentale",
+        "Una rete di strade moderne",
+        "Il declino del turismo europeo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « Il Grand Tour contribuì così a costruire l'immagine dell'Italia come culla ineguagliabile della civiltà occidentale »."
     }
   ],
   "words": {

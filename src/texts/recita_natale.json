@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa ha perso Giacomo poco prima dello spettacolo?",
-      "options": ["Le orecchie del suo costume da asino", "Il copione della recita", "Le scarpe"],
-      "correct": 0
+      "options": [
+        "Le orecchie del suo costume da asino",
+        "Il copione della recita",
+        "Le scarpe"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « non trovo le mie orecchie! Un asino senza orecchie... », donc Giacomo a perdu les oreilles de son costume d'âne."
     },
     {
       "q": "Perché Sofia ha paura di salire sulla scaletta?",
-      "options": ["Perché le gira la testa a guardare dal basso", "Perché la scaletta è rotta", "Perché ha dimenticato le battute"],
-      "correct": 0
+      "options": [
+        "Perché le gira la testa a guardare dal basso",
+        "Perché la scaletta è rotta",
+        "Perché ha dimenticato le battute"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mi gira la testa solo a guardarla dal basso », donc Sofia a peur parce que la vue de l'échelle lui donne le vertige."
     },
     {
       "q": "Che cosa ha fatto il bambino con la capanna di pan di zenzero?",
-      "options": ["Ne ha mangiata metà", "L'ha costruita da solo", "L'ha nascosta nel cestino"],
-      "correct": 0
+      "options": [
+        "Ne ha mangiata metà",
+        "L'ha costruita da solo",
+        "L'ha nascosta nel cestino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Hai mangiato metà della capanna di pan di zenzero! », donc le bambino a mangé la moitié de la maison en pain d'épices."
     }
   ],
   "words": {

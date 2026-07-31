@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Da quanto tempo è partito Ahmed?",
-      "options": ["Da un mese", "Da un anno", "Da dieci anni"],
-      "correct": 1
+      "options": [
+        "Da un mese",
+        "Da un anno",
+        "Da dieci anni"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « è passato un anno da quando sei partito », donc Ahmed est parti depuis un an."
     },
     {
       "q": "Che cosa fa oggi Marco?",
-      "options": ["Insegna l'italiano ai nuovi arrivati", "Costruisce muri", "Ha lasciato la scuola"],
-      "correct": 0
+      "options": [
+        "Insegna l'italiano ai nuovi arrivati",
+        "Costruisce muri",
+        "Ha lasciato la scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Oggi insegno io l'italiano ai nuovi arrivati », donc Marco enseigne l'italien aux nouveaux arrivés."
     },
     {
       "q": "Qual è il messaggio della lettera?",
-      "options": ["L'amicizia non ha confini", "È meglio restare soli", "I muri sono utili"],
-      "correct": 0
+      "options": [
+        "L'amicizia non ha confini",
+        "È meglio restare soli",
+        "I muri sono utili"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Noi due siamo la prova che l'amicizia non ha confini », donc le message est que l'amitié n'a pas de frontières."
     }
   ],
   "words": {

@@ -18,7 +18,8 @@
         "Solo il lunedì mattina",
         "Ogni giorno dalle sette a mezzanotte"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte indique que l'entrée est autorisée du mardi au dimanche, de neuf à dix-neuf heures."
     },
     {
       "q": "Che cosa consiglia la guida a chi ha poco tempo?",
@@ -27,7 +28,8 @@
         "Di visitare soltanto la libreria",
         "Di saltare l'intera esposizione"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte conseille à ceux qui ont peu de temps de se concentrer sur les salles trois et cinq."
     },
     {
       "q": "Che cosa permette di fare la prenotazione online, secondo il testo?",
@@ -36,7 +38,8 @@
         "Di ottenere l'ingresso gratuito per tutta la famiglia",
         "Di accedere alla mostra dopo la chiusura"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que la réservation en ligne permet de sauter la file le week-end et les jours fériés."
     }
   ],
   "words": {

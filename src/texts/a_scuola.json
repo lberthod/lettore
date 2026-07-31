@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quale esercizio non ha capito lo studente?",
-      "options": ["Il numero uno", "Il numero tre", "Il numero dieci"],
-      "correct": 1
+      "options": [
+        "Il numero uno",
+        "Il numero tre",
+        "Il numero dieci"
+      ],
+      "correct": 1,
+      "explanation": "Le professeur demande « Quale esercizio? Il numero tre? » et l'étudiant confirme avec « Sì, quello »."
     },
     {
       "q": "Che cosa consiglia di guardare il professore?",
-      "options": ["L'esempio a pagina dieci", "Il libro a casa", "Un video"],
-      "correct": 0
+      "options": [
+        "L'esempio a pagina dieci",
+        "Il libro a casa",
+        "Un video"
+      ],
+      "correct": 0,
+      "explanation": "Le professeur conseille « Guarda l'esempio a pagina dieci »."
     },
     {
       "q": "Come si sente lo studente alla fine?",
-      "options": ["Ancora confuso", "Capisce meglio", "Arrabbiato"],
-      "correct": 1
+      "options": [
+        "Ancora confuso",
+        "Capisce meglio",
+        "Arrabbiato"
+      ],
+      "correct": 1,
+      "explanation": "À la fin, l'étudiant dit « Adesso capisco meglio »."
     }
   ],
   "words": {

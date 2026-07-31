@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Perché le api sono fondamentali per l'agricoltura?",
-      "options": ["Perché trasportano il polline e permettono alle piante di riprodursi", "Perché mangiano gli insetti dannosi", "Perché producono soltanto miele"],
-      "correct": 0
+      "options": [
+        "Perché trasportano il polline e permettono alle piante di riprodursi",
+        "Perché mangiano gli insetti dannosi",
+        "Perché producono soltanto miele"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'en transportant le pollen, les abeilles « permettono alle piante di riprodursi », ce qui est essentiel pour l'agriculture."
     },
     {
       "q": "Quali sono alcune cause della moria delle api?",
-      "options": ["I pesticidi, le monocolture, la varroa e il clima instabile", "Il rumore delle città e il turismo", "L'aumento del numero di fiori"],
-      "correct": 0
+      "options": [
+        "I pesticidi, le monocolture, la varroa e il clima instabile",
+        "Il rumore delle città e il turismo",
+        "L'aumento del numero di fiori"
+      ],
+      "correct": 0,
+      "explanation": "Le texte énumère comme causes « i pesticidi, le monocolture, la varroa e un clima sempre più instabile »."
     },
     {
       "q": "Quanta parte del nostro cibo dipende dagli impollinatori?",
-      "options": ["Circa un terzo", "Quasi niente", "La totalità"],
-      "correct": 0
+      "options": [
+        "Circa un terzo",
+        "Quasi niente",
+        "La totalità"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « circa un terzo di ciò che mettiamo nel piatto » dépend des pollinisateurs."
     }
   ],
   "words": {

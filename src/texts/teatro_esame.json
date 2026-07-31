@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché Paolo è agitato?",
-      "options": ["Perché tra poco ha l'esame di matematica", "Perché ha perso il libro di scuola", "Perché è in ritardo per la scuola"],
-      "correct": 0
+      "options": [
+        "Perché tra poco ha l'esame di matematica",
+        "Perché ha perso il libro di scuola",
+        "Perché è in ritardo per la scuola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"tra dieci minuti abbiamo l'esame di matematica\", donc Paolo est agité parce que l'examen de maths est dans dix minutes."
     },
     {
       "q": "Che cosa propone Giulia per calmare Paolo?",
-      "options": ["Di ripassare insieme le formule difficili", "Di saltare l'esame", "Di copiare durante la prova"],
-      "correct": 0
+      "options": [
+        "Di ripassare insieme le formule difficili",
+        "Di saltare l'esame",
+        "Di copiare durante la prova"
+      ],
+      "correct": 0,
+      "explanation": "Giulia dit \"Ripassiamo insieme le formule più difficili\", donc elle propose de réviser ensemble les formules difficiles."
     },
     {
       "q": "Che cosa dice Giulia alla fine sull'errore?",
-      "options": ["Che sbagliare non è la fine del mondo", "Che un errore rovina tutto", "Che è meglio non provare"],
-      "correct": 0
+      "options": [
+        "Che sbagliare non è la fine del mondo",
+        "Che un errore rovina tutto",
+        "Che è meglio non provare"
+      ],
+      "correct": 0,
+      "explanation": "Giulia dit \"anche se sbagli qualcosa, non è la fine del mondo\", donc se tromper n'est pas la fin du monde."
     }
   ],
   "words": {

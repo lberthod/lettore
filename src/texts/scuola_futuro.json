@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove seguivano le lezioni i bambini del futuro?",
-      "options": ["Da casa, con occhiali speciali", "In una grande classe", "Al parco"],
-      "correct": 0
+      "options": [
+        "Da casa, con occhiali speciali",
+        "In una grande classe",
+        "Al parco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les enfants ne allaient plus en classe et suivaient les leçons de chez eux avec des lunettes spéciales."
     },
     {
       "q": "Che cosa facevano gli occhiali speciali?",
-      "options": ["Permettevano di visitare luoghi e mondi", "Servivano solo a leggere", "Non funzionavano"],
-      "correct": 0
+      "options": [
+        "Permettevano di visitare luoghi e mondi",
+        "Servivano solo a leggere",
+        "Non funzionavano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que les lunettes permettaient de visiter la Rome antique ou de marcher dans le corps humain."
     },
     {
       "q": "Perché i bambini decidono di tornare a scuola?",
-      "options": ["Perché si sentivano soli e mancavano gli amici", "Perché gli occhiali erano rotti", "Perché il robot era cattivo"],
-      "correct": 0
+      "options": [
+        "Perché si sentivano soli e mancavano gli amici",
+        "Perché gli occhiali erano rotti",
+        "Perché il robot era cattivo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que beaucoup d'enfants se sentaient seuls et que les amis leur manquaient."
     }
   ],
   "words": {

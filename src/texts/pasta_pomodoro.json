@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa si mette nell'acqua della pentola?",
-      "options": ["Lo zucchero", "Il sale", "L'olio"],
-      "correct": 1
+      "options": [
+        "Lo zucchero",
+        "Il sale",
+        "L'olio"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Metti sul fuoco una pentola con acqua e sale », donc on met du sel dans l'eau."
     },
     {
       "q": "Quanto tempo deve cuocere il sugo?",
-      "options": ["Dieci minuti", "Mezz'ora", "Un'ora"],
-      "correct": 0
+      "options": [
+        "Dieci minuti",
+        "Mezz'ora",
+        "Un'ora"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Lascia cuocere per dieci minuti a fuoco basso », donc le sugo cuit dix minutes."
     },
     {
       "q": "Che cosa si aggiunge alla fine?",
-      "options": ["Basilico e parmigiano", "Zucchero e limone", "Burro e pepe"],
-      "correct": 0
+      "options": [
+        "Basilico e parmigiano",
+        "Zucchero e limone",
+        "Burro e pepe"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « aggiungi il basilico e un po' di parmigiano », donc on ajoute du basilic et du parmigiano à la fin."
     }
   ],
   "words": {

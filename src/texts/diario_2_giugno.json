@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa succede per la prima volta il 2 giugno 1946?",
-      "options": ["Le donne italiane votano", "Finisce la guerra", "Cade la dittatura"],
-      "correct": 0
+      "options": [
+        "Le donne italiane votano",
+        "Finisce la guerra",
+        "Cade la dittatura"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « anche le donne hanno potuto votare », donc les femmes italiennes votent pour la première fois."
     },
     {
       "q": "Dove si trova il seggio elettorale nel racconto?",
-      "options": ["Davanti alla scuola elementare", "In piazza principale", "Dentro il municipio"],
-      "correct": 0
+      "options": [
+        "Davanti alla scuola elementare",
+        "In piazza principale",
+        "Dentro il municipio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « In fila, davanti alla scuola elementare », donc le bureau de vote se trouve devant l'école primaire."
     },
     {
       "q": "Tra che cosa dovevano scegliere gli italiani quel giorno?",
-      "options": ["Tra repubblica e monarchia", "Tra due partiti politici", "Tra pace e guerra"],
-      "correct": 0
+      "options": [
+        "Tra repubblica e monarchia",
+        "Tra due partiti politici",
+        "Tra pace e guerra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Dovevamo scegliere tra repubblica e monarchia », donc ils devaient choisir entre la République et la monarchie."
     }
   ],
   "words": {

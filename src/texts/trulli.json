@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Perché sono nati i trulli?",
-      "options": ["Per non pagare le tasse sulle case", "Per proteggersi dal freddo", "Per una moda architettonica"],
-      "correct": 0
+      "options": [
+        "Per non pagare le tasse sulle case",
+        "Per proteggersi dal freddo",
+        "Per una moda architettonica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que le roi faisait payer une taxe sur chaque maison et que les paysans construisaient à sec pour pouvoir les démonter, donc pour ne pas payer les taxes."
     },
     {
       "q": "Con cosa sono costruiti i trulli?",
-      "options": ["Pietre grigie senza cemento", "Mattoni rossi", "Legno"],
-      "correct": 0
+      "options": [
+        "Pietre grigie senza cemento",
+        "Mattoni rossi",
+        "Legno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les trulli sont « costruiti con pietre grigie senza cemento »."
     },
     {
       "q": "Da quando i trulli sono patrimonio dell'Unesco?",
-      "options": ["Dal 1996", "Dal 1950", "Dal 2000"],
-      "correct": 0
+      "options": [
+        "Dal 1996",
+        "Dal 1950",
+        "Dal 2000"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique « Dal millenovecentonovantasei », c'est-à-dire depuis 1996."
     }
   ],
   "words": {

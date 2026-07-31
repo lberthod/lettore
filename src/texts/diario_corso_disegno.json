@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa disegnano gli studenti il primo giorno?",
-      "options": ["Solo linee dritte", "Un ritratto completo", "Un paesaggio di montagna"],
-      "correct": 0
+      "options": [
+        "Solo linee dritte",
+        "Un ritratto completo",
+        "Un paesaggio di montagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la maestra « ci ha fatto disegnare solo linee dritte », donc les étudiants dessinent seulement des lignes droites."
     },
     {
       "q": "Che cosa disegna la persona mercoledì?",
-      "options": ["Una semplice natura morta", "Un animale domestico", "Un edificio famoso"],
-      "correct": 0
+      "options": [
+        "Una semplice natura morta",
+        "Un animale domestico",
+        "Un edificio famoso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mercoledì ... abbiamo disegnato una semplice natura morta », donc la personne dessine une nature morte."
     },
     {
       "q": "Che cosa disegna la persona sabato?",
-      "options": ["Il proprio gatto mentre dormiva", "Un fiore in un vaso", "Un paesaggio marino"],
-      "correct": 0
+      "options": [
+        "Il proprio gatto mentre dormiva",
+        "Un fiore in un vaso",
+        "Un paesaggio marino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sabato. Ho disegnato il mio gatto mentre dormiva », donc la personne dessine son chat qui dormait."
     }
   ],
   "words": {

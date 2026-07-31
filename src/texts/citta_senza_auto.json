@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa aveva vietato la città di Nuova Milano?",
-      "options": ["Le automobili private", "Le biciclette", "I negozi"],
-      "correct": 0
+      "options": [
+        "Le automobili private",
+        "Le biciclette",
+        "I negozi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « aveva vietato completamente le automobili private », donc la ville avait interdit les voitures privées."
     },
     {
       "q": "Come si spostavano le persone?",
-      "options": ["Solo a piedi", "Con biciclette e mezzi pubblici elettrici", "Con automobili elettriche"],
-      "correct": 1
+      "options": [
+        "Solo a piedi",
+        "Con biciclette e mezzi pubblici elettrici",
+        "Con automobili elettriche"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Le persone si spostavano con biciclette, mezzi pubblici elettrici », donc ils se déplaçaient à vélo et en transports publics électriques."
     },
     {
       "q": "Che cosa avevano guadagnato i cittadini?",
-      "options": ["Più soldi", "Tempo e salute", "Case più grandi"],
-      "correct": 1
+      "options": [
+        "Più soldi",
+        "Tempo e salute",
+        "Case più grandi"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « avevano guadagnato qualcosa di più prezioso: il tempo e la salute », donc ils avaient gagné du temps et de la santé."
     }
   ],
   "words": {
@@ -54,7 +69,7 @@
     "diverso": "différent",
     "e": "et",
     "elettrici": "électriques",
-    "era": "était / avait (« era tornata » = était revenue)",
+    "era": "était",
     "futuro": "futur",
     "giocavano": "jouaient",
     "gli": "les",
@@ -98,8 +113,7 @@
     "tempo": "temps",
     "tornata": "revenue",
     "un": "un",
-    "vietato": "interdit",
-    "era": "était"
+    "vietato": "interdit"
   },
   "sentences": {
     "Nel 2150, la grande città di Nuova Milano aveva vietato completamente le automobili private.": "En 2150, la grande ville de Nouvelle Milan avait complètement interdit les voitures privées.",

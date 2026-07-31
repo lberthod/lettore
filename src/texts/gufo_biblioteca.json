@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Dove si era sistemato il gufo?",
-      "options": ["Tra le travi del sottotetto, sopra la sala di lettura", "Nel giardino della biblioteca", "In una cantina abbandonata"],
-      "correct": 0
+      "options": [
+        "Tra le travi del sottotetto, sopra la sala di lettura",
+        "Nel giardino della biblioteca",
+        "In una cantina abbandonata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il s'était installé « tra le travi del sottotetto della biblioteca comunale, proprio sopra la sala di lettura più antica »."
     },
     {
       "q": "Che cosa faceva il bibliotecario ogni sera?",
-      "options": ["Saliva a salutare in silenzio il gufo prima di chiudere", "Cacciava il gufo con una torcia", "Leggeva ad alta voce ai lettori"],
-      "correct": 0
+      "options": [
+        "Saliva a salutare in silenzio il gufo prima di chiudere",
+        "Cacciava il gufo con una torcia",
+        "Leggeva ad alta voce ai lettori"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que l'homme avait pris l'habitude de monter chaque soir avant de fermer pour un salut muet."
     },
     {
       "q": "Come si conclude il racconto?",
-      "options": ["La biblioteca chiude per ristrutturazione e l'uomo va in pensione", "Il gufo viene catturato da un veterinario", "La biblioteca viene ampliata con una nuova ala"],
-      "correct": 0
+      "options": [
+        "La biblioteca chiude per ristrutturazione e l'uomo va in pensione",
+        "Il gufo viene catturato da un veterinario",
+        "La biblioteca viene ampliata con una nuova ala"
+      ],
+      "correct": 0,
+      "explanation": "La fin du texte raconte que la bibliothèque ferme pour des travaux et que l'homme part en retraite après son dernier jour."
     }
   ],
   "words": {

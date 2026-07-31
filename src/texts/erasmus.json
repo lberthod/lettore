@@ -201,7 +201,8 @@
         "Ha chiesto gli appunti alle sue coinquiline",
         "Ha seguito un corso privato di italiano"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle a commencé à enregistrer les cours pour les réécouter le soir."
     },
     {
       "q": "Perché gli studenti viaggiavano con i treni regionali?",
@@ -210,7 +211,8 @@
         "Perché si spendeva poco",
         "Perché partivano direttamente da Bologna"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit qu'avec les trains régionaux on voyage lentement mais on dépense peu."
     },
     {
       "q": "Come ha passato Julie il Natale?",
@@ -219,7 +221,8 @@
         "È andata a Napoli con gli altri studenti",
         "È stata con i genitori di Martina in un paesino dell'Appennino"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que les parents de Martina l'ont invitée à passer Noël avec eux dans un petit village de l'Apennin."
     }
   ]
 }

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché la mamma è arrabbiata all'inizio?",
-      "options": ["I piatti sono sporchi nel lavandino", "Il figlio è tornato tardi", "Il papà ha rotto un piatto"],
-      "correct": 0
+      "options": [
+        "I piatti sono sporchi nel lavandino",
+        "Il figlio è tornato tardi",
+        "Il papà ha rotto un piatto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Chi ha lasciato i piatti sporchi nel lavandino? », ce qui explique que la mamma est fâchée à cause des assiettes sales."
     },
     {
       "q": "Che cosa propone il figlio?",
-      "options": ["Di fare i turni per le pulizie", "Di comprare una lavastoviglie", "Di mangiare fuori ogni sera"],
-      "correct": 0
+      "options": [
+        "Di fare i turni per le pulizie",
+        "Di comprare una lavastoviglie",
+        "Di mangiare fuori ogni sera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Forse dovremmo fare i turni per le pulizie », c'est le fils qui propose de faire des tours de nettoyage."
     },
     {
       "q": "Chi deve lavare i piatti stasera?",
-      "options": ["Il figlio", "Il papà", "Nessuno"],
-      "correct": 0
+      "options": [
+        "Il figlio",
+        "Il papà",
+        "Nessuno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « stasera tocca a te lavare i piatti, visto che hai avuto quest'idea », c'est donc le fils qui doit laver la vaisselle ce soir."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come si chiama il robot della famiglia?",
-      "options": ["Rex", "Marco", "Leo"],
-      "correct": 0
+      "options": [
+        "Rex",
+        "Marco",
+        "Leo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il robot si chiama Rex »."
     },
     {
       "q": "Che cosa prepara Rex la mattina?",
-      "options": ["La colazione", "La cena", "Il letto"],
-      "correct": 0
+      "options": [
+        "La colazione",
+        "La cena",
+        "Il letto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La mattina Rex prepara la colazione »."
     },
     {
       "q": "Come si sentono i bambini con Rex?",
-      "options": ["Lo amano", "Hanno paura di lui", "Non gli piace"],
-      "correct": 0
+      "options": [
+        "Lo amano",
+        "Hanno paura di lui",
+        "Non gli piace"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « I bambini amano Rex »."
     }
   ],
   "words": {

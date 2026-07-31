@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Erano tutti schiavi i gladiatori?",
-      "options": ["No, alcuni erano uomini liberi", "Sì, tutti senza eccezione", "No, erano tutti soldati"],
-      "correct": 0
+      "options": [
+        "No, alcuni erano uomini liberi",
+        "Sì, tutti senza eccezione",
+        "No, erano tutti soldati"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « alcuni erano uomini liberi che sceglievano questo mestiere », donc non, tous n'étaient pas esclaves."
     },
     {
       "q": "Che cosa usava il reziario per combattere?",
-      "options": ["Una rete e un tridente", "Una spada e uno scudo", "Un arco e frecce"],
-      "correct": 0
+      "options": [
+        "Una rete e un tridente",
+        "Una spada e uno scudo",
+        "Un arco e frecce"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il reziario usava una rete e un tridente », donc il utilisait un filet et un trident."
     },
     {
       "q": "Che cosa potevano ottenere i combattenti più famosi?",
-      "options": ["La libertà", "Una casa in campagna", "Un titolo nobiliare"],
-      "correct": 0
+      "options": [
+        "La libertà",
+        "Una casa in campagna",
+        "Un titolo nobiliare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « potevano ottenere la libertà e diventare istruttori », donc ils pouvaient obtenir la liberté."
     }
   ],
   "words": {

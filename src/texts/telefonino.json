@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Chi insegna al nonno a usare il telefonino?",
-      "options": ["La nipote Elisa", "Il figlio", "Un amico"],
-      "correct": 0
+      "options": [
+        "La nipote Elisa",
+        "Il figlio",
+        "Un amico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la petite-fille Elisa devient sa maîtresse."
     },
     {
       "q": "Qual è la prima lezione del nonno?",
-      "options": ["Mandare un messaggio", "Fare una foto", "Fare una videochiamata"],
-      "correct": 0
+      "options": [
+        "Mandare un messaggio",
+        "Fare una foto",
+        "Fare una videochiamata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La prima lezione: mandare un messaggio », donc la première leçon est d'envoyer un message."
     },
     {
       "q": "Con chi fa le videochiamate il nonno?",
-      "options": ["Con il figlio che vive in Germania", "Con Elisa", "Con un amico"],
-      "correct": 0
+      "options": [
+        "Con il figlio che vive in Germania",
+        "Con Elisa",
+        "Con un amico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il fait des appels vidéo avec son fils qui vit en Allemagne."
     }
   ],
   "words": {

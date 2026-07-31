@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cosa indica la sigla DOCG?",
-      "options": ["Denominazione di origine controllata e garantita", "Un nome di fantasia del produttore", "La gradazione alcolica del vino"],
-      "correct": 0
+      "options": [
+        "Denominazione di origine controllata e garantita",
+        "Un nome di fantasia del produttore",
+        "La gradazione alcolica del vino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « DOCG significa denominazione di origine controllata e garantita »."
     },
     {
       "q": "Che cosa significa « imbottigliato all'origine »?",
-      "options": ["Chi ha coltivato l'uva ha anche prodotto e imbottigliato il vino", "Il vino è stato venduto senza etichetta", "La bottiglia viene da un castello inventato"],
-      "correct": 0
+      "options": [
+        "Chi ha coltivato l'uva ha anche prodotto e imbottigliato il vino",
+        "Il vino è stato venduto senza etichetta",
+        "La bottiglia viene da un castello inventato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « significa che chi ha coltivato l'uva ha anche prodotto e imbottigliato il vino »."
     },
     {
       "q": "Di che cosa devi diffidare secondo il testo?",
-      "options": ["Dei nomi di fantasia e dei castelli inventati", "Delle etichette sobrie", "Della controetichetta"],
-      "correct": 0
+      "options": [
+        "Dei nomi di fantasia e dei castelli inventati",
+        "Delle etichette sobrie",
+        "Della controetichetta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Diffida invece del marketing: nomi di fantasia altisonanti, castelli inventati »."
     }
   ],
   "words": {

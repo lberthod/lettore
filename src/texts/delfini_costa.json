@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cos'è il Santuario Pelagos?",
-      "options": ["Una zona di mare condivisa tra Italia, Francia e Monaco per proteggere i mammiferi marini", "Un porto turistico della Liguria", "Un museo dedicato ai delfini"],
-      "correct": 0
+      "options": [
+        "Una zona di mare condivisa tra Italia, Francia e Monaco per proteggere i mammiferi marini",
+        "Un porto turistico della Liguria",
+        "Un museo dedicato ai delfini"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le Santuario Pelagos est « un'ampia zona di mare condivisa tra Italia, Francia e Principato di Monaco, dedicata ai mammiferi marini »."
     },
     {
       "q": "Come identificano i biologi i singoli delfini?",
-      "options": ["Grazie alle tacche e ai segni sulla pinna dorsale", "Grazie a microchip impiantati", "Grazie al colore degli occhi"],
-      "correct": 0
+      "options": [
+        "Grazie alle tacche e ai segni sulla pinna dorsale",
+        "Grazie a microchip impiantati",
+        "Grazie al colore degli occhi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les biologistes identifient les dauphins « grazie alle tacche e ai segni sulla pinna dorsale »."
     },
     {
       "q": "Che cosa distingue il turismo responsabile da quello dannoso?",
-      "options": ["Il rispetto della distanza e dei ritmi naturali degli animali", "L'uso di barche più veloci", "Il numero di turisti a bordo"],
-      "correct": 0
+      "options": [
+        "Il rispetto della distanza e dei ritmi naturali degli animali",
+        "L'uso di barche più veloci",
+        "Il numero di turisti a bordo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte oppose le tourisme responsable, qui « mantiene la distanza necessaria e rispetta i ritmi naturali degli animali », aux bateaux qui poursuivent les dauphins."
     }
   ],
   "words": {

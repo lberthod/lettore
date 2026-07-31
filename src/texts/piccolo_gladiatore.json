@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che lavoro faceva il padre di Tito?",
-      "options": ["Costruiva ponti e strade", "Era un gladiatore", "Vendeva pane al mercato"],
-      "correct": 0
+      "options": [
+        "Costruiva ponti e strade",
+        "Era un gladiatore",
+        "Vendeva pane al mercato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Suo padre costruiva ponti e strade per la città », donc il construisait des ponts et des routes."
     },
     {
       "q": "Dove sono andati Tito e suo padre?",
-      "options": ["Al Colosseo", "Al mercato", "Al porto"],
-      "correct": 0
+      "options": [
+        "Al Colosseo",
+        "Al mercato",
+        "Al porto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il padre ha portato Tito al Colosseo », donc ils sont allés au Colisée."
     },
     {
       "q": "Che cosa vuole diventare Tito?",
-      "options": ["Un costruttore di ponti", "Un gladiatore famoso", "Un soldato"],
-      "correct": 0
+      "options": [
+        "Un costruttore di ponti",
+        "Un gladiatore famoso",
+        "Un soldato"
+      ],
+      "correct": 0,
+      "explanation": "Tito dit « Voglio costruire ponti, come te! », donc il veut être constructeur de ponts."
     }
   ],
   "words": {

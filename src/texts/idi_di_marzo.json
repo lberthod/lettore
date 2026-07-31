@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa deve sembrare la morte di Cesare secondo il regista?",
-      "options": ["Una sorpresa totale", "Un evento già previsto", "Un incidente casuale"],
-      "correct": 0
+      "options": [
+        "Una sorpresa totale",
+        "Un evento già previsto",
+        "Un incidente casuale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la mort de César doit sembler « une surprise totale »."
     },
     {
       "q": "Di che cosa esita l'attrice che interpreta Bruto?",
-      "options": ["Del colpo finale", "Delle sue battute", "Del costume da indossare"],
-      "correct": 0
+      "options": [
+        "Del colpo finale",
+        "Delle sue battute",
+        "Del costume da indossare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'actrice qui joue Brutus hésite trop « avant le coup final »."
     },
     {
       "q": "Secondo la storia, che cosa spinse Bruto ad agire in fretta?",
-      "options": ["La paura più che l'odio", "Un ordine del senato", "La gelosia verso Cesare"],
-      "correct": 0
+      "options": [
+        "La paura più che l'odio",
+        "Un ordine del senato",
+        "La gelosia verso Cesare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Brutus fut poussé « par la peur plus que par la haine »."
     }
   ],
   "words": {

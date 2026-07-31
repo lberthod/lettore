@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Che cosa organizza il paese a Natale?",
-      "options": ["Il presepe vivente", "Una partita di calcio", "Un concerto"],
-      "correct": 0
+      "options": [
+        "Il presepe vivente",
+        "Una partita di calcio",
+        "Un concerto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le village « organizza il presepe vivente » à Noël."
     },
     {
       "q": "Che ruolo ha Anna?",
-      "options": ["L'angelo", "Il pastore", "Il re"],
-      "correct": 0
+      "options": [
+        "L'angelo",
+        "Il pastore",
+        "Il re"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'Anna « fa l'angelo »."
     },
     {
       "q": "Che cosa bevono tutti alla fine?",
-      "options": ["La cioccolata calda", "Il caffè", "Il tè"],
-      "correct": 0
+      "options": [
+        "La cioccolata calda",
+        "Il caffè",
+        "Il tè"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique qu'à la fin « tutti bevono la cioccolata calda »."
     }
   ],
   "words": {

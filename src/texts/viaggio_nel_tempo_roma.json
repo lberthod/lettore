@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In quale anno decide di viaggiare Claudia?",
-      "options": ["Nel 64 dopo Cristo, prima del grande incendio", "Nel 79 dopo Cristo, durante l'eruzione del Vesuvio", "Nel 753 avanti Cristo, alla fondazione di Roma"],
-      "correct": 0
+      "options": [
+        "Nel 64 dopo Cristo, prima del grande incendio",
+        "Nel 79 dopo Cristo, durante l'eruzione del Vesuvio",
+        "Nel 753 avanti Cristo, alla fondazione di Roma"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle choisit de visiter Rome \"nell'anno 64 dopo Cristo, poche settimane prima del grande incendio\"."
     },
     {
       "q": "Che cosa le ha raccomandato l'agenzia?",
-      "options": ["Di non intervenire e osservare da distanza", "Di parlare il meno possibile in latino", "Di indossare abiti romani autentici"],
-      "correct": 0
+      "options": [
+        "Di non intervenire e osservare da distanza",
+        "Di parlare il meno possibile in latino",
+        "Di indossare abiti romani autentici"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'agence lui a recommandé \"di non intervenire in alcun modo, ma di limitarsi a osservare da distanza di sicurezza\"."
     },
     {
       "q": "Che cosa colpisce di più Claudia nel Foro?",
-      "options": ["Gli odori e i rumori della vita quotidiana", "La grandezza dei monumenti", "Il numero di turisti temporali"],
-      "correct": 0
+      "options": [
+        "Gli odori e i rumori della vita quotidiana",
+        "La grandezza dei monumenti",
+        "Il numero di turisti temporali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle est frappée \"non dai monumenti... ma dagli odori e dai rumori della vita quotidiana\"."
     }
   ],
   "words": {

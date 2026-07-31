@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Dove ha camminato Giulia a Firenze?",
-      "options": ["Sul Ponte Vecchio", "In una grande piazza", "Sulla spiaggia"],
-      "correct": 0
+      "options": [
+        "Sul Ponte Vecchio",
+        "In una grande piazza",
+        "Sulla spiaggia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ho camminato sul Ponte Vecchio », donc Giulia a marché sur le Ponte Vecchio."
     },
     {
       "q": "Che cosa ha mangiato Giulia a Siena?",
-      "options": ["La ribollita", "Una pizza", "Un gelato"],
-      "correct": 0
+      "options": [
+        "La ribollita",
+        "Una pizza",
+        "Un gelato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « A Siena ho mangiato la ribollita », donc Giulia a mangé la ribollita à Sienne."
     },
     {
       "q": "Quando torna a casa Giulia?",
-      "options": ["Sabato", "Domenica", "Lunedì"],
-      "correct": 0
+      "options": [
+        "Sabato",
+        "Domenica",
+        "Lunedì"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Torno a casa sabato con il treno », donc Giulia rentre chez elle samedi."
     }
   ],
   "words": {

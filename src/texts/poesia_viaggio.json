@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Come si muove il mondo secondo la poesia?",
-      "options": ["Vola, visto dal finestrino del treno", "Si ferma completamente", "Diventa buio"],
-      "correct": 0
+      "options": [
+        "Vola, visto dal finestrino del treno",
+        "Si ferma completamente",
+        "Diventa buio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il mondo vola » et le titre « Finestrino » montre qu'on le voit depuis le train."
     },
     {
       "q": "Che cosa tiene in mano il viaggiatore?",
-      "options": ["Un biglietto", "Una mappa antica", "Un ombrello"],
-      "correct": 0
+      "options": [
+        "Un biglietto",
+        "Una mappa antica",
+        "Un ombrello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un biglietto stretto nella mano », donc le voyageur tient un billet."
     },
     {
       "q": "Come si sente il cuore del viaggiatore secondo l'ultimo verso?",
-      "options": ["Non si sazia mai", "È stanco e triste", "Vuole tornare subito a casa"],
-      "correct": 0
+      "options": [
+        "Non si sazia mai",
+        "È stanco e triste",
+        "Vuole tornare subito a casa"
+      ],
+      "correct": 0,
+      "explanation": "Le dernier vers dit « il cuore in viaggio non si sazia mai », donc le cœur ne se rassasie jamais."
     }
   ],
   "words": {

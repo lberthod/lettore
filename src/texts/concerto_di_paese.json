@@ -31,18 +31,33 @@
   "questions": [
     {
       "q": "Dove va Sofia con il papà e la mamma?",
-      "options": ["Alla piazza del paese, per il concerto", "Alla scuola di musica", "Al mare"],
-      "correct": 0
+      "options": [
+        "Alla piazza del paese, per il concerto",
+        "Alla scuola di musica",
+        "Al mare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Sofia « va alla piazza con il papà e la mamma » pour le grand concerto."
     },
     {
       "q": "Chi incontra Sofia vicino al palco?",
-      "options": ["Una musicista giovane di nome Anna", "Un cameriere", "Il sindaco del paese"],
-      "correct": 0
+      "options": [
+        "Una musicista giovane di nome Anna",
+        "Un cameriere",
+        "Il sindaco del paese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Vicino al palco, Sofia incontra una musicista giovane. Si chiama Anna »."
     },
     {
       "q": "Cosa sogna Sofia dopo il concerto?",
-      "options": ["Di diventare una musicista", "Di diventare cuoca", "Di comprare una chitarra nuova"],
-      "correct": 0
+      "options": [
+        "Di diventare una musicista",
+        "Di diventare cuoca",
+        "Di comprare una chitarra nuova"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit à la fin que Sofia « sogna di diventare una musicista »."
     }
   ],
   "words": {

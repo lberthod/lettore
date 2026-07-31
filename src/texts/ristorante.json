@@ -19,7 +19,8 @@
         "Aprire un ristorante nel suo paese",
         "Viaggiare per il mondo"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que Luca a un grand rêve : « aprire un ristorante nel suo paese », donc ouvrir un restaurant dans son village."
     },
     {
       "q": "Chi ha insegnato a Luca i segreti della cucina italiana?",
@@ -28,7 +29,8 @@
         "Un cuoco famoso",
         "Un compagno di scuola"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Lei gli ha insegnato tutti i segreti della cucina italiana » et « Lei » désigne sa mère."
     },
     {
       "q": "Che cosa succede la sera dell'apertura?",
@@ -37,7 +39,8 @@
         "Il ristorante chiude presto",
         "Alle otto il ristorante è già pieno"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « alle otto il ristorante è già pieno », donc à huit heures le restaurant est déjà plein."
     }
   ],
   "words": {

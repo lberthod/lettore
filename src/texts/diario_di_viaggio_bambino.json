@@ -29,7 +29,8 @@
         "Con il cameriere",
         "Con la nonna"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le bambin rencontre Giulia et qu'ils jouent ensemble avec la palla sur la plage."
     },
     {
       "q": "Cosa vedono nel mare venerdì pomeriggio?",
@@ -38,7 +39,8 @@
         "Una barca grande",
         "Un castello"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit : « Vediamo anche due delfini lontano nel mare. »"
     },
     {
       "q": "Cosa mette il bambino in valigia alla fine della vacanza?",
@@ -47,7 +49,8 @@
         "Un gelato",
         "Un pallone"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit : « Metto dentro una conchiglia bianca che ho trovato in spiaggia. »"
     }
   ],
   "words": {

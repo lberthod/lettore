@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quali fonti di energia rinnovabile sono citate nel testo?",
-      "options": ["Solare, eolica e idroelettrica", "Solo nucleare", "Solo carbone"],
-      "correct": 0
+      "options": [
+        "Solare, eolica e idroelettrica",
+        "Solo nucleare",
+        "Solo carbone"
+      ],
+      "correct": 0,
+      "explanation": "Le texte cite «pannelli solari e pale eoliche» pour le solaire et l'éolien, puis «l'energia idroelettrica»."
     },
     {
       "q": "Perché alcuni cittadini sono contrari alle nuove centrali?",
-      "options": ["Costano troppo poco", "Temono danni al paesaggio e al turismo", "Non producono elettricità"],
-      "correct": 1
+      "options": [
+        "Costano troppo poco",
+        "Temono danni al paesaggio e al turismo",
+        "Non producono elettricità"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que certains «temono che le nuove centrali cambino il paesaggio o danneggino il turismo locale»."
     },
     {
       "q": "Che cosa pensano molti esperti sull'energia pulita?",
-      "options": ["È inutile", "È l'unica strada possibile per il futuro", "È troppo pericolosa"],
-      "correct": 1
+      "options": [
+        "È inutile",
+        "È l'unica strada possibile per il futuro",
+        "È troppo pericolosa"
+      ],
+      "correct": 1,
+      "explanation": "Le texte affirme que «molti esperti credono che l'energia pulita rappresenti l'unica strada possibile per il futuro del pianeta»."
     }
   ],
   "words": {

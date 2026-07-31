@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che lavoro fa Amalia?",
-      "options": ["Fa le pulizie negli uffici", "Guida il tram", "Lavora in un negozio"],
-      "correct": 0
+      "options": [
+        "Fa le pulizie negli uffici",
+        "Guida il tram",
+        "Lavora in un negozio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle « faceva le pulizie negli uffici di un grande palazzo », donc elle fait le ménage dans les bureaux."
     },
     {
       "q": "Come comunicano Amalia e il ragazzo?",
-      "options": ["Parlano ogni sera", "Si salutano solo con un cenno", "Si scrivono messaggi"],
-      "correct": 1
+      "options": [
+        "Parlano ogni sera",
+        "Si salutano solo con un cenno",
+        "Si scrivono messaggi"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Non si erano mai parlati, eppure si salutavano con un cenno », donc ils se saluent seulement d'un signe de tête."
     },
     {
       "q": "Perché il ragazzo torna con un sorriso nuovo?",
-      "options": ["Ha trovato un lavoro", "Si è laureato", "Ha cambiato città"],
-      "correct": 1
+      "options": [
+        "Ha trovato un lavoro",
+        "Si è laureato",
+        "Ha cambiato città"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit qu'il revient « con un diploma stretto tra le mani e un sorriso nuovo », donc il a obtenu son diplôme."
     }
   ],
   "words": {

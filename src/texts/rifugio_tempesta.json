@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa sorprende i due amici durante l'escursione?",
-      "options": ["Un temporale improvviso", "Un animale selvatico", "La notte"],
-      "correct": 0
+      "options": [
+        "Un temporale improvviso",
+        "Un animale selvatico",
+        "La notte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils « furono sorpresi da un temporale improvviso », donc c'est un orage soudain."
     },
     {
       "q": "Chi li accoglie nel rifugio?",
-      "options": ["Un vecchio guardiano", "Altri escursionisti", "Nessuno"],
-      "correct": 0
+      "options": [
+        "Un vecchio guardiano",
+        "Altri escursionisti",
+        "Nessuno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Un vecchio guardiano li fece entrare », donc c'est un vieux gardien qui les accueille."
     },
     {
       "q": "Che cosa capiscono alla fine Anna e Paolo?",
-      "options": ["Che la montagna è pericolosa", "Che la solidarietà può salvare la vita", "Che non torneranno più"],
-      "correct": 1
+      "options": [
+        "Che la montagna è pericolosa",
+        "Che la solidarietà può salvare la vita",
+        "Che non torneranno più"
+      ],
+      "correct": 1,
+      "explanation": "À la fin, le texte dit qu'ils « capirono che in montagna la solidarietà può salvare la vita », donc ils comprennent que la solidarité peut sauver des vies."
     }
   ],
   "words": {

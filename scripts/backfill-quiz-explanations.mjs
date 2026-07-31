@@ -11,18 +11,17 @@
 // Usage :
 //   node scripts/backfill-quiz-explanations.mjs [--limit N] [--dry-run]
 //
-// La clé API vient de l'environnement (ANTHROPIC_API_KEY), comme pour
-// scripts/annotate-chapter.mjs.
+// La clé API vient de l'environnement (GLM_API_KEY), endpoint compatible
+// OpenAI (DeepSeek en production) — voir scripts/lib/llm-openai.mjs.
 
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import Anthropic from '@anthropic-ai/sdk'
+import { callLLM, requireApiKey } from './lib/llm-openai.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const TEXTS_DIR = path.join(ROOT, 'src/texts')
 
-const MODEL = 'claude-opus-4-8'
 // Taille des lots : les fichiers d'un même lot sont traités en parallèle,
 // avec un log de progression entre chaque lot.
 const BATCH_SIZE = 20
@@ -44,65 +43,50 @@ if (!Number.isFinite(args.limit) && process.argv.includes('--limit')) {
   process.exit(1)
 }
 
-// Sortie attendue du modèle : une explication par question, repérée par son
-// index (plus robuste qu'un tableau ordonné si le modèle réordonne).
-const EXPLANATIONS_SCHEMA = {
-  type: 'object',
-  additionalProperties: false,
-  required: ['explanations'],
-  properties: {
-    explanations: {
-      type: 'array',
-      items: {
-        type: 'object',
-        additionalProperties: false,
-        required: ['index', 'explanation'],
-        properties: {
-          index: { type: 'integer', description: 'Index de la question (0-based)' },
-          explanation: {
-            type: 'string',
-            description:
-              'Justification de la bonne réponse : 1 phrase en français simple, citant si possible le passage du texte',
-          },
-        },
-      },
-    },
-  },
-}
-
+// DeepSeek ne supporte pas les structured outputs (json_schema strict) :
+// le format attendu est décrit dans le system prompt et la réponse est
+// validée côté script (validateExplanations), avec un retry par texte.
 const SYSTEM = `Tu complètes les quiz de Leggendo, une application d'apprentissage de l'italien par la lecture destinée à des francophones. Chaque texte est en italien avec un quiz de compréhension ; tu dois ajouter, pour chaque question, une explication justifiant la bonne réponse.
 
 Contraintes :
 - Chaque "explanation" fait 1 phrase, en français simple (même registre que les traductions françaises de l'app).
 - Elle justifie la bonne réponse en citant si possible le passage du texte concerné (ex. « Le texte dit "…" »).
-- Renvoie une explication pour CHAQUE index demandé, avec l'index exact fourni.`
+- Renvoie une explication pour CHAQUE index demandé, avec l'index exact fourni.
 
-let client = null
-function getClient() {
-  if (!client) client = new Anthropic()
-  return client
+Tu DOIS répondre avec un unique objet JSON valide, sans aucun texte avant ni après, exactement de cette forme :
+
+{
+  "explanations": [
+    { "index": 0, "explanation": "…" },
+    { "index": 2, "explanation": "…" }
+  ]
 }
 
-async function callClaude(prompt) {
-  const stream = getClient().messages.stream({
-    model: MODEL,
-    max_tokens: 4000,
-    system: SYSTEM,
-    output_config: { format: { type: 'json_schema', schema: EXPLANATIONS_SCHEMA } },
-    messages: [{ role: 'user', content: prompt }],
-  })
-  const msg = await stream.finalMessage()
-  if (msg.stop_reason === 'refusal') {
-    throw new Error('Requête refusée par les classificateurs de sécurité.')
+- "index" : entier, l'index (0-based) de la question, recopié à l'identique depuis la demande.
+- "explanation" : chaîne non vide, 1 phrase en français.
+- Aucune autre clé, pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
+
+// Valide la réponse du modèle : un objet { explanations: [...] } couvrant
+// chaque index demandé avec une explication non vide. Renvoie une Map
+// index → explanation, ou lève une erreur décrivant le problème.
+function validateExplanations(out, missing) {
+  if (!out || !Array.isArray(out.explanations)) {
+    throw new Error('réponse sans tableau "explanations"')
   }
-  if (msg.stop_reason === 'max_tokens') {
-    throw new Error('Sortie tronquée (max_tokens atteint).')
+  const byIndex = new Map()
+  for (const e of out.explanations) {
+    if (!e || !Number.isInteger(e.index)) {
+      throw new Error(`entrée sans index entier : ${JSON.stringify(e).slice(0, 100)}`)
+    }
+    if (typeof e.explanation !== 'string' || !e.explanation.trim()) {
+      throw new Error(`explication manquante ou vide pour la question ${e.index}`)
+    }
+    byIndex.set(e.index, e.explanation.trim())
   }
-  const text = msg.content
-    .filter((b) => b.type === 'text')
-    .map((b) => b.text)
-    .join('')
-  return JSON.parse(text)
+  for (const i of missing) {
+    if (!byIndex.has(i)) throw new Error(`explication manquante ou vide pour la question ${i}`)
+  }
+  return byIndex
 }
 
 const hasExplanation = (q) =>
@@ -129,17 +113,23 @@ async function backfillText(file) {
     })
     .join('\n\n')
 
-  const out = await callClaude(
-    `Voici un texte italien (« ${textData.title} », niveau ${textData.level}) :\n\n${textData.paragraphs.join('\n\n')}\n\nVoici les questions du quiz avec leur bonne réponse. Pour chaque question, écris l'explication (1 phrase en français) qui justifie la bonne réponse :\n\n${questionBlock}`
-  )
+  const prompt = `Voici un texte italien (« ${textData.title} », niveau ${textData.level}) :\n\n${textData.paragraphs.join('\n\n')}\n\nVoici les questions du quiz avec leur bonne réponse. Pour chaque question, écris l'explication (1 phrase en français) qui justifie la bonne réponse :\n\n${questionBlock}`
 
-  const byIndex = new Map(out.explanations.map((e) => [e.index, e.explanation]))
-  for (const i of missing) {
-    const explanation = byIndex.get(i)
-    if (typeof explanation !== 'string' || !explanation.trim()) {
-      throw new Error(`explication manquante ou vide pour la question ${i}`)
+  // Sans structured outputs, une réponse peut être mal formée : on retente
+  // une fois avant de compter le texte en échec (repris à la relance).
+  let byIndex
+  for (let attempt = 1; ; attempt++) {
+    const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 4000 })
+    try {
+      byIndex = validateExplanations(out, missing)
+      break
+    } catch (err) {
+      if (attempt >= 2) throw err
+      console.warn(`  ⚠ ${path.relative(ROOT, file)} : ${err.message} — nouvel essai…`)
     }
-    textData.questions[i].explanation = explanation.trim()
+  }
+  for (const i of missing) {
+    textData.questions[i].explanation = byIndex.get(i)
   }
 
   fs.writeFileSync(file, JSON.stringify(textData, null, 2) + '\n')
@@ -176,6 +166,9 @@ if (!todo.length) {
   console.log('Rien à faire — corpus déjà backfillé.')
   process.exit(0)
 }
+
+// Des appels API vont partir : la clé est requise (pas en dry-run ci-dessus).
+requireApiKey()
 
 let done = 0
 let failed = 0

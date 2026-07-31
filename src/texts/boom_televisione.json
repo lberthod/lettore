@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Perché all'inizio c'è un solo televisore per quartiere?",
-      "options": ["Perché il televisore costa molto", "Perché la televisione non esiste ancora", "Perché tutti hanno già un televisore"],
-      "correct": 0
+      "options": [
+        "Perché il televisore costa molto",
+        "Perché la televisione non esiste ancora",
+        "Perché tutti hanno già un televisore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la télévision est un objet rare et coûteux et que beaucoup de familles n'ont pas assez d'argent pour l'acheter, donc il n'y a qu'un téléviseur par quartier."
     },
     {
       "q": "Dove guarda la televisione la gente che non ha un televisore in casa?",
-      "options": ["Al bar o a casa del vicino più ricco", "Solo in chiesa", "Solo al cinema"],
-      "correct": 0
+      "options": [
+        "Al bar o a casa del vicino più ricco",
+        "Solo in chiesa",
+        "Solo al cinema"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le téléviseur se trouve souvent au bar ou chez le voisin le plus riche de la zone."
     },
     {
       "q": "Che cosa succede nelle strade quando comincia \"Lascia o raddoppia?\"",
-      "options": ["Le strade diventano vuote", "Le strade diventano piene di gente", "Le strade restano come sempre"],
-      "correct": 0
+      "options": [
+        "Le strade diventano vuote",
+        "Le strade diventano piene di gente",
+        "Le strade restano come sempre"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que quand « Lascia o raddoppia? » commence, les rues deviennent vides."
     }
   ],
   "words": {
@@ -97,7 +112,6 @@
     "i": "les",
     "imparano": "apprennent",
     "il": "le",
-    "in": "dans",
     "in": "dans",
     "insegna": "enseigne",
     "insieme": "ensemble",

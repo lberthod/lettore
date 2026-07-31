@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Cosa deve consegnare ogni socio alla reception prima del primo accesso?",
-      "options": ["Un certificato medico obbligatorio valido dodici mesi", "Una fotografia recente", "Una lettera di raccomandazione"],
-      "correct": 0
+      "options": [
+        "Un certificato medico obbligatorio valido dodici mesi",
+        "Una fotografia recente",
+        "Una lettera di raccomandazione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le certificat médical obligatoire, valable douze mois, doit être remis à la réception avant le premier accès."
     },
     {
       "q": "Cosa succede a chi prenota un corso e non si presenta senza disdire in tempo, dopo tre volte in un mese?",
-      "options": ["L'accesso ai corsi viene sospeso per due settimane", "Riceve un rimborso automatico", "Viene espulso definitivamente dalla palestra"],
-      "correct": 0
+      "options": [
+        "L'accesso ai corsi viene sospeso per due settimane",
+        "Riceve un rimborso automatico",
+        "Viene espulso definitivamente dalla palestra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'après trois avertissements en un mois, l'accès aux cours est suspendu pendant deux semaines."
     },
     {
       "q": "A quali condizioni i ragazzi tra i quattordici e i diciassette anni possono accedere alla sala pesi?",
-      "options": ["Solo se accompagnati da un genitore o da un istruttore, e non oltre le ventuno", "Sempre, senza alcuna restrizione", "Solo la domenica pomeriggio"],
-      "correct": 0
+      "options": [
+        "Solo se accompagnati da un genitore o da un istruttore, e non oltre le ventuno",
+        "Sempre, senza alcuna restrizione",
+        "Solo la domenica pomeriggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique qu'ils peuvent accéder à la salle de musculation seulement s'ils sont accompagnés d'un parent ou d'un instructeur, et pas après vingt et une heures."
     }
   ],
   "words": {

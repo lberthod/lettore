@@ -84,7 +84,8 @@
         "Gialla",
         "Blu"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Anna abita in una casa gialla »."
     },
     {
       "q": "Che cosa c'è davanti alla porta?",
@@ -93,7 +94,8 @@
         "Un divano blu",
         "Un tavolo di legno"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Davanti alla porta c'è un albero di limoni »."
     },
     {
       "q": "Che cosa fa Anna la domenica?",
@@ -102,7 +104,8 @@
         "Cucina i pomodori",
         "Aiuta il nonno a innaffiare le piante"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « La domenica aiuta il nonno a innaffiare le piante »."
     }
   ]
 }

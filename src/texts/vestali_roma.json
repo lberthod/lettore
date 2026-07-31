@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa custodivano le vestali?",
-      "options": ["Il fuoco sacro della dea Vesta", "Le monete dello stato romano", "Le armi dei legionari"],
-      "correct": 0
+      "options": [
+        "Il fuoco sacro della dea Vesta",
+        "Le monete dello stato romano",
+        "Le armi dei legionari"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les vestales étaient « incaricate di custodire il fuoco sacro della dea Vesta »."
     },
     {
       "q": "Che cosa rischiava una vestale colpevole di incestum?",
-      "options": ["Di essere sepolta viva", "Di essere esiliata a vita", "Di pagare una multa"],
-      "correct": 0
+      "options": [
+        "Di essere sepolta viva",
+        "Di essere esiliata a vita",
+        "Di pagare una multa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'une vestale coupable d'incestum était « sepolta viva in una camera sotterranea »."
     },
     {
       "q": "Chi decretò la fine del culto delle vestali?",
-      "options": ["L'imperatore Teodosio, nel 394", "L'imperatore Augusto, nel 27 a.C.", "Il senato romano, nel 44 a.C."],
-      "correct": 0
+      "options": [
+        "L'imperatore Teodosio, nel 394",
+        "L'imperatore Augusto, nel 27 a.C.",
+        "Il senato romano, nel 44 a.C."
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que c'est « l'imperatore Teodosio, nel 394 » qui a décrété la fin du culte."
     }
   ],
   "words": {

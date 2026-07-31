@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Perché la traduzione del romanzo fu affidata a Bianca?",
-      "options": ["Gli eredi esigevano per clausola una traduzione umana", "La macchina si era guastata", "Il romanzo era scritto in una lingua sconosciuta"],
-      "correct": 0
+      "options": [
+        "Gli eredi esigevano per clausola una traduzione umana",
+        "La macchina si era guastata",
+        "Il romanzo era scritto in una lingua sconosciuta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « gli eredi pretendevano, per clausola testamentaria, una traduzione umana »."
     },
     {
       "q": "Che difetto aveva la versione prodotta dalla macchina?",
-      "options": ["Era esatta ma senza sapore, come acqua distillata", "Conteneva molti errori di grammatica", "Era rimasta incompiuta a metà"],
-      "correct": 0
+      "options": [
+        "Era esatta ma senza sapore, come acqua distillata",
+        "Conteneva molti errori di grammatica",
+        "Era rimasta incompiuta a metà"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la version de la machine était « esatta, levigata, irreprensibile » mais « senza sapore », comme de l'eau distillée."
     },
     {
       "q": "Che cosa fecero molti lettori dopo la serata pubblica?",
-      "options": ["Spensero l'impianto e lessero le pagine lentamente", "Chiesero di riaprire le facoltà di lingue", "Smisero del tutto di leggere romanzi"],
-      "correct": 0
+      "options": [
+        "Spensero l'impianto e lessero le pagine lentamente",
+        "Chiesero di riaprire le facoltà di lingue",
+        "Smisero del tutto di leggere romanzi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « molti lettori spensero l'impianto e compitarono le pagine lentamente »."
     }
   ],
   "words": {

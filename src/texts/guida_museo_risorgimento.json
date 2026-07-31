@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quali giorni è aperto il museo?",
-      "options": ["Dal martedì alla domenica", "Solo il fine settimana", "Tutti i giorni tranne il martedì"],
-      "correct": 0
+      "options": [
+        "Dal martedì alla domenica",
+        "Solo il fine settimana",
+        "Tutti i giorni tranne il martedì"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il museo è aperto dal martedì alla domenica »."
     },
     {
       "q": "Che cosa si trova al primo piano?",
-      "options": ["Documenti originali, uniformi e bandiere", "Solo quadri moderni", "Una collezione di monete antiche"],
-      "correct": 0
+      "options": [
+        "Documenti originali, uniformi e bandiere",
+        "Solo quadri moderni",
+        "Una collezione di monete antiche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « al primo piano trovate documenti originali, uniformi militari e le bandiere delle diverse battaglie »."
     },
     {
       "q": "Quanto costa noleggiare l'audioguida?",
-      "options": ["Tre euro", "Dieci euro", "È gratuita"],
-      "correct": 0
+      "options": [
+        "Tre euro",
+        "Dieci euro",
+        "È gratuita"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « al costo di tre euro » pour la location de l'audioguide."
     }
   ],
   "words": {

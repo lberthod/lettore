@@ -25,7 +25,8 @@
         "Era diviso tra due consoli, eletti ogni anno, e il senato",
         "Era nelle mani dei generali dell'esercito"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que le pouvoir était divisé entre deux consuls élus chaque année et le sénat."
     },
     {
       "q": "Cosa fece il generale cartaginese Annibale?",
@@ -34,7 +35,8 @@
         "Conquistò Roma e la governò per molti anni",
         "Fondò la città di Cartagine dopo tre guerre"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise qu'Annibale a traversé les Alpes avec ses éléphants mais a finalement dû se rendre."
     },
     {
       "q": "Perché Pompei è così importante per conoscere la vita quotidiana dei romani?",
@@ -43,7 +45,8 @@
         "Perché vi nacque Giulio Cesare",
         "Perché la cenere del Vesuvio conservò case, negozi e perfino il pane nei forni"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte explique que la cendre du Vésuve a conservé les maisons, les boutiques et même le pain dans les fours."
     }
   ],
   "words": {

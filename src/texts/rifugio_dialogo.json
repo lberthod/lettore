@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa chiedono i due viaggiatori all'inizio?",
-      "options": ["Se ci sono posti letto per la notte", "Se c'è un ristorante vicino", "Se possono lasciare la macchina"],
-      "correct": 0
+      "options": [
+        "Se ci sono posti letto per la notte",
+        "Se c'è un ristorante vicino",
+        "Se possono lasciare la macchina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « avete ancora posti letto per stanotte », donc ils demandent s'il y a des lits pour la nuit."
     },
     {
       "q": "Da quanto tempo camminano i due viaggiatori?",
-      "options": ["Da circa sei ore", "Da due giorni", "Da trenta minuti"],
-      "correct": 0
+      "options": [
+        "Da circa sei ore",
+        "Da due giorni",
+        "Da trenta minuti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Camminiamo da stamattina, circa sei ore », donc ils marchent depuis environ six heures."
     },
     {
       "q": "A che ora consiglia di partire il gestore del rifugio?",
-      "options": ["Verso le sei del mattino", "A mezzogiorno", "Nel pomeriggio"],
-      "correct": 0
+      "options": [
+        "Verso le sei del mattino",
+        "A mezzogiorno",
+        "Nel pomeriggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « vi consiglio di partire presto, verso le sei », donc il conseille de partir vers six heures du matin."
     }
   ],
   "words": {

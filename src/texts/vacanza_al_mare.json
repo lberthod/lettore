@@ -70,7 +70,8 @@
         "Il pallone",
         "Gli occhiali"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Aspetta! Dimentichiamo la crema solare, è importante », donc ils oublient la crème solaire."
     },
     {
       "q": "Che cosa succede al castello di sabbia di Tommaso?",
@@ -79,7 +80,8 @@
         "Il cane lo distrugge",
         "Il vento lo distrugge"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Oh no, l'onda distrugge il nostro castello! », donc une vague détruit le château de sable."
     },
     {
       "q": "Che cosa mangia Giulia al ristorante?",
@@ -88,7 +90,8 @@
         "Gli spaghetti con le vongole",
         "Il pesce"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Io voglio la pizza margherita, è la mia preferita », donc Giulia mange une pizza margherita."
     }
   ],
   "words": {

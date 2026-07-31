@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che festa si avvicina?",
-      "options": ["Natale", "Pasqua", "Carnevale"],
-      "correct": 0
+      "options": [
+        "Natale",
+        "Pasqua",
+        "Carnevale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « tra pochi giorni è Natale », donc c'est Noël."
     },
     {
       "q": "Che cosa ha chiesto Sofia a Babbo Natale?",
-      "options": ["Un libro e una bicicletta", "Un cane", "Dei vestiti"],
-      "correct": 0
+      "options": [
+        "Un libro e una bicicletta",
+        "Un cane",
+        "Dei vestiti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ho chiesto un libro e una bicicletta »."
     },
     {
       "q": "Quando verranno i nonni?",
-      "options": ["A pranzo il giorno di Natale", "Il giorno dopo", "Non verranno"],
-      "correct": 0
+      "options": [
+        "A pranzo il giorno di Natale",
+        "Il giorno dopo",
+        "Non verranno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Verrete a pranzo il giorno di Natale »."
     }
   ],
   "words": {

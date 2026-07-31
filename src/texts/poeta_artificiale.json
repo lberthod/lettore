@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa Virgilio nel 2070?",
-      "options": ["Vince il più importante premio di poesia italiana", "Scrive un romanzo di fantascienza", "Diventa presidente di una giuria letteraria"],
-      "correct": 0
+      "options": [
+        "Vince il più importante premio di poesia italiana",
+        "Scrive un romanzo di fantascienza",
+        "Diventa presidente di una giuria letteraria"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Virgilio « vince il più importante premio di poesia italiana » en 2070."
     },
     {
       "q": "Che cosa dichiara la vecchia poetessa esclusa dalla finale?",
-      "options": ["Che una macchina non può conoscere la sofferenza umana", "Che il premio è stato truccato", "Che smetterà di scrivere poesie"],
-      "correct": 0
+      "options": [
+        "Che una macchina non può conoscere la sofferenza umana",
+        "Che il premio è stato truccato",
+        "Che smetterà di scrivere poesie"
+      ],
+      "correct": 0,
+      "explanation": "La vieille poétesse déclare qu'« una macchina non può conoscere la sofferenza » dont naît toute vraie poésie."
     },
     {
       "q": "Quale domanda resta aperta alla fine del racconto?",
-      "options": ["Che cosa resta della poesia senza un poeta umano", "Se Virgilio riceverà un secondo premio", "Se la giuria si scioglierà"],
-      "correct": 0
+      "options": [
+        "Che cosa resta della poesia senza un poeta umano",
+        "Se Virgilio riceverà un secondo premio",
+        "Se la giuria si scioglierà"
+      ],
+      "correct": 0,
+      "explanation": "La question finale est « che cosa resta della poesia, se non è più necessario un poeta? », soit ce qui reste de la poésie sans poète humain."
     }
   ],
   "words": {

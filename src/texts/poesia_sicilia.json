@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa cresce dolce in Sicilia secondo la poesia?",
-      "options": ["Le arance", "Le mele", "Le fragole"],
-      "correct": 0
+      "options": [
+        "Le arance",
+        "Le mele",
+        "Le fragole"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « arance dolci da raccogliere », donc ce sont les oranges qui poussent douces en Sicile."
     },
     {
       "q": "Che cosa fa il vulcano nella poesia?",
-      "options": ["Fuma lontano", "Dorme sempre", "Non esiste più"],
-      "correct": 0
+      "options": [
+        "Fuma lontano",
+        "Dorme sempre",
+        "Non esiste più"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il vulcano fuma lontano », donc le volcan fume au loin."
     },
     {
       "q": "Come viene descritta la Sicilia alla fine della poesia?",
-      "options": ["Una storia e una stella", "Un'isola triste", "Un posto freddo"],
-      "correct": 0
+      "options": [
+        "Una storia e una stella",
+        "Un'isola triste",
+        "Un posto freddo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « sei una storia, sei una stella », donc la Sicile est décrite comme une histoire et une étoile."
     }
   ],
   "words": {

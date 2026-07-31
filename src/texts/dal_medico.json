@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Da quanti giorni sta male il paziente?",
-      "options": ["Da tre giorni", "Da una settimana", "Da un mese"],
-      "correct": 0
+      "options": [
+        "Da tre giorni",
+        "Da una settimana",
+        "Da un mese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « non mi sento bene da tre giorni », donc le patient est malade depuis trois jours."
     },
     {
       "q": "Quali sintomi ha?",
-      "options": ["Mal di gola, febbre e tosse", "Mal di testa", "Mal di stomaco"],
-      "correct": 0
+      "options": [
+        "Mal di gola, febbre e tosse",
+        "Mal di testa",
+        "Mal di stomaco"
+      ],
+      "correct": 0,
+      "explanation": "Le patient répond « Ho mal di gola, un po' di febbre e tanta tosse », ce qui correspond à mal de gorge, fièvre et toux."
     },
     {
       "q": "Che cosa prescrive il dottore?",
-      "options": ["Uno sciroppo e riposo", "Un'operazione", "Niente"],
-      "correct": 0
+      "options": [
+        "Uno sciroppo e riposo",
+        "Un'operazione",
+        "Niente"
+      ],
+      "correct": 0,
+      "explanation": "Le docteur déclare « Le prescrivo uno sciroppo e molto riposo », donc il prescrit un sirop et du repos."
     }
   ],
   "words": {

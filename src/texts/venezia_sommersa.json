@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché Venezia vive quasi completamente sull'acqua nel 2100?",
-      "options": ["Perché il livello del mare è salito molto", "Perché la città è stata ricostruita altrove", "Perché non esistono più le strade"],
-      "correct": 0
+      "options": [
+        "Perché il livello del mare è salito molto",
+        "Perché la città è stata ricostruita altrove",
+        "Perché non esistono più le strade"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le niveau de la mer a tellement monté que Venise vit presque entièrement sur l'eau."
     },
     {
       "q": "Con che cosa visitano Venezia i turisti nel futuro?",
-      "options": ["Con barche sottomarine trasparenti", "Con droni personali", "A piedi su ponti di ghiaccio"],
-      "correct": 0
+      "options": [
+        "Con barche sottomarine trasparenti",
+        "Con droni personali",
+        "A piedi su ponti di ghiaccio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que les touristes visitent Venise surtout en bateaux sous-marins transparents."
     },
     {
       "q": "Che cosa fanno Sara e la sua squadra durante il guasto?",
-      "options": ["Lavorano tutta la notte per salvare le case", "Evacuano definitivamente la città", "Chiamano altre città per un aiuto immediato"],
-      "correct": 0
+      "options": [
+        "Lavorano tutta la notte per salvare le case",
+        "Evacuano definitivamente la città",
+        "Chiamano altre città per un aiuto immediato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils travaillent toute la nuit et parviennent à sauver les maisons."
     }
   ],
   "words": {

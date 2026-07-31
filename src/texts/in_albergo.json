@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Per quante notti è la prenotazione?",
-      "options": ["Una notte", "Due notti", "Tre notti"],
-      "correct": 1
+      "options": [
+        "Una notte",
+        "Due notti",
+        "Tre notti"
+      ],
+      "correct": 1,
+      "explanation": "Le texte précise « una camera doppia per due notti », donc la réservation est pour deux nuits."
     },
     {
       "q": "A che piano è la camera?",
-      "options": ["Al primo piano", "Al terzo piano", "Al piano terra"],
-      "correct": 1
+      "options": [
+        "Al primo piano",
+        "Al terzo piano",
+        "Al piano terra"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Al terzo piano », donc la chambre est au troisième étage."
     },
     {
       "q": "A che ora è la colazione?",
-      "options": ["Dalle sette alle dieci", "Dalle otto alle nove", "Solo alle otto"],
-      "correct": 0
+      "options": [
+        "Dalle sette alle dieci",
+        "Dalle otto alle nove",
+        "Solo alle otto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique « Dalle sette alle dieci », donc la colazione est de sept à dix heures."
     }
   ],
   "words": {

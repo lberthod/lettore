@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa nota il turista sui piatti italiani?",
-      "options": ["Che sono molto diversi da regione a regione", "Che sono tutti uguali", "Che costano troppo"],
-      "correct": 0
+      "options": [
+        "Che sono molto diversi da regione a regione",
+        "Che sono tutti uguali",
+        "Che costano troppo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni regione italiana ha piatti molto diversi », donc le touriste note qu'ils sont très différents d'une région à l'autre."
     },
     {
       "q": "Che lingua si parla in Campania secondo il dialogo?",
-      "options": ["Il napoletano", "Il siciliano", "Il veneto"],
-      "correct": 0
+      "options": [
+        "Il napoletano",
+        "Il siciliano",
+        "Il veneto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « in Campania, per esempio, parliamo napoletano », donc on y parle napolitain."
     },
     {
       "q": "Da dove consiglia di cominciare la persona del posto?",
-      "options": ["Dal Sud", "Dal Nord", "Dalle isole"],
-      "correct": 0
+      "options": [
+        "Dal Sud",
+        "Dal Nord",
+        "Dalle isole"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « le consiglio di cominciare dal Sud », donc la personne du lieu conseille de commencer par le Sud."
     }
   ],
   "words": {

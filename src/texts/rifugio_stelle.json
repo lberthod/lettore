@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove è arrivata la famiglia Rossi dopo la camminata?",
-      "options": ["Al rifugio di montagna", "In città", "Al mare"],
-      "correct": 0
+      "options": [
+        "Al rifugio di montagna",
+        "In città",
+        "Al mare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La famiglia Rossi è arrivata al rifugio dopo una lunga camminata in montagna », donc elle est arrivée au refuge de montagne."
     },
     {
       "q": "Che cosa hanno visto la sera, quando non c'era elettricità?",
-      "options": ["Migliaia di stelle nel cielo", "Un film in televisione", "Altri rifugi lontani"],
-      "correct": 0
+      "options": [
+        "Migliaia di stelle nel cielo",
+        "Un film in televisione",
+        "Altri rifugi lontani"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que quand ils sont sortis pour regarder le ciel, ils ont vu « migliaia di stelle »."
     },
     {
       "q": "Perché la famiglia si è svegliata presto la mattina dopo?",
-      "options": ["Per vedere il sole che nasceva dietro le montagne", "Per tornare subito a casa", "Perché faceva troppo caldo"],
-      "correct": 0
+      "options": [
+        "Per vedere il sole che nasceva dietro le montagne",
+        "Per tornare subito a casa",
+        "Perché faceva troppo caldo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils se sont réveillés tôt « prima del sole » et ont vu « il sole che nasceva dietro le montagne »."
     }
   ],
   "words": {

@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Perché i genitori di Tommaso erano scettici?",
-      "options": ["Temevano che un mestiere antico non offrisse un futuro sicuro", "Volevano che diventasse musicista", "Pensavano che Cremona fosse troppo lontana"],
-      "correct": 0
+      "options": [
+        "Temevano che un mestiere antico non offrisse un futuro sicuro",
+        "Volevano che diventasse musicista",
+        "Pensavano che Cremona fosse troppo lontana"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la mère craignait qu'un métier ancien n'offre pas un avenir sûr."
     },
     {
       "q": "Da dove viene l'abete rosso che il maestro insegna a scegliere?",
-      "options": ["Dalla Val di Fiemme", "Dalla Val d'Orcia", "Dalla costa siciliana"],
-      "correct": 0
+      "options": [
+        "Dalla Val di Fiemme",
+        "Dalla Val d'Orcia",
+        "Dalla costa siciliana"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que l'épicéa vient de la Val di Fiemme."
     },
     {
       "q": "Che cosa ha capito Tommaso alla fine?",
-      "options": ["Che certi mestieri si imparano con le mani e con gli anni", "Che avrebbe dovuto restare al liceo", "Che i violini si costruiscono in fretta"],
-      "correct": 0
+      "options": [
+        "Che certi mestieri si imparano con le mani e con gli anni",
+        "Che avrebbe dovuto restare al liceo",
+        "Che i violini si costruiscono in fretta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que ces métiers s'apprennent avec les mains, les erreurs et les années."
     }
   ],
   "words": {

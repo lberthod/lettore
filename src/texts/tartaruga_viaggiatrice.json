@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa sognava di fare Tilla?",
-      "options": ["Vedere il mondo intero", "Vincere una gara di corsa", "Trovare un tesoro nascosto"],
-      "correct": 0
+      "options": [
+        "Vedere il mondo intero",
+        "Vincere una gara di corsa",
+        "Trovare un tesoro nascosto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Tilla « sognava di vedere il mondo intero », donc elle rêvait de voir le monde entier."
     },
     {
       "q": "Che cosa porta sempre con sé Tilla?",
-      "options": ["La sua casa sulla schiena", "Una valigia pesante", "Una mappa antica"],
-      "correct": 0
+      "options": [
+        "La sua casa sulla schiena",
+        "Una valigia pesante",
+        "Una mappa antica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle part « con la sua casa sempre sulla schiena », donc elle porte sa maison sur son dos."
     },
     {
       "q": "Che cosa risponde Tilla al coniglio veloce?",
-      "options": ["Che lei arriva sempre perché non si ferma mai", "Che vuole essere veloce come lui", "Che è stanca di camminare"],
-      "correct": 0
+      "options": [
+        "Che lei arriva sempre perché non si ferma mai",
+        "Che vuole essere veloce come lui",
+        "Che è stanca di camminare"
+      ],
+      "correct": 0,
+      "explanation": "Tilla répond « Io arrivo sempre, prima o poi, perché non mi fermo mai », donc elle arrive toujours parce qu'elle ne s'arrête jamais."
     }
   ],
   "words": {

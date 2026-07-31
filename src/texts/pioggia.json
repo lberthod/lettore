@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Perché Martina e Piero non vanno al parco?",
-      "options": ["Perché piove", "Perché sono malati", "Perché è tardi"],
-      "correct": 0
+      "options": [
+        "Perché piove",
+        "Perché sono malati",
+        "Perché è tardi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « oggi niente parco » parce qu'il pleut le samedi matin."
     },
     {
       "q": "Cosa preparano i bambini con la mamma?",
-      "options": ["Dei biscotti", "Una torta", "Una pizza"],
-      "correct": 0
+      "options": [
+        "Dei biscotti",
+        "Una torta",
+        "Una pizza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « perché non cucinate i biscotti? » donc les enfants préparent des biscuits."
     },
     {
       "q": "Cosa guardano Martina e Piero alla fine della giornata?",
-      "options": ["L'arcobaleno", "Le stelle", "Il gatto"],
-      "correct": 0
+      "options": [
+        "L'arcobaleno",
+        "Le stelle",
+        "Il gatto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Martina e Piero guardano l'arcobaleno dalla finestra »."
     }
   ],
   "words": {

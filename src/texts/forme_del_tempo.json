@@ -24,7 +24,8 @@
         "Il peso esatto di ogni forma",
         "La temperatura interna del formaggio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils écoutent la résonance du son pour « cogliere la presenza o l'assenza di difetti invisibili all'occhio »."
     },
     {
       "q": "Che cosa temono soprattutto i casari più anziani riguardo al futuro del mestiere?",
@@ -33,7 +34,8 @@
         "La scarsità di latte nelle campagne emiliane",
         "L'aumento eccessivo del prezzo del formaggio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils craignent que les jeunes « finiscano per abbandonare un sapere tramandato di padre in figlio »."
     },
     {
       "q": "Perché il Consorzio di Tutela conduce una battaglia legale incessante?",
@@ -42,7 +44,8 @@
         "Per aumentare il numero di forme prodotte ogni anno",
         "Per ridurre il tempo minimo di stagionatura"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le Consorzio mène une « battaglia legale incessante » pour défendre le nom contre la « contraffazione internazionale »."
     }
   ],
   "words": {

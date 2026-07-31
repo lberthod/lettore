@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa ha di nuovo il bambino sulle spalle?",
-      "options": ["Uno zaino nuovo", "Un cappello", "Una giacca"],
-      "correct": 0
+      "options": [
+        "Uno zaino nuovo",
+        "Un cappello",
+        "Una giacca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Zaino nuovo sulle spalle », donc il porte un sac à dos neuf."
     },
     {
       "q": "Come batte il cuore del bambino?",
-      "options": ["Forte forte", "Piano piano", "Non batte affatto"],
-      "correct": 0
+      "options": [
+        "Forte forte",
+        "Piano piano",
+        "Non batte affatto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il cuore batte forte forte », donc son cœur bat très fort."
     },
     {
       "q": "Che cosa diventa la paura alla fine della poesia?",
-      "options": ["Amica", "Più grande", "Un segreto"],
-      "correct": 0
+      "options": [
+        "Amica",
+        "Più grande",
+        "Un segreto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la paura diventa amica », donc la peur devient une amie."
     }
   ],
   "words": {

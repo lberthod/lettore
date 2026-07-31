@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa nota Elena riguardo al nuovo vicino?",
-      "options": ["Che esce solo di notte con occhiali scuri", "Che non esce mai di casa", "Che riceve visite ogni giorno"],
-      "correct": 0
+      "options": [
+        "Che esce solo di notte con occhiali scuri",
+        "Che non esce mai di casa",
+        "Che riceve visite ogni giorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « esce di casa solo di notte, sempre con gli occhiali scuri », donc Elena remarque qu'il sort seulement la nuit avec des lunettes noires."
     },
     {
       "q": "Qual è il vero lavoro del vicino?",
-      "options": ["Doppiatore di film", "Guardia notturna", "Fotografo professionista"],
-      "correct": 0
+      "options": [
+        "Doppiatore di film",
+        "Guardia notturna",
+        "Fotografo professionista"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « lavora come doppiatore di film », donc le vrai métier du voisin est doubleur de films."
     },
     {
       "q": "Come si sente Elena alla fine della storia?",
-      "options": ["Un po' ridicola ma felice di averlo conosciuto", "Ancora più sospettosa di prima", "Delusa dalla verità scoperta"],
-      "correct": 0
+      "options": [
+        "Un po' ridicola ma felice di averlo conosciuto",
+        "Ancora più sospettosa di prima",
+        "Delusa dalla verità scoperta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « si sente un po' ridicola... ma è comunque felice di aver conosciuto un vicino simpatico », donc elle se sent un peu ridicule mais heureuse de l'avoir connu."
     }
   ],
   "words": {

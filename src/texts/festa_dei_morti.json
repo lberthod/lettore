@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "In Sicilia, chi portava i doni ai bambini nella notte tra l'uno e il due novembre?",
-      "options": ["I parenti defunti", "I re magi", "Le streghe del paese"],
-      "correct": 0
+      "options": [
+        "I parenti defunti",
+        "I re magi",
+        "Le streghe del paese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « erano i morti a portare i doni ai bambini », donc ce sont les parents défunts qui apportaient les cadeaux."
     },
     {
       "q": "Che cosa sono i pupi di zucchero?",
-      "options": ["Statuette variopinte raffiguranti paladini e dame", "Lumini accesi nei cimiteri", "Zucche intagliate per Halloween"],
-      "correct": 0
+      "options": [
+        "Statuette variopinte raffiguranti paladini e dame",
+        "Lumini accesi nei cimiteri",
+        "Zucche intagliate per Halloween"
+      ],
+      "correct": 0,
+      "explanation": "Le texte les décrit comme « statuette variopinte raffiguranti paladini e dame »."
     },
     {
       "q": "Secondo il testo, che cosa ha smarrito la modernità?",
-      "options": ["Un linguaggio per convivere con la morte", "La ricetta della frutta martorana", "Il calendario delle feste religiose"],
-      "correct": 0
+      "options": [
+        "Un linguaggio per convivere con la morte",
+        "La ricetta della frutta martorana",
+        "Il calendario delle feste religiose"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la modernité « ha smarrito quel linguaggio », c'est-à-dire le langage pour vivre avec la mort."
     }
   ],
   "words": {

@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Quanti anni ha Leo?",
-      "options": ["Sei", "Dieci", "Quattro"],
-      "correct": 0
+      "options": [
+        "Sei",
+        "Dieci",
+        "Quattro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Leo ha sei anni »."
     },
     {
       "q": "Chi incontra Leo a ricreazione?",
-      "options": ["Un bambino simpatico di nome Marco", "La sua maestra", "Sua sorella"],
-      "correct": 0
+      "options": [
+        "Un bambino simpatico di nome Marco",
+        "La sua maestra",
+        "Sua sorella"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Leo incontra un bambino simpatico... si chiama Marco »."
     },
     {
       "q": "Come si sente Leo alla fine della giornata?",
-      "options": ["Molto contento", "Molto stanco", "Molto triste"],
-      "correct": 0
+      "options": [
+        "Molto contento",
+        "Molto stanco",
+        "Molto triste"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Alla fine della giornata Leo è molto contento »."
     }
   ],
   "words": {

@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Dove è Paolo?",
-      "options": ["A Milano", "A Roma", "A Parigi"],
-      "correct": 0
+      "options": [
+        "A Milano",
+        "A Roma",
+        "A Parigi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Io sono a Milano », donc Paolo est à Milan."
     },
     {
       "q": "Di che colore è il tram?",
-      "options": ["Giallo", "Rosso", "Verde"],
-      "correct": 0
+      "options": [
+        "Giallo",
+        "Rosso",
+        "Verde"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « prendo il tram giallo », donc le tram est jaune."
     },
     {
       "q": "Che cosa mangia Paolo a pranzo?",
-      "options": ["Un panzerotto", "Una pizza", "Un gelato"],
-      "correct": 0
+      "options": [
+        "Un panzerotto",
+        "Una pizza",
+        "Un gelato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « A pranzo mangio un panzerotto caldo », donc il mange un panzerotto."
     }
   ],
   "words": {

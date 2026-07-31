@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa succede nel 2017?",
-      "options": ["L'arte del pizzaiuolo entra nel patrimonio UNESCO", "Nasce la pizza Margherita", "Apre la prima pizzeria di Napoli"],
-      "correct": 0
+      "options": [
+        "L'arte del pizzaiuolo entra nel patrimonio UNESCO",
+        "Nasce la pizza Margherita",
+        "Apre la prima pizzeria di Napoli"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'arte del pizzaiuolo napoletano est entrée au patrimoine culturel immatériel de l'UNESCO en 2017."
     },
     {
       "q": "Chi crea la pizza Margherita secondo la leggenda?",
-      "options": ["Raffaele Esposito", "Un cuoco francese", "La regina stessa"],
-      "correct": 0
+      "options": [
+        "Raffaele Esposito",
+        "Un cuoco francese",
+        "La regina stessa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que, selon la légende, c'est Raffaele Esposito qui a créé la pizza Margherita."
     },
     {
       "q": "Che cosa richiamano i colori della pizza Margherita?",
-      "options": ["La bandiera nazionale italiana", "I colori del Vesuvio", "I colori della squadra di calcio locale"],
-      "correct": 0
+      "options": [
+        "La bandiera nazionale italiana",
+        "I colori del Vesuvio",
+        "I colori della squadra di calcio locale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que les couleurs de la pizza Margherita rappellent celles de la bandiera nationale italienne."
     }
   ],
   "words": {

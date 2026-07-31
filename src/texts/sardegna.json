@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Qual è l'isola più grande del Mediterraneo?",
-      "options": ["La Sardegna", "La Sicilia", "Capri"],
-      "correct": 1
+      "options": [
+        "La Sardegna",
+        "La Sicilia",
+        "Capri"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que la Sardaigne est la deuxième plus grande île de la Méditerranée après la Sicile, donc la Sicile est la plus grande."
     },
     {
       "q": "Che cosa sono i nuraghi?",
-      "options": ["Spiagge famose", "Torri di pietra antiche", "Piatti tipici"],
-      "correct": 1
+      "options": [
+        "Spiagge famose",
+        "Torri di pietra antiche",
+        "Piatti tipici"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que les nuraghi sont des tours de pierre construites il y a plus de trois mille ans."
     },
     {
       "q": "Come è la lingua sarda rispetto all'italiano?",
-      "options": ["Identica", "Molto diversa", "Più facile"],
-      "correct": 1
+      "options": [
+        "Identica",
+        "Molto diversa",
+        "Più facile"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que la langue sarde est très différente de l'italien et qu'elle est considérée comme une langue à part."
     }
   ],
   "words": {

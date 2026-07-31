@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa rifletteva realmente lo specchio creato da Learco?",
-      "options": ["Ciò che ognuno si rifiutava di vedere di sé", "Il futuro di chi si specchiava", "Il viso reale di chi si specchiava"],
-      "correct": 0
+      "options": [
+        "Ciò che ognuno si rifiutava di vedere di sé",
+        "Il futuro di chi si specchiava",
+        "Il viso reale di chi si specchiava"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il « rifletteva ciò che ciascuno si ostinava a non guardare di sé », donc ce que chacun refusait de voir."
     },
     {
       "q": "Perché il Doge fece murare la stanza dello specchio?",
-      "options": ["Perché vi vide la paura di perdere il potere", "Perché lo specchio si ruppe da solo", "Perché non riusciva a vedersi riflesso"],
-      "correct": 0
+      "options": [
+        "Perché vi vide la paura di perdere il potere",
+        "Perché lo specchio si ruppe da solo",
+        "Perché non riusciva a vedersi riflesso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il « non vide il potere che credeva di incarnare, bensì la paura sottile di perderlo », donc il a vu la peur de perdre le pouvoir."
     },
     {
       "q": "Che cosa fece Learco, temendo un uso tirannico dello specchio?",
-      "options": ["Lo distrusse e ne sparse i frammenti nella laguna", "Lo donò al Doge", "Lo nascose nella sua bottega per sempre"],
-      "correct": 0
+      "options": [
+        "Lo distrusse e ne sparse i frammenti nella laguna",
+        "Lo donò al Doge",
+        "Lo nascose nella sua bottega per sempre"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il « lo frantumò una notte di luna calante e ne disperse le schegge nella laguna », donc il l'a détruit et en a dispersé les fragments."
     }
   ],
   "words": {

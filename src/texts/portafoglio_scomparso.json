@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa non trova la signora Bruni?",
-      "options": ["Il suo portafoglio", "Le sue chiavi", "Il telefono"],
-      "correct": 0
+      "options": [
+        "Il suo portafoglio",
+        "Le sue chiavi",
+        "Il telefono"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la signora Bruni ne trouve plus son portefeuille."
     },
     {
       "q": "Chi ha l'idea giusta?",
-      "options": ["Il capo", "Il giovane stagista", "Un collega"],
-      "correct": 1
+      "options": [
+        "Il capo",
+        "Il giovane stagista",
+        "Un collega"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que le jeune stagiaire a une idée."
     },
     {
       "q": "Dov'era il portafoglio?",
-      "options": ["Caduto dietro il cestino", "In una tasca", "A casa"],
-      "correct": 0
+      "options": [
+        "Caduto dietro il cestino",
+        "In una tasca",
+        "A casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le portefeuille était tombé derrière la corbeille."
     }
   ],
   "words": {

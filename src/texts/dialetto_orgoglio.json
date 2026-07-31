@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché il nipote evita di parlare in dialetto?",
-      "options": ["Teme di sembrare provinciale agli amici di Milano", "Non conosce affatto il dialetto", "Preferisce parlare solo inglese"],
-      "correct": 0
+      "options": [
+        "Teme di sembrare provinciale agli amici di Milano",
+        "Non conosce affatto il dialetto",
+        "Preferisce parlare solo inglese"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il ne veut pas « sembrare provinciale » aux yeux de ses amis de Milan."
     },
     {
       "q": "Come descrive la nonna il valore del dialetto?",
-      "options": ["Come qualcosa che porta secoli di storia", "Come una lingua ormai inutile", "Come un semplice errore grammaticale"],
-      "correct": 0
+      "options": [
+        "Come qualcosa che porta secoli di storia",
+        "Come una lingua ormai inutile",
+        "Come un semplice errore grammaticale"
+      ],
+      "correct": 0,
+      "explanation": "La nonna déclare que le dialecte « porta con sé secoli di storia »."
     },
     {
       "q": "Che cosa decide di fare il nipote alla fine?",
-      "options": ["Provare a usare il dialetto senza vergognarsi", "Smettere definitivamente di parlare con la nonna", "Iscriversi a un corso di dialetto"],
-      "correct": 0
+      "options": [
+        "Provare a usare il dialetto senza vergognarsi",
+        "Smettere definitivamente di parlare con la nonna",
+        "Iscriversi a un corso di dialetto"
+      ],
+      "correct": 0,
+      "explanation": "À la fin, il décide de « provare a usarlo senza vergognarmi », donc d'essayer de l'utiliser sans honte."
     }
   ],
   "words": {

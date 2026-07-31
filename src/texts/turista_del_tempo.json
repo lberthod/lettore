@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa vende la Compagnia dei Soggiorni Temporali nel 2140?",
-      "options": ["Soggiorni immersivi nella Roma del 1955 ricostruita", "Biglietti per colonie su Marte", "Viaggi nel futuro remoto"],
-      "correct": 0
+      "options": [
+        "Soggiorni immersivi nella Roma del 1955 ricostruita",
+        "Biglietti per colonie su Marte",
+        "Viaggi nel futuro remoto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la Compagnia vende « passeggiare nella Roma del 1955, ricostruita fin nell'ultimo sampietrino »."
     },
     {
       "q": "Perché Aldrovandi tornava sempre nello stesso bar?",
-      "options": ["Per rivedere la sua bisnonna ventenne che vi serviva caffè", "Per comprare il locale a buon prezzo", "Per studiare l'architettura del quartiere"],
-      "correct": 0
+      "options": [
+        "Per rivedere la sua bisnonna ventenne che vi serviva caffè",
+        "Per comprare il locale a buon prezzo",
+        "Per studiare l'architettura del quartiere"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Aldrovandi venait « per un bar minuscolo... dove la sua bisnonna, allora ventenne, serviva caffè e chiacchiere »."
     },
     {
       "q": "Come finisce la vicenda di Aldrovandi?",
-      "options": ["Resta a vivere nella copia del passato, preferendola al presente", "Torna nel 2140 guarito dalla nostalgia", "Viene espulso dalla Compagnia per i suoi capricci"],
-      "correct": 0
+      "options": [
+        "Resta a vivere nella copia del passato, preferendola al presente",
+        "Torna nel 2140 guarito dalla nostalgia",
+        "Viene espulso dalla Compagnia per i suoi capricci"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'à la fin Aldrovandi « smise di ripartire: affittò una stanza sopra il bar... soltanto lì... si sentiva a casa »."
     }
   ],
   "words": {

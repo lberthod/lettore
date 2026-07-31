@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa registrano i sensori nella Milano del 2060?",
-      "options": ["Ogni gesto dei cittadini", "Solo il traffico automobilistico", "Solo le spese nei negozi"],
-      "correct": 0
+      "options": [
+        "Ogni gesto dei cittadini",
+        "Solo il traffico automobilistico",
+        "Solo le spese nei negozi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni gesto viene registrato da migliaia di sensori invisibili », donc les capteurs enregistrent chaque geste des citoyens."
     },
     {
       "q": "Che cosa scopre Elena riguardo al proprio profilo?",
-      "options": ["È stato modificato e tre anni sono stati cancellati", "È stato premiato dallo stato", "Non esiste più nessun dato su di lei da sempre"],
-      "correct": 0
+      "options": [
+        "È stato modificato e tre anni sono stati cancellati",
+        "È stato premiato dallo stato",
+        "Non esiste più nessun dato su di lei da sempre"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que son profil a été modifié sans autorisation et que trois années de sa vie numérique ont été supprimées."
     },
     {
       "q": "A chi decide di rivolgersi Elena?",
-      "options": ["A un gruppo clandestino", "Alla polizia locale", "Ai suoi colleghi di lavoro"],
-      "correct": 0
+      "options": [
+        "A un gruppo clandestino",
+        "Alla polizia locale",
+        "Ai suoi colleghi di lavoro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle décide de s'adresser à un groupe clandestin qui aide les citoyens effacés à retrouver leur identité."
     }
   ],
   "words": {

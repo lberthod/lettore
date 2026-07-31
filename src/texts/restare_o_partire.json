@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa ha ottenuto a Berlino l'amico che parte?",
-      "options": ["Uno stipendio doppio e un contratto stabile", "Una borsa da rinnovare ogni sei mesi", "Un incarico politico al ministero"],
-      "correct": 0
+      "options": [
+        "Uno stipendio doppio e un contratto stabile",
+        "Una borsa da rinnovare ogni sei mesi",
+        "Un incarico politico al ministero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Stipendio doppio, contratto stabile », donc il a obtenu un double salaire et un contrat stable."
     },
     {
       "q": "Secondo chi parte, di chi è la responsabilità delle partenze?",
-      "options": ["Di chi non crea le condizioni per restare", "Dei giovani che partono per capriccio", "Dei ricercatori stranieri in Italia"],
-      "correct": 0
+      "options": [
+        "Di chi non crea le condizioni per restare",
+        "Dei giovani che partono per capriccio",
+        "Dei ricercatori stranieri in Italia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La responsabilità non è di chi parte, ma di chi non crea le condizioni per restare », donc la responsabilité est à ceux qui ne créent pas les conditions pour rester."
     },
     {
       "q": "Perché, alla fine, il ricercatore dice di andarsene?",
-      "options": ["Proprio perché ama il suo Paese", "Perché non sopporta più l'Italia", "Perché a Berlino ha una fidanzata"],
-      "correct": 0
+      "options": [
+        "Proprio perché ama il suo Paese",
+        "Perché non sopporta più l'Italia",
+        "Perché a Berlino ha una fidanzata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « me ne vado proprio perché questo Paese lo amo », donc il part précisément parce qu'il aime son pays."
     }
   ],
   "words": {

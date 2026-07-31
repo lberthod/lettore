@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa ha il corvo all'inizio?",
-      "options": ["Un pezzo di formaggio", "Un pezzo di pane", "Un fiore"],
-      "correct": 0
+      "options": [
+        "Un pezzo di formaggio",
+        "Un pezzo di pane",
+        "Un fiore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Un corvo trova un pezzo di formaggio », donc le corbeau a un morceau de fromage."
     },
     {
       "q": "Perché la volpe fa i complimenti al corvo?",
-      "options": ["Per fargli aprire il becco", "Perché lo ama", "Per gioco"],
-      "correct": 0
+      "options": [
+        "Per fargli aprire il becco",
+        "Perché lo ama",
+        "Per gioco"
+      ],
+      "correct": 0,
+      "explanation": "La volpe dit « Canta per me! » pour que le corbeau ouvre le bec et laisse tomber le fromage, donc elle le complimente pour lui faire ouvrir le bec."
     },
     {
       "q": "Che cosa impara il corvo?",
-      "options": ["A cantare meglio", "A non fidarsi di chi fa troppi complimenti", "A volare più in alto"],
-      "correct": 1
+      "options": [
+        "A cantare meglio",
+        "A non fidarsi di chi fa troppi complimenti",
+        "A volare più in alto"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « non bisogna fidarsi di chi fa troppi complimenti », donc le corbeau apprend à ne pas se fier à ceux qui font trop de compliments."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che tipo di scarpe bisogna portare?",
-      "options": ["Scarponi robusti e già usati", "Scarpe eleganti nuove", "Sandali leggeri"],
-      "correct": 0
+      "options": [
+        "Scarponi robusti e già usati",
+        "Scarpe eleganti nuove",
+        "Sandali leggeri"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « portate scarponi robusti, comodi e già usati », donc il faut des chaussures robustes et déjà portées."
     },
     {
       "q": "Perché bisogna mettere strati diversi di vestiti?",
-      "options": ["Perché il tempo cambia in fretta in montagna", "Perché fa sempre molto caldo", "Per sembrare più eleganti"],
-      "correct": 0
+      "options": [
+        "Perché il tempo cambia in fretta in montagna",
+        "Perché fa sempre molto caldo",
+        "Per sembrare più eleganti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « in montagna il tempo cambia molto in fretta », donc il faut des couches parce que le temps change très vite."
     },
     {
       "q": "Che cosa bisogna dire a qualcuno prima di partire?",
-      "options": ["Dove si va e a che ora si pensa di tornare", "Solo il nome del sentiero", "Niente, non è necessario"],
-      "correct": 0
+      "options": [
+        "Dove si va e a che ora si pensa di tornare",
+        "Solo il nome del sentiero",
+        "Niente, non è necessario"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « dite sempre a qualcuno dove andate e a che ora pensate di tornare », donc il faut dire où on va et à quelle heure on pense rentrer."
     }
   ],
   "words": {

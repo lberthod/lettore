@@ -25,7 +25,8 @@
         "Che dovrebbe usare più ingredienti esotici possibili",
         "Che la tecnologia ha reso inutile la tradizione"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Bruno soutient que la cuisine contemporaine a perdu le sens de la soustraction, obsédée par l'accumulation de techniques et d'ingrédients."
     },
     {
       "q": "Perché Bruno rifiuta di aumentare il numero dei coperti nel suo ristorante?",
@@ -34,7 +35,8 @@
         "Perché considera la fretta la vera nemica del gusto",
         "Perché il locale è troppo piccolo"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que Bruno refuse d'augmenter le nombre de couverts, convaincu que la hâte est la véritable ennemie du goût."
     },
     {
       "q": "Che cosa capisce Bruno, alla fine del servizio, sul motivo per cui ha scelto questo mestiere?",
@@ -43,7 +45,8 @@
         "Che il numero di stelle ottenute conta più di tutto",
         "Che le recensioni pubblicate sui giornali sono l'unico giudizio che conta"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Bruno comprend que le vrai sens de son métier est l'instant où un plat très simple rend à quelqu'un un souvenir qu'il croyait perdu."
     }
   ],
   "words": {

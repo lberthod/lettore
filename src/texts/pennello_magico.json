@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa regala la vecchia signora a Elio?",
-      "options": ["Un pennello magico", "Un cavallo bianco", "Un libro antico"],
-      "correct": 0
+      "options": [
+        "Un pennello magico",
+        "Un cavallo bianco",
+        "Un libro antico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « una vecchia signora gli regalò un pennello dorato », donc elle offre un pinceau magique à Elio."
     },
     {
       "q": "Che cosa disegna Elio per i bambini del villaggio?",
-      "options": ["Pane fresco e frutta colorata", "Giocattoli nuovi", "Vestiti eleganti"],
-      "correct": 0
+      "options": [
+        "Pane fresco e frutta colorata",
+        "Giocattoli nuovi",
+        "Vestiti eleganti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « disegnò pane fresco e frutta colorata per tutti i bambini affamati del villaggio », donc Elio dessine du pain frais et des fruits colorés pour les enfants."
     },
     {
       "q": "Che cosa capisce l'uomo cattivo alla fine?",
-      "options": ["Che l'oro senza amore non porta felicità", "Che il pennello non funziona più", "Che deve tornare dalla vecchia signora"],
-      "correct": 0
+      "options": [
+        "Che l'oro senza amore non porta felicità",
+        "Che il pennello non funziona più",
+        "Che deve tornare dalla vecchia signora"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'oro senza amore non porta felicità », donc l'homme méchant comprend que l'or sans amour n'apporte pas le bonheur."
     }
   ],
   "words": {

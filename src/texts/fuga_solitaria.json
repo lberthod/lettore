@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che ruolo ha avuto Dario nella sua carriera?",
-      "options": ["Il gregario, che fa vincere gli altri", "Il capitano della squadra", "Il direttore sportivo"],
-      "correct": 0
+      "options": [
+        "Il gregario, che fa vincere gli altri",
+        "Il capitano della squadra",
+        "Il direttore sportivo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le métier de gregario consiste à faire gagner les autres."
     },
     {
       "q": "Dove viene ripreso Dario dal gruppo?",
-      "options": ["A duecento metri dalla linea", "A metà corsa", "Sul primo tornante"],
-      "correct": 0
+      "options": [
+        "A duecento metri dalla linea",
+        "A metà corsa",
+        "Sul primo tornante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique qu'il est repris à deux cents mètres de la ligne."
     },
     {
       "q": "Di che cosa parlano i giornali del mattino?",
-      "options": ["Del gregario che aveva osato", "Del velocista vincitore", "Del nuovo contratto di Dario"],
-      "correct": 0
+      "options": [
+        "Del gregario che aveva osato",
+        "Del velocista vincitore",
+        "Del nuovo contratto di Dario"
+      ],
+      "correct": 0,
+      "explanation": "Les journaux du matin racontent le gregario qui avait osé."
     }
   ],
   "words": {

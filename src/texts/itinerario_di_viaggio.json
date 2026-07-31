@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Cosa fanno i partecipanti il primo giorno del viaggio?",
-      "options": ["Visitano Taormina e il suo teatro antico", "Salgono subito sull'Etna", "Vanno direttamente a Siracusa"],
-      "correct": 0
+      "options": [
+        "Visitano Taormina e il suo teatro antico",
+        "Salgono subito sull'Etna",
+        "Vanno direttamente a Siracusa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « guidiamo verso Taormina, dove visitiamo il teatro antico e il centro storico »."
     },
     {
       "q": "Perché bisogna portare una giacca per l'escursione sull'Etna?",
-      "options": ["Perché in montagna fa freddo anche d'estate", "Perché piove sempre a settembre", "Perché fa troppo caldo di giorno"],
-      "correct": 0
+      "options": [
+        "Perché in montagna fa freddo anche d'estate",
+        "Perché piove sempre a settembre",
+        "Perché fa troppo caldo di giorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Portate una giacca, perché in montagna fa freddo anche d'estate »."
     },
     {
       "q": "A che ora parte il volo di ritorno l'ultimo giorno?",
-      "options": ["Alle diciotto e trenta", "Alle nove del mattino", "A mezzogiorno"],
-      "correct": 0
+      "options": [
+        "Alle diciotto e trenta",
+        "Alle nove del mattino",
+        "A mezzogiorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il volo di ritorno parte da Catania alle diciotto e trenta »."
     }
   ],
   "words": {

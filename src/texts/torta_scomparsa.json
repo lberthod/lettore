@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa prepara Marco per il compleanno del capo?",
-      "options": ["Una torta al cioccolato", "Una pizza speciale", "Un dolce di frutta"],
-      "correct": 0
+      "options": [
+        "Una torta al cioccolato",
+        "Una pizza speciale",
+        "Un dolce di frutta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « prepara con cura una torta al cioccolato per il compleanno del capo », donc il s'agit d'une torta al cioccolato."
     },
     {
       "q": "Che cosa trova Marco vicino al tavolo?",
-      "options": ["Il gatto con la faccia sporca di cioccolato", "Un altro cuoco che dorme", "Una finestra aperta"],
-      "correct": 0
+      "options": [
+        "Il gatto con la faccia sporca di cioccolato",
+        "Un altro cuoco che dorme",
+        "Una finestra aperta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « trova il gatto della cucina con la faccia sporca di cioccolato »."
     },
     {
       "q": "Chi è il vero colpevole della torta scomparsa?",
-      "options": ["Il gatto della cucina", "Un cliente del ristorante", "Un altro cameriere"],
-      "correct": 0
+      "options": [
+        "Il gatto della cucina",
+        "Un cliente del ristorante",
+        "Un altro cameriere"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il vero colpevole aveva quattro zampe », et il s'agit du gatto della cucina."
     }
   ],
   "words": {

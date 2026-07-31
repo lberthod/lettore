@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa insegna la nonna il lunedì?",
-      "options": ["A fare la pasta fresca", "A fare il pane", "A fare i biscotti"],
-      "correct": 0
+      "options": [
+        "A fare la pasta fresca",
+        "A fare il pane",
+        "A fare i biscotti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La nonna mi ha insegnato a fare la pasta fresca », donc elle apprend à faire la pasta fresca."
     },
     {
       "q": "Che problema c'è martedì con l'impasto?",
-      "options": ["È troppo duro", "È troppo salato", "È troppo liquido"],
-      "correct": 0
+      "options": [
+        "È troppo duro",
+        "È troppo salato",
+        "È troppo liquido"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'impasto era troppo duro », donc le problème est que l'impasto est trop dur."
     },
     {
       "q": "Che cosa succede sabato?",
-      "options": ["Tutti dicono che la pasta è buonissima", "La cena viene rimandata", "La nonna si arrabbia"],
-      "correct": 0
+      "options": [
+        "Tutti dicono che la pasta è buonissima",
+        "La cena viene rimandata",
+        "La nonna si arrabbia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Tutti hanno detto che la pasta era buonissima », donc tout le monde dit que la pasta est délicieuse."
     }
   ],
   "words": {

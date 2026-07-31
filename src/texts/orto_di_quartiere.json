@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Che cosa diventa un terreno abbandonato in un orto di quartiere?",
-      "options": ["Un piccolo spazio verde coltivato dai vicini", "Un parcheggio pubblico", "Un campo da calcio"],
-      "correct": 0
+      "options": [
+        "Un piccolo spazio verde coltivato dai vicini",
+        "Un parcheggio pubblico",
+        "Un campo da calcio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le terrain abandonné devient « un piccolo spazio verde dove i vicini coltivano insieme »."
     },
     {
       "q": "Quando si prendono le decisioni importanti sull'orto?",
-      "options": ["Durante una riunione mensile", "Ogni giorno alla stessa ora", "Solo il proprietario decide"],
-      "correct": 0
+      "options": [
+        "Durante una riunione mensile",
+        "Ogni giorno alla stessa ora",
+        "Solo il proprietario decide"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que les décisions importantes se prennent « durante una riunione mensile »."
     },
     {
       "q": "Secondo Chiara, cosa è cambiato nel quartiere grazie all'orto?",
-      "options": ["I vicini si conoscono e lavorano insieme", "Il quartiere è diventato più rumoroso", "Le famiglie si vedono di meno"],
-      "correct": 0
+      "options": [
+        "I vicini si conoscono e lavorano insieme",
+        "Il quartiere è diventato più rumoroso",
+        "Le famiglie si vedono di meno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte rapporte que Chiara dit « prima i vicini non si conoscevano. Adesso lavoriamo insieme »."
     }
   ],
   "words": {

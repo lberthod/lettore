@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Perché la sedia a capotavola resta vuota?",
-      "options": ["Perché apparteneva al nonno Michele, ormai scomparso", "Perché la famiglia aspetta un ospite in ritardo", "Perché è rotta da molti anni"],
-      "correct": 0
+      "options": [
+        "Perché apparteneva al nonno Michele, ormai scomparso",
+        "Perché la famiglia aspetta un ospite in ritardo",
+        "Perché è rotta da molti anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que cette chaise est restée vide car le grand-père Michele y avait régné pendant cinquante ans et que personne n'osait le remplacer."
     },
     {
       "q": "Che cosa annuncia il giovane Michele durante il caffè?",
-      "options": ["Che ha firmato un contratto a Berlino", "Che intende sposarsi in primavera", "Che ha comprato la casa paterna"],
-      "correct": 0
+      "options": [
+        "Che ha firmato un contratto a Berlino",
+        "Che intende sposarsi in primavera",
+        "Che ha comprato la casa paterna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte rapporte les paroles du jeune Michele : « Ho firmato un contratto a Berlino. »"
     },
     {
       "q": "Come reagisce nonna Assunta all'annuncio?",
-      "options": ["Promette di preparargli i barattoli di ragù", "Lascia la tavola senza dire una parola", "Ordina ai figli di impedire la partenza"],
-      "correct": 0
+      "options": [
+        "Promette di preparargli i barattoli di ragù",
+        "Lascia la tavola senza dire una parola",
+        "Ordina ai figli di impedire la partenza"
+      ],
+      "correct": 0,
+      "explanation": "La nonna Assunta lui répond : « Ti preparerò i barattoli di ragù. »"
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In quale momento è ambientata la poesia?",
-      "options": ["All'alba", "A mezzanotte di Capodanno", "A mezzogiorno"],
-      "correct": 1
+      "options": [
+        "All'alba",
+        "A mezzanotte di Capodanno",
+        "A mezzogiorno"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « A mezzanotte il cielo si accende » et le titre est « Notte di Capodanno », donc la poésie se déroule à minuit du Nouvel An."
     },
     {
       "q": "A che cosa sono paragonate le finestre?",
-      "options": ["A piccole stelle cadute", "A grandi fuochi", "A lune bianche"],
-      "correct": 0
+      "options": [
+        "A piccole stelle cadute",
+        "A grandi fuochi",
+        "A lune bianche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le finestre brillano come piccole stelle cadute », donc les fenêtres sont comparées à de petites étoiles filantes."
     },
     {
       "q": "Che cosa nasce in ogni cuore alla fine?",
-      "options": ["Una nuova paura", "Una nuova speranza", "Un ricordo triste"],
-      "correct": 1
+      "options": [
+        "Una nuova paura",
+        "Una nuova speranza",
+        "Un ricordo triste"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « E in ogni cuore nasce, timida, una nuova speranza », donc une nouvelle espérance naît dans chaque cœur."
     }
   ],
   "words": {
@@ -78,8 +93,7 @@
     "una": "une",
     "ultima": "dernière",
     "va": "va (« se ne va » = s'en va)",
-    "vecchio": "vieux",
-    "senza": "sans"
+    "vecchio": "vieux"
   },
   "sentences": {
     "La città trattiene il fiato nell'ultima ora dell'anno.": "La ville retient son souffle dans la dernière heure de l'année.",

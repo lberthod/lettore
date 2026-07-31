@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Per quale posto è il colloquio?",
-      "options": ["Cuoca", "Commessa", "Segretaria"],
-      "correct": 1
+      "options": [
+        "Cuoca",
+        "Commessa",
+        "Segretaria"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Lei ha mandato il curriculum per il posto di commessa, giusto? », ce qui confirme que le poste est celui de commessa."
     },
     {
       "q": "Che esperienza ha la candidata?",
-      "options": ["Due anni in un negozio di scarpe", "Cinque anni in un ristorante", "Nessuna esperienza"],
-      "correct": 0
+      "options": [
+        "Due anni in un negozio di scarpe",
+        "Cinque anni in un ristorante",
+        "Nessuna esperienza"
+      ],
+      "correct": 0,
+      "explanation": "La candidate répond « Ho lavorato due anni in un negozio di scarpe », donc elle a deux ans d'expérience dans un magasin de chaussures."
     },
     {
       "q": "Quando saprà la risposta la candidata?",
-      "options": ["Subito", "Entro una settimana", "Il giorno dopo"],
-      "correct": 1
+      "options": [
+        "Subito",
+        "Entro una settimana",
+        "Il giorno dopo"
+      ],
+      "correct": 1,
+      "explanation": "Le recruteur dit « Le faremo sapere entro una settimana », ce qui signifie qu'elle saura dans une semaine."
     }
   ],
   "words": {
@@ -40,12 +55,11 @@
     "bene": "bien",
     "buona": "bonne",
     "buongiorno": "bonjour",
-    "che": "quelle",
+    "che": "quelle / que",
     "commessa": "vendeuse",
     "con": "avec",
     "contatto": "contact",
     "curriculum": "CV",
-    "che": "quelle / que",
     "di": "de",
     "disponibile": "disponible",
     "due": "deux",

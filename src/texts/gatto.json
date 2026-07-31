@@ -19,7 +19,8 @@
         "Perché beve il latte",
         "Perché dorme in ufficio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « I ferrovieri lo chiamano Baffo, per i suoi lunghi baffi bianchi », donc c'est à cause de ses longs moustaches blanches."
     },
     {
       "q": "Dove trova il contadino il gatto grigio?",
@@ -28,7 +29,8 @@
         "Nel suo fienile, con tre gattini",
         "Nella sala d'attesa"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Ha trovato un gatto grigio nel suo fienile, insieme a tre gattini appena nati », donc il le trouve dans sa grange avec trois chatons."
     },
     {
       "q": "Qual è la sorpresa alla fine della storia?",
@@ -37,7 +39,8 @@
         "Baffo non torna più alla stazione",
         "Baffo in realtà è una gatta"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Baffo, in realtà, era una gatta ! », donc la surprise est que Baffo est en réalité une chatte."
     }
   ],
   "words": {

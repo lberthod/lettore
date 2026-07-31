@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come suona la lettera C davanti a \"e\" e \"i\"?",
-      "options": ["Dolce, come in \"cena\"", "Sempre dura", "Silenziosa"],
-      "correct": 0
+      "options": [
+        "Dolce, come in \"cena\"",
+        "Sempre dura",
+        "Silenziosa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que devant « e » et « i », la lettre C « suona dolce, come in \"cena\" »."
     },
     {
       "q": "Perché è importante pronunciare bene le doppie consonanti?",
-      "options": ["Perché cambiano il significato della parola", "Perché rendono la lingua più veloce", "Perché sono sempre silenziose"],
-      "correct": 0
+      "options": [
+        "Perché cambiano il significato della parola",
+        "Perché rendono la lingua più veloce",
+        "Perché sono sempre silenziose"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'il faut prononcer les doubles consonnes plus longtemps « perché cambiano completamente il significato della parola »."
     },
     {
       "q": "Che cosa consiglia la guida per abituare l'orecchio ai suoni italiani?",
-      "options": ["Ascoltare spesso canzoni e film in italiano", "Studiare solo la grammatica", "Evitare di parlare con italiani"],
-      "correct": 0
+      "options": [
+        "Ascoltare spesso canzoni e film in italiano",
+        "Studiare solo la grammatica",
+        "Evitare di parlare con italiani"
+      ],
+      "correct": 0,
+      "explanation": "La guida conseille d'« ascoltare spesso canzoni e film in italiano » pour habituer l'oreille."
     }
   ],
   "words": {

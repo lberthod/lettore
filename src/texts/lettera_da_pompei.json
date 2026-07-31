@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché lo scrittore della lettera si trova a Pompei?",
-      "options": ["Per affari legati al commercio del vino", "Per motivi militari", "Per curare una malattia"],
-      "correct": 0
+      "options": [
+        "Per affari legati al commercio del vino",
+        "Per motivi militari",
+        "Per curare una malattia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « per affari legati al commercio del vino », donc il est à Pompéi pour le commerce du vin."
     },
     {
       "q": "Che cosa ha visitato ieri lo scrittore?",
-      "options": ["Le nuove terme vicino al foro", "Il porto della città", "Un tempio dedicato a Giove"],
-      "correct": 0
+      "options": [
+        "Le nuove terme vicino al foro",
+        "Il porto della città",
+        "Un tempio dedicato a Giove"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne « Ieri ho visitato le nuove terme costruite vicino al foro », donc il a visité les nouvelles thermes près du forum."
     },
     {
       "q": "Che cosa racconta di aver sentito qualche anziano?",
-      "options": ["Piccoli terremoti negli ultimi giorni", "Rumori misteriosi dal Vesuvio", "Voci di un'imminente invasione"],
-      "correct": 0
+      "options": [
+        "Piccoli terremoti negli ultimi giorni",
+        "Rumori misteriosi dal Vesuvio",
+        "Voci di un'imminente invasione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique « Alcuni anziani raccontano di piccoli terremoti sentiti negli ultimi giorni », donc des anciens racontent de petits séismes."
     }
   ],
   "words": {

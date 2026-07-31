@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa nota la giovane restauratrice durante l'intervento?",
-      "options": ["Dettagli tecnici incompatibili con l'epoca dichiarata", "Una firma nascosta del vero autore", "Un messaggio segreto scritto sul retro"],
-      "correct": 0
+      "options": [
+        "Dettagli tecnici incompatibili con l'epoca dichiarata",
+        "Una firma nascosta del vero autore",
+        "Un messaggio segreto scritto sul retro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la restauratrice « nota alcuni dettagli tecnici incompatibili con l'epoca dichiarata »."
     },
     {
       "q": "Che cosa rivelano le indagini sul quadro?",
-      "options": ["Che era stato realizzato pochi decenni prima da un falsario", "Che era stato rubato da un museo", "Che apparteneva a un altro collezionista"],
-      "correct": 0
+      "options": [
+        "Che era stato realizzato pochi decenni prima da un falsario",
+        "Che era stato rubato da un museo",
+        "Che apparteneva a un altro collezionista"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il quadro era stato realizzato pochi decenni prima da un abilissimo falsario »."
     },
     {
       "q": "Come reagisce il collezionista dopo la scoperta?",
-      "options": ["Decide di non intentare causa legale per evitare uno scandalo", "Denuncia immediatamente il falsario alla polizia", "Chiede un rimborso totale al venditore"],
-      "correct": 0
+      "options": [
+        "Decide di non intentare causa legale per evitare uno scandalo",
+        "Denuncia immediatamente il falsario alla polizia",
+        "Chiede un rimborso totale al venditore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le collectionneur « decide comunque di non intentare causa legale, temendo uno scandalo ancora più imbarazzante »."
     }
   ],
   "words": {

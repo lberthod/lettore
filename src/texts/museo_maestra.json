@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cosa vedono i bambini nel quadro?",
-      "options": ["Un mare blu e una barca piccola", "Una montagna alta", "Un cane e un gatto"],
-      "correct": 0
+      "options": [
+        "Un mare blu e una barca piccola",
+        "Una montagna alta",
+        "Un cane e un gatto"
+      ],
+      "correct": 0,
+      "explanation": "La bonne réponse est dans la réplique de Luca : « Vedo un mare blu e una barca piccola »."
     },
     {
       "q": "Chi è il pittore del quadro?",
-      "options": ["Un artista italiano famoso", "Un bambino della classe", "La maestra"],
-      "correct": 0
+      "options": [
+        "Un artista italiano famoso",
+        "Un bambino della classe",
+        "La maestra"
+      ],
+      "correct": 0,
+      "explanation": "La maestra répond : « È un artista italiano famoso »."
     },
     {
       "q": "Che cosa fanno domani in classe?",
-      "options": ["Disegnano insieme", "Guardano un film", "Vanno al parco"],
-      "correct": 0
+      "options": [
+        "Disegnano insieme",
+        "Guardano un film",
+        "Vanno al parco"
+      ],
+      "correct": 0,
+      "explanation": "La maestra dit : « Domani in classe disegniamo insieme »."
     }
   ],
   "words": {

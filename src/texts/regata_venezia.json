@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quando si svolge la Regata Storica?",
-      "options": ["La prima domenica di settembre", "Il primo giorno dell'anno", "A Carnevale"],
-      "correct": 0
+      "options": [
+        "La prima domenica di settembre",
+        "Il primo giorno dell'anno",
+        "A Carnevale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ogni prima domenica di settembre », donc c'est la première dimanche de septembre."
     },
     {
       "q": "Che cosa apre le celebrazioni?",
-      "options": ["Un corteo di barche antiche", "Una sfilata di moda", "Un concerto"],
-      "correct": 0
+      "options": [
+        "Un corteo di barche antiche",
+        "Una sfilata di moda",
+        "Un concerto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il corteo di barche antiche... apre le celebrazioni », donc c'est le cortège de barques anciennes."
     },
     {
       "q": "Che cosa rappresenta la Regata per i veneziani?",
-      "options": ["Un modo di ricordare la gloria antica della Serenissima", "Solo un evento turistico", "Una gara senza importanza"],
-      "correct": 0
+      "options": [
+        "Un modo di ricordare la gloria antica della Serenissima",
+        "Solo un evento turistico",
+        "Una gara senza importanza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « è un modo di ricordare la gloria antica della Serenissima », donc c'est une façon de rappeler la gloire ancienne de la Sérénissime."
     }
   ],
   "words": {

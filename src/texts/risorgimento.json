@@ -198,7 +198,8 @@
         "Cercò alleanze internazionali con abilità diplomatica",
         "Guidò i volontari con le camicie rosse"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que Cavour « con abilità diplomatica, ottenne l'appoggio della Francia contro l'Austria », donc il a cherché des alliances internationales."
     },
     {
       "q": "Quale risultato ottenne la spedizione dei Mille?",
@@ -207,7 +208,8 @@
         "Liberò Venezia dagli austriaci",
         "Portò Roma nel Regno d'Italia"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que « con la spedizione dei Mille ... conquistò la Sicilia e Napoli »."
     },
     {
       "q": "Cosa significa la frase «fatta l'Italia, bisogna fare gli italiani»?",
@@ -216,7 +218,8 @@
         "Che serviva un nuovo re per governare il paese",
         "Che l'unità politica non era ancora un'unità reale del popolo"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte explique que « l'unità politica, però, non significava ancora unità reale », donc la phrase signifie que l'unité politique ne suffisait pas à unir vraiment le peuple."
     }
   ]
 }

@@ -24,18 +24,33 @@
   "questions": [
     {
       "q": "Perché Luca vuole vendere la casa dei genitori?",
-      "options": ["Perché ci sono debiti da saldare e nessuno dei due ci vive più", "Perché la casa è troppo piccola per la famiglia", "Perché ha già trovato un acquirente interessato"],
-      "correct": 0
+      "options": [
+        "Perché ci sono debiti da saldare e nessuno dei due ci vive più",
+        "Perché la casa è troppo piccola per la famiglia",
+        "Perché ha già trovato un acquirente interessato"
+      ],
+      "correct": 0,
+      "explanation": "Luca le dit clairement : « Abbiamo debiti da saldare e nessuno dei due vive più qui », donc il faut vendre pour payer les dettes."
     },
     {
       "q": "Che cosa propone Andrea come alternativa alla vendita immediata?",
-      "options": ["Di affittare la casa invece di venderla", "Di ristrutturarla e trasformarla in un albergo", "Di dividerla in due appartamenti separati"],
-      "correct": 0
+      "options": [
+        "Di affittare la casa invece di venderla",
+        "Di ristrutturarla e trasformarla in un albergo",
+        "Di dividerla in due appartamenti separati"
+      ],
+      "correct": 0,
+      "explanation": "Andrea propose « E se la affittassimo, invece di venderla? », c'est-à-dire louer la maison au lieu de la vendre."
     },
     {
       "q": "Come si conclude la conversazione tra i due fratelli?",
-      "options": ["Senza una decisione definitiva, con Andrea che vuole tornare un'ultima volta nella casa", "Con la firma immediata del contratto di vendita", "Con una lite che interrompe ogni rapporto tra i due"],
-      "correct": 0
+      "options": [
+        "Senza una decisione definitiva, con Andrea che vuole tornare un'ultima volta nella casa",
+        "Con la firma immediata del contratto di vendita",
+        "Con una lite che interrompe ogni rapporto tra i due"
+      ],
+      "correct": 0,
+      "explanation": "À la fin, Andrea demande « vorrei tornarci un'ultima volta, da solo » et Luca lui dit de prendre son temps, donc ils ne décident rien définitivement."
     }
   ],
   "words": {

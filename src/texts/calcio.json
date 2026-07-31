@@ -221,7 +221,8 @@
         "Perché fu il primo campionato del mondo vinto dagli Azzurri",
         "Perché la festa a Napoli durò due mesi"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que cette victoire « unì il paese come poche cose hanno saputo fare », avec les buts de Paolo Rossi."
     },
     {
       "q": "Per quale qualità sono considerati maestri gli allenatori italiani?",
@@ -230,7 +231,8 @@
         "La strategia e l'organizzazione difensiva",
         "La costruzione di stadi moderni"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte affirme que les entraîneurs italiens sont « maestri della strategia », capables de gagner grâce à l'organisation et à l'intelligence."
     },
     {
       "q": "Che cosa accadde a Napoli quando Maradona vinse il primo scudetto del club?",
@@ -239,7 +241,8 @@
         "Il presidente Pertini esultò in tribuna",
         "La festa durò due mesi"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit explicitement que « la festa durò due mesi » à Naples quand Maradona a gagné le premier scudetto."
     }
   ]
 }

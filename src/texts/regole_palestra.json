@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa bisogna portare sempre?",
-      "options": ["Un asciugamano personale", "Una borsa grande", "Un ombrello"],
-      "correct": 0
+      "options": [
+        "Un asciugamano personale",
+        "Una borsa grande",
+        "Un ombrello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Portate sempre un asciugamano personale », donc il faut toujours apporter une serviette personnelle."
     },
     {
       "q": "Che cosa bisogna bere durante gli esercizi?",
-      "options": ["Molta acqua", "Solo caffè", "Bibite gassate"],
-      "correct": 0
+      "options": [
+        "Molta acqua",
+        "Solo caffè",
+        "Bibite gassate"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Bevete molta acqua durante gli esercizi », donc il faut boire beaucoup d'eau."
     },
     {
       "q": "Quando è aperta la palestra?",
-      "options": ["Dal lunedì al sabato", "Solo la domenica", "Tutti i giorni tranne il sabato"],
-      "correct": 0
+      "options": [
+        "Dal lunedì al sabato",
+        "Solo la domenica",
+        "Tutti i giorni tranne il sabato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La palestra è aperta dal lunedì al sabato », donc elle est ouverte du lundi au samedi."
     }
   ],
   "words": {

@@ -180,7 +180,8 @@
         "In un paese della valle",
         "In una casera vicino al fiume"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Pietro vit « in una baita di pietra » et que l'alpeggio est « a duemila metri di altezza »."
     },
     {
       "q": "Cosa fa Pietro quando arriva il temporale?",
@@ -189,7 +190,8 @@
         "Raduna le mucche e le porta al riparo",
         "Ripara il tetto della baita"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte précise : « Pietro corre a radunare le mucche e le porta al riparo »."
     },
     {
       "q": "Cosa succede a settembre?",
@@ -198,7 +200,8 @@
         "Arriva la grandine sulla valle",
         "Pietro scende a valle e in paese c'è una grande festa"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte indique qu'à septembre « Pietro scende a valle » et qu'« in paese lo aspetta una grande festa »."
     }
   ]
 }

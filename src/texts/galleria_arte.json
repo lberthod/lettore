@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa pensa la prima persona del quadro?",
-      "options": ["Che sia completamente astratto e difficile da capire", "Che sia un paesaggio realistico", "Che sia un ritratto famoso"],
-      "correct": 0
+      "options": [
+        "Che sia completamente astratto e difficile da capire",
+        "Che sia un paesaggio realistico",
+        "Che sia un ritratto famoso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mi sembra completamente astratto. Non capisco proprio cosa rappresenti », donc elle le trouve abstrait et difficile à comprendre."
     },
     {
       "q": "Che cosa ricorda il quadro alla seconda persona?",
-      "options": ["Un temporale visto dall'alto", "Una città vista di notte", "Un giardino fiorito"],
-      "correct": 0
+      "options": [
+        "Un temporale visto dall'alto",
+        "Una città vista di notte",
+        "Un giardino fiorito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « A me ricorda più un temporale visto dall'alto », donc le tableau lui rappelle un orage vu d'en haut."
     },
     {
       "q": "Che cosa preferisce la prima persona?",
-      "options": ["I quadri più figurativi che raccontano una storia", "Solo l'arte astratta", "Nessun tipo di quadro"],
-      "correct": 0
+      "options": [
+        "I quadri più figurativi che raccontano una storia",
+        "Solo l'arte astratta",
+        "Nessun tipo di quadro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « preferisco i quadri più figurativi, quelli che raccontano una storia chiara », donc elle préfère les tableaux figuratifs avec une histoire claire."
     }
   ],
   "words": {

@@ -33,7 +33,8 @@
         "Ha troppo caldo",
         "Non ha tempo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Durante la corsa sento dolore al ginocchio », donc il s'arrête à cause de cette douleur."
     },
     {
       "q": "Che posizione arriva il ragazzo nella piccola gara tra compagni?",
@@ -42,7 +43,8 @@
         "Primo",
         "Ultimo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Non arrivo primo ma arrivo terzo », donc il arrive troisième."
     },
     {
       "q": "Che posizione arriva il ragazzo nella gara finale?",
@@ -51,7 +53,8 @@
         "Primo su cento corridori",
         "Decimo su dieci corridori"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Alla fine arrivo quinto su cento corridori », donc il arrive cinquième."
     }
   ],
   "words": {

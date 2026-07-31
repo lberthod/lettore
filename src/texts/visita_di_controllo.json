@@ -31,18 +31,33 @@
   "questions": [
     {
       "q": "Di che cosa si lamenta soprattutto Giulia durante la visita?",
-      "options": ["Di essere sempre stanca", "Di avere la febbre alta", "Di non riuscire a dormire di notte"],
-      "correct": 0
+      "options": [
+        "Di essere sempre stanca",
+        "Di avere la febbre alta",
+        "Di non riuscire a dormire di notte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ultimamente sono sempre stanca », donc Giulia se plaint d'être toujours fatiguée."
     },
     {
       "q": "Secondo la dottoressa, quali sono le probabili cause dei problemi di Giulia?",
-      "options": ["Poco movimento, una sedia non adatta e troppo caffè", "Un'allergia alimentare", "Una malattia grave da curare subito"],
-      "correct": 0
+      "options": [
+        "Poco movimento, una sedia non adatta e troppo caffè",
+        "Un'allergia alimentare",
+        "Una malattia grave da curare subito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne le manque de mouvement (« il corpo ha bisogno di muoversi »), la sedia (« probabilmente è la sedia ») et le café (« troppi caffè ») comme causes."
     },
     {
       "q": "Che cosa deve fare Giulia prima del prelievo del sangue?",
-      "options": ["Venire a digiuno, senza fare colazione", "Bere molto caffè prima di uscire", "Non dormire la notte precedente"],
-      "correct": 0
+      "options": [
+        "Venire a digiuno, senza fare colazione",
+        "Bere molto caffè prima di uscire",
+        "Non dormire la notte precedente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « deve venire a digiuno, quindi niente colazione », donc Giulia doit venir à jeun sans petit-déjeuner."
     }
   ],
   "words": {

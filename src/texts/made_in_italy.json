@@ -228,7 +228,8 @@
         "Perché l'Italia univa la qualità artigianale a prezzi più accessibili dell'alta moda parigina",
         "Perché Milano era già la capitale mondiale del prêt-à-porter"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que les journalistes découvrirent que l'Italie savait unir la qualité artisanale à des prix plus accessibles que la haute couture parisienne."
     },
     {
       "q": "Secondo il testo, che cosa sono i distretti industriali?",
@@ -237,7 +238,8 @@
         "Musei d'arte moderna dove sono esposti gli oggetti di design italiani",
         "Zone dove decine di piccole aziende familiari lavorano lo stesso prodotto da generazioni"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte définit les districts comme des zones où des dizaines de petites entreprises familiales travaillent le même produit depuis des générations."
     },
     {
       "q": "Quale resta, secondo il testo, la vera forza del made in Italy di fronte alle sfide attuali?",
@@ -246,7 +248,8 @@
         "Il costo del lavoro più basso rispetto alla concorrenza globale",
         "La protezione legale contro le imitazioni straniere"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte affirme que sa force reste la même : personne ne sait raconter un produit comme les Italiens."
     }
   ]
 }

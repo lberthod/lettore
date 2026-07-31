@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Tra quanto tempo arrivano gli ospiti?",
-      "options": ["Tra un'ora", "Tra dieci minuti", "Domani"],
-      "correct": 0
+      "options": [
+        "Tra un'ora",
+        "Tra dieci minuti",
+        "Domani"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Gli ospiti arrivano tra un'ora », donc les invités arrivent dans une heure."
     },
     {
       "q": "Che cosa ha fatto Sara?",
-      "options": ["Ha apparecchiato la tavola", "Ha gonfiato i palloncini", "Ha fatto la torta"],
-      "correct": 1
+      "options": [
+        "Ha apparecchiato la tavola",
+        "Ha gonfiato i palloncini",
+        "Ha fatto la torta"
+      ],
+      "correct": 1,
+      "explanation": "Sara dit « io ho gonfiato tutti i palloncini », donc elle a gonflé les ballons."
     },
     {
       "q": "Perché Leo dice «Ahia»?",
-      "options": ["Perché è caduto", "Perché la torta scotta", "Perché ha rotto un piatto"],
-      "correct": 1
+      "options": [
+        "Perché è caduto",
+        "Perché la torta scotta",
+        "Perché ha rotto un piatto"
+      ],
+      "correct": 1,
+      "explanation": "Leo dit « Ahia, scotta ancora ! » en parlant de la torta, donc parce que le gâteau est brûlant."
     }
   ],
   "words": {

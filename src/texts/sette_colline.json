@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Su che cosa è costruita Roma?",
-      "options": ["Su sette colline", "Su un fiume", "Su un'isola"],
-      "correct": 0
+      "options": [
+        "Su sette colline",
+        "Su un fiume",
+        "Su un'isola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Roma è costruita su sette colline », donc Rome est construite sur sept collines."
     },
     {
       "q": "Che cosa fanno le persone oggi sulle colline?",
-      "options": ["Camminano e fanno fotografie", "Lavorano in fabbrica", "Coltivano il grano"],
-      "correct": 0
+      "options": [
+        "Camminano e fanno fotografie",
+        "Lavorano in fabbrica",
+        "Coltivano il grano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Oggi le persone camminano sulle colline. Fanno fotografie belle », donc elles marchent et prennent des photos."
     },
     {
       "q": "Di che cosa parlano le leggende delle colline?",
-      "options": ["Dei primi re di Roma", "Di animali marini", "Di astronauti"],
-      "correct": 0
+      "options": [
+        "Dei primi re di Roma",
+        "Di animali marini",
+        "Di astronauti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Molte storie parlano dei primi re di Roma », donc les légendes parlent des premiers rois de Rome."
     }
   ],
   "words": {

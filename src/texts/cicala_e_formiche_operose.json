@@ -22,18 +22,33 @@
   "questions": [
     {
       "q": "Che cosa faceva la cicala durante l'estate?",
-      "options": ["Cantava tutto il giorno", "Raccoglieva grano", "Costruiva un formicaio"],
-      "correct": 0
+      "options": [
+        "Cantava tutto il giorno",
+        "Raccoglieva grano",
+        "Costruiva un formicaio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « una cicala cantava dalla mattina alla sera, senza mai fermarsi », donc elle chantait toute la journée."
     },
     {
       "q": "Perché le formiche lavoravano senza sosta?",
-      "options": ["Per vendere il grano", "Per prepararsi all'inverno", "Perché non sapevano cantare"],
-      "correct": 1
+      "options": [
+        "Per vendere il grano",
+        "Per prepararsi all'inverno",
+        "Perché non sapevano cantare"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Noi pensiamo all'inverno », donc les fourmis travaillaient pour se préparer à l'hiver."
     },
     {
       "q": "Che cosa impara la cicala alla fine della storia?",
-      "options": ["Che cantare non serve a nulla", "Che bisogna pensare anche al futuro", "Che le formiche sono cattive"],
-      "correct": 1
+      "options": [
+        "Che cantare non serve a nulla",
+        "Che bisogna pensare anche al futuro",
+        "Che le formiche sono cattive"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « imparò che il lavoro e la previdenza sono importanti », donc elle apprend qu'il faut penser aussi à l'avenir."
     }
   ],
   "words": {

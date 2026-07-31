@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Dove fu confinato Machiavelli dopo il ritorno dei Medici?",
-      "options": ["Nel podere di Sant'Andrea in Percussina", "Alla corte di Francesco Vettori", "In un monastero presso Milano"],
-      "correct": 0
+      "options": [
+        "Nel podere di Sant'Andrea in Percussina",
+        "Alla corte di Francesco Vettori",
+        "In un monastero presso Milano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Machiavel fut « confinato nel podere di Sant'Andrea in Percussina »."
     },
     {
       "q": "Che cosa indossava la sera prima di dialogare con gli antichi?",
-      "options": ["I panni reali e curiali", "La veste quotidiana piena di fango", "L'uniforme della cancelleria fiorentina"],
-      "correct": 0
+      "options": [
+        "I panni reali e curiali",
+        "La veste quotidiana piena di fango",
+        "L'uniforme della cancelleria fiorentina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il « indossava i panni reali e curiali » avant de dialoguer avec les anciens."
     },
     {
       "q": "In che cosa consiste la verità effettuale?",
-      "options": ["Guardare gli uomini come sono, non come dovrebbero essere", "Immaginare repubbliche ideali mai esistite", "Sostenere che il fine giustifichi ogni mezzo"],
-      "correct": 0
+      "options": [
+        "Guardare gli uomini come sono, non come dovrebbero essere",
+        "Immaginare repubbliche ideali mai esistite",
+        "Sostenere che il fine giustifichi ogni mezzo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que la vérité effective consiste à « guardare gli uomini come sono, non come dovrebbero essere »."
     }
   ],
   "words": {

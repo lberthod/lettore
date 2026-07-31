@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa succede stasera secondo il papà?",
-      "options": ["C'è il derby", "C'è una festa di compleanno", "C'è un concerto"],
-      "correct": 0
+      "options": [
+        "C'è il derby",
+        "C'è una festa di compleanno",
+        "C'è un concerto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Stasera c'è il derby! », donc ce soir il y a le derby."
     },
     {
       "q": "Per quale squadra tifa la figlia?",
-      "options": ["Per l'altra squadra, diversa da quella del papà", "Per la stessa squadra del papà", "Per nessuna squadra"],
-      "correct": 0
+      "options": [
+        "Per l'altra squadra, diversa da quella del papà",
+        "Per la stessa squadra del papà",
+        "Per nessuna squadra"
+      ],
+      "correct": 0,
+      "explanation": "La fille dit « io tifo per l'altra squadra », donc elle supporte l'autre équipe, pas celle de son père."
     },
     {
       "q": "Che cosa scommettono alla fine?",
-      "options": ["La pulizia dei piatti per un mese", "Un viaggio insieme", "Un regalo di compleanno"],
-      "correct": 0
+      "options": [
+        "La pulizia dei piatti per un mese",
+        "Un viaggio insieme",
+        "Un regalo di compleanno"
+      ],
+      "correct": 0,
+      "explanation": "Le père propose « Scommettiamo la pulizia dei piatti per un mese? », donc ils parient la vaisselle pour un mois."
     }
   ],
   "words": {

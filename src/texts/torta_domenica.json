@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che torta preparava il nonno ogni domenica?",
-      "options": ["Una torta di mele", "Una torta al cioccolato", "Una crostata"],
-      "correct": 0
+      "options": [
+        "Una torta di mele",
+        "Una torta al cioccolato",
+        "Una crostata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il nonno Giuseppe preparava una torta di mele »."
     },
     {
       "q": "Qual era, secondo il nonno, il vero segreto?",
-      "options": ["La cannella", "L'amore", "Il forno caldo"],
-      "correct": 1
+      "options": [
+        "La cannella",
+        "L'amore",
+        "Il forno caldo"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Il segreto, davvero, era l'amore »."
     },
     {
       "q": "Chi prova a fare la torta quando il nonno si ammala?",
-      "options": ["La piccola Lucia", "La mamma", "Nessuno"],
-      "correct": 0
+      "options": [
+        "La piccola Lucia",
+        "La mamma",
+        "Nessuno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la piccola Lucia decise di provare a fare la torta da sola »."
     }
   ],
   "words": {
@@ -89,8 +104,7 @@
     "torta": "gâteau / tarte",
     "tutta": "toute",
     "un": "un",
-    "una": "une",
-    "era": "était"
+    "una": "une"
   },
   "sentences": {
     "Ogni domenica, il nonno Giuseppe preparava una torta di mele per tutta la famiglia.": "Chaque dimanche, le grand-père Giuseppe préparait une tarte aux pommes pour toute la famille.",

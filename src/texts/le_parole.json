@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "A che cosa sono paragonate le parole all'inizio?",
-      "options": ["A ponti tra due anime", "A muri", "A fiori"],
-      "correct": 0
+      "options": [
+        "A ponti tra due anime",
+        "A muri",
+        "A fiori"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le parole sono ponti tra due anime lontane », donc les paroles sont comparées à des ponts entre deux âmes."
     },
     {
       "q": "Che cosa può fare a volte più di mille discorsi?",
-      "options": ["Una parola dolce", "Il silenzio", "Una canzone"],
-      "correct": 1
+      "options": [
+        "Una parola dolce",
+        "Il silenzio",
+        "Una canzone"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Ma il silenzio, a volte, dice più di mille discorsi », donc c'est le silence qui peut faire plus que mille discours."
     },
     {
       "q": "Che cosa possiede chi conosce le parole?",
-      "options": ["Le chiavi del cuore", "Molti soldi", "Il potere"],
-      "correct": 0
+      "options": [
+        "Le chiavi del cuore",
+        "Molti soldi",
+        "Il potere"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Chi conosce le parole possiede le chiavi del cuore », donc celui qui connaît les mots possède les clés du cœur."
     }
   ],
   "words": {

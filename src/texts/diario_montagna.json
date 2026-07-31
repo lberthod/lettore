@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "A che altezza si trova il rifugio?",
-      "options": ["Mille metri", "Duemila metri", "Cinquemila metri"],
-      "correct": 1
+      "options": [
+        "Mille metri",
+        "Duemila metri",
+        "Cinquemila metri"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « oggi siamo saliti al rifugio a duemila metri », donc le refuge se trouve à deux mille mètres."
     },
     {
       "q": "Che cosa hanno mangiato in cima?",
-      "options": ["Pizza e pasta", "Polenta e formaggio", "Solo frutta"],
-      "correct": 1
+      "options": [
+        "Pizza e pasta",
+        "Polenta e formaggio",
+        "Solo frutta"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Abbiamo mangiato polenta e formaggio », donc ils ont mangé de la polenta et du fromage."
     },
     {
       "q": "Che cosa ha imparato l'autrice del diario?",
-      "options": ["Che la montagna è noiosa", "Che la fatica della salita vale la vista", "Che è meglio restare a valle"],
-      "correct": 1
+      "options": [
+        "Che la montagna è noiosa",
+        "Che la fatica della salita vale la vista",
+        "Che è meglio restare a valle"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « la fatica della salita vale sempre la vista dalla cima », donc elle a appris que l'effort de la montée vaut la vue."
     }
   ],
   "words": {

@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa caratterizzò la violenza politica degli anni di piombo secondo il testo?",
-      "options": ["Provenne sia dall'eversione di sinistra sia da quella neofascista", "Provenne soltanto dalle Brigate Rosse", "Fu opera esclusiva di apparati stranieri"],
-      "correct": 0
+      "options": [
+        "Provenne sia dall'eversione di sinistra sia da quella neofascista",
+        "Provenne soltanto dalle Brigate Rosse",
+        "Fu opera esclusiva di apparati stranieri"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la violence politique ne fut pas le propre d'une seule aire idéologique, mais vint à la fois de l'extrême gauche et de l'extrême droite."
     },
     {
       "q": "Perché il caso Moro è considerato uno spartiacque?",
-      "options": ["Perché rivelò l'impreparazione dello Stato di fronte a un trauma simile", "Perché pose fine definitivamente al terrorismo in Italia", "Perché fu l'unico episodio di violenza politica del periodo"],
-      "correct": 0
+      "options": [
+        "Perché rivelò l'impreparazione dello Stato di fronte a un trauma simile",
+        "Perché pose fine definitivamente al terrorismo in Italia",
+        "Perché fu l'unico episodio di violenza politica del periodo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que l'enlèvement et l'assassinat de Moro révélèrent combien la République était imp préparée à un tel traumatisme."
     },
     {
       "q": "Secondo il testo, che cosa impedisce una memoria collettiva pacificata?",
-      "options": ["La convivenza di memorie parziali che non riescono a fondersi", "L'assenza totale di documentazione storica", "Il disinteresse generale della popolazione per quegli anni"],
-      "correct": 0
+      "options": [
+        "La convivenza di memorie parziali che non riescono a fondersi",
+        "L'assenza totale di documentazione storica",
+        "Il disinteresse generale della popolazione per quegli anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que trois mémoires partielles coexistent sans se fondre, ce qui rend difficile une mémoire collective apaisée."
     }
   ],
   "words": {

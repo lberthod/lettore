@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Di che colore è il bidone per carta e cartone?",
-      "options": ["Blu", "Verde", "Marrone"],
-      "correct": 0
+      "options": [
+        "Blu",
+        "Verde",
+        "Marrone"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le bac pour papier et carton est bleu : « Il bidone è di colore blu »."
     },
     {
       "q": "Che cosa va nel bidone dell'umido?",
-      "options": ["Avanzi di cibo e bucce di frutta", "Bottiglie di vetro", "Giornali vecchi"],
-      "correct": 0
+      "options": [
+        "Avanzi di cibo e bucce di frutta",
+        "Bottiglie di vetro",
+        "Giornali vecchi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte liste pour l'humide « avanzi di cibo, bucce di frutta e verdura, fondi di caffè », donc les restes de nourriture et les épluchures."
     },
     {
       "q": "Che cosa aiuta una raccolta differenziata fatta bene?",
-      "options": ["L'ambiente di tutti", "Solo il comune", "Nessuno in particolare"],
-      "correct": 0
+      "options": [
+        "L'ambiente di tutti",
+        "Solo il comune",
+        "Nessuno in particolare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme qu'une collecte bien faite « aiuta l'ambiente di tutti »."
     }
   ],
   "words": {

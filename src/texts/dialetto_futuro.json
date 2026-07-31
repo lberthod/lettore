@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa mutò radicalmente la sorte dei dialetti nel Novecento?",
-      "options": ["La scuola dell'obbligo e la televisione", "L'emigrazione verso le Americhe", "La diffusione di internet"],
-      "correct": 0
+      "options": [
+        "La scuola dell'obbligo e la televisione",
+        "L'emigrazione verso le Americhe",
+        "La diffusione di internet"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que ce sont « la scuola dell'obbligo » et « la televisione » qui ont imposé un italien uniforme au Novecento."
     },
     {
       "q": "Che cosa si dice, in modo impreciso, a proposito del napoletano?",
-      "options": ["Che l'UNESCO lo abbia dichiarato patrimonio dell'umanità", "Che sia una corruzione del latino classico", "Che sia ormai del tutto estinto"],
-      "correct": 0
+      "options": [
+        "Che l'UNESCO lo abbia dichiarato patrimonio dell'umanità",
+        "Che sia una corruzione del latino classico",
+        "Che sia ormai del tutto estinto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'on raconte souvent que l'UNESCO a déclaré le napolitain patrimoine de l'humanité, mais que cette nouvelle est imprécise."
     },
     {
       "q": "Secondo gli studiosi, che effetto ha il bilinguismo dialetto-italiano?",
-      "options": ["Affina la flessibilità cognitiva", "Confonde la mente dei bambini", "Ritarda l'apprendimento della lettura"],
-      "correct": 0
+      "options": [
+        "Affina la flessibilità cognitiva",
+        "Confonde la mente dei bambini",
+        "Ritarda l'apprendimento della lettura"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que le bilinguisme « affina la flessibilità cognitiva »."
     }
   ],
   "words": {

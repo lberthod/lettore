@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Di che cosa si lamenta la signora Ferri?",
-      "options": ["Di essere condannata dall'opinione pubblica prima di un processo", "Di non avere un avvocato", "Di essere stata arrestata ingiustamente"],
-      "correct": 0
+      "options": [
+        "Di essere condannata dall'opinione pubblica prima di un processo",
+        "Di non avere un avvocato",
+        "Di essere stata arrestata ingiustamente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « essere condannata dall'opinione pubblica prima ancora di essere ascoltata da un giudice », donc elle se plaint d'être condamnée par l'opinion publique avant tout procès."
     },
     {
       "q": "Che cosa sostiene l'avvocato riguardo alle accuse non verificate?",
-      "options": ["Che equivalgono a condannare senza possibilità di difesa", "Che sono sempre giustificate", "Che non hanno alcun effetto pratico"],
-      "correct": 0
+      "options": [
+        "Che equivalgono a condannare senza possibilità di difesa",
+        "Che sono sempre giustificate",
+        "Che non hanno alcun effetto pratico"
+      ],
+      "correct": 0,
+      "explanation": "L'avvocato dit : « diffondere accuse non verificate equivale, di fatto, a condannare qualcuno senza possibilità di difesa », donc les accusations non vérifiées équivalent à une condamnation sans défense."
     },
     {
       "q": "Che cosa osserva il giornalista nell'ultima battuta?",
-      "options": ["Che il pubblico si sta già facendo un'opinione, mentre parlano", "Che il processo si concluderà entro una settimana", "Che nessuno è interessato al caso"],
-      "correct": 0
+      "options": [
+        "Che il pubblico si sta già facendo un'opinione, mentre parlano",
+        "Che il processo si concluderà entro una settimana",
+        "Che nessuno è interessato al caso"
+      ],
+      "correct": 0,
+      "explanation": "Le journaliste dit : « il pubblico non aspetterà i tempi della giustizia per farsi un'opinione: lo sta già facendo, ora, mentre parliamo », donc le public se fait déjà une opinion pendant qu'ils parlent."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cos'è Aris?",
-      "options": ["Un'intelligenza artificiale in un corpo sintetico", "Un robot industriale senza forma umana", "Un semplice assistente vocale su smartphone"],
-      "correct": 0
+      "options": [
+        "Un'intelligenza artificiale in un corpo sintetico",
+        "Un robot industriale senza forma umana",
+        "Un semplice assistente vocale su smartphone"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique qu'Aris est « un'intelligenza artificiale incarnata in un corpo sintetico »."
     },
     {
       "q": "Perché Elisa si sente a volte inadeguata?",
-      "options": ["Perché Aris ricorda tutto e non si stanca mai", "Perché Aris è troppo silenzioso", "Perché Aris rifiuta di parlarle"],
-      "correct": 0
+      "options": [
+        "Perché Aris ricorda tutto e non si stanca mai",
+        "Perché Aris è troppo silenzioso",
+        "Perché Aris rifiuta di parlarle"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'Aris « ricorda ogni conversazione... e non si stanca mai », ce qui la fait sentir inadaptée."
     },
     {
       "q": "Che cosa risponde Aris alla domanda implicita di Elisa?",
-      "options": ["Che i sentimenti nascono da qualcosa, organico o artificiale", "Che i sentimenti non esistono per le macchine", "Che preferisce restare solo un esperimento"],
-      "correct": 0
+      "options": [
+        "Che i sentimenti nascono da qualcosa, organico o artificiale",
+        "Che i sentimenti non esistono per le macchine",
+        "Che preferisce restare solo un esperimento"
+      ],
+      "correct": 0,
+      "explanation": "Aris répond que « anche i sentimenti nascono da qualcosa; non importa se quel qualcosa è organico o artificiale »."
     }
   ],
   "words": {

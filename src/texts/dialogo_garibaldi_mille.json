@@ -28,17 +28,28 @@
         "Un attore di teatro",
         "Un cuoco siciliano"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « È un generale italiano molto famoso. Vive nell'Ottocento », donc Garibaldi est un général italien célèbre du XIXe siècle."
     },
     {
       "q": "Con quanti uomini parte Garibaldi per la Sicilia?",
-      "options": ["Mille", "Cento", "Diecimila"],
-      "correct": 0
+      "options": [
+        "Mille",
+        "Cento",
+        "Diecimila"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Parte con mille uomini per aiutare la Sicilia », donc il part avec mille hommes."
     },
     {
       "q": "Qual è l'obiettivo finale di Garibaldi?",
-      "options": ["Unire l'Italia", "Diventare re di Napoli", "Costruire una nuova città"],
-      "correct": 0
+      "options": [
+        "Unire l'Italia",
+        "Diventare re di Napoli",
+        "Costruire una nuova città"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il suo obiettivo è unire l'Italia », donc son objectif final est d'unir l'Italie."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Di che colore era il pettirosso all'inizio?",
-      "options": ["Tutto rosso", "Tutto grigio", "Bianco e nero"],
-      "correct": 1
+      "options": [
+        "Tutto rosso",
+        "Tutto grigio",
+        "Bianco e nero"
+      ],
+      "correct": 1,
+      "explanation": "Au début, le texte dit que le pettirosso était « un uccellino tutto grigio »."
     },
     {
       "q": "Che cosa fa il pettirosso per il bambino?",
-      "options": ["Canta una canzone", "Batte le ali per tenere acceso il fuoco", "Va a cercare aiuto"],
-      "correct": 1
+      "options": [
+        "Canta una canzone",
+        "Batte le ali per tenere acceso il fuoco",
+        "Va a cercare aiuto"
+      ],
+      "correct": 1,
+      "explanation": "Le texte explique qu'il « cominciò a battere le ali vicino al fuoco per tenerlo acceso »."
     },
     {
       "q": "Che cosa rappresenta la macchia rossa sul petto?",
-      "options": ["Il suo coraggio", "Una malattia", "Il freddo dell'inverno"],
-      "correct": 0
+      "options": [
+        "Il suo coraggio",
+        "Una malattia",
+        "Il freddo dell'inverno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la tache rouge est « il segno del suo coraggio »."
     }
   ],
   "words": {

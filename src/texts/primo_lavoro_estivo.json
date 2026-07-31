@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove lavora Marta questa estate?",
-      "options": ["In un piccolo bar vicino al mare", "In un negozio di vestiti", "In una biblioteca"],
-      "correct": 0
+      "options": [
+        "In un piccolo bar vicino al mare",
+        "In un negozio di vestiti",
+        "In una biblioteca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « lavora in un piccolo bar vicino al mare », donc elle travaille dans un petit bar près de la mer."
     },
     {
       "q": "Perché il primo giorno è difficile per Marta?",
-      "options": ["Non ricorda i nomi delle bevande", "Arriva sempre in ritardo", "Non le piace il proprietario"],
-      "correct": 0
+      "options": [
+        "Non ricorda i nomi delle bevande",
+        "Arriva sempre in ritardo",
+        "Non le piace il proprietario"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « non ricorda i nomi delle bevande », donc le premier jour est difficile car elle ne se souvient pas des noms des boissons."
     },
     {
       "q": "Che cosa le chiede il proprietario alla fine dell'estate?",
-      "options": ["Di tornare l'anno prossimo", "Di cambiare lavoro", "Di lavorare tutto l'inverno"],
-      "correct": 0
+      "options": [
+        "Di tornare l'anno prossimo",
+        "Di cambiare lavoro",
+        "Di lavorare tutto l'inverno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « le chiede di tornare l'anno prossimo », donc il lui demande de revenir l'année suivante."
     }
   ],
   "words": {

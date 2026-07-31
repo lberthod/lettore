@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Come chiamarono i Romani la via Appia?",
-      "options": ["« Regina viarum », la regina delle strade", "La via dei mercanti", "La strada del sale"],
-      "correct": 0
+      "options": [
+        "« Regina viarum », la regina delle strade",
+        "La via dei mercanti",
+        "La strada del sale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les Romains appelaient la via Appia « regina viarum », c'est-à-dire la reine des routes."
     },
     {
       "q": "Quanti chilometri poteva percorrere un corriere del cursus publicus in un giorno?",
-      "options": ["Anche duecento chilometri", "Non più di venti chilometri", "Circa mille chilometri"],
-      "correct": 0
+      "options": [
+        "Anche duecento chilometri",
+        "Non più di venti chilometri",
+        "Circa mille chilometri"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un courrier du cursus publicus pouvait parcourir jusqu'à deux cents kilomètres en une seule journée."
     },
     {
       "q": "Perché nacquero originariamente le strade romane?",
-      "options": ["Per la guerra: le legioni dovevano raggiungere le frontiere", "Per i viaggi dei pellegrini", "Per collegare i teatri dell'impero"],
-      "correct": 0
+      "options": [
+        "Per la guerra: le legioni dovevano raggiungere le frontiere",
+        "Per i viaggi dei pellegrini",
+        "Per collegare i teatri dell'impero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les routes sont nées pour la guerre, car les légions devaient atteindre rapidement les frontières menacées."
     }
   ],
   "words": {

@@ -21,7 +21,8 @@
         "Viene firmata una nuova costituzione",
         "Si tiene la prima elezione della Repubblica italiana"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'un petit fonctionnaire est arrêté alors qu'il « intasca una tangente », donc il a été arrêté pour avoir encaissé un pot-de-vin."
     },
     {
       "q": "Perché Milano viene chiamata \"Tangentopoli\"?",
@@ -30,7 +31,8 @@
         "Perché è la capitale d'Italia",
         "Perché ospita il tribunale più antico del paese"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Milan est rebaptisée « Tangentopoli » parce que le phénomène y apparaît particulièrement étendu : « dove il fenomeno appare più esteso »."
     },
     {
       "q": "Quale conseguenza politica ha l'inchiesta Mani Pulite?",
@@ -39,12 +41,13 @@
         "L'Italia diventa una monarchia",
         "Il Parlamento viene sciolto definitivamente"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les partis historiques de l'après-guerre « si sgretolano nel giro di due anni e scompaiono quasi del tutto », donc ils s'effondrent et disparaissent presque entièrement."
     }
   ],
   "words": {
-    "1992": "1992",
     "17": "17",
+    "1992": "1992",
     "a": "à",
     "ai": "aux",
     "alcuni": "certains",

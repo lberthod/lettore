@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché Paolo e Lucia devono aspettare?",
-      "options": ["Il volo è in ritardo di tre ore", "Hanno perso l'aereo", "L'aeroporto è chiuso"],
-      "correct": 0
+      "options": [
+        "Il volo è in ritardo di tre ore",
+        "Hanno perso l'aereo",
+        "L'aeroporto è chiuso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «Il nostro volo è in ritardo di tre ore», donc ils doivent attendre parce que le vol a trois heures de retard."
     },
     {
       "q": "Che cosa va a comprare Lucia?",
-      "options": ["Un romanzo", "Un caffè", "Un giornale"],
-      "correct": 0
+      "options": [
+        "Un romanzo",
+        "Un caffè",
+        "Un giornale"
+      ],
+      "correct": 0,
+      "explanation": "Lucia dit «Vado a comprare un romanzo per il viaggio», donc elle va acheter un roman."
     },
     {
       "q": "Chi chiama Paolo?",
-      "options": ["L'albergo", "Un taxi", "La famiglia"],
-      "correct": 0
+      "options": [
+        "L'albergo",
+        "Un taxi",
+        "La famiglia"
+      ],
+      "correct": 0,
+      "explanation": "Paolo dit «Io intanto chiamo l'albergo per avvisare del ritardo», donc il appelle l'hôtel."
     }
   ],
   "words": {

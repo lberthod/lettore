@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa notano sociologi e psicologi nelle grandi città?",
-      "options": ["Un'epidemia silenziosa di solitudine", "Un calo della popolazione urbana", "Un aumento della criminalità"],
-      "correct": 0
+      "options": [
+        "Un'epidemia silenziosa di solitudine",
+        "Un calo della popolazione urbana",
+        "Un aumento della criminalità"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « Sociologi e psicologi parlano ormai di una vera e propria epidemia silenziosa », donc ils notent une épidémie silencieuse de solitude."
     },
     {
       "q": "Che cosa caratterizza le famiglie moderne secondo il testo?",
-      "options": ["Sono più piccole e disperse geograficamente", "Vivono sempre tutte nella stessa città", "Sono diventate più numerose"],
-      "correct": 0
+      "options": [
+        "Sono più piccole e disperse geograficamente",
+        "Vivono sempre tutte nella stessa città",
+        "Sono diventate più numerose"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « Le famiglie, sempre più piccole e disperse geograficamente », donc les familles modernes sont plus petites et dispersées géographiquement."
     },
     {
       "q": "Che cosa fanno alcune amministrazioni comunali?",
-      "options": ["Sperimentano programmi di quartiere per favorire l'incontro tra vicini", "Vietano gli incontri pubblici", "Chiudono i parchi cittadini"],
-      "correct": 0
+      "options": [
+        "Sperimentano programmi di quartiere per favorire l'incontro tra vicini",
+        "Vietano gli incontri pubblici",
+        "Chiudono i parchi cittadini"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que « Alcune amministrazioni comunali hanno iniziato a sperimentare programmi di quartiere per favorire l'incontro tra vicini di casa », donc elles expérimentent des programmes de quartier."
     }
   ],
   "words": {

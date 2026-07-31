@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In che anno fu fondata l'Università di Bologna?",
-      "options": ["Nel 1088", "Nel 1500", "Nel 1848"],
-      "correct": 0
+      "options": [
+        "Nel 1088",
+        "Nel 1500",
+        "Nel 1848"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Fondata nel 1088 », donc l'université a été fondée en 1088."
     },
     {
       "q": "Da chi nacque l'iniziativa di fondare l'università?",
-      "options": ["Dagli studenti stessi", "Dal papa", "Da un imperatore romano"],
-      "correct": 0
+      "options": [
+        "Dagli studenti stessi",
+        "Dal papa",
+        "Da un imperatore romano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nacque dall'iniziativa di studenti », donc l'initiative vient des étudiants eux-mêmes."
     },
     {
       "q": "Che cosa conserva ancora oggi il centro storico di Bologna?",
-      "options": ["L'atmosfera universitaria con biblioteche e portici", "Solo edifici moderni", "Nessuna traccia del passato"],
-      "correct": 0
+      "options": [
+        "L'atmosfera universitaria con biblioteche e portici",
+        "Solo edifici moderni",
+        "Nessuna traccia del passato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il centro storico conserva l'atmosfera universitaria: biblioteche antiche, portici affollati di studenti », donc il conserve cette atmosphère."
     }
   ],
   "words": {

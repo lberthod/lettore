@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa cucina Lucia?",
-      "options": ["La pasta al pomodoro", "Il risotto ai funghi", "Una torta"],
-      "correct": 1
+      "options": [
+        "La pasta al pomodoro",
+        "Il risotto ai funghi",
+        "Una torta"
+      ],
+      "correct": 1,
+      "explanation": "Lucia dit « Faccio il risotto ai funghi », donc elle prépare un risotto aux champignons."
     },
     {
       "q": "Che cosa vuole tagliare Marco?",
-      "options": ["Le cipolle", "I funghi", "Il pane"],
-      "correct": 0
+      "options": [
+        "Le cipolle",
+        "I funghi",
+        "Il pane"
+      ],
+      "correct": 0,
+      "explanation": "Marco dit « So tagliare le cipolle », donc il veut couper les oignons."
     },
     {
       "q": "Che cosa succede a Marco?",
-      "options": ["Brucia il risotto", "Si taglia un dito", "Rompe un piatto"],
-      "correct": 1
+      "options": [
+        "Brucia il risotto",
+        "Si taglia un dito",
+        "Rompe un piatto"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « mi sono tagliato un dito », donc Marco se coupe un doigt."
     }
   ],
   "words": {

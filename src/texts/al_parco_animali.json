@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa vede il bambino all'inizio?",
-      "options": ["Un coniglio bianco", "Un cane nero", "Un gatto grigio"],
-      "correct": 0
+      "options": [
+        "Un coniglio bianco",
+        "Un cane nero",
+        "Un gatto grigio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Guarda, mamma, un coniglio bianco! », donc le bambino voit d'abord un lapin blanc."
     },
     {
       "q": "Che animale è vicino all'albero?",
-      "options": ["Un asino", "Un cavallo", "Una mucca"],
-      "correct": 0
+      "options": [
+        "Un asino",
+        "Un cavallo",
+        "Una mucca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Quello è un asino » pour l'animal près de l'arbre."
     },
     {
       "q": "Che cosa fa il verso strano che sente il bambino?",
-      "options": ["Le oche vicino al laghetto", "Un uccellino sull'albero", "Un cane che abbaia"],
-      "correct": 0
+      "options": [
+        "Le oche vicino al laghetto",
+        "Un uccellino sull'albero",
+        "Un cane che abbaia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sono le oche vicino al laghetto », donc ce sont les oies près de l'étang qui font ce bruit étrange."
     }
   ],
   "words": {

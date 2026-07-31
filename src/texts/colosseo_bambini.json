@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove va in visita la famiglia di Marco e Sofia?",
-      "options": ["Al Colosseo, a Roma", "A un museo di Milano", "A una spiaggia in Sicilia"],
-      "correct": 0
+      "options": [
+        "Al Colosseo, a Roma",
+        "A un museo di Milano",
+        "A una spiaggia in Sicilia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la famille visite le Colosseo à Rome."
     },
     {
       "q": "Che cosa chiede Sofia al papà?",
-      "options": ["Chi sono i gladiatori", "Come si chiama il Colosseo", "Quanti anni ha Roma"],
-      "correct": 0
+      "options": [
+        "Chi sono i gladiatori",
+        "Come si chiama il Colosseo",
+        "Quanti anni ha Roma"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Sofia demande qui sont les gladiateurs."
     },
     {
       "q": "Che cosa fa la famiglia alla fine della visita?",
-      "options": ["Compra una cartolina", "Mangia una pizza", "Prende un treno per Napoli"],
-      "correct": 0
+      "options": [
+        "Compra una cartolina",
+        "Mangia una pizza",
+        "Prende un treno per Napoli"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'à la fin, la famille achète une carte postale."
     }
   ],
   "words": {

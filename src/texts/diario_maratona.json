@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanti chilometri corre la protagonista lunedì?",
-      "options": ["Cinque chilometri", "Dieci chilometri", "Venti chilometri"],
-      "correct": 0
+      "options": [
+        "Cinque chilometri",
+        "Dieci chilometri",
+        "Venti chilometri"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Oggi ho corso cinque chilometri », donc lundi elle court cinq kilomètres."
     },
     {
       "q": "Che tempo faceva venerdì?",
-      "options": ["Pioveva forte", "C'era il sole", "Nevicava"],
-      "correct": 0
+      "options": [
+        "Pioveva forte",
+        "C'era il sole",
+        "Nevicava"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « pioveva forte », donc vendredi il pleuvait fort."
     },
     {
       "q": "Che cosa succede tra due settimane?",
-      "options": ["La maratona della città", "Un viaggio all'estero", "Un esame importante"],
-      "correct": 0
+      "options": [
+        "La maratona della città",
+        "Un viaggio all'estero",
+        "Un esame importante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Tra due settimane c'è la maratona della città », donc la maratona de la ville a lieu dans deux semaines."
     }
   ],
   "words": {

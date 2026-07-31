@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa riceveva per legge ogni cittadino di Meridia dopo un lutto grave?",
-      "options": ["Una cancellazione parziale della memoria traumatica", "Un risarcimento economico", "Un anno di congedo pagato"],
-      "correct": 0
+      "options": [
+        "Una cancellazione parziale della memoria traumatica",
+        "Un risarcimento economico",
+        "Un anno di congedo pagato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que chaque citoyen de Meridia recevait « una cancellazione parziale della memoria traumatica »."
     },
     {
       "q": "Che cosa fa Nadia dopo la morte del marito?",
-      "options": ["Rifiuta la cancellazione del ricordo", "Accetta subito la procedura", "Chiede una cancellazione totale"],
-      "correct": 0
+      "options": [
+        "Rifiuta la cancellazione del ricordo",
+        "Accetta subito la procedura",
+        "Chiede una cancellazione totale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Nadia « Rifiutò » la procédure de cancellation du souvenir."
     },
     {
       "q": "Che cosa sceglie di fare Nadia alla fine?",
-      "options": ["L'esilio volontario per conservare il ricordo", "Di sposarsi di nuovo subito", "Di lavorare per lo stato come ispettrice"],
-      "correct": 0
+      "options": [
+        "L'esilio volontario per conservare il ricordo",
+        "Di sposarsi di nuovo subito",
+        "Di lavorare per lo stato come ispettrice"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle choisit « l'esilio volontario » pour conserver intact le souvenir de ce qu'elle avait aimé."
     }
   ],
   "words": {

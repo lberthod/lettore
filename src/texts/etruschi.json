@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove vivevano soprattutto gli Etruschi?",
-      "options": ["Nell'attuale Toscana", "In Sicilia", "Nelle Alpi"],
-      "correct": 0
+      "options": [
+        "Nell'attuale Toscana",
+        "In Sicilia",
+        "Nelle Alpi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Abitavano soprattutto nell'attuale Toscana », donc la bonne réponse est Nell'attuale Toscana."
     },
     {
       "q": "Che cosa ci raccontano le tombe etrusche?",
-      "options": ["Le loro guerre", "La loro vita quotidiana", "I loro re"],
-      "correct": 1
+      "options": [
+        "Le loro guerre",
+        "La loro vita quotidiana",
+        "I loro re"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Le loro tombe, decorate con pitture colorate, ci raccontano molto della loro vita quotidiana », donc les tombes racontent la vie quotidienne."
     },
     {
       "q": "Perché la lingua etrusca è un mistero?",
-      "options": ["Perché non c'è nessun testo", "Perché gli studiosi non riescono a tradurla del tutto", "Perché era uguale al latino"],
-      "correct": 1
+      "options": [
+        "Perché non c'è nessun testo",
+        "Perché gli studiosi non riescono a tradurla del tutto",
+        "Perché era uguale al latino"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « gli studiosi non riescono a tradurla del tutto », c'est pourquoi la langue est un mystère."
     }
   ],
   "words": {

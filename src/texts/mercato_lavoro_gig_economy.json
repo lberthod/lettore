@@ -24,7 +24,8 @@
         "Solo l'invecchiamento della popolazione",
         "Esclusivamente le politiche fiscali degli ultimi anni"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte mentionne que cette transformation a été alimentée par la digitalisation, la crise de 2008 et la diffusion des plateformes numériques."
     },
     {
       "q": "Cosa hanno riconosciuto alcune sentenze riguardo ai rider?",
@@ -33,7 +34,8 @@
         "L'obbligo assoluto di assumerli come dipendenti a tempo indeterminato",
         "L'impossibilità di lavorare per più di una piattaforma contemporaneamente"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise que certaines décisions ont reconnu aux livreurs le droit à une protection sociale et assurantielle comparable à celle des salariés."
     },
     {
       "q": "Cosa impone la recente direttiva comunitaria citata nel testo?",
@@ -42,7 +44,8 @@
         "Il divieto totale delle piattaforme di consegna in tutta Europa",
         "Un salario unico uguale per tutti i lavoratori europei"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte indique que la directive impose des critères plus stricts pour présumer un lien de subordination lorsque l'algorithme exerce un contrôle comparable à celui d'un employeur."
     }
   ],
   "words": {

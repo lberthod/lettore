@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Quando arriva la Befana?",
-      "options": ["Il sei gennaio, di notte", "Il venticinque dicembre", "In estate"],
-      "correct": 0
+      "options": [
+        "Il sei gennaio, di notte",
+        "Il venticinque dicembre",
+        "In estate"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il sei gennaio è l'Epifania » et « La Befana arriva di notte »."
     },
     {
       "q": "Dove appende la calza il bambino?",
-      "options": ["Al camino", "Sotto il letto", "In cucina"],
-      "correct": 0
+      "options": [
+        "Al camino",
+        "Sotto il letto",
+        "In cucina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni bambino appende una calza al camino della casa »."
     },
     {
       "q": "Che cosa porta la Befana ai bambini buoni?",
-      "options": ["Dolci e caramelle", "Carbone di zucchero", "Un libro"],
-      "correct": 0
+      "options": [
+        "Dolci e caramelle",
+        "Carbone di zucchero",
+        "Un libro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Porta dolci e caramelle ai bambini buoni »."
     }
   ],
   "words": {

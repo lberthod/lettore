@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Che cosa scopre Chiara Rinaldi nell'archivio di Amalfi?",
-      "options": ["Una pergamena che sembra provare un antico trattato con Bisanzio", "Una mappa del porto medievale", "Un diario di un marinaio veneziano"],
-      "correct": 0
+      "options": [
+        "Una pergamena che sembra provare un antico trattato con Bisanzio",
+        "Una mappa del porto medievale",
+        "Un diario di un marinaio veneziano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Chiara « scopre una pergamena ingiallita » qui « sembra confermare » un « trattato commerciale con Bisanzio », donc elle découvre une pergamene qui semble prouver un ancien traité avec Byzance."
     },
     {
       "q": "Quale indizio insospettisce Chiara e il professor Ferri?",
-      "options": ["La forma di alcune lettere e il sigillo, troppo recenti per il documento", "Il colore troppo chiaro della pergamena", "La lingua scritta in latino classico"],
-      "correct": 0
+      "options": [
+        "La forma di alcune lettere e il sigillo, troppo recenti per il documento",
+        "Il colore troppo chiaro della pergamena",
+        "La lingua scritta in latino classico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que le professeur Ferri note « alcune lettere presentano una forma tipica del Cinquecento » et que le « sigillo » porte un « stemma » qui « non esisteva ancora nel decimo secolo », donc ces détails sont trop récents pour le document."
     },
     {
       "q": "Qual è la conclusione finale sulla pergamena?",
-      "options": ["È un falso creato probabilmente durante il Rinascimento", "È autentica e conferma il trattato con Bisanzio", "È stata scritta a Venezia nel Novecento"],
-      "correct": 0
+      "options": [
+        "È un falso creato probabilmente durante il Rinascimento",
+        "È autentica e conferma il trattato con Bisanzio",
+        "È stata scritta a Venezia nel Novecento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte conclut que « la pergamena è un falso, probabilmente creato durante il Rinascimento »."
     }
   ],
   "words": {

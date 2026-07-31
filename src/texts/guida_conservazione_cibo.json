@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "A che temperatura bisogna mantenere il frigorifero?",
-      "options": ["Tra i tre e i cinque gradi", "Sotto zero gradi", "Sopra i dieci gradi"],
-      "correct": 0
+      "options": [
+        "Tra i tre e i cinque gradi",
+        "Sotto zero gradi",
+        "Sopra i dieci gradi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit de maintenir la température du frigo entre trois et cinq degrés."
     },
     {
       "q": "Dove bisogna conservare carne e pesce nel frigorifero?",
-      "options": ["Nel ripiano più freddo, in basso", "Nel cassetto delle verdure", "Nella porta del frigorifero"],
-      "correct": 0
+      "options": [
+        "Nel ripiano più freddo, in basso",
+        "Nel cassetto delle verdure",
+        "Nella porta del frigorifero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique de conserver la viande et le poisson dans le compartiment le plus froid, en bas."
     },
     {
       "q": "Che cosa bisogna scrivere sui sacchetti nel congelatore?",
-      "options": ["La data", "Il prezzo", "La ricetta completa"],
-      "correct": 0
+      "options": [
+        "La data",
+        "Il prezzo",
+        "La ricetta completa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte prescrit d'étiqueter les sachets du congélateur avec la date."
     }
   ],
   "words": {

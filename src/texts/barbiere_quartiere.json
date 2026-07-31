@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Da quanto tempo Franco fa il barbiere?",
-      "options": ["Da quarant'anni", "Da cinque anni", "Da pochi mesi"],
-      "correct": 0
+      "options": [
+        "Da quarant'anni",
+        "Da cinque anni",
+        "Da pochi mesi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «Da quarant'anni Franco alzava la saracinesca», donc il est barbier depuis quarante ans."
     },
     {
       "q": "Perché i clienti tornano da Franco dopo l'apertura della catena low cost?",
-      "options": ["Perché da lui non si tagliano solo i capelli: si viene anche ascoltati", "Perché la catena ha chiuso subito", "Perché Franco ha abbassato i prezzi"],
-      "correct": 0
+      "options": [
+        "Perché da lui non si tagliano solo i capelli: si viene anche ascoltati",
+        "Perché la catena ha chiuso subito",
+        "Perché Franco ha abbassato i prezzi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «nessuno li ascoltava» et «Un barbiere vende tempo, non tagli», donc ils reviennent parce que chez lui on les écoute."
     },
     {
       "q": "A chi consegna Franco le sue forbici migliori?",
-      "options": ["Al giovane apprendista Salvatore", "Al professore in pensione", "A suo fratello"],
-      "correct": 0
+      "options": [
+        "Al giovane apprendista Salvatore",
+        "Al professore in pensione",
+        "A suo fratello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «Franco consegnò a Salvatore le sue forbici migliori», donc il les donne au jeune apprenti Salvatore."
     }
   ],
   "words": {

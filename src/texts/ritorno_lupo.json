@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Dove sopravvisse il lupo all'inizio del Novecento?",
-      "options": ["Nelle zone più impervie dell'Appennino centrale", "Sulle coste della Sicilia", "Nelle grandi pianure del nord"],
-      "correct": 0
+      "options": [
+        "Nelle zone più impervie dell'Appennino centrale",
+        "Sulle coste della Sicilia",
+        "Nelle grandi pianure del nord"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le loup a survécu « nascosti nelle zone più impervie e boscose dell'Appennino centrale »."
     },
     {
       "q": "Che cosa favorì il ritorno delle prede naturali?",
-      "options": ["Lo spopolamento delle montagne e la ricrescita dei boschi", "L'aumento degli allevamenti", "La costruzione di nuove strade"],
-      "correct": 0
+      "options": [
+        "Lo spopolamento delle montagne e la ricrescita dei boschi",
+        "L'aumento degli allevamenti",
+        "La costruzione di nuove strade"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « lo spopolamento delle montagne » et « i boschi ricrescevano » ont favorisé le retour des proies naturelles."
     },
     {
       "q": "Che cosa dicono i dati sugli attacchi all'uomo?",
-      "options": ["Non si registra un'aggressione mortale da oltre centocinquant'anni", "Gli attacchi aumentano ogni anno", "Il lupo attacca soprattutto i turisti"],
-      "correct": 0
+      "options": [
+        "Non si registra un'aggressione mortale da oltre centocinquant'anni",
+        "Gli attacchi aumentano ogni anno",
+        "Il lupo attacca soprattutto i turisti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que « non si registra un'aggressione mortale documentata da oltre centocinquant'anni »."
     }
   ],
   "words": {

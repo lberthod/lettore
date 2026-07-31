@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Cosa non vede Sara davanti a casa la mattina?",
-      "options": ["La sua bicicletta rossa", "Il suo cane", "La sua borsa"],
-      "correct": 0
+      "options": [
+        "La sua bicicletta rossa",
+        "Il suo cane",
+        "La sua borsa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle laisse sa bicyclette rouge devant la maison et qu'un matin elle ne la voit plus."
     },
     {
       "q": "Dove trova il papà la bicicletta?",
-      "options": ["Nel garage", "Nel giardino del vicino", "Sotto un albero"],
-      "correct": 0
+      "options": [
+        "Nel garage",
+        "Nel giardino del vicino",
+        "Sotto un albero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il papà apre la porta del garage e vede la bicicletta dentro »."
     },
     {
       "q": "Perché il fratellino ha messo la bici nel garage?",
-      "options": ["Perché piove stanotte", "Perché vuole rompere la bici", "Perché deve pulire il giardino"],
-      "correct": 0
+      "options": [
+        "Perché piove stanotte",
+        "Perché vuole rompere la bici",
+        "Perché deve pulire il giardino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ho messo io la bici nel garage, perché piove stanotte »."
     }
   ],
   "words": {

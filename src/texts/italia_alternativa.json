@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa ha costruito il professor Ricci?",
-      "options": ["Una macchina per osservare linee temporali alternative", "Un'astronave per viaggiare nello spazio", "Un robot capace di scrivere la storia"],
-      "correct": 0
+      "options": [
+        "Una macchina per osservare linee temporali alternative",
+        "Un'astronave per viaggiare nello spazio",
+        "Un robot capace di scrivere la storia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il professor Ricci ha finalmente completato la macchina capace di osservare le linee temporali alternative », donc il a construit une machine pour observer des lignes temporelles alternatives."
     },
     {
       "q": "Che cosa succede nella linea temporale osservata nel 1861?",
-      "options": ["Il Regno di Sardegna non riesce a unificare l'Italia", "L'Italia diventa una monarchia più forte", "Napoleone conquista tutta la penisola"],
-      "correct": 0
+      "options": [
+        "Il Regno di Sardegna non riesce a unificare l'Italia",
+        "L'Italia diventa una monarchia più forte",
+        "Napoleone conquista tutta la penisola"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il Regno di Sardegna non riuscì mai a unificare la penisola », donc dans cette ligne temporelle le Royaume de Sardaigne n'unit pas l'Italie."
     },
     {
       "q": "Su che cosa si interroga Ricci alla fine?",
-      "options": ["Se la frammentazione sarebbe stata un destino migliore", "Se deve pubblicare la sua scoperta", "Se la macchina sia davvero sicura da usare"],
-      "correct": 0
+      "options": [
+        "Se la frammentazione sarebbe stata un destino migliore",
+        "Se deve pubblicare la sua scoperta",
+        "Se la macchina sia davvero sicura da usare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Ricci « si chiede se il prezzo della frammentazione sarebbe stato inferiore », donc il se demande si la fragmentation aurait été un destin meilleur."
     }
   ],
   "words": {

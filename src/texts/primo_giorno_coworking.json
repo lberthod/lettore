@@ -22,7 +22,8 @@
         "Per seguire un corso universitario obbligatorio",
         "Per accompagnare i genitori in vacanza"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'Elena est attirée par un contrat à projet qui lui permet enfin de quitter la maison de ses parents."
     },
     {
       "q": "Che percorso professionale ha avuto Marco?",
@@ -31,7 +32,8 @@
         "Ha sempre lavorato come freelance fin da giovane",
         "Ha appena lasciato l'università senza esperienza"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Marco est passé d'un emploi stable en banque à une vie de projets courts et de clients en Europe, donc au travail en freelance."
     },
     {
       "q": "Come si sente Elena alla fine della giornata?",
@@ -40,7 +42,8 @@
         "Completamente delusa e pronta a tornare a casa",
         "Sicura che non tornerà mai più al coworking"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le vrai changement est la façon d'habiter une ville inconnue, un pas à la fois."
     }
   ],
   "words": {

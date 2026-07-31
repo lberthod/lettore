@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Per chi organizzano la festa?",
-      "options": ["Per Sara", "Per un collega", "Per la nonna"],
-      "correct": 0
+      "options": [
+        "Per Sara",
+        "Per un collega",
+        "Per la nonna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « per il compleanno di Sara », donc la fête est organisée pour Sara."
     },
     {
       "q": "Di che cosa si occupa la prima persona?",
-      "options": ["Degli inviti e delle decorazioni", "Della musica", "Della torta"],
-      "correct": 0
+      "options": [
+        "Degli inviti e delle decorazioni",
+        "Della musica",
+        "Della torta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Io mi occupo degli inviti e delle decorazioni », donc la première personne s'occupe des invitations et des décorations."
     },
     {
       "q": "Con che cosa sarà preparata la torta?",
-      "options": ["Con le fragole", "Con il cioccolato", "Con le mele"],
-      "correct": 0
+      "options": [
+        "Con le fragole",
+        "Con il cioccolato",
+        "Con le mele"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « con le fragole », donc la torta sera préparée avec des fraises."
     }
   ],
   "words": {

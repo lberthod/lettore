@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quali città collegava originariamente la Via Francigena?",
-      "options": ["Canterbury e Roma", "Parigi e Madrid", "Londra e Venezia"],
-      "correct": 0
+      "options": [
+        "Canterbury e Roma",
+        "Parigi e Madrid",
+        "Londra e Venezia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la Via Francigena « collegava Canterbury a Roma »."
     },
     {
       "q": "Perché i pellegrini medievali percorrevano questo cammino?",
-      "options": ["Per raggiungere le tombe di Pietro e Paolo", "Per commerciare con altri paesi", "Per sfuggire a una guerra"],
-      "correct": 0
+      "options": [
+        "Per raggiungere le tombe di Pietro e Paolo",
+        "Per commerciare con altri paesi",
+        "Per sfuggire a una guerra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les pèlerins la parcouraient « per raggiungere le tombe degli apostoli Pietro e Paolo »."
     },
     {
       "q": "Che cosa offre ogni tappa del percorso?",
-      "options": ["Piccoli borghi, chiese antiche e ostelli", "Solo grandi città moderne", "Autostrade e centri commerciali"],
-      "correct": 0
+      "options": [
+        "Piccoli borghi, chiese antiche e ostelli",
+        "Solo grandi città moderne",
+        "Autostrade e centri commerciali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « ogni tappa offre piccoli borghi, chiese antiche e ostelli »."
     }
   ],
   "words": {

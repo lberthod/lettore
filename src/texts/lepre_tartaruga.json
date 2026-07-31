@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché la lepre rideva della tartaruga?",
-      "options": ["Perché era lenta", "Perché era piccola", "Perché era vecchia"],
-      "correct": 0
+      "options": [
+        "Perché era lenta",
+        "Perché era piccola",
+        "Perché era vecchia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la lepre se moquait de la tartaruga parce qu'elle était lente : « Sei così lenta ! »."
     },
     {
       "q": "Che cosa fa la lepre durante la gara?",
-      "options": ["Corre fino al traguardo", "Si ferma e si addormenta", "Torna indietro"],
-      "correct": 1
+      "options": [
+        "Corre fino al traguardo",
+        "Si ferma e si addormenta",
+        "Torna indietro"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que la lepre, sûre de gagner, décide de se reposer sous un arbre et s'endort."
     },
     {
       "q": "Chi vince la gara?",
-      "options": ["La lepre", "La tartaruga", "Nessuno"],
-      "correct": 1
+      "options": [
+        "La lepre",
+        "La tartaruga",
+        "Nessuno"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que la tartaruga, sans s'arrêter, dépasse la lepre endormie et arrive au traguardo, donc elle gagne."
     }
   ],
   "words": {

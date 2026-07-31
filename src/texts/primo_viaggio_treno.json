@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanti anni ha Lucia?",
-      "options": ["Sei anni", "Dieci anni", "Tre anni"],
-      "correct": 0
+      "options": [
+        "Sei anni",
+        "Dieci anni",
+        "Tre anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Lucia ha sei anni », donc elle a six ans."
     },
     {
       "q": "Che cosa vede Lucia dal finestrino?",
-      "options": ["Case, campi e montagne", "Solo il buio", "Un'altra città"],
-      "correct": 0
+      "options": [
+        "Case, campi e montagne",
+        "Solo il buio",
+        "Un'altra città"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Dal finestrino, Lucia guarda le case, i campi e le montagne », donc elle voit des maisons, des champs et des montagnes."
     },
     {
       "q": "Chi aspetta Lucia alla fine del viaggio?",
-      "options": ["La zia", "Il nonno", "Un'amica"],
-      "correct": 0
+      "options": [
+        "La zia",
+        "Il nonno",
+        "Un'amica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la zia aspetta sul binario con un grande sorriso », donc c'est la tante qui attend Lucia."
     }
   ],
   "words": {

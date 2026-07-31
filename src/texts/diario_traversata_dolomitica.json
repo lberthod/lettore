@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Da dove parte l'autrice del diario nel primo giorno?",
-      "options": ["Da Cortina", "Da Bolzano", "Da Trento"],
-      "correct": 0
+      "options": [
+        "Da Cortina",
+        "Da Bolzano",
+        "Da Trento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sono partita stamattina da Cortina », donc elle part de Cortina."
     },
     {
       "q": "Che cosa consiglia il gestore del rifugio prima di attraversare i canaloni esposti?",
-      "options": ["Di controllare sempre le previsioni meteo", "Di camminare solo di notte", "Di portare meno acqua possibile"],
-      "correct": 0
+      "options": [
+        "Di controllare sempre le previsioni meteo",
+        "Di camminare solo di notte",
+        "Di portare meno acqua possibile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « controllare sempre le previsioni prima di attraversare i canaloni più esposti », donc il conseille de vérifier les prévisions météo."
     },
     {
       "q": "Che cosa racconta l'anziano gestore la sera del terzo giorno?",
-      "options": ["La storia di un antico sentiero militare", "La ricetta della polenta", "La leggenda di uno stambecco d'oro"],
-      "correct": 0
+      "options": [
+        "La storia di un antico sentiero militare",
+        "La ricetta della polenta",
+        "La leggenda di uno stambecco d'oro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « raccontato la storia di un antico sentiero militare scavato nella roccia », donc il raconte l'histoire d'un ancien sentier militaire."
     }
   ],
   "words": {

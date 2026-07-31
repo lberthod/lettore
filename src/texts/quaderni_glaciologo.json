@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Da quanto tempo il glaciologo studia lo stesso ghiacciaio?",
-      "options": ["Da trent'anni", "Da cinque anni", "Da un secolo intero"],
-      "correct": 0
+      "options": [
+        "Da trent'anni",
+        "Da cinque anni",
+        "Da un secolo intero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte commence par « 12 agosto, trent'anni fa » et précise qu'il s'agit du premier carottage, donc il étudie ce glacier depuis trente ans."
     },
     {
       "q": "Che cosa è successo alla palina numero sette?",
-      "options": ["È riemersa a valle, contorta come un relitto", "È stata rubata da un turista", "È rimasta intatta al suo posto"],
-      "correct": 0
+      "options": [
+        "È riemersa a valle, contorta come un relitto",
+        "È stata rubata da un turista",
+        "È rimasta intatta al suo posto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la palina numero sette... è riemersa a valle, contorta come un relitto », d'où la bonne réponse."
     },
     {
       "q": "Perché nell'ultima pagina porta sua figlia sul ghiacciaio?",
-      "options": ["Perché qualcuno ricordi com'era il bianco", "Perché lei diventi glaciologa", "Perché misuri le paline al posto suo"],
-      "correct": 0
+      "options": [
+        "Perché qualcuno ricordi com'era il bianco",
+        "Perché lei diventi glaciologa",
+        "Perché misuri le paline al posto suo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise « perché qualcuno ricordi com'era il bianco » comme raison de la demande de sa fille."
     }
   ],
   "words": {

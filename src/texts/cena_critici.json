@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa è in realtà il piatto tanto lodato dal critico?",
-      "options": ["La pasta e fagioli della nonna del cuoco, servita tale e quale", "Una creazione d'avanguardia di un giovane chef", "Un dessert destrutturato al cioccolato"],
-      "correct": 0
+      "options": [
+        "La pasta e fagioli della nonna del cuoco, servita tale e quale",
+        "Una creazione d'avanguardia di un giovane chef",
+        "Un dessert destrutturato al cioccolato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « è la pasta e fagioli di mia nonna Assunta, servita tale e quale », donc le plat tant loué est en réalité ce plat simple."
     },
     {
       "q": "Quanto stimerebbe il critico il valore del piatto?",
-      "options": ["Circa duecento euro, vino escluso", "Tre euro scarsi", "Non saprebbe dargli un prezzo"],
-      "correct": 0
+      "options": [
+        "Circa duecento euro, vino escluso",
+        "Tre euro scarsi",
+        "Non saprebbe dargli un prezzo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sui duecento euro, direi, vino escluso e servizio a parte », donc le critique l'estime à environ deux cents euros, vin non compris."
     },
     {
       "q": "Come reagisce il critico dopo essere stato smascherato?",
-      "options": ["Chiede in silenzio un'altra scodella", "Abbandona furioso il ristorante", "Scrive subito una recensione negativa"],
-      "correct": 0
+      "options": [
+        "Chiede in silenzio un'altra scodella",
+        "Abbandona furioso il ristorante",
+        "Scrive subito una recensione negativa"
+      ],
+      "correct": 0,
+      "explanation": "Après avoir été démasqué, le critique dit « potrei averne in silenzio un'altra scodella? », donc il demande en silence une autre assiettée."
     }
   ],
   "words": {

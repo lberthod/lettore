@@ -76,7 +76,8 @@
         "Prendono solo dolci",
         "Non mangiano niente"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « C'è il banco dei panini con la porchetta! » puis « Prendiamo due panini », donc ils prennent des panini à la porchetta."
     },
     {
       "q": "Che cosa succede quando Sara gioca vicino al tavolo?",
@@ -85,7 +86,8 @@
         "Vince un premio grande",
         "Rompe una pallina"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Ops, tocco il tavolo e cade un bicchiere! », donc Sara touche la table et un verre tombe."
     },
     {
       "q": "Che cosa vede la festa alla fine, sopra la piazza?",
@@ -94,7 +96,8 @@
         "La pioggia",
         "Un temporale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Guardate i fuochi d'artificio sopra la piazza! », donc ils voient des feux d'artifice au-dessus de la place."
     }
   ],
   "words": {

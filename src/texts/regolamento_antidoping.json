@@ -22,7 +22,8 @@
         "Solo la partecipazione a una competizione internazionale",
         "Il semplice fatto di essere tesserati presso la Federazione"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le dopage est la violation de normes comme la présence d'une substance interdite, l'usage d'une méthode prohibée ou le refus injustifié de se soumettre au prélèvement."
     },
     {
       "q": "Che cosa deve comunicare trimestralmente l'atleta inserito nel gruppo di controllo, secondo l'articolo 5?",
@@ -31,7 +32,8 @@
         "L'elenco completo dei farmaci assunti nell'anno precedente",
         "Il nome del proprio allenatore e del medico sociale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise que l'athlète doit communiquer chaque trimestre sa localisation via le système ADAMS, en indiquant une heure de disponibilité par jour."
     },
     {
       "q": "Quali sanzioni può comportare, secondo l'articolo 7, la violazione delle norme antidoping?",
@@ -40,7 +42,8 @@
         "Una semplice ammonizione verbale senza altre conseguenze",
         "La sola sospensione dello stipendio per un mese"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "L'article 7 indique que la violation entraîne une suspension de deux à quatre ans, l'annulation des résultats et, dans les cas graves, une radiation à vie."
     }
   ],
   "words": {

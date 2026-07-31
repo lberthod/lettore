@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "In quali condizioni fu girato Roma città aperta?",
-      "options": ["Tra le macerie, con pellicola di fortuna e mezzi poverissimi", "Negli stabilimenti di Cinecittà con grandi riflettori", "In Francia, con celebri attori professionisti"],
-      "correct": 0
+      "options": [
+        "Tra le macerie, con pellicola di fortuna e mezzi poverissimi",
+        "Negli stabilimenti di Cinecittà con grandi riflettori",
+        "In Francia, con celebri attori professionisti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Rossellini a tourné Roma città aperta « con pellicola di fortuna, attori costretti a recitare in appartamenti veri e una troupe che rubava la corrente elettrica dove poteva », donc dans des conditions très pauvres parmi les décombres."
     },
     {
       "q": "Chi interpretò il protagonista di Ladri di biciclette?",
-      "options": ["Un operaio autentico che non aveva mai recitato", "Un famoso attore di teatro romano", "Lo stesso regista Vittorio De Sica"],
-      "correct": 0
+      "options": [
+        "Un operaio autentico che non aveva mai recitato",
+        "Un famoso attore di teatro romano",
+        "Lo stesso regista Vittorio De Sica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que De Sica a confié le rôle principal à « un operaio autentico, Lamberto Maggiorani, che non aveva mai recitato »."
     },
     {
       "q": "Perché l'estetica della povertà fu una scelta morale?",
-      "options": ["Perché rifiutare l'artificio restituiva dignità ai calpestati dalla storia", "Perché i registi volevano risparmiare sul montaggio", "Perché la censura vietava le scenografie di lusso"],
-      "correct": 0
+      "options": [
+        "Perché rifiutare l'artificio restituiva dignità ai calpestati dalla storia",
+        "Perché i registi volevano risparmiare sul montaggio",
+        "Perché la censura vietava le scenografie di lusso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « rifiutare l'artificio significava restituire dignità a coloro che la storia aveva calpestato », donc c'était un choix moral."
     }
   ],
   "words": {

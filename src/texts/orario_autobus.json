@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "A che ora parte il primo autobus?",
-      "options": ["Alle sei e mezza", "Alle otto", "A mezzogiorno"],
-      "correct": 0
+      "options": [
+        "Alle sei e mezza",
+        "Alle otto",
+        "A mezzogiorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il primo autobus parte alle sei e mezza del mattino », donc le premier bus part à six heures et demie."
     },
     {
       "q": "Ogni quanto passano gli autobus durante il giorno?",
-      "options": ["Ogni venti minuti", "Ogni cinque minuti", "Ogni due ore"],
-      "correct": 0
+      "options": [
+        "Ogni venti minuti",
+        "Ogni cinque minuti",
+        "Ogni due ore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Gli autobus passano ogni venti minuti durante il giorno », donc ils passent toutes les vingt minutes."
     },
     {
       "q": "Quanto costa il biglietto?",
-      "options": ["Un euro e cinquanta", "Tre euro", "Cinquanta centesimi"],
-      "correct": 0
+      "options": [
+        "Un euro e cinquanta",
+        "Tre euro",
+        "Cinquanta centesimi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il biglietto costa un euro e cinquanta », donc le billet coûte un euro cinquante."
     }
   ],
   "words": {

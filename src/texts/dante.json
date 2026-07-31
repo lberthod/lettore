@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché Dante è considerato il padre della lingua italiana?",
-      "options": ["Perché scrisse in volgare e non in latino", "Perché inventò l'alfabeto", "Perché era un re"],
-      "correct": 0
+      "options": [
+        "Perché scrisse in volgare e non in latino",
+        "Perché inventò l'alfabeto",
+        "Perché era un re"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Scrivendo in volgare, e non in latino, Dante scelse la lingua del popolo », c'est pourquoi il est considéré comme le père de la langue italienne."
     },
     {
       "q": "Quali regni attraversa il viaggio della Divina Commedia?",
-      "options": ["Inferno, Purgatorio e Paradiso", "Solo l'Inferno", "Il passato e il futuro"],
-      "correct": 0
+      "options": [
+        "Inferno, Purgatorio e Paradiso",
+        "Solo l'Inferno",
+        "Il passato e il futuro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un viaggio immaginario attraverso l'Inferno, il Purgatorio e il Paradiso », donc le voyage traverse ces trois règnes."
     },
     {
       "q": "Dove scrisse gran parte dell'opera?",
-      "options": ["A Firenze", "Lontano da Firenze, in esilio", "A Roma"],
-      "correct": 1
+      "options": [
+        "A Firenze",
+        "Lontano da Firenze, in esilio",
+        "A Roma"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Esiliato dalla sua città... Dante scrisse gran parte dell'opera lontano da Firenze », donc il a écrit loin de Florence, en exil."
     }
   ],
   "words": {

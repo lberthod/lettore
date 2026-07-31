@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa scompare misteriosamente nella riserva?",
-      "options": ["L'ultimo esemplare di un branco di lupi", "Un intero gregge di pecore", "Una specie rara di uccello"],
-      "correct": 0
+      "options": [
+        "L'ultimo esemplare di un branco di lupi",
+        "Un intero gregge di pecore",
+        "Una specie rara di uccello"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un loup, le dernier exemplaire d'un groupe autrefois nombreux, a mystérieusement disparu."
     },
     {
       "q": "Chi si rivela essere l'autore della cattura?",
-      "options": ["Un anziano allevatore disperato", "Un bracconiere professionista", "Un turista straniero"],
-      "correct": 0
+      "options": [
+        "Un anziano allevatore disperato",
+        "Un bracconiere professionista",
+        "Un turista straniero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte révèle que l'auteur n'est pas un chasseur mais un vieil éleveur désespéré."
     },
     {
       "q": "Perché l'uomo aveva catturato il lupo?",
-      "options": ["Per allontanarlo dal proprio gregge, senza ucciderlo", "Per venderlo a un collezionista", "Per vendicarsi della guardia forestale"],
-      "correct": 0
+      "options": [
+        "Per allontanarlo dal proprio gregge, senza ucciderlo",
+        "Per venderlo a un collezionista",
+        "Per vendicarsi della guardia forestale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique qu'il a capturé le loup vivant pour l'éloigner définitivement de son troupeau, sans le tuer."
     }
   ],
   "words": {

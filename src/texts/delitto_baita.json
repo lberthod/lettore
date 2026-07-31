@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove viene trovato il corpo della vittima?",
-      "options": ["Nella legnaia della baita", "Sotto la neve, fuori dalla baita", "In una stanza chiusa a chiave"],
-      "correct": 0
+      "options": [
+        "Nella legnaia della baita",
+        "Sotto la neve, fuori dalla baita",
+        "In una stanza chiusa a chiave"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la victime a été trouvée sans vie dans la legnaia (le bûcher)."
     },
     {
       "q": "Che cosa nota il commissario Ferri riguardo alle impronte?",
-      "options": ["Che conducevano verso la baita dall'esterno", "Che erano state cancellate dal vento", "Che appartenevano a un animale selvatico"],
-      "correct": 0
+      "options": [
+        "Che conducevano verso la baita dall'esterno",
+        "Che erano state cancellate dal vento",
+        "Che appartenevano a un animale selvatico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que les empreintes dans la neige fraîche conduisaient vers le chalet, donc depuis l'extérieur."
     },
     {
       "q": "Che cosa scoprono i soccorritori alla fine?",
-      "options": ["Un uomo nascosto poco distante dalla baita", "Che non c'era stato nessun delitto", "Che la vittima era ancora viva"],
-      "correct": 0
+      "options": [
+        "Un uomo nascosto poco distante dalla baita",
+        "Che non c'era stato nessun delitto",
+        "Che la vittima era ancora viva"
+      ],
+      "correct": 0,
+      "explanation": "À la fin, les secouristes découvrent un homme transi caché non loin du chalet, l'auteur du crime."
     }
   ],
   "words": {

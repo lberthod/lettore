@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa trattiene ancora la roccia?",
-      "options": ["Il gelo", "La pioggia", "Il fuoco"],
-      "correct": 0
+      "options": [
+        "Il gelo",
+        "La pioggia",
+        "Il fuoco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La roccia trattiene ancora il gelo », donc la roche retient encore le gel."
     },
     {
       "q": "Che cosa scivola sul granito grigio?",
-      "options": ["Il vento", "Un fiume", "Una nuvola nera"],
-      "correct": 0
+      "options": [
+        "Il vento",
+        "Un fiume",
+        "Una nuvola nera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il vento che scivola sul granito grigio », donc c'est le vent qui glisse sur le granit gris."
     },
     {
       "q": "Che cosa pretende la vetta in cambio del silenzio?",
-      "options": ["Umiltà", "Denaro", "Coraggio infinito"],
-      "correct": 0
+      "options": [
+        "Umiltà",
+        "Denaro",
+        "Coraggio infinito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « in cambio pretende umiltà », donc la cime exige de l'humilité en échange."
     }
   ],
   "words": {

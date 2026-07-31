@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa prepara la famiglia?",
-      "options": ["La pizza", "La pasta al pomodoro", "Un dolce"],
-      "correct": 0
+      "options": [
+        "La pizza",
+        "La pasta al pomodoro",
+        "Un dolce"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Oggi facciamo la pizza in casa! », donc la famille prépare une pizza."
     },
     {
       "q": "Che cosa mette Luca sulla pizza?",
-      "options": ["Tanta mozzarella", "Poca mozzarella", "Il pesce"],
-      "correct": 0
+      "options": [
+        "Tanta mozzarella",
+        "Poca mozzarella",
+        "Il pesce"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Io metto la mozzarella. Tanta, tanta! », donc Luca met beaucoup de mozzarella."
     },
     {
       "q": "Dove va la pizza?",
-      "options": ["Nel forno", "Nel frigo", "Sul tavolo"],
-      "correct": 0
+      "options": [
+        "Nel forno",
+        "Nel frigo",
+        "Sul tavolo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La pizza va nel forno », donc la pizza va dans le four."
     }
   ],
   "words": {

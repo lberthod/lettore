@@ -16,7 +16,8 @@
         "Al mare",
         "A scuola"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Giulia e suo fratello vanno al mare », donc ils vont à la mer."
     },
     {
       "q": "Che cosa fa il fratello di Giulia?",
@@ -25,7 +26,8 @@
         "Nuota tra le onde",
         "Costruisce un castello"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Suo fratello preferisce leggere un libro sotto il sole », donc il lit un livre au soleil."
     },
     {
       "q": "Che cosa bevono verso mezzogiorno?",
@@ -34,7 +36,8 @@
         "Un'aranciata",
         "Una limonata fresca"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « bevono una limonata fresca », donc ils boivent une limonade fraîche."
     }
   ],
   "words": {

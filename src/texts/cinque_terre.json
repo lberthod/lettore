@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "In quale regione si trovano le Cinque Terre?",
-      "options": ["In Liguria", "In Toscana", "In Sicilia"],
-      "correct": 0
+      "options": [
+        "In Liguria",
+        "In Toscana",
+        "In Sicilia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sulla costa della Liguria », donc les Cinque Terre se trouvent en Ligurie."
     },
     {
       "q": "Come si arrivava un tempo nei paesi delle Cinque Terre?",
-      "options": ["Solo in barca o a piedi", "In treno", "In macchina"],
-      "correct": 0
+      "options": [
+        "Solo in barca o a piedi",
+        "In treno",
+        "In macchina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Non c'erano strade: si arrivava solo in barca o a piedi », donc on n'y arrivait que par bateau ou à pied."
     },
     {
       "q": "Qual è il piatto tipico delle Cinque Terre?",
-      "options": ["Le trofie al pesto", "Le orecchiette", "Il risotto"],
-      "correct": 0
+      "options": [
+        "Le trofie al pesto",
+        "Le orecchiette",
+        "Il risotto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il piatto tipico è semplice e profumato: le trofie al pesto », donc le plat typique est les trofie al pesto."
     }
   ],
   "words": {

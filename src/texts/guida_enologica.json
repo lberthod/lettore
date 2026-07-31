@@ -20,7 +20,8 @@
         "Solo il grado alcolico esatto",
         "Il nome esatto del vitigno utilizzato"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que l'examen visuel permet d'observer « la limpidezza, l'intensità del colore e le sfumature che rivelano l'età del vino », c'est-à-dire la limpidité, l'intensité de la couleur et les nuances liées à l'âge."
     },
     {
       "q": "Quali sono i cinque elementi valutati nell'esame gustativo?",
@@ -29,7 +30,8 @@
         "Colore, profumo, prezzo, annata e origine",
         "Temperatura, luce, umidità, rumore e tempo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte indique que dans l'examen gustatif « si valutano cinque elementi fondamentali: la dolcezza, l'acidità, la tannicità, per i rossi, la sapidità e il corpo »."
     },
     {
       "q": "Come deve procedere un buon itinerario di degustazione?",
@@ -38,7 +40,8 @@
         "Sempre partendo dai vini più alcolici",
         "In ordine alfabetico di etichetta"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte affirme qu'« un itinerario di degustazione ben costruito procede dai vini più leggeri verso quelli più strutturati », donc des vins les plus légers aux plus structurés."
     }
   ],
   "words": {

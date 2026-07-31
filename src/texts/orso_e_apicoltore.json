@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Cosa scopre Vittorio quando segue l'orso di nascosto?",
-      "options": ["Che l'orso porta il miele ai suoi cuccioli affamati", "Che l'orso vive con altri orsi in una grotta", "Che l'orso ha già una propria riserva di miele"],
-      "correct": 0
+      "options": [
+        "Che l'orso porta il miele ai suoi cuccioli affamati",
+        "Che l'orso vive con altri orsi in una grotta",
+        "Che l'orso ha già una propria riserva di miele"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Vittorio voit deux petits ours « magri e deboli » et comprend que l'ours « portava il miele ai suoi cuccioli » : il nourrit ses petits."
     },
     {
       "q": "Perché i cuccioli dell'orso erano deboli e affamati?",
-      "options": ["Perché un incendio aveva distrutto gran parte del bosco", "Perché la madre li aveva abbandonati", "Perché era arrivato un inverno molto rigido"],
-      "correct": 0
+      "options": [
+        "Perché un incendio aveva distrutto gran parte del bosco",
+        "Perché la madre li aveva abbandonati",
+        "Perché era arrivato un inverno molto rigido"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'« un incendio aveva distrutto gran parte del bosco », ce qui a laissé les oursons sans nourriture."
     },
     {
       "q": "Come reagisce Vittorio dopo aver scoperto la verità?",
-      "options": ["Lascia ogni anno un'arnia piena di miele per l'orso", "Costruisce una recinzione elettrica intorno al bosco", "Chiede aiuto al comune per catturare l'orso"],
-      "correct": 0
+      "options": [
+        "Lascia ogni anno un'arnia piena di miele per l'orso",
+        "Costruisce una recinzione elettrica intorno al bosco",
+        "Chiede aiuto al comune per catturare l'orso"
+      ],
+      "correct": 0,
+      "explanation": "Vittorio « smontò la trappola » et, à partir de cet automne, « lascia ogni anno un'arnia piena di miele » pour l'ours et ses petits."
     }
   ],
   "words": {

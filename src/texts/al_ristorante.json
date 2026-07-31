@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Per quante persone è il tavolo?",
-      "options": ["Per due persone", "Per quattro persone", "Per una persona"],
-      "correct": 0
+      "options": [
+        "Per due persone",
+        "Per quattro persone",
+        "Per una persona"
+      ],
+      "correct": 0,
+      "explanation": "Le texte demande « avete un tavolo per due persone? », donc la table est pour deux personnes."
     },
     {
       "q": "Che cosa prende Marco di primo?",
-      "options": ["Le lasagne", "Gli spaghetti alle vongole", "Una bistecca"],
-      "correct": 0
+      "options": [
+        "Le lasagne",
+        "Gli spaghetti alle vongole",
+        "Una bistecca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Per me le lasagne », donc Marco prend des lasagnes comme primo."
     },
     {
       "q": "Perché i clienti chiedono di fare presto?",
-      "options": ["Perché hanno molta fame", "Perché sono di fretta", "Perché il ristorante chiude"],
-      "correct": 1
+      "options": [
+        "Perché hanno molta fame",
+        "Perché sono di fretta",
+        "Perché il ristorante chiude"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Siamo un po' di fretta: è possibile fare presto? », donc ils demandent d'accélérer parce qu'ils sont pressés."
     }
   ],
   "words": {

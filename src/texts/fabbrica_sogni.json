@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa erano obbligati a fare i cittadini ogni notte?",
-      "options": ["Depositare i propri sogni presso un ufficio", "Consegnare i propri risparmi allo stato", "Scrivere un rapporto sulla giornata"],
-      "correct": 0
+      "options": [
+        "Depositare i propri sogni presso un ufficio",
+        "Consegnare i propri risparmi allo stato",
+        "Scrivere un rapporto sulla giornata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que chaque citoyen devait déposer ses rêves chaque nuit dans un bureau prévu à cet effet."
     },
     {
       "q": "Che cosa fa Vero con il proprio sogno di libertà?",
-      "options": ["Lo nasconde e se lo ripete ogni notte", "Lo consegna subito ai funzionari", "Lo dimentica volontariamente"],
-      "correct": 0
+      "options": [
+        "Lo nasconde e se lo ripete ogni notte",
+        "Lo consegna subito ai funzionari",
+        "Lo dimentica volontariamente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Vero cache le rêve au fond de son cœur et se le répète chaque nuit comme un secret précieux."
     },
     {
       "q": "Che cosa scoprono le autorità alla fine?",
-      "options": ["Che un sogno vissuto non può più essere confiscato", "Che Vero non aveva mai sognato nulla", "Che tutti i cittadini nascondevano sogni simili"],
-      "correct": 0
+      "options": [
+        "Che un sogno vissuto non può più essere confiscato",
+        "Che Vero non aveva mai sognato nulla",
+        "Che tutti i cittadini nascondevano sogni simili"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un rêve, une fois vraiment vécu, ne peut plus être confisqué à personne."
     }
   ],
   "words": {

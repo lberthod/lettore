@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa sta succedendo alla salsa?",
-      "options": ["Sta bruciando", "È troppo fredda", "Manca di sale"],
-      "correct": 0
+      "options": [
+        "Sta bruciando",
+        "È troppo fredda",
+        "Manca di sale"
+      ],
+      "correct": 0,
+      "explanation": "Le chef dit « la salsa sta bruciando », donc la sauce brûle."
     },
     {
       "q": "Perché l'apprendista non controllava il fuoco?",
-      "options": ["Era occupato a tagliare le verdure", "Era uscito a fare una pausa", "Stava parlando al telefono"],
-      "correct": 0
+      "options": [
+        "Era occupato a tagliare le verdure",
+        "Era uscito a fare una pausa",
+        "Stava parlando al telefono"
+      ],
+      "correct": 0,
+      "explanation": "L'apprenti dit « Ero occupato a tagliare le verdure », donc il était occupé à couper les légumes."
     },
     {
       "q": "Che cosa promette l'apprendista alla fine?",
-      "options": ["Di stare più attento la prossima volta", "Di cambiare lavoro", "Di non cucinare mai più"],
-      "correct": 0
+      "options": [
+        "Di stare più attento la prossima volta",
+        "Di cambiare lavoro",
+        "Di non cucinare mai più"
+      ],
+      "correct": 0,
+      "explanation": "L'apprenti promet « di stare più attento la prossima volta », donc il fera plus attention la prochaine fois."
     }
   ],
   "words": {

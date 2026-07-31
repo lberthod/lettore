@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa provocò l'onda che distrusse Longarone?",
-      "options": ["Una frana immane staccatasi dal monte Toc", "Il crollo improvviso della diga", "Un terremoto nelle valli dolomitiche"],
-      "correct": 0
+      "options": [
+        "Una frana immane staccatasi dal monte Toc",
+        "Il crollo improvviso della diga",
+        "Un terremoto nelle valli dolomitiche"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'une « frana immane » détachée du mont Toc a provoqué une onde qui a rasé Longarone."
     },
     {
       "q": "Chi aveva denunciato il pericolo prima della tragedia?",
-      "options": ["La giornalista Tina Merlin", "I dirigenti della società elettrica", "I giudici della Repubblica"],
-      "correct": 0
+      "options": [
+        "La giornalista Tina Merlin",
+        "I dirigenti della società elettrica",
+        "I giudici della Repubblica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la journaliste Tina Merlin avait dénoncé le danger avec lucidité prophétique sur les colonnes de son journal."
     },
     {
       "q": "Secondo il testo, di chi fu la responsabilità della tragedia?",
-      "options": ["Degli uomini che vollero ignorare ogni segnale", "Della natura imprevedibile", "Degli abitanti della valle"],
-      "correct": 0
+      "options": [
+        "Degli uomini che vollero ignorare ogni segnale",
+        "Della natura imprevedibile",
+        "Degli abitanti della valle"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « non fu dunque la natura a uccidere, bensì l'arroganza di chi antepose il profitto alla prudenza », donc la responsabilité est aux hommes qui ont ignoré les signes."
     }
   ],
   "words": {

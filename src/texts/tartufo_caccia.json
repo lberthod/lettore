@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Chi accompagna il trifolau nella ricerca del tartufo?",
-      "options": ["Il proprio cane addestrato", "Un gruppo di amici esperti", "Un drone con sensori"],
-      "correct": 0
+      "options": [
+        "Il proprio cane addestrato",
+        "Un gruppo di amici esperti",
+        "Un drone con sensori"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « accompagnato da un unico compagno fidato: il proprio cane addestrato alla ricerca del tartufo », donc c'est son chien dressé."
     },
     {
       "q": "Quale tartufo è associato soprattutto alle colline intorno ad Alba?",
-      "options": ["Il tartufo bianco", "Il tartufo nero", "Il tartufo estero"],
-      "correct": 0
+      "options": [
+        "Il tartufo bianco",
+        "Il tartufo nero",
+        "Il tartufo estero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il pregiato tartufo bianco, associato soprattutto alle colline intorno ad Alba »."
     },
     {
       "q": "In che cosa consistono le frodi scoperte dalle autorità?",
-      "options": ["Tartufi esteri venduti come italiani o mescolati a quelli pregiati", "Tartufi coltivati illegalmente in serra", "Tartufi rubati direttamente dai ristoranti"],
-      "correct": 0
+      "options": [
+        "Tartufi esteri venduti come italiani o mescolati a quelli pregiati",
+        "Tartufi coltivati illegalmente in serra",
+        "Tartufi rubati direttamente dai ristoranti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « tartufi di provenienza estera venduti come italiani, oppure esemplari di qualità inferiore mescolati abilmente a quelli pregiati »."
     }
   ],
   "words": {

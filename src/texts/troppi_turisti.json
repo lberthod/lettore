@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Quanti visitatori ha superato Venezia in un anno?",
-      "options": ["Trenta milioni", "Tre milioni", "Cinquanta milioni"],
-      "correct": 0
+      "options": [
+        "Trenta milioni",
+        "Tre milioni",
+        "Cinquanta milioni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Venise a dépassé les trente millions de visiteurs en un an."
     },
     {
       "q": "Perché i due amici criticano le grandi navi da crociera?",
-      "options": ["Perché inquinano la laguna e scaricano migliaia di persone per poche ore", "Perché sono troppo lente", "Perché costano poco"],
-      "correct": 0
+      "options": [
+        "Perché inquinano la laguna e scaricano migliaia di persone per poche ore",
+        "Perché sono troppo lente",
+        "Perché costano poco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elles polluent la lagune et débarquent des milliers de personnes pour quelques heures."
     },
     {
       "q": "Su quale soluzione si trovano d'accordo alla fine?",
-      "options": ["Un turismo più lento, anche fuori stagione", "Chiudere la città ai visitatori", "Costruire più alberghi"],
-      "correct": 0
+      "options": [
+        "Un turismo più lento, anche fuori stagione",
+        "Chiudere la città ai visitatori",
+        "Costruire più alberghi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un tourisme plus lent, y compris hors saison, ferait du bien aux visiteurs et surtout aux Vénitiens."
     }
   ],
   "words": {

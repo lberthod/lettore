@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Quanti colori ha la bandiera italiana?",
-      "options": ["Tre", "Due", "Quattro"],
-      "correct": 0
+      "options": [
+        "Tre",
+        "Due",
+        "Quattro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la bandiera italiana ha tre colori."
     },
     {
       "q": "Chi chiede perché la bandiera ha questi colori?",
-      "options": ["Un bambino", "Un maestro", "Una nonna"],
-      "correct": 0
+      "options": [
+        "Un bambino",
+        "Un maestro",
+        "Una nonna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un bambino chiede al maestro pourquoi le drapeau a ces couleurs."
     },
     {
       "q": "Che cosa fa la bandiera ogni lunedì?",
-      "options": ["Sventola davanti alla scuola", "Resta in classe", "Cade a terra"],
-      "correct": 0
+      "options": [
+        "Sventola davanti alla scuola",
+        "Resta in classe",
+        "Cade a terra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que ogni lunedì la bandiera sventola davanti alla scuola."
     }
   ],
   "words": {

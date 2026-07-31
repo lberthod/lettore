@@ -32,18 +32,33 @@
   "questions": [
     {
       "q": "Chi è Tito?",
-      "options": ["Un giovane che arriva alla scuola dei gladiatori", "Il maestro della scuola", "Un gladiatore famoso"],
-      "correct": 0
+      "options": [
+        "Un giovane che arriva alla scuola dei gladiatori",
+        "Il maestro della scuola",
+        "Un gladiatore famoso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Tito arrive à l'école des gladiateurs."
     },
     {
       "q": "Che cosa dice Marco Rufo sul coraggio?",
-      "options": ["Che il coraggio è continuare anche quando hai paura", "Che i gladiatori non hanno mai paura", "Che il coraggio non è importante"],
-      "correct": 0
+      "options": [
+        "Che il coraggio è continuare anche quando hai paura",
+        "Che i gladiatori non hanno mai paura",
+        "Che il coraggio non è importante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le courage, c'est continuer même quand on a peur."
     },
     {
       "q": "Che cosa fa Tito la domenica?",
-      "options": ["Scrive lettere alla sua famiglia", "Combatte nell'arena", "Va al mercato"],
-      "correct": 0
+      "options": [
+        "Scrive lettere alla sua famiglia",
+        "Combatte nell'arena",
+        "Va al mercato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Tito écrit des lettres à sa famille le dimanche."
     }
   ],
   "words": {

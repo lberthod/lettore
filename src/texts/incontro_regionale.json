@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "A che ora cena la famiglia di Marco a Milano?",
-      "options": ["Alle sette", "Alle nove", "A mezzanotte"],
-      "correct": 0
+      "options": [
+        "Alle sette",
+        "Alle nove",
+        "A mezzanotte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Da noi si cena già alle sette », donc Marco dîne à sept heures."
     },
     {
       "q": "Che cosa fa la famiglia di Giuseppe dopo il pranzo della domenica?",
-      "options": ["Dorme un'oretta", "Va subito a lavorare", "Fa una lunga passeggiata"],
-      "correct": 0
+      "options": [
+        "Dorme un'oretta",
+        "Va subito a lavorare",
+        "Fa una lunga passeggiata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « dormiamo un'oretta dopo pranzo », donc Giuseppe dort environ une heure après le déjeuner."
     },
     {
       "q": "Come si conclude la conversazione tra Marco e Giuseppe?",
-      "options": ["Riconoscendo che si completano a vicenda", "Litigando su chi ha ragione", "Decidendo di non parlarsi più"],
-      "correct": 0
+      "options": [
+        "Riconoscendo che si completano a vicenda",
+        "Litigando su chi ha ragione",
+        "Decidendo di non parlarsi più"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ci completiamo a vicenda », donc ils reconnaissent qu'ils se complètent mutuellement."
     }
   ],
   "words": {

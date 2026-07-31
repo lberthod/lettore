@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Su che cosa si concentra l'attenzione pubblica secondo il testo?",
-      "options": ["Sull'intelligenza artificiale, più che sul quantistico", "Esclusivamente sui computer quantistici", "Su nessuna tecnologia in particolare"],
-      "correct": 0
+      "options": [
+        "Sull'intelligenza artificiale, più che sul quantistico",
+        "Esclusivamente sui computer quantistici",
+        "Su nessuna tecnologia in particolare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'opinion publique est fascinée par l'intelligence artificielle."
     },
     {
       "q": "Quali proprietà sfruttano i computer quantistici?",
-      "options": ["La sovrapposizione e l'entanglement", "Solo la velocità dei processori classici", "L'elettricità statica"],
-      "correct": 0
+      "options": [
+        "La sovrapposizione e l'entanglement",
+        "Solo la velocità dei processori classici",
+        "L'elettricità statica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne la superposition et l'intrication comme propriétés exploitées par les ordinateurs quantiques."
     },
     {
       "q": "Che cosa fanno già i governi più lungimiranti secondo il testo?",
-      "options": ["Investono somme colossali in questa tecnologia", "Vietano la ricerca quantistica", "Ignorano completamente il settore"],
-      "correct": 0
+      "options": [
+        "Investono somme colossali in questa tecnologia",
+        "Vietano la ricerca quantistica",
+        "Ignorano completamente il settore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que les gouvernements les plus clairvoyants ont déjà commencé à investir des sommes colossales."
     }
   ],
   "words": {

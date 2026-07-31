@@ -189,7 +189,8 @@
         "Tedesco",
         "Italiano"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Qui si parla italiano », donc on y parle italien."
     },
     {
       "q": "Come viaggia Matteo da Zurigo al Ticino?",
@@ -198,7 +199,8 @@
         "In battello sul Lago Maggiore",
         "In macchina attraverso le Alpi"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Il viaggio in treno passa sotto le montagne, nella galleria del San Gottardo », donc Matteo voyage en train."
     },
     {
       "q": "Cosa visitano Matteo e il nonno a Bellinzona?",
@@ -207,7 +209,8 @@
         "I tre castelli costruiti nel Medioevo",
         "La piazza grande con le palme"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « visitano insieme i tre castelli di Bellinzona, costruiti nel Medioevo », donc ils visitent ces trois châteaux."
     }
   ]
 }

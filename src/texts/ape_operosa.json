@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa faceva Mimì invece di lavorare?",
-      "options": ["Dormiva all'ombra o giocava", "Costruiva nuovi alveari", "Insegnava alle altre api"],
-      "correct": 0
+      "options": [
+        "Dormiva all'ombra o giocava",
+        "Costruiva nuovi alveari",
+        "Insegnava alle altre api"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « Mimì dormiva all'ombra o giocava tutto il giorno », donc elle dormait à l'ombre ou jouait au lieu de travailler."
     },
     {
       "q": "Che cosa dice la regina delle api a Mimì?",
-      "options": ["Che ogni ape ha un compito importante", "Che Mimì deve lasciare l'alveare", "Che il lavoro non è necessario"],
-      "correct": 0
+      "options": [
+        "Che ogni ape ha un compito importante",
+        "Che Mimì deve lasciare l'alveare",
+        "Che il lavoro non è necessario"
+      ],
+      "correct": 0,
+      "explanation": "Le texte rapporte « Ogni ape ha un compito importante per tutte le altre », donc la reine dit que chaque abeille a une tâche importante."
     },
     {
       "q": "Che cosa succede in inverno per colpa della pigrizia di Mimì?",
-      "options": ["Il miele non basta per tutte le api", "L'alveare si distrugge completamente", "Le altre api se ne vanno"],
-      "correct": 0
+      "options": [
+        "Il miele non basta per tutte le api",
+        "L'alveare si distrugge completamente",
+        "Le altre api se ne vanno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « il miele nell'alveare non bastava per tutte le api », donc le miel ne suffit pas pour toutes les abeilles à cause de la paresse de Mimì."
     }
   ],
   "words": {

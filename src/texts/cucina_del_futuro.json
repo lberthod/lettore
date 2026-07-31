@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa il sintetizzatore alimentare nel 2075?",
-      "options": ["Crea qualsiasi piatto in pochi minuti", "Pulisce automaticamente la casa", "Fa la spesa da solo"],
-      "correct": 0
+      "options": [
+        "Crea qualsiasi piatto in pochi minuti",
+        "Pulisce automaticamente la casa",
+        "Fa la spesa da solo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un sintetizzatore alimentare capace di creare qualsiasi piatto in pochi minuti », donc il crée n'importe quel plat en quelques minutes."
     },
     {
       "q": "Perché Elena preferisce cucinare a mano?",
-      "options": ["Perché lo faceva anche sua nonna", "Perché non si fida della tecnologia", "Perché il sintetizzatore è troppo costoso"],
-      "correct": 0
+      "options": [
+        "Perché lo faceva anche sua nonna",
+        "Perché non si fida della tecnologia",
+        "Perché il sintetizzatore è troppo costoso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Elena cuisine « come faceva sua nonna prima di lei », donc parce que sa grand-mère faisait de même."
     },
     {
       "q": "Che cosa succede dopo la cena di Elena?",
-      "options": ["Molti amici iniziano a spegnere il sintetizzatore ogni tanto", "Tutti smettono di usare la tecnologia per sempre", "Nessuno cambia le proprie abitudini"],
-      "correct": 0
+      "options": [
+        "Molti amici iniziano a spegnere il sintetizzatore ogni tanto",
+        "Tutti smettono di usare la tecnologia per sempre",
+        "Nessuno cambia le proprie abitudini"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « molti di loro cominciano a spegnere il sintetizzatore almeno una volta alla settimana », donc beaucoup d'amis se mettent à l'éteindre de temps en temps."
     }
   ],
   "words": {

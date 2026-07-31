@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa cresce tra le pietre secondo la poesia?",
-      "options": ["Erba verde", "Fiori rossi", "Alberi alti"],
-      "correct": 0
+      "options": [
+        "Erba verde",
+        "Fiori rossi",
+        "Alberi alti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « erba verde tra le pietre bianche », donc c'est de l'herbe verte."
     },
     {
       "q": "Chi camminava in quel luogo secondo la poesia?",
-      "options": ["Uomini romani con le toghe", "Soldati moderni", "Pastori con le pecore"],
-      "correct": 0
+      "options": [
+        "Uomini romani con le toghe",
+        "Soldati moderni",
+        "Pastori con le pecore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Qui camminavano uomini romani, con le toghe lunghe », donc des hommes romains en toge."
     },
     {
       "q": "Che cosa fa la pietra secondo l'ultimo verso?",
-      "options": ["Resiste come testimone di un tempo lontano", "Si rompe completamente", "Scompare sotto la terra"],
-      "correct": 0
+      "options": [
+        "Resiste come testimone di un tempo lontano",
+        "Si rompe completamente",
+        "Scompare sotto la terra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la pietra resiste, testimone muto di un tempo lontano », donc elle résiste comme témoin d'un temps lointain."
     }
   ],
   "words": {

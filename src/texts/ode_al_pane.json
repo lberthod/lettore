@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Da quali ingredienti nasce il pane nella poesia?",
-      "options": ["Da farina e acqua", "Da latte e miele", "Da zucchero e burro"],
-      "correct": 0
+      "options": [
+        "Da farina e acqua",
+        "Da latte e miele",
+        "Da zucchero e burro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte commence par « Farina e acqua, nient'altro », donc le pain naît de la farine et de l'eau."
     },
     {
       "q": "Quando impastano le mani?",
-      "options": ["Prima dell'alba", "A mezzogiorno", "Dopo il tramonto"],
-      "correct": 0
+      "options": [
+        "Prima dell'alba",
+        "A mezzogiorno",
+        "Dopo il tramonto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mani che impastano prima dell'alba », donc les mains pétrissent avant l'aube."
     },
     {
       "q": "Che cosa rappresenta il pane diviso sulla tavola?",
-      "options": ["La prima parola di pace tra gli uomini", "Un segno di ricchezza", "Un'antica ricetta segreta"],
-      "correct": 0
+      "options": [
+        "La prima parola di pace tra gli uomini",
+        "Un segno di ricchezza",
+        "Un'antica ricetta segreta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le pain divisé est « prima parola di pace tra gli uomini », donc il représente la première parole de paix entre les hommes."
     }
   ],
   "words": {

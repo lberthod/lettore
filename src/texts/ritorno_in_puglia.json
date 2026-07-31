@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché Carlo torna in Puglia?",
-      "options": ["Per il matrimonio di sua cugina", "Per un viaggio di lavoro", "Per vendere la casa di famiglia"],
-      "correct": 0
+      "options": [
+        "Per il matrimonio di sua cugina",
+        "Per un viaggio di lavoro",
+        "Per vendere la casa di famiglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il revient en Puglia \"per il matrimonio di sua cugina\"."
     },
     {
       "q": "Che cosa osserva Carlo durante il tragitto verso casa?",
-      "options": ["Muretti a secco e trulli bianchi", "Grattacieli moderni", "Un grande porto industriale"],
-      "correct": 0
+      "options": [
+        "Muretti a secco e trulli bianchi",
+        "Grattacieli moderni",
+        "Un grande porto industriale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que Carlo observe \"i muretti a secco e i trulli bianchi\"."
     },
     {
       "q": "Che cosa si chiede Carlo alla fine della serata?",
-      "options": ["Se sia davvero felice a Milano", "Se debba vendere la macchina del padre", "Se debba restare per sempre in Puglia"],
-      "correct": 0
+      "options": [
+        "Se sia davvero felice a Milano",
+        "Se debba vendere la macchina del padre",
+        "Se debba restare per sempre in Puglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que Carlo \"si chiede per la prima volta se sia davvero felice a Milano\"."
     }
   ],
   "words": {

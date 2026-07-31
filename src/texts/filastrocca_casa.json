@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa bolle in cucina?",
-      "options": ["La minestra", "Il caffè", "L'acqua"],
-      "correct": 0
+      "options": [
+        "La minestra",
+        "Il caffè",
+        "L'acqua"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « In cucina bolle la minestra », donc c'est la soupe qui bout."
     },
     {
       "q": "Dove dorme il gatto?",
-      "options": ["Sulla finestra", "Sul tappeto", "Sul divano"],
-      "correct": 0
+      "options": [
+        "Sulla finestra",
+        "Sul tappeto",
+        "Sul divano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il gatto dorme sulla finestra », donc le chat dort sur la fenêtre."
     },
     {
       "q": "Come è la casa alla fine?",
-      "options": ["Fredda e triste", "Calda e il cuore è lieto", "Vuota"],
-      "correct": 1
+      "options": [
+        "Fredda e triste",
+        "Calda e il cuore è lieto",
+        "Vuota"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « La casa è calda, il cuore è lieto », donc la maison est chaude et le cœur joyeux."
     }
   ],
   "words": {

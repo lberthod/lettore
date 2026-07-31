@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Sotto quale impero Trieste divenne un grande porto franco?",
-      "options": ["Sotto l'impero degli Asburgo", "Sotto l'impero ottomano", "Sotto l'impero romano"],
-      "correct": 0
+      "options": [
+        "Sotto l'impero degli Asburgo",
+        "Sotto l'impero ottomano",
+        "Sotto l'impero romano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Trieste grandit comme « porto franco dell'impero » sous les Habsbourg."
     },
     {
       "q": "Che cosa custodiva Umberto Saba nella sua libreria antiquaria?",
-      "options": ["Un tesoro di volumi ingialliti", "Una collezione di quadri veneziani", "Antichi strumenti musicali"],
-      "correct": 0
+      "options": [
+        "Un tesoro di volumi ingialliti",
+        "Una collezione di quadri veneziani",
+        "Antichi strumenti musicali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que Saba « custodiva nella sua libreria antiquaria un tesoro di volumi ingialliti »."
     },
     {
       "q": "Che cos'è la bora?",
-      "options": ["Un vento impetuoso che scende dal Carso", "Un piatto tipico dei buffet triestini", "Un dialetto parlato sull'altopiano"],
-      "correct": 0
+      "options": [
+        "Un vento impetuoso che scende dal Carso",
+        "Un piatto tipico dei buffet triestini",
+        "Un dialetto parlato sull'altopiano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte définit la bora comme « un vento impetuoso che scende dal Carso »."
     }
   ],
   "words": {

@@ -19,13 +19,13 @@
 // Usage :
 //   node scripts/backfill-dictionary-register.mjs [--all] [--limit N] [--dry-run]
 //
-// La clé API vient de l'environnement (ANTHROPIC_API_KEY), comme pour
-// scripts/backfill-quiz-explanations.mjs.
+// La clé API vient de l'environnement (GLM_API_KEY), endpoint compatible
+// OpenAI (DeepSeek en production) — voir scripts/lib/llm-openai.mjs.
 
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
-import Anthropic from '@anthropic-ai/sdk'
+import { callLLM, requireApiKey } from './lib/llm-openai.mjs'
 import { loadShardedDictionary, writeLemmaShards } from './dictionary-shards.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
@@ -34,7 +34,6 @@ const CORPUS_WORDS_PATH = path.join(ROOT, 'scripts', 'data', 'dictionary-words.j
 // cette trace, ils seraient re-soumis au LLM à chaque exécution.
 const NEUTRAL_PATH = path.join(ROOT, 'scripts', 'data', 'register-neutral.json')
 
-const MODEL = 'claude-opus-4-8'
 // Lemmes par appel LLM : la classification est courte (un mot par ligne en
 // entrée, un couple lemme/registre en sortie), on peut charger les lots.
 const BATCH_SIZE = 50
@@ -61,30 +60,10 @@ if (!Number.isFinite(args.limit) && process.argv.includes('--limit')) {
   process.exit(1)
 }
 
-// Sortie attendue du modèle : un registre par lemme, repéré par le lemme
-// lui-même (plus robuste qu'un tableau ordonné si le modèle réordonne).
-const REGISTER_SCHEMA = {
-  type: 'object',
-  additionalProperties: false,
-  required: ['registers'],
-  properties: {
-    registers: {
-      type: 'array',
-      items: {
-        type: 'object',
-        additionalProperties: false,
-        required: ['lemma', 'register'],
-        properties: {
-          lemma: { type: 'string', description: 'Le lemme, recopié à l’identique depuis la liste fournie' },
-          register: {
-            type: 'string',
-            enum: ['formale', 'neutro', 'informale', 'letterario', 'dialettale'],
-          },
-        },
-      },
-    },
-  },
-}
+// DeepSeek ne supporte pas les structured outputs (json_schema strict) :
+// le format attendu est décrit dans le system prompt et la réponse est
+// validée côté script (validateRegisters), avec un retry par lot.
+const ALL_REGISTERS = new Set(['formale', 'neutro', 'informale', 'letterario', 'dialettale'])
 
 const SYSTEM = `Tu es lexicographe pour Leggendo, un dictionnaire italien-français destiné à des apprenants francophones. Pour chaque lemme fourni (avec sa nature grammaticale et sa définition), indique son registre de langue en italien contemporain :
 
@@ -97,34 +76,42 @@ const SYSTEM = `Tu es lexicographe pour Leggendo, un dictionnaire italien-franç
 Contraintes :
 - Réponds pour CHAQUE lemme demandé, en recopiant le lemme à l'identique.
 - Juge le mot dans son sens donné par la définition fournie, pas dans d'autres sens possibles.
-- N'invente pas de marquage : un mot simplement rare ou technique reste "neutro".`
+- N'invente pas de marquage : un mot simplement rare ou technique reste "neutro".
 
-let client = null
-function getClient() {
-  if (!client) client = new Anthropic()
-  return client
+Tu DOIS répondre avec un unique objet JSON valide, sans aucun texte avant ni après, exactement de cette forme :
+
+{
+  "registers": [
+    { "lemma": "recarsi", "register": "formale" },
+    { "lemma": "casa", "register": "neutro" }
+  ]
 }
 
-async function callClaude(prompt) {
-  const stream = getClient().messages.stream({
-    model: MODEL,
-    max_tokens: 8000,
-    system: SYSTEM,
-    output_config: { format: { type: 'json_schema', schema: REGISTER_SCHEMA } },
-    messages: [{ role: 'user', content: prompt }],
-  })
-  const msg = await stream.finalMessage()
-  if (msg.stop_reason === 'refusal') {
-    throw new Error('Requête refusée par les classificateurs de sécurité.')
+- "lemma" : le lemme, recopié à l'identique depuis la liste fournie.
+- "register" : exactement une de ces 5 valeurs : "formale", "neutro", "informale", "letterario", "dialettale".
+- Aucune autre clé, pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
+
+// Valide la réponse du modèle : un objet { registers: [...] } couvrant chaque
+// lemme du lot avec un registre parmi les 5 valeurs attendues. Renvoie une
+// Map lemme → registre, ou lève une erreur décrivant le problème.
+function validateRegisters(out, batch) {
+  if (!out || !Array.isArray(out.registers)) {
+    throw new Error('réponse sans tableau "registers"')
   }
-  if (msg.stop_reason === 'max_tokens') {
-    throw new Error('Sortie tronquée (max_tokens atteint).')
+  const byLemma = new Map()
+  for (const r of out.registers) {
+    if (!r || typeof r.lemma !== 'string') {
+      throw new Error(`entrée sans lemme : ${JSON.stringify(r).slice(0, 100)}`)
+    }
+    if (!ALL_REGISTERS.has(r.register)) {
+      throw new Error(`registre inattendu "${r.register}" pour "${r.lemma}"`)
+    }
+    byLemma.set(r.lemma, r.register)
   }
-  const text = msg.content
-    .filter((b) => b.type === 'text')
-    .map((b) => b.text)
-    .join('')
-  return JSON.parse(text)
+  for (const l of batch) {
+    if (!byLemma.has(l)) throw new Error(`registre manquant pour "${l}"`)
+  }
+  return byLemma
 }
 
 // --- Sélection des lemmes cibles ---
@@ -185,6 +172,9 @@ if (!todo.length) {
   process.exit(0)
 }
 
+// Des appels API vont partir : la clé est requise (pas en dry-run ci-dessus).
+requireApiKey()
+
 // --- Boucle par lots, écriture des shards après chaque lot (reprise) ---
 
 let done = 0
@@ -200,25 +190,30 @@ for (let start = 0; start < todo.length; start += BATCH_SIZE) {
     .join('\n')
 
   try {
-    const out = await callClaude(
-      `Indique le registre de langue de chacun de ces ${batch.length} lemmes italiens :\n\n${wordBlock}`
-    )
-    const byLemma = new Map(out.registers.map((r) => [r.lemma, r.register]))
+    const prompt = `Indique le registre de langue de chacun de ces ${batch.length} lemmes italiens :\n\n${wordBlock}`
+    // Sans structured outputs, une réponse peut être mal formée : on retente
+    // le lot une fois avant de le compter en échec (repris à la relance).
+    let byLemma
+    for (let attempt = 1; ; attempt++) {
+      const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 8000 })
+      try {
+        byLemma = validateRegisters(out, batch)
+        break
+      } catch (err) {
+        if (attempt >= 2) throw err
+        console.warn(`  ⚠ lot ${start / BATCH_SIZE + 1} : ${err.message} — nouvel essai…`)
+      }
+    }
     let batchMarked = 0
     for (const l of batch) {
       const register = byLemma.get(l)
-      if (register === undefined) {
-        throw new Error(`registre manquant pour "${l}"`)
-      }
       if (MARKED_REGISTERS.has(register)) {
         lemmas[l].register = register
         batchMarked++
-      } else if (register === 'neutro') {
-        // Champ absent des shards par design ; on trace le lemme pour ne pas
-        // le re-soumettre aux prochaines exécutions.
-        neutralLemmas.add(l)
       } else {
-        throw new Error(`registre inattendu "${register}" pour "${l}"`)
+        // "neutro" : champ absent des shards par design ; on trace le lemme
+        // pour ne pas le re-soumettre aux prochaines exécutions.
+        neutralLemmas.add(l)
       }
     }
     if (batchMarked > 0) writeLemmaShards(lemmas)

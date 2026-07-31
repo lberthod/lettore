@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Dove nasce il gelato moderno?",
-      "options": ["Alla corte dei Medici, nel Rinascimento", "A Roma, nell'antichità", "A Napoli, nell'Ottocento"],
-      "correct": 0
+      "options": [
+        "Alla corte dei Medici, nel Rinascimento",
+        "A Roma, nell'antichità",
+        "A Napoli, nell'Ottocento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le gelato moderne naît à la cour des Médicis à la Renaissance."
     },
     {
       "q": "Perché il gelato artigianale è più cremoso di quello industriale?",
-      "options": ["Perché contiene meno aria e meno grassi", "Perché contiene più zucchero", "Perché si conserva più a lungo"],
-      "correct": 0
+      "options": [
+        "Perché contiene meno aria e meno grassi",
+        "Perché contiene più zucchero",
+        "Perché si conserva più a lungo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique qu'il contient moins d'air et moins de matières grasses, ce qui le rend plus crémeux."
     },
     {
       "q": "Di che colore deve essere un buon gelato al pistacchio?",
-      "options": ["Verde scuro, quasi marrone", "Verde brillante", "Bianco"],
-      "correct": 0
+      "options": [
+        "Verde scuro, quasi marrone",
+        "Verde brillante",
+        "Bianco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'un bon gelato au pistacchio doit être vert foncé, presque marron."
     }
   ],
   "words": {

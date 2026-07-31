@@ -22,18 +22,33 @@
   "questions": [
     {
       "q": "Che cosa aveva rubato il corvo?",
-      "options": ["Un pezzo di pane", "Un pezzo di formaggio", "Una mela"],
-      "correct": 1
+      "options": [
+        "Un pezzo di pane",
+        "Un pezzo di formaggio",
+        "Una mela"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que le corbeau « rubò un bel pezzo di formaggio stagionato da un banco di formaggi »."
     },
     {
       "q": "Come convince la volpe il corvo ad aprire il becco?",
-      "options": ["Gli offre del cibo", "Lo minaccia", "Lo elogia con complimenti"],
-      "correct": 2
+      "options": [
+        "Gli offre del cibo",
+        "Lo minaccia",
+        "Lo elogia con complimenti"
+      ],
+      "correct": 2,
+      "explanation": "La volpe fait des compliments au corbeau, par exemple en disant « Le tue piume sono lucide come la seta » et en vantant son chant."
     },
     {
       "q": "Qual è la morale della storia?",
-      "options": ["Bisogna sempre condividere il cibo", "Diffidare dei complimenti interessati", "I corvi non sanno cantare"],
-      "correct": 1
+      "options": [
+        "Bisogna sempre condividere il cibo",
+        "Diffidare dei complimenti interessati",
+        "I corvi non sanno cantare"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit qu'« il corvo imparò a diffidare delle lodi troppo facili » et que « chi ascolta i complimenti senza pensare finisce per perdere ciò che ha di più prezioso »."
     }
   ],
   "words": {

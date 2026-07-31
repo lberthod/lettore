@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa fa la persona descritta nei primi versi?",
-      "options": ["Lavora dall'alba al tramonto per un salario insufficiente", "Viaggia per il mondo senza pensieri", "Studia in una grande università"],
-      "correct": 0
+      "options": [
+        "Lavora dall'alba al tramonto per un salario insufficiente",
+        "Viaggia per il mondo senza pensieri",
+        "Studia in una grande università"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « lavora dall'alba al tramonto per un salario che non basta al pane », donc elle travaille pour un salaire insuffisant."
     },
     {
       "q": "Che cosa cerca senza trovarlo la persona che bussa a mille porte?",
-      "options": ["Un tetto", "Un lavoro ben pagato", "Un amico sincero"],
-      "correct": 0
+      "options": [
+        "Un tetto",
+        "Un lavoro ben pagato",
+        "Un amico sincero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « cercando un tetto che non trova mai », donc elle cherche un toit sans le trouver."
     },
     {
       "q": "Che cosa lascia ogni ingiustizia secondo l'ultimo verso?",
-      "options": ["Una traccia che spinge qualcuno a reagire", "Nessuna conseguenza duratura", "Solo tristezza senza speranza"],
-      "correct": 0
+      "options": [
+        "Una traccia che spinge qualcuno a reagire",
+        "Nessuna conseguenza duratura",
+        "Solo tristezza senza speranza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni ingiustizia lascia una traccia, e chi la vede, prima o poi, reagisce », donc l'injustice laisse une trace qui pousse à réagir."
     }
   ],
   "words": {

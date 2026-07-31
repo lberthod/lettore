@@ -22,7 +22,8 @@
         "Per un guasto all'impianto elettrico",
         "Per un ampliamento del cortile interno"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte indique que les travaux sont rendus indispensables à cause des infiltrations signalées par les habitants du quatrième étage."
     },
     {
       "q": "Quale maggioranza è richiesta per approvare le deliberazioni secondo l'articolo 1136 del Codice Civile?",
@@ -31,7 +32,8 @@
         "L'unanimità di tutti i condomini senza eccezioni",
         "La sola presenza dell'amministratore del condominio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise que les délibérations sont valables avec la présence d'au moins un tiers des copropriétaires et un tiers de la valeur de l'immeuble, et le vote favorable de la majorité des présents."
     },
     {
       "q": "Che cosa possono fare i condomini che non possono partecipare all'assemblea?",
@@ -40,7 +42,8 @@
         "Inviare un messaggio vocale all'amministratore",
         "Rinviare automaticamente la decisione al mese successivo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que les copropriétaires absents peuvent donner une procuration écrite à un autre copropriétaire, mais qu'un mandataire ne peut représenter plus de trois mandants."
     }
   ],
   "words": {

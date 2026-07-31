@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Che cosa cuce radice a radice sotto il frascame?",
-      "options": ["Il micelio paziente", "Un ruscello nascosto", "Il vento del mattino"],
-      "correct": 0
+      "options": [
+        "Il micelio paziente",
+        "Un ruscello nascosto",
+        "Il vento del mattino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « micelio paziente che cuce radice a radice »."
     },
     {
       "q": "Chi attraversa la brina all'alba?",
-      "options": ["I cervi", "I pastori", "I cacciatori"],
-      "correct": 0
+      "options": [
+        "I cervi",
+        "I pastori",
+        "I cacciatori"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « All'alba i cervi attraversano la brina »."
     },
     {
       "q": "Secondo il poema, chi entra nel bosco che cosa è?",
-      "options": ["Un ospite, non un padrone", "Il padrone del bosco", "Un nemico della natura"],
-      "correct": 0
+      "options": [
+        "Un ospite, non un padrone",
+        "Il padrone del bosco",
+        "Un nemico della natura"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « chi entra qui non è padrone, è ospite »."
     }
   ],
   "words": {

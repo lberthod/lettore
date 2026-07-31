@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa sparisce prima della premiazione?",
-      "options": ["La coppa d'argento del vincitore", "Una damigiana di vino pregiato", "L'incasso della sagra"],
-      "correct": 0
+      "options": [
+        "La coppa d'argento del vincitore",
+        "Una damigiana di vino pregiato",
+        "L'incasso della sagra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la coppa d'argento destinata al vincitore sparì dal tavolo degli organizzatori »."
     },
     {
       "q": "Perché il produttore aveva nascosto la coppa?",
-      "options": ["Per costringere gli organizzatori a rivedere la sua squalifica", "Per venderla a un collezionista", "Per vendicarsi del vincitore"],
-      "correct": 0
+      "options": [
+        "Per costringere gli organizzatori a rivedere la sua squalifica",
+        "Per venderla a un collezionista",
+        "Per vendicarsi del vincitore"
+      ],
+      "correct": 0,
+      "explanation": "L'uomo confessò di aver nascosto la coppa non per rubarla, ma per costringere gli organizzatori a rivedere la sua squalifica."
     },
     {
       "q": "Su che cosa riflette Conti alla fine?",
-      "options": ["Su quanto l'orgoglio possa spingere a gesti sconsiderati", "Sulla qualità del vino locale", "Sulla necessità di più sicurezza alla sagra"],
-      "correct": 0
+      "options": [
+        "Su quanto l'orgoglio possa spingere a gesti sconsiderati",
+        "Sulla qualità del vino locale",
+        "Sulla necessità di più sicurezza alla sagra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « riflettendo su quanto l'orgoglio possa spingere anche le persone più oneste a gesti sconsiderati »."
     }
   ],
   "words": {

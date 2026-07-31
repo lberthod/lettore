@@ -19,7 +19,8 @@
         "Con la sua amica Chiara",
         "Con suo fratello"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « decide di partire con la sua amica Chiara »."
     },
     {
       "q": "Come si muovono le persone a Venezia?",
@@ -28,7 +29,8 @@
         "In macchina",
         "In autobus"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « si cammina a piedi o si prende il vaporetto »."
     },
     {
       "q": "Che cosa mangiano le due amiche nella trattoria vicino a Rialto?",
@@ -37,7 +39,8 @@
         "Pollo arrosto con patate",
         "Spaghetti alle vongole"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « il cameriere consiglia gli spaghetti alle vongole »."
     }
   ],
   "words": {

@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "A che ora parte il pullman dalla scuola?",
-      "options": ["Alle otto e mezza", "Alle dieci", "A mezzogiorno"],
-      "correct": 0
+      "options": [
+        "Alle otto e mezza",
+        "Alle dieci",
+        "A mezzogiorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Il pullman parte alle otto e mezza dalla scuola »."
     },
     {
       "q": "Che cosa succede quando Elena tocca la sfera speciale?",
-      "options": ["I suoi capelli si alzano", "La sfera si rompe", "La luce si spegne"],
-      "correct": 0
+      "options": [
+        "I suoi capelli si alzano",
+        "La sfera si rompe",
+        "La luce si spegne"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Elena tocca una sfera speciale e i suoi capelli si alzano »."
     },
     {
       "q": "Che cosa compra Elena nel negozio del museo?",
-      "options": ["Un piccolo libro sulle stelle", "Un modellino di robot", "Una maglietta"],
-      "correct": 0
+      "options": [
+        "Un piccolo libro sulle stelle",
+        "Un modellino di robot",
+        "Una maglietta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Elena compra un piccolo libro sulle stelle per il suo fratello »."
     }
   ],
   "words": {

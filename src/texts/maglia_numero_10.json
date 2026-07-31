@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Perché la maglia numero 10 ha un significato speciale per Enzo?",
-      "options": ["Perché l'aveva indossata suo fratello Davide, morto in un incidente", "Perché è la maglia della squadra nazionale", "Perché gliel'ha regalata l'allenatore per il suo compleanno"],
-      "correct": 0
+      "options": [
+        "Perché l'aveva indossata suo fratello Davide, morto in un incidente",
+        "Perché è la maglia della squadra nazionale",
+        "Perché gliel'ha regalata l'allenatore per il suo compleanno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que son frère Davide avait porté cette maglia pendant toute son enfance avant de mourir dans un accident de moto."
     },
     {
       "q": "Come reagisce Enzo subito dopo aver segnato il primo gol?",
-      "options": ["Resta fermo con la mano sulla maglia, senza esultare come gli altri", "Corre verso gli spalti a festeggiare con il pubblico", "Si toglie la maglia e la lancia verso i compagni"],
-      "correct": 0
+      "options": [
+        "Resta fermo con la mano sulla maglia, senza esultare come gli altri",
+        "Corre verso gli spalti a festeggiare con il pubblico",
+        "Si toglie la maglia e la lancia verso i compagni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Enzo n'a pas levé les bras et est resté immobile avec la main sur la maglia, sans exulter comme les autres joueurs."
     },
     {
       "q": "Cosa fa Enzo subito dopo la partita?",
-      "options": ["Chiede un passaggio al cimitero per andare dal fratello", "Va a festeggiare al bar del quartiere con gli amici", "Rilascia un'intervista ai giornalisti sportivi locali"],
-      "correct": 0
+      "options": [
+        "Chiede un passaggio al cimitero per andare dal fratello",
+        "Va a festeggiare al bar del quartiere con gli amici",
+        "Rilascia un'intervista ai giornalisti sportivi locali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'après le match, Enzo a demandé à l'entraîneur de le déposer au cimetière."
     }
   ],
   "words": {

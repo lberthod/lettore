@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa rappresenta il derby secondo il testo?",
-      "options": ["La messa cantata di una liturgia urbana", "Una semplice partita come le altre", "Un fenomeno recente nato con la televisione"],
-      "correct": 0
+      "options": [
+        "La messa cantata di una liturgia urbana",
+        "Una semplice partita come le altre",
+        "Un fenomeno recente nato con la televisione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que le derby « non è una semplice partita, bensì la messa cantata di una liturgia urbana »."
     },
     {
       "q": "Che cosa accade durante la settimana della vigilia?",
-      "options": ["Gli sfottò fioriscono negli uffici e nelle chat", "Le città vengono evacuate per prudenza", "I giornali evitano di parlare della partita"],
-      "correct": 0
+      "options": [
+        "Gli sfottò fioriscono negli uffici e nelle chat",
+        "Le città vengono evacuate per prudenza",
+        "I giornali evitano di parlare della partita"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que pendant la semaine de la veille, « gli sfottò fioriscono negli uffici e nelle chat familiari »."
     },
     {
       "q": "Perché nessuna città rinuncerebbe al proprio derby?",
-      "options": ["Perché offre un'appartenenza ereditata e indiscutibile", "Perché garantisce enormi profitti ai comuni", "Perché è imposto dal calendario federale"],
-      "correct": 0
+      "options": [
+        "Perché offre un'appartenenza ereditata e indiscutibile",
+        "Perché garantisce enormi profitti ai comuni",
+        "Perché è imposto dal calendario federale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que le derby offre « un'appartenenza ereditata, gratuita, indiscutibile », donc aucune ville n'y renoncerait."
     }
   ],
   "words": {

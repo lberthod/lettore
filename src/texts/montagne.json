@@ -172,7 +172,8 @@
         "Il Monte Bianco",
         "Il Monte Rosa"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « La montagna più alta è il Monte Bianco »."
     },
     {
       "q": "Come sono gli Appennini rispetto alle Alpi?",
@@ -181,7 +182,8 @@
         "Più vicini alla Francia e alla Svizzera",
         "Più dolci e più verdi"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que les Appennins sont « montagne più dolci e più verdi » par rapport aux Alpes."
     },
     {
       "q": "Cosa succede alla neve in primavera?",
@@ -190,7 +192,8 @@
         "Copre le vigne e gli ulivi",
         "Resta bianca solo sugli Appennini"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « In primavera, la neve si scioglie e riempie i laghi e i torrenti »."
     }
   ]
 }

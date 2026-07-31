@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quante volte al giorno bisogna dare da mangiare al cane?",
-      "options": ["Due volte", "Una volta", "Cinque volte"],
-      "correct": 0
+      "options": [
+        "Due volte",
+        "Una volta",
+        "Cinque volte"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « date da mangiare al cane due volte al giorno », donc il faut le nourrir deux fois par jour."
     },
     {
       "q": "Ogni quanto bisogna lavare il cane?",
-      "options": ["Una volta al mese", "Ogni giorno", "Una volta all'anno"],
-      "correct": 0
+      "options": [
+        "Una volta al mese",
+        "Ogni giorno",
+        "Una volta all'anno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « lavate il cane una volta al mese », donc il faut le laver une fois par mois."
     },
     {
       "q": "Che cosa bisogna evitare secondo la guida?",
-      "options": ["Lasciare il cane da solo per troppe ore senza acqua", "Portarlo dal veterinario", "Fare passeggiate troppo lunghe"],
-      "correct": 0
+      "options": [
+        "Lasciare il cane da solo per troppe ore senza acqua",
+        "Portarlo dal veterinario",
+        "Fare passeggiate troppo lunghe"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mai lasciare il cane da solo per troppe ore senza acqua o compagnia », donc il faut éviter de le laisser seul trop longtemps sans eau ni compagnie."
     }
   ],
   "words": {

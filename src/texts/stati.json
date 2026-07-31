@@ -198,7 +198,8 @@
         "La dinastia dei Savoia",
         "Lo Stato della Chiesa"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que la Lombardie et la Vénétie appartenaient à l'empire autrichien, qui les administrait depuis Vienne."
     },
     {
       "q": "Perché viaggiare attraverso la penisola era complicato per un mercante?",
@@ -207,7 +208,8 @@
         "Perché mancavano i treni tra gli stati",
         "Perché doveva mostrare documenti ai confini, cambiare moneta e pagare dazi"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte explique qu'il fallait montrer ses documents à chaque frontière, changer de monnaie et payer des droits sur les marchandises."
     },
     {
       "q": "Secondo il testo, cosa preparò lentamente il cammino verso l'unità?",
@@ -216,7 +218,8 @@
         "La lingua letteraria di Dante e una cultura comune",
         "La potenza economica di Napoli"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte affirme que c'est l'identité commune, faite de la langue littéraire de Dante et d'une culture partagée, qui a préparé lentement le chemin vers l'unité."
     }
   ]
 }

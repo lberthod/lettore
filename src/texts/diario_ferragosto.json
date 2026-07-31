@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si riunisce la famiglia per Ferragosto?",
-      "options": ["Nella casa al mare dei nonni", "In un ristorante di città", "In montagna, in un rifugio"],
-      "correct": 0
+      "options": [
+        "Nella casa al mare dei nonni",
+        "In un ristorante di città",
+        "In montagna, in un rifugio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « tutta la famiglia si è riunita nella casa al mare dei nonni »."
     },
     {
       "q": "Che cosa fanno i bambini nel pomeriggio?",
-      "options": ["Fanno il bagno", "Giocano a carte in casa", "Dormono tutto il pomeriggio"],
-      "correct": 0
+      "options": [
+        "Fanno il bagno",
+        "Giocano a carte in casa",
+        "Dormono tutto il pomeriggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i bambini hanno fatto il bagno »."
     },
     {
       "q": "Che cosa organizza il paese la sera?",
-      "options": ["I fuochi d'artificio sopra il mare", "Un concerto in piazza", "Una gara di nuoto"],
-      "correct": 0
+      "options": [
+        "I fuochi d'artificio sopra il mare",
+        "Un concerto in piazza",
+        "Una gara di nuoto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il paese ha organizzato i fuochi d'artificio sopra il mare »."
     }
   ],
   "words": {

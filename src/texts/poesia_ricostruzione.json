@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa c'è ora dove prima c'era la guerra?",
-      "options": ["Calce e mattoni", "Solo macerie vuote", "Un museo"],
-      "correct": 0
+      "options": [
+        "Calce e mattoni",
+        "Solo macerie vuote",
+        "Un museo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ora c'è calce, mattoni » : il y a maintenant de la chaux et des briques."
     },
     {
       "q": "Che cosa fanno le donne nella poesia?",
-      "options": ["Portano secchi lungo le strade", "Coltivano i campi", "Scrivono lettere"],
-      "correct": 0
+      "options": [
+        "Portano secchi lungo le strade",
+        "Coltivano i campi",
+        "Scrivono lettere"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le donne portano secchi lungo le strade » : les femmes portent des seaux le long des rues."
     },
     {
       "q": "Che cosa impara di nuovo il paese secondo l'ultimo verso?",
-      "options": ["A chiamarsi futuro", "A restare fermo nel passato", "A dimenticare tutto"],
-      "correct": 0
+      "options": [
+        "A chiamarsi futuro",
+        "A restare fermo nel passato",
+        "A dimenticare tutto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « impara di nuovo a chiamarsi futuro » : le pays apprend à nouveau à s'appeler futur."
     }
   ],
   "words": {

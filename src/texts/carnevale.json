@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Quando si svolge il Carnevale di Venezia?",
-      "options": ["Tra gennaio e febbraio", "In estate", "A dicembre"],
-      "correct": 0
+      "options": [
+        "Tra gennaio e febbraio",
+        "In estate",
+        "A dicembre"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que chaque année, entre janvier et février, Venise se transforme pour le Carnaval."
     },
     {
       "q": "Qual è il momento più famoso del Carnevale?",
-      "options": ["Il volo dell'angelo", "La sfilata delle gondole", "Il concerto in piazza San Marco"],
-      "correct": 0
+      "options": [
+        "Il volo dell'angelo",
+        "La sfilata delle gondole",
+        "Il concerto in piazza San Marco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que le moment le plus célèbre du Carnaval est le vol de l'ange."
     },
     {
       "q": "Quando è rinato il Carnevale moderno?",
-      "options": ["Nel 1979", "Nel 1900", "Nel 2000"],
-      "correct": 0
+      "options": [
+        "Nel 1979",
+        "Nel 1900",
+        "Nel 2000"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le Carnaval moderne est rené en 1979, après presque deux siècles de silence."
     }
   ],
   "words": {

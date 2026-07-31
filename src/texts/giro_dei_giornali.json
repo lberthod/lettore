@@ -20,7 +20,8 @@
         "Alle sette e mezza",
         "Alle nove"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Si sveglia molto presto, alle cinque e mezza »."
     },
     {
       "q": "Che lavoro fa Tommaso prima della scuola?",
@@ -29,7 +30,8 @@
         "Lavora in un'edicola tutto il giorno",
         "Aiuta il dottor Bianchi in ospedale"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'il « mette il sacco sulla bicicletta » et « consegna i giornali a molte case »."
     },
     {
       "q": "Cosa fa Tommaso con i soldi guadagnati?",
@@ -38,7 +40,8 @@
         "Li dà tutti al signor Renzo",
         "Compra una nuova bicicletta"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Con i soldi guadagnati, Tommaso compra i libri e un regalo per sua madre »."
     }
   ],
   "words": {

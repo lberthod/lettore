@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come viene descritta l'acqua del Po all'inizio della poesia?",
-      "options": ["Come qualcosa che si sfilaccia in mille rami tra fiume e mare", "Come un lago immobile e ghiacciato", "Come un fiume che scorre dritto senza deviazioni"],
-      "correct": 0
+      "options": [
+        "Come qualcosa che si sfilaccia in mille rami tra fiume e mare",
+        "Come un lago immobile e ghiacciato",
+        "Come un fiume che scorre dritto senza deviazioni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « L'acqua del Po si sfilaccia in mille rami » et qu'elle est « indecisa se essere fiume o essere mare », donc comme quelque chose qui se déchire en mille bras entre fleuve et mer."
     },
     {
       "q": "Che cosa fanno gli aironi cinerini secondo la seconda poesia?",
-      "options": ["Restano immobili sulla riva finché non colpiscono una preda", "Volano sempre in gruppi numerosi verso il mare", "Costruiscono nidi sopra le canne del canneto"],
-      "correct": 0
+      "options": [
+        "Restano immobili sulla riva finché non colpiscono una preda",
+        "Volano sempre in gruppi numerosi verso il mare",
+        "Costruiscono nidi sopra le canne del canneto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte décrit les aigrettes « immobili sulla riva » jusqu'à ce qu'un éclair d'argent les lance « in un colpo secco verso la preda », donc elles restent immobiles puis frappent une proie."
     },
     {
       "q": "Che cosa rappresentano le anguille nella quinta poesia?",
-      "options": ["Un viaggio antico e una memoria tramandata dai pescatori", "Un pericolo per l'equilibrio del delta", "Una specie ormai scomparsa dal delta"],
-      "correct": 0
+      "options": [
+        "Un viaggio antico e una memoria tramandata dai pescatori",
+        "Un pericolo per l'equilibrio del delta",
+        "Una specie ormai scomparsa dal delta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les anguilles « nascono lontano, oltre l'oceano » et qu'elles « portano nel corpo la memoria di un viaggio », et les vieux pêcheurs les appellent avec le même nom que leurs grands-pères, donc un voyage ancien et une mémoire transmise."
     }
   ],
   "words": {

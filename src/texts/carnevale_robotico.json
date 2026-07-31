@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa organizza ogni città nel 2055?",
-      "options": ["Il proprio Carnevale robotico", "Una gara di velocità tra robot", "Un festival di musica classica"],
-      "correct": 0
+      "options": [
+        "Il proprio Carnevale robotico",
+        "Una gara di velocità tra robot",
+        "Un festival di musica classica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Nel 2055, ogni città organizza il proprio Carnevale robotico »."
     },
     {
       "q": "Perché è difficile per Zeta partecipare alla sfilata?",
-      "options": ["Perché non è programmato per ballare", "Perché è troppo piccolo", "Perché non ha un costume"],
-      "correct": 0
+      "options": [
+        "Perché non è programmato per ballare",
+        "Perché è troppo piccolo",
+        "Perché non ha un costume"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i robot domestici non sono programmati per ballare »."
     },
     {
       "q": "Come reagisce il pubblico alla sfilata di Zeta?",
-      "options": ["Applaude con gioia ed emozione", "Resta indifferente", "Ride di lui"],
-      "correct": 0
+      "options": [
+        "Applaude con gioia ed emozione",
+        "Resta indifferente",
+        "Ride di lui"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il pubblico applaude a lungo: non ha mai visto un robot ballare con tanta gioia ed emozione »."
     }
   ],
   "words": {

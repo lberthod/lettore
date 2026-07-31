@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa ha fatto il comune davanti a scuola?",
-      "options": ["Una pista ciclabile nuova", "Un parco nuovo", "Un parcheggio nuovo"],
-      "correct": 0
+      "options": [
+        "Una pista ciclabile nuova",
+        "Un parco nuovo",
+        "Un parcheggio nuovo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il comune ha fatto una pista ciclabile nuova davanti a scuola »."
     },
     {
       "q": "Perché la mamma di Marco è contenta?",
-      "options": ["Perché c'è meno traffico davanti alla scuola", "Perché la scuola chiude prima", "Perché costa meno l'autobus"],
-      "correct": 0
+      "options": [
+        "Perché c'è meno traffico davanti alla scuola",
+        "Perché la scuola chiude prima",
+        "Perché costa meno l'autobus"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la maman est contente parce qu'il y a moins de trafic devant l'école."
     },
     {
       "q": "Cosa porta Giulia il giorno dopo?",
-      "options": ["La sua bicicletta", "Un ombrello", "Un pallone"],
-      "correct": 0
+      "options": [
+        "La sua bicicletta",
+        "Un ombrello",
+        "Un pallone"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Domani porto la mia bicicletta »."
     }
   ],
   "words": {

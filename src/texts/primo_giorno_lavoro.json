@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come si sente Luca nel suo primo giorno?",
-      "options": ["Annoiato", "Un po' emozionato", "Arrabbiato"],
-      "correct": 1
+      "options": [
+        "Annoiato",
+        "Un po' emozionato",
+        "Arrabbiato"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « un po' emozionato » (un peu ému)."
     },
     {
       "q": "Di che cosa si occupa Giulia?",
-      "options": ["Dei clienti", "Della contabilità", "Della pulizia"],
-      "correct": 0
+      "options": [
+        "Dei clienti",
+        "Della contabilità",
+        "Della pulizia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « si occupa dei clienti » (elle s'occupe des clients)."
     },
     {
       "q": "Che cosa è importante secondo il capo?",
-      "options": ["Non sbagliare mai", "Avere voglia di imparare", "Lavorare velocemente"],
-      "correct": 1
+      "options": [
+        "Non sbagliare mai",
+        "Avere voglia di imparare",
+        "Lavorare velocemente"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « L'importante è avere voglia di imparare » (l'important est d'avoir envie d'apprendre)."
     }
   ],
   "words": {

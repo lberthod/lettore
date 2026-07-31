@@ -29,7 +29,8 @@
         "Ha sempre lavorato con un contratto a tempo indeterminato",
         "Non ha mai avuto alcuna esperienza lavorativa"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « ho lavorato come stagista prima, poi come collaboratore a tempo determinato in un'azienda di consulenza »."
     },
     {
       "q": "Come organizzerebbe il candidato le priorità in una settimana intensa?",
@@ -38,7 +39,8 @@
         "Nasconderebbe i ritardi fino all'ultimo momento",
         "Rifiuterebbe di gestire più di un progetto"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « stabilirei quali scadenze siano davvero urgenti, poi comunicherei subito al team eventuali ritardi »."
     },
     {
       "q": "Che cosa promette la selezionatrice riguardo ai primi mesi di lavoro?",
@@ -47,7 +49,8 @@
         "Nessun tipo di supporto o formazione iniziale",
         "Un trasferimento immediato in un'altra sede"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « è previsto un periodo di formazione affinché lei possa inserirsi senza fretta »."
     }
   ],
   "words": {

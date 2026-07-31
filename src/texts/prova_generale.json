@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa manca nella scena secondo il regista?",
-      "options": ["La tensione tra i due personaggi", "La musica di sottofondo", "I costumi giusti"],
-      "correct": 0
+      "options": [
+        "La tensione tra i due personaggi",
+        "La musica di sottofondo",
+        "I costumi giusti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Manca la tensione tra i due personaggi »."
     },
     {
       "q": "Che cosa consiglia il regista al pubblico riguardo alla recitazione?",
-      "options": ["Che il pubblico non immagina se non vede sul palco", "Che il pubblico capisce sempre tutto", "Che il pubblico non conta"],
-      "correct": 0
+      "options": [
+        "Che il pubblico non immagina se non vede sul palco",
+        "Che il pubblico capisce sempre tutto",
+        "Che il pubblico non conta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il pubblico non immagina niente se non lo vede sul palco »."
     },
     {
       "q": "Che cosa succede domani sera?",
-      "options": ["Il teatro sarà pieno", "Lo spettacolo sarà cancellato", "Cambierà il regista"],
-      "correct": 0
+      "options": [
+        "Il teatro sarà pieno",
+        "Lo spettacolo sarà cancellato",
+        "Cambierà il regista"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Domani sera il teatro sarà pieno »."
     }
   ],
   "words": {

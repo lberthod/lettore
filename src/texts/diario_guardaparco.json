@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Quanti stambecchi hanno contato sul versante nord?",
-      "options": ["Quarantadue", "Trentacinque", "Cinquantadue"],
-      "correct": 0
+      "options": [
+        "Quarantadue",
+        "Trentacinque",
+        "Cinquantadue"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « quarantadue, tre in più dell'anno scorso »."
     },
     {
       "q": "Che cosa ha visto il guardaparco nel nido dell'aquila reale?",
-      "options": ["Due uova", "Tre piccoli già nati", "Un nido vuoto"],
-      "correct": 0
+      "options": [
+        "Due uova",
+        "Tre piccoli già nati",
+        "Un nido vuoto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le garde a vu « due uova » dans le nid de l'aigle royal."
     },
     {
       "q": "Perché il guardaparco resta nonostante lo stipendio basso?",
-      "options": ["Perché nessun ufficio può offrirgli un'alba sulle montagne", "Perché spera in una promozione", "Perché non trova un altro lavoro"],
-      "correct": 0
+      "options": [
+        "Perché nessun ufficio può offrirgli un'alba sulle montagne",
+        "Perché spera in una promozione",
+        "Perché non trova un altro lavoro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « nessun ufficio potrà mai offrirmi un'alba sulle montagne dello Stelvio »."
     }
   ],
   "words": {

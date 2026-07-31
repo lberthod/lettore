@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Qual è il problema che hanno Sara e Marco?",
-      "options": ["L'app si blocca prima della presentazione", "Hanno perso tutti i loro dati", "Non hanno un computer disponibile"],
-      "correct": 0
+      "options": [
+        "L'app si blocca prima della presentazione",
+        "Hanno perso tutti i loro dati",
+        "Non hanno un computer disponibile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'app si blocca ancora » avant la présentation."
     },
     {
       "q": "Dove pensa Marco che sia l'errore?",
-      "options": ["Nella parte che gestisce i dati degli utenti", "Nel design grafico dell'app", "Nella connessione internet"],
-      "correct": 0
+      "options": [
+        "Nella parte che gestisce i dati degli utenti",
+        "Nel design grafico dell'app",
+        "Nella connessione internet"
+      ],
+      "correct": 0,
+      "explanation": "Marco dit « Forse l'errore è nella parte che gestisce i dati degli utenti »."
     },
     {
       "q": "Che cosa manca nel codice secondo Marco?",
-      "options": ["Un punto e virgola", "Un intero paragrafo di codice", "Il nome della funzione principale"],
-      "correct": 0
+      "options": [
+        "Un punto e virgola",
+        "Un intero paragrafo di codice",
+        "Il nome della funzione principale"
+      ],
+      "correct": 0,
+      "explanation": "Marco dit « Manca solo un punto e virgola »."
     }
   ],
   "words": {

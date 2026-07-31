@@ -26,7 +26,8 @@
         "È stata licenziata dal direttore per un errore grave",
         "Vuole trasferirsi all'estero senza un motivo preciso"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte explique qu'elle a reçu une proposition « che sento profondamente vicino ai miei valori » et que « la nascita di mia figlia » lui donne envie de consacrer plus de temps à sa fille."
     },
     {
       "q": "Che tipo di lavoro andrà a fare la protagonista?",
@@ -35,7 +36,8 @@
         "Un impiego come insegnante universitaria",
         "Un lavoro autonomo come consulente finanziaria"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte précise qu'il s'agit d'« un ruolo di coordinamento in una piccola cooperativa che si occupa di inserimento lavorativo per persone con disabilità »."
     },
     {
       "q": "Cosa propone la protagonista per facilitare la sua partenza dall'azienda?",
@@ -44,7 +46,8 @@
         "Di lasciare immediatamente senza alcun preavviso",
         "Di continuare a lavorare part-time per un anno intero"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Elle propose de « redigere un documento dettagliato sulle procedure interne e affiancare la persona che mi succederà »."
     }
   ],
   "words": {

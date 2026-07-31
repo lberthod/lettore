@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Come cominciano a comunicare Marta e Sandro?",
-      "options": ["Attraverso piccoli gesti con le piante", "Attraverso lettere scritte", "Tramite i social media"],
-      "correct": 0
+      "options": [
+        "Attraverso piccoli gesti con le piante",
+        "Attraverso lettere scritte",
+        "Tramite i social media"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit : « Da quel piccolo gesto comincia una specie di dialogo silenzioso » et que Sandro déplace un pot pour faire de la place."
     },
     {
       "q": "Quando parlano di più Marta e Sandro?",
-      "options": ["La sera, dai loro balconi", "Al mattino, in cucina", "Durante le riunioni di condominio"],
-      "correct": 0
+      "options": [
+        "La sera, dai loro balconi",
+        "Al mattino, in cucina",
+        "Durante le riunioni di condominio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « la sera, quando entrambi escono a prendere una boccata d'aria, cominciano a scambiarsi qualche parola » et que ces conversations deviennent un rituel."
     },
     {
       "q": "Cosa succede quando Marta incontra un uomo anziano in ascensore?",
-      "options": ["Non lo riconosce come il suo vicino di balcone", "Lo riconosce subito e lo saluta con un abbraccio", "Litigano per un malinteso"],
-      "correct": 0
+      "options": [
+        "Non lo riconosce come il suo vicino di balcone",
+        "Lo riconosce subito e lo saluta con un abbraccio",
+        "Litigano per un malinteso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « nessuno dei due immagina che si tratti proprio del suo vicino di balcone, e si separano senza riconoscersi »."
     }
   ],
   "words": {

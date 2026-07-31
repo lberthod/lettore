@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Qual è il risultato all'intervallo della finale?",
-      "options": ["La squadra perde due a zero", "La squadra vince tre a uno", "Le due squadre sono in pareggio"],
-      "correct": 0
+      "options": [
+        "La squadra perde due a zero",
+        "La squadra vince tre a uno",
+        "Le due squadre sono in pareggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Perdiamo due a zero », donc l'équipe perd deux à zéro."
     },
     {
       "q": "Che cosa fa il capitano prima di tornare in campo?",
-      "options": ["Consegna la fascia al giovane portiere", "Litiga con il mister davanti a tutti", "Annuncia che lascia subito la squadra"],
-      "correct": 0
+      "options": [
+        "Consegna la fascia al giovane portiere",
+        "Litiga con il mister davanti a tutti",
+        "Annuncia che lascia subito la squadra"
+      ],
+      "correct": 0,
+      "explanation": "Le texte montre le capitaine qui dit « Vieni qui, ragazzo » et qui lui remet la fascia, donc il donne le brassard au jeune gardien."
     },
     {
       "q": "Di che cosa parla soprattutto il discorso del mister?",
-      "options": ["Delle ragioni per cui giocano da vent'anni in quel club", "Della nuova tattica per il secondo tempo", "Dei soldi promessi dalla società in caso di vittoria"],
-      "correct": 0
+      "options": [
+        "Delle ragioni per cui giocano da vent'anni in quel club",
+        "Della nuova tattica per il secondo tempo",
+        "Dei soldi promessi dalla società in caso di vittoria"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « E sapete perché? Perché questo club è l'unico posto al mondo... », donc le discours du mister explique surtout les raisons pour lesquelles ils jouent depuis vingt ans dans ce club."
     }
   ],
   "words": {

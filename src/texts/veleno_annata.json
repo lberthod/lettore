@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "Come si tradisce l'enologo?",
-      "options": ["Descrive il sapore di una bottiglia che nessuno doveva aver aperto", "Confessa spontaneamente alla commissaria", "Viene riconosciuto da un testimone"],
-      "correct": 0
+      "options": [
+        "Descrive il sapore di una bottiglia che nessuno doveva aver aperto",
+        "Confessa spontaneamente alla commissaria",
+        "Viene riconosciuto da un testimone"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que personne, sauf l'empoisonneur, n'avait pu goûter cette bouteille avant la dégustation, donc en décrivant son goût, l'œnologue se trahit."
     },
     {
       "q": "Perché Ferrandi doveva essere messo a tacere?",
-      "options": ["Stava per rivelare che l'annata era falsificata", "Aveva rubato una bottiglia preziosa", "Voleva comprare la tenuta dei conti"],
-      "correct": 0
+      "options": [
+        "Stava per rivelare che l'annata era falsificata",
+        "Aveva rubato una bottiglia preziosa",
+        "Voleva comprare la tenuta dei conti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Ferrandi s'apprêtait à révéler au monde que ce millésime était falsifié."
     },
     {
       "q": "In quale bottiglia era stato versato il veleno?",
-      "options": ["In quella del millenovecentonovantotto", "In tutte le dieci annate", "Nel calice della nuora"],
-      "correct": 0
+      "options": [
+        "In quella del millenovecentonovantotto",
+        "In tutte le dieci annate",
+        "Nel calice della nuora"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les analyses ont révélé que le poison n'avait été versé que dans la bouteille de 1998."
     }
   ],
   "words": {

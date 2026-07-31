@@ -24,7 +24,8 @@
         "Perché il Molise è stato ufficialmente abolito come regione",
         "Perché non compare su nessuna mappa geografica"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que la boutade est née «per scherzo su un social network» puis est devenue le trait distinctif le plus connu de la région."
     },
     {
       "q": "Che cosa sono i tratturi menzionati nel testo?",
@@ -33,7 +34,8 @@
         "Antiche strade romane costruite per i legionari",
         "Canali di irrigazione usati per l'agricoltura"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte définit les tratturi comme «larghe vie erbose» le long desquelles les bergers conduisaient leurs troupeaux pendant des siècles."
     },
     {
       "q": "Come hanno reagito i molisani alla battuta sulla propria inesistenza?",
@@ -42,7 +44,8 @@
         "L'hanno denunciata come offensiva alle autorità",
         "L'hanno completamente ignorata senza mai parlarne"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte explique que les Molisani ont adopté la plaisanterie comme un «vessillo paradossale», symbole d'identité et motif d'orgueil partagé."
     }
   ],
   "words": {

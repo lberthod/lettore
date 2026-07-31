@@ -17,7 +17,8 @@
         "A Venezia",
         "In Cina"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Nasce a Venezia », donc Marco Polo naît à Venise."
     },
     {
       "q": "Chi incontra Marco Polo in Cina?",
@@ -26,7 +27,8 @@
         "Un altro viaggiatore",
         "L'imperatore Kublai Khan"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « incontra il grande imperatore Kublai Khan », donc il rencontre l'empereur Kublai Khan."
     },
     {
       "q": "Come si chiama il libro di Marco Polo?",
@@ -35,7 +37,8 @@
         "La Via della Seta",
         "Il Viaggio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Il libro si chiama 'Il Milione' », donc le livre s'appelle Il Milione."
     }
   ],
   "words": {

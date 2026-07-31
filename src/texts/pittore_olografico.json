@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa fa l'artista olografico Iris?",
-      "options": ["Dipinge quadri che cambiano secondo l'umore dei visitatori", "Vende quadri antichi restaurati", "Insegna storia dell'arte ai turisti"],
-      "correct": 0
+      "options": [
+        "Dipinge quadri che cambiano secondo l'umore dei visitatori",
+        "Vende quadri antichi restaurati",
+        "Insegna storia dell'arte ai turisti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Iris « dipinge quadri che cambiano forma secondo l'umore dei visitatori »."
     },
     {
       "q": "Come reagisce Iris davanti alla bambina che piange?",
-      "options": ["Lascia l'opera identica, senza modificarla", "Cambia subito i colori per farla sorridere", "Ignora completamente la sua reazione"],
-      "correct": 0
+      "options": [
+        "Lascia l'opera identica, senza modificarla",
+        "Cambia subito i colori per farla sorridere",
+        "Ignora completamente la sua reazione"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Iris, « invece di modificare l'immagine come sempre, la lascia identica »."
     },
     {
       "q": "Che cosa cominciano a chiedersi i critici alla fine?",
-      "options": ["Se Iris stia sviluppando una sensibilità artistica", "Se Iris debba essere spento definitivamente", "Se i visitatori preferiscano quadri tradizionali"],
-      "correct": 0
+      "options": [
+        "Se Iris stia sviluppando una sensibilità artistica",
+        "Se Iris debba essere spento definitivamente",
+        "Se i visitatori preferiscano quadri tradizionali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les critiques « cominciano a chiedersi se Iris non stia sviluppando qualcosa di simile alla sensibilità artistica »."
     }
   ],
   "words": {

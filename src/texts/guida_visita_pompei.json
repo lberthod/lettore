@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In quali giorni sono aperti gli scavi di Pompei?",
-      "options": ["Tutti i giorni, tranne alcune festività", "Solo nei weekend", "Solo d'estate"],
-      "correct": 0
+      "options": [
+        "Tutti i giorni, tranne alcune festività",
+        "Solo nei weekend",
+        "Solo d'estate"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'ils sont ouverts \"tutti i giorni\" sauf le 1er janvier et le 25 décembre."
     },
     {
       "q": "Dove si conclude il percorso consigliato?",
-      "options": ["Alla Villa dei Misteri", "Al Vesuvio", "Al porto antico"],
-      "correct": 0
+      "options": [
+        "Alla Villa dei Misteri",
+        "Al Vesuvio",
+        "Al porto antico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit de conclure la visite \"alla Villa dei Misteri\"."
     },
     {
       "q": "Che cosa consiglia la guida di portare?",
-      "options": ["Scarpe comode, acqua e un cappello", "Un ombrello e stivali di gomma", "Solo una macchina fotografica"],
-      "correct": 0
+      "options": [
+        "Scarpe comode, acqua e un cappello",
+        "Un ombrello e stivali di gomma",
+        "Solo una macchina fotografica"
+      ],
+      "correct": 0,
+      "explanation": "La guide conseille de porter \"scarpe comode, una bottiglia d'acqua e un cappello\"."
     }
   ],
   "words": {

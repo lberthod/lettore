@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa mancava al robot all'inizio della storia?",
-      "options": ["I sentimenti", "La forza fisica", "La velocità"],
-      "correct": 0
+      "options": [
+        "I sentimenti",
+        "La forza fisica",
+        "La velocità"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un robot perfetto, ma senza sentimenti », donc il lui manquait les sentiments."
     },
     {
       "q": "Chi entra nel laboratorio ferito?",
-      "options": ["Un gatto", "Un cane", "Un uccellino"],
-      "correct": 0
+      "options": [
+        "Un gatto",
+        "Un cane",
+        "Un uccellino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un gatto ferito entrò nel laboratorio », donc c'est un chat blessé."
     },
     {
       "q": "Che cosa impara il robot alla fine?",
-      "options": ["Che può imparare a prendersi cura di qualcuno", "Che deve smettere di lavorare", "Che i gatti sono pericolosi"],
-      "correct": 0
+      "options": [
+        "Che può imparare a prendersi cura di qualcuno",
+        "Che deve smettere di lavorare",
+        "Che i gatti sono pericolosi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il robot imparò che anche una macchina può imparare a prendersi cura di qualcuno », donc il apprend qu'il peut prendre soin de quelqu'un."
     }
   ],
   "words": {

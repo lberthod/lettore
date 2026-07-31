@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa costruisce ogni studente nel laboratorio?",
-      "options": ["Un drone personale", "Un robot da cucina", "Una bicicletta elettrica"],
-      "correct": 0
+      "options": [
+        "Un drone personale",
+        "Un robot da cucina",
+        "Una bicicletta elettrica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ogni studente costruisce il proprio drone personale », donc chaque élève construit un drone personnel."
     },
     {
       "q": "Che cosa succede al drone di Marta?",
-      "options": ["Si rompe subito", "Vola troppo in alto e sparisce", "Vince un premio"],
-      "correct": 1
+      "options": [
+        "Si rompe subito",
+        "Vola troppo in alto e sparisce",
+        "Vince un premio"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « il drone di Marta vola troppo in alto e sparisce tra le nuvole », donc il s'égare."
     },
     {
       "q": "Che cosa mostra il drone quando ritorna?",
-      "options": ["Un temporale", "Un villaggio mai visto sulle mappe", "Una gara di droni"],
-      "correct": 1
+      "options": [
+        "Un temporale",
+        "Un villaggio mai visto sulle mappe",
+        "Una gara di droni"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « il drone ritorna da solo e mostra immagini di un piccolo villaggio mai visto prima sulle mappe », donc il montre un village inconnu."
     }
   ],
   "words": {

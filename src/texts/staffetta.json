@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanti anni aveva Maria?",
-      "options": ["Sedici", "Venti", "Trenta"],
-      "correct": 0
+      "options": [
+        "Sedici",
+        "Venti",
+        "Trenta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Maria aveva soltanto sedici anni », donc elle avait seize ans."
     },
     {
       "q": "Dove nascondeva i messaggi?",
-      "options": ["Nell'orlo del cappotto", "Nelle scarpe", "In un libro"],
-      "correct": 0
+      "options": [
+        "Nell'orlo del cappotto",
+        "Nelle scarpe",
+        "In un libro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'elle cachait les messages « nell'orlo del cappotto », c'est-à-dire dans l'ourlet du manteau."
     },
     {
       "q": "Perché Maria non raccontò mai le sue imprese?",
-      "options": ["Perché le aveva dimenticate", "Perché la vera libertà non ha bisogno di medaglie", "Perché aveva paura"],
-      "correct": 1
+      "options": [
+        "Perché le aveva dimenticate",
+        "Perché la vera libertà non ha bisogno di medaglie",
+        "Perché aveva paura"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit que « la vera libertà non ha bisogno di medaglie », ce qui explique pourquoi elle n'a jamais raconté ses exploits."
     }
   ],
   "words": {
@@ -112,8 +127,7 @@
     "una": "une",
     "vera": "vraie",
     "viso": "visage",
-    "vita": "vie",
-    "era": "était"
+    "vita": "vie"
   },
   "sentences": {
     "Nell'inverno del millenovecentoquarantaquattro, Maria aveva soltanto sedici anni, ma era già una staffetta partigiana.": "Durant l'hiver mille neuf cent quarante-quatre, Maria n'avait que seize ans, mais elle était déjà agent de liaison des partisans.",

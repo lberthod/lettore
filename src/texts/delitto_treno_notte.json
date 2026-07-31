@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove avviene il delitto?",
-      "options": ["Su un treno notturno per Bari", "In un albergo di montagna", "Su una nave da crociera"],
-      "correct": 0
+      "options": [
+        "Su un treno notturno per Bari",
+        "In un albergo di montagna",
+        "Su una nave da crociera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que le crime se déroule dans le « treno notturno per Bari »."
     },
     {
       "q": "Chi risolve il caso prima dell'arrivo della polizia?",
-      "options": ["L'ispettrice Conti", "Il capotreno", "Un altro passeggero anonimo"],
-      "correct": 0
+      "options": [
+        "L'ispettrice Conti",
+        "Il capotreno",
+        "Un altro passeggero anonimo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que l'« ispettrice Conti » prend le contrôle avant l'arrivée de la police."
     },
     {
       "q": "Qual è il movente del delitto?",
-      "options": ["Un antico debito mai saldato", "Una rapina finita male", "Una vendetta d'amore"],
-      "correct": 0
+      "options": [
+        "Un antico debito mai saldato",
+        "Una rapina finita male",
+        "Una vendetta d'amore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte conclut que Conti a découvert un « antico debito mai saldato » comme mobile."
     }
   ],
   "words": {

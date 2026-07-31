@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove si trova Marco con la sua famiglia?",
-      "options": ["A Vienna, per le vacanze di Natale", "A Roma, per lavoro", "A casa sua"],
-      "correct": 0
+      "options": [
+        "A Vienna, per le vacanze di Natale",
+        "A Roma, per lavoro",
+        "A casa sua"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sono a Vienna con la mia famiglia per le vacanze di Natale »."
     },
     {
       "q": "Cosa compra Marco per Anna?",
-      "options": ["Una candela profumata", "Un cappello di lana", "Una cioccolata calda"],
-      "correct": 0
+      "options": [
+        "Una candela profumata",
+        "Un cappello di lana",
+        "Una cioccolata calda"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Compro un piccolo regalo per te... È una candela profumata al cioccolato »."
     },
     {
       "q": "Come tornano a casa Marco e la sua famiglia?",
-      "options": ["In treno", "In aereo", "A piedi"],
-      "correct": 0
+      "options": [
+        "In treno",
+        "In aereo",
+        "A piedi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Poi torniamo a casa in treno »."
     }
   ],
   "words": {

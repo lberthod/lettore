@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché la madre è particolarmente emozionata all'inizio della scena?",
-      "options": ["Perché è la prima volta da anni che cenano tutti insieme", "Perché festeggia il proprio compleanno", "Perché ha appena ricevuto una brutta notizia"],
-      "correct": 0
+      "options": [
+        "Perché è la prima volta da anni che cenano tutti insieme",
+        "Perché festeggia il proprio compleanno",
+        "Perché ha appena ricevuto una brutta notizia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « sono anni che non ceniamo così, tutti insieme sotto lo stesso tetto », donc c'est la première fois depuis des années qu'ils dînent tous ensemble."
     },
     {
       "q": "Di che cosa accusa il padre Elena?",
-      "options": ["Di assenze prolungate dovute alla vita all'estero", "Di aver sprecato i suoi risparmi", "Di non aver mai chiamato la famiglia"],
-      "correct": 0
+      "options": [
+        "Di assenze prolungate dovute alla vita all'estero",
+        "Di aver sprecato i suoi risparmi",
+        "Di non aver mai chiamato la famiglia"
+      ],
+      "correct": 0,
+      "explanation": "Le père dit « Vivere all'estero non giustifica certe assenze prolungate », donc il reproche à Elena ses absences prolongées à cause de sa vie à l'étranger."
     },
     {
       "q": "Che cosa propone il fratello per risolvere la tensione?",
-      "options": ["Di godersi semplicemente la serata senza vecchi rancori", "Di lasciare subito la tavola", "Di parlare di un altro argomento per ore"],
-      "correct": 0
+      "options": [
+        "Di godersi semplicemente la serata senza vecchi rancori",
+        "Di lasciare subito la tavola",
+        "Di parlare di un altro argomento per ore"
+      ],
+      "correct": 0,
+      "explanation": "Le frère dit « godiamoci semplicemente questa sera, senza rovinarla con vecchi rancori », donc il propose de profiter simplement de la soirée sans vieilles rancunes."
     }
   ],
   "words": {

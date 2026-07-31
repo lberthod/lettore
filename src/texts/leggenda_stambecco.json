@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa si narrava di chi avesse ucciso lo stambecco bianco?",
-      "options": ["Che si sarebbe portato addosso una sventura per generazioni", "Che sarebbe diventato ricco", "Che sarebbe diventato il capo del villaggio"],
-      "correct": 0
+      "options": [
+        "Che si sarebbe portato addosso una sventura per generazioni",
+        "Che sarebbe diventato ricco",
+        "Che sarebbe diventato il capo del villaggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que celui qui aurait osé tuer l'animal se serait attiré une malédiction capable de traverser des générations entières."
     },
     {
       "q": "Che cosa fece Bastian quando raggiunse lo stambecco sul ciglio del precipizio?",
-      "options": ["Abbassò l'arma e lo lasciò andare", "Sparò immediatamente", "Fuggì spaventato"],
-      "correct": 0
+      "options": [
+        "Abbassò l'arma e lo lasciò andare",
+        "Sparò immediatamente",
+        "Fuggì spaventato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il a baissé son arme lentement et a laissé le bouquetin s'éloigner parmi les rochers."
     },
     {
       "q": "Che cosa trovò Bastian il mattino seguente nella sua baita?",
-      "options": ["La baita colma di neve fresca", "La baita distrutta dal vento", "Lo stambecco bianco addormentato davanti alla porta"],
-      "correct": 0
+      "options": [
+        "La baita colma di neve fresca",
+        "La baita distrutta dal vento",
+        "Lo stambecco bianco addormentato davanti alla porta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le lendemain matin, il trouva sa cabane remplie de neige fraîche."
     }
   ],
   "words": {
@@ -128,7 +143,6 @@
     "ciclo": "cycle",
     "cielo": "ciel",
     "ciglio": "bord (« sul ciglio » = au bord)",
-    "cielo": "ciel",
     "città": "ville",
     "ciò": "ce (que)",
     "colma": "pleine",

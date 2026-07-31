@@ -227,7 +227,8 @@
         "Un'arte apprezzata soltanto dagli intellettuali fiorentini",
         "Una passione popolare, come oggi il cinema o il calcio"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que l'opéra était « la passion populaire de son temps, comme aujourd'hui le cinéma ou le football »."
     },
     {
       "q": "Perché ai suoi tempi il nome di Verdi veniva scritto sui muri?",
@@ -236,7 +237,8 @@
         "Per protestare contro i fischi del pubblico della Scala",
         "Per pubblicizzare le prime dei suoi nuovi spettacoli"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Verdi était un symbole du Risorgimento et que « son nom était écrit sur les murs comme message patriotique »."
     },
     {
       "q": "Quale argomento usa il testo contro l'idea che l'opera sia un'arte del passato?",
@@ -245,7 +247,8 @@
         "I teatri sono ancora pieni e le arene estive attirano un pubblico nuovo",
         "Il biglietto costa oggi meno che ai tempi di Verdi"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte affirme que « les théâtres italiens sont encore pleins » et que les arènes d'été attirent un nouveau public."
     }
   ]
 }

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché oggi è un giorno speciale per Sofia?",
-      "options": ["È il suo compleanno", "Ha iniziato la scuola nuova", "È andata in vacanza"],
-      "correct": 1
+      "options": [
+        "È il suo compleanno",
+        "Ha iniziato la scuola nuova",
+        "È andata in vacanza"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Ho iniziato la scuola nuova », donc c'est pour cela que la journée est spéciale."
     },
     {
       "q": "Come si sentiva Sofia all'inizio?",
-      "options": ["Molto nervosa", "Molto felice", "Annoiata"],
-      "correct": 0
+      "options": [
+        "Molto nervosa",
+        "Molto felice",
+        "Annoiata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ero molto nervosa », donc Sofia se sentait très nerveuse au début."
     },
     {
       "q": "Che cosa hanno in comune Sofia ed Elena?",
-      "options": ["Amano gli stessi libri", "Abitano vicino", "Hanno la stessa età"],
-      "correct": 0
+      "options": [
+        "Amano gli stessi libri",
+        "Abitano vicino",
+        "Hanno la stessa età"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le piacciono gli stessi libri che piacciono a me », donc elles aiment les mêmes livres."
     }
   ],
   "words": {

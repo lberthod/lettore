@@ -16,7 +16,8 @@
         "Scrivere testi e tradurre le lingue",
         "Costruire case"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que l'intelligence artificielle « peut écrire des textes, traduire les langues et reconnaître les images »."
     },
     {
       "q": "Per che cosa usiamo il telefono, secondo il testo?",
@@ -25,7 +26,8 @@
         "Solo per giocare",
         "Per guardare la televisione"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que nous utilisons le téléphone « per parlare, leggere le notizie e ascoltare la musica »."
     },
     {
       "q": "Che cosa non dobbiamo dimenticare, secondo il testo?",
@@ -34,7 +36,8 @@
         "Di studiare l'informatica",
         "Il valore delle cose semplici"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « non dimenticare il valore delle cose semplici »."
     }
   ],
   "words": {

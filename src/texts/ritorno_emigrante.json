@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Da dove torna Giovanni?",
-      "options": ["Dall'America, dove ha lavorato in fabbrica", "Dalla Francia, dove studiava", "Dall'esercito"],
-      "correct": 0
+      "options": [
+        "Dall'America, dove ha lavorato in fabbrica",
+        "Dalla Francia, dove studiava",
+        "Dall'esercito"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « sono passati vent'anni dalla tua partenza per l'America » et « Ho lavorato duro in fabbrica », donc Giovanni revient d'Amérique où il a travaillé en usine."
     },
     {
       "q": "Che cosa si è perso Giovanni durante la sua assenza?",
-      "options": ["Il matrimonio di Anna e la nascita dei nipoti", "L'apertura di un nuovo negozio", "Una guerra locale"],
-      "correct": 0
+      "options": [
+        "Il matrimonio di Anna e la nascita dei nipoti",
+        "L'apertura di un nuovo negozio",
+        "Una guerra locale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ti sei perso tante cose: il matrimonio di Anna, la nascita dei tuoi nipoti », donc il a manqué le mariage d'Anna et la naissance de ses neveux."
     },
     {
       "q": "Che cosa porta Giovanni con sé nella valigia?",
-      "options": ["Ricordi", "Soldi guadagnati in America", "Regali costosi"],
-      "correct": 0
+      "options": [
+        "Ricordi",
+        "Soldi guadagnati in America",
+        "Regali costosi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « questa valigia piena di ricordi », donc Giovanni apporte des souvenirs dans sa valise."
     }
   ],
   "words": {

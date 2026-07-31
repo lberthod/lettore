@@ -33,18 +33,33 @@
   "questions": [
     {
       "q": "Che cosa prepara sempre la signora Carla per la sagra?",
-      "options": ["Una torta speciale", "Un pane fresco", "Una pizza grande"],
-      "correct": 0
+      "options": [
+        "Una torta speciale",
+        "Un pane fresco",
+        "Una pizza grande"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La signora Carla fa sempre una torta speciale per la sagra »."
     },
     {
       "q": "Chi ha preso la torta durante la notte?",
-      "options": ["Il cane Birillo", "Il nipote Tommaso", "Il signor Guido"],
-      "correct": 0
+      "options": [
+        "Il cane Birillo",
+        "Il nipote Tommaso",
+        "Il signor Guido"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Birillo ha aperto la finestra della cucina con il naso. Poi ha preso la torta »."
     },
     {
       "q": "Cosa fanno gli amici dopo il mistero?",
-      "options": ["Preparano insieme una nuova torta", "Chiudono la sagra", "Comprano una torta al negozio"],
-      "correct": 0
+      "options": [
+        "Preparano insieme una nuova torta",
+        "Chiudono la sagra",
+        "Comprano una torta al negozio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Insieme preparano una nuova torta, ancora più buona della prima »."
     }
   ],
   "words": {

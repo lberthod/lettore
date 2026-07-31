@@ -14,18 +14,33 @@
   "questions": [
     {
       "q": "Chi visita la famiglia Bruni?",
-      "options": ["Lo zio Franco", "La nonna", "Un amico"],
-      "correct": 0
+      "options": [
+        "Lo zio Franco",
+        "La nonna",
+        "Un amico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la famille Bruni « va a trovare lo zio Franco »."
     },
     {
       "q": "Come si chiama il cavallo bianco?",
-      "options": ["Stella", "Luna", "Bianca"],
-      "correct": 0
+      "options": [
+        "Stella",
+        "Luna",
+        "Bianca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il cavallo si chiama Stella »."
     },
     {
       "q": "Cosa raccolgono i bambini nel pomeriggio?",
-      "options": ["Le uova nel pollaio", "Le mele nell'albero", "I fiori nel giardino"],
-      "correct": 0
+      "options": [
+        "Le uova nel pollaio",
+        "Le mele nell'albero",
+        "I fiori nel giardino"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « nel pomeriggio, i bambini raccolgono le uova nel pollaio »."
     }
   ],
   "words": {

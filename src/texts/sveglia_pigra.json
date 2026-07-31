@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché il bambino arrivava sempre tardi a scuola?",
-      "options": ["Per colpa della sveglia pigra", "Perché la scuola era lontana", "Perché non aveva la sveglia"],
-      "correct": 0
+      "options": [
+        "Per colpa della sveglia pigra",
+        "Perché la scuola era lontana",
+        "Perché non aveva la sveglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « per colpa sua, il bambino della casa arrivava sempre tardi a scuola », donc à cause du réveil paresseux."
     },
     {
       "q": "Chi fa capire a Tic il suo errore?",
-      "options": ["La lampada del salotto", "Il gatto di casa", "Il bambino stesso"],
-      "correct": 0
+      "options": [
+        "La lampada del salotto",
+        "Il gatto di casa",
+        "Il bambino stesso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « la lampada del salotto disse a Tic: — Perché non pensi mai agli altri? », donc c'est la lampe du salon."
     },
     {
       "q": "Che cosa succede dopo che Tic capisce l'errore?",
-      "options": ["Suona puntuale ogni mattina", "Smette di funzionare", "Viene sostituita da una nuova sveglia"],
-      "correct": 0
+      "options": [
+        "Suona puntuale ogni mattina",
+        "Smette di funzionare",
+        "Viene sostituita da una nuova sveglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « La mattina dopo, Tic suonò puntuale » et qu'ensuite l'enfant ne fut plus jamais en retard."
     }
   ],
   "words": {

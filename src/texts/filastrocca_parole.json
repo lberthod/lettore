@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa è la parola mamma?",
-      "options": ["Una parola d'amore", "Una parola triste", "Un numero"],
-      "correct": 0
+      "options": [
+        "Una parola d'amore",
+        "Una parola triste",
+        "Un numero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mamma è una parola d'amore »."
     },
     {
       "q": "Che cosa canta il mare?",
-      "options": ["Una canzone", "Un nome", "Una storia"],
-      "correct": 0
+      "options": [
+        "Una canzone",
+        "Un nome",
+        "Una storia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Mare canta una canzone »."
     },
     {
       "q": "Che cosa sono le parole?",
-      "options": ["Amiche vere", "Nemiche", "Case"],
-      "correct": 0
+      "options": [
+        "Amiche vere",
+        "Nemiche",
+        "Case"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le parole sono amiche vere »."
     }
   ],
   "words": {

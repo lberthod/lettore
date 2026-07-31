@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Qual è il problema tra i due vicini?",
-      "options": ["La raccolta differenziata sbagliata", "Il rumore di notte", "Un parcheggio occupato"],
-      "correct": 0
+      "options": [
+        "La raccolta differenziata sbagliata",
+        "Il rumore di notte",
+        "Un parcheggio occupato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte montre que M. Verdi met la plastique avec le verre, ce qui fait une mauvaise collecte sélective."
     },
     {
       "q": "Dove sono scritte le regole della raccolta?",
-      "options": ["Sul cartello dell'ingresso", "Sul giornale locale", "Su un sito internet"],
-      "correct": 0
+      "options": [
+        "Sul cartello dell'ingresso",
+        "Sul giornale locale",
+        "Su un sito internet"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les règles sont écrites clairement sur le panneau à l'entrée."
     },
     {
       "q": "Che cosa promette il signor Verdi alla fine?",
-      "options": ["Di fare più attenzione da domani", "Di cambiare condominio", "Di non parlare più con la vicina"],
-      "correct": 0
+      "options": [
+        "Di fare più attenzione da domani",
+        "Di cambiare condominio",
+        "Di non parlare più con la vicina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que M. Verdi promet de faire plus attention à partir de demain."
     }
   ],
   "words": {

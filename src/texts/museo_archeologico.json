@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove è stato trovato il mosaico?",
-      "options": ["Negli scavi di una villa romana", "In un tempio greco", "Sotto una piazza moderna"],
-      "correct": 0
+      "options": [
+        "Negli scavi di una villa romana",
+        "In un tempio greco",
+        "Sotto una piazza moderna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le mosaïque a été trouvé dans les fouilles d'une villa romaine."
     },
     {
       "q": "Perché i colori del mosaico sono ancora vivi?",
-      "options": ["Grazie alle tessere di pietra colorata", "Perché è stato restaurato di recente", "Perché è fatto di plastica"],
-      "correct": 0
+      "options": [
+        "Grazie alle tessere di pietra colorata",
+        "Perché è stato restaurato di recente",
+        "Perché è fatto di plastica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte explique que les couleurs sont encore vives grâce aux petites tesselles de pierre colorée."
     },
     {
       "q": "Che cosa manca alla statua?",
-      "options": ["La testa", "Un braccio", "Le gambe"],
-      "correct": 0
+      "options": [
+        "La testa",
+        "Un braccio",
+        "Le gambe"
+      ],
+      "correct": 0,
+      "explanation": "Le texte parle d'une statue sans tête et précise que la tête s'est perdue au fil des siècles."
     }
   ],
   "words": {

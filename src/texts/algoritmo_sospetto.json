@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa nota l'analista alla Borsa di Milano?",
-      "options": ["Movimenti finanziari strani e ripetuti", "Un guasto al sistema informatico", "Un errore nei calcoli delle tasse"],
-      "correct": 0
+      "options": [
+        "Movimenti finanziari strani e ripetuti",
+        "Un guasto al sistema informatico",
+        "Un errore nei calcoli delle tasse"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'analyste note des « movimenti finanziari strani, ripetuti » à la même heure exacte."
     },
     {
       "q": "Chi aveva creato l'algoritmo sospetto?",
-      "options": ["Un dipendente licenziato anni prima", "Un hacker straniero anonimo", "Un altro analista della stessa banca"],
-      "correct": 0
+      "options": [
+        "Un dipendente licenziato anni prima",
+        "Un hacker straniero anonimo",
+        "Un altro analista della stessa banca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le programme avait été créé par « un dipendente licenziato » des années auparavant."
     },
     {
       "q": "Che cosa succede all'algoritmo alla fine?",
-      "options": ["Viene finalmente disattivato", "Continua a funzionare indisturbato", "Viene venduto a un'altra banca"],
-      "correct": 0
+      "options": [
+        "Viene finalmente disattivato",
+        "Continua a funzionare indisturbato",
+        "Viene venduto a un'altra banca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « l'algoritmo viene finalmente disattivato » avant de causer des dommages irréparables."
     }
   ],
   "words": {

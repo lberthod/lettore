@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa riceve Giovanni in cambio delle lettere che scrive per Antonio?",
-      "options": ["Metà della pagnotta del compagno", "Del denaro dagli ufficiali", "Una licenza per tornare a casa"],
-      "correct": 0
+      "options": [
+        "Metà della pagnotta del compagno",
+        "Del denaro dagli ufficiali",
+        "Una licenza per tornare a casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'Antonio donne à Giovanni la moitié de sa pagnotte en échange des lettres."
     },
     {
       "q": "Perché i soldati guardano Antonio quasi con invidia?",
-      "options": ["Perché la ferita lo allontana dalla guerra per qualche mese", "Perché ha ricevuto una medaglia al valore", "Perché gli ufficiali lo hanno promosso"],
-      "correct": 0
+      "options": [
+        "Perché la ferita lo allontana dalla guerra per qualche mese",
+        "Perché ha ricevuto una medaglia al valore",
+        "Perché gli ufficiali lo hanno promosso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les soldats le regardent avec envie parce que sa blessure le soustrait à la guerre pour quelques mois."
     },
     {
       "q": "Che cosa pensano i soldati delle promesse di Natale?",
-      "options": ["Nessuno ci crede più, ma nessuno lo dice ad alta voce", "Tutti sono convinti di tornare presto", "I giornali le hanno smentite ufficialmente"],
-      "correct": 0
+      "options": [
+        "Nessuno ci crede più, ma nessuno lo dice ad alta voce",
+        "Tutti sono convinti di tornare presto",
+        "I giornali le hanno smentite ufficialmente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que personne ne croit plus aux promesses de Noël, mais que personne n'ose le dire à voix haute."
     }
   ],
   "words": {

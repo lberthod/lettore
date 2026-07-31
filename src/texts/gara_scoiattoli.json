@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa devono raccogliere di più gli scoiattoli per vincere?",
-      "options": ["Ghiande", "Noci", "Funghi"],
-      "correct": 0
+      "options": [
+        "Ghiande",
+        "Noci",
+        "Funghi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les écureuils doivent ramasser le plus de glands pour gagner."
     },
     {
       "q": "Come si comporta Piccola durante la gara?",
-      "options": ["Cammina piano ma osserva bene dove sono le ghiande migliori", "Corre più veloce di tutti", "Non partecipa alla gara"],
-      "correct": 0
+      "options": [
+        "Cammina piano ma osserva bene dove sono le ghiande migliori",
+        "Corre più veloce di tutti",
+        "Non partecipa alla gara"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que Piccola marche lentement mais observe où sont les meilleurs glands."
     },
     {
       "q": "Che cosa capisce Nocciolo alla fine?",
-      "options": ["Che la velocità non basta senza strategia", "Che deve allenarsi di più", "Che la gara non è giusta"],
-      "correct": 0
+      "options": [
+        "Che la velocità non basta senza strategia",
+        "Che deve allenarsi di più",
+        "Che la gara non è giusta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'à la fin Nocciolo comprend que la vitesse ne suffit pas sans un peu de stratégie."
     }
   ],
   "words": {

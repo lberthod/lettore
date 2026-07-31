@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa scoprono gli archeologi vicino a Tarquinia?",
-      "options": ["Una tomba etrusca intatta", "Un tempio romano sepolto", "Una nave greca naufragata"],
-      "correct": 0
+      "options": [
+        "Una tomba etrusca intatta",
+        "Un tempio romano sepolto",
+        "Una nave greca naufragata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que près de Tarquinia, les archéologues découvrent une tombe étrusque intacte."
     },
     {
       "q": "Che cosa scopre la dottoressa Ferri?",
-      "options": ["Muffe tossiche nell'aria della tomba", "Un antico veleno nelle pareti", "Una trappola meccanica"],
-      "correct": 0
+      "options": [
+        "Muffe tossiche nell'aria della tomba",
+        "Un antico veleno nelle pareti",
+        "Una trappola meccanica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que la docteure Ferri découvre que l'air du tombeau contenait des moisissures toxiques."
     },
     {
       "q": "Che cosa continua a circolare tra gli abitanti del paese?",
-      "options": ["La leggenda della maledizione", "La ricetta di un piatto locale", "Una nuova indagine della polizia"],
-      "correct": 0
+      "options": [
+        "La leggenda della maledizione",
+        "La ricetta di un piatto locale",
+        "Una nuova indagine della polizia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que la légende de la malédiction continue de circuler parmi les habitants."
     }
   ],
   "words": {

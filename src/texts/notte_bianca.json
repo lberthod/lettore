@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Da quale tradizione trae origine il concetto della notte bianca, secondo il testo?",
-      "options": ["Dalle celebrazioni notturne scandinave legate al solstizio", "Da un'antica festa romana", "Da una tradizione commerciale americana"],
-      "correct": 0
+      "options": [
+        "Dalle celebrazioni notturne scandinave legate al solstizio",
+        "Da un'antica festa romana",
+        "Da una tradizione commerciale americana"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la nuit blanche parisienne était elle-même redevable à une tradition scandinave liée au solstice."
     },
     {
       "q": "Che cosa rivelano, secondo l'autore, queste manifestazioni al di là dell'aspetto promozionale?",
-      "options": ["Un desiderio di riappropriarsi collettivamente dello spazio pubblico", "Una strategia puramente economica dei commercianti", "Un disinteresse crescente verso i musei"],
-      "correct": 0
+      "options": [
+        "Un desiderio di riappropriarsi collettivamente dello spazio pubblico",
+        "Una strategia puramente economica dei commercianti",
+        "Un disinteresse crescente verso i musei"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne un désir plus profond : se réapproprier collectivement l'espace public."
     },
     {
       "q": "Quale critica strutturale viene mossa al modello della notte bianca negli ultimi anni?",
-      "options": ["La tendenza all'eventificazione a scapito di un'accessibilità culturale continuativa", "L'eccessivo costo dei biglietti d'ingresso", "La scarsa partecipazione del pubblico giovanile"],
-      "correct": 0
+      "options": [
+        "La tendenza all'eventificazione a scapito di un'accessibilità culturale continuativa",
+        "L'eccessivo costo dei biglietti d'ingresso",
+        "La scarsa partecipazione del pubblico giovanile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte critique la tendance à remplacer un investissement continu dans l'accessibilité ordinaire de la culture par des événements ponctuels."
     }
   ],
   "words": {

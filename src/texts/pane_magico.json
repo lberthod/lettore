@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa sapeva fare la pagnotta magica?",
-      "options": ["Parlare", "Volare", "Cantare canzoni"],
-      "correct": 0
+      "options": [
+        "Parlare",
+        "Volare",
+        "Cantare canzoni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « una pagnotta magica che sapeva parlare », donc elle savait parler."
     },
     {
       "q": "Perché l'uomo entra nel forno?",
-      "options": ["Per rubare la pagnotta", "Per comprare il pane", "Per aiutare il fornaio"],
-      "correct": 0
+      "options": [
+        "Per rubare la pagnotta",
+        "Per comprare il pane",
+        "Per aiutare il fornaio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un uomo affamato entrò nel forno per rubare la pagnotta », donc il entre pour voler la pagnotta."
     },
     {
       "q": "Che cosa fa il fornaio alla fine?",
-      "options": ["Dà all'uomo un pezzo di pane gratis", "Chiama la polizia", "Chiude il forno per sempre"],
-      "correct": 0
+      "options": [
+        "Dà all'uomo un pezzo di pane gratis",
+        "Chiama la polizia",
+        "Chiude il forno per sempre"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il fornaio, felice, diede all'uomo un pezzo di pane gratis », donc il lui donne un morceau de pain gratuitement."
     }
   ],
   "words": {

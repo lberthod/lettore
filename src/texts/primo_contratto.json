@@ -18,18 +18,33 @@
   "questions": [
     {
       "q": "Che cosa indica la RAL?",
-      "options": ["La retribuzione annua lorda", "Lo stipendio netto mensile", "Il numero di giorni di ferie"],
-      "correct": 0
+      "options": [
+        "La retribuzione annua lorda",
+        "Lo stipendio netto mensile",
+        "Il numero di giorni di ferie"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La RAL è la retribuzione annua lorda »."
     },
     {
       "q": "Che cosa succede durante il periodo di prova?",
-      "options": ["Il rapporto può essere interrotto senza preavviso", "Non si riceve nessuno stipendio", "Non si possono prendere permessi"],
-      "correct": 0
+      "options": [
+        "Il rapporto può essere interrotto senza preavviso",
+        "Non si riceve nessuno stipendio",
+        "Non si possono prendere permessi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que pendant cette période, l'employé et l'entreprise peuvent interrompre le contrat sans préavis."
     },
     {
       "q": "A chi puoi chiedere un aiuto gratuito?",
-      "options": ["A un sindacato o a un patronato", "Solo a un avvocato privato", "Al ministero del lavoro"],
-      "correct": 0
+      "options": [
+        "A un sindacato o a un patronato",
+        "Solo a un avvocato privato",
+        "Al ministero del lavoro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte recommande de demander de l'aide à un syndicat ou à un patronato, qui offrent des consultations gratuites."
     }
   ],
   "words": {

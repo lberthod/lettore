@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa cerca Elena sabato mattina?",
-      "options": ["Le chiavi di casa", "Il suo telefono", "Un libro importante"],
-      "correct": 0
+      "options": [
+        "Le chiavi di casa",
+        "Il suo telefono",
+        "Un libro importante"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Elena cerca le chiavi di casa dappertutto », donc elle cherche les clés de la maison."
     },
     {
       "q": "Che cosa suggerisce Marco?",
-      "options": ["Che le chiavi sono nella tasca del cappotto", "Che le chiavi sono in giardino", "Che qualcuno le ha rubate"],
-      "correct": 0
+      "options": [
+        "Che le chiavi sono nella tasca del cappotto",
+        "Che le chiavi sono in giardino",
+        "Che qualcuno le ha rubate"
+      ],
+      "correct": 0,
+      "explanation": "Marco dit « forse le hai lasciate nella tasca del cappotto di ieri », donc il pense qu'elles sont dans la poche du manteau."
     },
     {
       "q": "Chi aveva nascosto le chiavi?",
-      "options": ["Il gatto di casa", "Il vicino di casa", "Nessuno, erano sempre lì"],
-      "correct": 0
+      "options": [
+        "Il gatto di casa",
+        "Il vicino di casa",
+        "Nessuno, erano sempre lì"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il gatto aveva nascosto le chiavi », donc c'est le chat de la maison."
     }
   ],
   "words": {

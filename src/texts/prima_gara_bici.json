@@ -18,7 +18,8 @@
         "In una scuola",
         "In montagna"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que la course se déroule « nel parco vicino a casa sua »."
     },
     {
       "q": "Che cosa succede a Marco durante la gara?",
@@ -27,7 +28,8 @@
         "Vince subito",
         "Torna a casa"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'il tombe une fois mais se relève tout de suite."
     },
     {
       "q": "Come si sente Marco alla fine, anche se arriva ultimo?",
@@ -36,7 +38,8 @@
         "Molto arrabbiato",
         "Triste e stanco"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Marco est heureux « perché ha provato »."
     }
   ],
   "words": {

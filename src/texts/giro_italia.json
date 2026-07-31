@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "In quale stagione si svolge il Giro d'Italia?",
-      "options": ["In inverno", "In primavera", "In autunno"],
-      "correct": 1
+      "options": [
+        "In inverno",
+        "In primavera",
+        "In autunno"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « si svolge ogni anno in primavera », donc le Giro a lieu au printemps."
     },
     {
       "q": "Qual è il simbolo del primo in classifica?",
-      "options": ["La maglia rosa", "Una coppa d'oro", "Una bandiera"],
-      "correct": 0
+      "options": [
+        "La maglia rosa",
+        "Una coppa d'oro",
+        "Una bandiera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il simbolo della corsa è la maglia rosa, indossata dal ciclista in testa alla classifica », donc le symbole est le maillot rose."
     },
     {
       "q": "Che cosa rappresenta il Giro per gli italiani?",
-      "options": ["Solo una gara", "Una festa che attraversa il paese", "Un evento poco seguito"],
-      "correct": 1
+      "options": [
+        "Solo una gara",
+        "Una festa che attraversa il paese",
+        "Un evento poco seguito"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « per gli italiani, il Giro non è solo sport: è una festa che attraversa città e paesi », donc c'est une fête qui traverse le pays."
     }
   ],
   "words": {

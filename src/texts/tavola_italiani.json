@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa resta un momento sacro per gli italiani?",
-      "options": ["Il pranzo della domenica", "La colazione del lunedì", "Lo spuntino pomeridiano"],
-      "correct": 0
+      "options": [
+        "Il pranzo della domenica",
+        "La colazione del lunedì",
+        "Lo spuntino pomeridiano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il pranzo della domenica resta ancora oggi un momento sacro »."
     },
     {
       "q": "Come viene descritta generalmente la colazione italiana?",
-      "options": ["Veloce, spesso consumata in piedi al bar", "Molto lunga e abbondante", "Sempre a base di uova e bacon"],
-      "correct": 0
+      "options": [
+        "Veloce, spesso consumata in piedi al bar",
+        "Molto lunga e abbondante",
+        "Sempre a base di uova e bacon"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la colazione, invece, è generalmente veloce: un caffè e qualcosa di dolce, spesso consumati in piedi al bar »."
     },
     {
       "q": "Perché il pranzo si è accorciato durante la settimana?",
-      "options": ["Per motivi di lavoro e di orari scolastici", "Perché gli italiani mangiano meno", "Perché non piace più cucinare"],
-      "correct": 0
+      "options": [
+        "Per motivi di lavoro e di orari scolastici",
+        "Perché gli italiani mangiano meno",
+        "Perché non piace più cucinare"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « per motivi di lavoro e di orari scolastici »."
     }
   ],
   "words": {

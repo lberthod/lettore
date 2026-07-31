@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Che cosa fa Sofia oggi per la prima volta?",
-      "options": ["Un sentiero in montagna", "Una lezione di nuoto", "Un viaggio in treno"],
-      "correct": 0
+      "options": [
+        "Un sentiero in montagna",
+        "Una lezione di nuoto",
+        "Un viaggio in treno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « È il mio primo sentiero ! », donc Sofia fait sa première randonnée en montagne."
     },
     {
       "q": "Che animale vede Sofia sulla roccia?",
-      "options": ["Uno stambecco", "Una volpe", "Un cane"],
-      "correct": 0
+      "options": [
+        "Uno stambecco",
+        "Una volpe",
+        "Un cane"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « È uno stambecco », c'est l'animal brun que Sofia voit sur le rocher."
     },
     {
       "q": "Cosa dice il nonno alla fine?",
-      "options": ["Che la montagna ha sempre qualcosa di nuovo", "Che è ora di tornare a casa", "Che ha paura dell'altezza"],
-      "correct": 0
+      "options": [
+        "Che la montagna ha sempre qualcosa di nuovo",
+        "Che è ora di tornare a casa",
+        "Che ha paura dell'altezza"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Certo, Sofia » après qu'elle veut refaire des randonnées, ce qui montre que la montagne a toujours quelque chose de nouveau."
     }
   ],
   "words": {

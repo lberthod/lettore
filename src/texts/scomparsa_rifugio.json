@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa scopre il gestore del rifugio?",
-      "options": ["Che un escursionista non è tornato dalla passeggiata", "Che manca cibo in dispensa", "Che una tempesta ha danneggiato il tetto"],
-      "correct": 0
+      "options": [
+        "Che un escursionista non è tornato dalla passeggiata",
+        "Che manca cibo in dispensa",
+        "Che una tempesta ha danneggiato il tetto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le gérant découvre que « uno degli escursionisti non è tornato dalla passeggiata pomeridiana »."
     },
     {
       "q": "Che cosa nota il giovane guardiaparco?",
-      "options": ["Impronte insolite verso una grotta nascosta", "Un fuoco acceso nel bosco", "Uno zaino abbandonato sul sentiero"],
-      "correct": 0
+      "options": [
+        "Impronte insolite verso una grotta nascosta",
+        "Un fuoco acceso nel bosco",
+        "Uno zaino abbandonato sul sentiero"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le jeune garde-parc remarque « impronte insolite che si allontanano dal sentiero principale verso una grotta nascosta »."
     },
     {
       "q": "Perché l'escursionista si era rifugiato nella grotta?",
-      "options": ["Per un improvviso temporale", "Perché si era perso completamente", "Perché inseguiva un animale selvatico"],
-      "correct": 0
+      "options": [
+        "Per un improvviso temporale",
+        "Perché si era perso completamente",
+        "Perché inseguiva un animale selvatico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'excursionniste « si era rifugiato lì durante un improvviso temporale »."
     }
   ],
   "words": {

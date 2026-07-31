@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Perché la guida vuole affrettarsi?",
-      "options": ["Perché il tempo cambia in fretta in montagna", "Perché ha un altro appuntamento", "Perché ha paura degli animali selvatici"],
-      "correct": 0
+      "options": [
+        "Perché il tempo cambia in fretta in montagna",
+        "Perché ha un altro appuntamento",
+        "Perché ha paura degli animali selvatici"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il tempo cambia in fretta quassù », donc la guide veut se dépêcher parce que le temps change vite en montagne."
     },
     {
       "q": "Di che cosa si lamenta il primo turista?",
-      "options": ["Delle gambe stanche", "Del freddo intenso", "Della mancanza di acqua"],
-      "correct": 0
+      "options": [
+        "Delle gambe stanche",
+        "Del freddo intenso",
+        "Della mancanza di acqua"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Le gambe mi tremano dalla fatica », donc le premier touriste se plaint de ses jambes fatiguées."
     },
     {
       "q": "Che cosa offre di fare la guida per aiutare i turisti?",
-      "options": ["Prendere le borracce per liberare le loro mani", "Chiamare l'elicottero di soccorso", "Tornare indietro immediatamente"],
-      "correct": 0
+      "options": [
+        "Prendere le borracce per liberare le loro mani",
+        "Chiamare l'elicottero di soccorso",
+        "Tornare indietro immediatamente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Lasciate a me le borracce, così avrete le mani più libere », donc la guide propose de prendre les gourdes pour libérer leurs mains."
     }
   ],
   "words": {

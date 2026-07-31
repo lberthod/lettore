@@ -194,7 +194,8 @@
         "I Romani",
         "Le guide alpine"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit que les Romains ont fondé la ville d'Aosta."
     },
     {
       "q": "Cosa vede Camille dalle rocce vicino al rifugio?",
@@ -203,7 +204,8 @@
         "Un branco di lupi",
         "Le mucche di suo padre"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que Camille voit un groupe de stambecchi (bouquetins) sur les rochers."
     },
     {
       "q": "Perché è stato creato il parco del Gran Paradiso?",
@@ -212,7 +214,8 @@
         "Per proteggere il ghiacciaio",
         "Per salvare gli stambecchi"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit que le parc a été créé pour sauver les stambecchi (bouquetins)."
     }
   ]
 }

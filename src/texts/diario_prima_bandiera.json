@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Con chi va Tommaso a Roma?",
-      "options": ["Con il nonno", "Con la maestra", "Con gli amici"],
-      "correct": 0
+      "options": [
+        "Con il nonno",
+        "Con la maestra",
+        "Con gli amici"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « oggi vado a Roma con il nonno », donc Tommaso va à Rome avec son grand-père."
     },
     {
       "q": "Di che colori è la bandiera che vede Tommaso?",
-      "options": ["Verde, bianca e rossa", "Blu e gialla", "Nera e bianca"],
-      "correct": 0
+      "options": [
+        "Verde, bianca e rossa",
+        "Blu e gialla",
+        "Nera e bianca"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « È verde, bianca e rossa », donc la bandiera est verte, blanche et rouge."
     },
     {
       "q": "Cosa prova Tommaso davanti alla bandiera?",
-      "options": ["È molto emozionato", "È annoiato", "Ha paura"],
-      "correct": 0
+      "options": [
+        "È molto emozionato",
+        "È annoiato",
+        "Ha paura"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « sono molto emozionato », donc Tommaso est très ému."
     }
   ],
   "words": {

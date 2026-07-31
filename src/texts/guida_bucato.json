@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa bisogna fare prima di tutto con i vestiti?",
-      "options": ["Dividerli per colore", "Metterli subito in lavatrice", "Stirarli"],
-      "correct": 0
+      "options": [
+        "Dividerli per colore",
+        "Metterli subito in lavatrice",
+        "Stirarli"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « dividete i vestiti per colore », donc il faut les diviser par couleur."
     },
     {
       "q": "Che cosa indica l'etichetta interna dei vestiti?",
-      "options": ["La temperatura giusta per il lavaggio", "Il prezzo del capo", "La data di acquisto"],
-      "correct": 0
+      "options": [
+        "La temperatura giusta per il lavaggio",
+        "Il prezzo del capo",
+        "La data di acquisto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que l'étiquette « indica la temperatura giusta per ogni tessuto », donc la bonne température de lavage."
     },
     {
       "q": "Perché non bisogna riempire troppo la lavatrice?",
-      "options": ["Perché i vestiti hanno bisogno di spazio per lavarsi bene", "Perché costa di più", "Perché fa troppo rumore"],
-      "correct": 0
+      "options": [
+        "Perché i vestiti hanno bisogno di spazio per lavarsi bene",
+        "Perché costa di più",
+        "Perché fa troppo rumore"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i vestiti hanno bisogno di spazio per lavarsi bene », donc il ne faut pas trop remplir la machine."
     }
   ],
   "words": {

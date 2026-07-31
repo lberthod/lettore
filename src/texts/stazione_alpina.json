@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quante persone vivono nella stazione alpina?",
-      "options": ["Tre scienziati", "Dieci ricercatori", "Nessuno, è completamente automatica"],
-      "correct": 0
+      "options": [
+        "Tre scienziati",
+        "Dieci ricercatori",
+        "Nessuno, è completamente automatica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «Solo tre scienziati vivono lassù», donc ce sont trois scientifiques qui vivent dans la station."
     },
     {
       "q": "Qual è il compito principale degli scienziati?",
-      "options": ["Osservare come cambia il ghiaccio dei ghiacciai", "Costruire nuove stazioni sciistiche", "Cercare minerali preziosi"],
-      "correct": 0
+      "options": [
+        "Osservare come cambia il ghiaccio dei ghiacciai",
+        "Costruire nuove stazioni sciistiche",
+        "Cercare minerali preziosi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «Il loro compito è osservare come cambia il ghiaccio dei ghiacciai», donc leur tâche est d'observer comment la glace des glaciers change."
     },
     {
       "q": "Che cosa trova il robot esploratore?",
-      "options": ["Un antico rifugio sepolto sotto il ghiaccio", "Un tesoro nascosto", "Un altro robot abbandonato"],
-      "correct": 0
+      "options": [
+        "Un antico rifugio sepolto sotto il ghiaccio",
+        "Un tesoro nascosto",
+        "Un altro robot abbandonato"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit «Il robot trova solo un antico rifugio sepolto da decenni», donc le robot trouve un ancien refuge enfoui sous la glace."
     }
   ],
   "words": {

@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Chi studiò il fenomeno del tarantismo alla fine degli anni Cinquanta?",
-      "options": ["L'antropologo Ernesto De Martino", "Un gruppo di musicisti rock", "Un medico tedesco"],
-      "correct": 0
+      "options": [
+        "L'antropologo Ernesto De Martino",
+        "Un gruppo di musicisti rock",
+        "Un medico tedesco"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que c'est l'anthropologue Ernesto De Martino qui a étudié le phénomène sur le terrain à la fin des années cinquante."
     },
     {
       "q": "Che cosa accadde alla pizzica negli anni Novanta?",
-      "options": ["Giovani musicisti la mescolarono con rock e jazz", "Fu proibita dalle autorità", "Restò identica a quella antica"],
-      "correct": 0
+      "options": [
+        "Giovani musicisti la mescolarono con rock e jazz",
+        "Fu proibita dalle autorità",
+        "Restò identica a quella antica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que dans les années 1990, de jeunes musiciens salentins ont repris les rythmes anciens et les ont mélangés avec le rock, le jazz et la musique électronique."
     },
     {
       "q": "Quale lezione suggerisce la storia della Taranta?",
-      "options": ["Una tradizione sopravvive quando accetta di trasformarsi", "Le tradizioni devono rimanere immutate", "La musica popolare non interessa ai giovani"],
-      "correct": 0
+      "options": [
+        "Una tradizione sopravvive quando accetta di trasformarsi",
+        "Le tradizioni devono rimanere immutate",
+        "La musica popolare non interessa ai giovani"
+      ],
+      "correct": 0,
+      "explanation": "Le texte conclut qu'une tradition ne survit que si elle accepte de se transformer."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quando si teneva la festa di Montecielo?",
-      "options": ["Ogni estate", "A Natale", "In primavera"],
-      "correct": 0
+      "options": [
+        "Ogni estate",
+        "A Natale",
+        "In primavera"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que « Ogni estate » le petit pays de Montecielo organisait la fête."
     },
     {
       "q": "Quale problema c'era quell'anno?",
-      "options": ["Il campo era pieno di fango per la pioggia", "Mancavano i soldi", "Nessuno voleva venire"],
-      "correct": 0
+      "options": [
+        "Il campo era pieno di fango per la pioggia",
+        "Mancavano i soldi",
+        "Nessuno voleva venire"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il était tombé beaucoup de pluie et que le champ de la fête était plein de boue."
     },
     {
       "q": "Come hanno risolto il problema gli abitanti?",
-      "options": ["Hanno annullato la festa", "Hanno pulito la piazza insieme", "Hanno cambiato paese"],
-      "correct": 1
+      "options": [
+        "Hanno annullato la festa",
+        "Hanno pulito la piazza insieme",
+        "Hanno cambiato paese"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit qu'ensemble, jeunes et vieux, ils ont nettoyé la place pendant toute la nuit."
     }
   ],
   "words": {

@@ -19,18 +19,33 @@
   "questions": [
     {
       "q": "Che cosa cerca Sofia?",
-      "options": ["Le scarpe da calcio", "Il pallone", "La maglietta"],
-      "correct": 0
+      "options": [
+        "Le scarpe da calcio",
+        "Il pallone",
+        "La maglietta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Dove sono le mie scarpe da calcio? », donc Sofia cherche ses chaussures de foot."
     },
     {
       "q": "Chi gioca in porta?",
-      "options": ["Luca", "Marco", "Sofia"],
-      "correct": 0
+      "options": [
+        "Luca",
+        "Marco",
+        "Sofia"
+      ],
+      "correct": 0,
+      "explanation": "Marco dit « Tu sei bravo in porta », donc c'est Luca qui joue dans le but."
     },
     {
       "q": "Cosa pensa Marco della partita?",
-      "options": ["Che la squadra vince", "Che la partita è annullata", "Che perdono sicuramente"],
-      "correct": 0
+      "options": [
+        "Che la squadra vince",
+        "Che la partita è annullata",
+        "Che perdono sicuramente"
+      ],
+      "correct": 0,
+      "explanation": "Marco dit « Oggi la nostra squadra vince, ne sono sicuro », donc il pense que son équipe va gagner."
     }
   ],
   "words": {

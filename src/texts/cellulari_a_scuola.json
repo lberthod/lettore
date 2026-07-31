@@ -26,18 +26,33 @@
   "questions": [
     {
       "q": "Che cosa vuole fare il ministero, secondo la notizia?",
-      "options": ["Vietare i cellulari in classe, anche durante l'intervallo", "Regalare un tablet a ogni studente", "Abolire i compiti a casa"],
-      "correct": 0
+      "options": [
+        "Vietare i cellulari in classe, anche durante l'intervallo",
+        "Regalare un tablet a ogni studente",
+        "Abolire i compiti a casa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il ministero vuole vietare i cellulari in classe, anche durante l'intervallo »."
     },
     {
       "q": "Qual è il dubbio principale sollevato da chi è contrario al divieto totale?",
-      "options": ["Come farebbe un genitore a contattare il figlio in caso di emergenza", "Il costo troppo alto dei cellulari", "La mancanza di linee guida europee"],
-      "correct": 0
+      "options": [
+        "Come farebbe un genitore a contattare il figlio in caso di emergenza",
+        "Il costo troppo alto dei cellulari",
+        "La mancanza di linee guida europee"
+      ],
+      "correct": 0,
+      "explanation": "Le texte demande « E se un genitore deve contattare il figlio per un'emergenza? Come fa, se il telefono è spento? »."
     },
     {
       "q": "Su quale idea finiscono per trovare un accordo i due interlocutori?",
-      "options": ["Vietare il telefono a lezione ma permetterlo durante l'intervallo", "Vietare i cellulari per sempre, senza eccezioni", "Lasciare ai ragazzi piena libertà in ogni momento"],
-      "correct": 0
+      "options": [
+        "Vietare il telefono a lezione ma permetterlo durante l'intervallo",
+        "Vietare i cellulari per sempre, senza eccezioni",
+        "Lasciare ai ragazzi piena libertà in ogni momento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte propose « vietare il telefono durante le lezioni, ma permetterlo durante l'intervallo, in casi particolari »."
     }
   ],
   "words": {

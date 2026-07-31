@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quale vulcano domina il paesaggio siciliano?",
-      "options": ["Il Vesuvio", "L'Etna", "Lo Stromboli"],
-      "correct": 1
+      "options": [
+        "Il Vesuvio",
+        "L'Etna",
+        "Lo Stromboli"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Il vulcano Etna domina il paesaggio », donc c'est l'Etna."
     },
     {
       "q": "Quali civiltà si sono incontrate in Sicilia?",
-      "options": ["Solo i greci", "Greci, arabi, normanni e spagnoli", "Solo i romani"],
-      "correct": 1
+      "options": [
+        "Solo i greci",
+        "Greci, arabi, normanni e spagnoli",
+        "Solo i romani"
+      ],
+      "correct": 1,
+      "explanation": "Le texte énumère « greci, arabi, normanni e spagnoli » parmi les civilisations rencontrées en Sicile."
     },
     {
       "q": "Che cosa è famoso della cucina siciliana?",
-      "options": ["Arancini e cannoli", "La polenta", "Il risotto"],
-      "correct": 0
+      "options": [
+        "Arancini e cannoli",
+        "La polenta",
+        "Il risotto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte cite les arancini et les cannoli comme plats célèbres de la cuisine sicilienne."
     }
   ],
   "words": {

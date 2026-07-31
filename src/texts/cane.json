@@ -86,7 +86,8 @@
         "È nero",
         "È marrone"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « Ho un cane piccolo e bianco », donc Toby est blanc."
     },
     {
       "q": "Dove va Toby ogni mattina?",
@@ -95,7 +96,8 @@
         "Al parco",
         "Al mare"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Ogni mattina andiamo al parco », donc Toby va au parc."
     },
     {
       "q": "Dove dorme Toby quando fa freddo?",
@@ -104,7 +106,8 @@
         "Sotto un albero",
         "Sul letto del bambino"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « quando fa freddo, sale sul mio letto », donc Toby dort sur le lit du narrateur."
     }
   ]
 }

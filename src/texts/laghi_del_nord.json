@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanti grandi laghi ci sono nel nord dell'Italia?",
-      "options": ["Tre", "Due", "Cinque"],
-      "correct": 0
+      "options": [
+        "Tre",
+        "Due",
+        "Cinque"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ci sono tre grandi laghi », donc il y a trois grands lacs."
     },
     {
       "q": "Che cosa cresce sulle rive del lago di Garda?",
-      "options": ["I limoni", "Le palme del deserto", "Il riso"],
-      "correct": 0
+      "options": [
+        "I limoni",
+        "Le palme del deserto",
+        "Il riso"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Sulle sue rive crescono i limoni », donc ce sont les citrons qui poussent sur les rives du lac de Garde."
     },
     {
       "q": "Da dove arrivano i turisti?",
-      "options": ["Da tutta l'Europa", "Solo dall'Italia del sud", "Solo dall'America"],
-      "correct": 0
+      "options": [
+        "Da tutta l'Europa",
+        "Solo dall'Italia del sud",
+        "Solo dall'America"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « I turisti arrivano da tutta l'Europa », donc les touristes viennent de toute l'Europe."
     }
   ],
   "words": {

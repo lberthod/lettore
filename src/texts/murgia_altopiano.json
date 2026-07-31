@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Come veniva considerata la Murgia per decenni?",
-      "options": ["Un territorio arido e improduttivo", "Una zona industriale abbandonata", "Un parco divertimenti storico"],
-      "correct": 0
+      "options": [
+        "Un territorio arido e improduttivo",
+        "Una zona industriale abbandonata",
+        "Un parco divertimenti storico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la Murgia \"fu considerato dai più un territorio arido e improduttivo\"."
     },
     {
       "q": "Che cosa sono le gravine della Murgia?",
-      "options": ["Profondi canyon calcarei con pareti a strapiombo", "Antichi acquedotti romani", "Grandi laghi artificiali"],
-      "correct": 0
+      "options": [
+        "Profondi canyon calcarei con pareti a strapiombo",
+        "Antichi acquedotti romani",
+        "Grandi laghi artificiali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte les décrit comme \"profondi canyon calcarei\" avec \"pareti a strapiombo\"."
     },
     {
       "q": "Quale tensione affronta oggi il Parco Nazionale dell'Alta Murgia?",
-      "options": ["Tra tutela ambientale e agricoltura intensiva", "Tra turismo di massa e spopolamento", "Tra pesca industriale e pesca artigianale"],
-      "correct": 0
+      "options": [
+        "Tra tutela ambientale e agricoltura intensiva",
+        "Tra turismo di massa e spopolamento",
+        "Tra pesca industriale e pesca artigianale"
+      ],
+      "correct": 0,
+      "explanation": "Le texte mentionne les \"pressioni\" de l'\"agricoltura intensiva\" contre la \"tutela\" du patrimoine naturaliste."
     }
   ],
   "words": {

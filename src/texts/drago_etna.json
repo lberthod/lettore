@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Perché la montagna fumava e tremava?",
-      "options": ["Perché il drago russava", "Perché c'era un incendio nel bosco", "Perché i pastori accendevano grandi fuochi"],
-      "correct": 0
+      "options": [
+        "Perché il drago russava",
+        "Perché c'era un incendio nel bosco",
+        "Perché i pastori accendevano grandi fuochi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que quand le dragon ronflait, la montagne fumait et la terre tremblait."
     },
     {
       "q": "Che cosa voleva veramente il drago?",
-      "options": ["Che qualcuno venisse a parlare con lui", "Distruggere i villaggi della Sicilia", "Dormire per altri mille anni"],
-      "correct": 0
+      "options": [
+        "Che qualcuno venisse a parlare con lui",
+        "Distruggere i villaggi della Sicilia",
+        "Dormire per altri mille anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le dragon était seul et que personne ne venait lui parler depuis mille ans."
     },
     {
       "q": "Che cosa portano i siciliani al drago ogni anno?",
-      "options": ["Arance", "Fiori", "Formaggio"],
-      "correct": 0
+      "options": [
+        "Arance",
+        "Fiori",
+        "Formaggio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les Siciliens portent des arances au dragon chaque année."
     }
   ],
   "words": {

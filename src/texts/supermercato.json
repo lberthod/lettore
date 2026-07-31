@@ -81,7 +81,8 @@
         "Con la mamma",
         "Con il papà"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Sofia va al supermercato con la mamma », donc elle y va avec sa maman."
     },
     {
       "q": "Che cosa comprano al reparto della frutta?",
@@ -90,7 +91,8 @@
         "Latte e uova",
         "Mele, banane e arance"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Comprano mele, banane e arance », donc ils achètent des pommes, des bananes et des oranges."
     },
     {
       "q": "Che cosa compra la mamma per Sofia alla cassa?",
@@ -99,7 +101,8 @@
         "Un gelato",
         "Una banana"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « le compra un piccolo cioccolato », donc la maman achète un petit chocolat pour Sofia."
     }
   ]
 }

@@ -21,7 +21,8 @@
         "Non superare i due chilogrammi",
         "Il peso non ha alcuna importanza"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « evitando di superare i dodici chilogrammi di peso complessivo », donc il ne faut pas dépasser douze kilos."
     },
     {
       "q": "Quale budget giornaliero indicativo propone il manuale per un viaggiatore parsimonioso?",
@@ -30,7 +31,8 @@
         "Più di trecento euro al giorno",
         "Meno di dieci euro al giorno, senza alloggio"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « tra i quaranta e i sessanta euro giornalieri, alloggio incluso », donc le budget est de 40 à 60 euros par jour."
     },
     {
       "q": "Che cosa consiglia il manuale riguardo agli imprevisti durante il viaggio?",
@@ -39,7 +41,8 @@
         "Di evitare qualsiasi contatto con gli abitanti del posto",
         "Di pianificare ogni minuto senza alcuna flessibilità"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « lasciare margine all'imprevisto ... anziché un'agenda rigida », donc il conseille de laisser place à l'imprévu."
     }
   ],
   "words": {

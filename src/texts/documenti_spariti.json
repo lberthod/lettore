@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa manca nell'ufficio lunedì mattina?",
-      "options": ["Il faldone con i contratti importanti", "Un computer", "Le chiavi dell'ufficio"],
-      "correct": 0
+      "options": [
+        "Il faldone con i contratti importanti",
+        "Un computer",
+        "Le chiavi dell'ufficio"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit \"la segretaria dell'ufficio non trova più il faldone con i contratti più importanti dell'azienda\", donc il manque le faldone avec les contrats importants."
     },
     {
       "q": "Perché Marco sembra nervoso?",
-      "options": ["Aveva portato i documenti a casa per errore", "Aveva rubato del denaro", "Voleva licenziarsi"],
-      "correct": 0
+      "options": [
+        "Aveva portato i documenti a casa per errore",
+        "Aveva rubato del denaro",
+        "Voleva licenziarsi"
+      ],
+      "correct": 0,
+      "explanation": "Marco est nerveux parce qu'il avait apporté les documents chez lui pour corriger une erreur et avait oublié de les rapporter, comme il le confesse à la fin."
     },
     {
       "q": "Come reagisce il direttore alla fine?",
-      "options": ["È sollevato, non c'era nessun mistero", "Licenzia subito Marco", "Chiama la polizia"],
-      "correct": 0
+      "options": [
+        "È sollevato, non c'era nessun mistero",
+        "Licenzia subito Marco",
+        "Chiama la polizia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le directeur est \"sollevato\" parce qu'il comprend qu'il n'y avait pas de mystère, seulement la peur d'un jeune homme."
     }
   ],
   "words": {

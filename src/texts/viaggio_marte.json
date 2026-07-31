@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanto durò il viaggio verso Marte?",
-      "options": ["Sei mesi", "Un anno", "Due settimane"],
-      "correct": 0
+      "options": [
+        "Sei mesi",
+        "Un anno",
+        "Due settimane"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Il viaggio durò sei mesi »."
     },
     {
       "q": "Dove vivevano i turisti su Marte?",
-      "options": ["In tende", "In una cupola trasparente", "Sull'astronave"],
-      "correct": 1
+      "options": [
+        "In tende",
+        "In una cupola trasparente",
+        "Sull'astronave"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « I turisti vivevano in una cupola trasparente »."
     },
     {
       "q": "Che cosa capisce Elena alla fine?",
-      "options": ["Che Marte è meglio della Terra", "Che l'uomo porta sempre con sé il desiderio di casa", "Che vuole restare su Marte"],
-      "correct": 1
+      "options": [
+        "Che Marte è meglio della Terra",
+        "Che l'uomo porta sempre con sé il desiderio di casa",
+        "Che vuole restare su Marte"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « l'uomo può viaggiare lontanissimo, ma porta sempre con sé il desiderio di casa »."
     }
   ],
   "words": {
@@ -123,8 +138,7 @@
     "uomo": "homme",
     "viaggiare": "voyager",
     "viaggio": "voyage",
-    "vivevano": "vivaient",
-    "era": "était"
+    "vivevano": "vivaient"
   },
   "sentences": {
     "Nel 2130, il primo viaggio turistico su Marte diventò realtà.": "En 2130, le premier voyage touristique sur Mars devint réalité.",

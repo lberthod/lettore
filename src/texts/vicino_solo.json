@@ -13,18 +13,33 @@
   "questions": [
     {
       "q": "Dove mangia sempre il signor Bruno?",
-      "options": ["Da solo in giardino", "Al ristorante", "Con la famiglia"],
-      "correct": 0
+      "options": [
+        "Da solo in giardino",
+        "Al ristorante",
+        "Con la famiglia"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « mangia sempre da solo in giardino »."
     },
     {
       "q": "Che cosa porta Marco al signor Bruno?",
-      "options": ["Un disegno colorato", "Un libro", "Una torta"],
-      "correct": 0
+      "options": [
+        "Un disegno colorato",
+        "Un libro",
+        "Una torta"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « un giorno gli porta un disegno colorato »."
     },
     {
       "q": "Che cosa fa la classe il giorno dopo?",
-      "options": ["Scrive delle cartoline", "Va al cinema", "Organizza una festa"],
-      "correct": 0
+      "options": [
+        "Scrive delle cartoline",
+        "Va al cinema",
+        "Organizza una festa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « il giorno dopo, tutta la classe scrive delle cartoline per il signor Bruno »."
     }
   ],
   "words": {

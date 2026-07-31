@@ -20,18 +20,33 @@
   "questions": [
     {
       "q": "Quando arrivò il pomodoro sulla tavola italiana?",
-      "options": ["Nel Cinquecento, dalle Americhe", "Nell'antica Roma", "Nel Novecento"],
-      "correct": 0
+      "options": [
+        "Nel Cinquecento, dalle Americhe",
+        "Nell'antica Roma",
+        "Nel Novecento"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le pomodoro « arrivò dalle Americhe soltanto nel Cinquecento »."
     },
     {
       "q": "Grazie a chi si diffuse la pasta secca in Sicilia?",
-      "options": ["Grazie ai mercanti arabi", "Grazie ai monaci francesi", "Grazie ai pescatori greci"],
-      "correct": 0
+      "options": [
+        "Grazie ai mercanti arabi",
+        "Grazie ai monaci francesi",
+        "Grazie ai pescatori greci"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la pasta secca « si diffuse in Sicilia grazie ai mercanti arabi »."
     },
     {
       "q": "Qual è, secondo il testo, il vero pericolo per la cucina italiana?",
-      "options": ["L'omologazione industriale", "L'innovazione dei cuochi", "Il turismo gastronomico"],
-      "correct": 0
+      "options": [
+        "L'omologazione industriale",
+        "L'innovazione dei cuochi",
+        "Il turismo gastronomico"
+      ],
+      "correct": 0,
+      "explanation": "Le texte affirme que « il vero pericolo... è l'omologazione industriale »."
     }
   ],
   "words": {

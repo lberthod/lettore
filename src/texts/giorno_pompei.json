@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Dove vive Ottavia?",
-      "options": ["A Pompei, vicino al foro", "A Roma, vicino al Colosseo", "In un piccolo villaggio di montagna"],
-      "correct": 0
+      "options": [
+        "A Pompei, vicino al foro",
+        "A Roma, vicino al Colosseo",
+        "In un piccolo villaggio di montagna"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « nella sua casa di Pompei vicino al foro », donc Ottavia vit à Pompéi près du forum."
     },
     {
       "q": "Che cosa fanno i venditori al mercato?",
-      "options": ["Gridano i prezzi della frutta e del pesce", "Vendono solo vestiti", "Riparano le case"],
-      "correct": 0
+      "options": [
+        "Gridano i prezzi della frutta e del pesce",
+        "Vendono solo vestiti",
+        "Riparano le case"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i venditori gridano i prezzi della frutta e del pesce fresco », donc les vendeurs crient les prix des fruits et du poisson."
     },
     {
       "q": "Che cosa vede Ottavia verso sera?",
-      "options": ["Una nuvola nera sopra la montagna", "Un arcobaleno colorato", "Una nave nel porto"],
-      "correct": 0
+      "options": [
+        "Una nuvola nera sopra la montagna",
+        "Un arcobaleno colorato",
+        "Una nave nel porto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « vede una nuvola nera sopra la montagna vicina », donc Ottavia voit un nuage noir au-dessus de la montagne."
     }
   ],
   "words": {

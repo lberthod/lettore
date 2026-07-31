@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa sostiene il maestro all'inizio del dialogo?",
-      "options": ["Che nessuno commette il male volontariamente", "Che tutti gli uomini sono naturalmente malvagi", "Che la virtù non può essere insegnata"],
-      "correct": 0
+      "options": [
+        "Che nessuno commette il male volontariamente",
+        "Che tutti gli uomini sono naturalmente malvagi",
+        "Che la virtù non può essere insegnata"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « nessuno commette il male volontariamente »."
     },
     {
       "q": "Perché, secondo il maestro, un ladro ruba?",
-      "options": ["Perché crede di trarne un vantaggio", "Perché odia la società", "Perché è costretto dalla povertà"],
-      "correct": 0
+      "options": [
+        "Perché crede di trarne un vantaggio",
+        "Perché odia la società",
+        "Perché è costretto dalla povertà"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « crede senz'altro di trarne un vantaggio »."
     },
     {
       "q": "Quale conclusione raggiungono i due interlocutori?",
-      "options": ["Che l'ignoranza, non la malvagità, è la radice del male", "Che il male è sempre una scelta consapevole", "Che nessuno può davvero conoscere il bene"],
-      "correct": 0
+      "options": [
+        "Che l'ignoranza, non la malvagità, è la radice del male",
+        "Che il male è sempre una scelta consapevole",
+        "Che nessuno può davvero conoscere il bene"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « l'ignoranza, non la malvagità, è la vera radice di ogni azione ingiusta »."
     }
   ],
   "words": {

@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quando è chiuso il museo?",
-      "options": ["Il lunedì", "Il sabato", "La domenica"],
-      "correct": 0
+      "options": [
+        "Il lunedì",
+        "Il sabato",
+        "La domenica"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le lundi le musée est toujours fermé pour le nettoyage des salles."
     },
     {
       "q": "Quanto costa il biglietto ridotto?",
-      "options": ["Otto euro", "Dodici euro", "Venti euro"],
-      "correct": 0
+      "options": [
+        "Otto euro",
+        "Dodici euro",
+        "Venti euro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le billet réduit coûte huit euros pour les étudiants et les plus de 65 ans."
     },
     {
       "q": "Che cosa è vietato fare nel museo?",
-      "options": ["Toccare le opere e fare foto con il flash", "Parlare a voce bassa", "Portare uno zaino piccolo"],
-      "correct": 0
+      "options": [
+        "Toccare le opere e fare foto con il flash",
+        "Parlare a voce bassa",
+        "Portare uno zaino piccolo"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit qu'il est interdit de toucher les œuvres et de prendre des photos avec le flash."
     }
   ],
   "words": {

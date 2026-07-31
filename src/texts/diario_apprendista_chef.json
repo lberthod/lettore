@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Come descrive l'autore il suo primo giorno di lavoro?",
-      "options": ["Molto più duro di quanto immaginava", "Facile e piacevole", "Noioso e senza sfide"],
-      "correct": 0
+      "options": [
+        "Molto più duro di quanto immaginava",
+        "Facile e piacevole",
+        "Noioso e senza sfide"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le premier jour a été « molto più duro di quanto immaginassi », donc plus dur que prévu."
     },
     {
       "q": "Perché lo chef rimprovera l'apprendista mercoledì?",
-      "options": ["Perché aveva sbagliato la cottura del risotto", "Perché era arrivato in ritardo", "Perché aveva rotto un piatto"],
-      "correct": 0
+      "options": [
+        "Perché aveva sbagliato la cottura del risotto",
+        "Perché era arrivato in ritardo",
+        "Perché aveva rotto un piatto"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que le chef l'a réprimandé « perché avevo sbagliato la cottura del risotto »."
     },
     {
       "q": "Che cosa succede sabato secondo il diario?",
-      "options": ["Lo chef gli permette di preparare un piatto per un cliente vero", "Lo chef lo licenzia definitivamente", "L'apprendista decide di abbandonare la cucina"],
-      "correct": 0
+      "options": [
+        "Lo chef gli permette di preparare un piatto per un cliente vero",
+        "Lo chef lo licenzia definitivamente",
+        "L'apprendista decide di abbandonare la cucina"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que samedi il lui a permis de préparer un plat pour un vrai client."
     }
   ],
   "words": {

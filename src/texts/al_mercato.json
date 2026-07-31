@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Quanto costano le mele al chilo?",
-      "options": ["Due euro", "Un euro", "Quattro euro"],
-      "correct": 0
+      "options": [
+        "Due euro",
+        "Un euro",
+        "Quattro euro"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Due euro al chilo » pour les pommes."
     },
     {
       "q": "Quanti pomodori compra il cliente?",
-      "options": ["Un chilo", "Mezzo chilo", "Due chili"],
-      "correct": 1
+      "options": [
+        "Un chilo",
+        "Mezzo chilo",
+        "Due chili"
+      ],
+      "correct": 1,
+      "explanation": "Le client répond « Mezzo chilo, grazie » quand on lui demande combien de tomates il veut."
     },
     {
       "q": "Quanto paga in tutto?",
-      "options": ["Due euro", "Quattro euro", "Sei euro"],
-      "correct": 1
+      "options": [
+        "Due euro",
+        "Quattro euro",
+        "Sei euro"
+      ],
+      "correct": 1,
+      "explanation": "Le vendeur répond « Quattro euro » à la question « Quanto pago in tutto ? »."
     }
   ],
   "words": {

@@ -173,7 +173,8 @@
         "Fu il primo voto dopo la prima guerra mondiale",
         "Per la prima volta votarono anche le donne"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « Per la prima volta nella storia del paese votarono anche le donne », donc le vote était historique parce que les femmes votaient pour la première fois."
     },
     {
       "q": "Cosa accadde all'ultimo re, Umberto secondo, dopo il referendum?",
@@ -182,7 +183,8 @@
         "Rimase a Roma come cittadino privato",
         "Divenne un capo della Resistenza"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « l'ultimo re, Umberto secondo, partì per l'esilio », donc il est parti en exil après le référendum."
     },
     {
       "q": "Perché la Costituzione italiana è considerata una delle più moderne del mondo?",
@@ -191,7 +193,8 @@
         "Perché difende la libertà, il lavoro e l'uguaglianza di tutti i cittadini",
         "Perché fu approvata direttamente con un referendum"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit qu'elle « difende la libertà, il lavoro e l'uguaglianza di tutti i cittadini », c'est pourquoi elle est considérée comme moderne."
     }
   ]
 }

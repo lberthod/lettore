@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che problema ha il gatto secondo la proprietaria?",
-      "options": ["Non mangia da due giorni ed è sempre stanco", "Ha una zampa rotta", "Non smette di miagolare"],
-      "correct": 0
+      "options": [
+        "Non mangia da due giorni ed è sempre stanco",
+        "Ha una zampa rotta",
+        "Non smette di miagolare"
+      ],
+      "correct": 0,
+      "explanation": "La propriétaire dit : « il mio gatto non mangia più da due giorni e sembra sempre stanco », donc le problème est qu'il ne mange plus depuis deux jours et qu'il est toujours fatigué."
     },
     {
       "q": "Che cosa nota il veterinario esaminando il gatto?",
-      "options": ["Che la pancia sembra un po' gonfia", "Che ha la febbre alta", "Che ha perso molto pelo"],
-      "correct": 0
+      "options": [
+        "Che la pancia sembra un po' gonfia",
+        "Che ha la febbre alta",
+        "Che ha perso molto pelo"
+      ],
+      "correct": 0,
+      "explanation": "Le vétérinaire remarque que « la pancia sembra un po' gonfia », donc il note que le ventre semble un peu gonflé."
     },
     {
       "q": "Che cosa propone di fare il veterinario?",
-      "options": ["Una radiografia per essere sicuri", "Un'operazione immediata", "Di portare il gatto a casa senza fare nulla"],
-      "correct": 0
+      "options": [
+        "Una radiografia per essere sicuri",
+        "Un'operazione immediata",
+        "Di portare il gatto a casa senza fare nulla"
+      ],
+      "correct": 0,
+      "explanation": "Le vétérinaire propose « Facciamo una radiografia per essere sicuri », donc il propose de faire une radiographie pour être sûr."
     }
   ],
   "words": {

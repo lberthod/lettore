@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Da quando la Val d'Orcia è patrimonio dell'UNESCO?",
-      "options": ["Dal 2004", "Dal 1950", "Dal 2020"],
-      "correct": 0
+      "options": [
+        "Dal 2004",
+        "Dal 1950",
+        "Dal 2020"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que la Val d'Orcia figure sur la liste du patrimoine mondial de l'UNESCO depuis 2004."
     },
     {
       "q": "Chi rappresentò per primo questo paesaggio come simbolo di armonia?",
-      "options": ["Gli artisti senesi tra Quattrocento e Cinquecento", "I fotografi del Novecento", "Gli architetti moderni"],
-      "correct": 0
+      "options": [
+        "Gli artisti senesi tra Quattrocento e Cinquecento",
+        "I fotografi del Novecento",
+        "Gli architetti moderni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise que ce sont les artistes senesi entre le Quattrocento et le Cinquecento qui ont représenté ce paysage comme symbole d'harmonie."
     },
     {
       "q": "Che cosa mantiene vivo l'equilibrio antico della valle?",
-      "options": ["L'agricoltura tradizionale, come il pecorino e il vino", "L'industria pesante", "Il turismo di massa"],
-      "correct": 0
+      "options": [
+        "L'agricoltura tradizionale, come il pecorino e il vino",
+        "L'industria pesante",
+        "Il turismo di massa"
+      ],
+      "correct": 0,
+      "explanation": "Le texte indique que l'agriculture traditionnelle, en particulier le pecorino et le vin, maintient vivant l'équilibre ancien."
     }
   ],
   "words": {

@@ -16,18 +16,33 @@
   "questions": [
     {
       "q": "Quanti giorni propone l'itinerario della guida?",
-      "options": ["Tre giorni", "Una settimana", "Un solo giorno"],
-      "correct": 0
+      "options": [
+        "Tre giorni",
+        "Una settimana",
+        "Un solo giorno"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Questa guida propone un itinerario di tre giorni », donc l'itinéraire dure trois jours."
     },
     {
       "q": "Cosa sono i trulli di Alberobello?",
-      "options": ["Tipiche costruzioni in pietra a forma di cono", "Grandi navi da pesca", "Antichi teatri romani"],
-      "correct": 0
+      "options": [
+        "Tipiche costruzioni in pietra a forma di cono",
+        "Grandi navi da pesca",
+        "Antichi teatri romani"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « i trulli di Alberobello, le tipiche costruzioni in pietra a forma di cono », donc ce sont des constructions en pierre en forme de cône."
     },
     {
       "q": "Perché la guida consiglia di spostarsi in auto?",
-      "options": ["Perché i collegamenti tra i borghi sono limitati", "Perché il treno costa troppo", "Perché non ci sono strade"],
-      "correct": 0
+      "options": [
+        "Perché i collegamenti tra i borghi sono limitati",
+        "Perché il treno costa troppo",
+        "Perché non ci sono strade"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « spostatevi in auto perché i collegamenti tra i borghi sono limitati », donc la voiture est conseillée à cause des liaisons limitées."
     }
   ],
   "words": {

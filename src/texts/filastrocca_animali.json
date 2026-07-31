@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Di che colore è il gatto?",
-      "options": ["Bianco", "Nero", "Grigio"],
-      "correct": 1
+      "options": [
+        "Bianco",
+        "Nero",
+        "Grigio"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Il gatto nero », donc le chat est noir."
     },
     {
       "q": "Che cosa fa il pesce?",
-      "options": ["Dorme", "Nuota", "Vola"],
-      "correct": 1
+      "options": [
+        "Dorme",
+        "Nuota",
+        "Vola"
+      ],
+      "correct": 1,
+      "explanation": "Le texte dit « Il pesce nuota », donc le poisson nage."
     },
     {
       "q": "Dove dorme il cavallo?",
-      "options": ["Sul muro", "Nel mare", "Lungo il cammino"],
-      "correct": 2
+      "options": [
+        "Sul muro",
+        "Nel mare",
+        "Lungo il cammino"
+      ],
+      "correct": 2,
+      "explanation": "Le texte dit « Dorme il cavallo lungo il cammino », donc le cheval dort le long du chemin."
     }
   ],
   "words": {

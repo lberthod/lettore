@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa bisogna fare per prima cosa?",
-      "options": ["Premere il tasto per accendere il computer", "Scrivere subito un testo", "Chiudere tutti i programmi"],
-      "correct": 0
+      "options": [
+        "Premere il tasto per accendere il computer",
+        "Scrivere subito un testo",
+        "Chiudere tutti i programmi"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Prima cosa: premete il tasto per accendere il computer »."
     },
     {
       "q": "Come si apre un programma?",
-      "options": ["Cliccando due volte sulla sua icona", "Premendo il tasto spazio", "Spegnendo il computer"],
-      "correct": 0
+      "options": [
+        "Cliccando due volte sulla sua icona",
+        "Premendo il tasto spazio",
+        "Spegnendo il computer"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Per aprire un programma, cliccate due volte sulla sua icona »."
     },
     {
       "q": "Che cosa bisogna fare alla fine?",
-      "options": ["Spegnere sempre il computer", "Lasciare tutto acceso", "Staccare subito la corrente"],
-      "correct": 0
+      "options": [
+        "Spegnere sempre il computer",
+        "Lasciare tutto acceso",
+        "Staccare subito la corrente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Alla fine, spegnete sempre il computer prima di andare via »."
     }
   ],
   "words": {

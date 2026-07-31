@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Da quanti anni lavora Bruno nella stessa azienda?",
-      "options": ["Trentotto anni", "Dieci anni", "Cinque anni"],
-      "correct": 0
+      "options": [
+        "Trentotto anni",
+        "Dieci anni",
+        "Cinque anni"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Dopo trentotto anni nella stessa azienda », donc Bruno travaille dans la même entreprise depuis trente-huit ans."
     },
     {
       "q": "Come reagiscono i colleghi più giovani al suo ultimo giorno?",
-      "options": ["Alzano appena lo sguardo per salutarlo distrattamente", "Organizzano una grande festa a sorpresa", "Si commuovono visibilmente"],
-      "correct": 0
+      "options": [
+        "Alzano appena lo sguardo per salutarlo distrattamente",
+        "Organizzano una grande festa a sorpresa",
+        "Si commuovono visibilmente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « appena alzano lo sguardo per salutarlo distrattamente », donc les jeunes collègues lèvent à peine les yeux pour le saluer distraitement."
     },
     {
       "q": "Che cosa prova Bruno uscendo dall'edificio, e perché questo lo turba?",
-      "options": ["Prova più sollievo che tristezza, cosa che non si aspettava", "Prova una tristezza infinita che lo paralizza", "Non prova assolutamente nulla"],
-      "correct": 0
+      "options": [
+        "Prova più sollievo che tristezza, cosa che non si aspettava",
+        "Prova una tristezza infinita che lo paralizza",
+        "Non prova assolutamente nulla"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « si sorprende a provare più sollievo che tristezza, e questo lo turba profondamente », donc il est troublé parce qu'il ressent plus de soulagement que de tristesse."
     }
   ],
   "words": {

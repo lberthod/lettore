@@ -26,7 +26,8 @@
         "Solo denaro e documenti",
         "Attrezzi da lavoro agricolo"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit qu'il emporte « due camicie, un vestito buono per la domenica, la fotografia sbiadita dei genitori e un tozzo di pane »."
     },
     {
       "q": "Che cosa racconta a Rocco l'uomo di Potenza durante il viaggio?",
@@ -35,7 +36,8 @@
         "Le difficoltà di trovare un treno puntuale",
         "La storia della sua famiglia contadina"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que cet homme lui raconte l'histoire des ouvriers du Sud appelés « terroni » à Turin."
     },
     {
       "q": "Che cosa capisce Rocco, molti anni dopo, sul coraggio?",
@@ -44,7 +46,8 @@
         "Che consiste nel non lasciare mai il proprio paese",
         "Che consiste nell'evitare ogni cambiamento"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit que le courage « consiste nel continuare a camminare » même quand on a peur."
     }
   ],
   "words": {

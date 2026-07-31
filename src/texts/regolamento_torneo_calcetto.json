@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Quanti giocatori ha ogni squadra in campo?",
-      "options": ["Cinque", "Sette", "Undici"],
-      "correct": 0
+      "options": [
+        "Cinque",
+        "Sette",
+        "Undici"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni squadra ha cinque giocatori in campo », donc chaque équipe a cinq joueurs sur le terrain."
     },
     {
       "q": "Quanti punti vale una vittoria?",
-      "options": ["Tre punti", "Un punto", "Cinque punti"],
-      "correct": 0
+      "options": [
+        "Tre punti",
+        "Un punto",
+        "Cinque punti"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la vittoria vale tre punti », donc une victoire vaut trois points."
     },
     {
       "q": "Che cosa succede in caso di fallo grave?",
-      "options": ["L'espulsione immediata del giocatore", "Solo un avvertimento verbale", "Niente, il gioco continua normalmente"],
-      "correct": 0
+      "options": [
+        "L'espulsione immediata del giocatore",
+        "Solo un avvertimento verbale",
+        "Niente, il gioco continua normalmente"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « ogni fallo grave porta all'espulsione immediata », donc un faute grave entraîne l'expulsion immédiate."
     }
   ],
   "words": {

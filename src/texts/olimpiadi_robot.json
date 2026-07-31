@@ -15,18 +15,33 @@
   "questions": [
     {
       "q": "Che cosa organizza il Comitato Olimpico nel 2072?",
-      "options": ["Le prime Olimpiadi riservate ai robot", "Un campionato di scacchi robotico", "Una gara di velocità tra automobili"],
-      "correct": 0
+      "options": [
+        "Le prime Olimpiadi riservate ai robot",
+        "Un campionato di scacchi robotico",
+        "Una gara di velocità tra automobili"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que le Comité organise « le prime Olimpiadi riservate esclusivamente ai robot atletici »."
     },
     {
       "q": "Che cosa succede durante la finale dei cento metri?",
-      "options": ["Un guasto tecnico ferma il robot favorito", "Il pubblico interrompe la gara", "Due robot si scontrano"],
-      "correct": 0
+      "options": [
+        "Un guasto tecnico ferma il robot favorito",
+        "Il pubblico interrompe la gara",
+        "Due robot si scontrano"
+      ],
+      "correct": 0,
+      "explanation": "Le texte précise qu'« un piccolo guasto tecnico costringe il robot favorito a fermarsi » pendant la finale."
     },
     {
       "q": "Su che cosa si interrogano molti commentatori alla fine?",
-      "options": ["Se la competizione abbia ancora senso senza l'elemento umano", "Se i robot debbano pagare le tasse", "Se sia giusto vietare le Olimpiadi tradizionali"],
-      "correct": 0
+      "options": [
+        "Se la competizione abbia ancora senso senza l'elemento umano",
+        "Se i robot debbano pagare le tasse",
+        "Se sia giusto vietare le Olimpiadi tradizionali"
+      ],
+      "correct": 0,
+      "explanation": "Le texte rapporte que les commentateurs se demandent « se questo genere di competizione conservi ancora un senso, una volta eliminato l'elemento umano »."
     }
   ],
   "words": {

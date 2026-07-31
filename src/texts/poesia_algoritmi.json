@@ -17,18 +17,33 @@
   "questions": [
     {
       "q": "Che cosa impara a fare l'algoritmo secondo la poesia?",
-      "options": ["A prevedere il pianto", "A scrivere poesie", "A guidare automobili"],
-      "correct": 0
+      "options": [
+        "A prevedere il pianto",
+        "A scrivere poesie",
+        "A guidare automobili"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Un algoritmo impara a prevedere il pianto »."
     },
     {
       "q": "Che cosa non sa fare l'algoritmo, secondo il quinto verso?",
-      "options": ["Restare in silenzio senza motivo", "Calcolare numeri complessi", "Riconoscere volti umani"],
-      "correct": 0
+      "options": [
+        "Restare in silenzio senza motivo",
+        "Calcolare numeri complessi",
+        "Riconoscere volti umani"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « Ma non sa cosa sia restare in silenzio / solo per il gusto di non essere previsti »."
     },
     {
       "q": "Dove trova la vera libertà il narratore, secondo l'ultimo verso?",
-      "options": ["In un errore che nessun codice può prevedere", "In un nuovo dispositivo tecnologico", "In una vacanza senza internet"],
-      "correct": 0
+      "options": [
+        "In un errore che nessun codice può prevedere",
+        "In un nuovo dispositivo tecnologico",
+        "In una vacanza senza internet"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « la vera libertà, oggi, è proprio questa: un errore che nessun codice sa prevedere »."
     }
   ],
   "words": {

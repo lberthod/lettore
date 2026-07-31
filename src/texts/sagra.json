@@ -190,7 +190,8 @@
         "Ha guadagnato molte mance",
         "Ha rovesciato un piatto di tortellini"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « il primo giorno era nervoso e ha rovesciato un piatto di tortellini »."
     },
     {
       "q": "Chi conosce la ricetta segreta dei tortellini?",
@@ -199,7 +200,8 @@
         "Tutte le famiglie di Montefiore",
         "Il cuoco del grande tendone"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « si dice che la conoscano solo cinque donne »."
     },
     {
       "q": "Qual è il premio del torneo di carte della domenica?",
@@ -208,7 +210,8 @@
         "Un prosciutto intero",
         "Una cena gratis alla sagra"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « il premio del torneo è un prosciutto intero »."
     }
   ]
 }

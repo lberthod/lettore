@@ -194,7 +194,8 @@
         "In giardino, sotto l'albero di fico",
         "Nella cucina della nonna"
       ],
-      "correct": 0
+      "correct": 0,
+      "explanation": "Le texte dit « In soffitta, tra scatole polverose e mobili antichi, trova una piccola scatola di legno », donc elle la trouve dans le grenier de la vieille maison des grands-parents."
     },
     {
       "q": "Chi ha scritto la lettera?",
@@ -203,7 +204,8 @@
         "Il padre di Martina",
         "Il nonno Giovanni, quando era un giovane marinaio"
       ],
-      "correct": 2
+      "correct": 2,
+      "explanation": "Le texte dit « La lettera è del nonno Giovanni, scritta quando era un giovane marinaio », donc c'est le grand-père Giovanni qui a écrit la lettre."
     },
     {
       "q": "Cosa fa il nonno dopo due anni in America?",
@@ -212,7 +214,8 @@
         "Torna al paese e sposa la nonna",
         "Scrive un'ultima lettera e parte di nuovo"
       ],
-      "correct": 1
+      "correct": 1,
+      "explanation": "Le texte dit « Dopo due anni, è tornato al paese con un piccolo anello d'oro e l'ha sposata », donc il revient au village et épouse la grand-mère."
     }
   ]
 }

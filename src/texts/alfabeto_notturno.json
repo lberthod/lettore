@@ -21,18 +21,33 @@
   "questions": [
     {
       "q": "A che cosa vengono paragonate le parole che affiorano di notte?",
-      "options": ["A pesci muti dal fondo dell'insonnia", "A foglie portate dal vento", "A campane lontane"],
-      "correct": 0
+      "options": [
+        "A pesci muti dal fondo dell'insonnia",
+        "A foglie portate dal vento",
+        "A campane lontane"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit que les paroles « affiorano ... come pesci muti dal fondo dell'insonnia », donc elles sont comparées à des poissons muets."
     },
     {
       "q": "Come appare la pagina bianca nel poema?",
-      "options": ["Come una neve da attraversare", "Come uno specchio fedele", "Come un muro invalicabile"],
-      "correct": 0
+      "options": [
+        "Come una neve da attraversare",
+        "Come uno specchio fedele",
+        "Come un muro invalicabile"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « La pagina bianca è una neve da attraversare », donc la page blanche est comparée à une neige à traverser."
     },
     {
       "q": "Che cosa accade all'alba?",
-      "options": ["Il poema è compiuto ma non dice tutto", "Il poeta cancella ogni verso", "Le parole tornano a dormire"],
-      "correct": 0
+      "options": [
+        "Il poema è compiuto ma non dice tutto",
+        "Il poeta cancella ogni verso",
+        "Le parole tornano a dormire"
+      ],
+      "correct": 0,
+      "explanation": "Le texte dit « All'alba il poema è compiuto, eppure non dice tutto », donc à l'aube le poème est achevé mais ne dit pas tout."
     }
   ],
   "words": {
