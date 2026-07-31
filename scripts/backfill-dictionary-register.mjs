@@ -180,52 +180,63 @@ requireApiKey()
 let done = 0
 let marked = 0
 let failed = 0
+// Lots traités en parallèle (CONCURRENCY appels LLM en vol) ; les mutations de
+// `lemmas` et les écritures de shards restent séquentielles dans l'event loop.
+const CONCURRENCY = 6
+const batches = []
 for (let start = 0; start < todo.length; start += BATCH_SIZE) {
-  const batch = todo.slice(start, start + BATCH_SIZE)
-  const wordBlock = batch
-    .map((l) => {
-      const e = lemmas[l]
-      return `- ${e.lemma} (${e.pos}) : ${e.definition_it}`
-    })
-    .join('\n')
-
-  try {
-    const prompt = `Indique le registre de langue de chacun de ces ${batch.length} lemmes italiens :\n\n${wordBlock}`
-    // Sans structured outputs, une réponse peut être mal formée : on retente
-    // le lot une fois avant de le compter en échec (repris à la relance).
-    let byLemma
-    for (let attempt = 1; ; attempt++) {
-      const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 8000 })
-      try {
-        byLemma = validateRegisters(out, batch)
-        break
-      } catch (err) {
-        if (attempt >= 2) throw err
-        console.warn(`  ⚠ lot ${start / BATCH_SIZE + 1} : ${err.message} — nouvel essai…`)
-      }
-    }
-    let batchMarked = 0
-    for (const l of batch) {
-      const register = byLemma.get(l)
-      if (MARKED_REGISTERS.has(register)) {
-        lemmas[l].register = register
-        batchMarked++
-      } else {
-        // "neutro" : champ absent des shards par design ; on trace le lemme
-        // pour ne pas le re-soumettre aux prochaines exécutions.
-        neutralLemmas.add(l)
-      }
-    }
-    if (batchMarked > 0) writeLemmaShards(lemmas)
-    writeFileSync(NEUTRAL_PATH, JSON.stringify([...neutralLemmas].sort(), null, 2) + '\n')
-    done += batch.length
-    marked += batchMarked
-  } catch (err) {
-    failed += batch.length
-    console.error(`  ✗ lot ${start / BATCH_SIZE + 1} (${batch[0]}…) : ${err?.message ?? err}`)
-  }
-  console.log(`Progression : ${done + failed}/${todo.length} (${marked} marqué(s), ${failed} en échec)`)
+  batches.push({ index: start / BATCH_SIZE + 1, batch: todo.slice(start, start + BATCH_SIZE) })
 }
+let cursor = 0
+async function worker() {
+  while (cursor < batches.length) {
+    const { index, batch } = batches[cursor++]
+    const wordBlock = batch
+      .map((l) => {
+        const e = lemmas[l]
+        return `- ${e.lemma} (${e.pos}) : ${e.definition_it}`
+      })
+      .join('\n')
+
+    try {
+      const prompt = `Indique le registre de langue de chacun de ces ${batch.length} lemmes italiens :\n\n${wordBlock}`
+      // Sans structured outputs, une réponse peut être mal formée : on retente
+      // le lot une fois avant de le compter en échec (repris à la relance).
+      let byLemma
+      for (let attempt = 1; ; attempt++) {
+        const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 16000 })
+        try {
+          byLemma = validateRegisters(out, batch)
+          break
+        } catch (err) {
+          if (attempt >= 2) throw err
+          console.warn(`  ⚠ lot ${index} : ${err.message} — nouvel essai…`)
+        }
+      }
+      let batchMarked = 0
+      for (const l of batch) {
+        const register = byLemma.get(l)
+        if (MARKED_REGISTERS.has(register)) {
+          lemmas[l].register = register
+          batchMarked++
+        } else {
+          // "neutro" : champ absent des shards par design ; on trace le lemme
+          // pour ne pas le re-soumettre aux prochaines exécutions.
+          neutralLemmas.add(l)
+        }
+      }
+      if (batchMarked > 0) writeLemmaShards(lemmas)
+      writeFileSync(NEUTRAL_PATH, JSON.stringify([...neutralLemmas].sort(), null, 2) + '\n')
+      done += batch.length
+      marked += batchMarked
+    } catch (err) {
+      failed += batch.length
+      console.error(`  ✗ lot ${index} (${batch[0]}…) : ${err?.message ?? err}`)
+    }
+    console.log(`Progression : ${done + failed}/${todo.length} (${marked} marqué(s), ${failed} en échec)`)
+  }
+}
+await Promise.all(Array.from({ length: CONCURRENCY }, worker))
 
 if (failed) {
   console.error(`Terminé avec ${failed} lemme(s) en échec — relance le script pour reprendre.`)
