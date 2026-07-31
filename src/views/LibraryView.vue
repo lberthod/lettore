@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import textsIndex from '../texts/index.json'
 import taxonomy from '../texts/category.json'
@@ -211,6 +211,15 @@ const hasMore = computed(() => shownCount.value < totalVisibleTexts.value)
 function loadMore() {
   visibleCount.value += PAGE_SIZE
 }
+
+// Mode écoute (compréhension orale) : même route que la lecture, avec
+// ?mode=ascolto — ReaderView masque alors le texte. Bouton (et non lien
+// imbriqué) car la carte est déjà un RouterLink.
+const router = useRouter()
+
+function listenTo(t) {
+  router.push({ name: 'reader', params: { id: t.id }, query: { mode: 'ascolto' } })
+}
 </script>
 
 <template>
@@ -359,8 +368,19 @@ function loadMore() {
               {{ t.paragraphCount }} paragraphes · ~{{ t.wordCount }} mots
               <span v-if="isRead(t.id)" class="read-badge">✓ lu</span>
             </p>
-            <span class="cta">
-              {{ isRead(t.id) ? 'Relire →' : 'Lire →' }}
+            <span class="cta-row">
+              <button
+                class="listen-btn"
+                type="button"
+                :title="`Écouter « ${t.title} » sans le texte (mode écoute)`"
+                :aria-label="`Écouter « ${t.title} » sans le texte (mode écoute)`"
+                @click.stop.prevent="listenTo(t)"
+              >
+                🎧 Écouter
+              </button>
+              <span class="cta">
+                {{ isRead(t.id) ? 'Relire →' : 'Lire →' }}
+              </span>
             </span>
           </RouterLink>
         </div>
@@ -793,11 +813,37 @@ function loadMore() {
   font-weight: 700;
 }
 
-.cta {
+.cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
   margin-top: auto;
-  align-self: flex-end;
+}
+
+.cta {
   font-size: 0.85rem;
   font-weight: 700;
+  color: #b0692e;
+}
+
+/* Action secondaire discrète : écoute sans texte (mode ascolto) */
+.listen-btn {
+  padding: 0.2rem 0.65rem;
+  border: 1px solid rgba(176, 105, 46, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #8a5a2b;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+
+.listen-btn:hover {
+  background: #faf6f0;
+  border-color: #b0692e;
   color: #b0692e;
 }
 

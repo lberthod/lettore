@@ -17,6 +17,7 @@ import QuizSection from '../components/QuizSection.vue'
 import {
   progress,
   markRead,
+  touchStreak,
   isFavorite,
   toggleFavorite,
   isInVocabMode,
@@ -26,6 +27,8 @@ import { currentUser } from '../lib/auth.js'
 import { isCatalogText, loadCatalogText } from '../lib/protectedContent.js'
 import ContentPaywall from '../components/ContentPaywall.vue'
 import { trackTextOpened, trackReadingCompleted, trackWordTranslated } from '../lib/analytics.js'
+import PronunciationDrill from '../components/PronunciationDrill.vue'
+import { isSupported as speechRecognitionSupported } from '../lib/speechRecognition.js'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -161,14 +164,58 @@ function openQuiz() {
 function onQuizCompleted(score) {
   if (score >= currentText.value.questions.length - 1) {
     markRead(props.id)
+    touchStreak()
     trackReadingCompleted({ textId: props.id, level: textMeta.value?.level })
   }
+}
+
+// --- Mode écoute (« ascolto ») : compréhension orale pure, activé par
+// ?mode=ascolto (voir LibraryView.vue). Le texte reste dans le DOM (le TTS
+// lit depuis les mêmes données) mais est flouté et rendu inerte ; le quiz
+// existant sert de vérification de compréhension. Le surlignage de phrase
+// (readingKey) reste actif sous le flou : il montre la progression de la
+// lecture sans révéler les mots.
+const ascoltoRequested = computed(() => route.query.mode === 'ascolto')
+const textRevealed = ref(false)
+const ascoltoMasked = computed(() => ascoltoRequested.value && !textRevealed.value)
+
+// --- Exercice de prononciation : un bouton micro discret après chaque
+// phrase ouvre un panneau PronunciationDrill (une seule phrase à la fois).
+// Sans reconnaissance vocale (Firefox, WebView), les boutons n'apparaissent
+// pas. En mode écoute masqué, pas de bouton non plus : le drill affiche la
+// phrase cible en toutes lettres (mots comparés, transcription), ce qui
+// révélerait le texte flouté.
+const micSupported = speechRecognitionSupported()
+const drillKey = ref(null) // clé 'pi-si' de la phrase en cours d'exercice
+
+const drillSentence = computed(() =>
+  drillKey.value
+    ? flatSentences.value.find((s) => s.key === drillKey.value)?.text || ''
+    : ''
+)
+
+function toggleDrill(key) {
+  if (drillKey.value === key) {
+    drillKey.value = null
+    return
+  }
+  // Une lecture globale en cours parasiterait l'exercice (le micro capterait
+  // la voix du TTS) : on l'arrête proprement avant d'ouvrir le panneau.
+  stopReading()
+  closeOverlay()
+  drillKey.value = key
 }
 
 // --- Mode vocabulaire (réservé aux connectés) : un clic ajoute ce texte à la
 // page globale « Mode vocabulaire » (voir VocabularyView.vue), qui regroupe
 // le lexique de tous les textes ainsi marqués.
 const inVocabMode = computed(() => isInVocabMode(props.id))
+
+// Re-masquer le texte (mode écoute) doit fermer l'exercice de prononciation :
+// le panneau resterait sinon visible avec la phrase en clair.
+watch(ascoltoMasked, (masked) => {
+  if (masked) drillKey.value = null
+})
 
 function toggleVocabMode() {
   if (!currentUser.value) {
@@ -398,6 +445,9 @@ watch(
     closeOverlay()
     stopReading()
     quizOpen.value = false
+    drillKey.value = null
+    // Changement de texte : le mode écoute repart texte masqué
+    textRevealed.value = false
     loadText(id)
   },
   { immediate: true }
@@ -516,7 +566,30 @@ onBeforeUnmount(() => {
         </div>
       </div>
 
-      <p v-if="!progress.hintDismissed" class="hint">
+      <!-- Bandeau du mode écoute : explique le masquage et permet de révéler
+           le texte. Pas de promesse de pause fine : sur mobile natif,
+           pause = stop (limitation documentée de src/tts.js). -->
+      <div v-if="ascoltoRequested" class="ascolto-bar">
+        <p class="ascolto-note">
+          <span aria-hidden="true">🎧</span>
+          <template v-if="ascoltoMasked">
+            Mode écoute : le texte est masqué. Écoutez-le avec le bouton
+            lecture, puis vérifiez votre compréhension.
+          </template>
+          <template v-else>
+            Mode écoute : texte affiché.
+          </template>
+        </p>
+        <button
+          class="ascolto-toggle"
+          :aria-pressed="!ascoltoMasked"
+          @click="textRevealed = !textRevealed"
+        >
+          {{ ascoltoMasked ? 'Afficher le texte' : 'Masquer le texte' }}
+        </button>
+      </div>
+
+      <p v-if="!progress.hintDismissed && !ascoltoMasked" class="hint">
         <template v-if="touchMode">
           Touchez un mot pour voir sa traduction. Touchez la ponctuation
           (<strong>.</strong> <strong>!</strong> <strong>?</strong>) pour
@@ -539,43 +612,93 @@ onBeforeUnmount(() => {
 
       <!-- Le texte, sur un panneau « papier » posé sur la scène -->
       <div class="paper">
-        <article @click.self="closeOverlay">
-          <p v-for="(sentences, pi) in paragraphs" :key="pi">
-            <span
-              v-for="(s, si) in sentences"
-              :key="si"
-              class="sentence"
-              :class="{ reading: readingKey === `${pi}-${si}` }"
+        <!-- Mode écoute masqué : flou CSS + `inert` (pas de retrait du DOM,
+             le TTS lit flatSentences depuis les mêmes données). `inert`
+             bloque focus, clics et lecteurs d'écran sur le texte caché. -->
+        <article
+          :class="{ masked: ascoltoMasked }"
+          :inert="ascoltoMasked"
+          @click.self="closeOverlay"
+        >
+          <template v-for="(sentences, pi) in paragraphs" :key="pi">
+            <p>
+              <span
+                v-for="(s, si) in sentences"
+                :key="si"
+                class="sentence"
+                :class="{ reading: readingKey === `${pi}-${si}` }"
+              >
+                <template v-for="(token, ti) in s.tokens" :key="ti">
+                  <span
+                    v-if="isWord(token)"
+                    class="word"
+                    role="button"
+                    tabindex="0"
+                    :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
+                    @mouseenter="onWordEnter(token, $event)"
+                    @mouseleave="onWordLeave"
+                    @focus="onWordFocus(token, $event)"
+                    @blur="onWordBlur"
+                    @click="onWordTap(token, s.sentence, $event)"
+                    @dblclick="onWordDblClick(s.sentence, $event)"
+                    @keydown="onWordKeydown(s.sentence, $event)"
+                    >{{ token }}</span
+                  ><span
+                    v-else-if="isSentenceEnd(token)"
+                    class="punct"
+                    role="button"
+                    tabindex="0"
+                    title="Traduire la phrase"
+                    aria-label="Traduire la phrase"
+                    @click="onPunctClick(s.sentence, $event)"
+                    @keydown="onPunctKeydown(s.sentence, $event)"
+                    >{{ token }}</span
+                  ><template v-else>{{ token }}</template>
+                </template><button
+                  v-if="micSupported && !ascoltoMasked"
+                  class="drill-btn"
+                  :class="{ active: drillKey === `${pi}-${si}` }"
+                  :title="
+                    drillKey === `${pi}-${si}`
+                      ? `Fermer l'exercice de prononciation`
+                      : 'Prononcer cette phrase'
+                  "
+                  :aria-label="
+                    drillKey === `${pi}-${si}`
+                      ? `Fermer l'exercice de prononciation`
+                      : 'S’entraîner à prononcer cette phrase'
+                  "
+                  :aria-expanded="drillKey === `${pi}-${si}`"
+                  @click.stop="toggleDrill(`${pi}-${si}`)"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5.3-3a5.3 5.3 0 0 1-10.6 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-1.7z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </p>
+            <!-- Exercice de prononciation de la phrase active (une seule à la
+                 fois), posé sous le paragraphe qui la contient -->
+            <div
+              v-if="drillSentence && drillKey.startsWith(`${pi}-`)"
+              class="drill-panel"
             >
-              <template v-for="(token, ti) in s.tokens" :key="ti">
-                <span
-                  v-if="isWord(token)"
-                  class="word"
-                  role="button"
-                  tabindex="0"
-                  :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
-                  @mouseenter="onWordEnter(token, $event)"
-                  @mouseleave="onWordLeave"
-                  @focus="onWordFocus(token, $event)"
-                  @blur="onWordBlur"
-                  @click="onWordTap(token, s.sentence, $event)"
-                  @dblclick="onWordDblClick(s.sentence, $event)"
-                  @keydown="onWordKeydown(s.sentence, $event)"
-                  >{{ token }}</span
-                ><span
-                  v-else-if="isSentenceEnd(token)"
-                  class="punct"
-                  role="button"
-                  tabindex="0"
-                  title="Traduire la phrase"
-                  aria-label="Traduire la phrase"
-                  @click="onPunctClick(s.sentence, $event)"
-                  @keydown="onPunctKeydown(s.sentence, $event)"
-                  >{{ token }}</span
-                ><template v-else>{{ token }}</template>
-              </template>
-            </span>
-          </p>
+              <div class="drill-head">
+                <p class="drill-phrase">« {{ drillSentence }} »</p>
+                <button
+                  class="drill-close"
+                  title="Fermer l'exercice"
+                  aria-label="Fermer l'exercice de prononciation"
+                  @click="drillKey = null"
+                >
+                  ✕
+                </button>
+              </div>
+              <PronunciationDrill :phrase="drillSentence" />
+            </div>
+          </template>
         </article>
 
         <div
@@ -609,7 +732,7 @@ onBeforeUnmount(() => {
         <RouterLink
           v-if="prevText"
           class="pager-link prev"
-          :to="{ name: 'reader', params: { id: prevText.id } }"
+          :to="{ name: 'reader', params: { id: prevText.id }, query: route.query }"
         >
           ← {{ prevText.title }}
         </RouterLink>
@@ -617,7 +740,7 @@ onBeforeUnmount(() => {
         <RouterLink
           v-if="nextText"
           class="pager-link next"
-          :to="{ name: 'reader', params: { id: nextText.id } }"
+          :to="{ name: 'reader', params: { id: nextText.id }, query: route.query }"
         >
           {{ nextText.title }} →
         </RouterLink>
@@ -809,6 +932,52 @@ onBeforeUnmount(() => {
   color: #faf6f0;
 }
 
+/* --- Mode écoute --- */
+
+.ascolto-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin: 0 0 0.9rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(176, 105, 46, 0.25);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, 0.75);
+}
+
+.ascolto-note {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #6b6156;
+}
+
+.ascolto-toggle {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(138, 90, 43, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #8a5a2b;
+  font-family: inherit;
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+
+.ascolto-toggle:hover {
+  background: #faf6f0;
+  border-color: #b0692e;
+  color: #b0692e;
+}
+
+/* Texte masqué : flou seulement (le DOM reste en place pour le TTS, et le
+   surlignage de la phrase lue reste perceptible sous le flou) */
+article.masked {
+  filter: blur(9px);
+}
+
 /* --- Panneau « papier » : même famille que le panneau vitré de la scène,
        mais plus opaque pour un vrai confort de lecture --- */
 
@@ -841,6 +1010,7 @@ article {
   user-select: none;
   /* Évite le délai et le zoom du double-tap sur mobile */
   touch-action: manipulation;
+  transition: filter 0.25s ease;
 }
 
 article p {
@@ -894,6 +1064,94 @@ article p:first-letter {
 .punct:hover,
 .punct:focus-visible {
   background: #f0e0c8;
+}
+
+/* --- Exercice de prononciation --- */
+
+/* Bouton micro inline après chaque phrase : discret (estompé), il s'affirme
+   au survol/focus sans casser la justification du texte */
+.drill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: baseline;
+  width: 1.35em;
+  height: 1.35em;
+  margin: 0 0.15em;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #b0692e;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.12s, background 0.12s, color 0.12s;
+}
+
+.drill-btn svg {
+  width: 0.72em;
+  height: 0.72em;
+}
+
+.sentence:hover .drill-btn,
+.drill-btn:hover,
+.drill-btn:focus-visible {
+  opacity: 1;
+  background: #f0e0c8;
+}
+
+.drill-btn:focus-visible {
+  outline: 2px solid #b0692e;
+  outline-offset: 2px;
+}
+
+.drill-btn.active {
+  opacity: 1;
+  background: #b0692e;
+  color: #faf6f0;
+}
+
+.drill-panel {
+  margin: -0.4rem 0 1.2rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(176, 105, 46, 0.3);
+  border-radius: 12px;
+  background: #faf6f0;
+  font-size: 1rem;
+  line-height: 1.5;
+  user-select: text;
+}
+
+.drill-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.drill-phrase {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #6f4722;
+}
+
+.drill-close {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid rgba(138, 90, 43, 0.35);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #6b6156;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.12s, border-color 0.12s;
+}
+
+.drill-close:hover {
+  color: #b0692e;
+  border-color: #b0692e;
 }
 
 /* --- Bouton de vérification --- */
