@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { progress, dueFavorites, reviewWord, MAX_BOX } from '../progress.js'
+import { progress, dueFavorites, reviewWord, touchStreak, MAX_BOX } from '../progress.js'
 import { ttsSupported, speakItalian } from '../tts.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
@@ -32,8 +32,10 @@ function answer(success) {
   if (current.value + 1 < queue.value.length) {
     current.value++
   } else {
+    // Session terminée : compte pour la série quotidienne.
     reviewing.value = false
     queue.value = []
+    touchStreak()
   }
 }
 

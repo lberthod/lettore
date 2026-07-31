@@ -26,6 +26,22 @@ function mergeFavorites(local, remote) {
   return [...byWord.values()]
 }
 
+// Série quotidienne multi-appareils : le record est le max des deux côtés ;
+// la série en cours et sa date viennent du côté actif le plus récemment
+// (les dates 'YYYY-MM-DD' se comparent lexicographiquement). Pas d'addition
+// des `current` : une même journée jouée sur deux appareils ne compte qu'une
+// fois.
+function mergeStreak(local, remote) {
+  const l = local || {}
+  const r = remote || {}
+  const freshest = (r.lastActiveDate || '') > (l.lastActiveDate || '') ? r : l
+  return {
+    current: freshest.current || 0,
+    longest: Math.max(l.longest || 0, r.longest || 0),
+    lastActiveDate: freshest.lastActiveDate || null,
+  }
+}
+
 // Laisse remonter les erreurs de lecture (hors ligne, permissions) : l'appelant
 // doit savoir que la fusion n'a pas eu lieu, car pousser après une lecture
 // ratée écraserait le distant (setDoc/merge remplace les tableaux entiers).
@@ -45,6 +61,7 @@ async function pullAndMerge(uid, db, fs, isStale) {
   progress.vocabTexts = [
     ...new Set([...progress.vocabTexts, ...(remote.vocabTexts || [])]),
   ]
+  progress.streak = mergeStreak(progress.streak, remote.streak)
   if (!progress.hintDismissed && remote.hintDismissed) {
     progress.hintDismissed = true
   }
@@ -65,6 +82,7 @@ function pushLocal(uid, db, fs) {
         vocabTexts: progress.vocabTexts,
         ttsRate: progress.ttsRate,
         hintDismissed: progress.hintDismissed,
+        streak: progress.streak,
       },
     },
     { merge: true }

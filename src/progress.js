@@ -38,6 +38,13 @@ function normalize(saved) {
     vocabTexts: saved.vocabTexts || [], // ids des textes ajoutés au mode vocabulaire
     ttsRate: saved.ttsRate || 0.9,
     hintDismissed: saved.hintDismissed || false,
+    // Migration : les profils créés avant les séries quotidiennes reçoivent
+    // un streak vierge (même approche que les favoris pré-répétition espacée).
+    streak: {
+      current: saved.streak?.current || 0,
+      longest: saved.streak?.longest || 0,
+      lastActiveDate: saved.streak?.lastActiveDate || null,
+    },
   }
 }
 
@@ -143,6 +150,33 @@ export function toggleFavorite(entry) {
 export function dueFavorites() {
   const now = Date.now()
   return progress.favorites.filter((f) => (f.due || 0) <= now)
+}
+
+// Date calendaire LOCALE au format 'YYYY-MM-DD'. Surtout pas un timestamp ni
+// toISOString() (UTC) : un utilisateur actif à 23h50 puis 00h10 doit compter
+// deux jours selon SON fuseau, pas celui de Greenwich.
+function localDay(date) {
+  const y = date.getFullYear()
+  const m = String(date.getMonth() + 1).padStart(2, '0')
+  const d = String(date.getDate()).padStart(2, '0')
+  return `${y}-${m}-${d}`
+}
+
+// Série quotidienne : à appeler après chaque activité qui « compte » (quiz
+// réussi, session de révision). Aujourd'hui déjà compté → no-op ; hier actif →
+// la série continue ; sinon → elle repart à 1. La persistance passe par le
+// watcher deep existant sur `progress`.
+export function touchStreak() {
+  const now = new Date()
+  const today = localDay(now)
+  const s = progress.streak
+  if (s.lastActiveDate === today) return
+  const yesterday = localDay(
+    new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1)
+  )
+  s.current = s.lastActiveDate === yesterday ? s.current + 1 : 1
+  s.longest = Math.max(s.longest || 0, s.current)
+  s.lastActiveDate = today
 }
 
 // Résultat d'une révision : réussite → boîte suivante (intervalle plus long),

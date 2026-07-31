@@ -111,6 +111,68 @@ describe('initProgressSync — envoi de la fusion initiale', () => {
     expect(setDoc).not.toHaveBeenCalled()
   })
 
+  // Streak multi-appareils : record = max des deux, série en cours = celle du
+  // côté actif le plus récemment — jamais un écrasement naïf par le local.
+  it('fusionne le streak : record = max, série courante = côté le plus récent', async () => {
+    localStorage.setItem(
+      'lettore.progress.streak-remote-gagne',
+      JSON.stringify({
+        streak: { current: 2, longest: 9, lastActiveDate: '2026-07-28' },
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        streak: { current: 4, longest: 6, lastActiveDate: '2026-07-30' },
+      })
+    )
+
+    await login('streak-remote-gagne')
+
+    const expected = { current: 4, longest: 9, lastActiveDate: '2026-07-30' }
+    expect(progress.streak).toEqual(expected)
+    expect(pushedProgress(setDoc.mock.calls[0]).streak).toEqual(expected)
+  })
+
+  it('garde la série locale quand elle est plus récente que la distante', async () => {
+    localStorage.setItem(
+      'lettore.progress.streak-local-gagne',
+      JSON.stringify({
+        streak: { current: 3, longest: 3, lastActiveDate: '2026-07-31' },
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        streak: { current: 7, longest: 7, lastActiveDate: '2026-07-20' },
+      })
+    )
+
+    await login('streak-local-gagne')
+
+    expect(progress.streak).toEqual({
+      current: 3,
+      longest: 7,
+      lastActiveDate: '2026-07-31',
+    })
+  })
+
+  it('tolère un document distant sans streak (profil pré-migration)', async () => {
+    localStorage.setItem(
+      'lettore.progress.streak-absent',
+      JSON.stringify({
+        streak: { current: 1, longest: 2, lastActiveDate: '2026-07-31' },
+      })
+    )
+    getDoc.mockResolvedValue(remoteSnap({ readTexts: ['distante'] }))
+
+    await login('streak-absent')
+
+    expect(progress.streak).toEqual({
+      current: 1,
+      longest: 2,
+      lastActiveDate: '2026-07-31',
+    })
+  })
+
   it('ne pousse pas si le compte a changé pendant la fusion', async () => {
     let resolveGet
     getDoc.mockReturnValue(

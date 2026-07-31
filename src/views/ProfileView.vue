@@ -16,9 +16,15 @@ import {
   reauthenticateWithApple,
   deleteAccount,
 } from '../lib/account.js'
+import { progress, dueFavorites } from '../progress.js'
 
 const router = useRouter()
 const error = ref('')
+
+// --- Dashboard de progression ---
+// dueFavorites dépend de Date.now() : recalculé via progress pour rester
+// réactif aux révisions faites pendant la session.
+const dueCount = computed(() => dueFavorites().length)
 
 async function doLogout() {
   error.value = ''
@@ -142,6 +148,38 @@ async function confirmDelete() {
         <p v-if="verifyError" class="error">{{ verifyError }}</p>
       </div>
 
+      <h2>Ma progression</h2>
+      <div class="dashboard">
+        <div class="stat stat-streak">
+          <span class="stat-value">🔥 {{ progress.streak.current }}</span>
+          <span class="stat-label">
+            {{ progress.streak.current > 1 ? "jours d'affilée" : "jour d'affilée" }}
+          </span>
+          <span class="stat-sub">Record : {{ progress.streak.longest }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ progress.readTexts.length }}</span>
+          <span class="stat-label">
+            {{ progress.readTexts.length > 1 ? 'textes lus' : 'texte lu' }}
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ progress.knownWords.length }}</span>
+          <span class="stat-label">
+            {{ progress.knownWords.length > 1 ? 'mots connus' : 'mot connu' }}
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ dueCount }}</span>
+          <span class="stat-label">
+            {{ dueCount > 1 ? 'mots à réviser' : 'mot à réviser' }}
+          </span>
+          <RouterLink v-if="dueCount" class="stat-link" :to="{ name: 'words' }">
+            Réviser →
+          </RouterLink>
+        </div>
+      </div>
+
       <h2>Abonnement</h2>
       <p>
         Formule actuelle : <strong>Gratuit</strong><br />
@@ -245,6 +283,50 @@ async function confirmDelete() {
 .link-btn[disabled] {
   opacity: 0.5;
   cursor: default;
+}
+
+/* --- Dashboard de progression --- */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.7rem;
+  margin: 0.9rem 0 1.6rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.stat-value {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #6f4722;
+}
+
+.stat-streak .stat-value {
+  color: #b0692e;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: #6b6156;
+}
+
+.stat-sub {
+  font-size: 0.75rem;
+  color: #8a5a2b;
+  opacity: 0.85;
+}
+
+.stat-link {
+  font-size: 0.8rem;
+  color: #b0692e;
 }
 
 .danger-zone {
