@@ -76,7 +76,8 @@
       "pallottoliere",
       "aritmetica"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "abbadare": {
     "lemma": "abbadare",
@@ -93,7 +94,8 @@
       "badare",
       "curarsi di"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "abbagliante": {
     "lemma": "abbagliante",
@@ -172,7 +174,8 @@
       "scuotere",
       "sballottare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "dialettale"
   },
   "abbandonare": {
     "lemma": "abbandonare",
@@ -332,7 +335,8 @@
     "synonyms": [
       "vestire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "abbinamento": {
     "lemma": "abbinamento",
@@ -381,7 +385,8 @@
     "synonyms": [
       "necessitare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "abboccamento": {
     "lemma": "abboccamento",
@@ -399,7 +404,8 @@
       "incontro",
       "conversazione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "abboccare": {
     "lemma": "abboccare",
@@ -510,7 +516,8 @@
     "synonyms": [
       "abbraccio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "abbracciare": {
     "lemma": "abbracciare",
@@ -864,7 +871,8 @@
     "synonyms": [
       "lavaggio rituale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "abnegazione": {
     "lemma": "abnegazione",
@@ -881,7 +889,8 @@
       "altruismo",
       "sacrificio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "abolire": {
     "lemma": "abolire",
@@ -1181,7 +1190,8 @@
       "mendicante",
       "pezzente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "accavallarsi": {
     "lemma": "accavallarsi",
@@ -1231,7 +1241,8 @@
       "entrare",
       "penetrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "accelerare": {
     "lemma": "accelerare",
@@ -1449,7 +1460,8 @@
       "trucco",
       "inganno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "acchiappare": {
     "lemma": "acchiappare",
@@ -1498,7 +1510,8 @@
       "apatico",
       "indolente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "accigliarsi": {
     "lemma": "accigliarsi",
@@ -1532,7 +1545,8 @@
       "affinché",
       "perché"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "acciottolato": {
     "lemma": "acciottolato",
@@ -1769,7 +1783,8 @@
       "acconsentire",
       "cedere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "acconsentire": {
     "lemma": "acconsentire",
@@ -1786,7 +1801,8 @@
       "consentire",
       "permettere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "accontentare": {
     "lemma": "accontentare",
@@ -1820,7 +1836,8 @@
       "dolore",
       "tristezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "accorciare": {
     "lemma": "accorciare",
@@ -1942,7 +1959,8 @@
       "astuto",
       "avveduto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "accostare": {
     "lemma": "accostare",
@@ -2010,7 +2028,8 @@
       "aumentare",
       "incrementare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "accucciarsi": {
     "lemma": "accucciarsi",
@@ -2162,7 +2181,8 @@
       "duramente",
       "aspramente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "acerbo": {
     "lemma": "acerbo",
@@ -2267,7 +2287,8 @@
       "placare",
       "tranquillizzare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "acquirente": {
     "lemma": "acquirente",
@@ -2417,7 +2438,8 @@
       "apposta",
       "deliberatamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "adagiare": {
     "lemma": "adagiare",
@@ -2589,7 +2611,8 @@
       "profondamente",
       "a fondo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "addestrare": {
     "lemma": "addestrare",
@@ -2643,7 +2666,8 @@
       "in passato",
       "fa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "addio": {
     "lemma": "addio",
@@ -2732,7 +2756,8 @@
       "rattristare",
       "addolorare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "addolcire": {
     "lemma": "addolcire",
@@ -2888,7 +2913,8 @@
       "allegare",
       "portare come prova"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "adeguato": {
     "lemma": "adeguato",
@@ -2974,7 +3000,8 @@
       "destinare",
       "riservare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "adirarsi": {
     "lemma": "adirarsi",
@@ -2991,7 +3018,8 @@
       "arrabbiarsi",
       "infuriarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "adocchiare": {
     "lemma": "adocchiare",
@@ -3025,7 +3053,8 @@
       "oscurare",
       "offuscare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "adoperare": {
     "lemma": "adoperare",
@@ -3191,7 +3220,8 @@
       "riunire",
       "raccogliere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "adunarsi": {
     "lemma": "adunarsi",
@@ -3208,7 +3238,8 @@
       "radunarsi",
       "riunirsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "adunco": {
     "lemma": "adunco",
@@ -3242,7 +3273,8 @@
       "artigliare",
       "aggrappare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "adunque": {
     "lemma": "adunque",
@@ -3260,7 +3292,8 @@
       "quindi",
       "pertanto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "aere": {
     "lemma": "aere",
@@ -3277,7 +3310,8 @@
       "aria",
       "atmosfera"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "aereo": {
     "lemma": "aereo",
@@ -3635,7 +3669,8 @@
       "ostentare",
       "atteggiarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "affetto": {
     "lemma": "affetto",
@@ -3741,7 +3776,8 @@
       "attribuire",
       "appioppare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "affidabile": {
     "lemma": "affidabile",
@@ -3826,7 +3862,8 @@
       "attaccare",
       "appendere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "affilare": {
     "lemma": "affilare",
@@ -3893,7 +3930,8 @@
     "synonyms": [
       "perché (finale)"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "affinità": {
     "lemma": "affinità",
@@ -3944,7 +3982,8 @@
       "fissarsi",
       "contemplare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "affittacamere": {
     "lemma": "affittacamere",
@@ -4208,7 +4247,8 @@
       "trattenere",
       "moderare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "affrescare": {
     "lemma": "affrescare",
@@ -4408,7 +4448,8 @@
       "gelare",
       "raggelare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "aggetto": {
     "lemma": "aggetto",
@@ -4780,7 +4821,8 @@
       "accigliarsi",
       "corrugare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "aggrottare": {
     "lemma": "aggrottare",
@@ -5128,7 +5170,8 @@
       "desiderare",
       "ambire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "agonia": {
     "lemma": "agonia",
@@ -5374,7 +5417,8 @@
     "synonyms": [
       "ahi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ahimè": {
     "lemma": "ahimè",
@@ -5388,7 +5432,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "aia": {
     "lemma": "aia",
@@ -5422,7 +5467,8 @@
       "precettore",
       "governatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "aire": {
     "lemma": "aire",
@@ -5439,7 +5485,8 @@
       "slancio",
       "rincorsa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "airone": {
     "lemma": "airone",
@@ -5591,7 +5638,8 @@
       "subito",
       "immediatamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ala": {
     "lemma": "ala",
@@ -5636,7 +5684,8 @@
       "vivace",
       "attivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "alba": {
     "lemma": "alba",
@@ -5829,7 +5878,8 @@
       "qualcosa",
       "nulla"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "alcuno": {
     "lemma": "alcuno",
@@ -5893,7 +5943,8 @@
       "infine",
       "finalmente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "alga": {
     "lemma": "alga",
@@ -6022,7 +6073,8 @@
       "soffiare",
       "respirare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "alito": {
     "lemma": "alito",
@@ -6210,7 +6262,8 @@
       "accanto",
       "vicino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "allattare": {
     "lemma": "allattare",
@@ -6328,7 +6381,8 @@
       "rallegrare",
       "far gioire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "allegrezza": {
     "lemma": "allegrezza",
@@ -6345,7 +6399,8 @@
       "gioia",
       "allegria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "allegria": {
     "lemma": "allegria",
@@ -6619,7 +6674,8 @@
       "sistemare",
       "alloggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "alloggiare": {
     "lemma": "alloggiare",
@@ -6739,7 +6795,8 @@
     "synonyms": [
       "allora"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "alludere": {
     "lemma": "alludere",
@@ -6858,7 +6915,8 @@
       "monte",
       "vetta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "alpeggio": {
     "lemma": "alpeggio",
@@ -6923,7 +6981,8 @@
       "parecchio",
       "piuttosto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "altalena": {
     "lemma": "altalena",
@@ -7054,7 +7113,8 @@
       "superbo",
       "fiero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "altezza": {
     "lemma": "altezza",
@@ -7087,7 +7147,8 @@
       "pomposo",
       "roboante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "altitudine": {
     "lemma": "altitudine",
@@ -7255,7 +7316,8 @@
     "synonyms": [
       "degli altri"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "altura": {
     "lemma": "altura",
@@ -7357,7 +7419,8 @@
       "gentile",
       "cordiale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "amante": {
     "lemma": "amante",
@@ -7476,7 +7539,8 @@
       "angoscia",
       "affanno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ambasciata": {
     "lemma": "ambasciata",
@@ -7509,7 +7573,8 @@
       "entrambi",
       "tutti e due"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ambientale": {
     "lemma": "ambientale",
@@ -7658,7 +7723,8 @@
     "synonyms": [
       "entrambi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ambulante": {
     "lemma": "ambulante",
@@ -7921,7 +7987,8 @@
       "incattivirsi",
       "diventare furbo"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ammassare": {
     "lemma": "ammassare",
@@ -8658,7 +8725,8 @@
       "uccidere",
       "ammazzare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ancora": {
     "lemma": "ancora",
@@ -8777,7 +8845,8 @@
       "desiderio",
       "brama"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "anellino": {
     "lemma": "anellino",
@@ -9001,7 +9070,8 @@
       "ansia",
       "ristrettezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "angustiare": {
     "lemma": "angustiare",
@@ -9018,7 +9088,8 @@
       "tormentare",
       "preoccupare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "angusto": {
     "lemma": "angusto",
@@ -9036,7 +9107,8 @@
       "ristretto",
       "limitato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "anima": {
     "lemma": "anima",
@@ -9206,7 +9278,8 @@
       "coraggioso",
       "ardito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "annaffiare": {
     "lemma": "annaffiare",
@@ -9524,7 +9597,8 @@
       "imbrunire",
       "farsi notte"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "annuale": {
     "lemma": "annuale",
@@ -9677,7 +9751,8 @@
       "manifestarsi",
       "presentarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "annunzio": {
     "lemma": "annunzio",
@@ -9695,7 +9770,8 @@
       "notizia",
       "avviso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "annuo": {
     "lemma": "annuo",
@@ -9863,7 +9939,8 @@
       "ansia",
       "apprensione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ansimare": {
     "lemma": "ansimare",
@@ -10132,7 +10209,8 @@
     "synonyms": [
       "mattutino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "antipasto": {
     "lemma": "antipasto",
@@ -10199,7 +10277,8 @@
       "grotta",
       "tana"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "antropologia": {
     "lemma": "antropologia",
@@ -10498,7 +10577,8 @@
       "palesarsi",
       "manifestarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "appalto": {
     "lemma": "appalto",
@@ -10532,7 +10612,8 @@
       "prerogativa",
       "privilegio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "appannare": {
     "lemma": "appannare",
@@ -10601,7 +10682,8 @@
       "accingersi",
       "disporsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "apparente": {
     "lemma": "apparente",
@@ -10840,7 +10922,8 @@
       "chiamare",
       "denominare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "appena": {
     "lemma": "appena",
@@ -10941,7 +11024,8 @@
       "allettare",
       "attirare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "appetito": {
     "lemma": "appetito",
@@ -11008,7 +11092,8 @@
       "impiastrare",
       "spalmare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "appiastricciare": {
     "lemma": "appiastricciare",
@@ -11025,7 +11110,8 @@
       "impiastricciare",
       "incollare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "dialettale"
   },
   "appiattire": {
     "lemma": "appiattire",
@@ -11128,7 +11214,8 @@
       "affibbiare",
       "rifilare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "applaudire": {
     "lemma": "applaudire",
@@ -11281,7 +11368,8 @@
       "apposta",
       "espressamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "apposito": {
     "lemma": "apposito",
@@ -11298,7 +11386,8 @@
       "adatto",
       "specifico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "apposta": {
     "lemma": "apposta",
@@ -11349,7 +11438,8 @@
       "imparare",
       "venire a sapere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "apprendimento": {
     "lemma": "apprendimento",
@@ -11432,7 +11522,8 @@
     "synonyms": [
       "avvicinarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "appresso": {
     "lemma": "appresso",
@@ -11449,7 +11540,8 @@
       "vicino",
       "dietro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "apprestare": {
     "lemma": "apprestare",
@@ -11466,7 +11558,8 @@
       "preparare",
       "allestire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "apprezzare": {
     "lemma": "apprezzare",
@@ -11826,7 +11919,8 @@
     "synonyms": [
       "altare"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "arabo": {
     "lemma": "arabo",
@@ -12167,7 +12261,8 @@
       "spaccone",
       "millantatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "arcigno": {
     "lemma": "arcigno",
@@ -12296,7 +12391,8 @@
     "synonyms": [
       "osare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ardito": {
     "lemma": "ardito",
@@ -12816,7 +12912,8 @@
       "adirarsi",
       "irritarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "arrabbiarsi": {
     "lemma": "arrabbiarsi",
@@ -12901,7 +12998,8 @@
       "ansimare",
       "rantolare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "arrecare": {
     "lemma": "arrecare",
@@ -12918,7 +13016,8 @@
       "causare",
       "procurare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "arredare": {
     "lemma": "arredare",
@@ -13085,7 +13184,8 @@
       "sorridere",
       "favorire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "arrischiare": {
     "lemma": "arrischiare",
@@ -13136,7 +13236,8 @@
       "affrettarsi",
       "sbrigarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "arrivederci": {
     "lemma": "arrivederci",
@@ -13169,7 +13270,8 @@
     "synonyms": [
       "arrivederci"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "arrivo": {
     "lemma": "arrivo",
@@ -13443,7 +13545,8 @@
       "bruciore",
       "arsura"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "arte": {
     "lemma": "arte",
@@ -13845,7 +13948,8 @@
       "nascondere",
       "celare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ascrivere": {
     "lemma": "ascrivere",
@@ -13862,7 +13966,8 @@
       "attribuire",
       "imputare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "asfalto": {
     "lemma": "asfalto",
@@ -13976,7 +14081,8 @@
       "spruzzare",
       "bagnare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "aspettare": {
     "lemma": "aspettare",
@@ -14109,7 +14215,8 @@
       "scagliarsi",
       "lanciarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "assaggiare": {
     "lemma": "assaggiare",
@@ -14387,7 +14494,8 @@
       "approvazione",
       "permesso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "assente": {
     "lemma": "assente",
@@ -14434,7 +14542,8 @@
       "affermare",
       "dichiarare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "asserpolato": {
     "lemma": "asserpolato",
@@ -14451,7 +14560,8 @@
       "contorto",
       "sinuoso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "assessore": {
     "lemma": "assessore",
@@ -14518,7 +14628,8 @@
       "affermare",
       "confermare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "assicurare": {
     "lemma": "assicurare",
@@ -14632,7 +14743,8 @@
       "affollare",
       "accalcarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "assimilabile": {
     "lemma": "assimilabile",
@@ -14764,7 +14876,8 @@
       "sottomettere",
       "dominare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "assoggettarsi": {
     "lemma": "assoggettarsi",
@@ -14781,7 +14894,8 @@
       "sottomettersi",
       "piegarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "assolutamente": {
     "lemma": "assolutamente",
@@ -14928,7 +15042,8 @@
       "abituato",
       "avvezzo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "assumere": {
     "lemma": "assumere",
@@ -15013,7 +15128,8 @@
       "testimone",
       "spettatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "astenersi": {
     "lemma": "astenersi",
@@ -15500,7 +15616,8 @@
     "synonyms": [
       "invecchiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "attendere": {
     "lemma": "attendere",
@@ -16121,7 +16238,8 @@
       "rattristarsi",
       "affliggersi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "attrito": {
     "lemma": "attrito",
@@ -16189,7 +16307,8 @@
       "realizzazione",
       "esecuzione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "audacia": {
     "lemma": "audacia",
@@ -16253,7 +16372,8 @@
     "synonyms": [
       "uffa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "augello": {
     "lemma": "augello",
@@ -16269,7 +16389,8 @@
     "synonyms": [
       "uccello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "augurare": {
     "lemma": "augurare",
@@ -16319,7 +16440,8 @@
       "maestoso",
       "venerabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "aula": {
     "lemma": "aula",
@@ -16418,7 +16540,8 @@
     "synonyms": [
       "desiderabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "auspicio": {
     "lemma": "auspicio",
@@ -16434,7 +16557,8 @@
     "synonyms": [
       "presagio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "austriaco": {
     "lemma": "austriaco",
@@ -16852,7 +16976,8 @@
       "presto",
       "in fretta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "avallare": {
     "lemma": "avallare",
@@ -16969,7 +17094,8 @@
       "tomba",
       "sepolcro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "avemaria": {
     "lemma": "avemaria",
@@ -17002,7 +17128,8 @@
       "essere arrabbiato con",
       "avere rancore verso"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "avere": {
     "lemma": "avere",
@@ -17086,7 +17213,8 @@
       "ancestrale",
       "ereditario"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "avo": {
     "lemma": "avo",
@@ -17103,7 +17231,8 @@
       "antenato",
       "progenitore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "avorio": {
     "lemma": "avorio",
@@ -17134,7 +17263,8 @@
       "servirsi",
       "usufruire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "avvallarsi": {
     "lemma": "avvallarsi",
@@ -17168,7 +17298,8 @@
       "infiammarsi",
       "ardere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "avvedersi": {
     "lemma": "avvedersi",
@@ -17185,7 +17316,8 @@
       "accorgersi",
       "rendersi conto"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "avvelenare": {
     "lemma": "avvelenare",
@@ -17442,7 +17574,8 @@
     "synonyms": [
       "abituarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "avvezzo": {
     "lemma": "avvezzo",
@@ -17458,7 +17591,8 @@
     "synonyms": [
       "abituato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "avviare": {
     "lemma": "avviare",
@@ -17576,7 +17710,8 @@
       "ubriaco",
       "ebbro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "avvinghiare": {
     "lemma": "avvinghiare",
@@ -17677,7 +17812,8 @@
     "synonyms": [
       "giovane avvocato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "avvocato": {
     "lemma": "avvocato",

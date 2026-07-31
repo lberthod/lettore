@@ -249,7 +249,8 @@
       "dove",
       "mentre"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ladracchiolo": {
     "lemma": "ladracchiolo",
@@ -266,7 +267,8 @@
       "ladruncolo",
       "ladroncello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ladro": {
     "lemma": "ladro",
@@ -366,7 +368,8 @@
       "lamento",
       "piagnisteo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "lagnarsi": {
     "lemma": "lagnarsi",
@@ -432,7 +435,8 @@
       "lamenti",
       "gemiti"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "laico": {
     "lemma": "laico",
@@ -467,7 +471,8 @@
       "sudicio",
       "osceno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lama": {
     "lemma": "lama",
@@ -903,7 +908,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lanternone": {
     "lemma": "lanternone",
@@ -920,7 +926,8 @@
       "fanale",
       "lampione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "lanternuccia": {
     "lemma": "lanternuccia",
@@ -937,7 +944,8 @@
       "lumicino",
       "lucerna"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lanugine": {
     "lemma": "lanugine",
@@ -1142,7 +1150,8 @@
       "licenzioso",
       "voluttuoso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lasso": {
     "lemma": "lasso",
@@ -1160,7 +1169,8 @@
       "intervallo",
       "stanco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lassù": {
     "lemma": "lassù",
@@ -1389,7 +1399,8 @@
       "lodevole",
       "encomiabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "laurea": {
     "lemma": "laurea",
@@ -2013,7 +2024,8 @@
       "lieve",
       "aereo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "leggiucchiare": {
     "lemma": "leggiucchiare",
@@ -2282,7 +2294,8 @@
       "vigore",
       "slancio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "lentamente": {
     "lemma": "lentamente",
@@ -2538,7 +2551,8 @@
       "allegria",
       "contentezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lettera": {
     "lemma": "lettera",
@@ -2783,7 +2797,8 @@
       "leggerezza",
       "delicatezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "levitazione": {
     "lemma": "levitazione",
@@ -3072,7 +3087,8 @@
       "piacere",
       "capriccio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "libraio": {
     "lemma": "libraio",
@@ -3103,7 +3119,8 @@
       "planare",
       "aleggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "libreria": {
     "lemma": "libreria",
@@ -3202,7 +3219,8 @@
       "sconveniente",
       "spinto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "liceo": {
     "lemma": "liceo",
@@ -3529,7 +3547,8 @@
       "ordinato",
       "curato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "linea": {
     "lemma": "linea",
@@ -4081,7 +4100,8 @@
       "proprietario",
       "padrone di casa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "locazione": {
     "lemma": "locazione",
@@ -4098,7 +4118,8 @@
       "affitto",
       "noleggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "loco": {
     "lemma": "loco",
@@ -4115,7 +4136,8 @@
       "luogo",
       "posto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lodare": {
     "lemma": "lodare",
@@ -4186,7 +4208,8 @@
       "allodola",
       "lodola"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "logica": {
     "lemma": "logica",
@@ -4354,7 +4377,8 @@
       "favella",
       "parlata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lordo": {
     "lemma": "lordo",
@@ -4524,7 +4548,8 @@
     "synonyms": [
       "lacrimone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "lucciola": {
     "lemma": "lucciola",
@@ -4693,7 +4718,8 @@
       "diavolo",
       "demonio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "lucignolo": {
     "lemma": "lucignolo",
@@ -4761,7 +4787,8 @@
       "gioco",
       "gara"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "luglio": {
     "lemma": "luglio",
@@ -4976,7 +5003,8 @@
       "lontano",
       "distante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "lungimirante": {
     "lemma": "lungimirante",

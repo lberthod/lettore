@@ -15,7 +15,8 @@
       "obbediente",
       "docile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ubbidiente": {
     "lemma": "ubbidiente",
@@ -236,7 +237,8 @@
       "sentire",
       "ascoltare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "udito": {
     "lemma": "udito",
@@ -270,7 +272,8 @@
       "platea",
       "assemblea"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ufficiale": {
     "lemma": "ufficiale",
@@ -339,7 +342,8 @@
       "incarico",
       "funzione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "uggia": {
     "lemma": "uggia",
@@ -356,7 +360,8 @@
       "noia",
       "fastidio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "uggioso": {
     "lemma": "uggioso",
@@ -444,7 +449,8 @@
       "oh",
       "ahi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "uhm": {
     "lemma": "uhm",
@@ -461,7 +467,8 @@
       "mah",
       "boh"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "uliveto": {
     "lemma": "uliveto",
@@ -1103,7 +1110,8 @@
       "mai",
       "unqua"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "unto": {
     "lemma": "unto",
@@ -1378,7 +1386,8 @@
       "porta",
       "soglia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "uscire": {
     "lemma": "uscire",
@@ -1440,7 +1449,8 @@
     "synonyms": [
       "rosignolo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "uso": {
     "lemma": "uso",
@@ -1474,7 +1484,8 @@
       "mugolare",
       "guaire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "utente": {
     "lemma": "utente",

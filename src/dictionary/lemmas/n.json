@@ -59,7 +59,8 @@
     "synonyms": [
       "narice"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "narice": {
     "lemma": "narice",
@@ -92,7 +93,8 @@
       "raccontare",
       "riferire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "narratore": {
     "lemma": "narratore",
@@ -191,7 +193,8 @@
       "nascita",
       "origine"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nascita": {
     "lemma": "nascita",
@@ -850,7 +853,8 @@
       "richiedere",
       "abbisognare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "necrologia": {
     "lemma": "necrologia",
@@ -1200,7 +1204,8 @@
       "iniquità",
       "perfidia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nero": {
     "lemma": "nero",
@@ -1504,7 +1509,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "nibbio": {
     "lemma": "nibbio",
@@ -1617,7 +1623,8 @@
       "addirittura",
       "nondimeno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nientemeno": {
     "lemma": "nientemeno",
@@ -1809,7 +1816,8 @@
       "timoniere",
       "pilota"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nocciola": {
     "lemma": "nocciola",
@@ -1952,7 +1960,8 @@
     "synonyms": [
       "noi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "noioso": {
     "lemma": "noioso",
@@ -1985,7 +1994,8 @@
     "synonyms": [
       "non lo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "noleggiare": {
     "lemma": "noleggiare",
@@ -2053,7 +2063,8 @@
       "nominare",
       "chiamare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "nome": {
     "lemma": "nome",
@@ -2157,7 +2168,8 @@
       "oltre a",
       "come pure"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "nondimanco": {
     "lemma": "nondimanco",
@@ -2175,7 +2187,8 @@
       "tuttavia",
       "ciò nonostante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nondimeno": {
     "lemma": "nondimeno",
@@ -2193,7 +2206,8 @@
       "però",
       "ciò nonostante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "nonna": {
     "lemma": "nonna",
@@ -2226,7 +2240,8 @@
       "nonno",
       "vecchietto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "nonno": {
     "lemma": "nonno",
@@ -2459,7 +2474,8 @@
     "synonyms": [
       "no"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nostalgia": {
     "lemma": "nostalgia",
@@ -2620,7 +2636,8 @@
       "comunicare",
       "annunciare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "notizia": {
     "lemma": "notizia",
@@ -2704,7 +2721,8 @@
     "synonyms": [
       "di notte"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "nottola": {
     "lemma": "nottola",
@@ -3054,7 +3072,8 @@
       "divinità",
       "dio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "numerare": {
     "lemma": "numerare",

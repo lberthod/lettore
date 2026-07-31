@@ -28,7 +28,8 @@
       "ingenuità",
       "credulità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dabbene": {
     "lemma": "dabbene",
@@ -45,7 +46,8 @@
       "onesto",
       "perbene"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "daccapo": {
     "lemma": "daccapo",
@@ -78,7 +80,8 @@
     "synonyms": [
       "da quando"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dado": {
     "lemma": "dado",
@@ -122,7 +125,8 @@
     "synonyms": [
       "dagli"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "dama": {
     "lemma": "dama",
@@ -156,7 +160,8 @@
       "dandy",
       "zerbinotto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "damigiana": {
     "lemma": "damigiana",
@@ -189,7 +194,8 @@
       "corteggiatore",
       "innamorato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "danaro": {
     "lemma": "danaro",
@@ -205,7 +211,8 @@
     "synonyms": [
       "denaro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "danaroso": {
     "lemma": "danaroso",
@@ -385,7 +392,8 @@
       "inizialmente",
       "all'inizio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dapprincipio": {
     "lemma": "dapprincipio",
@@ -402,7 +410,8 @@
       "all'inizio",
       "in principio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dare": {
     "lemma": "dare",
@@ -690,7 +699,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "decadenza": {
     "lemma": "decadenza",
@@ -975,7 +985,8 @@
       "validità",
       "inizio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "decorrere": {
     "lemma": "decorrere",
@@ -992,7 +1003,8 @@
       "trascorrere",
       "decorrere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "decrepito": {
     "lemma": "decrepito",
@@ -1192,7 +1204,8 @@
     "synonyms": [
       "morto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "degenere": {
     "lemma": "degenere",
@@ -1248,7 +1261,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "degnarsi": {
     "lemma": "degnarsi",
@@ -1447,7 +1461,8 @@
       "decidere",
       "stabilire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "deliberatamente": {
     "lemma": "deliberatamente",
@@ -1464,7 +1479,8 @@
       "intenzionalmente",
       "appositamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "deliberazione": {
     "lemma": "deliberazione",
@@ -1481,7 +1497,8 @@
       "delibera",
       "decisione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "delicatamente": {
     "lemma": "delicatamente",
@@ -1548,7 +1565,8 @@
     "synonyms": [
       "commettere reati"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "delirio": {
     "lemma": "delirio",
@@ -1761,7 +1779,8 @@
       "chiamare",
       "nominare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "denominazione": {
     "lemma": "denominazione",
@@ -1778,7 +1797,8 @@
       "nome",
       "appellativo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "denso": {
     "lemma": "denso",
@@ -1940,7 +1960,8 @@
       "deplorabile",
       "triste"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "deporre": {
     "lemma": "deporre",
@@ -2298,7 +2319,8 @@
       "pranzare",
       "cenare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "desolato": {
     "lemma": "desolato",
@@ -2379,7 +2401,8 @@
       "svegliare",
       "risvegliare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "destinare": {
     "lemma": "destinare",
@@ -2458,7 +2481,8 @@
       "sveglio",
       "vigile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "destra": {
     "lemma": "destra",
@@ -2782,7 +2806,8 @@
     "synonyms": [
       "giorno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "di più": {
     "lemma": "di più",
@@ -2847,7 +2872,8 @@
     "synonyms": [
       "trasparente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "diagnosi": {
     "lemma": "diagnosi",
@@ -2956,7 +2982,8 @@
       "diavolo",
       "caspita"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "dianzi": {
     "lemma": "dianzi",
@@ -2973,7 +3000,8 @@
       "poco fa",
       "or ora"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "diario": {
     "lemma": "diario",
@@ -3006,7 +3034,8 @@
       "furfante",
       "birbante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "diavoleria": {
     "lemma": "diavoleria",
@@ -3023,7 +3052,8 @@
       "stregoneria",
       "trucco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "diavolo": {
     "lemma": "diavolo",
@@ -3573,7 +3603,8 @@
     "synonyms": [
       "ampiamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "diffusione": {
     "lemma": "diffusione",
@@ -3624,7 +3655,8 @@
       "direttamente",
       "dritto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "diga": {
     "lemma": "diga",
@@ -3797,7 +3829,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dilettante": {
     "lemma": "dilettante",
@@ -3825,7 +3858,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dilettoso": {
     "lemma": "dilettoso",
@@ -3839,7 +3873,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "diligente": {
     "lemma": "diligente",
@@ -4007,7 +4042,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dimolto": {
     "lemma": "dimolto",
@@ -4023,7 +4059,8 @@
     "synonyms": [
       "molto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "dimonio": {
     "lemma": "dimonio",
@@ -4039,7 +4076,8 @@
     "synonyms": [
       "demonio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "dimora": {
     "lemma": "dimora",
@@ -4053,7 +4091,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dimorare": {
     "lemma": "dimorare",
@@ -4067,7 +4106,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "dimostrare": {
     "lemma": "dimostrare",
@@ -4129,7 +4169,8 @@
       "davanti",
       "innanzi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dinastia": {
     "lemma": "dinastia",
@@ -4208,7 +4249,8 @@
       "separarsi",
       "andarsene"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "dipendente": {
     "lemma": "dipendente",
@@ -4343,7 +4385,8 @@
     "synonyms": [
       "poi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "diradare": {
     "lemma": "diradare",
@@ -4564,7 +4607,8 @@
       "di fronte",
       "davanti"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "diritto": {
     "lemma": "diritto",
@@ -4598,7 +4642,8 @@
       "colpo di testa",
       "sbaglio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "dirompere": {
     "lemma": "dirompere",
@@ -4615,7 +4660,8 @@
       "esplodere",
       "irrompere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "dirottamente": {
     "lemma": "dirottamente",
@@ -4632,7 +4678,8 @@
       "copiosamente",
       "violentemente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dirotto": {
     "lemma": "dirotto",
@@ -4835,7 +4882,8 @@
       "espletamento",
       "svolgimento"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "discarica": {
     "lemma": "discarica",
@@ -4919,7 +4967,8 @@
       "distinguere",
       "percepire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "discernimento": {
     "lemma": "discernimento",
@@ -4936,7 +4985,8 @@
       "giudizio",
       "acume"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "discesa": {
     "lemma": "discesa",
@@ -4986,7 +5036,8 @@
       "educare",
       "regolare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "disco": {
     "lemma": "disco",
@@ -5017,7 +5068,8 @@
       "monello",
       "birichino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "discordare": {
     "lemma": "discordare",
@@ -5034,7 +5086,8 @@
       "dissentire",
       "contrastare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "discorrere": {
     "lemma": "discorrere",
@@ -5051,7 +5104,8 @@
       "conversare",
       "chiacchierare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "discorso": {
     "lemma": "discorso",
@@ -5085,7 +5139,8 @@
       "lontano",
       "distante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "discretamente": {
     "lemma": "discretamente",
@@ -5271,7 +5326,8 @@
       "desolato",
       "spopolato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "disfare": {
     "lemma": "disfare",
@@ -5390,7 +5446,8 @@
       "desiderare",
       "bramare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "disiderare": {
     "lemma": "disiderare",
@@ -5407,7 +5464,8 @@
       "desiderare",
       "bramare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "disilludere": {
     "lemma": "disilludere",
@@ -5578,7 +5636,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dislivello": {
     "lemma": "dislivello",
@@ -5707,7 +5766,8 @@
       "sparire",
       "svanire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "disparte": {
     "lemma": "disparte",
@@ -6091,7 +6151,8 @@
       "disaccordo",
       "contrasto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dissentire": {
     "lemma": "dissentire",
@@ -6108,7 +6169,8 @@
       "dissociarsi",
       "contrastare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "dissesto": {
     "lemma": "dissesto",
@@ -6142,7 +6204,8 @@
       "nascondere",
       "mascherare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "dissimulatore": {
     "lemma": "dissimulatore",
@@ -6159,7 +6222,8 @@
       "ipocrita",
       "simulatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dissipare": {
     "lemma": "dissipare",
@@ -6753,7 +6817,8 @@
       "sradicare",
       "strappare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "divenire": {
     "lemma": "divenire",
@@ -6769,7 +6834,8 @@
     "synonyms": [
       "diventare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "diventare": {
     "lemma": "diventare",
@@ -6802,7 +6868,8 @@
       "litigio",
       "battibecco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "diversamente": {
     "lemma": "diversamente",
@@ -7251,7 +7318,8 @@
       "dolore",
       "contrazione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dolce": {
     "lemma": "dolce",
@@ -7351,7 +7419,8 @@
       "addolorato",
       "sofferente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dolere": {
     "lemma": "dolere",
@@ -7368,7 +7437,8 @@
       "fare male",
       "addolorare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "dolersi": {
     "lemma": "dolersi",
@@ -7385,7 +7455,8 @@
       "lamentarsi",
       "rammaricarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "dolina": {
     "lemma": "dolina",
@@ -7671,7 +7742,8 @@
     "synonyms": [
       "dono"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "donare": {
     "lemma": "donare",
@@ -7699,7 +7771,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "donatore": {
     "lemma": "donatore",
@@ -7729,7 +7802,8 @@
     "synonyms": [
       "da dove"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dondolare": {
     "lemma": "dondolare",
@@ -7790,7 +7864,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "donnina": {
     "lemma": "donnina",
@@ -7804,7 +7879,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "donno": {
     "lemma": "donno",
@@ -7821,7 +7897,8 @@
       "signore",
       "don"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dono": {
     "lemma": "dono",
@@ -8126,7 +8203,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "dottore": {
     "lemma": "dottore",
@@ -8204,7 +8282,8 @@
       "dovunque",
       "sebbene"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dovere": {
     "lemma": "dovere",
@@ -8238,7 +8317,8 @@
       "ricchezza",
       "profusione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "dovunque": {
     "lemma": "dovunque",
@@ -8331,7 +8411,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "drasticamente": {
     "lemma": "drasticamente",

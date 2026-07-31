@@ -13,7 +13,8 @@
     "synonyms": [
       "zac zac"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "zaino": {
     "lemma": "zaino",
@@ -381,7 +382,8 @@
       "pizzico",
       "briciolo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "zio": {
     "lemma": "zio",
@@ -411,7 +413,8 @@
     "synonyms": [
       "nubile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "zitto": {
     "lemma": "zitto",
@@ -563,7 +566,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "zuccheriera": {
     "lemma": "zuccheriera",
@@ -619,7 +623,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "zuppa": {
     "lemma": "zuppa",

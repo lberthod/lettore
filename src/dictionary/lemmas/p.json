@@ -160,7 +160,8 @@
       "palude",
       "acquitrino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "paesaggio": {
     "lemma": "paesaggio",
@@ -228,7 +229,8 @@
       "paesino",
       "villaggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "paesetto": {
     "lemma": "paesetto",
@@ -278,7 +280,8 @@
     "synonyms": [
       "patapunfete"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "paga": {
     "lemma": "paga",
@@ -532,7 +535,8 @@
       "palazzo",
       "reggia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "palatino": {
     "lemma": "palatino",
@@ -1137,7 +1141,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "panciotto": {
     "lemma": "panciotto",
@@ -1431,7 +1436,8 @@
       "fandonia",
       "bugia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "panzerotto": {
     "lemma": "panzerotto",
@@ -1495,7 +1501,8 @@
       "babbo",
       "padre"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "papalina": {
     "lemma": "papalina",
@@ -2122,7 +2129,8 @@
       "ugualmente",
       "allo stesso modo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "parlamentare": {
     "lemma": "parlamentare",
@@ -2189,7 +2197,8 @@
       "loquacità",
       "eloquenza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "parlare": {
     "lemma": "parlare",
@@ -2256,7 +2265,8 @@
     "synonyms": [
       "parola"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "parrocchiale": {
     "lemma": "parrocchiale",
@@ -2334,7 +2344,8 @@
       "moderazione",
       "sobrietà"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "parsimonioso": {
     "lemma": "parsimonioso",
@@ -2351,7 +2362,8 @@
       "frugale",
       "morigerato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "parte": {
     "lemma": "parte",
@@ -2685,7 +2697,8 @@
       "pascolare",
       "brucare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "pascolare": {
     "lemma": "pascolare",
@@ -3072,7 +3085,8 @@
     "synonyms": [
       "confusionario"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "pasticciotto": {
     "lemma": "pasticciotto",
@@ -3086,7 +3100,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "pasto": {
     "lemma": "pasto",
@@ -3197,7 +3212,8 @@
     "synonyms": [
       "patapunfete"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "pateracchio": {
     "lemma": "pateracchio",
@@ -3213,7 +3229,8 @@
     "synonyms": [
       "pasticcio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "paterno": {
     "lemma": "paterno",
@@ -3465,7 +3482,8 @@
       "castagnaccio",
       "polenta di castagne"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "pattugliare": {
     "lemma": "pattugliare",
@@ -3499,7 +3517,8 @@
       "paturnie",
       "malumore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "paura": {
     "lemma": "paura",
@@ -3815,7 +3834,8 @@
       "monetario",
       "finanziario"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "pedalare": {
     "lemma": "pedalare",
@@ -3924,7 +3944,8 @@
       "mare",
       "oceano"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pelame": {
     "lemma": "pelame",
@@ -3971,7 +3992,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "pelle": {
     "lemma": "pelle",
@@ -4508,7 +4530,8 @@
       "meditabondo",
       "assorto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pentecoste": {
     "lemma": "pentecoste",
@@ -4620,7 +4643,8 @@
       "scarsità",
       "carestia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "penzoloni": {
     "lemma": "penzoloni",
@@ -4787,7 +4811,8 @@
       "del resto",
       "tuttavia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "perbacco": {
     "lemma": "perbacco",
@@ -4803,7 +4828,8 @@
     "synonyms": [
       "caspita"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "perbene": {
     "lemma": "perbene",
@@ -4939,7 +4965,8 @@
       "perché",
       "poiché"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "percorrenza": {
     "lemma": "percorrenza",
@@ -5009,7 +5036,8 @@
       "battere",
       "picchiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "perdere": {
     "lemma": "perdere",
@@ -5043,7 +5071,8 @@
       "perbacco",
       "caspita"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "perdifiato": {
     "lemma": "perdifiato",
@@ -5091,7 +5120,8 @@
       "perbacco",
       "accidenti"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "perdita": {
     "lemma": "perdita",
@@ -5438,7 +5468,8 @@
       "pericolo",
       "rischio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "periglioso": {
     "lemma": "periglioso",
@@ -5455,7 +5486,8 @@
       "pericoloso",
       "rischioso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "periodicamente": {
     "lemma": "periodicamente",
@@ -5505,7 +5537,8 @@
       "morire",
       "scomparire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "perla": {
     "lemma": "perla",
@@ -5584,7 +5617,8 @@
       "rimanere",
       "durare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "permesso": {
     "lemma": "permesso",
@@ -5653,7 +5687,8 @@
       "dannoso",
       "nocivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "pernottamento": {
     "lemma": "pernottamento",
@@ -5703,7 +5738,8 @@
       "commettere",
       "compiere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "perpetuo": {
     "lemma": "perpetuo",
@@ -5720,7 +5756,8 @@
       "eterno",
       "continuo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "perplessità": {
     "lemma": "perplessità",
@@ -6013,7 +6050,8 @@
       "perciò",
       "dunque"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "pertica": {
     "lemma": "pertica",
@@ -6048,7 +6086,8 @@
       "fessura",
       "apertura"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "perugino": {
     "lemma": "perugino",
@@ -6080,7 +6119,8 @@
       "riempire",
       "permeare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "pervenire": {
     "lemma": "pervenire",
@@ -6097,7 +6137,8 @@
       "giungere",
       "arrivare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "perverso": {
     "lemma": "perverso",
@@ -6616,7 +6657,8 @@
       "riva",
       "pendio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "piagnisteo": {
     "lemma": "piagnisteo",
@@ -7222,7 +7264,8 @@
     "synonyms": [
       "piccino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "piccolo": {
     "lemma": "piccolo",
@@ -7271,7 +7314,8 @@
       "permaloso",
       "suscettibile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "piede": {
     "lemma": "piede",
@@ -7618,7 +7662,8 @@
       "prendere",
       "afferrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "pigmento": {
     "lemma": "pigmento",
@@ -7736,7 +7781,8 @@
       "grasso",
       "abbondante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pinguino": {
     "lemma": "pinguino",
@@ -8033,7 +8079,8 @@
       "rogo",
       "catasta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "piramide": {
     "lemma": "piramide",
@@ -8415,7 +8462,8 @@
       "sedare",
       "acquietare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "placca": {
     "lemma": "placca",
@@ -8586,7 +8634,8 @@
       "cupo",
       "fosco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "poc'anzi": {
     "lemma": "poc'anzi",
@@ -8604,7 +8653,8 @@
       "or ora",
       "testé"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "pochino": {
     "lemma": "pochino",
@@ -8621,7 +8671,8 @@
       "pochetto",
       "poco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "pochissimo": {
     "lemma": "pochissimo",
@@ -8886,7 +8937,8 @@
       "siccome",
       "dato che"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "polacco": {
     "lemma": "polacco",
@@ -9370,7 +9422,8 @@
       "mela",
       "pomello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pomodoro": {
     "lemma": "pomodoro",
@@ -9420,7 +9473,8 @@
       "soppesare",
       "riflettere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ponte": {
     "lemma": "ponte",
@@ -9454,7 +9508,8 @@
       "papa",
       "sommo sacerdote"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "popolano": {
     "lemma": "popolano",
@@ -9556,7 +9611,8 @@
     "synonyms": [
       "melone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "poppa": {
     "lemma": "poppa",
@@ -9656,7 +9712,8 @@
       "offrire",
       "dare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "poroso": {
     "lemma": "poroso",
@@ -9691,7 +9748,8 @@
       "collocare",
       "posare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "porro": {
     "lemma": "porro",
@@ -10126,7 +10184,8 @@
       "dopo",
       "in seguito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "positivo": {
     "lemma": "positivo",
@@ -10162,7 +10221,8 @@
       "posa",
       "atteggiamento"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "posizionamento": {
     "lemma": "posizionamento",
@@ -10400,7 +10460,8 @@
       "discendenza",
       "avvenire"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "postero": {
     "lemma": "postero",
@@ -10417,7 +10478,8 @@
       "discendente",
       "successore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "posticipare": {
     "lemma": "posticipare",
@@ -10589,7 +10651,8 @@
       "potere",
       "giurisdizione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "pover'uomo": {
     "lemma": "pover'uomo",
@@ -10641,7 +10704,8 @@
       "misero",
       "poveretto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "poveretto": {
     "lemma": "poveretto",
@@ -10659,7 +10723,8 @@
       "poveraccio",
       "sventurato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "poverino": {
     "lemma": "poverino",
@@ -10676,7 +10741,8 @@
       "poveretto",
       "meschino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "povero": {
     "lemma": "povero",
@@ -10903,7 +10969,8 @@
       "iniquo",
       "perverso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "preallegato": {
     "lemma": "preallegato",
@@ -10921,7 +10988,8 @@
       "citato",
       "allegato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "preavviso": {
     "lemma": "preavviso",
@@ -11011,7 +11079,8 @@
       "orazione",
       "supplica"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "precedente": {
     "lemma": "precedente",
@@ -11977,7 +12046,8 @@
       "summenzionato",
       "predetto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "prenotare": {
     "lemma": "prenotare",
@@ -12119,7 +12189,8 @@
       "apparecchio",
       "allestimento"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "preparare": {
     "lemma": "preparare",
@@ -12577,7 +12648,8 @@
       "accanto a",
       "da"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "pressoché": {
     "lemma": "pressoché",
@@ -12595,7 +12667,8 @@
       "praticamente",
       "pressappoco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "prestare": {
     "lemma": "prestare",
@@ -12737,7 +12810,8 @@
       "probabilmente",
       "verosimilmente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "presunto": {
     "lemma": "presunto",
@@ -12845,7 +12919,8 @@
       "esigenza",
       "ambizione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pretensioso": {
     "lemma": "pretensioso",
@@ -12863,7 +12938,8 @@
       "presuntuoso",
       "affettato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pretesto": {
     "lemma": "pretesto",
@@ -12969,7 +13045,8 @@
       "anticipatamente",
       "prima"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "preventivo": {
     "lemma": "preventivo",
@@ -13053,7 +13130,8 @@
       "preliminare",
       "precedente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "previsione": {
     "lemma": "previsione",
@@ -13123,7 +13201,8 @@
       "prima",
       "anzi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "priego": {
     "lemma": "priego",
@@ -13141,7 +13220,8 @@
       "supplica",
       "richiesta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "prigione": {
     "lemma": "prigione",
@@ -13248,7 +13328,8 @@
       "originario",
       "principale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "primamente": {
     "lemma": "primamente",
@@ -13266,7 +13347,8 @@
       "anzitutto",
       "innanzitutto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "primario": {
     "lemma": "primario",
@@ -13475,7 +13557,8 @@
       "iniziare",
       "avviare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "principio": {
     "lemma": "principio",
@@ -14186,7 +14269,8 @@
       "articolare",
       "dire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "professionale": {
     "lemma": "professionale",
@@ -14375,7 +14459,8 @@
       "proporre",
       "porgere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "profferta": {
     "lemma": "profferta",
@@ -14392,7 +14477,8 @@
       "offerta",
       "proposta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "proficuo": {
     "lemma": "proficuo",
@@ -14499,7 +14585,8 @@
       "dispensare",
       "prodigare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "profondità": {
     "lemma": "profondità",
@@ -14866,7 +14953,8 @@
       "discendenza",
       "progenie"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "proliferazione": {
     "lemma": "proliferazione",
@@ -15091,7 +15179,8 @@
       "proferire",
       "articolare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "propagare": {
     "lemma": "propagare",
@@ -15127,7 +15216,8 @@
       "ammannire",
       "rifilare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "propiziare": {
     "lemma": "propiziare",
@@ -15145,7 +15235,8 @@
       "favorire",
       "agevolare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "propizio": {
     "lemma": "propizio",
@@ -15163,7 +15254,8 @@
       "opportuno",
       "benevolo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "proponimento": {
     "lemma": "proponimento",
@@ -15181,7 +15273,8 @@
       "intenzione",
       "risoluzione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "proporre": {
     "lemma": "proporre",
@@ -15358,7 +15451,8 @@
     "synonyms": [
       "prua"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "prorompere": {
     "lemma": "prorompere",
@@ -15376,7 +15470,8 @@
       "scoppiare",
       "sgorgare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "prorompimento": {
     "lemma": "prorompimento",
@@ -15394,7 +15489,8 @@
       "impeto",
       "sfogo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "prosciugare": {
     "lemma": "prosciugare",
@@ -15517,7 +15613,8 @@
       "antistante",
       "frontistante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "prossimare": {
     "lemma": "prossimare",
@@ -15535,7 +15632,8 @@
       "accostarsi",
       "appressarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "prossimità": {
     "lemma": "prossimità",
@@ -15588,7 +15686,8 @@
       "sfinire",
       "avvilire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "protagonista": {
     "lemma": "protagonista",
@@ -15675,7 +15774,8 @@
       "sporto",
       "allungato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "protesta": {
     "lemma": "protesta",
@@ -16102,7 +16202,8 @@
       "rifornirsi",
       "procurarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "provvedimento": {
     "lemma": "provvedimento",
@@ -16192,7 +16293,8 @@
       "benefico",
       "provvidenziale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "provvisorio": {
     "lemma": "provvisorio",
@@ -16385,7 +16487,8 @@
     "synonyms": [
       "bleah"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "pubblicamente": {
     "lemma": "pubblicamente",
@@ -16545,7 +16648,8 @@
       "ingenuità",
       "sciocchezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "puerilmente": {
     "lemma": "puerilmente",
@@ -16562,7 +16666,8 @@
       "infantilmente",
       "ingenuamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pugliese": {
     "lemma": "pugliese",
@@ -16596,7 +16701,8 @@
       "lotta",
       "combattimento"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "pugnale": {
     "lemma": "pugnale",
@@ -17160,7 +17266,8 @@
       "burattino",
       "bambino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "puramente": {
     "lemma": "puramente",
@@ -17320,7 +17427,8 @@
       "codardo",
       "timoroso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "putrefatto": {
     "lemma": "putrefatto",

@@ -14,7 +14,8 @@
       "sciocco",
       "stupido"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "babbino": {
     "lemma": "babbino",
@@ -30,7 +31,8 @@
     "synonyms": [
       "papino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "babbo": {
     "lemma": "babbo",
@@ -46,7 +48,8 @@
     "synonyms": [
       "papà"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "baccano": {
     "lemma": "baccano",
@@ -63,7 +66,8 @@
       "chiasso",
       "frastuono"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "bacchetta": {
     "lemma": "bacchetta",
@@ -175,7 +179,8 @@
     "synonyms": [
       "bacio grande"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "bacon": {
     "lemma": "bacon",
@@ -225,7 +230,8 @@
       "abbazia",
       "monastero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "badile": {
     "lemma": "badile",
@@ -340,7 +346,8 @@
     "synonyms": [
       "boh"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "baia": {
     "lemma": "baia",
@@ -373,7 +380,8 @@
     "synonyms": [
       "soldo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "baita": {
     "lemma": "baita",
@@ -672,7 +680,8 @@
       "goffo",
       "stordito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "balsamico": {
     "lemma": "balsamico",
@@ -706,7 +715,8 @@
       "brillare",
       "luccicare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "balzano": {
     "lemma": "balzano",
@@ -1037,7 +1047,8 @@
       "esiliare",
       "annunciare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "bando": {
     "lemma": "bando",
@@ -1055,7 +1066,8 @@
       "editto",
       "decreto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "banfio": {
     "lemma": "banfio",
@@ -1072,7 +1084,8 @@
       "ansimante",
       "affannato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "bar": {
     "lemma": "bar",
@@ -1191,7 +1204,8 @@
     "synonyms": [
       "barbona"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "barbagianni": {
     "lemma": "barbagianni",
@@ -1225,7 +1239,8 @@
       "crudelmente",
       "brutalmente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "barbaro": {
     "lemma": "barbaro",
@@ -1307,7 +1322,8 @@
       "senzatetto",
       "mendicante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "barbuto": {
     "lemma": "barbuto",
@@ -2469,7 +2485,8 @@
       "be'",
       "insomma"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "belare": {
     "lemma": "belare",
@@ -2789,7 +2806,8 @@
     "synonyms": [
       "assenso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "benessere": {
     "lemma": "benessere",
@@ -2918,7 +2936,8 @@
     "synonyms": [
       "benissimo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "bensì": {
     "lemma": "bensì",
@@ -2935,7 +2954,8 @@
       "ma",
       "piuttosto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "benvenuto": {
     "lemma": "benvenuto",
@@ -2985,7 +3005,8 @@
       "urlare",
       "strillare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "bere": {
     "lemma": "bere",
@@ -3233,7 +3254,8 @@
       "animaletto",
       "bestiolina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "beta-agonista": {
     "lemma": "beta-agonista",
@@ -3582,7 +3604,8 @@
       "sciocca",
       "stupidella"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "biga": {
     "lemma": "biga",
@@ -3631,7 +3654,8 @@
     "synonyms": [
       "grigio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "biglia": {
     "lemma": "biglia",
@@ -3790,7 +3814,8 @@
     "synonyms": [
       "bimbo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "bimbo": {
     "lemma": "bimbo",
@@ -3980,7 +4005,8 @@
     "synonyms": [
       "monello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "birbaccione": {
     "lemma": "birbaccione",
@@ -3997,7 +4023,8 @@
       "birbone",
       "briccone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "birbante": {
     "lemma": "birbante",
@@ -4014,7 +4041,8 @@
       "furfante",
       "briccone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "birbone": {
     "lemma": "birbone",
@@ -4031,7 +4059,8 @@
       "birbante",
       "briccone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "birichinata": {
     "lemma": "birichinata",
@@ -4048,7 +4077,8 @@
       "marachella",
       "scherzo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "birichino": {
     "lemma": "birichino",
@@ -4065,7 +4095,8 @@
       "monello",
       "birba"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "birillo": {
     "lemma": "birillo",
@@ -4283,7 +4314,8 @@
       "litigare",
       "battibeccare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "bisticcio": {
     "lemma": "bisticcio",
@@ -4300,7 +4332,8 @@
       "litigio",
       "diverbio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "bistrattare": {
     "lemma": "bistrattare",
@@ -4530,7 +4563,8 @@
     "synonyms": [
       "smorfia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "boccale": {
     "lemma": "boccale",
@@ -4975,7 +5009,8 @@
     "synonyms": [
       "bastone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "borghesia": {
     "lemma": "borghesia",
@@ -5371,7 +5406,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "brama": {
     "lemma": "brama",
@@ -5385,7 +5421,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "bramare": {
     "lemma": "bramare",
@@ -5399,7 +5436,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "bramoso": {
     "lemma": "bramoso",
@@ -5413,7 +5451,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "branca": {
     "lemma": "branca",
@@ -5903,7 +5942,8 @@
     "synonyms": [
       "scudo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "brodo": {
     "lemma": "brodo",
@@ -6685,7 +6725,8 @@
     "synonyms": [
       "prigione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "burla": {
     "lemma": "burla",
@@ -6718,7 +6759,8 @@
       "beffare",
       "canzonare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "burlescamente": {
     "lemma": "burlescamente",
@@ -6862,7 +6904,8 @@
       "prendersi",
       "beccarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "bussa": {
     "lemma": "bussa",
@@ -6879,7 +6922,8 @@
       "percossa",
       "colpo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "bussare": {
     "lemma": "bussare",

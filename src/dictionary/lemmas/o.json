@@ -200,7 +200,8 @@
     "synonyms": [
       "dimenticanza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "obliquo": {
     "lemma": "obliquo",
@@ -283,7 +284,8 @@
     "synonyms": [
       "sguardo torvo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "occhiaia": {
     "lemma": "occhiaia",
@@ -330,7 +332,8 @@
       "guardare",
       "adocchiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "occhiata": {
     "lemma": "occhiata",
@@ -360,7 +363,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "occhietto": {
     "lemma": "occhietto",
@@ -449,7 +453,8 @@
       "uccisione",
       "strage"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "occorrenza": {
     "lemma": "occorrenza",
@@ -597,7 +602,8 @@
       "o",
       "oppure"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ode": {
     "lemma": "ode",
@@ -713,7 +719,8 @@
     "synonyms": [
       "profumino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "odoroso": {
     "lemma": "odoroso",
@@ -817,7 +824,8 @@
       "compito",
       "carica"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "offrire": {
     "lemma": "offrire",
@@ -904,7 +912,8 @@
       "oramai",
       "adesso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ogni": {
     "lemma": "ogni",
@@ -1006,7 +1015,8 @@
       "ohimè",
       "diamine"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ohimè": {
     "lemma": "ohimè",
@@ -1023,7 +1033,8 @@
       "ahimè",
       "purtroppo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ok": {
     "lemma": "ok",
@@ -1057,7 +1068,8 @@
       "ehilà",
       "ehi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "olfattivo": {
     "lemma": "olfattivo",
@@ -1584,7 +1596,8 @@
       "carico",
       "obbligo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "oneroso": {
     "lemma": "oneroso",
@@ -1601,7 +1614,8 @@
       "costoso",
       "gravoso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "onestà": {
     "lemma": "onestà",
@@ -1777,7 +1791,8 @@
       "disonore",
       "affronto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "opacità": {
     "lemma": "opacità",
@@ -2114,7 +2129,8 @@
     "synonyms": [
       "oplà"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "opuscolo": {
     "lemma": "opuscolo",
@@ -2231,7 +2247,8 @@
       "preghiera",
       "discorso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "orchestra": {
     "lemma": "orchestra",
@@ -2382,7 +2399,8 @@
       "macchinare",
       "tessere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "orecchietta": {
     "lemma": "orecchietta",
@@ -2441,7 +2459,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "orfano": {
     "lemma": "orfano",
@@ -2934,7 +2953,8 @@
       "onore",
       "omaggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "orrendo": {
     "lemma": "orrendo",
@@ -3143,7 +3163,8 @@
       "acclamazione",
       "elogio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "osare": {
     "lemma": "osare",
@@ -3381,7 +3402,8 @@
       "deferenza",
       "rispetto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "osservabile": {
     "lemma": "osservabile",
@@ -3596,7 +3618,8 @@
       "impedire",
       "ostacolare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "oste": {
     "lemma": "oste",
@@ -3612,7 +3635,8 @@
     "synonyms": [
       "locandiere"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ostello": {
     "lemma": "ostello",
@@ -4073,7 +4097,8 @@
       "laddove",
       "qualora"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ovest": {
     "lemma": "ovest",
@@ -4124,7 +4149,8 @@
       "cioè",
       "oppure"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ovviare": {
     "lemma": "ovviare",
@@ -4141,7 +4167,8 @@
       "rimediare",
       "porre rimedio"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ovvio": {
     "lemma": "ovvio",
@@ -4192,6 +4219,7 @@
       "pigro",
       "inattivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   }
 }

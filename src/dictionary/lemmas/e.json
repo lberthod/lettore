@@ -85,7 +85,8 @@
     "synonyms": [
       "ebro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ebollizione": {
     "lemma": "ebollizione",
@@ -127,7 +128,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ebro": {
     "lemma": "ebro",
@@ -143,7 +145,8 @@
     "synonyms": [
       "ebbro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "eccedere": {
     "lemma": "eccedere",
@@ -188,7 +191,8 @@
       "ottimo",
       "sommo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "eccellenza": {
     "lemma": "eccellenza",
@@ -359,7 +363,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "eco": {
     "lemma": "eco",
@@ -515,7 +520,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "edificio": {
     "lemma": "edificio",
@@ -727,7 +733,8 @@
       "compiere",
       "realizzare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "effettuazione": {
     "lemma": "effettuazione",
@@ -744,7 +751,8 @@
       "esecuzione",
       "realizzazione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "efficace": {
     "lemma": "efficace",
@@ -840,7 +848,8 @@
     "synonyms": [
       "lui"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "egregio": {
     "lemma": "egregio",
@@ -857,7 +866,8 @@
       "illustre",
       "insigne"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "egro": {
     "lemma": "egro",
@@ -873,7 +883,8 @@
     "synonyms": [
       "malato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "eguale": {
     "lemma": "eguale",
@@ -890,7 +901,8 @@
       "uguale",
       "pari"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "eh": {
     "lemma": "eh",
@@ -904,7 +916,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ehi": {
     "lemma": "ehi",
@@ -918,7 +931,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "elaborare": {
     "lemma": "elaborare",
@@ -1313,7 +1327,8 @@
     "synonyms": [
       "lei"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "elle": {
     "lemma": "elle",
@@ -1635,7 +1650,8 @@
     "synonyms": [
       "emisfero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "emissione": {
     "lemma": "emissione",
@@ -1797,7 +1813,8 @@
       "elogio",
       "lode"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "energetico": {
     "lemma": "energetico",
@@ -2076,7 +2093,8 @@
       "riguardare",
       "concernere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "entrare": {
     "lemma": "entrare",
@@ -2188,7 +2206,8 @@
       "formulare",
       "esporre"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "enunciato": {
     "lemma": "enunciato",
@@ -2202,7 +2221,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "enzima": {
     "lemma": "enzima",
@@ -2423,7 +2443,8 @@
     "synonyms": [
       "paragonabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "equiparare": {
     "lemma": "equiparare",
@@ -2439,7 +2460,8 @@
     "synonyms": [
       "paragonare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "equità": {
     "lemma": "equità",
@@ -2660,7 +2682,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ermetico": {
     "lemma": "ermetico",
@@ -2744,7 +2767,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "errante": {
     "lemma": "errante",
@@ -2758,7 +2782,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "errare": {
     "lemma": "errare",
@@ -2775,7 +2800,8 @@
       "sbagliare",
       "vagare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "errato": {
     "lemma": "errato",
@@ -2837,7 +2863,8 @@
       "pendio",
       "costa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "erto": {
     "lemma": "erto",
@@ -2854,7 +2881,8 @@
       "ripido",
       "scosceso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "erudito": {
     "lemma": "erudito",
@@ -2936,7 +2964,8 @@
       "frenesia",
       "eccitazione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "esalare": {
     "lemma": "esalare",
@@ -3088,7 +3117,8 @@
       "soddisfare",
       "accontentare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "esausto": {
     "lemma": "esausto",
@@ -3205,7 +3235,8 @@
       "ideare",
       "inventare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "escursione": {
     "lemma": "escursione",
@@ -3354,7 +3385,8 @@
       "esonerato",
       "libero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "esenzione": {
     "lemma": "esenzione",
@@ -3371,7 +3403,8 @@
       "dispensa",
       "esonero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "esercitare": {
     "lemma": "esercitare",
@@ -3572,7 +3605,8 @@
       "illustre",
       "insigne"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "esistenza": {
     "lemma": "esistenza",
@@ -3763,7 +3797,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "espediente": {
     "lemma": "espediente",
@@ -3901,7 +3936,8 @@
       "svolgere",
       "eseguire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "esplicitamente": {
     "lemma": "esplicitamente",
@@ -4255,7 +4291,8 @@
       "lui",
       "quello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "est": {
     "lemma": "est",
@@ -4436,7 +4473,8 @@
       "sbigottito",
       "sconcertato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "esteso": {
     "lemma": "esteso",
@@ -4530,7 +4568,8 @@
     "synonyms": [
       "questo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "estraneità": {
     "lemma": "estraneità",
@@ -4952,7 +4991,8 @@
     "synonyms": [
       "eterno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "euforia": {
     "lemma": "euforia",

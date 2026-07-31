@@ -310,7 +310,8 @@
       "macchiato",
       "chiazzato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "madia": {
     "lemma": "madia",
@@ -806,7 +807,8 @@
       "grande",
       "sommo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "magrezza": {
     "lemma": "magrezza",
@@ -857,7 +859,8 @@
     "synonyms": [
       "boh"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "mai": {
     "lemma": "mai",
@@ -1019,7 +1022,8 @@
       "furfante",
       "birbante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "malanimo": {
     "lemma": "malanimo",
@@ -1037,7 +1041,8 @@
       "rancore",
       "ostilità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "malannata": {
     "lemma": "malannata",
@@ -1104,7 +1109,8 @@
       "mascalzone",
       "furfante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "malaticcio": {
     "lemma": "malaticcio",
@@ -1227,7 +1233,8 @@
       "estremamente",
       "tremendamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "maledetto": {
     "lemma": "maledetto",
@@ -1299,7 +1306,8 @@
       "traballante",
       "incerto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "malga": {
     "lemma": "malga",
@@ -1524,7 +1532,8 @@
       "cattivo",
       "brutto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "malsano": {
     "lemma": "malsano",
@@ -1697,7 +1706,8 @@
       "mamma",
       "mammetta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "manaccia": {
     "lemma": "manaccia",
@@ -1714,7 +1724,8 @@
       "manona",
       "zampa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "manata": {
     "lemma": "manata",
@@ -1895,7 +1906,8 @@
       "mattino",
       "alba"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "maneggiare": {
     "lemma": "maneggiare",
@@ -1982,7 +1994,8 @@
       "scansafatiche",
       "parassita"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "mangiare": {
     "lemma": "mangiare",
@@ -2048,7 +2061,8 @@
       "mangiare",
       "cibarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "manico": {
     "lemma": "manico",
@@ -2337,7 +2351,8 @@
     "synonyms": [
       "mandritto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mansione": {
     "lemma": "mansione",
@@ -2535,7 +2550,8 @@
       "birichinata",
       "monelleria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "marameo": {
     "lemma": "marameo",
@@ -2549,7 +2565,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "maratona": {
     "lemma": "maratona",
@@ -2816,7 +2833,8 @@
       "insaporire",
       "condire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "marinaro": {
     "lemma": "marinaro",
@@ -2901,7 +2919,8 @@
       "sposarsi",
       "accasare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "marito": {
     "lemma": "marito",
@@ -2954,7 +2973,8 @@
       "imbroglione",
       "ladro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "marketing": {
     "lemma": "marketing",
@@ -3020,7 +3040,8 @@
       "monello",
       "ragazzino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "marmotta": {
     "lemma": "marmotta",
@@ -3160,7 +3181,8 @@
       "martoriare",
       "torturare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "martire": {
     "lemma": "martire",
@@ -3489,7 +3511,8 @@
       "maestro",
       "artigiano"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "matematica": {
     "lemma": "matematica",
@@ -4022,7 +4045,8 @@
     "synonyms": [
       "con me"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "medaglia": {
     "lemma": "medaglia",
@@ -4072,7 +4096,8 @@
       "stesso",
       "identico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "media": {
     "lemma": "media",
@@ -4136,7 +4161,8 @@
       "attraverso",
       "per mezzo di"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "mediatico": {
     "lemma": "mediatico",
@@ -4299,7 +4325,8 @@
       "pensieroso",
       "assorto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "meditare": {
     "lemma": "meditare",
@@ -4426,7 +4453,8 @@
       "malinconia",
       "tristezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "melanconico": {
     "lemma": "melanconico",
@@ -4443,7 +4471,8 @@
       "malinconico",
       "triste"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "melanzana": {
     "lemma": "melanzana",
@@ -4615,7 +4644,8 @@
       "portare",
       "guidare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "meno": {
     "lemma": "meno",
@@ -4646,7 +4676,8 @@
       "minimo",
       "minore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mensa": {
     "lemma": "mensa",
@@ -4826,7 +4857,8 @@
       "bugia",
       "falsità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "meramente": {
     "lemma": "meramente",
@@ -4844,7 +4876,8 @@
       "semplicemente",
       "soltanto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "meraviglia": {
     "lemma": "meraviglia",
@@ -4966,7 +4999,8 @@
       "merce",
       "roba"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mercatino": {
     "lemma": "mercatino",
@@ -5033,7 +5067,8 @@
       "pietà",
       "grazia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mercenario": {
     "lemma": "mercenario",
@@ -5209,7 +5244,8 @@
       "lodevole",
       "encomiabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "merletto": {
     "lemma": "merletto",
@@ -5257,7 +5293,8 @@
       "versare",
       "spillare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "meschinità": {
     "lemma": "meschinità",
@@ -5393,7 +5430,8 @@
     "synonyms": [
       "signore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "messinscena": {
     "lemma": "messinscena",
@@ -5427,7 +5465,8 @@
       "tristemente",
       "malinconicamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mestiere": {
     "lemma": "mestiere",
@@ -5462,7 +5501,8 @@
       "tristezza",
       "malinconia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mesto": {
     "lemma": "mesto",
@@ -5479,7 +5519,8 @@
       "triste",
       "malinconico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mestolo": {
     "lemma": "mestolo",
@@ -5812,7 +5853,8 @@
     "synonyms": [
       "mezzogiorno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mezzogiorno": {
     "lemma": "mezzogiorno",
@@ -5922,7 +5964,8 @@
     "synonyms": [
       "affatto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "micelio": {
     "lemma": "micelio",
@@ -5953,7 +5996,8 @@
       "gatto",
       "micino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "microbico": {
     "lemma": "microbico",
@@ -6887,7 +6931,8 @@
       "sciocco",
       "credulone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "minerale": {
     "lemma": "minerale",
@@ -7223,7 +7268,8 @@
       "straordinario",
       "magnifico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "miracolo": {
     "lemma": "miracolo",
@@ -7345,7 +7391,8 @@
       "compassionevole",
       "miserevole"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "miserere": {
     "lemma": "miserere",
@@ -7380,7 +7427,8 @@
       "deplorevole",
       "misero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "miseria": {
     "lemma": "miseria",
@@ -7723,7 +7771,8 @@
       "adesso",
       "ora"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "mobile": {
     "lemma": "mobile",
@@ -7790,7 +7839,8 @@
     "synonyms": [
       "fazzoletto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "moccolaia": {
     "lemma": "moccolaia",
@@ -8010,7 +8060,8 @@
       "basso",
       "moderato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "modificare": {
     "lemma": "modificare",
@@ -8082,7 +8133,8 @@
       "abbattuto",
       "sconsolato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "moglie": {
     "lemma": "moglie",
@@ -8118,7 +8170,8 @@
       "smancerie",
       "vezzi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "molestare": {
     "lemma": "molestare",
@@ -8152,7 +8205,8 @@
     "synonyms": [
       "mulino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "molisano": {
     "lemma": "molisano",
@@ -8284,7 +8338,8 @@
       "folla",
       "massa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "molto": {
     "lemma": "molto",
@@ -8335,7 +8390,8 @@
       "attimo",
       "istante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "momento": {
     "lemma": "momento",
@@ -8401,7 +8457,8 @@
     "synonyms": [
       "suorina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "monaco": {
     "lemma": "monaco",
@@ -8465,7 +8522,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "mondiale": {
     "lemma": "mondiale",
@@ -8516,7 +8574,8 @@
     "synonyms": [
       "birbante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "monelleria": {
     "lemma": "monelleria",
@@ -8870,7 +8929,8 @@
       "malattia",
       "epidemia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "morboso": {
     "lemma": "morboso",
@@ -8953,7 +9013,8 @@
     "synonyms": [
       "bruno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "morfinomane": {
     "lemma": "morfinomane",
@@ -9153,7 +9214,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "mortificare": {
     "lemma": "mortificare",
@@ -9552,7 +9614,8 @@
       "burlare",
       "punzecchiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "motto": {
     "lemma": "motto",
@@ -9771,7 +9834,8 @@
       "muggire",
       "rombare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "muggine": {
     "lemma": "muggine",
@@ -9964,7 +10028,8 @@
       "generoso",
       "liberale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "munire": {
     "lemma": "munire",
@@ -9982,7 +10047,8 @@
       "dotare",
       "equipaggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "muovere": {
     "lemma": "muovere",
@@ -10066,7 +10132,8 @@
     "synonyms": [
       "muretto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "muretto": {
     "lemma": "muretto",
@@ -10132,7 +10199,8 @@
     "synonyms": [
       "muschio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "muscolare": {
     "lemma": "muscolare",

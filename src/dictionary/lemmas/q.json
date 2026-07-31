@@ -320,7 +320,8 @@
       "come",
       "in che modo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "qualora": {
     "lemma": "qualora",
@@ -338,7 +339,8 @@
       "nel caso che",
       "ove"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "qualsiasi": {
     "lemma": "qualsiasi",
@@ -389,7 +391,8 @@
       "ogni volta che",
       "tutte le volte che"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "quand'anche": {
     "lemma": "quand'anche",
@@ -407,7 +410,8 @@
       "seppure",
       "ancorché"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "quando": {
     "lemma": "quando",
@@ -491,7 +495,8 @@
       "sebbene",
       "nonostante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "quaranta": {
     "lemma": "quaranta",
@@ -718,7 +723,8 @@
       "quattrino",
       "soldino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "quattro": {
     "lemma": "quattro",
@@ -925,7 +931,8 @@
       "agente",
       "sbirro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "queto": {
     "lemma": "queto",
@@ -943,7 +950,8 @@
       "tranquillo",
       "calmo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "qui": {
     "lemma": "qui",
@@ -1048,7 +1056,8 @@
       "di qui",
       "da qui"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "quindi": {
     "lemma": "quindi",
@@ -1112,7 +1121,8 @@
       "là",
       "ivi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "quondam": {
     "lemma": "quondam",
@@ -1129,7 +1139,8 @@
       "fu",
       "già"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "quota": {
     "lemma": "quota",

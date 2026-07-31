@@ -240,7 +240,8 @@
       "rinuncia",
       "offerta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sacrilegio": {
     "lemma": "sacrilegio",
@@ -467,7 +468,8 @@
       "convenevoli",
       "smanceria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "salamoia": {
     "lemma": "salamoia",
@@ -552,7 +554,8 @@
     "synonyms": [
       "salice"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "saldare": {
     "lemma": "saldare",
@@ -928,7 +931,8 @@
       "rozzezza",
       "asprezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "salvatore": {
     "lemma": "salvatore",
@@ -963,7 +967,8 @@
       "salvezza",
       "redenzione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "salvezza": {
     "lemma": "salvezza",
@@ -1587,7 +1592,8 @@
       "baciare",
       "vezzeggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "sbadigliare": {
     "lemma": "sbadigliare",
@@ -1686,7 +1692,8 @@
       "squilibrato",
       "confuso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sbalordimento": {
     "lemma": "sbalordimento",
@@ -1935,7 +1942,8 @@
       "gualcire",
       "schernire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "sbiadito": {
     "lemma": "sbiadito",
@@ -2097,7 +2105,8 @@
       "scomposto",
       "sciatto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "sbracciato": {
     "lemma": "sbracciato",
@@ -2150,7 +2159,8 @@
       "stracciato",
       "malandato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "sbriciolare": {
     "lemma": "sbriciolare",
@@ -2790,7 +2800,8 @@
     "synonyms": [
       "evitamento"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "scapaccione": {
     "lemma": "scapaccione",
@@ -2807,7 +2818,8 @@
       "ceffone",
       "sberla"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "scapataggine": {
     "lemma": "scapataggine",
@@ -2878,7 +2890,8 @@
       "svantaggio",
       "perdita"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "scappare": {
     "lemma": "scappare",
@@ -2914,7 +2927,8 @@
       "evasione",
       "fuga"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "scappellotto": {
     "lemma": "scappellotto",
@@ -2932,7 +2946,8 @@
       "sberla",
       "ceffone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "scarabocchio": {
     "lemma": "scarabocchio",
@@ -3105,7 +3120,8 @@
       "ciabatta",
       "scarpone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "scarpetta": {
     "lemma": "scarpetta",
@@ -3370,7 +3386,8 @@
       "temerario",
       "incosciente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "scegliere": {
     "lemma": "scegliere",
@@ -3442,7 +3459,8 @@
       "stupido",
       "stolto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "scempio": {
     "lemma": "scempio",
@@ -3460,7 +3478,8 @@
       "devastazione",
       "rovina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "scena": {
     "lemma": "scena",
@@ -3548,7 +3567,8 @@
       "sbadato",
       "avventato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "scettico": {
     "lemma": "scettico",
@@ -3584,7 +3604,8 @@
       "discernere",
       "separare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "scheggia": {
     "lemma": "scheggia",
@@ -3670,7 +3691,8 @@
       "sottrarsi",
       "schivare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "schermo": {
     "lemma": "schermo",
@@ -3706,7 +3728,8 @@
       "beffa",
       "dileggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "scherzare": {
     "lemma": "scherzare",
@@ -3916,7 +3939,8 @@
       "schiarire",
       "albeggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "schiarire": {
     "lemma": "schiarire",
@@ -4089,7 +4113,8 @@
       "socchiudere",
       "dischiudere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "schiudersi": {
     "lemma": "schiudersi",
@@ -4106,7 +4131,8 @@
       "aprirsi",
       "sbocciare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "schiuma": {
     "lemma": "schiuma",
@@ -4262,7 +4288,8 @@
       "disgraziato",
       "malvagio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "scialare": {
     "lemma": "scialare",
@@ -4280,7 +4307,8 @@
       "sperperare",
       "dissipare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "scialbo": {
     "lemma": "scialbo",
@@ -4383,7 +4411,8 @@
       "lava",
       "colata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "sciatore": {
     "lemma": "sciatore",
@@ -4553,7 +4582,8 @@
       "dividere",
       "distinguere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "scintilla": {
     "lemma": "scintilla",
@@ -4660,7 +4690,8 @@
       "stupidello",
       "ingenuo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "sciocco": {
     "lemma": "sciocco",
@@ -4766,7 +4797,8 @@
       "ozio",
       "indolenza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "scioperato": {
     "lemma": "scioperato",
@@ -4941,7 +4973,8 @@
       "esclamare",
       "gridare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "scoccare": {
     "lemma": "scoccare",
@@ -5608,7 +5641,8 @@
       "ingrato",
       "immemore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sconosciuto": {
     "lemma": "sconosciuto",
@@ -5715,7 +5749,8 @@
       "alterato",
       "stravolto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "scontrarsi": {
     "lemma": "scontrarsi",
@@ -6052,7 +6087,8 @@
       "abbuffata",
       "spanciata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "scorrere": {
     "lemma": "scorrere",
@@ -6531,7 +6567,8 @@
       "approfittare",
       "sfruttare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "scrollare": {
     "lemma": "scrollare",
@@ -6895,7 +6932,8 @@
       "disprezzare",
       "disdegnare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "sdegno": {
     "lemma": "sdegno",
@@ -7120,7 +7158,8 @@
       "quantunque",
       "malgrado"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "seccare": {
     "lemma": "seccare",
@@ -7257,7 +7296,8 @@
     "synonyms": [
       "con sé"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "secolare": {
     "lemma": "secolare",
@@ -7309,7 +7349,8 @@
       "favorire",
       "appoggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "secondario": {
     "lemma": "secondario",
@@ -7361,7 +7402,8 @@
       "segretare",
       "occultare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "sedano": {
     "lemma": "sedano",
@@ -7722,7 +7764,8 @@
       "soprattutto",
       "in particolare"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "segno": {
     "lemma": "segno",
@@ -7863,7 +7906,8 @@
       "proseguire",
       "persistere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "seguito": {
     "lemma": "seguito",
@@ -7899,7 +7943,8 @@
       "certamente",
       "indubbiamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sei": {
     "lemma": "sei",
@@ -8079,7 +8124,8 @@
       "bosco",
       "foresta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "selvaggina": {
     "lemma": "selvaggina",
@@ -8148,7 +8194,8 @@
       "aspetto",
       "apparenza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sembianza": {
     "lemma": "sembianza",
@@ -8166,7 +8213,8 @@
       "apparenza",
       "fattezze"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sembrare": {
     "lemma": "sembrare",
@@ -8218,7 +8266,8 @@
       "seme",
       "sementi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "semestre": {
     "lemma": "semestre",
@@ -8389,7 +8438,8 @@
       "purché",
       "ammesso che"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "senato": {
     "lemma": "senato",
@@ -8958,7 +9008,8 @@
       "benché",
       "anche se"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "sequela": {
     "lemma": "sequela",
@@ -8976,7 +9027,8 @@
       "successione",
       "sfilza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "sequenza": {
     "lemma": "sequenza",
@@ -9047,7 +9099,8 @@
       "messere",
       "messer"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sera": {
     "lemma": "sera",
@@ -9130,7 +9183,8 @@
     "synonyms": [
       "disastro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "serbare": {
     "lemma": "serbare",
@@ -9148,7 +9202,8 @@
       "custodire",
       "riservare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "serenamente": {
     "lemma": "serenamente",
@@ -9496,7 +9551,8 @@
       "clistere",
       "enteroclisma"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "servizievole": {
     "lemma": "servizievole",
@@ -10494,7 +10550,8 @@
       "pastaia",
       "cuoca"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "sfogo": {
     "lemma": "sfogo",
@@ -10708,7 +10765,8 @@
       "canzonatura",
       "beffa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "sfrenato": {
     "lemma": "sfrenato",
@@ -11622,7 +11680,8 @@
       "garanzia",
       "malleveria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "siderale": {
     "lemma": "siderale",
@@ -11676,7 +11735,8 @@
       "simile",
       "cosiffatto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sigaretta": {
     "lemma": "sigaretta",
@@ -11922,7 +11982,8 @@
       "ragazzina",
       "signorina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "silente": {
     "lemma": "silente",
@@ -11940,7 +12001,8 @@
       "muto",
       "quieto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "silenzio": {
     "lemma": "silenzio",
@@ -12504,7 +12566,8 @@
       "fino",
       "infino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "sinonimo": {
     "lemma": "sinonimo",
@@ -12607,7 +12670,8 @@
       "signore",
       "monarca"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sirena": {
     "lemma": "sirena",
@@ -12641,7 +12705,8 @@
       "certamente",
       "senz'altro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "sistema": {
     "lemma": "sistema",
@@ -12902,7 +12967,8 @@
       "gesto",
       "manata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "smania": {
     "lemma": "smania",
@@ -13009,7 +13075,8 @@
       "fanfarone",
       "millantatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "smarrimento": {
     "lemma": "smarrimento",
@@ -13397,7 +13464,8 @@
       "schiarire",
       "rasserenare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "snodare": {
     "lemma": "snodare",
@@ -13433,7 +13501,8 @@
       "delicato",
       "gentile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sobbalzare": {
     "lemma": "sobbalzare",
@@ -13538,7 +13607,8 @@
       "perdere",
       "arrendersi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "soccorrere": {
     "lemma": "soccorrere",
@@ -14013,7 +14083,8 @@
       "attenuato",
       "velato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sofisticato": {
     "lemma": "sofisticato",
@@ -14171,7 +14242,8 @@
       "aggiungere",
       "replicare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "soglia": {
     "lemma": "soglia",
@@ -14343,7 +14415,8 @@
       "sultano",
       "sovrano"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "soldatesco": {
     "lemma": "soldatesco",
@@ -14501,7 +14574,8 @@
       "usare",
       "costumare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "soletto": {
     "lemma": "soletto",
@@ -14519,7 +14593,8 @@
       "solingo",
       "solitario"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "solidarietà": {
     "lemma": "solidarietà",
@@ -14573,7 +14648,8 @@
       "appartato",
       "isolato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "solitamente": {
     "lemma": "solitamente",
@@ -14680,7 +14756,8 @@
       "diligenza",
       "prontezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "solleone": {
     "lemma": "solleone",
@@ -14993,7 +15070,8 @@
       "sottomettere",
       "assoggettare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "sommo": {
     "lemma": "sommo",
@@ -15239,7 +15317,8 @@
       "prepotenza",
       "angheria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sopire": {
     "lemma": "sopire",
@@ -15257,7 +15336,8 @@
       "calmare",
       "attenuare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "soppesare": {
     "lemma": "soppesare",
@@ -15311,7 +15391,8 @@
       "nascostamente",
       "alla chetichella"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sopportare": {
     "lemma": "sopportare",
@@ -15415,7 +15496,8 @@
       "predetto",
       "summenzionato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "sopraffare": {
     "lemma": "sopraffare",
@@ -15553,7 +15635,8 @@
       "suddetto",
       "sopraddetto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "soprassalto": {
     "lemma": "soprassalto",
@@ -15623,7 +15706,8 @@
       "capitare",
       "giungere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "sopravvivenza": {
     "lemma": "sopravvivenza",
@@ -15709,7 +15793,8 @@
       "topo",
       "ratto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "sordamente": {
     "lemma": "sordamente",
@@ -15726,7 +15811,8 @@
       "cupamente",
       "ovattatamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sordo": {
     "lemma": "sordo",
@@ -16085,7 +16171,8 @@
       "ottenere",
       "produrre"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "sorveglianza": {
     "lemma": "sorveglianza",
@@ -16244,7 +16331,8 @@
       "spronare",
       "incalzare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "sospirare": {
     "lemma": "sospirare",
@@ -16296,7 +16384,8 @@
       "sospiro",
       "sbuffo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "sosta": {
     "lemma": "sosta",
@@ -16490,7 +16579,8 @@
       "veste",
       "tonaca"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sotterraneo": {
     "lemma": "sotterraneo",
@@ -16939,7 +17029,8 @@
       "smisurato",
       "superfluo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sovra": {
     "lemma": "sovra",
@@ -16956,7 +17047,8 @@
       "sopra",
       "su"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sovrano": {
     "lemma": "sovrano",
@@ -17025,7 +17117,8 @@
       "sopra",
       "suso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sovrumano": {
     "lemma": "sovrumano",
@@ -17061,7 +17154,8 @@
       "soccorrere",
       "aiutare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "sovversivo": {
     "lemma": "sovversivo",
@@ -17163,7 +17257,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "spagnolo": {
     "lemma": "spagnolo",
@@ -17652,7 +17747,8 @@
       "orrendo",
       "pauroso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "spavento": {
     "lemma": "spavento",
@@ -18003,7 +18099,8 @@
       "fallace",
       "apparente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "speculare": {
     "lemma": "speculare",
@@ -18038,7 +18135,8 @@
       "ospedale",
       "nosocomio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "spedire": {
     "lemma": "spedire",
@@ -18162,7 +18260,8 @@
       "sbocconcellare",
       "piluccare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "spendere": {
     "lemma": "spendere",
@@ -18319,7 +18418,8 @@
       "disperdere",
       "sparpagliare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "sperduto": {
     "lemma": "sperduto",
@@ -18407,7 +18507,8 @@
       "disorientato",
       "perduto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sperticato": {
     "lemma": "sperticato",
@@ -18425,7 +18526,8 @@
       "smisurato",
       "eccessivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "spesa": {
     "lemma": "spesa",
@@ -18495,7 +18597,8 @@
       "egregio",
       "onorevole"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "spettacolare": {
     "lemma": "spettacolare",
@@ -18711,7 +18814,8 @@
       "rammaricato",
       "desolato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "spiacevole": {
     "lemma": "spiacevole",
@@ -18801,7 +18905,8 @@
       "rivelare",
       "spifferare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "spiazzare": {
     "lemma": "spiazzare",
@@ -18871,7 +18976,8 @@
       "sbrigarsi",
       "affrettarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "spiccicare": {
     "lemma": "spiccicare",
@@ -19029,7 +19135,8 @@
       "canna",
       "cannone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "spingere": {
     "lemma": "spingere",
@@ -19170,7 +19277,8 @@
       "soffiare",
       "alitare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "spiritato": {
     "lemma": "spiritato",
@@ -19273,7 +19381,8 @@
       "spirito",
       "anima"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "splendente": {
     "lemma": "splendente",
@@ -19591,7 +19700,8 @@
       "svuotare",
       "desertificare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "sporadico": {
     "lemma": "sporadico",
@@ -21134,7 +21244,8 @@
       "considerato",
       "dato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "stanza": {
     "lemma": "stanza",
@@ -21255,7 +21366,8 @@
       "aderire",
       "entrarci"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "stare": {
     "lemma": "stare",
@@ -21888,7 +22000,8 @@
       "pigiare",
       "appiattire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "dialettale"
   },
   "stile": {
     "lemma": "stile",
@@ -22062,7 +22175,8 @@
       "offerta",
       "obolo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "stipendio": {
     "lemma": "stipendio",
@@ -22115,7 +22229,8 @@
       "sottoscrizione",
       "conclusione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "stipulare": {
     "lemma": "stipulare",
@@ -22133,7 +22248,8 @@
       "sottoscrivere",
       "siglare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "stirare": {
     "lemma": "stirare",
@@ -22238,7 +22354,8 @@
       "indispettire",
       "infastidire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "stizzoso": {
     "lemma": "stizzoso",
@@ -22677,7 +22794,8 @@
       "sfinito",
       "esausto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "stracittadino": {
     "lemma": "stracittadino",
@@ -22854,7 +22972,8 @@
       "assurdo",
       "stravagante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "stranamente": {
     "lemma": "stranamente",
@@ -23399,7 +23518,8 @@
       "valorosamente",
       "accanitamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "strepitare": {
     "lemma": "strepitare",
@@ -23522,7 +23642,8 @@
       "grido",
       "urlo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "stridulo": {
     "lemma": "stridulo",
@@ -23789,7 +23910,8 @@
       "stretta",
       "strizzata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "strofinare": {
     "lemma": "strofinare",
@@ -23963,7 +24085,8 @@
       "logorare",
       "sciogliere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "struggersi": {
     "lemma": "struggersi",
@@ -23981,7 +24104,8 @@
       "consumarsi",
       "languire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "strumentalizzare": {
     "lemma": "strumentalizzare",
@@ -24228,7 +24352,8 @@
       "seccato",
       "esasperato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "stupefatto": {
     "lemma": "stupefatto",
@@ -24454,7 +24579,8 @@
       "repentino",
       "istantaneo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "subito": {
     "lemma": "subito",
@@ -24683,7 +24809,8 @@
       "sopraccitato",
       "summenzionato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "suddito": {
     "lemma": "suddito",
@@ -24804,7 +24931,8 @@
       "sancire",
       "confermare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "suggerimento": {
     "lemma": "suggerimento",
@@ -25350,7 +25478,8 @@
       "supplichevole",
       "implorante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "supplichevole": {
     "lemma": "supplichevole",
@@ -25367,7 +25496,8 @@
       "implorante",
       "accorato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "supplichevolmente": {
     "lemma": "supplichevolmente",
@@ -25384,7 +25514,8 @@
       "umilmente",
       "accoratamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "supplizio": {
     "lemma": "supplizio",
@@ -25489,7 +25620,8 @@
       "levarsi",
       "innalzarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "suscitare": {
     "lemma": "suscitare",
@@ -25524,7 +25656,8 @@
       "su",
       "sopra"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "sussiego": {
     "lemma": "sussiego",

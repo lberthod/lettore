@@ -14,7 +14,8 @@
       "ingannare",
       "imbrogliare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "gabbia": {
     "lemma": "gabbia",
@@ -47,7 +48,8 @@
       "allegria",
       "gioia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "gala": {
     "lemma": "gala",
@@ -126,7 +128,8 @@
       "forzato",
       "carcerato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "galera": {
     "lemma": "galera",
@@ -347,7 +350,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "gamma": {
     "lemma": "gamma",
@@ -620,7 +624,8 @@
       "castigare",
       "punire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "gastronomia": {
     "lemma": "gastronomia",
@@ -685,7 +690,8 @@
       "prigione",
       "carcere"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "gattaccio": {
     "lemma": "gattaccio",
@@ -699,7 +705,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "gattino": {
     "lemma": "gattino",
@@ -1751,7 +1758,8 @@
       "afferrare",
       "artigliare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ghiacciaio": {
     "lemma": "ghiacciaio",
@@ -1885,7 +1893,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ghiotto": {
     "lemma": "ghiotto",
@@ -1996,7 +2005,8 @@
       "poiché",
       "dato che"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "giacchetta": {
     "lemma": "giacchetta",
@@ -2107,7 +2117,8 @@
     "synonyms": [
       "gendarme"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "giapponese": {
     "lemma": "giapponese",
@@ -2357,7 +2368,8 @@
       "allegro",
       "gioioso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "giogo": {
     "lemma": "giogo",
@@ -2613,7 +2625,8 @@
       "aiutare",
       "servire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "giovedì": {
     "lemma": "giovedì",
@@ -2676,7 +2689,8 @@
     "synonyms": [
       "giovane"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "giovinetto": {
     "lemma": "giovinetto",
@@ -2693,7 +2707,8 @@
       "ragazzo",
       "adolescente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "giovinezza": {
     "lemma": "giovinezza",
@@ -2742,7 +2757,8 @@
     "synonyms": [
       "andare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "giretto": {
     "lemma": "giretto",
@@ -2758,7 +2774,8 @@
     "synonyms": [
       "passeggiatina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "girino": {
     "lemma": "girino",
@@ -2896,7 +2913,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "giudicare": {
     "lemma": "giudicare",
@@ -2942,7 +2960,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "giudiziario": {
     "lemma": "giudiziario",
@@ -2956,7 +2975,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "giudizio": {
     "lemma": "giudizio",
@@ -3035,7 +3055,8 @@
       "arrivare",
       "pervenire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "giuntura": {
     "lemma": "giuntura",
@@ -3164,7 +3185,8 @@
     "synonyms": [
       "giù"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "giustamente": {
     "lemma": "giustamente",
@@ -3403,7 +3425,8 @@
       "glorificare",
       "esaltare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "glorioso": {
     "lemma": "glorioso",
@@ -3466,7 +3489,8 @@
     "synonyms": [
       "finto tonto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "gobbetta": {
     "lemma": "gobbetta",
@@ -3835,7 +3859,8 @@
       "sciocco",
       "credulone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "gora": {
     "lemma": "gora",
@@ -3899,7 +3924,8 @@
     "synonyms": [
       "guancia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "governante": {
     "lemma": "governante",
@@ -4278,7 +4304,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "granata": {
     "lemma": "granata",
@@ -4348,7 +4375,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "grandezza": {
     "lemma": "grandezza",
@@ -4452,7 +4480,8 @@
       "grinfia",
       "artiglio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "granito": {
     "lemma": "granito",
@@ -4762,7 +4791,8 @@
       "pesare",
       "opprimere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "grave": {
     "lemma": "grave",
@@ -4814,7 +4844,8 @@
       "peso",
       "oppressione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "gravidanza": {
     "lemma": "gravidanza",
@@ -4849,7 +4880,8 @@
       "pregno",
       "carico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "gravina": {
     "lemma": "gravina",
@@ -4938,7 +4970,8 @@
       "perdonare",
       "condonare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "grazie": {
     "lemma": "grazie",
@@ -5118,7 +5151,8 @@
       "affollare",
       "stipare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "greppia": {
     "lemma": "greppia",
@@ -5134,7 +5168,8 @@
     "synonyms": [
       "mangiatoia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "greppo": {
     "lemma": "greppo",
@@ -5152,7 +5187,8 @@
       "scarpata",
       "pendio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "greve": {
     "lemma": "greve",
@@ -5169,7 +5205,8 @@
       "pesante",
       "opprimente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "grezzo": {
     "lemma": "grezzo",
@@ -5443,7 +5480,8 @@
       "nodo",
       "viluppo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "groppone": {
     "lemma": "groppone",
@@ -5461,7 +5499,8 @@
       "dorso",
       "spalle"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "grossezza": {
     "lemma": "grossezza",
@@ -5637,7 +5676,8 @@
       "ingenuo",
       "stupido"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "gruppo": {
     "lemma": "gruppo",
@@ -5864,7 +5904,8 @@
       "occhiataccia",
       "sguardo torvo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "guardia": {
     "lemma": "guardia",
@@ -5899,7 +5940,8 @@
       "portineria",
       "custodia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "guardiano": {
     "lemma": "guardiano",
@@ -6023,7 +6065,8 @@
       "spiare",
       "fissare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "guazza": {
     "lemma": "guazza",
@@ -6039,7 +6082,8 @@
     "synonyms": [
       "rugiada"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "guerra": {
     "lemma": "guerra",
@@ -6175,7 +6219,8 @@
       "maniera",
       "foggia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "guizzare": {
     "lemma": "guizzare",

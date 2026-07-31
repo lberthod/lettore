@@ -139,7 +139,8 @@
       "riaccendere",
       "ravvivare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "racchiudere": {
     "lemma": "racchiudere",
@@ -299,7 +300,8 @@
       "riparare",
       "rassettare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "raccontare": {
     "lemma": "raccontare",
@@ -353,7 +355,8 @@
       "abbreviare",
       "scorciare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "raddoppiare": {
     "lemma": "raddoppiare",
@@ -684,7 +687,8 @@
       "indebolire",
       "attenuare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "raffigurare": {
     "lemma": "raffigurare",
@@ -809,7 +813,8 @@
       "teppista",
       "birbante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ragazzata": {
     "lemma": "ragazzata",
@@ -1229,7 +1234,8 @@
       "sgridata",
       "predica"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ramarro": {
     "lemma": "ramarro",
@@ -1367,7 +1373,8 @@
       "sgridata",
       "biasimo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rampognare": {
     "lemma": "rampognare",
@@ -1385,7 +1392,8 @@
       "sgridare",
       "redarguire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rampone": {
     "lemma": "rampone",
@@ -1542,7 +1550,8 @@
     "synonyms": [
       "rana"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "rantolare": {
     "lemma": "rantolare",
@@ -2127,7 +2136,8 @@
       "approvare",
       "sancire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ratto": {
     "lemma": "ratto",
@@ -2195,7 +2205,8 @@
       "pentimento",
       "resipiscenza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ravvicinato": {
     "lemma": "ravvicinato",
@@ -2229,7 +2240,8 @@
       "avvolgersi",
       "avviluppare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "razionale": {
     "lemma": "razionale",
@@ -2460,7 +2472,8 @@
     "synonyms": [
       "regno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "reato": {
     "lemma": "reato",
@@ -2530,7 +2543,8 @@
       "arrecare",
       "causare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "recarsi": {
     "lemma": "recarsi",
@@ -2548,7 +2562,8 @@
       "dirigersi",
       "spostarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "recensione": {
     "lemma": "recensione",
@@ -2635,7 +2650,8 @@
       "troncare",
       "amputare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "recinto": {
     "lemma": "recinto",
@@ -2722,7 +2738,8 @@
       "decisamente",
       "categoricamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "recita": {
     "lemma": "recita",
@@ -2912,7 +2929,8 @@
       "compilare",
       "stendere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "redimere": {
     "lemma": "redimere",
@@ -3169,7 +3187,8 @@
       "reale",
       "regale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "regionale": {
     "lemma": "regionale",
@@ -3635,7 +3654,8 @@
       "vogatore",
       "rematore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "remissione": {
     "lemma": "remissione",
@@ -3652,7 +3672,8 @@
       "perdono",
       "assoluzione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "remo": {
     "lemma": "remo",
@@ -3703,7 +3724,8 @@
       "pagare",
       "compensare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "rena": {
     "lemma": "rena",
@@ -3719,7 +3741,8 @@
     "synonyms": [
       "sabbia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rendere": {
     "lemma": "rendere",
@@ -3805,7 +3828,8 @@
     "synonyms": [
       "rendita modesta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "rene": {
     "lemma": "rene",
@@ -3835,7 +3859,8 @@
     "synonyms": [
       "colpevole"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "reparto": {
     "lemma": "reparto",
@@ -3869,7 +3894,8 @@
     "synonyms": [
       "disponibilità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "repertorio": {
     "lemma": "repertorio",
@@ -3958,7 +3984,8 @@
       "riprovare",
       "biasimare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "repubblica": {
     "lemma": "repubblica",
@@ -4027,7 +4054,8 @@
       "ritenere",
       "giudicare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "reputazione": {
     "lemma": "reputazione",
@@ -4063,7 +4091,8 @@
       "quiete",
       "tregua"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "resa": {
     "lemma": "resa",
@@ -4237,7 +4266,8 @@
     "synonyms": [
       "rispettivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "respingere": {
     "lemma": "respingere",
@@ -4768,7 +4798,8 @@
       "rispetto",
       "inchino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "revisionare": {
     "lemma": "revisionare",
@@ -4858,7 +4889,8 @@
       "ciclo",
       "giro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "reziario": {
     "lemma": "reziario",
@@ -5201,7 +5233,8 @@
       "secco",
       "bruciato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "riascoltare": {
     "lemma": "riascoltare",
@@ -5831,7 +5864,8 @@
       "ricovero",
       "asilo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ricevere": {
     "lemma": "ricevere",
@@ -6005,7 +6039,8 @@
       "raccogliere",
       "radunare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ricolmo": {
     "lemma": "ricolmo",
@@ -6023,7 +6058,8 @@
       "pieno",
       "traboccante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ricominciare": {
     "lemma": "ricominciare",
@@ -6157,7 +6193,8 @@
     "synonyms": [
       "gratitudine"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "riconoscere": {
     "lemma": "riconoscere",
@@ -6526,7 +6563,8 @@
       "rifiutare",
       "respingere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ridente": {
     "lemma": "ridente",
@@ -6544,7 +6582,8 @@
       "gioioso",
       "ameno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ridere": {
     "lemma": "ridere",
@@ -6580,7 +6619,8 @@
       "rianimare",
       "ravvivare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ridicolo": {
     "lemma": "ridicolo",
@@ -6650,7 +6690,8 @@
       "ridiventare",
       "ritornare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ridiventare": {
     "lemma": "ridiventare",
@@ -6685,7 +6726,8 @@
       "rattristarsi",
       "rammaricarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ridurre": {
     "lemma": "ridurre",
@@ -7159,7 +7201,8 @@
       "fuggire",
       "sfuggire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rifugiato": {
     "lemma": "rifugiato",
@@ -7647,7 +7690,8 @@
       "splendente",
       "scintillante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rilucere": {
     "lemma": "rilucere",
@@ -7665,7 +7709,8 @@
       "brillare",
       "scintillare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "riluttante": {
     "lemma": "riluttante",
@@ -7683,7 +7728,8 @@
       "recalcitrante",
       "contrario"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "riluttanza": {
     "lemma": "riluttanza",
@@ -7701,7 +7747,8 @@
       "ritrosia",
       "avversione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "rima": {
     "lemma": "rima",
@@ -7837,7 +7884,8 @@
       "rincretinire",
       "rincitrullire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "rimbeccare": {
     "lemma": "rimbeccare",
@@ -7855,7 +7903,8 @@
       "rimproverare",
       "rispondere per le rime"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "rimbecillire": {
     "lemma": "rimbecillire",
@@ -7873,7 +7922,8 @@
       "rimbambire",
       "rincretinire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "rimbombare": {
     "lemma": "rimbombare",
@@ -7926,7 +7976,8 @@
       "sgridare",
       "brontolare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rimediare": {
     "lemma": "rimediare",
@@ -7979,7 +8030,8 @@
       "rammendo",
       "rattoppo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rimescolìo": {
     "lemma": "rimescolìo",
@@ -8068,7 +8120,8 @@
       "ammirare",
       "osservare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rimodellare": {
     "lemma": "rimodellare",
@@ -8120,7 +8173,8 @@
     "synonyms": [
       "morire di nuovo"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rimorso": {
     "lemma": "rimorso",
@@ -8412,7 +8466,8 @@
       "acquattarsi",
       "nascondersi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rincarare": {
     "lemma": "rincarare",
@@ -8515,7 +8570,8 @@
       "dispiacere",
       "dolere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "rincrescimento": {
     "lemma": "rincrescimento",
@@ -8532,7 +8588,8 @@
       "rammarico",
       "dispiacere"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "rinegoziare": {
     "lemma": "rinegoziare",
@@ -8637,7 +8694,8 @@
       "raffinare",
       "ingentilire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ringhiare": {
     "lemma": "ringhiare",
@@ -8812,7 +8870,8 @@
       "rinnovare",
       "rinfrescare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rinnovo": {
     "lemma": "rinnovo",
@@ -8863,7 +8922,8 @@
       "richiudere",
       "serrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rintanarsi": {
     "lemma": "rintanarsi",
@@ -8984,7 +9044,8 @@
       "rinunciare",
       "abbandonare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rinvenire": {
     "lemma": "rinvenire",
@@ -9002,7 +9063,8 @@
       "scoprire",
       "ritrovare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "rinviare": {
     "lemma": "rinviare",
@@ -9038,7 +9100,8 @@
       "canale",
       "torrente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rione": {
     "lemma": "rione",
@@ -9390,7 +9453,8 @@
       "recuperare",
       "riafferrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "ripignere": {
     "lemma": "ripignere",
@@ -9407,7 +9471,8 @@
       "respingere",
       "spingere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ripiombare": {
     "lemma": "ripiombare",
@@ -9760,7 +9825,8 @@
       "fama",
       "nomea"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "riqualificare": {
     "lemma": "riqualificare",
@@ -9899,7 +9965,8 @@
     "synonyms": [
       "sghignazzata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "risatina": {
     "lemma": "risatina",
@@ -9931,7 +9998,8 @@
     "synonyms": [
       "scroscio di risate"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "riscaldamento": {
     "lemma": "riscaldamento",
@@ -10045,7 +10113,8 @@
       "illuminare",
       "schiarire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rischiararsi": {
     "lemma": "rischiararsi",
@@ -10062,7 +10131,8 @@
       "schiarirsi",
       "illuminarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rischiare": {
     "lemma": "rischiare",
@@ -10346,7 +10416,8 @@
       "vivere",
       "dimorare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "risma": {
     "lemma": "risma",
@@ -10523,7 +10594,8 @@
       "echeggiare",
       "rimbombare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "risorgere": {
     "lemma": "risorgere",
@@ -10609,7 +10681,8 @@
       "ricordarsi",
       "rammentarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "risparmiare": {
     "lemma": "risparmiare",
@@ -11082,7 +11155,8 @@
       "far rivivere",
       "rinnovare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "risvegliare": {
     "lemma": "risvegliare",
@@ -11810,7 +11884,8 @@
       "tornare",
       "ritornare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "riverenza": {
     "lemma": "riverenza",
@@ -11828,7 +11903,8 @@
       "deferenza",
       "inchino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "riversare": {
     "lemma": "riversare",
@@ -11967,7 +12043,8 @@
       "ruscello",
       "torrente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rivolere": {
     "lemma": "rivolere",
@@ -12349,7 +12426,8 @@
       "rauco",
       "arrochito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rodare": {
     "lemma": "rodare",
@@ -12417,7 +12495,8 @@
       "atto",
       "contratto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "rognoso": {
     "lemma": "rognoso",
@@ -12435,7 +12514,8 @@
       "scabbioso",
       "noioso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "rogo": {
     "lemma": "rogo",
@@ -12555,7 +12635,8 @@
       "eremita",
       "anacoreta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "rompere": {
     "lemma": "rompere",
@@ -12607,7 +12688,8 @@
       "scavezzacollo",
       "temerario"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "rondine": {
     "lemma": "rondine",
@@ -12860,7 +12942,8 @@
       "arrossare",
       "fiammeggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "rossetto": {
     "lemma": "rossetto",
@@ -13262,7 +13345,8 @@
       "fulvo",
       "rossiccio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "ruga": {
     "lemma": "ruga",
@@ -13571,7 +13655,8 @@
       "scherzare",
       "sgambettare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "ruzzolare": {
     "lemma": "ruzzolare",

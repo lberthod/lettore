@@ -76,7 +76,8 @@
     "synonyms": [
       "formaggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cadavere": {
     "lemma": "cadavere",
@@ -236,7 +237,8 @@
       "causa",
       "motivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cagionoso": {
     "lemma": "cagionoso",
@@ -252,7 +254,8 @@
     "synonyms": [
       "cagionevole"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "caglio": {
     "lemma": "caglio",
@@ -1874,7 +1877,8 @@
       "cambiare",
       "mutare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "canile": {
     "lemma": "canile",
@@ -2692,7 +2696,8 @@
       "capo",
       "boss"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "capodanno": {
     "lemma": "capodanno",
@@ -3211,7 +3216,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "carattere": {
     "lemma": "carattere",
@@ -3353,7 +3359,8 @@
     "synonyms": [
       "carcassa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "carcere": {
     "lemma": "carcere",
@@ -3443,7 +3450,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "carestia": {
     "lemma": "carestia",
@@ -3505,7 +3513,8 @@
     "synonyms": [
       "dolce"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "carica": {
     "lemma": "carica",
@@ -3603,7 +3612,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "carnagione": {
     "lemma": "carnagione",
@@ -3664,7 +3674,8 @@
     "synonyms": [
       "boia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "carnevale": {
     "lemma": "carnevale",
@@ -3720,7 +3731,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "caro": {
     "lemma": "caro",
@@ -3751,7 +3763,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "carosello": {
     "lemma": "carosello",
@@ -4219,7 +4232,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "casale": {
     "lemma": "casale",
@@ -4376,7 +4390,8 @@
     "synonyms": [
       "malga"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "casetta": {
     "lemma": "casetta",
@@ -4409,7 +4424,8 @@
       "vicino di casa",
       "coinquilino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "casina": {
     "lemma": "casina",
@@ -4443,7 +4459,8 @@
       "confusione",
       "disordine"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "caso": {
     "lemma": "caso",
@@ -4592,7 +4609,8 @@
       "petto",
       "torace"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "castagna": {
     "lemma": "castagna",
@@ -4669,7 +4687,8 @@
     "synonyms": [
       "punire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "castigo": {
     "lemma": "castigo",
@@ -4844,7 +4863,8 @@
       "baracca",
       "tugurio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "catasta": {
     "lemma": "catasta",
@@ -5091,7 +5111,8 @@
       "conquistare",
       "ammaliare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "cattiveria": {
     "lemma": "cattiveria",
@@ -5240,7 +5261,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "cava": {
     "lemma": "cava",
@@ -5695,7 +5717,8 @@
     "synonyms": [
       "ce lo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "celare": {
     "lemma": "celare",
@@ -6407,7 +6430,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cero": {
     "lemma": "cero",
@@ -6552,7 +6576,8 @@
       "azzurro",
       "celeste"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cervellaccio": {
     "lemma": "cervellaccio",
@@ -6566,7 +6591,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cervellino": {
     "lemma": "cervellino",
@@ -6582,7 +6608,8 @@
     "synonyms": [
       "sventato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cervello": {
     "lemma": "cervello",
@@ -6788,7 +6815,8 @@
       "perché",
       "poiché"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "chef": {
     "lemma": "chef",
@@ -6822,7 +6850,8 @@
       "placare",
       "acquietare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "cheto": {
     "lemma": "cheto",
@@ -6840,7 +6869,8 @@
       "silenzioso",
       "calmo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "chi": {
     "lemma": "chi",
@@ -6956,7 +6986,8 @@
       "ciarlone",
       "loquace"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "chiamare": {
     "lemma": "chiamare",
@@ -7126,7 +7157,8 @@
       "serrare",
       "chiudere a chiave"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "chiave": {
     "lemma": "chiave",
@@ -7537,7 +7569,8 @@
     "synonyms": [
       "salve"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ciarla": {
     "lemma": "ciarla",
@@ -7554,7 +7587,8 @@
       "chiacchiera",
       "pettegolezzo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ciarlare": {
     "lemma": "ciarlare",
@@ -7570,7 +7604,8 @@
     "synonyms": [
       "chiacchierare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "ciarlatano": {
     "lemma": "ciarlatano",
@@ -7698,7 +7733,8 @@
       "grasso",
       "carne"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cicciaporco": {
     "lemma": "cicciaporco",
@@ -7714,7 +7750,8 @@
     "synonyms": [
       "grassone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "ciccioso": {
     "lemma": "ciccioso",
@@ -7731,7 +7768,8 @@
       "grassoccio",
       "paffuto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cicerone": {
     "lemma": "cicerone",
@@ -7999,7 +8037,8 @@
       "provarsi",
       "misurarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ciminiera": {
     "lemma": "ciminiera",
@@ -8110,7 +8149,8 @@
       "circondare",
       "avvolgere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "cinghia": {
     "lemma": "cinghia",
@@ -8316,7 +8356,8 @@
     "synonyms": [
       "cintura"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cintura": {
     "lemma": "cintura",
@@ -8499,7 +8540,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cippo": {
     "lemma": "cippo",
@@ -8806,7 +8848,8 @@
     "synonyms": [
       "asino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "ciurlare": {
     "lemma": "ciurlare",
@@ -8822,7 +8865,8 @@
     "synonyms": [
       "tentennare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "civetta": {
     "lemma": "civetta",
@@ -9194,7 +9238,8 @@
       "pendio",
       "salita"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "clonare": {
     "lemma": "clonare",
@@ -9358,7 +9403,8 @@
     "synonyms": [
       "quello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "codice": {
     "lemma": "codice",
@@ -9425,7 +9471,8 @@
     "synonyms": [
       "contemporaneo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "cogitabondo": {
     "lemma": "cogitabondo",
@@ -9442,7 +9489,8 @@
       "pensieroso",
       "meditabondo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cogliere": {
     "lemma": "cogliere",
@@ -9592,7 +9640,8 @@
       "là",
       "laggiù"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "colare": {
     "lemma": "colare",
@@ -9639,7 +9688,8 @@
     "synonyms": [
       "quella"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "colla": {
     "lemma": "colla",
@@ -10245,7 +10295,8 @@
     "synonyms": [
       "quelli"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "colossale": {
     "lemma": "colossale",
@@ -10442,7 +10493,8 @@
       "coperta",
       "manto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "colui": {
     "lemma": "colui",
@@ -10458,7 +10510,8 @@
     "synonyms": [
       "quello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "comandare": {
     "lemma": "comandare",
@@ -10609,7 +10662,8 @@
       "bruciato",
       "arso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "come": {
     "lemma": "come",
@@ -11085,7 +11139,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "compagnia": {
     "lemma": "compagnia",
@@ -11183,7 +11238,8 @@
       "contegnoso",
       "misurato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "compassione": {
     "lemma": "compassione",
@@ -11234,7 +11290,8 @@
       "condiscendenza",
       "pietà"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "compatire": {
     "lemma": "compatire",
@@ -11285,7 +11342,8 @@
       "fondersi",
       "amalgamarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "compensare": {
     "lemma": "compensare",
@@ -11511,7 +11569,8 @@
       "lamentare",
       "piangere per"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "compianto": {
     "lemma": "compianto",
@@ -11528,7 +11587,8 @@
       "lutto",
       "cordoglio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "compiere": {
     "lemma": "compiere",
@@ -12106,7 +12166,8 @@
       "dimostrare",
       "provare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "compunto": {
     "lemma": "compunto",
@@ -12123,7 +12184,8 @@
       "contrito",
       "pentito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "computer": {
     "lemma": "computer",
@@ -12517,7 +12579,8 @@
     "synonyms": [
       "astruso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "concettuale": {
     "lemma": "concettuale",
@@ -12614,7 +12677,8 @@
     "synonyms": [
       "adunanza segreta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "conciliare": {
     "lemma": "conciliare",
@@ -12647,7 +12711,8 @@
       "poiché",
       "giacché"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "concitatamente": {
     "lemma": "concitatamente",
@@ -13130,7 +13195,8 @@
       "adattarsi",
       "convenire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "conferenza": {
     "lemma": "conferenza",
@@ -13164,7 +13230,8 @@
       "attribuire",
       "assegnare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "conferma": {
     "lemma": "conferma",
@@ -14057,7 +14124,8 @@
     "synonyms": [
       "annoverare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "cono": {
     "lemma": "cono",
@@ -14533,7 +14601,8 @@
       "simile",
       "analogo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "consistenza": {
     "lemma": "consistenza",
@@ -14618,7 +14687,8 @@
       "confortante",
       "consolante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "consolazione": {
     "lemma": "consolazione",
@@ -14665,7 +14735,8 @@
     "synonyms": [
       "coniuge"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "consorzio": {
     "lemma": "consorzio",
@@ -14731,7 +14802,8 @@
       "abituale",
       "solito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "consuetudine": {
     "lemma": "consuetudine",
@@ -14748,7 +14820,8 @@
       "usanza",
       "abitudine"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "consulente": {
     "lemma": "consulente",
@@ -14856,7 +14929,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "contabile": {
     "lemma": "contabile",
@@ -14920,7 +14994,8 @@
     "synonyms": [
       "campagna"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "contagio": {
     "lemma": "contagio",
@@ -15050,7 +15125,8 @@
       "atteggiamento",
       "compostezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "contemplare": {
     "lemma": "contemplare",
@@ -15083,7 +15159,8 @@
     "synonyms": [
       "frattempo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "contemporaneamente": {
     "lemma": "contemporaneamente",
@@ -15135,7 +15212,8 @@
       "competere",
       "litigare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "contenere": {
     "lemma": "contenere",
@@ -15268,7 +15346,8 @@
     "synonyms": [
       "allegrone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "contesa": {
     "lemma": "contesa",
@@ -15349,7 +15428,8 @@
     "synonyms": [
       "simultaneamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "continente": {
     "lemma": "continente",
@@ -15380,7 +15460,8 @@
       "moderazione",
       "sobrietà"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "continuamente": {
     "lemma": "continuamente",
@@ -15584,7 +15665,8 @@
       "quartiere",
       "rione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "contraddire": {
     "lemma": "contraddire",
@@ -15870,7 +15952,8 @@
       "trasgredire",
       "violare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "contribuire": {
     "lemma": "contribuire",
@@ -15921,7 +16004,8 @@
       "pentimento",
       "rimorso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "contro": {
     "lemma": "contro",
@@ -16085,7 +16169,8 @@
       "cortesie",
       "formalità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "conveniente": {
     "lemma": "conveniente",
@@ -16483,7 +16568,8 @@
       "segretamente",
       "nascostamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "copertina": {
     "lemma": "copertina",
@@ -16811,7 +16897,8 @@
       "lutto",
       "dolore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "cordoncino": {
     "lemma": "cordoncino",
@@ -16843,7 +16930,8 @@
     "synonyms": [
       "cuore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "coreografia": {
     "lemma": "coreografia",
@@ -17725,7 +17813,8 @@
       "sicché",
       "per cui"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "cosiddetto": {
     "lemma": "cosiddetto",
@@ -17788,7 +17877,8 @@
       "aggeggio",
       "affare"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cospetto": {
     "lemma": "cospetto",
@@ -17804,7 +17894,8 @@
     "synonyms": [
       "presenza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "cospicuo": {
     "lemma": "cospicuo",
@@ -17872,7 +17963,8 @@
     "synonyms": [
       "laggiù"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "costante": {
     "lemma": "costante",
@@ -17940,7 +18032,8 @@
       "questa",
       "lei"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "costellazione": {
     "lemma": "costellazione",
@@ -18007,7 +18100,8 @@
       "lì",
       "costà"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "costiero": {
     "lemma": "costiero",
@@ -18106,7 +18200,8 @@
       "questi",
       "quelli"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "costoso": {
     "lemma": "costoso",
@@ -18225,7 +18320,8 @@
       "quello",
       "lui"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "costumato": {
     "lemma": "costumato",
@@ -18276,7 +18372,8 @@
       "tale",
       "simile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cotanto": {
     "lemma": "cotanto",
@@ -18293,7 +18390,8 @@
       "tanto",
       "così tanto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cotechino": {
     "lemma": "cotechino",
@@ -18327,7 +18425,8 @@
       "codesto",
       "quello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cotone": {
     "lemma": "cotone",
@@ -18361,7 +18460,8 @@
       "infatuazione",
       "passione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cottimante": {
     "lemma": "cottimante",
@@ -18458,7 +18558,8 @@
     "synonyms": [
       "coperchio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "coworking": {
     "lemma": "coworking",
@@ -18838,7 +18939,8 @@
       "spaccarsi",
       "morire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "crepitare": {
     "lemma": "crepitare",
@@ -19473,7 +19575,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "cruccio": {
     "lemma": "cruccio",
@@ -19487,7 +19590,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "crudele": {
     "lemma": "crudele",
@@ -19607,7 +19711,8 @@
     "synonyms": [
       "abbondanza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cucchiaiata": {
     "lemma": "cucchiaiata",
@@ -19733,7 +19838,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "cuffia": {
     "lemma": "cuffia",
@@ -19905,7 +20011,8 @@
     "synonyms": [
       "culla"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cunicolo": {
     "lemma": "cunicolo",
@@ -19993,7 +20100,8 @@
     "synonyms": [
       "avidità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "cupido": {
     "lemma": "cupido",
@@ -20009,7 +20117,8 @@
     "synonyms": [
       "avido"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "cupo": {
     "lemma": "cupo",
@@ -20098,7 +20207,8 @@
     "synonyms": [
       "burocratico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "curiosamente": {
     "lemma": "curiosamente",
@@ -20177,7 +20287,8 @@
     "synonyms": [
       "percorso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "curva": {
     "lemma": "curva",

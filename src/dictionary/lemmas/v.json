@@ -14,7 +14,8 @@
       "libero",
       "disponibile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vacanza": {
     "lemma": "vacanza",
@@ -178,7 +179,8 @@
       "sognare",
       "bramare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "vaghezza": {
     "lemma": "vaghezza",
@@ -262,7 +264,8 @@
       "girovagare",
       "errare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "vagone": {
     "lemma": "vagone",
@@ -460,7 +463,8 @@
       "paggio",
       "servitore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "valligiano": {
     "lemma": "valligiano",
@@ -602,7 +606,8 @@
     "synonyms": [
       "fiammata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vaneggiare": {
     "lemma": "vaneggiare",
@@ -806,7 +811,8 @@
       "attraversare",
       "oltrepassare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "variabile": {
     "lemma": "variabile",
@@ -1160,7 +1166,8 @@
       "posto",
       "sostituzione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vedere": {
     "lemma": "vedere",
@@ -1239,7 +1246,8 @@
     "synonyms": [
       "vedova"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vedovo": {
     "lemma": "vedovo",
@@ -1369,7 +1377,8 @@
     "synonyms": [
       "velo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "velato": {
     "lemma": "velato",
@@ -1617,7 +1626,8 @@
       "levriero",
       "levriere"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vena": {
     "lemma": "vena",
@@ -1797,7 +1807,8 @@
       "venerabile",
       "rispettabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "venerare": {
     "lemma": "venerare",
@@ -1890,7 +1901,8 @@
       "perdono",
       "grazia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "venire": {
     "lemma": "venire",
@@ -2189,7 +2201,8 @@
       "destino",
       "caso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "venturo": {
     "lemma": "venturo",
@@ -2206,7 +2219,8 @@
       "prossimo",
       "futuro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "venuta": {
     "lemma": "venuta",
@@ -2241,7 +2255,8 @@
       "autentico",
       "sincero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "veramente": {
     "lemma": "veramente",
@@ -2366,7 +2381,8 @@
       "bastonata",
       "frustata"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vergine": {
     "lemma": "vergine",
@@ -2535,7 +2551,8 @@
       "rosso",
       "purpureo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vermouth": {
     "lemma": "vermouth",
@@ -2655,7 +2672,8 @@
       "diavolo",
       "demonio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "versione": {
     "lemma": "versione",
@@ -2777,7 +2795,8 @@
       "nessuno",
       "alcuno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vescica": {
     "lemma": "vescica",
@@ -2828,7 +2847,8 @@
       "sera",
       "crepuscolo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vessare": {
     "lemma": "vessare",
@@ -2846,7 +2866,8 @@
       "tormentare",
       "angariare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "vessatore": {
     "lemma": "vessatore",
@@ -2864,7 +2885,8 @@
       "persecutore",
       "tiranno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vessillo": {
     "lemma": "vessillo",
@@ -2882,7 +2904,8 @@
       "stendardo",
       "insegna"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vestale": {
     "lemma": "vestale",
@@ -3155,7 +3178,8 @@
       "provviste",
       "derrate"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vettura": {
     "lemma": "vettura",
@@ -3207,7 +3231,8 @@
       "antichità",
       "decrepitezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vezzo": {
     "lemma": "vezzo",
@@ -3225,7 +3250,8 @@
       "moina",
       "smanceria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vezzoso": {
     "lemma": "vezzoso",
@@ -3243,7 +3269,8 @@
       "leggiadro",
       "civettuolo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vi": {
     "lemma": "vi",
@@ -3294,7 +3321,8 @@
       "gita",
       "escursione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "viaggiare": {
     "lemma": "viaggiare",
@@ -3382,7 +3410,8 @@
       "pellegrino",
       "camminatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "viario": {
     "lemma": "viario",
@@ -3662,7 +3691,8 @@
       "operante",
       "attuale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "vigilare": {
     "lemma": "vigilare",
@@ -3855,7 +3885,8 @@
       "oltraggiare",
       "denigrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "villa": {
     "lemma": "villa",
@@ -4420,7 +4451,8 @@
       "ceffo",
       "faccia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "viscere": {
     "lemma": "viscere",
@@ -4908,7 +4940,8 @@
       "ingiuria",
       "oltraggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vituperosamente": {
     "lemma": "vituperosamente",
@@ -4925,7 +4958,8 @@
       "ignominiosamente",
       "oltraggiosamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "viuzza": {
     "lemma": "viuzza",
@@ -5027,7 +5061,8 @@
       "pietanza",
       "cibo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vivente": {
     "lemma": "vivente",
@@ -5080,7 +5115,8 @@
       "nitido",
       "intenso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "vivo": {
     "lemma": "vivo",
@@ -5181,7 +5217,8 @@
     "synonyms": [
       "vociona"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "vocina": {
     "lemma": "vocina",
@@ -5278,7 +5315,8 @@
     "synonyms": [
       "voi"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "volante": {
     "lemma": "volante",
@@ -5418,7 +5456,8 @@
       "dirigere",
       "rivolgere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "volgersi": {
     "lemma": "volgersi",
@@ -5436,7 +5475,8 @@
       "voltarsi",
       "rivolgersi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "volgo": {
     "lemma": "volgo",
@@ -5454,7 +5494,8 @@
       "plebe",
       "massa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "volo": {
     "lemma": "volo",
@@ -5685,7 +5726,8 @@
       "godimento",
       "sensualità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "voluttuosamente": {
     "lemma": "voluttuosamente",
@@ -5702,7 +5744,8 @@
       "sensualmente",
       "languidamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "volvere": {
     "lemma": "volvere",
@@ -5720,7 +5763,8 @@
       "girare",
       "ruotare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "vomero": {
     "lemma": "vomero",

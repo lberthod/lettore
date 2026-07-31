@@ -60,7 +60,8 @@
       "Signore",
       "Creatore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "idea": {
     "lemma": "idea",
@@ -403,7 +404,8 @@
       "inconsapevole",
       "all'oscuro"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ignominia": {
     "lemma": "ignominia",
@@ -420,7 +422,8 @@
       "disonore",
       "vergogna"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ignorante": {
     "lemma": "ignorante",
@@ -509,7 +512,8 @@
       "spoglio",
       "scoperto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "il": {
     "lemma": "il",
@@ -541,7 +545,8 @@
       "gioioso",
       "sereno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "illegale": {
     "lemma": "illegale",
@@ -733,7 +738,8 @@
       "celebre",
       "rinomato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "illustrissimo": {
     "lemma": "illustrissimo",
@@ -750,7 +756,8 @@
       "egregio",
       "eccellentissimo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "imbacuccare": {
     "lemma": "imbacuccare",
@@ -928,7 +935,8 @@
       "messaggio",
       "commissione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "imbattersi": {
     "lemma": "imbattersi",
@@ -1413,7 +1421,8 @@
       "spaventoso",
       "smisurato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "immateriale": {
     "lemma": "immateriale",
@@ -1615,7 +1624,8 @@
       "prossimità",
       "vicinanza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "immiserire": {
     "lemma": "immiserire",
@@ -1632,7 +1642,8 @@
       "impoverire",
       "rovinare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "immobile": {
     "lemma": "immobile",
@@ -1715,7 +1726,8 @@
       "fermo",
       "statico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "immutabile": {
     "lemma": "immutabile",
@@ -1929,7 +1941,8 @@
       "dispensare",
       "somministrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "imparziale": {
     "lemma": "imparziale",
@@ -2034,7 +2047,8 @@
       "abborracciare",
       "inventare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "impatto": {
     "lemma": "impatto",
@@ -2359,7 +2373,8 @@
       "regnare",
       "dominare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "imperatore": {
     "lemma": "imperatore",
@@ -2495,7 +2510,8 @@
       "dominio",
       "autorità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "imperioso": {
     "lemma": "imperioso",
@@ -2671,7 +2687,8 @@
       "supplicare",
       "ottenere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "impetuosamente": {
     "lemma": "impetuosamente",
@@ -2776,7 +2793,8 @@
       "ingombrare",
       "disturbare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "impicciarsi": {
     "lemma": "impicciarsi",
@@ -2793,7 +2811,8 @@
       "immischiarsi",
       "intromettersi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "impiccio": {
     "lemma": "impiccio",
@@ -2810,7 +2829,8 @@
       "guaio",
       "problema"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "impiegare": {
     "lemma": "impiegare",
@@ -2913,7 +2933,8 @@
       "inzaccherato",
       "sporco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "implacabile": {
     "lemma": "implacabile",
@@ -3035,7 +3056,8 @@
       "infiacchirsi",
       "adagiarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "impolverato": {
     "lemma": "impolverato",
@@ -3187,7 +3209,8 @@
       "infastidire",
       "seccare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "impossessarsi": {
     "lemma": "impossessarsi",
@@ -3251,7 +3274,8 @@
     "synonyms": [
       "impedito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "imposta": {
     "lemma": "imposta",
@@ -3337,7 +3361,8 @@
       "maledire",
       "bestemmiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "impreciso": {
     "lemma": "impreciso",
@@ -3604,7 +3629,8 @@
       "imprevisto",
       "inatteso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "imprevisto": {
     "lemma": "imprevisto",
@@ -3908,7 +3934,8 @@
       "in un attimo",
       "in un baleno"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "inadeguato": {
     "lemma": "inadeguato",
@@ -3943,7 +3970,8 @@
       "inosservanza",
       "violazione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inadempimento": {
     "lemma": "inadempimento",
@@ -3960,7 +3988,8 @@
       "violazione",
       "mancanza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inanimato": {
     "lemma": "inanimato",
@@ -3994,7 +4023,8 @@
       "argenteo",
       "lucente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "inascoltato": {
     "lemma": "inascoltato",
@@ -4116,7 +4146,8 @@
       "disattenzione",
       "negligenza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "incalcolabile": {
     "lemma": "incalcolabile",
@@ -4500,7 +4531,8 @@
       "avventato",
       "sconsiderato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "incendiare": {
     "lemma": "incendiare",
@@ -4676,7 +4708,8 @@
       "piegare",
       "chinare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "inchinarsi": {
     "lemma": "inchinarsi",
@@ -4711,7 +4744,8 @@
       "servile",
       "incline"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "inchino": {
     "lemma": "inchino",
@@ -4895,7 +4929,8 @@
       "rigore",
       "severità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inclinare": {
     "lemma": "inclinare",
@@ -4966,7 +5001,8 @@
       "sconosciuto",
       "ignoto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "incollerito": {
     "lemma": "incollerito",
@@ -4984,7 +5020,8 @@
       "furioso",
       "adirato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "incolpare": {
     "lemma": "incolpare",
@@ -5017,7 +5054,8 @@
       "illeso",
       "salvo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "incombente": {
     "lemma": "incombente",
@@ -5034,7 +5072,8 @@
       "imminente",
       "minaccioso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "incominciare": {
     "lemma": "incominciare",
@@ -5070,7 +5109,8 @@
       "fastidio",
       "seccatura"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "incompatibile": {
     "lemma": "incompatibile",
@@ -5301,7 +5341,8 @@
       "immediatamente",
       "all'istante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "incontentabile": {
     "lemma": "incontentabile",
@@ -5485,7 +5526,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "incosciente": {
     "lemma": "incosciente",
@@ -5589,7 +5631,8 @@
       "spiacevole",
       "deplorevole"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "increspatura": {
     "lemma": "increspatura",
@@ -5824,7 +5867,8 @@
       "invano",
       "inutilmente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "indebitamente": {
     "lemma": "indebitamente",
@@ -5841,7 +5885,8 @@
       "illegittimamente",
       "ingiustamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "indebolire": {
     "lemma": "indebolire",
@@ -6029,7 +6074,8 @@
       "quindi",
       "dopo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "indiavolato": {
     "lemma": "indiavolato",
@@ -6485,7 +6531,8 @@
       "inseparabilmente",
       "saldamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "indistinguibile": {
     "lemma": "indistinguibile",
@@ -6759,7 +6806,8 @@
       "esitare",
       "attardarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "indugiarsi": {
     "lemma": "indugiarsi",
@@ -6777,7 +6825,8 @@
       "trattenersi",
       "soffermarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "indugio": {
     "lemma": "indugio",
@@ -6795,7 +6844,8 @@
       "ritardo",
       "attesa"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "indulgente": {
     "lemma": "indulgente",
@@ -6897,7 +6947,8 @@
       "ingegnarsi",
       "arrangiarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "industrioso": {
     "lemma": "industrioso",
@@ -6915,7 +6966,8 @@
       "laborioso",
       "attivo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inebetito": {
     "lemma": "inebetito",
@@ -6933,7 +6985,8 @@
       "stordito",
       "istupidito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inebriante": {
     "lemma": "inebriante",
@@ -6968,7 +7021,8 @@
       "esaltare",
       "stordire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ineducato": {
     "lemma": "ineducato",
@@ -7004,7 +7058,8 @@
       "inesprimibile",
       "indescrivibile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ineguagliabile": {
     "lemma": "ineguagliabile",
@@ -7038,7 +7093,8 @@
     "synonyms": [
       "indescrivibile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "inerpicarsi": {
     "lemma": "inerpicarsi",
@@ -7158,7 +7214,8 @@
       "incomprensibile",
       "misterioso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inestimabile": {
     "lemma": "inestimabile",
@@ -7175,7 +7232,8 @@
       "preziosissimo",
       "impagabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inettitudine": {
     "lemma": "inettitudine",
@@ -7191,7 +7249,8 @@
     "synonyms": [
       "incapacità"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "inetto": {
     "lemma": "inetto",
@@ -7276,7 +7335,8 @@
       "imbacuccare",
       "coprire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "infallibilmente": {
     "lemma": "infallibilmente",
@@ -7747,7 +7807,8 @@
       "simulazione",
       "ipocrisia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "infinitamente": {
     "lemma": "infinitamente",
@@ -7817,7 +7878,8 @@
       "fino",
       "sino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "infiorata": {
     "lemma": "infiorata",
@@ -7848,7 +7910,8 @@
       "fregarsene",
       "disinteressarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "infisso": {
     "lemma": "infisso",
@@ -7991,7 +8054,8 @@
       "rovente",
       "ardente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "infondere": {
     "lemma": "infondere",
@@ -8163,7 +8227,8 @@
       "rompere",
       "violare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "infrasettimanale": {
     "lemma": "infrasettimanale",
@@ -8177,7 +8242,8 @@
       }
     ],
     "synonyms": [],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "infreddato": {
     "lemma": "infreddato",
@@ -8243,7 +8309,8 @@
       "raro",
       "insolito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "infronzolarsi": {
     "lemma": "infronzolarsi",
@@ -8260,7 +8327,8 @@
       "agghindarsi",
       "azzimarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "infuori": {
     "lemma": "infuori",
@@ -8277,7 +8345,8 @@
       "eccetto",
       "tranne"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "infuriare": {
     "lemma": "infuriare",
@@ -8294,7 +8363,8 @@
       "infierire",
       "scatenarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "infuriarsi": {
     "lemma": "infuriarsi",
@@ -8560,7 +8630,8 @@
       "meschino",
       "gretto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ingente": {
     "lemma": "ingente",
@@ -8717,7 +8788,8 @@
       "imporre",
       "intimare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ingiuriare": {
     "lemma": "ingiuriare",
@@ -8735,7 +8807,8 @@
       "offendere",
       "oltraggiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "ingiurioso": {
     "lemma": "ingiurioso",
@@ -8753,7 +8826,8 @@
       "oltraggioso",
       "insultante"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ingiustamente": {
     "lemma": "ingiustamente",
@@ -8890,7 +8964,8 @@
       "abbuffarsi",
       "trangugiare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "ingranaggio": {
     "lemma": "ingranaggio",
@@ -9074,7 +9149,8 @@
       "ingiustamente",
       "slealmente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "iniquo": {
     "lemma": "iniquo",
@@ -9092,7 +9168,8 @@
       "sleale",
       "crudele"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "iniziale": {
     "lemma": "iniziale",
@@ -9283,7 +9360,8 @@
       "avanti",
       "prima"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "innanzitutto": {
     "lemma": "innanzitutto",
@@ -10231,7 +10309,8 @@
       "tramare",
       "attentare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "insidioso": {
     "lemma": "insidioso",
@@ -10479,7 +10558,8 @@
       "arretrato",
       "irrisolto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "insomma": {
     "lemma": "insomma",
@@ -10648,7 +10728,8 @@
       "impensabile",
       "inimmaginabile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "insperato": {
     "lemma": "insperato",
@@ -10873,7 +10954,8 @@
       "inorgoglirsi",
       "montarsi la testa"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "insurrezione": {
     "lemma": "insurrezione",
@@ -11034,7 +11116,8 @@
       "completamente",
       "del tutto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "integrazione": {
     "lemma": "integrazione",
@@ -11069,7 +11152,8 @@
       "rettitudine",
       "interezza"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "integro": {
     "lemma": "integro",
@@ -11087,7 +11171,8 @@
       "retto",
       "intatto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "intelletto": {
     "lemma": "intelletto",
@@ -11192,7 +11277,8 @@
       "capire",
       "comprendere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "intendersi": {
     "lemma": "intendersi",
@@ -11226,7 +11312,8 @@
       "intenzione",
       "proposito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "intenditore": {
     "lemma": "intenditore",
@@ -11432,7 +11519,8 @@
       "mediazione",
       "intervento"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "interdetto": {
     "lemma": "interdetto",
@@ -11449,7 +11537,8 @@
       "sconcertato",
       "sbalordito"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "interessante": {
     "lemma": "interessante",
@@ -11549,7 +11638,8 @@
     "synonyms": [
       "controparte"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "interloquire": {
     "lemma": "interloquire",
@@ -11566,7 +11656,8 @@
       "intervenire",
       "intromettersi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "intermediare": {
     "lemma": "intermediare",
@@ -11736,7 +11827,8 @@
       "consultare",
       "sentire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "interporsi": {
     "lemma": "interporsi",
@@ -11753,7 +11845,8 @@
       "intromettersi",
       "frapporsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "interpretare": {
     "lemma": "interpretare",
@@ -12033,7 +12126,8 @@
       "ordinare",
       "ingiungere"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "intimidatorio": {
     "lemma": "intimidatorio",
@@ -12190,7 +12284,8 @@
       "tumulare",
       "sotterrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "intonare": {
     "lemma": "intonare",
@@ -12417,7 +12512,8 @@
       "entrare",
       "penetrare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "intrattenere": {
     "lemma": "intrattenere",
@@ -12958,7 +13054,8 @@
       "imprecare",
       "insultare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "inventare": {
     "lemma": "inventare",
@@ -13178,7 +13275,8 @@
       "vitreo",
       "vetroso"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "inviare": {
     "lemma": "inviare",
@@ -13405,7 +13503,8 @@
       "rubare",
       "sottrarre"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "involontariamente": {
     "lemma": "involontariamente",
@@ -13604,7 +13703,8 @@
       "rabbiosamente",
       "stizzosamente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "iroso": {
     "lemma": "iroso",
@@ -13621,7 +13721,8 @@
       "adirato",
       "collerico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "irraggiare": {
     "lemma": "irraggiare",
@@ -14008,7 +14109,8 @@
       "infliggere",
       "comminare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "iscrivere": {
     "lemma": "iscrivere",
@@ -14293,7 +14395,8 @@
       "domanda",
       "supplica"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "isterico": {
     "lemma": "isterico",
@@ -14346,7 +14449,8 @@
       "stesso",
       "medesimo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "istintivamente": {
     "lemma": "istintivamente",
@@ -14638,6 +14742,7 @@
       "lì",
       "là"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   }
 }

@@ -147,7 +147,8 @@
     "synonyms": [
       "testone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "facile": {
     "lemma": "facile",
@@ -597,7 +598,8 @@
       "servitore",
       "domestico"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "familiare": {
     "lemma": "familiare",
@@ -699,7 +701,8 @@
       "bambino",
       "ragazzo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fandonia": {
     "lemma": "fandonia",
@@ -933,7 +936,8 @@
       "riuscire",
       "cavarsela"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "fardello": {
     "lemma": "fardello",
@@ -1445,7 +1449,8 @@
       "destino",
       "sorte"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "fattezza": {
     "lemma": "fattezza",
@@ -1463,7 +1468,8 @@
       "aspetto",
       "sembianze"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "fatto": {
     "lemma": "fatto",
@@ -1533,7 +1539,8 @@
       "stregone",
       "fattucchiere"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "fatuo": {
     "lemma": "fatuo",
@@ -1551,7 +1558,8 @@
       "vacuo",
       "sciocco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "fauna": {
     "lemma": "fauna",
@@ -1582,7 +1590,8 @@
       "parola",
       "linguaggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "favellare": {
     "lemma": "favellare",
@@ -1599,7 +1608,8 @@
       "parlare",
       "conversare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "favilla": {
     "lemma": "favilla",
@@ -1615,7 +1625,8 @@
     "synonyms": [
       "scintilla"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "favo": {
     "lemma": "favo",
@@ -1945,7 +1956,8 @@
       "infedele",
       "traditore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fegato": {
     "lemma": "fegato",
@@ -2026,7 +2038,8 @@
       "congratularsi",
       "complimentarsi"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "feltro": {
     "lemma": "feltro",
@@ -2088,7 +2101,8 @@
     "synonyms": [
       "bambina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "femore": {
     "lemma": "femore",
@@ -2179,7 +2193,8 @@
     "synonyms": [
       "bara"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "ferie": {
     "lemma": "ferie",
@@ -2515,7 +2530,8 @@
     "synonyms": [
       "ardentemente"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "fervido": {
     "lemma": "fervido",
@@ -2532,7 +2548,8 @@
       "ardente",
       "appassionato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "fervore": {
     "lemma": "fervore",
@@ -2565,7 +2582,8 @@
     "synonyms": [
       "frusta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fesso": {
     "lemma": "fesso",
@@ -2783,7 +2801,8 @@
     "synonyms": [
       "figlia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "fiaba": {
     "lemma": "fiaba",
@@ -2935,7 +2954,8 @@
       "decreto",
       "autorizzazione"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "fiata": {
     "lemma": "fiata",
@@ -2951,7 +2971,8 @@
     "synonyms": [
       "volta"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fiatare": {
     "lemma": "fiatare",
@@ -3153,7 +3174,8 @@
       "fedele",
       "leale"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fiducia": {
     "lemma": "fiducia",
@@ -3286,7 +3308,8 @@
       "conficcare",
       "fissare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "figlia": {
     "lemma": "figlia",
@@ -3335,7 +3358,8 @@
       "figlia",
       "bambina"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "figo": {
     "lemma": "figo",
@@ -3353,7 +3377,8 @@
       "forte",
       "bello"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "figura": {
     "lemma": "figura",
@@ -3388,7 +3413,8 @@
       "gaffe",
       "brutta figura"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "figurante": {
     "lemma": "figurante",
@@ -3440,7 +3466,8 @@
       "immaginarsi",
       "pensare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "figurativo": {
     "lemma": "figurativo",
@@ -3794,7 +3821,8 @@
       "persino",
       "perfino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "finanziamento": {
     "lemma": "finanziamento",
@@ -4060,7 +4088,8 @@
       "finché",
       "finattanto che"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "finto": {
     "lemma": "finto",
@@ -4292,7 +4321,8 @@
       "cielo",
       "volta celeste"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "firmare": {
     "lemma": "firmare",
@@ -4584,7 +4614,8 @@
       "calamità",
       "piaga"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "flânerie": {
     "lemma": "flânerie",
@@ -4601,7 +4632,8 @@
       "passeggiata",
       "vagabondaggio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "flash": {
     "lemma": "flash",
@@ -4850,7 +4882,8 @@
       "onda",
       "cavallone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "foce": {
     "lemma": "foce",
@@ -4950,7 +4983,8 @@
       "forma",
       "stile"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "foggiare": {
     "lemma": "foggiare",
@@ -4967,7 +5001,8 @@
       "modellare",
       "plasmare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "foglia": {
     "lemma": "foglia",
@@ -5492,7 +5527,8 @@
       "lucidare",
       "pulire"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "letterario"
   },
   "forchetta": {
     "lemma": "forchetta",
@@ -5601,7 +5637,8 @@
     "synonyms": [
       "precursore"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "forma": {
     "lemma": "forma",
@@ -6788,7 +6825,8 @@
     "synonyms": [
       "osteria"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "dialettale"
   },
   "frase": {
     "lemma": "frase",
@@ -7127,7 +7165,8 @@
       "fregatura",
       "imbroglio"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "fregiare": {
     "lemma": "fregiare",
@@ -7144,7 +7183,8 @@
       "decorare",
       "ornare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "fremebondo": {
     "lemma": "fremebondo",
@@ -7161,7 +7201,8 @@
       "tremante",
       "agitato"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fremere": {
     "lemma": "fremere",
@@ -7387,7 +7428,8 @@
       "gelido",
       "freddo"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "frigo": {
     "lemma": "frigo",
@@ -7403,7 +7445,8 @@
     "synonyms": [
       "frigorifero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "frigorifero": {
     "lemma": "frigorifero",
@@ -7511,7 +7554,8 @@
       "battuta",
       "arguzia"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "frodare": {
     "lemma": "frodare",
@@ -7913,7 +7957,8 @@
       "dissipare",
       "scacciare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "formale"
   },
   "fuggevole": {
     "lemma": "fuggevole",
@@ -7930,7 +7975,8 @@
       "effimero",
       "passeggero"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fuggiasco": {
     "lemma": "fuggiasco",
@@ -7996,7 +8042,8 @@
     "synonyms": [
       "fuggiasco"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "fuliggine": {
     "lemma": "fuliggine",
@@ -8408,7 +8455,8 @@
       "birbante",
       "mascalzone"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "informale"
   },
   "furia": {
     "lemma": "furia",
@@ -8508,7 +8556,8 @@
     "synonyms": [
       "di nascosto"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "furtivo": {
     "lemma": "furtivo",
@@ -8525,7 +8574,8 @@
       "nascosto",
       "clandestino"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "furto": {
     "lemma": "furto",
