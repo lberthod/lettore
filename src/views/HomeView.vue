@@ -12,8 +12,8 @@ import { currentUser } from '../lib/auth.js'
 import { progress } from '../progress.js'
 import { nextStep } from '../lib/percorso.js'
 
-// Éventail des niveaux, des catégories représentées et des tailles de texte
-const { levelRange, categoryCount, minWords, maxWords } = catalogStats
+// Nombre de textes, éventail des niveaux et catégories représentées
+const { count, levelRange, categoryCount } = catalogStats
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
 const floatingWords = [
@@ -214,7 +214,7 @@ onUnmounted(() => {
         <template v-else>
           <div class="badge">
             <span class="pulse" aria-hidden="true"></span>
-            <span class="badge-text">{{ categoryCount }} catégories · {{ levelRange }} · {{ minWords }}–{{ maxWords }} mots</span>
+            <span class="badge-text">{{ count }} textes · {{ levelRange }} · {{ categoryCount }} catégories</span>
           </div>
 
           <p class="sub">
