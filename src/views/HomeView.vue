@@ -1,10 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-// Totaux calculés au build (voir le plugin leggendo-catalog dans
-// vite.config.js) : l'accueil affiche trois chiffres, elle n'a pas à embarquer
-// le catalogue entier dans le bundle d'entrée.
-import { catalogStats } from 'virtual:catalog'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 import { isLoggedIn, isPremiumPlus } from '../lib/access.js'
@@ -12,8 +8,6 @@ import { currentUser } from '../lib/auth.js'
 import { progress } from '../progress.js'
 import { nextStep } from '../lib/percorso.js'
 
-// Nombre de textes, éventail des niveaux et catégories représentées
-const { count, levelRange, categoryCount } = catalogStats
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
 const floatingWords = [
@@ -214,7 +208,7 @@ onUnmounted(() => {
         <template v-else>
           <div class="badge">
             <span class="pulse" aria-hidden="true"></span>
-            <span class="badge-text">{{ count }} textes · {{ levelRange }} · {{ categoryCount }} catégories</span>
+            <span class="badge-text">Lire · écouter · parler — l'italien à votre rythme</span>
           </div>
 
           <p class="sub">
