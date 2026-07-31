@@ -23,7 +23,7 @@ Style des textes existants : récits de vie quotidienne, voyages, culture et his
 Contraintes de format ABSOLUES :
 - "words" doit contenir CHAQUE mot du texte, sous sa forme exacte telle qu'elle apparaît (fléchie, pas le lemme), en minuscules, apostrophe droite ('). Un mot répété n'apparaît qu'une fois. Traductions françaises courtes ; pour les mots grammaticaux ambigus, une glose brève entre parenthèses (ex. "gli": "lui (« gli piace » = il aime)").
 - "sentences" doit contenir CHAQUE phrase du texte, reproduite à l'identique (mêmes mots, même ponctuation), avec sa traduction française naturelle.
-- "questions" : exactement 3 questions de compréhension en italien, 3 options chacune, une seule correcte ("correct" = index de la bonne option). Les questions portent sur le contenu du texte.
+- "questions" : exactement 3 questions de compréhension en italien, 3 options chacune, une seule correcte ("correct" = index de la bonne option). Les questions portent sur le contenu du texte. Chaque question inclut "explanation" : 1 phrase en français simple justifiant la bonne réponse, en citant si possible le passage du texte concerné (ex. « Le texte dit "…" »).
 - Le titre est en italien.`
 
 // Génère un texte complet à partir de la demande utilisateur.

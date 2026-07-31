@@ -38,11 +38,16 @@ export const TEXT_SCHEMA = {
       items: {
         type: 'object',
         additionalProperties: false,
-        required: ['q', 'options', 'correct'],
+        required: ['q', 'options', 'correct', 'explanation'],
         properties: {
           q: { type: 'string' },
           options: { type: 'array', items: { type: 'string' } },
           correct: { type: 'integer', description: 'Index de la bonne réponse' },
+          explanation: {
+            type: 'string',
+            description:
+              'Justification de la bonne réponse : 1 phrase en français simple, citant si possible le passage du texte',
+          },
         },
       },
     },
@@ -165,6 +170,8 @@ export function validateStructure(out) {
     if ((q.options?.length ?? 0) < 3) errors.push(`question ${i + 1} : moins de 3 options`)
     if (q.correct < 0 || q.correct >= (q.options?.length ?? 0))
       errors.push(`question ${i + 1} : index "correct" hors limites`)
+    if (typeof q.explanation !== 'string' || !q.explanation.trim())
+      errors.push(`question ${i + 1} : explication manquante`)
   }
   return errors
 }

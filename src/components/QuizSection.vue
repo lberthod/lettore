@@ -18,6 +18,9 @@ function shuffled() {
       q: q.q,
       options: order.map((i) => q.options[i]),
       correct: order.indexOf(q.correct),
+      // Absent sur les vieux textes non backfillés (userTexts Firestore…) :
+      // l'affichage doit alors dégrader proprement.
+      explanation: q.explanation,
     }
   })
 }
@@ -73,6 +76,9 @@ function reset() {
             {{ opt }}
           </button>
         </div>
+        <p v-if="answers[qi] !== null && q.explanation" class="explanation">
+          {{ q.explanation }}
+        </p>
       </li>
     </ol>
     <div v-if="allAnswered" class="result">
@@ -159,6 +165,16 @@ li {
 
 .option.dimmed {
   opacity: 0.5;
+}
+
+.explanation {
+  margin: 0.5rem 0 0;
+  padding: 0.45rem 0.9rem;
+  border-left: 3px solid #b0692e;
+  border-radius: 0 8px 8px 0;
+  background: #f0e9df;
+  color: #5a4a38;
+  font-size: 0.9rem;
 }
 
 .result {
