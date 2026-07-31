@@ -50,7 +50,13 @@ async function speakNative(text, { rate = 0.9, onEnd } = {}) {
   }
 }
 
-export function speakItalian(text, { rate = 0.9, onEnd } = {}) {
+// `onWordBoundary({ charIndex })` (optionnel) : appelé à chaque frontière de
+// mot pendant la lecture — web uniquement, via l'événement `onboundary` de
+// SpeechSynthesisUtterance. Le plugin natif n'expose pas cet événement, et
+// certains moteurs web ne l'émettent pas non plus (Chrome avec des voix
+// distantes) : le callback peut donc ne jamais être appelé — les appelants
+// doivent le traiter comme une amélioration progressive.
+export function speakItalian(text, { rate = 0.9, onEnd, onWordBoundary } = {}) {
   if (!ttsSupported) return
   if (isNative) {
     speakNative(text, { rate, onEnd })
@@ -65,6 +71,15 @@ export function speakItalian(text, { rate = 0.9, onEnd } = {}) {
   if (onEnd) {
     utterance.onend = onEnd
     utterance.onerror = onEnd
+  }
+  if (onWordBoundary) {
+    utterance.onboundary = (event) => {
+      // `name` vaut 'word' ou 'sentence' ; certains moteurs (anciens Safari)
+      // ne le renseignent pas — on ne filtre que les frontières explicitement
+      // non-mot.
+      if (event.name && event.name !== 'word') return
+      onWordBoundary({ charIndex: event.charIndex })
+    }
   }
   window.speechSynthesis.speak(utterance)
 }

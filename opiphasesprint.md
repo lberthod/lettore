@@ -248,3 +248,19 @@ Exploiter `onboundary` de `SpeechSynthesisUtterance` (web seulement, fiabilité 
 | 8 | Karaoke mot-à-mot | Moyen | Non | Non | Non |
 
 **Démarrage** : Phase 0 (une demi-journée, dont le test qualité GLM qui conditionne les Phases 5 et 7), puis Phase 1 — chemin de bout en bout le plus court : `schema.mjs` → `generate.mjs` → backfill → `QuizSection.vue`.
+
+---
+
+## Checklist de mise en production (état au 2026-07-31 : phases 1-7 implémentées et commitées)
+
+Tout est implémenté et testé en local (106 tests serveur, 44 tests client). Étapes restantes, dans l'ordre :
+
+1. **Push** : publier les commits sur origin.
+2. **Déployer `leggendo-server/` sur le VPS** puis `systemctl restart leggendo-api.service`. Requis pour : explications de quiz sur les nouveaux textes générés, `/scrivi` (POST /leggendo/correct), `/dialogo` (routes /leggendo/dialogue). Aucune nouvelle variable d'env requise (GLM inchangé).
+3. **Déployer les règles Firestore** : `firebase deploy --only firestore:rules` (nouvelle collection `dialogueSessions`, lecture owner uniquement).
+4. **Synchroniser le contenu protégé** : `node scripts/sync-content.mjs` (credentials service account) — sans ça, les abonnés ne voient pas le contenu complet des 6 textes tu/Lei.
+5. **Backfill des explications de quiz** : `ANTHROPIC_API_KEY=... node scripts/backfill-quiz-explanations.mjs --limit 5` d'abord (contrôle qualité), puis sans limite (460 textes). Re-committer les JSON modifiés puis re-sync (étape 4).
+6. **Backfill des registres du dictionnaire** : `ANTHROPIC_API_KEY=... node scripts/backfill-dictionary-register.mjs --limit 5` d'abord, puis sans limite (~11 200 lemmes du corpus, lots de 50). Re-committer les shards.
+7. **Test en réel avec un compte premium_plus** : une correction sur `/scrivi` (vérifier la qualité pédagogique de GLM-5.1 — si décevante, cf. section « Décision LLM » plus haut) et une session `/dialogo` complète avec bilan.
+8. **Build mobile** : `npx cap sync` déjà fait ; vérifier la compilation Xcode (portage Swift vendorisé `SpeechRecognitionPlugin.swift`), tester sur appareil : double permission micro/reconnaissance iOS au premier usage, comportement `no-speech` Android, drill de prononciation de bout en bout.
+9. **Déploiement web** : build + déploiement Firebase Hosting habituel.

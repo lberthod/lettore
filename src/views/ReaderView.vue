@@ -128,10 +128,16 @@ const nextText = computed(() =>
 const paragraphs = computed(() =>
   currentText.value.paragraphs.map((p) => {
     const sentences = p.match(/[^.!?]+[.!?]*\s*/g) || [p]
-    return sentences.map((sentence) => ({
-      sentence: sentence.trim(),
-      tokens: sentence.split(/(\p{L}[\p{L}'’-]*)/u).filter((t) => t !== ''),
-    }))
+    return sentences.map((sentence) => {
+      const tokens = sentence
+        .split(/(\p{L}[\p{L}'’-]*)/u)
+        .filter((t) => t !== '')
+      // Rang de chaque token parmi les mots de la phrase (-1 pour la
+      // ponctuation/espaces) : sert au surlignage karaoke mot-à-mot.
+      let w = 0
+      const wordIndices = tokens.map((t) => (isWord(t) ? w++ : -1))
+      return { sentence: sentence.trim(), tokens, wordIndices }
+    })
   })
 )
 
@@ -230,7 +236,39 @@ const ttsEnabled = ref(false)
 const readingText = ref(false)
 const paused = ref(false)
 const readingKey = ref(null) // phrase en cours de lecture ('pi-si')
+// Karaoke mot-à-mot : rang (parmi les mots de la phrase en cours) du mot
+// prononcé, -1 hors lecture ou quand le moteur n'émet pas `onboundary`
+// (natif, certaines voix distantes de Chrome) — dans ce cas seul le
+// surlignage de phrase reste visible, comme avant.
+const readingWordIndex = ref(-1)
 let readSession = 0 // invalide les onEnd d'une lecture annulée
+
+// Positions [début, fin) de chaque mot dans le texte exactement tel qu'il est
+// envoyé au TTS, obtenues avec la même regex que les tokens affichés : le
+// n-ième intervalle correspond au n-ième token-mot de la phrase (le trim ne
+// change pas la suite des mots). Mapper par cumul de longueurs sur le texte
+// parlé est plus robuste qu'une redécoupe indépendante : les charIndex du
+// moteur tombent toujours dans ce repère-là.
+function wordSpans(text) {
+  const spans = []
+  let pos = 0
+  for (const token of text.split(/(\p{L}[\p{L}'’-]*)/u)) {
+    if (token === '') continue
+    if (isWord(token)) spans.push({ start: pos, end: pos + token.length })
+    pos += token.length
+  }
+  return spans
+}
+
+// charIndex → rang du mot : premier mot dont la fin dépasse charIndex
+// (couvre à la fois un index au début/milieu du mot et un index posé sur la
+// ponctuation qui le précède).
+function wordIndexAt(spans, charIndex) {
+  for (let w = 0; w < spans.length; w++) {
+    if (charIndex < spans[w].end) return w
+  }
+  return spans.length - 1
+}
 
 const speeds = [
   { rate: 0.7, label: 'Lent' },
@@ -248,6 +286,7 @@ function speak(text) {
   readingText.value = false
   paused.value = false
   readingKey.value = null
+  readingWordIndex.value = -1
   speakItalian(text, { rate: progress.ttsRate })
 }
 
@@ -269,12 +308,21 @@ function playText() {
       readingText.value = false
       paused.value = false
       readingKey.value = null
+      readingWordIndex.value = -1
       return
     }
     readingKey.value = list[i].key
+    // Réinitialisé à chaque phrase : sans événement onboundary, aucun mot
+    // n'est surligné (comportement d'avant).
+    readingWordIndex.value = -1
+    const spans = wordSpans(list[i].text)
     speakItalian(list[i].text, {
       rate: progress.ttsRate,
       onEnd: () => next(i + 1),
+      onWordBoundary: ({ charIndex }) => {
+        if (session !== readSession || !spans.length) return
+        readingWordIndex.value = wordIndexAt(spans, charIndex)
+      },
     })
   }
   next(0)
@@ -292,6 +340,7 @@ function stopReading() {
   readingText.value = false
   paused.value = false
   readingKey.value = null
+  readingWordIndex.value = -1
 }
 
 function setRate(rate) {
@@ -632,6 +681,11 @@ onBeforeUnmount(() => {
                   <span
                     v-if="isWord(token)"
                     class="word"
+                    :class="{
+                      'word-reading':
+                        readingKey === `${pi}-${si}` &&
+                        s.wordIndices[ti] === readingWordIndex,
+                    }"
                     role="button"
                     tabindex="0"
                     :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
@@ -1027,6 +1081,14 @@ article p:first-letter {
   border-radius: 4px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+/* Karaoke : mot en cours de prononciation — fond un peu plus soutenu que la
+   phrase surlignée, simple transition douce (pas d'animation), sans toucher
+   au comportement interactif des mots (survol, clic, focus). */
+.sentence.reading .word.word-reading {
+  background: #ecd9b4;
+  transition: background 0.12s ease;
 }
 
 .word {
