@@ -12,6 +12,7 @@ Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebas
 | GET | `/leggendo/jobs/<uuid>` | état du job : `pending` / `running` / `done` (+ texte) / `error` |
 | GET | `/leggendo/my-job` | job actif du compte (reprise après rechargement) |
 | GET | `/leggendo/quota` | solde de crédits de génération du compte (auth requise) |
+| POST | `/leggendo/correct` | correction pédagogique d'une production écrite, **synchrone** (auth requise ; réservée aux rôles à crédits `premium_plus`/`enseignant`, 1 crédit, remboursé si échec — voir `quota.mjs`/`jobs.mjs`, logs `generationLogs` avec `kind: "correction"`, timeout `CORRECT_TIMEOUT_MS`, 90 s par défaut) |
 
 ## Tests
 

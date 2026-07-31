@@ -13,6 +13,8 @@
 export const FREE_TRIAL_CREDITS = 1
 export const MONTHLY_CREDITS = { premium_plus: 30, enseignant: 100 }
 export const CREDIT_COST = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
+// Correction d'une production écrite (Phase 5) : même barème que « corto ».
+export const CORRECTION_COST = 1
 
 export const EMAIL_NOT_VERIFIED =
   'Vérifiez votre adresse e-mail pour lancer votre génération d’essai : un lien vous a été envoyé à l’inscription.'
@@ -86,6 +88,27 @@ export function quotaError(user, q, sizeId) {
   // facturation peut différer de celle du compte Firebase.
   if (!user.emailVerified) {
     return EMAIL_NOT_VERIFIED
+  }
+  return null
+}
+
+// Refus/autorisation d'une correction d'écriture (Phase 5). Choix assumé :
+// la correction est réservée aux rôles à crédits (premium_plus/enseignant),
+// SANS essai gratuit. L'essai gratuit existant est un capital unique à vie
+// (`trialUsed`, un booléen) entièrement pensé pour la génération : le
+// partager avec la correction ferait consommer silencieusement, pour une
+// petite correction, la seule génération d'essai du compte — et en créer un
+// second compteur d'essai rouvrirait la surface d'abus (comptes jetables)
+// que TODO_SECURITE.md a justement fermée. Aligné sur l'accès client
+// (src/lib/access.js : correction = premium_plus/enseignant, comme Notizie).
+export function correctionQuotaError(user, q) {
+  if (!isCreditRole(user.role)) {
+    return 'La correction de textes fait partie de la formule Premium IA — passez à Premium IA pour faire corriger vos productions écrites.'
+  }
+  const limit = MONTHLY_CREDITS[user.role]
+  if (q.monthlyUsed + CORRECTION_COST > limit) {
+    const remaining = Math.max(0, limit - q.monthlyUsed)
+    return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${CORRECTION_COST} requis pour une correction).`
   }
   return null
 }

@@ -18,11 +18,12 @@ import { getFirestore } from 'firebase-admin/firestore'
 import { getAuth } from 'firebase-admin/auth'
 import { getAppCheck } from 'firebase-admin/app-check'
 import { generateUserText } from './generate.mjs'
+import { correctUserText } from './correct.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
-import { QuotaExceededError, creditCost } from './quota.mjs'
+import { QuotaExceededError, creditCost, CORRECTION_COST } from './quota.mjs'
 import { createJobStore, ActiveJobError } from './jobs.mjs'
-import { buildTaxonomyIndex, parseRequest, slugify } from './validate.mjs'
+import { buildTaxonomyIndex, parseRequest, parseCorrectionRequest, slugify } from './validate.mjs'
 import { createAppCheckGuard } from './appcheck.mjs'
 import { clientIp, createIpLimiter, createRateWindow } from './ratelimit.mjs'
 
@@ -142,16 +143,31 @@ const ESTIMATED_COST_PER_1K_TOKENS_USD = Number(
 )
 const generationLogs = db.collection('generationLogs')
 
-async function logGeneration({ user, size, level, jobId, status, startedAt, usage, error }) {
+// Journalise tout appel IA (génération comme correction) dans
+// `generationLogs`, distingués par `kind` — même collection pour garder une
+// vue unique des coûts. `id` = jobId (génération) ou correctionId.
+async function logAiCall({
+  user,
+  kind,
+  id,
+  level = null,
+  sizeId = null,
+  creditsCost,
+  status,
+  startedAt,
+  usage,
+  error,
+}) {
   const totalTokens = usage.reduce((sum, u) => sum + (u.total_tokens || 0), 0)
   const entry = {
+    kind,
     uid: user.uid,
     email: user.email || null,
     role: user.role,
     level,
-    sizeId: size.id,
-    creditsCost: creditCost(size.id),
-    jobId,
+    sizeId,
+    creditsCost,
+    jobId: id,
     status,
     durationMs: Date.now() - startedAt,
     modelCalls: usage.length,
@@ -163,16 +179,59 @@ async function logGeneration({ user, size, level, jobId, status, startedAt, usag
   try {
     await generationLogs.add(entry)
   } catch (err) {
-    console.error(`[job ${jobId}] échec de journalisation du coût :`, err)
+    console.error(`[${kind} ${id}] échec de journalisation du coût :`, err)
   }
   // Alerte simple (README_TARIFICATION.md) : le coût IA ne doit pas dépasser
   // 25 % du revenu Premium IA — seuil grossier faute d'agrégation en temps
-  // réel, mais suffisant pour repérer une génération anormalement coûteuse.
+  // réel, mais suffisant pour repérer un appel anormalement coûteux.
   if (entry.estimatedCostUsd > 0.5) {
     console.warn(
-      `[job ${jobId}] ⚠ coût estimé élevé pour une génération : $${entry.estimatedCostUsd} (${totalTokens} tokens, ${usage.length} appel(s))`
+      `[${kind} ${id}] ⚠ coût estimé élevé : $${entry.estimatedCostUsd} (${totalTokens} tokens, ${usage.length} appel(s))`
     )
   }
+}
+
+function logGeneration({ user, size, level, jobId, status, startedAt, usage, error }) {
+  return logAiCall({
+    user,
+    kind: 'generation',
+    id: jobId,
+    level,
+    sizeId: size.id,
+    creditsCost: creditCost(size.id),
+    status,
+    startedAt,
+    usage,
+    error,
+  })
+}
+
+// --- Correction synchrone (Phase 5) ---
+// Une correction est bien plus courte qu'une génération : la réponse est
+// renvoyée directement (pas de job à sonder). Ce délai borne uniquement la
+// réponse HTTP — callLLM garde ses propres timeout/retries ; au-delà, le
+// crédit est remboursé et le résultat éventuel du LLM est jeté (jamais livré).
+const CORRECT_TIMEOUT_MS = Number(process.env.CORRECT_TIMEOUT_MS || 90 * 1000)
+
+function withTimeout(promise, ms, message) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      // Le travail continue en arrière-plan : on neutralise juste son rejet
+      // éventuel (sinon unhandledRejection) — son résultat ne sera pas livré.
+      promise.catch(() => {})
+      reject(new Error(message))
+    }, ms)
+    promise.then(
+      (value) => {
+        clearTimeout(timer)
+        resolve(value)
+      },
+      (err) => {
+        clearTimeout(timer)
+        reject(err)
+      }
+    )
+  })
 }
 
 // --- Helpers HTTP ---
@@ -388,6 +447,110 @@ const server = http.createServer(async (req, res) => {
       })()
 
       send(202, { jobId })
+      return
+    }
+
+    // Correction pédagogique d'une production écrite (Phase 5) — mêmes
+    // garde-fous que /generate (auth + App Check + rate-limit IP + CORS),
+    // mais synchrone : la réponse contient directement la correction.
+    if (req.method === 'POST' && url.pathname === '/leggendo/correct') {
+      const { user, error: authError } = await authenticate(req, 'correct')
+      if (authError) {
+        send(authError.status, { error: authError.message })
+        return
+      }
+
+      let body
+      try {
+        body = JSON.parse(await readBody(req))
+      } catch {
+        send(400, { error: 'JSON invalide.' })
+        return
+      }
+      const { errors, text } = parseCorrectionRequest(body)
+      if (errors.length) {
+        send(400, { error: errors.join(' ; ') })
+        return
+      }
+
+      // Même plafond IP que la génération (compteur commun : ce qui compte,
+      // c'est le nombre d'appels IA déclenchés depuis une origine réseau).
+      // trial: false — la correction est réservée aux rôles à crédits, le
+      // quota de sièges d'essai par IP ne la concerne pas.
+      const ip = clientIp(req, { trustProxy: TRUST_PROXY })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: false })
+      if (ipError) {
+        console.warn(
+          `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (correction)`
+        )
+        send(429, { error: ipError })
+        return
+      }
+
+      const correctionId = crypto.randomUUID()
+      const correctionRef = jobStore.correctionsCollection.doc(correctionId)
+      try {
+        await jobStore.reserveCorrection(user, correctionRef)
+      } catch (err) {
+        if (err instanceof QuotaExceededError) {
+          send(429, { error: err.message })
+          return
+        }
+        throw err
+      }
+      ipLimiter.record(ip, { uid: user.uid, trial: false })
+      console.log(
+        `[correction ${correctionId}] ${user.email || user.uid} (${user.role}) — ${text.length} caractères`
+      )
+      const startedAt = Date.now()
+      const usage = []
+      const logCorrection = (status, error) =>
+        logAiCall({
+          user,
+          kind: 'correction',
+          id: correctionId,
+          creditsCost: CORRECTION_COST,
+          status,
+          startedAt,
+          usage,
+          error,
+        })
+
+      let result
+      try {
+        result = await withTimeout(
+          correctUserText({ text, usage }),
+          CORRECT_TIMEOUT_MS,
+          'Correction interrompue (délai maximal dépassé).'
+        )
+      } catch (err) {
+        // Échec technique ou timeout : le crédit est rendu (failCorrection,
+        // clôture + remboursement dans la même transaction, jamais rejoués).
+        await jobStore
+          .failCorrection(correctionId, err.message)
+          .catch((e) => console.error(`[correction ${correctionId}] échec du remboursement :`, e))
+        console.error(`[correction ${correctionId}] échec : ${err.message}`)
+        await logCorrection('error', err.message)
+        send(502, {
+          error: 'La correction a échoué, votre crédit n’a pas été consommé. Réessayez dans un instant.',
+        })
+        return
+      }
+
+      if (await jobStore.finishCorrection(correctionId)) {
+        console.log(
+          `[correction ${correctionId}] terminée (${result.errors.length} erreur(s), niveau estimé ${result.level_estimate})`
+        )
+        await logCorrection('done')
+        send(200, result)
+        return
+      }
+      // Clôturée entre-temps (crédit déjà rendu) : ne pas livrer gratuitement.
+      console.warn(`[correction ${correctionId}] clôturée entre-temps — résultat abandonné`)
+      await logCorrection('discarded', 'Correction clôturée et remboursée avant la fin.')
+      send(502, {
+        error: 'La correction a expiré, votre crédit n’a pas été consommé. Réessayez.',
+      })
       return
     }
 

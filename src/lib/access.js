@@ -147,6 +147,15 @@ export async function hasClassiciAccess() {
   return isPremiumPlus()
 }
 
+// Correction d'écriture (« Scrivi », leggendo-server POST /correct) : mêmes
+// rôles que la génération IA — premium_plus/enseignant, pas d'essai gratuit
+// (choix documenté dans leggendo-server/quota.mjs). Le refus réel est rendu
+// par le serveur ; ceci ne sert qu'à afficher ou masquer l'accès côté client.
+export async function hasCorrectionAccess() {
+  if (!firebaseReady) return true
+  return isPremiumPlus()
+}
+
 // Aperçu gratuit de Classici pour tout utilisateur connecté (README_TARIFICATION.md) :
 // deux fables courtes en entier, et le premier chapitre de quelques livres plus
 // longs, pour donner un aperçu avant l'abonnement Premium IA — règles

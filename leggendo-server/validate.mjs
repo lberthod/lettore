@@ -32,6 +32,28 @@ export function parseRequest(body, { themeById, genreById, sizeById }) {
   return { errors, theme, genre, size, level, title, summary }
 }
 
+// Validation de la production écrite soumise à correction (Phase 5).
+// Volontairement simple : type + bornes de longueur (anti-abus de tokens) et
+// présence d'au moins une lettre — pas de détection de langue fragile, le
+// prompt de correction gère lui-même un texte qui ne serait pas de l'italien.
+export const CORRECTION_MAX_CHARS = 2000
+
+export function parseCorrectionRequest(body) {
+  const errors = []
+  const text = typeof body?.text === 'string' ? body.text.trim() : ''
+  if (!text) {
+    errors.push('texte vide')
+  } else {
+    if (text.length > CORRECTION_MAX_CHARS) {
+      errors.push(`texte : ${CORRECTION_MAX_CHARS} caractères maximum`)
+    }
+    if (!/\p{L}/u.test(text)) {
+      errors.push('texte : aucune lettre à corriger')
+    }
+  }
+  return { errors, text }
+}
+
 export function slugify(title) {
   const base = title
     .toLowerCase()

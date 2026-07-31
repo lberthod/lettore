@@ -76,6 +76,75 @@ export const REPAIR_SCHEMA = {
   },
 }
 
+// Schéma pour la correction pédagogique d'une production écrite (Phase 5).
+// Le niveau estimé va jusqu'à C2 : un élève peut écrire au-delà des niveaux
+// proposés en lecture (LEVELS s'arrête à C1 côté génération).
+export const CORRECTION_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+export const CORRECTION_ERROR_TYPES = ['grammatica', 'lessico', 'registro', 'ortografia']
+
+export const CORRECTION_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['corrected', 'errors', 'level_estimate'],
+  properties: {
+    corrected: {
+      type: 'string',
+      description:
+        "Le texte de l'élève corrigé, en italien, en préservant au maximum son style et ses choix",
+    },
+    errors: {
+      type: 'array',
+      description: "Chaque erreur relevée dans le texte de l'élève",
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['original', 'correction', 'explanation', 'type'],
+        properties: {
+          original: { type: 'string', description: "Le passage fautif, tel qu'écrit par l'élève" },
+          correction: { type: 'string', description: 'Le passage corrigé' },
+          explanation: {
+            type: 'string',
+            description: "Explication pédagogique en français simple (1 à 2 phrases)",
+          },
+          type: { type: 'string', enum: CORRECTION_ERROR_TYPES },
+        },
+      },
+    },
+    level_estimate: {
+      type: 'string',
+      enum: CORRECTION_LEVELS,
+      description: 'Niveau CECR estimé de la production écrite',
+    },
+  },
+}
+
+// Contrôles structurels bloquants sur la sortie de correction (même rôle que
+// validateStructure pour la génération : on ne fait pas confiance au modèle).
+export function validateCorrectionStructure(out) {
+  const errors = []
+  if (typeof out?.corrected !== 'string' || !out.corrected.trim()) {
+    errors.push('corrected manquant ou vide')
+  }
+  if (!Array.isArray(out?.errors)) {
+    errors.push('errors absent ou non-tableau')
+  } else {
+    for (const [i, e] of out.errors.entries()) {
+      for (const field of ['original', 'correction', 'explanation']) {
+        if (typeof e?.[field] !== 'string' || !e[field].trim()) {
+          errors.push(`erreur ${i + 1} : ${field} manquant`)
+        }
+      }
+      if (!CORRECTION_ERROR_TYPES.includes(e?.type)) {
+        errors.push(`erreur ${i + 1} : type invalide`)
+      }
+    }
+  }
+  if (!CORRECTION_LEVELS.includes(out?.level_estimate)) {
+    errors.push('level_estimate invalide')
+  }
+  return errors
+}
+
 // Schéma pour la proposition de sujet (orchestrateur).
 export const TOPIC_SCHEMA = {
   type: 'object',

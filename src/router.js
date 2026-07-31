@@ -150,6 +150,21 @@ const router = createRouter({
       meta: { ...findRoute('/creer-son-texte'), requiresAuth: true },
     },
     {
+      path: '/scrivi',
+      name: 'write',
+      // Production écrite + correction pédagogique (Premium IA) : comme
+      // /notizie, la route exige une connexion ; le droit premium_plus/
+      // enseignant est tranché par le serveur (POST /leggendo/correct), la
+      // vue affiche une bannière de blocage aux autres formules.
+      component: () => import('./views/WriteView.vue'),
+      meta: {
+        title: 'Scrivi — Leggendo',
+        description:
+          'Écrivez en italien et recevez une correction pédagogique : erreurs expliquées en français, niveau estimé — formule Premium IA.',
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/notizie',
       name: 'news',
       component: () => import('./views/NotizieView.vue'),

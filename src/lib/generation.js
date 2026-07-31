@@ -84,8 +84,9 @@ async function getIdToken() {
 // provenance (jeton App Check — les SDK Firebase l'attachent d'eux-mêmes,
 // mais pas nos `fetch` maison, voir leggendo-server/appcheck.mjs). Renvoie
 // null quand l'utilisateur n'est pas connecté : l'API refuserait de toute
-// façon, autant ne pas partir.
-async function apiHeaders(extra) {
+// façon, autant ne pas partir. Exporté pour les autres clients de la même
+// API (src/lib/correction.js).
+export async function apiHeaders(extra) {
   const [idToken, appCheckToken] = await Promise.all([
     getIdToken(),
     getAppCheckToken(),
