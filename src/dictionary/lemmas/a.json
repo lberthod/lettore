@@ -6722,7 +6722,8 @@
       "quando",
       "nel momento in cui"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "letterario"
   },
   "allotta": {
     "lemma": "allotta",
@@ -7170,7 +7171,8 @@
       "anche",
       "inoltre"
     ],
-    "isVerb": false
+    "isVerb": false,
+    "register": "formale"
   },
   "altrettanto": {
     "lemma": "altrettanto",
@@ -7970,7 +7972,8 @@
       "uccidere",
       "assassinare"
     ],
-    "isVerb": true
+    "isVerb": true,
+    "register": "informale"
   },
   "ammettere": {
     "lemma": "ammettere",

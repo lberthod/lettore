@@ -113,6 +113,14 @@ function selectPrefix(prefix) {
 function speak(word) {
   speakItalian(word, { rate: 1 })
 }
+
+// Registre de langue : champ optionnel des shards (absent = neutro, jamais
+// affiché — voir scripts/backfill-dictionary-register.mjs). On ne badge que
+// les valeurs connues, au cas où une donnée inattendue traînerait.
+const KNOWN_REGISTERS = ['formale', 'informale', 'letterario', 'dialettale']
+const registerBadge = computed(() =>
+  KNOWN_REGISTERS.includes(entry.value?.register) ? entry.value.register : null
+)
 </script>
 
 <template>
@@ -146,7 +154,12 @@ function speak(word) {
           🔊
         </button>
       </h2>
-      <p class="pos">{{ entry.pos }}</p>
+      <p class="pos">
+        {{ entry.pos }}
+        <span v-if="registerBadge" class="register" :class="`register-${registerBadge}`">
+          {{ registerBadge }}
+        </span>
+      </p>
       <p class="fr"><strong>{{ entry.fr }}</strong></p>
       <p class="definition">{{ entry.definition_it }}</p>
 
@@ -449,6 +462,48 @@ function speak(word) {
   font-style: italic;
   color: #6b6156;
   font-size: 0.9rem;
+}
+
+/* Badge de registre de langue (formale, informale, letterario, dialettale) —
+   petit pill discret dans la palette beige/brune de la page ; « neutro »
+   n'est jamais affiché (champ absent des données). */
+.register {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.08rem 0.55rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 999px;
+  background: rgba(250, 246, 240, 0.9);
+  color: #6f4722;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+.register-formale {
+  border-color: #c9bda8;
+  background: #f1ebe0;
+  color: #5c5344;
+}
+
+.register-informale {
+  border-color: #e0c3a4;
+  background: #f7ead9;
+  color: #b0692e;
+}
+
+.register-letterario {
+  border-color: #cdbfd0;
+  background: #f0e9f1;
+  color: #6d5470;
+}
+
+.register-dialettale {
+  border-color: #bfcbb2;
+  background: #ecf1e4;
+  color: #5c6f47;
 }
 
 .fr {
