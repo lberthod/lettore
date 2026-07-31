@@ -11,6 +11,8 @@ import {
   quotaStatus,
   creditCost,
   CORRECTION_COST,
+  dialogueQuotaError,
+  DIALOGUE_COST,
 } from './quota.mjs'
 
 export const JOB_TTL_MS = 60 * 60 * 1000
@@ -21,6 +23,12 @@ export const JOB_TTL_MS = 60 * 60 * 1000
 export const JOB_STUCK_MS = 45 * 60 * 1000
 
 const STUCK_JOB_ERROR = 'Génération interrompue (délai maximal dépassé).'
+
+// Une session de dialogue (Phase 7) active depuis plus de 24 h est
+// considérée abandonnée : pruneJobs la clôt (sans remboursement — au moins
+// un tour a normalement été servi ; si l'ouverture avait échoué, failDialogue
+// aurait déjà remboursé et clôturé).
+export const DIALOGUE_SESSION_TTL_MS = 24 * 60 * 60 * 1000
 
 // Levée par reserveJob quand un job actif (non bloqué) existe déjà pour ce
 // compte — distincte de QuotaExceededError pour que server.mjs renvoie le
@@ -37,6 +45,12 @@ export function createJobStore(db) {
   // Le document de correction sert de borne d'idempotence du remboursement
   // (creditRefundedAt), exactement comme pour les jobs.
   const correctionsCollection = db.collection('leggendoCorrections')
+  // Sessions de dialogue simulé (Phase 7) : l'état multi-tour vit ici — le
+  // serveur reste stateless entre requêtes (survit aux redémarrages du VPS).
+  // Lecture par l'owner autorisée côté client (firestore.rules), écriture
+  // uniquement via l'Admin SDK (ces méthodes). Même document
+  // leggendoQuotas/{uid} que le reste : mêmes crédits, mêmes transactions.
+  const dialogueSessionsCollection = db.collection('dialogueSessions')
 
   function activeJobQuery(uid) {
     return jobsCollection
@@ -244,6 +258,113 @@ export function createJobStore(db) {
     })
   }
 
+  // --- Sessions de dialogue simulé (Phase 7) ---
+  // Réserve DIALOGUE_COST crédits et crée la session dans une même
+  // transaction Firestore — le pendant de reserveCorrection. Tarification à
+  // la session (pas au tour, voir quota.mjs) : c'est la SEULE consommation de
+  // crédits du dialogue, quel que soit le nombre de tours joués ensuite.
+  async function reserveDialogue(user, sessionRef, { scenario, level }) {
+    const quotaRef = quotasCollection.doc(user.uid)
+    return db.runTransaction(async (tx) => {
+      const quotaDoc = await tx.get(quotaRef)
+      const q = resetIfStale(user, quotaDoc.exists ? quotaDoc.data() : freshQuota(user))
+      const error = dialogueQuotaError(user, q)
+      if (error) throw new QuotaExceededError(error)
+      q.monthlyUsed += DIALOGUE_COST
+      tx.set(quotaRef, q)
+      tx.set(sessionRef, {
+        uid: user.uid,
+        scenario,
+        level,
+        turns: [],
+        status: 'active',
+        role: user.role,
+        cost: DIALOGUE_COST,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      })
+      return q
+    })
+  }
+
+  // Échec technique : clôture la session en erreur et rembourse — mais
+  // SEULEMENT si elle échoue avant le premier échange complet (aucun tour
+  // enregistré, donc l'ouverture LLM n'a jamais été livrée). Une session qui
+  // a déjà servi au moins un tour a de la valeur : un tour raté en cours de
+  // route ne clôt pas la session (l'élève retente), et l'abandonner ne
+  // rembourse pas. Même garantie d'idempotence que failCorrection
+  // (creditRefundedAt posé dans la même transaction, jamais rejoué).
+  async function failDialogue(sessionId, message) {
+    const ref = dialogueSessionsCollection.doc(sessionId)
+    return db.runTransaction(async (tx) => {
+      const doc = await tx.get(ref)
+      if (!doc.exists) return false
+      const session = doc.data()
+      if (session.status !== 'active') return false
+      const refundable = Boolean(
+        !session.creditRefundedAt && session.uid && (session.turns || []).length === 0
+      )
+      const quotaRef = refundable ? quotasCollection.doc(session.uid) : null
+      const quotaDoc = refundable ? await tx.get(quotaRef) : null
+      tx.update(ref, {
+        status: 'error',
+        error: message,
+        creditRefundedAt: Date.now(),
+        updatedAt: Date.now(),
+      })
+      if (quotaDoc && quotaDoc.exists) {
+        const q = quotaDoc.data()
+        q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - (session.cost || DIALOGUE_COST))
+        tx.set(quotaRef, q)
+      }
+      return true
+    })
+  }
+
+  // Ajoute des tours (élève et/ou personnage) à une session encore active,
+  // avec d'éventuels champs annexes (dernières suggested_replies pour la
+  // reprise). Transactionnel : deux requêtes concurrentes ne peuvent pas
+  // s'écraser mutuellement l'historique. Renvoie le tableau de tours à jour,
+  // ou null si la session n'est plus active (clôturée/expirée entre-temps —
+  // l'appelant ne doit alors pas livrer la réplique).
+  async function appendDialogueTurns(sessionId, newTurns, extra = {}) {
+    const ref = dialogueSessionsCollection.doc(sessionId)
+    return db.runTransaction(async (tx) => {
+      const doc = await tx.get(ref)
+      if (!doc.exists || doc.data().status !== 'active') return null
+      const turns = [...(doc.data().turns || []), ...newTurns]
+      tx.update(ref, { turns, updatedAt: Date.now(), ...extra })
+      return turns
+    })
+  }
+
+  // Clôture normale (bilan livré, fin demandée, plafond atteint) : le crédit
+  // reste consommé. Ne s'applique qu'à une session encore active — une
+  // session déjà en erreur/clôturée n'est pas réécrite.
+  async function closeDialogue(sessionId, feedback) {
+    const ref = dialogueSessionsCollection.doc(sessionId)
+    return db.runTransaction(async (tx) => {
+      const doc = await tx.get(ref)
+      if (!doc.exists || doc.data().status !== 'active') return false
+      tx.update(ref, {
+        status: 'closed',
+        feedback,
+        closedAt: Date.now(),
+        updatedAt: Date.now(),
+      })
+      return true
+    })
+  }
+
+  // Ne renvoie la session que si elle appartient à l'utilisateur — sinon
+  // comme si elle n'existait pas (même règle que jobFor : pas de fuite entre
+  // comptes).
+  async function dialogueFor(uid, sessionId) {
+    const doc = await dialogueSessionsCollection.doc(sessionId).get()
+    const session = doc.exists ? doc.data() : null
+    return session && session.uid === uid ? session : null
+  }
+
   async function pruneJobs() {
     const cutoff = Date.now() - JOB_TTL_MS
     for (const collection of [jobsCollection, correctionsCollection]) {
@@ -252,6 +373,23 @@ export function createJobStore(db) {
       const batch = db.batch()
       stale.docs.forEach((doc) => batch.delete(doc.ref))
       await batch.commit()
+    }
+    // Sessions de dialogue abandonnées : actives depuis plus de 24 h → closes
+    // (pas supprimées : l'élève garde l'historique en lecture, et le bilan
+    // reste consultable si déjà produit). Filtre `status` en mémoire plutôt
+    // qu'en requête composite : pas d'index Firestore supplémentaire.
+    const dialogueCutoff = Date.now() - DIALOGUE_SESSION_TTL_MS
+    const staleSessions = await dialogueSessionsCollection
+      .where('createdAt', '<', dialogueCutoff)
+      .get()
+    for (const doc of staleSessions.docs) {
+      if (doc.data().status !== 'active') continue
+      await doc.ref.update({
+        status: 'closed',
+        closedReason: 'expired',
+        closedAt: Date.now(),
+        updatedAt: Date.now(),
+      })
     }
   }
 
@@ -290,6 +428,12 @@ export function createJobStore(db) {
     reserveCorrection,
     finishCorrection,
     failCorrection,
+    dialogueSessionsCollection,
+    reserveDialogue,
+    failDialogue,
+    appendDialogueTurns,
+    closeDialogue,
+    dialogueFor,
     reserveJob,
     markRunning,
     finishJob,

@@ -154,6 +154,16 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Sessions de dialogue simulé (Phase 7, leggendo-server/jobs.mjs) :
+    // l'état multi-tour (historique, statut, bilan) est écrit UNIQUEMENT par
+    // le VPS via l'Admin SDK — aucune écriture client, sinon un client
+    // modifié pourrait réécrire son historique ou rouvrir une session close.
+    // Lecture par le propriétaire seulement (champ `uid` posé à la création).
+    match /dialogueSessions/{sessionId} {
+      allow read: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow write: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

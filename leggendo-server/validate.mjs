@@ -54,6 +54,41 @@ export function parseCorrectionRequest(body) {
   return { errors, text }
 }
 
+// --- Dialogue simulé (Phase 7) ---
+// Ouverture de session : scénario connu + niveau CECR valide. `scenarioIds`
+// est un Set/Map des identifiants de dialogue.mjs (injecté pour rester
+// testable sans importer les prompts).
+export function parseDialogueRequest(body, scenarioIds) {
+  const errors = []
+  const scenario =
+    typeof body?.scenario === 'string' && scenarioIds.has(body.scenario) ? body.scenario : null
+  if (!scenario) errors.push('scénario inconnu')
+  const level = LEVELS.includes(body?.level) ? body.level : null
+  if (!level) errors.push('niveau CECR invalide')
+  return { errors, scenario, level }
+}
+
+// Réplique de l'élève : mêmes contrôles que la correction (type, bornes
+// anti-abus de tokens, au moins une lettre), plafond plus court — une
+// réplique de dialogue, pas une rédaction.
+export const DIALOGUE_TURN_MAX_CHARS = 500
+
+export function parseDialogueTurnRequest(body) {
+  const errors = []
+  const text = typeof body?.text === 'string' ? body.text.trim() : ''
+  if (!text) {
+    errors.push('texte vide')
+  } else {
+    if (text.length > DIALOGUE_TURN_MAX_CHARS) {
+      errors.push(`texte : ${DIALOGUE_TURN_MAX_CHARS} caractères maximum`)
+    }
+    if (!/\p{L}/u.test(text)) {
+      errors.push('texte : aucune lettre')
+    }
+  }
+  return { errors, text }
+}
+
 export function slugify(title) {
   const base = title
     .toLowerCase()

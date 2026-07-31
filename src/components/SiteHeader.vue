@@ -71,6 +71,7 @@ watch(dictMenuOpen, (open) => {
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
       <RouterLink v-if="premiumPlus" :to="{ name: 'write' }">✍️ Scrivi</RouterLink>
+      <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }">💬 Dialogo</RouterLink>
       <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">🗞 Notizie</RouterLink>
       <div ref="dictMenuEl" class="chrome-dropdown" :class="{ open: dictMenuOpen, active: dictActive }">
         <button

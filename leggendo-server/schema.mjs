@@ -145,6 +145,94 @@ export function validateCorrectionStructure(out) {
   return errors
 }
 
+// --- Dialogue simulé (Phase 7) ---
+// Schéma d'un tour : la réplique du personnage, 2-3 suggestions de réponse
+// (béquilles pour les niveaux A1-A2) et le jugement « scène terminée ».
+export const DIALOGUE_TURN_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['reply', 'suggested_replies', 'done'],
+  properties: {
+    reply: {
+      type: 'string',
+      description: 'Réplique du personnage, en italien, courte (2 à 3 phrases)',
+    },
+    suggested_replies: {
+      type: 'array',
+      items: { type: 'string' },
+      description:
+        "2 à 3 réponses possibles très courtes (en italien, adaptées au niveau demandé) que l'élève pourrait faire",
+    },
+    done: {
+      type: 'boolean',
+      description: 'true seulement quand la scène est naturellement terminée',
+    },
+  },
+}
+
+// Schéma du bilan de clôture : corrections légères des répliques de l'élève,
+// expliquées en français.
+export const DIALOGUE_FEEDBACK_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['feedback'],
+  properties: {
+    feedback: {
+      type: 'array',
+      description: "Points d'amélioration relevés dans les répliques de l'élève (5 maximum)",
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['original', 'better', 'explanation'],
+        properties: {
+          original: { type: 'string', description: "Ce que l'élève a écrit (passage exact)" },
+          better: { type: 'string', description: 'Formulation plus correcte ou plus naturelle' },
+          explanation: {
+            type: 'string',
+            description: 'Explication pédagogique en français simple (1 à 2 phrases)',
+          },
+        },
+      },
+    },
+  },
+}
+
+// Contrôles structurels bloquants sur la sortie d'un tour de dialogue (on ne
+// fait pas confiance au modèle, même contraint par le schéma).
+export function validateDialogueTurnStructure(out) {
+  const errors = []
+  if (typeof out?.reply !== 'string' || !out.reply.trim()) {
+    errors.push('reply manquant ou vide')
+  }
+  if (!Array.isArray(out?.suggested_replies)) {
+    errors.push('suggested_replies absent ou non-tableau')
+  } else if (out.suggested_replies.some((s) => typeof s !== 'string' || !s.trim())) {
+    errors.push('suggested_replies : entrée vide ou non-texte')
+  }
+  if (typeof out?.done !== 'boolean') {
+    errors.push('done absent ou non-booléen')
+  }
+  return errors
+}
+
+// Contrôles structurels bloquants sur le bilan de clôture. Un tableau vide
+// est valide (aucune erreur notable relevée).
+export function validateDialogueFeedbackStructure(out) {
+  const errors = []
+  if (!Array.isArray(out?.feedback)) {
+    errors.push('feedback absent ou non-tableau')
+  } else {
+    for (const [i, f] of out.feedback.entries()) {
+      for (const field of ['original', 'better', 'explanation']) {
+        if (typeof f?.[field] !== 'string' || !f[field].trim()) {
+          errors.push(`feedback ${i + 1} : ${field} manquant`)
+        }
+      }
+    }
+  }
+  return errors
+}
+
 // Schéma pour la proposition de sujet (orchestrateur).
 export const TOPIC_SCHEMA = {
   type: 'object',

@@ -15,6 +15,13 @@ export const MONTHLY_CREDITS = { premium_plus: 30, enseignant: 100 }
 export const CREDIT_COST = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
 // Correction d'une production écrite (Phase 5) : même barème que « corto ».
 export const CORRECTION_COST = 1
+// Dialogue simulé (Phase 7) : tarification à la SESSION, pas au tour — le
+// coût doit être prévisible pour l'utilisateur avant d'ouvrir la scène. Les
+// 2 crédits sont réservés à l'ouverture ; le plafond de tours utilisateur
+// (MAX_DIALOGUE_TURNS, appliqué côté serveur dans server.mjs) borne le nombre
+// d'appels LLM que ces 2 crédits peuvent déclencher.
+export const DIALOGUE_COST = 2
+export const MAX_DIALOGUE_TURNS = 12
 
 export const EMAIL_NOT_VERIFIED =
   'Vérifiez votre adresse e-mail pour lancer votre génération d’essai : un lien vous a été envoyé à l’inscription.'
@@ -109,6 +116,24 @@ export function correctionQuotaError(user, q) {
   if (q.monthlyUsed + CORRECTION_COST > limit) {
     const remaining = Math.max(0, limit - q.monthlyUsed)
     return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${CORRECTION_COST} requis pour une correction).`
+  }
+  return null
+}
+
+// Refus/autorisation d'un dialogue simulé (Phase 7). Même choix documenté
+// que la correction : réservé aux rôles à crédits (premium_plus/enseignant),
+// SANS essai gratuit — l'essai existant est le capital unique de génération,
+// et un compteur d'essai séparé rouvrirait l'abus par comptes jetables que
+// TODO_SECURITE.md a fermé. Aligné sur l'accès client (src/lib/access.js :
+// hasDialogueAccess = premium_plus/enseignant, comme la correction).
+export function dialogueQuotaError(user, q) {
+  if (!isCreditRole(user.role)) {
+    return 'Le dialogue simulé fait partie de la formule Premium IA — passez à Premium IA pour converser avec votre partenaire de dialogue.'
+  }
+  const limit = MONTHLY_CREDITS[user.role]
+  if (q.monthlyUsed + DIALOGUE_COST > limit) {
+    const remaining = Math.max(0, limit - q.monthlyUsed)
+    return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${DIALOGUE_COST} requis pour un dialogue).`
   }
   return null
 }

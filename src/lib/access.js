@@ -156,6 +156,16 @@ export async function hasCorrectionAccess() {
   return isPremiumPlus()
 }
 
+// Dialogue simulé (« Dialogo », leggendo-server POST /dialogue) : mêmes
+// rôles que la correction — premium_plus/enseignant, pas d'essai gratuit
+// (choix documenté dans leggendo-server/quota.mjs, dialogueQuotaError). Le
+// refus réel est rendu par le serveur ; ceci ne sert qu'à afficher ou
+// masquer l'accès côté client.
+export async function hasDialogueAccess() {
+  if (!firebaseReady) return true
+  return isPremiumPlus()
+}
+
 // Aperçu gratuit de Classici pour tout utilisateur connecté (README_TARIFICATION.md) :
 // deux fables courtes en entier, et le premier chapitre de quelques livres plus
 // longs, pour donner un aperçu avant l'abonnement Premium IA — règles

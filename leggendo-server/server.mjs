@@ -19,11 +19,30 @@ import { getAuth } from 'firebase-admin/auth'
 import { getAppCheck } from 'firebase-admin/app-check'
 import { generateUserText } from './generate.mjs'
 import { correctUserText } from './correct.mjs'
+import {
+  scenarioById,
+  openDialogue,
+  dialogueTurn,
+  dialogueFeedback,
+} from './dialogue.mjs'
 import { LEVELS } from './schema.mjs'
 import { GLM_MODEL } from './llm.mjs'
-import { QuotaExceededError, creditCost, CORRECTION_COST } from './quota.mjs'
+import {
+  QuotaExceededError,
+  creditCost,
+  CORRECTION_COST,
+  DIALOGUE_COST,
+  MAX_DIALOGUE_TURNS,
+} from './quota.mjs'
 import { createJobStore, ActiveJobError } from './jobs.mjs'
-import { buildTaxonomyIndex, parseRequest, parseCorrectionRequest, slugify } from './validate.mjs'
+import {
+  buildTaxonomyIndex,
+  parseRequest,
+  parseCorrectionRequest,
+  parseDialogueRequest,
+  parseDialogueTurnRequest,
+  slugify,
+} from './validate.mjs'
 import { createAppCheckGuard } from './appcheck.mjs'
 import { clientIp, createIpLimiter, createRateWindow } from './ratelimit.mjs'
 
@@ -212,6 +231,13 @@ function logGeneration({ user, size, level, jobId, status, startedAt, usage, err
 // réponse HTTP — callLLM garde ses propres timeout/retries ; au-delà, le
 // crédit est remboursé et le résultat éventuel du LLM est jeté (jamais livré).
 const CORRECT_TIMEOUT_MS = Number(process.env.CORRECT_TIMEOUT_MS || 90 * 1000)
+
+// --- Dialogue simulé (Phase 7), synchrone lui aussi ---
+// Un tour de dialogue est une réponse courte (2-3 phrases) ; le bilan de
+// clôture est à peine plus long qu'une correction. Même sémantique que
+// CORRECT_TIMEOUT_MS : borne la réponse HTTP, au-delà le résultat éventuel
+// du LLM est jeté.
+const DIALOGUE_TIMEOUT_MS = Number(process.env.DIALOGUE_TIMEOUT_MS || 90 * 1000)
 
 function withTimeout(promise, ms, message) {
   return new Promise((resolve, reject) => {
@@ -550,6 +576,325 @@ const server = http.createServer(async (req, res) => {
       await logCorrection('discarded', 'Correction clôturée et remboursée avant la fin.')
       send(502, {
         error: 'La correction a expiré, votre crédit n’a pas été consommé. Réessayez.',
+      })
+      return
+    }
+
+    // --- Dialogue simulé (Phase 7) ---
+    // Ouverture de session : réserve 2 crédits (tarification à la session,
+    // voir quota.mjs), crée dialogueSessions/{id} et renvoie directement la
+    // première réplique du personnage. Mêmes garde-fous que /correct (auth +
+    // App Check + rate-limit IP + CORS + timeout), synchrone (réponse courte).
+    if (req.method === 'POST' && url.pathname === '/leggendo/dialogue') {
+      const { user, error: authError } = await authenticate(req, 'dialogue')
+      if (authError) {
+        send(authError.status, { error: authError.message })
+        return
+      }
+
+      let body
+      try {
+        body = JSON.parse(await readBody(req))
+      } catch {
+        send(400, { error: 'JSON invalide.' })
+        return
+      }
+      const { errors, scenario: scenarioId, level } = parseDialogueRequest(body, scenarioById)
+      if (errors.length) {
+        send(400, { error: errors.join(' ; ') })
+        return
+      }
+      const scenario = scenarioById.get(scenarioId)
+
+      // Même plafond IP que la génération/correction, compté à l'OUVERTURE
+      // de session seulement (les tours suivants sont bornés par
+      // MAX_DIALOGUE_TURNS, pas par le compteur IP). trial: false — le
+      // dialogue est réservé aux rôles à crédits.
+      const ip = clientIp(req, { trustProxy: TRUST_PROXY })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: false })
+      if (ipError) {
+        console.warn(
+          `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (dialogue)`
+        )
+        send(429, { error: ipError })
+        return
+      }
+
+      const sessionId = crypto.randomUUID()
+      const sessionRef = jobStore.dialogueSessionsCollection.doc(sessionId)
+      try {
+        await jobStore.reserveDialogue(user, sessionRef, { scenario: scenarioId, level })
+      } catch (err) {
+        if (err instanceof QuotaExceededError) {
+          send(429, { error: err.message })
+          return
+        }
+        throw err
+      }
+      ipLimiter.record(ip, { uid: user.uid, trial: false })
+      console.log(
+        `[dialogue ${sessionId}] ${user.email || user.uid} (${user.role}) — ouverture ${scenarioId} ${level}`
+      )
+      const startedAt = Date.now()
+      const usage = []
+      const logOpen = (status, error) =>
+        logAiCall({
+          user,
+          kind: 'dialogue',
+          id: sessionId,
+          level,
+          creditsCost: DIALOGUE_COST,
+          status,
+          startedAt,
+          usage,
+          error,
+        })
+
+      let out
+      try {
+        out = await withTimeout(
+          openDialogue({ scenario, level, usage }),
+          DIALOGUE_TIMEOUT_MS,
+          'Ouverture du dialogue interrompue (délai maximal dépassé).'
+        )
+      } catch (err) {
+        // Échec avant le premier échange complet : les 2 crédits sont rendus
+        // (failDialogue, remboursement idempotent — voir jobs.mjs).
+        await jobStore
+          .failDialogue(sessionId, err.message)
+          .catch((e) => console.error(`[dialogue ${sessionId}] échec du remboursement :`, e))
+        console.error(`[dialogue ${sessionId}] échec à l'ouverture : ${err.message}`)
+        await logOpen('error', err.message)
+        send(502, {
+          error: 'Le dialogue n’a pas pu démarrer, vos crédits n’ont pas été consommés. Réessayez dans un instant.',
+        })
+        return
+      }
+
+      const turns = await jobStore.appendDialogueTurns(
+        sessionId,
+        [{ role: 'assistant', text: out.reply }],
+        { suggested_replies: out.suggested_replies }
+      )
+      if (!turns) {
+        // Session clôturée entre-temps (cas limite) : crédit déjà rendu ou
+        // session expirée — ne pas livrer la réplique.
+        console.warn(`[dialogue ${sessionId}] clôturé avant la première réplique — abandonné`)
+        await logOpen('discarded', 'Session clôturée avant la première réplique.')
+        send(502, { error: 'La session a expiré, réessayez.' })
+        return
+      }
+      await logOpen('done')
+      send(200, {
+        sessionId,
+        reply: out.reply,
+        suggested_replies: out.suggested_replies,
+        turnsLeft: MAX_DIALOGUE_TURNS,
+      })
+      return
+    }
+
+    const dialogueTurnMatch = url.pathname.match(/^\/leggendo\/dialogue\/([a-f0-9-]{36})\/turn$/)
+    if (req.method === 'POST' && dialogueTurnMatch) {
+      const { user, error: authError } = await authenticate(req, 'dialogue-turn')
+      if (authError) {
+        send(authError.status, { error: authError.message })
+        return
+      }
+      let body
+      try {
+        body = JSON.parse(await readBody(req))
+      } catch {
+        send(400, { error: 'JSON invalide.' })
+        return
+      }
+      const { errors, text } = parseDialogueTurnRequest(body)
+      if (errors.length) {
+        send(400, { error: errors.join(' ; ') })
+        return
+      }
+      const sessionId = dialogueTurnMatch[1]
+      // La session n'est remise qu'à son propriétaire (dialogueFor) — sinon
+      // comme si elle n'existait pas.
+      const session = await jobStore.dialogueFor(user.uid, sessionId)
+      if (!session) {
+        send(404, { error: 'Session inconnue ou expirée.' })
+        return
+      }
+      if (session.status !== 'active') {
+        send(409, { error: 'Cette session est terminée — ouvrez un nouveau dialogue.' })
+        return
+      }
+      const userTurns = (session.turns || []).filter((t) => t.role === 'user').length
+      if (userTurns >= MAX_DIALOGUE_TURNS) {
+        // Plafond côté serveur : les 2 crédits de la session ne peuvent pas
+        // déclencher plus de MAX_DIALOGUE_TURNS tours LLM.
+        send(409, {
+          error: 'Nombre maximal de tours atteint — terminez la session pour voir le bilan.',
+          limitReached: true,
+        })
+        return
+      }
+
+      const scenario = scenarioById.get(session.scenario)
+      if (!scenario) {
+        send(409, { error: 'Scénario retiré — ouvrez un nouveau dialogue.' })
+        return
+      }
+      const startedAt = Date.now()
+      const usage = []
+      const logTurn = (status, error) =>
+        logAiCall({
+          user,
+          kind: 'dialogue',
+          id: sessionId,
+          level: session.level,
+          creditsCost: 0, // la session a déjà été débitée à l'ouverture
+          status,
+          startedAt,
+          usage,
+          error,
+        })
+
+      let out
+      try {
+        out = await withTimeout(
+          dialogueTurn({ scenario, level: session.level, turns: session.turns || [], userText: text, usage }),
+          DIALOGUE_TIMEOUT_MS,
+          'Tour de dialogue interrompu (délai maximal dépassé).'
+        )
+      } catch (err) {
+        // Échec d'un tour en cours de session : la session reste active (pas
+        // de remboursement — l'ouverture a déjà été livrée), l'élève retente.
+        console.error(`[dialogue ${sessionId}] échec du tour : ${err.message}`)
+        await logTurn('error', err.message)
+        send(502, { error: 'La réponse a échoué, réessayez — votre session reste ouverte.' })
+        return
+      }
+
+      // Dernier tour autorisé : le personnage conclut, quoi qu'il en pense.
+      const done = out.done || userTurns + 1 >= MAX_DIALOGUE_TURNS
+      const turns = await jobStore.appendDialogueTurns(
+        sessionId,
+        [
+          { role: 'user', text },
+          { role: 'assistant', text: out.reply },
+        ],
+        { suggested_replies: out.suggested_replies }
+      )
+      if (!turns) {
+        console.warn(`[dialogue ${sessionId}] clôturé pendant le tour — réplique abandonnée`)
+        await logTurn('discarded', 'Session clôturée pendant le tour.')
+        send(409, { error: 'Cette session est terminée — ouvrez un nouveau dialogue.' })
+        return
+      }
+      await logTurn('done')
+      send(200, {
+        reply: out.reply,
+        suggested_replies: out.suggested_replies,
+        done,
+        turnsLeft: Math.max(0, MAX_DIALOGUE_TURNS - (userTurns + 1)),
+      })
+      return
+    }
+
+    // Clôture : un DERNIER appel LLM produit le bilan (corrections légères
+    // des répliques de l'élève, en français), puis la session passe en
+    // `closed`. Idempotent : re-clore une session déjà close renvoie le
+    // bilan enregistré (utile après un rechargement au mauvais moment).
+    const dialogueCloseMatch = url.pathname.match(/^\/leggendo\/dialogue\/([a-f0-9-]{36})\/close$/)
+    if (req.method === 'POST' && dialogueCloseMatch) {
+      const { user, error: authError } = await authenticate(req, 'dialogue-close')
+      if (authError) {
+        send(authError.status, { error: authError.message })
+        return
+      }
+      const sessionId = dialogueCloseMatch[1]
+      const session = await jobStore.dialogueFor(user.uid, sessionId)
+      if (!session) {
+        send(404, { error: 'Session inconnue ou expirée.' })
+        return
+      }
+      if (session.status === 'closed') {
+        send(200, { feedback: session.feedback || [] })
+        return
+      }
+      if (session.status !== 'active') {
+        send(409, { error: 'Cette session a échoué — ouvrez un nouveau dialogue.' })
+        return
+      }
+      const turns = session.turns || []
+      if (!turns.some((t) => t.role === 'user')) {
+        // Rien à évaluer : clôture sans appel LLM, bilan vide.
+        await jobStore.closeDialogue(sessionId, [])
+        send(200, { feedback: [] })
+        return
+      }
+
+      const scenario = scenarioById.get(session.scenario)
+      const startedAt = Date.now()
+      const usage = []
+      const logClose = (status, error) =>
+        logAiCall({
+          user,
+          kind: 'dialogue',
+          id: sessionId,
+          level: session.level,
+          creditsCost: 0,
+          status,
+          startedAt,
+          usage,
+          error,
+        })
+
+      let out
+      try {
+        out = await withTimeout(
+          dialogueFeedback({ scenario, level: session.level, turns, usage }),
+          DIALOGUE_TIMEOUT_MS,
+          'Bilan du dialogue interrompu (délai maximal dépassé).'
+        )
+      } catch (err) {
+        // La session reste active : l'élève peut redemander le bilan (pas de
+        // remboursement — les tours joués ont été livrés).
+        console.error(`[dialogue ${sessionId}] échec du bilan : ${err.message}`)
+        await logClose('error', err.message)
+        send(502, { error: 'Le bilan a échoué, réessayez — votre session reste ouverte.' })
+        return
+      }
+      await jobStore.closeDialogue(sessionId, out.feedback)
+      console.log(
+        `[dialogue ${sessionId}] clos (${turns.length} tours, ${out.feedback.length} point(s) de bilan)`
+      )
+      await logClose('done')
+      send(200, { feedback: out.feedback })
+      return
+    }
+
+    // Reprise après rechargement : historique complet + dernières
+    // suggestions + bilan éventuel. Propriétaire uniquement (dialogueFor).
+    const dialogueGetMatch = url.pathname.match(/^\/leggendo\/dialogue\/([a-f0-9-]{36})$/)
+    if (req.method === 'GET' && dialogueGetMatch) {
+      const { user, error: authError } = await authenticate(req, 'dialogue-get')
+      if (authError) {
+        send(authError.status, { error: authError.message })
+        return
+      }
+      const session = await jobStore.dialogueFor(user.uid, dialogueGetMatch[1])
+      if (!session) {
+        send(404, { error: 'Session inconnue ou expirée.' })
+        return
+      }
+      const userTurns = (session.turns || []).filter((t) => t.role === 'user').length
+      send(200, {
+        sessionId: dialogueGetMatch[1],
+        scenario: session.scenario,
+        level: session.level,
+        status: session.status,
+        turns: session.turns || [],
+        suggested_replies: session.suggested_replies || [],
+        feedback: session.feedback ?? null,
+        turnsLeft: Math.max(0, MAX_DIALOGUE_TURNS - userTurns),
       })
       return
     }

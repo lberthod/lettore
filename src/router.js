@@ -165,6 +165,21 @@ const router = createRouter({
       },
     },
     {
+      path: '/dialogo',
+      name: 'dialogue',
+      // Dialogue simulé (Phase 7, Premium IA) : même patron que /scrivi — la
+      // route exige une connexion ; le droit premium_plus/enseignant est
+      // tranché par le serveur (POST /leggendo/dialogue), la vue affiche une
+      // bannière de blocage aux autres formules.
+      component: () => import('./views/DialogueView.vue'),
+      meta: {
+        title: 'Dialogo — Leggendo',
+        description:
+          "Dialoguez en italien avec l'IA dans des scènes du quotidien (bar, médecin, gare…) : réponses à votre niveau et bilan corrigé — formule Premium IA.",
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/notizie',
       name: 'news',
       component: () => import('./views/NotizieView.vue'),
