@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import {
   progress,
   dueFavorites,
@@ -106,11 +106,22 @@ function typeLabel(type) {
   return TYPE_LABELS[type] || type || 'Errore'
 }
 
+const route = useRoute()
+
 function startReview() {
   queue.value = [
     ...dueFavorites().map((item) => ({ kind: 'word', item })),
     ...dueErrorCards().map((item) => ({ kind: 'error', item })),
   ]
+  // Arrivée depuis l'étape « review » d'une session composée
+  // (lib/percorso.js#composeSession) : elle a annoncé une durée basée sur
+  // REVIEW_STEP_CAP éléments, pas sur tout ce qui est dû — sans ce plafond,
+  // la promesse de durée de la session est rompue dès qu'on clique l'étape.
+  // Une visite directe de /words (pas de `limit`) révise tout ce qui est dû.
+  const limit = Number(route.query.limit)
+  if (Number.isFinite(limit) && limit > 0) {
+    queue.value = queue.value.slice(0, limit)
+  }
   if (!queue.value.length) return
   current.value = 0
   revealed.value = false

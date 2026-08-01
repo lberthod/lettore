@@ -14,7 +14,12 @@ import {
   recordSessionCompleted,
 } from '../progress.js'
 import { nextStep, composeSession, currentStepIndex } from '../lib/percorso.js'
-import { loadDailySession, saveDailySession, clearDailySession } from '../lib/dailySession.js'
+import {
+  loadDailySession,
+  saveDailySession,
+  clearDailySession,
+  loadYesterdaySessionTypes,
+} from '../lib/dailySession.js'
 import { missionsToday } from '../lib/missions.js'
 
 
@@ -97,12 +102,19 @@ const goalMinutes = computed(() => progress.learningPreferences.dailyMinutes)
 
 async function recomposeSession() {
   const uid = currentUser.value?.uid || null
+  const startTs = sessionStartTs.value || Date.now()
   session.value = composeSession(progress, {
     hasPremiumIA: premiumIA.value,
     texts: textsIndex.value,
-    now: sessionStartTs.value || Date.now(),
+    // L'heure réelle, pas minuit (sessionStartTs) : composeSession filtre les
+    // révisions dues par rapport à `now`, et minuit sous-estime tout ce qui
+    // devient dû plus tard dans la journée. sessionStartTs reste le repère du
+    // « jour » pour la mise en cache locale (saveDailySession) et le calcul
+    // de l'étape en cours (currentStepIndex), ce qui est correct.
+    now: Date.now(),
+    yesterdayTypes: loadYesterdaySessionTypes(startTs, uid),
   })
-  saveDailySession(session.value, sessionStartTs.value || Date.now(), uid)
+  saveDailySession(session.value, startTs, uid)
 }
 
 function setDailyGoal(minutes) {
@@ -172,7 +184,9 @@ onMounted(async () => {
     session.value = composeSession(progress, {
       hasPremiumIA: premiumIA.value,
       texts: textsIndex.value,
-      now: sessionStartTs.value,
+      // Voir le commentaire de recomposeSession() : l'heure réelle, pas minuit.
+      now: Date.now(),
+      yesterdayTypes: loadYesterdaySessionTypes(sessionStartTs.value, uid),
     })
     saveDailySession(session.value, sessionStartTs.value, uid)
   }

@@ -27,8 +27,11 @@ function localDay(ts) {
   return `${y}-${m}-${day}`
 }
 
-// { date, session } où `session` est la valeur renvoyée par composeSession —
-// ou `null` si rien n'est stocké ou que le stockage date d'un autre jour.
+// { date, session, prevDate, prevTypes } où `session` est la valeur renvoyée
+// par composeSession — ou `null` si rien n'est stocké ou que le stockage
+// date d'un autre jour. `prevDate`/`prevTypes` (voir plus bas) survivent au
+// changement de jour : c'est justement ce qui permet de les lire le
+// lendemain.
 export function loadDailySession(now = Date.now(), uid = null) {
   try {
     const raw = localStorage.getItem(keyFor(uid))
@@ -43,9 +46,49 @@ export function loadDailySession(now = Date.now(), uid = null) {
 
 export function saveDailySession(session, now = Date.now(), uid = null) {
   try {
-    localStorage.setItem(keyFor(uid), JSON.stringify({ date: localDay(now), session }))
+    const key = keyFor(uid)
+    const date = localDay(now)
+    let prevDate = null
+    let prevTypes = null
+    const raw = localStorage.getItem(key)
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      if (parsed && parsed.date === date) {
+        // Recomposition le même jour (ex. objectif changé) : on garde le
+        // souvenir de la veille déjà en place, on ne l'écrase pas avec la
+        // session du jour qui n'est pas encore terminée.
+        prevDate = parsed.prevDate || null
+        prevTypes = parsed.prevTypes || null
+      } else if (parsed && parsed.session) {
+        // Le stockage passe au jour suivant : la session qu'il contenait
+        // devient « celle d'hier », dont lib/percorso.js#composeSession se
+        // sert pour éviter de reproduire exactement la même composition deux
+        // jours de suite — y compris pour un utilisateur qui n'a rien
+        // terminé (la seule donnée alors disponible est la recommandation
+        // elle-même, pas le journal d'activité).
+        prevDate = parsed.date
+        prevTypes = (parsed.session.steps || []).map((s) => s.type)
+      }
+    }
+    localStorage.setItem(key, JSON.stringify({ date, session, prevDate, prevTypes }))
   } catch {
     // Stockage indisponible (navigation privée, plein) : pas de reprise, sans plus.
+  }
+}
+
+// Types d'étapes de la session RECOMMANDÉE hier (pas forcément terminée),
+// si le stockage local en garde le souvenir — `null` sinon (premier jour,
+// stockage vidé, ou plus d'un jour d'écart).
+export function loadYesterdaySessionTypes(now = Date.now(), uid = null) {
+  try {
+    const raw = localStorage.getItem(keyFor(uid))
+    if (!raw) return null
+    const parsed = JSON.parse(raw)
+    if (!parsed || !Array.isArray(parsed.prevTypes)) return null
+    const yesterday = localDay(now - 24 * 60 * 60 * 1000)
+    return parsed.prevDate === yesterday ? parsed.prevTypes : null
+  } catch {
+    return null
   }
 }
 

@@ -258,6 +258,17 @@ describe('composeSession — session quotidienne composée', () => {
     expect(session.steps[0]).toMatchObject({ type: 'review', count: REVIEW_STEP_CAP })
   })
 
+  it('l’étape review porte sa limite dans la query (régression WordsView non plafonné)', () => {
+    const progress = makeProgress({
+      favorites: Array.from({ length: 50 }, (_, i) => ({ word: `w${i}`, due: 0 })),
+    })
+    const session = composeSession(progress, { now: NOW })
+    expect(session.steps[0].to).toEqual({
+      name: 'words',
+      query: { limit: String(REVIEW_STEP_CAP) },
+    })
+  })
+
   it('pas de révision proposée quand rien n’est dû', () => {
     const progress = makeProgress()
     const session = composeSession(progress, { texts, now: NOW })
@@ -383,6 +394,33 @@ describe('composeSession — session quotidienne composée', () => {
     const today = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
     const todaySignature = today.steps.map((s) => s.type).sort()
     expect(todaySignature).not.toEqual(yesterdaySignature)
+  })
+
+  it('évite la répétition même pour un utilisateur inactif hier, via yesterdayTypes (régression)', () => {
+    // Sans activité réelle hier (l'utilisateur a ignoré la recommandation),
+    // yesterdaySignature() dérivée du seul journal est vide et ne peut rien
+    // détecter — c'est justement le cas que `yesterdayTypes` (fourni par
+    // l'appelant depuis lib/dailySession.js#loadYesterdaySessionTypes, qui se
+    // souvient de la session RECOMMANDÉE, pas de ce qui a été fait) doit
+    // couvrir.
+    const prefs = {
+      goal: 'general',
+      dailyMinutes: 10,
+      reminderEnabled: false,
+      preferredActivities: [],
+      avoidedActivities: [],
+    }
+    const progress = makeProgress({ learningPreferences: prefs, activity: [] })
+    const y = composeSession(progress, { hasPremiumIA: true, texts, now: NOW - DAY })
+    const yesterdayTypes = y.steps.map((s) => s.type)
+
+    // Sans l'override : même profil totalement inactif, composition identique.
+    const withoutOverride = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    expect(withoutOverride.steps.map((s) => s.type).sort()).toEqual([...yesterdayTypes].sort())
+
+    // Avec l'override : la composition change.
+    const withOverride = composeSession(progress, { hasPremiumIA: true, texts, now: NOW, yesterdayTypes })
+    expect(withOverride.steps.map((s) => s.type).sort()).not.toEqual([...yesterdayTypes].sort())
   })
 
   it('activité évitée : proposée seulement avec modération, jamais éliminée définitivement', () => {

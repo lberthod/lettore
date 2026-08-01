@@ -232,8 +232,12 @@ function modeOfType(type) {
 
 // Types d'étape déjà pratiqués la veille (jour calendaire local) — pour
 // éviter de reproduire exactement la même composition de session deux jours
-// de suite (règle 6.3). Dérivé du journal d'activité existant : pas besoin
-// d'un nouveau champ de progression.
+// de suite (règle 6.3). Dérivé du journal d'activité RÉELLEMENT effectuée :
+// ne détecte donc rien pour un utilisateur qui n'a rien terminé hier, même
+// si la session recommandée était identique — c'est le repli utilisé quand
+// `composeSession` ne reçoit pas `yesterdayTypes` (voir plus bas, alimenté
+// par lib/dailySession.js#loadYesterdaySessionTypes côté appelant, qui lui
+// se souvient de la session RECOMMANDÉE, pas seulement de ce qui a été fait).
 function yesterdaySignature(progress, now) {
   const today = startOfDay(now)
   const yesterdayStart = today - DAY
@@ -250,7 +254,7 @@ function yesterdaySignature(progress, now) {
 // contient au plus 3 étapes, chacune { type, estimatedMinutes, ...détails }.
 export function composeSession(
   progress,
-  { hasPremiumIA = false, texts = [], now = Date.now(), duration } = {}
+  { hasPremiumIA = false, texts = [], now = Date.now(), duration, yesterdayTypes } = {}
 ) {
   const prefs = progress.learningPreferences || {}
   const totalDuration = duration || prefs.dailyMinutes || 10
@@ -258,7 +262,9 @@ export function composeSession(
   const preferred = new Set(prefs.preferredActivities || [])
   const goal = prefs.goal || 'general'
   const allowedByGoal = GOAL_ACTIVITIES[goal] || GOAL_ACTIVITIES.general
-  const yesterday = yesterdaySignature(progress, now)
+  const yesterday = Array.isArray(yesterdayTypes)
+    ? new Set(yesterdayTypes)
+    : yesterdaySignature(progress, now)
 
   const steps = []
   const usedTypes = new Set()
@@ -281,7 +287,11 @@ export function composeSession(
       type: 'review',
       estimatedMinutes: minutes,
       count,
-      to: { name: 'words' },
+      // `limit` dans la query : WordsView plafonne sa file de révision à ce
+      // nombre quand on y arrive depuis cette étape, pour que la durée
+      // annoncée par la session composée reste vraie (sinon l'étape promet
+      // ~4 min pour 10 éléments mais ouvre une file de 50 éléments dus).
+      to: { name: 'words', query: { limit: String(count) } },
     })
     usedTypes.add('review')
     remaining -= minutes

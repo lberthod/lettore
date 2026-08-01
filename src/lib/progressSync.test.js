@@ -128,7 +128,7 @@ describe('initProgressSync — envoi de la fusion initiale', () => {
 
     await login('streak-remote-gagne')
 
-    const expected = { current: 4, longest: 9, lastActiveDate: '2026-07-30' }
+    const expected = { current: 4, longest: 9, lastActiveDate: '2026-07-30', restDaysUsed: [] }
     expect(progress.streak).toEqual(expected)
     expect(pushedProgress(setDoc.mock.calls[0]).streak).toEqual(expected)
   })
@@ -152,7 +152,26 @@ describe('initProgressSync — envoi de la fusion initiale', () => {
       current: 3,
       longest: 7,
       lastActiveDate: '2026-07-31',
+      restDaysUsed: [],
     })
+  })
+
+  it('fusionne restDaysUsed (§11.1) au lieu de le faire disparaître (régression)', async () => {
+    localStorage.setItem(
+      'lettore.progress.streak-restdays',
+      JSON.stringify({
+        streak: { current: 1, longest: 1, lastActiveDate: '2026-07-31', restDaysUsed: [100, 200] },
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        streak: { current: 1, longest: 1, lastActiveDate: '2026-07-31', restDaysUsed: [200, 300] },
+      })
+    )
+
+    await login('streak-restdays')
+
+    expect(progress.streak.restDaysUsed).toEqual([100, 200, 300])
   })
 
   it('tolère un document distant sans streak (profil pré-migration)', async () => {
@@ -170,6 +189,7 @@ describe('initProgressSync — envoi de la fusion initiale', () => {
       current: 1,
       longest: 2,
       lastActiveDate: '2026-07-31',
+      restDaysUsed: [],
     })
   })
 
@@ -276,6 +296,109 @@ describe('initProgressSync — fusion du parcours (activity, errorCards, skills)
     expect(merged.box).toBe(3)
     expect(merged.due).toBe(500)
     expect(pushedProgress(setDoc.mock.calls[0]).errorCards).toHaveLength(3)
+  })
+
+  it("errorCards : ne perd pas le contexte/l'historique enrichis d'un appareil (régression)", async () => {
+    localStorage.setItem(
+      'lettore.progress.cartes-contexte',
+      JSON.stringify({
+        errorCards: [
+          {
+            id: 'aa',
+            original: 'x',
+            correction: 'y',
+            box: 0,
+            due: 0,
+            addedTs: 1,
+            // Re-signalée sans contexte sur cet appareil.
+            contextBefore: '',
+            contextAfter: '',
+            contrastExample: '',
+            history: [1],
+          },
+        ],
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        errorCards: [
+          {
+            id: 'aa',
+            original: 'x',
+            correction: 'y',
+            box: 0,
+            due: 0,
+            addedTs: 1,
+            // Enregistrée avec contexte sur un autre appareil.
+            contextBefore: 'Ieri sera.',
+            contextAfter: 'Poi siamo tornati a casa.',
+            contrastExample: 'Sono andato / Ci sono andato.',
+            history: [2],
+          },
+        ],
+      })
+    )
+
+    await login('cartes-contexte')
+
+    const merged = progress.errorCards.find((c) => c.id === 'aa')
+    expect(merged.contextBefore).toBe('Ieri sera.')
+    expect(merged.contextAfter).toBe('Poi siamo tornati a casa.')
+    expect(merged.contrastExample).toBe('Sono andato / Ci sono andato.')
+    // history fusionné (union), pas remplacé par le seul local.
+    expect(merged.history).toEqual([1, 2])
+  })
+
+  it('sessionLog : union par date, terminée sur un appareil = terminée pour de bon', async () => {
+    localStorage.setItem(
+      'lettore.progress.sessionlog-fusion',
+      JSON.stringify({
+        sessionLog: [
+          { date: '2026-07-30', startedTs: 100, completed: false, completedTs: null },
+          { date: '2026-07-31', startedTs: 500, completed: false, completedTs: null },
+        ],
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        sessionLog: [
+          { date: '2026-07-30', startedTs: 150, completed: true, completedTs: 300 },
+        ],
+      })
+    )
+
+    await login('sessionlog-fusion')
+
+    expect(progress.sessionLog).toHaveLength(2)
+    const day30 = progress.sessionLog.find((e) => e.date === '2026-07-30')
+    expect(day30).toEqual({ date: '2026-07-30', startedTs: 100, completed: true, completedTs: 300 })
+  })
+
+  it('learningPreferences : reprend le distant seulement pour les champs restés à leur valeur par défaut en local', async () => {
+    localStorage.setItem(
+      'lettore.progress.prefs-fusion',
+      JSON.stringify({
+        // dailyMinutes choisi localement (non défaut) ; goal jamais touché (défaut 'general').
+        learningPreferences: { goal: 'general', dailyMinutes: 20, reminderEnabled: false, preferredActivities: [], avoidedActivities: [] },
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        learningPreferences: { goal: 'travel', dailyMinutes: 5, reminderEnabled: false, preferredActivities: ['dialogo'], avoidedActivities: [] },
+      })
+    )
+
+    await login('prefs-fusion')
+
+    // goal et preferredActivities repris du distant (local encore par défaut) ;
+    // dailyMinutes reste le choix local explicite (20), pas écrasé par le distant.
+    expect(progress.learningPreferences).toEqual({
+      goal: 'travel',
+      dailyMinutes: 20,
+      reminderEnabled: false,
+      preferredActivities: ['dialogo'],
+      avoidedActivities: [],
+    })
   })
 
   it('skills : par compétence, le côté au lastTs le plus récent gagne', async () => {

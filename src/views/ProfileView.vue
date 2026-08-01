@@ -18,7 +18,17 @@ import {
 } from '../lib/account.js'
 import { progress, dueFavorites, dueErrorCards, measuredLevel } from '../progress.js'
 import { weekSummary, daysAgoLabel } from '../lib/percorso.js'
-import { confidenceLevel, skillTrend } from '../lib/metrics.js'
+import {
+  confidenceLevel,
+  skillTrend,
+  retryRate,
+  retrySuccessRate,
+  recallWithoutHelpRate,
+  transferRate,
+  autonomousListeningRate,
+  sessionCompletionRate,
+  recurringErrorStats,
+} from '../lib/metrics.js'
 
 const router = useRouter()
 const error = ref('')
@@ -114,6 +124,62 @@ const skillRows = computed(() => {
     }
   })
 })
+
+// --- Indicateurs pédagogiques (§15.1) ---
+// Calculés par lib/metrics.js à partir du journal d'activité déjà tenu à
+// jour — jusqu'ici jamais affichés nulle part (audit pédagogique). `null`
+// veut dire « pas encore assez de données », affiché comme tel plutôt que
+// masqué en silence : cohérent avec le principe §10.2 de ne rien affirmer
+// sans échantillon suffisant.
+const pctOrNull = (v) => (v == null ? null : pct(v))
+const recurring = computed(() => recurringErrorStats(progress))
+const completion = computed(() => sessionCompletionRate(progress))
+const metricRows = computed(() => [
+  {
+    id: 'retry',
+    label: 'Seconde tentative',
+    value: pctOrNull(retryRate(progress)),
+    hint: 'part des corrections avec erreurs suivies d’une reformulation',
+  },
+  {
+    id: 'retrySuccess',
+    label: 'Réussite de reprise',
+    value: pctOrNull(retrySuccessRate(progress)),
+    hint: 'part des reprises qui aboutissent à la bonne formulation',
+  },
+  {
+    id: 'recall',
+    label: 'Rappel sans aide',
+    value: pctOrNull(recallWithoutHelpRate(progress)),
+    hint: 'productions écrites terminées sans aide progressive',
+  },
+  {
+    id: 'transfer',
+    label: 'Transfert',
+    value: pctOrNull(transferRate(progress)),
+    hint: 'mots revus en révision retrouvés dans une production',
+  },
+  {
+    id: 'listening',
+    label: 'Écoute autonome',
+    value: pctOrNull(autonomousListeningRate(progress)),
+    hint: 'quiz d’écoute réussis sans avoir affiché la transcription',
+  },
+  {
+    id: 'completion',
+    label: 'Sessions terminées',
+    value: completion.value ? pct(completion.value.rate) : null,
+    hint: completion.value
+      ? `${completion.value.completed}/${completion.value.started} sessions démarrées ces 30 derniers jours`
+      : 'sessions composées démarrées puis terminées (30 derniers jours)',
+  },
+  {
+    id: 'recurring',
+    label: 'Erreurs récurrentes',
+    value: recurring.value.totalCards ? `${recurring.value.withRecurrence}/${recurring.value.totalCards}` : null,
+    hint: 'cartes d’erreur revenues plus d’une fois — la règle n’est pas encore consolidée',
+  },
+])
 
 async function doLogout() {
   error.value = ''
@@ -298,6 +364,19 @@ async function confirmDelete() {
           <RouterLink v-if="row.nextAction" class="skill-next" :to="row.nextAction.to">
             {{ row.nextAction.label }} →
           </RouterLink>
+        </div>
+      </div>
+
+      <h3 class="skills-title">Comment tu progresses</h3>
+      <p class="skills-hint">
+        Ces indicateurs mesurent ce que tu réutilises, pas seulement ce que tu fais — « pas encore de
+        données » veut dire qu'il n'y a pas encore assez d'activité pour un chiffre honnête.
+      </p>
+      <div class="metrics">
+        <div v-for="m in metricRows" :key="m.id" class="metric" :class="{ empty: m.value == null }">
+          <span class="metric-label">{{ m.label }}</span>
+          <span class="metric-value">{{ m.value ?? 'Pas encore de données' }}</span>
+          <span class="metric-hint">{{ m.hint }}</span>
         </div>
       </div>
 
@@ -539,6 +618,51 @@ async function confirmDelete() {
   font-size: 0.78rem;
   color: #b0692e;
   align-self: flex-start;
+}
+
+/* --- Indicateurs pédagogiques --- */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.7rem;
+  margin: 0 0 1.6rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.metric.empty {
+  opacity: 0.65;
+}
+
+.metric-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6f4722;
+}
+
+.metric-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b0692e;
+}
+
+.metric.empty .metric-value {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6b6156;
+}
+
+.metric-hint {
+  font-size: 0.72rem;
+  color: rgba(44, 38, 32, 0.55);
 }
 
 .danger-zone {

@@ -37,6 +37,17 @@ export const ACTIVITY_CAP = 500
 // les mieux maîtrisées (boîte la plus haute) et les plus anciennes.
 export const ERROR_CARDS_CAP = 200
 
+// Préférences neutres pour un profil qui n'en a pas encore choisi — exportées
+// pour que lib/progressSync.js puisse distinguer « valeur par défaut, jamais
+// touchée » d'un vrai choix utilisateur lors de la fusion multi-appareils.
+export const DEFAULT_LEARNING_PREFERENCES = {
+  goal: 'general',
+  dailyMinutes: 10,
+  reminderEnabled: false,
+  preferredActivities: [],
+  avoidedActivities: [],
+}
+
 function normalize(saved) {
   return {
     readTexts: saved.readTexts || [], // ids des textes terminés (quiz réussi)
@@ -71,9 +82,9 @@ function normalize(saved) {
     // (voir lib/percorso.js) reçoivent des préférences par défaut neutres —
     // aucune activité évitée ni préférée, objectif général, 10 min/jour.
     learningPreferences: {
-      goal: saved.learningPreferences?.goal || 'general',
-      dailyMinutes: saved.learningPreferences?.dailyMinutes || 10,
-      reminderEnabled: saved.learningPreferences?.reminderEnabled || false,
+      goal: saved.learningPreferences?.goal || DEFAULT_LEARNING_PREFERENCES.goal,
+      dailyMinutes: saved.learningPreferences?.dailyMinutes || DEFAULT_LEARNING_PREFERENCES.dailyMinutes,
+      reminderEnabled: saved.learningPreferences?.reminderEnabled || DEFAULT_LEARNING_PREFERENCES.reminderEnabled,
       preferredActivities: Array.isArray(saved.learningPreferences?.preferredActivities)
         ? saved.learningPreferences.preferredActivities
         : [],
