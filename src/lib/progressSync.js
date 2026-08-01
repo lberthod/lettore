@@ -42,16 +42,19 @@ function mergeStreak(local, remote) {
   }
 }
 
-// Journal d'activité multi-appareils : union dédupliquée par timestamp (deux
-// événements réels ont quasi toujours des ts distincts ; un même événement vu
-// des deux côtés a exactement le même ts), triée chronologiquement puis
+// Journal d'activité multi-appareils : union dédupliquée par eventId quand il
+// est présent (identifiant stable, insensible aux collisions de timestamp
+// entre deux appareils), avec repli sur le timestamp pour les anciens
+// événements enregistrés avant son introduction. Triée chronologiquement puis
 // replafonnée aux ACTIVITY_CAP plus récents — même plafond qu'en local.
 function mergeActivity(local, remote) {
-  const byTs = new Map()
+  const byKey = new Map()
   for (const a of [...remote, ...local]) {
-    if (a && typeof a.ts === 'number') byTs.set(a.ts, a)
+    if (!a || typeof a.ts !== 'number') continue
+    const key = a.eventId || `ts:${a.ts}`
+    byKey.set(key, a)
   }
-  return [...byTs.values()]
+  return [...byKey.values()]
     .sort((a, b) => a.ts - b.ts)
     .slice(-ACTIVITY_CAP)
 }

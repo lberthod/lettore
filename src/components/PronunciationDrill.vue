@@ -22,6 +22,12 @@ const props = defineProps({
 
 const supported = isSupported()
 
+// Score en-dessous duquel une seconde répétition est proposée (section 5.2).
+// Jamais bloquant : sans reconnaissance vocale disponible/fonctionnelle,
+// `supported` est déjà false (le composant ne rend rien) ou une erreur
+// s'affiche sans empêcher un nouvel essai via le bouton « Répéter » habituel.
+const RETRY_THRESHOLD = 80
+
 const speaking = ref(false)
 const listening = ref(false)
 const result = ref(null) // { score, words } de comparePhrases
@@ -170,6 +176,12 @@ onBeforeUnmount(() => {
       >
         {{ addedToReview ? '✓ Ajouté à vos révisions' : '📌 Ajouter aux révisions' }}
       </button>
+      <p v-if="result.score < RETRY_THRESHOLD" class="retry-prompt">
+        On refait un essai ?
+        <button type="button" class="link-btn" :disabled="listening" @click="repeat">
+          🎙️ Réessayer
+        </button>
+      </p>
     </div>
   </div>
 </template>
@@ -295,5 +307,28 @@ onBeforeUnmount(() => {
   color: #4a7c59;
   border-color: rgba(74, 124, 89, 0.4);
   background: rgba(74, 124, 89, 0.08);
+}
+
+.retry-prompt {
+  margin: 0.6rem 0 0;
+  font-size: 0.88rem;
+  color: #6b6156;
+}
+
+.retry-prompt .link-btn {
+  margin-left: 0.3rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #b0692e;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+}
+
+.retry-prompt .link-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 </style>

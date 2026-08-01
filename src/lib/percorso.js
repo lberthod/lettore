@@ -167,6 +167,247 @@ export function nextStep(progress, { hasPremiumIA = false, texts = [], now = Dat
   }
 }
 
+// ---------------------------------------------------------------------------
+// Session quotidienne composée (voir IntegartioNOptimsaitonPedago.MD §6)
+// ---------------------------------------------------------------------------
+//
+// `nextStep` reste la recommandation « une seule action » historique (utilisée
+// tant que le catalogue/les préférences ne sont pas chargés, ou comme repli).
+// `composeSession` l'étend : à partir des mêmes signaux (révisions dues,
+// dernière pratique par compétence, scores récents, niveau mesuré, objectif
+// personnel, durée choisie, Premium IA), elle construit jusqu'à 3 étapes qui
+// tiennent dans le temps disponible, au lieu d'une étape unique.
+
+// Étape « révision » : jamais plus de ce nombre d'éléments d'un coup, même
+// si beaucoup plus sont en retard — une session reste finissable.
+export const REVIEW_STEP_CAP = 10
+
+// Compétence journal ↔ type d'étape de session composée (voir logActivity :
+// 'review' n'est pas un skill à part, il couvre les révisions de mots ET de
+// cartes d'erreur, journalisées sous 'vocabolario' par WordsView).
+export const STEP_SKILL = {
+  review: 'vocabolario',
+  lettura: 'lettura',
+  ascolto: 'ascolto',
+  write: 'scrittura',
+  dialogo: 'dialogo',
+  pronuncia: 'pronuncia',
+}
+
+// Étapes qui coûtent un appel IA (correction, dialogue) : jamais deux dans
+// une session courte.
+export const COSTLY_AI_TYPES = ['write', 'dialogo']
+const SHORT_SESSION_MAX = 10
+
+export const RECEPTION_TYPES = ['lettura', 'ascolto']
+export const PRODUCTION_TYPES = ['write', 'dialogo', 'pronuncia']
+
+// Estimation de durée par type d'étape — grossière mais transparente, en
+// minutes. `count` module la durée de révision (davantage d'éléments = plus
+// long, jamais moins d'une minute).
+function estimateMinutes(type, { count } = {}) {
+  if (type === 'review') return Math.max(1, Math.ceil((count || 5) / 2.5))
+  if (type === 'lettura' || type === 'ascolto') return 5
+  if (type === 'dialogo') return 4
+  return 3 // write, pronuncia
+}
+
+// Ordre de pertinence des types d'étape selon l'objectif personnel — sert à
+// ne pas recommander une compétence juste parce que son compteur est bas si
+// elle n'appartient pas à l'objectif (règle 6.3). 'review' n'y figure pas :
+// les révisions dues restent prioritaires quel que soit l'objectif.
+const GOAL_ACTIVITIES = {
+  conversation: ['dialogo', 'pronuncia', 'ascolto', 'lettura'],
+  travel: ['ascolto', 'dialogo', 'lettura', 'pronuncia'],
+  exam: ['write', 'lettura', 'ascolto', 'pronuncia'],
+  reading: ['lettura', 'ascolto', 'pronuncia'],
+  general: ['lettura', 'ascolto', 'write', 'dialogo', 'pronuncia'],
+}
+
+function modeOfType(type) {
+  if (RECEPTION_TYPES.includes(type)) return 'reception'
+  if (PRODUCTION_TYPES.includes(type)) return 'production'
+  return null
+}
+
+// Types d'étape déjà pratiqués la veille (jour calendaire local) — pour
+// éviter de reproduire exactement la même composition de session deux jours
+// de suite (règle 6.3). Dérivé du journal d'activité existant : pas besoin
+// d'un nouveau champ de progression.
+function yesterdaySignature(progress, now) {
+  const today = startOfDay(now)
+  const yesterdayStart = today - DAY
+  const types = new Set()
+  for (const a of progress.activity || []) {
+    if (a.ts < yesterdayStart || a.ts >= today) continue
+    const type = Object.keys(STEP_SKILL).find((t) => STEP_SKILL[t] === a.skill)
+    if (type) types.add(type)
+  }
+  return types
+}
+
+// Construit une session composée : { duration, objective, steps }. `steps`
+// contient au plus 3 étapes, chacune { type, estimatedMinutes, ...détails }.
+export function composeSession(
+  progress,
+  { hasPremiumIA = false, texts = [], now = Date.now(), duration } = {}
+) {
+  const prefs = progress.learningPreferences || {}
+  const totalDuration = duration || prefs.dailyMinutes || 10
+  const avoided = new Set(prefs.avoidedActivities || [])
+  const preferred = new Set(prefs.preferredActivities || [])
+  const goal = prefs.goal || 'general'
+  const allowedByGoal = GOAL_ACTIVITIES[goal] || GOAL_ACTIVITIES.general
+  const yesterday = yesterdaySignature(progress, now)
+
+  const steps = []
+  const usedTypes = new Set()
+  let costlyAiCount = 0
+  const maxCostlyAi = totalDuration <= SHORT_SESSION_MAX ? 1 : 2
+
+  // 1. Révisions très en retard, en premier mais plafonnées.
+  const due = dueReviewCount(progress, now)
+  if (due > 0) {
+    const count = Math.min(due, REVIEW_STEP_CAP)
+    steps.push({
+      type: 'review',
+      estimatedMinutes: estimateMinutes('review', { count }),
+      count,
+      to: { name: 'words' },
+    })
+    usedTypes.add('review')
+  }
+
+  // Candidats restants, dans l'ordre de pertinence de l'objectif — filtrés
+  // par disponibilité (Premium IA) et non déjà utilisés.
+  function candidateTypes() {
+    return allowedByGoal.filter((type) => {
+      if (usedTypes.has(type)) return false
+      if (COSTLY_AI_TYPES.includes(type) && !hasPremiumIA) return false
+      if (COSTLY_AI_TYPES.includes(type) && costlyAiCount >= maxCostlyAi) return false
+      return true
+    })
+  }
+
+  // Score : compétence jamais/peu pratiquée récemment = priorité, avec un
+  // bonus discret pour les activités préférées et une pénalité pour les
+  // activités évitées (proposées avec modération, jamais supprimées).
+  function scoreType(type) {
+    const skill = STEP_SKILL[type]
+    const lastTs = progress.skills?.[skill]?.lastTs || 0
+    let score = now - lastTs // plus c'est ancien, plus le score est haut
+    if (preferred.has(type)) score += 3 * DAY
+    if (avoided.has(type)) score -= 5 * DAY
+    return score
+  }
+
+  function pickNext({ preferMode } = {}) {
+    let pool = candidateTypes()
+    if (!pool.length) return null
+    if (preferMode) {
+      const sameMode = pool.filter((t) => modeOfType(t) === preferMode)
+      if (sameMode.length) pool = sameMode
+    }
+    pool = [...pool].sort((a, b) => scoreType(b) - scoreType(a))
+    return pool[0]
+  }
+
+  const suggestion = recommendText(progress, texts)
+
+  function buildStep(type) {
+    if (type === 'lettura' || type === 'ascolto') {
+      const to = suggestion
+        ? { name: 'reader', params: { id: suggestion.id }, query: type === 'ascolto' ? { mode: 'ascolto' } : undefined }
+        : { name: 'library' }
+      return { type, estimatedMinutes: estimateMinutes(type), textId: suggestion?.id || null, to }
+    }
+    if (type === 'write') {
+      return { type, estimatedMinutes: estimateMinutes(type), promptId: null, to: { name: 'write' } }
+    }
+    if (type === 'dialogo') {
+      return { type, estimatedMinutes: estimateMinutes(type), to: { name: 'dialogue' } }
+    }
+    if (type === 'pronuncia') {
+      // Pas de route dédiée : la répétition guidée (PronunciationDrill) vit
+      // dans le lecteur, phrase par phrase — on renvoie donc vers un texte,
+      // comme pour la lecture.
+      const to = suggestion ? { name: 'reader', params: { id: suggestion.id } } : { name: 'library' }
+      return { type, estimatedMinutes: estimateMinutes(type), textId: suggestion?.id || null, to }
+    }
+    return { type, estimatedMinutes: estimateMinutes(type) }
+  }
+
+  // 2. Deux étapes de plus au maximum (3 au total), en alternant réception
+  // et production quand la durée le permet.
+  while (steps.length < 3) {
+    const lastMode = steps.length ? modeOfType(steps[steps.length - 1].type) : null
+    const wantMode = lastMode === 'reception' ? 'production' : lastMode === 'production' ? 'reception' : null
+    let type = pickNext({ preferMode: wantMode })
+    if (!type && wantMode) type = pickNext({})
+    if (!type) break
+    if (COSTLY_AI_TYPES.includes(type)) costlyAiCount += 1
+    usedTypes.add(type)
+    steps.push(buildStep(type))
+  }
+
+  // Règle 6.3 : ne pas reproduire exactement la même composition qu'hier.
+  // Si la signature des types coïncide, on remplace la dernière étape (la
+  // moins prioritaire) par le candidat suivant disponible, s'il y en a un.
+  if (steps.length > 1) {
+    const signature = new Set(steps.map((s) => s.type))
+    const sameAsYesterday =
+      signature.size === yesterday.size && [...signature].every((t) => yesterday.has(t))
+    if (sameAsYesterday) {
+      const lastType = steps[steps.length - 1].type
+      usedTypes.delete(lastType)
+      if (COSTLY_AI_TYPES.includes(lastType)) costlyAiCount -= 1
+      const alt = pickNext({})
+      if (alt) {
+        if (COSTLY_AI_TYPES.includes(alt)) costlyAiCount += 1
+        steps[steps.length - 1] = buildStep(alt)
+      } else {
+        usedTypes.add(lastType)
+        if (COSTLY_AI_TYPES.includes(lastType)) costlyAiCount += 1
+      }
+    }
+  }
+
+  return {
+    duration: totalDuration,
+    objective: sessionObjective(goal, steps),
+    steps,
+  }
+}
+
+const GOAL_OBJECTIVES = {
+  conversation: 'Parler avec plus d’aisance',
+  travel: 'Comprendre et réutiliser le vocabulaire du voyage',
+  exam: "Consolider l'écrit en vue d'un examen",
+  reading: 'Élargir la compréhension de lecture',
+  general: 'Progresser un peu partout, sans se disperser',
+}
+
+function sessionObjective(goal, steps) {
+  if (!steps.length) return 'Rien à faire de plus aujourd’hui — tout est à jour'
+  return GOAL_OBJECTIVES[goal] || GOAL_OBJECTIVES.general
+}
+
+// Étape en cours d'une session composée : la première dont la compétence
+// correspondante n'a pas encore été journalisée depuis `sinceTs` (le début
+// de la journée locale, en pratique — voir lib/dailySession.js). Dérivé du
+// journal d'activité existant, pas d'un compteur de progression séparé à
+// maintenir : terminer l'étape ailleurs dans l'app (lecture, écriture…)
+// suffit à faire avancer la session en revenant sur « Il tuo percorso ».
+export function currentStepIndex(session, progress, sinceTs = 0) {
+  const steps = session?.steps || []
+  for (let i = 0; i < steps.length; i++) {
+    const skill = STEP_SKILL[steps[i].type]
+    const done = (progress.activity || []).some((a) => a.ts >= sinceTs && a.skill === skill)
+    if (!done) return i
+  }
+  return steps.length
+}
+
 // Compteurs d'activité des 7 derniers jours, par compétence — pour les
 // petites jauges hebdomadaires du profil.
 export const SKILLS = ['lettura', 'ascolto', 'vocabolario', 'scrittura', 'dialogo', 'pronuncia']

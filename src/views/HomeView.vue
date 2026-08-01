@@ -1,12 +1,21 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 import { isLoggedIn, isPremiumPlus } from '../lib/access.js'
 import { currentUser } from '../lib/auth.js'
-import { progress } from '../progress.js'
-import { nextStep } from '../lib/percorso.js'
+import {
+  progress,
+  setLearningPreferences,
+  canUseRestDay,
+  useRestDay,
+  recordSessionStarted,
+  recordSessionCompleted,
+} from '../progress.js'
+import { nextStep, composeSession, currentStepIndex } from '../lib/percorso.js'
+import { loadDailySession, saveDailySession, clearDailySession } from '../lib/dailySession.js'
+import { missionsToday } from '../lib/missions.js'
 
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
@@ -40,10 +49,11 @@ function lyr(depth) {
   }
 }
 
-// --- Il tuo percorso : l'unique action recommandée pour un utilisateur
-// connecté (src/lib/percorso.js). L'index des textes (127 kB) et le rôle
-// Premium IA sont chargés à la demande après le montage : la recommandation
-// s'affine quand ils arrivent, sans alourdir le bundle d'entrée.
+// --- Il tuo percorso : la session quotidienne composée pour un utilisateur
+// connecté (src/lib/percorso.js#composeSession). L'index des textes (127 kB)
+// et le rôle Premium IA sont chargés à la demande après le montage — le
+// repli `step` (une seule action, règles historiques de `nextStep`)
+// s'affiche instantanément pendant ce court chargement.
 const loggedIn = computed(() => isLoggedIn())
 const textsIndex = ref([])
 const premiumIA = ref(false)
@@ -51,14 +61,121 @@ const step = computed(() =>
   nextStep(progress, { hasPremiumIA: premiumIA.value, texts: textsIndex.value })
 )
 
+// Session composée du jour : reprise localement si l'utilisateur revient au
+// milieu (lib/dailySession.js), sinon générée une fois texts/Premium IA
+// connus puis persistée pour le reste de la journée (règle 6.5).
+const session = ref(null)
+const sessionStartTs = ref(0)
+const activeIndex = computed(() =>
+  session.value ? currentStepIndex(session.value, progress, sessionStartTs.value) : 0
+)
+const sessionDone = computed(
+  () => !!session.value && activeIndex.value >= session.value.steps.length
+)
+
+// Achèvement de session (§15.1) : une entrée par jour dans progress.sessionLog
+// dès qu'une session composée est disponible, complétée quand toutes les
+// étapes sont faites — voir progress.js#recordSessionStarted/Completed et
+// lib/metrics.js#sessionCompletionRate.
+watch(session, (s) => {
+  if (s && s.steps.length) recordSessionStarted(sessionStartTs.value || Date.now())
+})
+watch(sessionDone, (done) => {
+  if (done) recordSessionCompleted()
+})
+
+function startOfToday(now = Date.now()) {
+  const d = new Date(now)
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime()
+}
+
+// --- Objectif quotidien flexible (§11.1) : quelques durées courantes,
+// appliquées immédiatement (la session du jour est recomposée avec la
+// nouvelle durée plutôt que d'attendre demain).
+const GOAL_OPTIONS = [5, 10, 15, 20, 30]
+const goalMinutes = computed(() => progress.learningPreferences.dailyMinutes)
+
+async function recomposeSession() {
+  const uid = currentUser.value?.uid || null
+  session.value = composeSession(progress, {
+    hasPremiumIA: premiumIA.value,
+    texts: textsIndex.value,
+    now: sessionStartTs.value || Date.now(),
+  })
+  saveDailySession(session.value, sessionStartTs.value || Date.now(), uid)
+}
+
+function setDailyGoal(minutes) {
+  if (minutes === goalMinutes.value) return
+  setLearningPreferences({ dailyMinutes: minutes })
+  const uid = currentUser.value?.uid || null
+  clearDailySession(uid)
+  recomposeSession()
+}
+
+// --- Jour de repos (§11.1) : ne casse pas la série, ne rattrape pas non
+// plus plusieurs jours d'inactivité — voir progress.js#canUseRestDay.
+const restDayAvailable = computed(() => loggedIn.value && canUseRestDay())
+const restDayMessage = ref('')
+function takeRestDay() {
+  if (useRestDay()) {
+    restDayMessage.value = 'Jour de repos pris — ta série est préservée, reviens quand tu veux.'
+  }
+}
+
+// --- Missions courtes du jour (§11.2), dérivées du journal d'activité.
+const missions = computed(() => (loggedIn.value ? missionsToday(progress) : []))
+
+const STEP_LABELS = {
+  review: 'Réviser',
+  lettura: 'Lire',
+  ascolto: 'Écouter',
+  write: 'Écrire',
+  dialogo: 'Dialoguer',
+  pronuncia: 'Prononcer',
+}
+const STEP_CTA = {
+  review: 'Réviser',
+  lettura: 'Lire',
+  ascolto: 'Écouter',
+  write: 'Écrire',
+  dialogo: 'Dialoguer',
+  pronuncia: "S'entraîner",
+}
+const STEP_ICONS = {
+  review: '🔁',
+  lettura: '📖',
+  ascolto: '🎧',
+  write: '✍️',
+  dialogo: '💬',
+  pronuncia: '🗣️',
+}
+
 // Plein écran : on verrouille le défilement de la page
 onMounted(async () => {
   document.body.style.overflow = 'hidden'
   if (!loggedIn.value) return
-  import('../texts/index.json').then((m) => {
+  const textsPromise = import('../texts/index.json').then((m) => {
     textsIndex.value = m.default
   })
   premiumIA.value = currentUser.value ? await isPremiumPlus() : false
+  await textsPromise
+
+  sessionStartTs.value = startOfToday()
+  const uid = currentUser.value?.uid || null
+  // Reprend une session interrompue localement avant d'en générer une
+  // nouvelle : revenir sur l'accueil ne recompose jamais la journée.
+  const resumed = loadDailySession(sessionStartTs.value, uid)
+  if (resumed) {
+    session.value = resumed
+  } else {
+    session.value = composeSession(progress, {
+      hasPremiumIA: premiumIA.value,
+      texts: textsIndex.value,
+      now: sessionStartTs.value,
+    })
+    saveDailySession(session.value, sessionStartTs.value, uid)
+  }
 })
 onUnmounted(() => {
   document.body.style.overflow = ''
@@ -191,6 +308,7 @@ onUnmounted(() => {
         <div v-if="loggedIn" class="percorso">
           <p class="percorso-eyebrow">
             Il tuo percorso
+            <span v-if="session" class="percorso-duration">· {{ session.duration }} min</span>
             <span
               v-if="progress.streak.current > 0"
               class="percorso-streak"
@@ -199,9 +317,81 @@ onUnmounted(() => {
               🔥 {{ progress.streak.current }}
             </span>
           </p>
-          <h2 class="percorso-title">{{ step.title }}</h2>
-          <p class="percorso-reason">{{ step.reason }}</p>
-          <RouterLink class="btn-hero" :to="step.to">{{ step.cta }} →</RouterLink>
+
+          <!-- Session composée (jusqu'à 3 étapes) une fois texts/Premium IA
+               connus et la session du jour générée ou reprise. -->
+          <template v-if="session">
+            <h2 class="percorso-title">{{ session.objective }}</h2>
+
+            <ol class="percorso-steps">
+              <li
+                v-for="(s, i) in session.steps"
+                :key="i"
+                class="percorso-step"
+                :class="{ 'is-current': i === activeIndex, 'is-done': i < activeIndex }"
+              >
+                <RouterLink :to="s.to" class="percorso-step-link">
+                  <span class="percorso-step-icon" aria-hidden="true">
+                    {{ i < activeIndex ? '✓' : STEP_ICONS[s.type] }}
+                  </span>
+                  <span class="percorso-step-label">{{ STEP_LABELS[s.type] || s.type }}</span>
+                  <span class="percorso-step-minutes">{{ s.estimatedMinutes }} min</span>
+                </RouterLink>
+              </li>
+            </ol>
+
+            <p v-if="sessionDone" class="percorso-reason">
+              Session du jour terminée — bravo ! Reviens demain pour la suite.
+            </p>
+            <RouterLink
+              v-else
+              class="btn-hero"
+              :to="session.steps[activeIndex].to"
+            >
+              {{ STEP_CTA[session.steps[activeIndex].type] || 'Continuer' }} →
+            </RouterLink>
+          </template>
+
+          <!-- Repli instantané le temps que la session se compose (texts et
+               rôle Premium IA chargés à la demande, voir <script>). -->
+          <template v-else>
+            <h2 class="percorso-title">{{ step.title }}</h2>
+            <p class="percorso-reason">{{ step.reason }}</p>
+            <RouterLink class="btn-hero" :to="step.to">{{ step.cta }} →</RouterLink>
+          </template>
+
+          <!-- Objectif quotidien flexible (§11.1) -->
+          <div class="percorso-goal">
+            <span class="percorso-goal-label">Objectif du jour :</span>
+            <button
+              v-for="m in GOAL_OPTIONS"
+              :key="m"
+              type="button"
+              class="goal-btn"
+              :class="{ active: goalMinutes === m }"
+              @click="setDailyGoal(m)"
+            >
+              {{ m }} min
+            </button>
+          </div>
+
+          <!-- Missions courtes du jour (§11.2) : pas de points, pas de
+               classement — simple statut fait/pas fait, sans conséquence si
+               une mission n'est pas faite. -->
+          <ul v-if="missions.length" class="missions">
+            <li v-for="m in missions" :key="m.id" class="mission" :class="{ done: m.done }">
+              <span class="mission-check" aria-hidden="true">{{ m.done ? '✓' : '○' }}</span>
+              {{ m.label }}
+            </li>
+          </ul>
+
+          <!-- Jour de repos (§11.1) : ne casse pas la série. -->
+          <p v-if="restDayAvailable" class="rest-day">
+            <button type="button" class="link-btn" @click="takeRestDay">
+              Prendre un jour de repos aujourd'hui
+            </button>
+          </p>
+          <p v-if="restDayMessage" class="rest-day-message">{{ restDayMessage }}</p>
         </div>
 
         <!-- Visiteur : héros inchangé -->
@@ -548,6 +738,74 @@ onUnmounted(() => {
   cursor: default;
 }
 
+.percorso-duration {
+  font-weight: 500;
+  letter-spacing: 0;
+  color: rgba(138, 90, 43, 0.75);
+  text-transform: none;
+}
+
+.percorso-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  margin: 0.2rem 0 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.percorso-step-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(176, 105, 46, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  color: rgba(44, 38, 32, 0.82);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.percorso-step-link:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(176, 105, 46, 0.4);
+}
+
+.percorso-step-icon {
+  font-size: 1rem;
+  width: 1.3em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.percorso-step-label {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+}
+
+.percorso-step-minutes {
+  font-size: 0.78rem;
+  color: rgba(44, 38, 32, 0.55);
+}
+
+.percorso-step.is-current .percorso-step-link {
+  background: rgba(176, 105, 46, 0.16);
+  border-color: rgba(176, 105, 46, 0.55);
+  box-shadow: 0 2px 10px rgba(111, 71, 34, 0.1);
+}
+
+.percorso-step.is-done .percorso-step-link {
+  opacity: 0.6;
+}
+
+.percorso-step.is-done .percorso-step-label {
+  text-decoration: line-through;
+}
+
 .percorso-title {
   margin: 0;
   font-size: 1.35rem;
@@ -560,6 +818,83 @@ onUnmounted(() => {
   font-size: 0.92rem;
   line-height: 1.5;
   color: rgba(44, 38, 32, 0.72);
+}
+
+.percorso-goal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+}
+
+.percorso-goal-label {
+  color: rgba(44, 38, 32, 0.6);
+}
+
+.goal-btn {
+  padding: 0.15rem 0.55rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  color: #6f4722;
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.goal-btn.active {
+  background: #b0692e;
+  border-color: #b0692e;
+  color: #fff;
+  font-weight: 600;
+}
+
+.missions {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mission {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: rgba(44, 38, 32, 0.72);
+}
+
+.mission.done {
+  color: #3d7a3d;
+}
+
+.mission-check {
+  font-size: 0.9rem;
+}
+
+.rest-day {
+  margin: 0.7rem 0 0;
+}
+
+.rest-day .link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #b0692e;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.rest-day-message {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: #3d7a3d;
 }
 
 .sub {

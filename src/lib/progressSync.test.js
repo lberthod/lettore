@@ -205,7 +205,7 @@ describe('initProgressSync — fusion du parcours (activity, errorCards, skills)
     await flush()
   })
 
-  it('activity : union dédupliquée par ts, triée, et poussée vers Firestore', async () => {
+  it('activity : union dédupliquée par ts (anciens événements sans eventId), triée, et poussée vers Firestore', async () => {
     const shared = { skill: 'lettura', ts: 1000 }
     localStorage.setItem(
       'lettore.progress.activite-fusion',
@@ -221,6 +221,33 @@ describe('initProgressSync — fusion du parcours (activity, errorCards, skills)
 
     expect(progress.activity.map((a) => a.ts)).toEqual([1000, 2000, 3000])
     expect(pushedProgress(setDoc.mock.calls[0]).activity).toHaveLength(3)
+  })
+
+  it('activity : union dédupliquée par eventId même en cas de ts identique sur deux appareils', async () => {
+    localStorage.setItem(
+      'lettore.progress.activite-eventid',
+      JSON.stringify({
+        activity: [
+          { skill: 'lettura', ts: 1000, eventId: 'shared-id' },
+          { skill: 'scrittura', ts: 1000, eventId: 'local-only' },
+        ],
+      })
+    )
+    getDoc.mockResolvedValue(
+      remoteSnap({
+        activity: [
+          { skill: 'lettura', ts: 1000, eventId: 'shared-id' },
+          { skill: 'dialogo', ts: 1000, eventId: 'remote-only' },
+        ],
+      })
+    )
+
+    await login('activite-eventid')
+
+    expect(progress.activity).toHaveLength(3)
+    expect(new Set(progress.activity.map((a) => a.eventId))).toEqual(
+      new Set(['shared-id', 'local-only', 'remote-only'])
+    )
   })
 
   it('errorCards : union par id ; en conflit, boîte la plus haute et due le plus lointain', async () => {

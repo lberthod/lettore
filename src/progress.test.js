@@ -16,6 +16,10 @@ import {
   ACTIVITY_CAP,
   ERROR_CARDS_CAP,
   MAX_BOX,
+  canUseRestDay,
+  useRestDay,
+  recordSessionStarted,
+  recordSessionCompleted,
 } from './progress.js'
 
 // progress.js est un singleton (état de module) : ces tests s'enchaînent
@@ -95,6 +99,7 @@ describe('progress.js — isolation de la progression par compte', () => {
       current: 0,
       longest: 0,
       lastActiveDate: null,
+      restDaysUsed: [],
     })
     expect(progress.readTexts).toEqual(['vieux-texte'])
   })
@@ -132,6 +137,7 @@ describe('touchStreak — série quotidienne', () => {
       current: 1,
       longest: 1,
       lastActiveDate: '2026-07-01',
+      restDaysUsed: [],
     })
 
     // Deuxième activité le même jour : no-op.
@@ -146,6 +152,7 @@ describe('touchStreak — série quotidienne', () => {
       current: 2,
       longest: 2,
       lastActiveDate: '2026-07-02',
+      restDaysUsed: [],
     })
 
     // Saut d'un jour : retombe à 1, le record est conservé.
@@ -169,7 +176,84 @@ describe('touchStreak — série quotidienne', () => {
       current: 2,
       longest: 2,
       lastActiveDate: '2026-08-01',
+      restDaysUsed: [],
     })
+  })
+})
+
+describe('jour de repos — préserve la série sans fausse progression (§11.1)', () => {
+  beforeEach(async () => {
+    localStorage.clear()
+    currentUser.value = { uid: `repos-${Math.random()}` }
+    await nextTick()
+  })
+
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+
+  it('indisponible sans série en cours', () => {
+    expect(canUseRestDay()).toBe(false)
+    expect(useRestDay()).toBe(false)
+  })
+
+  it("préserve la série sans l'incrémenter, puis permet de continuer le lendemain", () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 12, 0))
+    touchStreak()
+    expect(progress.streak.current).toBe(1)
+
+    // Le 2 juillet, aucune activité prévue : jour de repos pris CE jour-là,
+    // avant qu'il ne devienne « hier » et ne casse la série.
+    vi.setSystemTime(new Date(2026, 6, 2, 20, 0))
+    expect(canUseRestDay()).toBe(true)
+    expect(useRestDay()).toBe(true)
+    expect(progress.streak.current).toBe(1) // pas de fausse progression
+    expect(progress.streak.lastActiveDate).toBe('2026-07-02')
+
+    // Le lendemain, une vraie activité continue la série normalement.
+    vi.setSystemTime(new Date(2026, 6, 3, 9, 0))
+    touchStreak()
+    expect(progress.streak.current).toBe(2)
+  })
+
+  it('ne rattrape pas plusieurs jours manqués d’affilée', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 12, 0))
+    touchStreak()
+    // Deux jours d'écart (2 et 3 juillet manqués) : trop tard pour un jour de repos.
+    vi.setSystemTime(new Date(2026, 6, 4, 9, 0))
+    expect(canUseRestDay()).toBe(false)
+  })
+
+  it('déjà actif aujourd’hui : le jour de repos ne sert à rien', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 12, 0))
+    touchStreak()
+    expect(canUseRestDay()).toBe(false)
+  })
+})
+
+describe('sessions composées — journal d’achèvement (§15.1)', () => {
+  beforeEach(async () => {
+    localStorage.clear()
+    currentUser.value = { uid: `sessions-${Math.random()}` }
+    await nextTick()
+  })
+
+  it('une entrée par jour, idempotente au démarrage', () => {
+    const now = new Date(2026, 6, 10, 9, 0).getTime()
+    recordSessionStarted(now)
+    recordSessionStarted(now + 1000)
+    expect(progress.sessionLog).toHaveLength(1)
+    expect(progress.sessionLog[0]).toMatchObject({ date: '2026-07-10', completed: false })
+  })
+
+  it('recordSessionCompleted marque l’entrée du jour comme terminée', () => {
+    const now = new Date(2026, 6, 10, 9, 0).getTime()
+    recordSessionStarted(now)
+    recordSessionCompleted(now + 1000)
+    expect(progress.sessionLog[0].completed).toBe(true)
   })
 })
 
@@ -250,6 +334,20 @@ describe('logActivity — journal et agrégats par compétence', () => {
     expect(logActivity({ score: 3 })).toBeNull()
     expect(progress.activity).toHaveLength(0)
   })
+
+  it('chaque événement reçoit un eventId stable et unique, et sessionId=null par défaut', () => {
+    const a = logActivity({ skill: 'ascolto' })
+    const b = logActivity({ skill: 'ascolto' })
+    expect(typeof a.eventId).toBe('string')
+    expect(a.eventId).not.toBe('')
+    expect(a.eventId).not.toBe(b.eventId)
+    expect(a.sessionId).toBeNull()
+  })
+
+  it('sessionId explicite dans entry est conservé (session composée, Phase 2)', () => {
+    const event = logActivity({ skill: 'scrittura', sessionId: 'sess-1' })
+    expect(event.sessionId).toBe('sess-1')
+  })
 })
 
 describe('errorCards — cartes d’erreur en répétition espacée', () => {
@@ -318,10 +416,75 @@ describe('errorCards — cartes d’erreur en répétition espacée', () => {
     expect(progress.errorCards.find((c) => c.id === fragile.id)).toBeDefined()
   })
 
+  it('addErrorCard note chaque occurrence dans `history` (§15.1 — erreurs récurrentes)', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 9, 0))
+    const first = addErrorCard(sample)
+    expect(first.history).toEqual([Date.now()])
+
+    vi.setSystemTime(new Date(2026, 6, 9, 9, 0))
+    const again = addErrorCard(sample)
+    expect(progress.errorCards).toHaveLength(1)
+    expect(again.history).toEqual([
+      new Date(2026, 6, 1, 9, 0).getTime(),
+      new Date(2026, 6, 9, 9, 0).getTime(),
+    ])
+  })
+
   it('removeErrorCard retire la carte', () => {
     const { id } = addErrorCard(sample)
     removeErrorCard(id)
     expect(progress.errorCards).toHaveLength(0)
+  })
+
+  it('addErrorCard accepte les champs contextuels facultatifs (§8.1), vides par défaut', () => {
+    const card = addErrorCard(sample)
+    expect(card).toMatchObject({ sourceId: null, contextBefore: '', contextAfter: '', contrastExample: '' })
+
+    const withContext = addErrorCard({
+      ...sample,
+      original: 'un autre texte',
+      sourceId: 'texte-42',
+      contextBefore: 'Ieri sera.',
+      contextAfter: 'Poi siamo tornati a casa.',
+      contrastExample: 'Sono andato / Ci sono andato.',
+    })
+    expect(withContext).toMatchObject({
+      sourceId: 'texte-42',
+      contextBefore: 'Ieri sera.',
+      contextAfter: 'Poi siamo tornati a casa.',
+      contrastExample: 'Sono andato / Ci sono andato.',
+    })
+  })
+
+  it('reviewErrorCard — Leitner à trois réponses (§8.3) : oublié, difficile, su', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 10, 12, 0))
+    const { id } = addErrorCard(sample)
+    const card = progress.errorCards[0]
+
+    // « su » : boîte suivante, comme l'ancien `true`.
+    reviewErrorCard(id, 'su')
+    expect(card.box).toBe(1)
+    expect(card.due).toBe(Date.now() + 24 * 60 * 60 * 1000)
+
+    // « difficile » : même boîte, échéance courte (pas de régression de boîte).
+    reviewErrorCard(id, 'difficile')
+    expect(card.box).toBe(1)
+    expect(card.due).toBe(Date.now() + 4 * 60 * 60 * 1000)
+
+    // « oublié » : retour à la boîte 0, comme l'ancien `false`.
+    reviewErrorCard(id, 'oublie')
+    expect(card.box).toBe(0)
+    expect(card.due).toBe(Date.now())
+  })
+
+  it('reviewErrorCard reste rétrocompatible avec les booléens (true/false)', () => {
+    const { id } = addErrorCard(sample)
+    reviewErrorCard(id, true)
+    expect(progress.errorCards[0].box).toBe(1)
+    reviewErrorCard(id, false)
+    expect(progress.errorCards[0].box).toBe(0)
   })
 })
 
@@ -377,5 +540,24 @@ describe('normalize — migration des anciens profils', () => {
     // Les champs déjà migrés ne sont pas perdus au passage.
     expect(progress.streak.current).toBe(3)
     expect(progress.favorites[0]).toMatchObject({ word: 'casa', box: 0, due: 0 })
+  })
+
+  it('un journal d’activité enregistré avant eventId/sessionId reste utilisable tel quel', async () => {
+    localStorage.setItem(
+      'lettore.progress.vieux-journal',
+      JSON.stringify({
+        activity: [{ skill: 'lettura', score: 4, total: 5, ts: 1000 }],
+      })
+    )
+    currentUser.value = { uid: 'vieux-journal' }
+    await nextTick()
+    expect(progress.activity).toEqual([
+      { skill: 'lettura', score: 4, total: 5, ts: 1000 },
+    ])
+    // Un nouvel événement loggé sur ce même profil reçoit bien un eventId,
+    // sans que les anciens événements en soient affectés.
+    const fresh = logActivity({ skill: 'scrittura' })
+    expect(typeof fresh.eventId).toBe('string')
+    expect(progress.activity[0].eventId).toBeUndefined()
   })
 })

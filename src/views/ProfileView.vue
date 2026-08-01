@@ -18,6 +18,7 @@ import {
 } from '../lib/account.js'
 import { progress, dueFavorites, dueErrorCards, measuredLevel } from '../progress.js'
 import { weekSummary, daysAgoLabel } from '../lib/percorso.js'
+import { confidenceLevel, skillTrend } from '../lib/metrics.js'
 
 const router = useRouter()
 const error = ref('')
@@ -34,6 +35,20 @@ const week = computed(() => weekSummary(progress))
 // statistique propre à la compétence. Tout vient des agrégats progress.skills
 // — un profil neuf affiche simplement « Pas encore pratiqué ».
 const pct = (v) => `${Math.round(v * 100)} %`
+
+// Prochaine action utile par compétence (§10.3) : une suggestion simple et
+// toujours disponible, indépendante de la mesure elle-même.
+const NEXT_ACTION = {
+  lettura: { label: 'Lire un texte', to: { name: 'library' } },
+  ascolto: { label: 'Écouter un texte', to: { name: 'library' } },
+  vocabolario: { label: 'Réviser', to: { name: 'words' } },
+  scrittura: { label: 'Écrire quelques phrases', to: { name: 'write' } },
+  dialogo: { label: 'Faire un dialogue', to: { name: 'dialogue' } },
+  pronuncia: { label: "S'entraîner à l'oral", to: { name: 'library' } },
+}
+
+const TREND_LABEL = { up: 'en hausse', down: 'en baisse', stable: 'stable', null: null }
+const CONFIDENCE_LABEL = { faible: 'confiance faible', moyen: 'confiance moyenne', suffisant: 'confiance suffisante' }
 
 const skillRows = computed(() => {
   const s = progress.skills
@@ -83,12 +98,21 @@ const skillRows = computed(() => {
       stat: s.pronuncia?.avgScore != null ? `Score moyen : ${pct(s.pronuncia.avgScore)}` : null,
     },
   ]
-  return rows.map((r) => ({
-    ...r,
-    count: s[r.id]?.count || 0,
-    last: s[r.id]?.lastTs ? daysAgoLabel(s[r.id].lastTs) : null,
-    week: week.value[r.id] || 0,
-  }))
+  return rows.map((r) => {
+    const count = s[r.id]?.count || 0
+    const trend = skillTrend(progress, r.id)
+    return {
+      ...r,
+      count,
+      last: s[r.id]?.lastTs ? daysAgoLabel(s[r.id].lastTs) : null,
+      week: week.value[r.id] || 0,
+      // §10.3 : indicateur de confiance fondé sur la taille d'échantillon —
+      // jamais une affirmation de niveau à partir de quelques productions.
+      confidence: confidenceLevel(count),
+      trendDirection: trend.direction,
+      nextAction: NEXT_ACTION[r.id],
+    }
+  })
 })
 
 async function doLogout() {
@@ -263,8 +287,17 @@ async function confirmDelete() {
               {{ row.count }} activité{{ row.count > 1 ? 's' : '' }} · dernière : {{ row.last }}
             </p>
             <p v-if="row.stat" class="skill-stat">{{ row.stat }}</p>
+            <p class="skill-confidence">
+              {{ CONFIDENCE_LABEL[row.confidence] }}
+              <span v-if="TREND_LABEL[row.trendDirection]" class="skill-trend">
+                · tendance sur 4 semaines : {{ TREND_LABEL[row.trendDirection] }}
+              </span>
+            </p>
           </template>
           <p v-else class="skill-meta">Pas encore pratiqué</p>
+          <RouterLink v-if="row.nextAction" class="skill-next" :to="row.nextAction.to">
+            {{ row.nextAction.label }} →
+          </RouterLink>
         </div>
       </div>
 
@@ -489,6 +522,23 @@ async function confirmDelete() {
   font-size: 0.82rem;
   color: #b0692e;
   font-weight: 600;
+}
+
+.skill-confidence {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(44, 38, 32, 0.55);
+}
+
+.skill-trend {
+  color: rgba(44, 38, 32, 0.55);
+}
+
+.skill-next {
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  color: #b0692e;
+  align-self: flex-start;
 }
 
 .danger-zone {

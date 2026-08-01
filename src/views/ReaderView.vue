@@ -29,6 +29,8 @@ import ContentPaywall from '../components/ContentPaywall.vue'
 import { trackTextOpened, trackReadingCompleted, trackWordTranslated } from '../lib/analytics.js'
 import PronunciationDrill from '../components/PronunciationDrill.vue'
 import { isSupported as speechRecognitionSupported } from '../lib/speechRecognition.js'
+import { isPremiumPlus } from '../lib/access.js'
+import { nextAfterQuiz } from '../lib/continuity.js'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -167,21 +169,61 @@ function openQuiz() {
   quizOpen.value = true
 }
 
+// Premium IA : conditionne les suites recommandées qui pointent vers
+// l'écriture ou le dialogue (§9.1), comme HomeView/lib/percorso.js.
+const premiumIA = ref(false)
+isPremiumPlus().then((v) => {
+  premiumIA.value = v
+})
+
+// Mots distincts traduits pendant CETTE lecture (pas persistés : ils servent
+// uniquement à choisir la suite recommandée après le quiz, §9.1 — « score
+// correct avec nombreuses traductions » / « vocabulaire nouveau »).
+const translatedWords = ref([])
+
+// Suite recommandée après le quiz (§9.1) : UNE seule action, jamais une
+// liste — voir lib/continuity.js. `null` tant que le quiz n'est pas terminé.
+const afterQuiz = ref(null)
+
 function onQuizCompleted(score) {
   // Chaque quiz terminé est journalisé (score compris), réussi ou non : le
   // parcours a besoin des tentatives, pas seulement des succès. touchStreak
   // est appelé automatiquement par logActivity.
   const mode = ascoltoRequested.value ? 'ascolto' : 'lettura'
+  const total = currentText.value.questions.length
   logActivity({
     skill: mode,
     textId: props.id,
     score,
-    total: currentText.value.questions.length,
+    total,
     mode,
+    // Écoute autonome / dépendance aux aides (§15.1) : la transcription
+    // était-elle déjà affichée à la fin du quiz, et combien de mots/phrases
+    // ont été traduits pendant cette lecture/écoute.
+    textRevealed: mode === 'ascolto' ? textRevealed.value : null,
+    translatedWordsCount: translatedWords.value.length,
   })
-  if (score >= currentText.value.questions.length - 1) {
+  if (score >= total - 1) {
     markRead(props.id)
     trackReadingCompleted({ textId: props.id, level: textMeta.value?.level })
+  }
+  afterQuiz.value = nextAfterQuiz({
+    score,
+    total,
+    mode,
+    genre: textMeta.value?.genre || null,
+    translatedWords: translatedWords.value,
+    textId: props.id,
+    hasPremiumIA: premiumIA.value,
+  })
+}
+
+// L'action « réécouter avec le texte » (score bas en mode écoute) agit sur
+// place (affiche le texte flouté) plutôt que de naviguer.
+function applyAfterQuizAction() {
+  if (afterQuiz.value?.action === 'reveal') {
+    textRevealed.value = true
+    quizOpen.value = false
   }
 }
 
@@ -397,6 +439,9 @@ function showTranslation(original, event, isSentence) {
 
   if (!isSentence && result) {
     trackWordTranslated({ textId: props.id, level: textMeta.value?.level })
+    if (!translatedWords.value.includes(original)) {
+      translatedWords.value = [...translatedWords.value, original]
+    }
   }
   if (ttsEnabled.value) speak(original)
 }
@@ -507,6 +552,8 @@ watch(
     drillKey.value = null
     // Changement de texte : le mode écoute repart texte masqué
     textRevealed.value = false
+    translatedWords.value = []
+    afterQuiz.value = null
     loadText(id)
   },
   { immediate: true }
@@ -842,6 +889,27 @@ onBeforeUnmount(() => {
               :questions="currentText.questions"
               @completed="onQuizCompleted"
             />
+            <!-- Continuité (§9.1) : UNE seule suite recommandée, jamais une
+                 liste d'options équivalentes (§3.1). -->
+            <div v-if="afterQuiz" class="after-quiz">
+              <p class="after-quiz-reason">{{ afterQuiz.reason }}</p>
+              <button
+                v-if="afterQuiz.action === 'reveal'"
+                type="button"
+                class="after-quiz-cta"
+                @click="applyAfterQuizAction"
+              >
+                {{ afterQuiz.cta }} →
+              </button>
+              <RouterLink
+                v-else-if="afterQuiz.to"
+                class="after-quiz-cta"
+                :to="afterQuiz.to"
+                @click="quizOpen = false"
+              >
+                {{ afterQuiz.cta }} →
+              </RouterLink>
+            </div>
           </div>
         </div>
       </Transition>
@@ -1358,6 +1426,30 @@ article p:first-letter {
   border-radius: 18px;
   background: rgba(255, 253, 248, 0.97);
   box-shadow: 0 24px 60px rgba(44, 38, 32, 0.35);
+}
+
+.after-quiz {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(176, 105, 46, 0.25);
+}
+
+.after-quiz-reason {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  color: #4a4238;
+}
+
+.after-quiz-cta {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: #b0692e;
+  color: #faf6f0;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .quiz-close {

@@ -53,13 +53,43 @@ function normalize(saved) {
       current: saved.streak?.current || 0,
       longest: saved.streak?.longest || 0,
       lastActiveDate: saved.streak?.lastActiveDate || null,
+      // Migration : jours de repos (§11.1) — horodatages des jours de repos
+      // déjà utilisés, pour espacer ce « joker » dans le temps.
+      restDaysUsed: Array.isArray(saved.streak?.restDaysUsed) ? saved.streak.restDaysUsed : [],
     },
     // Migration : les profils créés avant le parcours pédagogique reçoivent
     // un journal, des agrégats et un paquet de cartes d'erreur vides.
     activity: Array.isArray(saved.activity) ? saved.activity : [],
     skills: saved.skills && typeof saved.skills === 'object' ? saved.skills : {},
     errorCards: Array.isArray(saved.errorCards) ? saved.errorCards : [],
+    // Migration : journal des sessions composées du jour (démarrées/
+    // terminées), voir recordSessionStarted/recordSessionCompleted —
+    // uniquement de quoi mesurer l'achèvement de session (§15.1), pas un
+    // nouveau système de tracking.
+    sessionLog: Array.isArray(saved.sessionLog) ? saved.sessionLog : [],
+    // Migration : les profils créés avant la session quotidienne composée
+    // (voir lib/percorso.js) reçoivent des préférences par défaut neutres —
+    // aucune activité évitée ni préférée, objectif général, 10 min/jour.
+    learningPreferences: {
+      goal: saved.learningPreferences?.goal || 'general',
+      dailyMinutes: saved.learningPreferences?.dailyMinutes || 10,
+      reminderEnabled: saved.learningPreferences?.reminderEnabled || false,
+      preferredActivities: Array.isArray(saved.learningPreferences?.preferredActivities)
+        ? saved.learningPreferences.preferredActivities
+        : [],
+      avoidedActivities: Array.isArray(saved.learningPreferences?.avoidedActivities)
+        ? saved.learningPreferences.avoidedActivities
+        : [],
+    },
   }
+}
+
+// Met à jour les préférences d'apprentissage (fusion partielle — n'écrase
+// que les clés fournies). Les activités évitées ne sont jamais supprimées
+// des choix possibles ailleurs dans l'app, seulement proposées avec
+// modération par lib/percorso.js.
+export function setLearningPreferences(patch) {
+  Object.assign(progress.learningPreferences, patch)
 }
 
 // Première connexion d'un compte qui n'a pas encore son propre espace :
@@ -193,6 +223,32 @@ export function touchStreak() {
   s.lastActiveDate = today
 }
 
+// Jour de repos (IntegartioNOptimsaitonPedago.MD §11.1) : « possibilité d'un
+// jour de repos sans perdre tout le sens du parcours ». N'incrémente jamais
+// `current` (pas de fausse progression pour une journée sans pratique) —
+// évite seulement la remise à 1 du lendemain. Utilisable au plus une fois
+// tous les `REST_DAY_COOLDOWN`, et seulement pour éviter la coupure d'UNE
+// journée manquée (pas pour rattraper plusieurs jours d'inactivité).
+export const REST_DAY_COOLDOWN = 6 * DAY
+
+export function canUseRestDay(now = Date.now()) {
+  const s = progress.streak
+  if (!s.current) return false // rien à préserver
+  const today = localDay(new Date(now))
+  if (s.lastActiveDate === today) return false // déjà actif aujourd'hui
+  const yesterday = localDay(new Date(new Date(now).getFullYear(), new Date(now).getMonth(), new Date(now).getDate() - 1))
+  if (s.lastActiveDate !== yesterday) return false // plus d'une journée d'écart : trop tard
+  return !(s.restDaysUsed || []).some((ts) => now - ts < REST_DAY_COOLDOWN)
+}
+
+export function useRestDay(now = Date.now()) {
+  if (!canUseRestDay(now)) return false
+  const s = progress.streak
+  s.lastActiveDate = localDay(new Date(now))
+  s.restDaysUsed = [...(s.restDaysUsed || []), now].slice(-20)
+  return true
+}
+
 // Résultat d'une révision : réussite → boîte suivante (intervalle plus long),
 // échec → retour à la boîte 0 (revu dès la prochaine session).
 export function reviewWord(word, success) {
@@ -222,14 +278,29 @@ function rollingAvgScore(skill, windowSize = 20) {
   return sum / recent.length
 }
 
+// Identifiant stable d'événement : permet à la fusion multi-appareils de
+// dédupliquer sans dépendre du timestamp (deux événements sur deux appareils
+// peuvent partager le même ts). crypto.randomUUID n'existe pas partout
+// (contextes non sécurisés, anciens navigateurs) d'où le repli manuel.
+function newEventId() {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID()
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`
+}
+
 // Enregistre un événement d'apprentissage. `entry` = { skill, ...données
-// libres (textId, score, total, attempts, mode, level, errorCount…) } ;
-// `ts` est ajouté automatiquement. Met à jour les agrégats `progress.skills`
-// et la série quotidienne : une activité loggée = une journée active (les
-// vues n'ont plus à appeler touchStreak elles-mêmes).
+// libres (textId, score, total, attempts, mode, level, errorCount, sessionId…) } ;
+// `ts` et `eventId` sont ajoutés automatiquement, `sessionId` reste `null`
+// quand l'événement n'appartient pas à une session composée. Met à jour les
+// agrégats `progress.skills` et la série quotidienne : une activité loggée =
+// une journée active (les vues n'ont plus à appeler touchStreak elles-mêmes).
 export function logActivity(entry) {
   if (!entry || !entry.skill) return null
-  const event = { ...entry, ts: Date.now() }
+  const event = {
+    sessionId: null,
+    ...entry,
+    ts: Date.now(),
+    eventId: newEventId(),
+  }
   progress.activity.push(event)
   if (progress.activity.length > ACTIVITY_CAP) {
     progress.activity.splice(0, progress.activity.length - ACTIVITY_CAP)
@@ -290,10 +361,33 @@ export function errorCardId(original, correction) {
 // plafond, on éjecte d'abord les cartes les mieux maîtrisées (boîte la plus
 // haute) et, à boîte égale, les plus anciennes : on ne sacrifie jamais une
 // erreur encore fragile pour en garder une déjà sue.
-export function addErrorCard({ original, correction, explanation, type, source }) {
+//
+// Champs facultatifs (IntegartioNOptimsaitonPedago.MD §8.1) : `sourceId`
+// (identifiant du texte/dialogue d'origine), `contextBefore`/`contextAfter`
+// (phrases voisines, pour se souvenir du contexte plusieurs jours après) et
+// `contrastExample` (formulation contrastive, utile pour l'exercice « choisir
+// entre deux formulations », voir lib/errorExercises.js). Les anciennes
+// cartes sans ces champs restent valides — l'UI dégrade proprement sur ''.
+export function addErrorCard({
+  original,
+  correction,
+  explanation,
+  type,
+  source,
+  sourceId,
+  contextBefore,
+  contextAfter,
+  contrastExample,
+}) {
   const id = errorCardId(original, correction)
   const existing = progress.errorCards.find((c) => c.id === id)
-  if (existing) return existing
+  if (existing) {
+    // Erreur récurrente (§15.1) : on note le nouvel horodatage plutôt que de
+    // dupliquer la carte — `history` sert seulement à mesurer l'écart entre
+    // deux occurrences, plafonné pour ne pas alourdir le document.
+    existing.history = [...(existing.history || [existing.addedTs]), Date.now()].slice(-8)
+    return existing
+  }
   const card = {
     id,
     original,
@@ -301,9 +395,14 @@ export function addErrorCard({ original, correction, explanation, type, source }
     explanation: explanation || '',
     type: type || 'grammatica',
     source: source || 'scrivi',
+    sourceId: sourceId || null,
+    contextBefore: contextBefore || '',
+    contextAfter: contextAfter || '',
+    contrastExample: contrastExample || '',
     box: 0,
     due: 0,
     addedTs: Date.now(),
+    history: [Date.now()],
   }
   progress.errorCards.push(card)
   while (progress.errorCards.length > ERROR_CARDS_CAP) {
@@ -329,11 +428,25 @@ export function dueErrorCards() {
   return progress.errorCards.filter((c) => (c.due || 0) <= now)
 }
 
-// Même Leitner que reviewWord : réussite → boîte suivante (intervalle plus
-// long), échec → retour à la boîte 0.
-export function reviewErrorCard(id, success) {
+// Échéance courte pour la réponse « difficile » (§8.3) : la carte reste dans
+// la même boîte (la difficulté n'est pas oubliée, la maîtrise n'est pas
+// encore acquise), mais revient plus vite qu'un intervalle Leitner normal.
+export const DIFFICULT_RETRY_INTERVAL = 4 * 60 * 60 * 1000 // 4 heures
+
+// Leitner à trois réponses (IntegartioNOptimsaitonPedago.MD §8.3), qui étend
+// le binaire d'origine sans le casser : `success` reste utilisable tel quel
+// (true → boîte suivante, comme « su » ; false → boîte 0, comme « oublié »),
+// ou `outcome` peut valoir explicitement 'oublie' | 'difficile' | 'su'.
+// 'difficile' est un troisième cas, pas un alias de false : même boîte,
+// échéance courte.
+export function reviewErrorCard(id, outcome) {
   const c = progress.errorCards.find((x) => x.id === id)
   if (!c) return
+  if (outcome === 'difficile') {
+    c.due = Date.now() + DIFFICULT_RETRY_INTERVAL
+    return
+  }
+  const success = outcome === true || outcome === 'su'
   c.box = success ? Math.min((c.box || 0) + 1, MAX_BOX) : 0
   c.due = Date.now() + INTERVALS[c.box]
 }
@@ -373,4 +486,34 @@ export function measuredLevel() {
   const levels = progress.skills.scrittura?.levels || []
   const scrittura = modeOf(levels.slice(-5))
   return { scrittura, global: scrittura }
+}
+
+// ---------------------------------------------------------------------------
+// Journal des sessions composées (achèvement de session, §15.1)
+// ---------------------------------------------------------------------------
+//
+// Une entrée par jour calendaire local où une session composée (voir
+// lib/percorso.js#composeSession, appelée depuis HomeView) a démarré.
+// `recordSessionStarted` est idempotente pour un même jour ; `startedTs` sert
+// à borner les fenêtres de metrics.js#sessionCompletionRate.
+export const SESSION_LOG_CAP = 90
+
+export function recordSessionStarted(now = Date.now()) {
+  const today = localDay(new Date(now))
+  if (progress.sessionLog.some((e) => e.date === today)) return
+  progress.sessionLog.push({ date: today, startedTs: now, completed: false, completedTs: null })
+  if (progress.sessionLog.length > SESSION_LOG_CAP) {
+    progress.sessionLog.splice(0, progress.sessionLog.length - SESSION_LOG_CAP)
+  }
+}
+
+export function recordSessionCompleted(now = Date.now()) {
+  const today = localDay(new Date(now))
+  let entry = progress.sessionLog.find((e) => e.date === today)
+  if (!entry) {
+    entry = { date: today, startedTs: now, completed: false, completedTs: null }
+    progress.sessionLog.push(entry)
+  }
+  entry.completed = true
+  entry.completedTs = now
 }

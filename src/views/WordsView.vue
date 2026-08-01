@@ -14,6 +14,10 @@ import {
 import { ttsSupported, speakItalian } from '../tts.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
+import { isPremiumPlus } from '../lib/access.js'
+import { suggestProductionFromReview } from '../lib/continuity.js'
+import { buildExercise, checkExerciseAnswer } from '../lib/errorExercises.js'
+import { guessGrammarTopic } from '../lib/grammarLinks.js'
 
 // --- Session de révision (répétition espacée) ---
 // La file mélange deux sortes de cartes : les mots favoris dus, puis les
@@ -23,13 +27,72 @@ const reviewing = ref(false)
 const queue = ref([]) // cartes de la session en cours
 const current = ref(0)
 const revealed = ref(false)
-const sessionResults = ref({ known: 0, again: 0 })
+const sessionResults = ref({ known: 0, again: 0, difficile: 0 })
 let reviewedCount = 0 // cartes effectivement répondues dans la session
+// Mots (pas les cartes d'erreur) effectivement révisés dans la session en
+// cours : sert de base à la suggestion de production après révision (§9.3).
+let reviewedWords = []
+
+// Premium IA : la suggestion de production après révision (§9.3) pointe
+// vers l'écriture, réservée à Premium IA — même schéma que HomeView/percorso.js.
+const premiumIA = ref(false)
+isPremiumPlus().then((v) => {
+  premiumIA.value = v
+})
+// UNE seule suite recommandée après une session de révision terminée (§9.3,
+// §3.1) : réutiliser 2-3 mots revus dans une courte production. `null` sinon.
+const afterReview = ref(null)
 
 const dueWords = computed(() => dueFavorites().length)
 const dueErrors = computed(() => dueErrorCards().length)
 const dueCount = computed(() => dueWords.value + dueErrors.value)
 const currentCard = computed(() => queue.value[current.value] || null)
+
+// --- Exercices sur les cartes d'erreur (IntegartioNOptimsaitonPedago.MD
+// §8.2) : le type d'exercice dépend du type d'erreur (lib/errorExercises.js).
+const exercise = computed(() =>
+  currentCard.value?.kind === 'error' ? buildExercise(currentCard.value.item) : null
+)
+const exerciseAttempt = ref('')
+const exerciseFeedback = ref(null) // null | 'correct' | 'wrong'
+
+function checkExercise() {
+  if (!exercise.value || !exerciseAttempt.value.trim()) return
+  exerciseFeedback.value = checkExerciseAnswer(exercise.value, exerciseAttempt.value) ? 'correct' : 'wrong'
+  revealed.value = true
+}
+
+function chooseOption(opt) {
+  exerciseAttempt.value = opt
+  exerciseFeedback.value = opt === exercise.value.correct ? 'correct' : 'wrong'
+  revealed.value = true
+}
+
+// Lien vers la fiche grammaticale correspondante (§9.4) : une ancre précise
+// quand un indice lexical simple permet de la deviner, sinon aucun lien
+// plutôt qu'un mauvais aiguillage.
+const grammarTopic = computed(() =>
+  currentCard.value?.kind === 'error'
+    ? guessGrammarTopic(currentCard.value.item.original, currentCard.value.item.correction)
+    : null
+)
+const grammarLink = computed(() => {
+  const topic = grammarTopic.value
+  if (!topic || currentCard.value?.kind !== 'error') return null
+  const item = currentCard.value.item
+  return {
+    name: 'grammar',
+    hash: `#${topic}`,
+    query: {
+      from: 'erreur',
+      topic,
+      errOriginal: item.original,
+      errCorrection: item.correction,
+      errType: item.type,
+      errExplanation: item.explanation || undefined,
+    },
+  }
+})
 
 // Étiquettes des types de carte d'erreur (mêmes identifiants que le serveur).
 const TYPE_LABELS = {
@@ -51,8 +114,12 @@ function startReview() {
   if (!queue.value.length) return
   current.value = 0
   revealed.value = false
-  sessionResults.value = { known: 0, again: 0 }
+  exerciseAttempt.value = ''
+  exerciseFeedback.value = null
+  sessionResults.value = { known: 0, again: 0, difficile: 0 }
   reviewedCount = 0
+  reviewedWords = []
+  afterReview.value = null
   reviewing.value = true
 }
 
@@ -63,17 +130,30 @@ function endSession() {
   // automatiquement par logActivity) — sauf si rien n'a été répondu.
   if (reviewedCount > 0) {
     logActivity({ skill: 'vocabolario', reviewed: reviewedCount })
+    afterReview.value = suggestProductionFromReview(reviewedWords, {
+      hasPremiumIA: premiumIA.value,
+    })
   }
 }
 
-function answer(success) {
+// `outcome` : true/false pour un mot (inchangé) ; pour une carte d'erreur,
+// 'oublie' | 'difficile' | 'su' — Leitner à trois réponses (§8.3).
+function answer(outcome) {
   const card = currentCard.value
   if (!card) return
-  if (card.kind === 'word') reviewWord(card.item.word, success)
-  else reviewErrorCard(card.item.id, success)
-  sessionResults.value[success ? 'known' : 'again']++
+  if (card.kind === 'word') {
+    reviewWord(card.item.word, outcome)
+    reviewedWords.push(card.item.word)
+    sessionResults.value[outcome ? 'known' : 'again']++
+  } else {
+    reviewErrorCard(card.item.id, outcome)
+    if (outcome === 'difficile') sessionResults.value.difficile++
+    else sessionResults.value[outcome === 'su' ? 'known' : 'again']++
+  }
   reviewedCount++
   revealed.value = false
+  exerciseAttempt.value = ''
+  exerciseFeedback.value = null
   if (current.value + 1 < queue.value.length) {
     current.value++
   } else {
@@ -89,6 +169,8 @@ function trashCurrentCard() {
   removeErrorCard(card.item.id)
   queue.value.splice(current.value, 1)
   revealed.value = false
+  exerciseAttempt.value = ''
+  exerciseFeedback.value = null
   if (current.value >= queue.value.length) endSession()
 }
 
@@ -211,8 +293,9 @@ onUnmounted(() => {
             </p>
           </template>
 
-          <!-- Carte « erreur » : recto = production fautive, verso =
-               correction + explication -->
+          <!-- Carte « erreur » : exercice adapté au type d'erreur (§8.2) —
+               corriger la phrase, compléter la forme manquante, ou choisir
+               entre deux formulations proches. -->
           <template v-else>
             <p class="error-badge-row">
               <span class="type-badge">{{ typeLabel(currentCard.item.type) }}</span>
@@ -225,27 +308,84 @@ onUnmounted(() => {
                 🗑
               </button>
             </p>
-            <p class="review-error">{{ currentCard.item.original }}</p>
-            <p v-if="!revealed" class="error-prompt">Comment corriger ?</p>
+
+            <template v-if="exercise.kind === 'chooseBetween'">
+              <p class="error-prompt">Quelle formulation est correcte ?</p>
+              <div class="choose-options">
+                <button
+                  v-for="opt in exercise.options"
+                  :key="opt"
+                  type="button"
+                  class="choose-option"
+                  :class="{
+                    correct: revealed && opt === exercise.correct,
+                    wrong: revealed && exerciseAttempt === opt && opt !== exercise.correct,
+                  }"
+                  :disabled="revealed"
+                  @click="chooseOption(opt)"
+                >
+                  {{ opt }}
+                </button>
+              </div>
+            </template>
             <template v-else>
+              <p class="review-error">{{ exercise.prompt }}</p>
+              <label v-if="!revealed" class="exercise-input">
+                <input
+                  v-model="exerciseAttempt"
+                  type="text"
+                  autocomplete="off"
+                  :placeholder="exercise.kind === 'fillBlank' ? 'Complétez le mot manquant…' : 'Corrigez la phrase…'"
+                  @keydown.enter.prevent="checkExercise"
+                />
+              </label>
+            </template>
+
+            <template v-if="revealed">
+              <p
+                class="exercise-feedback"
+                :class="exerciseFeedback"
+              >
+                {{ exerciseFeedback === 'correct' ? '✓ Correct !' : 'Pas tout à fait — voici la correction.' }}
+              </p>
               <p class="review-translation">{{ currentCard.item.correction }}</p>
               <p v-if="currentCard.item.explanation" class="error-explanation">
                 {{ currentCard.item.explanation }}
               </p>
+              <RouterLink v-if="grammarLink" class="grammar-link" :to="grammarLink">
+                📚 Voir la règle et s'exercer →
+              </RouterLink>
             </template>
           </template>
 
           <div class="review-actions">
-            <button v-if="!revealed" class="btn reveal" @click="revealed = true">
-              {{ currentCard.kind === 'word' ? 'Afficher la traduction' : 'Afficher la correction' }}
-            </button>
+            <template v-if="currentCard.kind === 'word'">
+              <button v-if="!revealed" class="btn reveal" @click="revealed = true">
+                Afficher la traduction
+              </button>
+              <template v-else>
+                <button class="btn known" @click="answer(true)">
+                  ✓ Je savais
+                </button>
+                <button class="btn again" @click="answer(false)">
+                  ✗ À revoir
+                </button>
+              </template>
+            </template>
             <template v-else>
-              <button class="btn known" @click="answer(true)">
-                ✓ Je savais
+              <button
+                v-if="!revealed && exercise.kind !== 'chooseBetween'"
+                class="btn reveal"
+                :disabled="!exerciseAttempt.trim()"
+                @click="checkExercise"
+              >
+                Vérifier
               </button>
-              <button class="btn again" @click="answer(false)">
-                ✗ À revoir
-              </button>
+              <template v-if="revealed">
+                <button class="btn again" @click="answer('oublie')">✗ Oublié</button>
+                <button class="btn hard" @click="answer('difficile')">🤔 Difficile</button>
+                <button class="btn known" @click="answer('su')">✓ Su</button>
+              </template>
             </template>
           </div>
           <button class="review-quit" @click="stopReview">
@@ -274,7 +414,7 @@ onUnmounted(() => {
           </template>
           <span v-else class="all-done">
             ✓ Tout est révisé pour aujourd'hui.
-            <template v-if="sessionResults.known + sessionResults.again">
+            <template v-if="sessionResults.known + sessionResults.again + sessionResults.difficile">
               Session : {{ sessionResults.known }} su{{
                 sessionResults.known > 1 ? 's' : ''
               }}, {{ sessionResults.again }} à revoir.
@@ -282,6 +422,13 @@ onUnmounted(() => {
             Revenez demain — les intervalles s'allongent à chaque réussite.
           </span>
         </div>
+
+        <!-- Continuité (§9.3, §3.1) : UNE seule suite recommandée après une
+             session de révision, jamais une liste d'options. -->
+        <RouterLink v-if="afterReview" class="after-review" :to="afterReview.to">
+          <span>{{ afterReview.reason }}</span>
+          <strong>{{ afterReview.cta }} →</strong>
+        </RouterLink>
 
         <ul class="list">
           <li
@@ -553,6 +700,106 @@ onUnmounted(() => {
   background: #fff;
   border-color: #a34430;
   color: #a34430;
+}
+
+.btn.hard {
+  background: #fff;
+  border-color: #b0692e;
+  color: #b0692e;
+}
+
+/* --- Exercices sur les cartes d'erreur --- */
+.choose-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.6rem 0;
+}
+
+.choose-option {
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #d8cfc2;
+  background: #faf6f0;
+  font-size: 0.98rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.choose-option:disabled {
+  cursor: default;
+}
+
+.choose-option.correct {
+  background: #e3f0e6;
+  border-color: #4a7c59;
+  color: #35674a;
+  font-weight: 600;
+}
+
+.choose-option.wrong {
+  background: #f8e3de;
+  border-color: #a34430;
+  color: #a34430;
+}
+
+.exercise-input {
+  display: block;
+  margin: 0.6rem 0;
+}
+
+.exercise-input input {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(107, 97, 86, 0.4);
+  background: #fffaf3;
+  font: inherit;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.exercise-feedback {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+
+.exercise-feedback.correct {
+  color: #3d7a3d;
+}
+
+.exercise-feedback.wrong {
+  color: #a34430;
+}
+
+.grammar-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #4a5086;
+  text-decoration: underline;
+}
+
+/* --- Suite recommandée après révision (§9.3) --- */
+.after-review {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(176, 105, 46, 0.3);
+  background: rgba(176, 105, 46, 0.06);
+  text-decoration: none;
+  color: #4a4238;
+  font-size: 0.92rem;
+}
+
+.after-review strong {
+  color: #b0692e;
+  white-space: nowrap;
 }
 
 .review-quit {

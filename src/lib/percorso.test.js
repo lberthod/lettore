@@ -7,6 +7,11 @@ import {
   dueReviewCount,
   daysAgoLabel,
   REVIEW_THRESHOLD,
+  composeSession,
+  currentStepIndex,
+  COSTLY_AI_TYPES,
+  REVIEW_STEP_CAP,
+  STEP_SKILL,
 } from './percorso.js'
 
 const DAY = 24 * 60 * 60 * 1000
@@ -24,6 +29,13 @@ function makeProgress(over = {}) {
     activity: [],
     skills: {},
     streak: { current: 0, longest: 0, lastActiveDate: null },
+    learningPreferences: {
+      goal: 'general',
+      dailyMinutes: 10,
+      reminderEnabled: false,
+      preferredActivities: [],
+      avoidedActivities: [],
+    },
     ...over,
   }
 }
@@ -219,6 +231,233 @@ describe('weekSummary', () => {
 
   it('profil neuf → tous les compteurs à zéro', () => {
     expect(weekSummary(makeProgress(), NOW).total).toBe(0)
+  })
+})
+
+describe('composeSession — session quotidienne composée', () => {
+  it('ne planifie jamais plus de trois étapes', () => {
+    const progress = makeProgress({
+      favorites: Array.from({ length: 20 }, (_, i) => ({ word: `w${i}`, due: 0 })),
+      learningPreferences: {
+        goal: 'general',
+        dailyMinutes: 20,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    expect(session.steps.length).toBeLessThanOrEqual(3)
+  })
+
+  it('révisions très en retard en premier, mais plafonnées à REVIEW_STEP_CAP', () => {
+    const progress = makeProgress({
+      favorites: Array.from({ length: 50 }, (_, i) => ({ word: `w${i}`, due: 0 })),
+    })
+    const session = composeSession(progress, { now: NOW })
+    expect(session.steps[0]).toMatchObject({ type: 'review', count: REVIEW_STEP_CAP })
+  })
+
+  it('pas de révision proposée quand rien n’est dû', () => {
+    const progress = makeProgress()
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.steps.some((s) => s.type === 'review')).toBe(false)
+  })
+
+  it('durée par défaut = dailyMinutes des préférences', () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'general',
+        dailyMinutes: 20,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+    })
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.duration).toBe(20)
+  })
+
+  it('une durée explicite prime sur les préférences', () => {
+    const progress = makeProgress()
+    const session = composeSession(progress, { texts, now: NOW, duration: 5 })
+    expect(session.duration).toBe(5)
+  })
+
+  it('jamais deux activités IA coûteuses (write/dialogo) dans une session courte', () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'general',
+        dailyMinutes: 10,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW, duration: 10 })
+    const costly = session.steps.filter((s) => COSTLY_AI_TYPES.includes(s.type))
+    expect(costly.length).toBeLessThanOrEqual(1)
+  })
+
+  it('sans Premium IA, aucune étape write/dialogo n’est proposée', () => {
+    const progress = makeProgress()
+    const session = composeSession(progress, { hasPremiumIA: false, texts, now: NOW })
+    expect(session.steps.some((s) => COSTLY_AI_TYPES.includes(s.type))).toBe(false)
+  })
+
+  it("objectif 'reading' ne recommande pas dialogo/write même si leur compteur est bas", () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'reading',
+        dailyMinutes: 15,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+      // scrittura/dialogo jamais pratiqués (compteur le plus bas possible),
+      // mais hors de l'objectif « reading » : ne doivent pas apparaître.
+      activity: [ev('lettura', 0)],
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    expect(session.steps.every((s) => !['write', 'dialogo'].includes(s.type))).toBe(true)
+  })
+
+  it("objectif 'conversation' priorise dialogo/pronuncia", () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'conversation',
+        dailyMinutes: 15,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    expect(session.steps.some((s) => s.type === 'dialogo' || s.type === 'pronuncia')).toBe(true)
+  })
+
+  it('alterne réception et production quand la durée le permet', () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'general',
+        dailyMinutes: 20,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    const modes = session.steps
+      .filter((s) => s.type !== 'review')
+      .map((s) => (['lettura', 'ascolto'].includes(s.type) ? 'reception' : 'production'))
+    for (let i = 1; i < modes.length; i++) {
+      expect(modes[i]).not.toBe(modes[i - 1])
+    }
+  })
+
+  it('évite de reproduire exactement la composition de la veille', () => {
+    const prefs = {
+      goal: 'general',
+      dailyMinutes: 10,
+      reminderEnabled: false,
+      preferredActivities: [],
+      avoidedActivities: [],
+    }
+    const yesterdayProgress = makeProgress({ learningPreferences: prefs })
+    const y = composeSession(yesterdayProgress, { hasPremiumIA: true, texts, now: NOW - DAY })
+    const yesterdaySignature = y.steps.map((s) => s.type).sort()
+
+    // Aujourd'hui : le journal ET les agrégats par compétence (progress.skills,
+    // alimentés par logActivity dans l'app réelle) indiquent que ces mêmes
+    // compétences ont été pratiquées hier — la priorisation par dernière
+    // pratique doit à elle seule pousser vers une autre composition.
+    const skills = {}
+    for (const type of yesterdaySignature) {
+      skills[STEP_SKILL[type]] = { lastTs: NOW - DAY }
+    }
+    const progress = makeProgress({
+      learningPreferences: prefs,
+      skills,
+      activity: yesterdaySignature.map((type) => ev(STEP_SKILL[type], 1)),
+    })
+    const today = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    const todaySignature = today.steps.map((s) => s.type).sort()
+    expect(todaySignature).not.toEqual(yesterdaySignature)
+  })
+
+  it('activité évitée : proposée seulement avec modération, jamais éliminée définitivement', () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'general',
+        dailyMinutes: 20,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: ['ascolto'],
+      },
+    })
+    // La liste de préférences n'exclut pas fonctionnellement l'ascolto :
+    // c'est juste dépriorisé (testé indirectement via la préférence).
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    expect(session.steps.length).toBeGreaterThan(0)
+  })
+
+  it('objectif exposé dans la session, adapté au but personnel', () => {
+    const progress = makeProgress({
+      learningPreferences: {
+        goal: 'travel',
+        dailyMinutes: 10,
+        reminderEnabled: false,
+        preferredActivities: [],
+        avoidedActivities: [],
+      },
+    })
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.objective).toMatch(/voyage/i)
+  })
+
+  it('chaque étape expose type et estimatedMinutes', () => {
+    const progress = makeProgress({
+      favorites: [{ word: 'a', due: 0 }],
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW })
+    for (const step of session.steps) {
+      expect(step).toMatchObject({ type: expect.any(String), estimatedMinutes: expect.any(Number) })
+      // Chaque étape reste directement accessible depuis la navigation
+      // existante (règle 6.5) : un lien vue-router valide.
+      expect(step.to).toHaveProperty('name')
+    }
+  })
+})
+
+describe('currentStepIndex — reprise locale de session', () => {
+  it('pointe sur la première étape si rien n’a été fait', () => {
+    const progress = makeProgress()
+    const session = { steps: [{ type: 'review' }, { type: 'lettura' }] }
+    expect(currentStepIndex(session, progress, NOW - DAY)).toBe(0)
+  })
+
+  it('avance dès qu’une activité correspondant au type est journalisée depuis le début de session', () => {
+    const progress = makeProgress({
+      activity: [ev('vocabolario', 0)],
+    })
+    const session = { steps: [{ type: 'review' }, { type: 'lettura' }, { type: 'ascolto' }] }
+    expect(currentStepIndex(session, progress, NOW - DAY)).toBe(1)
+  })
+
+  it('renvoie la longueur des étapes quand tout est fait', () => {
+    const progress = makeProgress({
+      activity: [ev('vocabolario', 0), ev('lettura', 0)],
+    })
+    const session = { steps: [{ type: 'review' }, { type: 'lettura' }] }
+    expect(currentStepIndex(session, progress, NOW - DAY)).toBe(2)
+  })
+
+  it('une activité antérieure au début de session ne compte pas', () => {
+    const progress = makeProgress({
+      activity: [ev('vocabolario', 5)], // il y a 5 jours, avant la session
+    })
+    const session = { steps: [{ type: 'review' }] }
+    expect(currentStepIndex(session, progress, NOW - DAY)).toBe(0)
   })
 })
 

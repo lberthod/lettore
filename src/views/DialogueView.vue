@@ -2,6 +2,7 @@
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
+import CorrectionRetry from '../components/CorrectionRetry.vue'
 import { fetchQuota } from '../lib/generation.js'
 import { speakItalian, stopSpeaking } from '../tts.js'
 import {
@@ -52,6 +53,10 @@ const input = ref('')
 const working = ref(false) // un appel serveur en cours (ouverture/tour)
 const closing = ref(false) // bilan en cours
 const error = ref('')
+// Événement 'dialogo' de ce bilan : conservé pour y ajouter
+// retryCount/retrySuccess/errorTypes une fois la reprise terminée, plutôt
+// que de logger un second événement séparé (même pattern que WriteView).
+const activityEvent = ref(null)
 
 const scenarioMeta = computed(
   () => SCENARIOS.find((s) => s.id === selectedScenario.value) || null
@@ -138,7 +143,7 @@ async function finish() {
     // Capture pédagogique : la session compte dans le parcours (touchStreak
     // est appelé par logActivity) et chaque point du bilan devient une carte
     // de révision. Le bilan ne classe pas ses remarques : 'lessico' par défaut.
-    logActivity({
+    activityEvent.value = logActivity({
       skill: 'dialogo',
       scenario: selectedScenario.value,
       turns: turns.value.filter((t) => t.role === 'user').length,
@@ -169,8 +174,29 @@ function restart() {
   error.value = ''
   input.value = ''
   turnsLeft.value = MAX_DIALOGUE_TURNS
+  activityEvent.value = null
   clearSessionId()
   refreshQuota()
+}
+
+// CorrectionRetry attend { original, correction, explanation, type } — le
+// bilan du serveur nomme sa correction `better`.
+const retryErrors = computed(
+  () => (feedback.value || []).map((f) => ({
+    original: f.original,
+    correction: f.better,
+    explanation: f.explanation,
+    type: f.type || 'lessico',
+  }))
+)
+
+// Reprise après feedback (section 5) : on complète l'événement 'dialogo'
+// déjà loggé plutôt que d'en créer un second pour ce bilan.
+function onRetryComplete({ retryCount, retrySuccess, errorTypes }) {
+  if (!activityEvent.value) return
+  activityEvent.value.retryCount = retryCount
+  activityEvent.value.retrySuccess = retrySuccess
+  activityEvent.value.errorTypes = errorTypes
 }
 
 // Reprise après rechargement : l'identifiant vit en localStorage, le serveur
@@ -368,6 +394,13 @@ function speak(text) {
         ajoutée{{ feedback.length > 1 ? 's' : '' }} à vos révisions —
         <RouterLink :to="{ name: 'words' }">réviser →</RouterLink>
       </p>
+
+      <CorrectionRetry
+        v-if="feedback && feedback.length"
+        :errors="retryErrors"
+        source="dialogo"
+        @complete="onRetryComplete"
+      />
 
       <div class="close-row">
         <button type="button" class="btn-primary" @click="restart">
