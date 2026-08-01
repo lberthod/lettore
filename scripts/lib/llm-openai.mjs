@@ -50,7 +50,15 @@ function extractJson(text) {
 // Appel chat completions : system + user, response_format json_object,
 // 3 tentatives avec backoff. Renvoie l'objet JSON parsé ; `onUsage(usage)`
 // est appelé avec les tokens consommés après chaque réponse réussie.
-export async function callLLM({ system, prompt, maxTokens = 8000, onUsage }) {
+// `thinking` (optionnel) : passer 'disabled' pour couper le mode réflexion de
+// DeepSeek (actif par défaut) — voir leggendo-server/llm.mjs pour le même
+// paramètre. Sur une tâche de classification/explication courte (repérer un
+// registre de langue, justifier une réponse de quiz en 1 phrase), testé sur
+// leggendo-server/correct.mjs (tâche équivalente) : mêmes résultats, -81 %
+// de tokens de sortie. Non re-testé isolément ici (scripts de backfill,
+// exécutés ponctuellement, pas un coût récurrent), mais appliqué par
+// analogie directe.
+export async function callLLM({ system, prompt, maxTokens = 8000, onUsage, thinking }) {
   if (!GLM_API_KEY) {
     throw new Error('GLM_API_KEY manquante (export GLM_API_KEY=...).')
   }
@@ -70,6 +78,7 @@ export async function callLLM({ system, prompt, maxTokens = 8000, onUsage }) {
           max_tokens: maxTokens,
           temperature: 0.7,
           response_format: { type: 'json_object' },
+          ...(thinking ? { thinking: { type: thinking } } : {}),
           messages: [
             { role: 'system', content: system },
             { role: 'user', content: prompt },

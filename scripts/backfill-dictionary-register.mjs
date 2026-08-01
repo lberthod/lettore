@@ -204,7 +204,7 @@ async function worker() {
       // le lot une fois avant de le compter en échec (repris à la relance).
       let byLemma
       for (let attempt = 1; ; attempt++) {
-        const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 16000 })
+        const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 16000, thinking: 'disabled' })
         try {
           byLemma = validateRegisters(out, batch)
           break

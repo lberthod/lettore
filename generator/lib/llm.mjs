@@ -23,7 +23,7 @@ function extractJson(text) {
 // strict côté API comme les "structured outputs" Anthropic : on la décrit
 // explicitement et on valide/répare côté appelant).
 function describeSchema(schema) {
-  return JSON.stringify(schema, null, 2)
+  return JSON.stringify(schema)
 }
 
 export async function callLLM({ system, prompt, schema, maxTokens = 8000 }) {

@@ -71,6 +71,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://leggendo.fr/test-de-niveau</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://leggendo.fr/mentions-legales</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

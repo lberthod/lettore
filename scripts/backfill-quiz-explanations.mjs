@@ -119,7 +119,7 @@ async function backfillText(file) {
   // une fois avant de compter le texte en échec (repris à la relance).
   let byIndex
   for (let attempt = 1; ; attempt++) {
-    const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 4000 })
+    const out = await callLLM({ system: SYSTEM, prompt, maxTokens: 4000, thinking: 'disabled' })
     try {
       byIndex = validateExplanations(out, missing)
       break
