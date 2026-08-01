@@ -121,6 +121,31 @@ export function refreshUserRole() {
   return getUserRole({ forceRefresh: true })
 }
 
+// Essai Premium IA de 10 jours accordé à l'inscription (voir
+// README_TARIFICATION.md, § Essai Premium IA à l'inscription, et
+// functions/index.js, onUserCreated/revertExpiredTrials). Le claim
+// `trialEnd` (secondes epoch) n'est posé que par ce mécanisme ; sa présence
+// aux côtés de `role: premium_plus` et sans `periodEnd` (jamais posé par un
+// vrai paiement) signale un essai en cours plutôt qu'un abonnement payant.
+// Ceci n'affiche qu'un compte à rebours indicatif : le retour au gratuit à
+// l'expiration est décidé côté serveur (revertExpiredTrials), pas ici.
+export async function getTrialInfo() {
+  const user = currentUser.value
+  if (!user) return { active: false, daysRemaining: 0 }
+  try {
+    const token = await user.getIdTokenResult()
+    const { role, trialEnd, periodEnd } = token.claims
+    if (role !== 'premium_plus' || !trialEnd || periodEnd) {
+      return { active: false, daysRemaining: 0 }
+    }
+    const remainingMs = trialEnd * 1000 - Date.now()
+    if (remainingMs <= 0) return { active: false, daysRemaining: 0 }
+    return { active: true, daysRemaining: Math.ceil(remainingMs / 86400000) }
+  } catch {
+    return { active: false, daysRemaining: 0 }
+  }
+}
+
 // Hiérarchie des rôles (README_TARIFICATION.md) : un rôle supérieur inclut
 // les droits du rôle précédent — gratuit < premium < premium_plus < enseignant.
 // « Premium IA » est le nom commercial de `premium_plus` ; l'identifiant
@@ -140,11 +165,11 @@ export async function hasCatalogAccess() {
   return role === 'premium' || role === 'premium_plus' || role === 'enseignant'
 }
 
-// Classiques adaptés (« Classici ») : réservés à Premium IA et Enseignant,
-// comme les crédits de génération (voir README_TARIFICATION.md).
+// Classiques adaptés (« Classici ») : catalogue complet réservé à Premium et
+// au-dessus, comme le reste de la bibliothèque (voir README_TARIFICATION.md
+// — l'aperçu gratuit ci-dessous couvre le compte Gratuit).
 export async function hasClassiciAccess() {
-  if (!firebaseReady) return true
-  return isPremiumPlus()
+  return hasCatalogAccess()
 }
 
 // Correction d'écriture (« Scrivi », leggendo-server POST /correct) : mêmes

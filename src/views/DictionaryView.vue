@@ -180,6 +180,11 @@ const registerBadge = computed(() =>
       >
         Voir la conjugaison complète →
       </RouterLink>
+
+      <p class="see-also">
+        Règles d'accord, pluriels, prépositions articulées :
+        <RouterLink :to="{ name: 'grammar' }">voir la page Grammatica</RouterLink>.
+      </p>
     </div>
 
     <template v-else>
@@ -549,6 +554,17 @@ const registerBadge = computed(() =>
   font-size: 0.9rem;
   font-weight: 600;
   transition: background 0.12s, color 0.12s;
+}
+
+.see-also {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #6b6156;
+}
+
+.see-also a {
+  color: #b0692e;
+  font-weight: 600;
 }
 
 .btn-conj:hover {

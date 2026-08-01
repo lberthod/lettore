@@ -40,13 +40,13 @@ service cloud.firestore {
       allow write: if false;
     }
 
-    // Chapitres de Classici : réservés à Premium IA et Enseignant
-    // (cf. hasClassiciAccess()). L'aperçu gratuit (deux fables entières et
-    // le premier chapitre de quelques livres) reste dans le build public et
-    // n'a donc aucun document ici.
+    // Chapitres de Classici : catalogue complet réservé à Premium et
+    // au-dessus (cf. hasClassiciAccess()). L'aperçu gratuit (un livre entier
+    // par niveau A2/B2/C2 et le premier chapitre de chaque livre) reste dans
+    // le build public et n'a donc aucun document ici.
     match /bookChapters/{chapterId} {
       allow read: if request.auth != null
-        && request.auth.token.role in ['premium_plus', 'enseignant'];
+        && request.auth.token.role in ['premium', 'premium_plus', 'enseignant'];
       allow write: if false;
     }
 

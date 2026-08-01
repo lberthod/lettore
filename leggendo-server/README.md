@@ -1,6 +1,6 @@
 # leggendo-server — API « Créer son texte »
 
-Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebase-admin`, pour Firestore) qui tourne sur le VPS derrière Caddy (`api.loicberthod.ch/leggendo/*`). Un utilisateur connecté (Firebase Auth) demande un texte sur mesure (sujet, niveau, genre, thème, taille) ; la génération GLM prenant plusieurs minutes, l'API fonctionne en **mode job** : l'app crée un job puis sonde son état ([src/lib/generation.js](../src/lib/generation.js)), et enregistre le texte fini dans Firestore ([src/lib/userTexts.js](../src/lib/userTexts.js)).
+Serveur Node (http natif + fetch, Node ≥ 18 ; seule dépendance npm : `firebase-admin`, pour Firestore) qui tourne sur le VPS derrière Caddy (`api.loicberthod.ch/leggendo/*`). Un utilisateur connecté (Firebase Auth) demande un texte sur mesure (sujet, niveau, genre, thème, taille) ; la génération DeepSeek prenant plusieurs minutes, l'API fonctionne en **mode job** : l'app crée un job puis sonde son état ([src/lib/generation.js](../src/lib/generation.js)), et enregistre le texte fini dans Firestore ([src/lib/userTexts.js](../src/lib/userTexts.js)).
 
 ## Endpoints
 
@@ -32,7 +32,7 @@ Garde-fous :
   - **remboursement automatique** (`jobStore.failJob`) si le job se termine en erreur — une génération qui échoue pour une raison technique ne consomme pas de crédit ; la clôture du job et le remboursement se font dans la même transaction, conditionnée au statut du job (`pending`/`running`), donc jamais rejoués ;
   - solde consultable via `GET /leggendo/quota`, sans consommation (affiché côté app avant de lancer une génération, voir [CreateTextView.vue](../src/views/CreateTextView.vue)).
 - **Mesure des coûts IA** (`logGeneration` dans `server.mjs`, collection Firestore `generationLogs`) : chaque génération enregistre uid, rôle, niveau, taille, coût en crédits, nombre d'appels au modèle, tokens consommés et coût estimé (`ESTIMATED_COST_PER_1K_TOKENS_USD`, approximatif) — une alerte est loguée si le coût estimé d'une génération dépasse 0.50 $.
-- **Un seul job actif par compte** ; jobs persistés dans Firestore (collection `leggendoJobs`, survivent à un redémarrage du VPS), purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels GLM).
+- **Un seul job actif par compte** ; jobs persistés dans Firestore (collection `leggendoJobs`, survivent à un redémarrage du VPS), purgés après 1 h (TTL) ; un job actif depuis plus de 45 min est marqué en erreur (filet anti-blocage, en plus du timeout des appels DeepSeek).
 - **CORS** restreint aux origines listées dans `ALLOWED_ORIGINS` (le token Firebase reste la vraie protection, ceci évite juste qu'un site tiers rejoue les appels authentifiés depuis le navigateur d'un utilisateur).
 - **Validation** : même exigence de couverture lexicale que le catalogue ([generate.mjs](generate.mjs), découpage identique au lecteur, passes de réparation) — le lexique des mots doit être complet ; jusqu'à 2 phrases sans traduction sont tolérées plutôt que de jeter la génération.
 
@@ -43,11 +43,11 @@ Garde-fous :
 | `PORT` | `8091` | port d'écoute |
 | `GOOGLE_APPLICATION_CREDENTIALS` | — | chemin vers la clé JSON du compte de service (accès Firestore + vérification des ID tokens, obligatoire) |
 | `ALLOWED_ORIGINS` | `https://leggendo.fr,https://leggendo-dbb84.web.app,https://leggendo-dbb84.firebaseapp.com,http://localhost:5173` | origines autorisées (CORS), séparées par des virgules |
-| `GLM_API_KEY` | — | clé API GLM (obligatoire) |
-| `GLM_MODEL` | `glm-5.1` | modèle utilisé |
-| `GLM_BASE_URL` | endpoint Zhipu AI | endpoint chat completions (compatible OpenAI) |
-| `GLM_FALLBACK_URL` | endpoint Z.ai | bascule automatique en cas d'erreur réseau sur l'endpoint principal |
-| `GLM_TIMEOUT_MS` | 8 min | timeout par appel GLM |
+| `GLM_API_KEY` | — | clé API DeepSeek (obligatoire ; nom de variable `GLM_*` conservé par compatibilité) |
+| `GLM_MODEL` | `deepseek-v4-flash` | modèle utilisé |
+| `GLM_BASE_URL` | endpoint DeepSeek | endpoint chat completions (compatible OpenAI) |
+| `GLM_FALLBACK_URL` | — (aucun par défaut) | bascule optionnelle en cas d'erreur réseau sur l'endpoint principal, si configurée |
+| `GLM_TIMEOUT_MS` | 8 min | timeout par appel DeepSeek |
 | `APP_CHECK_MODE` | `off` | `off` (désactivé) / `soft` (vérifié + journalisé, jamais refusé) / `enforce` (refuse les requêtes non attestées) — voir [TODO_SECURITE.md](TODO_SECURITE.md) |
 | `TRUST_PROXY` | `1` | passer à `0` si le serveur n'est plus derrière Caddy (sinon `X-Forwarded-For` devient falsifiable par le client) |
 | `MAX_TRIAL_ACCOUNTS_PER_IP` | 5 | comptes d'essai distincts autorisés par IP sur 24 h |

@@ -25,7 +25,8 @@ const TENSES = [
 ]
 
 const PERSONS = ['io', 'tu', 'lui/lei', 'noi', 'voi', 'loro']
-const IMPERATIVE_PERSONS = ['tu', 'lei', 'noi', 'voi', 'loro']
+// Clé « lui/lei » comme dans les données (forme de politesse Lei)
+const IMPERATIVE_PERSONS = ['tu', 'lui/lei', 'noi', 'voi', 'loro']
 
 function speak(form) {
   speakItalian(form, { rate: 1 })
@@ -42,9 +43,12 @@ const ALL_SECTIONS = computed(() => {
 
 <template>
   <SceneLayout title="Coniuga" :accent="verbo" tagline="Tableau de conjugaison" wide>
-    <RouterLink class="back" :to="{ name: 'dictionary', params: { word: verbo } }">
-      ← Retour à la fiche « {{ verbo }} »
-    </RouterLink>
+    <div class="top-links">
+      <RouterLink class="back" :to="{ name: 'dictionary', params: { word: verbo } }">
+        ← Retour à la fiche « {{ verbo }} »
+      </RouterLink>
+      <RouterLink class="grammar-link" :to="{ name: 'grammar' }">Grammatica →</RouterLink>
+    </div>
 
     <template v-if="conjugation">
       <nav class="quick-nav" aria-label="Aller à un temps">
@@ -105,11 +109,20 @@ const ALL_SECTIONS = computed(() => {
 </template>
 
 <style scoped>
-.back {
+.top-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.back,
+.grammar-link {
   display: inline-block;
   font-size: 0.85rem;
   color: #b0692e;
-  margin-bottom: 1rem;
 }
 
 .hint {

@@ -41,9 +41,10 @@ async function changeRole(user, role) {
   user.role = role // optimiste
   try {
     await setUserRole(user.uid, role)
-  } catch {
+  } catch (err) {
+    console.error('adminSetUserRole a échoué :', err)
     user.role = previous
-    error.value = `Le rôle de ${user.email} n'a pas pu être changé.`
+    error.value = `Le rôle de ${user.email} n'a pas pu être changé${err?.code ? ` (${err.code})` : ''}.`
   } finally {
     updating.value = { ...updating.value, [user.uid]: false }
   }

@@ -16,8 +16,31 @@ Les quatre formules seront disponibles dès le lancement :
 
 Les offres annuelles correspondent approximativement à deux mois offerts.
 
-Le lancement ne sera pas progressif : Gratuit, Premium, Premium IA et
-Enseignant doivent être fonctionnels au moment de l'ouverture des paiements.
+Le lancement ne sera pas progressif : Gratuit, Premium et Premium IA doivent
+être fonctionnels au moment de l'ouverture des paiements. **Enseignant est
+annoncé sur la page tarifaire mais reste « bientôt disponible » : pas de lien
+de paiement actif tant que les fonctions pédagogiques (classes, partage,
+export) ne sont pas livrées.**
+
+## Essai Premium IA à l'inscription
+
+Chaque nouveau compte reçoit automatiquement le rôle `premium_plus` (Premium
+IA) pendant **10 jours** à partir de la création du compte, sans carte
+bancaire.
+
+- L'essai est accordé au moment de la création du compte Firebase (déclencheur
+  `onUserCreated`, voir `functions/index.js`).
+- Pendant l'essai, le compte a les mêmes droits qu'un abonné Premium IA payant
+  (catalogue complet, 30 crédits de génération, Classici, Notizie).
+- À l'expiration des 10 jours, si aucun paiement n'a été effectué (pas de
+  `periodEnd` Stripe/Play/Apple posé sur le compte), le rôle repasse
+  automatiquement à `gratuit`. Le compte n'est jamais bloqué : il retrouve
+  simplement les limites de la formule Gratuit.
+- Si l'utilisateur s'abonne (Premium ou Premium IA) pendant l'essai, le
+  paiement prend le relais normalement et l'essai n'a plus d'effet.
+- Le retour au gratuit est effectué côté serveur par une fonction planifiée
+  (`revertExpiredTrials`), jamais côté client : les claims du token restent la
+  source de vérité.
 
 ## Principes
 
@@ -44,9 +67,9 @@ Découvrir la méthode Leggendo gratuitement.
 - progression locale ;
 - inscription gratuite ;
 - une génération IA d'essai après inscription ;
-- **Classici** (aperçu, dès la connexion) : 2 livres en entier et le premier
-  chapitre de quelques autres — voir la section « Classici » de
-  [README.md](README.md).
+- **Classici** (aperçu, dès la connexion) : le premier chapitre de chaque
+  livre du catalogue, plus un livre entier par niveau A2, B2 et C2 — voir la
+  section « Classici » de [README.md](README.md).
 
 Le compte gratuit ne débloque pas automatiquement tout le catalogue.
 
@@ -61,6 +84,8 @@ Lire sans limites et progresser régulièrement.
 - tout le contenu Gratuit ;
 - accès à l'ensemble du catalogue ;
 - tous les niveaux, de A1 à C2 ;
+- **catalogue Classici complet** (au-delà de l'aperçu offert au compte
+  Gratuit) ;
 - traductions, audio et quiz ;
 - favoris et vocabulaire sauvegardé ;
 - progression synchronisée entre appareils ;
@@ -83,8 +108,7 @@ Créer des lectures adaptées à son niveau et à ses centres d'intérêt.
 - traduction complète du texte généré ;
 - audio et quiz de compréhension ;
 - bibliothèque personnelle des textes créés ;
-- **catalogue Classici complet** (au-delà des 2 livres et des premiers
-  chapitres offerts en aperçu à tout compte connecté) ;
+- catalogue Classici complet (déjà inclus dans Premium — voir ci-dessus) ;
 - notification lorsque la génération est terminée ;
 - **Notizie** : jusqu'à 3 textes d'actualité italienne générés chaque jour
   (flux partagé, pas un crédit consommé par abonné — voir
@@ -153,8 +177,8 @@ Les limites devront être visibles dans l'offre et vérifiées côté serveur.
 | Audio, traductions et quiz | Oui | Oui | Oui | Oui |
 | Progression synchronisée | Non | Oui | Oui | Oui |
 | Création IA | 1 essai | Non | 30 crédits/mois | 100 crédits/mois |
-| Classici : aperçu (2 livres + 1ᵉʳ chapitre) | Oui | Oui | Oui | Oui |
-| Classici : catalogue complet | Non | Non | Oui | Oui |
+| Classici : aperçu (1 livre/niveau A2·B2·C2 + 1ᵉʳ chapitre de chaque livre) | Oui | Oui | Oui | Oui |
+| Classici : catalogue complet | Non | Oui | Oui | Oui |
 | Notizie (actualité générée) | Non | Non | Oui | Oui |
 | Liens publics | Non | Non | Non | Oui |
 | Classes et dossiers | Non | Non | Non | Oui |

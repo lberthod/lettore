@@ -13,7 +13,7 @@ Application web de lecture pour apprendre l'italien : des textes gradués en ita
 - ❓ **Quiz de compréhension** à la fin de chaque texte, ⭐ **mots favoris** avec répétition espacée (vue « Parole »)
 - ✍️ **Créer son texte** : un utilisateur connecté demande un texte sur mesure (sujet, niveau, genre, taille) — généré par LLM sur le VPS, enregistré dans Firestore, retrouvable dans « Mes textes »
 - 👤 **Comptes Firebase** (facultatifs) : 6 textes en aperçu gratuit pour les visiteurs, catalogue complet réservé à Premium et au-dessus
-- 📖 **Classici** : 16 œuvres classiques du domaine public (texte authentique, non simplifié) — 2 livres en entier et le premier chapitre de quelques autres en aperçu gratuit dès la connexion, le reste réservé à Premium IA et Enseignant
+- 📖 **Classici** : 16 œuvres classiques du domaine public (texte authentique, non simplifié) — premier chapitre de chaque livre et 3 livres en entier (un par niveau A2/B2/C2) en aperçu gratuit dès la connexion, le reste réservé à Premium et au-dessus
 - 📕 **Dizionario** *(pilote)* : dictionnaire italien-français (définition, nature grammaticale, exemples, synonymes) et tableaux de conjugaison complets, pré-générés et servis en statique — voir [analyse.md](analyse.md)
 - 📱 **PWA installable** : service worker actif, app et textes disponibles hors ligne
 - ⚡ **Chargement à la demande** : chaque texte est un chunk séparé (via `import.meta.glob`)
@@ -116,23 +116,23 @@ Section `/classici`, distincte des 460 textes gradués : des œuvres du domaine 
 | Livre | Auteur | Niveau | Chapitres | Accès |
 |---|---|---|---:|---|
 | Le avventure di Pinocchio | Carlo Collodi | B1 | 36 | 1ᵉʳ chapitre gratuit |
-| Cappuccetto Rosso | Fiaba popolare | A1 | 4 | Premium IA |
-| Il gatto con gli stivali | Charles Perrault | A1 | 1 | Premium IA |
-| Cenerentola | Adattamento tradizionale | A2 | 5 | 1ᵉʳ chapitre gratuit |
-| La bella e la bestia | D'après Leprince de Beaumont | A2 | 5 | Premium IA |
+| Cappuccetto Rosso | Fiaba popolare | A1 | 4 | 1ᵉʳ chapitre gratuit |
+| Il gatto con gli stivali | Charles Perrault | A1 | 1 | 1ᵉʳ chapitre gratuit |
+| Cenerentola | Adattamento tradizionale | A2 | 5 | **Gratuit** |
+| La bella e la bestia | D'après Leprince de Beaumont | A2 | 5 | 1ᵉʳ chapitre gratuit |
 | La cicala e la formica | Esopo | A1 | 1 | **Gratuit** |
-| La colomba e la formica | Esopo | A1 | 1 | Premium IA |
+| La colomba e la formica | Esopo | A1 | 1 | 1ᵉʳ chapitre gratuit |
 | Il leone e il topo | Esopo | A1 | 1 | **Gratuit** |
-| Rosso Malpelo | Giovanni Verga | B2 | 1 | Premium IA |
-| Il Principe | Niccolò Machiavelli | C2 | 5 | 1ᵉʳ chapitre gratuit |
-| Pollicino | Fiaba popolare | A2 | 5 | Premium IA |
-| Pelle d'asino | D'après Charles Perrault | A2 | 5 | Premium IA |
-| Inferno (Divina Commedia, sélection) | Dante Alighieri | C2 | 6 | Premium IA |
-| La figlia del re | Racconto popolare italiano | A2 | 4 | Premium IA |
-| Le novelle della nonna (sélection) | Emma Perodi | B2 | 5 | Premium IA |
+| Rosso Malpelo | Giovanni Verga | B2 | 1 | **Gratuit** |
+| Il Principe | Niccolò Machiavelli | C2 | 5 | **Gratuit** |
+| Pollicino | Fiaba popolare | A2 | 5 | 1ᵉʳ chapitre gratuit |
+| Pelle d'asino | D'après Charles Perrault | A2 | 5 | 1ᵉʳ chapitre gratuit |
+| Inferno (Divina Commedia, sélection) | Dante Alighieri | C2 | 6 | 1ᵉʳ chapitre gratuit |
+| La figlia del re | Racconto popolare italiano | A2 | 4 | 1ᵉʳ chapitre gratuit |
+| Le novelle della nonna (sélection) | Emma Perodi | B2 | 5 | 1ᵉʳ chapitre gratuit |
 | Il fu Mattia Pascal | Luigi Pirandello | C1 | 18 | 1ᵉʳ chapitre gratuit |
 
-Règle d'accès (`src/lib/access.js`, `isFreeClassiciChapter`) : un compte connecté peut lire gratuitement 2 livres en entier (*La cicala e la formica*, *Il leone e il topo*) et le premier chapitre de 4 livres plus longs (*Pinocchio*, *Cenerentola*, *Il Principe*, *Il fu Mattia Pascal*). Le reste de Classici est réservé aux formules **Premium IA** et **Enseignant** — voir [README_TARIFICATION.md](README_TARIFICATION.md).
+Règle d'accès (`src/lib/access.js`, `isFreeClassiciChapter`) : un compte connecté peut lire gratuitement le premier chapitre de chaque livre, plus 3 livres en entier — un par niveau A2 (*Cenerentola*), B2 (*Rosso Malpelo*) et C2 (*Il Principe*), en plus des fables A1 à chapitre unique (*La cicala e la formica*, *Il leone e il topo*, déjà couvertes par la règle du premier chapitre). Le reste de Classici est réservé aux formules **Premium** et au-dessus — voir [README_TARIFICATION.md](README_TARIFICATION.md).
 
 ## Feuille de route : web → PWA → stores
 

@@ -233,10 +233,19 @@ const router = createRouter({
       path: '/verbi',
       name: 'verbs',
       component: () => import('./views/VerbsView.vue'),
-      meta: {
-        title: 'Verbi italiani — Leggendo',
-        description: 'Tous les verbes italiens du dictionnaire, avec leur table de conjugaison complète.',
-      },
+      meta: findRoute('/verbi'),
+    },
+    {
+      path: '/grammatica',
+      name: 'grammar',
+      component: () => import('./views/GrammarView.vue'),
+      meta: findRoute('/grammatica'),
+    },
+    {
+      path: '/test-de-niveau',
+      name: 'level-test',
+      component: () => import('./views/LevelTestView.vue'),
+      meta: findRoute('/test-de-niveau'),
     },
     {
       path: '/admin',

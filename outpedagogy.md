@@ -230,3 +230,129 @@ Chaque item précise maintenant *quoi toucher exactement* dans le code existant.
 | — | #9 Karaoke mot-à-mot | Bas de la liste — nice-to-have, pas structurant |
 
 **Prochaine étape concrète recommandée** : commencer par #4 (explications de quiz) comme gain rapide vérifiable, puis attaquer #2 en version web pour ouvrir le pilier "expression orale", qui est aujourd'hui le manque le plus sévère de l'app.
+
+---
+
+## 7. Réévaluation pédagogique après implémentation — 2026-08-01
+
+Cette section actualise l'audit précédent. Plusieurs recommandations structurantes sont maintenant présentes dans le code : série quotidienne, tableau de bord par compétence, journal d'activité, recommandation de prochaine action, écriture corrigée, dialogue interactif, exercice de prononciation, cartes d'erreurs en répétition espacée, mode d'écoute et explications de quiz. Le produit n'est donc plus seulement un lecteur enrichi : il possède les briques d'un environnement d'apprentissage à 360°.
+
+Le nouveau risque n'est plus l'absence de fonctionnalités. C'est leur **dispersion** : l'apprenant peut lire, écouter, écrire, parler, réviser et dialoguer, mais il doit encore comprendre lui-même comment ces activités s'enchaînent pour produire un apprentissage durable.
+
+### 7.1 Couverture actuelle corrigée
+
+| Dimension | État actuel | Limite encore importante |
+|---|---|---|
+| Compréhension écrite | Forte | QCM encore courts et surtout factuels |
+| Compréhension orale | Moyenne à forte | TTS système, peu de diversité de voix et de débit authentique |
+| Expression écrite | Fonctionnelle | La correction reste une activité ponctuelle, sans brouillon guidé ni réécriture obligatoire |
+| Interaction écrite | Fonctionnelle | Dialogue IA disponible, mais progression pragmatique encore peu structurée |
+| Prononciation | Fonctionnelle | Score fondé sur reconnaissance des mots, pas sur prosodie ou qualité phonétique réelle |
+| Vocabulaire | Forte | Leitner binaire ; difficulté et contexte de rappel peu pris en compte |
+| Grammaire | Contenu de référence | Page riche mais principalement consultative, pas encore une pratique adaptative |
+| Suivi | Bon socle | Mesures d'activité plus fortes que mesures de maîtrise |
+| Gamification | Sobre et saine | Série présente, mais absence d'objectifs courts explicites et de célébration de maîtrise |
+
+### 7.2 La boucle pédagogique cible
+
+L'expérience devrait toujours rendre visible une seule boucle :
+
+1. **Découvrir** : lire ou écouter un contenu adapté au niveau.
+2. **Comprendre** : traduire seulement si nécessaire et répondre à des questions.
+3. **Produire** : écrire, prononcer ou répondre dans un dialogue à partir du même contenu.
+4. **Recevoir un feedback** : correction expliquée, courte et priorisée.
+5. **Réécrire ou répéter** : effectuer immédiatement une seconde tentative améliorée.
+6. **Mémoriser** : convertir les erreurs réellement utiles en cartes de révision contextualisées.
+7. **Revenir** : proposer automatiquement la meilleure action au bon moment.
+
+Les étapes 1, 2, 4, 6 et 7 sont déjà bien amorcées. Le maillon le plus faible est l'étape 5 : l'application explique l'erreur et la stocke, mais ne contraint pas encore suffisamment l'apprenant à **mobiliser immédiatement la correction**. Or lire une explication n'est pas encore apprendre ; reformuler correctement est la véritable activité d'apprentissage.
+
+### 7.3 Audit de la boîte de texte d'écriture
+
+La zone de production libre est pertinente parce qu'elle ouvre un espace personnel et accepte des rythmes différents. Pour devenir une vraie situation pédagogique, elle devrait proposer trois modes, sans surcharger l'écran :
+
+- **Libre** : l'apprenant écrit ce qu'il souhaite.
+- **Guidé** : un objectif communicatif, trois idées à couvrir et quelques mots utiles.
+- **Défi lié au texte** : raconter la suite, changer le point de vue, résumer ou donner son avis sur la lecture qui vient d'être terminée.
+
+Après correction, le parcours recommandé est : texte original → deux erreurs prioritaires maximum → explications → zone « Réécris maintenant » → nouvelle vérification. Les corrections secondaires peuvent rester consultables, mais tout afficher avec le même poids crée une charge cognitive inutile, surtout aux niveaux A1-A2.
+
+La correction doit aussi distinguer explicitement :
+
+- **erreur bloquante**, qui empêche la compréhension ;
+- **erreur de système**, règle grammaticale ou lexicale à apprendre ;
+- **amélioration de naturel**, phrase correcte mais peu idiomatique ;
+- **préférence stylistique**, qui ne doit pas être présentée comme une faute.
+
+Cette distinction est essentielle pour préserver la confiance et éviter que l'IA ne transforme arbitrairement le style personnel en « bonne réponse » unique.
+
+### 7.4 Personnalisation : passer du niveau au profil de compétence
+
+Un unique niveau global A1-C2 serait trompeur. Un utilisateur peut lire au niveau B1, écouter au niveau A2 et écrire au niveau A1. Le tableau de bord doit donc conserver un profil séparé : lecture, écoute, vocabulaire, écriture, interaction et prononciation.
+
+La prochaine action ne devrait pas seulement combler la compétence la moins pratiquée. Elle devrait combiner quatre signaux :
+
+- échéance de mémoire : révisions dues ;
+- faiblesse observée : erreurs ou scores récents ;
+- objectif déclaré : voyage, examen, conversation, lecture ;
+- énergie disponible : session de 5, 10 ou 20 minutes.
+
+La question d'accueil la plus utile n'est donc pas « Que veux-tu faire ? », mais « Combien de temps as-tu aujourd'hui ? ». Le moteur peut ensuite composer une mini-session cohérente : par exemple 2 minutes de révision, 5 minutes de lecture et 3 minutes de production.
+
+### 7.5 Gamification pertinente
+
+La série quotidienne actuelle est une bonne mécanique de continuité, à condition de ne pas devenir punitive. La gamification recommandée doit valoriser la maîtrise et l'effort, pas le volume de clics.
+
+À privilégier :
+
+- objectif quotidien flexible en minutes ou en actions utiles ;
+- mission courte liée à une compétence : « comprendre sans traduction », « réutiliser trois mots », « corriger puis réécrire » ;
+- barre de session avec début et fin clairs ;
+- célébration discrète d'une compétence consolidée ;
+- badges rares correspondant à des capacités réelles, par exemple réussir cinq écoutes sans afficher le texte.
+
+À éviter : XP attribués à toute action, classements publics, récompenses aléatoires et notifications culpabilisantes. Ces mécanismes peuvent augmenter l'ouverture de l'application tout en diminuant l'autonomie et la qualité de l'apprentissage.
+
+### 7.6 Indicateurs de succès à mesurer
+
+Les métriques produit doivent refléter l'apprentissage, pas seulement l'engagement :
+
+| Indicateur | Ce qu'il mesure |
+|---|---|
+| Taux de seconde tentative | Transformation du feedback en action |
+| Erreurs récurrentes à 7 et 30 jours | Consolidation réelle |
+| Rappel correct sans aide | Maîtrise du vocabulaire |
+| Réussite en écoute avant affichage du texte | Compréhension orale autonome |
+| Réutilisation d'un mot appris en écriture/dialogue | Transfert entre compétences |
+| Sessions terminées / sessions commencées | Charge et clarté du parcours |
+| Progression par compétence sur 4 semaines | Effet durable, au-delà de la série |
+
+Il faut également instrumenter l'usage des aides : traduction de mot, traduction de phrase, affichage du texte en écoute et nombre de corrections demandées. Une diminution progressive de ces aides, à niveau de contenu comparable, est un meilleur signal de progrès qu'un simple nombre de textes terminés.
+
+## 8. Priorités recommandées — prochaine itération
+
+### Priorité 1 — fermer la boucle de correction
+
+Ajouter une seconde tentative obligatoire mais courte après une erreur d'écriture, de dialogue ou de prononciation. Ne demander qu'une ou deux reformulations prioritaires. C'est le gain pédagogique le plus fort avec les briques déjà présentes.
+
+### Priorité 2 — créer la session quotidienne composée
+
+Faire évoluer « la prochaine action » vers une session de 5, 10 ou 20 minutes, construite à partir des révisions dues, de la faiblesse récente et de l'objectif personnel. L'utilisateur garde toujours la possibilité de changer d'activité.
+
+### Priorité 3 — contextualiser les cartes d'erreur
+
+Chaque carte devrait conserver la phrase complète, la source, une explication courte et un exemple contrastif. La révision doit demander une production ou un choix en contexte, pas seulement la reconnaissance d'une correction isolée.
+
+### Priorité 4 — relier les activités entre elles
+
+À la fin d'un texte, proposer une seule extension logique : écouter sans texte, résumer en trois phrases, prononcer une phrase clé ou jouer une situation liée. Ce lien transforme le catalogue en parcours et évite l'effet « menu d'outils ».
+
+### Priorité 5 — rendre la grammaire active
+
+Conserver la page de référence, mais créer de petits exercices depuis les erreurs réellement détectées. La grammaire devient alors une réponse à un besoin observé, et non un manuel séparé du reste de l'expérience.
+
+## 9. Conclusion actualisée
+
+L'application dispose maintenant d'une base crédible pour un apprentissage à 360°. La prochaine avancée ne viendra pas d'un nouveau module majeur, mais de l'orchestration des modules existants : une consigne adaptée, une production courte, un feedback priorisé, une seconde tentative et une révision au bon moment.
+
+La promesse pédagogique la plus juste serait : **« Chaque jour, Leggendo choisit avec vous une courte activité adaptée, vous fait utiliser l'italien, vous explique l'essentiel et vous aide à le retenir. »**

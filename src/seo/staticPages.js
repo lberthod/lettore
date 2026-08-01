@@ -72,6 +72,24 @@ export const ROUTES = [
     description:
       "Accédez à tous les textes gradués en italien avec traduction française et audio. Découvrez les formules d'abonnement de Leggendo.",
   },
+  {
+    path: '/verbi',
+    title: 'Verbi italiani — Leggendo',
+    description:
+      'Tous les verbes italiens du dictionnaire, avec leur table de conjugaison complète.',
+  },
+  {
+    path: '/grammatica',
+    title: 'Grammatica — grammaire et orthographe italiennes — Leggendo',
+    description:
+      "L'essentiel de la grammaire italienne expliqué en français : articles, pluriels, prépositions articulées, pronoms, orthographe et accents.",
+  },
+  {
+    path: '/test-de-niveau',
+    title: "Test de niveau d'italien gratuit (A1 à C2) — Leggendo",
+    description:
+      "Testez votre niveau d'italien en quelques questions : test adaptatif qui s'ajuste à vos réponses pour estimer votre niveau CECR, de A1 à C2.",
+  },
   { path: '/mentions-legales', title: 'Mentions légales — Leggendo' },
   { path: '/confidentialite', title: 'Confidentialité — Leggendo' },
   { path: '/conditions', title: 'CGU / CGV — Leggendo' },

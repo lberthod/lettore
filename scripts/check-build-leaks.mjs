@@ -18,6 +18,7 @@ import {
   lockedContent,
   chapterDocId,
   loadTextsIndex,
+  freeContentIds,
 } from './lib/free-content.mjs'
 
 const distDir = path.join(ROOT, 'dist')
@@ -99,6 +100,17 @@ const files = walk(distDir)
 // un simple coup d'œil aux noms de fichiers repère la régression la plus
 // probable, avant même de comparer le contenu.
 const assetNames = new Set(files.map((f) => path.basename(f)))
+
+// Préfixes de chunk légitimement gratuits (ex. chapitre de livre
+// « gatto-con-gli-stivali-01 ») : un identifiant réservé peut être un
+// préfixe d'un identifiant gratuit plus long (texte « gatto » vs livre
+// « gatto-con-gli-stivali ») — sans cette liste, la détection par préfixe de
+// nom de fichier ci-dessous produirait un faux positif.
+const free = freeContentIds()
+const freeChunkNames = new Set([
+  ...free.texts,
+  ...free.chapters.map(({ bookId, chapterId }) => `${bookId}-${chapterId}`),
+])
 const blob = files
   .filter((f) => /\.(js|html|css|json|txt)$/.test(f))
   .map((f) => readFileSync(f, 'utf8'))
@@ -108,9 +120,17 @@ const leaks = []
 const unverifiable = []
 
 for (const item of items) {
-  const nameLeak = [...assetNames].find((name) =>
-    new RegExp(`^${item.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-[A-Za-z0-9_-]+\\.js$`).test(name)
-  )
+  const nameLeak = [...assetNames].find((name) => {
+    if (
+      !new RegExp(
+        `^${item.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-[A-Za-z0-9_-]+\\.js$`
+      ).test(name)
+    ) {
+      return false
+    }
+    const base = name.replace(/-[A-Za-z0-9_]+\.js$/, '')
+    return !freeChunkNames.has(base)
+  })
   if (nameLeak) {
     leaks.push(`${item.label} — chunk émis : dist/assets/${nameLeak}`)
     continue

@@ -28,7 +28,7 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
 // Sous-menu « Lessico » : regroupe les outils lexicaux pour désencombrer la barre
 const dictMenuOpen = ref(false)
 const dictMenuEl = ref(null)
-const dictNames = ['dictionary', 'verbs', 'vocabulary']
+const dictNames = ['dictionary', 'verbs', 'grammar', 'vocabulary']
 const dictActive = computed(() => dictNames.includes(route.name))
 watch(() => route.fullPath, () => (dictMenuOpen.value = false))
 
@@ -67,12 +67,13 @@ watch(dictMenuOpen, (open) => {
       <RouterLink :to="{ name: 'home' }">Accueil</RouterLink>
       <RouterLink :to="{ name: 'library' }">Textes</RouterLink>
       <RouterLink :to="{ name: 'books' }">Classici</RouterLink>
+      <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>
       <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
-      <RouterLink v-if="premiumPlus" :to="{ name: 'write' }">✍️ Scrivi</RouterLink>
-      <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }">💬 Dialogo</RouterLink>
-      <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">🗞 Notizie</RouterLink>
+      <RouterLink v-if="premiumPlus" :to="{ name: 'write' }">Scrivi</RouterLink>
+      <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }">Dialogo</RouterLink>
+      <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">Notizie</RouterLink>
       <div ref="dictMenuEl" class="chrome-dropdown" :class="{ open: dictMenuOpen, active: dictActive }">
         <button
           type="button"
@@ -85,6 +86,7 @@ watch(dictMenuOpen, (open) => {
         <div class="chrome-dropdown-menu">
           <RouterLink :to="{ name: 'dictionary' }">Dizionario</RouterLink>
           <RouterLink :to="{ name: 'verbs' }">Verbi</RouterLink>
+          <RouterLink :to="{ name: 'grammar' }">Grammatica</RouterLink>
           <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">Vocabulaire</RouterLink>
         </div>
       </div>

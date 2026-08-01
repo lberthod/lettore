@@ -83,9 +83,14 @@ export const premiumPlusPlan = {
   ],
 }
 
+// Annoncée sur la page tarifaire mais pas encore vendue (voir
+// README_TARIFICATION.md) : les fonctions pédagogiques (classes, partage,
+// export) ne sont pas livrées. `comingSoon` masque le bouton d'achat côté
+// PricingView.vue au profit d'un badge « Bientôt disponible ».
 export const teacherPlan = {
   id: 'enseignant',
   name: 'Enseignant',
+  comingSoon: true,
   monthly: {
     price: swiss ? '24,90 CHF' : '24,90 €',
     period: '/ mois',

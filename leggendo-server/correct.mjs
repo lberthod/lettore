@@ -21,14 +21,17 @@ Principes ABSOLUS :
 // non vide, ≤ 2000 caractères). `usage` est muté en place, un élément par
 // appel LLM réussi — même mécanique de mesure des coûts que generateUserText.
 export async function correctUserText({ text, usage = [] }) {
-  // Sortie ≈ texte corrigé + erreurs expliquées : bien plus courte qu'une
-  // génération, mais les modèles raisonneurs consomment aussi des tokens de
-  // réflexion sur ce budget — plancher confortable pour éviter la troncature.
   const maxTokens = Math.min(16000, Math.max(8000, text.length * 6))
+  // Repérer et expliquer des fautes dans un texte court ne bénéficie pas du
+  // mode réflexion de DeepSeek (actif par défaut) : testé sur un texte A2
+  // à 8 erreurs, mêmes erreurs détectées avec ou sans, mais 3057 tokens de
+  // réflexion invisibles en moins (out: 3717 → 718, -81 %) — même constat
+  // que dialogueFeedback (dialogue.mjs).
   const out = await callLLM({
     system: SYSTEM,
     schema: CORRECTION_SCHEMA,
     maxTokens,
+    thinking: 'disabled',
     onUsage: (u) => usage.push(u),
     prompt: `Voici la production écrite de l'élève à corriger :\n\n${text}`,
   })

@@ -5,6 +5,11 @@ import { HttpsError } from 'firebase-functions/v2/https'
 
 export const ROLES = ['gratuit', 'premium', 'premium_plus', 'enseignant']
 
+// Durée (en jours) de l'essai Premium IA accordé automatiquement à
+// l'inscription — voir README_TARIFICATION.md, § Essai Premium IA à
+// l'inscription.
+export const TRIAL_DAYS = 10
+
 // Seul ce compte peut appeler les fonctions d'administration.
 export const ADMIN_EMAIL = 'lberthod@gmail.com'
 

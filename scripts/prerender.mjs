@@ -234,6 +234,16 @@ for (const route of ROUTES) {
         url: canonical,
       },
     })
+  } else if (route.path === '/grammatica') {
+    extraHead = jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Grammatica — grammaire et orthographe italiennes',
+      description: route.description,
+      inLanguage: 'fr',
+      about: { '@type': 'Thing', name: 'Grammaire italienne' },
+      url: canonical,
+    })
   }
   let html = patchHead(template, {
     title: route.title,
@@ -339,6 +349,51 @@ ${byLevel[lvl]
       `<h1>À propos de Leggendo</h1>
   <p>Leggendo est né d'un constat simple : on apprend une langue en la lisant beaucoup, à un niveau où l'on comprend l'essentiel. ${catalogStats.count} textes gradués, de ${escapeHtml(catalogStats.levelRange)}, avec traduction française au clic et lecture audio.</p>
   <p><a href="/methode">Découvrir la méthode</a> · <a href="/textes">Voir les textes</a></p>`
+    )
+  } else if (route.path === '/verbi') {
+    html = withBody(
+      html,
+      `<h1>Verbi italiani</h1>
+  <p>Tout verbe italien appartient à l'un des trois groupes, reconnaissables à la terminaison de l'infinitif : <strong>-are</strong> (parlare, amare — le plus régulier), <strong>-ere</strong> (credere, prendere — souvent irrégulier au participe) et <strong>-ire</strong> (dormire, ou finire avec l'infixe <em>-isc-</em>).</p>
+  <p>Les temps composés se forment avec un auxiliaire : <em>avere</em> pour la plupart des verbes, <em>essere</em> pour les verbes de mouvement, d'état et les réfléchis.</p>
+  <h2>Les exceptions : verbes irréguliers essentiels</h2>
+  <p>Auxiliaires : <a href="/coniugazione/essere">essere</a>, <a href="/coniugazione/avere">avere</a>. Modaux : <a href="/coniugazione/potere">potere</a>, <a href="/coniugazione/dovere">dovere</a>, <a href="/coniugazione/volere">volere</a>, <a href="/coniugazione/sapere">sapere</a>. Mouvement et état : <a href="/coniugazione/andare">andare</a>, <a href="/coniugazione/venire">venire</a>, <a href="/coniugazione/stare">stare</a>, <a href="/coniugazione/uscire">uscire</a>, <a href="/coniugazione/salire">salire</a>, <a href="/coniugazione/rimanere">rimanere</a>. Autres incontournables : <a href="/coniugazione/fare">fare</a>, <a href="/coniugazione/dire">dire</a>, <a href="/coniugazione/dare">dare</a>, <a href="/coniugazione/bere">bere</a>, <a href="/coniugazione/tenere">tenere</a>, <a href="/coniugazione/scegliere">scegliere</a>, <a href="/coniugazione/mettere">mettere</a>, <a href="/coniugazione/prendere">prendere</a>, <a href="/coniugazione/vedere">vedere</a>, <a href="/coniugazione/conoscere">conoscere</a>, <a href="/coniugazione/vivere">vivere</a>, <a href="/coniugazione/morire">morire</a>.</p>
+  <p>Pour les articles, les pluriels, les prépositions et l'orthographe : <a href="/grammatica">voir la page Grammatica</a>.</p>`
+    )
+  } else if (route.path === '/grammatica') {
+    html = withBody(
+      html,
+      `<h1>Grammatica</h1>
+  <p>L'essentiel de la grammaire et de l'orthographe italiennes, expliqué en français. Pour les verbes et leurs conjugaisons, voir la <a href="/verbi">page Verbi</a>.</p>
+  <h2>Le nom : genre et pluriel</h2>
+  <p>Le pluriel se forme en changeant la voyelle finale, jamais avec un « s » : -o → -i (libro → libri), -a → -e (casa → case), -e → -i pour les deux genres (cane → cani, notte → notti). Invariables : mots accentués sur la finale (città, caffè) et mots étrangers (film). Pièges classiques : il problema/il programma/il poeta sont masculins malgré le -a ; la mano est féminin ; l'uovo → le uova et il braccio → le braccia changent de genre au pluriel.</p>
+  <h2>Les articles</h2>
+  <p>L'article s'accorde en genre et en nombre, mais aussi selon la première lettre du mot qui suit — c'est la grande différence avec le français : <em>il libro, lo studente, l'amico, la casa, l'amica</em> au singulier ; <em>i libri, gli studenti, gli amici, le case, le amiche</em> au pluriel ; <em>un libro, uno studente, un amico, una casa, un'amica</em> à l'indéfini.</p>
+  <h2>L'adjectif</h2>
+  <p>Il s'accorde avec le nom (ragazzo italiano → ragazzi italiani, ragazza italiana → ragazze italiane) ; les adjectifs en -e n'ont que deux formes. Contrairement au français, l'adjectif se place le plus souvent après le nom : una macchina rossa. Quelques adjectifs courts et fréquents (bello, buono, grande, piccolo, giovane, vecchio, nuovo, stesso, altro) se placent avant.</p>
+  <h2>Les possessifs</h2>
+  <p>Le possessif s'accorde avec la chose possédée et se fait précéder de l'article : il mio libro, la mia casa, i miei amici. Devant un nom de famille au singulier non affectueux, l'article disparaît : mia madre, tuo fratello.</p>
+  <h2>Les démonstratifs : questo et quello</h2>
+  <p>Questo (ce, celui-ci) est régulier. Quello (ce, celui-là) se décline comme les prépositions articulées ci-dessous : quel libro, quello studente, quell'amico, quella casa.</p>
+  <h2>Les prépositions articulées</h2>
+  <p>Les prépositions di, a, da, in, su fusionnent obligatoirement avec l'article défini : del/dello/dell'/della/dei/degli/delle (di), al/allo/all'/alla/ai/agli/alle (a), dal/dallo/dall'/dalla/dai/dagli/dalle (da), nel/nello/nell'/nella/nei/negli/nelle (in), sul/sullo/sull'/sulla/sui/sugli/sulle (su). Tra et fra (entre, parmi) ne fusionnent jamais avec l'article.</p>
+  <h2>Piacere et les verbes à construction inversée</h2>
+  <p>Piacere (aimer, plaire) fonctionne à l'envers du français : la chose aimée est sujet, la personne est un complément indirect — Mi piace la pizza (littéralement « la pizza me plaît »), Mi piacciono i libri.</p>
+  <h2>Les pronoms personnels compléments</h2>
+  <p>Directs : mi, ti, lo, la, ci, vi, li, le. Indirects : mi, ti, gli, le, ci, vi, gli. Ne (en) et ci (y) : Ne prendo due, Ci vado domani. Le pronom se soude à l'infinitif et à l'impératif : vederlo, dimmi.</p>
+  <h2>La négation</h2>
+  <p>Non se place avant le verbe : Non parlo italiano. Avec mai, niente, nessuno placés après le verbe, l'italien double la négation : Non ho visto nessuno, Non capisco niente.</p>
+  <h2>Comparatif et superlatif</h2>
+  <p>Più/meno... di ou che pour comparer ; il/la più... di pour le superlatif relatif ; le suffixe -issimo/-issima pour le superlatif absolu (bello → bellissimo).</p>
+  <h2>Molto, tanto, poco, troppo : adjectif ou adverbe ?</h2>
+  <p>Adjectifs (accordés, devant un nom) : molti libri, poche idee. Adverbes (invariables, devant un adjectif) : molto bello, troppo stanco.</p>
+  <h2>L'interrogation</h2>
+  <p>Pas d'inversion sujet-verbe : Parli italiano? Mots interrogatifs courants : che/cosa, chi, come, dove, quando, perché, quanto (qui s'accorde, contrairement au français).</p>
+  <h2>Orthographe : les sons c et g</h2>
+  <p>La lettre suivante décide de la prononciation, et le h sert à « durcir » : ca/co/cu/che/chi = [k] dur (casa, perché), ce/ci = [tch] doux (cena, ciao), ga/go/gu/ghe/ghi = [g] dur (gatto, ghiaccio), ge/gi = [dj] doux (gelato, giorno), gn comme dans agneau (gnocchi, bagno), gli « l mouillé » (famiglia), sce/sci = [ch] (pesce, sciare).</p>
+  <h2>Orthographe : consonnes doubles et accents</h2>
+  <p>Les consonnes doubles se prononcent réellement plus longues et changent le sens (pala/palla, caro/carro, sono/sonno). L'accent écrit n'apparaît que sur la voyelle finale (città, però, caffè) et distingue des mots courts (è/e, là/la, sì/si, dà/da). L'élision se marque par l'apostrophe devant voyelle (l'amico, un'ora, c'è). Le h est toujours muet, sauf à l'écrit de avere (ho, hai, ha, hanno).</p>
+  <p>Explorez les <a href="/textes">textes gradués</a>, la liste des <a href="/verbi">verbes avec conjugaison complète</a> et le <a href="/dizionario">dictionnaire</a>.</p>`
     )
   } else if (LEVEL_LANDING_PAGES.some((p) => p.path === route.path)) {
     // Pages par niveau (GPTanalyse.md, § 10) — même sélection éditoriale que

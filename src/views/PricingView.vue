@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 import { useRouter } from 'vue-router'
 import { plans, stripeReady, checkoutUrl } from '../lib/stripe.js'
 import { currentUser } from '../lib/auth.js'
-import { markRoleMayHaveChanged } from '../lib/access.js'
+import { getTrialInfo, markRoleMayHaveChanged } from '../lib/access.js'
 import { trackBeginCheckout } from '../lib/analytics.js'
 import { billingSupported, purchase } from '../lib/billing.js'
 import SiteHeader from '../components/SiteHeader.vue'
@@ -24,11 +24,13 @@ const restoring = ref(false)
 // apkdoc.md (Android) et apk doc.md (iOS).
 const platform = ref('web')
 const isNativeApp = ref(false)
+const trialInfo = ref({ active: false, daysRemaining: 0 })
 onMounted(async () => {
   document.body.style.overflow = 'hidden'
   const { Capacitor } = await import('@capacitor/core')
   platform.value = Capacitor.getPlatform()
   isNativeApp.value = Capacitor.isNativePlatform()
+  trialInfo.value = await getTrialInfo()
 })
 onUnmounted(() => {
   document.body.style.overflow = ''
@@ -185,6 +187,12 @@ async function restore() {
           Les formules payantes arrivent bientôt. En attendant, créez un compte
           gratuit pour découvrir la bibliothèque.
         </p>
+        <p v-if="trialInfo.active" class="notice notice-trial">
+          Votre essai Premium IA gratuit se termine dans
+          {{ trialInfo.daysRemaining }}
+          {{ trialInfo.daysRemaining > 1 ? 'jours' : 'jour' }}. Abonnez-vous
+          pour garder l'accès sans interruption.
+        </p>
         <p v-if="purchaseError" class="notice">{{ purchaseError }}</p>
 
         <div class="billing-toggle" role="group" aria-label="Fréquence de facturation">
@@ -214,6 +222,7 @@ async function restore() {
             :class="{ highlight: plan.highlight }"
           >
             <span v-if="plan.highlight" class="ribbon">Consigliato</span>
+            <span v-if="plan.comingSoon" class="ribbon ribbon-soon">Bientôt disponible</span>
             <h2>{{ plan.name }}</h2>
             <p class="price">
               {{ plan[billing].price
@@ -222,8 +231,9 @@ async function restore() {
             <ul>
               <li v-for="f in plan.features" :key="f">{{ f }}</li>
             </ul>
+            <span v-if="plan.comingSoon" class="current">Bientôt disponible</span>
             <button
-              v-if="isNativeApp ? plan.id !== 'gratuit' : plan[billing].paymentLink !== null"
+              v-else-if="isNativeApp ? plan.id !== 'gratuit' : plan[billing].paymentLink !== null"
               class="btn-hero"
               :disabled="
                 purchasing ||
@@ -497,6 +507,15 @@ async function restore() {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.ribbon-soon {
+  background: #6b6156;
+}
+
+.notice-trial {
+  border-color: rgba(74, 124, 89, 0.4);
+  color: #4a7c59;
 }
 
 .plan h2 {

@@ -43,15 +43,15 @@ describe('isFreeClassiciChapter', () => {
     }
   })
 
-  it('les livres en aperçu ne libèrent que le premier chapitre', () => {
-    for (const bookId of FREE_CLASSICI_PREVIEW_BOOK_IDS) {
+  it('les livres en aperçu (hors livres entièrement gratuits) ne libèrent que le premier chapitre', () => {
+    const previewOnly = FREE_CLASSICI_PREVIEW_BOOK_IDS.filter(
+      (id) => !FREE_CLASSICI_BOOK_IDS.includes(id)
+    )
+    expect(previewOnly.length).toBeGreaterThan(0)
+    for (const bookId of previewOnly) {
       expect(isFreeClassiciChapter(bookId, '01')).toBe(true)
       expect(isFreeClassiciChapter(bookId, '02')).toBe(false)
     }
-  })
-
-  it('un livre entièrement payant ne libère aucun chapitre', () => {
-    expect(isFreeClassiciChapter('inferno', '01')).toBe(false)
   })
 
   it('un identifiant de livre inconnu est traité comme payant', () => {

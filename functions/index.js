@@ -18,6 +18,12 @@
 //                         src/lib/billing.js, apkdoc.md § Google Play Billing).
 // - validateAppleReceipt : vérifie un reçu StoreKit iOS (voir src/lib/iap.js,
 //                         apk doc.md § Paiement in-app).
+// - revertExpiredTrials : tâche planifiée (une fois par jour) qui repasse au
+//                         rôle `gratuit` les comptes dont l'essai Premium IA
+//                         de 10 jours (voir `onUserCreated` et
+//                         README_TARIFICATION.md, § Essai Premium IA à
+//                         l'inscription) est expiré sans qu'un paiement
+//                         (Stripe/Play/Apple) n'ait pris le relais.
 //
 // Secrets (à définir AVANT le premier déploiement qui les utilise) :
 //   firebase functions:secrets:set STRIPE_SECRET_KEY
@@ -30,6 +36,7 @@
 //   https://<region>-leggendo-dbb84.cloudfunctions.net/stripeWebhook
 
 import { onRequest, onCall, HttpsError } from 'firebase-functions/v2/https'
+import { onSchedule } from 'firebase-functions/v2/scheduler'
 import { defineSecret } from 'firebase-functions/params'
 import { setGlobalOptions } from 'firebase-functions/v2'
 import functionsV1 from 'firebase-functions/v1'
@@ -38,6 +45,7 @@ import { getAuth } from 'firebase-admin/auth'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
 import {
   ROLES,
+  TRIAL_DAYS,
   requireAdmin,
   roleForPriceId,
   roleForProductId,
@@ -112,7 +120,73 @@ export const onUserCreated = functionsV1
       // Ne jamais faire échouer une inscription légitime pour un compteur.
       console.error('Comptage des inscriptions impossible :', err)
     }
+
+    // Essai Premium IA de 10 jours, accordé automatiquement à l'inscription
+    // (voir README_TARIFICATION.md, § Essai Premium IA à l'inscription).
+    // `trialEnd` (secondes epoch) est repris par `revertExpiredTrials` pour
+    // repasser le compte en `gratuit` si aucun paiement (`periodEnd`) n'a été
+    // posé d'ici là. Indépendant du compteur d'abus ci-dessus : une erreur
+    // ici ne doit jamais faire échouer l'inscription.
+    try {
+      const trialEnd = Math.floor(Date.now() / 1000) + TRIAL_DAYS * 24 * 60 * 60
+      await getAuth().setCustomUserClaims(user.uid, {
+        role: 'premium_plus',
+        premium: true,
+        trialEnd,
+      })
+    } catch (err) {
+      console.error("Octroi de l'essai Premium IA impossible :", err)
+    }
   })
+
+// Tâche planifiée : repasse au rôle `gratuit` les comptes dont l'essai
+// Premium IA de 10 jours (posé par `onUserCreated`) est expiré et qui n'ont
+// jamais payé — `periodEnd` (posé uniquement par `applyRole`, donc par un
+// vrai paiement Stripe/Play/Apple) sert de discriminant : son absence signifie
+// que l'essai n'a jamais été converti en abonnement payant. Voir
+// README_TARIFICATION.md, § Essai Premium IA à l'inscription.
+export const revertExpiredTrials = onSchedule('every 24 hours', async () => {
+  const auth = getAuth()
+  const now = Math.floor(Date.now() / 1000)
+  let reverted = 0
+  let pageToken
+
+  do {
+    let page
+    try {
+      page = await auth.listUsers(1000, pageToken)
+    } catch (err) {
+      console.error('Listage des comptes impossible (revertExpiredTrials) :', err)
+      break
+    }
+
+    for (const user of page.users) {
+      const claims = user.customClaims || {}
+      if (
+        claims.role === 'premium_plus' &&
+        claims.trialEnd &&
+        claims.trialEnd <= now &&
+        claims.periodEnd === undefined
+      ) {
+        try {
+          await auth.setCustomUserClaims(user.uid, {
+            ...claims,
+            role: 'gratuit',
+            premium: false,
+            trialEnd: null,
+          })
+          reverted += 1
+        } catch (err) {
+          console.error(`Retour au gratuit impossible pour ${user.uid} :`, err)
+        }
+      }
+    }
+
+    pageToken = page.pageToken
+  } while (pageToken)
+
+  console.log(`revertExpiredTrials : ${reverted} compte(s) repassé(s) en gratuit.`)
+})
 
 // Pose (ou retire) le rôle et le claim `premium` associé sur un utilisateur.
 // `role` est optionnel : si absent, seul `premium` est mis à jour (cas d'un

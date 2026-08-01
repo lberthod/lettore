@@ -61,6 +61,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://leggendo.fr/verbi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://leggendo.fr/grammatica</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://leggendo.fr/mentions-legales</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

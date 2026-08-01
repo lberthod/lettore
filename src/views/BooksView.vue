@@ -12,7 +12,7 @@ function readChapters(book) {
 function accessLabel(book) {
   if (FREE_CLASSICI_BOOK_IDS.includes(book.id)) return 'Gratuit'
   if (FREE_CLASSICI_PREVIEW_BOOK_IDS.includes(book.id)) return '1er chapitre gratuit'
-  return 'Premium IA'
+  return 'Premium'
 }
 </script>
 

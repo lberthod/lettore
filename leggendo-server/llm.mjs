@@ -1,19 +1,19 @@
-// Appels à l'API GLM (Zhipu AI / Z.ai), endpoint chat completions compatible
-// OpenAI. Copie autonome de generator/lib/llm.mjs, configurée par variables
-// d'environnement (le dossier leggendo/ part seul sur le VPS).
+// Appels à l'API DeepSeek, endpoint chat completions compatible OpenAI.
+// Copie autonome de generator/lib/llm.mjs, configurée par variables
+// d'environnement (le dossier leggendo/ part seul sur le VPS). Noms de
+// variables GLM_* conservés par compatibilité (même famille que
+// scripts/lib/llm-openai.mjs, aussi branché sur DeepSeek).
 
 export const GLM_API_KEY = process.env.GLM_API_KEY || ''
-export const GLM_MODEL = process.env.GLM_MODEL || 'glm-5.1'
-export const GLM_BASE_URL =
-  process.env.GLM_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4/chat/completions'
+export const GLM_MODEL = process.env.GLM_MODEL || 'deepseek-v4-flash'
+export const GLM_BASE_URL = process.env.GLM_BASE_URL || 'https://api.deepseek.com/chat/completions'
 // Un appel qui pend sans timeout bloque le job « running » pour toujours
 // (et avec lui le verrou un-job-par-compte) : on coupe au bout de 8 minutes.
 export const GLM_TIMEOUT_MS = Number(process.env.GLM_TIMEOUT_MS || 8 * 60 * 1000)
-// La connectivité vers open.bigmodel.cn (Chine) est parfois coupée depuis le
-// VPS : en cas d'erreur réseau, on bascule sur l'endpoint international
-// (même clé, mêmes modèles) pour la tentative suivante.
-export const GLM_FALLBACK_URL =
-  process.env.GLM_FALLBACK_URL || 'https://api.z.ai/api/paas/v4/chat/completions'
+// Pas de second endpoint connu côté DeepSeek : GLM_FALLBACK_URL reste
+// configurable (bascule en cas d'erreur réseau sur l'endpoint principal)
+// mais n'a pas de valeur par défaut.
+export const GLM_FALLBACK_URL = process.env.GLM_FALLBACK_URL || ''
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
@@ -35,20 +35,52 @@ function extractJson(text) {
 // (README_TARIFICATION.md, § Mesure des coûts IA). Les tentatives qui
 // échouent avant d'obtenir de réponse ne sont pas comptées (pas de usage
 // disponible).
-export async function callLLM({ system, prompt, schema, maxTokens = 8000, onUsage }) {
+// `thinking` (optionnel) : passer 'disabled' pour couper le mode réflexion de
+// DeepSeek (activé par défaut, effort « high ») sur les appels où il n'aide
+// pas (répliques courtes, pas de raisonnement multi-étapes) — les tokens de
+// réflexion sont facturés en sortie même s'ils ne sont jamais affichés à
+// l'utilisateur. Effet de bord utile : `temperature` est ignoré par l'API
+// tant que le mode réflexion est actif, donc le désactiver est aussi ce qui
+// rend `temperature: 0.7` réellement effectif.
+// `history` (optionnel) : messages { role: 'user'|'assistant', content }
+// insérés entre le system prompt et `prompt` — pour une conversation
+// multi-tour, préférer ça à un transcript aplati dans `prompt` : DeepSeek met
+// automatiquement en cache (disque) le préfixe déjà vu d'une requête à
+// l'autre (system + tours précédents identiques), facturé ~10× moins cher
+// que des tokens neufs. Un transcript reconstruit en une seule chaîne
+// (system fixe mais tout l'historique dans `prompt`) casse ce préfixe dès
+// qu'un octet diffère (formatage, garniture d'instruction) — les messages
+// séparés, eux, restent identiques tour après tour par construction.
+// `reasoningEffort` (optionnel, 'low'/'high'/'max') : n'a d'effet que si le
+// mode réflexion est actif (thinking non 'disabled') — réduit le budget de
+// réflexion sans le couper entièrement, pour les tâches qui bénéficient d'un
+// peu de raisonnement (repérage d'erreurs) sans avoir besoin de l'effort
+// « high » par défaut de l'API.
+export async function callLLM({
+  system,
+  prompt,
+  schema,
+  maxTokens = 8000,
+  onUsage,
+  thinking,
+  reasoningEffort,
+  history = [],
+}) {
   if (!GLM_API_KEY) {
     throw new Error('GLM_API_KEY manquante (export GLM_API_KEY=...).')
   }
 
+  // JSON compact (pas d'indentation) : refacturé à chaque appel, l'indentation
+  // ne sert qu'à la lisibilité humaine et coûte des tokens pour rien ici.
   const fullSystem = `${system}
 
 Tu DOIS répondre avec un unique objet JSON valide, sans aucun texte avant ni après, conforme exactement à ce schéma JSON Schema :
 
-${JSON.stringify(schema, null, 2)}
+${JSON.stringify(schema)}
 
 Ne mets pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
 
-  const endpoints = [...new Set([GLM_BASE_URL, GLM_FALLBACK_URL])]
+  const endpoints = [...new Set([GLM_BASE_URL, GLM_FALLBACK_URL].filter(Boolean))]
   let endpointIndex = 0
   let lastError
   let currentMaxTokens = maxTokens
@@ -67,8 +99,11 @@ Ne mets pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
           max_tokens: currentMaxTokens,
           temperature: 0.7,
           response_format: { type: 'json_object' },
+          ...(thinking ? { thinking: { type: thinking } } : {}),
+          ...(thinking !== 'disabled' && reasoningEffort ? { reasoning_effort: reasoningEffort } : {}),
           messages: [
             { role: 'system', content: fullSystem },
+            ...history,
             { role: 'user', content: prompt },
           ],
         }),
@@ -83,8 +118,15 @@ Ne mets pas de balises markdown (pas de \`\`\`), juste le JSON brut.`
       // Suivi du coût : tokens réellement consommés par appel.
       const u = data.usage
       if (u) {
+        const reasoningTokens = u.completion_tokens_details?.reasoning_tokens
         console.log(
-          `  usage : in=${u.prompt_tokens} out=${u.completion_tokens} total=${u.total_tokens}`
+          `  usage : in=${u.prompt_tokens}` +
+            (u.prompt_cache_hit_tokens != null
+              ? ` (cache_hit=${u.prompt_cache_hit_tokens} cache_miss=${u.prompt_cache_miss_tokens})`
+              : '') +
+            ` out=${u.completion_tokens}` +
+            (reasoningTokens ? ` (dont réflexion=${reasoningTokens})` : '') +
+            ` total=${u.total_tokens}`
         )
         onUsage?.(u)
       }

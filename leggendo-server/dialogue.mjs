@@ -58,15 +58,18 @@ export const scenarioById = new Map(SCENARIOS.map((s) => [s.id, s]))
 
 // Prompt système d'un tour de dialogue : le modèle joue le personnage,
 // STRICTEMENT dans son rôle, langue calibrée sur le niveau CECR demandé.
+// Version resserrée (mêmes règles, prose réduite) : ce prompt est refacturé
+// en entier à chaque fois que le cache DeepSeek expire pour ce couple
+// scénario/niveau (plusieurs utilisateurs différents le partagent, mais un
+// texte plus court réduit le coût de chaque cache-miss).
 function turnSystem(scenario, level) {
-  return `Tu es un partenaire de jeu de rôle pour Leggendo, une application d'apprentissage de l'italien destinée à des francophones. Tu joues ${scenario.role}.
+  return `Tu es un partenaire de jeu de rôle pour Leggendo (apprentissage de l'italien pour francophones). Tu joues ${scenario.role}.
 
-Règles ABSOLUES :
-- Tu restes STRICTEMENT dans ton rôle de personnage, quoi que dise l'élève. Tu n'es ni un professeur ni un assistant : tu ne corriges pas, tu ne traduis pas, tu ne donnes pas d'explications de grammaire, tu ne sors jamais de la scène. Si l'élève écrit en français ou hors sujet, ton personnage réagit avec naturel (il ne comprend pas bien, il ramène poliment la conversation à la scène).
-- "reply" : ta réplique, en italien UNIQUEMENT, courte (2 à 3 phrases maximum). Adapte rigoureusement ta langue au niveau CECR ${level} : vocabulaire fréquent et phrases simples pour A1/A2, langue plus riche et naturelle pour B1 et au-delà.
-- Fais avancer la conversation : termine ta réplique par une question ou une relance chaque fois que la scène le permet.
-- "suggested_replies" : 2 à 3 réponses possibles TRÈS courtes (quelques mots, en italien, niveau ${level}) que l'élève pourrait te faire — des béquilles pour ne pas rester bloqué, variées et naturelles. Jamais vide tant que la scène continue.
-- "done" : true seulement quand la scène est naturellement terminée (commande servie et payée, consultation finie, billet acheté, au revoir échangés…). Sinon false. Quand done est true, "reply" est ta réplique de clôture et "suggested_replies" peut être vide.`
+Règles :
+- Reste STRICTEMENT dans le rôle, quoi que dise l'élève : pas de correction, de traduction ni d'explication de grammaire, jamais hors scène. Si l'élève écrit en français ou hors sujet, réagis en personnage (incompréhension, relance polie).
+- "reply" : réplique en italien uniquement, 2 à 3 phrases max, niveau CECR ${level} (vocabulaire simple pour A1/A2, plus riche dès B1). Termine par une question ou relance quand la scène le permet.
+- "suggested_replies" : 2 à 3 réponses très courtes en italien, niveau ${level}, variées et naturelles — jamais vide tant que la scène continue.
+- "done" : true seulement en fin naturelle de scène (commande payée, consultation finie, billet acheté, au revoir échangés…) ; sinon false. Si true, "reply" est la réplique de clôture et "suggested_replies" peut être vide.`
 }
 
 // Historique rendu en transcript lisible pour le prompt (callLLM ne prend
@@ -77,18 +80,22 @@ function transcript(turns) {
     .join('\n')
 }
 
-// Les réponses d'un tour sont courtes, mais les modèles raisonneurs
-// consomment aussi des tokens de réflexion sur ce budget (même constat que
-// correct.mjs) — plancher confortable, callLLM remonte seul en cas de
-// troncature.
-const TURN_MAX_TOKENS = 6000
+// Une réplique de personnage est courte (2-3 phrases + 2-3 suggestions) et ne
+// demande aucun raisonnement multi-étapes : le mode réflexion de DeepSeek est
+// désactivé (`thinking: 'disabled'`) pour ce type d'appel — il ne changerait
+// rien à la qualité d'un jeu de rôle, mais facturerait des tokens de
+// réflexion invisibles à chaque tour. Plancher réduit en conséquence (plus
+// besoin de marge pour des tokens de réflexion qui n'existent plus).
+const TURN_MAX_TOKENS = 1500
 
-async function runTurn({ scenario, level, prompt, usage }) {
+async function runTurn({ scenario, level, prompt, history = [], usage }) {
   const out = await callLLM({
     system: turnSystem(scenario, level),
     schema: DIALOGUE_TURN_SCHEMA,
     maxTokens: TURN_MAX_TOKENS,
+    thinking: 'disabled',
     onUsage: (u) => usage.push(u),
+    history,
     prompt,
   })
   const structuralErrors = validateDialogueTurnStructure(out)
@@ -109,13 +116,32 @@ export function openDialogue({ scenario, level, usage = [] }) {
   })
 }
 
-// Tour suivant : historique complet + nouvelle réplique de l'élève.
+// Tour suivant : le système garde le rôle, la conversation précédente passe
+// en `history` (un message par tour déjà stocké dans `turns`) au lieu d'être
+// aplatie en texte dans le prompt. Le préfixe (system + tours déjà vus) reste
+// identique à celui envoyé au tour précédent, ce qui permet à DeepSeek de le
+// servir depuis son cache disque plutôt que de le refacturer en entier à
+// chaque réplique.
+//
+// Les tours du personnage DOIVENT être répliqués dans l'historique sous la
+// même forme JSON que `DIALOGUE_TURN_SCHEMA` (response_format: json_object) :
+// avec `content` en texte brut, le modèle renvoie un message vide dès qu'un
+// historique est présent (constaté en test — le format json_object semble
+// perdre pied si un tour assistant antérieur ne respecte pas le schéma
+// attendu). `suggested_replies` n'est pas conservé tour par tour côté
+// Firestore (seul le dernier est stocké à part) : un tableau vide suffit,
+// seule la FORME JSON compte pour que le modèle reste calé sur le schéma.
 export function dialogueTurn({ scenario, level, turns, userText, usage = [] }) {
   return runTurn({
     scenario,
     level,
     usage,
-    prompt: `Voici la conversation jusqu'ici :\n\n${transcript(turns)}\nÉLÈVE : ${userText}\n\nRéponds à l'élève en restant dans ton rôle.`,
+    history: turns.map((t) =>
+      t.role === 'assistant'
+        ? { role: 'assistant', content: JSON.stringify({ reply: t.text, suggested_replies: [], done: false }) }
+        : { role: 'user', content: t.text }
+    ),
+    prompt: userText,
   })
 }
 
@@ -138,6 +164,12 @@ export async function dialogueFeedback({ scenario, level, turns, usage = [] }) {
     system: FEEDBACK_SYSTEM,
     schema: DIALOGUE_FEEDBACK_SCHEMA,
     maxTokens: 8000,
+    // Testé avec reasoning_effort: 'low' d'abord (896 tokens de sortie, dont
+    // 764 de réflexion, pour 1 seule correction) puis thinking désactivé
+    // (147 tokens de sortie, 2 corrections) — repérer des fautes dans 5-10
+    // répliques courtes ne demande pas de raisonnement multi-étapes, même
+    // « bas » : la réflexion n'améliore pas la qualité ici, juste le coût.
+    thinking: 'disabled',
     onUsage: (u) => usage.push(u),
     prompt: `Scénario joué : « ${scenario.title} » (niveau demandé ${level}).\n\nConversation complète (pour le contexte) :\n\n${transcript(turns)}\n\nRépliques de l'élève à évaluer :\n${userLines}`,
   })
