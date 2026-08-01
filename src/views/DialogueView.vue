@@ -21,6 +21,7 @@ import {
   clearSessionId,
 } from '../lib/dialogue.js'
 import { logActivity, addErrorCard } from '../progress.js'
+import { selectPriorityErrors } from '../lib/correctionRetry.js'
 
 // --- Solde de crédits (comme WriteView) : un dialogue coûte 2 crédits, à la
 // session — le serveur reste la seule source de vérité, affichage informatif.
@@ -143,10 +144,19 @@ async function finish() {
     // Capture pédagogique : la session compte dans le parcours (touchStreak
     // est appelé par logActivity) et chaque point du bilan devient une carte
     // de révision. Le bilan ne classe pas ses remarques : 'lessico' par défaut.
+    // errorCount/priorityErrorCount (comme pour 'scrittura') sont
+    // nécessaires pour que retryRate() (metrics.js §15.1) compte aussi les
+    // reprises de dialogue : sans errorCount, un bilan avec remarques n'est
+    // jamais compté comme « correction proposée ».
+    // selectPriorityErrors attend { original, correction } — retryErrors
+    // fait déjà cette conversion depuis le bilan (`better` → `correction`).
+    const priorityErrorCount = selectPriorityErrors(retryErrors.value).length
     activityEvent.value = logActivity({
       skill: 'dialogo',
       scenario: selectedScenario.value,
       turns: turns.value.filter((t) => t.role === 'user').length,
+      errorCount: feedback.value.length,
+      priorityErrorCount,
     })
     for (const f of feedback.value) {
       addErrorCard({

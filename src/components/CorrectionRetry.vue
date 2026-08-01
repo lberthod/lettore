@@ -3,11 +3,24 @@
 // section 5) : après une correction d'écriture ou un bilan de dialogue, on
 // reprend 1-2 erreurs prioritaires, on demande une reformulation, on la
 // vérifie localement et on met à jour la carte SRS correspondante — sans
-// jamais bloquer ni dupliquer de carte (addErrorCard/reviewErrorCard sont
-// déjà idempotents par id, voir progress.js).
-import { computed, ref, watch } from 'vue'
+// jamais bloquer ni dupliquer de carte.
+//
+// La carte a déjà été créée par la vue appelante (WriteView/DialogueView
+// appellent addErrorCard() pour CHAQUE erreur juste après la correction,
+// avant même d'afficher ce composant) : on se contente ici de retrouver son
+// id (errorCardId est une fonction pure du couple original/correction) et
+// de la faire progresser dans Leitner via reviewErrorCard. Appeler à
+// nouveau addErrorCard() ici ajouterait un second horodatage à `history`
+// dans la même session, ce qui ferait passer une simple reprise pour une
+// « erreur récurrente » (§15.1) alors qu'elle ne l'est pas encore.
+import { computed, onUnmounted, ref, watch } from 'vue'
 import { selectPriorityErrors, checkRewrite, hintFor } from '../lib/correctionRetry.js'
-import { addErrorCard, reviewErrorCard } from '../progress.js'
+import { errorCardId, reviewErrorCard } from '../progress.js'
+
+// Le message « Bravo ! » doit rester visible un instant avant de passer à
+// l'étape suivante ou de disparaître — sans ce délai, `advance()` efface
+// `feedback` dans le même tick et l'apprenant ne voit jamais la confirmation.
+const SUCCESS_DELAY_MS = 1100
 
 const props = defineProps({
   // Erreurs complètes de la correction/bilan : [{ original, correction,
@@ -37,12 +50,21 @@ const hintShown = ref(false)
 const retryCount = ref(0)
 const outcomes = ref([]) // succès/échec final par étape traitée
 const finished = ref(false)
+let advanceTimer = null
+
+function clearAdvanceTimer() {
+  if (advanceTimer) {
+    clearTimeout(advanceTimer)
+    advanceTimer = null
+  }
+}
 
 // Nouvelle correction (nouvelle soumission, nouveau bilan) : on repart de
 // zéro plutôt que de continuer sur une reprise obsolète.
 watch(
   () => props.errors,
   () => {
+    clearAdvanceTimer()
     stepIndex.value = 0
     attempt.value = ''
     feedback.value = null
@@ -52,6 +74,8 @@ watch(
     finished.value = false
   },
 )
+
+onUnmounted(clearAdvanceTimer)
 
 const current = computed(() => steps.value[stepIndex.value] || null)
 const hint = computed(() => (current.value ? hintFor(current.value.correction) : ''))
@@ -68,24 +92,21 @@ function typeLabel(type) {
 }
 
 function recordCard(err, success) {
-  const card = addErrorCard({
-    original: err.original,
-    correction: err.correction,
-    explanation: err.explanation,
-    type: err.type,
-    source: props.source,
-  })
-  reviewErrorCard(card.id, success)
+  reviewErrorCard(errorCardId(err.original, err.correction), success)
 }
 
 function verify() {
-  if (!current.value || !attempt.value.trim() || finished.value) return
+  if (!current.value || !attempt.value.trim() || finished.value || advanceTimer) return
   retryCount.value += 1
   const { success } = checkRewrite(attempt.value, current.value.correction)
   feedback.value = success ? 'success' : 'retry'
   if (success) {
     recordCard(current.value, true)
-    advance(true)
+    // Laisse le message de réussite visible avant de passer à la suite.
+    advanceTimer = setTimeout(() => {
+      advanceTimer = null
+      advance(true)
+    }, SUCCESS_DELAY_MS)
   }
 }
 
@@ -96,7 +117,7 @@ function toggleHint() {
 // Ne bloque jamais : l'apprenant peut toujours passer à la suite même sans
 // avoir retrouvé la forme correcte.
 function skip() {
-  if (!current.value || finished.value) return
+  if (!current.value || finished.value || advanceTimer) return
   recordCard(current.value, false)
   advance(false)
 }
@@ -142,7 +163,7 @@ function advance(success) {
         v-model="attempt"
         rows="2"
         placeholder="Scrivi di nuovo la frase…"
-        :disabled="finished"
+        :disabled="finished || feedback === 'success'"
         @keydown.enter.exact.prevent="verify"
       ></textarea>
     </label>
@@ -160,15 +181,15 @@ function advance(success) {
       <button
         type="button"
         class="btn-primary"
-        :disabled="!attempt.trim()"
+        :disabled="!attempt.trim() || feedback === 'success'"
         @click="verify"
       >
         Vérifier
       </button>
-      <button type="button" class="link-btn" @click="toggleHint">
+      <button type="button" class="link-btn" :disabled="feedback === 'success'" @click="toggleHint">
         {{ hintShown ? 'Cacher l’indice' : '💡 Un indice' }}
       </button>
-      <button type="button" class="link-btn" @click="skip">Passer</button>
+      <button type="button" class="link-btn" :disabled="feedback === 'success'" @click="skip">Passer</button>
     </div>
   </section>
 </template>

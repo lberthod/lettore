@@ -264,18 +264,27 @@ export function composeSession(
   const usedTypes = new Set()
   let costlyAiCount = 0
   const maxCostlyAi = totalDuration <= SHORT_SESSION_MAX ? 1 : 2
+  // Budget de minutes restant : chaque étape ajoutée le consomme, pour que
+  // la somme des estimatedMinutes ne dépasse jamais la durée annoncée
+  // (sinon une session « 5 minutes » peut afficher 12 minutes d'étapes).
+  let remaining = totalDuration
 
-  // 1. Révisions très en retard, en premier mais plafonnées.
+  // 1. Révisions très en retard, en premier mais plafonnées — à la fois en
+  // nombre (REVIEW_STEP_CAP) et en durée (ne consomme pas plus que le
+  // budget total, pour laisser une chance aux étapes suivantes).
   const due = dueReviewCount(progress, now)
   if (due > 0) {
-    const count = Math.min(due, REVIEW_STEP_CAP)
+    const maxByBudget = Math.max(1, Math.floor(remaining * 2.5))
+    const count = Math.min(due, REVIEW_STEP_CAP, maxByBudget)
+    const minutes = estimateMinutes('review', { count })
     steps.push({
       type: 'review',
-      estimatedMinutes: estimateMinutes('review', { count }),
+      estimatedMinutes: minutes,
       count,
       to: { name: 'words' },
     })
     usedTypes.add('review')
+    remaining -= minutes
   }
 
   // Candidats restants, dans l'ordre de pertinence de l'objectif — filtrés
@@ -301,12 +310,17 @@ export function composeSession(
     return score
   }
 
-  function pickNext({ preferMode } = {}) {
+  function pickNext({ preferMode, maxMinutes } = {}) {
     let pool = candidateTypes()
     if (!pool.length) return null
     if (preferMode) {
       const sameMode = pool.filter((t) => modeOfType(t) === preferMode)
       if (sameMode.length) pool = sameMode
+    }
+    if (maxMinutes != null) {
+      const fitting = pool.filter((t) => estimateMinutes(t) <= maxMinutes)
+      if (!fitting.length) return null
+      pool = fitting
     }
     pool = [...pool].sort((a, b) => scoreType(b) - scoreType(a))
     return pool[0]
@@ -338,16 +352,34 @@ export function composeSession(
   }
 
   // 2. Deux étapes de plus au maximum (3 au total), en alternant réception
-  // et production quand la durée le permet.
-  while (steps.length < 3) {
+  // et production quand la durée le permet — et sans dépasser le budget de
+  // minutes restant, sinon la durée annoncée ne veut plus rien dire.
+  while (steps.length < 3 && remaining > 0) {
     const lastMode = steps.length ? modeOfType(steps[steps.length - 1].type) : null
     const wantMode = lastMode === 'reception' ? 'production' : lastMode === 'production' ? 'reception' : null
-    let type = pickNext({ preferMode: wantMode })
-    if (!type && wantMode) type = pickNext({})
+    let type = pickNext({ preferMode: wantMode, maxMinutes: remaining })
+    if (!type && wantMode) type = pickNext({ maxMinutes: remaining })
     if (!type) break
+    const minutes = estimateMinutes(type)
     if (COSTLY_AI_TYPES.includes(type)) costlyAiCount += 1
     usedTypes.add(type)
     steps.push(buildStep(type))
+    remaining -= minutes
+  }
+
+  // Filet de sécurité : une session très courte (ou sans révision due) ne
+  // doit pas rester vide juste parce que la seule activité pertinente
+  // dépasse légèrement le budget — une étape un peu longue vaut mieux
+  // qu'aucune proposition.
+  if (!steps.length) {
+    const type = pickNext({})
+    if (type) {
+      const minutes = estimateMinutes(type)
+      if (COSTLY_AI_TYPES.includes(type)) costlyAiCount += 1
+      usedTypes.add(type)
+      steps.push(buildStep(type))
+      remaining -= minutes
+    }
   }
 
   // Règle 6.3 : ne pas reproduire exactement la même composition qu'hier.
@@ -358,13 +390,20 @@ export function composeSession(
     const sameAsYesterday =
       signature.size === yesterday.size && [...signature].every((t) => yesterday.has(t))
     if (sameAsYesterday) {
-      const lastType = steps[steps.length - 1].type
+      const lastStep = steps[steps.length - 1]
+      const lastType = lastStep.type
       usedTypes.delete(lastType)
       if (COSTLY_AI_TYPES.includes(lastType)) costlyAiCount -= 1
-      const alt = pickNext({})
+      // Le budget libéré par l'étape retirée redevient disponible pour
+      // l'alternative — le remplacement ne doit pas, lui non plus, dépasser
+      // la durée annoncée.
+      const freedBudget = remaining + lastStep.estimatedMinutes
+      const alt = pickNext({ maxMinutes: freedBudget })
       if (alt) {
         if (COSTLY_AI_TYPES.includes(alt)) costlyAiCount += 1
-        steps[steps.length - 1] = buildStep(alt)
+        const altStep = buildStep(alt)
+        steps[steps.length - 1] = altStep
+        remaining = freedBudget - altStep.estimatedMinutes
       } else {
         usedTypes.add(lastType)
         if (COSTLY_AI_TYPES.includes(lastType)) costlyAiCount += 1

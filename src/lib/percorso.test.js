@@ -427,6 +427,34 @@ describe('composeSession — session quotidienne composée', () => {
       expect(step.to).toHaveProperty('name')
     }
   })
+
+  it('la somme des étapes ne dépasse jamais la durée annoncée', () => {
+    // Beaucoup de révisions dues + Premium IA : de quoi remplir largement
+    // 3 étapes de 5 minutes chacune si le budget n'est pas respecté.
+    const progress = makeProgress({
+      favorites: Array.from({ length: 50 }, (_, i) => ({ word: `w${i}`, due: 0 })),
+    })
+    for (const duration of [5, 10, 20]) {
+      const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW, duration })
+      const total = session.steps.reduce((sum, s) => sum + s.estimatedMinutes, 0)
+      expect(total).toBeLessThanOrEqual(duration)
+    }
+  })
+
+  it('une session de 5 minutes ne propose pas 12 minutes d’étapes (régression)', () => {
+    const progress = makeProgress({
+      favorites: Array.from({ length: 10 }, (_, i) => ({ word: `w${i}`, due: 0 })),
+    })
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW, duration: 5 })
+    const total = session.steps.reduce((sum, s) => sum + s.estimatedMinutes, 0)
+    expect(total).toBeLessThanOrEqual(5)
+  })
+
+  it('une session très courte sans révision due propose quand même au moins une étape', () => {
+    const progress = makeProgress()
+    const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW, duration: 2 })
+    expect(session.steps.length).toBeGreaterThan(0)
+  })
 })
 
 describe('currentStepIndex — reprise locale de session', () => {

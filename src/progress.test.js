@@ -431,6 +431,24 @@ describe('errorCards — cartes d’erreur en répétition espacée', () => {
     ])
   })
 
+  it('une reprise (reviewErrorCard seul, sans ré-appeler addErrorCard) ne gonfle pas `history` (régression CorrectionRetry)', () => {
+    // Reproduit le flux réel : la vue appelante (WriteView/DialogueView)
+    // crée la carte une fois après la correction, puis CorrectionRetry
+    // fait seulement progresser Leitner via l'id — jamais un second
+    // addErrorCard() pour la même erreur dans la même session, sinon
+    // recurringErrorStats() (metrics.js) confondrait une reprise avec une
+    // vraie récurrence de l'erreur dans une nouvelle production.
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 9, 0))
+    const created = addErrorCard(sample)
+    expect(created.history).toEqual([Date.now()])
+
+    const id = errorCardId(sample.original, sample.correction)
+    reviewErrorCard(id, true)
+    expect(progress.errorCards).toHaveLength(1)
+    expect(progress.errorCards[0].history).toEqual([Date.now()])
+  })
+
   it('removeErrorCard retire la carte', () => {
     const { id } = addErrorCard(sample)
     removeErrorCard(id)
