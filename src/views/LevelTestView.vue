@@ -2,18 +2,33 @@
 import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
-import { LEVELS, QUESTIONS_BY_LEVEL } from '../data/levelTestQuestions.js'
+import {
+  LEVELS,
+  pickQuestion as enginePickQuestion,
+  estimateLevel,
+  summarizeSelfAssessment,
+  describeRecommendation,
+} from '../lib/levelTestEngine.js'
+import { saveLevelPositioning } from '../lib/levelReview.js'
+import { correctText, CorrectionError } from '../lib/correction.js'
 
-// Test adaptatif « escalier » : on démarre en A1, une bonne réponse fait
-// monter d'un niveau, une mauvaise fait redescendre d'un niveau. On
-// s'arrête soit après deux échecs consécutifs au même niveau (le palier est
-// trouvé), soit après deux réussites consécutives en C2 (le plafond du
-// test est atteint), soit après un nombre maximal de questions (garde-fou).
+// Positionnement multimodal (Sprint 3.1, phasetravail.md §3.1) : QCM
+// adaptatif « escalier » (sélection de question et estimation partagées
+// avec ScalaCecrGame.vue via lib/levelTestEngine.js), suivi d'une courte
+// auto-évaluation par situations réelles puis d'une production écrite
+// facultative. Le résultat final est un niveau « conseillé pour commencer »,
+// jamais une certification.
+//
+// On démarre en A1 : une bonne réponse fait monter d'un niveau, une mauvaise
+// fait redescendre d'un niveau. On s'arrête soit après deux échecs
+// consécutifs au même niveau (le palier est trouvé), soit après deux
+// réussites consécutives en C2 (le plafond du test est atteint), soit après
+// un nombre maximal de questions (garde-fou).
 const MIN_QUESTIONS = 10
 const MAX_QUESTIONS = 16
 
-const started = ref(false)
-const finished = ref(false)
+// phase : 'intro' -> 'qcm' -> 'self-assessment' -> 'production' -> 'result'
+const phase = ref('intro')
 const levelIndex = ref(0)
 const asked = ref(0)
 const wrongStreak = ref(0)
@@ -24,23 +39,8 @@ const current = ref(null) // { level, index, q, options, correct }
 const picked = ref(null)
 const answered = ref(false)
 
-function pickQuestion(level) {
-  const bank = QUESTIONS_BY_LEVEL[level]
-  const used = usedByLevel.value[level] || new Set()
-  let available = bank.map((_, i) => i).filter((i) => !used.has(i))
-  // Toutes les questions du niveau ont déjà été posées dans cette tentative
-  // (rare avec 16 questions max et 20 par niveau) : on relâche la contrainte.
-  if (available.length === 0) available = bank.map((_, i) => i)
-  const idx = available[Math.floor(Math.random() * available.length)]
-  used.add(idx)
-  usedByLevel.value[level] = used
-  const q = bank[idx]
-  return { level, index: idx, q: q.q, options: q.options, correct: q.correct }
-}
-
 function start() {
-  started.value = true
-  finished.value = false
+  phase.value = 'qcm'
   levelIndex.value = 0
   asked.value = 0
   wrongStreak.value = 0
@@ -49,37 +49,14 @@ function start() {
   usedByLevel.value = {}
   picked.value = null
   answered.value = false
-  current.value = pickQuestion(LEVELS[0])
-}
-
-function estimateLevel() {
-  // Pour chaque niveau, on regarde la proportion de bonnes réponses parmi
-  // les questions posées à ce niveau ; le niveau estimé est le plus haut
-  // niveau où la majorité des réponses sont correctes.
-  const stats = LEVELS.map((level) => {
-    const attempts = history.value.filter((h) => h.level === level)
-    return {
-      level,
-      attempts: attempts.length,
-      correct: attempts.filter((h) => h.correct).length,
-    }
-  })
-  let estimated = null
-  for (let i = LEVELS.length - 1; i >= 0; i--) {
-    const s = stats[i]
-    if (s.attempts > 0 && s.correct / s.attempts >= 0.5) {
-      estimated = LEVELS[i]
-      break
-    }
-  }
-  return { estimated, stats }
+  current.value = enginePickQuestion(LEVELS[0], usedByLevel.value)
 }
 
 const result = ref(null)
 
-function finish() {
-  finished.value = true
-  result.value = estimateLevel()
+function finishQcm() {
+  result.value = estimateLevel(history.value)
+  phase.value = 'self-assessment'
 }
 
 function answer(optionIndex) {
@@ -95,7 +72,7 @@ function answer(optionIndex) {
     if (levelIndex.value === LEVELS.length - 1) {
       correctStreakAtTop.value++
       if (correctStreakAtTop.value >= 2 || asked.value >= MAX_QUESTIONS) {
-        finish()
+        finishQcm()
         return
       }
     } else {
@@ -106,24 +83,106 @@ function answer(optionIndex) {
     correctStreakAtTop.value = 0
     wrongStreak.value++
     if ((wrongStreak.value >= 2 && asked.value >= MIN_QUESTIONS) || asked.value >= MAX_QUESTIONS) {
-      finish()
+      finishQcm()
       return
     }
     if (levelIndex.value > 0) levelIndex.value--
   }
 
   if (asked.value >= MAX_QUESTIONS) {
-    finish()
+    finishQcm()
   }
 }
 
 function next() {
   answered.value = false
   picked.value = null
-  current.value = pickQuestion(LEVELS[levelIndex.value])
+  current.value = enginePickQuestion(LEVELS[levelIndex.value], usedByLevel.value)
+}
+
+// --- Auto-évaluation par situations réelles (§3.1 / outpedagogy.md §10.6) ---
+// Un signal complémentaire au QCM, jamais utilisé pour recalculer le niveau
+// estimé : seulement pour enrichir l'explication du résultat final.
+const SELF_ASSESSMENT_QUESTIONS = [
+  {
+    id: 'restaurant',
+    text: 'Peux-tu commander au restaurant sans préparer tes phrases à l’avance ?',
+  },
+  {
+    id: 'telephone',
+    text: 'Peux-tu tenir une conversation téléphonique simple en italien, sans voir ton interlocuteur ?',
+  },
+  {
+    id: 'article',
+    text: 'Peux-tu comprendre l’essentiel d’un court article de presse italien sans traduction ?',
+  },
+]
+const selfAssessmentAnswers = ref({}) // { [id]: 'oui' | 'plutot' | 'non' }
+
+function answerSelfAssessment(id, value) {
+  selfAssessmentAnswers.value = { ...selfAssessmentAnswers.value, [id]: value }
+}
+
+const selfAssessmentComplete = computed(() =>
+  SELF_ASSESSMENT_QUESTIONS.every((q) => selfAssessmentAnswers.value[q.id])
+)
+
+function goToProduction() {
+  phase.value = 'production'
+}
+
+// --- Production écrite facultative ---
+// Réutilise le client de correction de WriteView.vue (lib/correction.js) :
+// un simple textarea + envoi au même endpoint, sans dupliquer le reste de sa
+// UI (aides progressives, reprise, brouillons…) qui n'a pas sa place ici —
+// limite documentée dans le rapport de ce sprint.
+const productionText = ref('')
+const productionWorking = ref(false)
+const productionError = ref('')
+const productionResult = ref(null) // { corrected, errors, level_estimate }
+const PRODUCTION_MAX_CHARS = 400
+
+async function submitProduction() {
+  if (!productionText.value.trim()) return
+  productionWorking.value = true
+  productionError.value = ''
+  try {
+    productionResult.value = await correctText(productionText.value.trim())
+  } catch (e) {
+    productionError.value =
+      e instanceof CorrectionError
+        ? e.message
+        : "La correction n'a pas pu être obtenue — tu peux continuer sans."
+  } finally {
+    productionWorking.value = false
+  }
+}
+
+const recommendation = ref('')
+
+function finishPositioning() {
+  const selfAssessment = summarizeSelfAssessment(selfAssessmentAnswers.value)
+  recommendation.value = describeRecommendation(result.value, {
+    selfAssessment,
+    hasProduction: !!productionResult.value,
+  })
+  // Mémorise le positionnement pour la relecture automatique après quelques
+  // activités authentiques (lib/levelReview.js, note discrète dans
+  // ProfileView.vue).
+  saveLevelPositioning({
+    level: result.value.estimated || 'A1',
+    confidence: result.value.confidence,
+    source: productionResult.value ? 'multimodal' : 'qcm+auto-evaluation',
+  })
+  phase.value = 'result'
 }
 
 function restart() {
+  selfAssessmentAnswers.value = {}
+  productionText.value = ''
+  productionResult.value = null
+  productionError.value = ''
+  recommendation.value = ''
   start()
 }
 
@@ -141,22 +200,23 @@ const RESULT_MESSAGES = {
 
 <template>
   <SceneLayout title="Test de" accent=" niveau" tagline="De A1 à C2, en quelques questions">
-    <div v-if="!started" class="intro-panel">
+    <div v-if="phase === 'intro'" class="intro-panel">
       <p>
-        Ce test adaptatif estime votre niveau d'italien selon le <strong>CECR</strong> (A1 à C2).
-        Il commence par une question A1 : chaque bonne réponse fait monter le niveau des questions
-        suivantes, chaque erreur le fait redescendre. Après une dizaine de questions, le test
-        détermine le palier que vous maîtrisez.
+        Ce test adaptatif estime le niveau d'italien conseillé pour commencer, selon le
+        <strong>CECR</strong> (A1 à C2). Il commence par une question A1 : chaque bonne réponse
+        fait monter le niveau des questions suivantes, chaque erreur le fait redescendre. Après le
+        questionnaire, quelques questions sur des situations réelles et une production écrite
+        facultative complètent le résultat.
       </p>
       <ul class="rules">
         <li>Une seule bonne réponse par question, aucun temps limite.</li>
         <li>Entre {{ MIN_QUESTIONS }} et {{ MAX_QUESTIONS }} questions selon votre parcours.</li>
-        <li>Le résultat est une estimation, pas une certification officielle.</li>
+        <li>Le résultat est un niveau conseillé pour commencer, pas une certification officielle.</li>
       </ul>
       <button class="start-btn" type="button" @click="start">Commencer le test</button>
     </div>
 
-    <div v-else-if="!finished" class="test-panel">
+    <div v-else-if="phase === 'qcm'" class="test-panel">
       <div class="test-header">
         <span class="level-chip">Niveau testé : {{ current.level }}</span>
         <span class="q-count">Question {{ asked + 1 }}</span>
@@ -186,20 +246,101 @@ const RESULT_MESSAGES = {
       <button v-if="answered" class="next-btn" type="button" @click="next">Question suivante →</button>
     </div>
 
+    <div v-else-if="phase === 'self-assessment'" class="self-assessment-panel">
+      <p class="step-hint">
+        Encore quelques questions sur des situations réelles — elles n'ajustent pas le score du
+        questionnaire, mais aident à formuler un résultat plus juste.
+      </p>
+      <div v-for="q in SELF_ASSESSMENT_QUESTIONS" :key="q.id" class="self-assessment-item">
+        <p class="self-assessment-text">{{ q.text }}</p>
+        <div class="self-assessment-options">
+          <button
+            v-for="opt in [
+              { value: 'oui', label: 'Oui' },
+              { value: 'plutot', label: 'Plutôt' },
+              { value: 'non', label: 'Non' },
+            ]"
+            :key="opt.value"
+            type="button"
+            class="option option-small"
+            :class="{ selected: selfAssessmentAnswers[q.id] === opt.value }"
+            @click="answerSelfAssessment(q.id, opt.value)"
+          >
+            {{ opt.label }}
+          </button>
+        </div>
+      </div>
+      <div class="step-actions">
+        <button class="next-btn" type="button" :disabled="!selfAssessmentComplete" @click="goToProduction">
+          Continuer →
+        </button>
+        <button class="skip-btn" type="button" @click="goToProduction">Passer cette étape</button>
+      </div>
+    </div>
+
+    <div v-else-if="phase === 'production'" class="production-panel">
+      <p class="step-hint">
+        Facultatif : écris quelques phrases en italien pour affiner le résultat. Cette production
+        est envoyée à la même correction pédagogique que la page « Scrivi ».
+      </p>
+      <label>
+        <span class="label-line">
+          Ton texte en italien
+          <small class="char-count">{{ productionText.length }}/{{ PRODUCTION_MAX_CHARS }}</small>
+        </span>
+        <textarea
+          v-model="productionText"
+          rows="5"
+          :maxlength="PRODUCTION_MAX_CHARS"
+          :disabled="productionWorking || !!productionResult"
+          placeholder="Ieri sono andato al mercato con mia sorella…"
+        ></textarea>
+      </label>
+
+      <p v-if="productionError" class="error">{{ productionError }}</p>
+
+      <div v-if="productionResult" class="production-result">
+        <p>
+          Niveau estimé sur cette production : <strong>{{ productionResult.level_estimate || '—' }}</strong>
+          <span v-if="productionResult.errors?.length">
+            · {{ productionResult.errors.length }} remarque{{ productionResult.errors.length > 1 ? 's' : '' }}
+          </span>
+        </p>
+      </div>
+
+      <div class="step-actions">
+        <button
+          v-if="!productionResult"
+          class="next-btn"
+          type="button"
+          :disabled="productionWorking || !productionText.trim()"
+          @click="submitProduction"
+        >
+          {{ productionWorking ? 'Correction en cours…' : 'Envoyer ma production' }}
+        </button>
+        <button class="next-btn" v-else type="button" @click="finishPositioning">Voir mon résultat →</button>
+        <button v-if="!productionResult" class="skip-btn" type="button" @click="finishPositioning">
+          Passer cette étape
+        </button>
+      </div>
+    </div>
+
     <div v-else class="result-panel">
       <template v-if="result.estimated">
         <p class="result-level">
-          Niveau estimé : <strong>{{ result.estimated }}</strong>
+          Niveau conseillé pour commencer : <strong>{{ result.estimated }}</strong>
         </p>
         <p class="result-message">{{ RESULT_MESSAGES[result.estimated] }}</p>
       </template>
       <template v-else>
-        <p class="result-level">Niveau estimé : <strong>Pré-A1</strong></p>
+        <p class="result-level">Niveau conseillé pour commencer : <strong>Pré-A1</strong></p>
         <p class="result-message">
           Les bases (A1) ne sont pas encore consolidées — c'est le point de départ idéal pour
           commencer à lire.
         </p>
       </template>
+
+      <p class="recommendation">{{ recommendation }}</p>
 
       <table class="breakdown">
         <thead>
@@ -412,5 +553,107 @@ const RESULT_MESSAGES = {
 
 .cta-link:hover {
   text-decoration: underline;
+}
+
+.step-hint {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #6b6156;
+}
+
+.self-assessment-item {
+  margin-bottom: 1.1rem;
+}
+
+.self-assessment-text {
+  margin: 0 0 0.5rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #2c2620;
+}
+
+.self-assessment-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.option-small {
+  flex: 0 0 auto;
+  padding: 0.4rem 1rem;
+}
+
+.option-small.selected {
+  border-color: #b0692e;
+  background: rgba(176, 105, 46, 0.12);
+  font-weight: 600;
+}
+
+.step-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.skip-btn {
+  background: none;
+  border: none;
+  color: #6b6156;
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.production-panel label {
+  display: block;
+}
+
+.production-panel textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d8cfc2;
+  border-radius: 8px;
+  background: #faf6f0;
+  font: inherit;
+  resize: vertical;
+}
+
+.production-panel .label-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9rem;
+  color: #4a4238;
+  margin-bottom: 0.3rem;
+}
+
+.production-panel .char-count {
+  font-size: 0.78rem;
+  color: #8a5a2b;
+}
+
+.production-result {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #4a4238;
+}
+
+.error {
+  margin: 0.6rem 0;
+  color: #a34430;
+  font-size: 0.88rem;
+}
+
+.recommendation {
+  margin: 0 0 1.2rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #6b6156;
+  font-style: italic;
 }
 </style>
