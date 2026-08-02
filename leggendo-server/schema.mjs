@@ -81,16 +81,42 @@ export const REPAIR_SCHEMA = {
 // proposés en lecture (LEVELS s'arrête à C1 côté génération).
 export const CORRECTION_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 export const CORRECTION_ERROR_TYPES = ['grammatica', 'lessico', 'registro', 'ortografia']
+// Sprint 1.1 (phasetravail.md) : réussite communicative, distincte de la
+// qualité linguistique. "atteint" = le but de la consigne est rempli même
+// avec des fautes mineures ; "a_completer" = hors-sujet ou but manqué même
+// sans faute. Jamais exigé en mode libre (pas de consigne à évaluer).
+export const COMMUNICATIVE_STATUSES = ['atteint', 'partiel', 'a_completer']
 
 export const CORRECTION_SCHEMA = {
   type: 'object',
   additionalProperties: false,
+  // "communicative" n'est PAS dans required : seulement rempli par le modèle
+  // quand une consigne/objectif communicatif a été transmise (voir correct.mjs).
   required: ['corrected', 'errors', 'level_estimate'],
   properties: {
     corrected: {
       type: 'string',
       description:
         "Le texte de l'élève corrigé, en italien, en préservant au maximum son style et ses choix",
+    },
+    communicative: {
+      type: 'object',
+      additionalProperties: false,
+      required: ['status', 'note'],
+      description:
+        "Réussite communicative : uniquement quand une consigne/objectif a été fourni. Absent en mode libre.",
+      properties: {
+        status: {
+          type: 'string',
+          enum: COMMUNICATIVE_STATUSES,
+          description:
+            '"atteint" = le but de la consigne est rempli (même avec des fautes mineures) ; "partiel" = le but est partiellement rempli ; "a_completer" = hors-sujet ou but manqué (même sans faute)',
+        },
+        note: {
+          type: 'string',
+          description: 'Une phrase maximum, en français, expliquant le statut',
+        },
+      },
     },
     errors: {
       type: 'array',
@@ -124,6 +150,17 @@ export function validateCorrectionStructure(out) {
   const errors = []
   if (typeof out?.corrected !== 'string' || !out.corrected.trim()) {
     errors.push('corrected manquant ou vide')
+  }
+  // "communicative" est optionnel (mode libre : absent) mais s'il est
+  // présent, il doit être complet — pas de statut à moitié rempli.
+  if (out?.communicative !== undefined) {
+    const c = out.communicative
+    if (!COMMUNICATIVE_STATUSES.includes(c?.status)) {
+      errors.push('communicative : status invalide')
+    }
+    if (typeof c?.note !== 'string' || !c.note.trim()) {
+      errors.push('communicative : note manquante')
+    }
   }
   if (!Array.isArray(out?.errors)) {
     errors.push('errors absent ou non-tableau')

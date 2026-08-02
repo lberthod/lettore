@@ -13,8 +13,16 @@ import {
   MONTHLY_CREDITS,
   CORRECTION_COST,
 } from '../quota.mjs'
-import { parseCorrectionRequest, CORRECTION_MAX_CHARS } from '../validate.mjs'
-import { CORRECTION_SCHEMA, validateCorrectionStructure } from '../schema.mjs'
+import {
+  parseCorrectionRequest,
+  CORRECTION_MAX_CHARS,
+  CORRECTION_GOAL_MAX_CHARS,
+} from '../validate.mjs'
+import {
+  CORRECTION_SCHEMA,
+  COMMUNICATIVE_STATUSES,
+  validateCorrectionStructure,
+} from '../schema.mjs'
 
 const gratuit = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
 const premium = { uid: 'u2', role: 'premium', premium: true }
@@ -174,6 +182,39 @@ test('parseCorrectionRequest rejette un texte sans aucune lettre', () => {
   assert.ok(errors.some((e) => e.includes('aucune lettre')))
 })
 
+// --- goal (Sprint 1.1, phasetravail.md) : consigne/objectif communicatif,
+// optionnelle — présente pour les modes guidé/contenu, absente en mode libre.
+
+test('parseCorrectionRequest : goal absente (mode libre) donne goal null, sans erreur', () => {
+  const { errors, goal } = parseCorrectionRequest({ text: 'Ieri sono andato al mercato.' })
+  assert.deepEqual(errors, [])
+  assert.equal(goal, null)
+})
+
+test('parseCorrectionRequest : goal fournie (mode guidé/contenu) est acceptée et nettoyée', () => {
+  const { errors, goal } = parseCorrectionRequest({
+    text: 'Ieri sono andato al mercato.',
+    goal: '  Scrivi un\'email per rifiutare un invito.  ',
+  })
+  assert.deepEqual(errors, [])
+  assert.equal(goal, "Scrivi un'email per rifiutare un invito.")
+})
+
+test('parseCorrectionRequest : goal trop longue est tronquée, pas rejetée', () => {
+  const { errors, goal } = parseCorrectionRequest({
+    text: 'Ieri sono andato al mercato.',
+    goal: 'a'.repeat(CORRECTION_GOAL_MAX_CHARS + 50),
+  })
+  assert.deepEqual(errors, [])
+  assert.equal(goal.length, CORRECTION_GOAL_MAX_CHARS)
+})
+
+test('parseCorrectionRequest : goal non-string ou vide est ignorée (repli null)', () => {
+  assert.equal(parseCorrectionRequest({ text: 'Ciao.', goal: '   ' }).goal, null)
+  assert.equal(parseCorrectionRequest({ text: 'Ciao.', goal: 42 }).goal, null)
+  assert.equal(parseCorrectionRequest({ text: 'Ciao.' }).goal, null)
+})
+
 // --- CORRECTION_SCHEMA / validateCorrectionStructure (schema.mjs) ---
 
 function validCorrection() {
@@ -228,4 +269,43 @@ test('validateCorrectionStructure signale un niveau estimé invalide ou absent',
   assert.ok(validateCorrectionStructure(out).some((e) => e.includes('level_estimate')))
   delete out.level_estimate
   assert.ok(validateCorrectionStructure(out).some((e) => e.includes('level_estimate')))
+})
+
+// --- communicative (Sprint 1.1) : optionnel (absent en mode libre), mais
+// complet quand présent (modes guidé/contenu, une consigne a été fournie).
+
+test('le schéma déclare "communicative" comme optionnel, fermé, avec un statut énuméré', () => {
+  assert.ok(!CORRECTION_SCHEMA.required.includes('communicative'))
+  const c = CORRECTION_SCHEMA.properties.communicative
+  assert.equal(c.additionalProperties, false)
+  assert.deepEqual(c.properties.status.enum, COMMUNICATIVE_STATUSES)
+  assert.deepEqual(COMMUNICATIVE_STATUSES, ['atteint', 'partiel', 'a_completer'])
+})
+
+test('validateCorrectionStructure accepte une sortie sans communicative (mode libre)', () => {
+  const out = validCorrection()
+  assert.equal(out.communicative, undefined)
+  assert.deepEqual(validateCorrectionStructure(out), [])
+})
+
+test('validateCorrectionStructure accepte une sortie avec communicative complet (consigne fournie)', () => {
+  const out = {
+    ...validCorrection(),
+    communicative: { status: 'atteint', note: 'Le message répond bien à la consigne demandée.' },
+  }
+  assert.deepEqual(validateCorrectionStructure(out), [])
+})
+
+test('validateCorrectionStructure signale un statut communicative invalide ou une note manquante', () => {
+  const out = {
+    ...validCorrection(),
+    communicative: { status: 'presque', note: 'Une note.' },
+  }
+  assert.ok(validateCorrectionStructure(out).some((e) => e.includes('communicative') && e.includes('status')))
+
+  const out2 = {
+    ...validCorrection(),
+    communicative: { status: 'a_completer', note: '   ' },
+  }
+  assert.ok(validateCorrectionStructure(out2).some((e) => e.includes('communicative') && e.includes('note')))
 })

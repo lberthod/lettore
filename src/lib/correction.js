@@ -19,7 +19,11 @@ export class CorrectionError extends Error {
   }
 }
 
-export async function correctText(text) {
+// `goal` (optionnel) : la consigne/objectif communicatif déjà affichée à
+// l'élève (instructionLine dans WriteView.vue, modes guidé/contenu) — permet
+// au serveur de juger l'atteinte du but séparément des erreurs de langue
+// (Sprint 1.1, phasetravail.md). Absent/vide en mode libre.
+export async function correctText(text, goal) {
   const headers = await apiHeaders({ 'Content-Type': 'application/json' })
   if (!headers) {
     throw new CorrectionError('Connectez-vous pour faire corriger un texte.', 401)
@@ -29,7 +33,7 @@ export async function correctText(text) {
     res = await fetch(`${API_BASE}/correct`, {
       method: 'POST',
       headers,
-      body: JSON.stringify({ text }),
+      body: JSON.stringify(goal ? { text, goal } : { text }),
     })
   } catch (err) {
     throw new CorrectionError(networkErrorMessage(err) || err.message, 0)

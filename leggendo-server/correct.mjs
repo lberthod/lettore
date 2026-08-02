@@ -17,23 +17,43 @@ Principes ABSOLUS :
 - "level_estimate" : le niveau CECR (A1 à C2) que reflète cette production écrite, d'après la richesse et la justesse de la langue.
 - Si le texte n'est manifestement pas de l'italien (français, anglais…), corrige-le vers l'italien : "corrected" = la version italienne, avec une erreur de type "lessico" expliquant qu'il faut écrire en italien.`
 
+// Complément de SYSTEM ajouté uniquement quand une consigne/objectif
+// communicatif accompagne le texte (modes guidé/contenu de WriteView.vue) —
+// Sprint 1.1 (phasetravail.md) : juger l'atteinte du but AVANT la liste
+// d'erreurs linguistiques, séparément de la qualité de la langue. Un texte
+// truffé de fautes mineures peut avoir "atteint" son but ; un texte
+// impeccable mais hors-sujet doit afficher "a_completer".
+const COMMUNICATIVE_ADDENDUM = `
+
+Une consigne/objectif communicatif accompagne cette production. AVANT de relever les erreurs linguistiques, juge si l'élève a atteint le but de la consigne (indépendamment des fautes de grammaire/orthographe) et remplis le champ "communicative" :
+- "status": "atteint" si le but de la consigne est rempli, même avec des fautes mineures ; "partiel" si le but n'est que partiellement rempli ; "a_completer" si le texte est hors-sujet ou manque le but, même sans faute de langue.
+- "note": une seule phrase en français simple, encourageante, qui explique ce statut par rapport à la consigne (pas une remarque de grammaire).
+Ne remplis PAS ce champ si aucune consigne n'est fournie.`
+
 // Corrige la production `text` (déjà validée par parseCorrectionRequest :
-// non vide, ≤ 2000 caractères). `usage` est muté en place, un élément par
-// appel LLM réussi — même mécanique de mesure des coûts que generateUserText.
-export async function correctUserText({ text, usage = [] }) {
+// non vide, ≤ 2000 caractères). `goal` (optionnel) est la consigne/objectif
+// communicatif déjà connue côté client pour les modes guidé/contenu — null
+// en mode libre, où il n'y a pas de but à juger. `usage` est muté en place,
+// un élément par appel LLM réussi — même mécanique de mesure des coûts que
+// generateUserText.
+export async function correctUserText({ text, goal = null, usage = [] }) {
   const maxTokens = Math.min(16000, Math.max(8000, text.length * 6))
   // Repérer et expliquer des fautes dans un texte court ne bénéficie pas du
   // mode réflexion de DeepSeek (actif par défaut) : testé sur un texte A2
   // à 8 erreurs, mêmes erreurs détectées avec ou sans, mais 3057 tokens de
   // réflexion invisibles en moins (out: 3717 → 718, -81 %) — même constat
   // que dialogueFeedback (dialogue.mjs).
+  const system = goal ? `${SYSTEM}${COMMUNICATIVE_ADDENDUM}` : SYSTEM
+  const prompt = goal
+    ? `Consigne/objectif communicatif donné à l'élève :\n${goal}\n\nVoici la production écrite de l'élève à corriger :\n\n${text}`
+    : `Voici la production écrite de l'élève à corriger :\n\n${text}`
   const out = await callLLM({
-    system: SYSTEM,
+    system,
     schema: CORRECTION_SCHEMA,
     maxTokens,
     thinking: 'disabled',
     onUsage: (u) => usage.push(u),
-    prompt: `Voici la production écrite de l'élève à corriger :\n\n${text}`,
+    prompt,
   })
 
   const structuralErrors = validateCorrectionStructure(out)

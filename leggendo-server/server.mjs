@@ -493,7 +493,7 @@ const server = http.createServer(async (req, res) => {
         send(400, { error: 'JSON invalide.' })
         return
       }
-      const { errors, text } = parseCorrectionRequest(body)
+      const { errors, text, goal } = parseCorrectionRequest(body)
       if (errors.length) {
         send(400, { error: errors.join(' ; ') })
         return
@@ -545,7 +545,7 @@ const server = http.createServer(async (req, res) => {
       let result
       try {
         result = await withTimeout(
-          correctUserText({ text, usage }),
+          correctUserText({ text, goal, usage }),
           CORRECT_TIMEOUT_MS,
           'Correction interrompue (délai maximal dépassé).'
         )

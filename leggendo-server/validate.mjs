@@ -37,6 +37,11 @@ export function parseRequest(body, { themeById, genreById, sizeById }) {
 // présence d'au moins une lettre — pas de détection de langue fragile, le
 // prompt de correction gère lui-même un texte qui ne serait pas de l'italien.
 export const CORRECTION_MAX_CHARS = 2000
+// Consigne/objectif communicatif (Sprint 1.1, phasetravail.md) : déjà connue
+// côté client pour les modes guidé/contenu (instructionLine dans
+// WriteView.vue), transmise ici pour que le prompt de correction juge
+// l'atteinte du but. Plafond court : une consigne, pas une rédaction.
+export const CORRECTION_GOAL_MAX_CHARS = 300
 
 export function parseCorrectionRequest(body) {
   const errors = []
@@ -51,7 +56,12 @@ export function parseCorrectionRequest(body) {
       errors.push('texte : aucune lettre à corriger')
     }
   }
-  return { errors, text }
+  // Optionnelle : absente en mode libre (rien à évaluer côté objectif).
+  let goal = typeof body?.goal === 'string' ? body.goal.trim() : ''
+  if (goal.length > CORRECTION_GOAL_MAX_CHARS) {
+    goal = goal.slice(0, CORRECTION_GOAL_MAX_CHARS)
+  }
+  return { errors, text, goal: goal || null }
 }
 
 // --- Dialogue simulé (Phase 7) ---
