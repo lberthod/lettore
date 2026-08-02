@@ -5,9 +5,31 @@
 
 import { getDbInstance as getDb } from './firebase.js'
 
+// Pays et catégories connus du flux (voir leggendo-server/rss.mjs — COUNTRIES
+// / CATEGORIES). Dupliqué ici en constantes d'affichage (drapeau + libellé)
+// pour éviter de tirer le backend dans le bundle frontend.
+export const NEWS_COUNTRIES = [
+  { id: 'it', flag: '🇮🇹', label: 'Italia' },
+  { id: 'ch', flag: '🇨🇭', label: 'Svizzera' },
+  { id: 'fr', flag: '🇫🇷', label: 'Francia' },
+]
+
+export const NEWS_CATEGORIES = [
+  { id: 'cronaca', icon: '📰', label: 'Cronaca' },
+  { id: 'politica', icon: '🏛️', label: 'Politica' },
+  { id: 'economia', icon: '💶', label: 'Economia' },
+  { id: 'mondo', icon: '🌍', label: 'Mondo' },
+  { id: 'tecnologia', icon: '💻', label: 'Tecnologia' },
+  { id: 'sport', icon: '⚽', label: 'Sport' },
+  { id: 'cultura', icon: '🎭', label: 'Cultura' },
+]
+
 // Les plus récents d'abord. Les règles Firestore refusent la lecture si
-// l'utilisateur n'a pas le rôle Premium+ (voir firestore.rules).
-export async function listNewsTexts(max = 30) {
+// l'utilisateur n'a pas le rôle Premium+ (voir firestore.rules). `max` plus
+// large que l'affichage réel (voir NotizieView.vue) : le filtrage par pays
+// et catégorie se fait côté client sur ce lot, pour éviter de dépendre
+// d'index composites Firestore par combinaison pays/catégorie.
+export async function listNewsTexts(max = 200) {
   const [db, fs] = await Promise.all([getDb(), import('firebase/firestore')])
   if (!db) return []
   const { collection, query, orderBy, limit, getDocs } = fs

@@ -186,7 +186,7 @@ const router = createRouter({
       meta: {
         title: 'Notizie — Leggendo',
         description:
-          "Textes d'actualité italienne générés chaque jour et adaptés à votre niveau — formule Premium+.",
+          "Textes d'actualité italienne, suisse et française, générés au fil de leur publication et adaptés à votre niveau — formule Premium+.",
         requiresAuth: true,
       },
     },
@@ -246,6 +246,12 @@ const router = createRouter({
       name: 'level-test',
       component: () => import('./views/LevelTestView.vue'),
       meta: findRoute('/test-de-niveau'),
+    },
+    {
+      path: '/giochi',
+      name: 'games',
+      component: () => import('./views/GameView.vue'),
+      meta: findRoute('/giochi'),
     },
     {
       path: '/admin',

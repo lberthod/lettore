@@ -100,15 +100,15 @@ Caddy proxifie `api.loicberthod.ch/leggendo/*` vers `localhost:8091` ; l'URL cô
 
 ## Notizie — cron d'actualité (Premium IA)
 
-[news-cron.mjs](news-cron.mjs) est un script indépendant du serveur HTTP (`server.mjs`) : il ne tourne pas en continu, il est **invoqué par cron** et fait une seule chose à chaque exécution — récupérer les flux RSS ANSA ([rss.mjs](rss.mjs)), choisir un article pas encore traité, générer un texte gradué qui le reformule fidèlement ([news.mjs](news.mjs)), et l'écrire dans Firestore (collection `newsTexts`). L'app lit ce pool via [src/lib/newsTexts.js](../src/lib/newsTexts.js) (page « Notizie », réservée aux rôles `premium_plus` et `enseignant`, voir [firestore.rules](../firestore.rules) et [README_TARIFICATION.md](../README_TARIFICATION.md)).
+[news-cron.mjs](news-cron.mjs) est un script indépendant du serveur HTTP (`server.mjs`) : il ne tourne pas en continu, il est **invoqué par cron** et fait une seule chose à chaque exécution — récupérer les flux RSS multi-pays ([rss.mjs](rss.mjs) : ANSA pour l'Italie, laRegione.ch pour la Suisse italophone, France Info pour la France), choisir l'article le plus frais et pas trop similaire aux 50 derniers textes publiés, générer un texte gradué qui le reformule fidèlement en italien — en traduisant au passage les sources françaises ([news.mjs](news.mjs)) — et l'écrire dans Firestore (collection `newsTexts`) avec son pays et sa catégorie. L'app lit ce pool via [src/lib/newsTexts.js](../src/lib/newsTexts.js) (page « Notizie », filtrable par pays/catégorie, réservée aux rôles `premium_plus` et `enseignant`, voir [firestore.rules](../firestore.rules) et [README_TARIFICATION.md](../README_TARIFICATION.md)).
 
-Feature de la formule Premium IA, mais **hors du système de crédits** : c'est un flux partagé généré par le cron, pas une génération à la demande consommant un crédit par abonné. Pool partagé, pas un appel par abonné : chaque exécution produit **un seul texte**, lu ensuite par tous les abonnés Premium IA — planifier 3 exécutions par jour donne bien « jusqu'à 3 textes par jour », sans multiplier le coût par le nombre d'abonnés.
+Feature de la formule Premium IA, mais **hors du système de crédits** : c'est un flux partagé généré par le cron, pas une génération à la demande consommant un crédit par abonné. Pool partagé, pas un appel par abonné : chaque exécution produit **au plus un seul texte**, lu ensuite par tous les abonnés Premium IA. Planifier une exécution toutes les 5 minutes ne veut pas dire un texte toutes les 5 minutes : chaque run n'écrit rien si aucun article assez frais et distinct des 50 derniers n'a été trouvé (voir `isFresh` dans news-cron.mjs) — le volume réel suit la cadence de publication des flux sources. Si le coût LLM à cette fréquence de cron devient trop élevé, espacer davantage le cron (`*/15`, `*/30`, …) est le seul réglage à changer.
 
 Mêmes identifiants que le serveur HTTP (`GLM_API_KEY`, `GOOGLE_APPLICATION_CREDENTIALS` — voir [Configuration](#configuration-env) et [Identifiants Firestore](#identifiants-firestore-compte-de-service) ci-dessus), pas de port ni de service systemd à installer.
 
 ```bash
 # crontab -e (même utilisateur système que leggendo-api.service)
-0 7,13,20 * * * cd /opt/leggendo-api && \
+*/5 * * * * cd /opt/leggendo-api && \
   GLM_API_KEY=... GOOGLE_APPLICATION_CREDENTIALS=/opt/leggendo-api/service-account.json \
   /usr/bin/node news-cron.mjs >> /var/log/leggendo-news.log 2>&1
 ```
