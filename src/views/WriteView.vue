@@ -1,5 +1,5 @@
 <script setup>
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import CorrectionRetry from '../components/CorrectionRetry.vue'
@@ -15,6 +15,8 @@ import {
 import { progress, logActivity, addErrorCard } from '../progress.js'
 import { selectPriorityErrors } from '../lib/correctionRetry.js'
 import { isCatalogText, loadCatalogText } from '../lib/protectedContent.js'
+import { saveDraft, loadDraft, clearDraft } from '../lib/writingDraft.js'
+import { currentUser } from '../lib/auth.js'
 import {
   CONTENT_ACTIONS,
   pickGuidedPrompt,
@@ -36,11 +38,30 @@ const text = ref('')
 // existe, sinon un repli neutre (B, ni trop simple ni trop exigeant).
 const referenceLevel = computed(() => progress.skills?.scrittura?.levels?.at(-1) || 'B1')
 
+// Confirmation avant de perdre le contexte d'un texte non encore corrigé
+// (0.1) : `result` non nul signifie que le texte a déjà été envoyé au
+// serveur, donc rien à perdre. Le texte reste par ailleurs sauvegardé
+// localement (saveDraft) pour le contexte quitté — on peut donc le vider
+// sans risque une fois la confirmation acceptée.
+function guardChange(applyChange) {
+  if (text.value.trim() && !result.value) {
+    const ok = window.confirm(
+      "Vous avez un texte non corrigé. Changer maintenant videra le champ (votre brouillon reste enregistré sur cet appareil). Continuer ?"
+    )
+    if (!ok) return
+    text.value = ''
+    result.value = null
+  }
+  applyChange()
+}
+
 // --- Mode guidé ---
 const guidedPrompt = ref(pickGuidedPrompt())
 function newGuidedPrompt() {
-  guidedPrompt.value = pickGuidedPrompt(guidedPrompt.value?.id)
-  resetAids()
+  guardChange(() => {
+    guidedPrompt.value = pickGuidedPrompt(guidedPrompt.value?.id)
+    resetAids()
+  })
 }
 
 // --- Mode lié à un contenu : textes terminés (quiz réussi ou marqués lus) ---
@@ -48,6 +69,14 @@ const sourceTexts = computed(() =>
   textsIndex.filter((t) => progress.readTexts.includes(t.id))
 )
 const sourceTextId = ref(null)
+// Proxy utilisé par le <select> du template : passe par guardChange avant
+// de changer de sujet, comme chooseMode.
+const sourceTextIdModel = computed({
+  get: () => sourceTextId.value,
+  set: (id) => guardChange(() => {
+    sourceTextId.value = id
+  }),
+})
 const contentActionId = ref('riassumere')
 const contentAction = computed(() => contentActionById(contentActionId.value))
 const selectedSource = computed(() => sourceTexts.value.find((t) => t.id === sourceTextId.value) || null)
@@ -95,12 +124,86 @@ onMounted(() => {
     if (words.length) reuseWords.value = words
   }
   refreshQuota()
+  checkForDraft()
 })
 
 function chooseMode(m) {
-  mode.value = m
-  resetAids()
+  if (m === mode.value) return
+  guardChange(() => {
+    mode.value = m
+    resetAids()
+  })
 }
+
+// --- Brouillon local (0.1 — filet de sécurité) : une entrée par couple
+// (mode, sujet), isolée par compte comme dailySession.js. Le sujet est le
+// prompt guidé en mode 'guidato', le texte de départ en mode 'contenuto'
+// (repli sur l'action si aucun texte choisi), rien en mode libre.
+const draftPromptId = computed(() => {
+  if (mode.value === 'guidato') return guidedPrompt.value?.id || null
+  if (mode.value === 'contenuto') return sourceTextId.value || contentActionId.value || null
+  return null
+})
+
+function draftContext() {
+  return { uid: currentUser.value?.uid || null, mode: mode.value, promptId: draftPromptId.value }
+}
+
+const pendingDraft = ref(null)
+const lastSavedAt = ref(null)
+
+// N'affiche l'offre de reprise que si l'utilisateur n'a pas déjà commencé à
+// taper autre chose dans ce contexte — jamais d'écrasement forcé.
+function checkForDraft() {
+  if (text.value.trim()) {
+    pendingDraft.value = null
+    return
+  }
+  const draft = loadDraft(draftContext())
+  pendingDraft.value = draft && draft.text?.trim() ? draft : null
+}
+
+function restoreDraft() {
+  if (!pendingDraft.value) return
+  text.value = pendingDraft.value.text
+  pendingDraft.value = null
+}
+
+function dismissDraft() {
+  pendingDraft.value = null
+}
+
+watch([mode, draftPromptId], checkForDraft)
+
+const DRAFT_DEBOUNCE_MS = 800
+let draftTimer = null
+watch(text, (val) => {
+  if (draftTimer) clearTimeout(draftTimer)
+  draftTimer = setTimeout(() => {
+    if (!val.trim()) {
+      clearDraft(draftContext())
+      lastSavedAt.value = null
+      return
+    }
+    const savedAt = Date.now()
+    saveDraft({ ...draftContext(), text: val, savedAt })
+    lastSavedAt.value = savedAt
+  }, DRAFT_DEBOUNCE_MS)
+})
+
+onBeforeUnmount(() => {
+  if (draftTimer) clearTimeout(draftTimer)
+})
+
+const wordCount = computed(() => (text.value.trim() ? text.value.trim().split(/\s+/).length : 0))
+
+const savedAtLabel = computed(() => {
+  if (!lastSavedAt.value) return ''
+  const d = new Date(lastSavedAt.value)
+  const hh = String(d.getHours()).padStart(2, '0')
+  const mm = String(d.getMinutes()).padStart(2, '0')
+  return `Enregistré sur cet appareil à ${hh}:${mm}`
+})
 
 // --- Aides progressives (§7.2) : reformulation, idées, mots utiles,
 // amorces de phrases, exemple complet — dans cet ordre, chacune facultative.
@@ -230,7 +333,7 @@ async function submit() {
   result.value = null
   activityEvent.value = null
   try {
-    result.value = await correctText(text.value)
+    result.value = await correctText(text.value, instructionLine.value || undefined)
     const errors = Array.isArray(result.value.errors) ? result.value.errors : []
     const priorityCount = selectPriorityErrors(errors, { max: maxRetryErrors.value }).length
     const wordCount = text.value.trim() ? text.value.trim().split(/\s+/).length : 0
@@ -256,6 +359,10 @@ async function submit() {
       reuseWordsOffered: reuseWords.value.length,
       reuseWordsUsed,
     })
+    if (draftTimer) clearTimeout(draftTimer)
+    clearDraft(draftContext())
+    lastSavedAt.value = null
+    pendingDraft.value = null
     for (const e of errors) {
       addErrorCard({
         original: e.original,
@@ -283,6 +390,14 @@ function onRetryComplete({ retryCount, retrySuccess, errorTypes }) {
   activityEvent.value.retryCount = retryCount
   activityEvent.value.retrySuccess = retrySuccess
   activityEvent.value.errorTypes = errorTypes
+}
+
+// Étiquettes du statut de réussite communicative (Sprint 1.1) — même
+// vocabulaire que COMMUNICATIVE_STATUSES côté serveur (schema.mjs).
+const COMMUNICATIVE_LABELS = {
+  atteint: '🎯 Objectif atteint',
+  partiel: '🎯 Objectif partiellement atteint',
+  a_completer: '🎯 Objectif à compléter',
 }
 
 // Étiquettes des types d'erreur (mêmes identifiants que le serveur).
@@ -387,7 +502,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
       <template v-else>
         <label v-if="sourceTexts.length" class="content-field">
           Texte de départ
-          <select v-model="sourceTextId">
+          <select v-model="sourceTextIdModel">
             <option :value="null" disabled>Choisir un texte terminé…</option>
             <option v-for="t in sourceTexts" :key="t.id" :value="t.id">
               {{ t.title }} ({{ t.level }})
@@ -451,6 +566,12 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
       </div>
     </div>
 
+    <p v-if="pendingDraft" class="draft-banner">
+      📝 Vous avez un brouillon non envoyé pour ce sujet.
+      <button type="button" class="link-btn" @click="restoreDraft">Reprendre mon brouillon</button>
+      <button type="button" class="link-btn" @click="dismissDraft">Ignorer</button>
+    </p>
+
     <form class="form" @submit.prevent="submit">
       <fieldset class="fields" :disabled="working">
         <p v-if="mode === 'libero'" class="suggest-row">
@@ -465,7 +586,9 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
         <label>
           <span class="label-line">
             Votre texte en italien
-            <small class="char-count">{{ text.length }}/{{ CORRECTION_MAX_CHARS }}</small>
+            <small class="char-count">
+              {{ text.length }}/{{ CORRECTION_MAX_CHARS }} · {{ wordCount }} mot{{ wordCount > 1 ? 's' : '' }}
+            </small>
           </span>
           <textarea
             v-model="text"
@@ -474,6 +597,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
             :maxlength="CORRECTION_MAX_CHARS"
             placeholder="Ieri sono andato al mercato con mia sorella. Abbiamo comprato…"
           ></textarea>
+          <small v-if="savedAtLabel" class="draft-saved">{{ savedAtLabel }}</small>
         </label>
       </fieldset>
       <button class="btn-primary" type="submit" :disabled="working || !canCorrect || !text.trim()">
@@ -491,6 +615,15 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
 
     <article v-if="result" ref="resultEl" class="correction">
       <h2>La tua correzione</h2>
+
+      <!-- Réussite communicative (Sprint 1.1) : absente en mode libre ou pour
+           un résultat mis en cache avant ce champ — un simple statut + une
+           phrase, jamais un score, distinct du détail linguistique ci-dessous. -->
+      <p v-if="result.communicative" class="communicative-note" :class="result.communicative.status">
+        <span class="communicative-status">{{ COMMUNICATIVE_LABELS[result.communicative.status] || result.communicative.status }}</span>
+        {{ result.communicative.note }}
+      </p>
+
       <p class="correction-meta">
         Niveau estimé : <span class="level-badge">{{ result.level_estimate }}</span>
         · {{ result.errors.length }}
@@ -734,6 +867,26 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
   font-weight: 400;
 }
 
+.draft-banner {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(90, 96, 150, 0.08);
+  border: 1px solid rgba(90, 96, 150, 0.25);
+  font-size: 0.88rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.draft-saved {
+  display: block;
+  margin-top: 0.3rem;
+  color: #6b6156;
+  font-size: 0.78rem;
+}
+
 .hint {
   font-size: 0.9rem;
   color: #6b6156;
@@ -806,6 +959,30 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
   color: #6b6156;
   font-size: 0.88rem;
   margin-top: 0;
+}
+
+/* Réussite communicative (Sprint 1.1) : statut neutre, volontairement
+   distinct du niveau CECR (badge) et des erreurs (rouge/vert) — ce n'est pas
+   un score, juste un repère de compréhension mutuelle. */
+.communicative-note {
+  margin: 0.4rem 0 0.9rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(107, 97, 86, 0.07);
+  border: 1px solid rgba(107, 97, 86, 0.25);
+  font-size: 0.92rem;
+  color: #4a4238;
+  line-height: 1.5;
+}
+
+.communicative-status {
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.communicative-note.a_completer {
+  background: rgba(176, 105, 46, 0.08);
+  border-color: rgba(176, 105, 46, 0.3);
 }
 
 .level-note {
