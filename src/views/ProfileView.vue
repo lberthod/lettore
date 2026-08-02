@@ -18,6 +18,7 @@ import {
 } from '../lib/account.js'
 import { progress, dueFavorites, dueErrorCards, measuredLevel } from '../progress.js'
 import { weekSummary, daysAgoLabel } from '../lib/percorso.js'
+import { loadLevelPositioning, reviewPositioning } from '../lib/levelReview.js'
 import {
   confidenceLevel,
   skillTrend,
@@ -28,6 +29,7 @@ import {
   autonomousListeningRate,
   sessionCompletionRate,
   recurringErrorStats,
+  consolidatedErrorStats,
 } from '../lib/metrics.js'
 
 const router = useRouter()
@@ -134,6 +136,9 @@ const skillRows = computed(() => {
 const pctOrNull = (v) => (v == null ? null : pct(v))
 const recurring = computed(() => recurringErrorStats(progress))
 const completion = computed(() => sessionCompletionRate(progress))
+// Sprint 1.2 : erreurs consolidées (réussite différée, plusieurs jours après
+// la correction, dans une session de révision séparée) vs encore fragiles.
+const consolidation = computed(() => consolidatedErrorStats(progress))
 const metricRows = computed(() => [
   {
     id: 'retry',
@@ -179,7 +184,26 @@ const metricRows = computed(() => [
     value: recurring.value.totalCards ? `${recurring.value.withRecurrence}/${recurring.value.totalCards}` : null,
     hint: 'cartes d’erreur revenues plus d’une fois — la règle n’est pas encore consolidée',
   },
+  {
+    id: 'consolidation',
+    label: 'Erreurs consolidées',
+    value: consolidation.value.testedTypes
+      ? `${consolidation.value.consolidated}/${consolidation.value.testedTypes}`
+      : null,
+    hint: 'types d’erreur réussis en révision différée (plusieurs jours après, hors du contexte de correction) — le reste est encore fragile',
+  },
 ])
+
+// --- Relecture du positionnement CECR (Sprint 3.1, phasetravail.md §3.1) ---
+// Après le test de niveau/le jeu Scala CECR, on a mémorisé un niveau
+// « conseillé pour commencer » (lib/levelReview.js#saveLevelPositioning).
+// Une fois quelques activités authentiques enregistrées, on compare ce
+// niveau conseillé au niveau réellement observé (measuredLevel — même
+// source que la carte « Écriture » ci-dessus) et on l'affiche en une phrase
+// discrète, seulement quand la comparaison est prête.
+const positioningReview = computed(() =>
+  reviewPositioning(progress, loadLevelPositioning(), { observedLevel: measuredLevel().scrittura })
+)
 
 async function doLogout() {
   error.value = ''
@@ -304,6 +328,10 @@ async function confirmDelete() {
       </div>
 
       <h2>Ma progression</h2>
+      <p v-if="positioningReview.ready" class="positioning-note">
+        📍 {{ positioningReview.note }}
+        <RouterLink :to="{ name: 'level-test' }">Refaire le test →</RouterLink>
+      </p>
       <div class="dashboard">
         <div class="stat stat-streak">
           <span class="stat-value">🔥 {{ progress.streak.current }}</span>
@@ -483,6 +511,20 @@ async function confirmDelete() {
 .link-btn[disabled] {
   opacity: 0.5;
   cursor: default;
+}
+
+.positioning-note {
+  margin: 0.4rem 0 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  background: rgba(176, 105, 46, 0.08);
+  font-size: 0.82rem;
+  color: #6b6156;
+}
+
+.positioning-note a {
+  color: #b0692e;
+  font-weight: 600;
 }
 
 /* --- Dashboard de progression --- */

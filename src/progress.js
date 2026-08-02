@@ -5,6 +5,7 @@
 
 import { reactive, ref, watch } from 'vue'
 import { currentUser } from './lib/auth.js'
+import { isDelayedReview } from './lib/correctionRetry.js'
 
 // Clé historique (avant l'isolation par UID), conservée comme espace des
 // visiteurs non connectés.
@@ -458,8 +459,28 @@ export function reviewErrorCard(id, outcome) {
     return
   }
   const success = outcome === true || outcome === 'su'
+  const now = Date.now()
+  // Réussite différée (Sprint 1.2, outpedagogy.md §15.1) : distincte de la
+  // reprise immédiate (CorrectionRetry.vue, retryCount/retrySuccess). On ne
+  // journalise QUE les révisions qui ont lieu au moins
+  // lib/correctionRetry.js#DELAYED_REVIEW_MIN_DAYS jours après la correction
+  // initiale (`c.addedTs`, posé par addErrorCard) — sinon une reprise faite
+  // dans la foulée via /words compterait à tort comme un transfert. Événement
+  // journalisé dans le journal générique existant (logActivity), pas de
+  // nouvelle collection ni de nouveau champ redondant sur la carte.
+  if (isDelayedReview(c.addedTs, now)) {
+    logActivity({
+      skill: 'ripasso_errori',
+      errorType: c.type,
+      cardId: c.id,
+      source: c.source || null,
+      sourceId: c.sourceId || null,
+      success,
+      daysSinceCorrection: (now - c.addedTs) / DAY,
+    })
+  }
   c.box = success ? Math.min((c.box || 0) + 1, MAX_BOX) : 0
-  c.due = Date.now() + INTERVALS[c.box]
+  c.due = now + INTERVALS[c.box]
 }
 
 export function removeErrorCard(id) {

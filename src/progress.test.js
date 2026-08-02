@@ -504,6 +504,42 @@ describe('errorCards — cartes d’erreur en répétition espacée', () => {
     reviewErrorCard(id, false)
     expect(progress.errorCards[0].box).toBe(0)
   })
+
+  it('reviewErrorCard journalise une réussite différée (Sprint 1.2) seulement plusieurs jours après la correction', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 9, 0))
+    const { id } = addErrorCard(sample)
+
+    // Reprise le jour même (comme CorrectionRetry.vue) : pas de délai, donc
+    // pas comptée comme réussite différée.
+    reviewErrorCard(id, true)
+    expect(progress.activity.some((a) => a.skill === 'ripasso_errori')).toBe(false)
+
+    // Révision quelques jours plus tard (session de répétition espacée,
+    // WordsView.vue) : comptée séparément de la reprise immédiate.
+    vi.setSystemTime(new Date(2026, 6, 5, 9, 0))
+    reviewErrorCard(id, 'su')
+    const delayed = progress.activity.filter((a) => a.skill === 'ripasso_errori')
+    expect(delayed).toHaveLength(1)
+    expect(delayed[0]).toMatchObject({
+      errorType: 'grammatica',
+      cardId: id,
+      success: true,
+    })
+    expect(delayed[0].daysSinceCorrection).toBeGreaterThanOrEqual(2)
+  })
+
+  it('reviewErrorCard journalise aussi un échec en révision différée (pour distinguer consolidée / fragile)', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 1, 9, 0))
+    const { id } = addErrorCard(sample)
+
+    vi.setSystemTime(new Date(2026, 6, 10, 9, 0))
+    reviewErrorCard(id, 'oublie')
+    const delayed = progress.activity.filter((a) => a.skill === 'ripasso_errori')
+    expect(delayed).toHaveLength(1)
+    expect(delayed[0].success).toBe(false)
+  })
 })
 
 describe('measuredLevel — niveau CECR mesuré', () => {

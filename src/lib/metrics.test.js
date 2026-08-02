@@ -10,6 +10,7 @@ import {
   sessionCompletionRate,
   confidenceLevel,
   skillTrend,
+  consolidatedErrorStats,
 } from './metrics.js'
 
 const DAY = 24 * 60 * 60 * 1000
@@ -159,6 +160,47 @@ describe('sessionCompletionRate — achèvement de session (§15.1)', () => {
       completed: 1,
       rate: 0.5,
     })
+  })
+})
+
+describe('consolidatedErrorStats — erreurs consolidées vs fragiles (Sprint 1.2)', () => {
+  it('vide sans événement ripasso_errori', () => {
+    expect(consolidatedErrorStats(makeProgress())).toEqual({
+      testedTypes: 0,
+      consolidated: 0,
+      fragile: 0,
+      byType: {},
+      trend: { recentCount: 0, previousCount: 0, direction: null },
+    })
+  })
+
+  it('un type est consolidé dès qu’il compte au moins une réussite différée', () => {
+    const progress = makeProgress({
+      activity: [
+        { skill: 'ripasso_errori', errorType: 'grammatica', cardId: 'a', success: false },
+        { skill: 'ripasso_errori', errorType: 'grammatica', cardId: 'a', success: true },
+        { skill: 'ripasso_errori', errorType: 'lessico', cardId: 'b', success: false },
+        // ignoré : reprise immédiate (pas de cardId), autre compétence
+        { skill: 'scrittura', retrySuccess: true },
+      ],
+    })
+    const stats = consolidatedErrorStats(progress)
+    expect(stats.testedTypes).toBe(2)
+    expect(stats.consolidated).toBe(1)
+    expect(stats.fragile).toBe(1)
+    expect(stats.byType.grammatica).toMatchObject({ attempts: 2, successes: 1, consolidated: true })
+    expect(stats.byType.lessico).toMatchObject({ attempts: 1, successes: 0, consolidated: false })
+  })
+
+  it('réutilise confidenceLevel par type (échantillon)', () => {
+    const events = Array.from({ length: 10 }, () => ({
+      skill: 'ripasso_errori',
+      errorType: 'ortografia',
+      cardId: 'c',
+      success: true,
+    }))
+    const progress = makeProgress({ activity: events })
+    expect(consolidatedErrorStats(progress).byType.ortografia.confidence).toBe('suffisant')
   })
 })
 

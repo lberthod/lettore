@@ -4,7 +4,11 @@ import {
   checkRewrite,
   hintFor,
   MAX_RETRY_ERRORS,
+  isDelayedReview,
+  DELAYED_REVIEW_MIN_DAYS,
 } from './correctionRetry.js'
+
+const DAY = 24 * 60 * 60 * 1000
 
 describe('selectPriorityErrors', () => {
   it('ne sélectionne rien pour une liste vide', () => {
@@ -91,5 +95,25 @@ describe('hintFor', () => {
 
   it('gère un seul mot', () => {
     expect(hintFor('Ciao')).toBe('Ciao …')
+  })
+})
+
+describe('isDelayedReview — réussite différée vs reprise immédiate (Sprint 1.2)', () => {
+  it('faux sans horodatage de correction', () => {
+    expect(isDelayedReview(null)).toBe(false)
+    expect(isDelayedReview(undefined)).toBe(false)
+    expect(isDelayedReview(0)).toBe(false)
+  })
+
+  it('faux le jour même de la correction (reprise immédiate)', () => {
+    const now = Date.now()
+    expect(isDelayedReview(now, now)).toBe(false)
+    expect(isDelayedReview(now - (DELAYED_REVIEW_MIN_DAYS * DAY - 1), now)).toBe(false)
+  })
+
+  it('vrai au moins DELAYED_REVIEW_MIN_DAYS jours après la correction', () => {
+    const now = Date.now()
+    expect(isDelayedReview(now - DELAYED_REVIEW_MIN_DAYS * DAY, now)).toBe(true)
+    expect(isDelayedReview(now - 10 * DAY, now)).toBe(true)
   })
 })

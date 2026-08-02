@@ -173,6 +173,55 @@ export function sessionCompletionRate(progress, { days = 30, now = Date.now() } 
 }
 
 // ---------------------------------------------------------------------------
+// Sprint 1.2 — Erreurs consolidées vs encore fragiles (réussite différée)
+// ---------------------------------------------------------------------------
+//
+// S'appuie sur les événements `ripasso_errori` journalisés par
+// progress.js#reviewErrorCard (voir lib/correctionRetry.js#isDelayedReview) :
+// une révision de carte d'erreur SRS qui a lieu au moins
+// DELAYED_REVIEW_MIN_DAYS après la correction initiale — donc dans la
+// session de répétition espacée de WordsView.vue, jamais la reprise
+// immédiate de CorrectionRetry.vue (mesurée séparément ci-dessus par
+// retrySuccessRate). Un type d'erreur est « consolidé » dès qu'il compte au
+// moins une réussite différée ; sinon (testé en différé mais jamais réussi,
+// ou pas encore testé en différé bien que dû) il reste « fragile ». Ne crée
+// aucun nouveau calcul de confiance/tendance : réutilise confidenceLevel
+// (taille d'échantillon par type) et skillTrend (évolution de l'activité de
+// révision différée elle-même) déjà en place.
+export function consolidatedErrorStats(progress) {
+  const events = activityOf(progress).filter((a) => a.skill === 'ripasso_errori' && a.cardId)
+  const byType = new Map()
+  for (const e of events) {
+    const key = e.errorType || 'inconnu'
+    if (!byType.has(key)) byType.set(key, { attempts: 0, successes: 0 })
+    const t = byType.get(key)
+    t.attempts += 1
+    if (e.success) t.successes += 1
+  }
+  const byTypeResult = {}
+  let consolidated = 0
+  let fragile = 0
+  for (const [type, stats] of byType) {
+    const isConsolidated = stats.successes > 0
+    if (isConsolidated) consolidated += 1
+    else fragile += 1
+    byTypeResult[type] = {
+      attempts: stats.attempts,
+      successes: stats.successes,
+      consolidated: isConsolidated,
+      confidence: confidenceLevel(stats.attempts),
+    }
+  }
+  return {
+    testedTypes: byType.size,
+    consolidated,
+    fragile,
+    byType: byTypeResult,
+    trend: skillTrend(progress, 'ripasso_errori'),
+  }
+}
+
+// ---------------------------------------------------------------------------
 // §10.2/10.3 — Confiance de la mesure et tendance à 4 semaines
 // ---------------------------------------------------------------------------
 

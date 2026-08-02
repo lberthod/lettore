@@ -66,3 +66,44 @@ export function hintFor(correction) {
   const half = Math.max(1, Math.ceil(words.length / 2))
   return `${words.slice(0, half).join(' ')} …`
 }
+
+// ---------------------------------------------------------------------------
+// Réussite différée / transfert (Sprint 1.2, outpedagogy.md §15.1)
+// ---------------------------------------------------------------------------
+//
+// Deux signaux distincts existent maintenant pour une même erreur corrigée :
+//
+// 1. « Reprise immédiate » (ci-dessus, checkRewrite/CorrectionRetry.vue) :
+//    reformulation demandée dans la foulée de la correction, dans la MÊME
+//    session, sur la MÊME phrase. Mesurée par retryCount/retrySuccess
+//    (journalisés par WriteView.vue/DialogueView.vue sur l'événement
+//    scrittura/dialogo) et agrégée par lib/metrics.js#retrySuccessRate.
+//
+// 2. « Réussite différée » (nouveau) : une carte d'erreur SRS
+//    (progress.js#errorCards, alimentée par addErrorCard juste après la
+//    correction — c'est déjà le journal générique réutilisé, pas un nouveau
+//    système) redevient due et est révisée avec succès dans
+//    lib/errorExercises.js (WordsView.vue), PLUSIEURS JOURS après la
+//    correction initiale (`card.addedTs`) — donc dans une session séparée,
+//    hors du contexte d'écriture d'origine. Ce n'est pas un « nouveau
+//    contexte » au sens d'une phrase totalement inédite (les exercices
+//    d'errorExercises.js retravaillent la phrase de la carte), mais c'est un
+//    contexte d'évaluation différent (exercice isolé, pas la production
+//    libre) et surtout un DÉLAI réel, ce qui suffit à distinguer ce signal
+//    d'une simple reprise immédiate.
+//
+// Une carte d'erreur est due dès sa création (box 0, due 0) : sans seuil de
+// délai, une révision faite juste après la correction (par exemple si
+// l'apprenant visite /words dans la foulée) serait comptée comme un
+// transfert alors que ce n'est qu'une reprise immédiate déguisée. D'où ce
+// seuil, extrait en fonction pure pour rester testable sans dépendre de
+// progress.js (réactif) — voir progress.js#reviewErrorCard, qui journalise
+// l'événement `ripasso_errori` via logActivity() seulement quand
+// isDelayedReview() est vrai.
+export const DELAYED_REVIEW_MIN_DAYS = 2
+const DAY_MS = 24 * 60 * 60 * 1000
+
+export function isDelayedReview(correctedAt, now = Date.now()) {
+  if (!correctedAt) return false
+  return (now - correctedAt) / DAY_MS >= DELAYED_REVIEW_MIN_DAYS
+}
