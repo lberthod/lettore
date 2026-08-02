@@ -20,7 +20,7 @@ import {
   clearDailySession,
   loadYesterdaySessionTypes,
 } from '../lib/dailySession.js'
-import { missionsToday } from '../lib/missions.js'
+import { selectMissionsForToday } from '../lib/missions.js'
 
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
@@ -136,7 +136,10 @@ function takeRestDay() {
 }
 
 // --- Missions courtes du jour (§11.2), dérivées du journal d'activité.
-const missions = computed(() => (loggedIn.value ? missionsToday(progress) : []))
+// Sprint 2.1 : priorise une mission liée à une faiblesse observée quand le
+// signal est disponible, sinon repli automatique sur les 3 missions fixes
+// (voir lib/missions.js#selectMissionsForToday).
+const missions = computed(() => (loggedIn.value ? selectMissionsForToday(progress) : []))
 
 const STEP_LABELS = {
   review: 'Réviser',
