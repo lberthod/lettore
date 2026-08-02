@@ -357,6 +357,13 @@ onUnmounted(() => {
               </li>
             </ol>
 
+            <!-- Difficulté adaptative (Sprint 2.2, lib/percorso.js#adjustDifficulty) :
+                 le changement n'est jamais silencieux, une phrase discrète
+                 l'explique quand le contenu proposé diffère de l'habitude. -->
+            <p v-if="session.difficulty?.reason" class="percorso-reason percorso-difficulty">
+              {{ session.difficulty.reason }}
+            </p>
+
             <p v-if="sessionDone" class="percorso-reason">
               Session du jour terminée — bravo ! Reviens demain pour la suite.
             </p>
@@ -835,6 +842,12 @@ onUnmounted(() => {
   font-size: 0.92rem;
   line-height: 1.5;
   color: rgba(44, 38, 32, 0.72);
+}
+
+.percorso-difficulty {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(44, 38, 32, 0.58);
 }
 
 .percorso-goal {

@@ -12,6 +12,7 @@ import {
   COSTLY_AI_TYPES,
   REVIEW_STEP_CAP,
   STEP_SKILL,
+  adjustDifficulty,
 } from './percorso.js'
 
 const DAY = 24 * 60 * 60 * 1000
@@ -492,6 +493,151 @@ describe('composeSession — session quotidienne composée', () => {
     const progress = makeProgress()
     const session = composeSession(progress, { hasPremiumIA: true, texts, now: NOW, duration: 2 })
     expect(session.steps.length).toBeGreaterThan(0)
+  })
+})
+
+describe('adjustDifficulty — difficulté adaptative de la session composée', () => {
+  it('moins de deux événements notables : ne change rien (repli neutre)', () => {
+    const result = adjustDifficulty([])
+    expect(result).toMatchObject({ direction: 'same', reason: null, removeOneHelp: false })
+  })
+
+  it('cas 1 : deux réussites autonomes (peu/pas d’aides) → contenu plus exigeant', () => {
+    const recentActivity = [
+      { skill: 'lettura', score: 5, total: 5, translatedWordsCount: 0 },
+      { skill: 'scrittura', errorCount: 0, helpUsed: [] },
+    ]
+    const result = adjustDifficulty(recentActivity)
+    expect(result.direction).toBe('harder')
+    expect(result.removeOneHelp).toBe(false)
+    expect(result.reason).toMatch(/exigeant/i)
+  })
+
+  it('cas 2 : réussite mais avec beaucoup d’aides → même niveau, une aide à retirer', () => {
+    const recentActivity = [
+      { skill: 'scrittura', errorCount: 0, helpUsed: ['idees', 'vocabolario', 'struttura'] },
+      { skill: 'scrittura', errorCount: 0, helpUsed: ['idees', 'vocabolario', 'struttura'] },
+    ]
+    const result = adjustDifficulty(recentActivity)
+    expect(result.direction).toBe('same')
+    expect(result.removeOneHelp).toBe(true)
+    expect(result.reason).toMatch(/aide|traduction/i)
+  })
+
+  it('cas 3 : deux échecs de suite → contenu réduit, sans toucher au niveau CECR', () => {
+    const recentActivity = [
+      { skill: 'ascolto', score: 1, total: 5, textRevealed: true },
+      { skill: 'ascolto', score: 2, total: 5, textRevealed: true },
+    ]
+    const result = adjustDifficulty(recentActivity)
+    expect(result.direction).toBe('easier')
+    // Aucun champ de niveau CECR dans le résultat : la règle ne rétrograde
+    // jamais le niveau affiché, seulement la longueur/complexité proposée.
+    expect(result).not.toHaveProperty('level')
+    expect(result).not.toHaveProperty('cecrLevel')
+  })
+
+  it('cas 3bis : deux abandons de suite (score/total absent) → contenu réduit également', () => {
+    const recentActivity = [
+      { skill: 'scrittura', abandoned: true },
+      { skill: 'scrittura', abandoned: true },
+    ]
+    const result = adjustDifficulty(recentActivity)
+    expect(result.direction).toBe('easier')
+  })
+
+  it('un échec suivi d’un abandon compte aussi comme deux échecs/abandons de suite', () => {
+    const recentActivity = [
+      { skill: 'scrittura', errorCount: 3 },
+      { skill: 'scrittura', abandoned: true },
+    ]
+    expect(adjustDifficulty(recentActivity).direction).toBe('easier')
+  })
+
+  it('cas 4 : erreur récurrente (recurringErrorStats) → microConsolidation, indépendamment de la direction', () => {
+    const errorCards = [
+      { id: 'e1', history: [0, 10 * DAY] }, // écart >= 7 jours : récurrente
+    ]
+    const result = adjustDifficulty([], { errorCards })
+    expect(result.microConsolidation).toBe(true)
+    expect(result.direction).toBe('same')
+  })
+
+  it('sans carte d’erreur récurrente : microConsolidation à false', () => {
+    const result = adjustDifficulty([], { errorCards: [] })
+    expect(result.microConsolidation).toBe(false)
+  })
+
+  it('résultats mixtes (une réussite, un échec) : ne bouge rien', () => {
+    const recentActivity = [
+      { skill: 'lettura', score: 5, total: 5 },
+      { skill: 'ascolto', score: 1, total: 5 },
+    ]
+    const result = adjustDifficulty(recentActivity)
+    expect(result.direction).toBe('same')
+    expect(result.reason).toBeNull()
+  })
+})
+
+describe('composeSession — difficulté adaptative branchée (Sprint 2.2)', () => {
+  const prefs = {
+    goal: 'general',
+    dailyMinutes: 20,
+    reminderEnabled: false,
+    preferredActivities: [],
+    avoidedActivities: [],
+  }
+
+  it('expose toujours `difficulty` sur la session composée', () => {
+    const progress = makeProgress({ learningPreferences: prefs })
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.difficulty).toMatchObject({ direction: expect.any(String) })
+  })
+
+  it('deux réussites autonomes récentes → texte suggéré un cran au-dessus (levelOffset)', () => {
+    const progress = makeProgress({
+      learningPreferences: prefs,
+      // Niveau cible sans mesure d'écriture : le mode des textes déjà lus
+      // (A1) — décalé d'un cran par levelOffset, la suggestion doit viser B1
+      // (seuls niveaux disponibles dans `texts` : A1 et B1).
+      readTexts: ['a1-uno', 'a1-due'],
+      activity: [
+        ev('lettura', 0, { score: 5, total: 5, translatedWordsCount: 0 }),
+        ev('lettura', 0, { score: 5, total: 5, translatedWordsCount: 0 }),
+      ],
+    })
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.difficulty.direction).toBe('harder')
+    const readingStep = session.steps.find((s) => s.type === 'lettura' || s.type === 'ascolto')
+    expect(readingStep).toBeTruthy()
+    const text = texts.find((t) => t.id === readingStep.textId)
+    expect(text?.level).toBe('B1')
+  })
+
+  it('deux échecs récents → session plus courte (au plus 2 étapes) sans rétrograder le niveau', () => {
+    const progress = makeProgress({
+      learningPreferences: prefs,
+      activity: [
+        ev('ascolto', 0, { score: 1, total: 5, textRevealed: true }),
+        ev('ascolto', 0, { score: 1, total: 5, textRevealed: true }),
+      ],
+    })
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.difficulty.direction).toBe('easier')
+    expect(session.steps.length).toBeLessThanOrEqual(2)
+  })
+
+  it('révision très en retard + deux échecs récents : le plafond de révision descend aussi', () => {
+    const progress = makeProgress({
+      learningPreferences: prefs,
+      favorites: Array.from({ length: 50 }, (_, i) => ({ word: `w${i}`, due: 0 })),
+      activity: [
+        ev('ascolto', 0, { score: 1, total: 5, textRevealed: true }),
+        ev('ascolto', 0, { score: 1, total: 5, textRevealed: true }),
+      ],
+    })
+    const session = composeSession(progress, { texts, now: NOW })
+    expect(session.steps[0].count).toBeLessThan(REVIEW_STEP_CAP)
   })
 })
 

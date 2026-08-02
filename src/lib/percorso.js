@@ -6,6 +6,8 @@
 // singletons de progress.js — il est donc testable sans navigateur, et
 // n'embarque pas l'index des textes (127 kB) dans le bundle d'entrée : c'est
 // à l'appelant de le charger à la demande (voir HomeView).
+
+import { recurringErrorStats } from './metrics.js'
 //
 // Les règles sont simples et transparentes, par ordre de priorité :
 //   1. ≥ 5 révisions dues (mots favoris + cartes d'erreur) → réviser
@@ -72,14 +74,27 @@ export function targetLevel(progress, texts = []) {
   return modeOf(readLevels)
 }
 
+// Échelle CECR, utilisée uniquement pour décaler le niveau cible d'un cran
+// (adjustDifficulty ci-dessous) — jamais pour rétrograder le niveau AFFICHÉ
+// à l'utilisateur, seulement pour choisir un texte légèrement plus exigeant.
+export const CECR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+
 // Un texte du catalogue jamais lu, au niveau cible si possible, sinon
 // n'importe quel texte non lu. `null` quand le catalogue n'est pas chargé
-// ou que tout a été lu.
-export function recommendText(progress, texts = []) {
+// ou que tout a été lu. `levelOffset` (Sprint 2.2, voir adjustDifficulty)
+// décale le niveau cible de N crans sur l'échelle CECR — seulement vers le
+// haut en pratique (jamais négatif côté appelant, voir composeSession).
+export function recommendText(progress, texts = [], { levelOffset = 0 } = {}) {
   const read = new Set(progress.readTexts || [])
   const unread = texts.filter((t) => !read.has(t.id))
   if (!unread.length) return null
-  const level = targetLevel(progress, texts)
+  let level = targetLevel(progress, texts)
+  if (levelOffset && level) {
+    const idx = CECR_LEVELS.indexOf(level)
+    if (idx !== -1) {
+      level = CECR_LEVELS[Math.min(Math.max(idx + levelOffset, 0), CECR_LEVELS.length - 1)]
+    }
+  }
   return unread.find((t) => t.level === level) || unread[0]
 }
 
@@ -250,6 +265,118 @@ function yesterdaySignature(progress, now) {
   return types
 }
 
+// ---------------------------------------------------------------------------
+// Difficulté adaptative de la session composée (phasetravail.md, Sprint 2.2)
+// ---------------------------------------------------------------------------
+//
+// S'appuie UNIQUEMENT sur des signaux déjà journalisés par logActivity
+// (progress.js), sans ajouter de nouveau champ de tracking :
+//   - aide utilisée : `helpUsed` (scrittura, WriteView.vue), `textRevealed`
+//     et `translatedWordsCount` (ascolto/lettura, ReaderView.vue).
+//   - réussite/échec : `score`/`total` (lettura, ascolto, pronuncia),
+//     `errorCount` (scrittura, dialogo).
+//   - abandon : AUCUN événement n'est journalisé quand l'utilisateur quitte
+//     une activité sans la terminer — logActivity n'est appelé qu'à la fin
+//     (voir WriteView.vue/DialogueView.vue/ReaderView.vue). Il n'existe donc
+//     pas aujourd'hui de signal d'abandon distinct de l'échec.
+//     TODO : si un signal explicite est ajouté un jour (ex. un champ
+//     `abandoned: true` journalisé au moment où l'utilisateur quitte une
+//     activité en cours), le brancher dans `outcomeOf` ci-dessous — en
+//     attendant, seul l'échec journalisé (résultat noté mais raté) déclenche
+//     la règle « 2 échecs/abandons de suite ».
+//   - erreur récurrente ciblée : `recurringErrorStats` (lib/metrics.js) est
+//     déjà le module qui détecte ce signal (cartes d'erreur re-signalées à
+//     plusieurs jours d'écart) — réutilisé tel quel, pas de second calcul.
+
+// Aides utilisées à partir duquel une réussite est considérée « aidée »
+// plutôt qu'autonome.
+const HEAVY_HELP_THRESHOLD = 3
+// Même seuil de réussite que autonomousListeningRate (lib/metrics.js).
+const ADJUST_SUCCESS_RATIO = 0.6
+
+// Nombre d'aides utilisées pendant un événement journalisé — dérivé des
+// mêmes champs que lib/metrics.js (recallWithoutHelpRate, readingHelpDependency).
+function helpCountOf(entry) {
+  if (entry.skill === 'scrittura') return Array.isArray(entry.helpUsed) ? entry.helpUsed.length : 0
+  if (entry.skill === 'ascolto' || entry.skill === 'lettura') {
+    return (entry.textRevealed === true ? 1 : 0) + (entry.translatedWordsCount || 0)
+  }
+  return 0
+}
+
+// 'success' | 'failure' | 'abandoned' | null (pas assez d'information pour
+// juger cet événement, ex. une simple révision de mots sans score).
+function outcomeOf(entry) {
+  if (entry.abandoned === true) return 'abandoned' // voir TODO ci-dessus
+  if (typeof entry.score === 'number' && entry.total) {
+    return entry.score / entry.total >= ADJUST_SUCCESS_RATIO ? 'success' : 'failure'
+  }
+  if (entry.skill === 'scrittura' || entry.skill === 'dialogo') {
+    const errors = typeof entry.errorCount === 'number' ? entry.errorCount : null
+    if (errors !== null) return errors === 0 ? 'success' : 'failure'
+  }
+  return null
+}
+
+// Ajuste la difficulté du CONTENU de la prochaine session composée à partir
+// des deux derniers événements d'activité notables (ceux dont on peut juger
+// la réussite — voir outcomeOf). Règle simple et transparente, en quatre cas :
+//   1. 2 réussites autonomes comparables (peu/pas d'aides) → contenu un peu
+//      plus exigeant ('harder').
+//   2. réussite mais avec beaucoup d'aides → même niveau ('same'), mais
+//      `removeOneHelp` signale qu'une aide peut être retirée progressivement
+//      (à charge des vues qui proposent les aides, ex. WriteView.vue).
+//   3. 2 échecs ou abandons de suite → contenu réduit ('easier' : moins
+//      d'étapes, révisions plafonnées plus bas) — jamais de rétrogradation du
+//      niveau CECR affiché (aucun champ de niveau n'est modifié ici).
+//   4. erreur récurrente ciblée (recurringErrorStats) → `microConsolidation`
+//      signale qu'une micro-activité de consolidation est pertinente,
+//      indépendamment des trois cas précédents.
+export function adjustDifficulty(recentActivity = [], { errorCards = [] } = {}) {
+  const notable = (recentActivity || []).filter((a) => outcomeOf(a) !== null)
+  const lastTwo = notable.slice(-2)
+  const microConsolidation = recurringErrorStats({ errorCards }).recurredAfter7Days > 0
+
+  if (lastTwo.length < 2) {
+    return { direction: 'same', reason: null, removeOneHelp: false, microConsolidation }
+  }
+
+  const outcomes = lastTwo.map(outcomeOf)
+
+  // 3. Deux échecs ou abandons de suite.
+  if (outcomes.every((o) => o === 'failure' || o === 'abandoned')) {
+    return {
+      direction: 'easier',
+      reason: 'Nous simplifions un peu le contenu proposé pour te laisser reprendre confiance.',
+      removeOneHelp: false,
+      microConsolidation,
+    }
+  }
+
+  // 1 et 2. Deux réussites de suite : autonome (peu d'aides) ou aidée.
+  if (outcomes.every((o) => o === 'success')) {
+    const heavyHelp = lastTwo.some((a) => helpCountOf(a) >= HEAVY_HELP_THRESHOLD)
+    if (heavyHelp) {
+      return {
+        direction: 'same',
+        reason: 'Nous gardons ce niveau pour t’aider à progresser avec moins de traductions.',
+        removeOneHelp: true,
+        microConsolidation,
+      }
+    }
+    return {
+      direction: 'harder',
+      reason: 'Deux réussites sans aide : nous proposons un contenu un peu plus exigeant.',
+      removeOneHelp: false,
+      microConsolidation,
+    }
+  }
+
+  // Résultats mixtes (une réussite, un échec) : pas assez de signal pour
+  // bouger quoi que ce soit.
+  return { direction: 'same', reason: null, removeOneHelp: false, microConsolidation }
+}
+
 // Construit une session composée : { duration, objective, steps }. `steps`
 // contient au plus 3 étapes, chacune { type, estimatedMinutes, ...détails }.
 export function composeSession(
@@ -266,6 +393,15 @@ export function composeSession(
     ? new Set(yesterdayTypes)
     : yesterdaySignature(progress, now)
 
+  // Difficulté adaptative (Sprint 2.2) : influence le CONTENU proposé —
+  // niveau des textes suggérés (levelOffset) et longueur de session
+  // ('easier' → moins d'étapes, révisions plafonnées plus bas) — jamais le
+  // niveau CECR affiché à l'utilisateur, qui n'est modifié nulle part ici.
+  const difficulty = adjustDifficulty(progress.activity, { errorCards: progress.errorCards })
+  const levelOffset = difficulty.direction === 'harder' ? 1 : 0
+  const maxSteps = difficulty.direction === 'easier' ? 2 : 3
+  const reviewCap = difficulty.direction === 'easier' ? Math.min(REVIEW_STEP_CAP, 5) : REVIEW_STEP_CAP
+
   const steps = []
   const usedTypes = new Set()
   let costlyAiCount = 0
@@ -276,12 +412,13 @@ export function composeSession(
   let remaining = totalDuration
 
   // 1. Révisions très en retard, en premier mais plafonnées — à la fois en
-  // nombre (REVIEW_STEP_CAP) et en durée (ne consomme pas plus que le
-  // budget total, pour laisser une chance aux étapes suivantes).
+  // nombre (REVIEW_STEP_CAP, réduit à `reviewCap` après deux échecs/abandons
+  // de suite — règle 3 d'adjustDifficulty) et en durée (ne consomme pas plus
+  // que le budget total, pour laisser une chance aux étapes suivantes).
   const due = dueReviewCount(progress, now)
   if (due > 0) {
     const maxByBudget = Math.max(1, Math.floor(remaining * 2.5))
-    const count = Math.min(due, REVIEW_STEP_CAP, maxByBudget)
+    const count = Math.min(due, reviewCap, maxByBudget)
     const minutes = estimateMinutes('review', { count })
     steps.push({
       type: 'review',
@@ -336,7 +473,10 @@ export function composeSession(
     return pool[0]
   }
 
-  const suggestion = recommendText(progress, texts)
+  // levelOffset (Sprint 2.2) : après deux réussites autonomes de suite, le
+  // texte suggéré pour lire/écouter/prononcer vise un cran au-dessus — sans
+  // jamais toucher au niveau CECR affiché ailleurs dans l'app.
+  const suggestion = recommendText(progress, texts, { levelOffset })
 
   function buildStep(type) {
     if (type === 'lettura' || type === 'ascolto') {
@@ -361,10 +501,12 @@ export function composeSession(
     return { type, estimatedMinutes: estimateMinutes(type) }
   }
 
-  // 2. Deux étapes de plus au maximum (3 au total), en alternant réception
-  // et production quand la durée le permet — et sans dépasser le budget de
-  // minutes restant, sinon la durée annoncée ne veut plus rien dire.
-  while (steps.length < 3 && remaining > 0) {
+  // 2. Deux étapes de plus au maximum (3 au total ; `maxSteps` redescend à 2
+  // après deux échecs/abandons de suite — règle 3 d'adjustDifficulty, pour
+  // réduire la longueur de la session plutôt que son niveau), en alternant
+  // réception et production quand la durée le permet — et sans dépasser le
+  // budget de minutes restant, sinon la durée annoncée ne veut plus rien dire.
+  while (steps.length < maxSteps && remaining > 0) {
     const lastMode = steps.length ? modeOfType(steps[steps.length - 1].type) : null
     const wantMode = lastMode === 'reception' ? 'production' : lastMode === 'production' ? 'reception' : null
     let type = pickNext({ preferMode: wantMode, maxMinutes: remaining })
@@ -425,6 +567,11 @@ export function composeSession(
     duration: totalDuration,
     objective: sessionObjective(goal, steps),
     steps,
+    // Sprint 2.2 : direction/raison de l'ajustement de difficulté appliqué à
+    // CETTE composition — HomeView.vue l'affiche en une phrase discrète
+    // quand `reason` est renseigné, pour que le changement ne soit jamais
+    // silencieux.
+    difficulty,
   }
 }
 
