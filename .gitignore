@@ -66,6 +66,18 @@ node_modules/
 .env
 .env.local
 
+# Manifest privé de la pré-génération TTS (contient le texte intégral des
+# chapitres payants) — jamais servi publiquement, voir pregen_tts.py.
+/audio-manifest/
+
+# Environnements Python locaux (expérimentation TTS Chatterbox/Parler) et
+# copie de travail brute des audios générés — public/audio/ est la seule
+# copie servie par l'app, /audio/ à la racine est un scratch de génération.
+/parler-env/
+/tts-env/
+__pycache__/
+/audio/
+
 # dataconnect generated files
 .dataconnect
 

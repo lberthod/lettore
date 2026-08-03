@@ -4,13 +4,13 @@ import { RouterLink, useRouter } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import TranslationOverlay from '../components/TranslationOverlay.vue'
 import { lookupWord, lookupSentence } from '../translate.js'
+import { ttsSupported } from '../tts.js'
 import {
-  ttsSupported,
-  speakItalian,
-  stopSpeaking,
-  pauseSpeaking,
-  resumeSpeaking,
-} from '../tts.js'
+  speakItalianPregen as speakItalian,
+  stopPregenSpeaking as stopSpeaking,
+  pausePregenSpeaking as pauseSpeaking,
+  resumePregenSpeaking as resumeSpeaking,
+} from '../lib/pregenAudio.js'
 import QuizSection from '../components/QuizSection.vue'
 import {
   progress,
@@ -71,6 +71,59 @@ async function loadChapter(bookId, chapterId) {
   }
 }
 
+// --- Lecture continue : charge et affiche les chapitres à la suite, un par
+// un, au fil du défilement (au lieu de tout charger d'un coup) ---
+const continuousMode = ref(false)
+const continuousChapters = ref([])
+const continuousLoading = ref(false)
+const continuousDenied = ref(false)
+const continuousSentinel = ref(null)
+const continuousAllLoaded = computed(
+  () => !!book.value && continuousChapters.value.length >= book.value.chapters.length
+)
+
+async function loadNextContinuousChapter() {
+  if (continuousLoading.value || continuousDenied.value || !book.value) return
+  const nextIndex = continuousChapters.value.length
+  const meta = book.value.chapters[nextIndex]
+  if (!meta) return
+  continuousLoading.value = true
+  const data = await loadBookChapter(props.bookId, meta.id)
+  if (props.bookId !== book.value.id) {
+    // Le livre a changé pendant le chargement : on ignore ce résultat périmé.
+    continuousLoading.value = false
+    return
+  }
+  if (!data) {
+    continuousDenied.value = true
+    continuousLoading.value = false
+    return
+  }
+  continuousChapters.value = [
+    ...continuousChapters.value,
+    { meta, data, paragraphs: tokenizeParagraphs(data) },
+  ]
+  continuousLoading.value = false
+  trackTextOpened({ textId: `${props.bookId}-${meta.id}`, level: book.value?.level, access: 'full' })
+}
+
+function toggleContinuousMode() {
+  continuousMode.value = !continuousMode.value
+  if (continuousMode.value && !continuousChapters.value.length && !continuousDenied.value) {
+    loadNextContinuousChapter()
+  }
+}
+
+let continuousObserver = null
+
+function observeContinuousSentinel(el) {
+  if (!continuousObserver) return
+  continuousObserver.disconnect()
+  if (el) continuousObserver.observe(el)
+}
+
+watch(continuousSentinel, observeContinuousSentinel)
+
 function preloadNeighbors() {
   for (const c of [prevChapter.value, nextChapter.value]) {
     if (c) loadBookChapter(props.bookId, c.id)
@@ -97,27 +150,35 @@ const tagline = computed(() => {
   }
   return parts.join(' · ')
 })
-const chapterReadId = computed(() => `${props.bookId}-${props.chapterId}`)
 const chapterMeta = computed(
   () => book.value?.chapters.find((c) => c.id === props.chapterId) || null
 )
 
 // Découpage : paragraphes → phrases → mots (identique à ReaderView)
-const paragraphs = computed(() =>
-  currentChapter.value.paragraphs.map((p) => {
+function tokenizeParagraphs(chapterData) {
+  return chapterData.paragraphs.map((p) => {
     const sentences = p.match(/[^.!?]+[.!?]*\s*/g) || [p]
     return sentences.map((sentence) => ({
       sentence: sentence.trim(),
       tokens: sentence.split(/(\p{L}[\p{L}'’-]*)/u).filter((t) => t !== ''),
     }))
   })
-)
+}
 
-const flatSentences = computed(() =>
-  paragraphs.value.flatMap((sentences, pi) =>
+const paragraphs = computed(() => tokenizeParagraphs(currentChapter.value))
+
+const flatSentences = computed(() => {
+  if (continuousMode.value) {
+    return continuousChapters.value.flatMap((c, ci) =>
+      c.paragraphs.flatMap((sentences, pi) =>
+        sentences.map((s, si) => ({ key: `${ci}-${pi}-${si}`, text: s.sentence }))
+      )
+    )
+  }
+  return paragraphs.value.flatMap((sentences, pi) =>
     sentences.map((s, si) => ({ key: `${pi}-${si}`, text: s.sentence }))
   )
-)
+})
 
 const isWord = (token) => /^\p{L}/u.test(token)
 const isSentenceEnd = (token) => /[.!?]/.test(token)
@@ -131,14 +192,19 @@ const touchMode =
 
 // --- Quiz en overlay ---
 const quizOpen = ref(false)
+const quizChapter = ref(null)
 
-function openQuiz() {
+function openQuiz(chapterData) {
   closeOverlay()
+  quizChapter.value = chapterData || currentChapter.value
   quizOpen.value = true
 }
 
 function onQuizCompleted(score) {
-  if (score >= currentChapter.value.questions.length - 1) markRead(chapterReadId.value)
+  if (!quizChapter.value) return
+  if (score >= quizChapter.value.questions.length - 1) {
+    markRead(`${props.bookId}-${quizChapter.value.id}`)
+  }
 }
 
 // --- TTS (identique à ReaderView) ---
@@ -230,10 +296,9 @@ function positionFromEvent(event) {
   return { x: rect.left + rect.width / 2, y: rect.bottom + 8 }
 }
 
-function showTranslation(original, event, isSentence) {
-  const result = isSentence
-    ? lookupSentence(currentChapter.value, original)
-    : lookupWord(currentChapter.value, original)
+function showTranslation(original, event, isSentence, chapterData) {
+  const ctx = chapterData || currentChapter.value
+  const result = isSentence ? lookupSentence(ctx, original) : lookupWord(ctx, original)
 
   overlay.value = {
     ...positionFromEvent(event),
@@ -242,22 +307,23 @@ function showTranslation(original, event, isSentence) {
     loading: false,
     error: result ? '' : 'Pas de traduction dans le lexique',
     isSentence,
+    textId: `${props.bookId}-${ctx.id}`,
   }
 
   if (ttsEnabled.value) speak(original)
 }
 
-function onWordEnter(word, event) {
+function onWordEnter(word, event, chapterData) {
   if (touchMode) return
   clearTimeout(hoverTimer)
   cancelClose()
-  hoverTimer = setTimeout(() => showTranslation(word, event, false), 150)
+  hoverTimer = setTimeout(() => showTranslation(word, event, false, chapterData), 150)
 }
 
 let lastTapTime = 0
 let lastTapSentence = null
 
-function onWordTap(word, sentence, event) {
+function onWordTap(word, sentence, event, chapterData) {
   if (!touchMode) return
   clearTimeout(hoverTimer)
   const now = Date.now()
@@ -265,10 +331,10 @@ function onWordTap(word, sentence, event) {
   lastTapTime = isDoubleTap ? 0 : now
   lastTapSentence = isDoubleTap ? null : sentence
   if (isDoubleTap) {
-    onWordDblClick(sentence, event)
+    onWordDblClick(sentence, event, chapterData)
     return
   }
-  showTranslation(word, event, false)
+  showTranslation(word, event, false, chapterData)
 }
 
 function onWordLeave() {
@@ -276,27 +342,27 @@ function onWordLeave() {
   if (overlay.value && !overlay.value.isSentence) scheduleClose()
 }
 
-function onWordFocus(word, event) {
+function onWordFocus(word, event, chapterData) {
   clearTimeout(hoverTimer)
   cancelClose()
-  showTranslation(word, event, false)
+  showTranslation(word, event, false, chapterData)
 }
 
 function onWordBlur() {
   onWordLeave()
 }
 
-function onWordKeydown(sentence, event) {
+function onWordKeydown(sentence, event, chapterData) {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault()
-    onWordDblClick(sentence, event)
+    onWordDblClick(sentence, event, chapterData)
   }
 }
 
-function onPunctKeydown(sentence, event) {
+function onPunctKeydown(sentence, event, chapterData) {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault()
-    onPunctClick(sentence, event)
+    onPunctClick(sentence, event, chapterData)
   }
 }
 
@@ -316,18 +382,18 @@ function toggleWordFavorite() {
   toggleFavorite({
     word: overlay.value.original,
     translation: overlay.value.translation,
-    textId: chapterReadId.value,
+    textId: overlay.value.textId,
   })
 }
 
-function onWordDblClick(sentence, event) {
+function onWordDblClick(sentence, event, chapterData) {
   clearTimeout(hoverTimer)
-  showTranslation(sentence, event, true)
+  showTranslation(sentence, event, true, chapterData)
 }
 
-function onPunctClick(sentence, event) {
+function onPunctClick(sentence, event, chapterData) {
   clearTimeout(hoverTimer)
-  showTranslation(sentence, event, true)
+  showTranslation(sentence, event, true, chapterData)
 }
 
 function closeOverlay() {
@@ -342,6 +408,9 @@ watch(
     stopReading()
     quizOpen.value = false
     currentChapter.value = null
+    continuousMode.value = false
+    continuousChapters.value = []
+    continuousDenied.value = false
     const data = await loadBook(bookId)
     if (data) loadChapter(bookId, props.chapterId)
   },
@@ -355,6 +424,7 @@ watch(
     closeOverlay()
     stopReading()
     quizOpen.value = false
+    continuousMode.value = false
     loadChapter(props.bookId, chapterId)
   }
 )
@@ -367,10 +437,22 @@ function onKeydown(e) {
   }
 }
 
-onMounted(() => document.addEventListener('keydown', onKeydown))
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
+  if (typeof IntersectionObserver !== 'undefined') {
+    continuousObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) loadNextContinuousChapter()
+      },
+      { rootMargin: '800px 0px' }
+    )
+    observeContinuousSentinel(continuousSentinel.value)
+  }
+})
 onBeforeUnmount(() => {
   document.removeEventListener('keydown', onKeydown)
   stopSpeaking()
+  continuousObserver?.disconnect()
 })
 </script>
 
@@ -390,6 +472,13 @@ onBeforeUnmount(() => {
     <div class="reader">
       <div class="toolbar">
         <RouterLink class="back" :to="{ name: 'books' }">← Tutti i classici</RouterLink>
+        <button
+          class="summary-toggle"
+          :class="{ active: continuousMode }"
+          @click="toggleContinuousMode"
+        >
+          {{ continuousMode ? '📄 Lettura per capitolo' : '📖 Lettura continua' }}
+        </button>
         <button class="summary-toggle" @click="summaryOpen = true">📑 Sommario</button>
         <div v-if="ttsSupported" class="tts-bar">
           <button
@@ -441,68 +530,128 @@ onBeforeUnmount(() => {
 
       <p class="level-note">{{ book.levelNote }} — {{ book.source.provider }}</p>
 
-      <div class="paper">
-        <h2 class="chapter-title">{{ currentChapter.title }}</h2>
-        <article @click.self="closeOverlay">
-          <p v-for="(sentences, pi) in paragraphs" :key="pi">
-            <span
-              v-for="(s, si) in sentences"
-              :key="si"
-              class="sentence"
-              :class="{ reading: readingKey === `${pi}-${si}` }"
-            >
-              <template v-for="(token, ti) in s.tokens" :key="ti">
-                <span
-                  v-if="isWord(token)"
-                  class="word"
-                  role="button"
-                  tabindex="0"
-                  :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
-                  @mouseenter="onWordEnter(token, $event)"
-                  @mouseleave="onWordLeave"
-                  @focus="onWordFocus(token, $event)"
-                  @blur="onWordBlur"
-                  @click="onWordTap(token, s.sentence, $event)"
-                  @dblclick="onWordDblClick(s.sentence, $event)"
-                  @keydown="onWordKeydown(s.sentence, $event)"
-                  >{{ token }}</span
-                ><span
-                  v-else-if="isSentenceEnd(token)"
-                  class="punct"
-                  role="button"
-                  tabindex="0"
-                  title="Traduire la phrase"
-                  @click="onPunctClick(s.sentence, $event)"
-                  @keydown="onPunctKeydown(s.sentence, $event)"
-                  >{{ token }}</span
-                ><template v-else>{{ token }}</template>
-              </template>
-            </span>
-          </p>
-        </article>
+      <template v-if="!continuousMode">
+        <div class="paper">
+          <h2 class="chapter-title">{{ currentChapter.title }}</h2>
+          <article @click.self="closeOverlay">
+            <p v-for="(sentences, pi) in paragraphs" :key="pi">
+              <span
+                v-for="(s, si) in sentences"
+                :key="si"
+                class="sentence"
+                :class="{ reading: readingKey === `${pi}-${si}` }"
+              >
+                <template v-for="(token, ti) in s.tokens" :key="ti">
+                  <span
+                    v-if="isWord(token)"
+                    class="word"
+                    role="button"
+                    tabindex="0"
+                    :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
+                    @mouseenter="onWordEnter(token, $event)"
+                    @mouseleave="onWordLeave"
+                    @focus="onWordFocus(token, $event)"
+                    @blur="onWordBlur"
+                    @click="onWordTap(token, s.sentence, $event)"
+                    @dblclick="onWordDblClick(s.sentence, $event)"
+                    @keydown="onWordKeydown(s.sentence, $event)"
+                    >{{ token }}</span
+                  ><span
+                    v-else-if="isSentenceEnd(token)"
+                    class="punct"
+                    role="button"
+                    tabindex="0"
+                    title="Traduire la phrase"
+                    @click="onPunctClick(s.sentence, $event)"
+                    @keydown="onPunctKeydown(s.sentence, $event)"
+                    >{{ token }}</span
+                  ><template v-else>{{ token }}</template>
+                </template>
+              </span>
+            </p>
+          </article>
 
-        <div v-if="currentChapter.questions?.length" class="verify-cta">
-          <button class="btn-verify" @click="openQuiz">Verifica la comprensione →</button>
+          <div v-if="currentChapter.questions?.length" class="verify-cta">
+            <button class="btn-verify" @click="openQuiz()">Verifica la comprensione →</button>
+          </div>
         </div>
-      </div>
 
-      <nav class="pager">
-        <RouterLink
-          v-if="prevChapter"
-          class="pager-link prev"
-          :to="{ name: 'book-reader', params: { bookId, chapterId: prevChapter.id } }"
-        >
-          ← Capitolo {{ currentIndex }} — {{ prevChapter.title }}
-        </RouterLink>
-        <span v-else></span>
-        <RouterLink
-          v-if="nextChapter"
-          class="pager-link next"
-          :to="{ name: 'book-reader', params: { bookId, chapterId: nextChapter.id } }"
-        >
-          Capitolo {{ currentIndex + 2 }} — {{ nextChapter.title }} →
-        </RouterLink>
-      </nav>
+        <nav class="pager">
+          <RouterLink
+            v-if="prevChapter"
+            class="pager-link prev"
+            :to="{ name: 'book-reader', params: { bookId, chapterId: prevChapter.id } }"
+          >
+            ← Capitolo {{ currentIndex }} — {{ prevChapter.title }}
+          </RouterLink>
+          <span v-else></span>
+          <RouterLink
+            v-if="nextChapter"
+            class="pager-link next"
+            :to="{ name: 'book-reader', params: { bookId, chapterId: nextChapter.id } }"
+          >
+            Capitolo {{ currentIndex + 2 }} — {{ nextChapter.title }} →
+          </RouterLink>
+        </nav>
+      </template>
+
+      <div v-else class="continuous">
+        <div v-for="(chapter, ci) in continuousChapters" :key="chapter.meta.id" class="paper chapter-block">
+          <h2 class="chapter-title">{{ chapter.data.title }}</h2>
+          <article @click.self="closeOverlay">
+            <p v-for="(sentences, pi) in chapter.paragraphs" :key="pi">
+              <span
+                v-for="(s, si) in sentences"
+                :key="si"
+                class="sentence"
+                :class="{ reading: readingKey === `${ci}-${pi}-${si}` }"
+              >
+                <template v-for="(token, ti) in s.tokens" :key="ti">
+                  <span
+                    v-if="isWord(token)"
+                    class="word"
+                    role="button"
+                    tabindex="0"
+                    :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
+                    @mouseenter="onWordEnter(token, $event, chapter.data)"
+                    @mouseleave="onWordLeave"
+                    @focus="onWordFocus(token, $event, chapter.data)"
+                    @blur="onWordBlur"
+                    @click="onWordTap(token, s.sentence, $event, chapter.data)"
+                    @dblclick="onWordDblClick(s.sentence, $event, chapter.data)"
+                    @keydown="onWordKeydown(s.sentence, $event, chapter.data)"
+                    >{{ token }}</span
+                  ><span
+                    v-else-if="isSentenceEnd(token)"
+                    class="punct"
+                    role="button"
+                    tabindex="0"
+                    title="Traduire la phrase"
+                    @click="onPunctClick(s.sentence, $event, chapter.data)"
+                    @keydown="onPunctKeydown(s.sentence, $event, chapter.data)"
+                    >{{ token }}</span
+                  ><template v-else>{{ token }}</template>
+                </template>
+              </span>
+            </p>
+          </article>
+
+          <div v-if="chapter.data.questions?.length" class="verify-cta">
+            <button class="btn-verify" @click="openQuiz(chapter.data)">Verifica la comprensione →</button>
+          </div>
+        </div>
+
+        <p v-if="continuousLoading" class="continuous-status">Caricamento del capitolo successivo…</p>
+        <div v-if="continuousDenied" class="continuous-paywall">
+          <p class="excerpt">La suite du livre nécessite un accès complet.</p>
+          <ContentPaywall placement="classici" />
+        </div>
+        <div
+          v-if="!continuousDenied && !continuousAllLoaded"
+          ref="continuousSentinel"
+          class="continuous-sentinel"
+        ></div>
+      </div>
     </div>
 
     <TranslationOverlay
@@ -523,7 +672,12 @@ onBeforeUnmount(() => {
         <div v-if="quizOpen" class="quiz-modal" @click.self="quizOpen = false">
           <div class="quiz-panel">
             <button class="quiz-close" title="Fermer la vérification" @click="quizOpen = false">✕</button>
-            <QuizSection :key="chapterReadId" :questions="currentChapter.questions" @completed="onQuizCompleted" />
+            <QuizSection
+              v-if="quizChapter"
+              :key="`${bookId}-${quizChapter.id}`"
+              :questions="quizChapter.questions"
+              @completed="onQuizCompleted"
+            />
           </div>
         </div>
       </Transition>
@@ -606,6 +760,37 @@ onBeforeUnmount(() => {
 .summary-toggle:hover {
   border-color: #b0692e;
   color: #b0692e;
+}
+
+.summary-toggle.active {
+  background: #b0692e;
+  border-color: #b0692e;
+  color: #faf6f0;
+}
+
+.continuous {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.chapter-block .chapter-title {
+  text-align: left;
+}
+
+.continuous-status {
+  text-align: center;
+  color: #6b6156;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.continuous-paywall {
+  padding-top: 0.6rem;
+}
+
+.continuous-sentinel {
+  height: 1px;
 }
 
 .level-note {

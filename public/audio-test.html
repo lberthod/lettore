@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Test qualità audio — Chatterbox vs synthèse navigateur</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.3rem; }
+  .row { display: flex; align-items: center; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid #ddd; }
+  .row p { flex: 1; margin: 0; font-size: .95rem; }
+  button { white-space: nowrap; padding: .4rem .8rem; cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>Chatterbox (pré-généré) vs synthèse du navigateur</h1>
+  <p>Clique « 🎙️ Chatterbox » pour la voix pré-générée haute qualité, ou « 🔊 Navigateur » pour la synthèse vocale standard (Web Speech API) — même phrase, pour comparer.</p>
+
+  <p>
+    <label>Vitesse de lecture : <span id="speed-label">1.00x</span></label><br>
+    <input type="range" id="speed-control" min="0.75" max="1.5" step="0.05" value="1">
+  </p>
+
+  <h2>Italiano — Il gatto con gli stivali</h2>
+  <div id="list-it"></div>
+
+  <h2>Français</h2>
+  <div id="list-fr"></div>
+
+  <h2>L'an 999 : quand le Valais fut confié à l'Église</h2>
+  <p><button id="btn-l999-full">🎙️ Écouter le texte en entier (Chatterbox)</button></p>
+  <div id="list-l999"></div>
+
+  <h2>Chatterbox vs Parler-TTS (parler-tts-mini-multilingual-v1.1)</h2>
+  <div id="list-parler"></div>
+
+  <h2>Chatterbox vs Parler-TTS — textes longs (chiffres en toutes lettres)</h2>
+  <div id="list-parler-long"></div>
+
+  <h2>Parler-TTS — toutes les voix nommées (FR / IT)</h2>
+  <div id="list-parler-voices"></div>
+
+  <h2>Dialogue FR — voix masculine grave vs féminine grave</h2>
+  <p><button id="btn-dialogue-full">▶️ Écouter le dialogue en entier</button></p>
+  <div id="list-dialogue"></div>
+
+  <h2>Dialogue IT — voix masculine grave vs féminine grave</h2>
+  <p><button id="btn-dialogue-it-full">▶️ Écouter le dialogue en entier</button></p>
+  <div id="list-dialogue-it"></div>
+
+<script>
+const paragraphs = [{"id": "gatto_01_p1", "v3Id": "gatto_01_p1_v3", "lang": "it-IT", "text": "Un mugnaio ha tre figli. Un giorno il mugnaio muore. Il primo figlio prende il mulino. Il secondo figlio prende un asino. Il terzo figlio prende solo un gatto."}, {"id": "gatto_01_p2", "v3Id": "gatto_01_p2_v3", "lang": "it-IT", "text": "Il terzo figlio è triste. \"Un gatto non serve a niente\" pensa. Ma il gatto parla! \"Non essere triste\" dice il gatto. \"Dammi un sacco e un paio di stivali. Io posso aiutarti.\""}, {"id": "gatto_01_p3", "v3Id": "gatto_01_p3_v3", "lang": "it-IT", "text": "Il figlio dà gli stivali al gatto. Il gatto mette gli stivali e prende il sacco. Il gatto va nel bosco e mette dell'erba buona nel sacco. Un coniglio entra nel sacco. Il gatto prende il coniglio."}, {"id": "gatto_01_p4", "v3Id": "gatto_01_p4_v3", "lang": "it-IT", "text": "Il gatto va dal re. \"Questo coniglio è un regalo del mio padrone, il marchese di Carabas\" dice il gatto. Il re è contento. \"Grazie, gatto!\" dice il re."}, {"id": "gatto_01_p5", "v3Id": "gatto_01_p5_v3", "lang": "it-IT", "text": "Ogni settimana il gatto porta un regalo al re: un coniglio, due pernici. Il re conosce bene il nome \"marchese di Carabas\"."}, {"id": "gatto_01_p6", "lang": "it-IT", "text": "Un giorno il gatto sa che il re e la sua bella figlia vanno vicino al fiume. Il gatto dice al suo padrone: \"Nuota nel fiume! Poi io faccio il resto.\""}, {"id": "gatto_01_p7", "lang": "it-IT", "text": "Il figlio del mugnaio nuota nel fiume. Il gatto nasconde i vecchi vestiti del figlio sotto una pietra e grida: \"Aiuto! Aiuto! Il marchese di Carabas è nel fiume!\""}, {"id": "gatto_01_p8", "lang": "it-IT", "text": "Il re sente il gatto e ferma la carrozza. I soldati del re aiutano il giovane a uscire dall'acqua. Il re dà al giovane vestiti belli ed eleganti. Ora il giovane sembra un vero marchese."}, {"id": "gatto_01_p9", "lang": "it-IT", "text": "La figlia del re guarda il giovane. Il giovane è bello ed elegante. La ragazza è subito innamorata."}, {"id": "gatto_01_p10", "lang": "it-IT", "text": "Il gatto corre avanti e vede dei contadini in un campo. \"Il re arriva\" dice il gatto. \"Dite che questo campo è del marchese di Carabas! Se non dite così, avete un problema.\""}, {"id": "gatto_01_p11", "lang": "it-IT", "text": "Il re passa e chiede: \"Di chi è questo campo?\" I contadini rispondono: \"Del marchese di Carabas!\" Il re è molto impressionato."}, {"id": "gatto_01_p12", "lang": "it-IT", "text": "Il gatto corre al castello di un orco potente. L'orco può diventare un animale grande o piccolo. \"È vero che puoi diventare un leone?\" chiede il gatto. L'orco diventa subito un leone grande. Il gatto ha paura."}, {"id": "gatto_01_p13", "lang": "it-IT", "text": "\"E puoi diventare piccolo, per esempio un topo?\" chiede il gatto. L'orco ride e diventa un topolino. Il gatto salta e mangia il topo. Ora il castello non ha più padrone."}, {"id": "gatto_01_p14", "lang": "it-IT", "text": "Il re arriva al castello. Il gatto dice: \"Benvenuto al castello del marchese di Carabas!\" Il re è molto felice. Il castello è bellissimo."}, {"id": "gatto_01_p15", "lang": "it-IT", "text": "Il re dice al giovane: \"Vuoi sposare mia figlia?\" Il giovane dice di sì. I due si sposano e vivono felici nel castello. Il gatto diventa un grande signore e caccia i topi solo per divertimento."}];
+
+const paragraphsFr = [{"id": "gatto_fr_1", "v3Id": "gatto_fr_1_v3", "lang": "fr-FR", "text": "Un meunier a trois fils. Un jour le meunier meurt."}, {"id": "gatto_fr_2", "v3Id": "gatto_fr_2_v3", "lang": "fr-FR", "text": "Le troisième fils est triste. « Un chat ne sert à rien » pense-t-il. Mais le chat parle !"}, {"id": "gatto_fr_3", "v3Id": "gatto_fr_3_v3", "lang": "fr-FR", "text": "Le chat va dans le bois et met de la bonne herbe dans le sac. Un lapin entre dans le sac."}, {"id": "gatto_fr_4", "v3Id": "gatto_fr_4_v3", "lang": "fr-FR", "text": "« Ce lapin est un cadeau de mon maître, le marquis de Carabas » dit le chat. Le roi est content."}, {"id": "gatto_fr_5", "v3Id": "gatto_fr_5_v3", "lang": "fr-FR", "text": "Les deux se marient et vivent heureux dans le château. Le chat devient un grand seigneur."}];
+
+let currentAudio = null;
+let playbackRate = 1;
+
+const speedControl = document.getElementById('speed-control');
+const speedLabel = document.getElementById('speed-label');
+speedControl.addEventListener('input', () => {
+  playbackRate = parseFloat(speedControl.value);
+  speedLabel.textContent = `${playbackRate.toFixed(2)}x`;
+  if (currentAudio) currentAudio.playbackRate = playbackRate;
+  speechSynthesis.cancel();
+});
+
+function playAudio(id) {
+  if (currentAudio) currentAudio.pause();
+  currentAudio = new Audio(`/audio/${id}.mp3`);
+  currentAudio.playbackRate = playbackRate;
+  currentAudio.play();
+}
+
+// Enchaîne plusieurs clips Chatterbox pour lire un texte complet.
+function playSequence(ids) {
+  if (currentAudio) currentAudio.pause();
+  let i = 0;
+  const playNext = () => {
+    if (i >= ids.length) return;
+    const audio = new Audio(`/audio/${ids[i]}.mp3`);
+    audio.playbackRate = playbackRate;
+    currentAudio = audio;
+    i += 1;
+    audio.addEventListener('ended', playNext, { once: true });
+    audio.play();
+  };
+  playNext();
+}
+
+function playBrowser(text, lang) {
+  if (currentAudio) currentAudio.pause();
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = playbackRate;
+  const voices = speechSynthesis.getVoices();
+  const prefix = lang.slice(0, 2).toLowerCase();
+  const v = voices.find((v) => v.lang.toLowerCase().startsWith(prefix));
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+
+function renderList(containerId, items) {
+  const list = document.getElementById(containerId);
+  items.forEach(({ id, v3Id, text, lang }) => {
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    const p = document.createElement('p');
+    p.textContent = text;
+    row.appendChild(p);
+
+    const btnChatterbox = document.createElement('button');
+    btnChatterbox.textContent = '🎙️ Chatterbox';
+    btnChatterbox.onclick = () => playAudio(id);
+    row.appendChild(btnChatterbox);
+
+    if (v3Id) {
+      const btnV3 = document.createElement('button');
+      btnV3.textContent = '🎙️ Chatterbox v3';
+      btnV3.onclick = () => playAudio(v3Id);
+      row.appendChild(btnV3);
+    }
+
+    const btnBrowser = document.createElement('button');
+    btnBrowser.textContent = '🔊 Navigateur';
+    btnBrowser.onclick = () => playBrowser(text, lang);
+    row.appendChild(btnBrowser);
+
+    list.appendChild(row);
+  });
+}
+
+const paragraphsL999 = [
+  {"id": "l999_p1", "lang": "fr-FR", "text": "En l'an 999, au cœur d'une Europe encore morcelée en royaumes, comtés et domaines religieux, le Valais appartient au royaume de Bourgogne. À sa tête règne Rodolphe III, dernier souverain de cette dynastie. Son autorité reste fragile : les grands seigneurs cherchent à agrandir leurs terres, les routes alpines sont difficiles à contrôler et les rivalités menacent l'équilibre du royaume."},
+  {"id": "l999_p2", "lang": "fr-FR", "text": "C'est dans ce contexte que Rodolphe III prend une décision capitale. Il remet les droits comtaux sur le Valais à Hugues, évêque de Sion, ainsi qu'à ses successeurs. Cette donation, réalisée en 999, ne signifie pas que le roi offre chaque montagne, chaque village et chaque champ à l'Église. Il transmet surtout le pouvoir de gouverner, de rendre la justice, de percevoir certaines taxes et d'exercer l'autorité politique sur le territoire. L'évêque devient ainsi non seulement un chef religieux, mais également un seigneur temporel."},
+  {"id": "l999_p3", "lang": "fr-FR", "text": "Pourquoi un roi abandonnerait-il une partie de son pouvoir ? Au Moyen Âge, la frontière entre politique et religion est presque inexistante. Les souverains considèrent que leur autorité vient de Dieu et que soutenir l'Église peut favoriser le salut de leur âme. Ils craignent le péché, le Jugement dernier et les forces maléfiques que les croyances populaires associent aux démons. Dans les églises, les prêtres enseignent que les dons, les prières et les bonnes œuvres peuvent permettre d'obtenir la miséricorde divine."},
+  {"id": "l999_p4", "lang": "fr-FR", "text": "Toutefois, aucun document ne permet d'affirmer que Rodolphe III donna le Valais uniquement pour se protéger des mauvais esprits. Son geste répond surtout à une stratégie politique : en renforçant l'évêque de Sion, il crée un allié fidèle face aux familles nobles qui contestent son autorité. L'Église dispose également d'une administration organisée, capable de contrôler les terres et de maintenir une certaine stabilité."},
+  {"id": "l999_p5", "lang": "fr-FR", "text": "Cette décision transforme durablement l'histoire de la région. L'évêque de Sion devient comte du Valais et réunit entre ses mains le pouvoir spirituel et le pouvoir civil. Lorsque le royaume de Bourgogne est intégré au Saint-Empire romain germanique en 1032, cette organisation se maintient. Pendant des siècles, les évêques de Sion demeurent des acteurs politiques majeurs, même si leur autorité est contestée par les seigneurs locaux, la maison de Savoie et les communautés valaisannes."},
+  {"id": "l999_p6", "lang": "fr-FR", "text": "La donation de 999 est donc considérée comme l'un des actes fondateurs du Valais politique. Derrière l'image mystérieuse d'un roi recherchant la protection divine se cache surtout une manœuvre habile : confier le territoire à l'Église afin de stabiliser un royaume menacé."}
+];
+
+renderList('list-it', paragraphs);
+renderList('list-fr', paragraphsFr);
+renderList('list-l999', paragraphsL999);
+
+document.getElementById('btn-l999-full').onclick = () =>
+  playSequence(paragraphsL999.map((p) => p.id));
+
+const parlerComparisons = [
+  { chatterboxId: 'l999_p1', parlerId: 'parler_fr_test', lang: 'fr-FR',
+    text: "En l'an 999, au cœur d'une Europe encore morcelée en royaumes, le Valais appartient au royaume de Bourgogne." },
+  { chatterboxId: 'gatto_01_p1', parlerId: 'parler_it_test', lang: 'it-IT',
+    text: 'Un mugnaio ha tre figli. Un giorno il mugnaio muore. Il primo figlio prende il mulino.' },
+];
+
+function renderParlerComparison(containerId, items) {
+  const list = document.getElementById(containerId);
+  items.forEach(({ chatterboxId, parlerId, text, lang }) => {
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    const p = document.createElement('p');
+    p.textContent = `[${lang}] ${text}`;
+    row.appendChild(p);
+
+    const btnChatterbox = document.createElement('button');
+    btnChatterbox.textContent = '🎙️ Chatterbox';
+    btnChatterbox.onclick = () => playAudio(chatterboxId);
+    row.appendChild(btnChatterbox);
+
+    const btnParler = document.createElement('button');
+    btnParler.textContent = '🗣️ Parler-TTS';
+    btnParler.onclick = () => playAudio(parlerId);
+    row.appendChild(btnParler);
+
+    const btnBrowser = document.createElement('button');
+    btnBrowser.textContent = '🔊 Navigateur';
+    btnBrowser.onclick = () => playBrowser(text, lang);
+    row.appendChild(btnBrowser);
+
+    list.appendChild(row);
+  });
+}
+
+renderParlerComparison('list-parler', parlerComparisons);
+
+const parlerComparisonsLong = [
+  { chatterboxId: 'chatterbox_fr_long', parlerId: 'parler_fr_long', lang: 'fr-FR',
+    text: "En l'an neuf cent nonante-neuf, au cœur d'une Europe encore morcelée en royaumes, comtés et domaines religieux, le Valais appartient au royaume de Bourgogne. À sa tête règne Rodolphe Trois, dernier souverain de cette dynastie. Son autorité reste fragile : les grands seigneurs cherchent à agrandir leurs terres, les routes alpines sont difficiles à contrôler et les rivalités menacent l'équilibre du royaume. C'est dans ce contexte que Rodolphe Trois prend une décision capitale. Il remet les droits comtaux sur le Valais à Hugues, évêque de Sion, ainsi qu'à ses successeurs." },
+  { chatterboxId: 'chatterbox_it_long', parlerId: 'parler_it_long', lang: 'it-IT',
+    text: "Nell'anno novecentonovantanove, nel cuore di un'Europa ancora divisa in regni, contee e domini religiosi, il Vallese appartiene al regno di Borgogna. Al suo vertice regna Rodolfo Terzo, ultimo sovrano di questa dinastia. La sua autorità resta fragile: i grandi signori cercano di ampliare le loro terre, le strade alpine sono difficili da controllare e le rivalità minacciano l'equilibrio del regno. È in questo contesto che Rodolfo Terzo prende una decisione fondamentale. Cede i diritti comitali sul Vallese a Ugo, vescovo di Sion, e ai suoi successori." },
+];
+
+renderParlerComparison('list-parler-long', parlerComparisonsLong);
+
+const textFrShort = "En l'an neuf cent nonante-neuf, au cœur d'une Europe encore morcelée en royaumes, comtés et domaines religieux, le Valais appartient au royaume de Bourgogne.";
+const textItShort = "Nell'anno novecentonovantanove, nel cuore di un'Europa ancora divisa in regni, contee e domini religiosi, il Vallese appartiene al regno di Borgogna.";
+
+const parlerVoices = [
+  { id: 'parler_fr_grave', lang: 'fr-FR', name: 'Sur mesure — masculine grave', text: textFrShort },
+  { id: 'parler_fr_grave_femme', lang: 'fr-FR', name: 'Sur mesure — féminine grave', text: textFrShort },
+  { id: 'parler_fr_jeune', lang: 'fr-FR', name: 'Sur mesure — jeune et énergique', text: textFrShort },
+  { id: 'parler_fr_daniel', lang: 'fr-FR', name: 'Daniel', text: textFrShort },
+  { id: 'parler_fr_michelle', lang: 'fr-FR', name: 'Michelle', text: textFrShort },
+  { id: 'parler_fr_christine', lang: 'fr-FR', name: 'Christine', text: textFrShort },
+  { id: 'parler_fr_megan', lang: 'fr-FR', name: 'Megan', text: textFrShort },
+  { id: 'parler_it_julia', lang: 'it-IT', name: 'Julia', text: textItShort },
+  { id: 'parler_it_richard', lang: 'it-IT', name: 'Richard', text: textItShort },
+  { id: 'parler_it_megan', lang: 'it-IT', name: 'Megan', text: textItShort },
+];
+
+function renderVoiceList(containerId, items) {
+  const list = document.getElementById(containerId);
+  items.forEach(({ id, name, lang, text }) => {
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    const p = document.createElement('p');
+    p.textContent = `[${lang}] ${name} — ${text}`;
+    row.appendChild(p);
+
+    const btn = document.createElement('button');
+    btn.textContent = '🗣️ Écouter';
+    btn.onclick = () => playAudio(id);
+    row.appendChild(btn);
+
+    list.appendChild(row);
+  });
+}
+
+renderVoiceList('list-parler-voices', parlerVoices);
+
+const dialogue = [
+  { id: 'dialogue_h1', speaker: 'Lui (grave)', text: "Dis-moi, sais-tu pourquoi l'évêque de Sion a autant de pouvoir dans le Valais ?" },
+  { id: 'dialogue_f1', speaker: 'Elle (grave)', text: "Oui, tout vient d'une donation faite par le roi Rodolphe Trois, en l'an neuf cent nonante-neuf." },
+  { id: 'dialogue_h2', speaker: 'Lui (grave)', text: "Le roi a donné tout le Valais à l'Église ? Ça semble énorme comme geste." },
+  { id: 'dialogue_f2', speaker: 'Elle (grave)', text: "Pas exactement. Il lui a surtout confié le pouvoir de gouverner et de rendre la justice, pas chaque champ et chaque village." },
+  { id: 'dialogue_h3', speaker: 'Lui (grave)', text: "Et pourquoi un roi ferait-il cela ? Il perd une partie de son autorité." },
+  { id: 'dialogue_f3', speaker: 'Elle (grave)', text: "C'était une stratégie politique. En renforçant l'évêque, Rodolphe Trois se créait un allié fidèle face aux seigneurs qui contestaient son pouvoir." },
+];
+
+function renderDialogue(containerId, items) {
+  const list = document.getElementById(containerId);
+  items.forEach(({ id, speaker, text }) => {
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    const p = document.createElement('p');
+    p.textContent = `${speaker} : ${text}`;
+    row.appendChild(p);
+
+    const btn = document.createElement('button');
+    btn.textContent = '▶️';
+    btn.onclick = () => playAudio(id);
+    row.appendChild(btn);
+
+    list.appendChild(row);
+  });
+}
+
+renderDialogue('list-dialogue', dialogue);
+document.getElementById('btn-dialogue-full').onclick = () =>
+  playSequence(dialogue.map((d) => d.id));
+
+const dialogueIt = [
+  { id: 'dialogue_it_h1', speaker: 'Lui (grave)', text: 'Dimmi, sai perché il vescovo di Sion ha così tanto potere in Vallese?' },
+  { id: 'dialogue_it_f1', speaker: 'Lei (grave)', text: "Sì, tutto viene da una donazione fatta dal re Rodolfo Terzo, nell'anno novecentonovantanove." },
+  { id: 'dialogue_it_h2', speaker: 'Lui (grave)', text: 'Il re ha dato tutto il Vallese alla Chiesa? Sembra un gesto enorme.' },
+  { id: 'dialogue_it_f2', speaker: 'Lei (grave)', text: "Non esattamente. Gli ha affidato soprattutto il potere di governare e di amministrare la giustizia, non ogni campo e ogni villaggio." },
+  { id: 'dialogue_it_h3', speaker: 'Lui (grave)', text: 'E perché un re farebbe una cosa simile? Perde una parte della sua autorità.' },
+  { id: 'dialogue_it_f3', speaker: 'Lei (grave)', text: 'Era una strategia politica. Rafforzando il vescovo, Rodolfo Terzo si creava un alleato fedele contro i signori che contestavano il suo potere.' },
+];
+
+renderDialogue('list-dialogue-it', dialogueIt);
+document.getElementById('btn-dialogue-it-full').onclick = () =>
+  playSequence(dialogueIt.map((d) => d.id));
+</script>
+</body>
+</html>

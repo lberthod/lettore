@@ -1,0 +1,806 @@
+{
+  "quotidiano": [
+    {"id": "quotidiano_01_bar", "level": "A1", "title": "Al bar", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno! Vorrei un caffè, per favore."},
+      {"speaker": "donna", "text": "Certo! Lo vuole macchiato o normale?"},
+      {"speaker": "uomo", "text": "Macchiato, grazie. E anche un cornetto, se avete."},
+      {"speaker": "donna", "text": "Sì, abbiamo cornetti alla crema e al cioccolato. Quale preferisce?"},
+      {"speaker": "uomo", "text": "Alla crema, grazie mille."},
+      {"speaker": "donna", "text": "Ecco a lei. Sono due euro e cinquanta."}
+    ]},
+    {"id": "quotidiano_02_presentarsi", "level": "A1", "title": "Presentarsi", "lines": [
+      {"speaker": "donna", "text": "Ciao! Come ti chiami?"},
+      {"speaker": "uomo", "text": "Mi chiamo Marco. E tu, come ti chiami?"},
+      {"speaker": "donna", "text": "Io mi chiamo Anna. Piacere di conoscerti!"},
+      {"speaker": "uomo", "text": "Piacere mio! Di dove sei?"},
+      {"speaker": "donna", "text": "Sono di Torino. E tu, di dove sei?"},
+      {"speaker": "uomo", "text": "Io sono di Napoli, ma vivo qui da qualche anno."}
+    ]},
+    {"id": "quotidiano_03_mercato", "level": "A1", "title": "Fare la spesa al mercato", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno, vorrei un chilo di pomodori, per favore."},
+      {"speaker": "donna", "text": "Certo, li vuole maturi o un po' verdi?"},
+      {"speaker": "uomo", "text": "Maturi, per favore. Servono per una salsa."},
+      {"speaker": "donna", "text": "Perfetto. Desidera anche delle verdure fresche?"},
+      {"speaker": "uomo", "text": "Sì, un po' di zucchine e una lattuga, grazie."},
+      {"speaker": "donna", "text": "Ecco tutto. Buona giornata e buon appetito!"}
+    ]},
+    {"id": "quotidiano_04_indicazioni", "level": "A2", "title": "Chiedere indicazioni stradali", "lines": [
+      {"speaker": "donna", "text": "Scusi, sa dirmi come arrivare alla stazione centrale?"},
+      {"speaker": "uomo", "text": "Certo. Deve andare dritto per questa via e girare a destra al semaforo."},
+      {"speaker": "donna", "text": "Grazie. È lontano da qui?"},
+      {"speaker": "uomo", "text": "No, sono circa dieci minuti a piedi."},
+      {"speaker": "donna", "text": "Perfetto, molto gentile. Un'ultima cosa: c'è un bancomat vicino alla stazione?"},
+      {"speaker": "uomo", "text": "Sì, ce n'è uno proprio all'ingresso principale."}
+    ]},
+    {"id": "quotidiano_05_medico", "level": "A2", "title": "Dal medico", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno dottoressa, non mi sento molto bene da ieri."},
+      {"speaker": "donna", "text": "Mi dica, quali sintomi ha? Ha la febbre?"},
+      {"speaker": "uomo", "text": "Sì, un po' di febbre e mal di gola."},
+      {"speaker": "donna", "text": "Capisco. Ha anche tosse o mal di testa?"},
+      {"speaker": "uomo", "text": "Solo un leggero mal di testa, niente di grave."},
+      {"speaker": "donna", "text": "Le prescrivo del riposo e molta acqua. Se non migliora, torni tra tre giorni."}
+    ]},
+    {"id": "quotidiano_06_ristorante", "level": "A2", "title": "Prenotare un tavolo al ristorante", "lines": [
+      {"speaker": "donna", "text": "Buonasera, vorrei prenotare un tavolo per stasera."},
+      {"speaker": "uomo", "text": "Certo, per quante persone?"},
+      {"speaker": "donna", "text": "Per quattro persone, verso le otto."},
+      {"speaker": "uomo", "text": "Perfetto, abbiamo un tavolo libero vicino alla finestra. Va bene?"},
+      {"speaker": "donna", "text": "Benissimo, grazie mille."},
+      {"speaker": "uomo", "text": "A che nome faccio la prenotazione?"}
+    ]},
+    {"id": "quotidiano_07_farmacia", "level": "A2", "title": "In farmacia", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno, avrei bisogno di qualcosa contro il mal di testa."},
+      {"speaker": "donna", "text": "Certo, abbiamo diverse opzioni. Ha già preso qualcosa oggi?"},
+      {"speaker": "uomo", "text": "No, niente ancora. È solo iniziato da poco."},
+      {"speaker": "donna", "text": "Le consiglio queste compresse, una ogni otto ore."},
+      {"speaker": "uomo", "text": "Va bene, grazie. Devo prenderle con il cibo?"},
+      {"speaker": "donna", "text": "Sì, meglio dopo i pasti, per proteggere lo stomaco."}
+    ]},
+    {"id": "quotidiano_08_vestiti", "level": "B1", "title": "Acquisto in un negozio di vestiti", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, sto cercando una giacca leggera per la primavera."},
+      {"speaker": "uomo", "text": "Abbiamo diversi modelli. Che colore preferisce?"},
+      {"speaker": "donna", "text": "Mi piacerebbe qualcosa di neutro, magari grigio o blu."},
+      {"speaker": "uomo", "text": "Questa giacca blu è molto versatile e di buona qualità."},
+      {"speaker": "donna", "text": "Posso provarla? Non sono sicura della taglia."},
+      {"speaker": "uomo", "text": "Certamente, i camerini sono in fondo a destra."}
+    ]},
+    {"id": "quotidiano_09_weekend", "level": "B1", "title": "Parlare del tempo e dei progetti del weekend", "lines": [
+      {"speaker": "uomo", "text": "Hai sentito le previsioni per il weekend? Dicono che farà bel tempo."},
+      {"speaker": "donna", "text": "Sì, finalmente! Pensavo di andare in montagna con degli amici."},
+      {"speaker": "uomo", "text": "Che bella idea. Io invece resterò in città, ho troppe cose da fare."},
+      {"speaker": "donna", "text": "Peccato, ti perdi delle belle passeggiate. Perché non vieni anche tu?"},
+      {"speaker": "uomo", "text": "Magari domenica, se riesco a finire tutto entro sabato sera."},
+      {"speaker": "donna", "text": "Va bene, fammi sapere! Sarebbe bello passare la giornata insieme."}
+    ]},
+    {"id": "quotidiano_10_colloquio", "level": "B1", "title": "Un colloquio di lavoro", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, grazie per essere venuto al colloquio oggi."},
+      {"speaker": "uomo", "text": "Grazie a lei per l'opportunità. Sono davvero entusiasta di questa posizione."},
+      {"speaker": "donna", "text": "Mi parli un po' della sua esperienza precedente."},
+      {"speaker": "uomo", "text": "Ho lavorato per alcuni anni nel settore del marketing, occupandomi soprattutto di comunicazione digitale."},
+      {"speaker": "donna", "text": "Interessante. E perché vorrebbe cambiare azienda proprio adesso?"},
+      {"speaker": "uomo", "text": "Cerco nuove sfide e la possibilità di crescere professionalmente in un contesto più internazionale."}
+    ]},
+    {"id": "quotidiano_11_albergo", "level": "B2", "title": "Lamentarsi per un problema in albergo", "lines": [
+      {"speaker": "uomo", "text": "Buonasera, volevo segnalare un problema con la mia camera."},
+      {"speaker": "donna", "text": "Mi dispiace sentirlo, mi dica pure di cosa si tratta."},
+      {"speaker": "uomo", "text": "Il riscaldamento non funziona e fa piuttosto freddo stasera."},
+      {"speaker": "donna", "text": "Capisco, chiedo scusa per il disagio. Mando subito qualcuno a controllare."},
+      {"speaker": "uomo", "text": "La ringrazio. Sarebbe possibile anche cambiare stanza, se il problema persiste?"},
+      {"speaker": "donna", "text": "Certamente, faremo il possibile per trovarle una soluzione rapida e soddisfacente."}
+    ]},
+    {"id": "quotidiano_12_film", "level": "B2", "title": "Discutere di un film appena visto", "lines": [
+      {"speaker": "donna", "text": "Allora, cosa ne pensi del film che abbiamo appena visto?"},
+      {"speaker": "uomo", "text": "Devo dire che mi ha sorpreso. Non mi aspettavo un finale così complesso."},
+      {"speaker": "donna", "text": "Anche a me. La regia era molto curata, soprattutto nelle scene notturne."},
+      {"speaker": "uomo", "text": "Sono d'accordo. Però alcuni personaggi secondari mi sono sembrati poco sviluppati."},
+      {"speaker": "donna", "text": "Vero, avrebbero potuto approfondire meglio le loro motivazioni."},
+      {"speaker": "uomo", "text": "Nel complesso, comunque, lo consiglierei senza dubbio a chi ama i drammi psicologici."}
+    ]},
+    {"id": "quotidiano_13_banca", "level": "A2", "title": "In banca", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno, vorrei aprire un conto corrente."},
+      {"speaker": "donna", "text": "Certo, ha già un documento d'identità con lei?"},
+      {"speaker": "uomo", "text": "Sì, ho la carta d'identità e il codice fiscale."},
+      {"speaker": "donna", "text": "Perfetto. Vuole anche una carta di debito collegata al conto?"},
+      {"speaker": "uomo", "text": "Sì, mi servirebbe per fare acquisti online."},
+      {"speaker": "donna", "text": "Va bene, compiliamo insieme il modulo di richiesta."}
+    ]},
+    {"id": "quotidiano_14_aeroporto", "level": "A2", "title": "All'aeroporto", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, ecco il mio passaporto e la prenotazione."},
+      {"speaker": "uomo", "text": "Grazie. Ha bagagli da imbarcare oggi?"},
+      {"speaker": "donna", "text": "Sì, una valigia soltanto."},
+      {"speaker": "uomo", "text": "Perfetto, la metta pure sul nastro. Preferisce un posto vicino al finestrino?"},
+      {"speaker": "donna", "text": "Sì, se possibile, grazie."},
+      {"speaker": "uomo", "text": "Ecco la sua carta d'imbarco. Buon volo!"}
+    ]},
+    {"id": "quotidiano_15_conto_ristorante", "level": "A1", "title": "Chiedere il conto al ristorante", "lines": [
+      {"speaker": "uomo", "text": "Scusi, ci porta il conto, per favore?"},
+      {"speaker": "donna", "text": "Certo, arrivo subito."},
+      {"speaker": "uomo", "text": "Possiamo pagare con la carta?"},
+      {"speaker": "donna", "text": "Sì, certamente, nessun problema."},
+      {"speaker": "uomo", "text": "Perfetto, era tutto ottimo, grazie."},
+      {"speaker": "donna", "text": "Grazie a voi, tornate presto!"}
+    ]},
+    {"id": "quotidiano_16_taxi", "level": "A1", "title": "Prendere un taxi", "lines": [
+      {"speaker": "donna", "text": "Buonasera, mi porta in centro, per favore?"},
+      {"speaker": "uomo", "text": "Certo, salga pure. Quale indirizzo esattamente?"},
+      {"speaker": "donna", "text": "Piazza del Duomo, vicino alla fontana."},
+      {"speaker": "uomo", "text": "Perfetto, ci vorranno circa dieci minuti."},
+      {"speaker": "donna", "text": "Va benissimo, grazie."},
+      {"speaker": "uomo", "text": "Ecco arrivati. Buona serata!"}
+    ]},
+    {"id": "quotidiano_17_biblioteca", "level": "A1", "title": "In biblioteca", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno, vorrei prendere in prestito questo libro."},
+      {"speaker": "donna", "text": "Certo, ha la tessera della biblioteca?"},
+      {"speaker": "uomo", "text": "Sì, eccola."},
+      {"speaker": "donna", "text": "Perfetto. Può tenerlo per due settimane."},
+      {"speaker": "uomo", "text": "Va bene, grazie mille."},
+      {"speaker": "donna", "text": "Prego, buona lettura!"}
+    ]},
+    {"id": "quotidiano_18_telefono", "level": "A1", "title": "Parlare al telefono con un amico", "lines": [
+      {"speaker": "donna", "text": "Pronto, ciao! Come stai?"},
+      {"speaker": "uomo", "text": "Ciao, bene grazie! Tu come stai?"},
+      {"speaker": "donna", "text": "Bene anch'io. Ti va di uscire stasera?"},
+      {"speaker": "uomo", "text": "Volentieri! A che ora ci vediamo?"},
+      {"speaker": "donna", "text": "Verso le sette, davanti al cinema?"},
+      {"speaker": "uomo", "text": "Perfetto, ci vediamo lì. A dopo!"}
+    ]},
+    {"id": "quotidiano_19_biglietto_treno", "level": "A1", "title": "Comprare un biglietto del treno", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno, un biglietto per Milano, per favore."},
+      {"speaker": "donna", "text": "Andata sola o andata e ritorno?"},
+      {"speaker": "uomo", "text": "Andata e ritorno, per oggi."},
+      {"speaker": "donna", "text": "Va bene. Il treno parte tra venti minuti dal binario tre."},
+      {"speaker": "uomo", "text": "Perfetto, grazie mille."},
+      {"speaker": "donna", "text": "Buon viaggio!"}
+    ]},
+    {"id": "quotidiano_20_ora", "level": "A1", "title": "Chiedere l'ora", "lines": [
+      {"speaker": "donna", "text": "Scusi, sa dirmi che ore sono?"},
+      {"speaker": "uomo", "text": "Certo, sono le tre e mezza."},
+      {"speaker": "donna", "text": "Grazie mille, devo prendere un autobus tra poco."},
+      {"speaker": "uomo", "text": "Di niente. Che autobus deve prendere?"},
+      {"speaker": "donna", "text": "Il numero dodici, per il centro."},
+      {"speaker": "uomo", "text": "Passa proprio qui vicino, tra cinque minuti circa."}
+    ]},
+    {"id": "quotidiano_21_lavoro", "level": "A2", "title": "Parlare del proprio lavoro", "lines": [
+      {"speaker": "uomo", "text": "Di cosa ti occupi esattamente al lavoro?"},
+      {"speaker": "donna", "text": "Lavoro come insegnante in una scuola elementare."},
+      {"speaker": "uomo", "text": "Che bello, ti piace insegnare ai bambini?"},
+      {"speaker": "donna", "text": "Sì, molto, anche se a volte è faticoso."},
+      {"speaker": "uomo", "text": "Immagino. Da quanto tempo fai questo lavoro?"},
+      {"speaker": "donna", "text": "Da circa sette anni ormai."}
+    ]},
+    {"id": "quotidiano_22_casa", "level": "A2", "title": "Descrivere la propria casa", "lines": [
+      {"speaker": "donna", "text": "Come è fatta la tua nuova casa?"},
+      {"speaker": "uomo", "text": "Ha tre stanze, una cucina grande e un piccolo balcone."},
+      {"speaker": "donna", "text": "Che bello, è in centro città?"},
+      {"speaker": "uomo", "text": "No, è un po' fuori, ma è tranquilla e luminosa."},
+      {"speaker": "donna", "text": "Sembra perfetta. Hai già finito di arredarla?"},
+      {"speaker": "uomo", "text": "Quasi, manca solo qualche mobile per il salotto."}
+    ]},
+    {"id": "quotidiano_23_festa", "level": "A2", "title": "Organizzare una festa di compleanno", "lines": [
+      {"speaker": "uomo", "text": "Stai organizzando qualcosa per il tuo compleanno?"},
+      {"speaker": "donna", "text": "Sì, vorrei fare una piccola festa a casa mia."},
+      {"speaker": "uomo", "text": "Bella idea! Chi hai intenzione di invitare?"},
+      {"speaker": "donna", "text": "Solo gli amici più stretti e qualche collega."},
+      {"speaker": "uomo", "text": "Posso portare qualcosa da mangiare?"},
+      {"speaker": "donna", "text": "Sarebbe perfetto, magari un dolce."}
+    ]},
+    {"id": "quotidiano_24_hobby", "level": "A2", "title": "Parlare di hobby e tempo libero", "lines": [
+      {"speaker": "donna", "text": "Cosa fai di solito nel tempo libero?"},
+      {"speaker": "uomo", "text": "Mi piace molto leggere e andare in bicicletta."},
+      {"speaker": "donna", "text": "Interessante, che tipo di libri leggi?"},
+      {"speaker": "uomo", "text": "Soprattutto romanzi storici e qualche saggio."},
+      {"speaker": "donna", "text": "Io invece preferisco cucinare e guardare film."},
+      {"speaker": "uomo", "text": "Anche a me piace cucinare, ogni tanto proviamo qualche ricetta insieme?"}
+    ]},
+    {"id": "quotidiano_25_elettronica", "level": "B1", "title": "Fare una domanda in un negozio di elettronica", "lines": [
+      {"speaker": "uomo", "text": "Buongiorno, cerco un computer portatile leggero per lavorare fuori casa."},
+      {"speaker": "donna", "text": "Abbiamo diversi modelli. Che tipo di lavoro deve fare principalmente?"},
+      {"speaker": "uomo", "text": "Soprattutto scrittura e videochiamate, niente di troppo pesante."},
+      {"speaker": "donna", "text": "Allora le consiglio questo modello, ha una buona batteria e uno schermo nitido."},
+      {"speaker": "uomo", "text": "Perfetto. Ha una garanzia standard?"},
+      {"speaker": "donna", "text": "Sì, due anni di garanzia inclusa nel prezzo."}
+    ]},
+    {"id": "quotidiano_26_internet", "level": "B1", "title": "Discutere un problema con la connessione internet", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, la mia connessione internet non funziona da stamattina."},
+      {"speaker": "uomo", "text": "Mi dispiace per il disagio. Ha già provato a riavviare il modem?"},
+      {"speaker": "donna", "text": "Sì, l'ho fatto due volte, ma il problema persiste."},
+      {"speaker": "uomo", "text": "Capisco. Verifico subito se c'è un guasto nella sua zona."},
+      {"speaker": "donna", "text": "La ringrazio, ne ho davvero bisogno per lavorare."},
+      {"speaker": "uomo", "text": "Certamente, le faremo sapere entro un'ora al massimo."}
+    ]},
+    {"id": "quotidiano_27_vacanza", "level": "B1", "title": "Parlare di una vacanza appena fatta", "lines": [
+      {"speaker": "uomo", "text": "Com'è andata la tua vacanza al mare?"},
+      {"speaker": "donna", "text": "Benissimo, il tempo è stato favoloso quasi ogni giorno."},
+      {"speaker": "uomo", "text": "Che fortuna! Dove hai soggiornato esattamente?"},
+      {"speaker": "donna", "text": "In un piccolo appartamento vicino alla spiaggia, molto comodo."},
+      {"speaker": "uomo", "text": "E hai visitato anche qualche paese nei dintorni?"},
+      {"speaker": "donna", "text": "Sì, un paesino di pescatori davvero pittoresco, te lo consiglio."}
+    ]},
+    {"id": "quotidiano_28_regalo", "level": "A2", "title": "Chiedere consigli per un regalo", "lines": [
+      {"speaker": "donna", "text": "Devo fare un regalo a mia sorella, hai qualche idea?"},
+      {"speaker": "uomo", "text": "Che cosa le piace di solito?"},
+      {"speaker": "donna", "text": "Adora leggere e ascoltare musica."},
+      {"speaker": "uomo", "text": "Potresti regalarle un libro del suo autore preferito."},
+      {"speaker": "donna", "text": "Buona idea, oppure dei biglietti per un concerto."},
+      {"speaker": "uomo", "text": "Anche meglio, sicuramente le farà molto piacere."}
+    ]},
+    {"id": "quotidiano_29_salute", "level": "B1", "title": "Parlare di salute e alimentazione", "lines": [
+      {"speaker": "uomo", "text": "Ultimamente cerco di mangiare in modo più sano."},
+      {"speaker": "donna", "text": "Bravo, cosa hai cambiato esattamente nella tua dieta?"},
+      {"speaker": "uomo", "text": "Mangio più verdura e meno cibi fritti."},
+      {"speaker": "donna", "text": "Ottimo. Fai anche un po' di sport regolarmente?"},
+      {"speaker": "uomo", "text": "Sì, cerco di camminare almeno mezz'ora ogni giorno."},
+      {"speaker": "donna", "text": "Perfetto, sono piccoli cambiamenti ma fanno davvero la differenza."}
+    ]},
+    {"id": "quotidiano_30_progetto_collega", "level": "B1", "title": "Discutere un progetto di lavoro con un collega", "lines": [
+      {"speaker": "donna", "text": "A che punto siamo con il progetto per il cliente?"},
+      {"speaker": "uomo", "text": "Abbiamo quasi finito la prima parte, manca solo la revisione finale."},
+      {"speaker": "donna", "text": "Perfetto, quando pensi di poterla completare?"},
+      {"speaker": "uomo", "text": "Entro domani pomeriggio, se non emergono altri problemi."},
+      {"speaker": "donna", "text": "Va bene, tienimi aggiornata durante la giornata."},
+      {"speaker": "uomo", "text": "Certamente, ti scrivo appena ho novità."}
+    ]},
+    {"id": "quotidiano_31_clima", "level": "B2", "title": "Parlare del cambiamento climatico", "lines": [
+      {"speaker": "uomo", "text": "Hai notato quanto sono cambiate le stagioni negli ultimi anni?"},
+      {"speaker": "donna", "text": "Sì, gli inverni sembrano sempre più brevi e miti."},
+      {"speaker": "uomo", "text": "Molti scienziati collegano questo fenomeno al cambiamento climatico globale."},
+      {"speaker": "donna", "text": "È preoccupante, soprattutto per l'agricoltura e le risorse idriche."},
+      {"speaker": "uomo", "text": "Credi che le nuove politiche ambientali possano davvero fare la differenza?"},
+      {"speaker": "donna", "text": "Spero di sì, ma serve un impegno serio da parte di tutti i paesi."}
+    ]},
+    {"id": "quotidiano_32_libro", "level": "B2", "title": "Discutere di un libro appena letto", "lines": [
+      {"speaker": "donna", "text": "Hai finito il libro che ti avevo consigliato?"},
+      {"speaker": "uomo", "text": "Sì, l'ho finito ieri sera. Mi è piaciuto molto lo stile dell'autore."},
+      {"speaker": "donna", "text": "Anche a me. Cosa ne pensi del protagonista?"},
+      {"speaker": "uomo", "text": "Lo trovo complesso, con motivazioni non sempre chiare, ma proprio per questo interessante."},
+      {"speaker": "donna", "text": "Vero, e il finale ti ha convinto?"},
+      {"speaker": "uomo", "text": "Non del tutto, ma capisco perché l'autore abbia scelto quella conclusione."}
+    ]},
+    {"id": "quotidiano_33_politica", "level": "B2", "title": "Parlare di politica in modo generale", "lines": [
+      {"speaker": "uomo", "text": "Segui molto le notizie di politica ultimamente?"},
+      {"speaker": "donna", "text": "Abbastanza, anche se a volte trovo il dibattito troppo polarizzato."},
+      {"speaker": "uomo", "text": "Sono d'accordo, sembra difficile trovare posizioni equilibrate."},
+      {"speaker": "donna", "text": "Penso che l'informazione corretta sia fondamentale per farsi un'opinione propria."},
+      {"speaker": "uomo", "text": "Vero, per questo cerco sempre più fonti prima di trarre conclusioni."},
+      {"speaker": "donna", "text": "È un approccio saggio, soprattutto di questi tempi."}
+    ]},
+    {"id": "quotidiano_34_smart_working", "level": "B2", "title": "Un dibattito su smart working vs ufficio", "lines": [
+      {"speaker": "donna", "text": "Preferisci lavorare da casa o in ufficio?"},
+      {"speaker": "uomo", "text": "Dipende, apprezzo la flessibilità dello smart working, ma mi manca il contatto umano."},
+      {"speaker": "donna", "text": "Capisco, anche per me l'equilibrio tra i due sarebbe l'ideale."},
+      {"speaker": "uomo", "text": "Forse un modello ibrido, con alcuni giorni in ufficio e altri a casa."},
+      {"speaker": "donna", "text": "Sì, così si mantiene la collaborazione senza perdere la libertà organizzativa."},
+      {"speaker": "uomo", "text": "Esatto, credo sarà il modello più diffuso nei prossimi anni."}
+    ]},
+    {"id": "quotidiano_35_vicinato", "level": "B1", "title": "Parlare di un problema di vicinato", "lines": [
+      {"speaker": "uomo", "text": "Il vicino di sopra fa troppo rumore la sera, non riesco a dormire."},
+      {"speaker": "donna", "text": "Gli hai già parlato direttamente del problema?"},
+      {"speaker": "uomo", "text": "Non ancora, non volevo creare tensioni inutili."},
+      {"speaker": "donna", "text": "Ti capisco, ma forse è meglio chiarire la situazione con calma."},
+      {"speaker": "uomo", "text": "Hai ragione, proverò a parlargli questo weekend."},
+      {"speaker": "donna", "text": "Fammi sapere come va, spero si risolva facilmente."}
+    ]},
+    {"id": "quotidiano_36_trasloco", "level": "A2", "title": "Chiedere aiuto per un trasloco", "lines": [
+      {"speaker": "donna", "text": "Sabato prossimo devo fare il trasloco, mi aiuteresti?"},
+      {"speaker": "uomo", "text": "Certo, volentieri! A che ora inizia?"},
+      {"speaker": "donna", "text": "Verso le nove del mattino, se per te va bene."},
+      {"speaker": "uomo", "text": "Perfetto, porterò anche il mio furgone."},
+      {"speaker": "donna", "text": "Grazie mille, mi salvi davvero la giornata."},
+      {"speaker": "uomo", "text": "Figurati, per queste cose ci si aiuta sempre."}
+    ]},
+    {"id": "quotidiano_37_lezione_lingua", "level": "A1", "title": "Parlare di una lezione di lingua", "lines": [
+      {"speaker": "uomo", "text": "Come è andata la tua lezione d'italiano oggi?"},
+      {"speaker": "donna", "text": "Molto bene, ho imparato tanti verbi nuovi."},
+      {"speaker": "uomo", "text": "Bravissima! È difficile per te studiare l'italiano?"},
+      {"speaker": "donna", "text": "Un po', ma mi piace molto e faccio progressi ogni settimana."},
+      {"speaker": "uomo", "text": "Continua così, si vede che ti impegni davvero."},
+      {"speaker": "donna", "text": "Grazie, spero di parlare bene entro l'estate."}
+    ]},
+    {"id": "quotidiano_38_parrucchiere", "level": "A1", "title": "Fare una prenotazione dal parrucchiere", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, vorrei prenotare un appuntamento per un taglio."},
+      {"speaker": "uomo", "text": "Certo, per quando le andrebbe bene?"},
+      {"speaker": "donna", "text": "Per venerdì pomeriggio, se possibile."},
+      {"speaker": "uomo", "text": "Perfetto, ho un posto libero alle tre."},
+      {"speaker": "donna", "text": "Va benissimo, grazie mille."},
+      {"speaker": "uomo", "text": "A presto allora, buona giornata!"}
+    ]},
+    {"id": "quotidiano_39_animale", "level": "A1", "title": "Parlare del proprio animale domestico", "lines": [
+      {"speaker": "uomo", "text": "Hai un animale domestico a casa?"},
+      {"speaker": "donna", "text": "Sì, ho un gatto molto simpatico e giocherellone."},
+      {"speaker": "uomo", "text": "Che bello, da quanto tempo ce l'hai?"},
+      {"speaker": "donna", "text": "Da circa due anni, l'ho preso da un rifugio."},
+      {"speaker": "uomo", "text": "Che bella cosa. Come si chiama?"},
+      {"speaker": "donna", "text": "Si chiama Leo, ed è davvero il re di casa."}
+    ]},
+    {"id": "quotidiano_40_sport", "level": "A2", "title": "Discutere di uno sport preferito", "lines": [
+      {"speaker": "donna", "text": "Qual è il tuo sport preferito?"},
+      {"speaker": "uomo", "text": "Mi piace molto giocare a calcio con gli amici."},
+      {"speaker": "donna", "text": "Da quanto tempo giochi?"},
+      {"speaker": "uomo", "text": "Da bambino, quindi ormai da molti anni."},
+      {"speaker": "donna", "text": "Fai parte di una squadra vera e propria?"},
+      {"speaker": "uomo", "text": "Sì, giochiamo ogni domenica in un piccolo campionato locale."}
+    ]},
+    {"id": "quotidiano_41_incidente", "level": "B1", "title": "Parlare di un incidente stradale minore", "lines": [
+      {"speaker": "uomo", "text": "Ho avuto un piccolo incidente con la macchina ieri."},
+      {"speaker": "donna", "text": "Oddio, stai bene? Cos'è successo esattamente?"},
+      {"speaker": "uomo", "text": "Sto bene, tranquilla. Un'altra auto mi ha tamponato al semaforo."},
+      {"speaker": "donna", "text": "Meno male che non ti sei fatto male. La macchina ha molti danni?"},
+      {"speaker": "uomo", "text": "Solo il paraurti posteriore, niente di troppo grave."},
+      {"speaker": "donna", "text": "Per fortuna. Hai già chiamato l'assicurazione?"}
+    ]},
+    {"id": "quotidiano_42_posta", "level": "A2", "title": "Chiedere informazioni in un ufficio postale", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, vorrei spedire questo pacco all'estero."},
+      {"speaker": "uomo", "text": "Certo, mi faccia vedere il peso e la destinazione."},
+      {"speaker": "donna", "text": "Va in Germania, e non so esattamente quanto pesi."},
+      {"speaker": "uomo", "text": "Lo pesiamo subito. Vuole anche la consegna assicurata?"},
+      {"speaker": "donna", "text": "Sì, meglio essere sicuri, grazie."},
+      {"speaker": "uomo", "text": "Perfetto, arriverà entro pochi giorni lavorativi."}
+    ]},
+    {"id": "quotidiano_43_bolletta", "level": "B1", "title": "Parlare di un problema con una bolletta", "lines": [
+      {"speaker": "uomo", "text": "Ho ricevuto una bolletta della luce molto più alta del solito."},
+      {"speaker": "donna", "text": "Strano, hai controllato se ci sono consumi anomali?"},
+      {"speaker": "uomo", "text": "Non ancora, penso chiamerò il servizio clienti domani."},
+      {"speaker": "donna", "text": "Buona idea, magari è solo un errore di lettura del contatore."},
+      {"speaker": "uomo", "text": "Spero di sì, altrimenti dovrò rivedere un po' i miei consumi."},
+      {"speaker": "donna", "text": "Tienimi aggiornata su come va a finire."}
+    ]},
+    {"id": "quotidiano_44_vegetariano", "level": "B2", "title": "Discutere di abitudini alimentari", "lines": [
+      {"speaker": "donna", "text": "Da quanto tempo hai deciso di diventare vegetariana?"},
+      {"speaker": "uomo", "text": "Da circa un anno, principalmente per motivi ambientali e di salute."},
+      {"speaker": "donna", "text": "È stato difficile cambiare così tante abitudini?"},
+      {"speaker": "uomo", "text": "All'inizio sì, ma ora trovo tantissime alternative gustose e varie."},
+      {"speaker": "donna", "text": "Hai qualche piatto che consigli particolarmente?"},
+      {"speaker": "uomo", "text": "Sicuramente il curry di ceci, è saporito e molto semplice da preparare."}
+    ]},
+    {"id": "quotidiano_45_studi", "level": "B1", "title": "Parlare del proprio percorso di studi", "lines": [
+      {"speaker": "uomo", "text": "Cosa hai studiato all'università?"},
+      {"speaker": "donna", "text": "Ho studiato architettura, un percorso lungo ma appassionante."},
+      {"speaker": "uomo", "text": "Interessante, e lavori già nel settore?"},
+      {"speaker": "donna", "text": "Sì, da due anni in uno studio piccolo ma molto creativo."},
+      {"speaker": "uomo", "text": "Ti piace il tipo di progetti che seguite?"},
+      {"speaker": "donna", "text": "Moltissimo, soprattutto la ristrutturazione di edifici storici."}
+    ]},
+    {"id": "quotidiano_46_affitto", "level": "B1", "title": "Un colloquio per un appartamento in affitto", "lines": [
+      {"speaker": "donna", "text": "Buongiorno, chiamo per l'appartamento in affitto in centro."},
+      {"speaker": "uomo", "text": "Certo, è ancora disponibile. Quando vorrebbe visitarlo?"},
+      {"speaker": "donna", "text": "Sarebbe possibile domani pomeriggio?"},
+      {"speaker": "uomo", "text": "Sì, va benissimo. Le ricordo che è richiesta una busta paga recente."},
+      {"speaker": "donna", "text": "Nessun problema, la porterò con me."},
+      {"speaker": "uomo", "text": "Perfetto, allora ci vediamo domani alle quattro."}
+    ]},
+    {"id": "quotidiano_47_evento_culturale", "level": "B2", "title": "Parlare di un evento culturale in città", "lines": [
+      {"speaker": "uomo", "text": "Hai saputo della mostra di arte contemporanea che ha aperto in centro?"},
+      {"speaker": "donna", "text": "Sì, ne ho sentito parlare molto bene. Ti va di andarci insieme?"},
+      {"speaker": "uomo", "text": "Volentieri, magari questo fine settimana se sei libera."},
+      {"speaker": "donna", "text": "Perfetto, sabato pomeriggio dovrei essere libera."},
+      {"speaker": "uomo", "text": "Ottimo, controllo gli orari e ti confermo domani."},
+      {"speaker": "donna", "text": "Va bene, non vedo l'ora di vederla."}
+    ]},
+    {"id": "quotidiano_48_litigio", "level": "B2", "title": "Discutere una discussione tra amici", "lines": [
+      {"speaker": "donna", "text": "Ho avuto un piccolo litigio con un'amica ieri sera."},
+      {"speaker": "uomo", "text": "Mi dispiace, cos'è successo esattamente?"},
+      {"speaker": "donna", "text": "Un semplice malinteso su un impegno preso insieme, niente di grave."},
+      {"speaker": "uomo", "text": "Capita a tutti. Avete già chiarito la situazione?"},
+      {"speaker": "donna", "text": "Non ancora, penso di scriverle domani per parlarne con calma."},
+      {"speaker": "uomo", "text": "Fai bene, meglio chiarire prima che il malinteso cresca."}
+    ]},
+    {"id": "quotidiano_49_social", "level": "B2", "title": "Parlare di tecnologia e social media", "lines": [
+      {"speaker": "uomo", "text": "Passi molto tempo sui social media ogni giorno?"},
+      {"speaker": "donna", "text": "Onestamente sì, forse anche troppo rispetto a quanto vorrei."},
+      {"speaker": "uomo", "text": "Capita anche a me. Credi che influenzino il nostro modo di pensare?"},
+      {"speaker": "donna", "text": "Sicuramente, soprattutto per come ci facciamo un'opinione delle cose."},
+      {"speaker": "uomo", "text": "Forse dovremmo provare a limitarne l'uso, almeno la sera."},
+      {"speaker": "donna", "text": "Buona idea, potremmo provarci insieme per una settimana."}
+    ]},
+    {"id": "quotidiano_50_cena_amici", "level": "A2", "title": "Fare i piani per una cena tra amici", "lines": [
+      {"speaker": "donna", "text": "Organizziamo una cena tra amici questo weekend?"},
+      {"speaker": "uomo", "text": "Ottima idea, dove la facciamo?"},
+      {"speaker": "donna", "text": "Possiamo farla a casa mia, ho abbastanza spazio."},
+      {"speaker": "uomo", "text": "Perfetto, io porto il vino e il dolce."},
+      {"speaker": "donna", "text": "Va benissimo, io penso al primo e al secondo piatto."},
+      {"speaker": "uomo", "text": "Sarà una bellissima serata, non vedo l'ora."}
+    ]}
+  ],
+  "storia": [
+    {"id": "storia_01_fondazione_roma", "title": "La fondazione di Roma", "lines": [
+      {"speaker": "uomo", "text": "Sai qual è la leggenda sulla fondazione di Roma?"},
+      {"speaker": "donna", "text": "Sì, si dice che i fondatori fossero due fratelli gemelli, Romolo e Remo."},
+      {"speaker": "uomo", "text": "Esatto, secondo la leggenda furono allattati da una lupa da piccoli."},
+      {"speaker": "donna", "text": "E poi Romolo fondò la città sul colle Palatino, diventandone il primo re."},
+      {"speaker": "uomo", "text": "Si narra che la fondazione avvenne nell'anno settecentocinquantatré prima di Cristo."},
+      {"speaker": "donna", "text": "Una storia affascinante, anche se resta più leggenda che fatto storico certo."}
+    ]},
+    {"id": "storia_02_caduta_impero", "title": "La caduta dell'Impero Romano d'Occidente", "lines": [
+      {"speaker": "donna", "text": "Perché si dice che l'Impero Romano d'Occidente sia caduto nel quattrocentosettantasei?"},
+      {"speaker": "uomo", "text": "Perché in quell'anno l'ultimo imperatore, Romolo Augustolo, fu deposto da un capo germanico."},
+      {"speaker": "donna", "text": "Immagino che le cause fossero molte, non solo un singolo evento."},
+      {"speaker": "uomo", "text": "Esatto, crisi economica, invasioni continue e divisioni interne indebolirono l'impero per secoli."},
+      {"speaker": "donna", "text": "E l'Impero d'Oriente invece sopravvisse molto più a lungo, giusto?"},
+      {"speaker": "uomo", "text": "Sì, l'Impero Bizantino resistette quasi mille anni in più, fino al millequattrocentocinquantatré."}
+    ]},
+    {"id": "storia_03_pompei", "title": "Pompei e l'eruzione del Vesuvio", "lines": [
+      {"speaker": "uomo", "text": "Hai mai visitato gli scavi di Pompei?"},
+      {"speaker": "donna", "text": "Sì, un'esperienza incredibile. La città fu sepolta dalla cenere nel settantanove dopo Cristo."},
+      {"speaker": "uomo", "text": "L'eruzione del Vesuvio dev'essere stata improvvisa e terribile per gli abitanti."},
+      {"speaker": "donna", "text": "Infatti, molti non riuscirono a fuggire in tempo e furono sorpresi dalle ceneri."},
+      {"speaker": "uomo", "text": "È impressionante come gli edifici siano rimasti così ben conservati fino a oggi."},
+      {"speaker": "donna", "text": "Sì, la cenere ha protetto tutto per quasi duemila anni, come una fotografia del passato."}
+    ]},
+    {"id": "storia_04_rinascimento", "title": "Il Rinascimento a Firenze", "lines": [
+      {"speaker": "donna", "text": "Perché Firenze è considerata la culla del Rinascimento?"},
+      {"speaker": "uomo", "text": "Perché nel Quattrocento la famiglia Medici finanziò artisti, scienziati e pensatori di ogni tipo."},
+      {"speaker": "donna", "text": "Quindi non fu solo un caso, ma una scelta politica precisa."},
+      {"speaker": "uomo", "text": "Esatto, i Medici volevano rendere Firenze il centro culturale d'Europa."},
+      {"speaker": "donna", "text": "E funzionò, visto che nacquero capolavori come quelli di Botticelli e Brunelleschi."},
+      {"speaker": "uomo", "text": "Proprio così, un'epoca straordinaria che cambiò per sempre l'arte occidentale."}
+    ]},
+    {"id": "storia_05_leonardo", "title": "Leonardo da Vinci e le sue invenzioni", "lines": [
+      {"speaker": "uomo", "text": "Sapevi che Leonardo da Vinci progettò macchine volanti secoli prima degli aerei veri?"},
+      {"speaker": "donna", "text": "Sì, i suoi disegni mostrano macchinari incredibili per la sua epoca."},
+      {"speaker": "uomo", "text": "Molte delle sue idee non furono mai costruite realmente durante la sua vita."},
+      {"speaker": "donna", "text": "Vero, ma dimostrano quanto fosse avanti rispetto al suo tempo."},
+      {"speaker": "uomo", "text": "Era anche un grande pittore, non solo un inventore."},
+      {"speaker": "donna", "text": "Certo, basti pensare alla Gioconda o all'Ultima Cena per capire il suo genio."}
+    ]},
+    {"id": "storia_06_colosseo", "title": "Il Colosseo e i giochi gladiatori", "lines": [
+      {"speaker": "donna", "text": "Quante persone poteva ospitare il Colosseo ai tempi dell'antica Roma?"},
+      {"speaker": "uomo", "text": "Si stima che potesse contenere circa cinquantamila spettatori."},
+      {"speaker": "donna", "text": "Un numero enorme per l'epoca. E cosa succedeva davvero durante i giochi?"},
+      {"speaker": "uomo", "text": "Si svolgevano combattimenti tra gladiatori, ma anche cacce di animali esotici."},
+      {"speaker": "donna", "text": "Sembra uno spettacolo piuttosto crudele visto con gli occhi di oggi."},
+      {"speaker": "uomo", "text": "È vero, ma per i romani rappresentava intrattenimento e anche potere politico."}
+    ]},
+    {"id": "storia_07_venezia", "title": "La Repubblica di Venezia e i suoi mercanti", "lines": [
+      {"speaker": "uomo", "text": "Perché Venezia divenne così potente nel Medioevo?"},
+      {"speaker": "donna", "text": "Grazie al commercio marittimo con l'Oriente, soprattutto spezie e seta."},
+      {"speaker": "uomo", "text": "I suoi mercanti viaggiavano davvero fino in Asia?"},
+      {"speaker": "donna", "text": "Sì, il più famoso fu Marco Polo, che raggiunse la Cina nel Duecento."},
+      {"speaker": "uomo", "text": "E come riuscivano a proteggere una ricchezza così grande?"},
+      {"speaker": "donna", "text": "Con una flotta potente e un governo stabile guidato dai dogi."}
+    ]},
+    {"id": "storia_08_dante", "title": "Dante Alighieri e la Divina Commedia", "lines": [
+      {"speaker": "donna", "text": "Perché la Divina Commedia è considerata così importante per la lingua italiana?"},
+      {"speaker": "uomo", "text": "Perché Dante scrisse in volgare fiorentino invece che in latino, come si usava allora."},
+      {"speaker": "donna", "text": "Quindi contribuì a creare le basi dell'italiano moderno."},
+      {"speaker": "uomo", "text": "Esattamente, per questo motivo è chiamato il padre della lingua italiana."},
+      {"speaker": "donna", "text": "E l'opera racconta il viaggio nell'Inferno, nel Purgatorio e nel Paradiso, giusto?"},
+      {"speaker": "uomo", "text": "Sì, un viaggio simbolico che rappresenta anche il percorso dell'anima verso Dio."}
+    ]},
+    {"id": "storia_09_risorgimento", "title": "L'Unità d'Italia e il Risorgimento", "lines": [
+      {"speaker": "uomo", "text": "Quando fu proclamata ufficialmente l'Unità d'Italia?"},
+      {"speaker": "donna", "text": "Nel milleottocentosessantuno, con Vittorio Emanuele Secondo come primo re d'Italia."},
+      {"speaker": "uomo", "text": "Prima di allora l'Italia era divisa in tanti piccoli stati, vero?"},
+      {"speaker": "donna", "text": "Esatto, regni, ducati e territori sotto controllo straniero in diverse zone."},
+      {"speaker": "uomo", "text": "E chi furono le figure principali di questo processo di unificazione?"},
+      {"speaker": "donna", "text": "Cavour, Garibaldi e Mazzini ebbero tutti un ruolo fondamentale nel Risorgimento."}
+    ]},
+    {"id": "storia_10_galileo", "title": "Galileo Galilei e il processo dell'Inquisizione", "lines": [
+      {"speaker": "donna", "text": "Perché Galileo Galilei fu processato dalla Chiesa nel Seicento?"},
+      {"speaker": "uomo", "text": "Perché sosteneva che fosse la Terra a girare intorno al Sole, non il contrario."},
+      {"speaker": "donna", "text": "Un'idea che oggi sembra ovvia, ma allora era considerata pericolosa."},
+      {"speaker": "uomo", "text": "Esatto, contraddiceva l'insegnamento ufficiale dell'epoca e fu costretto a ritrattare."},
+      {"speaker": "donna", "text": "Nonostante tutto, le sue osservazioni con il telescopio cambiarono la scienza per sempre."},
+      {"speaker": "uomo", "text": "Proprio così, oggi è considerato uno dei padri della scienza moderna."}
+    ]},
+    {"id": "storia_11_via_appia", "title": "La Via Appia e le strade romane", "lines": [
+      {"speaker": "uomo", "text": "Perché i romani costruirono così tante strade in tutto l'impero?"},
+      {"speaker": "donna", "text": "Principalmente per motivi militari, per spostare velocemente le legioni."},
+      {"speaker": "uomo", "text": "La Via Appia era una delle più importanti, giusto?"},
+      {"speaker": "donna", "text": "Sì, collegava Roma al sud Italia ed era chiamata la regina delle strade."},
+      {"speaker": "uomo", "text": "È incredibile che alcune parti siano ancora percorribili oggi."},
+      {"speaker": "donna", "text": "Vero, la qualità della costruzione romana era davvero eccezionale per l'epoca."}
+    ]},
+    {"id": "storia_12_michelangelo", "title": "Michelangelo e la Cappella Sistina", "lines": [
+      {"speaker": "donna", "text": "Quanto tempo impiegò Michelangelo per dipingere la volta della Cappella Sistina?"},
+      {"speaker": "uomo", "text": "Ci vollero circa quattro anni di lavoro intenso e faticoso."},
+      {"speaker": "donna", "text": "Immagino fosse scomodo dipingere per ore con la testa all'insù."},
+      {"speaker": "uomo", "text": "Sì, si racconta che soffrisse molto fisicamente durante quel periodo."},
+      {"speaker": "donna", "text": "Eppure il risultato è considerato uno dei capolavori assoluti dell'arte."},
+      {"speaker": "uomo", "text": "Esatto, la Creazione di Adamo resta una delle immagini più celebri al mondo."}
+    ]},
+    {"id": "storia_13_repubblica_italiana", "title": "La nascita della Repubblica Italiana", "lines": [
+      {"speaker": "uomo", "text": "Quando l'Italia decise di diventare una repubblica?"},
+      {"speaker": "donna", "text": "Nel millenovecentoquarantasei, con un referendum popolare dopo la guerra."},
+      {"speaker": "uomo", "text": "Quindi gli italiani scelsero direttamente tra monarchia e repubblica."},
+      {"speaker": "donna", "text": "Esatto, e vinse la repubblica, mettendo fine al regno dei Savoia."},
+      {"speaker": "uomo", "text": "Fu anche la prima volta che le donne italiane poterono votare, giusto?"},
+      {"speaker": "donna", "text": "Sì, proprio in quell'occasione votarono per la prima volta nella storia del paese."}
+    ]},
+    {"id": "storia_14_palio_siena", "title": "Il Palio di Siena", "lines": [
+      {"speaker": "donna", "text": "Sai da quando esiste il Palio di Siena?"},
+      {"speaker": "uomo", "text": "Le sue origini risalgono al Medioevo, anche se la forma attuale è più recente."},
+      {"speaker": "donna", "text": "È vero che ogni quartiere della città partecipa con un proprio cavallo?"},
+      {"speaker": "uomo", "text": "Sì, si chiamano contrade e la rivalità tra loro è fortissima."},
+      {"speaker": "donna", "text": "Dev'essere uno spettacolo emozionante da vedere dal vivo."},
+      {"speaker": "uomo", "text": "Assolutamente, la piazza si riempie di tensione e passione popolare."}
+    ]},
+    {"id": "storia_15_raffaello", "title": "La Scuola di Atene e Raffaello", "lines": [
+      {"speaker": "uomo", "text": "Conosci l'affresco chiamato la Scuola di Atene?"},
+      {"speaker": "donna", "text": "Sì, l'ha dipinto Raffaello nei musei vaticani."},
+      {"speaker": "uomo", "text": "Rappresenta i grandi filosofi dell'antichità riuniti insieme."},
+      {"speaker": "donna", "text": "Platone e Aristotele sono proprio al centro della scena, vero?"},
+      {"speaker": "uomo", "text": "Esatto, e molti pensano che i volti raffigurino anche artisti dell'epoca di Raffaello."},
+      {"speaker": "donna", "text": "Un modo geniale di unire filosofia antica e arte rinascimentale."}
+    ]},
+    {"id": "storia_16_cesare_gallia", "title": "Giulio Cesare e la conquista della Gallia", "lines": [
+      {"speaker": "donna", "text": "Perché la conquista della Gallia fu così importante per Giulio Cesare?"},
+      {"speaker": "uomo", "text": "Gli permise di ottenere ricchezza, prestigio e un esercito fedele."},
+      {"speaker": "donna", "text": "Quanto durò questa campagna militare?"},
+      {"speaker": "uomo", "text": "Circa otto anni, con numerose battaglie contro le tribù galliche."},
+      {"speaker": "donna", "text": "E poi scrisse lui stesso un resoconto di questi eventi, giusto?"},
+      {"speaker": "uomo", "text": "Sì, il De Bello Gallico, ancora oggi studiato nelle scuole di tutto il mondo."}
+    ]},
+    {"id": "storia_17_augusto", "title": "Augusto e la Pax Romana", "lines": [
+      {"speaker": "uomo", "text": "Chi fu il primo vero imperatore di Roma?"},
+      {"speaker": "donna", "text": "Augusto, nipote adottivo di Giulio Cesare, dal ventisette prima di Cristo."},
+      {"speaker": "uomo", "text": "Il suo regno portò un lungo periodo di pace, vero?"},
+      {"speaker": "donna", "text": "Sì, la chiamiamo Pax Romana, durata circa due secoli."},
+      {"speaker": "uomo", "text": "Durante quel periodo l'impero si sviluppò molto anche a livello culturale."},
+      {"speaker": "donna", "text": "Esatto, arte, architettura e letteratura fiorirono come mai prima."}
+    ]},
+    {"id": "storia_18_marco_aurelio", "title": "Marco Aurelio e le guerre sul Danubio", "lines": [
+      {"speaker": "donna", "text": "Marco Aurelio era conosciuto anche come filosofo, non solo come imperatore."},
+      {"speaker": "uomo", "text": "Esatto, scrisse i suoi pensieri personali durante le campagne militari."},
+      {"speaker": "donna", "text": "Contro chi combatteva principalmente in quel periodo?"},
+      {"speaker": "uomo", "text": "Contro popolazioni germaniche lungo il confine del fiume Danubio."},
+      {"speaker": "donna", "text": "Doveva essere difficile scrivere filosofia in mezzo a tante battaglie."},
+      {"speaker": "uomo", "text": "Eppure i suoi scritti restano tra i più profondi della filosofia stoica antica."}
+    ]},
+    {"id": "storia_19_longobardi", "title": "I Longobardi in Italia", "lines": [
+      {"speaker": "uomo", "text": "Chi erano i Longobardi arrivati in Italia dopo la caduta dell'impero?"},
+      {"speaker": "donna", "text": "Un popolo germanico che invase la penisola nel sesto secolo dopo Cristo."},
+      {"speaker": "uomo", "text": "Riuscirono a controllare gran parte del territorio italiano?"},
+      {"speaker": "donna", "text": "Sì, fondarono un regno che durò per circa due secoli."},
+      {"speaker": "uomo", "text": "E lasciarono tracce ancora visibili oggi?"},
+      {"speaker": "donna", "text": "Certamente, monumenti e siti riconosciuti come patrimonio dell'umanità."}
+    ]},
+    {"id": "storia_20_carlo_magno", "title": "Carlo Magno e il Sacro Romano Impero", "lines": [
+      {"speaker": "donna", "text": "Quando fu incoronato imperatore Carlo Magno?"},
+      {"speaker": "uomo", "text": "Nell'anno ottocento, direttamente dal Papa a Roma."},
+      {"speaker": "donna", "text": "Questo evento segnò la nascita del Sacro Romano Impero, giusto?"},
+      {"speaker": "uomo", "text": "Esatto, un'unione simbolica tra potere politico e autorità religiosa."},
+      {"speaker": "donna", "text": "Il suo regno favorì anche la cultura e l'istruzione, vero?"},
+      {"speaker": "uomo", "text": "Sì, promosse scuole e biblioteche in tutto il suo vasto territorio."}
+    ]},
+    {"id": "storia_21_repubbliche_marinare", "title": "Le Repubbliche Marinare", "lines": [
+      {"speaker": "uomo", "text": "Quali erano le principali Repubbliche Marinare italiane?"},
+      {"speaker": "donna", "text": "Genova, Pisa, Amalfi e naturalmente Venezia."},
+      {"speaker": "uomo", "text": "Che ruolo avevano nel commercio del Mediterraneo?"},
+      {"speaker": "donna", "text": "Controllavano rotte commerciali fondamentali verso l'Oriente e il Nord Africa."},
+      {"speaker": "uomo", "text": "Erano anche spesso in guerra tra loro per il controllo dei mari."},
+      {"speaker": "donna", "text": "Sì, la rivalità commerciale portava frequentemente a veri conflitti armati."}
+    ]},
+    {"id": "storia_22_federico_secondo", "title": "Federico II di Svevia", "lines": [
+      {"speaker": "donna", "text": "Perché Federico Secondo viene chiamato Stupor Mundi?"},
+      {"speaker": "uomo", "text": "Perché la sua cultura e le sue conoscenze stupivano tutta l'Europa dell'epoca."},
+      {"speaker": "donna", "text": "Parlava davvero molte lingue diverse?"},
+      {"speaker": "uomo", "text": "Sì, si dice conoscesse almeno sei lingue, un caso raro per un sovrano medievale."},
+      {"speaker": "donna", "text": "E promosse anche importanti riforme legali nel suo regno."},
+      {"speaker": "uomo", "text": "Esatto, le sue leggi sono considerate tra le più avanzate del Medioevo europeo."}
+    ]},
+    {"id": "storia_23_peste_nera", "title": "La Peste Nera del Trecento", "lines": [
+      {"speaker": "uomo", "text": "Quanto fu devastante la Peste Nera in Italia nel Trecento?"},
+      {"speaker": "donna", "text": "Enormemente, si stima che uccise circa un terzo della popolazione europea."},
+      {"speaker": "uomo", "text": "Come si diffuse così velocemente tra le città?"},
+      {"speaker": "donna", "text": "Attraverso le rotte commerciali marittime, portata probabilmente da navi mercantili."},
+      {"speaker": "uomo", "text": "Che conseguenze ebbe sulla società dell'epoca?"},
+      {"speaker": "donna", "text": "Cambiò profondamente l'economia, la religiosità e persino l'arte di quel periodo."}
+    ]},
+    {"id": "storia_24_boccaccio", "title": "Boccaccio e il Decameron", "lines": [
+      {"speaker": "donna", "text": "Di cosa parla esattamente il Decameron di Boccaccio?"},
+      {"speaker": "uomo", "text": "Racconta di dieci giovani che si rifugiano in campagna durante la peste."},
+      {"speaker": "donna", "text": "E per passare il tempo si raccontano storie a vicenda, giusto?"},
+      {"speaker": "uomo", "text": "Esatto, cento novelle in totale, ricche di ironia e realismo."},
+      {"speaker": "donna", "text": "È considerato un'opera fondamentale per la letteratura italiana."},
+      {"speaker": "uomo", "text": "Sì, insieme a Dante e Petrarca forma le basi della prosa italiana moderna."}
+    ]},
+    {"id": "storia_25_petrarca", "title": "Petrarca e l'umanesimo", "lines": [
+      {"speaker": "uomo", "text": "Perché Petrarca viene considerato il padre dell'umanesimo?"},
+      {"speaker": "donna", "text": "Perché riscoprì e valorizzò i testi classici latini dimenticati per secoli."},
+      {"speaker": "uomo", "text": "Il suo interesse era rivolto soprattutto all'individuo, giusto?"},
+      {"speaker": "donna", "text": "Sì, mise al centro i sentimenti e l'esperienza personale dell'uomo."},
+      {"speaker": "uomo", "text": "Ed è famoso anche per le poesie dedicate a Laura."},
+      {"speaker": "donna", "text": "Esatto, il Canzoniere resta una delle opere poetiche più influenti della storia."}
+    ]},
+    {"id": "storia_26_lepanto", "title": "La Battaglia di Lepanto", "lines": [
+      {"speaker": "donna", "text": "Cosa fu esattamente la Battaglia di Lepanto?"},
+      {"speaker": "uomo", "text": "Uno scontro navale tra una coalizione cristiana e l'impero ottomano."},
+      {"speaker": "donna", "text": "In che anno avvenne questa battaglia?"},
+      {"speaker": "uomo", "text": "Nel millecinquecentosettantuno, nel mar Ionio."},
+      {"speaker": "donna", "text": "Fu una vittoria importante per gli europei, vero?"},
+      {"speaker": "uomo", "text": "Sì, fermò per un periodo l'espansione navale ottomana nel Mediterraneo."}
+    ]},
+    {"id": "storia_27_colombo", "title": "Cristoforo Colombo e la scoperta dell'America", "lines": [
+      {"speaker": "uomo", "text": "In che anno Cristoforo Colombo raggiunse le Americhe?"},
+      {"speaker": "donna", "text": "Nel millequattrocentonovantadue, partendo dalla Spagna."},
+      {"speaker": "uomo", "text": "Lui pensava di essere arrivato in Asia, giusto?"},
+      {"speaker": "donna", "text": "Esatto, credeva di aver trovato una nuova rotta verso le Indie."},
+      {"speaker": "uomo", "text": "Questo viaggio cambiò completamente la storia mondiale."},
+      {"speaker": "donna", "text": "Sì, aprì la strada a secoli di esplorazioni e scambi tra continenti."}
+    ]},
+    {"id": "storia_28_vespucci", "title": "Amerigo Vespucci", "lines": [
+      {"speaker": "donna", "text": "Perché il continente americano prende il nome da Amerigo Vespucci?"},
+      {"speaker": "uomo", "text": "Perché fu tra i primi a capire che si trattava di un nuovo continente."},
+      {"speaker": "donna", "text": "Non delle Indie come pensava Colombo, quindi."},
+      {"speaker": "uomo", "text": "Esatto, i suoi resoconti di viaggio convinsero i geografi dell'epoca."},
+      {"speaker": "donna", "text": "E così decisero di chiamare le nuove terre in suo onore."},
+      {"speaker": "uomo", "text": "Proprio così, un tributo che dura ancora oggi in tutto il mondo."}
+    ]},
+    {"id": "storia_29_concilio_trento", "title": "Il Concilio di Trento", "lines": [
+      {"speaker": "uomo", "text": "Perché fu convocato il Concilio di Trento?"},
+      {"speaker": "donna", "text": "Per rispondere alla Riforma protestante e riorganizzare la Chiesa cattolica."},
+      {"speaker": "uomo", "text": "Quanto durò questo concilio nel complesso?"},
+      {"speaker": "donna", "text": "Diversi anni, con interruzioni, nel corso del Cinquecento."},
+      {"speaker": "uomo", "text": "Portò cambiamenti importanti nella dottrina e nella disciplina religiosa."},
+      {"speaker": "donna", "text": "Sì, definì regole precise che influenzarono la Chiesa per secoli."}
+    ]},
+    {"id": "storia_30_caravaggio", "title": "Caravaggio e il chiaroscuro", "lines": [
+      {"speaker": "donna", "text": "Cosa rende unico lo stile pittorico di Caravaggio?"},
+      {"speaker": "uomo", "text": "L'uso drammatico della luce e dell'ombra, chiamato chiaroscuro."},
+      {"speaker": "donna", "text": "I suoi soggetti erano spesso persone comuni, non solo nobili."},
+      {"speaker": "uomo", "text": "Esatto, questo scandalizzò molti nel suo tempo, ma innovò profondamente l'arte."},
+      {"speaker": "donna", "text": "Era anche conosciuto per la sua vita turbolenta, giusto?"},
+      {"speaker": "uomo", "text": "Sì, una vita movimentata quanto la sua straordinaria pittura."}
+    ]},
+    {"id": "storia_31_vivaldi", "title": "Antonio Vivaldi e le Quattro Stagioni", "lines": [
+      {"speaker": "uomo", "text": "Conosci la storia dietro le Quattro Stagioni di Vivaldi?"},
+      {"speaker": "donna", "text": "So che sono quattro concerti per violino, uno per ogni stagione dell'anno."},
+      {"speaker": "uomo", "text": "Esatto, e ognuno descrive musicalmente immagini della natura."},
+      {"speaker": "donna", "text": "Vivaldi era anche sacerdote, oltre che musicista, vero?"},
+      {"speaker": "uomo", "text": "Sì, veniva chiamato il prete rosso per il colore dei suoi capelli."},
+      {"speaker": "donna", "text": "Un artista straordinario che ha lasciato un'eredità musicale immensa."}
+    ]},
+    {"id": "storia_32_volta", "title": "Alessandro Volta e l'invenzione della pila", "lines": [
+      {"speaker": "donna", "text": "Cosa inventò esattamente Alessandro Volta?"},
+      {"speaker": "uomo", "text": "La pila elettrica, il primo dispositivo capace di generare corrente continua."},
+      {"speaker": "donna", "text": "In che periodo avvenne questa scoperta?"},
+      {"speaker": "uomo", "text": "Alla fine del Settecento, un momento cruciale per la scienza moderna."},
+      {"speaker": "donna", "text": "Questa invenzione aprì la strada a molte tecnologie future."},
+      {"speaker": "uomo", "text": "Esatto, senza di lui l'elettricità come la conosciamo oggi sarebbe arrivata molto più tardi."}
+    ]},
+    {"id": "storia_33_napoleone", "title": "Napoleone e il Regno d'Italia", "lines": [
+      {"speaker": "uomo", "text": "Che influenza ebbe Napoleone sull'Italia del suo tempo?"},
+      {"speaker": "donna", "text": "Riorganizzò molti territori italiani sotto un unico controllo francese."},
+      {"speaker": "uomo", "text": "Introdusse anche riforme legali importanti, giusto?"},
+      {"speaker": "donna", "text": "Sì, il Codice Napoleonico influenzò a lungo il diritto italiano."},
+      {"speaker": "uomo", "text": "E questo periodo favorì anche idee di unità nazionale, vero?"},
+      {"speaker": "donna", "text": "Esatto, molti storici lo considerano un antecedente del Risorgimento."}
+    ]},
+    {"id": "storia_34_verdi", "title": "Giuseppe Verdi e l'opera italiana", "lines": [
+      {"speaker": "donna", "text": "Perché Giuseppe Verdi è così importante per la musica italiana?"},
+      {"speaker": "uomo", "text": "Compose alcune delle opere liriche più celebri al mondo, come il Nabucco."},
+      {"speaker": "donna", "text": "Le sue opere avevano anche un significato politico, vero?"},
+      {"speaker": "uomo", "text": "Sì, molti temi richiamavano il desiderio di unità e libertà nazionale."},
+      {"speaker": "donna", "text": "Il suo nome divenne quasi un simbolo del Risorgimento, giusto?"},
+      {"speaker": "uomo", "text": "Esatto, gli italiani lo consideravano un vero eroe culturale dell'epoca."}
+    ]},
+    {"id": "storia_35_prima_guerra", "title": "La Prima Guerra Mondiale e il fronte italiano", "lines": [
+      {"speaker": "uomo", "text": "In che anno l'Italia entrò nella Prima Guerra Mondiale?"},
+      {"speaker": "donna", "text": "Nel millenovecentoquindici, un anno dopo l'inizio del conflitto."},
+      {"speaker": "uomo", "text": "Il fronte principale era sulle Alpi, giusto?"},
+      {"speaker": "donna", "text": "Sì, condizioni durissime, con battaglie combattute anche tra ghiaccio e neve."},
+      {"speaker": "uomo", "text": "Quante perdite subì il paese in questo conflitto?"},
+      {"speaker": "donna", "text": "Centinaia di migliaia di soldati persero la vita in quegli anni terribili."}
+    ]},
+    {"id": "storia_36_fascismo", "title": "L'ascesa del fascismo in Italia", "lines": [
+      {"speaker": "donna", "text": "Come riuscì Mussolini a prendere il potere in Italia?"},
+      {"speaker": "uomo", "text": "Sfruttò la crisi economica e sociale del dopoguerra per guadagnare consenso."},
+      {"speaker": "donna", "text": "E poi organizzò una marcia su Roma per forzare la situazione politica."},
+      {"speaker": "uomo", "text": "Esatto, nel millenovecentoventidue, ottenendo l'incarico di governo dal re."},
+      {"speaker": "donna", "text": "Da lì trasformò gradualmente il paese in una dittatura, giusto?"},
+      {"speaker": "uomo", "text": "Sì, eliminando progressivamente le libertà politiche e civili degli italiani."}
+    ]},
+    {"id": "storia_37_seconda_guerra", "title": "La Seconda Guerra Mondiale in Italia", "lines": [
+      {"speaker": "uomo", "text": "Come cambiò la situazione italiana dopo il millenovecentoquarantatré?"},
+      {"speaker": "donna", "text": "L'Italia firmò un armistizio con gli alleati, ma il paese si divise in due."},
+      {"speaker": "uomo", "text": "Con una parte ancora controllata dai tedeschi al nord, giusto?"},
+      {"speaker": "donna", "text": "Esatto, mentre il sud era già stato liberato dalle truppe alleate."},
+      {"speaker": "uomo", "text": "Furono anni durissimi per la popolazione civile."},
+      {"speaker": "donna", "text": "Sì, tra bombardamenti, occupazione e una guerra combattuta anche dentro il paese."}
+    ]},
+    {"id": "storia_38_resistenza", "title": "La Resistenza italiana", "lines": [
+      {"speaker": "donna", "text": "Chi formava principalmente la Resistenza italiana?"},
+      {"speaker": "uomo", "text": "Gruppi partigiani composti da civili, ex militari e persone di ogni ceto sociale."},
+      {"speaker": "donna", "text": "Il loro obiettivo era liberare il paese dall'occupazione nazifascista."},
+      {"speaker": "uomo", "text": "Esatto, agivano soprattutto attraverso azioni di sabotaggio e guerriglia."},
+      {"speaker": "donna", "text": "Questo movimento è ancora oggi molto ricordato in Italia, vero?"},
+      {"speaker": "uomo", "text": "Sì, il venticinque aprile si celebra ogni anno proprio in loro memoria."}
+    ]},
+    {"id": "storia_39_miracolo_economico", "title": "Il miracolo economico italiano", "lines": [
+      {"speaker": "uomo", "text": "Cosa si intende con l'espressione miracolo economico italiano?"},
+      {"speaker": "donna", "text": "La rapida crescita industriale ed economica avvenuta negli anni Cinquanta."},
+      {"speaker": "uomo", "text": "L'Italia passò velocemente da paese agricolo a potenza industriale."},
+      {"speaker": "donna", "text": "Esatto, con una forte crescita di settori come l'automobile e l'elettrodomestico."},
+      {"speaker": "uomo", "text": "Questo cambiò anche profondamente lo stile di vita degli italiani."},
+      {"speaker": "donna", "text": "Sì, molte famiglie videro migliorare rapidamente il proprio tenore di vita."}
+    ]},
+    {"id": "storia_40_fiat", "title": "La nascita della Fiat", "lines": [
+      {"speaker": "donna", "text": "Quando fu fondata la Fiat a Torino?"},
+      {"speaker": "uomo", "text": "Nel millenovecentouno, all'inizio dell'industria automobilistica italiana."},
+      {"speaker": "donna", "text": "Divenne rapidamente una delle aziende più importanti del paese."},
+      {"speaker": "uomo", "text": "Esatto, contribuì enormemente allo sviluppo industriale di Torino."},
+      {"speaker": "donna", "text": "E permise a molti italiani di possedere finalmente un'automobile."},
+      {"speaker": "uomo", "text": "Sì, modelli come la cinquecento diventarono simboli di un'intera epoca."}
+    ]},
+    {"id": "storia_41_neorealismo", "title": "Il Neorealismo nel cinema italiano", "lines": [
+      {"speaker": "uomo", "text": "Cosa caratterizzava il cinema neorealista italiano del dopoguerra?"},
+      {"speaker": "donna", "text": "Storie semplici, spesso girate per strada, con attori non professionisti."},
+      {"speaker": "uomo", "text": "Volevano mostrare la realtà difficile della vita quotidiana, giusto?"},
+      {"speaker": "donna", "text": "Esatto, senza abbellimenti, con grande attenzione alle classi più povere."},
+      {"speaker": "uomo", "text": "Questo movimento influenzò molto il cinema mondiale successivo."},
+      {"speaker": "donna", "text": "Sì, registi di tutto il mondo si sono ispirati a quello stile essenziale."}
+    ]},
+    {"id": "storia_42_fellini", "title": "Federico Fellini e il cinema d'autore", "lines": [
+      {"speaker": "donna", "text": "Perché Federico Fellini è considerato un maestro del cinema?"},
+      {"speaker": "uomo", "text": "Per il suo stile visionario, tra sogno, memoria e ironia."},
+      {"speaker": "donna", "text": "Alcuni suoi film sono diventati simboli della cultura italiana nel mondo."},
+      {"speaker": "uomo", "text": "Esatto, pensiamo solo a quanto sia celebre ancora oggi la sua opera più famosa."},
+      {"speaker": "donna", "text": "Ha vinto anche numerosi premi internazionali durante la sua carriera."},
+      {"speaker": "uomo", "text": "Sì, resta uno dei registi italiani più amati e studiati di sempre."}
+    ]},
+    {"id": "storia_43_torre_pisa", "title": "La Torre di Pisa", "lines": [
+      {"speaker": "uomo", "text": "Perché la Torre di Pisa pende così tanto verso un lato?"},
+      {"speaker": "donna", "text": "A causa di un terreno instabile su cui fu costruita nel Medioevo."},
+      {"speaker": "uomo", "text": "Eppure la torre non è mai crollata nei secoli, giusto?"},
+      {"speaker": "donna", "text": "Esatto, e negli anni novanta sono stati fatti lavori per stabilizzarla ulteriormente."},
+      {"speaker": "uomo", "text": "Oggi è una delle attrazioni turistiche più famose d'Italia."},
+      {"speaker": "donna", "text": "Sì, milioni di visitatori arrivano ogni anno solo per vederla e fotografarla."}
+    ]},
+    {"id": "storia_44_duomo_milano", "title": "Il Duomo di Milano", "lines": [
+      {"speaker": "donna", "text": "Quanto tempo ci volle per costruire il Duomo di Milano?"},
+      {"speaker": "uomo", "text": "Quasi sei secoli, iniziato nel Trecento e completato solo nell'Ottocento."},
+      {"speaker": "donna", "text": "Un tempo davvero lunghissimo per un singolo edificio."},
+      {"speaker": "uomo", "text": "Sì, ma il risultato è uno dei più grandi capolavori gotici del mondo."},
+      {"speaker": "donna", "text": "Quante guglie e statue decorano l'intera struttura?"},
+      {"speaker": "uomo", "text": "Migliaia, tra guglie, statue e decorazioni finemente scolpite."}
+    ]},
+    {"id": "storia_45_reggia_caserta", "title": "La Reggia di Caserta", "lines": [
+      {"speaker": "uomo", "text": "Chi fece costruire la Reggia di Caserta?"},
+      {"speaker": "donna", "text": "Il re Carlo di Borbone, nel Settecento, come nuova capitale del regno."},
+      {"speaker": "uomo", "text": "È vero che è più grande della Reggia di Versailles?"},
+      {"speaker": "donna", "text": "Sì, per volume complessivo è considerata ancora più imponente."},
+      {"speaker": "uomo", "text": "I giardini devono essere altrettanto spettacolari."},
+      {"speaker": "donna", "text": "Assolutamente, con fontane, cascate artificiali e viali lunghissimi."}
+    ]},
+    {"id": "storia_46_etruschi", "title": "Gli Etruschi prima di Roma", "lines": [
+      {"speaker": "donna", "text": "Chi erano gli Etruschi prima della nascita di Roma?"},
+      {"speaker": "uomo", "text": "Un popolo antico che dominava gran parte dell'Italia centrale."},
+      {"speaker": "donna", "text": "Influenzarono molto la cultura romana successiva, vero?"},
+      {"speaker": "uomo", "text": "Sì, in architettura, religione e persino nell'organizzazione politica."},
+      {"speaker": "donna", "text": "Purtroppo conosciamo poco della loro lingua originale."},
+      {"speaker": "uomo", "text": "Esatto, resta ancora oggi in parte un mistero per gli storici."}
+    ]},
+    {"id": "storia_47_magna_grecia", "title": "La Magna Grecia nel Sud Italia", "lines": [
+      {"speaker": "uomo", "text": "Cosa si intende esattamente con Magna Grecia?"},
+      {"speaker": "donna", "text": "Le colonie greche fondate nel Sud Italia a partire dall'ottavo secolo prima di Cristo."},
+      {"speaker": "uomo", "text": "Città come Napoli e Taranto hanno origini greche, giusto?"},
+      {"speaker": "donna", "text": "Esatto, il loro nome stesso deriva spesso da parole greche antiche."},
+      {"speaker": "uomo", "text": "Portarono anche filosofia, arte e nuove tecniche architettoniche."},
+      {"speaker": "donna", "text": "Sì, un'eredità culturale ancora visibile in tanti templi e reperti oggi."}
+    ]},
+    {"id": "storia_48_archimede", "title": "Archimede di Siracusa", "lines": [
+      {"speaker": "donna", "text": "Cosa rese così famoso Archimede di Siracusa?"},
+      {"speaker": "uomo", "text": "Le sue scoperte in matematica, fisica e ingegneria, ancora oggi studiate."},
+      {"speaker": "donna", "text": "È vero che progettò anche macchine da guerra per difendere la sua città?"},
+      {"speaker": "uomo", "text": "Sì, aiutò a resistere a lungo contro l'assedio delle navi romane."},
+      {"speaker": "donna", "text": "E la sua morte è avvolta da una storia particolare, giusto?"},
+      {"speaker": "uomo", "text": "Esatto, si racconta fu ucciso da un soldato romano mentre studiava un problema geometrico."}
+    ]},
+    {"id": "storia_49_terme_romane", "title": "Le terme romane", "lines": [
+      {"speaker": "uomo", "text": "Che funzione avevano esattamente le terme nell'antica Roma?"},
+      {"speaker": "donna", "text": "Erano luoghi di igiene, ma anche di incontro sociale e relax."},
+      {"speaker": "uomo", "text": "Le persone passavano davvero molto tempo lì dentro?"},
+      {"speaker": "donna", "text": "Sì, spesso intere giornate, tra bagni caldi, freddi e sale per lo sport."},
+      {"speaker": "uomo", "text": "Erano aperte a tutte le classi sociali, giusto?"},
+      {"speaker": "donna", "text": "Sì, uno dei pochi luoghi dove ricchi e poveri si mescolavano davvero."}
+    ]},
+    {"id": "storia_50_acquedotto", "title": "L'acquedotto romano", "lines": [
+      {"speaker": "donna", "text": "Come riuscivano i romani a portare acqua fino alle grandi città?"},
+      {"speaker": "uomo", "text": "Attraverso acquedotti, spesso costruiti con archi imponenti e precisi calcoli di pendenza."},
+      {"speaker": "donna", "text": "Alcuni di questi acquedotti esistono ancora oggi, vero?"},
+      {"speaker": "uomo", "text": "Sì, diverse strutture sono rimaste in piedi per più di duemila anni."},
+      {"speaker": "donna", "text": "Una tecnologia incredibilmente avanzata per l'epoca."},
+      {"speaker": "uomo", "text": "Esatto, dimostra quanto fosse sofisticata l'ingegneria romana antica."}
+    ]}
+  ]
+}
