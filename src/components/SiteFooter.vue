@@ -7,6 +7,8 @@ import { RouterLink } from 'vue-router'
   <footer class="bottom">
     <nav class="legal">
       <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
+      <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>
+      <RouterLink :to="{ name: 'games' }">Giochi</RouterLink>
       <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
       <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
       <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>

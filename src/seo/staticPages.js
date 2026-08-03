@@ -90,6 +90,12 @@ export const ROUTES = [
     description:
       "Testez votre niveau d'italien en quelques questions : test adaptatif qui s'ajuste à vos réponses pour estimer votre niveau CECR, de A1 à C2.",
   },
+  {
+    path: '/giochi',
+    title: 'Giochi — jeux pour apprendre l’italien — Leggendo',
+    description:
+      "Quinze jeux courts pour réviser le vocabulaire, la grammaire et les textes italiens : mots à associer, pendu, anagrammes, conjugaison, phrases à reconstituer et bien plus.",
+  },
   { path: '/mentions-legales', title: 'Mentions légales — Leggendo' },
   { path: '/confidentialite', title: 'Confidentialité — Leggendo' },
   { path: '/conditions', title: 'CGU / CGV — Leggendo' },

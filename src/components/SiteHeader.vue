@@ -32,14 +32,28 @@ const dictNames = ['dictionary', 'verbs', 'grammar', 'vocabulary']
 const dictActive = computed(() => dictNames.includes(route.name))
 watch(() => route.fullPath, () => (dictMenuOpen.value = false))
 
+// Sous-menu « Scrivi » : regroupe les outils d'écriture pour désencombrer la barre
+const writeMenuOpen = ref(false)
+const writeMenuEl = ref(null)
+const writeNames = ['create-text', 'write', 'dialogue']
+const writeActive = computed(() => writeNames.includes(route.name))
+watch(() => route.fullPath, () => (writeMenuOpen.value = false))
+
 // Fermeture au clic extérieur : le focusout ne suffit pas, les liens ne
 // reçoivent pas le focus au clic sous Safari/Firefox (macOS)
 function onDocumentClick(event) {
   if (dictMenuOpen.value && !dictMenuEl.value?.contains(event.target)) {
     dictMenuOpen.value = false
   }
+  if (writeMenuOpen.value && !writeMenuEl.value?.contains(event.target)) {
+    writeMenuOpen.value = false
+  }
 }
 watch(dictMenuOpen, (open) => {
+  if (open) document.addEventListener('click', onDocumentClick)
+  else document.removeEventListener('click', onDocumentClick)
+})
+watch(writeMenuOpen, (open) => {
   if (open) document.addEventListener('click', onDocumentClick)
   else document.removeEventListener('click', onDocumentClick)
 })
@@ -65,14 +79,31 @@ watch(dictMenuOpen, (open) => {
     </div>
     <nav id="chrome-nav" class="chrome-nav" :class="{ open: menuOpen }">
       <RouterLink :to="{ name: 'home' }">Accueil</RouterLink>
-      <RouterLink :to="{ name: 'library' }">Textes</RouterLink>
+      <RouterLink :to="{ name: 'library' }">Testi</RouterLink>
       <RouterLink :to="{ name: 'books' }">Classici</RouterLink>
-      <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>
+      <RouterLink :to="{ name: 'games' }">Giochi</RouterLink>
       <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
-      <RouterLink v-if="loggedIn" :to="{ name: 'create-text' }">Créer son texte</RouterLink>
-      <RouterLink v-if="premiumPlus" :to="{ name: 'write' }">Scrivi</RouterLink>
-      <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }">Dialogo</RouterLink>
+      <div
+        v-if="loggedIn"
+        ref="writeMenuEl"
+        class="chrome-dropdown"
+        :class="{ open: writeMenuOpen, active: writeActive }"
+      >
+        <button
+          type="button"
+          class="chrome-dropdown-toggle"
+          :aria-expanded="writeMenuOpen"
+          @click="writeMenuOpen = !writeMenuOpen"
+        >
+          Scrivi <span class="caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="chrome-dropdown-menu">
+          <RouterLink :to="{ name: 'create-text' }">Crea il tuo testo</RouterLink>
+          <RouterLink v-if="premiumPlus" :to="{ name: 'write' }">Scrivi</RouterLink>
+          <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }">Dialogo</RouterLink>
+        </div>
+      </div>
       <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">Notizie</RouterLink>
       <div ref="dictMenuEl" class="chrome-dropdown" :class="{ open: dictMenuOpen, active: dictActive }">
         <button
@@ -87,7 +118,7 @@ watch(dictMenuOpen, (open) => {
           <RouterLink :to="{ name: 'dictionary' }">Dizionario</RouterLink>
           <RouterLink :to="{ name: 'verbs' }">Verbi</RouterLink>
           <RouterLink :to="{ name: 'grammar' }">Grammatica</RouterLink>
-          <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">Vocabulaire</RouterLink>
+          <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">Vocabolario</RouterLink>
         </div>
       </div>
       <RouterLink v-if="loggedIn" :to="{ name: 'words' }">

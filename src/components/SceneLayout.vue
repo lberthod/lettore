@@ -1,5 +1,4 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
 import SiteHeader from './SiteHeader.vue'
 import SiteFooter from './SiteFooter.vue'
 
@@ -17,13 +16,6 @@ defineProps({
   compact: { type: Boolean, default: false },
 })
 
-// Plein écran : on verrouille le défilement du document (l'écran défile en interne)
-onMounted(() => {
-  document.body.style.overflow = 'hidden'
-})
-onUnmounted(() => {
-  document.body.style.overflow = ''
-})
 </script>
 
 <template>
@@ -106,19 +98,21 @@ onUnmounted(() => {
 
 <style scoped>
 .scene-screen {
-  position: fixed;
-  inset: 0;
+  position: relative;
+  min-height: 100vh;
   z-index: 50;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   background: linear-gradient(180deg, #fdf3e3 0%, #f7e3c8 100%);
+  /* Plein écran : on sort des contraintes (largeur, padding) du conteneur #app */
+  width: 100vw;
+  margin: -2rem calc(50% - 50vw) -6rem;
 }
 
 /* --- Scène en fond --- */
 
 .scene {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
 }
