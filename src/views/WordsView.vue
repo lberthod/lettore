@@ -507,6 +507,8 @@ onUnmounted(() => {
   flex-direction: column;
   overflow: hidden;
   background: linear-gradient(180deg, #fdf3e3 0%, #f7e3c8 100%);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .scene {

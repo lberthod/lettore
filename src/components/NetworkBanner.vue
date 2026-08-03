@@ -19,7 +19,7 @@ import { isOnline } from '../lib/network.js'
   left: 0;
   right: 0;
   z-index: 300;
-  padding: 0.55rem 1rem;
+  padding: calc(0.55rem + env(safe-area-inset-top)) 1rem 0.55rem;
   background: #a34430;
   color: #faf6f0;
   font-size: 0.85rem;

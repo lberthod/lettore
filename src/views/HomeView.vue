@@ -483,6 +483,11 @@ onUnmounted(() => {
   flex-direction: column;
   overflow: hidden;
   background: linear-gradient(180deg, #fdf3e3 0%, #f7e3c8 100%);
+  /* position: fixed ignore le padding de body (env(safe-area-inset-*)) :
+     réservé ici pour ne pas passer sous la barre de statut / de gestes
+     Android en edge-to-edge. */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* --- Scène en fond --- */
@@ -1070,6 +1075,16 @@ onUnmounted(() => {
     width: 30px;
     height: 30px;
     font-size: 0.9rem;
+  }
+}
+
+/* Mots décoratifs positionnés en % de la scène entière : sur un écran
+   étroit et haut (mobile), le ratio change trop pour qu'ils restent dans le
+   ciel — ils retombent sur le titre/tagline. Purement esthétique, on les
+   masque plutôt que de recalculer leur position par breakpoint. */
+@media (max-width: 480px) {
+  .float-wrap {
+    display: none;
   }
 }
 

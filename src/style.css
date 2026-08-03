@@ -8,6 +8,14 @@ body {
   background: #faf6f0;
   color: #2c2620;
   min-height: 100vh;
+  /* App native (Capacitor, edge-to-edge sur Android 15+) : le contenu est
+     dessiné sous la barre de statut / l'encoche / la barre de gestes tant
+     qu'on ne réserve pas cet espace nous-mêmes. Sans effet sur le web
+     (env() vaut 0). Les écrans en position: fixed (HomeView, WordsView,
+     PricingView, MethodView, MethodTextView) ignorent ce padding — ils
+     réservent l'espace individuellement dans leur propre style. */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 #app {

@@ -359,7 +359,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(0.8rem, 3vw, 2.4rem);
+  padding: calc(clamp(0.8rem, 3vw, 2.4rem) + env(safe-area-inset-top)) clamp(0.8rem, 3vw, 2.4rem)
+    calc(clamp(0.8rem, 3vw, 2.4rem) + env(safe-area-inset-bottom));
   background: rgba(44, 38, 32, 0.6);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
