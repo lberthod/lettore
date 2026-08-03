@@ -1,8 +1,8 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, onUnmounted, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
-import { ttsSupported, speakItalian } from '../tts.js'
+import { ttsSupported, speakItalian, stopSpeaking } from '../tts.js'
 import { lookupDictionary, searchDictionary, allLemmas, dictionaryEntryCount } from '../lib/dictionary.js'
 
 const props = defineProps({
@@ -114,6 +114,140 @@ function speak(word) {
   speakItalian(word, { rate: 1 })
 }
 
+// --- Mode aléatoire (session audio) : pioche N lemmes au hasard, résout
+// chaque fiche complète, puis les enchaîne une par une avec lecture vocale
+// du mot, de la définition italienne et d'une phrase d'exemple.
+const SESSION_PRESETS = [10, 20, 50, 100]
+const sessionSize = ref(20)
+const sessionPanelOpen = ref(false)
+const sessionLoading = ref(false)
+const sessionActive = ref(false)
+const sessionQueue = ref([])
+const sessionIndex = ref(0)
+const autoplay = ref(true)
+const autoAdvance = ref(true)
+let advanceTimer = null
+// Incrémenté à chaque annulation (nextCard/prevCard/stop) : la chaîne de
+// lecture en cours capture sa valeur et se compare à la valeur courante
+// avant de continuer — sans ça, `stopSpeaking()` déclenche `onerror` sur
+// l'utterance annulée, qui rappelle `onEnd` et fait avancer la séquence une
+// deuxième fois par-dessus la nouvelle carte déjà affichée.
+let playToken = 0
+
+const sessionCurrent = computed(() => sessionQueue.value[sessionIndex.value] || null)
+
+function shuffled(list) {
+  const arr = [...list]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
+function clearAdvanceTimer() {
+  if (advanceTimer) {
+    clearTimeout(advanceTimer)
+    advanceTimer = null
+  }
+}
+
+// Pause entre deux segments lus : sans elle, le moteur vocal enchaîne
+// l'utterance suivante avant d'avoir relâché la précédente (surtout quand
+// c'est le même mot répété), et les deux se chevauchent en un son confus
+// (« stipare » + « stipare » perçus comme « stiapre »).
+const SPEECH_GAP_MS = 350
+
+function playSequence(parts, i, token) {
+  if (token !== playToken) return
+  if (i >= parts.length) {
+    if (autoAdvance.value) advanceTimer = setTimeout(nextCard, 1800)
+    return
+  }
+  const part = parts[i]
+  speakItalian(part.text, {
+    rate: 0.9,
+    lang: part.lang,
+    onEnd: () => {
+      if (token !== playToken) return
+      advanceTimer = setTimeout(() => playSequence(parts, i + 1, token), SPEECH_GAP_MS)
+    },
+  })
+}
+
+// Séquence lue à voix haute : le mot répété 3 fois (mémorisation), sa
+// traduction française, la définition italienne, puis la phrase d'exemple
+// dans les deux langues — chaque partie porte sa langue (`it-IT` / `fr-FR`)
+// pour que le moteur TTS choisisse la bonne voix.
+function playCurrentCard() {
+  const e = sessionCurrent.value
+  if (!e || !ttsSupported) return
+  clearAdvanceTimer()
+  playToken++
+  const parts = [
+    { text: e.lemma, lang: 'it-IT' },
+    { text: e.lemma, lang: 'it-IT' },
+    { text: e.lemma, lang: 'it-IT' },
+  ]
+  if (e.fr) parts.push({ text: e.fr, lang: 'fr-FR' })
+  if (e.definition_it) parts.push({ text: e.definition_it, lang: 'it-IT' })
+  if (e.examples?.[0]?.it) parts.push({ text: e.examples[0].it, lang: 'it-IT' })
+  if (e.examples?.[0]?.fr) parts.push({ text: e.examples[0].fr, lang: 'fr-FR' })
+  playSequence(parts, 0, playToken)
+}
+
+async function startRandomSession() {
+  sessionLoading.value = true
+  const picked = shuffled(await allLemmas()).slice(0, sessionSize.value)
+  // Chargées en parallèle plutôt qu'une par une : à 100 mots, l'attente
+  // séquentielle (un aller-retour par fiche) se faisait sentir avant l'entrée
+  // en session. Promise.all conserve l'ordre de `picked` malgré des réponses
+  // qui arrivent dans le désordre.
+  const entries = (await Promise.all(picked.map((l) => lookupDictionary(l.lemma)))).filter(Boolean)
+  sessionQueue.value = entries
+  sessionIndex.value = 0
+  sessionPanelOpen.value = false
+  sessionLoading.value = false
+  entry.value = null
+  sessionActive.value = true
+  if (autoplay.value) playCurrentCard()
+}
+
+function nextCard() {
+  clearAdvanceTimer()
+  playToken++
+  stopSpeaking()
+  if (sessionIndex.value + 1 < sessionQueue.value.length) {
+    sessionIndex.value++
+    if (autoplay.value) playCurrentCard()
+  } else {
+    endRandomSession()
+  }
+}
+
+function prevCard() {
+  clearAdvanceTimer()
+  playToken++
+  stopSpeaking()
+  if (sessionIndex.value > 0) {
+    sessionIndex.value--
+    if (autoplay.value) playCurrentCard()
+  }
+}
+
+function endRandomSession() {
+  clearAdvanceTimer()
+  playToken++
+  stopSpeaking()
+  sessionActive.value = false
+  sessionQueue.value = []
+}
+
+onUnmounted(() => {
+  clearAdvanceTimer()
+  stopSpeaking()
+})
+
 // Registre de langue : champ optionnel des shards (absent = neutro, jamais
 // affiché — voir scripts/backfill-dictionary-register.mjs). On ne badge que
 // les valeurs connues, au cas où une donnée inattendue traînerait.
@@ -140,6 +274,88 @@ const registerBadge = computed(() =>
       />
     </div>
 
+    <div v-if="!sessionActive" class="random-mode">
+      <button type="button" class="btn-random" @click="sessionPanelOpen = !sessionPanelOpen">
+        🎲 Mode aléatoire
+      </button>
+
+      <div v-if="sessionPanelOpen" class="random-panel">
+        <p class="random-hint">Choisissez combien de mots réviser, à l'oral, dans cette session.</p>
+        <div class="presets">
+          <button
+            v-for="n in SESSION_PRESETS"
+            :key="n"
+            type="button"
+            class="preset"
+            :class="{ active: sessionSize === n }"
+            @click="sessionSize = n"
+          >
+            {{ n }}
+          </button>
+          <input
+            v-model.number="sessionSize"
+            type="number"
+            min="1"
+            max="500"
+            class="preset-custom"
+            aria-label="Nombre de mots personnalisé"
+          />
+        </div>
+        <label class="autoplay-toggle">
+          <input v-model="autoplay" type="checkbox" />
+          Lecture audio automatique
+        </label>
+        <label v-if="autoplay" class="autoplay-toggle">
+          <input v-model="autoAdvance" type="checkbox" />
+          Passer au mot suivant automatiquement
+        </label>
+        <button
+          type="button"
+          class="btn-start-session"
+          :disabled="sessionLoading || !sessionSize"
+          @click="startRandomSession"
+        >
+          {{ sessionLoading ? 'Préparation…' : `Commencer (${sessionSize} mots)` }}
+        </button>
+      </div>
+    </div>
+
+    <div v-if="sessionActive && sessionCurrent" class="entry-card session-card">
+      <p class="session-progress">
+        Mot {{ sessionIndex + 1 }} / {{ sessionQueue.length }}
+      </p>
+      <h2 class="lemma">
+        {{ sessionCurrent.lemma }}
+        <button
+          v-if="ttsSupported"
+          class="speak"
+          title="Réécouter la fiche"
+          aria-label="Réécouter la fiche"
+          @click="playCurrentCard"
+        >
+          🔊
+        </button>
+      </h2>
+      <p class="pos">{{ sessionCurrent.pos }}</p>
+      <p class="fr"><strong>{{ sessionCurrent.fr }}</strong></p>
+      <p class="definition">{{ sessionCurrent.definition_it }}</p>
+
+      <div v-if="sessionCurrent.examples?.length" class="examples">
+        <p v-for="(ex, i) in sessionCurrent.examples" :key="i" class="example">
+          « {{ ex.it }} » <span class="example-fr">— {{ ex.fr }}</span>
+        </p>
+      </div>
+
+      <div class="session-actions">
+        <button type="button" class="btn-nav" :disabled="sessionIndex === 0" @click="prevCard">← Précédent</button>
+        <button type="button" class="btn-nav" @click="nextCard">
+          {{ sessionIndex + 1 < sessionQueue.length ? 'Suivant →' : 'Terminer' }}
+        </button>
+      </div>
+      <button type="button" class="session-quit" @click="endRandomSession">Arrêter la session</button>
+    </div>
+
+    <template v-if="!sessionActive">
     <div v-if="entry" class="entry-card">
       <RouterLink class="back" :to="{ name: 'dictionary' }" @click="entry = null">← Nouvelle recherche</RouterLink>
       <h2 class="lemma">
@@ -240,6 +456,7 @@ const registerBadge = computed(() =>
           </li>
         </ul>
       </template>
+    </template>
     </template>
   </SceneLayout>
 </template>
@@ -570,5 +787,167 @@ const registerBadge = computed(() =>
 .btn-conj:hover {
   background: #b0692e;
   color: #faf6f0;
+}
+
+.random-mode {
+  margin: 0.8rem 0 1.2rem;
+}
+
+.btn-random {
+  padding: 0.5rem 1rem;
+  border: 1px solid #b0692e;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #b0692e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.btn-random:hover {
+  background: #b0692e;
+  color: #faf6f0;
+}
+
+.random-panel {
+  margin-top: 0.7rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.random-hint {
+  margin: 0 0 0.7rem;
+  font-size: 0.88rem;
+  color: #6b6156;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.preset {
+  min-width: 2.6rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #6b6156;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+}
+
+.preset:hover {
+  border-color: #b0692e;
+  color: #b0692e;
+}
+
+.preset.active {
+  background: #b0692e;
+  border-color: #b0692e;
+  color: #faf6f0;
+}
+
+.preset-custom {
+  width: 4.2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border: 1px solid #d8cfc2;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.autoplay-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: #6b6156;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-start-session {
+  margin-top: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 999px;
+  background: #b0692e;
+  color: #faf6f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.btn-start-session:hover {
+  background: #9a5a25;
+}
+
+.btn-start-session:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.session-card {
+  text-align: center;
+}
+
+.session-progress {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+  color: #a89c8c;
+}
+
+.session-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.btn-nav {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid #b0692e;
+  background: #b0692e;
+  color: #faf6f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.btn-nav:hover {
+  background: #9a5a25;
+}
+
+.btn-nav:disabled {
+  opacity: 0.5;
+  cursor: default;
+  background: rgba(255, 255, 255, 0.7);
+  color: #b0692e;
+}
+
+.session-quit {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  color: #6b6156;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.7;
 }
 </style>

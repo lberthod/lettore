@@ -28,17 +28,18 @@ if (!isNative && ttsSupported) {
   window.speechSynthesis.onvoiceschanged = refreshVoices
 }
 
-function italianVoice() {
-  return voices.find((v) => v.lang.toLowerCase().startsWith('it')) || null
+function voiceFor(lang) {
+  const prefix = lang.slice(0, 2).toLowerCase()
+  return voices.find((v) => v.lang.toLowerCase().startsWith(prefix)) || null
 }
 
-async function speakNative(text, { rate = 0.9, onEnd } = {}) {
+async function speakNative(text, { rate = 0.9, lang = 'it-IT', onEnd } = {}) {
   const { TextToSpeech } = await import('@capacitor-community/text-to-speech')
   nativeSpeaking = true
   try {
     await TextToSpeech.speak({
       text,
-      lang: 'it-IT',
+      lang,
       rate,
       category: 'playback',
     })
@@ -50,22 +51,25 @@ async function speakNative(text, { rate = 0.9, onEnd } = {}) {
   }
 }
 
+// `lang` (optionnel, défaut 'it-IT') : code de langue BCP 47 — permet de lire
+// une traduction française (« fr-FR ») avec la bonne voix plutôt que de
+// prononcer le texte français avec un accent italien.
 // `onWordBoundary({ charIndex })` (optionnel) : appelé à chaque frontière de
 // mot pendant la lecture — web uniquement, via l'événement `onboundary` de
 // SpeechSynthesisUtterance. Le plugin natif n'expose pas cet événement, et
 // certains moteurs web ne l'émettent pas non plus (Chrome avec des voix
 // distantes) : le callback peut donc ne jamais être appelé — les appelants
 // doivent le traiter comme une amélioration progressive.
-export function speakItalian(text, { rate = 0.9, onEnd, onWordBoundary } = {}) {
+export function speakItalian(text, { rate = 0.9, lang = 'it-IT', onEnd, onWordBoundary } = {}) {
   if (!ttsSupported) return
   if (isNative) {
-    speakNative(text, { rate, onEnd })
+    speakNative(text, { rate, lang, onEnd })
     return
   }
   window.speechSynthesis.cancel()
   const utterance = new SpeechSynthesisUtterance(text)
-  utterance.lang = 'it-IT'
-  const voice = italianVoice()
+  utterance.lang = lang
+  const voice = voiceFor(lang)
   if (voice) utterance.voice = voice
   utterance.rate = rate
   if (onEnd) {
