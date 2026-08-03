@@ -356,3 +356,110 @@ Conserver la page de référence, mais créer de petits exercices depuis les err
 L'application dispose maintenant d'une base crédible pour un apprentissage à 360°. La prochaine avancée ne viendra pas d'un nouveau module majeur, mais de l'orchestration des modules existants : une consigne adaptée, une production courte, un feedback priorisé, une seconde tentative et une révision au bon moment.
 
 La promesse pédagogique la plus juste serait : **« Chaque jour, Leggendo choisit avec vous une courte activité adaptée, vous fait utiliser l'italien, vous explique l'essentiel et vous aide à le retenir. »**
+
+## 10. Audit pédagogique de maturité — au-delà de l'ajout de fonctionnalités
+
+Cette troisième lecture tient compte des développements désormais présents : session composée, missions, continuité entre activités, seconde tentative, exercices issus des erreurs et indicateurs de confiance. Le produit a franchi le stade du prototype fonctionnel. Le prochain enjeu est la **validité pédagogique** : s'assurer que ce que l'application affiche comme progrès correspond réellement à une capacité transférable hors de l'application.
+
+### 10.1 Diagnostic synthétique
+
+| Axe | Maturité actuelle | Risque principal |
+|---|---|---|
+| Variété des activités | Élevée | Accumulation d'outils si la session composée n'est pas l'entrée dominante |
+| Boucle feedback → reprise | Bonne | La reprise vérifie surtout la proximité avec une correction modèle |
+| Adaptation au rythme | Bonne base | Durée et fréquence sont adaptées, mais la difficulté l'est encore peu |
+| Mesure de progression | Prudente | Activité et réussite immédiate peuvent encore être confondues avec maîtrise |
+| Écriture | Fonctionnelle et bien guidée | L'objectif communicatif n'est pas évalué explicitement |
+| Gamification | Saine | Missions identiques et peu renouvelées à terme |
+| Transfert entre compétences | Bien amorcé | Le transfert est mesuré par présence lexicale, pas encore par usage correct |
+| Positionnement CECR | Fragile | Un QCM court et une production isolée ne couvrent pas les descripteurs CECR |
+
+### 10.2 Ce que la boîte de texte fait déjà bien
+
+`WriteView.vue` possède les éléments attendus d'un environnement d'écriture pédagogique : mode libre, mode guidé, activité liée à une lecture, aides révélées progressivement, mots adaptés au niveau, correction structurée, sélection d'une ou deux erreurs prioritaires et seconde tentative. Le texte complet n'est pas ajouté au journal d'activité, ce qui limite aussi le risque de confidentialité.
+
+La hiérarchie cognitive est pertinente : l'apprenant peut produire seul, demander une aide graduée, comparer, comprendre, puis reformuler. Pour un public francophone, les explications simples en français réduisent la charge extrinsèque, surtout aux niveaux A1-A2.
+
+### 10.3 Limite majeure : corriger la langue ne suffit pas à réussir la tâche
+
+Le schéma de correction actuel évalue surtout quatre familles : grammaire, lexique, registre et orthographe. Il ne dit pas clairement si l'apprenant a atteint le but demandé. Un courriel grammaticalement correct peut échouer s'il ne demande pas la modification de réservation ; un résumé correct peut omettre l'idée centrale ; un avis peut juxtaposer des phrases sans justification.
+
+La correction devrait donc séparer deux couches :
+
+1. **Réussite communicative** : destinataire, intention, informations attendues, clarté globale.
+2. **Qualité linguistique** : correction, étendue lexicale, cohésion, registre et précision.
+
+Pour les modes guidé et lié au contenu, la consigne, le but et les éléments attendus doivent être envoyés au correcteur. Le retour peut rester très court : « objectif atteint », « partiellement atteint » ou « à compléter », suivi d'un seul conseil. Il ne faut pas transformer l'écran en grille scolaire exhaustive.
+
+### 10.4 La seconde tentative mesure actuellement l'imitation plus que le transfert
+
+La reprise compare la réponse de l'apprenant à la correction proposée. C'est utile pour une forme locale, mais une forte similarité ne prouve pas que la règle est comprise. Une copie presque exacte peut réussir sans récupération durable.
+
+Progression recommandée selon le type d'erreur :
+
+- tentative immédiate : corriger la phrase d'origine ;
+- rappel différé : compléter ou corriger la même règle quelques jours plus tard ;
+- transfert : produire une nouvelle phrase dans un autre contexte ;
+- consolidation : reconnaître quand la forme concurrente est, elle aussi, correcte.
+
+Le véritable indicateur de maîtrise doit être le succès différé dans un contexte nouveau, pas seulement `retrySuccess` juste après l'explication.
+
+### 10.5 Adapter la difficulté, pas seulement la durée
+
+Le moteur compose déjà une session de 5, 10 ou 20 minutes et tient compte des activités récentes. L'étape suivante consiste à ajuster la difficulté à partir de signaux observables : score de quiz, recours aux traductions, affichage de la transcription, aides utilisées en écriture, erreurs récurrentes et réussite différée.
+
+Une règle simple suffit pour commencer :
+
+- deux réussites autonomes comparables : proposer un contenu légèrement plus exigeant ;
+- réussite avec beaucoup d'aides : maintenir le niveau et retirer progressivement une aide ;
+- deux échecs ou abandons : réduire la longueur ou la complexité, sans rétrograder automatiquement le niveau affiché ;
+- erreur récurrente ciblée : conserver le niveau général et insérer une micro-activité de consolidation.
+
+Cette adaptation doit être expliquée en langage simple : « Nous gardons ce niveau pour vous aider à lire avec moins de traductions. »
+
+### 10.6 Positionnement CECR : reformuler les promesses
+
+Le test de niveau repose sur 10 à 16 QCM et la correction estime le niveau d'une production isolée. Ces informations sont utiles pour orienter le contenu, mais insuffisantes pour affirmer une maîtrise CECR globale. Les résultats doivent rester formulés comme des **indices de travail** : « niveau conseillé pour commencer », « niveau observé sur vos dernières productions », avec taille d'échantillon et confiance.
+
+Pour renforcer la validité sans construire un examen complet, le positionnement initial peut combiner :
+
+- un court QCM de langue et de compréhension ;
+- une auto-évaluation par situations réelles ;
+- une courte production facultative ;
+- une révision automatique de la recommandation après trois activités authentiques.
+
+### 10.7 Gamification évolutive
+
+Les missions actuelles sont pédagogiquement saines parce qu'elles récompensent l'écoute autonome, la réécriture et le réemploi. Avec seulement quelques missions fixes, elles risquent toutefois de devenir prévisibles.
+
+Il faut générer une mission quotidienne à partir du besoin réel, sans points artificiels :
+
+- nombreuses traductions : « lis un paragraphe sans traduction de phrase » ;
+- erreurs d'articles récurrentes : « réussis deux rappels sur les articles » ;
+- écoute peu pratiquée : « écoute avant d'afficher le texte » ;
+- vocabulaire revu mais peu transféré : « réutilise deux mots dans une phrase ».
+
+La récompense principale doit rester une preuve de capacité : « Aujourd'hui, vous avez compris un texte A2 sans transcription », plutôt qu'un total abstrait d'XP.
+
+### 10.8 Autonomie et résilience de la zone de texte
+
+La zone affiche une limite de caractères et fonctionne correctement au clavier, mais l'audit du code ne montre pas encore de sauvegarde locale automatique du brouillon. Sur mobile, une fermeture, un changement de page ou une perte de connexion peut donc détruire un effort important.
+
+À ajouter avant d'enrichir davantage la correction :
+
+- brouillon local par mode et par consigne ;
+- état « enregistré sur cet appareil » ;
+- confirmation avant de remplacer un brouillon lors d'un changement de sujet ;
+- possibilité de corriger plus tard si le réseau ou le quota est indisponible ;
+- compteur de mots en plus du compteur de caractères, avec une cible indicative et non bloquante.
+
+### 10.9 Priorités de la prochaine itération
+
+1. **Évaluer l'objectif communicatif** dans l'écriture guidée et liée au contenu.
+2. **Sauvegarder automatiquement les brouillons**, surtout sur mobile.
+3. **Mesurer la réussite différée et le transfert grammatical**, pas seulement la reprise immédiate.
+4. **Adapter progressivement la difficulté** à partir de l'usage réel des aides.
+5. **Rendre le positionnement CECR plus prudent et multimodal**.
+6. **Personnaliser les missions** selon une faiblesse observée.
+
+Le meilleur prochain développement n'est donc pas un nouveau module. C'est une amélioration du noyau : **une tâche claire, une production protégée, un feedback qui juge aussi l'intention, une reprise immédiate, puis une vérification différée dans un autre contexte**.
