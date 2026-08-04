@@ -338,7 +338,7 @@ onUnmounted(() => {
     <SiteHeader />
 
     <!-- Héros centré -->
-    <div class="stage">
+    <div class="stage" :class="{ dashboard: !showMarketing }">
       <div class="hero">
         <template v-if="showMarketing">
           <h1 class="title">Legg<em>endo</em></h1>
@@ -700,6 +700,20 @@ onUnmounted(() => {
   justify-content: center;
   min-height: 0;
   padding: 0 1.5rem;
+}
+
+/* App native, compte connecté : le titre/tagline marketing sont masqués
+   (showMarketing), la carte « percorso » est plus courte — la centrer
+   verticalement dans tout l'espace disponible laissait un grand vide au-
+   dessus. Alignée en haut à la place, pour aller droit au contenu utile.
+   flex: 1 est aussi retiré : sans ça, .stage s'étirait quand même sur tout
+   l'espace vertical restant (aligné en haut mais avec du vide en dessous),
+   repoussant .tool-grid — qui le suit comme frère, pas comme enfant —
+   d'autant plus bas. */
+.stage.dashboard {
+  flex: 0 0 auto;
+  align-items: flex-start;
+  padding-top: 0.8rem;
 }
 
 .hero {

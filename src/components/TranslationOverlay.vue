@@ -69,7 +69,9 @@ defineEmits(['close', 'speak', 'favorite'])
 .overlay {
   /* Le lecteur défile dans le layout scène : coordonnées de viewport */
   position: fixed;
-  z-index: 100;
+  /* Au-dessus de NativeTabBar/NativeAccountButton (z-index: 500) : un mot
+     traduit près du bas de l'écran ne doit jamais passer sous la barre. */
+  z-index: 600;
   max-width: 320px;
   background: #2c2620;
   color: #faf6f0;

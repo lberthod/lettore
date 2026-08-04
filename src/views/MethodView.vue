@@ -355,7 +355,8 @@ onUnmounted(() => {
 .method-overlay {
   position: fixed;
   inset: 0;
-  z-index: 50;
+  /* Au-dessus de NativeTabBar/NativeAccountButton (z-index: 500). */
+  z-index: 600;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1406,7 +1406,9 @@ article p:first-letter {
 .quiz-modal {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  /* Au-dessus de NativeTabBar/NativeAccountButton (z-index: 500) : sans ça,
+     la barre d'onglets native passait par-dessus le bas de la modale. */
+  z-index: 600;
   display: flex;
   align-items: center;
   justify-content: center;
