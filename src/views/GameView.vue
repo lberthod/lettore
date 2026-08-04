@@ -146,6 +146,7 @@ function backToMenu() {
     accent="chi"
     tagline="Quinze jeux courts pour réviser le vocabulaire, la grammaire et les textes italiens autrement."
     wide
+    :compact="!activeGame"
   >
     <template v-if="!activeGame">
       <div class="game-grid">
@@ -238,9 +239,35 @@ function backToMenu() {
   text-decoration: underline;
 }
 
+/* Mobile : les 15 jeux doivent tenir sur un seul écran sans défilement,
+   pas une carte par ligne (15 écrans à faire défiler) — grille compacte
+   icône + titre, description masquée (elle reste lisible dans l'écran du
+   jeu lui-même une fois ouvert). */
 @media (max-width: 480px) {
   .game-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .game-card {
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    padding: 0.6rem 0.3rem;
+    border-radius: 10px;
+  }
+
+  .game-icon {
+    font-size: 1.5rem;
+  }
+
+  .game-title {
+    font-size: 0.72rem;
+    line-height: 1.15;
+  }
+
+  .game-description {
+    display: none;
   }
 }
 </style>
