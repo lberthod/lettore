@@ -18,6 +18,11 @@ function accessLabel(book) {
 
 <template>
   <SceneLayout title="Classici" accent="del dominio pubblico" wide>
+    <!-- Symétrique du lien Testi → Classici (LibraryView.vue) : SiteHeader,
+         qui portait ce lien, est masqué en app native. -->
+    <p class="library-crosslink">
+      <RouterLink :to="{ name: 'library' }">← Retour aux textes libres</RouterLink>
+    </p>
     <p class="intro">
       Des œuvres classiques italiennes du domaine public, en texte authentique
       (non simplifié) — traduction au clic, lecture audio et quiz de
@@ -56,6 +61,13 @@ function accessLabel(book) {
 </template>
 
 <style scoped>
+.library-crosslink {
+  max-width: 620px;
+  margin: 0 auto 0.8rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 .intro {
   max-width: 46rem;
   margin: 0 auto 1.6rem;
@@ -131,5 +143,29 @@ function accessLabel(book) {
 .access.free {
   color: #4a7c59;
   background: rgba(74, 124, 89, 0.14);
+}
+
+/* Mobile : 16 livres en 1 colonne = beaucoup de défilement. Grille dense à
+   2 colonnes, méta secondaire (chapitres/mots) masquée pour garder des
+   cartes courtes — titre, auteur et niveau d'accès restent, l'essentiel
+   pour choisir un livre. */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .card {
+    padding: 0.8rem 0.9rem;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .meta,
+  .progress {
+    display: none;
+  }
 }
 </style>

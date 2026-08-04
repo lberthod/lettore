@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import {
@@ -9,6 +9,7 @@ import {
   sendVerificationEmail,
   refreshEmailVerified,
 } from '../lib/auth.js'
+import { isPremiumPlus } from '../lib/access.js'
 import {
   authProvider,
   reauthenticateWithPassword,
@@ -34,6 +35,38 @@ import {
 
 const router = useRouter()
 const error = ref('')
+
+// --- Menu « Plus d'outils » -----------------------------------------------
+// En app native, SiteHeader (menu + sous-menus Lessico/Scrivi) est masqué :
+// sans relais, une dizaine de pages deviennent injoignables (aucun lien
+// interne ne pointe vers elles). Profilo, seul onglet « fourre-tout » de la
+// barre native, en devient le point d'accès — voir « Optimisation
+// Mobile.md » Phase 1 (suite) et Sprint 1.2 pour le choix des 5 onglets.
+const premiumPlus = ref(false)
+watch(
+  currentUser,
+  async (user) => {
+    premiumPlus.value = user ? await isPremiumPlus() : false
+  },
+  { immediate: true }
+)
+
+const TOOLS = [
+  { to: { name: 'books' }, icon: '📚', label: 'Classici' },
+  { to: { name: 'level-test' }, icon: '🎯', label: 'Test de niveau' },
+  { to: { name: 'vocabulary' }, icon: '🗂️', label: 'Vocabolario' },
+  { to: { name: 'verbs' }, icon: '🔤', label: 'Verbi' },
+  { to: { name: 'grammar' }, icon: '📐', label: 'Grammatica' },
+  { to: { name: 'dialogo-parlo' }, icon: '🗣️', label: 'DialogoParlo' },
+  { to: { name: 'create-text' }, icon: '✍️', label: 'Créer son texte' },
+  { to: { name: 'write' }, icon: '📝', label: 'Scrivi', premiumPlus: true },
+  { to: { name: 'dialogue' }, icon: '💬', label: 'Dialogo', premiumPlus: true },
+  { to: { name: 'news' }, icon: '📰', label: 'Notizie', premiumPlus: true },
+  { to: { name: 'my-texts' }, icon: '📄', label: 'Mes textes' },
+  { to: { name: 'about' }, icon: 'ℹ️', label: 'À propos' },
+  { to: { name: 'method' }, icon: '🧭', label: 'Méthode' },
+]
+const tools = computed(() => TOOLS.filter((t) => !t.premiumPlus || premiumPlus.value))
 
 // --- Dashboard de progression ---
 // dueFavorites/dueErrorCards dépendent de Date.now() : recalculés via progress
@@ -327,6 +360,14 @@ async function confirmDelete() {
         <p v-if="verifyError" class="error">{{ verifyError }}</p>
       </div>
 
+      <h2>Plus d'outils</h2>
+      <div class="tool-grid">
+        <RouterLink v-for="t in tools" :key="t.label" :to="t.to" class="tool-card">
+          <span class="tool-icon" aria-hidden="true">{{ t.icon }}</span>
+          <span class="tool-label">{{ t.label }}</span>
+        </RouterLink>
+      </div>
+
       <h2>Ma progression</h2>
       <p v-if="positioningReview.ready" class="positioning-note">
         📍 {{ positioningReview.note }}
@@ -482,6 +523,38 @@ async function confirmDelete() {
 <style scoped>
 .not-logged {
   margin: 0;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+  padding: 0.6rem 0.3rem;
+  border: 1px solid rgba(176, 105, 46, 0.2);
+  border-radius: 10px;
+  background: #fffaf3;
+  text-decoration: none;
+  color: #2c2620;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.tool-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .verify-box {

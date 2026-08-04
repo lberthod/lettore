@@ -38,6 +38,7 @@ const tabs = computed(() =>
       :to="t.to"
       class="tab"
       :class="{ active: activeTab === t.tab }"
+      :aria-current="activeTab === t.tab ? 'page' : undefined"
       @click="tapFeedback()"
     >
       <span class="tab-icon" aria-hidden="true">{{ t.icon }}</span>
@@ -68,7 +69,9 @@ const tabs = computed(() =>
   padding: 0.3rem 0.2rem;
   border-radius: 10px;
   text-decoration: none;
-  color: #9a8f80;
+  /* #6b6156 sur #fffaf3 : contraste 5.83:1, conforme WCAG AA (le
+     #9a8f80 d'origine ne passait pas à 0.68rem — 3.06:1). */
+  color: #6b6156;
   font-size: 0.68rem;
   font-weight: 600;
 }
@@ -79,7 +82,8 @@ const tabs = computed(() =>
 }
 
 .tab.active {
-  color: #b0692e;
+  /* #8a5a2b sur #fffaf3 : 5.65:1 (le #b0692e d'origine faisait 4.12:1). */
+  color: #8a5a2b;
   background: rgba(176, 105, 46, 0.1);
 }
 </style>

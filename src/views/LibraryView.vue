@@ -225,6 +225,12 @@ function listenTo(t) {
 <template>
   <SceneLayout title="Biblio" accent="teca" tagline="Tous les textes, de A1 à C2" bare wide>
     <div class="library">
+      <!-- En app native, SiteHeader (qui portait ce lien) est masqué : sans
+           ça, Classici devient injoignable — voir « Optimisation Mobile.md »
+           Phase 1 Sprint 1.3 (suite). -->
+      <p class="classici-crosslink">
+        <RouterLink :to="{ name: 'books' }">📚 Découvrir aussi les Classici (Cappuccetto Rosso, Pollicino…) →</RouterLink>
+      </p>
       <!-- Aperçu gratuit : rappel discret d'invitation à passer Premium -->
       <p v-if="authResolved && !catalogAccess" class="preview-note">
         {{ EXAMPLE_COUNT }} textes en accès libre.
@@ -443,6 +449,13 @@ function listenTo(t) {
   font-size: 0.85rem;
   text-align: center;
   color: rgba(44, 38, 32, 0.6);
+}
+
+.classici-crosslink {
+  max-width: 620px;
+  margin: 0 auto 0.8rem;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .preview-note a {
