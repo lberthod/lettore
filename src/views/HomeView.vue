@@ -146,6 +146,24 @@ function takeRestDay() {
 // (voir lib/missions.js#selectMissionsForToday).
 const missions = computed(() => (loggedIn.value ? selectMissionsForToday(progress) : []))
 
+// --- Plus d'outils (voir gabarit dans le template) ---
+const TOOLS = [
+  { to: { name: 'books' }, icon: '📚', label: 'Classici' },
+  { to: { name: 'level-test' }, icon: '🎯', label: 'Test de niveau' },
+  { to: { name: 'vocabulary' }, icon: '🗂️', label: 'Vocabolario' },
+  { to: { name: 'verbs' }, icon: '🔤', label: 'Verbi' },
+  { to: { name: 'grammar' }, icon: '📐', label: 'Grammatica' },
+  { to: { name: 'dialogo-parlo' }, icon: '🗣️', label: 'DialogoParlo' },
+  { to: { name: 'create-text' }, icon: '✍️', label: 'Créer son texte' },
+  { to: { name: 'write' }, icon: '📝', label: 'Scrivi', premiumPlus: true },
+  { to: { name: 'dialogue' }, icon: '💬', label: 'Dialogo', premiumPlus: true },
+  { to: { name: 'news' }, icon: '📰', label: 'Notizie', premiumPlus: true },
+  { to: { name: 'my-texts' }, icon: '📄', label: 'Mes textes' },
+  { to: { name: 'about' }, icon: 'ℹ️', label: 'À propos' },
+  { to: { name: 'method' }, icon: '🧭', label: 'Méthode' },
+]
+const tools = computed(() => TOOLS.filter((t) => !t.premiumPlus || premiumIA.value))
+
 const STEP_LABELS = {
   review: 'Réviser',
   lettura: 'Lire',
@@ -449,6 +467,18 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <!-- Plus d'outils : en app native, SiteHeader (menu + sous-menus
+         Lessico/Scrivi) est masqué — sans relais, une dizaine de pages
+         deviennent injoignables (aucun lien interne ne pointe vers elles).
+         Affiché sous le parcours du jour plutôt que dans Profil, pour rester
+         à portée immédiate depuis l'accueil. -->
+    <div v-if="!showMarketing" class="tool-grid">
+      <RouterLink v-for="t in tools" :key="t.label" :to="t.to" class="tool-card">
+        <span class="tool-icon" aria-hidden="true">{{ t.icon }}</span>
+        <span class="tool-label">{{ t.label }}</span>
+      </RouterLink>
+    </div>
+
     <!-- Bas d'écran : trois points (argumentaire marketing, inutile une fois
          convaincu — masqué en app native pour un compte connecté) -->
     <div v-if="showMarketing" class="features-band">
@@ -489,7 +519,11 @@ onUnmounted(() => {
   z-index: 50;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /* Web (visiteur) : le héros tient dans un écran, ce défilement ne se
+     déclenche jamais en pratique. App native connectée : le parcours du
+     jour + « Plus d'outils » peuvent dépasser la hauteur d'un petit
+     téléphone — overflow: hidden les aurait rendus inatteignables. */
+  overflow-y: auto;
   background: linear-gradient(180deg, #fdf3e3 0%, #f7e3c8 100%);
   /* position: fixed ignore le padding de body (env(safe-area-inset-*)) :
      réservé ici pour ne pas passer sous la barre de statut / de gestes
@@ -1003,6 +1037,44 @@ onUnmounted(() => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* --- Plus d'outils (app native, compte connecté) --- */
+
+.tool-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+  padding: 0.6rem 0.3rem;
+  border: 1px solid rgba(176, 105, 46, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 250, 243, 0.85);
+  text-decoration: none;
+  color: #2c2620;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.tool-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 /* --- Bas d'écran --- */

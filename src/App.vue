@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import NetworkBanner from './components/NetworkBanner.vue'
 import NativeTabBar from './components/NativeTabBar.vue'
+import NativeAccountButton from './components/NativeAccountButton.vue'
 import { initProgressSync } from './lib/progressSync.js'
 import { isNativeApp } from './lib/platform.js'
 import { initBackButton } from './lib/backButton.js'
@@ -32,6 +33,7 @@ initStatusBar()
     </Transition>
   </RouterView>
   <NativeTabBar v-if="isNativeApp" />
+  <NativeAccountButton v-if="isNativeApp" />
 </template>
 
 <style>

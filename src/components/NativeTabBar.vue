@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { isLoggedIn } from '../lib/access.js'
 import { tapFeedback } from '../lib/haptics.js'
 
 // Barre d'onglets de l'app native (remplace SiteHeader/SiteFooter, voir
@@ -9,31 +8,24 @@ import { tapFeedback } from '../lib/haptics.js'
 // route.meta.tab (router.js) plutôt que sur une liste de noms de route codée
 // ici, pour qu'une route enfant (ex. le lecteur /testo/:id) garde l'onglet
 // parent (Testi) surligné sans entretien à deux endroits.
+//
+// Le compte (Profilo) n'est plus un onglet : voir NativeAccountButton.vue
+// (icône en haut à droite, sur tout écran natif).
 const TABS = [
   { tab: 'home', to: { name: 'home' }, label: 'Accueil', icon: '🏠' },
   { tab: 'testi', to: { name: 'library' }, label: 'Testi', icon: '📖' },
   { tab: 'giochi', to: { name: 'games' }, label: 'Giochi', icon: '🎮' },
   { tab: 'lessico', to: { name: 'dictionary' }, label: 'Lessico', icon: '📚' },
-  { tab: 'profilo', to: { name: 'profile' }, label: 'Profilo', icon: '👤' },
 ]
 
 const route = useRoute()
 const activeTab = computed(() => route.meta.tab)
-
-// L'onglet Profilo mène à la connexion tant qu'il n'y a pas de compte —
-// ProfileView exige requiresAuth, inutile d'y rediriger pour se refaire
-// rediriger vers /connexion.
-const tabs = computed(() =>
-  TABS.map((t) =>
-    t.tab === 'profilo' && !isLoggedIn() ? { ...t, to: { name: 'login' } } : t
-  )
-)
 </script>
 
 <template>
   <nav class="native-tab-bar" aria-label="Navigation principale">
     <RouterLink
-      v-for="t in tabs"
+      v-for="t in TABS"
       :key="t.tab"
       :to="t.to"
       class="tab"
