@@ -19,13 +19,13 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: findRoute('/'),
+      meta: { ...findRoute('/'), tab: 'home' },
     },
     {
       path: '/textes',
       name: 'library',
       component: () => import('./views/LibraryView.vue'),
-      meta: findRoute('/textes'),
+      meta: { ...findRoute('/textes'), tab: 'testi' },
     },
     {
       path: '/testo/:id',
@@ -33,6 +33,7 @@ const router = createRouter({
       // Chargée à la demande : la page d'accueil n'embarque pas le lecteur
       component: () => import('./views/ReaderView.vue'),
       props: true,
+      meta: { tab: 'testi' },
       beforeEnter: async (to) => {
         // Texte du catalogue : toujours accessible, connecté ou non — les
         // métadonnées publiques (titre, niveau, extrait) et un paywall
@@ -55,13 +56,14 @@ const router = createRouter({
       path: '/classici',
       name: 'books',
       component: () => import('./views/BooksView.vue'),
-      meta: findRoute('/classici'),
+      meta: { ...findRoute('/classici'), tab: 'testi' },
     },
     {
       path: '/classici/:bookId/:chapterId',
       name: 'book-reader',
       component: () => import('./views/BookReaderView.vue'),
       props: true,
+      meta: { tab: 'testi' },
       // Chapitre Classici : toujours accessible, comme /testo/:id ci-dessus —
       // BookReaderView affiche les métadonnées publiques (titre, auteur,
       // niveau) et un paywall quand la lecture complète n'est pas autorisée.
@@ -105,49 +107,49 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: () => import('./views/ContactView.vue'),
-      meta: findRoute('/contact'),
+      meta: { ...findRoute('/contact'), tab: 'profilo' },
     },
     {
       path: '/abonnement',
       name: 'pricing',
       component: () => import('./views/PricingView.vue'),
-      meta: findRoute('/abonnement'),
+      meta: { ...findRoute('/abonnement'), tab: 'profilo' },
     },
     {
       path: '/connexion',
       name: 'login',
       component: () => import('./views/LoginView.vue'),
-      meta: findRoute('/connexion'),
+      meta: { ...findRoute('/connexion'), tab: 'profilo' },
     },
     {
       path: '/profil',
       name: 'profile',
       component: () => import('./views/ProfileView.vue'),
-      meta: { ...findRoute('/profil'), requiresAuth: true },
+      meta: { ...findRoute('/profil'), requiresAuth: true, tab: 'profilo' },
     },
     {
       path: '/mentions-legales',
       name: 'legal',
       component: () => import('./views/LegalView.vue'),
-      meta: findRoute('/mentions-legales'),
+      meta: { ...findRoute('/mentions-legales'), tab: 'profilo' },
     },
     {
       path: '/confidentialite',
       name: 'privacy',
       component: () => import('./views/PrivacyView.vue'),
-      meta: findRoute('/confidentialite'),
+      meta: { ...findRoute('/confidentialite'), tab: 'profilo' },
     },
     {
       path: '/conditions',
       name: 'terms',
       component: () => import('./views/TermsView.vue'),
-      meta: findRoute('/conditions'),
+      meta: { ...findRoute('/conditions'), tab: 'profilo' },
     },
     {
       path: '/creer-son-texte',
       name: 'create-text',
       component: () => import('./views/CreateTextView.vue'),
-      meta: { ...findRoute('/creer-son-texte'), requiresAuth: true },
+      meta: { ...findRoute('/creer-son-texte'), requiresAuth: true, tab: 'profilo' },
     },
     {
       path: '/scrivi',
@@ -162,6 +164,7 @@ const router = createRouter({
         description:
           'Écrivez en italien et recevez une correction pédagogique : erreurs expliquées en français, niveau estimé — formule Premium IA.',
         requiresAuth: true,
+        tab: 'profilo',
       },
     },
     {
@@ -177,6 +180,7 @@ const router = createRouter({
         description:
           "Dialoguez en italien avec l'IA dans des scènes du quotidien (bar, médecin, gare…) : réponses à votre niveau et bilan corrigé — formule Premium IA.",
         requiresAuth: true,
+        tab: 'profilo',
       },
     },
     {
@@ -188,25 +192,37 @@ const router = createRouter({
         description:
           "Textes d'actualité italienne, suisse et française, générés au fil de leur publication et adaptés à votre niveau — formule Premium+.",
         requiresAuth: true,
+        tab: 'testi',
       },
     },
     {
       path: '/mes-textes',
       name: 'my-texts',
       component: () => import('./views/MyTextsView.vue'),
-      meta: { ...findRoute('/mes-textes'), requiresAuth: true },
+      meta: { ...findRoute('/mes-textes'), requiresAuth: true, tab: 'profilo' },
     },
     {
       path: '/parole',
       name: 'words',
       component: () => import('./views/WordsView.vue'),
-      meta: { ...findRoute('/parole'), requiresAuth: true },
+      meta: { ...findRoute('/parole'), requiresAuth: true, tab: 'profilo' },
     },
     {
       path: '/vocabolario',
       name: 'vocabulary',
       component: () => import('./views/VocabularyView.vue'),
-      meta: { ...findRoute('/vocabolario'), requiresAuth: true },
+      meta: { ...findRoute('/vocabolario'), requiresAuth: true, tab: 'lessico' },
+    },
+    {
+      path: '/dialogoparlo',
+      name: 'dialogo-parlo',
+      component: () => import('./views/DialogoParloView.vue'),
+      meta: {
+        title: 'DialogoParlo — Leggendo',
+        description:
+          'Dialogues en italien à écouter (voix homme/femme) : vie quotidienne et histoire, du niveau A1 à B2.',
+        tab: 'lessico',
+      },
     },
     {
       path: '/dizionario/:word?',
@@ -217,6 +233,7 @@ const router = createRouter({
         title: 'Dizionario — Leggendo',
         description:
           'Dictionnaire italien-français : définition, nature grammaticale, exemples et conjugaison pour chaque mot.',
+        tab: 'lessico',
       },
     },
     {
@@ -227,19 +244,20 @@ const router = createRouter({
       meta: {
         title: 'Coniugazione — Leggendo',
         description: 'Tableau de conjugaison complet des verbes italiens.',
+        tab: 'lessico',
       },
     },
     {
       path: '/verbi',
       name: 'verbs',
       component: () => import('./views/VerbsView.vue'),
-      meta: findRoute('/verbi'),
+      meta: { ...findRoute('/verbi'), tab: 'lessico' },
     },
     {
       path: '/grammatica',
       name: 'grammar',
       component: () => import('./views/GrammarView.vue'),
-      meta: findRoute('/grammatica'),
+      meta: { ...findRoute('/grammatica'), tab: 'lessico' },
     },
     {
       path: '/test-de-niveau',
@@ -251,7 +269,7 @@ const router = createRouter({
       path: '/giochi',
       name: 'games',
       component: () => import('./views/GameView.vue'),
-      meta: findRoute('/giochi'),
+      meta: { ...findRoute('/giochi'), tab: 'giochi' },
     },
     {
       path: '/admin',

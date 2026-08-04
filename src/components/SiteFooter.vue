@@ -1,10 +1,13 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { isNativeApp } from '../lib/platform.js'
 </script>
 
 <template>
-  <!-- Pied de page commun à toutes les pages (source unique) -->
-  <footer class="bottom">
+  <!-- Pied de page commun à toutes les pages (source unique). Masqué en app
+       native : les liens légaux/compte vivent dans Profil (ProfileView),
+       voir « Optimisation Mobile.md » Phase 1 Sprint 1.3. -->
+  <footer v-if="!isNativeApp" class="bottom">
     <nav class="legal">
       <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
       <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>

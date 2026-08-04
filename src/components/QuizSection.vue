@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { resultFeedback } from '../lib/haptics.js'
 
 const props = defineProps({
   questions: { type: Array, required: true },
@@ -38,6 +39,7 @@ const score = computed(
 function pick(qi, oi) {
   if (answers.value[qi] !== null) return
   answers.value[qi] = oi
+  resultFeedback(oi === quiz.value[qi].correct)
   if (answers.value.every((a) => a !== null)) {
     emit('completed', score.value)
   }

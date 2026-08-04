@@ -4,6 +4,7 @@ import { RouterLink, useRoute } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
 import { isLoggedIn, isAdmin, isPremiumPlus } from '../lib/access.js'
 import { progress } from '../progress.js'
+import { isNativeApp } from '../lib/platform.js'
 
 // « Textes » et « Mes mots » ne s'affichent qu'une fois connecté
 const loggedIn = computed(() => isLoggedIn())
@@ -28,7 +29,7 @@ watch(() => route.fullPath, () => (menuOpen.value = false))
 // Sous-menu « Lessico » : regroupe les outils lexicaux pour désencombrer la barre
 const dictMenuOpen = ref(false)
 const dictMenuEl = ref(null)
-const dictNames = ['dictionary', 'verbs', 'grammar', 'vocabulary']
+const dictNames = ['dictionary', 'verbs', 'grammar', 'vocabulary', 'dialogo-parlo']
 const dictActive = computed(() => dictNames.includes(route.name))
 watch(() => route.fullPath, () => (dictMenuOpen.value = false))
 
@@ -60,8 +61,10 @@ watch(writeMenuOpen, (open) => {
 </script>
 
 <template>
-  <!-- Barre de navigation commune à toutes les pages (source unique) -->
-  <header class="chrome">
+  <!-- Barre de navigation commune à toutes les pages (source unique).
+       Masquée en app native : remplacée par NativeTabBar (App.vue), voir
+       « Optimisation Mobile.md » Phase 1. -->
+  <header v-if="!isNativeApp" class="chrome">
     <div class="chrome-bar">
       <RouterLink class="chrome-brand" :to="{ name: 'home' }">Legg<em>endo</em></RouterLink>
       <button
@@ -119,6 +122,7 @@ watch(writeMenuOpen, (open) => {
           <RouterLink :to="{ name: 'verbs' }">Verbi</RouterLink>
           <RouterLink :to="{ name: 'grammar' }">Grammatica</RouterLink>
           <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">Vocabolario</RouterLink>
+          <RouterLink :to="{ name: 'dialogo-parlo' }">DialogoParlo</RouterLink>
         </div>
       </div>
       <RouterLink v-if="loggedIn" :to="{ name: 'words' }">

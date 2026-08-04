@@ -461,6 +461,21 @@ async function confirmDelete() {
       Vous n'êtes pas connecté.
       <RouterLink :to="{ name: 'login' }">Se connecter</RouterLink>
     </p>
+
+    <!-- En app native, ces liens n'apparaissent nulle part ailleurs :
+         SiteFooter (qui les portait sur le web) se masque en natif — voir
+         « Optimisation Mobile.md » Phase 1 Sprint 1.3. Affichés ici aussi
+         sur le web : pas de duplication gênante, juste un raccourci de plus. -->
+    <div class="legal-links">
+      <h2>Informations légales</h2>
+      <nav class="legal-nav">
+        <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
+        <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
+        <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
+        <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>
+        <RouterLink :to="{ name: 'terms' }">CGU / CGV</RouterLink>
+      </nav>
+    </div>
   </SceneLayout>
 </template>
 
@@ -750,5 +765,22 @@ async function confirmDelete() {
 .delete-actions {
   display: flex;
   gap: 0.6rem;
+}
+
+.legal-links {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(176, 105, 46, 0.15);
+}
+
+.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+}
+
+.legal-nav a {
+  font-size: 0.85rem;
+  color: #6b6156;
 }
 </style>

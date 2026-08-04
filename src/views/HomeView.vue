@@ -21,6 +21,7 @@ import {
   loadYesterdaySessionTypes,
 } from '../lib/dailySession.js'
 import { selectMissionsForToday } from '../lib/missions.js'
+import { isNativeApp } from '../lib/platform.js'
 
 
 // Mots italiens qui flottent dans le ciel — cliquables : la traduction apparaît
@@ -60,6 +61,10 @@ function lyr(depth) {
 // repli `step` (une seule action, règles historiques de `nextStep`)
 // s'affiche instantanément pendant ce court chargement.
 const loggedIn = computed(() => isLoggedIn())
+// App native + connecté : on saute la landing marketing (déjà « convaincu »,
+// c'est un compte qui revient) pour aller droit au tableau de bord
+// « Il tuo percorso » ci-dessous — voir « Optimisation Mobile.md » Phase 2.
+const showMarketing = computed(() => !(isNativeApp && loggedIn.value))
 const textsIndex = ref([])
 const premiumIA = ref(false)
 const step = computed(() =>
@@ -317,8 +322,10 @@ onUnmounted(() => {
     <!-- Héros centré -->
     <div class="stage">
       <div class="hero">
-        <h1 class="title">Legg<em>endo</em></h1>
-        <p class="tagline">Apprendre l'italien en lisant</p>
+        <template v-if="showMarketing">
+          <h1 class="title">Legg<em>endo</em></h1>
+          <p class="tagline">Apprendre l'italien en lisant</p>
+        </template>
 
         <!-- Utilisateur connecté : une seule action explicite, la prochaine
              étape du parcours (règles transparentes dans src/lib/percorso.js). -->
@@ -442,8 +449,9 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <!-- Bas d'écran : trois points -->
-    <div class="features-band">
+    <!-- Bas d'écran : trois points (argumentaire marketing, inutile une fois
+         convaincu — masqué en app native pour un compte connecté) -->
+    <div v-if="showMarketing" class="features-band">
       <div class="features">
         <div class="feature">
           <span class="feature-icon" aria-hidden="true">☀︎</span>
