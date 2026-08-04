@@ -819,8 +819,9 @@ onBeforeUnmount(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.1rem;
-  height: 2.1rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.1). */
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid rgba(138, 90, 43, 0.35);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.65);
@@ -957,11 +958,14 @@ article p:first-letter {
 }
 
 .punct {
+  display: inline-block;
   cursor: pointer;
   color: #b0692e;
   font-weight: 700;
   border-radius: 3px;
-  padding: 0 0.1em;
+  /* Zone cliquable élargie (Analyse Optimisation UX Mobile.md Sprint 1.1). */
+  padding: 0.3em 0.2em;
+  margin: -0.3em -0.1em;
   transition: background 0.1s;
 }
 
@@ -1102,8 +1106,9 @@ article p:first-letter {
   position: absolute;
   top: 0.8rem;
   right: 0.9rem;
-  width: 2rem;
-  height: 2rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.1). */
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid rgba(138, 90, 43, 0.35);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);

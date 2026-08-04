@@ -936,7 +936,11 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
 .link-btn {
   background: none;
   border: none;
-  padding: 0;
+  /* Zone cliquable élargie (Analyse Optimisation UX Mobile.md Phase 4,
+     cohérence avec Sprint 1.5/1.6) : liens texte répétés (Réessayer,
+     Autre situation…) sans padding jusqu'ici. */
+  padding: 0.35rem 0.1rem;
+  margin: -0.35rem -0.1rem;
   color: #b0692e;
   text-decoration: underline;
   cursor: pointer;

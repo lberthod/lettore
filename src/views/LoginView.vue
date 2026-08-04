@@ -167,4 +167,12 @@ async function apple() {
   font-size: 0.9rem;
   line-height: 1.8;
 }
+
+.switcher a {
+  /* Zone cliquable verticale élargie (Analyse Optimisation UX Mobile.md
+     Sprint 1.6) : « Créer un compte »/« Mot de passe oublié » n'avaient
+     que la hauteur de ligne du texte comme cible. */
+  display: inline-block;
+  padding: 0.3rem 0;
+}
 </style>

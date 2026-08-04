@@ -128,12 +128,16 @@ li {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  align-items: flex-start;
+  /* Réponses en pleine largeur plutôt qu'ajustées au texte (Analyse
+     Optimisation UX Mobile.md Sprint 1.2) : une réponse courte (« Sì »)
+     n'avait qu'une cible tactile étroite. */
+  align-items: stretch;
 }
 
 .option {
   text-align: left;
-  padding: 0.45rem 0.9rem;
+  /* Padding vertical élargi : ~44px de haut (était 0.45rem, ~33px). */
+  padding: 0.7rem 0.9rem;
   border: 1px solid #d8cfc2;
   border-radius: 8px;
   background: #faf6f0;
@@ -192,7 +196,7 @@ li {
 }
 
 .retry {
-  padding: 0.35rem 0.9rem;
+  padding: 0.6rem 0.9rem;
   border: 1px solid #b0692e;
   border-radius: 999px;
   background: #fff;

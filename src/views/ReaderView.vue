@@ -964,8 +964,10 @@ onBeforeUnmount(() => {
   color: inherit;
   cursor: pointer;
   font-size: 0.8rem;
-  padding: 0 0.2rem;
-  margin-left: 0.3rem;
+  /* Zone cliquable ≥44px (Analyse Optimisation UX Mobile.md Sprint 1.1) :
+     le padding seul agrandit la cible sans changer la taille du glyphe. */
+  padding: 0.6rem;
+  margin: -0.6rem -0.6rem -0.6rem 0.3rem;
   opacity: 0.7;
 }
 
@@ -991,8 +993,10 @@ onBeforeUnmount(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.1rem;
-  height: 2.1rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.1) : c'était 2.1rem
+     (33.6px), sous la barre du lecteur — le contrôle le plus utilisé. */
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid rgba(138, 90, 43, 0.35);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.65);
@@ -1193,11 +1197,16 @@ article p:first-letter {
 }
 
 .punct {
+  display: inline-block;
   cursor: pointer;
   color: #b0692e;
   font-weight: 700;
   border-radius: 3px;
-  padding: 0 0.1em;
+  /* Zone cliquable élargie (Analyse Optimisation UX Mobile.md Sprint 1.1) :
+     la cible était réduite à la largeur du seul caractère de ponctuation —
+     action phare du lecteur (traduire une phrase). */
+  padding: 0.3em 0.2em;
+  margin: -0.3em -0.1em;
   transition: background 0.1s;
 }
 
@@ -1215,22 +1224,25 @@ article p:first-letter {
   align-items: center;
   justify-content: center;
   vertical-align: baseline;
-  width: 1.35em;
-  height: 1.35em;
-  margin: 0 0.15em;
+  /* Agrandi + moins estompé par défaut (Analyse Optimisation UX Mobile.md
+     Sprint 1.1) : à 1.35em/opacité 0.4 c'était à la fois petit et peu
+     visible, sur le bouton le plus répété du lecteur (après chaque phrase). */
+  width: 1.8em;
+  height: 1.8em;
+  margin: 0 0.1em;
   padding: 0;
   border: none;
   border-radius: 50%;
   background: transparent;
   color: #b0692e;
-  opacity: 0.4;
+  opacity: 0.6;
   cursor: pointer;
   transition: opacity 0.12s, background 0.12s, color 0.12s;
 }
 
 .drill-btn svg {
-  width: 0.72em;
-  height: 0.72em;
+  width: 0.85em;
+  height: 0.85em;
 }
 
 .sentence:hover .drill-btn,
@@ -1458,8 +1470,9 @@ article p:first-letter {
   position: absolute;
   top: 0.8rem;
   right: 0.9rem;
-  width: 2rem;
-  height: 2rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.1). */
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid rgba(138, 90, 43, 0.35);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);

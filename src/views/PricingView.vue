@@ -277,6 +277,7 @@ async function restore() {
           <template v-else>
             Paiement sécurisé par Stripe. Résiliable à tout moment.
           </template>
+          <br />
           Voir les
           <RouterLink :to="{ name: 'terms' }">conditions générales</RouterLink>.
         </p>
@@ -443,7 +444,8 @@ async function restore() {
 }
 
 .toggle-btn {
-  padding: 0.4rem 1.1rem;
+  /* ~44px de haut (Analyse Optimisation UX Mobile.md Sprint 1.5). */
+  padding: 0.65rem 1.1rem;
   border: none;
   border-radius: 999px;
   background: transparent;
@@ -470,6 +472,16 @@ async function restore() {
   text-align: left;
   opacity: 0;
   animation: appear 0.9s ease-out 1.2s forwards;
+}
+
+/* 1 colonne pleine largeur sur mobile (Analyse Optimisation UX Mobile.md
+   Sprint 3.2) : auto-fit/minmax(190px,1fr) livrait un nombre de colonnes
+   non contrôlé selon la largeur exacte de l'écran — même logique que le
+   correctif déjà fait sur les grilles Giochi/Classici. */
+@media (max-width: 480px) {
+  .plans {
+    grid-template-columns: 1fr;
+  }
 }
 
 .plan {
@@ -613,9 +625,13 @@ async function restore() {
 }
 
 .link-btn {
-  display: inline;
+  display: inline-block;
+  /* Zone cliquable élargie + séparé visuellement du lien CGU adjacent
+     (Analyse Optimisation UX Mobile.md Sprint 1.5 — <br> ajouté dans le
+     template) : deux liens minuscules côte à côte dans le même
+     paragraphe, risque de toucher le mauvais. */
   margin: 0 0 0 0.3rem;
-  padding: 0;
+  padding: 0.5rem 0.2rem;
   border: none;
   background: none;
   font: inherit;

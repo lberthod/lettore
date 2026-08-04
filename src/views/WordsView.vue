@@ -11,7 +11,7 @@ import {
   logActivity,
   MAX_BOX,
 } from '../progress.js'
-import { ttsSupported, speakItalian } from '../tts.js'
+import { ttsSupported, speakItalian, stopSpeaking } from '../tts.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 import { isPremiumPlus } from '../lib/access.js'
@@ -215,6 +215,7 @@ onMounted(() => {
 })
 onUnmounted(() => {
   document.body.style.overflow = ''
+  stopSpeaking()
 })
 </script>
 
@@ -537,6 +538,12 @@ onUnmounted(() => {
   max-width: 720px;
   margin: 0 auto;
   padding: 1.6rem 1.5rem 0;
+  /* Filet de sécurité (Analyse Optimisation UX Mobile.md Sprint 3.1) :
+     .review-card (état « en révision ») est un enfant direct de .stage,
+     sans scroll interne propre contrairement à .list — sur un petit écran
+     ou clavier ouvert sur .exercise-input, le contenu pouvait dépasser et
+     devenir inatteignable (.words-screen est overflow: hidden). */
+  overflow-y: auto;
 }
 
 .head {
@@ -638,10 +645,16 @@ onUnmounted(() => {
 }
 
 .trash {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 0.85rem;
+  /* Zone cliquable ≥44px (Analyse Optimisation UX Mobile.md Sprint 1.3). */
+  width: 2.75rem;
+  height: 2.75rem;
   padding: 0.1rem;
   opacity: 0.55;
 }
@@ -863,11 +876,17 @@ onUnmounted(() => {
 }
 
 .speak {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 0.85rem;
-  padding: 0 0.2rem;
+  /* Zone cliquable ≥44px (Analyse Optimisation UX Mobile.md Sprint 1.3). */
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.1rem;
   opacity: 0.7;
 }
 
@@ -904,7 +923,9 @@ onUnmounted(() => {
 .actions {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  /* Écart élargi (Analyse Optimisation UX Mobile.md Sprint 1.3) : réduit le
+     risque de mistap entre le lien source et le bouton ✕ adjacents. */
+  gap: 0.9rem;
 }
 
 .source {
@@ -918,11 +939,17 @@ onUnmounted(() => {
 }
 
 .remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   color: #a34430;
   cursor: pointer;
   font-size: 0.85rem;
+  /* Zone cliquable ≥44px (Analyse Optimisation UX Mobile.md Sprint 1.3). */
+  width: 2.75rem;
+  height: 2.75rem;
   padding: 0.1rem;
   opacity: 0.6;
 }
