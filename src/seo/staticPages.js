@@ -99,6 +99,12 @@ export const ROUTES = [
   { path: '/mentions-legales', title: 'Mentions légales — Leggendo' },
   { path: '/confidentialite', title: 'Confidentialité — Leggendo' },
   { path: '/conditions', title: 'CGU / CGV — Leggendo' },
+  {
+    path: '/deleteAccount',
+    title: 'Supprimer mon compte — Leggendo',
+    description:
+      'Comment supprimer votre compte Leggendo et vos données, depuis le site ou les applications Android et iOS.',
+  },
   { path: '/connexion', title: 'Connexion — Leggendo', noindex: true },
   { path: '/profil', title: 'Profil — Leggendo', noindex: true },
   {

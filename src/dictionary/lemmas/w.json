@@ -1,52 +1,68 @@
 {
   "weekend": {
-    "lemma": "weekend",
-    "pos": "nome maschile invariabile",
-    "fr": "week-end",
     "definition_it": "il fine settimana, i giorni di sabato e domenica dedicati al riposo o al tempo libero",
     "examples": [
       {
-        "it": "Andiamo in montagna per il weekend.",
-        "fr": "Nous allons à la montagne pour le week-end."
+        "fr": "Nous allons à la montagne pour le week-end.",
+        "it": "Andiamo in montagna per il weekend."
       }
     ],
+    "fr": "week-end",
+    "isVerb": false,
+    "lemma": "weekend",
+    "pos": "nome maschile invariabile",
     "synonyms": [
       "fine settimana"
-    ],
-    "isVerb": false
+    ]
   },
   "wifi": {
-    "lemma": "wifi",
-    "pos": "nome maschile invariabile",
-    "fr": "wifi",
     "definition_it": "tecnologia che permette la connessione a internet senza fili",
     "examples": [
       {
-        "it": "In albergo il wifi non funzionava bene.",
-        "fr": "À l'hôtel, le wifi ne fonctionnait pas bien."
+        "fr": "À l'hôtel, le wifi ne fonctionnait pas bien.",
+        "it": "In albergo il wifi non funzionava bene."
       }
     ],
+    "fr": "wifi",
+    "isVerb": false,
+    "lemma": "wifi",
+    "pos": "nome maschile invariabile",
     "synonyms": [
       "wi-fi"
+    ]
+  },
+  "working": {
+    "definition_it": "Termine inglese usato in italiano nell'espressione 'smart working' per indicare il lavoro a distanza.",
+    "examples": [
+      {
+        "fr": "Mon contrat prévoit deux jours de télétravail par semaine.",
+        "it": "Il mio contratto prevede due giorni di smart working a settimana."
+      }
     ],
-    "isVerb": false
+    "fr": "travail (dans l'expression travail à distance)",
+    "isVerb": false,
+    "lemma": "working",
+    "pos": "nome/forestierismo inglese (usato in espressioni come 'smart working')",
+    "synonyms": [
+      "telelavoro"
+    ]
   },
   "wow": {
-    "lemma": "wow",
-    "pos": "interiezione",
-    "fr": "wow, waouh",
     "definition_it": "esclamazione che esprime stupore o ammirazione",
     "examples": [
       {
-        "it": "Wow, che bel panorama!",
-        "fr": "Wow, quel beau panorama !"
+        "fr": "Wow, quel beau panorama !",
+        "it": "Wow, che bel panorama!"
       }
     ],
+    "fr": "wow, waouh",
+    "isVerb": false,
+    "lemma": "wow",
+    "pos": "interiezione",
+    "register": "informale",
     "synonyms": [
       "accidenti",
       "caspita"
-    ],
-    "isVerb": false,
-    "register": "informale"
+    ]
   }
 }

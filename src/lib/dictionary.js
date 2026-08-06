@@ -18,6 +18,18 @@ const lemmaShards = import.meta.glob('../dictionary/lemmas/*.json', { import: 'd
 const conjugationShards = import.meta.glob('../dictionary/conjugations/*.json', { import: 'default' })
 const wordIndexShards = import.meta.glob('../dictionary/word-index/*.json', { import: 'default' })
 
+// Noms propres (villes, personnages, œuvres…) : liste à part du dictionnaire
+// courant (villes/pays/personnes ne sont normalement pas des lemmes de
+// dictionnaire), utilisée en repli par le lecteur de dialogues et affichée
+// dans sa propre section « Nomi propri » (DictionaryView).
+let properNounsPromise = null
+function loadProperNouns() {
+  if (!properNounsPromise) {
+    properNounsPromise = import('../dictionary/proper-nouns.json').then((m) => m.default)
+  }
+  return properNounsPromise
+}
+
 let catalogPromise = null
 
 function loadCatalog() {
@@ -68,6 +80,17 @@ export async function lookupDictionary(word) {
     ? (await loadShard(conjugationShards, 'conjugations', shardKey(lemma)))[lemma] ?? null
     : null
   return { ...entry, conjugation }
+}
+
+export async function lookupProperNoun(word) {
+  if (!word) return null
+  const key = normalize(word)
+  const list = await loadProperNouns()
+  return list.find((p) => p.surface === key) ?? null
+}
+
+export async function allProperNouns() {
+  return loadProperNouns()
 }
 
 export async function getConjugation(verb) {

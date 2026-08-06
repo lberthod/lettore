@@ -1,0 +1,658 @@
+[
+  {
+    "surface": "adamo",
+    "name": "Adamo",
+    "category": "persona",
+    "fr": "Adam",
+    "description_it": "Nella tradizione biblica, il primo uomo creato da Dio.",
+    "description_fr": "Dans la tradition biblique, le premier homme créé par Dieu."
+  },
+  {
+    "surface": "africa",
+    "name": "Africa",
+    "category": "regione",
+    "fr": "Afrique",
+    "description_it": "Continente a sud dell'Europa, il secondo più grande del mondo.",
+    "description_fr": "Continent au sud de l'Europe, le deuxième plus grand du monde."
+  },
+  {
+    "surface": "alessandro",
+    "name": "Alessandro",
+    "category": "persona",
+    "fr": "Alexandre",
+    "description_it": "Alessandro Magno, re macedone che conquistò un vasto impero nel IV secolo a.C.",
+    "description_fr": "Alexandre le Grand, roi de Macédoine qui conquit un vaste empire au IVe siècle av. J.-C."
+  },
+  {
+    "surface": "amalfi",
+    "name": "Amalfi",
+    "category": "città",
+    "fr": "Amalfi",
+    "description_it": "Cittadina della Campania, antica repubblica marinara.",
+    "description_fr": "Petite ville de Campanie, ancienne république maritime."
+  },
+  {
+    "surface": "americhe",
+    "name": "Americhe",
+    "category": "regione",
+    "fr": "Amériques",
+    "description_it": "Il continente americano, diviso in America del Nord e del Sud.",
+    "description_fr": "Le continent américain, divisé en Amérique du Nord et du Sud."
+  },
+  {
+    "surface": "amerigo",
+    "name": "Amerigo",
+    "category": "persona",
+    "fr": "Amerigo",
+    "description_it": "Amerigo Vespucci, navigatore fiorentino da cui prende nome l'America.",
+    "description_fr": "Amerigo Vespucci, navigateur florentin qui a donné son nom à l'Amérique."
+  },
+  {
+    "surface": "anna",
+    "name": "Anna",
+    "category": "persona",
+    "fr": "Anne",
+    "description_it": "Nome proprio femminile di origine ebraica, molto diffuso in italiano.",
+    "description_fr": "Prénom féminin d'origine hébraïque, très répandu en italien."
+  },
+  {
+    "surface": "appia",
+    "name": "Appia",
+    "category": "opera",
+    "fr": "Voie Appienne",
+    "description_it": "La Via Appia, antica strada romana che collegava Roma a Brindisi.",
+    "description_fr": "La Voie Appienne, ancienne route romaine reliant Rome à Brindisi."
+  },
+  {
+    "surface": "archimede",
+    "name": "Archimede",
+    "category": "persona",
+    "fr": "Archimède",
+    "description_it": "Matematico e inventore greco di Siracusa, vissuto nel III secolo a.C.",
+    "description_fr": "Mathématicien et inventeur grec de Syracuse, IIIe siècle av. J.-C."
+  },
+  {
+    "surface": "aristotele",
+    "name": "Aristotele",
+    "category": "persona",
+    "fr": "Aristote",
+    "description_it": "Filosofo greco antico, allievo di Platone e maestro di Alessandro Magno.",
+    "description_fr": "Philosophe grec antique, élève de Platon et précepteur d'Alexandre le Grand."
+  },
+  {
+    "surface": "asia",
+    "name": "Asia",
+    "category": "regione",
+    "fr": "Asie",
+    "description_it": "Il continente più esteso e popoloso del mondo.",
+    "description_fr": "Le continent le plus vaste et le plus peuplé du monde."
+  },
+  {
+    "surface": "atene",
+    "name": "Atene",
+    "category": "città",
+    "fr": "Athènes",
+    "description_it": "Capitale della Grecia, culla della democrazia e della filosofia antica.",
+    "description_fr": "Capitale de la Grèce, berceau de la démocratie et de la philosophie antique."
+  },
+  {
+    "surface": "augustolo",
+    "name": "Augustolo",
+    "category": "persona",
+    "fr": "Augustule",
+    "description_it": "Romolo Augustolo, ultimo imperatore dell'Impero romano d'Occidente, deposto nel 476.",
+    "description_fr": "Romulus Augustule, dernier empereur de l'Empire romain d'Occident, déposé en 476."
+  },
+  {
+    "surface": "aurelio",
+    "name": "Aurelio",
+    "category": "persona",
+    "fr": "Aurèle",
+    "description_it": "Marco Aurelio, imperatore romano e filosofo stoico del II secolo.",
+    "description_fr": "Marc Aurèle, empereur romain et philosophe stoïcien du IIe siècle."
+  },
+  {
+    "surface": "boccaccio",
+    "name": "Boccaccio",
+    "category": "persona",
+    "fr": "Boccace",
+    "description_it": "Scrittore fiorentino del Trecento, autore del Decameron.",
+    "description_fr": "Écrivain florentin du XIVe siècle, auteur du Décaméron."
+  },
+  {
+    "surface": "botticelli",
+    "name": "Botticelli",
+    "category": "persona",
+    "fr": "Botticelli",
+    "description_it": "Pittore fiorentino del Rinascimento, autore della Nascita di Venere.",
+    "description_fr": "Peintre florentin de la Renaissance, auteur de la Naissance de Vénus."
+  },
+  {
+    "surface": "brunelleschi",
+    "name": "Brunelleschi",
+    "category": "persona",
+    "fr": "Brunelleschi",
+    "description_it": "Architetto fiorentino che progettò la cupola del Duomo di Firenze.",
+    "description_fr": "Architecte florentin, il conçut la coupole de la cathédrale de Florence."
+  },
+  {
+    "surface": "canzoniere",
+    "name": "Canzoniere",
+    "category": "opera",
+    "fr": "Canzoniere",
+    "description_it": "Raccolta di poesie liriche di Francesco Petrarca.",
+    "description_fr": "Recueil de poèmes lyriques de Pétrarque."
+  },
+  {
+    "surface": "caravaggio",
+    "name": "Caravaggio",
+    "category": "persona",
+    "fr": "Caravage",
+    "description_it": "Pittore italiano tra Cinquecento e Seicento, maestro del chiaroscuro.",
+    "description_fr": "Peintre italien à cheval sur les XVIe et XVIIe siècles, maître du clair-obscur."
+  },
+  {
+    "surface": "carlo",
+    "name": "Carlo",
+    "category": "persona",
+    "fr": "Charles",
+    "description_it": "Carlo Magno, re dei Franchi incoronato imperatore nell'800.",
+    "description_fr": "Charlemagne, roi des Francs couronné empereur en l'an 800."
+  },
+  {
+    "surface": "caserta",
+    "name": "Caserta",
+    "category": "città",
+    "fr": "Caserte",
+    "description_it": "Città della Campania, nota per la Reggia borbonica.",
+    "description_fr": "Ville de Campanie, connue pour son palais royal des Bourbons."
+  },
+  {
+    "surface": "cavour",
+    "name": "Cavour",
+    "category": "persona",
+    "fr": "Cavour",
+    "description_it": "Camillo Cavour, statista piemontese, protagonista dell'Unità d'Italia.",
+    "description_fr": "Camillo Cavour, homme d'État piémontais, artisan de l'unité de l'Italie."
+  },
+  {
+    "surface": "cesare",
+    "name": "Cesare",
+    "category": "persona",
+    "fr": "César",
+    "description_it": "Giulio Cesare, generale e statista romano, dittatore della Repubblica romana.",
+    "description_fr": "Jules César, général et homme d'État romain, dictateur de la République romaine."
+  },
+  {
+    "surface": "cina",
+    "name": "Cina",
+    "category": "paese",
+    "fr": "Chine",
+    "description_it": "Grande paese dell'Asia orientale.",
+    "description_fr": "Grand pays d'Asie orientale."
+  },
+  {
+    "surface": "colosseo",
+    "name": "Colosseo",
+    "category": "opera",
+    "fr": "Colisée",
+    "description_it": "Anfiteatro romano, simbolo di Roma antica.",
+    "description_fr": "Amphithéâtre romain, symbole de la Rome antique."
+  },
+  {
+    "surface": "cristo",
+    "name": "Cristo",
+    "category": "persona",
+    "fr": "Christ",
+    "description_it": "Gesù Cristo, figura centrale del cristianesimo.",
+    "description_fr": "Jésus-Christ, figure centrale du christianisme."
+  },
+  {
+    "surface": "cristoforo",
+    "name": "Cristoforo",
+    "category": "persona",
+    "fr": "Christophe",
+    "description_it": "Cristoforo Colombo, navigatore genovese che raggiunse le Americhe nel 1492.",
+    "description_fr": "Christophe Colomb, navigateur génois qui atteignit les Amériques en 1492."
+  },
+  {
+    "surface": "dante",
+    "name": "Dante",
+    "category": "persona",
+    "fr": "Dante",
+    "description_it": "Dante Alighieri, poeta fiorentino, autore della Divina Commedia.",
+    "description_fr": "Dante Alighieri, poète florentin, auteur de la Divine Comédie."
+  },
+  {
+    "surface": "danubio",
+    "name": "Danubio",
+    "category": "fiume",
+    "fr": "Danube",
+    "description_it": "Fiume dell'Europa centrale, il secondo più lungo del continente.",
+    "description_fr": "Fleuve d'Europe centrale, le deuxième plus long du continent."
+  },
+  {
+    "surface": "decameron",
+    "name": "Decameron",
+    "category": "opera",
+    "fr": "Décaméron",
+    "description_it": "Raccolta di cento novelle scritta da Boccaccio.",
+    "description_fr": "Recueil de cent nouvelles écrit par Boccace."
+  },
+  {
+    "surface": "emanuele",
+    "name": "Emanuele",
+    "category": "persona",
+    "fr": "Emmanuel",
+    "description_it": "Vittorio Emanuele, nome di re italiani, tra cui il primo re d'Italia unita.",
+    "description_fr": "Victor-Emmanuel, nom de rois italiens, dont le premier roi de l'Italie unifiée."
+  },
+  {
+    "surface": "federico",
+    "name": "Federico",
+    "category": "persona",
+    "fr": "Frédéric",
+    "description_it": "Federico II, imperatore svevo soprannominato Stupor Mundi per la sua cultura.",
+    "description_fr": "Frédéric II, empereur souabe surnommé Stupor Mundi pour sa vaste culture."
+  },
+  {
+    "surface": "fellini",
+    "name": "Fellini",
+    "category": "persona",
+    "fr": "Fellini",
+    "description_it": "Federico Fellini, regista italiano del Novecento, autore de La Dolce Vita.",
+    "description_fr": "Federico Fellini, réalisateur italien du XXe siècle, auteur de La Dolce Vita."
+  },
+  {
+    "surface": "firenze",
+    "name": "Firenze",
+    "category": "città",
+    "fr": "Florence",
+    "description_it": "Capoluogo della Toscana, culla del Rinascimento.",
+    "description_fr": "Chef-lieu de la Toscane, berceau de la Renaissance."
+  },
+  {
+    "surface": "gallia",
+    "name": "Gallia",
+    "category": "regione",
+    "fr": "Gaule",
+    "description_it": "Antica regione europea corrispondente all'incirca alla Francia attuale.",
+    "description_fr": "Ancienne région européenne correspondant approximativement à la France actuelle."
+  },
+  {
+    "surface": "garibaldi",
+    "name": "Garibaldi",
+    "category": "persona",
+    "fr": "Garibaldi",
+    "description_it": "Giuseppe Garibaldi, generale e patriota, eroe del Risorgimento italiano.",
+    "description_fr": "Giuseppe Garibaldi, général et patriote, héros du Risorgimento italien."
+  },
+  {
+    "surface": "genova",
+    "name": "Genova",
+    "category": "città",
+    "fr": "Gênes",
+    "description_it": "Città portuale della Liguria, antica repubblica marinara.",
+    "description_fr": "Ville portuaire de Ligurie, ancienne république maritime."
+  },
+  {
+    "surface": "germania",
+    "name": "Germania",
+    "category": "paese",
+    "fr": "Allemagne",
+    "description_it": "Paese dell'Europa centrale.",
+    "description_fr": "Pays d'Europe centrale."
+  },
+  {
+    "surface": "giulio",
+    "name": "Giulio",
+    "category": "persona",
+    "fr": "Jules",
+    "description_it": "Nome proprio, spesso riferito a Giulio Cesare.",
+    "description_fr": "Prénom, souvent associé à Jules César."
+  },
+  {
+    "surface": "giuseppe",
+    "name": "Giuseppe",
+    "category": "persona",
+    "fr": "Joseph",
+    "description_it": "Nome proprio maschile molto diffuso in Italia, come Giuseppe Garibaldi.",
+    "description_fr": "Prénom masculin très répandu en Italie, comme Giuseppe Garibaldi."
+  },
+  {
+    "surface": "grecia",
+    "name": "Grecia",
+    "category": "paese",
+    "fr": "Grèce",
+    "description_it": "Paese del Mediterraneo orientale, culla della civiltà occidentale.",
+    "description_fr": "Pays de la Méditerranée orientale, berceau de la civilisation occidentale."
+  },
+  {
+    "surface": "indie",
+    "name": "Indie",
+    "category": "regione",
+    "fr": "Indes",
+    "description_it": "Nome storico usato per indicare l'India e le regioni vicine.",
+    "description_fr": "Nom historique désignant l'Inde et les régions voisines."
+  },
+  {
+    "surface": "ionio",
+    "name": "Ionio",
+    "category": "mare",
+    "fr": "mer Ionienne",
+    "description_it": "Tratto di mare tra Italia e Grecia.",
+    "description_fr": "Étendue de mer entre l'Italie et la Grèce."
+  },
+  {
+    "surface": "italia",
+    "name": "Italia",
+    "category": "paese",
+    "fr": "Italie",
+    "description_it": "Paese dell'Europa meridionale a forma di stivale.",
+    "description_fr": "Pays d'Europe méridionale en forme de botte."
+  },
+  {
+    "surface": "laura",
+    "name": "Laura",
+    "category": "persona",
+    "fr": "Laure",
+    "description_it": "Donna amata e cantata da Petrarca nel Canzoniere.",
+    "description_fr": "Femme aimée et chantée par Pétrarque dans le Canzoniere."
+  },
+  {
+    "surface": "leo",
+    "name": "Leo",
+    "category": "persona",
+    "fr": "Léon",
+    "description_it": "Nome di papi, tra cui Leone X della famiglia Medici.",
+    "description_fr": "Nom de papes, dont Léon X de la famille Médicis."
+  },
+  {
+    "surface": "leonardo",
+    "name": "Leonardo",
+    "category": "persona",
+    "fr": "Léonard",
+    "description_it": "Leonardo da Vinci, genio del Rinascimento, pittore, scienziato e inventore.",
+    "description_fr": "Léonard de Vinci, génie de la Renaissance, peintre, savant et inventeur."
+  },
+  {
+    "surface": "lepanto",
+    "name": "Lepanto",
+    "category": "evento",
+    "fr": "Lépante",
+    "description_it": "Battaglia navale del 1571 tra la Lega Santa e l'Impero ottomano.",
+    "description_fr": "Bataille navale de 1571 entre la Sainte Ligue et l'Empire ottoman."
+  },
+  {
+    "surface": "longobardi",
+    "name": "Longobardi",
+    "category": "popolo",
+    "fr": "Lombards",
+    "description_it": "Popolo germanico che invase l'Italia nel VI secolo.",
+    "description_fr": "Peuple germanique qui envahit l'Italie au VIe siècle."
+  },
+  {
+    "surface": "marco",
+    "name": "Marco",
+    "category": "persona",
+    "fr": "Marc",
+    "description_it": "Marco Polo, mercante e viaggiatore veneziano che esplorò l'Asia nel Duecento.",
+    "description_fr": "Marco Polo, marchand et voyageur vénitien, explorateur de l'Asie au XIIIe siècle."
+  },
+  {
+    "surface": "mazzini",
+    "name": "Mazzini",
+    "category": "persona",
+    "fr": "Mazzini",
+    "description_it": "Giuseppe Mazzini, patriota e pensatore politico, figura chiave del Risorgimento.",
+    "description_fr": "Giuseppe Mazzini, patriote et penseur politique, figure clé du Risorgimento."
+  },
+  {
+    "surface": "michelangelo",
+    "name": "Michelangelo",
+    "category": "persona",
+    "fr": "Michel-Ange",
+    "description_it": "Artista rinascimentale, scultore, pittore e architetto.",
+    "description_fr": "Artiste de la Renaissance, sculpteur, peintre et architecte."
+  },
+  {
+    "surface": "milano",
+    "name": "Milano",
+    "category": "città",
+    "fr": "Milan",
+    "description_it": "Capoluogo della Lombardia, capitale economica d'Italia.",
+    "description_fr": "Chef-lieu de la Lombardie, capitale économique de l'Italie."
+  },
+  {
+    "surface": "mundi",
+    "name": "Mundi",
+    "category": "epoca",
+    "fr": "Mundi",
+    "description_it": "Frammento latino dell'espressione Stupor Mundi, 'meraviglia del mondo', soprannome di Federico II.",
+    "description_fr": "Fragment latin de l'expression Stupor Mundi, « merveille du monde », surnom de Frédéric II."
+  },
+  {
+    "surface": "mussolini",
+    "name": "Mussolini",
+    "category": "persona",
+    "fr": "Mussolini",
+    "description_it": "Benito Mussolini, politico italiano, capo del fascismo e dittatore dal 1922 al 1943.",
+    "description_fr": "Benito Mussolini, homme politique italien, chef du fascisme et dictateur de 1922 à 1943."
+  },
+  {
+    "surface": "nabucco",
+    "name": "Nabucco",
+    "category": "opera",
+    "fr": "Nabucco",
+    "description_it": "Opera lirica di Giuseppe Verdi, famosa per il coro Va, pensiero.",
+    "description_fr": "Opéra de Giuseppe Verdi, célèbre pour son chœur Va, pensiero."
+  },
+  {
+    "surface": "napoleone",
+    "name": "Napoleone",
+    "category": "persona",
+    "fr": "Napoléon",
+    "description_it": "Napoleone Bonaparte, generale e imperatore francese tra Settecento e Ottocento.",
+    "description_fr": "Napoléon Bonaparte, général et empereur français à cheval sur les XVIIIe et XIXe siècles."
+  },
+  {
+    "surface": "napoli",
+    "name": "Napoli",
+    "category": "città",
+    "fr": "Naples",
+    "description_it": "Capoluogo della Campania, città affacciata sul golfo omonimo.",
+    "description_fr": "Chef-lieu de la Campanie, ville donnant sur le golfe du même nom."
+  },
+  {
+    "surface": "pax",
+    "name": "Pax",
+    "category": "epoca",
+    "fr": "Pax",
+    "description_it": "Frammento latino dell'espressione Pax Romana, lungo periodo di pace nell'Impero romano.",
+    "description_fr": "Fragment latin de l'expression Pax Romana, longue période de paix dans l'Empire romain."
+  },
+  {
+    "surface": "petrarca",
+    "name": "Petrarca",
+    "category": "persona",
+    "fr": "Pétrarque",
+    "description_it": "Francesco Petrarca, poeta e umanista toscano del Trecento, autore del Canzoniere.",
+    "description_fr": "Pétrarque, poète et humaniste toscan du XIVe siècle, auteur du Canzoniere."
+  },
+  {
+    "surface": "pisa",
+    "name": "Pisa",
+    "category": "città",
+    "fr": "Pise",
+    "description_it": "Città toscana famosa per la sua torre pendente.",
+    "description_fr": "Ville toscane célèbre pour sa tour penchée."
+  },
+  {
+    "surface": "platone",
+    "name": "Platone",
+    "category": "persona",
+    "fr": "Platon",
+    "description_it": "Filosofo greco antico, allievo di Socrate e maestro di Aristotele.",
+    "description_fr": "Philosophe grec antique, élève de Socrate et maître d'Aristote."
+  },
+  {
+    "surface": "pompei",
+    "name": "Pompei",
+    "category": "città",
+    "fr": "Pompéi",
+    "description_it": "Antica città romana sepolta dall'eruzione del Vesuvio nel 79 d.C.",
+    "description_fr": "Ancienne ville romaine ensevelie par l'éruption du Vésuve en 79 apr. J.-C."
+  },
+  {
+    "surface": "raffaello",
+    "name": "Raffaello",
+    "category": "persona",
+    "fr": "Raphaël",
+    "description_it": "Raffaello Sanzio, pittore e architetto del Rinascimento, autore di celebri Madonne.",
+    "description_fr": "Raphaël, peintre et architecte de la Renaissance, auteur de célèbres Madones."
+  },
+  {
+    "surface": "roma",
+    "name": "Roma",
+    "category": "città",
+    "fr": "Rome",
+    "description_it": "Capitale d'Italia, sede antica dell'Impero romano.",
+    "description_fr": "Capitale de l'Italie, ancien siège de l'Empire romain."
+  },
+  {
+    "surface": "romolo",
+    "name": "Romolo",
+    "category": "persona",
+    "fr": "Romulus",
+    "description_it": "Leggendario fondatore e primo re di Roma.",
+    "description_fr": "Fondateur légendaire et premier roi de Rome."
+  },
+  {
+    "surface": "savoia",
+    "name": "Savoia",
+    "category": "dinastia",
+    "fr": "Savoie",
+    "description_it": "Casa Savoia, dinastia regnante d'Italia dal 1861 al 1946.",
+    "description_fr": "Maison de Savoie, dynastie régnante d'Italie de 1861 à 1946."
+  },
+  {
+    "surface": "siena",
+    "name": "Siena",
+    "category": "città",
+    "fr": "Sienne",
+    "description_it": "Città toscana famosa per il Palio e la piazza del Campo.",
+    "description_fr": "Ville toscane célèbre pour le Palio et la Piazza del Campo."
+  },
+  {
+    "surface": "siracusa",
+    "name": "Siracusa",
+    "category": "città",
+    "fr": "Syracuse",
+    "description_it": "Città della Sicilia, patria dello scienziato Archimede.",
+    "description_fr": "Ville de Sicile, patrie du savant Archimède."
+  },
+  {
+    "surface": "sistina",
+    "name": "Sistina",
+    "category": "opera",
+    "fr": "Sixtine",
+    "description_it": "La Cappella Sistina, cappella vaticana affrescata da Michelangelo.",
+    "description_fr": "La chapelle Sixtine, chapelle du Vatican décorée de fresques par Michel-Ange."
+  },
+  {
+    "surface": "spagna",
+    "name": "Spagna",
+    "category": "paese",
+    "fr": "Espagne",
+    "description_it": "Paese della penisola iberica.",
+    "description_fr": "Pays de la péninsule ibérique."
+  },
+  {
+    "surface": "taranto",
+    "name": "Taranto",
+    "category": "città",
+    "fr": "Tarente",
+    "description_it": "Città della Puglia affacciata su due mari.",
+    "description_fr": "Ville des Pouilles donnant sur deux mers."
+  },
+  {
+    "surface": "torino",
+    "name": "Torino",
+    "category": "città",
+    "fr": "Turin",
+    "description_it": "Capoluogo del Piemonte, prima capitale d'Italia unita.",
+    "description_fr": "Chef-lieu du Piémont, première capitale de l'Italie unifiée."
+  },
+  {
+    "surface": "trento",
+    "name": "Trento",
+    "category": "città",
+    "fr": "Trente",
+    "description_it": "Città del Trentino, sede del celebre Concilio del Cinquecento.",
+    "description_fr": "Ville du Trentin, siège du célèbre concile du XVIe siècle."
+  },
+  {
+    "surface": "venezia",
+    "name": "Venezia",
+    "category": "città",
+    "fr": "Venise",
+    "description_it": "Città costruita su canali nel nord-est d'Italia.",
+    "description_fr": "Ville construite sur des canaux dans le nord-est de l'Italie."
+  },
+  {
+    "surface": "versailles",
+    "name": "Versailles",
+    "category": "città",
+    "fr": "Versailles",
+    "description_it": "Città francese famosa per la reggia dei re di Francia.",
+    "description_fr": "Ville française célèbre pour le château des rois de France."
+  },
+  {
+    "surface": "vespucci",
+    "name": "Vespucci",
+    "category": "persona",
+    "fr": "Vespucci",
+    "description_it": "Amerigo Vespucci, navigatore fiorentino da cui deriva il nome America.",
+    "description_fr": "Amerigo Vespucci, navigateur florentin dont dérive le nom Amérique."
+  },
+  {
+    "surface": "vesuvio",
+    "name": "Vesuvio",
+    "category": "regione",
+    "fr": "Vésuve",
+    "description_it": "Vulcano attivo vicino a Napoli, celebre per l'eruzione del 79 d.C.",
+    "description_fr": "Volcan actif près de Naples, célèbre pour son éruption de 79 apr. J.-C."
+  },
+  {
+    "surface": "vittorio",
+    "name": "Vittorio",
+    "category": "persona",
+    "fr": "Victor",
+    "description_it": "Vittorio Emanuele, nome di re italiani, tra cui Vittorio Emanuele II.",
+    "description_fr": "Victor-Emmanuel, nom de rois italiens, dont Victor-Emmanuel II."
+  },
+  {
+    "surface": "vivaldi",
+    "name": "Vivaldi",
+    "category": "persona",
+    "fr": "Vivaldi",
+    "description_it": "Antonio Vivaldi, compositore veneziano barocco, autore de Le quattro stagioni.",
+    "description_fr": "Antonio Vivaldi, compositeur baroque vénitien, auteur des Quatre Saisons."
+  },
+  {
+    "surface": "gallico",
+    "name": "gallico",
+    "category": "aggettivo",
+    "fr": "gaulois",
+    "description_it": "Aggettivo derivato da Gallia, cioè relativo ai Galli.",
+    "description_fr": "Adjectif dérivé de Gallia, c'est-à-dire relatif aux Gaulois."
+  },
+  {
+    "surface": "napoleonico",
+    "name": "napoleonico",
+    "category": "aggettivo",
+    "fr": "napoléonien",
+    "description_it": "Aggettivo riferito a Napoleone e alla sua epoca.",
+    "description_fr": "Adjectif se rapportant à Napoléon et à son époque."
+  }
+]

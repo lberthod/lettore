@@ -3,10 +3,34 @@ import { computed, onUnmounted, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import { ttsSupported, speakItalian, stopSpeaking } from '../tts.js'
-import { lookupDictionary, searchDictionary, allLemmas, dictionaryEntryCount } from '../lib/dictionary.js'
+import {
+  lookupDictionary,
+  searchDictionary,
+  allLemmas,
+  dictionaryEntryCount,
+  allProperNouns,
+} from '../lib/dictionary.js'
 
 const props = defineProps({
   word: { type: String, default: '' },
+})
+
+// Onglet « Nomi propri » : villes, personnages, œuvres… rencontrés dans les
+// textes mais absents du dictionnaire courant (un nom propre n'est pas un
+// lemme de dictionnaire classique) — voir dictionary.js/proper-nouns.json.
+const mode = ref('dizionario') // 'dizionario' | 'nomi-propri'
+const properNouns = ref([])
+allProperNouns().then((list) => (properNouns.value = list))
+
+const properQuery = ref('')
+const filteredProperNouns = computed(() => {
+  const q = properQuery.value.trim().toLowerCase()
+  const list = q
+    ? properNouns.value.filter(
+        (p) => p.name.toLowerCase().includes(q) || p.fr.toLowerCase().includes(q)
+      )
+    : properNouns.value
+  return [...list].sort((a, b) => a.name.localeCompare(b.name, 'it'))
 })
 
 const query = ref(props.word || '')
@@ -264,6 +288,48 @@ const registerBadge = computed(() =>
       {{ entryCount }} mots couverts pour l'instant, en cours d'enrichissement.
     </p>
 
+    <div class="mode-tabs">
+      <button
+        type="button"
+        class="mode-tab"
+        :class="{ active: mode === 'dizionario' }"
+        @click="mode = 'dizionario'"
+      >
+        Dizionario
+      </button>
+      <button
+        type="button"
+        class="mode-tab"
+        :class="{ active: mode === 'nomi-propri' }"
+        @click="mode = 'nomi-propri'"
+      >
+        Nomi propri <span class="count">{{ properNouns.length }}</span>
+      </button>
+    </div>
+
+    <template v-if="mode === 'nomi-propri'">
+      <div class="search">
+        <input
+          v-model="properQuery"
+          type="text"
+          placeholder="Cherchez un nom propre…"
+          autocomplete="off"
+        />
+      </div>
+      <ul class="proper-list">
+        <li v-for="p in filteredProperNouns" :key="p.surface" class="proper-card">
+          <div class="proper-head">
+            <span class="proper-name">{{ p.name }}</span>
+            <span class="proper-category">{{ p.category }}</span>
+          </div>
+          <p class="proper-fr"><strong>{{ p.fr }}</strong></p>
+          <p class="proper-desc">{{ p.description_it }}</p>
+          <p class="proper-desc proper-desc-fr">{{ p.description_fr }}</p>
+        </li>
+      </ul>
+    </template>
+
+    <template v-else>
     <div class="search">
       <input
         v-model="query"
@@ -458,6 +524,7 @@ const registerBadge = computed(() =>
       </template>
     </template>
     </template>
+    </template>
   </SceneLayout>
 </template>
 
@@ -467,6 +534,91 @@ const registerBadge = computed(() =>
   line-height: 1.6;
   color: #6b6156;
   margin-top: 0.6rem;
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mode-tab {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #6b6156;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mode-tab.active {
+  background: #2c2620;
+  border-color: #2c2620;
+  color: #faf6f0;
+}
+
+.mode-tab .count {
+  opacity: 0.7;
+  margin-left: 0.3rem;
+  font-weight: 400;
+}
+
+.proper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.proper-card {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e4d9c6;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.proper-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.proper-name {
+  font-weight: 700;
+  color: #2c2620;
+  font-size: 1.05rem;
+}
+
+.proper-category {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  /* #6b6156 (Sprint 2.1) : #a89c8c échouait le contraste WCAG AA. */
+  color: #6b6156;
+}
+
+.proper-fr {
+  margin: 0.25rem 0;
+  color: #b0692e;
+}
+
+.proper-desc {
+  margin: 0.15rem 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #6b6156;
+}
+
+.proper-desc-fr {
+  font-style: italic;
+  /* #6b6156 (Sprint 2.1) : #8a8072 échouait le contraste WCAG AA
+     (≈3.6:1). */
+  color: #6b6156;
 }
 
 .search {
@@ -500,21 +652,26 @@ const registerBadge = computed(() =>
 .count {
   font-weight: 400;
   text-transform: none;
-  color: #a89c8c;
+  /* #6b6156 (Sprint 2.1) : #a89c8c échouait le contraste WCAG AA. */
+  color: #6b6156;
 }
 
 .alphabet {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.4rem;
   margin-top: 1rem;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid #e4d9c6;
 }
 
 .letter {
-  min-width: 1.9rem;
-  height: 1.9rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.4) : nav principale
+     du dictionnaire, la plus utilisée de cet écran. flex-wrap absorbe déjà
+     le surcroît de largeur en ajoutant des lignes, pas de grille figée
+     à recalculer (contrairement à Giochi/Classici avant leur correctif). */
+  min-width: 2.75rem;
+  height: 2.75rem;
   padding: 0 0.3rem;
   border: 1px solid #e4d9c6;
   border-radius: 6px;
@@ -540,18 +697,22 @@ const registerBadge = computed(() =>
 .prefixes {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.4rem;
   margin: 0.7rem 0 1rem;
 }
 
 .prefix {
-  min-width: 2.4rem;
-  height: 1.6rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.4). */
+  min-width: 2.75rem;
+  height: 2.75rem;
   padding: 0 0.4rem;
   border: 1px solid #e4d9c6;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.6);
-  color: #8a8072;
+  /* #6b6156 (Sprint 2.1) : #8a8072 échouait le contraste WCAG AA (≈3.6:1
+     sur fond clair) ; #6b6156 est la couleur "texte secondaire" utilisée
+     partout ailleurs dans l'app (5.8:1). */
+  color: #6b6156;
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
@@ -600,11 +761,19 @@ const registerBadge = computed(() =>
   color: #2c2620;
   font-size: 0.9rem;
   white-space: nowrap;
+  /* Ellipse plutôt que débordement (Analyse Optimisation UX Mobile.md
+     Sprint 3.3) : .index-list a une largeur de colonne fixe (220px), un
+     lemme long pouvait déborder — même traitement que .index-fr juste
+     à côté, pour cohérence. */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .index-fr {
   font-size: 0.8rem;
-  color: #8a8072;
+  /* #6b6156 (Sprint 2.1) : #8a8072 échouait le contraste WCAG AA, affiché
+     à côté de chaque lemme de l'index — élément central du dictionnaire. */
+  color: #6b6156;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -833,8 +1002,9 @@ const registerBadge = computed(() =>
 }
 
 .preset {
-  min-width: 2.6rem;
-  height: 2rem;
+  /* 44px (Analyse Optimisation UX Mobile.md Sprint 1.4). */
+  min-width: 2.75rem;
+  height: 2.75rem;
   padding: 0 0.5rem;
   border: 1px solid #e4d9c6;
   border-radius: 8px;
@@ -859,11 +1029,15 @@ const registerBadge = computed(() =>
 
 .preset-custom {
   width: 4.2rem;
-  height: 2rem;
+  height: 2.75rem;
   padding: 0 0.5rem;
   border: 1px solid #d8cfc2;
   border-radius: 8px;
-  font-size: 0.9rem;
+  /* 1rem/16px (Analyse Optimisation UX Mobile.md Sprint 3.3) : ce champ
+     n'est pas dans la classe .form globale (style.css) qui applique déjà
+     cette règle anti-zoom iOS ailleurs — à 0.9rem/14.4px il restait
+     déclencheur de zoom au focus. */
+  font-size: 1rem;
   font-family: inherit;
   background: rgba(255, 255, 255, 0.85);
 }
@@ -907,7 +1081,9 @@ const registerBadge = computed(() =>
 .session-progress {
   margin: 0 0 0.6rem;
   font-size: 0.8rem;
-  color: #a89c8c;
+  /* #6b6156 (Sprint 2.1) : #a89c8c échouait le contraste WCAG AA
+     (≈2.5:1), affiché en continu pendant toute la session audio. */
+  color: #6b6156;
 }
 
 .session-actions {
@@ -918,7 +1094,9 @@ const registerBadge = computed(() =>
 }
 
 .btn-nav {
-  padding: 0.5rem 1.1rem;
+  /* ~44px de haut (Analyse Optimisation UX Mobile.md Sprint 1.4) : répété
+     à chaque mot pendant toute la session. */
+  padding: 0.75rem 1.1rem;
   border-radius: 999px;
   border: 1px solid #b0692e;
   background: #b0692e;

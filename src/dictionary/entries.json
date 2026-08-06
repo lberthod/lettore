@@ -1,5 +1,10 @@
 [
   {
+    "lemma": "Abramo",
+    "fr": "Abraham",
+    "isVerb": false
+  },
+  {
     "lemma": "a",
     "fr": "à",
     "isVerb": false
@@ -87,6 +92,11 @@
   {
     "lemma": "abbecedario",
     "fr": "abécédaire",
+    "isVerb": false
+  },
+  {
+    "lemma": "abbellimento",
+    "fr": "embellissements",
     "isVerb": false
   },
   {
@@ -195,14 +205,14 @@
     "isVerb": false
   },
   {
-    "lemma": "abilità",
-    "fr": "habileté, compétence",
-    "isVerb": false
-  },
-  {
     "lemma": "abilitare",
     "fr": "habiliter, qualifier",
     "isVerb": true
+  },
+  {
+    "lemma": "abilità",
+    "fr": "habileté, compétence",
+    "isVerb": false
   },
   {
     "lemma": "abilmente",
@@ -273,11 +283,6 @@
     "lemma": "abolire",
     "fr": "abolir",
     "isVerb": true
-  },
-  {
-    "lemma": "Abramo",
-    "fr": "Abraham",
-    "isVerb": false
   },
   {
     "lemma": "abside",
@@ -1610,6 +1615,11 @@
     "isVerb": false
   },
   {
+    "lemma": "ai",
+    "fr": "aux (à + les, masc. pl.)",
+    "isVerb": false
+  },
+  {
     "lemma": "aia",
     "fr": "aire (de battage), cour de ferme",
     "isVerb": false
@@ -1662,6 +1672,11 @@
   {
     "lemma": "aizzoso",
     "fr": "provocateur, querelleur",
+    "isVerb": false
+  },
+  {
+    "lemma": "al",
+    "fr": "au (à + le)",
     "isVerb": false
   },
   {
@@ -1815,6 +1830,11 @@
     "isVerb": false
   },
   {
+    "lemma": "alla",
+    "fr": "à la",
+    "isVerb": false
+  },
+  {
     "lemma": "alla deriva",
     "fr": "à la dérive",
     "isVerb": false
@@ -1868,6 +1888,11 @@
     "lemma": "allattare",
     "fr": "allaiter",
     "isVerb": true
+  },
+  {
+    "lemma": "alle",
+    "fr": "à (les), aux (fém. pl.)",
+    "isVerb": false
   },
   {
     "lemma": "alleanza",
@@ -1972,6 +1997,11 @@
   {
     "lemma": "allitterazione",
     "fr": "allitération",
+    "isVerb": false
+  },
+  {
+    "lemma": "allo",
+    "fr": "au (à + lo)",
     "isVerb": false
   },
   {
@@ -2970,6 +3000,11 @@
     "isVerb": false
   },
   {
+    "lemma": "antecedente",
+    "fr": "antécédent, précédent",
+    "isVerb": false
+  },
+  {
     "lemma": "antenato",
     "fr": "ancêtre",
     "isVerb": false
@@ -3223,6 +3258,11 @@
     "lemma": "appartenere",
     "fr": "appartenir",
     "isVerb": true
+  },
+  {
+    "lemma": "appassionante",
+    "fr": "passionnant",
+    "isVerb": false
   },
   {
     "lemma": "appassionare",
@@ -3635,6 +3675,11 @@
     "isVerb": false
   },
   {
+    "lemma": "architettonico",
+    "fr": "architecturales",
+    "isVerb": false
+  },
+  {
     "lemma": "architettura",
     "fr": "architecture",
     "isVerb": false
@@ -3817,6 +3862,11 @@
   {
     "lemma": "armeno",
     "fr": "arménien",
+    "isVerb": false
+  },
+  {
+    "lemma": "armistizio",
+    "fr": "armistice",
     "isVerb": false
   },
   {
@@ -4840,6 +4890,11 @@
     "isVerb": true
   },
   {
+    "lemma": "attrazione",
+    "fr": "attractions",
+    "isVerb": false
+  },
+  {
     "lemma": "attrezzarsi",
     "fr": "s'équiper",
     "isVerb": true
@@ -5025,6 +5080,11 @@
     "isVerb": false
   },
   {
+    "lemma": "automobilistico",
+    "fr": "automobile (adj.)",
+    "isVerb": false
+  },
+  {
     "lemma": "autonomia",
     "fr": "autonomie",
     "isVerb": false
@@ -5045,13 +5105,13 @@
     "isVerb": false
   },
   {
-    "lemma": "autorità",
-    "fr": "autorité",
+    "lemma": "autoritario",
+    "fr": "autoritaire",
     "isVerb": false
   },
   {
-    "lemma": "autoritario",
-    "fr": "autoritaire",
+    "lemma": "autorità",
+    "fr": "autorité",
     "isVerb": false
   },
   {
@@ -5545,11 +5605,6 @@
     "isVerb": false
   },
   {
-    "lemma": "balìa",
-    "fr": "pouvoir, merci (à la merci de)",
-    "isVerb": false
-  },
-  {
     "lemma": "ballare",
     "fr": "danser",
     "isVerb": true
@@ -5612,6 +5667,11 @@
   {
     "lemma": "balzo",
     "fr": "bond, saut",
+    "isVerb": false
+  },
+  {
+    "lemma": "balìa",
+    "fr": "pouvoir, merci (à la merci de)",
     "isVerb": false
   },
   {
@@ -6865,6 +6925,11 @@
     "isVerb": false
   },
   {
+    "lemma": "bombardamento",
+    "fr": "bombardements",
+    "isVerb": false
+  },
+  {
     "lemma": "bonifico",
     "fr": "virement (bancaire)",
     "isVerb": false
@@ -7255,13 +7320,13 @@
     "isVerb": true
   },
   {
-    "lemma": "brulichìio",
-    "fr": "grouillement, bourdonnement (de voix, d'insetti)",
+    "lemma": "brulichio",
+    "fr": "grouillement, fourmillement",
     "isVerb": false
   },
   {
-    "lemma": "brulichio",
-    "fr": "grouillement, fourmillement",
+    "lemma": "brulichìio",
+    "fr": "grouillement, bourdonnement (de voix, d'insetti)",
     "isVerb": false
   },
   {
@@ -7550,6 +7615,11 @@
     "isVerb": false
   },
   {
+    "lemma": "caccia",
+    "fr": "chasses",
+    "isVerb": false
+  },
+  {
     "lemma": "cacciare",
     "fr": "chasser",
     "isVerb": true
@@ -7585,6 +7655,11 @@
     "isVerb": true
   },
   {
+    "lemma": "caffeina",
+    "fr": "caféine",
+    "isVerb": false
+  },
+  {
     "lemma": "caffè",
     "fr": "café",
     "isVerb": false
@@ -7597,11 +7672,6 @@
   {
     "lemma": "caffè-concerto",
     "fr": "café-concert",
-    "isVerb": false
-  },
-  {
-    "lemma": "caffeina",
-    "fr": "caféine",
     "isVerb": false
   },
   {
@@ -8295,11 +8365,6 @@
     "isVerb": false
   },
   {
-    "lemma": "capacità",
-    "fr": "capacité, aptitude",
-    "isVerb": false
-  },
-  {
     "lemma": "capacitare",
     "fr": "persuader, convaincre",
     "isVerb": true
@@ -8308,6 +8373,11 @@
     "lemma": "capacitarsi",
     "fr": "se rendre compte, comprendre, se persuader",
     "isVerb": true
+  },
+  {
+    "lemma": "capacità",
+    "fr": "capacité, aptitude",
+    "isVerb": false
   },
   {
     "lemma": "capanna",
@@ -8685,13 +8755,13 @@
     "isVerb": false
   },
   {
-    "lemma": "carità",
-    "fr": "charité",
+    "lemma": "caritatevole",
+    "fr": "charitable",
     "isVerb": false
   },
   {
-    "lemma": "caritatevole",
-    "fr": "charitable",
+    "lemma": "carità",
+    "fr": "charité",
     "isVerb": false
   },
   {
@@ -9190,6 +9260,11 @@
     "isVerb": false
   },
   {
+    "lemma": "cattolico",
+    "fr": "catholique",
+    "isVerb": false
+  },
+  {
     "lemma": "catturare",
     "fr": "capturer",
     "isVerb": true
@@ -9337,6 +9412,11 @@
   {
     "lemma": "ce",
     "fr": "nous / y (particule combinée)",
+    "isVerb": false
+  },
+  {
+    "lemma": "cece",
+    "fr": "pois chiches",
     "isVerb": false
   },
   {
@@ -9715,11 +9795,6 @@
     "isVerb": false
   },
   {
-    "lemma": "ché",
-    "fr": "car, parce que",
-    "isVerb": false
-  },
-  {
     "lemma": "chef",
     "fr": "chef (cuisinier)",
     "isVerb": false
@@ -9755,11 +9830,6 @@
     "isVerb": false
   },
   {
-    "lemma": "chiacchierìio",
-    "fr": "bavardage continu, papotage",
-    "isVerb": false
-  },
-  {
     "lemma": "chiacchierio",
     "fr": "brouhaha, bavardage confuso",
     "isVerb": false
@@ -9767,6 +9837,11 @@
   {
     "lemma": "chiacchierone",
     "fr": "bavard, moulin à paroles",
+    "isVerb": false
+  },
+  {
+    "lemma": "chiacchierìio",
+    "fr": "bavardage continu, papotage",
     "isVerb": false
   },
   {
@@ -9802,6 +9877,11 @@
   {
     "lemma": "chiarore",
     "fr": "lueur",
+    "isVerb": false
+  },
+  {
+    "lemma": "chiaroscuro",
+    "fr": "clair-obscur",
     "isVerb": false
   },
   {
@@ -9922,6 +10002,11 @@
   {
     "lemma": "chiusura",
     "fr": "fermeture",
+    "isVerb": false
+  },
+  {
+    "lemma": "ché",
+    "fr": "car, parce que",
     "isVerb": false
   },
   {
@@ -10205,11 +10290,6 @@
     "isVerb": false
   },
   {
-    "lemma": "ciò",
-    "fr": "cela, ceci",
-    "isVerb": false
-  },
-  {
     "lemma": "ciocca",
     "fr": "mèche (de cheveux)",
     "isVerb": false
@@ -10230,11 +10310,6 @@
     "isVerb": false
   },
   {
-    "lemma": "cioè",
-    "fr": "c'est-à-dire",
-    "isVerb": false
-  },
-  {
     "lemma": "ciondoloni",
     "fr": "pendants, ballants",
     "isVerb": false
@@ -10247,6 +10322,11 @@
   {
     "lemma": "ciottolo",
     "fr": "galet, caillou",
+    "isVerb": false
+  },
+  {
+    "lemma": "cioè",
+    "fr": "c'est-à-dire",
     "isVerb": false
   },
   {
@@ -10330,11 +10410,6 @@
     "isVerb": false
   },
   {
-    "lemma": "città",
-    "fr": "ville",
-    "isVerb": false
-  },
-  {
     "lemma": "cittadina",
     "fr": "petite ville, bourgade",
     "isVerb": false
@@ -10347,6 +10422,11 @@
   {
     "lemma": "cittadino",
     "fr": "citoyen ; citadin, urbain",
+    "isVerb": false
+  },
+  {
+    "lemma": "città",
+    "fr": "ville",
     "isVerb": false
   },
   {
@@ -10382,6 +10462,11 @@
   {
     "lemma": "civiltà",
     "fr": "civilisation",
+    "isVerb": false
+  },
+  {
+    "lemma": "ciò",
+    "fr": "cela, ceci",
     "isVerb": false
   },
   {
@@ -10490,6 +10575,11 @@
     "isVerb": false
   },
   {
+    "lemma": "coalizione",
+    "fr": "coalition",
+    "isVerb": false
+  },
+  {
     "lemma": "cocchiere",
     "fr": "cocher",
     "isVerb": false
@@ -10593,11 +10683,6 @@
     "lemma": "coinvolgere",
     "fr": "impliquer, engager",
     "isVerb": true
-  },
-  {
-    "lemma": "colà",
-    "fr": "là-bas",
-    "isVerb": false
   },
   {
     "lemma": "colare",
@@ -10867,6 +10952,11 @@
   {
     "lemma": "colui",
     "fr": "celui (qui)",
+    "isVerb": false
+  },
+  {
+    "lemma": "colà",
+    "fr": "là-bas",
     "isVerb": false
   },
   {
@@ -11345,6 +11435,11 @@
     "isVerb": false
   },
   {
+    "lemma": "compressa",
+    "fr": "comprimés",
+    "isVerb": false
+  },
+  {
     "lemma": "compromesso",
     "fr": "compromis",
     "isVerb": false
@@ -11405,13 +11500,13 @@
     "isVerb": false
   },
   {
-    "lemma": "comunità",
-    "fr": "communauté",
+    "lemma": "comunitario",
+    "fr": "communautaire",
     "isVerb": false
   },
   {
-    "lemma": "comunitario",
-    "fr": "communautaire",
+    "lemma": "comunità",
+    "fr": "communauté",
     "isVerb": false
   },
   {
@@ -11523,6 +11618,11 @@
     "lemma": "conciliare",
     "fr": "concilier, réconcilier",
     "isVerb": true
+  },
+  {
+    "lemma": "concilio",
+    "fr": "concile",
+    "isVerb": false
   },
   {
     "lemma": "conciossiaché",
@@ -12238,6 +12338,11 @@
     "lemma": "contare",
     "fr": "compter",
     "isVerb": true
+  },
+  {
+    "lemma": "contatore",
+    "fr": "compteur",
+    "isVerb": false
   },
   {
     "lemma": "contattare",
@@ -13070,11 +13175,6 @@
     "isVerb": false
   },
   {
-    "lemma": "così",
-    "fr": "ainsi, comme ça, tellement",
-    "isVerb": false
-  },
-  {
     "lemma": "cosicché",
     "fr": "de sorte que, si bien que",
     "isVerb": false
@@ -13160,11 +13260,6 @@
     "isVerb": false
   },
   {
-    "lemma": "costì",
-    "fr": "là (près de toi)",
-    "isVerb": false
-  },
-  {
     "lemma": "costiero",
     "fr": "côtier",
     "isVerb": false
@@ -13237,6 +13332,16 @@
   {
     "lemma": "costume",
     "fr": "coutume, costume, maillot de bain",
+    "isVerb": false
+  },
+  {
+    "lemma": "costì",
+    "fr": "là (près de toi)",
+    "isVerb": false
+  },
+  {
+    "lemma": "così",
+    "fr": "ainsi, comme ça, tellement",
     "isVerb": false
   },
   {
@@ -13337,6 +13442,11 @@
   {
     "lemma": "creatività",
     "fr": "créativité",
+    "isVerb": false
+  },
+  {
+    "lemma": "creativo",
+    "fr": "créatif",
     "isVerb": false
   },
   {
@@ -13635,6 +13745,11 @@
     "isVerb": false
   },
   {
+    "lemma": "cruciale",
+    "fr": "crucial, décisif",
+    "isVerb": false
+  },
+  {
     "lemma": "crudele",
     "fr": "cruel",
     "isVerb": false
@@ -13862,6 +13977,11 @@
   {
     "lemma": "curriculum",
     "fr": "curriculum vitae",
+    "isVerb": false
+  },
+  {
+    "lemma": "curry",
+    "fr": "curry",
     "isVerb": false
   },
   {
@@ -14770,11 +14890,6 @@
     "isVerb": false
   },
   {
-    "lemma": "dì",
-    "fr": "jour",
-    "isVerb": false
-  },
-  {
     "lemma": "di più",
     "fr": "davantage, plus",
     "isVerb": false
@@ -15065,13 +15180,13 @@
     "isVerb": false
   },
   {
-    "lemma": "dignità",
-    "fr": "dignité",
+    "lemma": "dignitoso",
+    "fr": "digne",
     "isVerb": false
   },
   {
-    "lemma": "dignitoso",
-    "fr": "digne",
+    "lemma": "dignità",
+    "fr": "dignité",
     "isVerb": false
   },
   {
@@ -16535,6 +16650,11 @@
     "isVerb": false
   },
   {
+    "lemma": "dramma",
+    "fr": "drames",
+    "isVerb": false
+  },
+  {
     "lemma": "drammatico",
     "fr": "dramatique",
     "isVerb": false
@@ -16592,6 +16712,11 @@
   {
     "lemma": "duca",
     "fr": "duc",
+    "isVerb": false
+  },
+  {
+    "lemma": "ducato",
+    "fr": "ducats",
     "isVerb": false
   },
   {
@@ -16702,6 +16827,11 @@
   {
     "lemma": "duro",
     "fr": "dur",
+    "isVerb": false
+  },
+  {
+    "lemma": "dì",
+    "fr": "jour",
     "isVerb": false
   },
   {
@@ -17210,6 +17340,11 @@
     "isVerb": false
   },
   {
+    "lemma": "emergere",
+    "fr": "ils/elles émergent",
+    "isVerb": true
+  },
+  {
     "lemma": "emettere",
     "fr": "émettre",
     "isVerb": true
@@ -17540,14 +17675,14 @@
     "isVerb": false
   },
   {
-    "lemma": "eredità",
-    "fr": "héritage",
-    "isVerb": false
-  },
-  {
     "lemma": "ereditare",
     "fr": "hériter",
     "isVerb": true
+  },
+  {
+    "lemma": "eredità",
+    "fr": "héritage",
+    "isVerb": false
   },
   {
     "lemma": "eresia",
@@ -17910,6 +18045,11 @@
     "isVerb": false
   },
   {
+    "lemma": "esotico",
+    "fr": "exotiques",
+    "isVerb": false
+  },
+  {
     "lemma": "espediente",
     "fr": "expédient, subterfuge",
     "isVerb": false
@@ -18205,11 +18345,6 @@
     "isVerb": true
   },
   {
-    "lemma": "età",
-    "fr": "âge",
-    "isVerb": false
-  },
-  {
     "lemma": "etere",
     "fr": "éther, ondes (radio/TV); ciel",
     "isVerb": false
@@ -18267,6 +18402,11 @@
   {
     "lemma": "etterno",
     "fr": "éternel (forme poétique)",
+    "isVerb": false
+  },
+  {
+    "lemma": "età",
+    "fr": "âge",
     "isVerb": false
   },
   {
@@ -18430,13 +18570,13 @@
     "isVerb": false
   },
   {
-    "lemma": "facoltà",
-    "fr": "faculté",
+    "lemma": "facoltoso",
+    "fr": "riche, aisé",
     "isVerb": false
   },
   {
-    "lemma": "facoltoso",
-    "fr": "riche, aisé",
+    "lemma": "facoltà",
+    "fr": "faculté",
     "isVerb": false
   },
   {
@@ -18985,14 +19125,14 @@
     "isVerb": false
   },
   {
-    "lemma": "felicità",
-    "fr": "bonheur",
-    "isVerb": false
-  },
-  {
     "lemma": "felicitare",
     "fr": "féliciter",
     "isVerb": true
+  },
+  {
+    "lemma": "felicità",
+    "fr": "bonheur",
+    "isVerb": false
   },
   {
     "lemma": "feltro",
@@ -19720,6 +19860,11 @@
     "isVerb": true
   },
   {
+    "lemma": "fisicamente",
+    "fr": "physiquement",
+    "isVerb": false
+  },
+  {
     "lemma": "fisico",
     "fr": "physique",
     "isVerb": false
@@ -19785,11 +19930,6 @@
     "isVerb": false
   },
   {
-    "lemma": "flânerie",
-    "fr": "flânerie",
-    "isVerb": false
-  },
-  {
     "lemma": "flash",
     "fr": "flash",
     "isVerb": false
@@ -19840,6 +19980,11 @@
     "isVerb": false
   },
   {
+    "lemma": "flotta",
+    "fr": "flotte",
+    "isVerb": false
+  },
+  {
     "lemma": "fluido",
     "fr": "fluide",
     "isVerb": false
@@ -19862,6 +20007,11 @@
   {
     "lemma": "flutto",
     "fr": "flot, vague",
+    "isVerb": false
+  },
+  {
+    "lemma": "flânerie",
+    "fr": "flânerie",
     "isVerb": false
   },
   {
@@ -20370,11 +20520,6 @@
     "isVerb": false
   },
   {
-    "lemma": "fragorìo",
-    "fr": "grondement continu / vacarme prolongé",
-    "isVerb": false
-  },
-  {
     "lemma": "fragorosamente",
     "fr": "bruyamment",
     "isVerb": false
@@ -20382,6 +20527,11 @@
   {
     "lemma": "fragoroso",
     "fr": "fracassant / retentissant",
+    "isVerb": false
+  },
+  {
+    "lemma": "fragorìo",
+    "fr": "grondement continu / vacarme prolongé",
     "isVerb": false
   },
   {
@@ -20622,6 +20772,11 @@
   {
     "lemma": "frequente",
     "fr": "fréquent",
+    "isVerb": false
+  },
+  {
+    "lemma": "frequentemente",
+    "fr": "fréquemment",
     "isVerb": false
   },
   {
@@ -20975,6 +21130,11 @@
     "isVerb": false
   },
   {
+    "lemma": "furgone",
+    "fr": "fourgonnette, camionnette",
+    "isVerb": false
+  },
+  {
     "lemma": "furia",
     "fr": "fureur, rage",
     "isVerb": false
@@ -21090,6 +21250,16 @@
     "isVerb": false
   },
   {
+    "lemma": "galilei",
+    "fr": "Galilée (nom de famille)",
+    "isVerb": false
+  },
+  {
+    "lemma": "galileo",
+    "fr": "Galilée (prénom)",
+    "isVerb": false
+  },
+  {
     "lemma": "galla",
     "fr": "flotter (dans l'expression 'stare a galla')",
     "isVerb": false
@@ -21117,6 +21287,11 @@
   {
     "lemma": "galletto",
     "fr": "jeune coq",
+    "isVerb": false
+  },
+  {
+    "lemma": "gallico",
+    "fr": "galliques",
     "isVerb": false
   },
   {
@@ -21525,8 +21700,18 @@
     "isVerb": false
   },
   {
+    "lemma": "geografo",
+    "fr": "géographes",
+    "isVerb": false
+  },
+  {
     "lemma": "geologico",
     "fr": "géologique",
+    "isVerb": false
+  },
+  {
+    "lemma": "geometrico",
+    "fr": "géométrique",
     "isVerb": false
   },
   {
@@ -21675,23 +21860,18 @@
     "isVerb": false
   },
   {
-    "lemma": "già",
-    "fr": "déjà",
-    "isVerb": false
-  },
-  {
     "lemma": "giacca",
     "fr": "veste",
     "isVerb": false
   },
   {
-    "lemma": "giacché",
-    "fr": "puisque, étant donné que",
+    "lemma": "giacchetta",
+    "fr": "petite veste",
     "isVerb": false
   },
   {
-    "lemma": "giacchetta",
-    "fr": "petite veste",
+    "lemma": "giacché",
+    "fr": "puisque, étant donné que",
     "isVerb": false
   },
   {
@@ -21797,6 +21977,11 @@
   {
     "lemma": "giocattolo",
     "fr": "jouet",
+    "isVerb": false
+  },
+  {
+    "lemma": "giocherellone",
+    "fr": "espiègle, joueur",
     "isVerb": false
   },
   {
@@ -21960,11 +22145,6 @@
     "isVerb": false
   },
   {
-    "lemma": "giù",
-    "fr": "en bas",
-    "isVerb": false
-  },
-  {
     "lemma": "giubba",
     "fr": "veste, habit",
     "isVerb": false
@@ -22045,11 +22225,6 @@
     "isVerb": true
   },
   {
-    "lemma": "giurì",
-    "fr": "jury",
-    "isVerb": false
-  },
-  {
     "lemma": "giuria",
     "fr": "jury",
     "isVerb": false
@@ -22062,6 +22237,11 @@
   {
     "lemma": "giuridico",
     "fr": "juridique",
+    "isVerb": false
+  },
+  {
+    "lemma": "giurì",
+    "fr": "jury",
     "isVerb": false
   },
   {
@@ -22097,6 +22277,16 @@
   {
     "lemma": "giusto",
     "fr": "juste",
+    "isVerb": false
+  },
+  {
+    "lemma": "già",
+    "fr": "déjà",
+    "isVerb": false
+  },
+  {
+    "lemma": "giù",
+    "fr": "en bas",
     "isVerb": false
   },
   {
@@ -22302,6 +22492,11 @@
   {
     "lemma": "gota",
     "fr": "joue",
+    "isVerb": false
+  },
+  {
+    "lemma": "gotico",
+    "fr": "gothiques",
     "isVerb": false
   },
   {
@@ -22960,6 +23155,11 @@
     "isVerb": false
   },
   {
+    "lemma": "guerriglia",
+    "fr": "guérilla",
+    "isVerb": false
+  },
+  {
     "lemma": "gufo",
     "fr": "hibou",
     "isVerb": false
@@ -23060,6 +23260,11 @@
     "isVerb": false
   },
   {
+    "lemma": "ibrido",
+    "fr": "hybride",
+    "isVerb": false
+  },
+  {
     "lemma": "icona",
     "fr": "icône",
     "isVerb": false
@@ -23110,13 +23315,13 @@
     "isVerb": false
   },
   {
-    "lemma": "identità",
-    "fr": "identité",
+    "lemma": "identitario",
+    "fr": "identitaire",
     "isVerb": false
   },
   {
-    "lemma": "identitario",
-    "fr": "identitaire",
+    "lemma": "identità",
+    "fr": "identité",
     "isVerb": false
   },
   {
@@ -23960,6 +24165,11 @@
     "isVerb": false
   },
   {
+    "lemma": "imponente",
+    "fr": "imposant",
+    "isVerb": false
+  },
+  {
     "lemma": "imporre",
     "fr": "imposer",
     "isVerb": true
@@ -24000,13 +24210,13 @@
     "isVerb": false
   },
   {
-    "lemma": "impossibilità",
-    "fr": "impossibilité",
+    "lemma": "impossibilitato",
+    "fr": "empêché, dans l'impossibilité de",
     "isVerb": false
   },
   {
-    "lemma": "impossibilitato",
-    "fr": "empêché, dans l'impossibilité de",
+    "lemma": "impossibilità",
+    "fr": "impossibilité",
     "isVerb": false
   },
   {
@@ -24642,6 +24852,11 @@
   {
     "lemma": "incorniciare",
     "fr": "encadrer, entourer",
+    "isVerb": true
+  },
+  {
+    "lemma": "incoronare",
+    "fr": "couronné",
     "isVerb": true
   },
   {
@@ -25365,6 +25580,11 @@
     "isVerb": false
   },
   {
+    "lemma": "influente",
+    "fr": "influents",
+    "isVerb": false
+  },
+  {
     "lemma": "influenza",
     "fr": "influence, ascendant ; grippe",
     "isVerb": false
@@ -25820,6 +26040,11 @@
     "isVerb": false
   },
   {
+    "lemma": "innovare",
+    "fr": "il/elle innova",
+    "isVerb": true
+  },
+  {
     "lemma": "innovativo",
     "fr": "innovant, novateur",
     "isVerb": false
@@ -26195,11 +26420,6 @@
     "isVerb": true
   },
   {
-    "lemma": "insù",
-    "fr": "vers le haut, en haut",
-    "isVerb": false
-  },
-  {
     "lemma": "insufficiente",
     "fr": "insuffisant, inadéquat",
     "isVerb": false
@@ -26232,6 +26452,11 @@
   {
     "lemma": "insurrezione",
     "fr": "insurrection, soulèvement",
+    "isVerb": false
+  },
+  {
+    "lemma": "insù",
+    "fr": "vers le haut, en haut",
     "isVerb": false
   },
   {
@@ -27345,11 +27570,6 @@
     "isVerb": false
   },
   {
-    "lemma": "là",
-    "fr": "là, là-bas",
-    "isVerb": false
-  },
-  {
     "lemma": "labbro",
     "fr": "lèvre ; bord (d'une plaie, d'un vase)",
     "isVerb": false
@@ -28170,13 +28390,13 @@
     "isVerb": true
   },
   {
-    "lemma": "levità",
-    "fr": "légèreté, délicatesse",
+    "lemma": "levitazione",
+    "fr": "lévitation",
     "isVerb": false
   },
   {
-    "lemma": "levitazione",
-    "fr": "lévitation",
+    "lemma": "levità",
+    "fr": "légèreté, délicatesse",
     "isVerb": false
   },
   {
@@ -28207,11 +28427,6 @@
   {
     "lemma": "li",
     "fr": "les (eux, ceux-là)",
-    "isVerb": false
-  },
-  {
-    "lemma": "lì",
-    "fr": "là, y",
     "isVerb": false
   },
   {
@@ -28483,6 +28698,11 @@
     "lemma": "litigare",
     "fr": "se disputer, se quereller",
     "isVerb": true
+  },
+  {
+    "lemma": "litigio",
+    "fr": "dispute, querelle",
+    "isVerb": false
   },
   {
     "lemma": "litigiosità",
@@ -28900,6 +29120,16 @@
     "isVerb": false
   },
   {
+    "lemma": "là",
+    "fr": "là, là-bas",
+    "isVerb": false
+  },
+  {
+    "lemma": "lì",
+    "fr": "là, y",
+    "isVerb": false
+  },
+  {
     "lemma": "ma",
     "fr": "mais, pourtant",
     "isVerb": false
@@ -28922,6 +29152,11 @@
   {
     "lemma": "macchia",
     "fr": "tache; maquis (végétation)",
+    "isVerb": false
+  },
+  {
+    "lemma": "macchiato",
+    "fr": "taché",
     "isVerb": false
   },
   {
@@ -29015,11 +29250,6 @@
     "isVerb": false
   },
   {
-    "lemma": "maestà",
-    "fr": "majesté, grandeur solennelle",
-    "isVerb": false
-  },
-  {
     "lemma": "maestoso",
     "fr": "majestueux, imposant",
     "isVerb": false
@@ -29032,6 +29262,11 @@
   {
     "lemma": "maestro",
     "fr": "instituteur, maître, professeur (de musique)",
+    "isVerb": false
+  },
+  {
+    "lemma": "maestà",
+    "fr": "majesté, grandeur solennelle",
     "isVerb": false
   },
   {
@@ -29672,6 +29907,11 @@
   {
     "lemma": "marchio",
     "fr": "marque, label, empreinte",
+    "isVerb": false
+  },
+  {
+    "lemma": "marcia",
+    "fr": "marche",
     "isVerb": false
   },
   {
@@ -30335,13 +30575,13 @@
     "isVerb": false
   },
   {
-    "lemma": "menù",
-    "fr": "menu, carte",
+    "lemma": "menzogna",
+    "fr": "mensonge",
     "isVerb": false
   },
   {
-    "lemma": "menzogna",
-    "fr": "mensonge",
+    "lemma": "menù",
+    "fr": "menu, carte",
     "isVerb": false
   },
   {
@@ -30400,11 +30640,6 @@
     "isVerb": false
   },
   {
-    "lemma": "mercè",
-    "fr": "merci, grâce, pitié",
-    "isVerb": false
-  },
-  {
     "lemma": "mercenario",
     "fr": "mercenaire",
     "isVerb": false
@@ -30417,6 +30652,11 @@
   {
     "lemma": "mercoledì",
     "fr": "mercredi",
+    "isVerb": false
+  },
+  {
+    "lemma": "mercè",
+    "fr": "merci, grâce, pitié",
     "isVerb": false
   },
   {
@@ -30550,11 +30790,6 @@
     "isVerb": false
   },
   {
-    "lemma": "metà",
-    "fr": "moitié, mi-",
-    "isVerb": false
-  },
-  {
     "lemma": "metabolita",
     "fr": "métabolite",
     "isVerb": false
@@ -30613,6 +30848,11 @@
     "lemma": "mettersi",
     "fr": "se mettre, se placer, s'habiller de",
     "isVerb": true
+  },
+  {
+    "lemma": "metà",
+    "fr": "moitié, mi-",
+    "isVerb": false
   },
   {
     "lemma": "mezz'ora",
@@ -31300,6 +31540,11 @@
     "isVerb": false
   },
   {
+    "lemma": "modem",
+    "fr": "modem",
+    "isVerb": false
+  },
+  {
     "lemma": "modernità",
     "fr": "modernité",
     "isVerb": false
@@ -31800,6 +32045,11 @@
     "isVerb": false
   },
   {
+    "lemma": "movimentato",
+    "fr": "animée / mouvementée",
+    "isVerb": false
+  },
+  {
     "lemma": "movimento",
     "fr": "mouvement",
     "isVerb": false
@@ -31992,6 +32242,11 @@
   {
     "lemma": "musicale",
     "fr": "musical",
+    "isVerb": false
+  },
+  {
+    "lemma": "musicalmente",
+    "fr": "musicalement",
     "isVerb": false
   },
   {
@@ -32230,6 +32485,11 @@
     "isVerb": true
   },
   {
+    "lemma": "navale",
+    "fr": "naval",
+    "isVerb": false
+  },
+  {
     "lemma": "navata",
     "fr": "nef (d'une église)",
     "isVerb": false
@@ -32257,11 +32517,6 @@
   {
     "lemma": "ne",
     "fr": "en (de cela, de lui, d'eux)",
-    "isVerb": false
-  },
-  {
-    "lemma": "né",
-    "fr": "ni",
     "isVerb": false
   },
   {
@@ -32295,14 +32550,14 @@
     "isVerb": false
   },
   {
-    "lemma": "necessità",
-    "fr": "nécessité, besoin",
-    "isVerb": false
-  },
-  {
     "lemma": "necessitare",
     "fr": "nécessiter, avoir besoin de",
     "isVerb": true
+  },
+  {
+    "lemma": "necessità",
+    "fr": "nécessité, besoin",
+    "isVerb": false
   },
   {
     "lemma": "necrologia",
@@ -32402,6 +32657,11 @@
   {
     "lemma": "neorealismo",
     "fr": "néoréalisme",
+    "isVerb": false
+  },
+  {
+    "lemma": "neorealista",
+    "fr": "néoréaliste",
     "isVerb": false
   },
   {
@@ -33075,6 +33335,11 @@
     "isVerb": false
   },
   {
+    "lemma": "né",
+    "fr": "ni",
+    "isVerb": false
+  },
+  {
     "lemma": "o",
     "fr": "ou",
     "isVerb": false
@@ -33260,6 +33525,11 @@
     "isVerb": false
   },
   {
+    "lemma": "oddio",
+    "fr": "oh mon Dieu / oh là là",
+    "isVerb": false
+  },
+  {
     "lemma": "ode",
     "fr": "ode",
     "isVerb": false
@@ -33390,11 +33660,6 @@
     "isVerb": false
   },
   {
-    "lemma": "olà",
-    "fr": "holà !, hé là !",
-    "isVerb": false
-  },
-  {
     "lemma": "olfattivo",
     "fr": "olfactif",
     "isVerb": false
@@ -33462,6 +33727,11 @@
   {
     "lemma": "oltreoceano",
     "fr": "outre-mer, outre-Atlantique",
+    "isVerb": false
+  },
+  {
+    "lemma": "olà",
+    "fr": "holà !, hé là !",
     "isVerb": false
   },
   {
@@ -33565,11 +33835,6 @@
     "isVerb": false
   },
   {
-    "lemma": "onestà",
-    "fr": "honnêteté, probité",
-    "isVerb": false
-  },
-  {
     "lemma": "onestamente",
     "fr": "honnêtement, franchement",
     "isVerb": false
@@ -33577,6 +33842,11 @@
   {
     "lemma": "onesto",
     "fr": "honnête",
+    "isVerb": false
+  },
+  {
+    "lemma": "onestà",
+    "fr": "honnêteté, probité",
     "isVerb": false
   },
   {
@@ -34430,11 +34700,6 @@
     "isVerb": false
   },
   {
-    "lemma": "pàffete",
-    "fr": "paf !, patatras !",
-    "isVerb": false
-  },
-  {
     "lemma": "paga",
     "fr": "paie, salaire",
     "isVerb": false
@@ -34805,11 +35070,6 @@
     "isVerb": false
   },
   {
-    "lemma": "papà",
-    "fr": "papa",
-    "isVerb": false
-  },
-  {
     "lemma": "papalina",
     "fr": "calotte, petit bonnet",
     "isVerb": false
@@ -34832,6 +35092,11 @@
   {
     "lemma": "pappina",
     "fr": "petite bouillie, cataplasme",
+    "isVerb": false
+  },
+  {
+    "lemma": "papà",
+    "fr": "papa",
     "isVerb": false
   },
   {
@@ -34912,6 +35177,11 @@
   {
     "lemma": "parata",
     "fr": "défilé, parade ; parade (escrime, sport)",
+    "isVerb": false
+  },
+  {
+    "lemma": "paraurti",
+    "fr": "pare-chocs",
     "isVerb": false
   },
   {
@@ -35192,6 +35462,11 @@
   {
     "lemma": "passante",
     "fr": "passant, passante",
+    "isVerb": false
+  },
+  {
+    "lemma": "passaporto",
+    "fr": "passeport",
     "isVerb": false
   },
   {
@@ -35630,6 +35905,11 @@
     "isVerb": true
   },
   {
+    "lemma": "pendenza",
+    "fr": "pente",
+    "isVerb": false
+  },
+  {
     "lemma": "pendere",
     "fr": "pendre, être suspendu ; pencher",
     "isVerb": true
@@ -35845,13 +36125,13 @@
     "isVerb": false
   },
   {
-    "lemma": "perciò",
-    "fr": "c'est pourquoi, donc",
+    "lemma": "perciocché",
+    "fr": "parce que, car (littéraire)",
     "isVerb": false
   },
   {
-    "lemma": "perciocché",
-    "fr": "parce que, car (littéraire)",
+    "lemma": "perciò",
+    "fr": "c'est pourquoi, donc",
     "isVerb": false
   },
   {
@@ -35863,6 +36143,11 @@
     "lemma": "percorrere",
     "fr": "parcourir",
     "isVerb": true
+  },
+  {
+    "lemma": "percorribile",
+    "fr": "praticables / carrossables",
+    "isVerb": false
   },
   {
     "lemma": "percorso",
@@ -36075,11 +36360,6 @@
     "isVerb": false
   },
   {
-    "lemma": "però",
-    "fr": "mais, cependant, pourtant",
-    "isVerb": false
-  },
-  {
     "lemma": "perpetrare",
     "fr": "perpétrer, commettre",
     "isVerb": true
@@ -36138,6 +36418,11 @@
     "lemma": "persistenza",
     "fr": "persistance, ténacité",
     "isVerb": false
+  },
+  {
+    "lemma": "persistere",
+    "fr": "persiste",
+    "isVerb": true
   },
   {
     "lemma": "persona",
@@ -36202,6 +36487,11 @@
   {
     "lemma": "perverso",
     "fr": "pervers, malfaisant",
+    "isVerb": false
+  },
+  {
+    "lemma": "però",
+    "fr": "mais, cependant, pourtant",
     "isVerb": false
   },
   {
@@ -36610,11 +36900,6 @@
     "isVerb": false
   },
   {
-    "lemma": "pietà",
-    "fr": "pitié, piété",
-    "isVerb": false
-  },
-  {
     "lemma": "pietanza",
     "fr": "plat, mets",
     "isVerb": false
@@ -36637,6 +36922,11 @@
   {
     "lemma": "pietrisco",
     "fr": "gravier, cailloutis",
+    "isVerb": false
+  },
+  {
+    "lemma": "pietà",
+    "fr": "pitié, piété",
     "isVerb": false
   },
   {
@@ -36677,6 +36967,11 @@
   {
     "lemma": "pigro",
     "fr": "paresseux, indolent",
+    "isVerb": false
+  },
+  {
+    "lemma": "pila",
+    "fr": "pile",
     "isVerb": false
   },
   {
@@ -36835,18 +37130,13 @@
     "isVerb": false
   },
   {
+    "lemma": "pittorico",
+    "fr": "pictural",
+    "isVerb": false
+  },
+  {
     "lemma": "pittura",
     "fr": "peinture ; tableau",
-    "isVerb": false
-  },
-  {
-    "lemma": "più",
-    "fr": "plus, davantage",
-    "isVerb": false
-  },
-  {
-    "lemma": "più volte",
-    "fr": "plusieurs fois, à plusieurs reprises",
     "isVerb": false
   },
   {
@@ -36902,6 +37192,16 @@
   {
     "lemma": "pizzo",
     "fr": "dentelle ; bouc (barbiche) ; pointe, cime",
+    "isVerb": false
+  },
+  {
+    "lemma": "più",
+    "fr": "plus, davantage",
+    "isVerb": false
+  },
+  {
+    "lemma": "più volte",
+    "fr": "plusieurs fois, à plusieurs reprises",
     "isVerb": false
   },
   {
@@ -37047,6 +37347,11 @@
   {
     "lemma": "polacco",
     "fr": "polonais ; (nom) Polonais, langue polonaise",
+    "isVerb": false
+  },
+  {
+    "lemma": "polarizzato",
+    "fr": "polarisé",
     "isVerb": false
   },
   {
@@ -38135,6 +38440,11 @@
     "isVerb": false
   },
   {
+    "lemma": "prestigio",
+    "fr": "prestige",
+    "isVerb": false
+  },
+  {
     "lemma": "prestigioso",
     "fr": "prestigieux, réputé",
     "isVerb": false
@@ -38345,6 +38655,11 @@
     "isVerb": false
   },
   {
+    "lemma": "principalmente",
+    "fr": "principalement",
+    "isVerb": false
+  },
+  {
     "lemma": "principato",
     "fr": "principauté ; règne d'un prince",
     "isVerb": false
@@ -38467,6 +38782,11 @@
   {
     "lemma": "procedura",
     "fr": "procédure, marche à suivre",
+    "isVerb": false
+  },
+  {
+    "lemma": "processato",
+    "fr": "transformé / traité",
     "isVerb": false
   },
   {
@@ -38885,13 +39205,13 @@
     "isVerb": false
   },
   {
-    "lemma": "proprietà",
-    "fr": "propriété ; bien, domaine ; qualité",
+    "lemma": "proprietario",
+    "fr": "propriétaire",
     "isVerb": false
   },
   {
-    "lemma": "proprietario",
-    "fr": "propriétaire",
+    "lemma": "proprietà",
+    "fr": "propriété ; bien, domaine ; qualité",
     "isVerb": false
   },
   {
@@ -38912,6 +39232,11 @@
   {
     "lemma": "prorompimento",
     "fr": "jaillissement, débordement, explosion (littéraire)",
+    "isVerb": false
+  },
+  {
+    "lemma": "prosa",
+    "fr": "prose",
     "isVerb": false
   },
   {
@@ -38997,6 +39322,11 @@
   {
     "lemma": "protesta",
     "fr": "protestation, contestation ; manifestation",
+    "isVerb": false
+  },
+  {
+    "lemma": "protestante",
+    "fr": "protestant",
     "isVerb": false
   },
   {
@@ -39210,13 +39540,13 @@
     "isVerb": false
   },
   {
-    "lemma": "pubblicità",
-    "fr": "publicité, réclame ; notoriété",
+    "lemma": "pubblicitario",
+    "fr": "publicitaire ; (nom) publicitaire, professionnel de la publicité",
     "isVerb": false
   },
   {
-    "lemma": "pubblicitario",
-    "fr": "publicitaire ; (nom) publicitaire, professionnel de la publicité",
+    "lemma": "pubblicità",
+    "fr": "publicité, réclame ; notoriété",
     "isVerb": false
   },
   {
@@ -39472,6 +39802,11 @@
   {
     "lemma": "puzza",
     "fr": "puanteur, mauvaise odeur, remugle",
+    "isVerb": false
+  },
+  {
+    "lemma": "pàffete",
+    "fr": "paf !, patatras !",
     "isVerb": false
   },
   {
@@ -40515,6 +40850,11 @@
     "isVerb": false
   },
   {
+    "lemma": "realismo",
+    "fr": "réalisme",
+    "isVerb": false
+  },
+  {
     "lemma": "realista",
     "fr": "réaliste",
     "isVerb": false
@@ -40735,6 +41075,11 @@
     "isVerb": false
   },
   {
+    "lemma": "regia",
+    "fr": "mise en scène / réalisation",
+    "isVerb": false
+  },
+  {
     "lemma": "regime",
     "fr": "régime",
     "isVerb": false
@@ -40855,6 +41200,11 @@
     "isVerb": false
   },
   {
+    "lemma": "relax",
+    "fr": "détente / relaxation",
+    "isVerb": false
+  },
+  {
     "lemma": "relazione",
     "fr": "relation, rapport ; compte rendu",
     "isVerb": false
@@ -40862,6 +41212,11 @@
   {
     "lemma": "religione",
     "fr": "religion",
+    "isVerb": false
+  },
+  {
+    "lemma": "religiosità",
+    "fr": "religiosité",
     "isVerb": false
   },
   {
@@ -40952,6 +41307,11 @@
   {
     "lemma": "reperibilità",
     "fr": "disponibilité, service de garde",
+    "isVerb": false
+  },
+  {
+    "lemma": "reperto",
+    "fr": "vestiges / pièces (archéologiques)",
     "isVerb": false
   },
   {
@@ -41053,6 +41413,11 @@
     "lemma": "resistere",
     "fr": "résister",
     "isVerb": true
+  },
+  {
+    "lemma": "resoconto",
+    "fr": "comptes rendus / rapports",
+    "isVerb": false
   },
   {
     "lemma": "respettivo",
@@ -41905,6 +42270,11 @@
     "isVerb": true
   },
   {
+    "lemma": "rifugiarsi",
+    "fr": "ils se réfugient / se réfugier",
+    "isVerb": true
+  },
+  {
     "lemma": "rifugiato",
     "fr": "réfugié, réfugiée",
     "isVerb": false
@@ -42448,6 +42818,11 @@
     "lemma": "rione",
     "fr": "quartier",
     "isVerb": false
+  },
+  {
+    "lemma": "riorganizzare",
+    "fr": "réorganiser",
+    "isVerb": true
   },
   {
     "lemma": "riottenere",
@@ -43125,6 +43500,11 @@
     "isVerb": true
   },
   {
+    "lemma": "ritrattare",
+    "fr": "rétracter, revenir sur ses propos",
+    "isVerb": true
+  },
+  {
     "lemma": "ritratto",
     "fr": "portrait",
     "isVerb": false
@@ -43782,6 +44162,11 @@
   {
     "lemma": "saccone",
     "fr": "grand sac, paillasse, matelas de paille",
+    "isVerb": false
+  },
+  {
+    "lemma": "sacerdote",
+    "fr": "prêtre",
     "isVerb": false
   },
   {
@@ -45780,11 +46165,6 @@
     "isVerb": false
   },
   {
-    "lemma": "sé",
-    "fr": "soi, lui-même, elle-même",
-    "isVerb": false
-  },
-  {
     "lemma": "sebbene",
     "fr": "bien que, quoique",
     "isVerb": false
@@ -46082,6 +46462,11 @@
   {
     "lemma": "selvatico",
     "fr": "sauvage, non domestiqué",
+    "isVerb": false
+  },
+  {
+    "lemma": "semaforo",
+    "fr": "feu de signalisation",
     "isVerb": false
   },
   {
@@ -47050,11 +47435,6 @@
     "isVerb": false
   },
   {
-    "lemma": "sì",
-    "fr": "oui, si",
-    "isVerb": false
-  },
-  {
     "lemma": "sibilo",
     "fr": "sifflement, sifflet",
     "isVerb": false
@@ -47515,6 +47895,11 @@
     "isVerb": false
   },
   {
+    "lemma": "smart",
+    "fr": "intelligent, connecté, astucieux",
+    "isVerb": false
+  },
+  {
     "lemma": "smartphone",
     "fr": "smartphone, téléphone intelligent, portable",
     "isVerb": false
@@ -47715,11 +48100,6 @@
     "isVerb": false
   },
   {
-    "lemma": "sofà",
-    "fr": "sofa, canapé",
-    "isVerb": false
-  },
-  {
     "lemma": "sofferenza",
     "fr": "souffrance, douleur",
     "isVerb": false
@@ -47795,6 +48175,11 @@
     "isVerb": false
   },
   {
+    "lemma": "sofà",
+    "fr": "sofa, canapé",
+    "isVerb": false
+  },
+  {
     "lemma": "soggetto",
     "fr": "sujet, thème, individu",
     "isVerb": false
@@ -47812,6 +48197,11 @@
   {
     "lemma": "soggiogare",
     "fr": "subjuguer, soumettre, asservir",
+    "isVerb": true
+  },
+  {
+    "lemma": "soggiornare",
+    "fr": "séjourné / séjourner",
     "isVerb": true
   },
   {
@@ -49655,6 +50045,11 @@
     "isVerb": false
   },
   {
+    "lemma": "stabilizzare",
+    "fr": "la stabiliser / stabiliser",
+    "isVerb": true
+  },
+  {
     "lemma": "staccare",
     "fr": "détacher, décoller, débrancher",
     "isVerb": true
@@ -49797,6 +50192,11 @@
   {
     "lemma": "stand",
     "fr": "stand",
+    "isVerb": false
+  },
+  {
+    "lemma": "standard",
+    "fr": "standard",
     "isVerb": false
   },
   {
@@ -50142,6 +50542,11 @@
   {
     "lemma": "stoffa",
     "fr": "tissu, étoffe",
+    "isVerb": false
+  },
+  {
+    "lemma": "stoico",
+    "fr": "stoïque",
     "isVerb": false
   },
   {
@@ -51255,6 +51660,16 @@
     "isVerb": true
   },
   {
+    "lemma": "sé",
+    "fr": "soi, lui-même, elle-même",
+    "isVerb": false
+  },
+  {
+    "lemma": "sì",
+    "fr": "oui, si",
+    "isVerb": false
+  },
+  {
     "lemma": "tabacchiera",
     "fr": "tabatière",
     "isVerb": false
@@ -51410,6 +51825,11 @@
     "isVerb": false
   },
   {
+    "lemma": "tamponare",
+    "fr": "tamponné, heurté / tamponner",
+    "isVerb": true
+  },
+  {
     "lemma": "tana",
     "fr": "tanière, terrier",
     "isVerb": false
@@ -51550,11 +51970,6 @@
     "isVerb": false
   },
   {
-    "lemma": "tarì",
-    "fr": "tari (ancienne monnaie)",
-    "isVerb": false
-  },
-  {
     "lemma": "tariffa",
     "fr": "tarif",
     "isVerb": false
@@ -51577,6 +51992,11 @@
   {
     "lemma": "tartufo",
     "fr": "truffe",
+    "isVerb": false
+  },
+  {
+    "lemma": "tarì",
+    "fr": "tari (ancienne monnaie)",
     "isVerb": false
   },
   {
@@ -51682,11 +52102,6 @@
   {
     "lemma": "te",
     "fr": "toi",
-    "isVerb": false
-  },
-  {
-    "lemma": "tè",
-    "fr": "thé",
     "isVerb": false
   },
   {
@@ -52260,11 +52675,6 @@
     "isVerb": false
   },
   {
-    "lemma": "testé",
-    "fr": "à l'instant, tout à l'heure",
-    "isVerb": false
-  },
-  {
     "lemma": "testimone",
     "fr": "témoin",
     "isVerb": false
@@ -52297,6 +52707,11 @@
   {
     "lemma": "testone",
     "fr": "grosse tête, entêté",
+    "isVerb": false
+  },
+  {
+    "lemma": "testé",
+    "fr": "à l'instant, tout à l'heure",
     "isVerb": false
   },
   {
@@ -53160,6 +53575,11 @@
     "isVerb": false
   },
   {
+    "lemma": "trasloco",
+    "fr": "déménagement",
+    "isVerb": false
+  },
+  {
     "lemma": "trasmettere",
     "fr": "transmettre, diffuser",
     "isVerb": true
@@ -53490,11 +53910,6 @@
     "isVerb": true
   },
   {
-    "lemma": "tribù",
-    "fr": "tribu",
-    "isVerb": false
-  },
-  {
     "lemma": "tribuna",
     "fr": "tribune, gradins",
     "isVerb": false
@@ -53508,6 +53923,16 @@
     "lemma": "tributare",
     "fr": "rendre (hommage), décerner",
     "isVerb": true
+  },
+  {
+    "lemma": "tributo",
+    "fr": "tribut, hommage",
+    "isVerb": false
+  },
+  {
+    "lemma": "tribù",
+    "fr": "tribu",
+    "isVerb": false
   },
   {
     "lemma": "tricolore",
@@ -53810,6 +54235,11 @@
     "isVerb": false
   },
   {
+    "lemma": "turbolento",
+    "fr": "turbulente, agitée",
+    "isVerb": false
+  },
+  {
     "lemma": "turchese",
     "fr": "turquoise",
     "isVerb": false
@@ -53902,6 +54332,11 @@
   {
     "lemma": "tuttora",
     "fr": "encore, encore aujourd'hui, jusqu'à présent",
+    "isVerb": false
+  },
+  {
+    "lemma": "tè",
+    "fr": "thé",
     "isVerb": false
   },
   {
@@ -54055,6 +54490,11 @@
     "isVerb": false
   },
   {
+    "lemma": "ulteriormente",
+    "fr": "davantage, ultérieurement",
+    "isVerb": false
+  },
+  {
     "lemma": "ultimamente",
     "fr": "dernièrement, ces derniers temps",
     "isVerb": false
@@ -54180,6 +54620,11 @@
     "isVerb": true
   },
   {
+    "lemma": "unificazione",
+    "fr": "unification",
+    "isVerb": false
+  },
+  {
     "lemma": "uniforme",
     "fr": "uniforme (vêtement) ; uniforme, régulier, constant",
     "isVerb": false
@@ -54210,13 +54655,13 @@
     "isVerb": false
   },
   {
-    "lemma": "università",
-    "fr": "université",
+    "lemma": "universitario",
+    "fr": "universitaire",
     "isVerb": false
   },
   {
-    "lemma": "universitario",
-    "fr": "universitaire",
+    "lemma": "università",
+    "fr": "université",
     "isVerb": false
   },
   {
@@ -54510,6 +54955,11 @@
     "isVerb": false
   },
   {
+    "lemma": "valorizzare",
+    "fr": "il/elle valorisa, mit en valeur",
+    "isVerb": true
+  },
+  {
     "lemma": "valorizzazione",
     "fr": "mise en valeur",
     "isVerb": false
@@ -54555,13 +55005,13 @@
     "isVerb": false
   },
   {
-    "lemma": "vanità",
-    "fr": "vanité",
+    "lemma": "vanitoso",
+    "fr": "vaniteux",
     "isVerb": false
   },
   {
-    "lemma": "vanitoso",
-    "fr": "vaniteux",
+    "lemma": "vanità",
+    "fr": "vanité",
     "isVerb": false
   },
   {
@@ -54742,6 +55192,11 @@
   {
     "lemma": "veduta",
     "fr": "vue, panorama",
+    "isVerb": false
+  },
+  {
+    "lemma": "vegetariano",
+    "fr": "végétarienne",
     "isVerb": false
   },
   {
@@ -55168,6 +55623,11 @@
     "lemma": "versare",
     "fr": "verser, renverser",
     "isVerb": true
+  },
+  {
+    "lemma": "versatile",
+    "fr": "polyvalent",
+    "isVerb": false
   },
   {
     "lemma": "versiere",
@@ -55665,11 +56125,6 @@
     "isVerb": false
   },
   {
-    "lemma": "virtù",
-    "fr": "vertu",
-    "isVerb": false
-  },
-  {
     "lemma": "virtuale",
     "fr": "virtuel",
     "isVerb": false
@@ -55677,6 +56132,11 @@
   {
     "lemma": "virtuoso",
     "fr": "vertueux, virtuose",
+    "isVerb": false
+  },
+  {
+    "lemma": "virtù",
+    "fr": "vertu",
     "isVerb": false
   },
   {
@@ -55910,13 +56370,13 @@
     "isVerb": false
   },
   {
-    "lemma": "vocìo",
-    "fr": "brouhaha, rumeur de voix",
+    "lemma": "vocione",
+    "fr": "grosse voix, voix de stentor",
     "isVerb": false
   },
   {
-    "lemma": "vocione",
-    "fr": "grosse voix, voix de stentor",
+    "lemma": "vocìo",
+    "fr": "brouhaha, rumeur de voix",
     "isVerb": false
   },
   {
@@ -55990,11 +56450,6 @@
     "isVerb": false
   },
   {
-    "lemma": "volontà",
-    "fr": "volonté",
-    "isVerb": false
-  },
-  {
     "lemma": "volontariamente",
     "fr": "volontairement, délibérément",
     "isVerb": false
@@ -56002,6 +56457,11 @@
   {
     "lemma": "volontario",
     "fr": "volontaire, bénévole",
+    "isVerb": false
+  },
+  {
+    "lemma": "volontà",
+    "fr": "volonté",
     "isVerb": false
   },
   {
@@ -56045,13 +56505,13 @@
     "isVerb": false
   },
   {
-    "lemma": "voluttà",
-    "fr": "volupté, plaisir intense",
+    "lemma": "voluttuosamente",
+    "fr": "voluptueusement",
     "isVerb": false
   },
   {
-    "lemma": "voluttuosamente",
-    "fr": "voluptueusement",
+    "lemma": "voluttà",
+    "fr": "volupté, plaisir intense",
     "isVerb": false
   },
   {
@@ -56142,6 +56602,11 @@
   {
     "lemma": "wifi",
     "fr": "wifi",
+    "isVerb": false
+  },
+  {
+    "lemma": "working",
+    "fr": "travail (dans l'expression travail à distance)",
     "isVerb": false
   },
   {

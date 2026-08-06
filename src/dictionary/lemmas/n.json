@@ -1,3369 +1,3399 @@
 {
   "nano": {
-    "lemma": "nano",
-    "pos": "sostantivo maschile / aggettivo",
-    "fr": "nain",
     "definition_it": "persona o cosa di statura molto piccola; nelle favole, piccolo essere fantastico",
     "examples": [
       {
-        "it": "Biancaneve viveva con sette nani.",
-        "fr": "Blanche-Neige vivait avec sept nains."
+        "fr": "Blanche-Neige vivait avec sept nains.",
+        "it": "Biancaneve viveva con sette nani."
       }
     ],
+    "fr": "nain",
+    "isVerb": false,
+    "lemma": "nano",
+    "pos": "sostantivo maschile / aggettivo",
     "synonyms": [
       "gnomo"
-    ],
-    "isVerb": false
+    ]
   },
   "napoletano": {
-    "lemma": "napoletano",
-    "pos": "aggettivo / sostantivo maschile",
-    "fr": "napolitain",
     "definition_it": "che viene da Napoli o riguarda Napoli; anche il dialetto parlato in quella città",
     "examples": [
       {
-        "it": "La pizza napoletana è famosa in tutto il mondo.",
-        "fr": "La pizza napolitaine est célèbre dans le monde entier."
+        "fr": "La pizza napolitaine est célèbre dans le monde entier.",
+        "it": "La pizza napoletana è famosa in tutto il mondo."
       }
     ],
+    "fr": "napolitain",
+    "isVerb": false,
+    "lemma": "napoletano",
+    "pos": "aggettivo / sostantivo maschile",
     "synonyms": [
       "partenopeo"
-    ],
-    "isVerb": false
+    ]
   },
   "nardo": {
-    "lemma": "nardo",
-    "pos": "sostantivo maschile",
-    "fr": "nard",
     "definition_it": "pianta aromatica da cui si ricava un profumo molto pregiato",
     "examples": [
       {
-        "it": "La stanza profumava di nardo.",
-        "fr": "La pièce embaumait le nard."
+        "fr": "La pièce embaumait le nard.",
+        "it": "La stanza profumava di nardo."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nard",
+    "isVerb": false,
+    "lemma": "nardo",
+    "pos": "sostantivo maschile",
+    "synonyms": []
   },
   "nare": {
-    "lemma": "nare",
-    "pos": "sostantivo femminile (letterario)",
-    "fr": "narine (littéraire)",
     "definition_it": "parola letteraria per narice, l'apertura del naso",
     "examples": [
       {
-        "it": "Il cavallo aprì le nari e annusò l'aria.",
-        "fr": "Le cheval ouvrit les naseaux et huma l'air."
+        "fr": "Le cheval ouvrit les naseaux et huma l'air.",
+        "it": "Il cavallo aprì le nari e annusò l'aria."
       }
     ],
+    "fr": "narine (littéraire)",
+    "isVerb": false,
+    "lemma": "nare",
+    "pos": "sostantivo femminile (letterario)",
+    "register": "letterario",
     "synonyms": [
       "narice"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "narice": {
-    "lemma": "narice",
-    "pos": "sostantivo femminile",
-    "fr": "narine",
     "definition_it": "ciascuna delle due aperture del naso attraverso cui passa l'aria",
     "examples": [
       {
-        "it": "Respira lentamente con una sola narice.",
-        "fr": "Respire lentement par une seule narine."
+        "fr": "Respire lentement par une seule narine.",
+        "it": "Respira lentamente con una sola narice."
       }
     ],
+    "fr": "narine",
+    "isVerb": false,
+    "lemma": "narice",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "nare"
-    ],
-    "isVerb": false
+    ]
   },
   "narrare": {
-    "lemma": "narrare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "raconter, narrer",
     "definition_it": "raccontare una storia o dei fatti, a voce o per iscritto",
     "examples": [
       {
-        "it": "Il libro narra la vita di un pescatore siciliano.",
-        "fr": "Le livre raconte la vie d'un pêcheur sicilien."
+        "fr": "Le livre raconte la vie d'un pêcheur sicilien.",
+        "it": "Il libro narra la vita di un pescatore siciliano."
       }
     ],
+    "fr": "raconter, narrer",
+    "isVerb": true,
+    "lemma": "narrare",
+    "pos": "verbo (transitivo, regolare)",
+    "register": "formale",
     "synonyms": [
       "raccontare",
       "riferire"
-    ],
-    "isVerb": true,
-    "register": "formale"
+    ]
   },
   "narratore": {
-    "lemma": "narratore",
-    "pos": "sostantivo (maschile)",
-    "fr": "narrateur, conteur",
     "definition_it": "chi racconta una storia, a voce o in un libro",
     "examples": [
       {
-        "it": "Il narratore del romanzo parla in prima persona.",
-        "fr": "Le narrateur du roman parle à la première personne."
+        "fr": "Le narrateur du roman parle à la première personne.",
+        "it": "Il narratore del romanzo parla in prima persona."
       }
     ],
+    "fr": "narrateur, conteur",
+    "isVerb": false,
+    "lemma": "narratore",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "raccontatore",
       "scrittore"
-    ],
-    "isVerb": false
+    ]
   },
   "narrazione": {
-    "lemma": "narrazione",
-    "pos": "sostantivo (femminile)",
-    "fr": "narration, récit",
     "definition_it": "il racconto di fatti reali o inventati, fatto in modo ordinato",
     "examples": [
       {
-        "it": "La narrazione del film segue due epoche diverse.",
-        "fr": "La narration du film suit deux époques différentes."
+        "fr": "La narration du film suit deux époques différentes.",
+        "it": "La narrazione del film segue due epoche diverse."
       }
     ],
+    "fr": "narration, récit",
+    "isVerb": false,
+    "lemma": "narrazione",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "racconto",
       "resoconto"
-    ],
-    "isVerb": false
+    ]
   },
   "nasale": {
-    "lemma": "nasale",
-    "pos": "aggettivo",
-    "fr": "nasal",
     "definition_it": "che riguarda il naso; detto di suono prodotto facendo passare l'aria dal naso",
     "examples": [
       {
-        "it": "In italiano la lettera «n» è una consonante nasale.",
-        "fr": "En italien, la lettre « n » est une consonne nasale."
+        "fr": "En italien, la lettre « n » est une consonne nasale.",
+        "it": "In italiano la lettera «n» è una consonante nasale."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nasal",
+    "isVerb": false,
+    "lemma": "nasale",
+    "pos": "aggettivo",
+    "synonyms": []
   },
   "nascente": {
-    "lemma": "nascente",
-    "pos": "aggettivo",
-    "fr": "naissant, levant",
     "definition_it": "che sta nascendo o comincia proprio adesso",
     "examples": [
       {
-        "it": "Guardavamo il sole nascente dalla finestra.",
-        "fr": "Nous regardions le soleil levant depuis la fenêtre."
+        "fr": "Nous regardions le soleil levant depuis la fenêtre.",
+        "it": "Guardavamo il sole nascente dalla finestra."
       }
     ],
+    "fr": "naissant, levant",
+    "isVerb": false,
+    "lemma": "nascente",
+    "pos": "aggettivo",
     "synonyms": [
       "emergente",
       "iniziale"
-    ],
-    "isVerb": false
+    ]
   },
   "nascere": {
-    "lemma": "nascere",
-    "pos": "verbo (intransitivo, irregolare)",
-    "fr": "naître",
     "definition_it": "venire al mondo, cominciare a vivere o a esistere",
     "examples": [
       {
-        "it": "Mio fratello è nato a marzo.",
-        "fr": "Mon frère est né en mars."
+        "fr": "Mon frère est né en mars.",
+        "it": "Mio fratello è nato a marzo."
       }
     ],
+    "fr": "naître",
+    "isVerb": true,
+    "lemma": "nascere",
+    "pos": "verbo (intransitivo, irregolare)",
     "synonyms": [
       "venire al mondo",
       "sorgere"
-    ],
-    "isVerb": true
+    ]
   },
   "nascimento": {
-    "lemma": "nascimento",
-    "pos": "sostantivo (maschile, letterario)",
-    "fr": "naissance (littéraire)",
     "definition_it": "forma antica e letteraria per «nascita», cioè il momento in cui qualcosa o qualcuno nasce",
     "examples": [
       {
-        "it": "Il poeta racconta i nascimenti degli eroi antichi.",
-        "fr": "Le poète raconte les naissances des héros anciens."
+        "fr": "Le poète raconte les naissances des héros anciens.",
+        "it": "Il poeta racconta i nascimenti degli eroi antichi."
       }
     ],
+    "fr": "naissance (littéraire)",
+    "isVerb": false,
+    "lemma": "nascimento",
+    "pos": "sostantivo (maschile, letterario)",
+    "register": "letterario",
     "synonyms": [
       "nascita",
       "origine"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nascita": {
-    "lemma": "nascita",
-    "pos": "sostantivo (femminile)",
-    "fr": "naissance",
     "definition_it": "il momento in cui una persona o un animale viene al mondo; anche l'inizio di qualcosa",
     "examples": [
       {
-        "it": "La nascita di sua figlia è stata il giorno più bello della sua vita.",
-        "fr": "La naissance de sa fille a été le plus beau jour de sa vie."
+        "fr": "La naissance de sa fille a été le plus beau jour de sa vie.",
+        "it": "La nascita di sua figlia è stata il giorno più bello della sua vita."
       }
     ],
+    "fr": "naissance",
+    "isVerb": false,
+    "lemma": "nascita",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "natale",
       "origine",
       "inizio"
-    ],
-    "isVerb": false
+    ]
   },
   "nascituro": {
-    "lemma": "nascituro",
-    "pos": "sostantivo (maschile) / aggettivo",
-    "fr": "enfant à naître",
     "definition_it": "il bambino che deve ancora nascere, che si trova nel ventre della madre",
     "examples": [
       {
-        "it": "Hanno già scelto il nome del nascituro.",
-        "fr": "Ils ont déjà choisi le prénom de l'enfant à naître."
+        "fr": "Ils ont déjà choisi le prénom de l'enfant à naître.",
+        "it": "Hanno già scelto il nome del nascituro."
       }
     ],
+    "fr": "enfant à naître",
+    "isVerb": false,
+    "lemma": "nascituro",
+    "pos": "sostantivo (maschile) / aggettivo",
     "synonyms": [
       "feto"
-    ],
-    "isVerb": false
+    ]
   },
   "nascondere": {
-    "lemma": "nascondere",
-    "pos": "verbo (transitivo, irregolare)",
-    "fr": "cacher",
     "definition_it": "mettere una cosa in un posto dove gli altri non possono vederla o trovarla",
     "examples": [
       {
-        "it": "Ha deciso di nascondere le chiavi sotto il tappeto.",
-        "fr": "Il a décidé de cacher les clés sous le tapis."
+        "fr": "Il a décidé de cacher les clés sous le tapis.",
+        "it": "Ha deciso di nascondere le chiavi sotto il tappeto."
       }
     ],
+    "fr": "cacher",
+    "isVerb": true,
+    "lemma": "nascondere",
+    "pos": "verbo (transitivo, irregolare)",
     "synonyms": [
       "celare",
       "occultare"
-    ],
-    "isVerb": true
+    ]
   },
   "nascondiglio": {
-    "lemma": "nascondiglio",
-    "pos": "sostantivo (maschile)",
-    "fr": "cachette",
     "definition_it": "luogo segreto dove si nasconde qualcosa o dove ci si nasconde",
     "examples": [
       {
-        "it": "I bambini hanno trovato un nascondiglio perfetto in giardino.",
-        "fr": "Les enfants ont trouvé une cachette parfaite dans le jardin."
+        "fr": "Les enfants ont trouvé une cachette parfaite dans le jardin.",
+        "it": "I bambini hanno trovato un nascondiglio perfetto in giardino."
       }
     ],
+    "fr": "cachette",
+    "isVerb": false,
+    "lemma": "nascondiglio",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "rifugio",
       "covo"
-    ],
-    "isVerb": false
+    ]
   },
   "nascondino": {
-    "lemma": "nascondino",
-    "pos": "sostantivo (maschile)",
-    "fr": "cache-cache",
     "definition_it": "gioco per bambini in cui uno cerca gli altri che si sono nascosti",
     "examples": [
       {
-        "it": "Al parco giochiamo sempre a nascondino.",
-        "fr": "Au parc, nous jouons toujours à cache-cache."
+        "fr": "Au parc, nous jouons toujours à cache-cache.",
+        "it": "Al parco giochiamo sempre a nascondino."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "cache-cache",
+    "isVerb": false,
+    "lemma": "nascondino",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "nascostamente": {
-    "lemma": "nascostamente",
-    "pos": "avverbio",
-    "fr": "en cachette, secrètement",
     "definition_it": "in modo che gli altri non vedano e non sappiano; di nascosto",
     "examples": [
       {
-        "it": "Entrò nascostamente nella stanza per non svegliare nessuno.",
-        "fr": "Il entra en cachette dans la chambre pour ne réveiller personne."
+        "fr": "Il entra en cachette dans la chambre pour ne réveiller personne.",
+        "it": "Entrò nascostamente nella stanza per non svegliare nessuno."
       }
     ],
+    "fr": "en cachette, secrètement",
+    "isVerb": false,
+    "lemma": "nascostamente",
+    "pos": "avverbio",
     "synonyms": [
       "segretamente",
       "di nascosto"
-    ],
-    "isVerb": false
+    ]
   },
   "nascosto": {
-    "lemma": "nascosto",
-    "pos": "aggettivo (participio passato di nascondere)",
-    "fr": "caché, dissimulé",
     "definition_it": "che si trova in un luogo dove non si vede, che nessuno può notare",
     "examples": [
       {
-        "it": "La casa era nascosta dietro gli alberi.",
-        "fr": "La maison était cachée derrière les arbres."
+        "fr": "La maison était cachée derrière les arbres.",
+        "it": "La casa era nascosta dietro gli alberi."
       }
     ],
+    "fr": "caché, dissimulé",
+    "isVerb": false,
+    "lemma": "nascosto",
+    "pos": "aggettivo (participio passato di nascondere)",
     "synonyms": [
       "celato",
       "segreto"
-    ],
-    "isVerb": false
+    ]
   },
   "nasello": {
-    "lemma": "nasello",
-    "pos": "sostantivo maschile",
-    "fr": "merlu, colin",
     "definition_it": "pesce di mare dalla carne bianca e delicata, molto usato in cucina",
     "examples": [
       {
-        "it": "Stasera cuciniamo il nasello al forno con le patate.",
-        "fr": "Ce soir, nous cuisinons le merlu au four avec des pommes de terre."
+        "fr": "Ce soir, nous cuisinons le merlu au four avec des pommes de terre.",
+        "it": "Stasera cuciniamo il nasello al forno con le patate."
       }
     ],
+    "fr": "merlu, colin",
+    "isVerb": false,
+    "lemma": "nasello",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "merluzzo"
-    ],
-    "isVerb": false
+    ]
   },
   "nasetto": {
-    "lemma": "nasetto",
-    "pos": "sostantivo maschile (diminutivo di naso)",
-    "fr": "petit nez, joli petit nez",
     "definition_it": "naso piccolo e grazioso, spesso detto con affetto",
     "examples": [
       {
-        "it": "La bambina ha un nasetto all'insù.",
-        "fr": "La petite fille a un petit nez retroussé."
+        "fr": "La petite fille a un petit nez retroussé.",
+        "it": "La bambina ha un nasetto all'insù."
       }
     ],
+    "fr": "petit nez, joli petit nez",
+    "isVerb": false,
+    "lemma": "nasetto",
+    "pos": "sostantivo maschile (diminutivo di naso)",
     "synonyms": [
       "nasino"
-    ],
-    "isVerb": false
+    ]
   },
   "nasino": {
-    "lemma": "nasino",
-    "pos": "sostantivo maschile (diminutivo di naso)",
-    "fr": "petit nez",
     "definition_it": "naso piccolo, soprattutto quello dei bambini",
     "examples": [
       {
-        "it": "Il neonato aveva il nasino rosso per il freddo.",
-        "fr": "Le nouveau-né avait le petit nez rouge à cause du froid."
+        "fr": "Le nouveau-né avait le petit nez rouge à cause du froid.",
+        "it": "Il neonato aveva il nasino rosso per il freddo."
       }
     ],
+    "fr": "petit nez",
+    "isVerb": false,
+    "lemma": "nasino",
+    "pos": "sostantivo maschile (diminutivo di naso)",
     "synonyms": [
       "nasetto"
-    ],
-    "isVerb": false
+    ]
   },
   "naso": {
-    "lemma": "naso",
-    "pos": "sostantivo maschile",
-    "fr": "nez",
     "definition_it": "parte del viso, in mezzo agli occhi e alla bocca, che serve per respirare e per sentire gli odori",
     "examples": [
       {
-        "it": "Con il raffreddore ho il naso chiuso.",
-        "fr": "Avec le rhume, j'ai le nez bouché."
+        "fr": "Avec le rhume, j'ai le nez bouché.",
+        "it": "Con il raffreddore ho il naso chiuso."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nez",
+    "isVerb": false,
+    "lemma": "naso",
+    "pos": "sostantivo maschile",
+    "synonyms": []
   },
   "nasone": {
-    "lemma": "nasone",
-    "pos": "sostantivo maschile (accrescitivo di naso)",
-    "fr": "gros nez ; fontaine publique (à Rome)",
     "definition_it": "naso molto grande; a Roma, anche la piccola fontana pubblica da cui esce sempre acqua",
     "examples": [
       {
-        "it": "Abbiamo bevuto a un nasone vicino al Colosseo.",
-        "fr": "Nous avons bu à une fontaine publique près du Colisée."
+        "fr": "Nous avons bu à une fontaine publique près du Colisée.",
+        "it": "Abbiamo bevuto a un nasone vicino al Colosseo."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "gros nez ; fontaine publique (à Rome)",
+    "isVerb": false,
+    "lemma": "nasone",
+    "pos": "sostantivo maschile (accrescitivo di naso)",
+    "synonyms": []
   },
   "nastro": {
-    "lemma": "nastro",
-    "pos": "sostantivo maschile",
-    "fr": "ruban, bande",
     "definition_it": "striscia lunga e stretta di stoffa, carta o plastica, usata per legare, decorare o registrare",
     "examples": [
       {
-        "it": "Ha chiuso il pacco con un nastro rosso.",
-        "fr": "Elle a fermé le paquet avec un ruban rouge."
+        "fr": "Elle a fermé le paquet avec un ruban rouge.",
+        "it": "Ha chiuso il pacco con un nastro rosso."
       }
     ],
+    "fr": "ruban, bande",
+    "isVerb": false,
+    "lemma": "nastro",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "fettuccia",
       "banda"
-    ],
-    "isVerb": false
+    ]
   },
   "natale": {
-    "lemma": "natale",
-    "pos": "sostantivo maschile / aggettivo",
-    "fr": "Noël ; natal, de naissance",
     "definition_it": "la festa cristiana del 25 dicembre; come aggettivo, che riguarda il luogo o il giorno in cui si è nati",
     "examples": [
       {
-        "it": "A Natale torna sempre nella sua città natale.",
-        "fr": "À Noël, il retourne toujours dans sa ville natale."
+        "fr": "À Noël, il retourne toujours dans sa ville natale.",
+        "it": "A Natale torna sempre nella sua città natale."
       }
     ],
+    "fr": "Noël ; natal, de naissance",
+    "isVerb": false,
+    "lemma": "natale",
+    "pos": "sostantivo maschile / aggettivo",
     "synonyms": [
       "nativo"
-    ],
-    "isVerb": false
+    ]
   },
   "natività": {
-    "lemma": "natività",
-    "pos": "sostantivo femminile",
-    "fr": "nativité, naissance",
     "definition_it": "la nascita, in particolare quella di Gesù rappresentata nell'arte e nel presepe",
     "examples": [
       {
-        "it": "Nel museo c'è un dipinto della Natività.",
-        "fr": "Au musée, il y a un tableau de la Nativité."
+        "fr": "Au musée, il y a un tableau de la Nativité.",
+        "it": "Nel museo c'è un dipinto della Natività."
       }
     ],
+    "fr": "nativité, naissance",
+    "isVerb": false,
+    "lemma": "natività",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "nascita"
-    ],
-    "isVerb": false
+    ]
   },
   "nativo": {
-    "lemma": "nativo",
-    "pos": "aggettivo",
-    "fr": "natal, natif, originaire",
     "definition_it": "che riguarda il luogo dove una persona è nata; che è originario di un posto",
     "examples": [
       {
-        "it": "Parla ancora il dialetto del suo paese nativo.",
-        "fr": "Il parle encore le dialecte de son village natal."
+        "fr": "Il parle encore le dialecte de son village natal.",
+        "it": "Parla ancora il dialetto del suo paese nativo."
       }
     ],
+    "fr": "natal, natif, originaire",
+    "isVerb": false,
+    "lemma": "nativo",
+    "pos": "aggettivo",
     "synonyms": [
       "natale",
       "originario"
-    ],
-    "isVerb": false
+    ]
   },
   "nato": {
-    "lemma": "nato",
-    "pos": "aggettivo (participio passato di nascere)",
-    "fr": "né",
     "definition_it": "che è venuto al mondo in un certo luogo o momento; che ha una qualità fin dalla nascita",
     "examples": [
       {
-        "it": "È nato a Firenze ed è un artista nato.",
-        "fr": "Il est né à Florence et c'est un artiste né."
+        "fr": "Il est né à Florence et c'est un artiste né.",
+        "it": "È nato a Firenze ed è un artista nato."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "né",
+    "isVerb": false,
+    "lemma": "nato",
+    "pos": "aggettivo (participio passato di nascere)",
+    "synonyms": []
   },
   "natura": {
-    "lemma": "natura",
-    "pos": "nome (femminile)",
-    "fr": "nature",
     "definition_it": "l'insieme delle piante, degli animali e dei paesaggi non creati dall'uomo; anche il carattere proprio di una cosa o di una persona.",
     "examples": [
       {
-        "it": "In montagna la natura è ancora incontaminata.",
-        "fr": "À la montagne, la nature est encore intacte."
+        "fr": "À la montagne, la nature est encore intacte.",
+        "it": "In montagna la natura è ancora incontaminata."
       }
     ],
+    "fr": "nature",
+    "isVerb": false,
+    "lemma": "natura",
+    "pos": "nome (femminile)",
     "synonyms": [
       "ambiente",
       "indole"
-    ],
-    "isVerb": false
+    ]
   },
   "naturale": {
-    "lemma": "naturale",
-    "pos": "aggettivo",
-    "fr": "naturel",
     "definition_it": "che viene dalla natura, senza aggiunte artificiali; anche normale, spontaneo.",
     "examples": [
       {
-        "it": "Preferisco l'acqua naturale a quella frizzante.",
-        "fr": "Je préfère l'eau plate à l'eau gazeuse."
+        "fr": "Je préfère l'eau plate à l'eau gazeuse.",
+        "it": "Preferisco l'acqua naturale a quella frizzante."
       }
     ],
+    "fr": "naturel",
+    "isVerb": false,
+    "lemma": "naturale",
+    "pos": "aggettivo",
     "synonyms": [
       "genuino",
       "spontaneo"
-    ],
-    "isVerb": false
+    ]
   },
   "naturalista": {
-    "lemma": "naturalista",
-    "pos": "nome (maschile/femminile) e aggettivo",
-    "fr": "naturaliste",
     "definition_it": "persona che studia la natura, le piante e gli animali; anche chi segue il naturalismo in arte o in letteratura.",
     "examples": [
       {
-        "it": "I naturalisti hanno osservato gli uccelli per tutta la mattina.",
-        "fr": "Les naturalistes ont observé les oiseaux toute la matinée."
+        "fr": "Les naturalistes ont observé les oiseaux toute la matinée.",
+        "it": "I naturalisti hanno osservato gli uccelli per tutta la mattina."
       }
     ],
+    "fr": "naturaliste",
+    "isVerb": false,
+    "lemma": "naturalista",
+    "pos": "nome (maschile/femminile) e aggettivo",
     "synonyms": [
       "biologo"
-    ],
-    "isVerb": false
+    ]
   },
   "naturalistico": {
-    "lemma": "naturalistico",
-    "pos": "aggettivo",
-    "fr": "naturaliste, relatif à la nature",
     "definition_it": "che riguarda lo studio della natura o la sua rappresentazione fedele.",
     "examples": [
       {
-        "it": "Il museo ospita una ricca collezione naturalistica.",
-        "fr": "Le musée abrite une riche collection consacrée à la nature."
+        "fr": "Le musée abrite une riche collection consacrée à la nature.",
+        "it": "Il museo ospita una ricca collezione naturalistica."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "naturaliste, relatif à la nature",
+    "isVerb": false,
+    "lemma": "naturalistico",
+    "pos": "aggettivo",
+    "synonyms": []
   },
   "naturalmente": {
-    "lemma": "naturalmente",
-    "pos": "avverbio",
-    "fr": "naturellement, bien sûr",
     "definition_it": "in modo naturale, senza sforzo; si usa anche per dire che una cosa è ovvia.",
     "examples": [
       {
-        "it": "Naturalmente ti aiuterò a preparare la cena.",
-        "fr": "Bien sûr que je t'aiderai à préparer le dîner."
+        "fr": "Bien sûr que je t'aiderai à préparer le dîner.",
+        "it": "Naturalmente ti aiuterò a preparare la cena."
       }
     ],
+    "fr": "naturellement, bien sûr",
+    "isVerb": false,
+    "lemma": "naturalmente",
+    "pos": "avverbio",
     "synonyms": [
       "certamente",
       "ovviamente"
-    ],
-    "isVerb": false
+    ]
   },
   "naufragare": {
-    "lemma": "naufragare",
-    "pos": "verbo (intransitivo, regolare in -gare)",
-    "fr": "faire naufrage, échouer",
     "definition_it": "affondare o perdersi in mare, parlando di una nave; in senso figurato, fallire completamente.",
     "examples": [
       {
-        "it": "La nave è naufragata vicino alla costa.",
-        "fr": "Le navire a fait naufrage près de la côte."
+        "fr": "Le navire a fait naufrage près de la côte.",
+        "it": "La nave è naufragata vicino alla costa."
       }
     ],
+    "fr": "faire naufrage, échouer",
+    "isVerb": true,
+    "lemma": "naufragare",
+    "pos": "verbo (intransitivo, regolare in -gare)",
     "synonyms": [
       "affondare",
       "fallire"
-    ],
-    "isVerb": true
+    ]
   },
   "naufrago": {
-    "lemma": "naufrago",
-    "pos": "nome (maschile)",
-    "fr": "naufragé",
     "definition_it": "persona sopravvissuta al naufragio di una nave.",
     "examples": [
       {
-        "it": "I naufraghi sono stati salvati dai pescatori.",
-        "fr": "Les naufragés ont été sauvés par les pêcheurs."
+        "fr": "Les naufragés ont été sauvés par les pêcheurs.",
+        "it": "I naufraghi sono stati salvati dai pescatori."
       }
     ],
+    "fr": "naufragé",
+    "isVerb": false,
+    "lemma": "naufrago",
+    "pos": "nome (maschile)",
     "synonyms": [
       "superstite"
-    ],
-    "isVerb": false
+    ]
   },
   "nausea": {
-    "lemma": "nausea",
-    "pos": "nome (femminile)",
-    "fr": "nausée",
     "definition_it": "sensazione di malessere allo stomaco, come se si stesse per vomitare.",
     "examples": [
       {
-        "it": "In barca ho sentito una forte nausea.",
-        "fr": "Sur le bateau, j'ai eu une forte nausée."
+        "fr": "Sur le bateau, j'ai eu une forte nausée.",
+        "it": "In barca ho sentito una forte nausea."
       }
     ],
+    "fr": "nausée",
+    "isVerb": false,
+    "lemma": "nausea",
+    "pos": "nome (femminile)",
     "synonyms": [
       "malessere",
       "disgusto"
-    ],
-    "isVerb": false
+    ]
   },
   "nauseare": {
-    "lemma": "nauseare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "écœurer, dégoûter",
     "definition_it": "provocare nausea o disgusto a qualcuno.",
     "examples": [
       {
-        "it": "Quell'odore di fritto mi nausea.",
-        "fr": "Cette odeur de friture m'écœure."
+        "fr": "Cette odeur de friture m'écœure.",
+        "it": "Quell'odore di fritto mi nausea."
       }
     ],
+    "fr": "écœurer, dégoûter",
+    "isVerb": true,
+    "lemma": "nauseare",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "disgustare",
       "stomacare"
+    ]
+  },
+  "navale": {
+    "definition_it": "relativo alle navi o alla marina",
+    "examples": [
+      {
+        "fr": "Le musée naval expose d'anciens navires de guerre.",
+        "it": "Il museo navale espone antiche navi da guerra."
+      }
     ],
-    "isVerb": true
+    "fr": "naval",
+    "isVerb": false,
+    "lemma": "navale",
+    "pos": "aggettivo",
+    "synonyms": [
+      "marittimo"
+    ]
   },
   "navata": {
-    "lemma": "navata",
-    "pos": "nome (femminile)",
-    "fr": "nef (d'une église)",
     "definition_it": "ciascuno degli spazi lunghi in cui è divisa l'interno di una chiesa.",
     "examples": [
       {
-        "it": "La chiesa ha tre navate e un grande altare.",
-        "fr": "L'église a trois nefs et un grand autel."
+        "fr": "L'église a trois nefs et un grand autel.",
+        "it": "La chiesa ha tre navate e un grande altare."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nef (d'une église)",
+    "isVerb": false,
+    "lemma": "navata",
+    "pos": "nome (femminile)",
+    "synonyms": []
   },
   "nave": {
-    "lemma": "nave",
-    "pos": "nome (femminile)",
-    "fr": "navire, bateau",
     "definition_it": "grande imbarcazione che viaggia sul mare e trasporta persone o merci.",
     "examples": [
       {
-        "it": "La nave parte da Genova alle otto.",
-        "fr": "Le navire part de Gênes à huit heures."
+        "fr": "Le navire part de Gênes à huit heures.",
+        "it": "La nave parte da Genova alle otto."
       }
     ],
+    "fr": "navire, bateau",
+    "isVerb": false,
+    "lemma": "nave",
+    "pos": "nome (femminile)",
     "synonyms": [
       "imbarcazione",
       "bastimento"
-    ],
-    "isVerb": false
+    ]
   },
   "nazifascista": {
-    "lemma": "nazifascista",
-    "pos": "nome (maschile/femminile) e aggettivo",
-    "fr": "nazi-fasciste",
     "definition_it": "che riguarda l'unione del nazismo tedesco e del fascismo italiano; chi ne faceva parte.",
     "examples": [
       {
-        "it": "I nazifascisti occuparono il paese nel 1943.",
-        "fr": "Les nazis-fascistes occupèrent le village en 1943."
+        "fr": "Les nazis-fascistes occupèrent le village en 1943.",
+        "it": "I nazifascisti occuparono il paese nel 1943."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nazi-fasciste",
+    "isVerb": false,
+    "lemma": "nazifascista",
+    "pos": "nome (maschile/femminile) e aggettivo",
+    "synonyms": []
   },
   "nazionale": {
-    "lemma": "nazionale",
-    "pos": "aggettivo (anche nome femminile)",
-    "fr": "national ; l'équipe nationale",
     "definition_it": "che riguarda tutta una nazione; come nome, la squadra che rappresenta un paese.",
     "examples": [
       {
-        "it": "Domani gioca la nazionale italiana di calcio.",
-        "fr": "Demain, l'équipe nationale italienne de football joue."
+        "fr": "Demain, l'équipe nationale italienne de football joue.",
+        "it": "Domani gioca la nazionale italiana di calcio."
       }
     ],
+    "fr": "national ; l'équipe nationale",
+    "isVerb": false,
+    "lemma": "nazionale",
+    "pos": "aggettivo (anche nome femminile)",
     "synonyms": [
       "statale"
-    ],
-    "isVerb": false
+    ]
   },
   "nazione": {
-    "lemma": "nazione",
-    "pos": "nome (femminile)",
-    "fr": "nation",
     "definition_it": "insieme di persone che vivono in uno stesso territorio e condividono lingua, storia e cultura.",
     "examples": [
       {
-        "it": "Molte nazioni hanno firmato l'accordo.",
-        "fr": "De nombreuses nations ont signé l'accord."
+        "fr": "De nombreuses nations ont signé l'accord.",
+        "it": "Molte nazioni hanno firmato l'accordo."
       }
     ],
+    "fr": "nation",
+    "isVerb": false,
+    "lemma": "nazione",
+    "pos": "nome (femminile)",
     "synonyms": [
       "stato",
       "paese"
-    ],
-    "isVerb": false
+    ]
   },
   "ne": {
-    "lemma": "ne",
-    "pos": "pronome / particella (si elide in n')",
-    "fr": "en (de cela, de lui, d'eux)",
     "definition_it": "particella che sostituisce «di questo», «di lui», «da lì»; davanti a vocale diventa n'",
     "examples": [
       {
-        "it": "Non me n'ero accorto prima.",
-        "fr": "Je ne m'en étais pas aperçu avant."
+        "fr": "Je ne m'en étais pas aperçu avant.",
+        "it": "Non me n'ero accorto prima."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
-  },
-  "né": {
-    "lemma": "né",
-    "pos": "congiunzione",
-    "fr": "ni",
-    "definition_it": "congiunzione che unisce due elementi in una frase negativa",
-    "examples": [
-      {
-        "it": "Non voglio né carne né pesce.",
-        "fr": "Je ne veux ni viande ni poisson."
-      }
-    ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "en (de cela, de lui, d'eux)",
+    "isVerb": false,
+    "lemma": "ne",
+    "pos": "pronome / particella (si elide in n')",
+    "synonyms": []
   },
   "neanche": {
-    "lemma": "neanche",
-    "pos": "avverbio (e congiunzione)",
-    "fr": "même pas, non plus",
     "definition_it": "serve a rafforzare una negazione: nemmeno, neppure",
     "examples": [
       {
-        "it": "Non ho neanche un euro in tasca.",
-        "fr": "Je n'ai même pas un euro en poche."
+        "fr": "Je n'ai même pas un euro en poche.",
+        "it": "Non ho neanche un euro in tasca."
       }
     ],
+    "fr": "même pas, non plus",
+    "isVerb": false,
+    "lemma": "neanche",
+    "pos": "avverbio (e congiunzione)",
     "synonyms": [
       "nemmeno",
       "neppure"
-    ],
-    "isVerb": false
+    ]
   },
   "nebbia": {
-    "lemma": "nebbia",
-    "pos": "sostantivo (femminile)",
-    "fr": "brouillard",
     "definition_it": "nube di goccioline d'acqua vicina al suolo che rende difficile vedere lontano",
     "examples": [
       {
-        "it": "In autunno la pianura è coperta di nebbia.",
-        "fr": "En automne, la plaine est couverte de brouillard."
+        "fr": "En automne, la plaine est couverte de brouillard.",
+        "it": "In autunno la pianura è coperta di nebbia."
       }
     ],
+    "fr": "brouillard",
+    "isVerb": false,
+    "lemma": "nebbia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "foschia",
       "bruma"
-    ],
-    "isVerb": false
+    ]
   },
   "nebbiolo": {
-    "lemma": "nebbiolo",
-    "pos": "sostantivo (maschile)",
-    "fr": "nebbiolo (cépage et vin du Piémont)",
     "definition_it": "vitigno piemontese e vino rosso che se ne ricava, usato per il Barolo",
     "examples": [
       {
-        "it": "Il Barolo si produce con uve di nebbiolo.",
-        "fr": "Le Barolo est produit avec du raisin de nebbiolo."
+        "fr": "Le Barolo est produit avec du raisin de nebbiolo.",
+        "it": "Il Barolo si produce con uve di nebbiolo."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nebbiolo (cépage et vin du Piémont)",
+    "isVerb": false,
+    "lemma": "nebbiolo",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "nebbioso": {
-    "lemma": "nebbioso",
-    "pos": "aggettivo",
-    "fr": "brumeux, embrumé",
     "definition_it": "pieno di nebbia; in senso figurato, poco chiaro",
     "examples": [
       {
-        "it": "Era una mattina fredda e nebbiosa.",
-        "fr": "C'était un matin froid et brumeux."
+        "fr": "C'était un matin froid et brumeux.",
+        "it": "Era una mattina fredda e nebbiosa."
       }
     ],
+    "fr": "brumeux, embrumé",
+    "isVerb": false,
+    "lemma": "nebbioso",
+    "pos": "aggettivo",
     "synonyms": [
       "brumoso",
       "confuso"
-    ],
-    "isVerb": false
+    ]
   },
   "necessariamente": {
-    "lemma": "necessariamente",
-    "pos": "avverbio",
-    "fr": "nécessairement, forcément",
     "definition_it": "in modo obbligatorio, senza altra possibilità",
     "examples": [
       {
-        "it": "Un errore non porta necessariamente a un fallimento.",
-        "fr": "Une erreur ne mène pas nécessairement à un échec."
+        "fr": "Une erreur ne mène pas nécessairement à un échec.",
+        "it": "Un errore non porta necessariamente a un fallimento."
       }
     ],
+    "fr": "nécessairement, forcément",
+    "isVerb": false,
+    "lemma": "necessariamente",
+    "pos": "avverbio",
     "synonyms": [
       "inevitabilmente",
       "obbligatoriamente"
-    ],
-    "isVerb": false
+    ]
   },
   "necessario": {
-    "lemma": "necessario",
-    "pos": "aggettivo (anche sostantivo maschile)",
-    "fr": "nécessaire",
     "definition_it": "di cui non si può fare a meno, che serve assolutamente",
     "examples": [
       {
-        "it": "Porta con te solo il materiale necessario.",
-        "fr": "Emporte seulement le matériel nécessaire."
+        "fr": "Emporte seulement le matériel nécessaire.",
+        "it": "Porta con te solo il materiale necessario."
       }
     ],
+    "fr": "nécessaire",
+    "isVerb": false,
+    "lemma": "necessario",
+    "pos": "aggettivo (anche sostantivo maschile)",
     "synonyms": [
       "indispensabile",
       "occorrente"
-    ],
-    "isVerb": false
-  },
-  "necessità": {
-    "lemma": "necessità",
-    "pos": "sostantivo (femminile, invariabile)",
-    "fr": "nécessité, besoin",
-    "definition_it": "il fatto di aver bisogno di qualcosa che non si può evitare",
-    "examples": [
-      {
-        "it": "Non c'è necessità di gridare.",
-        "fr": "Il n'y a pas besoin de crier."
-      }
-    ],
-    "synonyms": [
-      "bisogno",
-      "esigenza"
-    ],
-    "isVerb": false
+    ]
   },
   "necessitare": {
-    "lemma": "necessitare",
-    "pos": "verbo (transitivo e intransitivo, regolare -are)",
-    "fr": "nécessiter, avoir besoin de",
     "definition_it": "avere bisogno di qualcosa; rendere qualcosa indispensabile",
     "examples": [
       {
-        "it": "La casa necessita di lavori urgenti.",
-        "fr": "La maison nécessite des travaux urgents."
+        "fr": "La maison nécessite des travaux urgents.",
+        "it": "La casa necessita di lavori urgenti."
       }
     ],
+    "fr": "nécessiter, avoir besoin de",
+    "isVerb": true,
+    "lemma": "necessitare",
+    "pos": "verbo (transitivo e intransitivo, regolare -are)",
+    "register": "formale",
     "synonyms": [
       "richiedere",
       "abbisognare"
+    ]
+  },
+  "necessità": {
+    "definition_it": "il fatto di aver bisogno di qualcosa che non si può evitare",
+    "examples": [
+      {
+        "fr": "Il n'y a pas besoin de crier.",
+        "it": "Non c'è necessità di gridare."
+      }
     ],
-    "isVerb": true,
-    "register": "formale"
+    "fr": "nécessité, besoin",
+    "isVerb": false,
+    "lemma": "necessità",
+    "pos": "sostantivo (femminile, invariabile)",
+    "synonyms": [
+      "bisogno",
+      "esigenza"
+    ]
   },
   "necrologia": {
-    "lemma": "necrologia",
-    "pos": "sostantivo (femminile)",
-    "fr": "nécrologie",
     "definition_it": "scritto che ricorda la vita e le opere di una persona morta da poco",
     "examples": [
       {
-        "it": "Il giornale ha pubblicato una lunga necrologia dello scrittore.",
-        "fr": "Le journal a publié une longue nécrologie de l'écrivain."
+        "fr": "Le journal a publié une longue nécrologie de l'écrivain.",
+        "it": "Il giornale ha pubblicato una lunga necrologia dello scrittore."
       }
     ],
+    "fr": "nécrologie",
+    "isVerb": false,
+    "lemma": "necrologia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "commemorazione"
-    ],
-    "isVerb": false
+    ]
   },
   "necrologio": {
-    "lemma": "necrologio",
-    "pos": "sostantivo (maschile)",
-    "fr": "avis de décès, rubrique nécrologique",
     "definition_it": "breve annuncio, spesso sul giornale, che informa della morte di qualcuno",
     "examples": [
       {
-        "it": "Ho letto il suo nome nel necrologio di ieri.",
-        "fr": "J'ai lu son nom dans l'avis de décès d'hier."
+        "fr": "J'ai lu son nom dans l'avis de décès d'hier.",
+        "it": "Ho letto il suo nome nel necrologio di ieri."
       }
     ],
+    "fr": "avis de décès, rubrique nécrologique",
+    "isVerb": false,
+    "lemma": "necrologio",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "annuncio funebre"
-    ],
-    "isVerb": false
+    ]
   },
   "necromanzia": {
-    "lemma": "necromanzia",
-    "pos": "sostantivo (femminile)",
-    "fr": "nécromancie",
     "definition_it": "pratica magica con cui si crede di parlare con i morti per conoscere il futuro",
     "examples": [
       {
-        "it": "Nel romanzo il mago pratica la necromanzia.",
-        "fr": "Dans le roman, le magicien pratique la nécromancie."
+        "fr": "Dans le roman, le magicien pratique la nécromancie.",
+        "it": "Nel romanzo il mago pratica la necromanzia."
       }
     ],
+    "fr": "nécromancie",
+    "isVerb": false,
+    "lemma": "necromanzia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "negromanzia"
-    ],
-    "isVerb": false
+    ]
   },
   "necropoli": {
-    "lemma": "necropoli",
-    "pos": "sostantivo (femminile, invariabile)",
-    "fr": "nécropole",
     "definition_it": "grande cimitero dell'antichità, formato da molte tombe",
     "examples": [
       {
-        "it": "Abbiamo visitato la necropoli etrusca di Cerveteri.",
-        "fr": "Nous avons visité la nécropole étrusque de Cerveteri."
+        "fr": "Nous avons visité la nécropole étrusque de Cerveteri.",
+        "it": "Abbiamo visitato la necropoli etrusca di Cerveteri."
       }
     ],
+    "fr": "nécropole",
+    "isVerb": false,
+    "lemma": "necropoli",
+    "pos": "sostantivo (femminile, invariabile)",
     "synonyms": [
       "cimitero antico"
-    ],
-    "isVerb": false
+    ]
   },
   "negare": {
-    "lemma": "negare",
-    "pos": "verbo (transitivo, regolare -are con -gh-)",
-    "fr": "nier, refuser",
     "definition_it": "dire che una cosa non è vera; oppure rifiutare qualcosa a qualcuno",
     "examples": [
       {
-        "it": "L'imputato nega ogni responsabilità.",
-        "fr": "L'accusé nie toute responsabilité."
+        "fr": "L'accusé nie toute responsabilité.",
+        "it": "L'imputato nega ogni responsabilità."
       }
     ],
+    "fr": "nier, refuser",
+    "isVerb": true,
+    "lemma": "negare",
+    "pos": "verbo (transitivo, regolare -are con -gh-)",
     "synonyms": [
       "smentire",
       "rifiutare"
-    ],
-    "isVerb": true
+    ]
   },
   "negativo": {
-    "lemma": "negativo",
-    "pos": "aggettivo",
-    "fr": "négatif",
     "definition_it": "che esprime un rifiuto o una cosa non buona; contrario di positivo",
     "examples": [
       {
-        "it": "Il risultato dell'esame è negativo.",
-        "fr": "Le résultat de l'examen est négatif."
+        "fr": "Le résultat de l'examen est négatif.",
+        "it": "Il risultato dell'esame è negativo."
       }
     ],
+    "fr": "négatif",
+    "isVerb": false,
+    "lemma": "negativo",
+    "pos": "aggettivo",
     "synonyms": [
       "sfavorevole",
       "contrario"
-    ],
-    "isVerb": false
+    ]
   },
   "negli": {
-    "lemma": "negli",
-    "pos": "preposizione articolata (in + gli)",
-    "fr": "dans les, aux",
     "definition_it": "unione della preposizione «in» con l'articolo «gli», usata davanti a nomi maschili plurali",
     "examples": [
       {
-        "it": "Negli ultimi anni la città è cambiata molto.",
-        "fr": "Ces dernières années, la ville a beaucoup changé."
+        "fr": "Ces dernières années, la ville a beaucoup changé.",
+        "it": "Negli ultimi anni la città è cambiata molto."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "dans les, aux",
+    "isVerb": false,
+    "lemma": "negli",
+    "pos": "preposizione articolata (in + gli)",
+    "synonyms": []
   },
   "negoziabile": {
-    "lemma": "negoziabile",
-    "pos": "aggettivo",
-    "fr": "négociable",
     "definition_it": "che si può discutere o cambiare con un accordo tra le persone",
     "examples": [
       {
-        "it": "Il prezzo della casa non è negoziabile.",
-        "fr": "Le prix de la maison n'est pas négociable."
+        "fr": "Le prix de la maison n'est pas négociable.",
+        "it": "Il prezzo della casa non è negoziabile."
       }
     ],
+    "fr": "négociable",
+    "isVerb": false,
+    "lemma": "negoziabile",
+    "pos": "aggettivo",
     "synonyms": [
       "trattabile",
       "discutibile"
-    ],
-    "isVerb": false
+    ]
   },
   "negoziante": {
-    "lemma": "negoziante",
-    "pos": "sostantivo maschile e femminile",
-    "fr": "commerçant, commerçante",
     "definition_it": "persona che ha un negozio e vende prodotti al pubblico",
     "examples": [
       {
-        "it": "La negoziante mi ha fatto uno sconto.",
-        "fr": "La commerçante m'a fait une réduction."
+        "fr": "La commerçante m'a fait une réduction.",
+        "it": "La negoziante mi ha fatto uno sconto."
       }
     ],
+    "fr": "commerçant, commerçante",
+    "isVerb": false,
+    "lemma": "negoziante",
+    "pos": "sostantivo maschile e femminile",
     "synonyms": [
       "commerciante",
       "bottegaio"
-    ],
-    "isVerb": false
+    ]
   },
   "negoziare": {
-    "lemma": "negoziare",
-    "pos": "verbo (transitivo e intransitivo, regolare in -iare)",
-    "fr": "négocier",
     "definition_it": "discutere con qualcuno per arrivare a un accordo su un prezzo o su una questione",
     "examples": [
       {
-        "it": "I due paesi negoziano un accordo di pace.",
-        "fr": "Les deux pays négocient un accord de paix."
+        "fr": "Les deux pays négocient un accord de paix.",
+        "it": "I due paesi negoziano un accordo di pace."
       }
     ],
+    "fr": "négocier",
+    "isVerb": true,
+    "lemma": "negoziare",
+    "pos": "verbo (transitivo e intransitivo, regolare in -iare)",
     "synonyms": [
       "trattare",
       "contrattare"
-    ],
-    "isVerb": true
+    ]
   },
   "negozio": {
-    "lemma": "negozio",
-    "pos": "sostantivo maschile",
-    "fr": "magasin, boutique",
     "definition_it": "locale dove si vendono prodotti al pubblico",
     "examples": [
       {
-        "it": "Il negozio di scarpe apre alle nove.",
-        "fr": "Le magasin de chaussures ouvre à neuf heures."
+        "fr": "Le magasin de chaussures ouvre à neuf heures.",
+        "it": "Il negozio di scarpe apre alle nove."
       }
     ],
+    "fr": "magasin, boutique",
+    "isVerb": false,
+    "lemma": "negozio",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "bottega",
       "esercizio"
-    ],
-    "isVerb": false
+    ]
   },
   "nei": {
-    "lemma": "nei",
-    "pos": "preposizione articolata",
-    "fr": "dans les, aux",
     "definition_it": "unione della preposizione «in» con l'articolo «i»; nella forma antica o poetica si scrive «ne'»",
     "examples": [
       {
-        "it": "Nei giorni di festa il paese è pieno di gente.",
-        "fr": "Les jours de fête, le village est plein de monde."
+        "fr": "Les jours de fête, le village est plein de monde.",
+        "it": "Nei giorni di festa il paese è pieno di gente."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "dans les, aux",
+    "isVerb": false,
+    "lemma": "nei",
+    "pos": "preposizione articolata",
+    "synonyms": []
   },
   "nella": {
-    "lemma": "nella",
-    "pos": "preposizione articolata (in + la; forme: nel, nello, nell', nei, negli, nelle)",
-    "fr": "dans la, dans le, en",
     "definition_it": "unione della preposizione «in» con l'articolo determinativo: indica il luogo, il tempo o la situazione in cui si trova qualcosa",
     "examples": [
       {
-        "it": "Il libro è nella borsa, accanto alle chiavi.",
-        "fr": "Le livre est dans le sac, à côté des clés."
+        "fr": "Le livre est dans le sac, à côté des clés.",
+        "it": "Il libro è nella borsa, accanto alle chiavi."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "dans la, dans le, en",
+    "isVerb": false,
+    "lemma": "nella",
+    "pos": "preposizione articolata (in + la; forme: nel, nello, nell', nei, negli, nelle)",
+    "synonyms": []
   },
   "nemico": {
-    "lemma": "nemico",
-    "pos": "nome (maschile) / aggettivo",
-    "fr": "ennemi, hostile",
     "definition_it": "persona o gruppo che vuole fare del male a qualcuno o che combatte contro di lui; contrario di amico",
     "examples": [
       {
-        "it": "L'esercito nemico si è ritirato durante la notte.",
-        "fr": "L'armée ennemie s'est retirée pendant la nuit."
+        "fr": "L'armée ennemie s'est retirée pendant la nuit.",
+        "it": "L'esercito nemico si è ritirato durante la notte."
       }
     ],
+    "fr": "ennemi, hostile",
+    "isVerb": false,
+    "lemma": "nemico",
+    "pos": "nome (maschile) / aggettivo",
     "synonyms": [
       "avversario",
       "rivale"
-    ],
-    "isVerb": false
+    ]
   },
   "nemmeno": {
-    "lemma": "nemmeno",
-    "pos": "avverbio / congiunzione (troncamento: nemmen)",
-    "fr": "même pas, non plus",
     "definition_it": "si usa per rafforzare una negazione: neanche, neppure, in nessun modo",
     "examples": [
       {
-        "it": "Non ho nemmeno il tempo di mangiare.",
-        "fr": "Je n'ai même pas le temps de manger."
+        "fr": "Je n'ai même pas le temps de manger.",
+        "it": "Non ho nemmeno il tempo di mangiare."
       }
     ],
+    "fr": "même pas, non plus",
+    "isVerb": false,
+    "lemma": "nemmeno",
+    "pos": "avverbio / congiunzione (troncamento: nemmen)",
     "synonyms": [
       "neanche",
       "neppure"
-    ],
-    "isVerb": false
+    ]
   },
   "neofascista": {
-    "lemma": "neofascista",
-    "pos": "nome (maschile e femminile) / aggettivo",
-    "fr": "néofasciste",
     "definition_it": "persona che segue idee simili a quelle del fascismo, ma in epoca successiva alla Seconda guerra mondiale; relativo a queste idee",
     "examples": [
       {
-        "it": "Un gruppo neofascista ha organizzato la manifestazione.",
-        "fr": "Un groupe néofasciste a organisé la manifestation."
+        "fr": "Un groupe néofasciste a organisé la manifestation.",
+        "it": "Un gruppo neofascista ha organizzato la manifestazione."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "néofasciste",
+    "isVerb": false,
+    "lemma": "neofascista",
+    "pos": "nome (maschile e femminile) / aggettivo",
+    "synonyms": []
   },
   "neon": {
-    "lemma": "neon",
-    "pos": "nome (maschile, invariabile)",
-    "fr": "néon",
     "definition_it": "gas senza colore usato dentro i tubi luminosi; per estensione, la lampada che contiene questo gas",
     "examples": [
       {
-        "it": "La luce al neon del corridoio tremolava.",
-        "fr": "La lumière au néon du couloir clignotait."
+        "fr": "La lumière au néon du couloir clignotait.",
+        "it": "La luce al neon del corridoio tremolava."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "néon",
+    "isVerb": false,
+    "lemma": "neon",
+    "pos": "nome (maschile, invariabile)",
+    "synonyms": []
   },
   "neonato": {
-    "lemma": "neonato",
-    "pos": "nome (maschile) / aggettivo",
-    "fr": "nouveau-né",
     "definition_it": "bambino nato da pochi giorni o da poche settimane",
     "examples": [
       {
-        "it": "Il neonato dorme quasi tutto il giorno.",
-        "fr": "Le nouveau-né dort presque toute la journée."
+        "fr": "Le nouveau-né dort presque toute la journée.",
+        "it": "Il neonato dorme quasi tutto il giorno."
       }
     ],
+    "fr": "nouveau-né",
+    "isVerb": false,
+    "lemma": "neonato",
+    "pos": "nome (maschile) / aggettivo",
     "synonyms": [
       "bebè",
       "lattante"
-    ],
-    "isVerb": false
+    ]
   },
   "neonicotinoide": {
-    "lemma": "neonicotinoide",
-    "pos": "nome (maschile) / aggettivo",
-    "fr": "néonicotinoïde",
     "definition_it": "tipo di insetticida chimico, simile alla nicotina, accusato di essere pericoloso per le api",
     "examples": [
       {
-        "it": "L'uso dei neonicotinoidi è vietato in molti paesi europei.",
-        "fr": "L'utilisation des néonicotinoïdes est interdite dans de nombreux pays européens."
+        "fr": "L'utilisation des néonicotinoïdes est interdite dans de nombreux pays européens.",
+        "it": "L'uso dei neonicotinoidi è vietato in molti paesi europei."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "néonicotinoïde",
+    "isVerb": false,
+    "lemma": "neonicotinoide",
+    "pos": "nome (maschile) / aggettivo",
+    "synonyms": []
   },
   "neorealismo": {
-    "lemma": "neorealismo",
-    "pos": "nome (maschile)",
-    "fr": "néoréalisme",
     "definition_it": "movimento italiano del cinema e della letteratura del dopoguerra, che racconta la vita reale della gente semplice",
     "examples": [
       {
-        "it": "Il neorealismo ha raccontato l'Italia povera del dopoguerra.",
-        "fr": "Le néoréalisme a raconté l'Italie pauvre de l'après-guerre."
+        "fr": "Le néoréalisme a raconté l'Italie pauvre de l'après-guerre.",
+        "it": "Il neorealismo ha raccontato l'Italia povera del dopoguerra."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "néoréalisme",
+    "isVerb": false,
+    "lemma": "neorealismo",
+    "pos": "nome (maschile)",
+    "synonyms": []
+  },
+  "neorealista": {
+    "definition_it": "relativo al neorealismo, corrente artistica e cinematografica italiana del dopoguerra",
+    "examples": [
+      {
+        "fr": "Le film suit le style néoréaliste italien.",
+        "it": "Il film segue lo stile neorealista italiano."
+      }
+    ],
+    "fr": "néoréaliste",
+    "isVerb": false,
+    "lemma": "neorealista",
+    "pos": "aggettivo",
+    "synonyms": []
   },
   "neppure": {
-    "lemma": "neppure",
-    "pos": "avverbio / congiunzione (troncamento: neppur)",
-    "fr": "même pas, non plus",
     "definition_it": "rafforza una frase negativa: neanche, nemmeno",
     "examples": [
       {
-        "it": "Non mi ha salutato e neppure guardato.",
-        "fr": "Il ne m'a pas salué et ne m'a même pas regardé."
+        "fr": "Il ne m'a pas salué et ne m'a même pas regardé.",
+        "it": "Non mi ha salutato e neppure guardato."
       }
     ],
+    "fr": "même pas, non plus",
+    "isVerb": false,
+    "lemma": "neppure",
+    "pos": "avverbio / congiunzione (troncamento: neppur)",
     "synonyms": [
       "neanche",
       "nemmeno"
-    ],
-    "isVerb": false
+    ]
   },
   "nequizia": {
-    "lemma": "nequizia",
-    "pos": "sostantivo (femminile)",
-    "fr": "méchanceté, iniquité, perversité",
     "definition_it": "cattiveria profonda e voluta, modo di agire ingiusto e malvagio (parola letteraria e antica)",
     "examples": [
       {
-        "it": "Il poeta condanna la nequizia degli uomini corrotti.",
-        "fr": "Le poète condamne la méchanceté des hommes corrompus."
+        "fr": "Le poète condamne la méchanceté des hommes corrompus.",
+        "it": "Il poeta condanna la nequizia degli uomini corrotti."
       }
     ],
+    "fr": "méchanceté, iniquité, perversité",
+    "isVerb": false,
+    "lemma": "nequizia",
+    "pos": "sostantivo (femminile)",
+    "register": "letterario",
     "synonyms": [
       "malvagità",
       "iniquità",
       "perfidia"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nero": {
-    "lemma": "nero",
-    "pos": "aggettivo e sostantivo (maschile)",
-    "fr": "noir",
     "definition_it": "del colore più scuro che esiste, come la notte senza luna o il carbone; in senso figurato, molto triste o cattivo",
     "examples": [
       {
-        "it": "Portava un cappotto nero e una sciarpa rossa.",
-        "fr": "Il portait un manteau noir et une écharpe rouge."
+        "fr": "Il portait un manteau noir et une écharpe rouge.",
+        "it": "Portava un cappotto nero e una sciarpa rossa."
       }
     ],
+    "fr": "noir",
+    "isVerb": false,
+    "lemma": "nero",
+    "pos": "aggettivo e sostantivo (maschile)",
     "synonyms": [
       "scuro",
       "buio",
       "corvino"
-    ],
-    "isVerb": false
+    ]
   },
   "nervo": {
-    "lemma": "nervo",
-    "pos": "sostantivo (maschile)",
-    "fr": "nerf",
     "definition_it": "filo sottile del corpo che porta i messaggi tra il cervello e le altre parti; al plurale, anche lo stato di tensione di una persona",
     "examples": [
       {
-        "it": "Il dentista mi ha tolto il nervo del dente.",
-        "fr": "Le dentiste m'a enlevé le nerf de la dent."
+        "fr": "Le dentiste m'a enlevé le nerf de la dent.",
+        "it": "Il dentista mi ha tolto il nervo del dente."
       }
     ],
+    "fr": "nerf",
+    "isVerb": false,
+    "lemma": "nervo",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "tendine",
       "fibra"
-    ],
-    "isVerb": false
+    ]
   },
   "nervosamente": {
-    "lemma": "nervosamente",
-    "pos": "avverbio",
-    "fr": "nerveusement, fébrilement",
     "definition_it": "in modo agitato e teso, senza riuscire a stare tranquillo",
     "examples": [
       {
-        "it": "Aspettava nervosamente la risposta del medico.",
-        "fr": "Il attendait nerveusement la réponse du médecin."
+        "fr": "Il attendait nerveusement la réponse du médecin.",
+        "it": "Aspettava nervosamente la risposta del medico."
       }
     ],
+    "fr": "nerveusement, fébrilement",
+    "isVerb": false,
+    "lemma": "nervosamente",
+    "pos": "avverbio",
     "synonyms": [
       "agitatamente",
       "febbrilmente"
-    ],
-    "isVerb": false
+    ]
   },
   "nervosismo": {
-    "lemma": "nervosismo",
-    "pos": "sostantivo (maschile)",
-    "fr": "nervosité, énervement",
     "definition_it": "stato di agitazione e di tensione che rende difficile restare calmi",
     "examples": [
       {
-        "it": "Il nervosismo tra i giocatori era evidente.",
-        "fr": "La nervosité entre les joueurs était évidente."
+        "fr": "La nervosité entre les joueurs était évidente.",
+        "it": "Il nervosismo tra i giocatori era evidente."
       }
     ],
+    "fr": "nervosité, énervement",
+    "isVerb": false,
+    "lemma": "nervosismo",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "agitazione",
       "tensione",
       "irritabilità"
-    ],
-    "isVerb": false
+    ]
   },
   "nervoso": {
-    "lemma": "nervoso",
-    "pos": "aggettivo",
-    "fr": "nerveux, énervé, tendu",
     "definition_it": "che è agitato e non riesce a stare calmo; che riguarda i nervi",
     "examples": [
       {
-        "it": "Prima dell'esame diventa sempre molto nervoso.",
-        "fr": "Avant l'examen, il devient toujours très nerveux."
+        "fr": "Avant l'examen, il devient toujours très nerveux.",
+        "it": "Prima dell'esame diventa sempre molto nervoso."
       }
     ],
+    "fr": "nerveux, énervé, tendu",
+    "isVerb": false,
+    "lemma": "nervoso",
+    "pos": "aggettivo",
     "synonyms": [
       "agitato",
       "teso",
       "irritabile"
-    ],
-    "isVerb": false
+    ]
   },
   "nesso": {
-    "lemma": "nesso",
-    "pos": "sostantivo (maschile)",
-    "fr": "lien, rapport, connexion",
     "definition_it": "legame logico che unisce due fatti o due idee",
     "examples": [
       {
-        "it": "Non vedo il nesso tra le due storie.",
-        "fr": "Je ne vois pas le lien entre les deux histoires."
+        "fr": "Je ne vois pas le lien entre les deux histoires.",
+        "it": "Non vedo il nesso tra le due storie."
       }
     ],
+    "fr": "lien, rapport, connexion",
+    "isVerb": false,
+    "lemma": "nesso",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "legame",
       "rapporto",
       "collegamento"
-    ],
-    "isVerb": false
+    ]
   },
   "nessuno": {
-    "lemma": "nessuno",
-    "pos": "aggettivo e pronome indefinito",
-    "fr": "aucun, personne",
     "definition_it": "neanche una persona o neanche una cosa; indica assenza totale",
     "examples": [
       {
-        "it": "Non c'era nessuno in casa quando siamo arrivati.",
-        "fr": "Il n'y avait personne à la maison quand nous sommes arrivés."
+        "fr": "Il n'y avait personne à la maison quand nous sommes arrivés.",
+        "it": "Non c'era nessuno in casa quando siamo arrivati."
       }
     ],
+    "fr": "aucun, personne",
+    "isVerb": false,
+    "lemma": "nessuno",
+    "pos": "aggettivo e pronome indefinito",
     "synonyms": [
       "alcuno",
       "niuno"
-    ],
-    "isVerb": false
+    ]
   },
   "nettare": {
-    "lemma": "nettare",
-    "pos": "sostantivo maschile",
-    "fr": "nectar",
     "definition_it": "liquido dolce prodotto dai fiori, che le api raccolgono per fare il miele",
     "examples": [
       {
-        "it": "Le api succhiano il nettare dei fiori.",
-        "fr": "Les abeilles aspirent le nectar des fleurs."
+        "fr": "Les abeilles aspirent le nectar des fleurs.",
+        "it": "Le api succhiano il nettare dei fiori."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nectar",
+    "isVerb": false,
+    "lemma": "nettare",
+    "pos": "sostantivo maschile",
+    "synonyms": []
   },
   "netto": {
-    "lemma": "netto",
-    "pos": "aggettivo",
-    "fr": "net, propre, clair",
     "definition_it": "pulito, chiaro e senza dubbi; detto di una somma, che resta dopo aver tolto le spese",
     "examples": [
       {
-        "it": "C'è una netta differenza tra i due testi.",
-        "fr": "Il y a une nette différence entre les deux textes."
+        "fr": "Il y a une nette différence entre les deux textes.",
+        "it": "C'è una netta differenza tra i due testi."
       }
     ],
+    "fr": "net, propre, clair",
+    "isVerb": false,
+    "lemma": "netto",
+    "pos": "aggettivo",
     "synonyms": [
       "chiaro",
       "pulito"
-    ],
-    "isVerb": false
+    ]
   },
   "neurale": {
-    "lemma": "neurale",
-    "pos": "aggettivo",
-    "fr": "neural, neuronal",
     "definition_it": "che riguarda i neuroni o il sistema nervoso",
     "examples": [
       {
-        "it": "Le reti neurali imparano dai dati.",
-        "fr": "Les réseaux neuronaux apprennent à partir des données."
+        "fr": "Les réseaux neuronaux apprennent à partir des données.",
+        "it": "Le reti neurali imparano dai dati."
       }
     ],
+    "fr": "neural, neuronal",
+    "isVerb": false,
+    "lemma": "neurale",
+    "pos": "aggettivo",
     "synonyms": [
       "nervoso"
-    ],
-    "isVerb": false
+    ]
   },
   "neurodegenerativo": {
-    "lemma": "neurodegenerativo",
-    "pos": "aggettivo",
-    "fr": "neurodégénératif",
     "definition_it": "detto di una malattia che distrugge lentamente le cellule del sistema nervoso",
     "examples": [
       {
-        "it": "L'Alzheimer è una malattia neurodegenerativa.",
-        "fr": "La maladie d'Alzheimer est une maladie neurodégénérative."
+        "fr": "La maladie d'Alzheimer est une maladie neurodégénérative.",
+        "it": "L'Alzheimer è una malattia neurodegenerativa."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "neurodégénératif",
+    "isVerb": false,
+    "lemma": "neurodegenerativo",
+    "pos": "aggettivo",
+    "synonyms": []
   },
   "neutralità": {
-    "lemma": "neutralità",
-    "pos": "sostantivo femminile",
-    "fr": "neutralité",
     "definition_it": "condizione di chi non prende posizione né da una parte né dall'altra",
     "examples": [
       {
-        "it": "Il paese ha scelto la neutralità durante la guerra.",
-        "fr": "Le pays a choisi la neutralité pendant la guerre."
+        "fr": "Le pays a choisi la neutralité pendant la guerre.",
+        "it": "Il paese ha scelto la neutralità durante la guerra."
       }
     ],
+    "fr": "neutralité",
+    "isVerb": false,
+    "lemma": "neutralità",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "imparzialità"
-    ],
-    "isVerb": false
+    ]
   },
   "neutro": {
-    "lemma": "neutro",
-    "pos": "aggettivo",
-    "fr": "neutre",
     "definition_it": "che non favorisce nessuna delle parti; senza colore o carattere marcato",
     "examples": [
       {
-        "it": "Ha risposto con un tono neutro.",
-        "fr": "Il a répondu sur un ton neutre."
+        "fr": "Il a répondu sur un ton neutre.",
+        "it": "Ha risposto con un tono neutro."
       }
     ],
+    "fr": "neutre",
+    "isVerb": false,
+    "lemma": "neutro",
+    "pos": "aggettivo",
     "synonyms": [
       "imparziale"
-    ],
-    "isVerb": false
+    ]
   },
   "neve": {
-    "lemma": "neve",
-    "pos": "sostantivo femminile",
-    "fr": "neige",
     "definition_it": "acqua che cade dal cielo sotto forma di cristalli bianchi quando fa molto freddo",
     "examples": [
       {
-        "it": "La neve ha coperto tutto il paese.",
-        "fr": "La neige a recouvert tout le village."
+        "fr": "La neige a recouvert tout le village.",
+        "it": "La neve ha coperto tutto il paese."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "neige",
+    "isVerb": false,
+    "lemma": "neve",
+    "pos": "sostantivo femminile",
+    "synonyms": []
   },
   "nevicare": {
-    "lemma": "nevicare",
-    "pos": "verbo (intransitivo, impersonale)",
-    "fr": "neiger",
     "definition_it": "cadere della neve dal cielo",
     "examples": [
       {
-        "it": "Stanotte ha nevicato sulle montagne.",
-        "fr": "Cette nuit il a neigé sur les montagnes."
+        "fr": "Cette nuit il a neigé sur les montagnes.",
+        "it": "Stanotte ha nevicato sulle montagne."
       }
     ],
-    "synonyms": [],
-    "isVerb": true
+    "fr": "neiger",
+    "isVerb": true,
+    "lemma": "nevicare",
+    "pos": "verbo (intransitivo, impersonale)",
+    "synonyms": []
   },
   "nevrosi": {
-    "lemma": "nevrosi",
-    "pos": "sostantivo femminile (invariabile)",
-    "fr": "névrose",
     "definition_it": "disturbo psicologico che provoca ansia e comportamenti ripetuti, senza perdita del contatto con la realtà",
     "examples": [
       {
-        "it": "Soffre di una leggera nevrosi da molti anni.",
-        "fr": "Il souffre d'une légère névrose depuis de nombreuses années."
+        "fr": "Il souffre d'une légère névrose depuis de nombreuses années.",
+        "it": "Soffre di una leggera nevrosi da molti anni."
       }
     ],
+    "fr": "névrose",
+    "isVerb": false,
+    "lemma": "nevrosi",
+    "pos": "sostantivo femminile (invariabile)",
     "synonyms": [
       "ansia"
-    ],
-    "isVerb": false
+    ]
   },
   "newsletter": {
-    "lemma": "newsletter",
-    "pos": "sostantivo (femminile, invariabile, prestito dall'inglese)",
-    "fr": "newsletter, lettre d'information",
     "definition_it": "messaggio di informazioni che un sito o un'azienda manda per e-mail a chi si è iscritto",
     "examples": [
       {
-        "it": "Mi sono iscritto alla newsletter del museo.",
-        "fr": "Je me suis inscrit à la newsletter du musée."
+        "fr": "Je me suis inscrit à la newsletter du musée.",
+        "it": "Mi sono iscritto alla newsletter del museo."
       }
     ],
+    "fr": "newsletter, lettre d'information",
+    "isVerb": false,
+    "lemma": "newsletter",
+    "pos": "sostantivo (femminile, invariabile, prestito dall'inglese)",
     "synonyms": [
       "bollettino"
-    ],
-    "isVerb": false
+    ]
   },
   "newton": {
-    "lemma": "newton",
-    "pos": "sostantivo (maschile, invariabile)",
-    "fr": "newton (unité de force)",
     "definition_it": "unità di misura della forza nel sistema internazionale, indicata con il simbolo N",
     "examples": [
       {
-        "it": "Un newton è la forza che dà a un chilogrammo un'accelerazione di un metro al secondo quadrato.",
-        "fr": "Un newton est la force qui donne à un kilogramme une accélération d'un mètre par seconde carrée."
+        "fr": "Un newton est la force qui donne à un kilogramme une accélération d'un mètre par seconde carrée.",
+        "it": "Un newton è la forza che dà a un chilogrammo un'accelerazione di un metro al secondo quadrato."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "newton (unité de force)",
+    "isVerb": false,
+    "lemma": "newton",
+    "pos": "sostantivo (maschile, invariabile)",
+    "synonyms": []
   },
   "ni": {
-    "lemma": "ni",
-    "pos": "avverbio (familiare)",
-    "fr": "oui et non, ni oui ni non",
     "definition_it": "risposta scherzosa che mette insieme sì e no per dire che non si è del tutto d'accordo",
     "examples": [
       {
-        "it": "«Ti è piaciuto il film?» «Ni, la fine è debole.»",
-        "fr": "« Le film t'a plu ? » « Oui et non, la fin est faible. »"
+        "fr": "« Le film t'a plu ? » « Oui et non, la fin est faible. »",
+        "it": "«Ti è piaciuto il film?» «Ni, la fine è debole.»"
       }
     ],
-    "synonyms": [],
+    "fr": "oui et non, ni oui ni non",
     "isVerb": false,
-    "register": "informale"
+    "lemma": "ni",
+    "pos": "avverbio (familiare)",
+    "register": "informale",
+    "synonyms": []
   },
   "nibbio": {
-    "lemma": "nibbio",
-    "pos": "sostantivo (maschile)",
-    "fr": "milan (oiseau de proie)",
     "definition_it": "uccello rapace di media grandezza, con la coda a forma di forbice, che vola planando a lungo",
     "examples": [
       {
-        "it": "Un nibbio girava lentamente sopra il campo.",
-        "fr": "Un milan tournait lentement au-dessus du champ."
+        "fr": "Un milan tournait lentement au-dessus du champ.",
+        "it": "Un nibbio girava lentamente sopra il campo."
       }
     ],
+    "fr": "milan (oiseau de proie)",
+    "isVerb": false,
+    "lemma": "nibbio",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "rapace"
-    ],
-    "isVerb": false
+    ]
   },
   "nicchia": {
-    "lemma": "nicchia",
-    "pos": "sostantivo (femminile)",
-    "fr": "niche, renfoncement",
     "definition_it": "spazio vuoto scavato in un muro, di solito per mettere una statua o un oggetto",
     "examples": [
       {
-        "it": "Nella nicchia della chiesa c'è una piccola statua.",
-        "fr": "Dans la niche de l'église il y a une petite statue."
+        "fr": "Dans la niche de l'église il y a une petite statue.",
+        "it": "Nella nicchia della chiesa c'è una piccola statua."
       }
     ],
+    "fr": "niche, renfoncement",
+    "isVerb": false,
+    "lemma": "nicchia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "incavo",
       "rientranza"
-    ],
-    "isVerb": false
+    ]
   },
   "nidificare": {
-    "lemma": "nidificare",
-    "pos": "verbo (intransitivo, regolare)",
-    "fr": "nicher, faire son nid",
     "definition_it": "costruire il nido e sistemarsi in un luogo per far nascere i piccoli",
     "examples": [
       {
-        "it": "Molti uccelli nidificano tra le canne del lago.",
-        "fr": "Beaucoup d'oiseaux nichent dans les roseaux du lac."
+        "fr": "Beaucoup d'oiseaux nichent dans les roseaux du lac.",
+        "it": "Molti uccelli nidificano tra le canne del lago."
       }
     ],
+    "fr": "nicher, faire son nid",
+    "isVerb": true,
+    "lemma": "nidificare",
+    "pos": "verbo (intransitivo, regolare)",
     "synonyms": [
       "annidarsi"
-    ],
-    "isVerb": true
+    ]
   },
   "nido": {
-    "lemma": "nido",
-    "pos": "sostantivo (maschile)",
-    "fr": "nid",
     "definition_it": "casa che gli uccelli e altri animali costruiscono per deporre le uova e crescere i piccoli",
     "examples": [
       {
-        "it": "Le rondini hanno fatto il nido sotto il tetto.",
-        "fr": "Les hirondelles ont fait leur nid sous le toit."
+        "fr": "Les hirondelles ont fait leur nid sous le toit.",
+        "it": "Le rondini hanno fatto il nido sotto il tetto."
       }
     ],
+    "fr": "nid",
+    "isVerb": false,
+    "lemma": "nido",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "covo",
       "tana"
-    ],
-    "isVerb": false
+    ]
   },
   "niello": {
-    "lemma": "niello",
-    "pos": "sostantivo (maschile)",
-    "fr": "nielle (technique de décoration des métaux)",
     "definition_it": "tecnica per decorare oggetti d'argento o d'oro riempiendo i solchi con una pasta nera",
     "examples": [
       {
-        "it": "Il museo espone una croce lavorata a niello.",
-        "fr": "Le musée expose une croix travaillée en nielle."
+        "fr": "Le musée expose une croix travaillée en nielle.",
+        "it": "Il museo espone una croce lavorata a niello."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nielle (technique de décoration des métaux)",
+    "isVerb": false,
+    "lemma": "niello",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "niente": {
-    "lemma": "niente",
-    "pos": "pronome indefinito / avverbio",
-    "fr": "rien",
     "definition_it": "nessuna cosa; si usa per dire che non c'è proprio nulla",
     "examples": [
       {
-        "it": "Non ho capito niente di quello che ha detto.",
-        "fr": "Je n'ai rien compris de ce qu'il a dit."
+        "fr": "Je n'ai rien compris de ce qu'il a dit.",
+        "it": "Non ho capito niente di quello che ha detto."
       }
     ],
+    "fr": "rien",
+    "isVerb": false,
+    "lemma": "niente",
+    "pos": "pronome indefinito / avverbio",
     "synonyms": [
       "nulla"
-    ],
-    "isVerb": false
+    ]
   },
   "nientedimeno": {
-    "lemma": "nientedimeno",
-    "pos": "avverbio (letterario)",
-    "fr": "rien de moins que, pas moins",
     "definition_it": "parola che si usa per esprimere sorpresa davanti a una cosa importante o inattesa; vale anche «tuttavia»",
     "examples": [
       {
-        "it": "Alla festa è arrivato nientedimeno che il sindaco.",
-        "fr": "À la fête est arrivé rien de moins que le maire."
+        "fr": "À la fête est arrivé rien de moins que le maire.",
+        "it": "Alla festa è arrivato nientedimeno che il sindaco."
       }
     ],
+    "fr": "rien de moins que, pas moins",
+    "isVerb": false,
+    "lemma": "nientedimeno",
+    "pos": "avverbio (letterario)",
+    "register": "letterario",
     "synonyms": [
       "addirittura",
       "nondimeno"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nientemeno": {
-    "lemma": "nientemeno",
-    "pos": "avverbio",
-    "fr": "rien de moins que, figure-toi",
     "definition_it": "parola che si usa per mostrare sorpresa davanti a qualcosa di grande o inatteso",
     "examples": [
       {
-        "it": "Ha vinto nientemeno che il primo premio.",
-        "fr": "Il a gagné rien de moins que le premier prix."
+        "fr": "Il a gagné rien de moins que le premier prix.",
+        "it": "Ha vinto nientemeno che il primo premio."
       }
     ],
+    "fr": "rien de moins que, figure-toi",
+    "isVerb": false,
+    "lemma": "nientemeno",
+    "pos": "avverbio",
     "synonyms": [
       "addirittura",
       "perfino"
-    ],
-    "isVerb": false
+    ]
   },
   "nipote": {
-    "lemma": "nipote",
-    "pos": "sostantivo (maschile e femminile)",
-    "fr": "neveu, nièce ; petit-fils, petite-fille",
     "definition_it": "figlio o figlia del fratello o della sorella, oppure figlio del proprio figlio",
     "examples": [
       {
-        "it": "Mia nipote viene a trovarmi ogni domenica.",
-        "fr": "Ma nièce vient me voir tous les dimanches."
+        "fr": "Ma nièce vient me voir tous les dimanches.",
+        "it": "Mia nipote viene a trovarmi ogni domenica."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "neveu, nièce ; petit-fils, petite-fille",
+    "isVerb": false,
+    "lemma": "nipote",
+    "pos": "sostantivo (maschile e femminile)",
+    "synonyms": []
   },
   "nipotino": {
-    "lemma": "nipotino",
-    "pos": "sostantivo (maschile)",
-    "fr": "petit-fils, petit neveu (affectueux)",
     "definition_it": "nipote piccolo di età; si usa con affetto per parlare di un bambino",
     "examples": [
       {
-        "it": "I nonni portano il nipotino al parco.",
-        "fr": "Les grands-parents emmènent leur petit-fils au parc."
+        "fr": "Les grands-parents emmènent leur petit-fils au parc.",
+        "it": "I nonni portano il nipotino al parco."
       }
     ],
+    "fr": "petit-fils, petit neveu (affectueux)",
+    "isVerb": false,
+    "lemma": "nipotino",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "nipote"
-    ],
-    "isVerb": false
+    ]
   },
   "nitido": {
-    "lemma": "nitido",
-    "pos": "aggettivo",
-    "fr": "net, clair, distinct",
     "definition_it": "che si vede o si sente in modo chiaro, senza ombre né confusione",
     "examples": [
       {
-        "it": "La fotografia è molto nitida.",
-        "fr": "La photographie est très nette."
+        "fr": "La photographie est très nette.",
+        "it": "La fotografia è molto nitida."
       }
     ],
+    "fr": "net, clair, distinct",
+    "isVerb": false,
+    "lemma": "nitido",
+    "pos": "aggettivo",
     "synonyms": [
       "chiaro",
       "limpido"
-    ],
-    "isVerb": false
+    ]
   },
   "nitrire": {
-    "lemma": "nitrire",
-    "pos": "verbo (intransitivo, regolare in -isc-)",
-    "fr": "hennir",
     "definition_it": "fare il verso tipico del cavallo",
     "examples": [
       {
-        "it": "Il cavallo nitrisce quando vede il padrone.",
-        "fr": "Le cheval hennit quand il voit son maître."
+        "fr": "Le cheval hennit quand il voit son maître.",
+        "it": "Il cavallo nitrisce quando vede il padrone."
       }
     ],
-    "synonyms": [],
-    "isVerb": true
+    "fr": "hennir",
+    "isVerb": true,
+    "lemma": "nitrire",
+    "pos": "verbo (intransitivo, regolare in -isc-)",
+    "synonyms": []
   },
   "no": {
-    "lemma": "no",
-    "pos": "avverbio",
-    "fr": "non",
     "definition_it": "parola che si usa per negare o per rifiutare qualcosa",
     "examples": [
       {
-        "it": "No, non voglio uscire stasera.",
-        "fr": "Non, je ne veux pas sortir ce soir."
+        "fr": "Non, je ne veux pas sortir ce soir.",
+        "it": "No, non voglio uscire stasera."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "non",
+    "isVerb": false,
+    "lemma": "no",
+    "pos": "avverbio",
+    "synonyms": []
   },
   "nobile": {
-    "lemma": "nobile",
-    "pos": "aggettivo / sostantivo (maschile e femminile)",
-    "fr": "noble",
     "definition_it": "che appartiene a una famiglia di antica origine e alto rango; anche generoso e degno di stima",
     "examples": [
       {
-        "it": "È un gesto molto nobile aiutare chi è in difficoltà.",
-        "fr": "C'est un geste très noble d'aider ceux qui sont en difficulté."
+        "fr": "C'est un geste très noble d'aider ceux qui sont en difficulté.",
+        "it": "È un gesto molto nobile aiutare chi è in difficoltà."
       }
     ],
+    "fr": "noble",
+    "isVerb": false,
+    "lemma": "nobile",
+    "pos": "aggettivo / sostantivo (maschile e femminile)",
     "synonyms": [
       "aristocratico",
       "generoso"
-    ],
-    "isVerb": false
+    ]
   },
   "nobiliare": {
-    "lemma": "nobiliare",
-    "pos": "aggettivo",
-    "fr": "nobiliaire, de la noblesse",
     "definition_it": "che riguarda i nobili e le loro famiglie",
     "examples": [
       {
-        "it": "La famiglia possiede un antico titolo nobiliare.",
-        "fr": "La famille possède un ancien titre nobiliaire."
+        "fr": "La famille possède un ancien titre nobiliaire.",
+        "it": "La famiglia possiede un antico titolo nobiliare."
       }
     ],
+    "fr": "nobiliaire, de la noblesse",
+    "isVerb": false,
+    "lemma": "nobiliare",
+    "pos": "aggettivo",
     "synonyms": [
       "aristocratico"
-    ],
-    "isVerb": false
+    ]
   },
   "nobilitare": {
-    "lemma": "nobilitare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "anoblir, ennoblir",
     "definition_it": "rendere più nobile, più degno o più prezioso qualcuno o qualcosa",
     "examples": [
       {
-        "it": "Il lavoro onesto nobilita l'uomo.",
-        "fr": "Le travail honnête ennoblit l'homme."
+        "fr": "Le travail honnête ennoblit l'homme.",
+        "it": "Il lavoro onesto nobilita l'uomo."
       }
     ],
+    "fr": "anoblir, ennoblir",
+    "isVerb": true,
+    "lemma": "nobilitare",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "elevare",
       "dignificare"
-    ],
-    "isVerb": true
+    ]
   },
   "nobiltà": {
-    "lemma": "nobiltà",
-    "pos": "sostantivo (femminile)",
-    "fr": "noblesse",
     "definition_it": "il gruppo delle famiglie nobili; anche la qualità di chi ha animo generoso e alto",
     "examples": [
       {
-        "it": "La nobiltà del suo gesto ha commosso tutti.",
-        "fr": "La noblesse de son geste a ému tout le monde."
+        "fr": "La noblesse de son geste a ému tout le monde.",
+        "it": "La nobiltà del suo gesto ha commosso tutti."
       }
     ],
+    "fr": "noblesse",
+    "isVerb": false,
+    "lemma": "nobiltà",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "aristocrazia",
       "generosità"
-    ],
-    "isVerb": false
+    ]
   },
   "nocca": {
-    "lemma": "nocca",
-    "pos": "sostantivo (femminile)",
-    "fr": "jointure du doigt, phalange",
     "definition_it": "la parte sporgente dell'articolazione delle dita della mano",
     "examples": [
       {
-        "it": "Ha bussato alla porta con le nocche.",
-        "fr": "Il a frappé à la porte avec les jointures des doigts."
+        "fr": "Il a frappé à la porte avec les jointures des doigts.",
+        "it": "Ha bussato alla porta con le nocche."
       }
     ],
+    "fr": "jointure du doigt, phalange",
+    "isVerb": false,
+    "lemma": "nocca",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "giuntura"
-    ],
-    "isVerb": false
+    ]
   },
   "nocchiero": {
-    "lemma": "nocchiero",
-    "pos": "sostantivo (maschile)",
-    "fr": "nocher, pilote (d'un navire)",
     "definition_it": "chi guida una nave e tiene il timone; il timoniere",
     "examples": [
       {
-        "it": "Il vecchio nocchiero conosceva bene quel mare.",
-        "fr": "Le vieux nocher connaissait bien cette mer."
+        "fr": "Le vieux nocher connaissait bien cette mer.",
+        "it": "Il vecchio nocchiero conosceva bene quel mare."
       }
     ],
+    "fr": "nocher, pilote (d'un navire)",
+    "isVerb": false,
+    "lemma": "nocchiero",
+    "pos": "sostantivo (maschile)",
+    "register": "letterario",
     "synonyms": [
       "timoniere",
       "pilota"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nocciola": {
-    "lemma": "nocciola",
-    "pos": "sostantivo (femminile)",
-    "fr": "noisette",
     "definition_it": "piccolo frutto secco e tondo, con guscio duro, che cresce sul nocciolo",
     "examples": [
       {
-        "it": "Questo gelato alla nocciola è squisito.",
-        "fr": "Cette glace à la noisette est délicieuse."
+        "fr": "Cette glace à la noisette est délicieuse.",
+        "it": "Questo gelato alla nocciola è squisito."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "noisette",
+    "isVerb": false,
+    "lemma": "nocciola",
+    "pos": "sostantivo (femminile)",
+    "synonyms": []
   },
   "nocciolo": {
-    "lemma": "nocciolo",
-    "pos": "sostantivo (maschile)",
-    "fr": "noyau (d'un fruit) ; cœur, essentiel",
     "definition_it": "la parte dura che sta dentro certi frutti e contiene il seme; in senso figurato, la parte centrale di una questione",
     "examples": [
       {
-        "it": "Veniamo subito al nocciolo del problema.",
-        "fr": "Venons-en tout de suite au cœur du problème."
+        "fr": "Venons-en tout de suite au cœur du problème.",
+        "it": "Veniamo subito al nocciolo del problema."
       }
     ],
+    "fr": "noyau (d'un fruit) ; cœur, essentiel",
+    "isVerb": false,
+    "lemma": "nocciolo",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "seme",
       "essenza"
-    ],
-    "isVerb": false
+    ]
   },
   "noce": {
-    "lemma": "noce",
-    "pos": "sostantivo (femminile; maschile per l'albero e il legno)",
-    "fr": "noix ; noyer (arbre, bois)",
     "definition_it": "frutto secco con guscio legnoso; indica anche l'albero che lo produce e il suo legno scuro",
     "examples": [
       {
-        "it": "Ha comprato un tavolo di noce massiccio.",
-        "fr": "Il a acheté une table en noyer massif."
+        "fr": "Il a acheté une table en noyer massif.",
+        "it": "Ha comprato un tavolo di noce massiccio."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "noix ; noyer (arbre, bois)",
+    "isVerb": false,
+    "lemma": "noce",
+    "pos": "sostantivo (femminile; maschile per l'albero e il legno)",
+    "synonyms": []
   },
   "nocivo": {
-    "lemma": "nocivo",
-    "pos": "aggettivo",
-    "fr": "nocif, nuisible",
     "definition_it": "che fa male alla salute o provoca un danno",
     "examples": [
       {
-        "it": "Il fumo è nocivo per i polmoni.",
-        "fr": "La fumée est nocive pour les poumons."
+        "fr": "La fumée est nocive pour les poumons.",
+        "it": "Il fumo è nocivo per i polmoni."
       }
     ],
+    "fr": "nocif, nuisible",
+    "isVerb": false,
+    "lemma": "nocivo",
+    "pos": "aggettivo",
     "synonyms": [
       "dannoso",
       "tossico"
-    ],
-    "isVerb": false
+    ]
   },
   "nodo": {
-    "lemma": "nodo",
-    "pos": "sostantivo (maschile)",
-    "fr": "nœud",
     "definition_it": "giro stretto che si fa con una corda o un filo per legare; anche punto difficile di una situazione",
     "examples": [
       {
-        "it": "Non riesco a sciogliere questo nodo.",
-        "fr": "Je n'arrive pas à défaire ce nœud."
+        "fr": "Je n'arrive pas à défaire ce nœud.",
+        "it": "Non riesco a sciogliere questo nodo."
       }
     ],
+    "fr": "nœud",
+    "isVerb": false,
+    "lemma": "nodo",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "legame",
       "intreccio"
-    ],
-    "isVerb": false
+    ]
   },
   "nodoso": {
-    "lemma": "nodoso",
-    "pos": "aggettivo",
-    "fr": "noueux",
     "definition_it": "pieno di nodi, con sporgenze dure e irregolari",
     "examples": [
       {
-        "it": "Si appoggiava a un bastone nodoso.",
-        "fr": "Il s'appuyait sur un bâton noueux."
+        "fr": "Il s'appuyait sur un bâton noueux.",
+        "it": "Si appoggiava a un bastone nodoso."
       }
     ],
+    "fr": "noueux",
+    "isVerb": false,
+    "lemma": "nodoso",
+    "pos": "aggettivo",
     "synonyms": [
       "rugoso",
       "contorto"
-    ],
-    "isVerb": false
+    ]
   },
   "noi": {
-    "lemma": "noi",
-    "pos": "pronome (personale, prima persona plurale)",
-    "fr": "nous",
     "definition_it": "pronome che indica chi parla insieme ad altre persone",
     "examples": [
       {
-        "it": "Noi partiamo domani mattina.",
-        "fr": "Nous partons demain matin."
+        "fr": "Nous partons demain matin.",
+        "it": "Noi partiamo domani mattina."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nous",
+    "isVerb": false,
+    "lemma": "noi",
+    "pos": "pronome (personale, prima persona plurale)",
+    "synonyms": []
   },
   "noia": {
-    "lemma": "noia",
-    "pos": "sostantivo (femminile)",
-    "fr": "ennui",
     "definition_it": "sensazione spiacevole che si prova quando non si ha niente di interessante da fare",
     "examples": [
       {
-        "it": "Muoio di noia in questa città.",
-        "fr": "Je meurs d'ennui dans cette ville."
+        "fr": "Je meurs d'ennui dans cette ville.",
+        "it": "Muoio di noia in questa città."
       }
     ],
+    "fr": "ennui",
+    "isVerb": false,
+    "lemma": "noia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "tedio",
       "fastidio"
-    ],
-    "isVerb": false
+    ]
   },
   "noialtri": {
-    "lemma": "noialtri",
-    "pos": "pronome (personale, colloquiale)",
-    "fr": "nous autres",
     "definition_it": "forma rafforzata di \"noi\", usata per distinguere il proprio gruppo dagli altri",
     "examples": [
       {
-        "it": "Noialtri contadini ci alziamo presto.",
-        "fr": "Nous autres paysans, nous nous levons tôt."
+        "fr": "Nous autres paysans, nous nous levons tôt.",
+        "it": "Noialtri contadini ci alziamo presto."
       }
     ],
+    "fr": "nous autres",
+    "isVerb": false,
+    "lemma": "noialtri",
+    "pos": "pronome (personale, colloquiale)",
+    "register": "informale",
     "synonyms": [
       "noi"
-    ],
-    "isVerb": false,
-    "register": "informale"
+    ]
   },
   "noioso": {
-    "lemma": "noioso",
-    "pos": "aggettivo",
-    "fr": "ennuyeux",
     "definition_it": "che non è interessante e fa venire la noia; anche fastidioso",
     "examples": [
       {
-        "it": "Il film era lungo e noioso.",
-        "fr": "Le film était long et ennuyeux."
+        "fr": "Le film était long et ennuyeux.",
+        "it": "Il film era lungo e noioso."
       }
     ],
+    "fr": "ennuyeux",
+    "isVerb": false,
+    "lemma": "noioso",
+    "pos": "aggettivo",
     "synonyms": [
       "tedioso",
       "monotono"
-    ],
-    "isVerb": false
+    ]
   },
   "nol": {
-    "lemma": "nol",
-    "pos": "forma arcaica (contrazione di «non lo»)",
-    "fr": "ne le (forme ancienne de « non lo »)",
     "definition_it": "forma antica e letteraria che unisce la negazione «non» e il pronome «lo»",
     "examples": [
       {
-        "it": "Chi lo sapeva? Io nol so.",
-        "fr": "Qui le savait ? Moi, je ne le sais pas."
+        "fr": "Qui le savait ? Moi, je ne le sais pas.",
+        "it": "Chi lo sapeva? Io nol so."
       }
     ],
+    "fr": "ne le (forme ancienne de « non lo »)",
+    "isVerb": false,
+    "lemma": "nol",
+    "pos": "forma arcaica (contrazione di «non lo»)",
+    "register": "letterario",
     "synonyms": [
       "non lo"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "noleggiare": {
-    "lemma": "noleggiare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "louer (un véhicule, un objet)",
     "definition_it": "prendere o dare in uso una cosa per un tempo limitato pagando una somma",
     "examples": [
       {
-        "it": "In vacanza abbiamo noleggiato una macchina per una settimana.",
-        "fr": "En vacances, nous avons loué une voiture pour une semaine."
+        "fr": "En vacances, nous avons loué une voiture pour une semaine.",
+        "it": "In vacanza abbiamo noleggiato una macchina per una settimana."
       }
     ],
+    "fr": "louer (un véhicule, un objet)",
+    "isVerb": true,
+    "lemma": "noleggiare",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "affittare",
       "prendere a nolo"
-    ],
-    "isVerb": true
+    ]
   },
   "noleggio": {
-    "lemma": "noleggio",
-    "pos": "sostantivo maschile",
-    "fr": "location",
     "definition_it": "il fatto di usare una cosa di un altro per un certo tempo, pagando un prezzo",
     "examples": [
       {
-        "it": "Vicino alla stazione c'è un noleggio di biciclette.",
-        "fr": "Près de la gare, il y a une location de vélos."
+        "fr": "Près de la gare, il y a une location de vélos.",
+        "it": "Vicino alla stazione c'è un noleggio di biciclette."
       }
     ],
+    "fr": "location",
+    "isVerb": false,
+    "lemma": "noleggio",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "affitto",
       "nolo"
-    ],
-    "isVerb": false
+    ]
   },
   "nolo": {
-    "lemma": "nolo",
-    "pos": "sostantivo maschile",
-    "fr": "prix de location, fret",
     "definition_it": "il prezzo che si paga per usare una cosa di un altro, soprattutto una nave o un mezzo di trasporto",
     "examples": [
       {
-        "it": "Il nolo della barca è troppo caro per noi.",
-        "fr": "Le prix de location du bateau est trop cher pour nous."
+        "fr": "Le prix de location du bateau est trop cher pour nous.",
+        "it": "Il nolo della barca è troppo caro per noi."
       }
     ],
+    "fr": "prix de location, fret",
+    "isVerb": false,
+    "lemma": "nolo",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "noleggio",
       "affitto"
-    ],
-    "isVerb": false
+    ]
   },
   "nomare": {
-    "lemma": "nomare",
-    "pos": "verbo (transitivo, regolare, letterario/arcaico)",
-    "fr": "nommer, appeler (littéraire)",
     "definition_it": "dare un nome a qualcuno o chiamarlo per nome; è una parola antica e poetica",
     "examples": [
       {
-        "it": "Il poeta noma i suoi eroi con parole solenni.",
-        "fr": "Le poète nomme ses héros avec des mots solennels."
+        "fr": "Le poète nomme ses héros avec des mots solennels.",
+        "it": "Il poeta noma i suoi eroi con parole solenni."
       }
     ],
+    "fr": "nommer, appeler (littéraire)",
+    "isVerb": true,
+    "lemma": "nomare",
+    "pos": "verbo (transitivo, regolare, letterario/arcaico)",
+    "register": "letterario",
     "synonyms": [
       "nominare",
       "chiamare"
-    ],
-    "isVerb": true,
-    "register": "letterario"
+    ]
   },
   "nome": {
-    "lemma": "nome",
-    "pos": "sostantivo maschile",
-    "fr": "nom, prénom",
     "definition_it": "la parola con cui si chiama una persona, un animale o una cosa",
     "examples": [
       {
-        "it": "Non ricordo il nome di quel ragazzo.",
-        "fr": "Je ne me souviens pas du nom de ce garçon."
+        "fr": "Je ne me souviens pas du nom de ce garçon.",
+        "it": "Non ricordo il nome di quel ragazzo."
       }
     ],
+    "fr": "nom, prénom",
+    "isVerb": false,
+    "lemma": "nome",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "appellativo",
       "denominazione"
-    ],
-    "isVerb": false
+    ]
   },
   "nomea": {
-    "lemma": "nomea",
-    "pos": "sostantivo femminile",
-    "fr": "réputation (souvent mauvaise)",
     "definition_it": "la fama che una persona ha fra la gente, di solito una fama cattiva",
     "examples": [
       {
-        "it": "Quel locale ha la nomea di essere pericoloso.",
-        "fr": "Cet établissement a la réputation d'être dangereux."
+        "fr": "Cet établissement a la réputation d'être dangereux.",
+        "it": "Quel locale ha la nomea di essere pericoloso."
       }
     ],
+    "fr": "réputation (souvent mauvaise)",
+    "isVerb": false,
+    "lemma": "nomea",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "fama",
       "reputazione"
-    ],
-    "isVerb": false
+    ]
   },
   "nomina": {
-    "lemma": "nomina",
-    "pos": "sostantivo femminile",
-    "fr": "nomination, désignation",
     "definition_it": "l'atto con cui una persona viene scelta per un incarico o un posto di lavoro",
     "examples": [
       {
-        "it": "La nomina del nuovo direttore è arrivata ieri.",
-        "fr": "La nomination du nouveau directeur est arrivée hier."
+        "fr": "La nomination du nouveau directeur est arrivée hier.",
+        "it": "La nomina del nuovo direttore è arrivata ieri."
       }
     ],
+    "fr": "nomination, désignation",
+    "isVerb": false,
+    "lemma": "nomina",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "designazione",
       "incarico"
-    ],
-    "isVerb": false
+    ]
   },
   "nominare": {
-    "lemma": "nominare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "nommer, citer, désigner",
     "definition_it": "dire il nome di qualcuno o di qualcosa; scegliere una persona per un incarico",
     "examples": [
       {
-        "it": "L'hanno nominata direttrice della scuola.",
-        "fr": "Ils l'ont nommée directrice de l'école."
+        "fr": "Ils l'ont nommée directrice de l'école.",
+        "it": "L'hanno nominata direttrice della scuola."
       }
     ],
+    "fr": "nommer, citer, désigner",
+    "isVerb": true,
+    "lemma": "nominare",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "citare",
       "designare",
       "eleggere"
-    ],
-    "isVerb": true
+    ]
   },
   "non": {
-    "lemma": "non",
-    "pos": "avverbio di negazione",
-    "fr": "ne... pas, non",
     "definition_it": "parola che si mette davanti al verbo per dire che una cosa non è vera o non succede",
     "examples": [
       {
-        "it": "Oggi non ho tempo di uscire.",
-        "fr": "Aujourd'hui, je n'ai pas le temps de sortir."
+        "fr": "Aujourd'hui, je n'ai pas le temps de sortir.",
+        "it": "Oggi non ho tempo di uscire."
       }
     ],
+    "fr": "ne... pas, non",
+    "isVerb": false,
+    "lemma": "non",
+    "pos": "avverbio di negazione",
     "synonyms": [
       "mica",
       "affatto"
-    ],
-    "isVerb": false
+    ]
   },
   "nonché": {
-    "lemma": "nonché",
-    "pos": "congiunzione",
-    "fr": "ainsi que, sans compter, et aussi",
     "definition_it": "parola che serve a unire due elementi in una frase, con il senso di «e anche», «oltre a»",
     "examples": [
       {
-        "it": "Hanno invitato i genitori, nonché i nonni e gli zii.",
-        "fr": "Ils ont invité les parents, ainsi que les grands-parents et les oncles."
+        "fr": "Ils ont invité les parents, ainsi que les grands-parents et les oncles.",
+        "it": "Hanno invitato i genitori, nonché i nonni e gli zii."
       }
     ],
+    "fr": "ainsi que, sans compter, et aussi",
+    "isVerb": false,
+    "lemma": "nonché",
+    "pos": "congiunzione",
+    "register": "formale",
     "synonyms": [
       "e anche",
       "oltre a",
       "come pure"
-    ],
-    "isVerb": false,
-    "register": "formale"
+    ]
   },
   "nondimanco": {
-    "lemma": "nondimanco",
-    "pos": "avverbio (letterario, antico)",
-    "fr": "néanmoins, cependant",
     "definition_it": "parola antica e letteraria che significa «lo stesso», «malgrado quello che è stato detto»",
     "examples": [
       {
-        "it": "Era stanco; nondimanco continuò a camminare.",
-        "fr": "Il était fatigué ; néanmoins il continua à marcher."
+        "fr": "Il était fatigué ; néanmoins il continua à marcher.",
+        "it": "Era stanco; nondimanco continuò a camminare."
       }
     ],
+    "fr": "néanmoins, cependant",
+    "isVerb": false,
+    "lemma": "nondimanco",
+    "pos": "avverbio (letterario, antico)",
+    "register": "letterario",
     "synonyms": [
       "nondimeno",
       "tuttavia",
       "ciò nonostante"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nondimeno": {
-    "lemma": "nondimeno",
-    "pos": "avverbio / congiunzione",
-    "fr": "néanmoins, toutefois",
     "definition_it": "si usa per introdurre un fatto che va contro quello detto prima: «tuttavia», «lo stesso»",
     "examples": [
       {
-        "it": "Il film è lungo; nondimeno vale la pena vederlo.",
-        "fr": "Le film est long ; néanmoins il vaut la peine d'être vu."
+        "fr": "Le film est long ; néanmoins il vaut la peine d'être vu.",
+        "it": "Il film è lungo; nondimeno vale la pena vederlo."
       }
     ],
+    "fr": "néanmoins, toutefois",
+    "isVerb": false,
+    "lemma": "nondimeno",
+    "pos": "avverbio / congiunzione",
+    "register": "formale",
     "synonyms": [
       "tuttavia",
       "però",
       "ciò nonostante"
-    ],
-    "isVerb": false,
-    "register": "formale"
+    ]
   },
   "nonna": {
-    "lemma": "nonna",
-    "pos": "sostantivo (femminile)",
-    "fr": "grand-mère",
     "definition_it": "la madre del padre o della madre di una persona",
     "examples": [
       {
-        "it": "La nonna prepara la torta ogni domenica.",
-        "fr": "La grand-mère prépare le gâteau tous les dimanches."
+        "fr": "La grand-mère prépare le gâteau tous les dimanches.",
+        "it": "La nonna prepara la torta ogni domenica."
       }
     ],
+    "fr": "grand-mère",
+    "isVerb": false,
+    "lemma": "nonna",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "nonnina"
-    ],
-    "isVerb": false
+    ]
   },
   "nonnino": {
-    "lemma": "nonnino",
-    "pos": "sostantivo (maschile, diminutivo affettuoso)",
-    "fr": "petit grand-père, papy",
     "definition_it": "modo affettuoso di chiamare un nonno o un uomo anziano; al femminile «nonnina»",
     "examples": [
       {
-        "it": "Il nonnino siede sulla panchina al sole.",
-        "fr": "Le petit grand-père est assis sur le banc au soleil."
+        "fr": "Le petit grand-père est assis sur le banc au soleil.",
+        "it": "Il nonnino siede sulla panchina al sole."
       }
     ],
+    "fr": "petit grand-père, papy",
+    "isVerb": false,
+    "lemma": "nonnino",
+    "pos": "sostantivo (maschile, diminutivo affettuoso)",
+    "register": "informale",
     "synonyms": [
       "nonno",
       "vecchietto"
-    ],
-    "isVerb": false,
-    "register": "informale"
+    ]
   },
   "nonno": {
-    "lemma": "nonno",
-    "pos": "sostantivo (maschile)",
-    "fr": "grand-père",
     "definition_it": "il padre del padre o della madre di una persona; al plurale indica anche i due nonni insieme",
     "examples": [
       {
-        "it": "Mio nonno mi racconta storie della guerra.",
-        "fr": "Mon grand-père me raconte des histoires de la guerre."
+        "fr": "Mon grand-père me raconte des histoires de la guerre.",
+        "it": "Mio nonno mi racconta storie della guerra."
       }
     ],
+    "fr": "grand-père",
+    "isVerb": false,
+    "lemma": "nonno",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "nonnino",
       "avo"
-    ],
-    "isVerb": false
+    ]
   },
   "nonnulla": {
-    "lemma": "nonnulla",
-    "pos": "sostantivo (maschile, invariabile)",
-    "fr": "rien du tout, bagatelle, broutille",
     "definition_it": "cosa di pochissima importanza, quasi niente",
     "examples": [
       {
-        "it": "Si arrabbia sempre per un nonnulla.",
-        "fr": "Il se met toujours en colère pour un rien."
+        "fr": "Il se met toujours en colère pour un rien.",
+        "it": "Si arrabbia sempre per un nonnulla."
       }
     ],
+    "fr": "rien du tout, bagatelle, broutille",
+    "isVerb": false,
+    "lemma": "nonnulla",
+    "pos": "sostantivo (maschile, invariabile)",
     "synonyms": [
       "inezia",
       "sciocchezza",
       "bazzecola"
-    ],
-    "isVerb": false
+    ]
   },
   "nono": {
-    "lemma": "nono",
-    "pos": "aggettivo numerale ordinale / sostantivo",
-    "fr": "neuvième",
     "definition_it": "che occupa il posto numero nove in una serie; come nome indica una delle nove parti di un intero",
     "examples": [
       {
-        "it": "Abitiamo al nono piano del palazzo.",
-        "fr": "Nous habitons au neuvième étage de l'immeuble."
+        "fr": "Nous habitons au neuvième étage de l'immeuble.",
+        "it": "Abitiamo al nono piano del palazzo."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "neuvième",
+    "isVerb": false,
+    "lemma": "nono",
+    "pos": "aggettivo numerale ordinale / sostantivo",
+    "synonyms": []
   },
   "nonostante": {
-    "lemma": "nonostante",
-    "pos": "preposizione / congiunzione",
-    "fr": "malgré, bien que",
     "definition_it": "si usa per dire che una cosa succede lo stesso, anche se qualcosa sembra impedirla",
     "examples": [
       {
-        "it": "Nonostante la pioggia, siamo usciti a piedi.",
-        "fr": "Malgré la pluie, nous sommes sortis à pied."
+        "fr": "Malgré la pluie, nous sommes sortis à pied.",
+        "it": "Nonostante la pioggia, siamo usciti a piedi."
       }
     ],
+    "fr": "malgré, bien que",
+    "isVerb": false,
+    "lemma": "nonostante",
+    "pos": "preposizione / congiunzione",
     "synonyms": [
       "malgrado",
       "benché",
       "sebbene"
-    ],
-    "isVerb": false
+    ]
   },
   "nord": {
-    "lemma": "nord",
-    "pos": "sostantivo (maschile, invariabile)",
-    "fr": "nord",
     "definition_it": "punto cardinale opposto al sud, dalla parte della stella polare; indica anche la parte settentrionale di un paese",
     "examples": [
       {
-        "it": "Milano si trova nel nord dell'Italia.",
-        "fr": "Milan se trouve dans le nord de l'Italie."
+        "fr": "Milan se trouve dans le nord de l'Italie.",
+        "it": "Milano si trova nel nord dell'Italia."
       }
     ],
+    "fr": "nord",
+    "isVerb": false,
+    "lemma": "nord",
+    "pos": "sostantivo (maschile, invariabile)",
     "synonyms": [
       "settentrione"
-    ],
-    "isVerb": false
+    ]
   },
   "nord-est": {
-    "lemma": "nord-est",
-    "pos": "sostantivo (maschile, invariabile)",
-    "fr": "nord-est",
     "definition_it": "punto che sta tra il nord e l'est; indica anche la zona di un paese che si trova in questa direzione",
     "examples": [
       {
-        "it": "Il vento soffia da nord-est.",
-        "fr": "Le vent souffle du nord-est."
+        "fr": "Le vent souffle du nord-est.",
+        "it": "Il vento soffia da nord-est."
       }
     ],
+    "fr": "nord-est",
+    "isVerb": false,
+    "lemma": "nord-est",
+    "pos": "sostantivo (maschile, invariabile)",
     "synonyms": [
       "grecale"
-    ],
-    "isVerb": false
+    ]
   },
   "nordico": {
-    "lemma": "nordico",
-    "pos": "aggettivo / sostantivo",
-    "fr": "nordique",
     "definition_it": "che viene dal nord, soprattutto dai paesi del nord dell'Europa",
     "examples": [
       {
-        "it": "Le lingue nordiche sono difficili da imparare.",
-        "fr": "Les langues nordiques sont difficiles à apprendre."
+        "fr": "Les langues nordiques sont difficiles à apprendre.",
+        "it": "Le lingue nordiche sono difficili da imparare."
       }
     ],
+    "fr": "nordique",
+    "isVerb": false,
+    "lemma": "nordico",
+    "pos": "aggettivo / sostantivo",
     "synonyms": [
       "settentrionale",
       "scandinavo"
-    ],
-    "isVerb": false
+    ]
   },
   "norma": {
-    "lemma": "norma",
-    "pos": "sostantivo (femminile)",
-    "fr": "norme, règle",
     "definition_it": "regola che dice come si deve fare o come deve essere una cosa",
     "examples": [
       {
-        "it": "L'edificio rispetta tutte le norme di sicurezza.",
-        "fr": "Le bâtiment respecte toutes les normes de sécurité."
+        "fr": "Le bâtiment respecte toutes les normes de sécurité.",
+        "it": "L'edificio rispetta tutte le norme di sicurezza."
       }
     ],
+    "fr": "norme, règle",
+    "isVerb": false,
+    "lemma": "norma",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "regola",
       "legge",
       "prescrizione"
-    ],
-    "isVerb": false
+    ]
   },
   "normale": {
-    "lemma": "normale",
-    "pos": "aggettivo",
-    "fr": "normal, ordinaire",
     "definition_it": "che segue la regola comune, che non ha niente di strano o di speciale",
     "examples": [
       {
-        "it": "È normale sentirsi stanchi dopo un viaggio così lungo.",
-        "fr": "Il est normal de se sentir fatigué après un voyage aussi long."
+        "fr": "Il est normal de se sentir fatigué après un voyage aussi long.",
+        "it": "È normale sentirsi stanchi dopo un viaggio così lungo."
       }
     ],
+    "fr": "normal, ordinaire",
+    "isVerb": false,
+    "lemma": "normale",
+    "pos": "aggettivo",
     "synonyms": [
       "comune",
       "ordinario",
       "abituale"
-    ],
-    "isVerb": false
+    ]
   },
   "normalmente": {
-    "lemma": "normalmente",
-    "pos": "avverbio",
-    "fr": "normalement, d'habitude",
     "definition_it": "in modo normale, come succede di solito",
     "examples": [
       {
-        "it": "Normalmente il negozio apre alle nove.",
-        "fr": "Normalement, le magasin ouvre à neuf heures."
+        "fr": "Normalement, le magasin ouvre à neuf heures.",
+        "it": "Normalmente il negozio apre alle nove."
       }
     ],
+    "fr": "normalement, d'habitude",
+    "isVerb": false,
+    "lemma": "normalmente",
+    "pos": "avverbio",
     "synonyms": [
       "di solito",
       "abitualmente",
       "generalmente"
-    ],
-    "isVerb": false
+    ]
   },
   "normanno": {
-    "lemma": "normanno",
-    "pos": "aggettivo (anche sostantivo)",
-    "fr": "normand",
     "definition_it": "che viene dalla Normandia; detto anche dei popoli del Nord che nel Medioevo conquistarono l'Italia del Sud",
     "examples": [
       {
-        "it": "In Sicilia ci sono molti castelli normanni.",
-        "fr": "En Sicile, il y a beaucoup de châteaux normands."
+        "fr": "En Sicile, il y a beaucoup de châteaux normands.",
+        "it": "In Sicilia ci sono molti castelli normanni."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "normand",
+    "isVerb": false,
+    "lemma": "normanno",
+    "pos": "aggettivo (anche sostantivo)",
+    "synonyms": []
   },
   "normativa": {
-    "lemma": "normativa",
-    "pos": "sostantivo (femminile)",
-    "fr": "réglementation, législation",
     "definition_it": "insieme delle norme e delle leggi che regolano un settore",
     "examples": [
       {
-        "it": "La normativa sul lavoro è cambiata quest'anno.",
-        "fr": "La réglementation du travail a changé cette année."
+        "fr": "La réglementation du travail a changé cette année.",
+        "it": "La normativa sul lavoro è cambiata quest'anno."
       }
     ],
+    "fr": "réglementation, législation",
+    "isVerb": false,
+    "lemma": "normativa",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "regolamento",
       "legislazione"
-    ],
-    "isVerb": false
+    ]
   },
   "normativo": {
-    "lemma": "normativo",
-    "pos": "aggettivo",
-    "fr": "normatif, réglementaire",
     "definition_it": "che riguarda le norme o che stabilisce delle regole",
     "examples": [
       {
-        "it": "Il testo ha un valore normativo per tutte le scuole.",
-        "fr": "Le texte a une valeur normative pour toutes les écoles."
+        "fr": "Le texte a une valeur normative pour toutes les écoles.",
+        "it": "Il testo ha un valore normativo per tutte le scuole."
       }
     ],
+    "fr": "normatif, réglementaire",
+    "isVerb": false,
+    "lemma": "normativo",
+    "pos": "aggettivo",
     "synonyms": [
       "regolamentare"
-    ],
-    "isVerb": false
+    ]
   },
   "nossignore": {
-    "lemma": "nossignore",
-    "pos": "avverbio (interiezione)",
-    "fr": "non monsieur, mais non",
     "definition_it": "modo antico e rispettoso per dire di no a una persona",
     "examples": [
       {
-        "it": "Nossignore, non ho visto nessuno entrare.",
-        "fr": "Non monsieur, je n'ai vu personne entrer."
+        "fr": "Non monsieur, je n'ai vu personne entrer.",
+        "it": "Nossignore, non ho visto nessuno entrare."
       }
     ],
+    "fr": "non monsieur, mais non",
+    "isVerb": false,
+    "lemma": "nossignore",
+    "pos": "avverbio (interiezione)",
+    "register": "letterario",
     "synonyms": [
       "no"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nostalgia": {
-    "lemma": "nostalgia",
-    "pos": "sostantivo (femminile)",
-    "fr": "nostalgie, mal du pays",
     "definition_it": "tristezza che si sente quando manca una persona, un luogo o un tempo passato",
     "examples": [
       {
-        "it": "Quando vivevo all'estero avevo nostalgia di casa.",
-        "fr": "Quand je vivais à l'étranger, j'avais le mal du pays."
+        "fr": "Quand je vivais à l'étranger, j'avais le mal du pays.",
+        "it": "Quando vivevo all'estero avevo nostalgia di casa."
       }
     ],
+    "fr": "nostalgie, mal du pays",
+    "isVerb": false,
+    "lemma": "nostalgia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "rimpianto",
       "malinconia"
-    ],
-    "isVerb": false
+    ]
   },
   "nostalgico": {
-    "lemma": "nostalgico",
-    "pos": "aggettivo",
-    "fr": "nostalgique",
     "definition_it": "che prova nostalgia o che fa pensare con tristezza al passato",
     "examples": [
       {
-        "it": "Ha guardato le vecchie foto con uno sguardo nostalgico.",
-        "fr": "Il a regardé les vieilles photos d'un regard nostalgique."
+        "fr": "Il a regardé les vieilles photos d'un regard nostalgique.",
+        "it": "Ha guardato le vecchie foto con uno sguardo nostalgico."
       }
     ],
+    "fr": "nostalgique",
+    "isVerb": false,
+    "lemma": "nostalgico",
+    "pos": "aggettivo",
     "synonyms": [
       "malinconico"
-    ],
-    "isVerb": false
+    ]
   },
   "nostro": {
-    "lemma": "nostro",
-    "pos": "aggettivo/pronome possessivo",
-    "fr": "notre, le nôtre",
     "definition_it": "che appartiene a noi, che è di chi parla insieme ad altri",
     "examples": [
       {
-        "it": "La nostra casa è vicino al mare.",
-        "fr": "Notre maison est près de la mer."
+        "fr": "Notre maison est près de la mer.",
+        "it": "La nostra casa è vicino al mare."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "notre, le nôtre",
+    "isVerb": false,
+    "lemma": "nostro",
+    "pos": "aggettivo/pronome possessivo",
+    "synonyms": []
   },
   "nota": {
-    "lemma": "nota",
-    "pos": "sostantivo (femminile)",
-    "fr": "note, remarque",
     "definition_it": "breve scritto per ricordare qualcosa o per spiegare un punto di un testo; anche il suono della musica",
     "examples": [
       {
-        "it": "Ho preso una nota sul quaderno per non dimenticare.",
-        "fr": "J'ai pris une note sur le cahier pour ne pas oublier."
+        "fr": "J'ai pris une note sur le cahier pour ne pas oublier.",
+        "it": "Ho preso una nota sul quaderno per non dimenticare."
       }
     ],
+    "fr": "note, remarque",
+    "isVerb": false,
+    "lemma": "nota",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "appunto",
       "osservazione"
-    ],
-    "isVerb": false
+    ]
   },
   "notaio": {
-    "lemma": "notaio",
-    "pos": "sostantivo (maschile)",
-    "fr": "notaire",
     "definition_it": "persona che per legge scrive e rende ufficiali i contratti importanti, come la vendita di una casa",
     "examples": [
       {
-        "it": "Domani andiamo dal notaio per firmare l'atto.",
-        "fr": "Demain nous allons chez le notaire pour signer l'acte."
+        "fr": "Demain nous allons chez le notaire pour signer l'acte.",
+        "it": "Domani andiamo dal notaio per firmare l'atto."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "notaire",
+    "isVerb": false,
+    "lemma": "notaio",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "notare": {
-    "lemma": "notare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "remarquer, noter",
     "definition_it": "accorgersi di qualcosa guardando o osservando con attenzione",
     "examples": [
       {
-        "it": "Ho notato subito che eri stanco.",
-        "fr": "J'ai tout de suite remarqué que tu étais fatigué."
+        "fr": "J'ai tout de suite remarqué que tu étais fatigué.",
+        "it": "Ho notato subito che eri stanco."
       }
     ],
+    "fr": "remarquer, noter",
+    "isVerb": true,
+    "lemma": "notare",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "osservare",
       "accorgersi",
       "rilevare"
-    ],
-    "isVerb": true
+    ]
   },
   "notarile": {
-    "lemma": "notarile",
-    "pos": "aggettivo",
-    "fr": "notarial",
     "definition_it": "che riguarda il notaio o il suo lavoro",
     "examples": [
       {
-        "it": "Gli atti notarili sono conservati per legge.",
-        "fr": "Les actes notariés sont conservés par la loi."
+        "fr": "Les actes notariés sont conservés par la loi.",
+        "it": "Gli atti notarili sono conservati per legge."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "notarial",
+    "isVerb": false,
+    "lemma": "notarile",
+    "pos": "aggettivo",
+    "synonyms": []
   },
   "notevolmente": {
-    "lemma": "notevolmente",
-    "pos": "avverbio",
-    "fr": "considérablement, nettement",
     "definition_it": "in misura grande, in modo che si vede bene",
     "examples": [
       {
-        "it": "Il suo italiano è migliorato notevolmente.",
-        "fr": "Son italien s'est considérablement amélioré."
+        "fr": "Son italien s'est considérablement amélioré.",
+        "it": "Il suo italiano è migliorato notevolmente."
       }
     ],
+    "fr": "considérablement, nettement",
+    "isVerb": false,
+    "lemma": "notevolmente",
+    "pos": "avverbio",
     "synonyms": [
       "molto",
       "sensibilmente"
-    ],
-    "isVerb": false
+    ]
   },
   "notifica": {
-    "lemma": "notifica",
-    "pos": "sostantivo (femminile)",
-    "fr": "notification",
     "definition_it": "avviso ufficiale, o messaggio che appare sullo schermo di un telefono",
     "examples": [
       {
-        "it": "Ho disattivato le notifiche del telefono.",
-        "fr": "J'ai désactivé les notifications du téléphone."
+        "fr": "J'ai désactivé les notifications du téléphone.",
+        "it": "Ho disattivato le notifiche del telefono."
       }
     ],
+    "fr": "notification",
+    "isVerb": false,
+    "lemma": "notifica",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "avviso",
       "comunicazione"
-    ],
-    "isVerb": false
+    ]
   },
   "notificare": {
-    "lemma": "notificare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "notifier, signifier",
     "definition_it": "comunicare qualcosa in modo ufficiale a una persona o a un ente",
     "examples": [
       {
-        "it": "Il tribunale ha notificato la sentenza alle parti.",
-        "fr": "Le tribunal a notifié le jugement aux parties."
+        "fr": "Le tribunal a notifié le jugement aux parties.",
+        "it": "Il tribunale ha notificato la sentenza alle parti."
       }
     ],
+    "fr": "notifier, signifier",
+    "isVerb": true,
+    "lemma": "notificare",
+    "pos": "verbo (transitivo, regolare)",
+    "register": "formale",
     "synonyms": [
       "comunicare",
       "annunciare"
-    ],
-    "isVerb": true,
-    "register": "formale"
+    ]
   },
   "notizia": {
-    "lemma": "notizia",
-    "pos": "sostantivo (femminile)",
-    "fr": "nouvelle, information",
     "definition_it": "informazione su un fatto recente che si comunica ad altri",
     "examples": [
       {
-        "it": "Le notizie della sera parlano dello sciopero.",
-        "fr": "Les informations du soir parlent de la grève."
+        "fr": "Les informations du soir parlent de la grève.",
+        "it": "Le notizie della sera parlano dello sciopero."
       }
     ],
+    "fr": "nouvelle, information",
+    "isVerb": false,
+    "lemma": "notizia",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "informazione",
       "novità"
-    ],
-    "isVerb": false
+    ]
   },
   "noto": {
-    "lemma": "noto",
-    "pos": "aggettivo",
-    "fr": "connu, célèbre",
     "definition_it": "che è conosciuto da molte persone; di cui si sa l'esistenza",
     "examples": [
       {
-        "it": "È un noto scrittore italiano.",
-        "fr": "C'est un écrivain italien connu."
+        "fr": "C'est un écrivain italien connu.",
+        "it": "È un noto scrittore italiano."
       }
     ],
+    "fr": "connu, célèbre",
+    "isVerb": false,
+    "lemma": "noto",
+    "pos": "aggettivo",
     "synonyms": [
       "conosciuto",
       "famoso",
       "celebre"
-    ],
-    "isVerb": false
+    ]
   },
   "nottata": {
-    "lemma": "nottata",
-    "pos": "sostantivo (femminile)",
-    "fr": "nuit (entière)",
     "definition_it": "tutta la durata di una notte, spesso vista come un tempo lungo o faticoso",
     "examples": [
       {
-        "it": "Ha passato la nottata a studiare.",
-        "fr": "Il a passé la nuit entière à étudier."
+        "fr": "Il a passé la nuit entière à étudier.",
+        "it": "Ha passato la nottata a studiare."
       }
     ],
+    "fr": "nuit (entière)",
+    "isVerb": false,
+    "lemma": "nottata",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "notte"
-    ],
-    "isVerb": false
+    ]
   },
   "notte": {
-    "lemma": "notte",
-    "pos": "sostantivo femminile",
-    "fr": "nuit",
     "definition_it": "la parte del giorno in cui non c'è la luce del sole, tra il tramonto e l'alba",
     "examples": [
       {
-        "it": "Di notte la città è silenziosa.",
-        "fr": "La nuit, la ville est silencieuse."
+        "fr": "La nuit, la ville est silencieuse.",
+        "it": "Di notte la città è silenziosa."
       }
     ],
+    "fr": "nuit",
+    "isVerb": false,
+    "lemma": "notte",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "nottata",
       "buio"
-    ],
-    "isVerb": false
+    ]
   },
   "nottetempo": {
-    "lemma": "nottetempo",
-    "pos": "avverbio",
-    "fr": "de nuit, pendant la nuit",
     "definition_it": "durante la notte, mentre è buio, spesso di nascosto",
     "examples": [
       {
-        "it": "I ladri sono entrati nottetempo dalla finestra.",
-        "fr": "Les voleurs sont entrés de nuit par la fenêtre."
+        "fr": "Les voleurs sont entrés de nuit par la fenêtre.",
+        "it": "I ladri sono entrati nottetempo dalla finestra."
       }
     ],
+    "fr": "de nuit, pendant la nuit",
+    "isVerb": false,
+    "lemma": "nottetempo",
+    "pos": "avverbio",
+    "register": "letterario",
     "synonyms": [
       "di notte"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "nottola": {
-    "lemma": "nottola",
-    "pos": "sostantivo femminile",
-    "fr": "noctule (chauve-souris) ; loquet",
     "definition_it": "piccolo pipistrello che vola al crepuscolo; indica anche un pezzo di legno o metallo girevole che tiene chiusa una porta",
     "examples": [
       {
-        "it": "Al tramonto una nottola volava intorno al campanile.",
-        "fr": "Au crépuscule, une noctule volait autour du clocher."
+        "fr": "Au crépuscule, une noctule volait autour du clocher.",
+        "it": "Al tramonto una nottola volava intorno al campanile."
       }
     ],
+    "fr": "noctule (chauve-souris) ; loquet",
+    "isVerb": false,
+    "lemma": "nottola",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "pipistrello"
-    ],
-    "isVerb": false
+    ]
   },
   "nottolino": {
-    "lemma": "nottolino",
-    "pos": "sostantivo maschile",
-    "fr": "cliquet, loquet",
     "definition_it": "piccolo pezzo mobile di un meccanismo che permette il movimento in un solo senso o tiene fermo qualcosa",
     "examples": [
       {
-        "it": "Il nottolino impedisce alla ruota di girare all'indietro.",
-        "fr": "Le cliquet empêche la roue de tourner en arrière."
+        "fr": "Le cliquet empêche la roue de tourner en arrière.",
+        "it": "Il nottolino impedisce alla ruota di girare all'indietro."
       }
     ],
+    "fr": "cliquet, loquet",
+    "isVerb": false,
+    "lemma": "nottolino",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "dente d'arresto"
-    ],
-    "isVerb": false
+    ]
   },
   "notturno": {
-    "lemma": "notturno",
-    "pos": "aggettivo (anche sostantivo maschile)",
-    "fr": "nocturne",
     "definition_it": "che avviene, vive o funziona durante la notte; come sostantivo indica un brano musicale dal carattere calmo",
     "examples": [
       {
-        "it": "Gli animali notturni cacciano quando è buio.",
-        "fr": "Les animaux nocturnes chassent quand il fait nuit."
+        "fr": "Les animaux nocturnes chassent quand il fait nuit.",
+        "it": "Gli animali notturni cacciano quando è buio."
       }
     ],
+    "fr": "nocturne",
+    "isVerb": false,
+    "lemma": "notturno",
+    "pos": "aggettivo (anche sostantivo maschile)",
     "synonyms": [
       "serale"
-    ],
-    "isVerb": false
+    ]
   },
   "nova": {
-    "lemma": "nova",
-    "pos": "sostantivo femminile",
-    "fr": "nova (astronomie)",
     "definition_it": "stella che all'improvviso diventa molto più luminosa per poi tornare debole",
     "examples": [
       {
-        "it": "Gli astronomi hanno osservato una nova nella costellazione dell'Aquila.",
-        "fr": "Les astronomes ont observé une nova dans la constellation de l'Aigle."
+        "fr": "Les astronomes ont observé une nova dans la constellation de l'Aigle.",
+        "it": "Gli astronomi hanno osservato una nova nella costellazione dell'Aquila."
       }
     ],
+    "fr": "nova (astronomie)",
+    "isVerb": false,
+    "lemma": "nova",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "stella nova"
-    ],
-    "isVerb": false
+    ]
   },
   "novanta": {
-    "lemma": "novanta",
-    "pos": "aggettivo numerale (invariabile)",
-    "fr": "quatre-vingt-dix",
     "definition_it": "il numero che viene dopo ottantanove e prima di novantuno, scritto 90",
     "examples": [
       {
-        "it": "Mia nonna ha compiuto novanta anni.",
-        "fr": "Ma grand-mère a eu quatre-vingt-dix ans."
+        "fr": "Ma grand-mère a eu quatre-vingt-dix ans.",
+        "it": "Mia nonna ha compiuto novanta anni."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "quatre-vingt-dix",
+    "isVerb": false,
+    "lemma": "novanta",
+    "pos": "aggettivo numerale (invariabile)",
+    "synonyms": []
   },
   "novantotto": {
-    "lemma": "novantotto",
-    "pos": "aggettivo numerale (invariabile)",
-    "fr": "quatre-vingt-dix-huit",
     "definition_it": "il numero 98, cioè novanta più otto",
     "examples": [
       {
-        "it": "Il libro costa novantotto euro.",
-        "fr": "Le livre coûte quatre-vingt-dix-huit euros."
+        "fr": "Le livre coûte quatre-vingt-dix-huit euros.",
+        "it": "Il libro costa novantotto euro."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "quatre-vingt-dix-huit",
+    "isVerb": false,
+    "lemma": "novantotto",
+    "pos": "aggettivo numerale (invariabile)",
+    "synonyms": []
   },
   "nove": {
-    "lemma": "nove",
-    "pos": "aggettivo numerale (invariabile)",
-    "fr": "neuf (9)",
     "definition_it": "il numero che viene dopo otto e prima di dieci, scritto 9",
     "examples": [
       {
-        "it": "La lezione comincia alle nove.",
-        "fr": "Le cours commence à neuf heures."
+        "fr": "Le cours commence à neuf heures.",
+        "it": "La lezione comincia alle nove."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "neuf (9)",
+    "isVerb": false,
+    "lemma": "nove",
+    "pos": "aggettivo numerale (invariabile)",
+    "synonyms": []
   },
   "novecento": {
-    "lemma": "novecento",
-    "pos": "aggettivo numerale / sostantivo maschile",
-    "fr": "neuf cents ; le XXe siècle",
     "definition_it": "il numero 900; con la maiuscola indica il secolo ventesimo, cioè gli anni dal 1900 al 1999",
     "examples": [
       {
-        "it": "La letteratura del Novecento è ricca di autori importanti.",
-        "fr": "La littérature du XXe siècle est riche en auteurs importants."
+        "fr": "La littérature du XXe siècle est riche en auteurs importants.",
+        "it": "La letteratura del Novecento è ricca di autori importanti."
       }
     ],
+    "fr": "neuf cents ; le XXe siècle",
+    "isVerb": false,
+    "lemma": "novecento",
+    "pos": "aggettivo numerale / sostantivo maschile",
     "synonyms": [
       "ventesimo secolo"
-    ],
-    "isVerb": false
+    ]
   },
   "novella": {
-    "lemma": "novella",
-    "pos": "sostantivo femminile",
-    "fr": "nouvelle (récit court)",
     "definition_it": "racconto breve in prosa, più corto di un romanzo; in senso antico anche una notizia",
     "examples": [
       {
-        "it": "Boccaccio scrisse cento novelle nel Decameron.",
-        "fr": "Boccace écrivit cent nouvelles dans le Décaméron."
+        "fr": "Boccace écrivit cent nouvelles dans le Décaméron.",
+        "it": "Boccaccio scrisse cento novelle nel Decameron."
       }
     ],
+    "fr": "nouvelle (récit court)",
+    "isVerb": false,
+    "lemma": "novella",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "racconto"
-    ],
-    "isVerb": false
+    ]
   },
   "novembre": {
-    "lemma": "novembre",
-    "pos": "sostantivo maschile",
-    "fr": "novembre",
     "definition_it": "l'undicesimo mese dell'anno, tra ottobre e dicembre",
     "examples": [
       {
-        "it": "A novembre le giornate diventano più corte.",
-        "fr": "En novembre, les journées deviennent plus courtes."
+        "fr": "En novembre, les journées deviennent plus courtes.",
+        "it": "A novembre le giornate diventano più corte."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "novembre",
+    "isVerb": false,
+    "lemma": "novembre",
+    "pos": "sostantivo maschile",
+    "synonyms": []
   },
   "novena": {
-    "lemma": "novena",
-    "pos": "sostantivo femminile",
-    "fr": "neuvaine",
     "definition_it": "serie di preghiere che si ripetono per nove giorni di seguito",
     "examples": [
       {
-        "it": "Le donne del paese hanno iniziato la novena di Natale.",
-        "fr": "Les femmes du village ont commencé la neuvaine de Noël."
+        "fr": "Les femmes du village ont commencé la neuvaine de Noël.",
+        "it": "Le donne del paese hanno iniziato la novena di Natale."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "neuvaine",
+    "isVerb": false,
+    "lemma": "novena",
+    "pos": "sostantivo femminile",
+    "synonyms": []
   },
   "novità": {
-    "lemma": "novità",
-    "pos": "sostantivo femminile (invariabile)",
-    "fr": "nouveauté, nouvelle",
     "definition_it": "cosa nuova, mai vista o mai successa prima",
     "examples": [
       {
-        "it": "Ci sono novità sul suo lavoro?",
-        "fr": "Y a-t-il du nouveau à propos de son travail ?"
+        "fr": "Y a-t-il du nouveau à propos de son travail ?",
+        "it": "Ci sono novità sul suo lavoro?"
       }
     ],
+    "fr": "nouveauté, nouvelle",
+    "isVerb": false,
+    "lemma": "novità",
+    "pos": "sostantivo femminile (invariabile)",
     "synonyms": [
       "innovazione",
       "notizia"
-    ],
-    "isVerb": false
+    ]
   },
   "nozze": {
-    "lemma": "nozze",
-    "pos": "sostantivo femminile plurale",
-    "fr": "noces, mariage",
     "definition_it": "la cerimonia e la festa con cui due persone si sposano",
     "examples": [
       {
-        "it": "Le nozze si celebreranno in giugno.",
-        "fr": "Les noces seront célébrées en juin."
+        "fr": "Les noces seront célébrées en juin.",
+        "it": "Le nozze si celebreranno in giugno."
       }
     ],
+    "fr": "noces, mariage",
+    "isVerb": false,
+    "lemma": "nozze",
+    "pos": "sostantivo femminile plurale",
     "synonyms": [
       "matrimonio",
       "sposalizio"
-    ],
-    "isVerb": false
+    ]
   },
   "nube": {
-    "lemma": "nube",
-    "pos": "sostantivo femminile",
-    "fr": "nuage, nuée",
     "definition_it": "massa di vapore o di polvere che si vede sospesa nell'aria",
     "examples": [
       {
-        "it": "Una nube nera copriva tutta la valle.",
-        "fr": "Un nuage noir couvrait toute la vallée."
+        "fr": "Un nuage noir couvrait toute la vallée.",
+        "it": "Una nube nera copriva tutta la valle."
       }
     ],
+    "fr": "nuage, nuée",
+    "isVerb": false,
+    "lemma": "nube",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "nuvola",
       "nuvolone"
-    ],
-    "isVerb": false
+    ]
   },
   "nuca": {
-    "lemma": "nuca",
-    "pos": "sostantivo femminile",
-    "fr": "nuque",
     "definition_it": "la parte posteriore della testa, dove il collo incontra il cranio",
     "examples": [
       {
-        "it": "Si è messo le mani dietro la nuca e ha chiuso gli occhi.",
-        "fr": "Il a mis les mains derrière la nuque et a fermé les yeux."
+        "fr": "Il a mis les mains derrière la nuque et a fermé les yeux.",
+        "it": "Si è messo le mani dietro la nuca e ha chiuso gli occhi."
       }
     ],
+    "fr": "nuque",
+    "isVerb": false,
+    "lemma": "nuca",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "collottola"
-    ],
-    "isVerb": false
+    ]
   },
   "nudità": {
-    "lemma": "nudità",
-    "pos": "sostantivo femminile (invariabile)",
-    "fr": "nudité",
     "definition_it": "la condizione di chi o di ciò che è nudo, senza vestiti o senza ornamenti",
     "examples": [
       {
-        "it": "Cercava di coprire la sua nudità con una coperta.",
-        "fr": "Elle essayait de couvrir sa nudité avec une couverture."
+        "fr": "Elle essayait de couvrir sa nudité avec une couverture.",
+        "it": "Cercava di coprire la sua nudità con una coperta."
       }
     ],
+    "fr": "nudité",
+    "isVerb": false,
+    "lemma": "nudità",
+    "pos": "sostantivo femminile (invariabile)",
     "synonyms": [
       "spoglianza"
-    ],
-    "isVerb": false
+    ]
   },
   "nudo": {
-    "lemma": "nudo",
-    "pos": "aggettivo",
-    "fr": "nu, dénudé",
     "definition_it": "che non porta vestiti; oppure privo di ogni copertura o ornamento",
     "examples": [
       {
-        "it": "I bambini correvano a piedi nudi sulla sabbia.",
-        "fr": "Les enfants couraient pieds nus sur le sable."
+        "fr": "Les enfants couraient pieds nus sur le sable.",
+        "it": "I bambini correvano a piedi nudi sulla sabbia."
       }
     ],
+    "fr": "nu, dénudé",
+    "isVerb": false,
+    "lemma": "nudo",
+    "pos": "aggettivo",
     "synonyms": [
       "spoglio",
       "scoperto"
-    ],
-    "isVerb": false
+    ]
   },
   "nugolo": {
-    "lemma": "nugolo",
-    "pos": "sostantivo maschile",
-    "fr": "nuée, essaim, foule",
     "definition_it": "grande quantità di cose, insetti o persone che si muovono insieme come una nuvola",
     "examples": [
       {
-        "it": "Un nugolo di bambini corse fuori dalla scuola.",
-        "fr": "Une nuée d'enfants sortit en courant de l'école."
+        "fr": "Une nuée d'enfants sortit en courant de l'école.",
+        "it": "Un nugolo di bambini corse fuori dalla scuola."
       }
     ],
+    "fr": "nuée, essaim, foule",
+    "isVerb": false,
+    "lemma": "nugolo",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "sciame",
       "moltitudine"
-    ],
-    "isVerb": false
+    ]
   },
   "nulla": {
-    "lemma": "nulla",
-    "pos": "pronome indefinito / sostantivo maschile",
-    "fr": "rien, néant",
     "definition_it": "nessuna cosa; l'assenza totale di qualcosa",
     "examples": [
       {
-        "it": "Non ho capito nulla di quel discorso.",
-        "fr": "Je n'ai rien compris à ce discours."
+        "fr": "Je n'ai rien compris à ce discours.",
+        "it": "Non ho capito nulla di quel discorso."
       }
     ],
+    "fr": "rien, néant",
+    "isVerb": false,
+    "lemma": "nulla",
+    "pos": "pronome indefinito / sostantivo maschile",
     "synonyms": [
       "niente"
-    ],
-    "isVerb": false
+    ]
   },
   "nullità": {
-    "lemma": "nullità",
-    "pos": "sostantivo femminile",
-    "fr": "nullité",
     "definition_it": "il fatto di non avere valore o effetto; anche persona che non vale niente",
     "examples": [
       {
-        "it": "Il giudice ha dichiarato la nullità del contratto.",
-        "fr": "Le juge a déclaré la nullité du contrat."
+        "fr": "Le juge a déclaré la nullité du contrat.",
+        "it": "Il giudice ha dichiarato la nullità del contratto."
       }
     ],
+    "fr": "nullité",
+    "isVerb": false,
+    "lemma": "nullità",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "invalidità",
       "inconsistenza"
-    ],
-    "isVerb": false
+    ]
   },
   "nullo": {
-    "lemma": "nullo",
-    "pos": "aggettivo",
-    "fr": "nul, sans valeur",
     "definition_it": "che non ha nessun valore né effetto, come se non esistesse",
     "examples": [
       {
-        "it": "La scheda senza firma è considerata nulla.",
-        "fr": "Le bulletin sans signature est considéré comme nul."
+        "fr": "Le bulletin sans signature est considéré comme nul.",
+        "it": "La scheda senza firma è considerata nulla."
       }
     ],
+    "fr": "nul, sans valeur",
+    "isVerb": false,
+    "lemma": "nullo",
+    "pos": "aggettivo",
     "synonyms": [
       "invalido",
       "inesistente"
-    ],
-    "isVerb": false
+    ]
   },
   "nume": {
-    "lemma": "nume",
-    "pos": "sostantivo maschile (letterario)",
-    "fr": "divinité, dieu",
     "definition_it": "divinità, dio antico che protegge un luogo o una persona",
     "examples": [
       {
-        "it": "Gli antichi pregavano i numi prima della battaglia.",
-        "fr": "Les anciens priaient les dieux avant la bataille."
+        "fr": "Les anciens priaient les dieux avant la bataille.",
+        "it": "Gli antichi pregavano i numi prima della battaglia."
       }
     ],
+    "fr": "divinité, dieu",
+    "isVerb": false,
+    "lemma": "nume",
+    "pos": "sostantivo maschile (letterario)",
+    "register": "letterario",
     "synonyms": [
       "divinità",
       "dio"
-    ],
-    "isVerb": false,
-    "register": "letterario"
+    ]
   },
   "numerare": {
-    "lemma": "numerare",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "numéroter, dénombrer",
     "definition_it": "mettere un numero su ogni cosa per metterle in ordine o per contarle",
     "examples": [
       {
-        "it": "Devo numerare le pagine del quaderno.",
-        "fr": "Je dois numéroter les pages du cahier."
+        "fr": "Je dois numéroter les pages du cahier.",
+        "it": "Devo numerare le pagine del quaderno."
       }
     ],
+    "fr": "numéroter, dénombrer",
+    "isVerb": true,
+    "lemma": "numerare",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "contare",
       "enumerare"
-    ],
-    "isVerb": true
+    ]
   },
   "numerazione": {
-    "lemma": "numerazione",
-    "pos": "sostantivo femminile",
-    "fr": "numérotation",
     "definition_it": "l'operazione di dare un numero a ogni elemento; il sistema usato per scrivere i numeri",
     "examples": [
       {
-        "it": "La numerazione delle case comincia dal ponte.",
-        "fr": "La numérotation des maisons commence au pont."
+        "fr": "La numérotation des maisons commence au pont.",
+        "it": "La numerazione delle case comincia dal ponte."
       }
     ],
+    "fr": "numérotation",
+    "isVerb": false,
+    "lemma": "numerazione",
+    "pos": "sostantivo femminile",
     "synonyms": [
       "conteggio"
-    ],
-    "isVerb": false
+    ]
   },
   "numero": {
-    "lemma": "numero",
-    "pos": "sostantivo maschile",
-    "fr": "nombre, numéro",
     "definition_it": "segno o parola che indica una quantità o la posizione di qualcosa in una serie",
     "examples": [
       {
-        "it": "Qual è il numero della tua casa?",
-        "fr": "Quel est le numéro de ta maison ?"
+        "fr": "Quel est le numéro de ta maison ?",
+        "it": "Qual è il numero della tua casa?"
       }
     ],
+    "fr": "nombre, numéro",
+    "isVerb": false,
+    "lemma": "numero",
+    "pos": "sostantivo maschile",
     "synonyms": [
       "cifra",
       "quantità"
-    ],
-    "isVerb": false
+    ]
   },
   "numeroso": {
-    "lemma": "numeroso",
-    "pos": "aggettivo",
-    "fr": "nombreux",
     "definition_it": "formato da molte persone o da molte cose",
     "examples": [
       {
-        "it": "Viene da una famiglia numerosa.",
-        "fr": "Il vient d'une famille nombreuse."
+        "fr": "Il vient d'une famille nombreuse.",
+        "it": "Viene da una famiglia numerosa."
       }
     ],
+    "fr": "nombreux",
+    "isVerb": false,
+    "lemma": "numeroso",
+    "pos": "aggettivo",
     "synonyms": [
       "abbondante",
       "folto"
-    ],
-    "isVerb": false
+    ]
   },
   "nuocere": {
-    "lemma": "nuocere",
-    "pos": "verbo (intransitivo, irregolare)",
-    "fr": "nuire, faire du tort",
     "definition_it": "fare male a qualcuno o a qualcosa, causare un danno",
     "examples": [
       {
-        "it": "Il fumo nuoce gravemente alla salute.",
-        "fr": "Le tabac nuit gravement à la santé."
+        "fr": "Le tabac nuit gravement à la santé.",
+        "it": "Il fumo nuoce gravemente alla salute."
       }
     ],
+    "fr": "nuire, faire du tort",
+    "isVerb": true,
+    "lemma": "nuocere",
+    "pos": "verbo (intransitivo, irregolare)",
     "synonyms": [
       "danneggiare",
       "ledere"
-    ],
-    "isVerb": true
+    ]
   },
   "nuora": {
-    "lemma": "nuora",
-    "pos": "sostantivo (femminile)",
-    "fr": "belle-fille (épouse du fils)",
     "definition_it": "la moglie del figlio, vista dai genitori di lui",
     "examples": [
       {
-        "it": "Mia nuora viene a pranzo domenica.",
-        "fr": "Ma belle-fille vient déjeuner dimanche."
+        "fr": "Ma belle-fille vient déjeuner dimanche.",
+        "it": "Mia nuora viene a pranzo domenica."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "belle-fille (épouse du fils)",
+    "isVerb": false,
+    "lemma": "nuora",
+    "pos": "sostantivo (femminile)",
+    "synonyms": []
   },
   "nuotare": {
-    "lemma": "nuotare",
-    "pos": "verbo (intransitivo, regolare)",
-    "fr": "nager",
     "definition_it": "muoversi nell'acqua usando le braccia e le gambe, senza affondare",
     "examples": [
       {
-        "it": "D'estate andiamo a nuotare al mare.",
-        "fr": "En été, nous allons nager à la mer."
+        "fr": "En été, nous allons nager à la mer.",
+        "it": "D'estate andiamo a nuotare al mare."
       }
     ],
+    "fr": "nager",
+    "isVerb": true,
+    "lemma": "nuotare",
+    "pos": "verbo (intransitivo, regolare)",
     "synonyms": [
       "fare il bagno"
-    ],
-    "isVerb": true
+    ]
   },
   "nuotatore": {
-    "lemma": "nuotatore",
-    "pos": "sostantivo (maschile)",
-    "fr": "nageur",
     "definition_it": "persona che nuota, spesso come sport",
     "examples": [
       {
-        "it": "Quel nuotatore ha vinto la gara dei cento metri.",
-        "fr": "Ce nageur a gagné la course du cent mètres."
+        "fr": "Ce nageur a gagné la course du cent mètres.",
+        "it": "Quel nuotatore ha vinto la gara dei cento metri."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nageur",
+    "isVerb": false,
+    "lemma": "nuotatore",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "nuoto": {
-    "lemma": "nuoto",
-    "pos": "sostantivo (maschile)",
-    "fr": "natation",
     "definition_it": "lo sport e l'attività di muoversi nell'acqua senza affondare",
     "examples": [
       {
-        "it": "Faccio nuoto due volte alla settimana.",
-        "fr": "Je fais de la natation deux fois par semaine."
+        "fr": "Je fais de la natation deux fois par semaine.",
+        "it": "Faccio nuoto due volte alla settimana."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "natation",
+    "isVerb": false,
+    "lemma": "nuoto",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "nuovamente": {
-    "lemma": "nuovamente",
-    "pos": "avverbio",
-    "fr": "de nouveau, à nouveau",
     "definition_it": "un'altra volta, ancora una volta; la forma novamente è antica e letteraria",
     "examples": [
       {
-        "it": "Il treno è nuovamente in ritardo.",
-        "fr": "Le train est de nouveau en retard."
+        "fr": "Le train est de nouveau en retard.",
+        "it": "Il treno è nuovamente in ritardo."
       }
     ],
+    "fr": "de nouveau, à nouveau",
+    "isVerb": false,
+    "lemma": "nuovamente",
+    "pos": "avverbio",
     "synonyms": [
       "di nuovo",
       "ancora"
-    ],
-    "isVerb": false
+    ]
   },
   "nuovo": {
-    "lemma": "nuovo",
-    "pos": "aggettivo",
-    "fr": "nouveau, neuf",
     "definition_it": "fatto o comprato da poco tempo, mai usato prima o mai visto prima",
     "examples": [
       {
-        "it": "Ho comprato una macchina nuova.",
-        "fr": "J'ai acheté une voiture neuve."
+        "fr": "J'ai acheté une voiture neuve.",
+        "it": "Ho comprato una macchina nuova."
       }
     ],
+    "fr": "nouveau, neuf",
+    "isVerb": false,
+    "lemma": "nuovo",
+    "pos": "aggettivo",
     "synonyms": [
       "recente",
       "moderno"
-    ],
-    "isVerb": false
+    ]
   },
   "nuraghe": {
-    "lemma": "nuraghe",
-    "pos": "sostantivo (maschile)",
-    "fr": "nuraghe (tour préhistorique sarde)",
     "definition_it": "antica torre di pietra costruita in Sardegna migliaia di anni fa",
     "examples": [
       {
-        "it": "In Sardegna abbiamo visitato un nuraghe molto antico.",
-        "fr": "En Sardaigne, nous avons visité un nuraghe très ancien."
+        "fr": "En Sardaigne, nous avons visité un nuraghe très ancien.",
+        "it": "In Sardegna abbiamo visitato un nuraghe molto antico."
       }
     ],
-    "synonyms": [],
-    "isVerb": false
+    "fr": "nuraghe (tour préhistorique sarde)",
+    "isVerb": false,
+    "lemma": "nuraghe",
+    "pos": "sostantivo (maschile)",
+    "synonyms": []
   },
   "nutrimento": {
-    "lemma": "nutrimento",
-    "pos": "sostantivo (maschile)",
-    "fr": "nourriture, alimentation",
     "definition_it": "il cibo che dà forza ed energia al corpo",
     "examples": [
       {
-        "it": "Le piante trovano nutrimento nel terreno.",
-        "fr": "Les plantes trouvent leur nourriture dans le sol."
+        "fr": "Les plantes trouvent leur nourriture dans le sol.",
+        "it": "Le piante trovano nutrimento nel terreno."
       }
     ],
+    "fr": "nourriture, alimentation",
+    "isVerb": false,
+    "lemma": "nutrimento",
+    "pos": "sostantivo (maschile)",
     "synonyms": [
       "alimento",
       "cibo"
-    ],
-    "isVerb": false
+    ]
   },
   "nutrire": {
-    "lemma": "nutrire",
-    "pos": "verbo (transitivo, regolare)",
-    "fr": "nourrir, alimenter",
     "definition_it": "dare cibo a qualcuno o a un animale perché possa vivere e crescere; nutrirsi significa mangiare",
     "examples": [
       {
-        "it": "La madre nutre il bambino con il latte.",
-        "fr": "La mère nourrit l'enfant avec du lait."
+        "fr": "La mère nourrit l'enfant avec du lait.",
+        "it": "La madre nutre il bambino con il latte."
       }
     ],
+    "fr": "nourrir, alimenter",
+    "isVerb": true,
+    "lemma": "nutrire",
+    "pos": "verbo (transitivo, regolare)",
     "synonyms": [
       "alimentare",
       "sfamare"
-    ],
-    "isVerb": true
+    ]
   },
   "nuvola": {
-    "lemma": "nuvola",
-    "pos": "sostantivo (femminile)",
-    "fr": "nuage",
     "definition_it": "massa bianca o grigia di vapore acqueo che si vede nel cielo",
     "examples": [
       {
-        "it": "Una grande nuvola nera copre il sole.",
-        "fr": "Un grand nuage noir cache le soleil."
+        "fr": "Un grand nuage noir cache le soleil.",
+        "it": "Una grande nuvola nera copre il sole."
       }
     ],
+    "fr": "nuage",
+    "isVerb": false,
+    "lemma": "nuvola",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "nube"
-    ],
-    "isVerb": false
+    ]
   },
   "nuvoletta": {
-    "lemma": "nuvoletta",
-    "pos": "sostantivo (femminile)",
-    "fr": "petit nuage, bulle (de bande dessinée)",
     "definition_it": "nuvola piccola; anche lo spazio ovale dove sono scritte le parole nei fumetti",
     "examples": [
       {
-        "it": "Nel cielo azzurro c'era solo una nuvoletta bianca.",
-        "fr": "Dans le ciel bleu il n'y avait qu'un petit nuage blanc."
+        "fr": "Dans le ciel bleu il n'y avait qu'un petit nuage blanc.",
+        "it": "Nel cielo azzurro c'era solo una nuvoletta bianca."
       }
     ],
+    "fr": "petit nuage, bulle (de bande dessinée)",
+    "isVerb": false,
+    "lemma": "nuvoletta",
+    "pos": "sostantivo (femminile)",
     "synonyms": [
       "nuvola",
       "fumetto"
-    ],
-    "isVerb": false
+    ]
   },
   "nuvolo": {
-    "lemma": "nuvolo",
-    "pos": "aggettivo",
-    "fr": "nuageux, couvert",
     "definition_it": "detto del cielo o del tempo quando è coperto di nuvole",
     "examples": [
       {
-        "it": "Oggi il cielo è nuvolo e fa freddo.",
-        "fr": "Aujourd'hui le ciel est couvert et il fait froid."
+        "fr": "Aujourd'hui le ciel est couvert et il fait froid.",
+        "it": "Oggi il cielo è nuvolo e fa freddo."
       }
     ],
+    "fr": "nuageux, couvert",
+    "isVerb": false,
+    "lemma": "nuvolo",
+    "pos": "aggettivo",
     "synonyms": [
       "nuvoloso",
       "coperto"
-    ],
-    "isVerb": false
+    ]
   },
   "nuvoloso": {
-    "lemma": "nuvoloso",
-    "pos": "aggettivo",
-    "fr": "nuageux",
     "definition_it": "pieno di nuvole, senza sole",
     "examples": [
       {
-        "it": "Le giornate nuvolose mi rendono triste.",
-        "fr": "Les journées nuageuses me rendent triste."
+        "fr": "Les journées nuageuses me rendent triste.",
+        "it": "Le giornate nuvolose mi rendono triste."
       }
     ],
+    "fr": "nuageux",
+    "isVerb": false,
+    "lemma": "nuvoloso",
+    "pos": "aggettivo",
     "synonyms": [
       "nuvolo",
       "coperto"
+    ]
+  },
+  "né": {
+    "definition_it": "congiunzione che unisce due elementi in una frase negativa",
+    "examples": [
+      {
+        "fr": "Je ne veux ni viande ni poisson.",
+        "it": "Non voglio né carne né pesce."
+      }
     ],
-    "isVerb": false
+    "fr": "ni",
+    "isVerb": false,
+    "lemma": "né",
+    "pos": "congiunzione",
+    "synonyms": []
   }
 }

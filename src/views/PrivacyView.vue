@@ -42,14 +42,29 @@ import SceneLayout from '../components/SceneLayout.vue'
       qu'il choisit de partager.
     </p>
 
-    <h2>5. Cookies et stockage local</h2>
+    <h2>5. Application mobile (Android / iOS)</h2>
+    <p>
+      Les applications Android et iOS de Leggendo utilisent le microphone
+      pour les exercices de prononciation : vous répétez une phrase en
+      italien et la reconnaissance vocale du système (Google sur Android,
+      Apple sur iOS) transcrit ce que vous dites afin d'évaluer les mots
+      reconnus. L'audio est traité par le service de reconnaissance vocale
+      du système d'exploitation et n'est ni stocké ni transmis à nos
+      serveurs ; seul le résultat texte de la transcription est utilisé,
+      localement, pour l'exercice en cours. Les applications ne contiennent
+      aucun SDK publicitaire ni outil de suivi tiers ; les seules données
+      transmises sont celles décrites aux sections 1 à 3 (compte, Firebase,
+      Stripe).
+    </p>
+
+    <h2>6. Cookies et stockage local</h2>
     <p>
       Le site utilise le stockage local de votre navigateur pour mémoriser
       vos préférences de lecture et permettre le fonctionnement hors ligne
       (PWA). Aucun cookie publicitaire ou de suivi n'est utilisé.
     </p>
 
-    <h2>6. Conservation et suppression</h2>
+    <h2>7. Conservation et suppression</h2>
     <p>
       Vos données sont conservées tant que votre compte est actif. Vous
       pouvez supprimer vous-même votre compte et vos données à tout moment
@@ -60,7 +75,7 @@ import SceneLayout from '../components/SceneLayout.vue'
       Stripe en cours — contactez-nous pour l'annuler.
     </p>
 
-    <h2>7. Vos droits</h2>
+    <h2>8. Vos droits</h2>
     <p>
       Conformément à la loi fédérale suisse sur la protection des données
       (nLPD) et au RGPD, vous disposez d'un droit d'accès, de rectification,

@@ -135,6 +135,7 @@ const router = createRouter({
     },
     {
       path: '/confidentialite',
+      alias: '/privacy',
       name: 'privacy',
       component: () => import('./views/PrivacyView.vue'),
       meta: { ...findRoute('/confidentialite'), tab: 'profilo' },
@@ -144,6 +145,12 @@ const router = createRouter({
       name: 'terms',
       component: () => import('./views/TermsView.vue'),
       meta: { ...findRoute('/conditions'), tab: 'profilo' },
+    },
+    {
+      path: '/deleteAccount',
+      name: 'delete-account',
+      component: () => import('./views/DeleteAccountView.vue'),
+      meta: { ...findRoute('/deleteAccount'), tab: 'profilo' },
     },
     {
       path: '/creer-son-texte',
@@ -220,7 +227,7 @@ const router = createRouter({
       meta: {
         title: 'DialogoParlo — Leggendo',
         description:
-          'Dialogues en italien à écouter (voix homme/femme) : vie quotidienne et histoire, du niveau A1 à B2.',
+          'Dialogues en italien à écouter (voix homme/femme) : vie quotidienne et histoire, du niveau A1 à C2.',
         tab: 'lessico',
       },
     },

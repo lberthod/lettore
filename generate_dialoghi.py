@@ -18,6 +18,20 @@ DESC = {
     "donna": "A deep, low-pitched female voice, speaking slowly and calmly, in a very clear recording with no background noise.",
 }
 
+# Parler-TTS tronque parfois la génération après les premiers mots (bug
+# connu du modèle, indépendant du texte). On détecte ça a posteriori via le
+# ratio durée/caractères (mesuré empiriquement ~0.07-0.16 s/car sur des
+# générations saines) et on relance jusqu'à obtenir un ratio plausible.
+MIN_RATIO = 0.065
+MAX_ATTEMPTS = 4
+
+
+def generate_audio(model, tokenizer, description_tokenizer, device, description, text):
+    input_ids = description_tokenizer(description, return_tensors="pt").input_ids.to(device)
+    prompt_input_ids = tokenizer(text, return_tensors="pt").input_ids.to(device)
+    generation = model.generate(input_ids=input_ids, prompt_input_ids=prompt_input_ids)
+    return generation.cpu().numpy().squeeze()
+
 def main():
     data = json.loads(Path("dialoghi_it.json").read_text(encoding="utf-8"))
     dialoghi = data["quotidiano"] + data["storia"]
@@ -50,14 +64,23 @@ def main():
         print(f"[{i}/{len(pending)}] {out_id} ({speaker}, {len(text)} car.) ...", flush=True)
         try:
             description = DESC[speaker]
-            input_ids = description_tokenizer(description, return_tensors="pt").input_ids.to(device)
-            prompt_input_ids = tokenizer(text, return_tensors="pt").input_ids.to(device)
-            generation = model.generate(input_ids=input_ids, prompt_input_ids=prompt_input_ids)
-            audio_arr = generation.cpu().numpy().squeeze()
+            min_duration = len(text) * MIN_RATIO
+            best_audio, best_duration = None, -1
+
+            for attempt in range(1, MAX_ATTEMPTS + 1):
+                audio_arr = generate_audio(model, tokenizer, description_tokenizer, device, description, text)
+                duration = len(audio_arr) / model.config.sampling_rate
+                if duration > best_duration:
+                    best_audio, best_duration = audio_arr, duration
+                if duration >= min_duration:
+                    break
+                print(f"  essai {attempt}/{MAX_ATTEMPTS} tronqué ({duration:.1f}s < {min_duration:.1f}s attendu), on relance...", flush=True)
+            else:
+                print(f"  ATTENTION : toujours court après {MAX_ATTEMPTS} essais, on garde le meilleur ({best_duration:.1f}s).", flush=True)
 
             wav_path = OUT_DIR / f"{out_id}.wav"
             mp3_path = OUT_DIR / f"{out_id}.mp3"
-            sf.write(str(wav_path), audio_arr, model.config.sampling_rate)
+            sf.write(str(wav_path), best_audio, model.config.sampling_rate)
             subprocess.run(
                 ["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav_path), str(mp3_path)],
                 check=True,

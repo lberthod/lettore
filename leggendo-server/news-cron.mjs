@@ -1,12 +1,13 @@
 // Cron VPS — génère UN texte d'actualité par exécution (planifié toutes les
-// 10 minutes, voir crontab en bas de fichier), pour la formule Premium+. Pool
+// 30 minutes, voir crontab en bas de fichier), pour la formule Premium+. Pool
 // partagé : un seul texte par run, pas un appel par abonné. Deux garde-fous :
 // - lock fichier (acquireLock/releaseLock) : une génération avec retries peut
 //   dépasser l'intervalle du cron, le lock évite deux runs simultanés qui
 //   doubleraient le volume produit ;
-// - quota horaire dur (MAX_PER_HOUR = 7, voir countLastHour) : au-delà, un
+// - quota horaire dur (MAX_PER_HOUR = 1, voir countLastHour) : au-delà, un
 //   run ne fait rien même s'il trouve un article frais.
-// Cible : 4 à 7 textes par heure, jamais plus.
+// Cible : 1 texte par heure maximum (volume réduit ~8x par rapport à
+// l'ancienne cible de 4-7/heure).
 //
 // Usage : node news-cron.mjs
 // Nécessite les mêmes variables d'environnement que server.mjs
@@ -63,12 +64,11 @@ const LEVELS_ROTATION = ['A2', 'B1', 'B2', 'C1']
 const RECENT_WINDOW = 50
 const SIMILARITY_THRESHOLD = 0.5
 
-// Cadence cible : 4 à 7 news par heure, 7 au maximum (quota strict, voir
-// countLastHour). Le cron tourne toutes les 10 minutes (6 exécutions/heure)
-// pour viser naturellement ce milieu de fourchette ; ce plafond est le
-// garde-fou qui empêche de dépasser 7 même si plusieurs runs consécutifs
-// trouvent chacun un article frais.
-const MAX_PER_HOUR = 7
+// Cadence cible : 1 news par heure maximum (quota strict, voir
+// countLastHour). Le cron tourne toutes les 30 minutes (2 exécutions/heure) ;
+// ce plafond est le garde-fou qui empêche de dépasser 1 même si plusieurs
+// runs consécutifs trouvent chacun un article frais.
+const MAX_PER_HOUR = 1
 const HOUR_MS = 60 * 60 * 1000
 
 function slugify(title) {
@@ -217,13 +217,12 @@ if (!acquireLock()) {
 
 // --- Déploiement VPS ---
 // crontab -e (utilisateur dédié, même que leggendo-api.service) :
-//   */10 * * * * cd /chemin/vers/leggendo-server && \
+//   */30 * * * * cd /chemin/vers/leggendo-server && \
 //     GLM_API_KEY=... GOOGLE_APPLICATION_CREDENTIALS=... \
 //     /usr/bin/node news-cron.mjs >> /var/log/leggendo-news.log 2>&1
 //
 // Chaque run ne génère un texte que si un article assez frais et distinct
 // des 50 derniers a été trouvé (voir isFresh) ET si le quota horaire
-// (MAX_PER_HOUR = 7, voir countLastHour) n'est pas déjà atteint. À 6
-// exécutions/heure, le volume réel se situe naturellement entre 4 et 7
-// textes/heure selon la cadence de publication des flux sources, sans
-// jamais dépasser 7.
+// (MAX_PER_HOUR = 1, voir countLastHour) n'est pas déjà atteint. À 2
+// exécutions/heure, le volume réel est au maximum 1 texte/heure (~8x moins
+// que l'ancienne cible de 4-7/heure).
