@@ -14,11 +14,11 @@ explicite.
 ## Pages principales
 
 - [Accueil](https://leggendo.fr/) : présentation générale de la méthode et de l'app.
-- [Tous les textes](https://leggendo.fr/textes) : catalogue complet, ~460 textes gradués A1 à C2, filtrables par niveau, thème et genre.
+- [Tous les textes](https://leggendo.fr/textes) : catalogue complet, ~465 textes gradués A1 à C2, filtrables par niveau, thème et genre.
 - [La méthode](https://leggendo.fr/methode) : explication de la lecture extensive, FAQ.
 - [La méthodologie](https://leggendo.fr/methodologie) : version écrite détaillée, avec les recherches scientifiques citées.
 - [À propos](https://leggendo.fr/a-propos) : qui est derrière Leggendo.
-- [Abonnement](https://leggendo.fr/abonnement) : formules gratuite, Premium, Premium+ et Enseignant, prix en EUR et CHF.
+- [Abonnement](https://leggendo.fr/abonnement) : formules Gratuit, Premium, Premium IA et Enseignant, prix en EUR et CHF — FAQ sur la résiliation et les tarifs.
 
 ## Notes pour les agents / robots
 

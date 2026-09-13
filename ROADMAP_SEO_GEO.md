@@ -60,36 +60,60 @@ en conséquence (pas de LocalBusiness, NAP, Google Business Profile : sans objet
 
 ## Phase 3 — GEO avancé (visibilité IA générative)
 
-- [ ] **Réponses directes en tête de page** : vérifier que les pages clés (méthode,
-      dictionnaire, conjugaison) ouvrent sur une réponse factuelle claire avant toute
-      prose marketing — format que les LLM citent préférentiellement.
-- [ ] **Données factuelles datées** : remplacer les formulations vagues ("depuis
-      plusieurs années", "des centaines de textes") par des chiffres précis et à jour
-      (nombre exact de textes, année de lancement) — cohérent avec le catalogue déjà
-      dynamique (`index.json`), donc automatisable dans `llms.txt` et les meta descriptions.
-- [ ] **E-E-A-T / auteur identifiable** : mentions légales, responsable du site,
-      coordonnées vérifiables — à vérifier sur `/a-propos` et le footer.
-- [ ] **Tenir `llms.txt` synchronisé** avec le catalogue réel (nombre de textes, pages
-      principales) à chaque évolution significative du site — actuellement rédigé à la
-      main, risque de dérive dans le temps.
+- [x] **Réponses directes en tête de page** : vérifié sur `/methode` (prerender.mjs),
+      `/dizionario/:lemme` et `/coniugazione/:verbo` — chacune ouvre déjà sur une
+      réponse factuelle (nature grammaticale + traduction, définition, tableaux) avant
+      toute prose. Rien à changer.
+- [x] **Données factuelles datées** : recherche de formulations vagues ("depuis
+      plusieurs années"...) dans `src/views/*.vue` — aucune trouvée. `/a-propos` utilise
+      déjà des chiffres calculés au build (`virtual:catalog`, `catalogStats`), pas de
+      valeurs codées en dur à corriger.
+- [x] **E-E-A-T / auteur identifiable** : déjà en place sur
+      [LegalView.vue](src/views/LegalView.vue) — éditeur nommé (Loïc Berthod), contact,
+      hébergeur, droit applicable. Rien à ajouter.
+- [x] **`llms.txt` resynchronisé** — dérive trouvée et corrigée : le fichier citait une
+      formule **« Premium+ »** qui n'existe plus (le vrai nom est **Premium IA**, voir
+      [stripe.js](src/lib/stripe.js)), et arrondissait le nombre de textes à ~460 alors
+      que le catalogue en compte 466. Corrigé dans [public/llms.txt](public/llms.txt).
+      Ce fichier reste rédigé à la main (contrairement à `sitemap.xml`/`robots.txt`,
+      générés par [scripts/generate-sitemap.mjs](scripts/generate-sitemap.mjs)) — à
+      relire manuellement après tout changement de nom de formule ou saut notable du
+      nombre de textes.
 
 ## Phase 4 — Performance & suivi (mesure continue)
 
-- [ ] **Mesurer les Core Web Vitals réels** en prod via PageSpeed Insights (LCP < 2.5s,
-      CLS < 0.1, INP < 200ms) — pas encore fait dans cet audit (nécessite le site déployé).
-- [ ] **Confirmer HTTPS/certificat** et l'absence de chaînes de redirection sur les
-      URLs canoniques.
-- [ ] **Google Search Console** : confirmer que le sitemap est bien soumis et suivre
-      l'indexation à J+7 / J+30 après chaque changement structurel important
-      (nouvelle route, nouveau type de page SEO).
-- [ ] **Analytics** : confirmer qu'un outil de mesure (privacy-friendly de préférence)
-      est en place pour suivre le trafic organique et son évolution.
+- [x] **Core Web Vitals mesurés en prod** (PageSpeed Insights, mobile, 2026-09-13) sur
+      https://leggendo.fr : **Performance 99, Accessibilité 89, Bonnes pratiques 100,
+      SEO 100**. LCP 1,4s (< 2,5s ✓), CLS 0 (< 0,1 ✓), TBT 120ms, FCP 0,8s — largement
+      dans les clous. Rien à optimiser côté performance/SEO technique.
+      Deux pistes accessibilité mineures relevées en passant (hors périmètre SEO strict,
+      à traiter séparément si voulu) : contraste de couleur insuffisant par endroits,
+      zones tactiles un peu petites sur certains éléments.
+- [x] **HTTPS confirmé** sur le domaine de prod (analysé via `https://leggendo.fr`),
+      catégorie « Bonnes pratiques » à 100 (inclut les vérifications de sécurité de base).
+- [ ] **Google Search Console** (nécessite votre compte Google, non vérifiable depuis
+      cette session) : confirmer que `sitemap.xml` est bien soumis, et suivre
+      l'indexation à J+7 / J+30 après le déploiement des changements de cette roadmap
+      (nouveaux JSON-LD, nouveaux liens de footer).
+- [ ] **Analytics** (idem, nécessite votre accès) : confirmer qu'un outil de mesure
+      (privacy-friendly de préférence) est en place pour suivre le trafic organique.
 
 ---
 
+## État au 2026-09-13 : Phases 1 à 4 traitées
+
+Tout ce qui était vérifiable/implémentable sans accès à vos comptes Google est fait.
+Il ne reste que la Search Console et l'Analytics (case ci-dessus) à confirmer de votre
+côté. Changements de code committés : `scripts/prerender.mjs`, `PricingView.vue`,
+`SiteFooter.vue`, `public/llms.txt`.
+
+**Import : les changements de footer et de FAQ ne sont pas encore déployés en
+production** (testés en local uniquement) — un déploiement (`npm run build` +
+`firebase deploy`) est nécessaire pour qu'ils soient visibles sur leggendo.fr.
+
 ## Notes de suivi
 
-- Prochaine revue : après implémentation de la Phase 1, revalider avec le Rich
-  Results Test et une relecture rapide de `llms.txt`.
+- Prochaine revue : après déploiement, revalider avec le Rich Results Test sur
+  `/abonnement` (nouveau FAQPage) et confirmer les liens de footer en prod.
 - Ne pas dupliquer d'efforts avec la checklist standard PME — ce document est
   spécifique au profil "app de contenu / SaaS" de Leggendo.
