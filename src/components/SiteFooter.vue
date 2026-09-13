@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { isNativeApp } from '../lib/platform.js'
+import { LEVEL_LANDING_PAGES } from '../seo/landingPages.js'
 </script>
 
 <template>
@@ -8,6 +9,18 @@ import { isNativeApp } from '../lib/platform.js'
        native : les liens légaux/compte vivent dans Profil (ProfileView),
        voir « Optimisation Mobile.md » Phase 1 Sprint 1.3. -->
   <footer v-if="!isNativeApp" class="bottom">
+    <!-- Maillage interne vers les pages par niveau (ROADMAP_SEO_GEO.md,
+         phase 2) : sans ces liens, /textes-italien-a1..b2 n'étaient
+         atteignables que par le sitemap, jamais depuis la navigation. -->
+    <nav class="levels">
+      <RouterLink
+        v-for="p in LEVEL_LANDING_PAGES"
+        :key="p.path"
+        :to="{ name: `level-${p.level.toLowerCase()}` }"
+      >
+        Textes {{ p.level }}
+      </RouterLink>
+    </nav>
     <nav class="legal">
       <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
       <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>
@@ -29,6 +42,7 @@ import { isNativeApp } from '../lib/platform.js'
   padding: 1rem 1.5rem 1.1rem;
 }
 
+.levels,
 .legal {
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +50,13 @@ import { isNativeApp } from '../lib/platform.js'
   gap: 0.2rem 1.1rem;
 }
 
+.levels {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(250, 246, 240, 0.15);
+}
+
+.levels a,
 .legal a {
   color: rgba(250, 246, 240, 0.75);
   text-decoration: none;
@@ -43,6 +64,7 @@ import { isNativeApp } from '../lib/platform.js'
   transition: color 0.12s;
 }
 
+.levels a:hover,
 .legal a:hover {
   color: #faf6f0;
 }

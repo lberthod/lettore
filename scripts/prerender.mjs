@@ -165,6 +165,21 @@ function jsonLd(obj) {
   return `    <script type="application/ld+json">${JSON.stringify(obj)}</script>\n`
 }
 
+// BreadcrumbList : fil d'Ariane structuré pour les pages profondes
+// (testo, classici/chapitre, dizionario, coniugazione) — voir ROADMAP_SEO_GEO.md.
+function breadcrumbJsonLd(items) {
+  return jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  })
+}
+
 function writeRoute(routePath, html) {
   const slug = routePath.replace(/^\//, '')
   if (!slug) {
@@ -201,6 +216,27 @@ const METHOD_FAQ = [
   },
 ]
 
+// FAQ affichée dans PricingView.vue — même remarque : dupliquée ici, à
+// répercuter si le contenu change côté client.
+const PRICING_FAQ = [
+  {
+    q: 'Puis-je résilier à tout moment ?',
+    a: "Oui. Sur le web, la résiliation se fait en un clic via Stripe (portail de facturation) ; sur mobile, depuis les réglages d'abonnement de votre compte Apple ou Google Play. Aucun engagement, aucune durée minimale.",
+  },
+  {
+    q: 'Quelle est la différence entre Premium et Premium IA ?',
+    a: "Premium débloque tout le catalogue de textes gradués et Classici. Premium IA inclut en plus 30 crédits de génération mensuels pour créer vos propres textes sur mesure avec « Créer son texte ».",
+  },
+  {
+    q: "Que se passe-t-il si j'annule mon abonnement ?",
+    a: "Vous gardez l'accès Premium jusqu'à la fin de la période déjà payée, puis revenez automatiquement à la formule gratuite (aperçu limité). Votre progression et vos mots favoris restent intacts.",
+  },
+  {
+    q: 'Le paiement est-il sécurisé ?',
+    a: "Sur le web, le paiement passe par Stripe (Payment Links), qui ne transmet jamais vos données bancaires à Leggendo. Sur mobile, le paiement passe par Apple ou Google, selon les mêmes règles que toutes leurs autres apps.",
+  },
+]
+
 for (const route of ROUTES) {
   if (route.noindex) continue
   const canonical = `${SITE_URL}${route.path}`
@@ -220,20 +256,30 @@ for (const route of ROUTES) {
     // ajuste l'affichage en CHF pour les visiteurs suisses côté client ;
     // Stripe lui-même choisit la devise réellement facturée au paiement.
     const premium = plans.find((p) => p.id === 'premium')
-    extraHead = jsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Product',
-      name: 'Leggendo Premium',
-      description:
-        "Accès illimité à tous les textes gradués en italien (A1 à C2), traduction française au clic et lecture audio.",
-      offers: {
-        '@type': 'Offer',
-        price: (premium?.monthly.price.match(/[\d,.]+/)?.[0] || '').replace(',', '.'),
-        priceCurrency: 'EUR',
-        priceValidUntil: `${new Date().getUTCFullYear() + 1}-12-31`,
-        url: canonical,
-      },
-    })
+    extraHead =
+      jsonLd({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'Leggendo Premium',
+        description:
+          "Accès illimité à tous les textes gradués en italien (A1 à C2), traduction française au clic et lecture audio.",
+        offers: {
+          '@type': 'Offer',
+          price: (premium?.monthly.price.match(/[\d,.]+/)?.[0] || '').replace(',', '.'),
+          priceCurrency: 'EUR',
+          priceValidUntil: `${new Date().getUTCFullYear() + 1}-12-31`,
+          url: canonical,
+        },
+      }) +
+      jsonLd({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: PRICING_FAQ.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        })),
+      })
   } else if (route.path === '/grammatica') {
     extraHead = jsonLd({
       '@context': 'https://schema.org',
@@ -328,7 +374,9 @@ ${byLevel[lvl]
   </section>`
     })
     .join('\n  ')}
-  <p>Paiement sécurisé par Stripe. Résiliable à tout moment.</p>`
+  <p>Paiement sécurisé par Stripe. Résiliable à tout moment.</p>
+  <h2>Questions fréquentes</h2>
+  ${PRICING_FAQ.map((f) => `<h3>${escapeHtml(f.q)}</h3>\n  <p>${escapeHtml(f.a)}</p>`).join('\n  ')}`
     )
   } else if (route.path === '/classici') {
     const body = booksIndex
@@ -429,28 +477,35 @@ for (const b of booksIndex) {
     const free = isFreeClassiciChapter(b.id, chapter.id)
     const description = `${chapter.title} — chapitre ${i + 1}/${manifest.chapters.length} de « ${manifest.title} » (${manifest.author}), niveau ${manifest.level}. Traduction française au clic et lecture audio.`
 
-    const extraHead = jsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'LearningResource',
-      name: `${manifest.title} — ${chapter.title}`,
-      description,
-      inLanguage: 'it',
-      learningResourceType: 'Classique italien adapté',
-      educationalLevel: manifest.level,
-      author: manifest.author,
-      isAccessibleForFree: free,
-      url: canonical,
-      isPartOf: { '@type': 'WebSite', name: 'Leggendo', url: SITE_URL },
-      ...(free
-        ? {}
-        : {
-            hasPart: {
-              '@type': 'WebPageElement',
-              isAccessibleForFree: false,
-              cssSelector: '.paywall',
-            },
-          }),
-    })
+    const extraHead =
+      jsonLd({
+        '@context': 'https://schema.org',
+        '@type': 'LearningResource',
+        name: `${manifest.title} — ${chapter.title}`,
+        description,
+        inLanguage: 'it',
+        learningResourceType: 'Classique italien adapté',
+        educationalLevel: manifest.level,
+        author: manifest.author,
+        isAccessibleForFree: free,
+        url: canonical,
+        isPartOf: { '@type': 'WebSite', name: 'Leggendo', url: SITE_URL },
+        ...(free
+          ? {}
+          : {
+              hasPart: {
+                '@type': 'WebPageElement',
+                isAccessibleForFree: false,
+                cssSelector: '.paywall',
+              },
+            }),
+      }) +
+      breadcrumbJsonLd([
+        { name: 'Leggendo', url: SITE_URL },
+        { name: 'Classici', url: `${SITE_URL}/classici` },
+        { name: manifest.title, url: `${SITE_URL}/classici/${b.id}/${manifest.chapters[0].id}` },
+        { name: chapter.title, url: canonical },
+      ])
 
     let html = patchHead(template, { title, description, canonical, extraHead })
 
@@ -495,14 +550,20 @@ for (const entry of getSeoDictionaryEntries()) {
   const title = `${entry.lemma} en italien : traduction, définition et exemples — Leggendo`
   const description = `« ${entry.lemma} » (${entry.pos}) : ${entry.fr}. Définition, exemples et conjugaison sur Leggendo.`
 
-  const extraHead = jsonLd({
-    '@context': 'https://schema.org',
-    '@type': 'DefinedTerm',
-    name: entry.lemma,
-    description: entry.definition_it,
-    inDefinedTermSet: `${SITE_URL}/verbi`,
-    url: canonical,
-  })
+  const extraHead =
+    jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTerm',
+      name: entry.lemma,
+      description: entry.definition_it,
+      inDefinedTermSet: `${SITE_URL}/verbi`,
+      url: canonical,
+    }) +
+    breadcrumbJsonLd([
+      { name: 'Leggendo', url: SITE_URL },
+      { name: 'Dizionario', url: `${SITE_URL}/dizionario` },
+      { name: entry.lemma, url: canonical },
+    ])
 
   let html = patchHead(template, { title, description, canonical, extraHead })
   const examplesHtml = entry.examples
@@ -535,7 +596,12 @@ for (const { lemma, fr, conjugation } of getSeoConjugations()) {
   const title = `Conjugaison de ${lemma} en italien — tableaux et exemples — Leggendo`
   const description = `Conjugaison complète du verbe italien « ${lemma} » (${fr}) : présent, passé composé, imparfait, futur, conditionnel, subjonctif, impératif.`
 
-  const html = patchHead(template, { title, description, canonical, extraHead: '' })
+  const extraHead = breadcrumbJsonLd([
+    { name: 'Leggendo', url: SITE_URL },
+    { name: 'Verbi', url: `${SITE_URL}/verbi` },
+    { name: lemma, url: canonical },
+  ])
+  const html = patchHead(template, { title, description, canonical, extraHead })
   const tables = Object.keys(TENSE_LABELS)
     .map((tense) => ({ tense, forms: findTense(conjugation, tense) }))
     .filter(({ forms }) => forms)
@@ -593,31 +659,37 @@ for (const t of textsIndex) {
   const description = `« ${t.excerpt} » — Lisez ce texte en italien (niveau ${t.level}, ~${t.wordCount} mots) avec traduction française au clic et lecture audio.`
   const free = FREE_IDS.has(t.id)
 
-  const extraHead = jsonLd({
-    '@context': 'https://schema.org',
-    '@type': 'LearningResource',
-    name: t.title,
-    description: t.excerpt,
-    inLanguage: 'it',
-    learningResourceType: 'Texte de lecture graduée',
-    educationalLevel: t.level,
-    about: t.category,
-    genre: t.genre,
-    isAccessibleForFree: free,
-    url: canonical,
-    isPartOf: { '@type': 'WebSite', name: 'Leggendo', url: SITE_URL },
-    // Balise le paywall (GPTanalyse.md, § 2) : le sélecteur cible la même
-    // classe que src/components/ContentPaywall.vue côté client.
-    ...(free
-      ? {}
-      : {
-          hasPart: {
-            '@type': 'WebPageElement',
-            isAccessibleForFree: false,
-            cssSelector: '.paywall',
-          },
-        }),
-  })
+  const extraHead =
+    jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'LearningResource',
+      name: t.title,
+      description: t.excerpt,
+      inLanguage: 'it',
+      learningResourceType: 'Texte de lecture graduée',
+      educationalLevel: t.level,
+      about: t.category,
+      genre: t.genre,
+      isAccessibleForFree: free,
+      url: canonical,
+      isPartOf: { '@type': 'WebSite', name: 'Leggendo', url: SITE_URL },
+      // Balise le paywall (GPTanalyse.md, § 2) : le sélecteur cible la même
+      // classe que src/components/ContentPaywall.vue côté client.
+      ...(free
+        ? {}
+        : {
+            hasPart: {
+              '@type': 'WebPageElement',
+              isAccessibleForFree: false,
+              cssSelector: '.paywall',
+            },
+          }),
+    }) +
+    breadcrumbJsonLd([
+      { name: 'Leggendo', url: SITE_URL },
+      { name: 'Tous les textes', url: `${SITE_URL}/textes` },
+      { name: t.title, url: canonical },
+    ])
 
   let html = patchHead(template, { title, description, canonical, extraHead })
 

@@ -25,15 +25,53 @@ const restoring = ref(false)
 const platform = ref('web')
 const isNativeApp = ref(false)
 const trialInfo = ref({ active: false, daysRemaining: 0 })
+
+// FAQ tarifs/abonnement — dupliquée dans scripts/prerender.mjs (branche
+// /abonnement) pour garder le FAQPage JSON-LD synchronisé côté bots sans JS.
+const faq = [
+  {
+    q: 'Puis-je résilier à tout moment ?',
+    a: "Oui. Sur le web, la résiliation se fait en un clic via Stripe (portail de facturation) ; sur mobile, depuis les réglages d'abonnement de votre compte Apple ou Google Play. Aucun engagement, aucune durée minimale.",
+  },
+  {
+    q: 'Quelle est la différence entre Premium et Premium IA ?',
+    a: "Premium débloque tout le catalogue de textes gradués et Classici. Premium IA inclut en plus 30 crédits de génération mensuels pour créer vos propres textes sur mesure avec « Créer son texte ».",
+  },
+  {
+    q: "Que se passe-t-il si j'annule mon abonnement ?",
+    a: "Vous gardez l'accès Premium jusqu'à la fin de la période déjà payée, puis revenez automatiquement à la formule gratuite (aperçu limité). Votre progression et vos mots favoris restent intacts.",
+  },
+  {
+    q: 'Le paiement est-il sécurisé ?',
+    a: "Sur le web, le paiement passe par Stripe (Payment Links), qui ne transmet jamais vos données bancaires à Leggendo. Sur mobile, le paiement passe par Apple ou Google, selon les mêmes règles que toutes leurs autres apps.",
+  },
+]
+const openFaq = ref(0)
+let faqJsonLd
+
 onMounted(async () => {
   document.body.style.overflow = 'hidden'
   const { Capacitor } = await import('@capacitor/core')
   platform.value = Capacitor.getPlatform()
   isNativeApp.value = Capacitor.isNativePlatform()
   trialInfo.value = await getTrialInfo()
+
+  faqJsonLd = document.createElement('script')
+  faqJsonLd.type = 'application/ld+json'
+  faqJsonLd.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  })
+  document.head.appendChild(faqJsonLd)
 })
 onUnmounted(() => {
   document.body.style.overflow = ''
+  faqJsonLd?.remove()
 })
 
 function planToAppleProductKey(planId, cycle) {
@@ -281,6 +319,24 @@ async function restore() {
           Voir les
           <RouterLink :to="{ name: 'terms' }">conditions générales</RouterLink>.
         </p>
+
+        <div class="faq">
+          <h2 class="faq-title">Questions fréquentes</h2>
+          <div
+            v-for="(item, i) in faq"
+            :key="item.q"
+            class="faq-item"
+            :class="{ open: openFaq === i }"
+          >
+            <button class="faq-q" type="button" @click="openFaq = openFaq === i ? null : i">
+              {{ item.q }}
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner"><p>{{ item.a }}</p></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -643,6 +699,95 @@ async function restore() {
 .link-btn:disabled {
   opacity: 0.6;
   cursor: default;
+}
+
+/* --- FAQ (même logique d'accordéon que MethodView, palette claire) --- */
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem auto 0;
+  max-width: 560px;
+  text-align: left;
+  opacity: 0;
+  animation: appear 0.9s ease-out 1.6s forwards;
+}
+
+.faq-title {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c2620;
+  text-align: center;
+}
+
+.faq-item {
+  border: 1px solid rgba(176, 105, 46, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.faq-item.open {
+  border-color: #b0692e;
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.7rem 0.95rem;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c2620;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-q .chev {
+  color: #b0692e;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.faq-item.open .chev {
+  transform: rotate(180deg);
+}
+
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.faq-item.open .faq-a {
+  grid-template-rows: 1fr;
+}
+
+.faq-a-inner {
+  overflow: hidden;
+}
+
+.faq-a-inner p {
+  margin: 0;
+  padding: 0 0.95rem 0.8rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(44, 38, 32, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 @keyframes appear {
