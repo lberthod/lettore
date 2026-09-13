@@ -100,6 +100,37 @@ en conséquence (pas de LocalBusiness, NAP, Google Business Profile : sans objet
 
 ---
 
+## Découverte critique (2026-09-13) : `leggendo.fr` ne servait AUCUNE page prérendue
+
+En allant déployer les changements de cette roadmap, découverte que **le domaine de
+production `leggendo.fr` ne pointe pas vers Firebase Hosting mais directement vers le
+VPS** (`179.237.71.235`), où Caddy sert `/mnt/data/leggendo-fr/dist` en statique. Le
+bloc Caddy ne faisait qu'un `file_server` nu, sans règle de fallback : **toute URL
+« propre » (`/abonnement`, `/testo/:id`, `/textes`, `/dizionario/:lemme`...) renvoyait
+une vraie 404**, sauf `/` exactement. Le fichier [public/.htaccess](public/.htaccess)
+contient bien la règle de fallback attendue, mais **Caddy ne lit pas les `.htaccess`**
+(mécanisme propre à Apache) — un reliquat d'un hébergement précédent (Infomaniak).
+
+Conséquence concrète : Googlebot, GPTBot, ClaudeBot, PerplexityBot, un partage de lien
+sur les réseaux, ou tout simple `curl` sur une page profonde tombait sur une 404 —
+**tout le travail de prérendu (`scripts/prerender.mjs`) et le JSON-LD associé était
+invisible pour n'importe quel crawler visitant `leggendo.fr` directement**, masqué
+seulement pour les visiteurs récurrents dont le Service Worker PWA déjà en cache
+maquillait le problème côté client.
+
+**Corrigé** : ajout de `try_files {path} {path}.html /index.html` dans le bloc
+`leggendo.fr {}` du Caddyfile du VPS (backup pris avant, `caddy validate` passé avant
+`systemctl reload` — jamais `restart`). Vérifié : toutes les URLs prérendues renvoient
+200 avec le bon contenu, les routes SPA non prérendues (`/profil`...) et les URLs
+inconnues retombent proprement sur `index.html` (même comportement que le rewrite SPA
+de `firebase.json`), et les autres sites/APIs du VPS (`managy`, `ruvy`,
+`api.loicberthod.ch/leggendo`, `prixparwatt.fr`...) répondent toujours normalement.
+
+Le build local à jour (avec BreadcrumbList + FAQ) a aussi été synchronisé sur
+`/mnt/data/leggendo-fr/dist` à cette occasion.
+
+---
+
 ## État au 2026-09-13 : Phases 1 à 4 traitées
 
 Tout ce qui était vérifiable/implémentable sans accès à vos comptes Google est fait.
