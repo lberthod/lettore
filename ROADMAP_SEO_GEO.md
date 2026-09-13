@@ -129,6 +129,23 @@ de `firebase.json`), et les autres sites/APIs du VPS (`managy`, `ruvy`,
 Le build local à jour (avec BreadcrumbList + FAQ) a aussi été synchronisé sur
 `/mnt/data/leggendo-fr/dist` à cette occasion.
 
+## Deuxième découverte (2026-09-13) : le Service Worker masquait aussi sitemap.xml
+
+Après le fix Caddy, l'utilisateur a testé `leggendo.fr/sitemap.xml` dans son propre
+navigateur (Service Worker PWA déjà installé depuis une visite précédente) et obtenu
+la fausse 404 Vue — alors que `curl` confirmait un vrai 200. Cause : `navigateFallback:
+'/index.html'` dans [vite.config.js](vite.config.js) (config Workbox) n'avait pas de
+`navigateFallbackDenylist` — le service worker interceptait donc **toute** navigation,
+y compris vers `sitemap.xml`, `robots.txt`, `llms.txt`, et servait l'app Vue à la
+place (qui affiche sa propre 404 puisque ce ne sont pas des routes connues). Contrairement
+au bug Caddy, celui-ci n'affecte pas les crawlers (une requête `fetch`/crawl n'a pas de
+Service Worker), mais bien tout visiteur humain qui a déjà ouvert le site une fois.
+
+**Corrigé** : ajout de `navigateFallbackDenylist: [/\.[^/]+$/]` (exclut du fallback SPA
+tout chemin qui a une extension de fichier — les vraies routes SPA n'en ont jamais).
+Rebuild + redéploiement Firebase Hosting et VPS + vérifié : `sitemap.xml` s'affiche
+correctement dans le navigateur.
+
 ---
 
 ## État au 2026-09-13 : Phases 1 à 4 traitées

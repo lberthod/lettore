@@ -172,6 +172,14 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg}'],
         globIgnores: LAZY_CACHE_PREFIXES.map((prefix) => `**/${prefix}-*.js`),
         navigateFallback: '/index.html',
+        // Sans ça, le service worker intercepte AUSSI la navigation vers des
+        // fichiers non-SPA servis à la racine (sitemap.xml, robots.txt,
+        // llms.txt...) et sert index.html à la place — ce qui affiche la 404
+        // Vue alors que le fichier existe bel et bien côté serveur (constaté
+        // en marchant sur leggendo.fr/sitemap.xml avec un SW déjà installé).
+        // Toute route SPA réelle est sans extension ; on exclut donc du
+        // fallback tout chemin qui se termine par une extension de fichier.
+        navigateFallbackDenylist: [/\.[^/]+$/],
         // Contenu statique versionné par son hash (voir chunkFileNames) :
         // une entrée en cache ne devient jamais périmée, seul son nom change.
         runtimeCaching: LAZY_CACHE_PREFIXES.map((prefix) => ({
