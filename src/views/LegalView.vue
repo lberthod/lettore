@@ -13,8 +13,9 @@ import SceneLayout from '../components/SceneLayout.vue'
     </p>
 
     <h2>Hébergement</h2>
+    <!-- A RELIRE PAR UN JURISTE : l'hébergeur (Infomaniak) du domaine leggendo.fr n'a pas pu être vérifié dans le code. -->
     <p>
-      Ce site (elgendo.ch) est hébergé par Infomaniak Network SA,<br />
+      Ce site (leggendo.fr) est hébergé par Infomaniak Network SA,<br />
       Rue Eugène-Marziano 25, 1227 Les Acacias, Genève, Suisse.
     </p>
     <p>
