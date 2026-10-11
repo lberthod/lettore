@@ -83,7 +83,7 @@ function removeText(id) {
 </script>
 
 <template>
-  <SceneLayout title="Mode " accent="vocabulaire" tagline="Trier le vocabulaire des textes lus" narrow>
+  <SceneLayout title-lang="fr" title="Mode " accent="vocabulaire" tagline="Trier le vocabulaire des textes lus" narrow>
     <p>
       Depuis un texte, cliquez sur « Ajouter au vocabulaire » pour l'inclure
       ici. Pour chaque mot, marquez-le connu ou ajoutez-le à
@@ -266,7 +266,7 @@ function removeText(id) {
 }
 
 .section-title a {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .list {
@@ -344,13 +344,13 @@ function removeText(id) {
 }
 
 .btn.add {
-  border: 1px solid #b0692e;
+  border: 1px solid #8f5220;
   background: #fff;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .btn.add:hover {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
 }
 

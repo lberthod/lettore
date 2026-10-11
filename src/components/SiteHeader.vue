@@ -82,9 +82,9 @@ watch(writeMenuOpen, (open) => {
     </div>
     <nav id="chrome-nav" class="chrome-nav" :class="{ open: menuOpen }">
       <RouterLink :to="{ name: 'home' }">Accueil</RouterLink>
-      <RouterLink :to="{ name: 'library' }">Testi</RouterLink>
-      <RouterLink :to="{ name: 'books' }">Classici</RouterLink>
-      <RouterLink :to="{ name: 'games' }">Giochi</RouterLink>
+      <RouterLink :to="{ name: 'library' }" title="Textes"><span lang="it">Testi</span></RouterLink>
+      <RouterLink :to="{ name: 'books' }" title="Classiques de la littérature"><span lang="it">Classici</span></RouterLink>
+      <RouterLink :to="{ name: 'games' }" title="Jeux"><span lang="it">Giochi</span></RouterLink>
       <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <div
@@ -99,15 +99,15 @@ watch(writeMenuOpen, (open) => {
           :aria-expanded="writeMenuOpen"
           @click="writeMenuOpen = !writeMenuOpen"
         >
-          Scrivi <span class="caret" aria-hidden="true">▾</span>
+          <span lang="it" title="Écrire">Scrivi</span> <span class="caret" aria-hidden="true">▾</span>
         </button>
         <div class="chrome-dropdown-menu">
-          <RouterLink :to="{ name: 'create-text' }">Crea il tuo testo</RouterLink>
-          <RouterLink v-if="premiumPlus" :to="{ name: 'write' }">Scrivi</RouterLink>
-          <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }">Dialogo</RouterLink>
+          <RouterLink :to="{ name: 'create-text' }" title="Créer son texte"><span lang="it">Crea il tuo testo</span></RouterLink>
+          <RouterLink v-if="premiumPlus" :to="{ name: 'write' }" title="Écrire"><span lang="it">Scrivi</span></RouterLink>
+          <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }" title="Dialogue"><span lang="it">Dialogo</span></RouterLink>
         </div>
       </div>
-      <RouterLink v-if="premiumPlus" :to="{ name: 'news' }">Notizie</RouterLink>
+      <RouterLink v-if="premiumPlus" :to="{ name: 'news' }" title="Actualités"><span lang="it">Notizie</span></RouterLink>
       <div ref="dictMenuEl" class="chrome-dropdown" :class="{ open: dictMenuOpen, active: dictActive }">
         <button
           type="button"
@@ -115,14 +115,14 @@ watch(writeMenuOpen, (open) => {
           :aria-expanded="dictMenuOpen"
           @click="dictMenuOpen = !dictMenuOpen"
         >
-          Lessico <span class="caret" aria-hidden="true">▾</span>
+          <span lang="it" title="Lexique">Lessico</span> <span class="caret" aria-hidden="true">▾</span>
         </button>
         <div class="chrome-dropdown-menu">
-          <RouterLink :to="{ name: 'dictionary' }">Dizionario</RouterLink>
-          <RouterLink :to="{ name: 'verbs' }">Verbi</RouterLink>
-          <RouterLink :to="{ name: 'grammar' }">Grammatica</RouterLink>
-          <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }">Vocabolario</RouterLink>
-          <RouterLink :to="{ name: 'dialogo-parlo' }">DialogoParlo</RouterLink>
+          <RouterLink :to="{ name: 'dictionary' }" title="Dictionnaire"><span lang="it">Dizionario</span></RouterLink>
+          <RouterLink :to="{ name: 'verbs' }" title="Verbes"><span lang="it">Verbi</span></RouterLink>
+          <RouterLink :to="{ name: 'grammar' }" title="Grammaire"><span lang="it">Grammatica</span></RouterLink>
+          <RouterLink v-if="loggedIn" :to="{ name: 'vocabulary' }" title="Vocabulaire"><span lang="it">Vocabolario</span></RouterLink>
+          <RouterLink :to="{ name: 'dialogo-parlo' }" title="Dialogue oral"><span lang="it">DialogoParlo</span></RouterLink>
         </div>
       </div>
       <RouterLink v-if="loggedIn" :to="{ name: 'words' }">
@@ -163,7 +163,7 @@ watch(writeMenuOpen, (open) => {
 }
 
 .chrome-brand em {
-  color: #b0692e;
+  color: #8f5220;
   font-style: italic;
 }
 
@@ -237,12 +237,12 @@ watch(writeMenuOpen, (open) => {
 }
 
 .chrome-nav a:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .chrome-nav a.router-link-exact-active {
-  color: #b0692e;
-  border-bottom-color: #b0692e;
+  color: #8f5220;
+  border-bottom-color: #8f5220;
 }
 
 .nav-auth {
@@ -271,12 +271,12 @@ watch(writeMenuOpen, (open) => {
 
 .chrome-dropdown-toggle:hover,
 .chrome-dropdown.open .chrome-dropdown-toggle {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .chrome-dropdown.active .chrome-dropdown-toggle {
-  color: #b0692e;
-  border-bottom-color: #b0692e;
+  color: #8f5220;
+  border-bottom-color: #8f5220;
 }
 
 .caret {
@@ -326,7 +326,7 @@ watch(writeMenuOpen, (open) => {
   margin-left: 0.3rem;
   padding: 0.05rem 0.3rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 0.72rem;
   font-weight: 700;

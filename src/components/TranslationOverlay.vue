@@ -20,15 +20,18 @@ defineEmits(['close', 'speak', 'favorite'])
 <template>
   <div
     class="overlay"
+    role="dialog"
+    :aria-label="original ? 'Traduction de ' + original : 'Traduction'"
     :class="{ sentence: isSentence }"
     :style="isSentence ? null : { left: x + 'px', top: y + 'px' }"
     @click.stop
   >
     <button class="close" title="Fermer" aria-label="Fermer" @click="$emit('close')">×</button>
-    <div class="original">
+    <div class="original" lang="it">
       <button
         v-if="canSpeak"
         class="speak"
+        lang="fr"
         title="Écouter en italien"
         aria-label="Écouter en italien"
         @click="$emit('speak')"

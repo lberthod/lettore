@@ -604,7 +604,7 @@ const registerBadge = computed(() =>
 
 .proper-fr {
   margin: 0.25rem 0;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .proper-desc {
@@ -636,8 +636,9 @@ const registerBadge = computed(() =>
 }
 
 .search input:focus {
-  outline: none;
-  border-color: #b0692e;
+  outline: 2px solid #8f5220;
+  outline-offset: 2px;
+  border-color: #8f5220;
 }
 
 .section-title {
@@ -684,13 +685,13 @@ const registerBadge = computed(() =>
 }
 
 .letter:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .letter.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -720,8 +721,8 @@ const registerBadge = computed(() =>
 }
 
 .prefix:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .prefix.active {
@@ -753,7 +754,7 @@ const registerBadge = computed(() =>
 }
 
 .index-entry:hover .index-lemma {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .index-lemma {
@@ -801,7 +802,7 @@ const registerBadge = computed(() =>
 }
 
 .result:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .result-lemma {
@@ -823,8 +824,9 @@ const registerBadge = computed(() =>
 
 .back {
   display: inline-block;
+  padding: 0.2rem 0;
   font-size: 0.85rem;
-  color: #b0692e;
+  color: #8f5220;
   margin-bottom: 0.8rem;
 }
 
@@ -882,7 +884,7 @@ const registerBadge = computed(() =>
 .register-informale {
   border-color: #e0c3a4;
   background: #f7ead9;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .register-letterario {
@@ -900,7 +902,7 @@ const registerBadge = computed(() =>
 .fr {
   font-size: 1.15rem;
   margin: 0 0 0.5rem;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .definition {
@@ -933,9 +935,9 @@ const registerBadge = computed(() =>
 .btn-conj {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border: 1px solid #b0692e;
+  border: 1px solid #8f5220;
   border-radius: 999px;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -949,12 +951,12 @@ const registerBadge = computed(() =>
 }
 
 .see-also a {
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
 }
 
 .btn-conj:hover {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
 }
 
@@ -964,10 +966,10 @@ const registerBadge = computed(() =>
 
 .btn-random {
   padding: 0.5rem 1rem;
-  border: 1px solid #b0692e;
+  border: 1px solid #8f5220;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.85);
-  color: #b0692e;
+  color: #8f5220;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -975,7 +977,7 @@ const registerBadge = computed(() =>
 }
 
 .btn-random:hover {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
 }
 
@@ -1017,13 +1019,13 @@ const registerBadge = computed(() =>
 }
 
 .preset:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .preset.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -1057,7 +1059,7 @@ const registerBadge = computed(() =>
   padding: 0.55rem 1.1rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 0.95rem;
   font-weight: 600;
@@ -1098,8 +1100,8 @@ const registerBadge = computed(() =>
      à chaque mot pendant toute la session. */
   padding: 0.75rem 1.1rem;
   border-radius: 999px;
-  border: 1px solid #b0692e;
-  background: #b0692e;
+  border: 1px solid #8f5220;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1115,7 +1117,7 @@ const registerBadge = computed(() =>
   opacity: 0.5;
   cursor: default;
   background: rgba(255, 255, 255, 0.7);
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .session-quit {

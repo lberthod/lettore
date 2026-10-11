@@ -235,7 +235,7 @@ onUnmounted(() => {
           </linearGradient>
           <linearGradient id="whill2" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#c08b4d" />
-            <stop offset="100%" stop-color="#b0692e" />
+            <stop offset="100%" stop-color="#8f5220" />
           </linearGradient>
           <linearGradient id="whill3" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#8a5a2b" />
@@ -573,7 +573,7 @@ onUnmounted(() => {
 }
 
 .empty a {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 /* --- Bandeau et session de révision --- */
@@ -706,8 +706,8 @@ onUnmounted(() => {
 
 .btn.start,
 .btn.reveal {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -730,8 +730,8 @@ onUnmounted(() => {
 
 .btn.hard {
   background: #fff;
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 /* --- Exercices sur les cartes d'erreur --- */
@@ -824,7 +824,7 @@ onUnmounted(() => {
 }
 
 .after-review strong {
-  color: #b0692e;
+  color: #8f5220;
   white-space: nowrap;
 }
 
@@ -867,7 +867,7 @@ onUnmounted(() => {
 }
 
 .entry:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .word {
@@ -930,7 +930,7 @@ onUnmounted(() => {
 
 .source {
   font-size: 0.8rem;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: none;
 }
 

@@ -219,7 +219,7 @@ onUnmounted(() => {
   display: inline-block;
   padding: 0.6rem 1.3rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-weight: 700;
   text-decoration: none;
@@ -239,7 +239,7 @@ onUnmounted(() => {
   background: none;
   border: none;
   padding: 0;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;
@@ -278,8 +278,8 @@ onUnmounted(() => {
 }
 
 .chip.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
   font-weight: 600;
 }
@@ -342,7 +342,7 @@ onUnmounted(() => {
 }
 
 .card-title:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .card-excerpt {
@@ -368,7 +368,7 @@ onUnmounted(() => {
 }
 
 .card-source {
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: none;
   font-weight: 600;
 }

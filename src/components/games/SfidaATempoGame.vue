@@ -270,7 +270,7 @@ onUnmounted(() => {
 }
 
 .sfida-btn--primary {
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
 }
 
@@ -294,7 +294,7 @@ onUnmounted(() => {
 
 .sfida-timerbar-fill {
   height: 100%;
-  background: #b0692e;
+  background: #8f5220;
   border-radius: 999px;
   transition: width 0.15s linear, background 0.2s ease;
 }
@@ -306,7 +306,7 @@ onUnmounted(() => {
 .sfida-timer-seconds {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
   min-width: 2.4em;
   text-align: right;
   white-space: nowrap;
@@ -337,7 +337,7 @@ onUnmounted(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font-weight: 700;
   font-size: 0.85rem;
@@ -414,7 +414,7 @@ onUnmounted(() => {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .over-detail {

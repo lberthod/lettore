@@ -121,8 +121,9 @@ const ALL_SECTIONS = computed(() => {
 .back,
 .grammar-link {
   display: inline-block;
+  padding: 0.2rem 0;
   font-size: 0.85rem;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .hint {
@@ -182,7 +183,7 @@ const ALL_SECTIONS = computed(() => {
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #b0692e;
+  color: #8f5220;
   text-transform: uppercase;
   border-bottom: 1px solid #e4d9c6;
   padding-bottom: 0.4rem;

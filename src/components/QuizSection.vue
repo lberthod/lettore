@@ -148,7 +148,7 @@ li {
 }
 
 .option:hover:not(:disabled) {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: #f0e9df;
 }
 
@@ -176,7 +176,7 @@ li {
 .explanation {
   margin: 0.5rem 0 0;
   padding: 0.45rem 0.9rem;
-  border-left: 3px solid #b0692e;
+  border-left: 3px solid #8f5220;
   border-radius: 0 8px 8px 0;
   background: #f0e9df;
   color: #5a4a38;
@@ -197,10 +197,10 @@ li {
 
 .retry {
   padding: 0.6rem 0.9rem;
-  border: 1px solid #b0692e;
+  border: 1px solid #8f5220;
   border-radius: 999px;
   background: #fff;
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
   cursor: pointer;
 }

@@ -704,8 +704,8 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
 }
 
 .mode-btn.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -787,7 +787,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
   border-radius: 999px;
   border: 1px solid rgba(176, 105, 46, 0.35);
   background: #fff;
-  color: #b0692e;
+  color: #8f5220;
   font: inherit;
   font-size: 0.82rem;
   font-weight: 600;
@@ -893,7 +893,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
 }
 
 .hint.working {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .hint.error {
@@ -941,7 +941,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
      Autre situation…) sans padding jusqu'ici. */
   padding: 0.35rem 0.1rem;
   margin: -0.35rem -0.1rem;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;
@@ -1002,7 +1002,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
   display: inline-block;
   padding: 0.1rem 0.5rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-weight: 700;
   font-size: 0.82rem;
@@ -1028,7 +1028,7 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
 }
 
 .review-note a {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .error-group {

@@ -257,7 +257,7 @@ function startRound() {
 }
 
 .il-btn--primary {
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
 }
 
@@ -355,7 +355,7 @@ function startRound() {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0.5rem 0;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 @media (max-width: 360px) {

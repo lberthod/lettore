@@ -29,7 +29,7 @@ function openRandomExample() {
           </linearGradient>
           <linearGradient id="mhill2" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#c08b4d" />
-            <stop offset="100%" stop-color="#b0692e" />
+            <stop offset="100%" stop-color="#8f5220" />
           </linearGradient>
           <linearGradient id="mhill3" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#8a5a2b" />
@@ -239,7 +239,7 @@ function openRandomExample() {
 }
 
 .title em {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 /* --- Contenu --- */
@@ -268,7 +268,7 @@ function openRandomExample() {
 }
 
 .content a {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .actions {
@@ -284,7 +284,7 @@ function openRandomExample() {
   border-radius: 999px;
   font-family: inherit;
   cursor: pointer;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 1rem;
   font-weight: 700;
@@ -312,8 +312,8 @@ function openRandomExample() {
 }
 
 .btn-ghost:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 @media (prefers-reduced-motion: reduce) {

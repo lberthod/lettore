@@ -267,7 +267,7 @@ const themes = [
 }
 
 .lede em {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 /* --- Démo : phrase seule, centrée --- */
@@ -301,12 +301,12 @@ const themes = [
 
 .demo-word:hover,
 .demo-word.active {
-  color: #b0692e;
-  border-bottom-color: #b0692e;
+  color: #8f5220;
+  border-bottom-color: #8f5220;
 }
 
 .demo-word:focus-visible {
-  outline: 2px solid #b0692e;
+  outline: 2px solid #8f5220;
   outline-offset: 2px;
   border-radius: 3px;
 }
@@ -351,7 +351,7 @@ const themes = [
   border: 1px solid rgba(176, 105, 46, 0.4);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
-  color: #b0692e;
+  color: #8f5220;
   vertical-align: middle;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s, transform 0.15s;
@@ -364,16 +364,16 @@ const themes = [
 
 .listen-btn:hover {
   background: rgba(255, 255, 255, 0.75);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .listen-btn:focus-visible {
-  outline: 2px solid #b0692e;
+  outline: 2px solid #8f5220;
   outline-offset: 2px;
 }
 
 .listen-btn.speaking {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   animation: breathe 1s ease-in-out infinite;
 }
@@ -419,7 +419,7 @@ const themes = [
 }
 
 .stat:focus-visible {
-  outline: 2px solid #b0692e;
+  outline: 2px solid #8f5220;
   outline-offset: 3px;
 }
 
@@ -541,26 +541,27 @@ const themes = [
 
 .chip:hover,
 .chip:focus-visible {
-  color: #b0692e;
-  border-bottom-color: #b0692e;
+  color: #8f5220;
+  border-bottom-color: #8f5220;
 }
 
 .chip:focus-visible {
-  outline: none;
+  outline: 2px solid #8f5220;
+  outline-offset: 2px;
 }
 
 .link-arrow {
   display: inline-block;
   font-weight: 600;
   font-size: clamp(0.72rem, 1.5vh, 0.82rem);
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.15s;
 }
 
 .link-arrow:hover {
-  border-bottom-color: #b0692e;
+  border-bottom-color: #8f5220;
 }
 
 /* --- CTA : verre fumé --- */

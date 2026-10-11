@@ -220,7 +220,7 @@ onUnmounted(() => {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0.5rem 0;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .cg-btn {
@@ -239,8 +239,8 @@ onUnmounted(() => {
 }
 
 .cg-btn-primary {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #fff;
   margin-top: 0.75rem;
 }
@@ -300,7 +300,7 @@ onUnmounted(() => {
 
 .cg-option:hover:not(:disabled) {
   transform: translateY(-1px);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .cg-option:disabled {

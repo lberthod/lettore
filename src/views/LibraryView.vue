@@ -458,15 +458,30 @@ function listenTo(t) {
   text-align: center;
 }
 
+.classici-crosslink a {
+  color: #8f5220;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(176, 105, 46, 0.4);
+}
+
+.classici-crosslink a:hover {
+  border-bottom-color: #8f5220;
+}
+
 .preview-note a {
-  color: #b0692e;
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: #8f5220;
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid rgba(176, 105, 46, 0.4);
 }
 
 .preview-note a:hover {
-  border-bottom-color: #b0692e;
+  border-bottom-color: #8f5220;
 }
 
 .progress-line {
@@ -535,8 +550,8 @@ function listenTo(t) {
 }
 
 .filters-toggle:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 /* --- Barre de filtres compacte --- */
@@ -642,11 +657,11 @@ function listenTo(t) {
 }
 
 .seg button:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .seg button.active {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
 }
 
@@ -662,8 +677,9 @@ function listenTo(t) {
 }
 
 .search-input:focus {
-  border-color: #b0692e;
-  outline: none;
+  border-color: #8f5220;
+  outline: 2px solid #8f5220;
+  outline-offset: 2px;
 }
 
 .cat-select {
@@ -690,9 +706,10 @@ function listenTo(t) {
 
 .cat-select:hover,
 .cat-select:focus {
-  border-color: #b0692e;
-  color: #b0692e;
-  outline: none;
+  border-color: #8f5220;
+  color: #8f5220;
+  outline: 2px solid #8f5220;
+  outline-offset: 2px;
 }
 
 .reset-btn {
@@ -702,7 +719,7 @@ function listenTo(t) {
   border: 1px solid rgba(176, 105, 46, 0.3);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.65);
-  color: #b0692e;
+  color: #8f5220;
   font-family: inherit;
   font-size: 0.83rem;
   font-weight: 600;
@@ -713,7 +730,7 @@ function listenTo(t) {
 
 .reset-btn:hover {
   background: rgba(176, 105, 46, 0.1);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .card-head {
@@ -732,9 +749,9 @@ function listenTo(t) {
 }
 
 .level-a1 { background: #e3f0e6; color: #35674a; }
-.level-a2 { background: #d9ead3; color: #38761d; }
-.level-b1 { background: #fff2cc; color: #8a6d1a; }
-.level-b2 { background: #fce5cd; color: #b45f06; }
+.level-a2 { background: #d9ead3; color: #2f6218; }
+.level-b1 { background: #fff2cc; color: #715813; }
+.level-b2 { background: #fce5cd; color: #8f4a00; }
 .level-c1 { background: #f4cccc; color: #990000; }
 .level-c2 { background: #e6d5f2; color: #5e2a84; }
 
@@ -791,7 +808,7 @@ function listenTo(t) {
 }
 
 .card:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 6px 20px rgba(176, 105, 46, 0.18);
   transform: translateY(-2px);
@@ -837,7 +854,7 @@ function listenTo(t) {
 .cta {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 /* Action secondaire discrète : écoute sans texte (mode ascolto) */
@@ -856,8 +873,8 @@ function listenTo(t) {
 
 .listen-btn:hover {
   background: #faf6f0;
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 /* --- Charger plus --- */
@@ -910,7 +927,7 @@ function listenTo(t) {
   min-height: 44px;
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   text-decoration: none;
   font-weight: 700;
@@ -920,7 +937,7 @@ function listenTo(t) {
 }
 
 .btn-unlock:hover {
-  background: #9a5a26;
+  background: #74411a;
   transform: translateY(-2px);
 }
 

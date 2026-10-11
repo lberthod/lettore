@@ -882,7 +882,7 @@ function chooseMicroOption(opt) {
 .fold-btn {
   font-size: 0.78rem;
   font-weight: 600;
-  color: #b0692e;
+  color: #8f5220;
   background: none;
   border: 1px solid #d9b98a;
   border-radius: 999px;
@@ -921,7 +921,7 @@ function chooseMicroOption(opt) {
   top: 0.6rem;
   font-size: 1.1rem;
   font-weight: 400;
-  color: #b0692e;
+  color: #8f5220;
   transition: transform 0.15s ease;
 }
 
@@ -930,7 +930,7 @@ function chooseMicroOption(opt) {
 }
 
 .topic summary:hover h2 {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .topic > *:not(summary) {
@@ -976,12 +976,12 @@ li {
 }
 
 em {
-  color: #b0692e;
+  color: #8f5220;
   font-style: italic;
 }
 
 a {
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
 }
 

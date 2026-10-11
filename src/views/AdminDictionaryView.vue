@@ -64,12 +64,12 @@ dictionaryStats().then((s) => (stats.value = s))
 }
 
 .tab:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .tab.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -105,7 +105,7 @@ dictionaryStats().then((s) => (stats.value = s))
 .stat-value {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .stat-label {

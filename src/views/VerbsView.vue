@@ -196,7 +196,7 @@ const irregularGroups = [
 }
 
 .primer em {
-  color: #b0692e;
+  color: #8f5220;
   font-style: italic;
 }
 
@@ -227,7 +227,7 @@ const irregularGroups = [
 }
 
 .more a {
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
 }
 
@@ -280,14 +280,14 @@ const irregularGroups = [
 }
 
 .irr-card:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: rgba(255, 255, 255, 0.85);
 }
 
 .irr-lemma {
   font-weight: 700;
   font-size: 0.98rem;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .irr-fr {
@@ -324,7 +324,7 @@ const irregularGroups = [
 
 .search input:focus {
   outline: none;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .verbs {
@@ -352,7 +352,7 @@ const irregularGroups = [
 }
 
 .lemma:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .fr {
@@ -366,7 +366,7 @@ const irregularGroups = [
 }
 
 .btn-conj {
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: none;
   font-weight: 700;
   opacity: 0.6;

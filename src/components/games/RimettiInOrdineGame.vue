@@ -318,7 +318,7 @@ onMounted(async () => {
 .stat-value {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .hint {
@@ -375,12 +375,12 @@ onMounted(async () => {
 
 .tile:hover:not(:disabled) {
   background: rgba(176, 105, 46, 0.08);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .tile.placed {
   background: rgba(176, 105, 46, 0.12);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .tile:disabled {
@@ -398,7 +398,7 @@ onMounted(async () => {
   padding: 0.55rem 1.2rem;
   border: none;
   border-radius: 8px;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font: inherit;
   font-weight: 600;
@@ -421,7 +421,7 @@ onMounted(async () => {
   border: 1px solid rgba(176, 105, 46, 0.35);
   border-radius: 8px;
   background: transparent;
-  color: #b0692e;
+  color: #8f5220;
   font: inherit;
   font-weight: 600;
   font-size: 0.95rem;
@@ -431,7 +431,7 @@ onMounted(async () => {
 
 .secondary-btn:hover {
   background: rgba(176, 105, 46, 0.08);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .feedback {

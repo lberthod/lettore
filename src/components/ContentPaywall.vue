@@ -32,13 +32,14 @@ function onCtaClick(action) {
       <li>Lecture audio en italien</li>
       <li>Progression et vocabulaire synchronisés entre appareils</li>
     </ul>
+    <p v-if="!currentUser" class="trial"><strong>10 jours de Premium IA offerts, sans carte</strong> : l'essai démarre après vérification de votre e-mail, avec 3 générations de textes IA incluses.</p>
     <RouterLink
       v-if="!currentUser"
       class="btn-hero"
       :to="{ name: 'login', query: { redirect: route.fullPath } }"
       @click="onCtaClick('signup')"
     >
-      Créer un compte gratuit
+      Commencer mes 10 jours offerts
     </RouterLink>
     <RouterLink
       v-else
@@ -86,7 +87,7 @@ function onCtaClick(action) {
   display: inline-block;
   padding: 0.7rem 1.7rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 0.98rem;
   font-weight: 700;
@@ -96,8 +97,12 @@ function onCtaClick(action) {
 }
 
 .btn-hero:hover {
-  background: #9a5a26;
+  background: #74411a;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
+}
+.trial {
+  margin: 0 0 0.9rem;
+  color: #6b3d17;
 }
 </style>

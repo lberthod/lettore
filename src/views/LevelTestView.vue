@@ -199,7 +199,7 @@ const RESULT_MESSAGES = {
 </script>
 
 <template>
-  <SceneLayout title="Test de" accent=" niveau" tagline="De A1 à C2, en quelques questions">
+  <SceneLayout title-lang="fr" title="Test de" accent=" niveau" tagline="De A1 à C2, en quelques questions">
     <div v-if="phase === 'intro'" class="intro-panel">
       <p>
         Ce test adaptatif estime le niveau d'italien conseillé pour commencer, selon le
@@ -398,7 +398,7 @@ const RESULT_MESSAGES = {
   padding: 0.6rem 1.4rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -422,7 +422,7 @@ const RESULT_MESSAGES = {
 .level-chip {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
   background: rgba(176, 105, 46, 0.1);
   border-radius: 999px;
   padding: 0.25rem 0.75rem;
@@ -443,7 +443,7 @@ const RESULT_MESSAGES = {
 
 .progress-fill {
   height: 100%;
-  background: #b0692e;
+  background: #8f5220;
   transition: width 0.25s ease;
 }
 
@@ -475,7 +475,7 @@ const RESULT_MESSAGES = {
 }
 
 .option:hover:not(:disabled) {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: #f0e9df;
 }
 
@@ -507,7 +507,7 @@ const RESULT_MESSAGES = {
 }
 
 .result-level strong {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .result-message {
@@ -546,7 +546,7 @@ const RESULT_MESSAGES = {
 }
 
 .cta-link {
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
   text-decoration: none;
 }
@@ -585,7 +585,7 @@ const RESULT_MESSAGES = {
 }
 
 .option-small.selected {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: rgba(176, 105, 46, 0.12);
   font-weight: 600;
 }

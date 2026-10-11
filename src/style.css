@@ -43,7 +43,12 @@ body {
 }
 
 .page a {
-  color: #b0692e;
+  color: #8f5220;
+}
+
+.page a[href^='mailto:'] {
+  display: inline-block;
+  padding: 0.2rem 0;
 }
 
 .page.narrow {
@@ -120,7 +125,7 @@ body {
 .form textarea:focus,
 .form select:focus {
   outline: none;
-  border-color: #b0692e;
+  border-color: #8f5220;
   box-shadow: 0 0 0 3px rgba(176, 105, 46, 0.15);
 }
 
@@ -148,13 +153,13 @@ body {
 }
 
 .btn-primary {
-  border: 1px solid #b0692e;
-  background: #b0692e;
+  border: 1px solid #8f5220;
+  background: #8f5220;
   color: #faf6f0;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #9a5a26;
+  background: #74411a;
 }
 
 .btn-secondary {
@@ -164,8 +169,8 @@ body {
 }
 
 .btn-secondary:hover:not(:disabled) {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .btn-primary:disabled,

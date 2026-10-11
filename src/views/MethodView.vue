@@ -508,7 +508,8 @@ onUnmounted(() => {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #e8b686;
+  /* #f6dcc0 : 4,6:1 même sur le bas du dégradé (#8a5630) */
+  color: #f6dcc0;
 }
 
 .panel h1 {
@@ -559,7 +560,7 @@ onUnmounted(() => {
 }
 
 .demo-word.active {
-  background: #b0692e;
+  background: #8f5220;
 }
 
 .bubble {
@@ -729,7 +730,7 @@ onUnmounted(() => {
   padding: 0.75rem 1.6rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   text-decoration: none;
   font-family: inherit;

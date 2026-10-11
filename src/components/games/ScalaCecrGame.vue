@@ -254,7 +254,7 @@ function optionClass(i) {
 }
 
 .scala-btn--primary {
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
 }
 
@@ -274,7 +274,7 @@ function optionClass(i) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -309,7 +309,7 @@ function optionClass(i) {
 
 .scala-progress-fill {
   height: 100%;
-  background: #b0692e;
+  background: #8f5220;
   border-radius: 999px;
   transition: width 0.3s ease;
 }
@@ -414,7 +414,7 @@ function optionClass(i) {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .over-detail {

@@ -3,7 +3,7 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
-import { isLoggedIn, isPremiumPlus } from '../lib/access.js'
+import { isLoggedIn, isPremiumPlus, getTrialInfo, EXAMPLE_TEXTS } from '../lib/access.js'
 import { currentUser } from '../lib/auth.js'
 import {
   progress,
@@ -66,6 +66,17 @@ const loggedIn = computed(() => isLoggedIn())
 // « Il tuo percorso » ci-dessous — voir « Optimisation Mobile.md » Phase 2.
 const showMarketing = computed(() => !(isNativeApp && loggedIn.value))
 const textsIndex = ref([])
+
+// GRO-2 : « Commencer à lire » ouvre un texte A1 réellement lisible sans
+// compte (aperçu gratuit calculé au build, lib/access.js#EXAMPLE_TEXTS), pas
+// la bibliothèque. Repli : le test de niveau si aucun A1 n'est en aperçu.
+const firstFreeA1 = EXAMPLE_TEXTS.find((t) => t.level === 'A1')
+const startReadingTo = firstFreeA1
+  ? { name: 'reader', params: { id: firstFreeA1.id } }
+  : { name: 'level-test' }
+
+// GRO-4 : bandeau de fin d'essai (<= 3 jours), lu depuis les claims du token.
+const trialDaysLeft = ref(0)
 const premiumIA = ref(false)
 const step = computed(() =>
   nextStep(progress, { hasPremiumIA: premiumIA.value, texts: textsIndex.value })
@@ -193,6 +204,9 @@ const STEP_ICONS = {
 onMounted(async () => {
   document.body.style.overflow = 'hidden'
   if (!loggedIn.value) return
+  getTrialInfo().then((t) => {
+    if (t.active && t.daysRemaining <= 3) trialDaysLeft.value = t.daysRemaining
+  })
   const textsPromise = import('../texts/index.json').then((m) => {
     textsIndex.value = m.default
   })
@@ -238,7 +252,7 @@ onUnmounted(() => {
           </linearGradient>
           <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#c08b4d" />
-            <stop offset="100%" stop-color="#b0692e" />
+            <stop offset="100%" stop-color="#8f5220" />
           </linearGradient>
           <linearGradient id="hill3" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#8a5a2b" />
@@ -348,6 +362,10 @@ onUnmounted(() => {
         <!-- Utilisateur connecté : une seule action explicite, la prochaine
              étape du parcours (règles transparentes dans src/lib/percorso.js). -->
         <div v-if="loggedIn" class="percorso">
+          <p v-if="trialDaysLeft" class="trial-banner" role="status">
+            Il vous reste {{ trialDaysLeft }} jour{{ trialDaysLeft > 1 ? 's' : '' }} d'essai Premium IA.
+            <RouterLink :to="{ name: 'pricing' }">Voir les offres</RouterLink>
+          </p>
           <p class="percorso-eyebrow">
             Il tuo percorso
             <span v-if="session" class="percorso-duration">· {{ session.duration }} min</span>
@@ -451,12 +469,14 @@ onUnmounted(() => {
           </div>
 
           <p class="sub">
-            Des histoires à votre niveau, la traduction française d'un survol,
+            Des histoires à votre niveau, la traduction française d'un survol ou d'un toucher,
             l'audio d'un clic. Rien d'autre entre vous et la langue.
           </p>
 
+          <p class="trial-note">10 jours de Premium IA offerts, sans carte<span class="trial-detail"> (après vérification de l'e-mail), dont 3 générations de textes IA</span></p>
+
           <div class="actions">
-            <RouterLink class="btn-hero" :to="{ name: 'library' }">
+            <RouterLink class="btn-hero" :to="startReadingTo">
               Commencer à lire →
             </RouterLink>
             <RouterLink class="btn-ghost" :to="{ name: 'method' }">
@@ -494,7 +514,7 @@ onUnmounted(() => {
           <span class="feature-icon" aria-hidden="true">✎</span>
           <div>
             <h2>Comprenez tout</h2>
-            <p>Survolez un mot, cliquez une phrase : la traduction apparaît.</p>
+            <p>Survolez ou touchez un mot, cliquez une phrase : la traduction apparaît.</p>
           </div>
         </div>
         <div class="feature">
@@ -731,7 +751,7 @@ onUnmounted(() => {
 }
 
 .title em {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .tagline {
@@ -819,7 +839,7 @@ onUnmounted(() => {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0;
-  color: #b0692e;
+  color: #8f5220;
   cursor: default;
 }
 
@@ -936,8 +956,8 @@ onUnmounted(() => {
 }
 
 .goal-btn.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #fff;
   font-weight: 600;
 }
@@ -975,7 +995,7 @@ onUnmounted(() => {
   background: none;
   border: none;
   padding: 0;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;
@@ -997,6 +1017,28 @@ onUnmounted(() => {
   animation: appear 0.9s ease-out 1.6s forwards;
 }
 
+.trial-note {
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #6b3d17;
+}
+
+.trial-banner {
+  margin: 0 0 0.8rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  background: #fff8e6;
+  border: 1px solid #e0c98f;
+  color: #6f5410;
+  font-size: 0.88rem;
+}
+
+.trial-banner a {
+  color: #8f5220;
+  font-weight: 700;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -1010,7 +1052,7 @@ onUnmounted(() => {
 .btn-hero {
   padding: 0.75rem 1.7rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 1rem;
   font-weight: 700;
@@ -1020,7 +1062,7 @@ onUnmounted(() => {
 }
 
 .btn-hero:hover {
-  background: #9a5a26;
+  background: #74411a;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
 }
@@ -1038,8 +1080,8 @@ onUnmounted(() => {
 }
 
 .btn-ghost:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 @keyframes appear {
@@ -1096,9 +1138,15 @@ onUnmounted(() => {
 .features-band {
   position: relative;
   z-index: 2;
-  padding: 0 1.5rem 0.9rem;
+  /* Fond brun propre au bandeau (bureau et mobile) : texte crème >= 7:1
+     quelle que soit la couleur de la colline derrière. */
+  max-width: 940px;
+  margin: 0 auto 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 14px;
+  background: rgba(94, 58, 26, 0.92);
   opacity: 0;
-  animation: appear 0.9s ease-out 2.2s forwards;
+  animation: appear 0.6s ease-out 0.6s forwards;
 }
 
 .features {
@@ -1125,8 +1173,8 @@ onUnmounted(() => {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(250, 246, 240, 0.7);
-  color: #b0692e;
+  background: #faf6f0;
+  color: #8f5220;
   font-size: 1.1rem;
 }
 
@@ -1140,12 +1188,19 @@ onUnmounted(() => {
   margin: 0;
   font-size: 0.8rem;
   line-height: 1.45;
-  color: rgba(250, 246, 240, 0.8);
+  color: #f3ebdf;
 }
 
 /* --- Responsive --- */
 
 @media (max-width: 720px) {
+  /* Sur mobile le bandeau tombe sur le ciel crème, pas sur la colline : on lui
+     donne son propre fond brun (texte crème ≥ 7:1) pour rester lisible. */
+  .features-band {
+    margin: 0 1rem 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+
   .features {
     flex-direction: column;
     align-items: center;
@@ -1182,14 +1237,25 @@ onUnmounted(() => {
   }
 }
 
-@media (max-height: 640px) {
+@media (max-height: 700px) {
   .sub,
-  .feature p {
+  .feature p,
+  .trial-detail {
     display: none;
   }
 
   .badge {
     margin-top: 0.9rem;
+  }
+
+  .trial-note {
+    margin-top: 0.5rem;
+    font-size: 0.88rem;
+  }
+
+  .actions {
+    margin-top: 0.9rem;
+    gap: 0.5rem;
   }
 
   .percorso {

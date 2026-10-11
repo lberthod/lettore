@@ -287,7 +287,7 @@ onMounted(async () => {
 }
 
 .abbina-tile:hover:not(:disabled) {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .abbina-tile:active:not(:disabled) {
@@ -295,7 +295,7 @@ onMounted(async () => {
 }
 
 .abbina-tile.is-selected {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: rgba(176, 105, 46, 0.12);
 }
 
@@ -334,7 +334,7 @@ onMounted(async () => {
   padding: 0.55rem 1.4rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font-size: 0.95rem;
   cursor: pointer;

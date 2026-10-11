@@ -99,6 +99,14 @@ async function apple() {
       doit être renseignée dans <code>src/lib/firebase.js</code>.
     </p>
 
+    <p v-if="mode === 'register'" class="trial-offer">
+      <strong>10 jours de Premium IA offerts, sans carte</strong> : après
+      vérification de votre e-mail (3 générations de textes IA incluses).
+    </p>
+    <p v-else-if="mode === 'login'" class="hint">
+      Nouveau ? 10 jours de Premium IA offerts, sans carte, après vérification de votre e-mail (3 générations de textes IA incluses).
+    </p>
+
     <form class="form" @submit.prevent="submit">
       <label v-if="mode === 'register'">
         Nom d'affichage
@@ -161,6 +169,16 @@ async function apple() {
 </template>
 
 <style scoped>
+.trial-offer {
+  margin: 0.4rem 0 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: #fff8e6;
+  border: 1px solid #e0c98f;
+  color: #5c4610;
+  font-size: 0.9rem;
+}
+
 .switcher {
   margin-top: 1.2rem;
   margin-bottom: 0;

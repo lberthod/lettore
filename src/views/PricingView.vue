@@ -47,6 +47,32 @@ const faq = [
   },
 ]
 const openFaq = ref(0)
+
+// « N mois offerts » sur l'annuel, calculé depuis les prix affichés (jamais
+// codé en dur) : (12 × mensuel − annuel) / mensuel, arrondi au mois.
+function priceValue(label) {
+  const n = parseFloat(String(label).replace(/[^\d,.]/g, '').replace(',', '.'))
+  return Number.isFinite(n) ? n : 0
+}
+function monthsFree(plan) {
+  const m = priceValue(plan.monthly.price)
+  const a = priceValue(plan.annual.price)
+  if (!m || !a) return 0
+  return Math.max(0, Math.round((12 * m - a) / m))
+}
+
+// Comparaison gratuit / Premium / Premium IA (README_TARIFICATION.md,
+// § Comparaison à afficher sur la page d'abonnement).
+const comparison = [
+  { label: 'Textes découverte', free: 'Oui', premium: 'Oui', ia: 'Oui' },
+  { label: 'Catalogue complet (A1 à C2)', free: 'Non', premium: 'Oui', ia: 'Oui' },
+  { label: 'Audio, traductions et quiz', free: 'Oui', premium: 'Oui', ia: 'Oui' },
+  { label: 'Progression synchronisée', free: 'Non', premium: 'Oui', ia: 'Oui' },
+  { label: 'Classici : aperçu', free: 'Oui', premium: 'Oui', ia: 'Oui' },
+  { label: 'Classici : catalogue complet', free: 'Non', premium: 'Oui', ia: 'Oui' },
+  { label: 'Création IA', free: '3 crédits d\'essai', premium: 'Non', ia: '30 crédits/mois' },
+  { label: 'Notizie (actualité générée)', free: 'Non', premium: 'Non', ia: 'Oui' },
+]
 let faqJsonLd
 
 onMounted(async () => {
@@ -170,7 +196,7 @@ async function restore() {
           </linearGradient>
           <linearGradient id="p-hill2" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#c08b4d" />
-            <stop offset="100%" stop-color="#b0692e" />
+            <stop offset="100%" stop-color="#8f5220" />
           </linearGradient>
           <linearGradient id="p-hill3" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#8a5a2b" />
@@ -215,7 +241,7 @@ async function restore() {
     <!-- Contenu centré -->
     <div class="stage">
       <div class="hero">
-        <h1 class="title">Abbona<em>menti</em></h1>
+        <h1 class="title" lang="it">Abbona<em>menti</em></h1>
         <p class="tagline">Abonnement</p>
         <p class="sub">
           Soutenez le projet et débloquez tous les textes avec la formule Premium.
@@ -226,7 +252,7 @@ async function restore() {
           gratuit pour découvrir la bibliothèque.
         </p>
         <p v-if="trialInfo.active" class="notice notice-trial">
-          Votre essai Premium IA gratuit se termine dans
+          Votre essai Premium IA gratuit (3 générations offertes) se termine dans
           {{ trialInfo.daysRemaining }}
           {{ trialInfo.daysRemaining > 1 ? 'jours' : 'jour' }}. Abonnez-vous
           pour garder l'accès sans interruption.
@@ -266,6 +292,9 @@ async function restore() {
               {{ plan[billing].price
               }}<span class="period">{{ plan[billing].period }}</span>
             </p>
+            <p v-if="billing === 'annual' && monthsFree(plan) > 0" class="months-free">
+              {{ monthsFree(plan) }} mois offerts
+            </p>
             <ul>
               <li v-for="f in plan.features" :key="f">{{ f }}</li>
             </ul>
@@ -299,6 +328,26 @@ async function restore() {
             <span v-else class="current">Votre formule actuelle</span>
           </div>
         </div>
+
+        <table class="compare">
+          <caption>Comparer les formules</caption>
+          <thead>
+            <tr>
+              <th scope="col">Fonction</th>
+              <th scope="col">Gratuit</th>
+              <th scope="col">Premium</th>
+              <th scope="col">Premium IA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in comparison" :key="row.label">
+              <th scope="row">{{ row.label }}</th>
+              <td>{{ row.free }}</td>
+              <td>{{ row.premium }}</td>
+              <td>{{ row.ia }}</td>
+            </tr>
+          </tbody>
+        </table>
 
         <p class="hint">
           <template v-if="platform === 'ios'">
@@ -449,7 +498,7 @@ async function restore() {
 }
 
 .title em {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .tagline {
@@ -514,7 +563,7 @@ async function restore() {
 }
 
 .toggle-btn.active {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
 }
 
@@ -560,7 +609,7 @@ async function restore() {
 }
 
 .plan.highlight {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 6px 20px rgba(176, 105, 46, 0.2);
 }
@@ -571,7 +620,7 @@ async function restore() {
   right: 1rem;
   padding: 0.2rem 0.8rem;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 0.7rem;
   font-weight: 700;
@@ -597,7 +646,7 @@ async function restore() {
   margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .period {
@@ -626,7 +675,7 @@ async function restore() {
   padding: 0.65rem 1.5rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-size: 0.95rem;
   font-weight: 700;
@@ -639,7 +688,7 @@ async function restore() {
 }
 
 .btn-hero:hover:not(:disabled) {
-  background: #9a5a26;
+  background: #74411a;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
 }
@@ -664,8 +713,8 @@ async function restore() {
 }
 
 .btn-ghost:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .hint {
@@ -731,7 +780,7 @@ async function restore() {
 }
 
 .faq-item.open {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .faq-q {
@@ -752,7 +801,7 @@ async function restore() {
 }
 
 .faq-q .chev {
-  color: #b0692e;
+  color: #8f5220;
   transition: transform 0.2s;
   flex-shrink: 0;
 }
@@ -814,6 +863,63 @@ async function restore() {
   .hint {
     animation: none;
     opacity: 1;
+  }
+}
+
+.months-free {
+  display: inline-block;
+  margin: -0.3rem 0 0.6rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #fff8e6;
+  border: 1px solid #e0c98f;
+  color: #5c4610;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.compare {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  overflow-wrap: anywhere;
+  margin: 1.6rem 0 0.5rem;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: rgba(255, 250, 243, 0.85);
+}
+
+.compare caption {
+  padding: 0.5rem;
+  font-weight: 700;
+  color: #2c2620;
+}
+
+.compare th,
+.compare td {
+  padding: 0.5rem 0.6rem;
+  border-top: 1px solid rgba(143, 82, 32, 0.2);
+  text-align: center;
+  color: #2c2620;
+}
+
+.compare th:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.compare th:first-child {
+  width: 34%;
+}
+
+@media (max-width: 480px) {
+  .compare {
+    font-size: 0.78rem;
+  }
+
+  .compare th,
+  .compare td {
+    padding: 0.45rem 0.3rem;
   }
 }
 </style>

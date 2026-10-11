@@ -39,7 +39,7 @@ import SceneLayout from '../components/SceneLayout.vue'
 }
 
 .btn-primary {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   box-shadow: 0 6px 20px rgba(176, 105, 46, 0.3);
 }
@@ -55,7 +55,7 @@ import SceneLayout from '../components/SceneLayout.vue'
 }
 
 .btn-ghost:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 </style>

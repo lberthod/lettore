@@ -200,7 +200,7 @@ function backToMenu() {
 
 .game-card:hover,
 .game-card:focus-visible {
-  border-color: #b0692e;
+  border-color: #8f5220;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(44, 38, 32, 0.1);
   outline: none;
@@ -227,11 +227,11 @@ function backToMenu() {
   display: inline-block;
   background: none;
   border: none;
-  color: #b0692e;
+  color: #8f5220;
   font-family: inherit;
   font-size: 0.92rem;
   cursor: pointer;
-  padding: 0;
+  padding: 0.2rem 0;
   margin-bottom: 0.8rem;
 }
 

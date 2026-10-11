@@ -384,7 +384,7 @@ function answer(qi, oi) {
 }
 
 .hint.working {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .hint.working p {
@@ -402,7 +402,7 @@ function answer(qi, oi) {
 .progress-bar {
   height: 100%;
   border-radius: inherit;
-  background: #b0692e;
+  background: #8f5220;
   transition: width 1s linear;
 }
 
@@ -517,7 +517,7 @@ function answer(qi, oi) {
 }
 
 .quiz-opt:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .quiz-opt.good {
@@ -543,7 +543,7 @@ function answer(qi, oi) {
      cohérence avec Sprint 1.5/1.6). */
   padding: 0.35rem 0.1rem;
   margin: -0.35rem -0.1rem;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;

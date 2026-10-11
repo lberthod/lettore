@@ -17,7 +17,7 @@ function accessLabel(book) {
 </script>
 
 <template>
-  <SceneLayout title="Classici" accent="del dominio pubblico" wide>
+  <SceneLayout title="Classici " accent="del dominio pubblico" wide>
     <!-- Symétrique du lien Testi → Classici (LibraryView.vue) : SiteHeader,
          qui portait ce lien, est masqué en app native. -->
     <p class="library-crosslink">
@@ -68,6 +68,19 @@ function accessLabel(book) {
   text-align: center;
 }
 
+.library-crosslink a {
+  color: #8f5220;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(176, 105, 46, 0.4);
+}
+
+.library-crosslink a:hover {
+  border-bottom-color: #8f5220;
+}
+
 .intro {
   max-width: 46rem;
   margin: 0 auto 1.6rem;
@@ -101,7 +114,7 @@ function accessLabel(book) {
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 26px rgba(111, 71, 34, 0.16);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .card h3 {
@@ -141,7 +154,7 @@ function accessLabel(book) {
 }
 
 .access.free {
-  color: #4a7c59;
+  color: #2f5f40;
   background: rgba(74, 124, 89, 0.14);
 }
 

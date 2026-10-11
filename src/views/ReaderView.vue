@@ -127,10 +127,20 @@ const nextText = computed(() =>
 )
 
 // Découpage : paragraphes → phrases → mots (les espaces/ponctuation restent affichés)
+// Champ optionnel `ttsParagraphs` (même découpage que `paragraphs`, mais avec
+// le texte tel qu'il doit être PRONONCÉ : p. ex. nombres écrits en lettres
+// alors que l'affichage garde les chiffres). Rétrocompatible : absent, ou dont
+// le découpage en phrases diffère, le texte affiché est lu comme avant.
+const splitSentences = (p) => p.match(/[^.!?]+[.!?]*\s*/g) || [p]
+
 const paragraphs = computed(() =>
-  currentText.value.paragraphs.map((p) => {
-    const sentences = p.match(/[^.!?]+[.!?]*\s*/g) || [p]
-    return sentences.map((sentence) => {
+  currentText.value.paragraphs.map((p, pi) => {
+    const sentences = splitSentences(p)
+    const spoken = currentText.value.ttsParagraphs?.[pi]
+    const spokenSentences =
+      typeof spoken === 'string' ? splitSentences(spoken) : null
+    const hasSpoken = spokenSentences && spokenSentences.length === sentences.length
+    return sentences.map((sentence, si) => {
       const tokens = sentence
         .split(/(\p{L}[\p{L}'’-]*)/u)
         .filter((t) => t !== '')
@@ -138,7 +148,12 @@ const paragraphs = computed(() =>
       // ponctuation/espaces) : sert au surlignage karaoke mot-à-mot.
       let w = 0
       const wordIndices = tokens.map((t) => (isWord(t) ? w++ : -1))
-      return { sentence: sentence.trim(), tokens, wordIndices }
+      return {
+        sentence: sentence.trim(),
+        speak: hasSpoken ? spokenSentences[si].trim() : sentence.trim(),
+        tokens,
+        wordIndices,
+      }
     })
   })
 )
@@ -146,7 +161,13 @@ const paragraphs = computed(() =>
 // Liste plate des phrases pour la lecture audio phrase par phrase
 const flatSentences = computed(() =>
   paragraphs.value.flatMap((sentences, pi) =>
-    sentences.map((s, si) => ({ key: `${pi}-${si}`, text: s.sentence }))
+    sentences.map((s, si) => ({
+      key: `${pi}-${si}`,
+      text: s.speak,
+      // Karaoke mot-à-mot seulement si le texte parlé = le texte affiché
+      // (sinon les rangs de mots ne correspondraient plus).
+      sameAsDisplay: s.speak === s.sentence,
+    }))
   )
 )
 
@@ -206,6 +227,11 @@ function onQuizCompleted(score) {
   if (score >= total - 1) {
     markRead(props.id)
     trackReadingCompleted({ textId: props.id, level: textMeta.value?.level })
+    // Contrat avec src/lib/push.js / App.vue (demande de permission push
+    // après un premier texte terminé) : événement window, detail = { id }.
+    window.dispatchEvent(
+      new CustomEvent('leggendo:text-completed', { detail: { id: props.id } })
+    )
   }
   afterQuiz.value = nextAfterQuiz({
     score,
@@ -367,7 +393,7 @@ function playText() {
     // Réinitialisé à chaque phrase : sans événement onboundary, aucun mot
     // n'est surligné (comportement d'avant).
     readingWordIndex.value = -1
-    const spans = wordSpans(list[i].text)
+    const spans = list[i].sameAsDisplay ? wordSpans(list[i].text) : []
     speakItalian(list[i].text, {
       rate: progress.ttsRate,
       onEnd: () => next(i + 1),
@@ -485,6 +511,7 @@ function onWordLeave() {
 // comme au survol ; Entrée/Espace traduit la phrase entière (équivalent du
 // double-clic), Échap referme (géré par onKeydown au niveau du document).
 function onWordFocus(word, event) {
+  activeWordKey.value = event.currentTarget?.dataset?.wk || activeWordKey.value
   clearTimeout(hoverTimer)
   cancelClose()
   showTranslation(word, event, false)
@@ -498,7 +525,41 @@ function onWordKeydown(sentence, event) {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault()
     onWordDblClick(sentence, event)
+    return
   }
+  // Tabindex itinérant : une seule étape de tabulation pour tout le texte,
+  // les flèches parcourent les mots (Home/End : premier/dernier).
+  const keys = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }
+  if (!(event.key in keys) && event.key !== 'Home' && event.key !== 'End') return
+  const words = Array.from(
+    event.currentTarget.closest('article')?.querySelectorAll('.word') || []
+  )
+  const i = words.indexOf(event.currentTarget)
+  if (i < 0) return
+  event.preventDefault()
+  let target = i + (keys[event.key] || 0)
+  if (event.key === 'Home') target = 0
+  if (event.key === 'End') target = words.length - 1
+  words[Math.max(0, Math.min(words.length - 1, target))]?.focus()
+}
+
+// Roving tabindex : clé unique `pi-si-ti` du mot qui porte tabindex=0.
+const wordKey = (pi, si, ti) => `${pi}-${si}-${ti}`
+const activeWordKey = ref(null)
+const firstWordKey = computed(() => {
+  for (let pi = 0; pi < paragraphs.value.length; pi++) {
+    for (let si = 0; si < paragraphs.value[pi].length; si++) {
+      const ti = paragraphs.value[pi][si].tokens.findIndex(isWord)
+      if (ti >= 0) return wordKey(pi, si, ti)
+    }
+  }
+  return null
+})
+const tabStopKey = computed(() => activeWordKey.value || firstWordKey.value)
+
+function skipToQuiz() {
+  document.getElementById('reader-verify')?.focus()
+  document.getElementById('reader-verify')?.scrollIntoView({ block: 'center' })
 }
 
 function onPunctKeydown(sentence, event) {
@@ -554,6 +615,7 @@ watch(
     textRevealed.value = false
     translatedWords.value = []
     afterQuiz.value = null
+    activeWordKey.value = null
     loadText(id)
   },
   { immediate: true }
@@ -716,12 +778,27 @@ onBeforeUnmount(() => {
         </button>
       </p>
 
+      <!-- Consigne unique référencée par chaque mot (aria-describedby) -->
+      <p id="reader-word-help" class="sr-only">
+        Mot : voir la traduction. Entrée pour traduire la phrase entière.
+        Flèches gauche et droite pour passer au mot suivant ou précédent.
+      </p>
+      <a
+        v-if="(currentText.questions && currentText.questions.length) && !ascoltoMasked"
+        href="#reader-verify"
+        class="skip-link"
+        @click.prevent="skipToQuiz"
+      >
+        Aller au quiz
+      </a>
+
       <!-- Le texte, sur un panneau « papier » posé sur la scène -->
       <div class="paper">
         <!-- Mode écoute masqué : flou CSS + `inert` (pas de retrait du DOM,
              le TTS lit flatSentences depuis les mêmes données). `inert`
              bloque focus, clics et lecteurs d'écran sur le texte caché. -->
         <article
+          lang="it"
           :class="{ masked: ascoltoMasked }"
           :inert="ascoltoMasked"
           @click.self="closeOverlay"
@@ -744,8 +821,10 @@ onBeforeUnmount(() => {
                         s.wordIndices[ti] === readingWordIndex,
                     }"
                     role="button"
-                    tabindex="0"
-                    :aria-label="`${token} — voir la traduction, Entrée pour traduire la phrase`"
+                    :tabindex="wordKey(pi, si, ti) === tabStopKey ? 0 : -1"
+                    :data-wk="wordKey(pi, si, ti)"
+                    :aria-label="token"
+                    aria-describedby="reader-word-help"
                     @mouseenter="onWordEnter(token, $event)"
                     @mouseleave="onWordLeave"
                     @focus="onWordFocus(token, $event)"
@@ -758,7 +837,7 @@ onBeforeUnmount(() => {
                     v-else-if="isSentenceEnd(token)"
                     class="punct"
                     role="button"
-                    tabindex="0"
+                    tabindex="-1"
                     title="Traduire la phrase"
                     aria-label="Traduire la phrase"
                     @click="onPunctClick(s.sentence, $event)"
@@ -818,7 +897,9 @@ onBeforeUnmount(() => {
         >
           <button
             v-if="currentText.questions && currentText.questions.length"
+            id="reader-verify"
             class="btn-verify"
+            lang="it"
             @click="openQuiz"
           >
             Verifica la comprensione →
@@ -941,13 +1022,16 @@ onBeforeUnmount(() => {
 }
 
 .back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
   font-size: 0.85rem;
   color: #8a5a2b;
   text-decoration: none;
 }
 
 .back:hover {
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
 }
 
@@ -1013,7 +1097,7 @@ onBeforeUnmount(() => {
 
 .icon-btn:hover:not(:disabled) {
   background: #faf6f0;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .icon-btn:disabled {
@@ -1022,9 +1106,9 @@ onBeforeUnmount(() => {
 }
 
 .icon-btn.tts-toggle.active {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .icon-btn.play.active {
@@ -1059,12 +1143,12 @@ onBeforeUnmount(() => {
 }
 
 .speed-btn:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .speed-btn.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -1104,8 +1188,8 @@ onBeforeUnmount(() => {
 
 .ascolto-toggle:hover {
   background: #faf6f0;
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 /* Texte masqué : flou seulement (le DOM reste en place pour le TTS, et le
@@ -1173,6 +1257,36 @@ article p:first-letter {
   transition: background 0.12s ease;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  background: #8f5220;
+  color: #faf6f0;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  position: static;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
+
 .word {
   cursor: pointer;
   border-radius: 3px;
@@ -1187,19 +1301,22 @@ article p:first-letter {
 .word:hover,
 .word:focus-visible {
   background: #f0e0c8;
-  text-decoration-color: #b0692e;
+  text-decoration-color: #8f5220;
 }
 
 .word:focus-visible,
 .punct:focus-visible {
-  outline: 2px solid #b0692e;
+  outline: 2px solid #8f5220;
   outline-offset: 2px;
 }
 
 .punct {
-  display: inline-block;
+  /* inline (et non inline-block) : un caractère inline ne peut pas être
+     séparé du mot qui le précède par un retour à la ligne, donc la
+     ponctuation ne démarre jamais une ligne (UX-5). */
+  display: inline;
   cursor: pointer;
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 700;
   border-radius: 3px;
   /* Zone cliquable élargie (Analyse Optimisation UX Mobile.md Sprint 1.1) :
@@ -1234,7 +1351,7 @@ article p:first-letter {
   border: none;
   border-radius: 50%;
   background: transparent;
-  color: #b0692e;
+  color: #8f5220;
   opacity: 0.6;
   cursor: pointer;
   transition: opacity 0.12s, background 0.12s, color 0.12s;
@@ -1253,13 +1370,13 @@ article p:first-letter {
 }
 
 .drill-btn:focus-visible {
-  outline: 2px solid #b0692e;
+  outline: 2px solid #8f5220;
   outline-offset: 2px;
 }
 
 .drill-btn.active {
   opacity: 1;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
 }
 
@@ -1302,8 +1419,8 @@ article p:first-letter {
 }
 
 .drill-close:hover {
-  color: #b0692e;
-  border-color: #b0692e;
+  color: #8f5220;
+  border-color: #8f5220;
 }
 
 /* --- Bouton de vérification --- */
@@ -1323,7 +1440,7 @@ article p:first-letter {
   padding: 0.7rem 1.6rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-family: inherit;
   font-size: 0.98rem;
@@ -1334,17 +1451,17 @@ article p:first-letter {
 }
 
 .btn-verify:hover {
-  background: #9a5a26;
+  background: #74411a;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
 }
 
 .btn-vocab {
   padding: 0.7rem 1.6rem;
-  border: 1px solid #b0692e;
+  border: 1px solid #8f5220;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.7);
-  color: #b0692e;
+  color: #8f5220;
   font-family: inherit;
   font-size: 0.98rem;
   font-weight: 700;
@@ -1353,7 +1470,7 @@ article p:first-letter {
 }
 
 .btn-vocab:hover {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   transform: translateY(-2px);
 }
@@ -1391,8 +1508,8 @@ article p:first-letter {
 
 .pager-link:hover {
   background: #faf6f0;
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 @media (max-width: 640px) {
@@ -1459,7 +1576,7 @@ article p:first-letter {
   padding: 0.5rem 1.1rem;
   border-radius: 999px;
   border: none;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-weight: 700;
   text-decoration: none;
@@ -1483,8 +1600,8 @@ article p:first-letter {
 }
 
 .quiz-close:hover {
-  color: #b0692e;
-  border-color: #b0692e;
+  color: #8f5220;
+  border-color: #8f5220;
 }
 
 .quiz-fade-enter-active,

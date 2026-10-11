@@ -47,9 +47,10 @@ const router = createRouter({
         // connexion requise ; le rôle exact reste vérifié par les règles
         // Firestore (ex. Notizie réservé à premium_plus/enseignant).
         await authReady
-        if (!currentUser.value) {
-          return { name: 'login', query: { redirect: to.fullPath } }
-        }
+        // Visiteur non connecté : un identifiant inconnu est une page
+        // introuvable (404), pas une invitation à se connecter — les textes
+        // privés (créés / actualités) ne se partagent pas par lien.
+        if (!currentUser.value) return { name: 'not-found' }
       },
     },
     {

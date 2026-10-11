@@ -241,7 +241,7 @@ async function checkVerification() {
   verifyInfo.value = verifyError.value = ''
   try {
     if (await refreshEmailVerified()) {
-      verifyInfo.value = 'Adresse confirmée, merci !'
+      verifyInfo.value = 'Adresse confirmée, merci ! Votre essai Premium IA démarre.'
     } else {
       verifyError.value = 'Adresse pas encore confirmée : ouvrez le lien reçu par e-mail, puis réessayez.'
     }
@@ -312,8 +312,9 @@ async function confirmDelete() {
       <div v-if="!currentUser.emailVerified" class="verify-box">
         <p>
           <strong>Adresse e-mail non confirmée.</strong> Ouvrez le lien envoyé à
-          l'inscription pour débloquer votre génération d'essai
-          (<RouterLink :to="{ name: 'create-text' }">Créer son texte</RouterLink>).
+          l'inscription : vos 10 jours de Premium IA offerts (dont 3 générations de textes) démarrent dès que
+          l'adresse est confirmée (puis
+          <RouterLink :to="{ name: 'create-text' }">Créer son texte</RouterLink>).
         </p>
         <p class="verify-actions">
           <button type="button" class="link-btn" :disabled="verifyBusy" @click="resendVerification">
@@ -517,7 +518,7 @@ async function confirmDelete() {
   background: none;
   border: none;
   padding: 0;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;
@@ -538,7 +539,7 @@ async function confirmDelete() {
 }
 
 .positioning-note a {
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
 }
 
@@ -567,7 +568,7 @@ async function confirmDelete() {
 }
 
 .stat-streak .stat-value {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .stat-label {
@@ -583,7 +584,7 @@ async function confirmDelete() {
 
 .stat-link {
   font-size: 0.8rem;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 /* --- Dashboard par compétence --- */
@@ -656,7 +657,7 @@ async function confirmDelete() {
 .skill-stat {
   margin: 0;
   font-size: 0.82rem;
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 600;
 }
 
@@ -673,7 +674,7 @@ async function confirmDelete() {
 .skill-next {
   margin-top: 0.2rem;
   font-size: 0.78rem;
-  color: #b0692e;
+  color: #8f5220;
   align-self: flex-start;
 }
 
@@ -708,7 +709,7 @@ async function confirmDelete() {
 .metric-value {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .metric.empty .metric-value {

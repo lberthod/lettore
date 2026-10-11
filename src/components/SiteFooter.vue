@@ -58,21 +58,27 @@ import { LEVEL_LANDING_PAGES } from '../seo/landingPages.js'
 
 .levels a,
 .legal a {
-  color: rgba(250, 246, 240, 0.75);
+  /* #f3ebdf sur le haut du dégradé (#8a5a2b) : 5,0:1 (WCAG AA). */
+  color: #f3ebdf;
   text-decoration: none;
   font-size: 0.75rem;
+  /* Cible tactile >= 24 px de haut (WCAG 2.5.8) sans changer la mise en page. */
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
   transition: color 0.12s;
 }
 
 .levels a:hover,
 .legal a:hover {
-  color: #faf6f0;
+  color: #fff;
+  text-decoration: underline;
 }
 
 .copyright {
   margin: 0.5rem 0 0;
   text-align: center;
   font-size: 0.72rem;
-  color: rgba(250, 246, 240, 0.5);
+  color: #f0e6d8; /* 4,76:1 sur #8a5a2b */
 }
 </style>

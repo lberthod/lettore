@@ -477,7 +477,7 @@ onBeforeUnmount(() => {
 
 .search:focus {
   outline: none;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .level-filters {
@@ -498,8 +498,8 @@ onBeforeUnmount(() => {
 }
 
 .level-chip:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .level-chip.active {
@@ -566,7 +566,7 @@ onBeforeUnmount(() => {
 }
 
 .card:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .card.selected {
@@ -635,7 +635,7 @@ onBeforeUnmount(() => {
   display: none;
   border: none;
   background: none;
-  color: #b0692e;
+  color: #8f5220;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -680,8 +680,8 @@ onBeforeUnmount(() => {
 }
 
 .play-all:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .play-all.playing {
@@ -705,8 +705,8 @@ onBeforeUnmount(() => {
 }
 
 .restart-all:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .lines {
@@ -771,7 +771,7 @@ onBeforeUnmount(() => {
 }
 
 .line.playing .bubble {
-  box-shadow: 0 0 0 2px #b0692e;
+  box-shadow: 0 0 0 2px #8f5220;
 }
 
 .bubble-text {
@@ -797,7 +797,7 @@ onBeforeUnmount(() => {
 }
 
 .translate-line:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .translate-line.active {

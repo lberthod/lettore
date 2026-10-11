@@ -314,7 +314,7 @@ onUnmounted(() => {
 .stat-value {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .timer-bar-track {
@@ -327,7 +327,7 @@ onUnmounted(() => {
 
 .timer-bar-fill {
   height: 100%;
-  background: #b0692e;
+  background: #8f5220;
   border-radius: 999px;
   transition: width 1s linear, background-color 0.2s ease;
 }
@@ -398,7 +398,7 @@ onUnmounted(() => {
 
 .guess-input:focus {
   outline: none;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .guess-input.shake {
@@ -430,7 +430,7 @@ onUnmounted(() => {
   padding: 0.55rem 1.2rem;
   border: none;
   border-radius: 8px;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font: inherit;
   font-weight: 600;
@@ -472,7 +472,7 @@ onUnmounted(() => {
   border: 1px solid rgba(176, 105, 46, 0.35);
   border-radius: 999px;
   background: transparent;
-  color: #b0692e;
+  color: #8f5220;
   font: inherit;
   font-size: 0.85rem;
   cursor: pointer;
@@ -481,7 +481,7 @@ onUnmounted(() => {
 
 .reset-btn:hover {
   background: rgba(176, 105, 46, 0.08);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 @media (max-width: 360px) {

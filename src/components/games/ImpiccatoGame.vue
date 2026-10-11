@@ -221,7 +221,7 @@ onMounted(async () => {
 .life {
   font-size: 1.1rem;
   line-height: 1;
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .life.lost {
@@ -288,7 +288,7 @@ onMounted(async () => {
 
 .key:hover:not(:disabled) {
   background: #f0e4d8;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .key:disabled {
@@ -337,7 +337,7 @@ onMounted(async () => {
   padding: 0.55rem 1.3rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #fff;
   font: inherit;
   font-weight: 600;

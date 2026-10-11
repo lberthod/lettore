@@ -298,7 +298,7 @@ function advance(success) {
   padding: 0.5rem 1.1rem;
   border-radius: 999px;
   border: none;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font: inherit;
   font-weight: 700;
@@ -314,7 +314,7 @@ function advance(success) {
   background: none;
   border: none;
   padding: 0;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;

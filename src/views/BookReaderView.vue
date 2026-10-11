@@ -736,13 +736,16 @@ onBeforeUnmount(() => {
 }
 
 .back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
   font-size: 0.85rem;
   color: #8a5a2b;
   text-decoration: none;
 }
 
 .back:hover {
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
 }
 
@@ -758,13 +761,13 @@ onBeforeUnmount(() => {
 }
 
 .summary-toggle:hover {
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 .summary-toggle.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -838,7 +841,7 @@ onBeforeUnmount(() => {
 
 .icon-btn:hover:not(:disabled) {
   background: #faf6f0;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .icon-btn:disabled {
@@ -847,9 +850,9 @@ onBeforeUnmount(() => {
 }
 
 .icon-btn.tts-toggle.active {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .icon-btn.play.active {
@@ -883,12 +886,12 @@ onBeforeUnmount(() => {
 }
 
 .speed-btn:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .speed-btn.active {
-  background: #b0692e;
-  border-color: #b0692e;
+  background: #8f5220;
+  border-color: #8f5220;
   color: #faf6f0;
 }
 
@@ -948,19 +951,19 @@ article p:first-letter {
 .word:hover,
 .word:focus-visible {
   background: #f0e0c8;
-  text-decoration-color: #b0692e;
+  text-decoration-color: #8f5220;
 }
 
 .word:focus-visible,
 .punct:focus-visible {
-  outline: 2px solid #b0692e;
+  outline: 2px solid #8f5220;
   outline-offset: 2px;
 }
 
 .punct {
   display: inline-block;
   cursor: pointer;
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 700;
   border-radius: 3px;
   /* Zone cliquable élargie (Analyse Optimisation UX Mobile.md Sprint 1.1). */
@@ -986,7 +989,7 @@ article p:first-letter {
   padding: 0.7rem 1.6rem;
   border: none;
   border-radius: 999px;
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   font-family: inherit;
   font-size: 0.98rem;
@@ -1019,8 +1022,8 @@ article p:first-letter {
 
 .pager-link:hover {
   background: #faf6f0;
-  border-color: #b0692e;
-  color: #b0692e;
+  border-color: #8f5220;
+  color: #8f5220;
 }
 
 @media (max-width: 640px) {
@@ -1089,11 +1092,11 @@ article p:first-letter {
 }
 
 .chapter-list a:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .chapter-list a.current {
-  color: #b0692e;
+  color: #8f5220;
   font-weight: 700;
 }
 
@@ -1118,8 +1121,8 @@ article p:first-letter {
 }
 
 .quiz-close:hover {
-  color: #b0692e;
-  border-color: #b0692e;
+  color: #8f5220;
+  border-color: #8f5220;
 }
 
 .quiz-fade-enter-active,

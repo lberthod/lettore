@@ -329,7 +329,7 @@ const formatDate = (ts) =>
   flex: none;
   border-radius: 50%;
   border: 2px solid rgba(176, 105, 46, 0.3);
-  border-top-color: #b0692e;
+  border-top-color: #8f5220;
   animation: spin 0.9s linear infinite;
 }
 
@@ -395,7 +395,7 @@ const formatDate = (ts) =>
 }
 
 .text-title:hover {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .text-meta {
@@ -408,7 +408,7 @@ const formatDate = (ts) =>
   background: none;
   border: none;
   padding: 0;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;

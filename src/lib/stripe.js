@@ -123,7 +123,7 @@ export const gratuitPlan = {
     'Traduction des mots et des phrases',
     'Lecture audio en italien',
     'Quiz de compréhension',
-    'Une génération IA d’essai après inscription',
+    "10 jours de Premium IA offerts après vérification de l'e-mail (3 générations)",
   ],
 }
 

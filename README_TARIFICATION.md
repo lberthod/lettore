@@ -25,13 +25,14 @@ export) ne sont pas livrées.**
 ## Essai Premium IA à l'inscription
 
 Chaque nouveau compte reçoit automatiquement le rôle `premium_plus` (Premium
-IA) pendant **10 jours** à partir de la création du compte, sans carte
-bancaire.
+IA) pendant **10 jours**, sans carte bancaire. L'essai démarre après la
+**vérification de l'adresse e-mail**, pas à la création du compte.
 
-- L'essai est accordé au moment de la création du compte Firebase (déclencheur
-  `onUserCreated`, voir `functions/index.js`).
+- L'essai est accordé par le callable `startTrial` (voir `functions/index.js`,
+  `functions/trial.mjs`), appelé une fois l'e-mail vérifié (`email_verified`).
 - Pendant l'essai, le compte a les mêmes droits qu'un abonné Premium IA payant
-  (catalogue complet, 30 crédits de génération, Classici, Notizie).
+  (catalogue complet, Classici, Notizie), mais les crédits de génération sont
+  plafonnés à **3** pendant l'essai (`TRIAL_PREMIUM_CREDITS`, au lieu de 30).
 - À l'expiration des 10 jours, si aucun paiement n'a été effectué (pas de
   `periodEnd` Stripe/Play/Apple posé sur le compte), le rôle repasse
   automatiquement à `gratuit`. Le compte n'est jamais bloqué : il retrouve
@@ -66,7 +67,7 @@ Découvrir la méthode Leggendo gratuitement.
 - quiz de compréhension ;
 - progression locale ;
 - inscription gratuite ;
-- une génération IA d'essai après inscription ;
+- l'essai de 10 jours après vérification de l'e-mail (3 générations IA) ;
 - **Classici** (aperçu, dès la connexion) : le premier chapitre de chaque
   livre du catalogue, plus un livre entier par niveau A2, B2 et C2 — voir la
   section « Classici » de [README.md](README.md).
@@ -176,7 +177,7 @@ Les limites devront être visibles dans l'offre et vérifiées côté serveur.
 | Catalogue complet | Non | Oui | Oui | Oui |
 | Audio, traductions et quiz | Oui | Oui | Oui | Oui |
 | Progression synchronisée | Non | Oui | Oui | Oui |
-| Création IA | 1 essai | Non | 30 crédits/mois | 100 crédits/mois |
+| Création IA | 3 crédits d'essai | Non | 30 crédits/mois | 100 crédits/mois |
 | Classici : aperçu (1 livre/niveau A2·B2·C2 + 1ᵉʳ chapitre de chaque livre) | Oui | Oui | Oui | Oui |
 | Classici : catalogue complet | Non | Oui | Oui | Oui |
 | Notizie (actualité générée) | Non | Non | Oui | Oui |

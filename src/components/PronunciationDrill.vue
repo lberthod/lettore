@@ -212,7 +212,7 @@ onBeforeUnmount(() => {
 }
 
 .action:hover:not(:disabled) {
-  border-color: #b0692e;
+  border-color: #8f5220;
   background: #f0e9df;
 }
 
@@ -299,7 +299,7 @@ onBeforeUnmount(() => {
 
 .add-review:hover:not(:disabled) {
   background: rgba(176, 105, 46, 0.18);
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .add-review:disabled {
@@ -320,7 +320,7 @@ onBeforeUnmount(() => {
   background: none;
   border: none;
   padding: 0;
-  color: #b0692e;
+  color: #8f5220;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;

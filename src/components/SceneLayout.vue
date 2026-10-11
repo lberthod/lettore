@@ -5,6 +5,8 @@ import SiteFooter from './SiteFooter.vue'
 defineProps({
   // Titre façon héros : « Cont » + <em>atto</em>
   title: { type: String, required: true },
+  // Langue du titre (italien par défaut ; 'fr' pour les titres français)
+  titleLang: { type: String, default: 'it' },
   accent: { type: String, default: '' },
   tagline: { type: String, default: '' },
   // Panneau étroit (formulaires) ou contenu livré tel quel (sans panneau vitré)
@@ -79,7 +81,7 @@ defineProps({
     <!-- Contenu centré -->
     <div class="stage">
       <div class="hero" :class="{ narrow, wide }">
-        <h1 class="title">{{ title }}<em v-if="accent">{{ accent }}</em></h1>
+        <h1 class="title" :lang="titleLang">{{ title }}<em v-if="accent">{{ accent }}</em></h1>
         <p v-if="tagline" class="tagline">{{ tagline }}</p>
 
         <template v-if="bare">
@@ -208,7 +210,7 @@ defineProps({
 }
 
 .title em {
-  color: #b0692e;
+  color: #8f5220;
   font-style: normal;
 }
 

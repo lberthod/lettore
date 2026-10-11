@@ -460,11 +460,11 @@ function speak(text) {
 }
 
 .scenario-card:hover {
-  border-color: #b0692e;
+  border-color: #8f5220;
 }
 
 .scenario-card.selected {
-  border-color: #b0692e;
+  border-color: #8f5220;
   box-shadow: 0 0 0 2px rgba(176, 105, 46, 0.35);
 }
 
@@ -570,7 +570,7 @@ function speak(text) {
 }
 
 .bubble-row.user .bubble {
-  background: #b0692e;
+  background: #8f5220;
   color: #faf6f0;
   border-bottom-right-radius: 4px;
 }
@@ -716,7 +716,7 @@ function speak(text) {
 }
 
 .review-note a {
-  color: #b0692e;
+  color: #8f5220;
 }
 
 .spinner {

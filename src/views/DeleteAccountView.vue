@@ -59,7 +59,7 @@ async function confirm() {
 </script>
 
 <template>
-  <SceneLayout title="Supprimer" accent="il conto" tagline="Suppression de compte" narrow>
+  <SceneLayout title-lang="fr" title="Supprimer" accent="il conto" tagline="Suppression de compte" narrow>
     <template v-if="done">
       <p>
         <strong>Votre compte et vos données ont été supprimés.</strong>
