@@ -65,7 +65,12 @@ export const ROUTES = [
     description:
       "Leggendo : un lecteur interactif pour apprendre l'italien par la lecture, développé en Suisse. Textes gradués, traduction française, audio.",
   },
-  { path: '/contact', title: 'Contact — Leggendo' },
+  {
+    path: '/contact',
+    title: 'Contact — Leggendo',
+    description:
+      "Une question, une suggestion ou un problème avec Leggendo ? Écrivez-nous : nous répondons aux demandes sur les textes, l'abonnement et les applications.",
+  },
   {
     path: '/abonnement',
     title: 'Abonnement — Leggendo',
@@ -77,6 +82,13 @@ export const ROUTES = [
     title: 'Verbi italiani — Leggendo',
     description:
       'Tous les verbes italiens du dictionnaire, avec leur table de conjugaison complète.',
+  },
+  {
+    path: '/dizionario',
+    title: 'Dizionario — Leggendo',
+    description:
+      'Dictionnaire italien-français : définition, nature grammaticale, exemples et conjugaison pour chaque mot.',
+    prerender: true,
   },
   {
     path: '/grammatica',
@@ -96,9 +108,24 @@ export const ROUTES = [
     description:
       "Quinze jeux courts pour réviser le vocabulaire, la grammaire et les textes italiens : mots à associer, pendu, anagrammes, conjugaison, phrases à reconstituer et bien plus.",
   },
-  { path: '/mentions-legales', title: 'Mentions légales — Leggendo' },
-  { path: '/confidentialite', title: 'Confidentialité — Leggendo' },
-  { path: '/conditions', title: 'CGU / CGV — Leggendo' },
+  {
+    path: '/mentions-legales',
+    title: 'Mentions légales — Leggendo',
+    description:
+      "Mentions légales de Leggendo : éditeur du site, responsable de la publication, hébergement et propriété intellectuelle des textes, traductions et audio.",
+  },
+  {
+    path: '/confidentialite',
+    title: 'Confidentialité — Leggendo',
+    description:
+      "Politique de confidentialité de Leggendo : données collectées, services tiers, durée de conservation et droits d'accès, de rectification et de suppression.",
+  },
+  {
+    path: '/conditions',
+    title: 'CGU / CGV — Leggendo',
+    description:
+      "Conditions générales d'utilisation et de vente de Leggendo : essai gratuit, abonnement, tarifs, résiliation, droit de rétractation et limites de responsabilité.",
+  },
   {
     path: '/deleteAccount',
     title: 'Supprimer mon compte — Leggendo',

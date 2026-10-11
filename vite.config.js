@@ -1,4 +1,5 @@
 import path from 'node:path'
+import { rmSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -117,11 +118,69 @@ const FIREBASE_SDK_PREFIX = 'firebase-sdk'
 
 const LAZY_CACHE_PREFIXES = [DICT_DATA_PREFIX, FIREBASE_SDK_PREFIX]
 
+// PERF-1 : chunks volontairement hors du précache. Le précache servait
+// ~2,1 Mio (162 entrées) à chaque installation/mise à jour du service worker ;
+// on ne garde que le socle de l'app (entrée, routeur, catalogue, lecteur,
+// accueil, bibliothèque, CSS). Tout le reste reste chargé à la demande et est
+// mis en cache à la première utilisation par la route runtime ci-dessous
+// (noms hashés = contenu immuable), donc disponible hors ligne après un
+// premier accès.
+//  - vues lourdes ou peu fréquentes (dialogues parlés 443 Ko, jeux, grammaire,
+//    écriture, moteur du test de niveau) ;
+//  - contenu gratuit d'aperçu (chapitres de livres, textes) : un chunk par
+//    contenu, nommé d'après son identifiant (voir freeContentPlugin).
+const LAZY_VIEW_CHUNKS = [
+  'DialogoParloView',
+  'DialogueView',
+  'GameView',
+  'GrammarView',
+  'WriteView',
+  'LevelTestView',
+  'levelTestEngine',
+  'CreateTextView',
+  'MyTextsView',
+  'AdminView',
+  'AdminWordsView',
+  'AdminTextsView',
+  'AdminDictionaryView',
+  'NotizieView',
+]
+const freeIds = freeContentIds()
+const FREE_CONTENT_CHUNKS = [
+  ...freeIds.texts,
+  ...freeIds.chapters.map(({ bookId, chapterId }) => `${bookId}-${chapterId}`),
+]
+const PRECACHE_IGNORES = [
+  ...LAZY_CACHE_PREFIXES,
+  ...LAZY_VIEW_CHUNKS,
+  ...FREE_CONTENT_CHUNKS,
+].map((name) => `**/${name}-*`)
+
+// Fichiers de public/ qui ne doivent pas partir en production (PWA-1,
+// PERF-1) : l'ancien manifeste statique (chemins ../icons/ cassés, écrasé par
+// celui que VitePWA génère) et la page de test audio. À retirer de public/
+// (git rm) ; ce plugin évite en attendant qu'ils soient publiés.
+function dropStalePublicFiles() {
+  return {
+    name: 'leggendo-drop-stale-public-files',
+    apply: 'build',
+    closeBundle: {
+      order: 'pre',
+      handler() {
+        // VitePWA lit dist/ dans son propre closeBundle : on nettoie avant.
+        const outDir = path.join(ROOT, 'dist')
+        rmSync(path.join(outDir, 'audio-test.html'), { force: true })
+      },
+    },
+  }
+}
+
 export default defineConfig({
   plugins: [
     freeContentPlugin(),
     catalogPlugin(),
     vue(),
+    dropStalePublicFiles(),
     // Mode hors-ligne : l'app et l'aperçu gratuit sont précachés à
     // l'installation. Le contenu réservé n'est plus un asset du build (voir
     // freeContentPlugin ci-dessus) : il vient de Firestore, dont le cache
@@ -155,22 +214,36 @@ export default defineConfig({
         background_color: '#faf6f0',
         icons: [
           {
-            src: '/favicon.svg',
-            sizes: 'any',
-            type: 'image/svg+xml',
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/apple-touch-icon.png',
-            sizes: '180x180',
+            src: '/icons/icon-512.png',
+            sizes: '512x512',
             type: 'image/png',
+            purpose: 'any',
+          },
+          // Version « maskable » (fond plein, logo dans la zone de sécurité) :
+          // Android la découpe en cercle/squircle sans rogner le livre.
+          {
+            src: '/icons/icon-maskable-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+          {
+            src: '/favicon.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
             purpose: 'any',
           },
         ],
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg}'],
-        globIgnores: LAZY_CACHE_PREFIXES.map((prefix) => `**/${prefix}-*.js`),
+        globIgnores: [...PRECACHE_IGNORES, '**/audio-test.html'],
         navigateFallback: '/index.html',
         // Sans ça, le service worker intercepte AUSSI la navigation vers des
         // fichiers non-SPA servis à la racine (sitemap.xml, robots.txt,
@@ -182,14 +255,30 @@ export default defineConfig({
         navigateFallbackDenylist: [/\.[^/]+$/],
         // Contenu statique versionné par son hash (voir chunkFileNames) :
         // une entrée en cache ne devient jamais périmée, seul son nom change.
-        runtimeCaching: LAZY_CACHE_PREFIXES.map((prefix) => ({
-          urlPattern: new RegExp(`/assets/${prefix}-.*\\.js$`),
-          handler: 'CacheFirst',
-          options: {
-            cacheName: prefix,
-            expiration: { maxEntries: 200, maxAgeSeconds: 180 * 24 * 60 * 60 },
+        runtimeCaching: [
+          ...LAZY_CACHE_PREFIXES.map((prefix) => ({
+            urlPattern: new RegExp(`/assets/${prefix}-.*\\.js$`),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: prefix,
+              expiration: { maxEntries: 200, maxAgeSeconds: 180 * 24 * 60 * 60 },
+            },
+          })),
+          // Vues et contenus d'aperçu sortis du précache (PERF-1) : mis en
+          // cache au premier accès. Les noms hashés rendent CacheFirst sûr.
+          {
+            urlPattern: new RegExp(
+              `/assets/(?:${[...LAZY_VIEW_CHUNKS, ...FREE_CONTENT_CHUNKS]
+                .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+                .join('|')})-[^/]*\\.(?:js|css)$`
+            ),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'lazy-assets',
+              expiration: { maxEntries: 200, maxAgeSeconds: 180 * 24 * 60 * 60 },
+            },
           },
-        })),
+        ],
       },
     }),
   ],

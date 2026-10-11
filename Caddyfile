@@ -1,0 +1,140 @@
+# Caddyfile du site statique leggendo.fr (SEO-1, audit 2026-10).
+#
+# STATUT : versionné pour revue, NON DÉPLOYÉ. Syntaxe relue à la main
+# (`caddy` n'est pas installé en local) : lancer `caddy validate` sur le VPS.
+#
+# INSTRUCTIONS DE DÉPLOIEMENT
+#   1. Ce VPS héberge d'autres sites : insérer UNIQUEMENT le bloc
+#      `leggendo.fr { ... }` ci-dessous dans le Caddyfile existant (par ex.
+#      /etc/caddy/Caddyfile). Ne jamais remplacer le fichier entier.
+#      Ne PAS recopier de bloc www.leggendo.fr : la redirection www ->
+#      leggendo.fr existe déjà en production ; un second bloc provoquerait
+#      l'erreur "ambiguous site definition".
+#   2. Relire chaque ligne marquée "# A VERIFIER" (racine /var/www/leggendo,
+#      chemin du log, domaine). Constat du 2026-10-11 : `curl -I
+#      https://leggendo.fr/` répond `server: Caddy`, et une URL inexistante
+#      (/testo/inexistant) répond 200 + index.html (soft 404). VPS.md ne décrit
+#      que le reverse proxy api.loicberthod.ch/leggendo/* -> localhost:8091.
+#   3. `caddy validate --config /etc/caddy/Caddyfile` puis
+#      `systemctl reload caddy`. JAMAIS `restart` (coupe les autres sites).
+#   4. Vérifier ensuite : 404 sur une URL inconnue, /manifest.webmanifest en
+#      application/manifest+json, console du navigateur sans erreur CSP.
+#
+# CSP / HSTS : ni l'une ni l'autre n'existe en production aujourd'hui. Pour
+# ce premier déploiement, HSTS est volontairement ABSENT (il est quasi
+# irréversible côté navigateurs : à n'activer qu'une fois HTTPS validé sur
+# tous les sous-domaines) et la CSP est en mode Content-Security-Policy-Report-Only
+# (elle signale dans la console sans rien bloquer). Pour durcir : observer la
+# console quelques jours, ajuster les sources, puis renommer l'en-tête en
+# `Content-Security-Policy`; HSTS : commencer par max-age=300, puis augmenter.
+#
+# Ce que ce fichier corrige par rapport à l'existant :
+#   1. vraie 404 HTTP (au lieu d'un 200 + index.html) pour les URL inconnues ;
+#   2. repli SPA sur /spa.html (shell vide généré par scripts/prerender.mjs)
+#      et non sur /index.html, qui est maintenant la page d'accueil prérendue ;
+#   3. en-têtes de cache explicites (assets hashés immuables, sw.js jamais
+#      mis en cache) ;
+#   4. noindex sur les routes dynamiques servies par le shell SPA ;
+#   5. Content-Type correct pour le manifeste.
+#
+# Convention de fichiers (scripts/prerender.mjs) : la route /textes est écrite
+# dans dist/textes.html, /testo/marco dans dist/testo/marco.html, etc. — donc
+# on essaie {path}.html avant {path}.
+
+leggendo.fr {  # A VERIFIER : domaine exact
+	# A VERIFIER : racine réelle où le contenu de dist/ est déposé.
+	root * /var/www/leggendo
+
+	encode zstd gzip
+
+	# --- En-têtes de sécurité (inoffensifs) + CSP en rapport seul ---
+	# HSTS volontairement omis (voir en-tête du fichier). CSP en Report-Only :
+	# basée sur firebase.json, à valider en console avant de l'imposer.
+	header {
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+		Content-Security-Policy-Report-Only "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.googleapis.com https://api.loicberthod.ch https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://leggendo-dbb84.firebaseapp.com"
+	}
+
+	# --- Cache-Control ---
+	# Assets Vite : nom hashé => contenu immuable.
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+
+	# Service worker, shells HTML et manifeste : toujours revalidés, sinon une
+	# mise à jour du site peut rester bloquée derrière un SW ou un index périmés.
+	# Type MIME correct pour le manifeste PWA (sinon text/plain ou octet-stream
+	# selon la table MIME) ; n'affecte pas les autres en-têtes de ce chemin.
+	header /manifest.webmanifest Content-Type "application/manifest+json"
+
+	@revalidate path /sw.js /workbox-*.js /index.html /spa.html /manifest.webmanifest /404.html
+	header @revalidate Cache-Control "no-cache"
+
+	# Fichiers lus par les robots : cache court pour qu'un nouveau sitemap soit
+	# pris en compte rapidement.
+	@crawlerFiles path /sitemap.xml /robots.txt /llms.txt
+	header @crawlerFiles Cache-Control "public, max-age=3600"
+
+	# Icônes, favicon, audio (non hashés) : une semaine. # A VERIFIER (audio
+	# peut être servi ailleurs, cf. public/audio/).
+	@staticMedia path /icons/* /favicon.* /apple-touch-icon.png /og-image.png /audio/*
+	header @staticMedia Cache-Control "public, max-age=604800"
+
+	# Pages HTML prérendues (hors liste ci-dessus) : revalidation à chaque
+	# visite grâce à l'ETag de file_server.
+	@htmlPages not path /assets/* /sitemap.xml /robots.txt /llms.txt /icons/* /audio/* /favicon.* /apple-touch-icon.png /og-image.png
+	header @htmlPages ?Cache-Control "no-cache"
+
+	# --- Routage ---
+
+	# Routes dont le contenu n'est PAS entièrement prérendu : textes créés par
+	# les utilisateurs (/testo/<id> hors catalogue), ~11 000 fiches du
+	# dictionnaire dont ~200 prérendues, conjugaisons idem, textes partagés.
+	# Si le fichier prérendu existe, il est servi (cas général, plus bas) ;
+	# sinon on sert le shell SPA, que Vue résout côté client — avec noindex
+	# pour ne pas faire indexer de soft 404.
+	# NB : on ne renvoie PAS 404 ici, sinon un rechargement de la page sur un
+	# texte personnel ou un mot hors lot prérendu casserait l'app.
+	@dynamicApp {
+		path /testo/* /dizionario/* /coniugazione/* /condividi/*
+		# `file {path}.html` : forme courte du matcher file (chemins listés en
+		# arguments, relatifs à `root`) ; vrai si le fichier prérendu existe.
+		# `not` l'inverse : on ne tombe ici que sans page prérendue.
+		not file {path}.html
+	}
+	handle @dynamicApp {
+		header X-Robots-Tag "noindex"
+		rewrite * /spa.html
+		file_server
+	}
+
+	# Routes purement applicatives (privées, déjà Disallow dans robots.txt) :
+	# shell SPA, jamais indexé.
+	@appOnly path /connexion /profil /creer-son-texte /scrivi /dialogo /notizie /mes-textes /parole /vocabolario /dialogoparlo /admin /admin/*
+	handle @appOnly {
+		header X-Robots-Tag "noindex"
+		rewrite * /spa.html
+		file_server
+	}
+
+	# Tout le reste : fichier réel ou page prérendue ; sinon vraie 404 (rendue
+	# par handle_errors ci-dessous) — y compris /classici/<livre>/<chapitre>
+	# inexistant et toute URL inconnue, qui renvoyaient auparavant 200.
+	handle {
+		try_files {path}.html {path} {path}/index.html
+		file_server
+	}
+
+	# Page 404 prérendue (dist/404.html, meta noindex), servie avec le VRAI
+	# statut 404 (schéma documenté de handle_errors).
+	handle_errors {
+		@notFound `{err.status_code} == 404`
+		rewrite @notFound /404.html
+		file_server
+	}
+
+	log {
+		output file /var/log/caddy/leggendo.fr.access.log  # A VERIFIER : chemin
+	}
+}

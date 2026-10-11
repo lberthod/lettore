@@ -13,6 +13,7 @@
 
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs'
 import path from 'node:path'
+import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
 import {
   ROOT,
   lockedContent,
@@ -170,3 +171,97 @@ if (leaks.length) {
 console.log(
   `✓ Aucun contenu réservé dans dist/ (${items.length} contenus vérifiés).`
 )
+
+// --- Non-régression SEO (SEO-8) ---------------------------------------------
+// Pages prérendues vides, canonical faux, shell SPA manquant, sitemap
+// incomplet : les régressions silencieuses que l'audit 2026-10 a trouvées.
+const seoErrors = []
+const seoWarnings = []
+
+const MIN_WORDS_ERROR = 50 // en dessous : page quasi vide pour un robot sans JS
+const MIN_WORDS_WARN = 150
+
+function mainWords(html) {
+  const m =
+    html.match(/<main>([\s\S]*?)<\/main>/) ||
+    html.match(/<div id="app">([\s\S]*?)<\/div>\s*<script/)
+  const text = (m ? m[1] : '')
+    .replace(/<script[\s\S]*?<\/script>/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&\w+;/g, ' ')
+  return text.split(/\s+/).filter(Boolean).length
+}
+
+// 1. Shell SPA (repli Caddy pour les routes sans page prérendue).
+const spaPath = path.join(distDir, 'spa.html')
+if (!existsSync(spaPath)) {
+  seoErrors.push('dist/spa.html absent (repli SPA du Caddyfile)')
+} else if (!/<div id="app"><\/div>/.test(readFileSync(spaPath, 'utf8'))) {
+  seoErrors.push('dist/spa.html doit contenir un <div id="app"></div> vide')
+}
+
+// 2. Pages statiques indexables : fichier présent, non vide, canonical exact.
+for (const route of ROUTES) {
+  if (route.noindex) continue
+  const slug = route.path === '/' ? 'index' : route.path.slice(1)
+  const file = path.join(distDir, `${slug}.html`)
+  if (!existsSync(file)) {
+    seoErrors.push(`page prérendue absente : ${route.path}`)
+    continue
+  }
+  const html = readFileSync(file, 'utf8')
+  const words = mainWords(html)
+  if (words < MIN_WORDS_ERROR) {
+    seoErrors.push(`page quasi vide (${words} mots) : ${route.path}`)
+  } else if (words < MIN_WORDS_WARN) {
+    seoWarnings.push(`contenu mince (${words} mots) : ${route.path}`)
+  }
+}
+
+// 3. Canonical de chaque page prérendue = son propre chemin.
+let canonicalChecked = 0
+for (const file of files) {
+  if (!file.endsWith('.html')) continue
+  const rel = path.relative(distDir, file).split(path.sep).join('/')
+  if (rel === 'spa.html' || rel === '404.html') continue
+  const expectedPath = rel === 'index.html' ? '/' : '/' + rel.replace(/\.html$/, '')
+  const m = readFileSync(file, 'utf8').match(/<link rel="canonical" href="([^"]*)"/)
+  canonicalChecked++
+  if (!m) {
+    seoErrors.push(`canonical manquant : ${rel}`)
+  } else if (decodeURIComponent(m[1]) !== SITE_URL + expectedPath) {
+    seoErrors.push(`canonical incorrect : ${rel} -> ${m[1]}`)
+  }
+}
+
+// 4. Sitemap : lastmod partout, /dizionario présent.
+const sitemapPath = path.join(distDir, 'sitemap.xml')
+if (!existsSync(sitemapPath)) {
+  seoErrors.push('dist/sitemap.xml absent')
+} else {
+  const sitemap = readFileSync(sitemapPath, 'utf8')
+  const blocks = sitemap.match(/<url>[\s\S]*?<\/url>/g) || []
+  const noLastmod = blocks.filter((b) => !/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(b))
+  if (noLastmod.length) seoErrors.push(`${noLastmod.length} URL du sitemap sans <lastmod>`)
+  if (!sitemap.includes(`<loc>${SITE_URL}/dizionario</loc>`)) {
+    seoErrors.push('/dizionario absent du sitemap')
+  }
+  for (const b of blocks) {
+    const loc = b.match(/<loc>([^<]*)<\/loc>/)?.[1] || ''
+    const p = decodeURIComponent(loc.replace(SITE_URL, '')) || '/'
+    const f = path.join(distDir, p === '/' ? 'index.html' : `${p.slice(1)}.html`)
+    if (!existsSync(f)) {
+      seoErrors.push(`URL du sitemap sans page prérendue : ${p}`)
+      break
+    }
+  }
+}
+
+for (const w of seoWarnings) console.warn(`⚠ SEO : ${w}`)
+if (seoErrors.length) {
+  console.error(`✗ Régression SEO (${seoErrors.length}) :`)
+  for (const e of seoErrors.slice(0, 15)) console.error(`  - ${e}`)
+  if (seoErrors.length > 15) console.error(`  … et ${seoErrors.length - 15} de plus`)
+  process.exit(1)
+}
+console.log(`✓ SEO : shell SPA, ${canonicalChecked} canonical, sitemap et pages non vides OK.`)

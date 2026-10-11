@@ -34,6 +34,7 @@ import { loadBooksIndex, loadBookManifest } from './lib/free-content.mjs'
 import { getSeoDictionaryEntries } from '../src/seo/dictionaryPages.js'
 import { getSeoConjugations } from '../src/seo/conjugationPages.js'
 import { LEVEL_LANDING_PAGES, findLevelLandingPage, pickFeaturedTexts } from '../src/seo/landingPages.js'
+import { STATIC_PAGE_CONTENT, NAV_LINKS, FOOTER_LINKS } from '../src/seo/staticContent.js'
 
 // Les shards de conjugaison ne sont pas tous générés dans le même format
 // (constaté en pratique) : certains verbes utilisent des clés camelCase avec
@@ -87,6 +88,12 @@ if (!existsSync(distDir)) {
 }
 
 const template = readFileSync(path.join(distDir, 'index.html'), 'utf8')
+// Shell SPA vide (SEO-1) : repli du serveur (Caddyfile) pour les routes de
+// l'application sans page prérendue (/connexion, /profil...). Distinct de
+// index.html, qui est écrasé plus bas par la page d'accueil prérendue —
+// servir l'accueil pour /connexion donnerait un contenu et un canonical faux.
+writeFileSync(path.join(distDir, 'spa.html'), template)
+
 const textsIndex = JSON.parse(
   readFileSync(path.join(srcDir, 'texts/index.json'), 'utf8')
 )
@@ -117,7 +124,7 @@ function escapeAttr(str = '') {
   return escapeHtml(str).replace(/"/g, '&quot;')
 }
 
-function patchHead(html, { title, description, canonical, extraHead = '' }) {
+function patchHead(html, { title, description, canonical, extraHead = '', ogType = 'website' }) {
   let out = html.replace(
     /<title>.*?<\/title>/s,
     `<title>${escapeHtml(title)}</title>`
@@ -125,6 +132,10 @@ function patchHead(html, { title, description, canonical, extraHead = '' }) {
   out = out.replace(
     /<meta\s+name="description"[^>]*\/>/,
     `<meta name="description" content="${escapeAttr(description)}" />`
+  )
+  out = out.replace(
+    /<meta\s+property="og:type"[^>]*\/>/,
+    `<meta property="og:type" content="${ogType}" />`
   )
   out = out.replace(
     /<meta\s+property="og:title"[^>]*\/>/,
@@ -154,10 +165,19 @@ function patchHead(html, { title, description, canonical, extraHead = '' }) {
   return out
 }
 
+// Navigation et pied de page statiques (SEO-6) : chaque page prérendue
+// expose ≥ 8 liens internes crawlables, y compris pour les robots sans JS.
+// Vue remplace tout le contenu de #app au montage (createApp().mount, pas
+// d'hydratation), donc aucune divergence à gérer avec le DOM client.
+const linkList = (links) =>
+  links.map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`).join(' · ')
+const SEO_HEADER = `<header><nav aria-label="Navigation principale"><a href="/">Leggendo</a> — ${linkList(NAV_LINKS.slice(1))}</nav></header>`
+const SEO_FOOTER = `<footer><nav aria-label="Pied de page">${linkList(FOOTER_LINKS)}</nav><p>© Leggendo — apprendre l'italien par la lecture, avec traduction française au clic et audio.</p></footer>`
+
 function withBody(html, bodyContent) {
   return html.replace(
     '<div id="app"></div>',
-    `<div id="app">${bodyContent}</div>`
+    () => `<div id="app">${SEO_HEADER}<main>${bodyContent}</main>${SEO_FOOTER}</div>`
   )
 }
 
@@ -189,6 +209,111 @@ function writeRoute(routePath, html) {
   const outPath = path.join(distDir, `${slug}.html`)
   mkdirSync(path.dirname(outPath), { recursive: true })
   writeFileSync(outPath, html)
+}
+
+// Rendu générique des pages à contenu statique (src/seo/staticContent.js).
+function renderStaticContent(page, routePath) {
+  const sections = page.sections
+    .map(
+      (sec) =>
+        `<section>\n    <h2>${escapeHtml(sec.h2)}</h2>\n` +
+        (sec.p || []).map((p) => `    <p>${escapeHtml(p)}</p>\n`).join('') +
+        (sec.ul ? `    <ul>${sec.ul.map((li) => `<li>${escapeHtml(li)}</li>`).join('')}</ul>\n` : '') +
+        '  </section>'
+    )
+    .join('\n  ')
+  // /dizionario : sélection de fiches (même lot que le sitemap).
+  const dictList =
+    routePath === '/dizionario'
+      ? `<section>
+    <h2>Fiches du dictionnaire</h2>
+    <ul>
+${getSeoDictionaryEntries()
+  .map(
+    (e) =>
+      `      <li><a href="/dizionario/${encodeURIComponent(e.lemma)}">${escapeHtml(e.lemma)}</a> (${escapeHtml(e.pos)}) — ${escapeHtml(e.fr)}</li>`
+  )
+  .join('\n')}
+    </ul>
+  </section>`
+      : ''
+  const links = page.links?.length ? `<p>${linkList(page.links)}</p>` : ''
+  return `<h1>${escapeHtml(page.h1)}</h1>
+  ${page.intro.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n  ')}
+  ${sections}
+  ${dictList}
+  ${links}`
+}
+
+// Descriptions CECR (niveau de lecture) — texte éditorial générique, utilisé
+// pour enrichir les pages de textes et de chapitres à partir des seules
+// métadonnées publiques (niveau, catégorie, genre, titre, extrait).
+const LEVEL_BLURB = {
+  A1: "niveau débutant : phrases courtes et simples, vocabulaire du quotidien, essentiellement au présent. Idéal pour prendre confiance dans la lecture dès les premiers jours.",
+  A2: "niveau élémentaire : histoires du quotidien un peu plus longues, premiers temps du passé, vocabulaire qui s'élargit aux voyages, au travail et à la famille.",
+  B1: "niveau intermédiaire : récits plus riches, temps variés, idées plus abstraites. On lit pour comprendre l'essentiel d'un texte authentique et gagner en aisance.",
+  B2: "niveau intermédiaire avancé : textes plus denses, nuances de vocabulaire, constructions plus complexes. On lit couramment et on affine sa compréhension fine.",
+  C1: "niveau avancé : style soutenu, tournures idiomatiques et implicites culturels. On lit des textes exigeants avec peu de recours à la traduction.",
+  C2: "niveau maîtrise : textes littéraires et registres variés, jeux de langue et références. Le niveau des lecteurs très à l'aise avec l'italien écrit.",
+}
+const READING_WPM = 120 // vitesse indicative d'un apprenant qui consulte les traductions
+const levelPageOf = (level) =>
+  LEVEL_LANDING_PAGES.find((p) => p.level === level)?.path || '/textes'
+
+// Bloc de lecture « à propos » + textes liés pour une page de texte.
+function relatedBlock(t) {
+  const sameLevel = textsIndex.filter((x) => x.level === t.level && x.id !== t.id)
+  const idx = textsIndex.filter((x) => x.level === t.level).findIndex((x) => x.id === t.id)
+  const rotate = (arr, n) => (arr.length ? [...arr.slice(n % arr.length), ...arr.slice(0, n % arr.length)] : arr)
+  const sameCat = sameLevel.filter((x) => x.category === t.category)
+  const others = sameLevel.filter((x) => x.category !== t.category)
+  const picks = [
+    ...rotate(sameCat, idx).slice(0, 4),
+    ...rotate(others, idx * 7).slice(0, 4),
+  ]
+  const minutes = Math.max(1, Math.round((t.wordCount || 0) / READING_WPM))
+  const levelPage = levelPageOf(t.level)
+  return `<section>
+    <h2>À propos de ce texte</h2>
+    <p>« ${escapeHtml(t.title)} » est un texte de type « ${escapeHtml(t.genre)} » sur le thème « ${escapeHtml(t.category)} », d'environ ${t.wordCount} mots. Comptez environ ${minutes} minute${minutes > 1 ? 's' : ''} de lecture, traductions comprises.</p>
+    <p>Niveau ${escapeHtml(t.level)} du CECR — ${escapeHtml(LEVEL_BLURB[t.level] || '')}</p>
+    <h2>Comment lire ce texte</h2>
+    <p>Lisez d'abord le texte en entier sans chercher à tout traduire, pour saisir le sens général. Cliquez ensuite sur les mots ou les phrases qui vous échappent pour afficher la traduction française, puis relisez en écoutant l'audio afin d'associer l'écrit et le son.</p>
+  </section>
+  <section>
+    <h2>Autres textes de niveau ${escapeHtml(t.level)}</h2>
+    <ul>
+${picks.map((x) => `      <li><a href="/testo/${x.id}">${escapeHtml(x.title)}</a> (${escapeHtml(x.category)}) — ${escapeHtml(x.excerpt)}</li>`).join('\n')}
+    </ul>
+    <p><a href="${levelPage}">Tous les textes ${escapeHtml(t.level)}</a> · <a href="/textes">Catalogue complet</a> · <a href="/test-de-niveau">Tester mon niveau</a></p>
+  </section>`
+}
+
+// Bloc d'enrichissement d'une page de chapitre Classici.
+function chapterBlock(b, manifest, chapter) {
+  const levelPage = levelPageOf(manifest.level)
+  const toc = manifest.chapters.slice(0, 40)
+  const sameLevel = booksIndex.filter((x) => x.level === b.level && x.id !== b.id).slice(0, 6)
+  return `<section>
+    <h2>À propos de cette œuvre</h2>
+    <p>« ${escapeHtml(manifest.title)} » de ${escapeHtml(manifest.author)} est proposé sur Leggendo en italien, en ${manifest.chapters.length} chapitre${manifest.chapters.length > 1 ? 's' : ''}, au niveau ${escapeHtml(manifest.level)} du CECR${manifest.levelNote ? ` (${escapeHtml(manifest.levelNote.toLowerCase())})` : ''}. Vous lisez actuellement le chapitre « ${escapeHtml(chapter.title)} ».</p>
+    <p>Niveau ${escapeHtml(manifest.level)} — ${escapeHtml(LEVEL_BLURB[manifest.level] || '')}</p>
+    <h2>Comment lire un classique</h2>
+    <p>Lisez chaque chapitre d'une traite pour suivre l'histoire, puis cliquez sur les mots et les phrases difficiles pour afficher la traduction française. L'audio permet de lire en écoutant, et le quiz de compréhension en fin de chapitre vérifie que le sens général est acquis.</p>
+  </section>
+  <section>
+    <h2>Sommaire de « ${escapeHtml(manifest.title)} »</h2>
+    <ol>
+${toc.map((c) => `      <li><a href="/classici/${b.id}/${c.id}">${escapeHtml(c.title)}</a></li>`).join('\n')}
+    </ol>
+  </section>
+  <section>
+    <h2>Autres classiques de niveau ${escapeHtml(manifest.level)}</h2>
+    <ul>
+${sameLevel.map((x) => `      <li><a href="/classici/${x.id}/01">${escapeHtml(x.title)}</a> — ${escapeHtml(x.author)}</li>`).join('\n')}
+    </ul>
+    <p><a href="/classici">Tous les classiques</a> · <a href="${levelPage}">Textes ${escapeHtml(manifest.level)}</a></p>
+  </section>`
 }
 
 let count = 0
@@ -341,6 +466,11 @@ ${byLevel[lvl]
     <li>Comprenez tout : survolez un mot, cliquez une phrase, la traduction apparaît.</li>
     <li>Écoutez l'italien : chaque texte se lit à voix haute, phrase par phrase.</li>
   </ul>
+  <h2>Comment ça marche</h2>
+  <p>Leggendo est un lecteur interactif pour apprendre l'italien par la lecture extensive. Vous choisissez un texte de votre niveau (CECR), vous lisez à votre rythme et vous ne quittez jamais la page : un survol donne la traduction française d'un mot, un clic traduit la phrase entière, et le bouton audio la fait entendre en italien.</p>
+  <p>Les ${catalogStats.count} textes gradués couvrent la vie quotidienne, les voyages, la culture et l'histoire. Les classiques italiens du domaine public (Pinocchio, Il Principe, Inferno…) sont proposés en texte authentique, chapitre par chapitre, avec des quiz de compréhension.</p>
+  <h2>Pour réviser</h2>
+  <p>Un <a href="/dizionario">dictionnaire italien-français</a>, des <a href="/verbi">tables de conjugaison</a>, une page de <a href="/grammatica">grammaire</a>, quinze <a href="/giochi">jeux</a> et un <a href="/test-de-niveau">test de niveau gratuit</a> complètent la lecture.</p>
   <p><a href="/textes">Commencer à lire</a> · <a href="/methode">La méthode</a></p>`
     )
   } else if (route.path === '/methode') {
@@ -396,7 +526,15 @@ ${byLevel[lvl]
       html,
       `<h1>À propos de Leggendo</h1>
   <p>Leggendo est né d'un constat simple : on apprend une langue en la lisant beaucoup, à un niveau où l'on comprend l'essentiel. ${catalogStats.count} textes gradués, de ${escapeHtml(catalogStats.levelRange)}, avec traduction française au clic et lecture audio.</p>
-  <p><a href="/methode">Découvrir la méthode</a> · <a href="/textes">Voir les textes</a></p>`
+  <h2>Ce que propose Leggendo</h2>
+  <ul>
+    <li>Des textes gradués de A1 à C2, classés selon le Cadre européen commun de référence pour les langues, sur des thèmes variés : vie quotidienne, voyages, culture, histoire.</li>
+    <li>Des classiques italiens du domaine public (Pinocchio, Il Principe, Rosso Malpelo, Inferno…) en texte authentique, chapitre par chapitre.</li>
+    <li>Une traduction française au clic sur chaque mot et chaque phrase, et une lecture audio pour associer l'écrit et le son.</li>
+    <li>Un dictionnaire, des tables de conjugaison, une page de grammaire et quinze jeux pour réviser.</li>
+  </ul>
+  <p>Leggendo est développé en Suisse. Une question ou une idée de texte ? <a href="/contact">Écrivez-nous</a>.</p>
+  <p><a href="/methode">Découvrir la méthode</a> · <a href="/textes">Voir les textes</a> · <a href="/test-de-niveau">Tester mon niveau</a></p>`
     )
   } else if (route.path === '/verbi') {
     html = withBody(
@@ -406,6 +544,9 @@ ${byLevel[lvl]
   <p>Les temps composés se forment avec un auxiliaire : <em>avere</em> pour la plupart des verbes, <em>essere</em> pour les verbes de mouvement, d'état et les réfléchis.</p>
   <h2>Les exceptions : verbes irréguliers essentiels</h2>
   <p>Auxiliaires : <a href="/coniugazione/essere">essere</a>, <a href="/coniugazione/avere">avere</a>. Modaux : <a href="/coniugazione/potere">potere</a>, <a href="/coniugazione/dovere">dovere</a>, <a href="/coniugazione/volere">volere</a>, <a href="/coniugazione/sapere">sapere</a>. Mouvement et état : <a href="/coniugazione/andare">andare</a>, <a href="/coniugazione/venire">venire</a>, <a href="/coniugazione/stare">stare</a>, <a href="/coniugazione/uscire">uscire</a>, <a href="/coniugazione/salire">salire</a>, <a href="/coniugazione/rimanere">rimanere</a>. Autres incontournables : <a href="/coniugazione/fare">fare</a>, <a href="/coniugazione/dire">dire</a>, <a href="/coniugazione/dare">dare</a>, <a href="/coniugazione/bere">bere</a>, <a href="/coniugazione/tenere">tenere</a>, <a href="/coniugazione/scegliere">scegliere</a>, <a href="/coniugazione/mettere">mettere</a>, <a href="/coniugazione/prendere">prendere</a>, <a href="/coniugazione/vedere">vedere</a>, <a href="/coniugazione/conoscere">conoscere</a>, <a href="/coniugazione/vivere">vivere</a>, <a href="/coniugazione/morire">morire</a>.</p>
+  <h2>Les temps à connaître</h2>
+  <p>Chaque fiche de conjugaison présente le présent, le passé composé, l'imparfait, le futur, le conditionnel, le subjonctif et l'impératif. Pour débuter, on commence par le présent, puis le passé composé (auxiliaire + participe passé : <em>ho mangiato</em>, <em>sono andato</em>) et l'imparfait (<em>mangiavo</em>), qui décrit les habitudes et le décor d'une histoire.</p>
+  <p>Retrouvez ces verbes en contexte dans les <a href="/textes">textes gradués</a> et cherchez n'importe quelle forme dans le <a href="/dizionario">dictionnaire</a>.</p>
   <p>Pour les articles, les pluriels, les prépositions et l'orthographe : <a href="/grammatica">voir la page Grammatica</a>.</p>`
     )
   } else if (route.path === '/grammatica') {
@@ -443,6 +584,8 @@ ${byLevel[lvl]
   <p>Les consonnes doubles se prononcent réellement plus longues et changent le sens (pala/palla, caro/carro, sono/sonno). L'accent écrit n'apparaît que sur la voyelle finale (città, però, caffè) et distingue des mots courts (è/e, là/la, sì/si, dà/da). L'élision se marque par l'apostrophe devant voyelle (l'amico, un'ora, c'è). Le h est toujours muet, sauf à l'écrit de avere (ho, hai, ha, hanno).</p>
   <p>Explorez les <a href="/textes">textes gradués</a>, la liste des <a href="/verbi">verbes avec conjugaison complète</a> et le <a href="/dizionario">dictionnaire</a>.</p>`
     )
+  } else if (STATIC_PAGE_CONTENT[route.path]) {
+    html = withBody(html, renderStaticContent(STATIC_PAGE_CONTENT[route.path], route.path))
   } else if (LEVEL_LANDING_PAGES.some((p) => p.path === route.path)) {
     // Pages par niveau (GPTanalyse.md, § 10) — même sélection éditoriale que
     // src/views/LevelLandingView.vue (src/seo/landingPages.js).
@@ -507,7 +650,7 @@ for (const b of booksIndex) {
         { name: chapter.title, url: canonical },
       ])
 
-    let html = patchHead(template, { title, description, canonical, extraHead })
+    let html = patchHead(template, { title, description, canonical, extraHead, ogType: 'article' })
 
     let bodyContent
     if (free) {
@@ -538,7 +681,7 @@ for (const b of booksIndex) {
   </div>`
     }
 
-    html = withBody(html, bodyContent)
+    html = withBody(html, bodyContent + '\n  ' + chapterBlock(b, manifest, chapter))
     writeRoute(`/classici/${b.id}/${chapter.id}`, html)
     count++
   })
@@ -556,7 +699,7 @@ for (const entry of getSeoDictionaryEntries()) {
       '@type': 'DefinedTerm',
       name: entry.lemma,
       description: entry.definition_it,
-      inDefinedTermSet: `${SITE_URL}/verbi`,
+      inDefinedTermSet: `${SITE_URL}/dizionario`,
       url: canonical,
     }) +
     breadcrumbJsonLd([
@@ -578,7 +721,7 @@ for (const entry of getSeoDictionaryEntries()) {
 
   html = withBody(
     html,
-    `<p><a href="/verbi">← Dizionario</a></p>
+    `<p><a href="/dizionario">← Dizionario</a></p>
   <h1>${escapeHtml(entry.lemma)}</h1>
   <p><strong>${escapeHtml(entry.pos)}</strong> — ${escapeHtml(entry.fr)}</p>
   <p>${escapeHtml(entry.definition_it)}</p>
@@ -630,8 +773,8 @@ for (const { lemma, fr, conjugation } of getSeoConjugations()) {
   count++
 }
 
-// --- Page 404 : servie par public/.htaccess (ErrorDocument 404 /404.html)
-// pour les vraies URL inexistantes ; la route Vue « not-found » gère le cas
+// --- Page 404 : servie par le Caddyfile (handle_errors / respond 404, voir
+// Caddyfile à la racine) pour les vraies URL inexistantes ; la route Vue « not-found » gère le cas
 // où le SPA est déjà chargé et navigue elle-même vers une URL inconnue.
 {
   const html404 = patchHead(template, {
@@ -691,7 +834,7 @@ for (const t of textsIndex) {
       { name: t.title, url: canonical },
     ])
 
-  let html = patchHead(template, { title, description, canonical, extraHead })
+  let html = patchHead(template, { title, description, canonical, extraHead, ogType: 'article' })
 
   let bodyContent
   if (free) {
@@ -722,7 +865,7 @@ for (const t of textsIndex) {
   </div>`
   }
 
-  html = withBody(html, bodyContent)
+  html = withBody(html, bodyContent + '\n  ' + relatedBlock(t))
   writeRoute(`/testo/${t.id}`, html)
   count++
 }
