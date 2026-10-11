@@ -10,6 +10,7 @@
 
 import { Capacitor } from '@capacitor/core'
 import { getFunctionsInstance } from './firebase.js'
+import { currentUser } from './auth.js'
 
 export const PRODUCTS = [
   'premium_monthly',
@@ -69,6 +70,13 @@ export function initBilling() {
     store.error((err) => {
       console.error('Erreur Play Billing :', err)
     })
+
+    // Lie l'achat au compte : le plugin (v13, obfuscator 'legacy' par défaut)
+    // pose md5(uid) en hex comme obfuscatedAccountId Play. Le serveur lit cette
+    // valeur dans la réponse de l'API Play (jamais fournie par le client) et
+    // checkPlayAccount (functions/purchases.mjs) accepte uid, sha256(uid) et
+    // md5(uid). Ne pas changer store.obfuscator sans adapter le serveur.
+    store.applicationUsername = () => currentUser.value?.uid
 
     return store.initialize([Platform.GOOGLE_PLAY])
   })
