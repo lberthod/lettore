@@ -16,7 +16,7 @@
     "TOMMASO — Ecco il cappello, mamma. È dentro lo zaino verde.",
     "GIULIA — Anche il libro nuovo lo metto nello zaino.",
     "PAPÀ — Ora chiudiamo la valigia e mettiamo tutto in macchina.",
-    "MAMMA — Aspetta! Dimentichiamo la crema solare, è importante.",
+    "MAMMA — Aspetta! Non dimentichiamo la crema solare, è importante.",
     "GIULIA — Ecco la crema, mamma. È nella borsa rossa.",
     "TOMMASO — Papà, portiamo anche la palla grande per giocare?",
     "PAPÀ — Sì, certo. Mettiamo la palla vicino agli zaini.",
@@ -38,7 +38,7 @@
     "PAPÀ — Certo, Tommaso! Prendiamo il secchiello e iniziamo.",
     "GIULIA — Io invece nuoto un po' nel mare con la mamma.",
     "MAMMA — Attenta, Giulia, l'acqua è fredda ma bella.",
-    "GIULIA — Non importa, mamma! L'acqua è fresca e mi piace tanto.",
+    "GIULIA — Non importa, mamma! L'acqua è fredda, ma mi piace tanto.",
     "TOMMASO — Papà, guarda! Il nostro castello è alto come una torre.",
     "PAPÀ — Bravo! Ma attento all'onda, il mare arriva veloce!",
     "TOMMASO — Oh no, l'onda distrugge il nostro castello!",
@@ -64,14 +64,14 @@
   ],
   "questions": [
     {
-      "q": "Che cosa dimentica la famiglia prima di partire?",
+      "q": "Che cosa dice la mamma di non dimenticare prima di partire?",
       "options": [
         "La crema solare",
         "Il pallone",
         "Gli occhiali"
       ],
       "correct": 0,
-      "explanation": "Le texte dit « Aspetta! Dimentichiamo la crema solare, è importante », donc ils oublient la crème solaire."
+      "explanation": "Le texte dit « Aspetta! Non dimentichiamo la crema solare, è importante », donc la maman rappelle de ne pas oublier la crème solaire."
     },
     {
       "q": "Che cosa succede al castello di sabbia di Tommaso?",
@@ -339,7 +339,6 @@
     "GIULIA — Anche il libro nuovo lo metto nello zaino.": "GIULIA — Le nouveau livre aussi, je le mets dans le sac à dos.",
     "PAPÀ — Ora chiudiamo la valigia e mettiamo tutto in macchina.": "PAPA — Maintenant nous fermons la valise et nous mettons tout dans la voiture.",
     "MAMMA — Aspetta!": "MAMAN — Attends !",
-    "Dimentichiamo la crema solare, è importante.": "Nous oublions la crème solaire, c'est important.",
     "GIULIA — Ecco la crema, mamma.": "GIULIA — Voici la crème, maman.",
     "È nella borsa rossa.": "Elle est dans le sac rouge.",
     "TOMMASO — Papà, portiamo anche la palla grande per giocare?": "TOMMASO — Papa, on apporte aussi le gros ballon pour jouer ?",
@@ -372,7 +371,6 @@
     "GIULIA — Io invece nuoto un po' nel mare con la mamma.": "GIULIA — Moi par contre je nage un peu dans la mer avec maman.",
     "MAMMA — Attenta, Giulia, l'acqua è fredda ma bella.": "MAMAN — Attention, Giulia, l'eau est froide mais belle.",
     "GIULIA — Non importa, mamma!": "GIULIA — Ce n'est pas grave, maman !",
-    "L'acqua è fresca e mi piace tanto.": "L'eau est fraîche et j'aime beaucoup ça.",
     "TOMMASO — Papà, guarda!": "TOMMASO — Papa, regarde !",
     "Il nostro castello è alto come una torre.": "Notre château est haut comme une tour.",
     "PAPÀ — Bravo!": "PAPA — Bravo !",
@@ -404,6 +402,8 @@
     "Domani torniamo di nuovo al mare.": "Demain nous retournons à la mer.",
     "Domani costruiamo un castello ancora più grande.": "Demain nous construisons un château encore plus grand.",
     "GIULIA — E io nuoto di nuovo con la mamma.": "GIULIA — Et moi je nage encore avec maman.",
-    "Buonanotte a tutti!": "Bonne nuit à tous !"
+    "Buonanotte a tutti!": "Bonne nuit à tous !",
+    "Non dimentichiamo la crema solare, è importante.": "N'oublions pas la crème solaire, c'est important.",
+    "L'acqua è fredda, ma mi piace tanto.": "L'eau est froide, mais j'aime beaucoup ça."
   }
 }

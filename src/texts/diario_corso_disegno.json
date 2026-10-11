@@ -8,7 +8,7 @@
     "Lunedì. Oggi ho iniziato il mio primo corso di disegno. La maestra ci ha fatto disegnare solo linee dritte.",
     "Martedì. Abbiamo imparato a disegnare i cerchi. Il mio non era perfetto, ma la maestra ha detto che va bene così.",
     "Mercoledì. Oggi abbiamo disegnato una semplice natura morta: una mela e un bicchiere sul tavolo.",
-    "Giovedì. Ho provato a disegnare un volto per la prima volta. È molto più difficile di quanto pensassi.",
+    "Giovedì. Ho provato a disegnare un volto per la prima volta. È molto più difficile del previsto.",
     "Venerdì. La maestra ci ha mostrato come usare le ombre per dare profondità ai disegni.",
     "Sabato. Ho disegnato il mio gatto mentre dormiva. Non è perfetto, ma sono davvero fiera del risultato."
   ],
@@ -111,7 +111,6 @@
     "oggi": "aujourd'hui",
     "ombre": "ombres",
     "paesaggio": "paysage",
-    "pensassi": "je pensais (subjonctif imparfait)",
     "per": "pour",
     "perfetto": "parfait",
     "persona": "personne",
@@ -120,7 +119,6 @@
     "primo": "premier",
     "profondità": "profondeur",
     "provato": "essayé",
-    "quanto": "combien",
     "risultato": "résultat",
     "ritratto": "portrait",
     "sabato": "samedi",
@@ -140,7 +138,8 @@
     "venerdì": "vendredi",
     "volta": "fois",
     "volto": "visage",
-    "è": "est"
+    "è": "est",
+    "previsto": "prévu (« del previsto » = que prévu)"
   },
   "sentences": {
     "Lunedì.": "Lundi.",
@@ -153,11 +152,11 @@
     "Oggi abbiamo disegnato una semplice natura morta: una mela e un bicchiere sul tavolo.": "Aujourd'hui nous avons dessiné une simple nature morte : une pomme et un verre sur la table.",
     "Giovedì.": "Jeudi.",
     "Ho provato a disegnare un volto per la prima volta.": "J'ai essayé de dessiner un visage pour la première fois.",
-    "È molto più difficile di quanto pensassi.": "C'est bien plus difficile que je ne le pensais.",
     "Venerdì.": "Vendredi.",
     "La maestra ci ha mostrato come usare le ombre per dare profondità ai disegni.": "La maîtresse nous a montré comment utiliser les ombres pour donner de la profondeur aux dessins.",
     "Sabato.": "Samedi.",
     "Ho disegnato il mio gatto mentre dormiva.": "J'ai dessiné mon chat pendant qu'il dormait.",
-    "Non è perfetto, ma sono davvero fiera del risultato.": "Ce n'est pas parfait, mais je suis vraiment fière du résultat."
+    "Non è perfetto, ma sono davvero fiera del risultato.": "Ce n'est pas parfait, mais je suis vraiment fière du résultat.",
+    "È molto più difficile del previsto.": "C'est bien plus difficile que prévu."
   }
 }

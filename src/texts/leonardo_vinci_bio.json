@@ -7,8 +7,8 @@
   "paragraphs": [
     "Leonardo da Vinci nasce in un piccolo paese vicino a Firenze, tanti anni fa. Da bambino, ama disegnare e osservare la natura. Da giovane, va a Firenze e studia con un grande pittore. Impara a dipingere, a scolpire e a costruire cose nuove. Il suo maestro capisce subito che Leonardo ha un talento speciale.",
     "Leonardo è un artista, ma è anche molto di più. È curioso di tutto: guarda gli uccelli e pensa a delle macchine che volano. Studia il corpo umano e disegna i muscoli e le ossa. Osserva l'acqua dei fiumi e scrive le sue idee sui quaderni. Scrive spesso da destra a sinistra, in un modo speciale e difficile da leggere.",
-    "Leonardo dipinge quadri famosi in tutto il mondo. Il quadro più famoso si chiama \"La Gioconda\". Nel quadro, c'è una donna con un sorriso misterioso. Milioni di persone vanno a Parigi ogni anno solo per guardare questo piccolo quadro. Un altro quadro famoso è \"L'Ultima Cena\", con Gesù e i suoi amici a tavola.",
-    "Leonardo non è solo un pittore. Disegna anche macchine per volare, per l'acqua e per la guerra. Le sue idee sono molto avanti per il suo tempo. Immagina macchine che oggi esistono davvero, come l'elicottero e il sottomarino. Molte delle sue macchine diventano realtà solo secoli dopo.",
+    "Leonardo dipinge quadri famosi in tutto il mondo. Il quadro più famoso si chiama \"La Gioconda\". Nel quadro, c'è una donna con un sorriso misterioso. Milioni di persone vanno a Parigi ogni anno solo per guardare questo piccolo quadro. Un altro quadro famoso è \"L'Ultima Cena\", con Gesù e gli apostoli a tavola.",
+    "Leonardo non è solo un pittore. Disegna anche macchine per volare, per l'acqua e per la guerra. Le sue idee sono molto in anticipo sui tempi. Immagina macchine che oggi esistono davvero, come l'elicottero e il sottomarino. Molte delle sue macchine diventano realtà solo secoli dopo.",
     "Leonardo lavora per re e principi importanti. Viaggia in diverse città italiane e poi va anche in Francia. Il re di Francia lo invita a vivere vicino al suo castello. Muore in Francia, ma il suo lavoro rimane famoso per sempre. Oggi, milioni di persone visitano i musei per guardare i suoi quadri e le sue idee."
   ],
   "questions": [
@@ -164,12 +164,9 @@
     "l'ultima cena": "la Cène",
     "gesù": "Jésus",
     "suoi": "ses",
-    "amici": "amis",
     "tavola": "table",
     "non": "ne... pas",
     "guerra": "guerre",
-    "avanti": "en avance",
-    "tempo": "époque",
     "immagina": "imagine",
     "oggi": "aujourd'hui",
     "esistono": "existent",
@@ -202,7 +199,10 @@
     "rimane": "reste",
     "per sempre": "pour toujours",
     "visitano": "visitent",
-    "musei": "musées"
+    "musei": "musées",
+    "apostoli": "apôtres",
+    "anticipo": "avance (« in anticipo » = en avance)",
+    "tempi": "temps, époques"
   },
   "sentences": {
     "Leonardo da Vinci nasce in un piccolo paese vicino a Firenze, tanti anni fa.": "Léonard de Vinci naît dans un petit village près de Florence, il y a très longtemps.",
@@ -219,16 +219,16 @@
     "Il quadro più famoso si chiama \"La Gioconda\".": "Le tableau le plus célèbre s'appelle « La Joconde ».",
     "Nel quadro, c'è una donna con un sorriso misterioso.": "Sur le tableau, il y a une femme au sourire mystérieux.",
     "Milioni di persone vanno a Parigi ogni anno solo per guardare questo piccolo quadro.": "Des millions de personnes vont à Paris chaque année juste pour regarder ce petit tableau.",
-    "Un altro quadro famoso è \"L'Ultima Cena\", con Gesù e i suoi amici a tavola.": "Un autre tableau célèbre est « La Cène », avec Jésus et ses amis à table.",
     "Leonardo non è solo un pittore.": "Léonard n'est pas seulement un peintre.",
     "Disegna anche macchine per volare, per l'acqua e per la guerra.": "Il dessine aussi des machines pour voler, pour l'eau et pour la guerre.",
-    "Le sue idee sono molto avanti per il suo tempo.": "Ses idées sont très en avance pour son époque.",
     "Immagina macchine che oggi esistono davvero, come l'elicottero e il sottomarino.": "Il imagine des machines qui existent vraiment aujourd'hui, comme l'hélicoptère et le sous-marin.",
     "Molte delle sue macchine diventano realtà solo secoli dopo.": "Beaucoup de ses machines ne deviennent réalité que des siècles plus tard.",
     "Leonardo lavora per re e principi importanti.": "Léonard travaille pour des rois et des princes importants.",
     "Viaggia in diverse città italiane e poi va anche in Francia.": "Il voyage dans différentes villes italiennes puis va aussi en France.",
     "Il re di Francia lo invita a vivere vicino al suo castello.": "Le roi de France l'invite à vivre près de son château.",
     "Muore in Francia, ma il suo lavoro rimane famoso per sempre.": "Il meurt en France, mais son travail reste célèbre pour toujours.",
-    "Oggi, milioni di persone visitano i musei per guardare i suoi quadri e le sue idee.": "Aujourd'hui, des millions de personnes visitent les musées pour regarder ses tableaux et ses idées."
+    "Oggi, milioni di persone visitano i musei per guardare i suoi quadri e le sue idee.": "Aujourd'hui, des millions de personnes visitent les musées pour regarder ses tableaux et ses idées.",
+    "Un altro quadro famoso è \"L'Ultima Cena\", con Gesù e gli apostoli a tavola.": "Un autre tableau célèbre est « La Cène », avec Jésus et les apôtres à table.",
+    "Le sue idee sono molto in anticipo sui tempi.": "Ses idées sont très en avance sur leur temps."
   }
 }

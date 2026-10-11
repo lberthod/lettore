@@ -5,7 +5,7 @@
 // le lexique et les phrases sous forme de tableaux {it, fr}, convertis ensuite
 // au format de l'app (objets `words` / `sentences`).
 
-export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1']
+export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 const PAIR = {
   type: 'object',

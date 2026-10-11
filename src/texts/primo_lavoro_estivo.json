@@ -9,7 +9,7 @@
     "Il primo giorno è difficile: non ricorda i nomi delle bevande e confonde spesso gli ordini.",
     "Il proprietario, un uomo paziente, la aiuta senza arrabbiarsi mai e le spiega tutto con calma.",
     "Dopo una settimana, Marta impara a preparare cappuccini perfetti e a parlare con i clienti stranieri.",
-    "Le piace il lavoro più di quanto pensasse: guadagna i suoi primi soldi e si sente più adulta.",
+    "Il lavoro le piace più del previsto: guadagna i suoi primi soldi e si sente più adulta.",
     "Alla fine dell'estate, il proprietario le chiede di tornare l'anno prossimo, e Marta accetta subito con un grande sorriso."
   ],
   "questions": [
@@ -96,7 +96,6 @@
     "ordini": "commandes",
     "parlare": "parler",
     "paziente": "patient",
-    "pensasse": "pensait (subjonctif imparfait)",
     "per": "pour",
     "perché": "pourquoi",
     "perfetti": "parfaits",
@@ -109,7 +108,6 @@
     "primo": "premier",
     "prossimo": "prochain",
     "proprietario": "propriétaire",
-    "quanto": "combien",
     "quest'estate": "cet été",
     "questa": "cette",
     "ricorda": "se souvient",
@@ -135,14 +133,15 @@
     "vestiti": "vêtements",
     "vicino": "près",
     "volta": "fois",
-    "è": "est"
+    "è": "est",
+    "previsto": "prévu (« più del previsto » = plus que prévu)"
   },
   "sentences": {
     "Quest'estate, per la prima volta, Marta lavora in un piccolo bar vicino al mare.": "Cet été, pour la première fois, Marta travaille dans un petit bar près de la mer.",
     "Il primo giorno è difficile: non ricorda i nomi delle bevande e confonde spesso gli ordini.": "Le premier jour est difficile : elle ne se souvient pas des noms des boissons et confond souvent les commandes.",
     "Il proprietario, un uomo paziente, la aiuta senza arrabbiarsi mai e le spiega tutto con calma.": "Le propriétaire, un homme patient, l'aide sans jamais se fâcher et lui explique tout calmement.",
     "Dopo una settimana, Marta impara a preparare cappuccini perfetti e a parlare con i clienti stranieri.": "Après une semaine, Marta apprend à préparer des cappuccinos parfaits et à parler avec les clients étrangers.",
-    "Le piace il lavoro più di quanto pensasse: guadagna i suoi primi soldi e si sente più adulta.": "Le travail lui plaît plus qu'elle ne le pensait : elle gagne son premier argent et se sent plus adulte.",
-    "Alla fine dell'estate, il proprietario le chiede di tornare l'anno prossimo, e Marta accetta subito con un grande sorriso.": "À la fin de l'été, le propriétaire lui demande de revenir l'année prochaine, et Marta accepte aussitôt avec un grand sourire."
+    "Alla fine dell'estate, il proprietario le chiede di tornare l'anno prossimo, e Marta accetta subito con un grande sorriso.": "À la fin de l'été, le propriétaire lui demande de revenir l'année prochaine, et Marta accepte aussitôt avec un grand sourire.",
+    "Il lavoro le piace più del previsto: guadagna i suoi primi soldi e si sente più adulta.": "Le travail lui plaît plus que prévu : elle gagne son premier argent et se sent plus adulte."
   }
 }
