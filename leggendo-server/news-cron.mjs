@@ -4,10 +4,9 @@
 // - lock fichier (acquireLock/releaseLock) : une génération avec retries peut
 //   dépasser l'intervalle du cron, le lock évite deux runs simultanés qui
 //   doubleraient le volume produit ;
-// - quota horaire dur (MAX_PER_HOUR = 1, voir countLastHour) : au-delà, un
+// - quota journalier dur (MAX_PER_DAY = 3, voir countLast24h) : au-delà, un
 //   run ne fait rien même s'il trouve un article frais.
-// Cible : 1 texte par heure maximum (volume réduit ~8x par rapport à
-// l'ancienne cible de 4-7/heure).
+// Cible : 3 textes par jour maximum.
 //
 // Usage : node news-cron.mjs
 // Nécessite les mêmes variables d'environnement que server.mjs
@@ -19,8 +18,10 @@ import os from 'node:os'
 import path from 'node:path'
 import { initializeApp, applicationDefault } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
+import { getAuth } from 'firebase-admin/auth'
 import { fetchAllFeeds, COUNTRIES } from './rss.mjs'
 import { generateNewsText } from './news.mjs'
+import { notifyNewContentIfDue } from './news-push.mjs'
 
 initializeApp({ credential: applicationDefault() })
 const db = getFirestore()
@@ -64,12 +65,12 @@ const LEVELS_ROTATION = ['A2', 'B1', 'B2', 'C1']
 const RECENT_WINDOW = 50
 const SIMILARITY_THRESHOLD = 0.5
 
-// Cadence cible : 1 news par heure maximum (quota strict, voir
-// countLastHour). Le cron tourne toutes les 30 minutes (2 exécutions/heure) ;
-// ce plafond est le garde-fou qui empêche de dépasser 1 même si plusieurs
+// Cadence cible : 3 news par jour maximum (quota strict, voir
+// countLast24h). Le cron tourne toutes les 30 minutes (48 exécutions/jour) ;
+// ce plafond est le garde-fou qui empêche de dépasser 3 même si plusieurs
 // runs consécutifs trouvent chacun un article frais.
-const MAX_PER_HOUR = 1
-const HOUR_MS = 60 * 60 * 1000
+const MAX_PER_DAY = 3
+const DAY_MS = 24 * 60 * 60 * 1000
 
 function slugify(title) {
   const base = title
@@ -96,6 +97,35 @@ async function nextRotation() {
   return {
     level: LEVELS_ROTATION[value % LEVELS_ROTATION.length],
     country: COUNTRIES[value % COUNTRIES.length],
+  }
+}
+
+// Prévient les abonnés Premium IA / Enseignant qu'un nouveau texte Notizie
+// est disponible — au plus une fois toutes les 4h, et au plus 6 fois par jour
+// (double garde-fou : l'intervalle suffit à lui seul à borner à 6/jour, mais
+// le compteur quotidien protège contre un décalage d'horloge ou un lastPushAt
+// manquant). Le rôle vit dans les custom claims Firebase Auth, pas dans
+// Firestore (voir applyRole côté functions/index.js) : listUsers + filtre en
+// mémoire, comme revertExpiredTrials — acceptable à cette fréquence.
+async function listPushRecipients() {
+  const auth = getAuth()
+  const uids = []
+  let pageToken
+  do {
+    const page = await auth.listUsers(1000, pageToken)
+    for (const u of page.users) {
+      const role = u.customClaims?.role
+      if (role === 'premium_plus' || role === 'enseignant') uids.push(u.uid)
+    }
+    pageToken = page.pageToken
+  } while (pageToken)
+  return uids
+}
+
+async function notifyNewContent() {
+  const res = await notifyNewContentIfDue({ db, listUids: listPushRecipients })
+  if (res.sent > 0) {
+    console.log(`[news-cron] notification « nouveau contenu » envoyée (${res.sent} jeton(s), ${res.failed} échec(s)).`)
   }
 }
 
@@ -153,20 +183,20 @@ function pickFreshItem(items, history, preferredCountry) {
   return preferred.find((i) => isFresh(i, history)) || items.find((i) => isFresh(i, history)) || null
 }
 
-// Nombre de news publiées durant la dernière heure glissante (createdAt >=
-// now - 1h). Sert de garde-fou dur : au-delà de MAX_PER_HOUR, on n'écrit
+// Nombre de news publiées durant les dernières 24h glissantes (createdAt >=
+// now - 24h). Sert de garde-fou dur : au-delà de MAX_PER_DAY, on n'écrit
 // plus rien, quelle que soit la fraîcheur des articles trouvés.
-async function countLastHour() {
-  const since = Date.now() - HOUR_MS
+async function countLast24h() {
+  const since = Date.now() - DAY_MS
   const snap = await db.collection('newsTexts').where('createdAt', '>=', since).get()
   return snap.size
 }
 
 async function main() {
-  const publishedLastHour = await countLastHour()
-  if (publishedLastHour >= MAX_PER_HOUR) {
+  const publishedLast24h = await countLast24h()
+  if (publishedLast24h >= MAX_PER_DAY) {
     console.log(
-      `[news-cron] quota horaire atteint (${publishedLastHour}/${MAX_PER_HOUR}), rien à faire.`
+      `[news-cron] quota journalier atteint (${publishedLast24h}/${MAX_PER_DAY}), rien à faire.`
     )
     return
   }
@@ -201,6 +231,10 @@ async function main() {
   })
 
   console.log(`[news-cron] terminé : ${id} (${textData.wordCount} mots, niveau ${level})`)
+
+  await notifyNewContent().catch((err) =>
+    console.error('[news-cron] notification « nouveau contenu » impossible :', err)
+  )
 }
 
 if (!acquireLock()) {
@@ -222,7 +256,6 @@ if (!acquireLock()) {
 //     /usr/bin/node news-cron.mjs >> /var/log/leggendo-news.log 2>&1
 //
 // Chaque run ne génère un texte que si un article assez frais et distinct
-// des 50 derniers a été trouvé (voir isFresh) ET si le quota horaire
-// (MAX_PER_HOUR = 1, voir countLastHour) n'est pas déjà atteint. À 2
-// exécutions/heure, le volume réel est au maximum 1 texte/heure (~8x moins
-// que l'ancienne cible de 4-7/heure).
+// des 50 derniers a été trouvé (voir isFresh) ET si le quota journalier
+// (MAX_PER_DAY = 3, voir countLast24h) n'est pas déjà atteint. Le volume réel
+// est donc au maximum 3 textes/jour.

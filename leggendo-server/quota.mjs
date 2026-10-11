@@ -12,6 +12,11 @@
 
 export const FREE_TRIAL_CREDITS = 1
 export const MONTHLY_CREDITS = { premium_plus: 30, enseignant: 100 }
+// Essai Premium IA de 10 jours (callable `startTrial`, functions/index.js) :
+// le compte porte le rôle `premium_plus` + un claim `trialEnd`, mais ses
+// crédits sont plafonnés à ce petit capital (et non aux 30 du plan payant) —
+// sinon un compte jetable vérifié = 30 générations payées par nous.
+export const TRIAL_PREMIUM_CREDITS = 3
 export const CREDIT_COST = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
 // Correction d'une production écrite (Phase 5) : même barème que « corto ».
 export const CORRECTION_COST = 1
@@ -44,7 +49,58 @@ export function monthKey(now = new Date()) {
 // abonnement Stripe (essai gratuit, rôle attribué à la main), on retombe sur
 // le mois civil UTC faute de date de référence.
 function periodAnchor(user, now) {
-  return user?.periodEnd ? `stripe:${user.periodEnd}` : monthKey(now)
+  if (user?.periodEnd) return `stripe:${user.periodEnd}`
+  // Essai : ancre fixe sur toute la durée, pour qu'un changement de mois
+  // civil ne remette pas le compteur à zéro en cours d'essai.
+  if (isTrialAccount(user, now)) return `trial:${user.trialEnd}`
+  return monthKey(now)
+}
+
+function nowSeconds(now) {
+  return Math.floor((now instanceof Date ? now.getTime() : Number(now)) / 1000)
+}
+
+// Compte en cours d'essai Premium IA : rôle `premium_plus`, `trialEnd` futur
+// et aucun paiement (`periodEnd` absent — il n'est posé que par un vrai
+// paiement Stripe/Play/Apple, voir functions/index.js).
+export function isTrialAccount(user, now = new Date()) {
+  return (
+    user?.role === 'premium_plus' &&
+    Number(user.trialEnd) > nowSeconds(now) &&
+    !user.periodEnd
+  )
+}
+
+// Compte susceptible d'épuiser un essai gratuit (limite par IP) : plan
+// gratuit ou essai Premium IA en cours.
+export function isTrialLikeAccount(user, now = new Date()) {
+  return user?.role === 'gratuit' || isTrialAccount(user, now)
+}
+
+// Rôle effectif à partir des claims du jeton. Un essai échu dont le claim n'a
+// pas encore été retiré par `revertExpiredTrials` (tâche quotidienne) est
+// traité comme `gratuit` : l'accès ne doit pas survivre à `trialEnd`.
+export function resolveRole(claims, now = new Date()) {
+  const role = claims.role || (claims.premium ? 'premium' : 'gratuit')
+  if (
+    role === 'premium_plus' &&
+    claims.trialEnd &&
+    !claims.periodEnd &&
+    Number(claims.trialEnd) <= nowSeconds(now)
+  ) {
+    return 'gratuit'
+  }
+  return role
+}
+
+// Plafond de crédits applicable (essai : TRIAL_PREMIUM_CREDITS).
+export function creditLimit(user, now = new Date()) {
+  return isTrialAccount(user, now) ? TRIAL_PREMIUM_CREDITS : MONTHLY_CREDITS[user.role]
+}
+
+// Un essai n'ouvre aucun crédit tant que l'adresse e-mail n'est pas vérifiée.
+function trialUnverified(user, now) {
+  return isTrialAccount(user, now) && !user.emailVerified
 }
 
 export function freshQuota(user, now = new Date()) {
@@ -70,7 +126,8 @@ function isCreditRole(role) {
 // Renvoie un message d'erreur si la génération doit être refusée, sinon null.
 export function quotaError(user, q, sizeId) {
   if (isCreditRole(user.role)) {
-    const limit = MONTHLY_CREDITS[user.role]
+    if (trialUnverified(user)) return EMAIL_NOT_VERIFIED
+    const limit = creditLimit(user)
     const cost = creditCost(sizeId)
     if (q.monthlyUsed + cost > limit) {
       const remaining = Math.max(0, limit - q.monthlyUsed)
@@ -112,7 +169,8 @@ export function correctionQuotaError(user, q) {
   if (!isCreditRole(user.role)) {
     return 'La correction de textes fait partie de la formule Premium IA — passez à Premium IA pour faire corriger vos productions écrites.'
   }
-  const limit = MONTHLY_CREDITS[user.role]
+  if (trialUnverified(user)) return EMAIL_NOT_VERIFIED
+  const limit = creditLimit(user)
   if (q.monthlyUsed + CORRECTION_COST > limit) {
     const remaining = Math.max(0, limit - q.monthlyUsed)
     return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${CORRECTION_COST} requis pour une correction).`
@@ -130,7 +188,8 @@ export function dialogueQuotaError(user, q) {
   if (!isCreditRole(user.role)) {
     return 'Le dialogue simulé fait partie de la formule Premium IA — passez à Premium IA pour converser avec votre partenaire de dialogue.'
   }
-  const limit = MONTHLY_CREDITS[user.role]
+  if (trialUnverified(user)) return EMAIL_NOT_VERIFIED
+  const limit = creditLimit(user)
   if (q.monthlyUsed + DIALOGUE_COST > limit) {
     const remaining = Math.max(0, limit - q.monthlyUsed)
     return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${DIALOGUE_COST} requis pour un dialogue).`
@@ -143,9 +202,15 @@ export function dialogueQuotaError(user, q) {
 // visible avant de lancer une génération »).
 export function quotaStatus(user, q) {
   if (isCreditRole(user.role)) {
-    const limit = MONTHLY_CREDITS[user.role]
+    const limit = creditLimit(user)
     const used = q.monthlyUsed
-    return { type: 'credits', limit, used, remaining: Math.max(0, limit - used) }
+    return {
+      type: 'credits',
+      limit,
+      used,
+      remaining: trialUnverified(user) ? 0 : Math.max(0, limit - used),
+      ...(isTrialAccount(user) ? { trial: true, emailVerified: Boolean(user.emailVerified) } : {}),
+    }
   }
   if (user.role === 'premium') {
     return { type: 'no_access' }

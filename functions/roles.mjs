@@ -15,11 +15,21 @@ export const ADMIN_EMAIL = 'lberthod@gmail.com'
 
 // Comparaison normalisée (casse, espaces) : certains fournisseurs (Google…)
 // peuvent renvoyer l'e-mail avec une casse différente de celle saisie.
+// L'e-mail doit être VÉRIFIÉ (`email_verified === true`) : sans cela, qui
+// s'inscrit avec l'adresse admin avant le propriétaire (ou via un fournisseur
+// qui ne la valide pas) obtiendrait les droits d'administration. Pré-requis
+// humain : le compte admin doit avoir un e-mail vérifié (connexion Google = oui).
+export function isAdminToken(token) {
+  const email = (token?.email || '').trim().toLowerCase()
+  return email === ADMIN_EMAIL && token?.email_verified === true
+}
+
 export function requireAdmin(request) {
   const email = (request.auth?.token?.email || '').trim().toLowerCase()
-  if (email !== ADMIN_EMAIL) {
+  if (!isAdminToken(request.auth?.token)) {
     console.warn('Appel admin refusé', {
       email: email || '(aucun e-mail dans le token)',
+      emailVerified: request.auth?.token?.email_verified === true,
       uid: request.auth?.uid || null,
     })
     throw new HttpsError('permission-denied', 'Réservé à l’administrateur.')

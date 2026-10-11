@@ -140,3 +140,72 @@ test('quotaStatus expose le solde correct par rôle', () => {
     remaining: MONTHLY_CREDITS.premium_plus - 5,
   })
 })
+
+// --- Essai Premium IA (SEC-1) ---
+import { TRIAL_PREMIUM_CREDITS, isTrialAccount, isTrialLikeAccount, resolveRole, creditLimit } from '../quota.mjs'
+
+const NOW = new Date('2026-10-11T12:00:00Z')
+const nowS = Math.floor(NOW.getTime() / 1000)
+const essai = (over = {}) => ({
+  uid: 'ut',
+  role: 'premium_plus',
+  premium: true,
+  emailVerified: true,
+  trialEnd: nowS + 5 * 86400,
+  periodEnd: null,
+  ...over,
+})
+
+test('essai : isTrialAccount vrai seulement si trialEnd futur et pas de paiement', () => {
+  assert.equal(isTrialAccount(essai(), NOW), true)
+  assert.equal(isTrialAccount(essai({ trialEnd: nowS - 1 }), NOW), false)
+  assert.equal(isTrialAccount(essai({ periodEnd: nowS + 100 }), NOW), false)
+  assert.equal(isTrialAccount({ ...premiumIA }, NOW), false)
+})
+
+test('essai : isTrialLikeAccount couvre gratuit et essai en cours (limite IP)', () => {
+  assert.equal(isTrialLikeAccount(gratuit, NOW), true)
+  assert.equal(isTrialLikeAccount(essai(), NOW), true)
+  assert.equal(isTrialLikeAccount(premiumIA, NOW), false)
+  assert.equal(isTrialLikeAccount(enseignant, NOW), false)
+})
+
+test('essai non vérifié : 0 crédit IA', () => {
+  const u = essai({ emailVerified: false })
+  const q = freshQuota(u, NOW)
+  assert.match(quotaError(u, q, 'corto'), /Vérifiez votre adresse/)
+  assert.equal(quotaStatus(u, q).remaining, 0)
+})
+
+test('essai vérifié : plafonné à TRIAL_PREMIUM_CREDITS (<= 3) crédits', () => {
+  assert.ok(TRIAL_PREMIUM_CREDITS <= 3)
+  const u = essai()
+  const q = freshQuota(u, NOW)
+  assert.equal(creditLimit(u, NOW), TRIAL_PREMIUM_CREDITS)
+  assert.equal(quotaError(u, q, 'lungo'), null) // coût 3
+  q.monthlyUsed = TRIAL_PREMIUM_CREDITS
+  assert.match(quotaError(u, q, 'corto'), /Crédits mensuels insuffisants/)
+  assert.equal(quotaStatus(u, q).limit, TRIAL_PREMIUM_CREDITS)
+})
+
+test('essai : le changement de mois civil ne remet pas le compteur à zéro', () => {
+  const u = essai({ trialEnd: Math.floor(new Date('2026-11-05T00:00:00Z').getTime() / 1000) })
+  const q = freshQuota(u, new Date('2026-10-31T12:00:00Z'))
+  q.monthlyUsed = 3
+  resetIfStale(u, q, new Date('2026-11-02T00:00:00Z'))
+  assert.equal(q.monthlyUsed, 3)
+})
+
+test('abonné payant : crédits mensuels complets, jamais plafonnés comme un essai', () => {
+  assert.equal(creditLimit(premiumIA, NOW), MONTHLY_CREDITS.premium_plus)
+  const paye = essai({ periodEnd: nowS + 86400 * 20 })
+  assert.equal(creditLimit(paye, NOW), MONTHLY_CREDITS.premium_plus)
+})
+
+test('resolveRole : un essai échu non encore révoqué est traité comme gratuit', () => {
+  assert.equal(resolveRole({ role: 'premium_plus', premium: true, trialEnd: nowS - 10 }, NOW), 'gratuit')
+  assert.equal(resolveRole({ role: 'premium_plus', premium: true, trialEnd: nowS + 10 }, NOW), 'premium_plus')
+  assert.equal(resolveRole({ role: 'premium_plus', trialEnd: nowS - 10, periodEnd: nowS + 5 }, NOW), 'premium_plus')
+  assert.equal(resolveRole({ premium: true }, NOW), 'premium')
+  assert.equal(resolveRole({}, NOW), 'gratuit')
+})

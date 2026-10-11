@@ -33,8 +33,12 @@ import {
   CORRECTION_COST,
   DIALOGUE_COST,
   MAX_DIALOGUE_TURNS,
+  resolveRole,
+  isTrialLikeAccount,
 } from './quota.mjs'
 import { createJobStore, ActiveJobError } from './jobs.mjs'
+import { sendPushToUser } from './push.mjs'
+import { generationDoneNotification } from './notif.mjs'
 import {
   buildTaxonomyIndex,
   parseRequest,
@@ -92,8 +96,11 @@ async function verifyIdToken(idToken) {
       // (toujours vrai pour une connexion Google). Conditionne l'essai
       // gratuit, voir quota.mjs.
       emailVerified: decoded.email_verified === true,
-      role: decoded.role || (decoded.premium ? 'premium' : 'gratuit'),
+      role: resolveRole(decoded),
       premium: Boolean(decoded.premium),
+      // Fin de l'essai Premium IA (secondes epoch, claim posé par `startTrial`
+      // après vérification de l'e-mail) — plafonne les crédits, voir quota.mjs.
+      trialEnd: decoded.trialEnd || null,
       // Fin de la période d'abonnement Stripe en cours (secondes epoch) —
       // ancre le renouvellement des crédits sur la vraie date de
       // renouvellement plutôt que sur le mois civil, voir quota.mjs.
@@ -137,7 +144,7 @@ const TRIAL_ALERT_PER_HOUR = Number(process.env.TRIAL_ALERT_PER_HOUR || 20)
 const trialRate = createRateWindow({ windowMs: 60 * 60 * 1000 })
 
 function watchTrialRate(user, ip) {
-  if (user.role !== 'gratuit') return
+  if (!isTrialLikeAccount(user)) return
   const count = trialRate.hit()
   if (count >= TRIAL_ALERT_PER_HOUR && count % TRIAL_ALERT_PER_HOUR === 0) {
     console.warn(
@@ -387,7 +394,7 @@ const server = http.createServer(async (req, res) => {
       // ratelimit.mjs). Vérifié avant la réservation, enregistré seulement
       // si celle-ci réussit — une demande refusée n'a rien coûté en IA.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const isTrial = user.role === 'gratuit'
+      const isTrial = isTrialLikeAccount(user)
       const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrial })
       if (ipError) {
         console.warn(
@@ -443,6 +450,7 @@ const server = http.createServer(async (req, res) => {
           if (await jobStore.finishJob(jobId, textData)) {
             console.log(`[job ${jobId}] terminé (${textData.wordCount} mots)`)
             await logGeneration({ user, size, level, jobId, status: 'done', startedAt, usage })
+            sendPushToUser(db, user.uid, generationDoneNotification(jobId)).catch((err) => console.error(`[job ${jobId}] notification push impossible :`, err))
           } else {
             // Le crédit a déjà été rendu : le résultat est jeté plutôt que
             // livré gratuitement. Les tokens ont bien été consommés, donc la
@@ -501,10 +509,9 @@ const server = http.createServer(async (req, res) => {
 
       // Même plafond IP que la génération (compteur commun : ce qui compte,
       // c'est le nombre d'appels IA déclenchés depuis une origine réseau).
-      // trial: false — la correction est réservée aux rôles à crédits, le
-      // quota de sièges d'essai par IP ne la concerne pas.
+      // Un compte en essai Premium IA compte comme siège d'essai par IP.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: false })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       if (ipError) {
         console.warn(
           `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (correction)`
@@ -524,7 +531,7 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
-      ipLimiter.record(ip, { uid: user.uid, trial: false })
+      ipLimiter.record(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       console.log(
         `[correction ${correctionId}] ${user.email || user.uid} (${user.role}) — ${text.length} caractères`
       )
@@ -608,10 +615,10 @@ const server = http.createServer(async (req, res) => {
 
       // Même plafond IP que la génération/correction, compté à l'OUVERTURE
       // de session seulement (les tours suivants sont bornés par
-      // MAX_DIALOGUE_TURNS, pas par le compteur IP). trial: false — le
-      // dialogue est réservé aux rôles à crédits.
+      // MAX_DIALOGUE_TURNS, pas par le compteur IP). Un compte en essai
+      // compte comme siège d'essai par IP.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: false })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       if (ipError) {
         console.warn(
           `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (dialogue)`
@@ -631,7 +638,7 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
-      ipLimiter.record(ip, { uid: user.uid, trial: false })
+      ipLimiter.record(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       console.log(
         `[dialogue ${sessionId}] ${user.email || user.uid} (${user.role}) — ouverture ${scenarioId} ${level}`
       )

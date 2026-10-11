@@ -24,6 +24,9 @@
 //                         README_TARIFICATION.md, § Essai Premium IA à
 //                         l'inscription) est expiré sans qu'un paiement
 //                         (Stripe/Play/Apple) n'ait pris le relais.
+// - sendStreakReminders : tâche planifiée (une fois par jour, 18h Europe/Zurich)
+//                         qui notifie (push, voir push.mjs) les comptes ayant
+//                         une série active mais pas encore lue aujourd'hui.
 //
 // Secrets (à définir AVANT le premier déploiement qui les utilise) :
 //   firebase functions:secrets:set STRIPE_SECRET_KEY
@@ -43,9 +46,19 @@ import functionsV1 from 'firebase-functions/v1'
 import { initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
+import { sendPushToUser } from './push.mjs'
+import { startTrialFor } from './trial.mjs'
+import { handleStripeEvent } from './stripe-events.mjs'
+import { sendStreakReminders as runStreakReminders } from './streaks.mjs'
+import {
+  claimPurchase,
+  checkPlayAccount,
+  deletePurchaseTokensFor,
+  verifyAppleReceipt,
+  pickActiveAppleTransaction,
+} from './purchases.mjs'
 import {
   ROLES,
-  TRIAL_DAYS,
   requireAdmin,
   roleForPriceId,
   roleForProductId,
@@ -121,26 +134,28 @@ export const onUserCreated = functionsV1
       console.error('Comptage des inscriptions impossible :', err)
     }
 
-    // Essai Premium IA de 10 jours, accordé automatiquement à l'inscription
-    // (voir README_TARIFICATION.md, § Essai Premium IA à l'inscription).
-    // `trialEnd` (secondes epoch) est repris par `revertExpiredTrials` pour
-    // repasser le compte en `gratuit` si aucun paiement (`periodEnd`) n'a été
-    // posé d'ici là. Indépendant du compteur d'abus ci-dessus : une erreur
-    // ici ne doit jamais faire échouer l'inscription.
-    try {
-      const trialEnd = Math.floor(Date.now() / 1000) + TRIAL_DAYS * 24 * 60 * 60
-      await getAuth().setCustomUserClaims(user.uid, {
-        role: 'premium_plus',
-        premium: true,
-        trialEnd,
-      })
-    } catch (err) {
-      console.error("Octroi de l'essai Premium IA impossible :", err)
-    }
+    // Aucun essai ni claim n'est posé ici (SEC-1) : le compte démarre en rôle
+    // `gratuit`. L'essai Premium IA de 10 jours est activé par le callable
+    // `startTrial` une fois l'e-mail vérifié.
   })
 
+// Démarre l'essai Premium IA de 10 jours (SEC-1). Exige un e-mail vérifié ;
+// une seule fois par uid ET par e-mail normalisé (alias +tag / points Gmail).
+// Contrat : appel sans argument, réponse `{ ok: true, trialEnd }` (secondes
+// epoch) ; le client doit ensuite rafraîchir son jeton (getIdToken(true)).
+// Les crédits de l'essai sont plafonnés côté VPS (TRIAL_PREMIUM_CREDITS).
+export const startTrial = onCall(async (request) => {
+  if (!request.auth) throw new HttpsError('unauthenticated', 'Connexion requise.')
+  return startTrialFor({
+    db: getFirestore(),
+    auth: getAuth(),
+    uid: request.auth.uid,
+    token: request.auth.token,
+  })
+})
+
 // Tâche planifiée : repasse au rôle `gratuit` les comptes dont l'essai
-// Premium IA de 10 jours (posé par `onUserCreated`) est expiré et qui n'ont
+// Premium IA de 10 jours (posé par `startTrial`) est expiré et qui n'ont
 // jamais payé — `periodEnd` (posé uniquement par `applyRole`, donc par un
 // vrai paiement Stripe/Play/Apple) sert de discriminant : son absence signifie
 // que l'essai n'a jamais été converti en abonnement payant. Voir
@@ -187,6 +202,23 @@ export const revertExpiredTrials = onSchedule('every 24 hours', async () => {
 
   console.log(`revertExpiredTrials : ${reverted} compte(s) repassé(s) en gratuit.`)
 })
+
+// Rappel de série quotidienne : une fois par jour, prévient les comptes dont
+// la série est à risque (dernière activité = hier, fuseau Europe/Zurich). Requête
+// filtrée, paginée et à concurrence bornée : voir streaks.mjs (SEC-7).
+export const sendStreakReminders = onSchedule(
+  { schedule: 'every day 18:00', timeZone: 'Europe/Zurich' },
+  async () => {
+    const db = getFirestore()
+    const res = await runStreakReminders({
+      db,
+      sendPush: (uid, notif) => sendPushToUser(db, uid, notif),
+    })
+    console.log(
+      `sendStreakReminders : ${res.sent} rappel(s) envoyé(s), ${res.failed} échec(s), ${res.scanned} compte(s) examiné(s).`
+    )
+  }
+)
 
 // Pose (ou retire) le rôle et le claim `premium` associé sur un utilisateur.
 // `role` est optionnel : si absent, seul `premium` est mis à jour (cas d'un
@@ -239,53 +271,12 @@ export const stripeWebhook = onRequest(
     }
 
     try {
-      switch (event.type) {
-        // Achat/abonnement validé → premium activé.
-        // L'uid Firebase doit être passé dans metadata.firebaseUid côté
-        // création de la Checkout Session (client_reference_id possible aussi).
-        case 'checkout.session.completed': {
-          const session = event.data.object
-          const uid =
-            session.metadata?.firebaseUid || session.client_reference_id
-          if (uid) {
-            const role = await roleForSession(stripe, session)
-            let periodEnd
-            // Recopie l'uid (et le rôle, pour la résiliation) sur
-            // l'abonnement : customer.subscription.deleted ne reçoit que les
-            // métadonnées de l'abonnement, pas celles de la session — sans
-            // cela la résiliation ne retirerait jamais les droits. La même
-            // réponse donne `current_period_end`, utilisé comme ancre de
-            // renouvellement des crédits (voir leggendo-server/quota.mjs).
-            if (session.subscription) {
-              const sub = await stripe.subscriptions.update(session.subscription, {
-                metadata: { firebaseUid: uid, ...(role ? { role } : {}) },
-              })
-              periodEnd = sub.current_period_end
-            }
-            await applyRole(uid, true, role, periodEnd)
-          }
-          break
-        }
-        // Renouvellement, changement de formule, etc. → resynchronise la fin
-        // de période, seule donnée qui doit changer à chaque cycle réel de
-        // l'abonnement (voir README_TARIFICATION.md, § Règles des crédits).
-        case 'customer.subscription.updated': {
-          const sub = event.data.object
-          const uid = sub.metadata?.firebaseUid
-          if (uid) await applyRole(uid, true, sub.metadata?.role, sub.current_period_end)
-          break
-        }
-        // Abonnement annulé/expiré → droits retirés (retour au rôle gratuit).
-        case 'customer.subscription.deleted': {
-          const sub = event.data.object
-          const uid = sub.metadata?.firebaseUid
-          if (uid) await applyRole(uid, false, 'gratuit')
-          break
-        }
-        default:
-          // Événements non gérés : on accuse simplement réception.
-          break
-      }
+      await handleStripeEvent(event, {
+        stripe,
+        applyRole,
+        roleForSession: (session) => roleForSession(stripe, session),
+        nowS: Math.floor(Date.now() / 1000),
+      })
       res.json({ received: true })
     } catch (err) {
       console.error('Erreur traitement webhook :', err)
@@ -349,6 +340,9 @@ export const verifyPlayPurchase = onCall(
       if (data.paymentState !== 1 && data.paymentState !== 2) {
         throw new HttpsError('failed-precondition', 'Paiement non confirmé par Google Play.')
       }
+      // Compte acheteur (si renseigné à l'achat) + liaison jeton ↔ uid : un
+      // jeton Play rejoué depuis un autre compte est refusé (SEC-2).
+      checkPlayAccount(data, uid)
       expiryTimeMillis = Number(data.expiryTimeMillis)
     } catch (err) {
       if (err instanceof HttpsError) throw err
@@ -356,6 +350,7 @@ export const verifyPlayPurchase = onCall(
       throw new HttpsError('internal', 'Vérification Google Play impossible.')
     }
 
+    await claimPurchase(getFirestore(), 'play', purchaseToken, uid)
     const periodEnd = Math.floor(expiryTimeMillis / 1000)
     await applyRole(uid, true, role, periodEnd)
 
@@ -473,6 +468,10 @@ export const deleteAccount = onCall(async (request) => {
     await batch.commit()
   }
 
+  // Libère les achats liés à ce compte (restauration possible après recréation).
+  // trialGrants/trialEmails sont conservés exprès (anti-abus de l'essai).
+  await deletePurchaseTokensFor(db, uid)
+
   await auth.deleteUser(uid)
 
   return { ok: true }
@@ -484,28 +483,10 @@ export const deleteAccount = onCall(async (request) => {
 // secret requis) — à migrer vers l'App Store Server API (JWT + clé privée)
 // si Apple retire définitivement ce point d'entrée.
 //
-// Appelée depuis src/lib/iap.js après un achat ou une restauration.
+// Appelée depuis src/lib/iap.js après un achat ou une restauration. Appel
+// Apple borné par un délai (purchases.mjs) ; bundle attendu : APPLE_BUNDLE_ID.
 const APPLE_VERIFY_URL_PROD = 'https://buy.itunes.apple.com/verifyReceipt'
 const APPLE_VERIFY_URL_SANDBOX = 'https://sandbox.itunes.apple.com/verifyReceipt'
-
-async function verifyAppleReceipt(receiptData, sharedSecret, url = APPLE_VERIFY_URL_PROD) {
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      'receipt-data': receiptData,
-      password: sharedSecret,
-      'exclude-old-transactions': true,
-    }),
-  })
-  const body = await res.json()
-  // 21007 : reçu sandbox envoyé par erreur à l'URL de prod (fréquent en
-  // TestFlight) — on retente contre le bac à sable comme le recommande Apple.
-  if (body.status === 21007 && url === APPLE_VERIFY_URL_PROD) {
-    return verifyAppleReceipt(receiptData, sharedSecret, APPLE_VERIFY_URL_SANDBOX)
-  }
-  return body
-}
 
 export const validateAppleReceipt = onCall(
   { secrets: [APPLE_SHARED_SECRET] },
@@ -518,25 +499,32 @@ export const validateAppleReceipt = onCall(
       throw new HttpsError('invalid-argument', 'Reçu manquant.')
     }
 
-    const body = await verifyAppleReceipt(receiptData, APPLE_SHARED_SECRET.value())
+    const body = await verifyAppleReceipt(receiptData, APPLE_SHARED_SECRET.value(), {
+      url: APPLE_VERIFY_URL_PROD,
+      sandboxUrl: APPLE_VERIFY_URL_SANDBOX,
+    })
     if (body.status !== 0) {
       console.error('Reçu Apple invalide, status', body.status)
       throw new HttpsError('failed-precondition', 'Reçu invalide.')
     }
 
-    // `latest_receipt_info` liste tout l'historique d'abonnement ; on ne
-    // garde que la transaction non expirée la plus récente.
-    const entries = body.latest_receipt_info || []
-    const now = Date.now()
-    const active = entries
-      .filter((e) => Number(e.expires_date_ms) > now)
-      .sort((a, b) => Number(b.expires_date_ms) - Number(a.expires_date_ms))[0]
+    // Contrôle du bundle_id, puis `latest_receipt_info` (tout l'historique
+    // d'abonnement) : on ne garde que la transaction non expirée la plus récente.
+    const active = pickActiveAppleTransaction(body)
 
     const uid = request.auth.uid
     if (!active) {
       await applyRole(uid, false, 'gratuit')
       return { ok: true, active: false }
     }
+
+    // Anti-rejeu : l'abonnement (original_transaction_id) est lié à un seul uid.
+    await claimPurchase(
+      getFirestore(),
+      'apple',
+      active.original_transaction_id || active.transaction_id,
+      uid
+    )
 
     const role = roleForAppleProductId(active.product_id)
     await applyRole(uid, true, role, Math.floor(Number(active.expires_date_ms) / 1000))

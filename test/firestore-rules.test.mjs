@@ -155,13 +155,23 @@ test('contentStats : lecture refusée hors compte administrateur', async () => {
 test('contentStats : lecture autorisée pour le compte administrateur', async () => {
   await seed((db) => setDoc(doc(db, 'contentStats/vocab-A1'), { count: 10 }))
   await assertSucceeds(
+    getDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com', email_verified: true }), 'contentStats/vocab-A1'))
+  )
+})
+
+test('contentStats : e-mail administrateur non vérifié refusé', async () => {
+  await seed((db) => setDoc(doc(db, 'contentStats/vocab-A1'), { count: 10 }))
+  await assertFails(
+    getDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com', email_verified: false }), 'contentStats/vocab-A1'))
+  )
+  await assertFails(
     getDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com' }), 'contentStats/vocab-A1'))
   )
 })
 
 test('contentStats : écriture refusée même pour l’administrateur', async () => {
   await assertFails(
-    setDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com' }), 'contentStats/vocab-A1'), {
+    setDoc(doc(asOwner('u1', { email: 'lberthod@gmail.com', email_verified: true }), 'contentStats/vocab-A1'), {
       count: 0,
     })
   )
@@ -194,6 +204,36 @@ test('users : createdTexts doit être une liste', async () => {
 test('users : un champ arbitraire est refusé', async () => {
   await assertFails(setDoc(doc(asOwner('u1', {}), 'users/u1'), { role: 'enseignant' }))
 })
+
+test('users : fcmTokens : 10 jetons acceptés, 11 refusés', async () => {
+  const tokens = (n) => Array.from({ length: n }, (_, i) => `tok${i}`)
+  await assertSucceeds(setDoc(doc(asOwner('u1', {}), 'users/u1'), { fcmTokens: tokens(10) }))
+  await assertFails(setDoc(doc(asOwner('u2', {}), 'users/u2'), { fcmTokens: tokens(11) }))
+})
+
+test('users : fcmTokens : éléments non-chaînes refusés', async () => {
+  await assertFails(setDoc(doc(asOwner('u1', {}), 'users/u1'), { fcmTokens: ['ok', 42] }))
+  await assertFails(setDoc(doc(asOwner('u1', {}), 'users/u1'), { fcmTokens: [{ a: 1 }] }))
+  await assertFails(setDoc(doc(asOwner('u1', {}), 'users/u1'), { fcmTokens: 'oops' }))
+})
+
+test('users : un profil déjà au-delà de 10 jetons peut encore écrire progress', async () => {
+  await seed((db) =>
+    setDoc(doc(db, 'users/u1'), { fcmTokens: Array.from({ length: 12 }, (_, i) => `t${i}`) })
+  )
+  await assertSucceeds(updateDoc(doc(asOwner('u1', {}), 'users/u1'), { progress: { readTexts: [] } }))
+})
+
+// --- Collections serveur : aucun accès client ---
+
+for (const col of ['purchaseTokens', 'trialGrants', 'trialEmails']) {
+  test(`${col} : ni lecture ni écriture côté client`, async () => {
+    await seed((db) => setDoc(doc(db, `${col}/x`), { uid: 'u1' }))
+    await assertFails(getDoc(doc(asOwner('u1', {}), `${col}/x`)))
+    await assertFails(setDoc(doc(asOwner('u1', {}), `${col}/y`), { uid: 'u1' }))
+    await assertFails(deleteDoc(doc(asOwner('u1', {}), `${col}/x`)))
+  })
+}
 
 test('users : un autre compte ne peut pas écrire', async () => {
   await assertFails(setDoc(doc(asOwner('u2', {}), 'users/u1'), { createdTexts: [] }))
@@ -384,4 +424,21 @@ test('newsTexts : lecture autorisée avec premium_plus ou enseignant', async () 
 
 test('collection inconnue : toujours refusée', async () => {
   await assertFails(setDoc(doc(asOwner('u1', {}), 'somethingElse/doc1'), { a: 1 }))
+})
+
+// --- users/{uid} : champs privilégiés jamais écrits par le client ---
+
+for (const [field, value] of [['role', 'premium_plus'], ['premium', true], ['trialEnd', 9999999999]]) {
+  test(`users : écriture client de ${field} refusée (création et mise à jour)`, async () => {
+    await assertFails(setDoc(doc(asOwner('u1', {}), 'users/u1'), { [field]: value }))
+    await seed((db) => setDoc(doc(db, 'users/u1'), { createdTexts: [] }))
+    await assertFails(updateDoc(doc(asOwner('u1', {}), 'users/u1'), { [field]: value }))
+    await assertFails(
+      setDoc(doc(asOwner('u1', {}), 'users/u1'), { createdTexts: [], [field]: value }, { merge: true })
+    )
+  })
+}
+
+test('users : un client ne peut pas écrire dans le document d’un autre uid (fcmTokens)', async () => {
+  await assertFails(setDoc(doc(asOwner('u2', {}), 'users/u1'), { fcmTokens: ['t'] }, { merge: true }))
 })

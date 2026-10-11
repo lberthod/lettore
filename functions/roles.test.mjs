@@ -9,13 +9,13 @@ test('ROLES contient les quatre rôles attendus, gratuit en premier', () => {
 
 test('requireAdmin autorise l’e-mail administrateur', () => {
   assert.doesNotThrow(() =>
-    requireAdmin({ auth: { uid: 'u1', token: { email: ADMIN_EMAIL } } })
+    requireAdmin({ auth: { uid: 'u1', token: { email: ADMIN_EMAIL, email_verified: true } } })
   )
 })
 
 test('requireAdmin tolère la casse et les espaces', () => {
   assert.doesNotThrow(() =>
-    requireAdmin({ auth: { uid: 'u1', token: { email: `  ${ADMIN_EMAIL.toUpperCase()}  ` } } })
+    requireAdmin({ auth: { uid: 'u1', token: { email: `  ${ADMIN_EMAIL.toUpperCase()}  `, email_verified: true } } })
   )
 })
 
@@ -42,4 +42,15 @@ test('roleForPriceId renvoie undefined pour un prix inconnu, sans lever d’erre
 
 test('roleForPriceId renvoie undefined sans priceId', () => {
   assert.equal(roleForPriceId(undefined), undefined)
+})
+
+test('requireAdmin refuse l’e-mail admin non vérifié', () => {
+  assert.throws(
+    () => requireAdmin({ auth: { uid: 'u3', token: { email: ADMIN_EMAIL, email_verified: false } } }),
+    HttpsError
+  )
+  assert.throws(
+    () => requireAdmin({ auth: { uid: 'u3', token: { email: ADMIN_EMAIL } } }),
+    HttpsError
+  )
 })

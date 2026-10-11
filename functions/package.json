@@ -11,7 +11,7 @@
     "serve": "firebase emulators:start --only functions",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "test": "node --test roles.test.mjs"
+    "test": "node --test"
   },
   "dependencies": {
     "firebase-admin": "^13.0.0",
