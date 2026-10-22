@@ -232,6 +232,15 @@ function logGeneration({ user, size, level, jobId, status, startedAt, usage, err
   })
 }
 
+// Interrupteur des fonctions IA (passage en 100 % gratuit, octobre 2026) : le
+// fournisseur par défaut (llm.mjs) traite les consignes hors UE et Suisse.
+// Tant que AI_ENABLED ne vaut pas « 1 », les routes qui transmettent une
+// saisie de l'utilisateur à un modèle répondent 503, avant toute
+// authentification ni décompte de crédit. Ne réactiver qu'avec un fournisseur
+// européen ou suisse (GLM_BASE_URL / GLM_MODEL).
+const AI_ENABLED = process.env.AI_ENABLED === '1'
+const AI_ROUTE_RE = /^\/leggendo\/(generate|correct|dialogue)(\/|$)/
+
 // --- Correction synchrone (Phase 5) ---
 // Une correction est bien plus courte qu'une génération : la réponse est
 // renvoyée directement (pas de job à sonder). Ce délai borne uniquement la
@@ -349,8 +358,13 @@ const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`)
 
   try {
+    if (!AI_ENABLED && req.method === 'POST' && AI_ROUTE_RE.test(url.pathname)) {
+      send(503, { error: 'Les fonctions IA de Leggendo sont désactivées.' })
+      return
+    }
+
     if (req.method === 'GET' && url.pathname === '/leggendo/health') {
-      send(200, { ok: true, model: GLM_MODEL })
+      send(200, { ok: true, ai: AI_ENABLED, model: GLM_MODEL })
       return
     }
 
