@@ -67,7 +67,6 @@ export const STATIC_PAGE_CONTENT = {
           "Une seule bonne réponse par question, sans limite de temps.",
           "Entre 10 et 16 questions selon votre parcours.",
           "Quelques questions de mise en situation sur des cas réels, qui aident à formuler un résultat plus juste sans modifier le score du questionnaire.",
-          "Une production écrite facultative pour compléter l'estimation.",
         ],
       },
       {
