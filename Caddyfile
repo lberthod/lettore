@@ -20,13 +20,17 @@
 #   4. Vérifier ensuite : 404 sur une URL inconnue, /manifest.webmanifest en
 #      application/manifest+json, console du navigateur sans erreur CSP.
 #
-# CSP / HSTS : ni l'une ni l'autre n'existe en production aujourd'hui. Pour
-# ce premier déploiement, HSTS est volontairement ABSENT (il est quasi
-# irréversible côté navigateurs : à n'activer qu'une fois HTTPS validé sur
-# tous les sous-domaines) et la CSP est en mode Content-Security-Policy-Report-Only
-# (elle signale dans la console sans rien bloquer). Pour durcir : observer la
-# console quelques jours, ajuster les sources, puis renommer l'en-tête en
-# `Content-Security-Policy`; HSTS : commencer par max-age=300, puis augmenter.
+# CSP / HSTS (passage en 100 % gratuit, octobre 2026) : plus de Stripe, de
+# Paddle, de reCAPTCHA ni d'appel IA côté client, la CSP se réduit à Firebase
+# (Auth, Firestore), à la connexion Google et à Google Analytics (chargé
+# seulement après consentement). Elle est désormais IMPOSÉE
+# (Content-Security-Policy) ; elle a été vérifiée en local sur le build
+# (accueil, textes, lecteur, Classici, connexion, profil, consentement) sans
+# violation. Si une violation apparaît en production, repasser l'en-tête en
+# Content-Security-Policy-Report-Only le temps de corriger.
+# HSTS : max-age=300 (5 min) pour le premier déploiement, sans
+# includeSubDomains ; après une semaine sans incident, passer à
+# max-age=31536000.
 #
 # Ce que ce fichier corrige par rapport à l'existant :
 #   1. vraie 404 HTTP (au lieu d'un 200 + index.html) pour les URL inconnues ;
@@ -42,20 +46,28 @@
 # on essaie {path}.html avant {path}.
 
 leggendo.fr {  # A VERIFIER : domaine exact
-	# A VERIFIER : racine réelle où le contenu de dist/ est déposé.
-	root * /var/www/leggendo
+	# A VERIFIER : racine constatée au déploiement du 2026-10-11 (Caddy sert
+	# /mnt/data/leggendo-fr/dist, avec swap de dossier dist-prev-*).
+	root * /mnt/data/leggendo-fr/dist
 
 	encode zstd gzip
 
-	# --- En-têtes de sécurité (inoffensifs) + CSP en rapport seul ---
-	# HSTS volontairement omis (voir en-tête du fichier). CSP en Report-Only :
-	# basée sur firebase.json, à valider en console avant de l'imposer.
+	# --- En-têtes de sécurité, CSP imposée et HSTS (voir en-tête du fichier) ---
+	# script-src : apis.google.com pour la fenêtre de connexion Google
+	# (Firebase Auth), googletagmanager.com pour Analytics après consentement.
+	# connect-src : *.googleapis.com (Auth, Firestore), Analytics, et
+	# api.loicberthod.ch (API Leggendo, fonctions IA aujourd'hui désactivées).
 	header {
+		Strict-Transport-Security "max-age=300"
 		X-Content-Type-Options "nosniff"
 		Referrer-Policy "strict-origin-when-cross-origin"
 		Permissions-Policy "camera=(), microphone=(self), geolocation=()"
-		Content-Security-Policy-Report-Only "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.googleapis.com https://api.loicberthod.ch https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://leggendo-dbb84.firebaseapp.com"
+		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://apis.google.com https://www.googletagmanager.com; connect-src 'self' https://*.googleapis.com https://api.loicberthod.ch https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://leggendo-dbb84.firebaseapp.com https://accounts.google.com; worker-src 'self'; manifest-src 'self'"
 	}
+
+	# Vente désactivée : l'ancienne page Abonnement renvoie vers l'accueil
+	# (le routeur Vue fait de même côté client).
+	redir /abonnement / permanent
 
 	# --- Cache-Control ---
 	# Assets Vite : nom hashé => contenu immuable.
