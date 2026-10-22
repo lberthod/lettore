@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
-import { isLoggedIn, isAdmin, isPremiumPlus } from '../lib/access.js'
+import { isLoggedIn, isAdmin } from '../lib/access.js'
 import { progress } from '../progress.js'
 import { isNativeApp } from '../lib/platform.js'
 
@@ -10,16 +10,9 @@ import { isNativeApp } from '../lib/platform.js'
 const loggedIn = computed(() => isLoggedIn())
 const admin = computed(() => isAdmin())
 
-// Notizie (Premium+) : lecture asynchrone des custom claims, pas réactive
-// à isLoggedIn() — on la relit à chaque connexion/déconnexion.
-const premiumPlus = ref(false)
-watch(
-  currentUser,
-  async (user) => {
-    premiumPlus.value = user ? await isPremiumPlus() : false
-  },
-  { immediate: true }
-)
+// Scrivi, Dialogo et Notizie : ouverts à tout compte connecté (mode gratuit,
+// GRATUIT.md) — le serveur applique le plafond de crédits.
+const premiumPlus = loggedIn
 
 // Menu compact (mobile) : replié par défaut, fermé à chaque navigation
 const menuOpen = ref(false)

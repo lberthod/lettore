@@ -1,5 +1,10 @@
 # Tarification Leggendo — décision de lancement
 
+> **Obsolète depuis le 22 octobre 2026.** Leggendo est passé en mode
+> entièrement gratuit : voir [GRATUIT.md](GRATUIT.md), qui fait foi pour les
+> droits d'accès. Ce document est conservé pour mémoire (grille de prix et
+> périmètre envisagés), en vue d'une monétisation future.
+
 Ce document fixe la tarification et le périmètre fonctionnel à implémenter pour
 le lancement commercial de Leggendo.
 

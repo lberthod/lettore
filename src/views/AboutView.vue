@@ -217,7 +217,7 @@ const themes = [
             Commencer à lire →
           </RouterLink>
           <RouterLink class="btn-ghost" :to="{ name: 'pricing' }">
-            Voir les abonnements
+            Pourquoi c'est gratuit
           </RouterLink>
         </div>
       </section>

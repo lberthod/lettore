@@ -1,22 +1,23 @@
-// Logique des crédits de génération (pure, sans dépendance Firestore — voir
+// Logique des crédits IA (pure, sans dépendance Firestore — voir
 // TODO_SECURITE.md, point 4). Isolée de server.mjs pour être testable seule.
 //
-// Barème défini dans README_TARIFICATION.md :
-// - Gratuit    : 1 génération d'essai, à vie (jamais renouvelée).
-// - Premium    : pas d'accès à la génération IA (formule lecture uniquement).
-// - Premium IA (rôle technique `premium_plus`) : 30 crédits par mois.
-// - Enseignant : 100 crédits par mois (inclut les droits Premium IA).
+// Mode gratuit (GRATUIT.md) : il n'y a plus de formule payante. Tout compte
+// connecté dispose chaque mois civil de FREE_MONTHLY_CREDITS crédits IA
+// (génération, correction, dialogue), une fois son adresse e-mail vérifiée.
+// Les rôles `premium_plus` et `enseignant`, attribués à la main par
+// l'administration (adminSetUserRole), gardent un plafond plus élevé — ils
+// servent aux tests et à d'éventuels comptes partenaires, pas à la vente.
 // Coût par taille de texte (CREDIT_COST). Une génération qui échoue pour une
 // raison technique ne consomme pas de crédit — voir `failJob` dans jobs.mjs,
 // qui clôture le job et le rembourse dans la même transaction.
 
-export const FREE_TRIAL_CREDITS = 1
-export const MONTHLY_CREDITS = { premium_plus: 30, enseignant: 100 }
-// Essai Premium IA de 10 jours (callable `startTrial`, functions/index.js) :
-// le compte porte le rôle `premium_plus` + un claim `trialEnd`, mais ses
-// crédits sont plafonnés à ce petit capital (et non aux 30 du plan payant) —
-// sinon un compte jetable vérifié = 30 générations payées par nous.
-export const TRIAL_PREMIUM_CREDITS = 3
+export const FREE_MONTHLY_CREDITS = 10
+export const MONTHLY_CREDITS = {
+  gratuit: FREE_MONTHLY_CREDITS,
+  premium: FREE_MONTHLY_CREDITS,
+  premium_plus: 30,
+  enseignant: 100,
+}
 export const CREDIT_COST = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
 // Correction d'une production écrite (Phase 5) : même barème que « corto ».
 export const CORRECTION_COST = 1
@@ -28,8 +29,11 @@ export const CORRECTION_COST = 1
 export const DIALOGUE_COST = 2
 export const MAX_DIALOGUE_TURNS = 12
 
+// Les crédits gratuits rendent l'inscription en masse rentable pour un
+// attaquant (un compte jetable = des générations payées par nous) : exiger
+// une boîte aux lettres réelle casse l'automatisation à faible coût.
 export const EMAIL_NOT_VERIFIED =
-  'Vérifiez votre adresse e-mail pour lancer votre génération d’essai : un lien vous a été envoyé à l’inscription.'
+  'Vérifiez votre adresse e-mail pour utiliser les outils IA : un lien vous a été envoyé à l’inscription.'
 
 export function creditCost(sizeId) {
   return CREDIT_COST[sizeId] ?? 1
@@ -39,20 +43,12 @@ export function monthKey(now = new Date()) {
   return now.toISOString().slice(0, 7) // YYYY-MM
 }
 
-// Ancre de la période de crédits en cours. Priorité à `user.periodEnd` — la
-// date de fin de période Stripe (claim Firebase posée par
-// functions/index.js à partir de `subscription.current_period_end`) : elle
-// change à chaque renouvellement réel de l'abonnement, donc comparer cette
-// valeur à celle stockée dans le quota suffit à détecter un nouveau cycle,
-// quel que soit le jour du mois où l'abonnement a été souscrit (voir
-// README_TARIFICATION.md, § Règles des crédits). Pour un compte sans
-// abonnement Stripe (essai gratuit, rôle attribué à la main), on retombe sur
-// le mois civil UTC faute de date de référence.
+// Ancre de la période de crédits en cours : le mois civil UTC. Les comptes
+// qui portent encore une claim `periodEnd` (anciens abonnements Stripe,
+// jamais retirée) gardent cette ancre pour ne pas remettre leur compteur à
+// zéro au moment du passage en gratuit.
 function periodAnchor(user, now) {
   if (user?.periodEnd) return `stripe:${user.periodEnd}`
-  // Essai : ancre fixe sur toute la durée, pour qu'un changement de mois
-  // civil ne remette pas le compteur à zéro en cours d'essai.
-  if (isTrialAccount(user, now)) return `trial:${user.trialEnd}`
   return monthKey(now)
 }
 
@@ -60,26 +56,22 @@ function nowSeconds(now) {
   return Math.floor((now instanceof Date ? now.getTime() : Number(now)) / 1000)
 }
 
-// Compte en cours d'essai Premium IA : rôle `premium_plus`, `trialEnd` futur
-// et aucun paiement (`periodEnd` absent — il n'est posé que par un vrai
-// paiement Stripe/Play/Apple, voir functions/index.js).
-export function isTrialAccount(user, now = new Date()) {
-  return (
-    user?.role === 'premium_plus' &&
-    Number(user.trialEnd) > nowSeconds(now) &&
-    !user.periodEnd
-  )
+// Rôles à plafond élevé, attribués à la main (jamais par un paiement).
+function isElevatedRole(role) {
+  return role === 'premium_plus' || role === 'enseignant'
 }
 
-// Compte susceptible d'épuiser un essai gratuit (limite par IP) : plan
-// gratuit ou essai Premium IA en cours.
-export function isTrialLikeAccount(user, now = new Date()) {
-  return user?.role === 'gratuit' || isTrialAccount(user, now)
+// Compte ordinaire (plafond gratuit) : soumis à la limite de comptes par IP
+// (ratelimit.mjs), puisqu'il se crée en quelques secondes.
+export function isFreeAccount(user) {
+  return !isElevatedRole(user?.role)
 }
 
-// Rôle effectif à partir des claims du jeton. Un essai échu dont le claim n'a
-// pas encore été retiré par `revertExpiredTrials` (tâche quotidienne) est
-// traité comme `gratuit` : l'accès ne doit pas survivre à `trialEnd`.
+// Rôle effectif à partir des claims du jeton. Les anciens essais Premium IA
+// (claim `trialEnd` posée par `startTrial`/`onUserCreated`, voir
+// functions/index.js) ne sont plus accordés, mais des comptes en portent
+// encore : un essai échu est traité comme `gratuit` pour qu'il ne conserve
+// pas le plafond élevé de `premium_plus`.
 export function resolveRole(claims, now = new Date()) {
   const role = claims.role || (claims.premium ? 'premium' : 'gratuit')
   if (
@@ -93,23 +85,16 @@ export function resolveRole(claims, now = new Date()) {
   return role
 }
 
-// Plafond de crédits applicable (essai : TRIAL_PREMIUM_CREDITS).
-export function creditLimit(user, now = new Date()) {
-  return isTrialAccount(user, now) ? TRIAL_PREMIUM_CREDITS : MONTHLY_CREDITS[user.role]
-}
-
-// Un essai n'ouvre aucun crédit tant que l'adresse e-mail n'est pas vérifiée.
-function trialUnverified(user, now) {
-  return isTrialAccount(user, now) && !user.emailVerified
+// Plafond mensuel applicable au compte.
+export function creditLimit(user) {
+  return MONTHLY_CREDITS[user?.role] ?? FREE_MONTHLY_CREDITS
 }
 
 export function freshQuota(user, now = new Date()) {
-  return { trialUsed: false, monthlyUsed: 0, periodAnchor: periodAnchor(user, now) }
+  return { monthlyUsed: 0, periodAnchor: periodAnchor(user, now) }
 }
 
-// Remet à zéro le compteur mensuel si on a changé de période de facturation.
-// Le crédit d'essai gratuit, lui, n'est jamais remis à zéro (c'est un
-// capital à vie, pas périodique).
+// Remet à zéro le compteur mensuel si on a changé de période.
 export function resetIfStale(user, q, now = new Date()) {
   const anchor = periodAnchor(user, now)
   if (q.periodAnchor !== anchor) {
@@ -119,110 +104,50 @@ export function resetIfStale(user, q, now = new Date()) {
   return q
 }
 
-function isCreditRole(role) {
-  return role === 'premium_plus' || role === 'enseignant'
+function insufficient(q, limit, cost, what) {
+  const remaining = Math.max(0, limit - q.monthlyUsed)
+  return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${cost} requis ${what}).`
 }
 
-// Renvoie un message d'erreur si la génération doit être refusée, sinon null.
+// Renvoie un message d'erreur si une consommation de `cost` crédits doit
+// être refusée, sinon null. `emailVerified` est lu dans l'ID token (jamais
+// fourni par le client).
+function creditError(user, q, cost, what) {
+  if (!user.emailVerified) return EMAIL_NOT_VERIFIED
+  const limit = creditLimit(user)
+  if (q.monthlyUsed + cost > limit) return insufficient(q, limit, cost, what)
+  return null
+}
+
+// Génération d'un texte.
 export function quotaError(user, q, sizeId) {
-  if (isCreditRole(user.role)) {
-    if (trialUnverified(user)) return EMAIL_NOT_VERIFIED
-    const limit = creditLimit(user)
-    const cost = creditCost(sizeId)
-    if (q.monthlyUsed + cost > limit) {
-      const remaining = Math.max(0, limit - q.monthlyUsed)
-      return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${cost} requis pour ce format).`
-    }
-    return null
-  }
-
-  if (user.role === 'premium') {
-    return 'La formule Premium ne comprend pas la génération de textes — passez à Premium IA pour créer vos propres lectures.'
-  }
-
-  // Gratuit : un unique essai, jamais renouvelé.
-  if (q.trialUsed) {
-    return 'Génération d’essai déjà utilisée — passez à Premium IA pour continuer à créer vos propres textes.'
-  }
-  // …et seulement une fois l'adresse e-mail vérifiée. C'est l'essai gratuit
-  // qui rend l'inscription en masse rentable pour un attaquant (un compte
-  // jetable = une génération payée par nous) : exiger une boîte aux lettres
-  // réelle casse l'automatisation à faible coût. Les rôles payants ne sont
-  // pas soumis à ce contrôle — ils ont déjà passé Stripe, et l'adresse de
-  // facturation peut différer de celle du compte Firebase.
-  if (!user.emailVerified) {
-    return EMAIL_NOT_VERIFIED
-  }
-  return null
+  return creditError(user, q, creditCost(sizeId), 'pour ce format')
 }
 
-// Refus/autorisation d'une correction d'écriture (Phase 5). Choix assumé :
-// la correction est réservée aux rôles à crédits (premium_plus/enseignant),
-// SANS essai gratuit. L'essai gratuit existant est un capital unique à vie
-// (`trialUsed`, un booléen) entièrement pensé pour la génération : le
-// partager avec la correction ferait consommer silencieusement, pour une
-// petite correction, la seule génération d'essai du compte — et en créer un
-// second compteur d'essai rouvrirait la surface d'abus (comptes jetables)
-// que TODO_SECURITE.md a justement fermée. Aligné sur l'accès client
-// (src/lib/access.js : correction = premium_plus/enseignant, comme Notizie).
+// Correction d'une production écrite (Phase 5).
 export function correctionQuotaError(user, q) {
-  if (!isCreditRole(user.role)) {
-    return 'La correction de textes fait partie de la formule Premium IA — passez à Premium IA pour faire corriger vos productions écrites.'
-  }
-  if (trialUnverified(user)) return EMAIL_NOT_VERIFIED
-  const limit = creditLimit(user)
-  if (q.monthlyUsed + CORRECTION_COST > limit) {
-    const remaining = Math.max(0, limit - q.monthlyUsed)
-    return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${CORRECTION_COST} requis pour une correction).`
-  }
-  return null
+  return creditError(user, q, CORRECTION_COST, 'pour une correction')
 }
 
-// Refus/autorisation d'un dialogue simulé (Phase 7). Même choix documenté
-// que la correction : réservé aux rôles à crédits (premium_plus/enseignant),
-// SANS essai gratuit — l'essai existant est le capital unique de génération,
-// et un compteur d'essai séparé rouvrirait l'abus par comptes jetables que
-// TODO_SECURITE.md a fermé. Aligné sur l'accès client (src/lib/access.js :
-// hasDialogueAccess = premium_plus/enseignant, comme la correction).
+// Ouverture d'un dialogue simulé (Phase 7).
 export function dialogueQuotaError(user, q) {
-  if (!isCreditRole(user.role)) {
-    return 'Le dialogue simulé fait partie de la formule Premium IA — passez à Premium IA pour converser avec votre partenaire de dialogue.'
-  }
-  if (trialUnverified(user)) return EMAIL_NOT_VERIFIED
-  const limit = creditLimit(user)
-  if (q.monthlyUsed + DIALOGUE_COST > limit) {
-    const remaining = Math.max(0, limit - q.monthlyUsed)
-    return `Crédits mensuels insuffisants (${remaining} restant${remaining > 1 ? 's' : ''} sur ${limit}, ${DIALOGUE_COST} requis pour un dialogue).`
-  }
-  return null
+  return creditError(user, q, DIALOGUE_COST, 'pour un dialogue')
 }
 
-// Solde à afficher côté client avant de lancer une génération (voir
-// README_TARIFICATION.md, § Règles des crédits : « le solde doit être
-// visible avant de lancer une génération »).
+// Solde à afficher côté client avant de lancer une action IA. `emailVerified`
+// sert à l'affichage : l'app invite à vérifier l'adresse avant de proposer le
+// bouton plutôt que de laisser partir une requête qui sera refusée (voir
+// CreateTextView.vue, WriteView.vue, DialogueView.vue).
 export function quotaStatus(user, q) {
-  if (isCreditRole(user.role)) {
-    const limit = creditLimit(user)
-    const used = q.monthlyUsed
-    return {
-      type: 'credits',
-      limit,
-      used,
-      remaining: trialUnverified(user) ? 0 : Math.max(0, limit - used),
-      ...(isTrialAccount(user) ? { trial: true, emailVerified: Boolean(user.emailVerified) } : {}),
-    }
-  }
-  if (user.role === 'premium') {
-    return { type: 'no_access' }
-  }
-  // `emailVerified` sert à l'affichage : l'app invite à vérifier l'adresse
-  // avant de proposer le bouton plutôt que de laisser partir une requête
-  // qui sera refusée (voir quotaError et CreateTextView.vue).
+  const limit = creditLimit(user)
+  const used = q.monthlyUsed
+  const emailVerified = Boolean(user.emailVerified)
   return {
-    type: 'trial',
-    used: q.trialUsed ? 1 : 0,
-    remaining: q.trialUsed ? 0 : FREE_TRIAL_CREDITS,
-    emailVerified: Boolean(user.emailVerified),
+    type: 'credits',
+    limit,
+    used,
+    remaining: emailVerified ? Math.max(0, limit - used) : 0,
+    emailVerified,
   }
 }
 

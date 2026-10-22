@@ -135,7 +135,7 @@ C'est le cœur de l'app. Pipeline de rendu :
 
 **Accès** ([lib/access.js](src/lib/access.js)) : les visiteurs non connectés voient un **aperçu gratuit de 6 textes** (échantillon réparti sur les niveaux) ; un compte (gratuit) débloque tout le catalogue. Si Firebase n'est pas configuré (mode développement), tout est ouvert. La page d'administration est réservée à un e-mail admin côté client — l'autorisation réelle est vérifiée côté serveur.
 
-**Monétisation** : modèle freemium défini dans [lib/stripe.js](src/lib/stripe.js) : Gratuit / Premium mensuel (5 CHF) / Premium annuel (45 CHF). Le paiement passe par des **Payment Links Stripe** (page hébergée par Stripe, aucun backend). Note : le contrôle d'accès Premium côté client n'est pas encore branché — remplir les Payment Links ne suffit pas, il faudra relier l'état d'abonnement (webhook Stripe → Firestore, ou Stripe Customer Portal) au déblocage des textes.
+**Monétisation** : *(obsolète — Leggendo est gratuit depuis le 22 octobre 2026, voir [GRATUIT.md](GRATUIT.md) ; `src/lib/stripe.js` a été retiré.)* Ancien modèle freemium défini dans `lib/stripe.js` : Gratuit / Premium mensuel (5 CHF) / Premium annuel (45 CHF). Le paiement passe par des **Payment Links Stripe** (page hébergée par Stripe, aucun backend). Note : le contrôle d'accès Premium côté client n'est pas encore branché — remplir les Payment Links ne suffit pas, il faudra relier l'état d'abonnement (webhook Stripe → Firestore, ou Stripe Customer Portal) au déblocage des textes.
 
 Sur les stores (voir README, phase 3), cette brique sera remplacée par les achats in-app via un branchement `Capacitor.isNativePlatform()` — Stripe reste le canal web.
 

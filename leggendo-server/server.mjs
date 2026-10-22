@@ -34,7 +34,7 @@ import {
   DIALOGUE_COST,
   MAX_DIALOGUE_TURNS,
   resolveRole,
-  isTrialLikeAccount,
+  isFreeAccount,
 } from './quota.mjs'
 import { createJobStore, ActiveJobError } from './jobs.mjs'
 import { sendPushToUser } from './push.mjs'
@@ -144,7 +144,7 @@ const TRIAL_ALERT_PER_HOUR = Number(process.env.TRIAL_ALERT_PER_HOUR || 20)
 const trialRate = createRateWindow({ windowMs: 60 * 60 * 1000 })
 
 function watchTrialRate(user, ip) {
-  if (!isTrialLikeAccount(user)) return
+  if (!isFreeAccount(user)) return
   const count = trialRate.hit()
   if (count >= TRIAL_ALERT_PER_HOUR && count % TRIAL_ALERT_PER_HOUR === 0) {
     console.warn(
@@ -394,7 +394,7 @@ const server = http.createServer(async (req, res) => {
       // ratelimit.mjs). Vérifié avant la réservation, enregistré seulement
       // si celle-ci réussit — une demande refusée n'a rien coûté en IA.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const isTrial = isTrialLikeAccount(user)
+      const isTrial = isFreeAccount(user)
       const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrial })
       if (ipError) {
         console.warn(
@@ -511,7 +511,7 @@ const server = http.createServer(async (req, res) => {
       // c'est le nombre d'appels IA déclenchés depuis une origine réseau).
       // Un compte en essai Premium IA compte comme siège d'essai par IP.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isFreeAccount(user) })
       if (ipError) {
         console.warn(
           `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (correction)`
@@ -531,7 +531,7 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
-      ipLimiter.record(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
+      ipLimiter.record(ip, { uid: user.uid, trial: isFreeAccount(user) })
       console.log(
         `[correction ${correctionId}] ${user.email || user.uid} (${user.role}) — ${text.length} caractères`
       )
@@ -618,7 +618,7 @@ const server = http.createServer(async (req, res) => {
       // MAX_DIALOGUE_TURNS, pas par le compteur IP). Un compte en essai
       // compte comme siège d'essai par IP.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isFreeAccount(user) })
       if (ipError) {
         console.warn(
           `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (dialogue)`
@@ -638,7 +638,7 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
-      ipLimiter.record(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
+      ipLimiter.record(ip, { uid: user.uid, trial: isFreeAccount(user) })
       console.log(
         `[dialogue ${sessionId}] ${user.email || user.uid} (${user.role}) — ouverture ${scenarioId} ${level}`
       )

@@ -643,7 +643,7 @@ onBeforeUnmount(() => {
 
         <p v-if="continuousLoading" class="continuous-status">Caricamento del capitolo successivo…</p>
         <div v-if="continuousDenied" class="continuous-paywall">
-          <p class="excerpt">La suite du livre nécessite un accès complet.</p>
+          <p class="excerpt">La suite du livre se lit avec un compte gratuit.</p>
           <ContentPaywall placement="classici" />
         </div>
         <div

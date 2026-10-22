@@ -108,19 +108,18 @@ test('createRateWindow compte les événements de la fenêtre courante', () => {
   assert.equal(window.hit(), 1, 'les événements trop vieux sont oubliés')
 })
 
-// SEC-1 : un compte en essai Premium IA (rôle premium_plus + trialEnd futur)
-// est compté comme siège d'essai par IP, au même titre qu'un compte gratuit.
-import { isTrialLikeAccount } from '../quota.mjs'
+// Mode gratuit : tout compte ordinaire (rôle gratuit, premium, ou ancien
+// essai premium_plus + trialEnd) est compté comme siège gratuit par IP.
+import { isFreeAccount } from '../quota.mjs'
 
-test('6e compte en essai Premium IA depuis la même IP : refusé', () => {
+test('6e compte gratuit depuis la même IP : refusé', () => {
   const lim = createIpLimiter({ maxTrialAccounts: 5 })
-  const trialEnd = Math.floor(Date.now() / 1000) + 86400
   for (let i = 0; i < 5; i++) {
-    const u = { uid: `t${i}`, role: 'premium_plus', trialEnd }
-    const trial = isTrialLikeAccount(u)
+    const u = { uid: `t${i}`, role: 'gratuit' }
+    const trial = isFreeAccount(u)
     assert.equal(lim.check('1.2.3.4', { uid: u.uid, trial }), null)
     lim.record('1.2.3.4', { uid: u.uid, trial })
   }
-  const sixieme = { uid: 't5', role: 'premium_plus', trialEnd }
-  assert.ok(lim.check('1.2.3.4', { uid: sixieme.uid, trial: isTrialLikeAccount(sixieme) }))
+  const sixieme = { uid: 't5', role: 'premium' }
+  assert.ok(lim.check('1.2.3.4', { uid: sixieme.uid, trial: isFreeAccount(sixieme) }))
 })

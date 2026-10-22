@@ -1,87 +1,24 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { useRouter } from 'vue-router'
-import { plans, stripeReady, checkoutUrl } from '../lib/stripe.js'
+import { ref } from 'vue'
 import { currentUser } from '../lib/auth.js'
-import { getTrialInfo, markRoleMayHaveChanged } from '../lib/access.js'
-import { trackBeginCheckout } from '../lib/analytics.js'
-import { billingSupported, purchase } from '../lib/billing.js'
+import { FREE_FEATURES, FREE_FAQ } from '../seo/freePage.js'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
-const billing = ref('monthly') // 'monthly' | 'annual'
-const router = useRouter()
-const purchasing = ref(false)
-const purchaseError = ref('')
-const restoring = ref(false)
-
-// Sur mobile natif (Capacitor), pas de lien de paiement web cliquable dans
-// l'app : Apple (règle 3.1.1) et Google interdisent Stripe pour du contenu
-// numérique consommé dans l'app. L'achat passe par Play Billing
-// (src/lib/billing.js, Android) ou StoreKit (src/lib/iap.js, iOS) ; sur le
-// web, on garde les Payment Links Stripe (src/lib/stripe.js) — voir
-// apkdoc.md (Android) et apk doc.md (iOS).
-const platform = ref('web')
-const isNativeApp = ref(false)
-const trialInfo = ref({ active: false, daysRemaining: 0 })
-
-// FAQ tarifs/abonnement — dupliquée dans scripts/prerender.mjs (branche
-// /abonnement) pour garder le FAQPage JSON-LD synchronisé côté bots sans JS.
-const faq = [
-  {
-    q: 'Puis-je résilier à tout moment ?',
-    a: "Oui. Sur le web, la résiliation se fait en un clic via Stripe (portail de facturation) ; sur mobile, depuis les réglages d'abonnement de votre compte Apple ou Google Play. Aucun engagement, aucune durée minimale.",
-  },
-  {
-    q: 'Quelle est la différence entre Premium et Premium IA ?',
-    a: "Premium débloque tout le catalogue de textes gradués et Classici. Premium IA inclut en plus 30 crédits de génération mensuels pour créer vos propres textes sur mesure avec « Créer son texte ».",
-  },
-  {
-    q: "Que se passe-t-il si j'annule mon abonnement ?",
-    a: "Vous gardez l'accès Premium jusqu'à la fin de la période déjà payée, puis revenez automatiquement à la formule gratuite (aperçu limité). Votre progression et vos mots favoris restent intacts.",
-  },
-  {
-    q: 'Le paiement est-il sécurisé ?',
-    a: "Sur le web, le paiement passe par Stripe (Payment Links), qui ne transmet jamais vos données bancaires à Leggendo. Sur mobile, le paiement passe par Apple ou Google, selon les mêmes règles que toutes leurs autres apps.",
-  },
-]
+// Page « Gratuit » (GRATUIT.md) : Leggendo n'a plus de formule payante. La
+// route garde son chemin /abonnement (liens indexés, applications déjà
+// installées) mais explique ce qui est inclus et pourquoi c'est gratuit.
+// Contenu (fonctionnalités, FAQ) partagé avec scripts/prerender.mjs via
+// src/seo/freePage.js, pour garder le FAQPage JSON-LD synchronisé côté bots.
+const faq = FREE_FAQ
+const features = FREE_FEATURES
 const openFaq = ref(0)
-
-// « N mois offerts » sur l'annuel, calculé depuis les prix affichés (jamais
-// codé en dur) : (12 × mensuel − annuel) / mensuel, arrondi au mois.
-function priceValue(label) {
-  const n = parseFloat(String(label).replace(/[^\d,.]/g, '').replace(',', '.'))
-  return Number.isFinite(n) ? n : 0
-}
-function monthsFree(plan) {
-  const m = priceValue(plan.monthly.price)
-  const a = priceValue(plan.annual.price)
-  if (!m || !a) return 0
-  return Math.max(0, Math.round((12 * m - a) / m))
-}
-
-// Comparaison gratuit / Premium / Premium IA (README_TARIFICATION.md,
-// § Comparaison à afficher sur la page d'abonnement).
-const comparison = [
-  { label: 'Textes découverte', free: 'Oui', premium: 'Oui', ia: 'Oui' },
-  { label: 'Catalogue complet (A1 à C2)', free: 'Non', premium: 'Oui', ia: 'Oui' },
-  { label: 'Audio, traductions et quiz', free: 'Oui', premium: 'Oui', ia: 'Oui' },
-  { label: 'Progression synchronisée', free: 'Non', premium: 'Oui', ia: 'Oui' },
-  { label: 'Classici : aperçu', free: 'Oui', premium: 'Oui', ia: 'Oui' },
-  { label: 'Classici : catalogue complet', free: 'Non', premium: 'Oui', ia: 'Oui' },
-  { label: 'Création IA', free: '3 crédits d\'essai', premium: 'Non', ia: '30 crédits/mois' },
-  { label: 'Notizie (actualité générée)', free: 'Non', premium: 'Non', ia: 'Oui' },
-]
 let faqJsonLd
 
-onMounted(async () => {
+onMounted(() => {
   document.body.style.overflow = 'hidden'
-  const { Capacitor } = await import('@capacitor/core')
-  platform.value = Capacitor.getPlatform()
-  isNativeApp.value = Capacitor.isNativePlatform()
-  trialInfo.value = await getTrialInfo()
-
   faqJsonLd = document.createElement('script')
   faqJsonLd.type = 'application/ld+json'
   faqJsonLd.textContent = JSON.stringify({
@@ -99,85 +36,6 @@ onUnmounted(() => {
   document.body.style.overflow = ''
   faqJsonLd?.remove()
 })
-
-function planToAppleProductKey(planId, cycle) {
-  // Fait le lien entre l'identifiant de formule (src/lib/stripe.js) et les
-  // clés de produits App Store Connect (src/lib/iap.js).
-  const map = {
-    premium: 'premium',
-    premium_plus: 'premium_plus',
-    enseignant: 'enseignant',
-  }
-  const base = map[planId]
-  if (!base) return null
-  return `${base}_${cycle === 'annual' ? 'annual' : 'monthly'}`
-}
-
-async function subscribe(plan) {
-  if (!currentUser.value) {
-    router.push({ name: 'login', query: { redirect: '/abonnement' } })
-    return
-  }
-  trackBeginCheckout(plan.id, billing.value)
-
-  if (platform.value === 'android' && billingSupported) {
-    const productId = plan[billing.value].productId
-    if (!productId) return
-    purchaseError.value = ''
-    purchasing.value = true
-    try {
-      await purchase(productId)
-      markRoleMayHaveChanged()
-    } catch (err) {
-      purchaseError.value = err?.message || "L'achat n'a pas abouti."
-    } finally {
-      purchasing.value = false
-    }
-    return
-  }
-
-  if (platform.value === 'ios') {
-    const productKey = planToAppleProductKey(plan.id, billing.value)
-    if (!productKey) return
-    purchaseError.value = ''
-    purchasing.value = true
-    try {
-      const { purchase: purchaseIos } = await import('../lib/iap.js')
-      await purchaseIos(productKey)
-      markRoleMayHaveChanged()
-    } catch (err) {
-      purchaseError.value = err?.message || "L'achat a échoué."
-    } finally {
-      purchasing.value = false
-    }
-    return
-  }
-
-  const link = plan[billing.value].paymentLink
-  if (!link) return
-  // Payment Link Stripe : redirection vers la page de paiement hébergée,
-  // avec client_reference_id pour que le webhook active le bon compte. Au
-  // retour, le token devra être renouvelé de force pour voir le nouveau rôle.
-  markRoleMayHaveChanged()
-  window.location.href = checkoutUrl(link, currentUser.value)
-}
-
-// Restauration des achats — exigée par Apple (règle 3.1.2) pour StoreKit.
-// Sans équivalent obligatoire côté Play (l'abonnement est déjà rattaché au
-// compte Google du terminal).
-async function restore() {
-  purchaseError.value = ''
-  restoring.value = true
-  try {
-    const { restorePurchases } = await import('../lib/iap.js')
-    await restorePurchases()
-    markRoleMayHaveChanged()
-  } catch (err) {
-    purchaseError.value = err?.message || 'Restauration impossible.'
-  } finally {
-    restoring.value = false
-  }
-}
 </script>
 
 <template>
@@ -241,133 +99,36 @@ async function restore() {
     <!-- Contenu centré -->
     <div class="stage">
       <div class="hero">
-        <h1 class="title" lang="it">Abbona<em>menti</em></h1>
-        <p class="tagline">Abonnement</p>
+        <h1 class="title" lang="it">Gratu<em>ito</em></h1>
+        <p class="tagline">Leggendo est gratuit</p>
         <p class="sub">
-          Soutenez le projet et débloquez tous les textes avec la formule Premium.
+          Tout le site, sans abonnement, sans essai limité, sans carte bancaire.
+          Un compte suffit, et il est gratuit lui aussi.
         </p>
 
-        <p v-if="!stripeReady && !isNativeApp" class="notice">
-          Les formules payantes arrivent bientôt. En attendant, créez un compte
-          gratuit pour découvrir la bibliothèque.
-        </p>
-        <p v-if="trialInfo.active" class="notice notice-trial">
-          Votre essai Premium IA gratuit (3 générations offertes) se termine dans
-          {{ trialInfo.daysRemaining }}
-          {{ trialInfo.daysRemaining > 1 ? 'jours' : 'jour' }}. Abonnez-vous
-          pour garder l'accès sans interruption.
-        </p>
-        <p v-if="purchaseError" class="notice">{{ purchaseError }}</p>
-
-        <div class="billing-toggle" role="group" aria-label="Fréquence de facturation">
-          <button
-            type="button"
-            class="toggle-btn"
-            :class="{ active: billing === 'monthly' }"
-            @click="billing = 'monthly'"
+        <div class="actions">
+          <RouterLink
+            v-if="!currentUser"
+            class="btn-hero"
+            :to="{ name: 'login', query: { redirect: '/textes' } }"
           >
-            Mensuel
-          </button>
-          <button
-            type="button"
-            class="toggle-btn"
-            :class="{ active: billing === 'annual' }"
-            @click="billing = 'annual'"
-          >
-            Annuel
-          </button>
+            Créer mon compte gratuit
+          </RouterLink>
+          <RouterLink v-else class="btn-hero" :to="{ name: 'library' }">
+            Commencer à lire →
+          </RouterLink>
+          <RouterLink class="btn-ghost" :to="{ name: 'method' }">
+            Comment ça marche
+          </RouterLink>
         </div>
 
-        <div class="plans">
-          <div
-            v-for="plan in plans"
-            :key="plan.id"
-            class="plan"
-            :class="{ highlight: plan.highlight }"
-          >
-            <span v-if="plan.highlight" class="ribbon">Consigliato</span>
-            <span v-if="plan.comingSoon" class="ribbon ribbon-soon">Bientôt disponible</span>
-            <h2>{{ plan.name }}</h2>
-            <p class="price">
-              {{ plan[billing].price
-              }}<span class="period">{{ plan[billing].period }}</span>
-            </p>
-            <p v-if="billing === 'annual' && monthsFree(plan) > 0" class="months-free">
-              {{ monthsFree(plan) }} mois offerts
-            </p>
-            <ul>
-              <li v-for="f in plan.features" :key="f">{{ f }}</li>
-            </ul>
-            <span v-if="plan.comingSoon" class="current">Bientôt disponible</span>
-            <button
-              v-else-if="isNativeApp ? plan.id !== 'gratuit' : plan[billing].paymentLink !== null"
-              class="btn-hero"
-              :disabled="
-                purchasing ||
-                (platform === 'android'
-                  ? !plan[billing].productId
-                  : !isNativeApp && !plan[billing].paymentLink)
-              "
-              @click="subscribe(plan)"
-            >
-              {{
-                purchasing
-                  ? 'Achat en cours…'
-                  : isNativeApp || plan[billing].paymentLink
-                    ? "S'abonner"
-                    : 'Bientôt disponible'
-              }}
-            </button>
-            <RouterLink
-              v-else-if="!currentUser"
-              class="btn-ghost"
-              :to="{ name: 'login' }"
-            >
-              Commencer gratuitement
-            </RouterLink>
-            <span v-else class="current">Votre formule actuelle</span>
-          </div>
-        </div>
-
-        <table class="compare">
-          <caption>Comparer les formules</caption>
-          <thead>
-            <tr>
-              <th scope="col">Fonction</th>
-              <th scope="col">Gratuit</th>
-              <th scope="col">Premium</th>
-              <th scope="col">Premium IA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="row in comparison" :key="row.label">
-              <th scope="row">{{ row.label }}</th>
-              <td>{{ row.free }}</td>
-              <td>{{ row.premium }}</td>
-              <td>{{ row.ia }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="hint">
-          <template v-if="platform === 'ios'">
-            Paiement sécurisé par Apple. Résiliable à tout moment dans les
-            réglages de votre compte Apple.
-            <button type="button" class="link-btn" :disabled="restoring" @click="restore">
-              Restaurer mes achats
-            </button>
-          </template>
-          <template v-else-if="platform === 'android'">
-            Paiement sécurisé par Google Play. Résiliable à tout moment dans
-            les réglages de votre compte Google Play.
-          </template>
-          <template v-else>
-            Paiement sécurisé par Stripe. Résiliable à tout moment.
-          </template>
-          <br />
-          Voir les
-          <RouterLink :to="{ name: 'terms' }">conditions générales</RouterLink>.
-        </p>
+        <ul class="features">
+          <li v-for="f in features" :key="f.title" class="feature">
+            <span class="feature-icon" aria-hidden="true">{{ f.icon }}</span>
+            <h2>{{ f.title }}</h2>
+            <p>{{ f.text }}</p>
+          </li>
+        </ul>
 
         <div class="faq">
           <h2 class="faq-title">Questions fréquentes</h2>
@@ -386,6 +147,11 @@ async function restore() {
             </div>
           </div>
         </div>
+
+        <p class="hint">
+          Voir les
+          <RouterLink :to="{ name: 'terms' }">conditions d'utilisation</RouterLink>.
+        </p>
       </div>
     </div>
 
@@ -483,7 +249,7 @@ async function restore() {
 }
 
 .hero {
-  max-width: 1100px;
+  max-width: 1000px;
   width: 100%;
   text-align: center;
 }
@@ -522,162 +288,25 @@ async function restore() {
   animation: appear 0.9s ease-out 0.9s forwards;
 }
 
-.notice {
-  margin: 1.2rem auto 0;
-  max-width: 520px;
-  padding: 0.7rem 1rem;
-  border: 1px solid rgba(176, 105, 46, 0.35);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.65);
-  font-size: 0.88rem;
-  color: #8a5a2b;
-  opacity: 0;
-  animation: appear 0.9s ease-out 1s forwards;
-}
+/* --- Boutons (même langage que la home) --- */
 
-/* --- Bascule mensuel / annuel --- */
-
-.billing-toggle {
-  display: inline-flex;
-  margin: 1.6rem auto 0;
-  padding: 0.25rem;
-  border: 1px solid rgba(176, 105, 46, 0.25);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1.5rem 0 0;
   opacity: 0;
   animation: appear 0.9s ease-out 1.1s forwards;
 }
 
-.toggle-btn {
-  /* ~44px de haut (Analyse Optimisation UX Mobile.md Sprint 1.5). */
-  padding: 0.65rem 1.1rem;
-  border: none;
-  border-radius: 999px;
-  background: transparent;
-  color: #6b6156;
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-}
-
-.toggle-btn.active {
-  background: #8f5220;
-  color: #faf6f0;
-}
-
-/* --- Cartes des formules --- */
-
-.plans {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 0.9rem;
-  margin: 1.8rem 0 0;
-  text-align: left;
-  opacity: 0;
-  animation: appear 0.9s ease-out 1.2s forwards;
-}
-
-/* 1 colonne pleine largeur sur mobile (Analyse Optimisation UX Mobile.md
-   Sprint 3.2) : auto-fit/minmax(190px,1fr) livrait un nombre de colonnes
-   non contrôlé selon la largeur exacte de l'écran — même logique que le
-   correctif déjà fait sur les grilles Giochi/Classici. */
-@media (max-width: 480px) {
-  .plans {
-    grid-template-columns: 1fr;
-  }
-}
-
-.plan {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.1rem 1.1rem;
-  border: 1px solid rgba(176, 105, 46, 0.25);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: transform 0.15s, box-shadow 0.15s;
-}
-
-.plan:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(138, 90, 43, 0.15);
-}
-
-.plan.highlight {
-  border-color: #8f5220;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 6px 20px rgba(176, 105, 46, 0.2);
-}
-
-.ribbon {
-  position: absolute;
-  top: -0.7rem;
-  right: 1rem;
-  padding: 0.2rem 0.8rem;
-  border-radius: 999px;
-  background: #8f5220;
-  color: #faf6f0;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.ribbon-soon {
-  background: #6b6156;
-}
-
-.notice-trial {
-  border-color: rgba(74, 124, 89, 0.4);
-  color: #4a7c59;
-}
-
-.plan h2 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.price {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #8f5220;
-}
-
-.period {
-  font-size: 0.82rem;
-  font-weight: 400;
-  color: #6b6156;
-}
-
-.plan ul {
-  margin: 0;
-  padding-left: 1rem;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
-.current {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #4a7c59;
-}
-
-/* --- Boutons (même langage que la home) --- */
-
 .btn-hero {
-  padding: 0.65rem 1.5rem;
+  padding: 0.7rem 1.7rem;
   border: none;
   border-radius: 999px;
   background: #8f5220;
   color: #faf6f0;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 700;
   font-family: inherit;
   text-align: center;
@@ -687,20 +316,14 @@ async function restore() {
   transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 
-.btn-hero:hover:not(:disabled) {
+.btn-hero:hover {
   background: #74411a;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
 }
 
-.btn-hero:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
-  box-shadow: none;
-}
-
 .btn-ghost {
-  padding: 0.65rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border: 1px solid rgba(138, 90, 43, 0.45);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.4);
@@ -717,6 +340,55 @@ async function restore() {
   color: #8f5220;
 }
 
+/* --- Ce qui est inclus --- */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+  margin: 1.8rem 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  opacity: 0;
+  animation: appear 0.9s ease-out 1.2s forwards;
+}
+
+@media (max-width: 480px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.1rem;
+  border: 1px solid rgba(176, 105, 46, 0.25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.feature-icon {
+  font-size: 1.4rem;
+}
+
+.feature h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #2c2620;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: rgba(44, 38, 32, 0.75);
+}
+
 .hint {
   margin: 1.4rem 0 0;
   font-size: 0.85rem;
@@ -729,27 +401,6 @@ async function restore() {
   color: #8a5a2b;
 }
 
-.link-btn {
-  display: inline-block;
-  /* Zone cliquable élargie + séparé visuellement du lien CGU adjacent
-     (Analyse Optimisation UX Mobile.md Sprint 1.5 — <br> ajouté dans le
-     template) : deux liens minuscules côte à côte dans le même
-     paragraphe, risque de toucher le mauvais. */
-  margin: 0 0 0 0.3rem;
-  padding: 0.5rem 0.2rem;
-  border: none;
-  background: none;
-  font: inherit;
-  color: #8a5a2b;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.link-btn:disabled {
-  opacity: 0.6;
-  cursor: default;
-}
-
 /* --- FAQ (même logique d'accordéon que MethodView, palette claire) --- */
 
 .faq {
@@ -760,7 +411,7 @@ async function restore() {
   max-width: 560px;
   text-align: left;
   opacity: 0;
-  animation: appear 0.9s ease-out 1.6s forwards;
+  animation: appear 0.9s ease-out 1.4s forwards;
 }
 
 .faq-title {
@@ -832,13 +483,6 @@ async function restore() {
   color: rgba(44, 38, 32, 0.75);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .faq {
-    animation: none;
-    opacity: 1;
-  }
-}
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -858,68 +502,12 @@ async function restore() {
   .title,
   .tagline,
   .sub,
-  .notice,
-  .plans,
+  .actions,
+  .features,
+  .faq,
   .hint {
     animation: none;
     opacity: 1;
-  }
-}
-
-.months-free {
-  display: inline-block;
-  margin: -0.3rem 0 0.6rem;
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
-  background: #fff8e6;
-  border: 1px solid #e0c98f;
-  color: #5c4610;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.compare {
-  width: 100%;
-  max-width: 100%;
-  table-layout: fixed;
-  overflow-wrap: anywhere;
-  margin: 1.6rem 0 0.5rem;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-  background: rgba(255, 250, 243, 0.85);
-}
-
-.compare caption {
-  padding: 0.5rem;
-  font-weight: 700;
-  color: #2c2620;
-}
-
-.compare th,
-.compare td {
-  padding: 0.5rem 0.6rem;
-  border-top: 1px solid rgba(143, 82, 32, 0.2);
-  text-align: center;
-  color: #2c2620;
-}
-
-.compare th:first-child {
-  text-align: left;
-  font-weight: 600;
-}
-
-.compare th:first-child {
-  width: 34%;
-}
-
-@media (max-width: 480px) {
-  .compare {
-    font-size: 0.78rem;
-  }
-
-  .compare th,
-  .compare td {
-    padding: 0.45rem 0.3rem;
   }
 }
 </style>

@@ -241,7 +241,7 @@ async function checkVerification() {
   verifyInfo.value = verifyError.value = ''
   try {
     if (await refreshEmailVerified()) {
-      verifyInfo.value = 'Adresse confirmée, merci ! Votre essai Premium IA démarre.'
+      verifyInfo.value = 'Adresse confirmée, merci ! Vos crédits IA du mois sont disponibles.'
     } else {
       verifyError.value = 'Adresse pas encore confirmée : ouvrez le lien reçu par e-mail, puis réessayez.'
     }
@@ -312,9 +312,9 @@ async function confirmDelete() {
       <div v-if="!currentUser.emailVerified" class="verify-box">
         <p>
           <strong>Adresse e-mail non confirmée.</strong> Ouvrez le lien envoyé à
-          l'inscription : vos 10 jours de Premium IA offerts (dont 3 générations de textes) démarrent dès que
-          l'adresse est confirmée (puis
-          <RouterLink :to="{ name: 'create-text' }">Créer son texte</RouterLink>).
+          l'inscription : vos crédits IA gratuits du mois (générations,
+          corrections, dialogues) se débloquent dès que l'adresse est confirmée
+          (puis <RouterLink :to="{ name: 'create-text' }">Créer son texte</RouterLink>).
         </p>
         <p class="verify-actions">
           <button type="button" class="link-btn" :disabled="verifyBusy" @click="resendVerification">
@@ -409,10 +409,11 @@ async function confirmDelete() {
         </div>
       </div>
 
-      <h2>Abonnement</h2>
+      <h2>Accès</h2>
       <p>
-        Formule actuelle : <strong>Gratuit</strong><br />
-        <RouterLink :to="{ name: 'pricing' }">Passer à Premium →</RouterLink>
+        Leggendo est <strong>entièrement gratuit</strong> : catalogue complet,
+        Classici, Notizie et des crédits IA chaque mois.<br />
+        <RouterLink :to="{ name: 'pricing' }">Pourquoi c'est gratuit →</RouterLink>
       </p>
 
       <p v-if="error" class="error">{{ error }}</p>
@@ -426,9 +427,7 @@ async function confirmDelete() {
         <template v-else>
           <p class="warning">
             Action définitive : vos textes créés, votre progression et votre
-            compte seront supprimés. Si vous avez un abonnement actif,
-            résiliez-le d'abord auprès de nous — la suppression du compte ne
-            résilie pas automatiquement un paiement en cours.
+            compte seront supprimés.
           </p>
           <form class="form" @submit.prevent="confirmDelete">
             <label v-if="provider !== 'google.com'">
@@ -470,11 +469,11 @@ async function confirmDelete() {
     <div class="legal-links">
       <h2>Informations légales</h2>
       <nav class="legal-nav">
-        <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
+        <RouterLink :to="{ name: 'pricing' }">Gratuit</RouterLink>
         <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
         <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
         <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>
-        <RouterLink :to="{ name: 'terms' }">CGU / CGV</RouterLink>
+        <RouterLink :to="{ name: 'terms' }">Conditions</RouterLink>
       </nav>
     </div>
   </SceneLayout>

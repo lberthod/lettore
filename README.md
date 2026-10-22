@@ -12,8 +12,8 @@ Application web de lecture pour apprendre l'italien : des textes gradués en ita
 - 🔊 **Lecture audio** en italien (voix it-IT via la Web Speech API), avec pause/reprise et trois vitesses
 - ❓ **Quiz de compréhension** à la fin de chaque texte, ⭐ **mots favoris** avec répétition espacée (vue « Parole »)
 - ✍️ **Créer son texte** : un utilisateur connecté demande un texte sur mesure (sujet, niveau, genre, taille) — généré par LLM sur le VPS, enregistré dans Firestore, retrouvable dans « Mes textes »
-- 👤 **Comptes Firebase** (facultatifs) : 6 textes en aperçu gratuit pour les visiteurs, catalogue complet réservé à Premium et au-dessus
-- 📖 **Classici** : 16 œuvres classiques du domaine public (texte authentique, non simplifié) — premier chapitre de chaque livre et 3 livres en entier (un par niveau A2/B2/C2) en aperçu gratuit dès la connexion, le reste réservé à Premium et au-dessus
+- 👤 **Comptes Firebase** (gratuits) : 6 textes en aperçu pour les visiteurs, catalogue complet pour tout compte connecté — voir [GRATUIT.md](GRATUIT.md)
+- 📖 **Classici** : 16 œuvres classiques du domaine public (texte authentique, non simplifié) — premier chapitre de chaque livre et 3 livres en entier (un par niveau A2/B2/C2) en aperçu sans compte, le reste pour tout compte connecté
 - 📕 **Dizionario** *(pilote)* : dictionnaire italien-français (définition, nature grammaticale, exemples, synonymes) et tableaux de conjugaison complets, pré-générés et servis en statique — voir [analyse.md](analyse.md)
 - 📱 **PWA installable** : service worker actif, app et textes disponibles hors ligne
 - ⚡ **Chargement à la demande** : chaque texte est un chunk séparé (via `import.meta.glob`)
@@ -140,23 +140,18 @@ Une seule codebase Vue pour tout. Pas de réécriture native (Swift/Kotlin) : po
 
 ### Phase 1 — Lancement web (en cours)
 
-- [x] Comptes Firebase + verrou d'accès (aperçu gratuit de 6 textes, catalogue complet connecté)
-- [ ] Renseigner les Payment Links Stripe dans `src/lib/stripe.js` et déployer
-- [ ] Valider la traction : est-ce que des visiteurs s'abonnent ?
-- Le web reste le meilleur canal de vente : ~3 % de frais Stripe, contre 15–30 % de commission sur les stores.
+- [x] Comptes Firebase + verrou d'accès (aperçu de 6 textes sans compte, catalogue complet connecté)
+- [x] **Mode gratuit** (22 octobre 2026) : plus de formule payante, voir [GRATUIT.md](GRATUIT.md)
+- [ ] Valider la traction : est-ce que des visiteurs créent un compte et reviennent ?
 
-### Tarification retenue pour le lancement
+### Tarification
 
-Les quatre formules seront disponibles ensemble dès l'ouverture des paiements :
-
-- Gratuit : 0 €
-- Premium : 7,90 €/mois
-- Premium IA : 14,90 €/mois, avec 30 crédits de génération mensuels
-- Enseignant : 24,90 €/mois, incluant Premium IA et les outils pédagogiques
-
-Le périmètre fonctionnel, les règles de crédits, les droits d'accès et les
-conditions de lancement sont définis dans
-[README_TARIFICATION.md](README_TARIFICATION.md).
+Leggendo est entièrement gratuit ; la monétisation sera étudiée plus tard à
+partir de l'usage réel. Les droits d'accès et le plafond de crédits IA sont
+décrits dans [GRATUIT.md](GRATUIT.md). L'ancienne grille (Premium, Premium IA,
+Enseignant) est conservée pour mémoire dans
+[README_TARIFICATION.md](README_TARIFICATION.md) ; l'intégration Paddle est
+en pause sur la branche `feat/paddle-mor` ([PADDLE.md](PADDLE.md)).
 
 ### Phase 2 — PWA (fait)
 

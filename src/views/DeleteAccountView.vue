@@ -83,9 +83,8 @@ async function confirm() {
         <li>Les textes que vous avez créés</li>
       </ul>
       <p class="hint">
-        Un abonnement Stripe actif n'est pas résilié automatiquement par la
-        suppression du compte : contactez-nous d'abord si vous êtes abonné,
-        pour éviter un prélèvement après suppression. Voir notre
+        Leggendo est gratuit : aucun paiement n'est lié à votre compte, rien
+        d'autre n'est à résilier. Voir notre
         <RouterLink :to="{ name: 'privacy' }">politique de confidentialité</RouterLink>.
       </p>
 

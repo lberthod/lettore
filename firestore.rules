@@ -32,21 +32,22 @@ service cloud.firestore {
     // d'index par document, et un gros chapitre dépasserait la taille
     // maximale d'une entrée d'index.
 
-    // Catalogue de textes : formules Premium et au-dessus
-    // (cf. hasCatalogAccess() dans src/lib/access.js).
+    // Mode gratuit (GRATUIT.md) : le catalogue complet est ouvert à tout
+    // compte connecté, quel que soit son rôle (cf. hasCatalogAccess() dans
+    // src/lib/access.js). La connexion reste exigée : c'est ce qui sépare
+    // l'aperçu public (dans le build) du reste, et ce qui évite qu'un script
+    // anonyme ne télécharge tout le corpus.
     match /catalogTexts/{textId} {
-      allow read: if request.auth != null
-        && request.auth.token.role in ['premium', 'premium_plus', 'enseignant'];
+      allow read: if request.auth != null;
       allow write: if false;
     }
 
-    // Chapitres de Classici : catalogue complet réservé à Premium et
-    // au-dessus (cf. hasClassiciAccess()). L'aperçu gratuit (un livre entier
-    // par niveau A2/B2/C2 et le premier chapitre de chaque livre) reste dans
-    // le build public et n'a donc aucun document ici.
+    // Chapitres de Classici : même règle que le catalogue (cf.
+    // hasClassiciAccess()). L'aperçu gratuit (un livre entier par niveau
+    // A2/B2/C2 et le premier chapitre de chaque livre) reste dans le build
+    // public et n'a donc aucun document ici.
     match /bookChapters/{chapterId} {
-      allow read: if request.auth != null
-        && request.auth.token.role in ['premium', 'premium_plus', 'enseignant'];
+      allow read: if request.auth != null;
       allow write: if false;
     }
 
@@ -166,15 +167,11 @@ service cloud.firestore {
             || request.auth.token.role == 'enseignant');
     }
 
-    // Pool partagé de textes d'actualité générés par le cron VPS — feature
-    // « Notizie » de la formule Premium IA (voir README_TARIFICATION.md) :
-    // écrit uniquement par l'Admin SDK (leggendo-server/news-cron.mjs), lu
-    // par les rôles `premium_plus` et `enseignant` (qui inclut les droits
-    // Premium IA, voir la hiérarchie des rôles dans README_TARIFICATION.md).
+    // Pool partagé de textes d'actualité générés par le cron VPS (« Notizie »,
+    // voir GRATUIT.md) : écrit uniquement par l'Admin SDK
+    // (leggendo-server/news-cron.mjs), lu par tout compte connecté.
     match /newsTexts/{textId} {
-      allow read: if request.auth != null
-        && (request.auth.token.role == 'premium_plus'
-            || request.auth.token.role == 'enseignant');
+      allow read: if request.auth != null;
       allow write: if false;
     }
 

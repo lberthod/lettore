@@ -3,7 +3,7 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
-import { isLoggedIn, isPremiumPlus, getTrialInfo, EXAMPLE_TEXTS } from '../lib/access.js'
+import { isLoggedIn, EXAMPLE_TEXTS } from '../lib/access.js'
 import { currentUser } from '../lib/auth.js'
 import {
   progress,
@@ -75,9 +75,9 @@ const startReadingTo = firstFreeA1
   ? { name: 'reader', params: { id: firstFreeA1.id } }
   : { name: 'level-test' }
 
-// GRO-4 : bandeau de fin d'essai (<= 3 jours), lu depuis les claims du token.
-const trialDaysLeft = ref(0)
-const premiumIA = ref(false)
+// Outils IA (Scrivi, Dialogo, Notizie, étapes IA du parcours) : ouverts à
+// tout compte connecté en mode gratuit (GRATUIT.md).
+const premiumIA = computed(() => loggedIn.value)
 const step = computed(() =>
   nextStep(progress, { hasPremiumIA: premiumIA.value, texts: textsIndex.value })
 )
@@ -204,14 +204,8 @@ const STEP_ICONS = {
 onMounted(async () => {
   document.body.style.overflow = 'hidden'
   if (!loggedIn.value) return
-  getTrialInfo().then((t) => {
-    if (t.active && t.daysRemaining <= 3) trialDaysLeft.value = t.daysRemaining
-  })
-  const textsPromise = import('../texts/index.json').then((m) => {
-    textsIndex.value = m.default
-  })
-  premiumIA.value = currentUser.value ? await isPremiumPlus() : false
-  await textsPromise
+  const m = await import('../texts/index.json')
+  textsIndex.value = m.default
 
   sessionStartTs.value = startOfToday()
   const uid = currentUser.value?.uid || null
@@ -362,10 +356,6 @@ onUnmounted(() => {
         <!-- Utilisateur connecté : une seule action explicite, la prochaine
              étape du parcours (règles transparentes dans src/lib/percorso.js). -->
         <div v-if="loggedIn" class="percorso">
-          <p v-if="trialDaysLeft" class="trial-banner" role="status">
-            Il vous reste {{ trialDaysLeft }} jour{{ trialDaysLeft > 1 ? 's' : '' }} d'essai Premium IA.
-            <RouterLink :to="{ name: 'pricing' }">Voir les offres</RouterLink>
-          </p>
           <p class="percorso-eyebrow">
             Il tuo percorso
             <span v-if="session" class="percorso-duration">· {{ session.duration }} min</span>
@@ -420,7 +410,7 @@ onUnmounted(() => {
           </template>
 
           <!-- Repli instantané le temps que la session se compose (texts et
-               rôle Premium IA chargés à la demande, voir <script>). -->
+               accès IA chargés à la demande, voir <script>). -->
           <template v-else>
             <h2 class="percorso-title">{{ step.title }}</h2>
             <p class="percorso-reason">{{ step.reason }}</p>
@@ -473,7 +463,7 @@ onUnmounted(() => {
             l'audio d'un clic. Rien d'autre entre vous et la langue.
           </p>
 
-          <p class="trial-note">10 jours de Premium IA offerts, sans carte<span class="trial-detail"> (après vérification de l'e-mail), dont 3 générations de textes IA</span></p>
+          <p class="trial-note">100 % gratuit, sans carte<span class="trial-detail"> : tout le catalogue, les Classici et des crédits IA chaque mois avec un simple compte</span></p>
 
           <div class="actions">
             <RouterLink class="btn-hero" :to="startReadingTo">
@@ -1022,21 +1012,6 @@ onUnmounted(() => {
   font-size: 0.95rem;
   font-weight: 700;
   color: #6b3d17;
-}
-
-.trial-banner {
-  margin: 0 0 0.8rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 10px;
-  background: #fff8e6;
-  border: 1px solid #e0c98f;
-  color: #6f5410;
-  font-size: 0.88rem;
-}
-
-.trial-banner a {
-  color: #8f5220;
-  font-weight: 700;
 }
 
 .actions {
