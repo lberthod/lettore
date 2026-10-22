@@ -18,7 +18,7 @@ explicite.
 - [La méthode](https://leggendo.fr/methode) : explication de la lecture extensive, FAQ.
 - [La méthodologie](https://leggendo.fr/methodologie) : version écrite détaillée, avec les recherches scientifiques citées.
 - [À propos](https://leggendo.fr/a-propos) : qui est derrière Leggendo.
-- [Abonnement](https://leggendo.fr/abonnement) : formules Gratuit, Premium, Premium IA et Enseignant, prix en EUR et CHF — FAQ sur la résiliation et les tarifs.
+- [Gratuit](https://leggendo.fr/abonnement) : Leggendo est entièrement gratuit (catalogue complet, Classici, Notizie, crédits IA mensuels avec un compte) — FAQ sur ce qui est inclus et pourquoi.
 
 ## Notes pour les agents / robots
 
@@ -28,4 +28,4 @@ explicite.
   exclues de l'indexation (voir robots.txt) : ne pas les citer comme contenu
   public.
 - Six textes du catalogue sont en accès libre sans compte ; les autres
-  nécessitent un abonnement (voir /abonnement pour les tarifs).
+  demandent un compte gratuit (voir /abonnement : aucun paiement).

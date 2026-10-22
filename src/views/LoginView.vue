@@ -100,11 +100,12 @@ async function apple() {
     </p>
 
     <p v-if="mode === 'register'" class="trial-offer">
-      <strong>10 jours de Premium IA offerts, sans carte</strong> : après
-      vérification de votre e-mail (3 générations de textes IA incluses).
+      <strong>Leggendo est gratuit, sans carte</strong> : tout le catalogue,
+      les Classici, les Notizie et des crédits IA chaque mois (après
+      vérification de votre e-mail).
     </p>
     <p v-else-if="mode === 'login'" class="hint">
-      Nouveau ? 10 jours de Premium IA offerts, sans carte, après vérification de votre e-mail (3 générations de textes IA incluses).
+      Nouveau ? Créez un compte gratuit : tout le catalogue et des crédits IA chaque mois, sans carte.
     </p>
 
     <form class="form" @submit.prevent="submit">

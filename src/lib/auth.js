@@ -1,8 +1,7 @@
 import { ref } from 'vue'
-import { getAuthInstance, getFunctionsInstance, firebaseReady } from './firebase.js'
+import { getAuthInstance, firebaseReady } from './firebase.js'
 import { onIdle } from './idle.js'
 import { trackSignUp, trackLogin } from './analytics.js'
-import { startTrialIfEligible } from './trial.js'
 
 export const currentUser = ref(null)
 
@@ -27,27 +26,10 @@ function startAuth() {
     onAuthStateChanged(auth, (user) => {
       currentUser.value = user
       resolveAuthReady()
-      if (user) tryStartTrial(user)
     })
   })
 }
 
-// Essai Premium IA : le serveur ne l'accorde plus à l'inscription, il faut le
-// demander (callable startTrial) une fois l'e-mail vérifié. Jamais bloquant.
-async function tryStartTrial(user) {
-  try {
-    const functions = await getFunctionsInstance()
-    if (!functions) return
-    const { httpsCallable } = await import('firebase/functions')
-    const startTrial = httpsCallable(functions, 'startTrial')
-    await startTrialIfEligible(user, {
-      call: () => startTrial(),
-      storage: typeof localStorage !== 'undefined' ? localStorage : null,
-    })
-  } catch (err) {
-    console.warn("Démarrage de l'essai :", err)
-  }
-}
 if (firebaseReady) {
   onIdle(startAuth)
 } else {
@@ -118,9 +100,7 @@ export async function refreshEmailVerified() {
   await user.reload()
   await user.getIdToken(true)
   currentUser.value = auth.currentUser
-  const verified = auth.currentUser?.emailVerified === true
-  if (verified) await tryStartTrial(auth.currentUser)
-  return verified
+  return auth.currentUser?.emailVerified === true
 }
 
 export async function login(email, password) {

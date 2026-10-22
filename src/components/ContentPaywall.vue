@@ -1,54 +1,46 @@
 <script setup>
 import { RouterLink, useRoute } from 'vue-router'
-import { currentUser } from '../lib/auth.js'
 import { trackCtaClick } from '../lib/analytics.js'
 
+// Mode gratuit (GRATUIT.md) : ce bloc n'apparaît qu'aux visiteurs sans
+// compte — un compte connecté a accès à tout le contenu. Il invite donc à
+// créer un compte gratuit, jamais à payer.
 defineProps({
-  // Où le paywall est affiché (mesure GA4) : 'text', 'classici'...
+  // Où le bloc est affiché (mesure GA4) : 'text', 'classici'...
   placement: { type: String, default: 'text' },
 })
 
 const route = useRoute()
 
-function onCtaClick(action) {
-  trackCtaClick({
-    placement: 'reader-paywall',
-    action,
-    destination: currentUser.value ? 'pricing' : 'login',
-  })
+function onCtaClick() {
+  trackCtaClick({ placement: 'reader-paywall', action: 'signup', destination: 'login' })
 }
 </script>
 
 <template>
   <div class="paywall">
-    <h2>Débloquez la suite</h2>
+    <h2>Lisez la suite avec un compte gratuit</h2>
     <p>
-      Ce contenu fait partie du catalogue complet, réservé aux abonné·es
-      Leggendo.
+      Ce contenu fait partie du catalogue complet, ouvert à tous les membres
+      de Leggendo. Créer un compte est gratuit et le reste.
     </p>
     <ul>
-      <li>Accès à l'ensemble du catalogue, tous niveaux (A1 à C2)</li>
-      <li>Traduction des mots et des phrases</li>
-      <li>Lecture audio en italien</li>
+      <li>Tous les textes gradués, tous niveaux (A1 à C2), et les Classici en entier</li>
+      <li>Traduction des mots et des phrases, lecture audio en italien</li>
       <li>Progression et vocabulaire synchronisés entre appareils</li>
+      <li>Des crédits chaque mois pour créer, faire corriger ou dialoguer avec l'IA</li>
     </ul>
-    <p v-if="!currentUser" class="trial"><strong>10 jours de Premium IA offerts, sans carte</strong> : l'essai démarre après vérification de votre e-mail, avec 3 générations de textes IA incluses.</p>
     <RouterLink
-      v-if="!currentUser"
       class="btn-hero"
       :to="{ name: 'login', query: { redirect: route.fullPath } }"
-      @click="onCtaClick('signup')"
+      @click="onCtaClick"
     >
-      Commencer mes 10 jours offerts
+      Créer mon compte gratuit
     </RouterLink>
-    <RouterLink
-      v-else
-      class="btn-hero"
-      :to="{ name: 'pricing', query: { redirect: route.fullPath } }"
-      @click="onCtaClick('subscribe')"
-    >
-      Débloquer tous les textes
-    </RouterLink>
+    <p class="hint">
+      Déjà membre ?
+      <RouterLink :to="{ name: 'login', query: { redirect: route.fullPath } }">Se connecter</RouterLink>
+    </p>
   </div>
 </template>
 
@@ -101,8 +93,13 @@ function onCtaClick(action) {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(176, 105, 46, 0.35);
 }
-.trial {
-  margin: 0 0 0.9rem;
-  color: #6b3d17;
+
+.hint {
+  margin: 0.9rem 0 0;
+  font-size: 0.88rem;
+}
+
+.hint a {
+  color: #8a5a2b;
 }
 </style>

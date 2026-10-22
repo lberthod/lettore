@@ -2,18 +2,18 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { FakeFirestore } from './fake-firestore.mjs'
 import { createJobStore, ActiveJobError, JOB_STUCK_MS } from '../jobs.mjs'
-import { QuotaExceededError, MONTHLY_CREDITS } from '../quota.mjs'
+import { QuotaExceededError, MONTHLY_CREDITS, FREE_MONTHLY_CREDITS } from '../quota.mjs'
 
 function makeStore() {
   return createJobStore(new FakeFirestore())
 }
 
-test('reserveJob crée le job et consomme l\'essai gratuit dans la même opération', async () => {
+test('reserveJob crée le job et consomme les crédits dans la même opération', async () => {
   const store = makeStore()
   const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
   const jobRef = store.jobsCollection.doc('job-1')
   const q = await store.reserveJob(user, jobRef, 'Mon titre', 'corto')
-  assert.equal(q.trialUsed, true)
+  assert.equal(q.monthlyUsed, 1)
 
   const jobDoc = await jobRef.get()
   assert.equal(jobDoc.exists, true)
@@ -21,12 +21,21 @@ test('reserveJob crée le job et consomme l\'essai gratuit dans la même opérat
   assert.equal(jobDoc.data().status, 'pending')
 })
 
-test('reserveJob refuse et ne crée rien quand l\'essai gratuit est déjà consommé', async () => {
+test('reserveJob refuse et ne crée rien quand les crédits du mois sont épuisés', async () => {
   const store = makeStore()
   const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
 
-  await store.reserveJob(user, store.jobsCollection.doc('job-0'), 'Titre 0', 'corto')
-  await store.jobsCollection.doc('job-0').update({ status: 'done' })
+  // Épuise les crédits du mois par des réservations successives (chaque
+  // job est clôturé pour ne pas déclencher le verrou un-job-par-compte).
+  let used = 0
+  for (let i = 0; used + 4 <= FREE_MONTHLY_CREDITS; i++, used += 4) {
+    await store.reserveJob(user, store.jobsCollection.doc(`job-${i}`), `Titre ${i}`, 'molto_lungo')
+    await store.jobsCollection.doc(`job-${i}`).update({ status: 'done' })
+  }
+  for (let i = 100; used < FREE_MONTHLY_CREDITS; i++, used += 1) {
+    await store.reserveJob(user, store.jobsCollection.doc(`job-${i}`), `Titre ${i}`, 'corto')
+    await store.jobsCollection.doc(`job-${i}`).update({ status: 'done' })
+  }
 
   const jobRef = store.jobsCollection.doc('job-refused')
   await assert.rejects(() => store.reserveJob(user, jobRef, 'Titre refusé', 'corto'), QuotaExceededError)
@@ -35,9 +44,9 @@ test('reserveJob refuse et ne crée rien quand l\'essai gratuit est déjà conso
   assert.equal(jobDoc.exists, false, 'le job ne doit pas être créé si le quota est refusé')
 })
 
-test('reserveJob refuse toujours pour un compte Premium (sans IA)', async () => {
+test("reserveJob refuse tant que l'adresse e-mail n'est pas vérifiée", async () => {
   const store = makeStore()
-  const user = { uid: 'u2', role: 'premium', premium: true }
+  const user = { uid: 'u2', role: 'gratuit', premium: false, emailVerified: false }
   await assert.rejects(
     () => store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'corto'),
     QuotaExceededError
@@ -46,14 +55,14 @@ test('reserveJob refuse toujours pour un compte Premium (sans IA)', async () => 
 
 test('reserveJob consomme le coût en crédits selon la taille (Premium IA)', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   const q = await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
   assert.equal(q.monthlyUsed, 3) // "lungo" coûte 3 crédits
 })
 
 test('failJob rembourse un crédit consommé (Premium IA) après un échec technique', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
   assert.equal(await store.failJob('job-1', 'GLM indisponible'), true)
 
@@ -66,23 +75,22 @@ test('failJob rembourse un crédit consommé (Premium IA) après un échec techn
   assert.equal(job.data().error, 'GLM indisponible')
 })
 
-test('failJob restaure l\'essai gratuit après un échec technique', async () => {
+test('failJob rembourse le crédit d\'un compte gratuit après un échec technique', async () => {
   const store = makeStore()
   const user = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'corto')
   await store.failJob('job-1', 'échec technique')
 
   const status = await store.getQuotaStatus(user)
-  assert.equal(status.remaining, 1)
+  assert.equal(status.remaining, FREE_MONTHLY_CREDITS)
 
-  // L'essai est de nouveau utilisable après remboursement.
   const q = await store.reserveJob(user, store.jobsCollection.doc('job-2'), 'Titre 2', 'corto')
-  assert.equal(q.trialUsed, true)
+  assert.equal(q.monthlyUsed, 1)
 })
 
 test('failJob ne rembourse qu\'une fois, même appelé plusieurs fois', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
 
   assert.equal(await store.failJob('job-1', 'échec 1'), true)
@@ -96,7 +104,7 @@ test('failJob ne rembourse qu\'une fois, même appelé plusieurs fois', async ()
 
 test('finishJob livre le résultat tant que le job est actif', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
 
   assert.equal(await store.markRunning('job-1'), true)
@@ -109,7 +117,7 @@ test('finishJob livre le résultat tant que le job est actif', async () => {
 
 test('finishJob ne livre pas le résultat d\'un job déjà clôturé et remboursé', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
   await store.markRunning('job-1')
 
@@ -127,7 +135,7 @@ test('finishJob ne livre pas le résultat d\'un job déjà clôturé et rembours
 
 test('markRunning ne réactive pas un job déjà clôturé', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre', 'lungo')
   await store.failJob('job-1', 'clôturé entre-temps')
 
@@ -138,9 +146,9 @@ test('markRunning ne réactive pas un job déjà clôturé', async () => {
 
 test('getQuotaStatus n\'écrit rien et ne consomme aucun crédit', async () => {
   const store = makeStore()
-  const user = { uid: 'u3', role: 'premium_plus', premium: true }
+  const user = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
   const status = await store.getQuotaStatus(user)
-  assert.deepEqual(status, { type: 'credits', limit: MONTHLY_CREDITS.premium_plus, used: 0, remaining: MONTHLY_CREDITS.premium_plus })
+  assert.deepEqual(status, { type: 'credits', limit: MONTHLY_CREDITS.premium_plus, used: 0, remaining: MONTHLY_CREDITS.premium_plus, emailVerified: true })
 })
 
 test('activeJobFor retrouve le job en cours puis ne retrouve plus rien une fois terminé', async () => {
@@ -185,7 +193,7 @@ test('jobFor ne renvoie le job qu\'à son propriétaire', async () => {
 
 test('reserveJob refuse une deuxième réservation tant que la première est active (même compte)', async () => {
   const store = makeStore()
-  const user = { uid: 'u1', role: 'premium_plus', premium: true }
+  const user = { uid: 'u1', role: 'premium_plus', premium: true, emailVerified: true }
 
   await store.reserveJob(user, store.jobsCollection.doc('job-1'), 'Titre 1', 'corto')
   await assert.rejects(
@@ -199,8 +207,8 @@ test('reserveJob refuse une deuxième réservation tant que la première est act
 
 test('reserveJob n\'empêche pas un autre compte de réserver un job en parallèle', async () => {
   const store = makeStore()
-  const userA = { uid: 'uA', role: 'premium_plus', premium: true }
-  const userB = { uid: 'uB', role: 'premium_plus', premium: true }
+  const userA = { uid: 'uA', role: 'premium_plus', premium: true, emailVerified: true }
+  const userB = { uid: 'uB', role: 'premium_plus', premium: true, emailVerified: true }
 
   await store.reserveJob(userA, store.jobsCollection.doc('job-a'), 'Titre A', 'corto')
   const q = await store.reserveJob(userB, store.jobsCollection.doc('job-b'), 'Titre B', 'corto')
@@ -209,7 +217,7 @@ test('reserveJob n\'empêche pas un autre compte de réserver un job en parallè
 
 test('reserveJob clôture et rembourse un job bloqué du même compte, puis réserve normalement', async () => {
   const store = makeStore()
-  const user = { uid: 'u1', role: 'premium_plus', premium: true }
+  const user = { uid: 'u1', role: 'premium_plus', premium: true, emailVerified: true }
   const stuckRef = store.jobsCollection.doc('job-stuck')
   await stuckRef.set({
     uid: 'u1',
@@ -218,6 +226,7 @@ test('reserveJob clôture et rembourse un job bloqué du même compte, puis rés
     title: 'Bloqué',
     sizeId: 'lungo',
     role: 'premium_plus',
+    emailVerified: true,
   })
   const q = await store.reserveJob(user, store.jobsCollection.doc('job-new'), 'Nouveau titre', 'corto')
 
@@ -240,16 +249,17 @@ test('activeJobFor clôture et rembourse un job bloqué une seule fois même app
     title: 'Bloqué',
     sizeId: 'lungo',
     role: 'premium_plus',
+    emailVerified: true,
   })
 
   assert.equal(await store.activeJobFor('u1'), null)
-  const afterFirst = await store.getQuotaStatus({ uid: 'u1', role: 'premium_plus', premium: true })
+  const afterFirst = await store.getQuotaStatus({ uid: 'u1', role: 'premium_plus', premium: true, emailVerified: true })
   assert.equal(afterFirst.used, 0, 'le remboursement doit ramener la consommation à 0')
 
   // Rappel : le job est déjà en 'error', donc plus détecté comme actif —
   // mais on vérifie explicitement qu'un deuxième remboursement ne se
   // déclenche pas si on rejoue la clôture sur le même document.
   assert.equal(await store.activeJobFor('u1'), null)
-  const afterSecond = await store.getQuotaStatus({ uid: 'u1', role: 'premium_plus', premium: true })
+  const afterSecond = await store.getQuotaStatus({ uid: 'u1', role: 'premium_plus', premium: true, emailVerified: true })
   assert.equal(afterSecond.used, 0, 'un deuxième passage ne doit pas rembourser une deuxième fois')
 })

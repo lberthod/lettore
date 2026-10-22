@@ -63,12 +63,8 @@ export function createJobStore(db) {
   // Recrédite dans `q` (objet quota déjà lu, pas encore réécrit) le coût
   // d'un job qu'on s'apprête à clôturer — utilisé aussi bien par
   // reserveJob (job bloqué détecté au passage) que par failJob.
-  function refundInto(q, role, sizeId) {
-    if (role === 'premium_plus' || role === 'enseignant') {
-      q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - creditCost(sizeId))
-    } else {
-      q.trialUsed = false
-    }
+  function refundInto(q, _role, sizeId) {
+    q.monthlyUsed = Math.max(0, (q.monthlyUsed || 0) - creditCost(sizeId))
   }
 
   // Vérifie qu'aucun job n'est déjà actif, consomme le crédit (barème par
@@ -101,11 +97,7 @@ export function createJobStore(db) {
       const error = quotaError(user, q, sizeId)
       if (error) throw new QuotaExceededError(error)
 
-      if (user.role === 'premium_plus' || user.role === 'enseignant') {
-        q.monthlyUsed += creditCost(sizeId)
-      } else {
-        q.trialUsed = true
-      }
+      q.monthlyUsed += creditCost(sizeId)
       tx.set(quotaRef, q)
       tx.set(jobRef, {
         uid: user.uid,

@@ -22,13 +22,13 @@ import { LEVEL_LANDING_PAGES } from '../seo/landingPages.js'
       </RouterLink>
     </nav>
     <nav class="legal">
-      <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
+      <RouterLink :to="{ name: 'pricing' }">Gratuit</RouterLink>
       <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>
       <RouterLink :to="{ name: 'games' }">Giochi</RouterLink>
       <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
       <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
       <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>
-      <RouterLink :to="{ name: 'terms' }">CGU / CGV</RouterLink>
+      <RouterLink :to="{ name: 'terms' }">Conditions</RouterLink>
     </nav>
     <p class="copyright">© {{ new Date().getFullYear() }} Leggendo — Fait en Suisse 🇨🇭</p>
   </footer>

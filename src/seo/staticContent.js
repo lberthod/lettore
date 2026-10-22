@@ -140,21 +140,21 @@ export const STATIC_PAGE_CONTENT = {
         ul: [
           "Signaler une erreur de traduction, de transcription ou de niveau dans un texte.",
           "Proposer un thème, un auteur ou un classique à ajouter au catalogue.",
-          "Remonter un problème technique : lecteur, audio, connexion, abonnement.",
-          "Poser une question sur votre abonnement, la facturation ou la suppression de votre compte.",
+          "Remonter un problème technique : lecteur, audio, connexion, crédits IA.",
+          "Poser une question sur votre compte ou sa suppression.",
         ],
       },
       {
         h2: 'Avant de nous écrire',
         p: [
-          "La page Méthode répond aux questions fréquentes sur le fonctionnement de la lecture avec traduction au clic, et la page Abonnement détaille les formules et leur résiliation. Pour supprimer votre compte et vos données, une page dédiée explique la démarche depuis le site ou les applications Android et iOS.",
+          "La page Méthode répond aux questions fréquentes sur le fonctionnement de la lecture avec traduction au clic, et la page Gratuit explique ce qui est inclus et pourquoi le site est gratuit. Pour supprimer votre compte et vos données, une page dédiée explique la démarche depuis le site ou les applications Android et iOS.",
           "Leggendo est édité en Suisse ; les informations de l'éditeur figurent dans les mentions légales.",
         ],
       },
     ],
     links: [
       ['/methode', 'La méthode et la FAQ'],
-      ['/abonnement', 'Les formules d\'abonnement'],
+      ['/abonnement', 'Leggendo est gratuit'],
       ['/deleteAccount', 'Supprimer mon compte'],
       ['/mentions-legales', 'Mentions légales'],
     ],
@@ -223,30 +223,29 @@ export const STATIC_PAGE_CONTENT = {
   },
 
   '/conditions': {
-    h1: "Conditions générales d'utilisation et de vente",
+    h1: "Conditions générales d'utilisation",
     intro: [
-      "Cette page fixe les règles d'utilisation de Leggendo et les conditions applicables aux abonnements payants. Elle résume ci-dessous les points principaux ; le texte complet fait foi.",
+      "Cette page fixe les règles d'utilisation de Leggendo, un service gratuit. Elle résume ci-dessous les points principaux ; le texte complet fait foi.",
     ],
     sections: [
       {
         h2: 'Ce que couvrent les conditions',
         ul: [
           "L'objet du service : un lecteur de textes italiens gradués avec traduction française, audio et outils d'apprentissage.",
-          "L'accès gratuit et les formules payantes : l'aperçu gratuit du catalogue, et les abonnements Premium et Premium IA qui débloquent l'ensemble des textes et, pour Premium IA, la génération de textes sur mesure.",
-          "Le paiement : sur le web via Stripe, sur mobile via les boutiques Apple et Google, avec les règles propres à chacune.",
-          "La résiliation : possible à tout moment ; l'accès est conservé jusqu'à la fin de la période déjà payée.",
+          "La gratuité : l'aperçu public sans compte, et l'accès complet (catalogue, Classici, Notizie, outils IA plafonnés en crédits mensuels) avec un compte gratuit.",
+          "Le compte : adresse e-mail valide ou compte Google, vérification de l'adresse pour les outils IA, suppression possible à tout moment.",
           "La responsabilité : les contenus pédagogiques et les traductions, y compris ceux produits par l'intelligence artificielle, sont fournis à titre indicatif.",
         ],
       },
       {
-        h2: 'Abonnements et résiliation',
+        h2: 'Un service gratuit',
         p: [
-          "Les formules, leurs prix et leurs avantages sont détaillés sur la page Abonnement. Sur le web, la résiliation se fait depuis le portail de facturation ; sur mobile, depuis les réglages d'abonnement de votre compte Apple ou Google Play.",
+          "Ce qui est inclus et pourquoi le site est gratuit sont expliqués sur la page Gratuit. Aucun paiement n'est demandé ni collecté.",
         ],
       },
     ],
     links: [
-      ['/abonnement', 'Les formules d\'abonnement'],
+      ['/abonnement', 'Leggendo est gratuit'],
       ['/confidentialite', 'Politique de confidentialité'],
       ['/mentions-legales', 'Mentions légales'],
       ['/contact', 'Nous contacter'],
@@ -270,7 +269,7 @@ export const STATIC_PAGE_CONTENT = {
       {
         h2: 'À savoir avant de supprimer',
         p: [
-          "La suppression du compte est définitive : votre progression et vos mots favoris ne pourront pas être récupérés. Si vous avez un abonnement payant, pensez à vérifier que votre abonnement est bien résilié auprès d'Apple, de Google Play ou de Stripe, depuis la boutique ou le portail de facturation concerné.",
+          "La suppression du compte est définitive : votre progression et vos mots favoris ne pourront pas être récupérés.",
           "Pour toute question sur vos données ou si vous ne parvenez pas à vous connecter, écrivez-nous via la page de contact.",
         ],
       },
@@ -278,7 +277,7 @@ export const STATIC_PAGE_CONTENT = {
     links: [
       ['/contact', 'Nous contacter'],
       ['/confidentialite', 'Politique de confidentialité'],
-      ['/abonnement', 'Gérer mon abonnement'],
+      ['/abonnement', 'Leggendo est gratuit'],
     ],
   },
 
@@ -309,7 +308,7 @@ export const NAV_LINKS = [
   ['/giochi', 'Giochi'],
   ['/test-de-niveau', 'Test de niveau'],
   ['/methode', 'Méthode'],
-  ['/abonnement', 'Abonnement'],
+  ['/abonnement', 'Gratuit'],
 ]
 
 export const FOOTER_LINKS = [
@@ -321,5 +320,5 @@ export const FOOTER_LINKS = [
   ['/contact', 'Contact'],
   ['/mentions-legales', 'Mentions légales'],
   ['/confidentialite', 'Confidentialité'],
-  ['/conditions', 'CGU / CGV'],
+  ['/conditions', 'Conditions'],
 ]

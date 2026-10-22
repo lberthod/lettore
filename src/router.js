@@ -44,8 +44,7 @@ const router = createRouter({
         if (catalogIdSet.has(to.params.id)) return
         if (!firebaseReady) return { name: 'not-found' }
         // Hors catalogue (texte créé par un utilisateur, actualité) :
-        // connexion requise ; le rôle exact reste vérifié par les règles
-        // Firestore (ex. Notizie réservé à premium_plus/enseignant).
+        // connexion requise ; l'accès reste vérifié par les règles Firestore.
         await authReady
         // Visiteur non connecté : un identifiant inconnu est une page
         // introuvable (404), pas une invitation à se connecter — les textes
@@ -162,15 +161,14 @@ const router = createRouter({
     {
       path: '/scrivi',
       name: 'write',
-      // Production écrite + correction pédagogique (Premium IA) : comme
-      // /notizie, la route exige une connexion ; le droit premium_plus/
-      // enseignant est tranché par le serveur (POST /leggendo/correct), la
-      // vue affiche une bannière de blocage aux autres formules.
+      // Production écrite + correction pédagogique : comme /notizie, la
+      // route exige une connexion ; les crédits et la vérification de
+      // l'adresse sont tranchés par le serveur (POST /leggendo/correct).
       component: () => import('./views/WriteView.vue'),
       meta: {
         title: 'Scrivi — Leggendo',
         description:
-          'Écrivez en italien et recevez une correction pédagogique : erreurs expliquées en français, niveau estimé — formule Premium IA.',
+          'Écrivez en italien et recevez une correction pédagogique : erreurs expliquées en français, niveau estimé — gratuit avec un compte.',
         requiresAuth: true,
         tab: 'profilo',
       },
@@ -178,15 +176,14 @@ const router = createRouter({
     {
       path: '/dialogo',
       name: 'dialogue',
-      // Dialogue simulé (Phase 7, Premium IA) : même patron que /scrivi — la
-      // route exige une connexion ; le droit premium_plus/enseignant est
-      // tranché par le serveur (POST /leggendo/dialogue), la vue affiche une
-      // bannière de blocage aux autres formules.
+      // Dialogue simulé (Phase 7) : même patron que /scrivi — la route exige
+      // une connexion ; les crédits sont tranchés par le serveur
+      // (POST /leggendo/dialogue).
       component: () => import('./views/DialogueView.vue'),
       meta: {
         title: 'Dialogo — Leggendo',
         description:
-          "Dialoguez en italien avec l'IA dans des scènes du quotidien (bar, médecin, gare…) : réponses à votre niveau et bilan corrigé — formule Premium IA.",
+          "Dialoguez en italien avec l'IA dans des scènes du quotidien (bar, médecin, gare…) : réponses à votre niveau et bilan corrigé — gratuit avec un compte.",
         requiresAuth: true,
         tab: 'profilo',
       },
@@ -198,7 +195,7 @@ const router = createRouter({
       meta: {
         title: 'Notizie — Leggendo',
         description:
-          "Textes d'actualité italienne, suisse et française, générés au fil de leur publication et adaptés à votre niveau — formule Premium+.",
+          "Textes d'actualité italienne, suisse et française, générés au fil de leur publication et adaptés à votre niveau — gratuit avec un compte.",
         requiresAuth: true,
         tab: 'testi',
       },

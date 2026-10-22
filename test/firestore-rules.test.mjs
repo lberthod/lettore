@@ -84,23 +84,22 @@ test('meta/index : lecture publique, écriture refusée', async () => {
   await assertFails(setDoc(doc(asOwner('u1', { role: 'enseignant' }), 'meta/index'), { texts: [] }))
 })
 
-// --- catalogTexts/{id} : catalogue réservé, Premium et au-dessus ---
+// --- catalogTexts/{id} : catalogue complet, tout compte connecté ---
 //
-// Ces trois collections sont la vraie barrière d'accès au contenu payant
-// depuis qu'il a quitté le build (voir vite.config.js et
+// Ces trois collections sont la vraie barrière d'accès au contenu hors
+// aperçu depuis qu'il a quitté le build (voir vite.config.js et
 // scripts/check-build-leaks.mjs) : elles sont testées ici parce qu'une
-// permission trop large y rendrait à nouveau le catalogue téléchargeable.
+// lecture anonyme y rendrait le catalogue téléchargeable par un script.
 
-test('catalogTexts : lecture refusée sans authentification ni rôle', async () => {
+test('catalogTexts : lecture refusée sans authentification', async () => {
   await seed((db) => setDoc(doc(db, 'catalogTexts/miracolo'), { data: '{}' }))
   await assertFails(getDoc(doc(asAnon(), 'catalogTexts/miracolo')))
-  await assertFails(getDoc(doc(asOwner('u1', {}), 'catalogTexts/miracolo')))
-  await assertFails(getDoc(doc(asOwner('u1', { role: 'gratuit' }), 'catalogTexts/miracolo')))
 })
 
-test('catalogTexts : lecture autorisée pour premium, premium_plus et enseignant', async () => {
+test('catalogTexts : lecture autorisée pour tout compte connecté, quel que soit le rôle', async () => {
   await seed((db) => setDoc(doc(db, 'catalogTexts/miracolo'), { data: '{}' }))
-  for (const role of ['premium', 'premium_plus', 'enseignant']) {
+  await assertSucceeds(getDoc(doc(asOwner('u1', {}), 'catalogTexts/miracolo')))
+  for (const role of ['gratuit', 'premium', 'premium_plus', 'enseignant']) {
     await assertSucceeds(getDoc(doc(asOwner('u1', { role }), 'catalogTexts/miracolo')))
   }
 })
@@ -116,20 +115,17 @@ test('catalogTexts : suppression toujours refusée côté client', async () => {
   await assertFails(deleteDoc(doc(asOwner('u1', { role: 'enseignant' }), 'catalogTexts/miracolo')))
 })
 
-// --- bookChapters/{id} : Classici, Premium IA et Enseignant seulement ---
+// --- bookChapters/{id} : Classici, tout compte connecté ---
 
-test('bookChapters : lecture refusée sans rôle suffisant', async () => {
+test('bookChapters : lecture refusée sans authentification', async () => {
   await seed((db) => setDoc(doc(db, 'bookChapters/pinocchio__02'), { data: '{}' }))
   await assertFails(getDoc(doc(asAnon(), 'bookChapters/pinocchio__02')))
-  await assertFails(getDoc(doc(asOwner('u1', {}), 'bookChapters/pinocchio__02')))
-  // Premium simple donne accès au catalogue mais pas aux Classici : c'est
-  // l'écart entre les deux collections qui sépare les formules.
-  await assertFails(getDoc(doc(asOwner('u1', { role: 'premium' }), 'bookChapters/pinocchio__02')))
 })
 
-test('bookChapters : lecture autorisée pour premium_plus et enseignant', async () => {
+test('bookChapters : lecture autorisée pour tout compte connecté, quel que soit le rôle', async () => {
   await seed((db) => setDoc(doc(db, 'bookChapters/pinocchio__02'), { data: '{}' }))
-  for (const role of ['premium_plus', 'enseignant']) {
+  await assertSucceeds(getDoc(doc(asOwner('u1', {}), 'bookChapters/pinocchio__02')))
+  for (const role of ['gratuit', 'premium', 'premium_plus', 'enseignant']) {
     await assertSucceeds(getDoc(doc(asOwner('u1', { role }), 'bookChapters/pinocchio__02')))
   }
 })
@@ -406,17 +402,17 @@ test('userTexts : suppression réservée au propriétaire', async () => {
   await assertSucceeds(deleteDoc(doc(asOwner('u1', {}), 'userTexts/t1')))
 })
 
-// --- newsTexts/{id} : Notizie, réservé Premium IA / Enseignant ---
+// --- newsTexts/{id} : Notizie, tout compte connecté ---
 
-test('newsTexts : lecture refusée sans le rôle requis', async () => {
+test('newsTexts : lecture refusée sans authentification', async () => {
   await seed((db) => setDoc(doc(db, 'newsTexts/n1'), { title: 'Notizia' }))
   await assertFails(getDoc(doc(asAnon(), 'newsTexts/n1')))
-  await assertFails(getDoc(doc(asOwner('u1', { role: 'premium' }), 'newsTexts/n1')))
 })
 
-test('newsTexts : lecture autorisée avec premium_plus ou enseignant', async () => {
+test('newsTexts : lecture autorisée pour tout compte connecté, quel que soit le rôle', async () => {
   await seed((db) => setDoc(doc(db, 'newsTexts/n1'), { title: 'Notizia' }))
-  await assertSucceeds(getDoc(doc(asOwner('u1', { role: 'premium_plus' }), 'newsTexts/n1')))
+  await assertSucceeds(getDoc(doc(asOwner('u1', {}), 'newsTexts/n1')))
+  await assertSucceeds(getDoc(doc(asOwner('u1', { role: 'gratuit' }), 'newsTexts/n1')))
   await assertSucceeds(getDoc(doc(asOwner('u2', { role: 'enseignant' }), 'newsTexts/n1')))
 })
 
