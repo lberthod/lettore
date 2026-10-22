@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
+import { CONTACT_EMAIL } from '../lib/legal.js'
 import { currentUser, logout, errorMessage } from '../lib/auth.js'
 import {
   authProvider,
@@ -80,12 +81,13 @@ async function confirm() {
       <ul>
         <li>Votre compte (e-mail, nom d'affichage, méthode de connexion)</li>
         <li>Votre progression de lecture, vos mots connus et votre historique d'activité</li>
-        <li>Les textes que vous avez créés</li>
+        <li>Les textes que vous avez créés, vos écrits soumis à la correction et vos dialogues</li>
+        <li>Vos crédits et tâches de génération, et les traces de l'ancien essai gratuit</li>
       </ul>
       <p class="hint">
-        Un abonnement Stripe actif n'est pas résilié automatiquement par la
-        suppression du compte : contactez-nous d'abord si vous êtes abonné,
-        pour éviter un prélèvement après suppression. Voir notre
+        Tout est effacé immédiatement de nos bases. Seuls subsistent des
+        compteurs techniques anonymes (nombre et coût des anciennes générations
+        de textes, sans lien avec vous). Voir notre
         <RouterLink :to="{ name: 'privacy' }">politique de confidentialité</RouterLink>.
       </p>
 
@@ -130,7 +132,7 @@ async function confirm() {
         <p class="hint">
           Vous ne pouvez pas vous connecter ? Écrivez-nous depuis l'adresse
           e-mail de votre compte à
-          <a href="mailto:lberthod@gmail.com?subject=Suppression%20de%20compte">lberthod@gmail.com</a>
+          <a :href="`mailto:${CONTACT_EMAIL}?subject=Suppression%20de%20compte`">{{ CONTACT_EMAIL }}</a>
           en précisant votre demande de suppression : nous traitons la
           demande sous 30 jours.
         </p>
