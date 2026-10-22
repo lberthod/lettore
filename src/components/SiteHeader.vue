@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
-import { isLoggedIn, isAdmin, isPremiumPlus } from '../lib/access.js'
+import { isLoggedIn, isAdmin, isPremiumPlus, AI_FEATURES } from '../lib/access.js'
 import { progress } from '../progress.js'
 import { isNativeApp } from '../lib/platform.js'
 
@@ -88,7 +88,7 @@ watch(writeMenuOpen, (open) => {
       <RouterLink :to="{ name: 'about' }">À propos</RouterLink>
       <RouterLink :to="{ name: 'method' }">Méthode</RouterLink>
       <div
-        v-if="loggedIn"
+        v-if="loggedIn && AI_FEATURES"
         ref="writeMenuEl"
         class="chrome-dropdown"
         :class="{ open: writeMenuOpen, active: writeActive }"
@@ -102,7 +102,7 @@ watch(writeMenuOpen, (open) => {
           <span lang="it" title="Écrire">Scrivi</span> <span class="caret" aria-hidden="true">▾</span>
         </button>
         <div class="chrome-dropdown-menu">
-          <RouterLink :to="{ name: 'create-text' }" title="Créer son texte"><span lang="it">Crea il tuo testo</span></RouterLink>
+          <RouterLink v-if="AI_FEATURES" :to="{ name: 'create-text' }" title="Créer son texte"><span lang="it">Crea il tuo testo</span></RouterLink>
           <RouterLink v-if="premiumPlus" :to="{ name: 'write' }" title="Écrire"><span lang="it">Scrivi</span></RouterLink>
           <RouterLink v-if="premiumPlus" :to="{ name: 'dialogue' }" title="Dialogue"><span lang="it">Dialogo</span></RouterLink>
         </div>

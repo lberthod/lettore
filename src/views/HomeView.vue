@@ -3,7 +3,7 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
-import { isLoggedIn, isPremiumPlus, getTrialInfo, EXAMPLE_TEXTS } from '../lib/access.js'
+import { isLoggedIn, isPremiumPlus, getTrialInfo, EXAMPLE_TEXTS, PAID_PLANS, AI_FEATURES } from '../lib/access.js'
 import { currentUser } from '../lib/auth.js'
 import {
   progress,
@@ -165,15 +165,17 @@ const TOOLS = [
   { to: { name: 'verbs' }, icon: '🔤', label: 'Verbi' },
   { to: { name: 'grammar' }, icon: '📐', label: 'Grammatica' },
   { to: { name: 'dialogo-parlo' }, icon: '🗣️', label: 'DialogoParlo' },
-  { to: { name: 'create-text' }, icon: '✍️', label: 'Créer son texte' },
+  { to: { name: 'create-text' }, icon: '✍️', label: 'Créer son texte', ai: true },
   { to: { name: 'write' }, icon: '📝', label: 'Scrivi', premiumPlus: true },
   { to: { name: 'dialogue' }, icon: '💬', label: 'Dialogo', premiumPlus: true },
   { to: { name: 'news' }, icon: '📰', label: 'Notizie', premiumPlus: true },
-  { to: { name: 'my-texts' }, icon: '📄', label: 'Mes textes' },
+  { to: { name: 'my-texts' }, icon: '📄', label: 'Mes textes', ai: true },
   { to: { name: 'about' }, icon: 'ℹ️', label: 'À propos' },
   { to: { name: 'method' }, icon: '🧭', label: 'Méthode' },
 ]
-const tools = computed(() => TOOLS.filter((t) => !t.premiumPlus || premiumIA.value))
+const tools = computed(() =>
+  TOOLS.filter((t) => (!t.premiumPlus || premiumIA.value) && (!t.ai || AI_FEATURES))
+)
 
 const STEP_LABELS = {
   review: 'Réviser',
@@ -364,7 +366,7 @@ onUnmounted(() => {
         <div v-if="loggedIn" class="percorso">
           <p v-if="trialDaysLeft" class="trial-banner" role="status">
             Il vous reste {{ trialDaysLeft }} jour{{ trialDaysLeft > 1 ? 's' : '' }} d'essai Premium IA.
-            <RouterLink :to="{ name: 'pricing' }">Voir les offres</RouterLink>
+            <RouterLink v-if="PAID_PLANS" :to="{ name: 'pricing' }">Voir les offres</RouterLink>
           </p>
           <p class="percorso-eyebrow">
             Il tuo percorso
@@ -473,7 +475,8 @@ onUnmounted(() => {
             l'audio d'un clic. Rien d'autre entre vous et la langue.
           </p>
 
-          <p class="trial-note">10 jours de Premium IA offerts, sans carte<span class="trial-detail"> (après vérification de l'e-mail), dont 3 générations de textes IA</span></p>
+          <p v-if="!PAID_PLANS" class="trial-note">Gratuit, sans publicité : tous les textes et les classiques en libre accès</p>
+          <p v-else class="trial-note">10 jours de Premium IA offerts, sans carte<span class="trial-detail"> (après vérification de l'e-mail), dont 3 générations de textes IA</span></p>
 
           <div class="actions">
             <RouterLink class="btn-hero" :to="startReadingTo">

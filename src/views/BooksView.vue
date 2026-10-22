@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import booksIndex from '../books/index.json'
 import { progress } from '../progress.js'
-import { FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS } from '../lib/access.js'
+import { FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS, PAID_PLANS } from '../lib/access.js'
 
 function readChapters(book) {
   return progress.readTexts.filter((id) => id.startsWith(`${book.id}-`)).length
@@ -49,7 +49,7 @@ function accessLabel(book) {
           </template>
           · ~{{ book.wordCount }} mots
         </p>
-        <p class="access" :class="{ free: accessLabel(book) !== 'Premium IA' }">
+        <p v-if="PAID_PLANS" class="access" :class="{ free: accessLabel(book) !== 'Premium IA' }">
           {{ accessLabel(book) }}
         </p>
         <p v-if="readChapters(book)" class="progress">

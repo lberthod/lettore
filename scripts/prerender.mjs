@@ -21,20 +21,17 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
-import {
-  EXAMPLE_COUNT,
-  pickExampleTexts,
-  isFreeClassiciChapter,
-} from '../src/lib/catalogAccess.js'
+import { isFreeClassiciChapter, paidPlansEnabled } from '../src/lib/catalogAccess.js'
 // Module Node-safe (voir src/lib/stripe.js : isSwitzerland() protège son
 // accès à `navigator` par un try/catch) — permet de générer les vraies
 // cartes de prix ici plutôt que de dupliquer les montants à la main.
 import { plans } from '../src/lib/stripe.js'
-import { loadBooksIndex, loadBookManifest } from './lib/free-content.mjs'
+import { loadBooksIndex, loadBookManifest, freeTextIds } from './lib/free-content.mjs'
 import { getSeoDictionaryEntries } from '../src/seo/dictionaryPages.js'
 import { getSeoConjugations } from '../src/seo/conjugationPages.js'
 import { LEVEL_LANDING_PAGES, findLevelLandingPage, pickFeaturedTexts } from '../src/seo/landingPages.js'
 import { STATIC_PAGE_CONTENT, NAV_LINKS, FOOTER_LINKS } from '../src/seo/staticContent.js'
+import { LEGAL_UPDATED, LEGAL_UPDATED_ISO } from '../src/lib/legal.js'
 
 // Les shards de conjugaison ne sont pas tous générés dans le même format
 // (constaté en pratique) : certains verbes utilisent des clés camelCase avec
@@ -98,7 +95,8 @@ const textsIndex = JSON.parse(
   readFileSync(path.join(srcDir, 'texts/index.json'), 'utf8')
 )
 
-const FREE_IDS = new Set(pickExampleTexts(textsIndex, EXAMPLE_COUNT).map((t) => t.id))
+// Même frontière que le build (vente désactivée : tout le catalogue).
+const FREE_IDS = freeTextIds()
 const booksIndex = loadBooksIndex()
 
 // Mêmes totaux que virtual:catalog (vite.config.js, plugin leggendo-catalog),
@@ -169,8 +167,12 @@ function patchHead(html, { title, description, canonical, extraHead = '', ogType
 // expose ≥ 8 liens internes crawlables, y compris pour les robots sans JS.
 // Vue remplace tout le contenu de #app au montage (createApp().mount, pas
 // d'hydratation), donc aucune divergence à gérer avec le DOM client.
+// Vente désactivée : la page /abonnement n'existe pas, aucun lien n'y mène.
 const linkList = (links) =>
-  links.map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`).join(' · ')
+  links
+    .filter(([href]) => paidPlansEnabled() || href !== '/abonnement')
+    .map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`)
+    .join(' · ')
 const SEO_HEADER = `<header><nav aria-label="Navigation principale"><a href="/">Leggendo</a> — ${linkList(NAV_LINKS.slice(1))}</nav></header>`
 const SEO_FOOTER = `<footer><nav aria-label="Pied de page">${linkList(FOOTER_LINKS)}</nav><p>© Leggendo — apprendre l'italien par la lecture, avec traduction française au clic et audio.</p></footer>`
 
@@ -238,8 +240,13 @@ ${getSeoDictionaryEntries()
   </section>`
       : ''
   const links = page.links?.length ? `<p>${linkList(page.links)}</p>` : ''
+  // Date lisible par une machine (<time datetime>) : écrite seulement en
+  // toutes lettres, elle était réinterprétée par Google (« 2569 E. B. »).
+  const updated = page.updated
+    ? `<p>Dernière mise à jour : <time datetime="${LEGAL_UPDATED_ISO}">${LEGAL_UPDATED}</time></p>\n  `
+    : ''
   return `<h1>${escapeHtml(page.h1)}</h1>
-  ${page.intro.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n  ')}
+  ${updated}${page.intro.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n  ')}
   ${sections}
   ${dictList}
   ${links}`
@@ -405,6 +412,15 @@ for (const route of ROUTES) {
           acceptedAnswer: { '@type': 'Answer', text: item.a },
         })),
       })
+  } else if (STATIC_PAGE_CONTENT[route.path]?.updated) {
+    extraHead = jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: route.title,
+      url: canonical,
+      inLanguage: 'fr',
+      dateModified: LEGAL_UPDATED_ISO,
+    })
   } else if (route.path === '/grammatica') {
     extraHead = jsonLd({
       '@context': 'https://schema.org',
@@ -427,6 +443,8 @@ for (const route of ROUTES) {
   // vrai lien <a> vers chaque texte (découverte + maillage interne pour les
   // pages du catalogue, y compris pour les robots sans JS).
   if (route.path === '/textes') {
+    // Titres seuls, sans extrait : la liste pesait 95 Ko, et chaque page
+    // /testo/<id> porte désormais le texte complet (catalogue gratuit).
     const byLevel = {}
     for (const t of textsIndex) (byLevel[t.level] ??= []).push(t)
     const body = Object.keys(byLevel)
@@ -438,7 +456,7 @@ for (const route of ROUTES) {
 ${byLevel[lvl]
   .map(
     (t) =>
-      `      <li><a href="/testo/${t.id}">${escapeHtml(t.title)}</a> — ${escapeHtml(t.excerpt)}</li>`
+      `      <li><a href="/testo/${t.id}">${escapeHtml(t.title)}</a></li>`
   )
   .join('\n')}
     </ul>

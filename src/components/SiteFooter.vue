@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { isNativeApp } from '../lib/platform.js'
 import { LEVEL_LANDING_PAGES } from '../seo/landingPages.js'
+import { PAID_PLANS } from '../lib/access.js'
 </script>
 
 <template>
@@ -22,13 +23,13 @@ import { LEVEL_LANDING_PAGES } from '../seo/landingPages.js'
       </RouterLink>
     </nav>
     <nav class="legal">
-      <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
+      <RouterLink v-if="PAID_PLANS" :to="{ name: 'pricing' }">Abonnement</RouterLink>
       <RouterLink :to="{ name: 'level-test' }">Test de niveau</RouterLink>
       <RouterLink :to="{ name: 'games' }">Giochi</RouterLink>
       <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
       <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
       <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>
-      <RouterLink :to="{ name: 'terms' }">CGU / CGV</RouterLink>
+      <RouterLink :to="{ name: 'terms' }">Conditions d'utilisation</RouterLink>
     </nav>
     <p class="copyright">© {{ new Date().getFullYear() }} Leggendo — Fait en Suisse 🇨🇭</p>
   </footer>

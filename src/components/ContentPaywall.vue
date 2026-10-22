@@ -2,6 +2,7 @@
 import { RouterLink, useRoute } from 'vue-router'
 import { currentUser } from '../lib/auth.js'
 import { trackCtaClick } from '../lib/analytics.js'
+import { PAID_PLANS } from '../lib/access.js'
 
 defineProps({
   // Où le paywall est affiché (mesure GA4) : 'text', 'classici'...
@@ -9,6 +10,10 @@ defineProps({
 })
 
 const route = useRoute()
+
+function reload() {
+  window.location.reload()
+}
 
 function onCtaClick(action) {
   trackCtaClick({
@@ -20,7 +25,17 @@ function onCtaClick(action) {
 </script>
 
 <template>
-  <div class="paywall">
+  <!-- Vente désactivée : tout le catalogue est libre, ce bloc ne s'affiche
+       donc que si le contenu n'a pas pu être chargé (hors ligne, réseau). -->
+  <div v-if="!PAID_PLANS" class="paywall" role="status">
+    <h2>Contenu indisponible</h2>
+    <p>
+      Ce contenu n'a pas pu être chargé. Vérifiez votre connexion internet,
+      puis réessayez.
+    </p>
+    <button type="button" class="btn-hero" @click="reload">Réessayer</button>
+  </div>
+  <div v-else class="paywall">
     <h2>Débloquez la suite</h2>
     <p>
       Ce contenu fait partie du catalogue complet, réservé aux abonné·es
@@ -92,6 +107,9 @@ function onCtaClick(action) {
   font-size: 0.98rem;
   font-weight: 700;
   text-decoration: none;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
   box-shadow: 0 6px 20px rgba(176, 105, 46, 0.3);
   transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
 }

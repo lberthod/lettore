@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 // Totaux calculés au build (voir le plugin leggendo-catalog dans vite.config.js)
 import { catalogStats } from 'virtual:catalog'
+import { PAID_PLANS } from '../lib/access.js'
 
 const { count: textCount, levelRange, categoryCount, totalWords } = catalogStats
 const totalWordsLabel = computed(() =>
@@ -216,8 +217,11 @@ const themes = [
           <RouterLink class="btn-primary" :to="{ name: 'library' }">
             Commencer à lire →
           </RouterLink>
-          <RouterLink class="btn-ghost" :to="{ name: 'pricing' }">
+          <RouterLink v-if="PAID_PLANS" class="btn-ghost" :to="{ name: 'pricing' }">
             Voir les abonnements
+          </RouterLink>
+          <RouterLink v-else class="btn-ghost" :to="{ name: 'method' }">
+            La méthode
           </RouterLink>
         </div>
       </section>

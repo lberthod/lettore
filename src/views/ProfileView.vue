@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
+import { PAID_PLANS, AI_FEATURES } from '../lib/access.js'
 import {
   currentUser,
   logout,
@@ -89,6 +90,7 @@ const skillRows = computed(() => {
     },
     {
       id: 'scrittura',
+      ai: true,
       label: 'Écriture',
       icon: '✍️',
       stat: lvl.scrittura
@@ -97,6 +99,7 @@ const skillRows = computed(() => {
     },
     {
       id: 'dialogo',
+      ai: true,
       label: 'Dialogue',
       icon: '💬',
       stat: s.dialogo?.sessions
@@ -110,7 +113,8 @@ const skillRows = computed(() => {
       stat: s.pronuncia?.avgScore != null ? `Score moyen : ${pct(s.pronuncia.avgScore)}` : null,
     },
   ]
-  return rows.map((r) => {
+  // Écriture et dialogue passent par l'IA : sans elle, pas de carte.
+  return rows.filter((r) => !r.ai || AI_FEATURES).map((r) => {
     const count = s[r.id]?.count || 0
     const trend = skillTrend(progress, r.id)
     return {
@@ -241,7 +245,9 @@ async function checkVerification() {
   verifyInfo.value = verifyError.value = ''
   try {
     if (await refreshEmailVerified()) {
-      verifyInfo.value = 'Adresse confirmée, merci ! Votre essai Premium IA démarre.'
+      verifyInfo.value = PAID_PLANS
+        ? 'Adresse confirmée, merci ! Votre essai Premium IA démarre.'
+        : 'Adresse confirmée, merci !'
     } else {
       verifyError.value = 'Adresse pas encore confirmée : ouvrez le lien reçu par e-mail, puis réessayez.'
     }
@@ -312,9 +318,8 @@ async function confirmDelete() {
       <div v-if="!currentUser.emailVerified" class="verify-box">
         <p>
           <strong>Adresse e-mail non confirmée.</strong> Ouvrez le lien envoyé à
-          l'inscription : vos 10 jours de Premium IA offerts (dont 3 générations de textes) démarrent dès que
-          l'adresse est confirmée (puis
-          <RouterLink :to="{ name: 'create-text' }">Créer son texte</RouterLink>).
+          l'inscription pour confirmer votre adresse<template v-if="PAID_PLANS"> : vos 10 jours de Premium IA offerts (dont 3 générations de textes) démarrent dès que
+          l'adresse est confirmée</template>.
         </p>
         <p class="verify-actions">
           <button type="button" class="link-btn" :disabled="verifyBusy" @click="resendVerification">
@@ -409,11 +414,13 @@ async function confirmDelete() {
         </div>
       </div>
 
-      <h2>Abonnement</h2>
-      <p>
-        Formule actuelle : <strong>Gratuit</strong><br />
-        <RouterLink :to="{ name: 'pricing' }">Passer à Premium →</RouterLink>
-      </p>
+      <template v-if="PAID_PLANS">
+        <h2>Abonnement</h2>
+        <p>
+          Formule actuelle : <strong>Gratuit</strong><br />
+          <RouterLink :to="{ name: 'pricing' }">Passer à Premium →</RouterLink>
+        </p>
+      </template>
 
       <p v-if="error" class="error">{{ error }}</p>
       <button class="btn-secondary" @click="doLogout">Se déconnecter</button>
@@ -425,10 +432,9 @@ async function confirmDelete() {
         </button>
         <template v-else>
           <p class="warning">
-            Action définitive : vos textes créés, votre progression et votre
-            compte seront supprimés. Si vous avez un abonnement actif,
-            résiliez-le d'abord auprès de nous — la suppression du compte ne
-            résilie pas automatiquement un paiement en cours.
+            Action définitive : votre compte, votre progression, vos mots
+            favoris, vos textes créés, vos écrits corrigés et vos dialogues
+            seront supprimés.
           </p>
           <form class="form" @submit.prevent="confirmDelete">
             <label v-if="provider !== 'google.com'">
@@ -470,11 +476,11 @@ async function confirmDelete() {
     <div class="legal-links">
       <h2>Informations légales</h2>
       <nav class="legal-nav">
-        <RouterLink :to="{ name: 'pricing' }">Abonnement</RouterLink>
+        <RouterLink v-if="PAID_PLANS" :to="{ name: 'pricing' }">Abonnement</RouterLink>
         <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
         <RouterLink :to="{ name: 'legal' }">Mentions légales</RouterLink>
         <RouterLink :to="{ name: 'privacy' }">Confidentialité</RouterLink>
-        <RouterLink :to="{ name: 'terms' }">CGU / CGV</RouterLink>
+        <RouterLink :to="{ name: 'terms' }">Conditions d'utilisation</RouterLink>
       </nav>
     </div>
   </SceneLayout>

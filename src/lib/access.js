@@ -9,9 +9,21 @@ import {
   FREE_CLASSICI_BOOK_IDS,
   FREE_CLASSICI_PREVIEW_BOOK_IDS,
   isFreeClassiciChapter,
+  paidPlansEnabled,
 } from './catalogAccess.js'
 
 export { EXAMPLE_COUNT, FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS, isFreeClassiciChapter }
+
+// Vente active ? (voir catalogAccess.js) — sinon aucune page, aucun lien ni
+// aucun appel vers Stripe, Google Play ou l'App Store.
+export const PAID_PLANS = paidPlansEnabled()
+
+// Fonctions IA (Créer son texte, Scrivi, Dialogo, Notizie) : désactivées tant
+// que VITE_AI_FEATURES ne vaut pas « true ». Le fournisseur configuré dans
+// leggendo-server/llm.mjs traite les consignes des utilisateurs hors UE et
+// Suisse : ne réactiver qu'après bascule vers un fournisseur européen ou
+// suisse (le serveur a son propre interrupteur, AI_ENABLED).
+export const AI_FEATURES = import.meta.env.VITE_AI_FEATURES === 'true'
 
 export const EXAMPLE_TEXTS = exampleTexts
 export const EXAMPLE_TEXT_IDS = EXAMPLE_TEXTS.map((t) => t.id)
@@ -131,7 +143,7 @@ export function refreshUserRole() {
 // l'expiration est décidé côté serveur (revertExpiredTrials), pas ici.
 export async function getTrialInfo() {
   const user = currentUser.value
-  if (!user) return { active: false, daysRemaining: 0 }
+  if (!PAID_PLANS || !user) return { active: false, daysRemaining: 0 }
   try {
     const token = await user.getIdTokenResult()
     const { role, trialEnd, periodEnd } = token.claims
@@ -151,6 +163,7 @@ export async function getTrialInfo() {
 // « Premium IA » est le nom commercial de `premium_plus` ; l'identifiant
 // technique reste inchangé pour éviter une migration inutile.
 export async function isPremiumPlus() {
+  if (!AI_FEATURES) return false
   const role = await getUserRole()
   return role === 'premium_plus' || role === 'enseignant'
 }
@@ -160,7 +173,7 @@ export async function isPremiumPlus() {
 // l'ancien contrôle « connecté = débloqué »). En dev sans Firebase configuré,
 // il n'y a pas de rôle à vérifier : on ne verrouille rien (comme isLoggedIn).
 export async function hasCatalogAccess() {
-  if (!firebaseReady) return true
+  if (!PAID_PLANS || !firebaseReady) return true
   const role = await getUserRole()
   return role === 'premium' || role === 'premium_plus' || role === 'enseignant'
 }
@@ -177,6 +190,7 @@ export async function hasClassiciAccess() {
 // (choix documenté dans leggendo-server/quota.mjs). Le refus réel est rendu
 // par le serveur ; ceci ne sert qu'à afficher ou masquer l'accès côté client.
 export async function hasCorrectionAccess() {
+  if (!AI_FEATURES) return false
   if (!firebaseReady) return true
   return isPremiumPlus()
 }
@@ -187,6 +201,7 @@ export async function hasCorrectionAccess() {
 // refus réel est rendu par le serveur ; ceci ne sert qu'à afficher ou
 // masquer l'accès côté client.
 export async function hasDialogueAccess() {
+  if (!AI_FEATURES) return false
   if (!firebaseReady) return true
   return isPremiumPlus()
 }

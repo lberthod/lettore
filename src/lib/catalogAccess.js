@@ -4,6 +4,27 @@
 // pour pouvoir tourner aussi bien dans le navigateur que sous Node — évite la
 // triple duplication (et le risque de divergence) qui existait auparavant.
 
+// Interrupteur de vente (passage en 100 % gratuit, octobre 2026) : tant que
+// VITE_PAID_PLANS ne vaut pas « true », aucune offre payante n'est proposée
+// et TOUT le catalogue est en libre accès, sans compte — embarqué dans le
+// build comme l'aperçu gratuit l'était (voir scripts/lib/free-content.mjs).
+// Le code de paiement reste en place pour revenir à la vente en repassant la
+// variable à « true ».
+//
+// Lu à chaque appel plutôt qu'à l'import : sous Node, les scripts de build
+// renseignent process.env après avoir importé ce module.
+export function paidPlansEnabled() {
+  let raw
+  try {
+    // Remplacé par un littéral au build (`define`, vite.config.js).
+    raw = import.meta.env.VITE_PAID_PLANS
+  } catch {
+    // Sous Node, import.meta.env n'existe pas.
+  }
+  raw ??= globalThis.process?.env?.VITE_PAID_PLANS
+  return String(raw) === 'true'
+}
+
 export const EXAMPLE_COUNT = 6
 
 // Un livre entier gratuit par niveau A2, B2 et C2 (README_TARIFICATION.md,
@@ -65,6 +86,7 @@ export function pickExampleTexts(textsIndex, count = EXAMPLE_COUNT) {
 }
 
 export function isFreeClassiciChapter(bookId, chapterId) {
+  if (!paidPlansEnabled()) return true
   if (FREE_CLASSICI_BOOK_IDS.includes(bookId)) return true
   return FREE_CLASSICI_PREVIEW_BOOK_IDS.includes(bookId) && chapterId === '01'
 }

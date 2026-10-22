@@ -1,8 +1,9 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter, useRoute, RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import { firebaseReady } from '../lib/firebase.js'
+import { PAID_PLANS } from '../lib/access.js'
 import {
   login,
   register,
@@ -30,6 +31,16 @@ const displayName = ref('')
 const error = ref('')
 const info = ref('')
 const busy = ref(false)
+// Inscription : âge minimum (15 ans, ou accord du représentant légal) et
+// acceptation des conditions — exigées avant toute création de compte, y
+// compris via Google (qui crée le compte à la première connexion).
+const ageConfirmed = ref(false)
+const termsAccepted = ref(false)
+const consentMissing = computed(
+  () => mode.value === 'register' && !(ageConfirmed.value && termsAccepted.value)
+)
+const CONSENT_ERROR =
+  "Pour créer un compte, cochez les deux cases (âge et conditions d'utilisation)."
 
 const heading = computed(() =>
   mode.value === 'login'
@@ -67,6 +78,10 @@ async function submit() {
 
 async function google() {
   error.value = ''
+  if (consentMissing.value) {
+    error.value = CONSENT_ERROR
+    return
+  }
   busy.value = true
   try {
     await loginWithGoogle()
@@ -80,6 +95,10 @@ async function google() {
 
 async function apple() {
   error.value = ''
+  if (consentMissing.value) {
+    error.value = CONSENT_ERROR
+    return
+  }
   busy.value = true
   try {
     await loginWithApple()
@@ -99,12 +118,18 @@ async function apple() {
       doit être renseignée dans <code>src/lib/firebase.js</code>.
     </p>
 
-    <p v-if="mode === 'register'" class="trial-offer">
-      <strong>10 jours de Premium IA offerts, sans carte</strong> : après
-      vérification de votre e-mail (3 générations de textes IA incluses).
-    </p>
-    <p v-else-if="mode === 'login'" class="hint">
-      Nouveau ? 10 jours de Premium IA offerts, sans carte, après vérification de votre e-mail (3 générations de textes IA incluses).
+    <template v-if="PAID_PLANS">
+      <p v-if="mode === 'register'" class="trial-offer">
+        <strong>10 jours de Premium IA offerts, sans carte</strong> : après
+        vérification de votre e-mail (3 générations de textes IA incluses).
+      </p>
+      <p v-else-if="mode === 'login'" class="hint">
+        Nouveau ? 10 jours de Premium IA offerts, sans carte, après vérification de votre e-mail (3 générations de textes IA incluses).
+      </p>
+    </template>
+    <p v-else-if="mode !== 'reset'" class="hint">
+      Le compte est gratuit et facultatif : il sert à retrouver votre
+      progression et vos mots favoris sur tous vos appareils.
     </p>
 
     <form class="form" @submit.prevent="submit">
@@ -126,6 +151,28 @@ async function apple() {
           :autocomplete="mode === 'login' ? 'current-password' : 'new-password'"
         />
       </label>
+
+      <template v-if="mode === 'register'">
+        <label class="consent">
+          <input v-model="ageConfirmed" type="checkbox" required />
+          <span>J'ai au moins 15 ans ou, à défaut, l'accord de mon représentant légal.</span>
+        </label>
+        <label class="consent">
+          <input v-model="termsAccepted" type="checkbox" required />
+          <span>
+            J'accepte les
+            <RouterLink :to="{ name: 'terms' }" target="_blank">conditions d'utilisation</RouterLink>
+            et j'ai lu la
+            <RouterLink :to="{ name: 'privacy' }" target="_blank">politique de confidentialité</RouterLink>.
+          </span>
+        </label>
+      </template>
+      <p v-else-if="mode === 'login'" class="consent-note">
+        Première connexion avec Google : un compte est créé ; vous confirmez
+        alors avoir au moins 15 ans (ou l'accord de votre représentant légal)
+        et accepter les
+        <RouterLink :to="{ name: 'terms' }">conditions d'utilisation</RouterLink>.
+      </p>
 
       <p v-if="error" class="error">{{ error }}</p>
       <p v-if="info" class="success">{{ info }}</p>
@@ -169,6 +216,36 @@ async function apple() {
 </template>
 
 <style scoped>
+.consent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.consent input {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0.1rem 0 0;
+  padding: 0;
+  accent-color: #8f5220;
+}
+
+.consent span {
+  font-weight: 500;
+}
+
+.consent-note {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  opacity: 0.8;
+}
+
 .trial-offer {
   margin: 0.4rem 0 0;
   padding: 0.6rem 0.9rem;
