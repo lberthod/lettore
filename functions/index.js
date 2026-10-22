@@ -48,12 +48,12 @@ import { getAuth } from 'firebase-admin/auth'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
 import { sendPushToUser } from './push.mjs'
 import { startTrialFor } from './trial.mjs'
+import { deleteUserData } from './account.mjs'
 import { handleStripeEvent } from './stripe-events.mjs'
 import { sendStreakReminders as runStreakReminders } from './streaks.mjs'
 import {
   claimPurchase,
   checkPlayAccount,
-  deletePurchaseTokensFor,
   verifyAppleReceipt,
   pickActiveAppleTransaction,
 } from './purchases.mjs'
@@ -418,15 +418,9 @@ export const adminSetUserRole = onCall(async (request) => {
 // suffirait à supprimer le compte sans reconfirmation.
 const REAUTH_MAX_AGE_S = 5 * 60
 
-// Suppression de son propre compte (RGPD / demande explicite). Supprime les
-// textes créés, le document de profil, les quotas/jobs de génération du VPS
-// (même projet Firestore que leggendo-server, voir leggendo-server/jobs.mjs),
-// puis le compte Firebase Auth lui-même. Les entrées `generationLogs` ne sont
-// pas supprimées (mesure des coûts IA, README_TARIFICATION.md) mais sont
-// anonymisées : uid et email retirés, seules les métriques agrégées restent.
-// L'abonnement Stripe éventuel n'est pas résilié automatiquement (aucun
-// identifiant client/abonnement n'est encore persisté côté serveur) — le
-// client doit prévenir l'utilisateur.
+// Suppression de son propre compte (RGPD / demande explicite) : efface toutes
+// les données Firestore du compte (liste dans account.mjs — seuls les
+// generationLogs sont gardés, anonymisés), puis le compte Firebase Auth.
 export const deleteAccount = onCall(async (request) => {
   if (!request.auth) {
     throw new HttpsError('unauthenticated', 'Connexion requise.')
@@ -440,39 +434,8 @@ export const deleteAccount = onCall(async (request) => {
   }
 
   const uid = request.auth.uid
-  const db = getFirestore()
-  const auth = getAuth()
-
-  const [textsSnap, jobsSnap, logsSnap] = await Promise.all([
-    db.collection('userTexts').where('owner', '==', uid).get(),
-    db.collection('leggendoJobs').where('uid', '==', uid).get(),
-    db.collection('generationLogs').where('uid', '==', uid).get(),
-  ])
-
-  // Firestore limite un batch à 500 écritures ; peu probable en pratique
-  // (textes + jobs + logs d'un seul compte), mais on découpe par sécurité
-  // plutôt que de supposer un volume borné.
-  const writes = [
-    ...textsSnap.docs.map((d) => ({ ref: d.ref, op: 'delete' })),
-    ...jobsSnap.docs.map((d) => ({ ref: d.ref, op: 'delete' })),
-    { ref: db.collection('users').doc(uid), op: 'delete' },
-    { ref: db.collection('leggendoQuotas').doc(uid), op: 'delete' },
-    ...logsSnap.docs.map((d) => ({ ref: d.ref, op: 'anonymize' })),
-  ]
-  for (let i = 0; i < writes.length; i += 400) {
-    const batch = db.batch()
-    writes.slice(i, i + 400).forEach(({ ref, op }) => {
-      if (op === 'delete') batch.delete(ref)
-      else batch.update(ref, { uid: null, email: null, anonymizedAt: Date.now() })
-    })
-    await batch.commit()
-  }
-
-  // Libère les achats liés à ce compte (restauration possible après recréation).
-  // trialGrants/trialEmails sont conservés exprès (anti-abus de l'essai).
-  await deletePurchaseTokensFor(db, uid)
-
-  await auth.deleteUser(uid)
+  await deleteUserData(getFirestore(), { uid, email: request.auth.token.email })
+  await getAuth().deleteUser(uid)
 
   return { ok: true }
 })
