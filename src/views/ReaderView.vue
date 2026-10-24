@@ -25,6 +25,7 @@ import {
 } from '../progress.js'
 import { currentUser } from '../lib/auth.js'
 import { isCatalogText, loadCatalogText } from '../lib/protectedContent.js'
+import { notFoundLocation } from '../lib/notFound.js'
 import ContentPaywall from '../components/ContentPaywall.vue'
 import { trackTextOpened, trackReadingCompleted, trackWordTranslated } from '../lib/analytics.js'
 import PronunciationDrill from '../components/PronunciationDrill.vue'
@@ -69,7 +70,7 @@ async function loadText(id) {
     data = await (await import('../lib/newsTexts.js')).loadNewsText(id)
   }
   if (!data) {
-    router.replace({ name: 'not-found' })
+    router.replace(notFoundLocation(router.currentRoute.value))
     return
   }
   // Navigation rapide : n'affiche que le texte encore demandé
