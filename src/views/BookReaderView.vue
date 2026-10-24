@@ -4,6 +4,7 @@ import { RouterLink, useRouter } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import TranslationOverlay from '../components/TranslationOverlay.vue'
 import { lookupWord, lookupSentence } from '../translate.js'
+import { notFoundLocation } from '../lib/notFound.js'
 import { ttsSupported } from '../tts.js'
 import {
   speakItalianPregen as speakItalian,
@@ -48,7 +49,7 @@ async function loadBook(bookId) {
   const loader = bookModules[`../books/${bookId}/book.json`]
   const data = loader ? await loader() : null
   if (!data) {
-    router.replace({ name: 'not-found' })
+    router.replace(notFoundLocation(router.currentRoute.value))
     return null
   }
   book.value = data
