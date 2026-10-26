@@ -30,7 +30,8 @@ const CONSENT_LABEL = {
       collectons alors aucune donnée personnelle, sauf si vous acceptez la
       mesure d'audience (section 4). Comme tout serveur web, notre hébergeur
       enregistre des journaux techniques (adresse IP, page demandée, date),
-      utilisés uniquement pour la sécurité et le bon fonctionnement du site.
+      utilisés uniquement pour la sécurité et le bon fonctionnement du site
+      et effacés au plus tard après 90 jours.
     </p>
 
     <h2>3. Avec un compte (facultatif)</h2>
@@ -130,6 +131,7 @@ const CONSENT_LABEL = {
       <li>Données de compte et progression : jusqu'à la suppression du compte.</li>
       <li>Statistiques Google Analytics : 14 mois au maximum ; cookies : 13 mois au maximum.</li>
       <li>Choix de mesure d'audience : 6 mois, puis la question vous est reposée.</li>
+      <li>Journaux techniques du serveur (adresse IP) : 90 jours au maximum.</li>
       <li>Messages envoyés via la page Contact : le temps de traiter votre demande.</li>
     </ul>
 
