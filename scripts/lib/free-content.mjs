@@ -10,16 +10,27 @@
 import { readFileSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { loadEnv } from 'vite'
 import {
   EXAMPLE_COUNT,
   pickExampleTexts,
   isFreeClassiciChapter,
+  paidPlansEnabled,
 } from '../../src/lib/catalogAccess.js'
 
 export const ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   '../..'
 )
+
+// Les outils Node du build (vite.config.js, prerender, check-build-leaks) ne
+// voient pas les fichiers .env que Vite lit pour le client : on y reprend
+// VITE_PAID_PLANS, pour que le build et le client tracent la même frontière
+// gratuit/réservé.
+const envPaidPlans = loadEnv('production', ROOT, 'VITE_').VITE_PAID_PLANS
+if (process.env.VITE_PAID_PLANS === undefined && envPaidPlans !== undefined) {
+  process.env.VITE_PAID_PLANS = envPaidPlans
+}
 const SRC = path.join(ROOT, 'src')
 
 function readJson(absPath) {
@@ -84,7 +95,9 @@ export function orphanTextFiles() {
     .filter((name) => !known.has(name))
 }
 
+// Vente désactivée (paidPlansEnabled) : tout le catalogue est gratuit.
 export function freeTextIds() {
+  if (!paidPlansEnabled()) return new Set(loadTextsIndex().map((t) => t.id))
   return new Set(
     pickExampleTexts(loadTextsIndex(), EXAMPLE_COUNT).map((t) => t.id)
   )

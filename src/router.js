@@ -5,7 +5,7 @@ import HomeView from './views/HomeView.vue'
 import { catalogIds } from 'virtual:catalog'
 import { currentUser, authReady } from './lib/auth.js'
 import { firebaseReady } from './lib/firebase.js'
-import { isAdmin } from './lib/access.js'
+import { isAdmin, AI_FEATURES } from './lib/access.js'
 import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION, findRoute } from './seo/staticPages.js'
 import { LEVEL_LANDING_PAGES } from './seo/landingPages.js'
 import { trackPageView } from './lib/analytics.js'
@@ -45,7 +45,8 @@ const router = createRouter({
         if (catalogIdSet.has(to.params.id)) return
         if (!firebaseReady) return notFoundLocation(to)
         // Hors catalogue (texte créé par un utilisateur, actualité) :
-        // connexion requise ; l'accès reste vérifié par les règles Firestore.
+        // connexion requise ; le rôle exact reste vérifié par les règles
+        // Firestore (ex. Notizie réservé à premium_plus/enseignant).
         await authReady
         // Visiteur non connecté : un identifiant inconnu est une page
         // introuvable (404), pas une invitation à se connecter — les textes
@@ -110,12 +111,20 @@ const router = createRouter({
       component: () => import('./views/ContactView.vue'),
       meta: { ...findRoute('/contact'), tab: 'profilo' },
     },
-    {
-      path: '/abonnement',
-      name: 'pricing',
-      component: () => import('./views/PricingView.vue'),
-      meta: { ...findRoute('/abonnement'), tab: 'profilo' },
-    },
+    // Vente désactivée (paidPlansEnabled) : la page n'existe pas et l'ancienne
+    // URL renvoie à l'accueil — le Caddyfile fait de même en 301 côté serveur.
+    // Expression littérale (pas paidPlansEnabled()) : remplacée au build, elle
+    // permet à Rollup d'écarter PricingView et Stripe du build gratuit.
+    import.meta.env.VITE_PAID_PLANS === 'true'
+      ? {
+          path: '/abonnement',
+          name: 'pricing',
+          component: () => import('./views/PricingView.vue'),
+          meta: { ...findRoute('/abonnement'), tab: 'profilo' },
+        }
+      : // Nom conservé : un lien oublié vers { name: 'pricing' } redirige au
+        // lieu de faire échouer le rendu (« No match for name »).
+        { path: '/abonnement', name: 'pricing', redirect: '/' },
     {
       path: '/connexion',
       name: 'login',
@@ -157,19 +166,21 @@ const router = createRouter({
       path: '/creer-son-texte',
       name: 'create-text',
       component: () => import('./views/CreateTextView.vue'),
-      meta: { ...findRoute('/creer-son-texte'), requiresAuth: true, tab: 'profilo' },
+      meta: { ...findRoute('/creer-son-texte'), requiresAuth: true, ai: true, tab: 'profilo' },
     },
     {
       path: '/scrivi',
       name: 'write',
-      // Production écrite + correction pédagogique : comme /notizie, la
-      // route exige une connexion ; les crédits et la vérification de
-      // l'adresse sont tranchés par le serveur (POST /leggendo/correct).
+      // Production écrite + correction pédagogique (Premium IA) : comme
+      // /notizie, la route exige une connexion ; le droit premium_plus/
+      // enseignant est tranché par le serveur (POST /leggendo/correct), la
+      // vue affiche une bannière de blocage aux autres formules.
       component: () => import('./views/WriteView.vue'),
       meta: {
         title: 'Scrivi — Leggendo',
+        ai: true,
         description:
-          'Écrivez en italien et recevez une correction pédagogique : erreurs expliquées en français, niveau estimé — gratuit avec un compte.',
+          'Écrivez en italien et recevez une correction pédagogique : erreurs expliquées en français, niveau estimé — formule Premium IA.',
         requiresAuth: true,
         tab: 'profilo',
       },
@@ -177,14 +188,16 @@ const router = createRouter({
     {
       path: '/dialogo',
       name: 'dialogue',
-      // Dialogue simulé (Phase 7) : même patron que /scrivi — la route exige
-      // une connexion ; les crédits sont tranchés par le serveur
-      // (POST /leggendo/dialogue).
+      // Dialogue simulé (Phase 7, Premium IA) : même patron que /scrivi — la
+      // route exige une connexion ; le droit premium_plus/enseignant est
+      // tranché par le serveur (POST /leggendo/dialogue), la vue affiche une
+      // bannière de blocage aux autres formules.
       component: () => import('./views/DialogueView.vue'),
       meta: {
         title: 'Dialogo — Leggendo',
+        ai: true,
         description:
-          "Dialoguez en italien avec l'IA dans des scènes du quotidien (bar, médecin, gare…) : réponses à votre niveau et bilan corrigé — gratuit avec un compte.",
+          "Dialoguez en italien avec l'IA dans des scènes du quotidien (bar, médecin, gare…) : réponses à votre niveau et bilan corrigé — formule Premium IA.",
         requiresAuth: true,
         tab: 'profilo',
       },
@@ -195,8 +208,9 @@ const router = createRouter({
       component: () => import('./views/NotizieView.vue'),
       meta: {
         title: 'Notizie — Leggendo',
+        ai: true,
         description:
-          "Textes d'actualité italienne, suisse et française, générés au fil de leur publication et adaptés à votre niveau — gratuit avec un compte.",
+          "Textes d'actualité italienne, suisse et française, générés au fil de leur publication et adaptés à votre niveau — formule Premium+.",
         requiresAuth: true,
         tab: 'testi',
       },
@@ -334,6 +348,9 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
+  // Fonctions IA désactivées (AI_FEATURES, voir access.js) : leurs pages
+  // n'existent plus, même pour un lien ou un favori ancien.
+  if (to.meta.ai && !AI_FEATURES) return { name: 'home' }
   if (!to.meta.requiresAuth || !firebaseReady) return
   // Attendre que Firebase ait restauré la session avant de décider
   await authReady

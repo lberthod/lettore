@@ -12,9 +12,9 @@ import { hasCatalogAccess, isLoggedIn, EXAMPLE_TEXT_IDS, EXAMPLE_COUNT } from '.
 // Taxonomie unique : les catégories affichées sont les thèmes de category.json
 const categories = taxonomy.themes
 
-// Catalogue complet ouvert à tout compte connecté (mode gratuit, GRATUIT.md) :
-// tout le monde voit les textes de l'aperçu public, les autres apparaissent
-// verrouillés tant que le visiteur n'est pas connecté.
+// Catalogue complet réservé à Premium et au-dessus (README_TARIFICATION.md) :
+// tout le monde voit les textes de l'aperçu gratuit, les autres apparaissent
+// verrouillés tant que le compte n'a pas le rôle payant requis.
 const loggedIn = computed(() => isLoggedIn())
 const catalogAccess = ref(!firebaseReady)
 const authResolved = ref(!firebaseReady)
@@ -231,11 +231,11 @@ function listenTo(t) {
       <p class="classici-crosslink">
         <RouterLink :to="{ name: 'books' }">📚 Découvrir aussi les Classici (Cappuccetto Rosso, Pollicino…) →</RouterLink>
       </p>
-      <!-- Aperçu public : rappel discret d'invitation à créer un compte -->
+      <!-- Aperçu gratuit : rappel discret d'invitation à passer Premium -->
       <p v-if="authResolved && !catalogAccess" class="preview-note">
         {{ EXAMPLE_COUNT }} textes en accès libre.
-        <RouterLink :to="{ name: 'login', query: { redirect: '/textes' } }">Créez un compte gratuit</RouterLink>
-        pour lire les {{ textsIndex.length }} textes.
+        <RouterLink :to="{ name: 'pricing' }">Passez à Premium</RouterLink>
+        pour débloquer les {{ textsIndex.length }} textes.
       </p>
 
       <div v-if="loggedIn && readCount" class="progress-line">
@@ -398,17 +398,17 @@ function listenTo(t) {
         </button>
       </div>
 
-      <!-- Visiteurs sans compte : un unique bloc d'invitation, au lieu de
-           cartes verrouillées dispersées -->
+      <!-- Comptes sans accès catalogue (visiteurs et gratuit) : un unique
+           bloc d'invitation, au lieu de cartes verrouillées dispersées -->
       <section v-if="authResolved && !catalogAccess && lockedCount > 0" class="unlock-all">
-        <h2>🔒 {{ lockedCount }} texte{{ lockedCount > 1 ? 's' : '' }} supplémentaire{{ lockedCount > 1 ? 's' : '' }} avec un compte gratuit</h2>
+        <h2>🔒 {{ lockedCount }} texte{{ lockedCount > 1 ? 's' : '' }} supplémentaire{{ lockedCount > 1 ? 's' : '' }} à débloquer</h2>
         <p>
-          Vous consultez la sélection en accès libre. Créez un compte, c'est
-          gratuit, pour lire l'intégralité du catalogue, suivre votre
-          progression et enregistrer vos mots favoris.
+          Vous consultez la sélection en accès libre. Passez à Premium pour
+          lire l'intégralité du catalogue, suivre votre progression et
+          enregistrer vos mots favoris.
         </p>
-        <RouterLink class="btn-unlock" :to="{ name: 'login', query: { redirect: '/textes' } }">
-          Créer mon compte gratuit →
+        <RouterLink class="btn-unlock" :to="{ name: 'pricing' }">
+          Découvrir Premium →
         </RouterLink>
       </section>
     </div>

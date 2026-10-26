@@ -263,7 +263,7 @@ function revealAid(key) {
 }
 
 // --- Solde de crédits (comme CreateTextView) : la correction coûte 1 crédit
-// est ouverte à tout compte dont l'adresse est vérifiée — le serveur
+// et est réservée aux rôles à crédits (premium_plus/enseignant) — le serveur
 // reste la seule source de vérité, ceci n'est qu'un affichage informatif. ---
 const quota = ref(null)
 async function refreshQuota() {
@@ -276,9 +276,10 @@ const canCorrect = computed(() => {
   if (quota.value.type !== 'credits') return false
   return quota.value.remaining >= CORRECTION_COST
 })
-// Adresse e-mail non vérifiée : le serveur refuse tout outil IA (quota.mjs)
-// — bannière de blocage plutôt que refus serveur après coup.
-const blocked = computed(() => quota.value?.emailVerified === false)
+// Rôle sans crédits (gratuit, premium lecture) : la correction fait partie
+// de Premium IA, comme la génération — bannière de blocage plutôt que refus
+// serveur après coup.
+const blocked = computed(() => quota.value && quota.value.type !== 'credits')
 
 // Suggestion de sujet optionnelle (mode libre uniquement) : un thème de la
 // taxonomie tiré au sort (GET /leggendo/taxonomy, repli sur la copie locale).
@@ -437,9 +438,9 @@ const levelNote = computed(() => LEVEL_NOTES[levelTier(result.value?.level_estim
     </p>
 
     <p v-if="blocked" class="quota-banner blocked">
-      Confirmez votre adresse e-mail pour utiliser vos crédits de correction :
-      un lien vous a été envoyé à l'inscription (voir
-      <RouterLink :to="{ name: 'profile' }">Mon profil</RouterLink>).
+      La correction de textes fait partie de la formule
+      <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink> — votre
+      formule actuelle ne l'inclut pas.
     </p>
     <p v-else-if="quota?.type === 'credits'" class="quota-banner">
       {{ quota.remaining }} crédit{{ quota.remaining > 1 ? 's' : '' }} sur

@@ -69,9 +69,10 @@ export function makeFakeDb(initial = {}) {
     batch() {
       const ops = []
       return {
-        delete: (r) => ops.push(r),
+        delete: (r) => ops.push(() => r.delete()),
+        update: (r, patch) => ops.push(() => r.update(patch)),
         commit: async () => {
-          for (const r of ops) await r.delete()
+          for (const op of ops) await op()
         },
       }
     },

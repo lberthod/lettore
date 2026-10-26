@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import SceneLayout from '../components/SceneLayout.vue'
+import { CONTACT_EMAIL, PUBLISHER } from '../lib/legal.js'
 
 const name = ref('')
 const email = ref('')
@@ -10,7 +11,7 @@ const message = ref('')
 function send() {
   const subject = encodeURIComponent(`[Leggendo] Message de ${name.value || 'un visiteur'}`)
   const body = encodeURIComponent(`${message.value}\n\n— ${name.value} (${email.value})`)
-  window.location.href = `mailto:lberthod@gmail.com?subject=${subject}&body=${body}`
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
 }
 </script>
 
@@ -38,8 +39,13 @@ function send() {
       <p class="hint">
         L'envoi ouvre votre application de messagerie. Vous pouvez aussi nous
         écrire directement à
-        <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>.
+        <a :href="`mailto:${CONTACT_EMAIL}`">{{ CONTACT_EMAIL }}</a>.
       </p>
     </form>
+
+    <p class="hint">
+      Par courrier : {{ PUBLISHER.name }}, {{ PUBLISHER.address }} ·
+      Téléphone : {{ PUBLISHER.phone }}
+    </p>
   </SceneLayout>
 </template>

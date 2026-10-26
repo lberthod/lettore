@@ -3,7 +3,7 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import { currentUser } from '../lib/auth.js'
-import { isLoggedIn } from '../lib/access.js'
+import { isLoggedIn, isPremiumPlus } from '../lib/access.js'
 import { listNewsTexts, NEWS_COUNTRIES, NEWS_CATEGORIES } from '../lib/newsTexts.js'
 import { networkErrorMessage } from '../lib/network.js'
 
@@ -15,6 +15,7 @@ import { networkErrorMessage } from '../lib/network.js'
 const POLL_INTERVAL_MS = 5 * 60 * 1000
 
 const loading = ref(true)
+const premiumPlus = ref(false)
 const texts = ref([])
 const loadError = ref('')
 const selectedCountry = ref('all')
@@ -65,7 +66,8 @@ const loadTexts = async () => {
 }
 
 onMounted(async () => {
-  if (isLoggedIn() && currentUser.value) {
+  premiumPlus.value = await isPremiumPlus()
+  if (premiumPlus.value) {
     await loadTexts()
     pollTimer = setInterval(loadTexts, POLL_INTERVAL_MS)
   } else {
@@ -83,7 +85,8 @@ onUnmounted(() => {
     <p>
       Une sélection d'actualités italiennes, suisses et françaises,
       reformulées en italien et adaptées à votre niveau au fil de leur
-      publication — pour tous les membres, gratuitement.
+      publication — réservé à la formule
+      <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink>.
     </p>
 
     <div v-if="loading" class="hint">Chargement…</div>
@@ -93,6 +96,11 @@ onUnmounted(() => {
       <RouterLink class="btn-hero" :to="{ name: 'login', query: { redirect: '/notizie' } }">
         Se connecter
       </RouterLink>
+    </div>
+
+    <div v-else-if="!premiumPlus" class="upsell">
+      <p>Les Notizie font partie de la formule Premium IA (14,90 €/mois) : 30 crédits de génération par mois, un fil d'actualité multi-pays adapté à votre niveau, et une bibliothèque de classiques adaptés et gradués.</p>
+      <RouterLink class="btn-hero" :to="{ name: 'pricing' }">Découvrir Premium IA</RouterLink>
     </div>
 
     <template v-else>

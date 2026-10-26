@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import {
   EXAMPLE_TEXT_IDS,
   EXAMPLE_COUNT,
@@ -9,7 +9,9 @@ import {
   refreshUserRole,
   markRoleMayHaveChanged,
   hasCatalogAccess,
+  PAID_PLANS,
 } from './access.js'
+import { paidPlansEnabled } from './catalogAccess.js'
 import { currentUser } from './auth.js'
 import textsIndex from '../texts/index.json'
 
@@ -35,7 +37,10 @@ describe('EXAMPLE_TEXT_IDS (aperçu gratuit)', () => {
   })
 })
 
-describe('isFreeClassiciChapter', () => {
+describe('isFreeClassiciChapter (vente active)', () => {
+  beforeEach(() => vi.stubEnv('VITE_PAID_PLANS', 'true'))
+  afterEach(() => vi.unstubAllEnvs())
+
   it('les livres entièrement gratuits sont accessibles à tous les chapitres', () => {
     for (const bookId of FREE_CLASSICI_BOOK_IDS) {
       expect(isFreeClassiciChapter(bookId, '01')).toBe(true)
@@ -56,6 +61,27 @@ describe('isFreeClassiciChapter', () => {
 
   it('un identifiant de livre inconnu est traité comme payant', () => {
     expect(isFreeClassiciChapter('livre-inexistant', '01')).toBe(false)
+  })
+})
+
+describe('vente désactivée (VITE_PAID_PLANS absent, mode par défaut)', () => {
+  beforeEach(() => {
+    vi.stubEnv('VITE_PAID_PLANS', '')
+    currentUser.value = null
+  })
+  afterEach(() => vi.unstubAllEnvs())
+
+  it('tous les chapitres de tous les livres sont libres', () => {
+    expect(paidPlansEnabled()).toBe(false)
+    for (const bookId of FREE_CLASSICI_PREVIEW_BOOK_IDS) {
+      expect(isFreeClassiciChapter(bookId, '02')).toBe(true)
+    }
+    expect(isFreeClassiciChapter('livre-inexistant', '07')).toBe(true)
+  })
+
+  it('le catalogue complet est ouvert, même sans compte', async () => {
+    expect(PAID_PLANS).toBe(false)
+    expect(await hasCatalogAccess()).toBe(true)
   })
 })
 

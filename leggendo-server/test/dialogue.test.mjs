@@ -1,4 +1,4 @@
-// Tests du dialogue simulé (Phase 7) : droit d'accès (adresse vérifiée, crédits),
+// Tests du dialogue simulé (Phase 7) : droit d'accès (rôles à crédits),
 // réservation/remboursement des 2 crédits de session, plafond de tours,
 // isolation entre comptes, validation d'entrée et schémas de sortie LLM.
 
@@ -24,9 +24,9 @@ import {
 import { SCENARIOS, scenarioById } from '../dialogue.mjs'
 
 const gratuit = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
-const nonVerifie = { uid: 'u2', role: 'gratuit', premium: false, emailVerified: false }
-const premiumIA = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
-const enseignant = { uid: 'u4', role: 'enseignant', premium: true, emailVerified: true }
+const premium = { uid: 'u2', role: 'premium', premium: true }
+const premiumIA = { uid: 'u3', role: 'premium_plus', premium: true }
+const enseignant = { uid: 'u4', role: 'enseignant', premium: true }
 
 function makeStore() {
   return createJobStore(new FakeFirestore())
@@ -42,12 +42,13 @@ async function openSession(store, user = premiumIA, id = 's-1') {
 
 // --- dialogueQuotaError (quota.mjs) ---
 
-test("dialogue refusé tant que l'adresse e-mail n'est pas vérifiée", () => {
-  assert.match(dialogueQuotaError(nonVerifie, freshQuota()), /Vérifiez votre adresse/)
+test('dialogue refusé aux comptes gratuit et premium (réservé aux rôles à crédits)', () => {
+  // Même choix documenté que la correction (quota.mjs) : pas d'essai gratuit.
+  assert.match(dialogueQuotaError(gratuit, freshQuota()), /Premium IA/)
+  assert.match(dialogueQuotaError(premium, freshQuota()), /Premium IA/)
 })
 
-test('dialogue autorisé pour tout compte vérifié sous la limite', () => {
-  assert.equal(dialogueQuotaError(gratuit, freshQuota()), null)
+test('dialogue autorisé pour Premium IA et Enseignant sous la limite', () => {
   assert.equal(dialogueQuotaError(premiumIA, freshQuota()), null)
   assert.equal(dialogueQuotaError(enseignant, freshQuota()), null)
 })
@@ -77,16 +78,16 @@ test('reserveDialogue consomme 2 crédits et crée la session dans la même tran
   assert.equal(s.cost, DIALOGUE_COST)
 })
 
-test('reserveDialogue refuse un compte non vérifié sans rien créer ni consommer', async () => {
+test('reserveDialogue refuse un compte gratuit sans rien créer ni consommer', async () => {
   const store = makeStore()
   const ref = store.dialogueSessionsCollection.doc('s-refused')
   await assert.rejects(
-    () => store.reserveDialogue(nonVerifie, ref, { scenario: 'al_bar', level: 'A1' }),
+    () => store.reserveDialogue(gratuit, ref, { scenario: 'al_bar', level: 'A1' }),
     QuotaExceededError
   )
   assert.equal((await ref.get()).exists, false)
-  const status = await store.getQuotaStatus(nonVerifie)
-  assert.equal(status.used, 0, 'rien n’est consommé')
+  const status = await store.getQuotaStatus(gratuit)
+  assert.equal(status.remaining, 1, "l'essai gratuit de génération reste intact")
 })
 
 test('reserveDialogue refuse quand les crédits sont épuisés, sans créer de session', async () => {

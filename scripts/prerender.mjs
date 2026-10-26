@@ -21,19 +21,17 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
-import {
-  EXAMPLE_COUNT,
-  pickExampleTexts,
-  isFreeClassiciChapter,
-} from '../src/lib/catalogAccess.js'
-// Page « Gratuit » (/abonnement) : fonctionnalités et FAQ partagées avec
-// PricingView.vue — module sans dépendance Vue/Firebase.
-import { FREE_FEATURES, FREE_FAQ } from '../src/seo/freePage.js'
-import { loadBooksIndex, loadBookManifest } from './lib/free-content.mjs'
+import { isFreeClassiciChapter, paidPlansEnabled } from '../src/lib/catalogAccess.js'
+// Module Node-safe (voir src/lib/stripe.js : isSwitzerland() protège son
+// accès à `navigator` par un try/catch) — permet de générer les vraies
+// cartes de prix ici plutôt que de dupliquer les montants à la main.
+import { plans } from '../src/lib/stripe.js'
+import { loadBooksIndex, loadBookManifest, freeTextIds } from './lib/free-content.mjs'
 import { getSeoDictionaryEntries } from '../src/seo/dictionaryPages.js'
 import { getSeoConjugations } from '../src/seo/conjugationPages.js'
 import { LEVEL_LANDING_PAGES, findLevelLandingPage, pickFeaturedTexts } from '../src/seo/landingPages.js'
 import { STATIC_PAGE_CONTENT, NAV_LINKS, FOOTER_LINKS } from '../src/seo/staticContent.js'
+import { LEGAL_UPDATED, LEGAL_UPDATED_ISO } from '../src/lib/legal.js'
 
 // Les shards de conjugaison ne sont pas tous générés dans le même format
 // (constaté en pratique) : certains verbes utilisent des clés camelCase avec
@@ -97,7 +95,8 @@ const textsIndex = JSON.parse(
   readFileSync(path.join(srcDir, 'texts/index.json'), 'utf8')
 )
 
-const FREE_IDS = new Set(pickExampleTexts(textsIndex, EXAMPLE_COUNT).map((t) => t.id))
+// Même frontière que le build (vente désactivée : tout le catalogue).
+const FREE_IDS = freeTextIds()
 const booksIndex = loadBooksIndex()
 
 // Mêmes totaux que virtual:catalog (vite.config.js, plugin leggendo-catalog),
@@ -168,8 +167,12 @@ function patchHead(html, { title, description, canonical, extraHead = '', ogType
 // expose ≥ 8 liens internes crawlables, y compris pour les robots sans JS.
 // Vue remplace tout le contenu de #app au montage (createApp().mount, pas
 // d'hydratation), donc aucune divergence à gérer avec le DOM client.
+// Vente désactivée : la page /abonnement n'existe pas, aucun lien n'y mène.
 const linkList = (links) =>
-  links.map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`).join(' · ')
+  links
+    .filter(([href]) => paidPlansEnabled() || href !== '/abonnement')
+    .map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`)
+    .join(' · ')
 const SEO_HEADER = `<header><nav aria-label="Navigation principale"><a href="/">Leggendo</a> — ${linkList(NAV_LINKS.slice(1))}</nav></header>`
 const SEO_FOOTER = `<footer><nav aria-label="Pied de page">${linkList(FOOTER_LINKS)}</nav><p>© Leggendo — apprendre l'italien par la lecture, avec traduction française au clic et audio.</p></footer>`
 
@@ -237,8 +240,13 @@ ${getSeoDictionaryEntries()
   </section>`
       : ''
   const links = page.links?.length ? `<p>${linkList(page.links)}</p>` : ''
+  // Date lisible par une machine (<time datetime>) : écrite seulement en
+  // toutes lettres, elle était réinterprétée par Google (« 2569 E. B. »).
+  const updated = page.updated
+    ? `<p>Dernière mise à jour : <time datetime="${LEGAL_UPDATED_ISO}">${LEGAL_UPDATED}</time></p>\n  `
+    : ''
   return `<h1>${escapeHtml(page.h1)}</h1>
-  ${page.intro.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n  ')}
+  ${updated}${page.intro.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n  ')}
   ${sections}
   ${dictList}
   ${links}`
@@ -340,6 +348,27 @@ const METHOD_FAQ = [
   },
 ]
 
+// FAQ affichée dans PricingView.vue — même remarque : dupliquée ici, à
+// répercuter si le contenu change côté client.
+const PRICING_FAQ = [
+  {
+    q: 'Puis-je résilier à tout moment ?',
+    a: "Oui. Sur le web, la résiliation se fait en un clic via Stripe (portail de facturation) ; sur mobile, depuis les réglages d'abonnement de votre compte Apple ou Google Play. Aucun engagement, aucune durée minimale.",
+  },
+  {
+    q: 'Quelle est la différence entre Premium et Premium IA ?',
+    a: "Premium débloque tout le catalogue de textes gradués et Classici. Premium IA inclut en plus 30 crédits de génération mensuels pour créer vos propres textes sur mesure avec « Créer son texte ».",
+  },
+  {
+    q: "Que se passe-t-il si j'annule mon abonnement ?",
+    a: "Vous gardez l'accès Premium jusqu'à la fin de la période déjà payée, puis revenez automatiquement à la formule gratuite (aperçu limité). Votre progression et vos mots favoris restent intacts.",
+  },
+  {
+    q: 'Le paiement est-il sécurisé ?',
+    a: "Sur le web, le paiement passe par Stripe (Payment Links), qui ne transmet jamais vos données bancaires à Leggendo. Sur mobile, le paiement passe par Apple ou Google, selon les mêmes règles que toutes leurs autres apps.",
+  },
+]
+
 for (const route of ROUTES) {
   if (route.noindex) continue
   const canonical = `${SITE_URL}${route.path}`
@@ -355,14 +384,42 @@ for (const route of ROUTES) {
       })),
     })
   } else if (route.path === '/abonnement') {
+    // Prix de référence EUR (le premier plan payant) — src/lib/stripe.js
+    // ajuste l'affichage en CHF pour les visiteurs suisses côté client ;
+    // Stripe lui-même choisit la devise réellement facturée au paiement.
+    const premium = plans.find((p) => p.id === 'premium')
+    extraHead =
+      jsonLd({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'Leggendo Premium',
+        description:
+          "Accès illimité à tous les textes gradués en italien (A1 à C2), traduction française au clic et lecture audio.",
+        offers: {
+          '@type': 'Offer',
+          price: (premium?.monthly.price.match(/[\d,.]+/)?.[0] || '').replace(',', '.'),
+          priceCurrency: 'EUR',
+          priceValidUntil: `${new Date().getUTCFullYear() + 1}-12-31`,
+          url: canonical,
+        },
+      }) +
+      jsonLd({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: PRICING_FAQ.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        })),
+      })
+  } else if (STATIC_PAGE_CONTENT[route.path]?.updated) {
     extraHead = jsonLd({
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: FREE_FAQ.map((item) => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-      })),
+      '@type': 'WebPage',
+      name: route.title,
+      url: canonical,
+      inLanguage: 'fr',
+      dateModified: LEGAL_UPDATED_ISO,
     })
   } else if (route.path === '/grammatica') {
     extraHead = jsonLd({
@@ -386,6 +443,8 @@ for (const route of ROUTES) {
   // vrai lien <a> vers chaque texte (découverte + maillage interne pour les
   // pages du catalogue, y compris pour les robots sans JS).
   if (route.path === '/textes') {
+    // Titres seuls, sans extrait : la liste pesait 95 Ko, et chaque page
+    // /testo/<id> porte désormais le texte complet (catalogue gratuit).
     const byLevel = {}
     for (const t of textsIndex) (byLevel[t.level] ??= []).push(t)
     const body = Object.keys(byLevel)
@@ -397,7 +456,7 @@ for (const route of ROUTES) {
 ${byLevel[lvl]
   .map(
     (t) =>
-      `      <li><a href="/testo/${t.id}">${escapeHtml(t.title)}</a> — ${escapeHtml(t.excerpt)}</li>`
+      `      <li><a href="/testo/${t.id}">${escapeHtml(t.title)}</a></li>`
   )
   .join('\n')}
     </ul>
@@ -449,14 +508,23 @@ ${byLevel[lvl]
   } else if (route.path === '/abonnement') {
     html = withBody(
       html,
-      `<h1>Leggendo est gratuit</h1>
-  <p>Tout le site, sans abonnement, sans essai limité, sans carte bancaire. Un compte suffit, et il est gratuit lui aussi.</p>
-  <ul>
-  ${FREE_FEATURES.map((f) => `<li><strong>${escapeHtml(f.title)}</strong> — ${escapeHtml(f.text)}</li>`).join('\n  ')}
-  </ul>
-  <p><a href="/connexion">Créer mon compte gratuit</a> · <a href="/methode">Comment ça marche</a></p>
+      `<h1>Abonnements Leggendo</h1>
+  <p>Soutenez le projet et débloquez tous les textes avec la formule Premium.</p>
+  ${plans
+    .map((p) => {
+      const monthly = `${p.monthly.price}${p.monthly.period ? ' ' + p.monthly.period : ''}`
+      const annual = `${p.annual.price}${p.annual.period ? ' ' + p.annual.period : ''}`
+      const price = p.annual.price === p.monthly.price ? monthly : `${monthly} (ou ${annual})`
+      return `<section>
+    <h2>${escapeHtml(p.name)}</h2>
+    <p>${escapeHtml(price)}</p>
+    <ul>${p.features.map((f) => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
+  </section>`
+    })
+    .join('\n  ')}
+  <p>Paiement sécurisé par Stripe. Résiliable à tout moment.</p>
   <h2>Questions fréquentes</h2>
-  ${FREE_FAQ.map((f) => `<h3>${escapeHtml(f.q)}</h3>\n  <p>${escapeHtml(f.a)}</p>`).join('\n  ')}`
+  ${PRICING_FAQ.map((f) => `<h3>${escapeHtml(f.q)}</h3>\n  <p>${escapeHtml(f.a)}</p>`).join('\n  ')}`
     )
   } else if (route.path === '/classici') {
     const body = booksIndex
@@ -626,8 +694,8 @@ for (const b of booksIndex) {
   <h1>${escapeHtml(manifest.title)}</h1>
   <p><strong>${escapeHtml(chapter.title)}</strong> · ${escapeHtml(manifest.author)} · niveau ${escapeHtml(manifest.level)}</p>
   <div class="paywall">
-    <p>Ce chapitre fait partie du catalogue Classici complet, ouvert à tous les membres : créez un compte gratuit pour lire la suite.</p>
-    <p><a href="/connexion">Créer mon compte gratuit</a> · <a href="/abonnement">Pourquoi c'est gratuit</a></p>
+    <p>Ce chapitre fait partie du catalogue Classici complet, réservé aux abonné·es Premium IA et Enseignant.</p>
+    <p><a href="/abonnement">Voir les formules d'abonnement</a> · <a href="/connexion">Se connecter</a></p>
   </div>`
     }
 
@@ -810,8 +878,8 @@ for (const t of textsIndex) {
   <p><strong>Niveau ${escapeHtml(t.level)}</strong> · ${escapeHtml(t.category)} · ${escapeHtml(t.genre)} · ~${t.wordCount} mots</p>
   <p>${escapeHtml(t.excerpt)}</p>
   <div class="paywall">
-    <p>Ce texte fait partie du catalogue complet, ouvert à tous les membres : créez un compte gratuit pour le lire.</p>
-    <p><a href="/connexion">Créer mon compte gratuit</a> · <a href="/abonnement">Pourquoi c'est gratuit</a></p>
+    <p>Ce texte fait partie du catalogue complet, réservé aux abonné·es Leggendo.</p>
+    <p><a href="/abonnement">Voir les formules d'abonnement</a> · <a href="/connexion">Se connecter</a></p>
   </div>`
   }
 

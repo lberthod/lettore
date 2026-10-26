@@ -14,6 +14,7 @@
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs'
 import path from 'node:path'
 import { SITE_URL, ROUTES } from '../src/seo/staticPages.js'
+import { paidPlansEnabled } from '../src/lib/catalogAccess.js'
 import {
   ROOT,
   lockedContent,
@@ -255,6 +256,31 @@ if (!existsSync(sitemapPath)) {
       break
     }
   }
+}
+
+// --- Vente désactivée : aucun moyen de payer dans le build ----------------
+// Liens de paiement Stripe, portail de facturation, achats in-app, Paddle,
+// lien vers la page Abonnement : rien de tout cela ne doit être publié tant
+// que VITE_PAID_PLANS n'est pas à « true ».
+const paymentErrors = []
+if (!paidPlansEnabled()) {
+  const PAYMENT_MARKERS = [
+    'buy.stripe.com',
+    'billing.stripe.com',
+    'cordova-plugin-purchase',
+    'paddle.com',
+    'href="/abonnement"',
+  ]
+  for (const m of PAYMENT_MARKERS) {
+    if (blob.includes(m)) paymentErrors.push(m)
+  }
+  if (existsSync(path.join(distDir, 'abonnement.html'))) {
+    paymentErrors.push('dist/abonnement.html')
+  }
+}
+if (paymentErrors.length) {
+  console.error(`✗ Moyen de paiement présent dans le build gratuit : ${paymentErrors.join(', ')}`)
+  process.exit(1)
 }
 
 for (const w of seoWarnings) console.warn(`⚠ SEO : ${w}`)
