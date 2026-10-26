@@ -146,7 +146,14 @@ leggendo.fr {  # A VERIFIER : domaine exact
 		file_server
 	}
 
+	# Actif en prod depuis le 2026-10-23. JSON, rotation à 50 Mo, 10 fichiers,
+	# 90 jours max (IP incluses : données perso).
 	log {
-		output file /var/log/caddy/leggendo.fr.access.log  # A VERIFIER : chemin
+		output file /var/log/caddy/leggendo.fr.access.log {
+			roll_size 50MiB
+			roll_keep 10
+			roll_keep_for 2160h
+		}
+		format json
 	}
 }

@@ -249,6 +249,14 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // Mise à jour immédiate : sans skipWaiting, le nouveau service worker
+        // reste « en attente » tant qu'un onglet Leggendo est ouvert, et les
+        // visiteurs continuent de voir l'ancienne version (constaté lors du
+        // passage en mode gratuit, octobre 2026). registerSW (autoUpdate,
+        // src/main.js) recharge alors la page à l'activation.
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,svg}'],
         globIgnores: [...PRECACHE_IGNORES, '**/audio-test.html'],
         navigateFallback: '/index.html',

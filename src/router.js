@@ -9,6 +9,7 @@ import { isAdmin, AI_FEATURES } from './lib/access.js'
 import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION, findRoute } from './seo/staticPages.js'
 import { LEVEL_LANDING_PAGES } from './seo/landingPages.js'
 import { trackPageView } from './lib/analytics.js'
+import { notFoundLocation } from './lib/notFound.js'
 
 const catalogIdSet = new Set(catalogIds)
 
@@ -42,7 +43,7 @@ const router = createRouter({
         // d'affichage, pas comme une redirection). Bon pour le SEO : Google
         // et tout visiteur anonyme voient une vraie page, jamais /connexion.
         if (catalogIdSet.has(to.params.id)) return
-        if (!firebaseReady) return { name: 'not-found' }
+        if (!firebaseReady) return notFoundLocation(to)
         // Hors catalogue (texte créé par un utilisateur, actualité) :
         // connexion requise ; le rôle exact reste vérifié par les règles
         // Firestore (ex. Notizie réservé à premium_plus/enseignant).
@@ -50,7 +51,7 @@ const router = createRouter({
         // Visiteur non connecté : un identifiant inconnu est une page
         // introuvable (404), pas une invitation à se connecter — les textes
         // privés (créés / actualités) ne se partagent pas par lien.
-        if (!currentUser.value) return { name: 'not-found' }
+        if (!currentUser.value) return notFoundLocation(to)
       },
     },
     {
