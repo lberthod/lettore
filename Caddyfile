@@ -98,6 +98,15 @@ leggendo.fr {  # A VERIFIER : domaine exact
 	@htmlPages not path /assets/* /sitemap.xml /robots.txt /llms.txt /icons/* /audio/* /favicon.* /apple-touch-icon.png /og-image.png
 	header @htmlPages ?Cache-Control "no-cache"
 
+	# --- Robots headless refuses (en prod depuis le 2026-11-08) ---
+	# HeadlessChrome execute le JavaScript : il declenche GA4 et fausse les stats
+	# (environ un quart des requetes, cf. docs/RAPPORT_STATS_2026-11-08.md).
+	# 403 journalise normalement ; premier handle => prioritaire sur les suivants.
+	@headless header_regexp ua User-Agent (?i)HeadlessChrome
+	handle @headless {
+		respond 403
+	}
+
 	# --- Routage ---
 
 	# Routes dont le contenu n'est PAS entièrement prérendu : textes créés par
