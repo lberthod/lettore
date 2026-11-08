@@ -1,9 +1,19 @@
 # Tarification Leggendo — décision de lancement
 
-> **Obsolète depuis le 22 octobre 2026.** Leggendo est passé en mode
-> entièrement gratuit : voir [GRATUIT.md](GRATUIT.md), qui fait foi pour les
-> droits d'accès. Ce document est conservé pour mémoire (grille de prix et
-> périmètre envisagés), en vue d'une monétisation future.
+> **Suspendu depuis le 22 octobre 2026 : Leggendo est 100 % gratuit.**
+> Le code de vente reste en place derrière des interrupteurs, tous à « off »
+> par défaut :
+>
+> | Interrupteur | Où | Effet quand il est absent |
+> |---|---|---|
+> | `VITE_PAID_PLANS=true` | build du front (`.env`) | pas de page `/abonnement` (redirigée), pas de Stripe / Play / App Store dans le build, tout le catalogue embarqué et lisible sans compte |
+> | `VITE_AI_FEATURES=true` | build du front (`.env`) | Créer son texte, Scrivi, Dialogo et Notizie masqués, routes redirigées vers l'accueil |
+> | `AI_ENABLED=1` | `leggendo-api.env` (VPS) | POST `/leggendo/generate`, `/correct`, `/dialogue*` répondent 503 |
+>
+> Revenir à la vente demande aussi de nouvelles CGV (la page `/conditions`
+> ne couvre plus que l'utilisation gratuite) et, avant `AI_ENABLED=1`, un
+> fournisseur d'IA situé dans l'UE ou en Suisse. Le reste de ce document
+> décrit l'offre telle qu'elle était prévue.
 
 Ce document fixe la tarification et le périmètre fonctionnel à implémenter pour
 le lancement commercial de Leggendo.

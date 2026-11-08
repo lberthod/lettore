@@ -1,3 +1,5 @@
+import { analyticsConsent } from './consent.js'
+
 // Configuration Firebase du projet "leggendo-dbb84".
 // → Console Firebase > Paramètres du projet > Vos applications > Config
 const firebaseConfig = {
@@ -158,15 +160,21 @@ export function getFunctionsInstance() {
 }
 
 let analyticsPromise = null
+const ANALYTICS_COOKIE_MAX_AGE_S = 13 * 30 * 24 * 60 * 60
 
 // Analytics : navigateur uniquement (isSupported écarte SSR/environnements
-// non compatibles). Renvoie null si non disponible.
+// non compatibles), et seulement après consentement explicite du visiteur
+// (voir consent.js) — avant, rien n'est chargé. Renvoie null si non disponible.
 export function getAnalyticsInstance() {
-  if (!firebaseReady) return Promise.resolve(null)
+  if (!firebaseReady || analyticsConsent.value !== 'granted') return Promise.resolve(null)
   if (!analyticsPromise) {
     analyticsPromise = Promise.all([getApp(), import('firebase/analytics')])
-      .then(([app, { getAnalytics, isSupported }]) =>
-        isSupported().then((ok) => (ok ? getAnalytics(app) : null))
+      .then(([app, { initializeAnalytics, isSupported }]) =>
+        isSupported().then((ok) =>
+          // Cookies _ga limités à 13 mois (recommandation CNIL), au lieu des
+          // 2 ans par défaut de Google Analytics.
+          ok ? initializeAnalytics(app, { config: { cookie_expires: ANALYTICS_COOKIE_MAX_AGE_S } }) : null
+        )
       )
       .catch(() => null)
   }

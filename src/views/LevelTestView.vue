@@ -11,6 +11,7 @@ import {
 } from '../lib/levelTestEngine.js'
 import { saveLevelPositioning } from '../lib/levelReview.js'
 import { correctText, CorrectionError } from '../lib/correction.js'
+import { AI_FEATURES } from '../lib/access.js'
 
 // Positionnement multimodal (Sprint 3.1, phasetravail.md §3.1) : QCM
 // adaptatif « escalier » (sélection de question et estimation partagées
@@ -127,7 +128,14 @@ const selfAssessmentComplete = computed(() =>
   SELF_ASSESSMENT_QUESTIONS.every((q) => selfAssessmentAnswers.value[q.id])
 )
 
+// Fonctions IA désactivées (AI_FEATURES) : la production écrite passe par la
+// correction IA, l'étape est donc sautée — rien de ce que tape le visiteur
+// ne part vers le serveur.
 function goToProduction() {
+  if (!AI_FEATURES) {
+    finishPositioning()
+    return
+  }
   phase.value = 'production'
 }
 
@@ -205,8 +213,8 @@ const RESULT_MESSAGES = {
         Ce test adaptatif estime le niveau d'italien conseillé pour commencer, selon le
         <strong>CECR</strong> (A1 à C2). Il commence par une question A1 : chaque bonne réponse
         fait monter le niveau des questions suivantes, chaque erreur le fait redescendre. Après le
-        questionnaire, quelques questions sur des situations réelles et une production écrite
-        facultative complètent le résultat.
+        questionnaire, quelques questions sur des situations réelles<template v-if="AI_FEATURES"> et une production écrite
+        facultative</template> complètent le résultat.
       </p>
       <ul class="rules">
         <li>Une seule bonne réponse par question, aucun temps limite.</li>

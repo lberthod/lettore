@@ -3,20 +3,16 @@ import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
 import booksIndex from '../books/index.json'
 import { progress } from '../progress.js'
-import { FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS, isLoggedIn } from '../lib/access.js'
+import { FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS, PAID_PLANS } from '../lib/access.js'
 
 function readChapters(book) {
   return progress.readTexts.filter((id) => id.startsWith(`${book.id}-`)).length
 }
 
-// Mode gratuit (GRATUIT.md) : un compte connecté lit tout ; l'étiquette ne
-// renseigne que les visiteurs sans compte sur ce qui est lisible sans se
-// connecter.
 function accessLabel(book) {
-  if (isLoggedIn()) return ''
-  if (FREE_CLASSICI_BOOK_IDS.includes(book.id)) return 'Sans compte'
-  if (FREE_CLASSICI_PREVIEW_BOOK_IDS.includes(book.id)) return '1er chapitre sans compte'
-  return 'Avec un compte gratuit'
+  if (FREE_CLASSICI_BOOK_IDS.includes(book.id)) return 'Gratuit'
+  if (FREE_CLASSICI_PREVIEW_BOOK_IDS.includes(book.id)) return '1er chapitre gratuit'
+  return 'Premium'
 }
 </script>
 
@@ -53,7 +49,7 @@ function accessLabel(book) {
           </template>
           · ~{{ book.wordCount }} mots
         </p>
-        <p v-if="accessLabel(book)" class="access free">
+        <p v-if="PAID_PLANS" class="access" :class="{ free: accessLabel(book) !== 'Premium IA' }">
           {{ accessLabel(book) }}
         </p>
         <p v-if="readChapters(book)" class="progress">

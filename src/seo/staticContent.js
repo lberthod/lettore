@@ -11,6 +11,9 @@
 //
 // Node-safe : aucune API navigateur. Format commun :
 //   { h1, intro: [paragraphes], sections: [{ h2, p: [..] | ul: [..] }], links: [[href, libellé]] }
+// `updated: true` : page légale, datée par LEGAL_UPDATED (src/lib/legal.js).
+
+import { CONTACT_EMAIL, PUBLISHER, HOST } from '../lib/legal.js'
 
 export const STATIC_PAGE_CONTENT = {
   '/methodologie': {
@@ -64,7 +67,6 @@ export const STATIC_PAGE_CONTENT = {
           "Une seule bonne réponse par question, sans limite de temps.",
           "Entre 10 et 16 questions selon votre parcours.",
           "Quelques questions de mise en situation sur des cas réels, qui aident à formuler un résultat plus juste sans modifier le score du questionnaire.",
-          "Une production écrite facultative pour compléter l'estimation.",
         ],
       },
       {
@@ -132,7 +134,7 @@ export const STATIC_PAGE_CONTENT = {
     h1: 'Contact',
     intro: [
       "Une question, un bug, une idée de texte ? Écrivez-nous, nous répondons généralement sous 48 heures.",
-      "Le formulaire de contact ouvre votre application de messagerie avec le message pré-rempli ; vous pouvez aussi écrire directement à l'adresse indiquée dans la page.",
+      `Le formulaire de contact ouvre votre application de messagerie avec le message pré-rempli ; vous pouvez aussi écrire directement à ${CONTACT_EMAIL}.`,
     ],
     sections: [
       {
@@ -140,112 +142,108 @@ export const STATIC_PAGE_CONTENT = {
         ul: [
           "Signaler une erreur de traduction, de transcription ou de niveau dans un texte.",
           "Proposer un thème, un auteur ou un classique à ajouter au catalogue.",
-          "Remonter un problème technique : lecteur, audio, connexion, crédits IA.",
-          "Poser une question sur votre compte ou sa suppression.",
+          "Remonter un problème technique : lecteur, audio, connexion.",
+          "Poser une question sur vos données ou la suppression de votre compte.",
         ],
       },
       {
         h2: 'Avant de nous écrire',
         p: [
-          "La page Méthode répond aux questions fréquentes sur le fonctionnement de la lecture avec traduction au clic, et la page Gratuit explique ce qui est inclus et pourquoi le site est gratuit. Pour supprimer votre compte et vos données, une page dédiée explique la démarche depuis le site ou les applications Android et iOS.",
-          "Leggendo est édité en Suisse ; les informations de l'éditeur figurent dans les mentions légales.",
+          "La page Méthode répond aux questions fréquentes sur le fonctionnement de la lecture avec traduction au clic. Pour supprimer votre compte et vos données, une page dédiée explique la démarche.",
+          `Leggendo est édité en Suisse par ${PUBLISHER.name}, ${PUBLISHER.address} ; les informations complètes figurent dans les mentions légales.`,
         ],
       },
     ],
     links: [
       ['/methode', 'La méthode et la FAQ'],
-      ['/abonnement', 'Leggendo est gratuit'],
       ['/deleteAccount', 'Supprimer mon compte'],
       ['/mentions-legales', 'Mentions légales'],
     ],
   },
 
+  // Pages légales : informations d'identification reprises en clair (elles
+  // doivent être lisibles même sans JavaScript), le reste résumé.
   '/mentions-legales': {
+    updated: true,
     h1: 'Mentions légales',
     intro: [
-      "Cette page présente l'éditeur de Leggendo, les prestataires qui hébergent le site et ses données, le régime de propriété intellectuelle applicable aux contenus et le droit applicable en cas de litige.",
+      `Le site leggendo.fr est édité par ${PUBLISHER.name}, ${PUBLISHER.form} (IDE ${PUBLISHER.ide}), ${PUBLISHER.address}. Téléphone : ${PUBLISHER.phone}. E-mail : ${CONTACT_EMAIL}.`,
     ],
     sections: [
       {
-        h2: 'Ce que couvrent les mentions légales',
+        h2: 'Directeur de la publication et hébergement',
         ul: [
-          "L'éditeur du site : Leggendo est édité à titre individuel depuis la Suisse, avec une adresse de contact.",
-          "L'hébergement : les prestataires qui hébergent le site, la base de données et le serveur de génération de textes.",
-          "La propriété intellectuelle : les contenus du site (textes, interface, code) sont protégés par le droit d'auteur ; les œuvres classiques proposées dans la section Classici relèvent du domaine public.",
-          "La responsabilité : les traductions et contenus pédagogiques sont fournis à titre indicatif.",
-          "Le droit applicable : le site est soumis au droit suisse.",
+          `Directeur de la publication : ${PUBLISHER.name}.`,
+          `Hébergeur : ${HOST.name}, ${HOST.address}, téléphone ${HOST.phone}.`,
+          "Comptes utilisateurs : Firebase, service de Google LLC (États-Unis).",
         ],
       },
       {
-        h2: 'Pour aller plus loin',
+        h2: 'Activité, contenus et droit applicable',
         p: [
-          "Les informations complètes et à jour figurent dans la page des mentions légales elle-même, qui fait foi. La politique de confidentialité décrit le traitement des données personnelles, et les conditions générales régissent l'utilisation du service et des abonnements.",
+          "Leggendo est un service gratuit d'apprentissage de l'italien par la lecture, sans vente ni publicité. Les textes, traductions, enregistrements audio et le code du site sont protégés par le droit d'auteur ; les œuvres classiques restent du domaine public.",
+          "Le site est soumis au droit suisse, sans préjudice des règles impératives qui protègent les consommateurs dans leur pays de résidence.",
         ],
       },
     ],
     links: [
       ['/confidentialite', 'Politique de confidentialité'],
-      ['/conditions', "Conditions générales d'utilisation"],
+      ['/conditions', "Conditions d'utilisation"],
       ['/contact', 'Nous contacter'],
     ],
   },
 
   '/confidentialite': {
+    updated: true,
     h1: 'Politique de confidentialité',
     intro: [
       "Cette page explique quelles données personnelles Leggendo traite, dans quel but, avec quels prestataires, pendant combien de temps, et comment exercer vos droits.",
     ],
     sections: [
       {
-        h2: 'Ce que décrit la politique de confidentialité',
+        h2: "L'essentiel",
         ul: [
-          "Les données de compte (adresse e-mail, identifiant de connexion) et les données d'usage liées à votre apprentissage : progression, mots favoris, textes créés.",
-          "Les prestataires techniques impliqués : authentification et base de données, notifications, paiement, mesure d'audience et fournisseurs de modèles de langage pour la génération de textes.",
-          "Les finalités et les bases légales de chaque traitement, ainsi que les éventuels transferts de données hors de Suisse et de l'Union européenne.",
-          "La durée de conservation des données.",
-          "Vos droits d'accès, de rectification et de suppression, et la manière de les exercer, y compris la suppression de votre compte.",
+          "Tous les textes se lisent sans compte ; sans compte, aucune donnée personnelle n'est collectée.",
+          "La mesure d'audience (Google Analytics) ne se charge qu'avec votre accord explicite, modifiable à tout moment.",
+          "Le compte, facultatif, conserve votre e-mail et votre progression jusqu'à sa suppression.",
+          "Aucun paiement, aucune publicité ; les fonctions d'intelligence artificielle sont désactivées et plus aucune donnée n'est transmise à un fournisseur d'IA.",
+          "La suppression du compte efface immédiatement toutes les données qui y sont liées.",
         ],
       },
       {
-        h2: 'Votre compte et vos données',
+        h2: 'Vos droits',
         p: [
-          "Vous pouvez lire une partie du catalogue sans créer de compte. Un compte permet de synchroniser votre progression et vos mots favoris entre vos appareils. Vous pouvez à tout moment demander la suppression de votre compte et des données associées depuis la page dédiée.",
-          "Le texte complet de la politique de confidentialité fait foi ; cette page n'en est qu'un résumé.",
+          `Accès, rectification, suppression, limitation, opposition et portabilité : écrivez à ${CONTACT_EMAIL}. Vous pouvez aussi saisir le PFPDT (Suisse) ou la CNIL (France). Le texte complet de la politique fait foi ; cette page n'en est qu'un résumé.`,
         ],
       },
     ],
     links: [
       ['/deleteAccount', 'Supprimer mon compte'],
-      ['/conditions', "Conditions générales d'utilisation"],
+      ['/conditions', "Conditions d'utilisation"],
       ['/mentions-legales', 'Mentions légales'],
       ['/contact', 'Nous contacter'],
     ],
   },
 
   '/conditions': {
-    h1: "Conditions générales d'utilisation",
+    updated: true,
+    h1: "Conditions d'utilisation",
     intro: [
-      "Cette page fixe les règles d'utilisation de Leggendo, un service gratuit. Elle résume ci-dessous les points principaux ; le texte complet fait foi.",
+      "Cette page fixe les règles d'utilisation de Leggendo, service gratuit de lecture en italien. Elle résume ci-dessous les points principaux ; le texte complet fait foi.",
     ],
     sections: [
       {
         h2: 'Ce que couvrent les conditions',
         ul: [
-          "L'objet du service : un lecteur de textes italiens gradués avec traduction française, audio et outils d'apprentissage.",
-          "La gratuité : l'aperçu public sans compte, et l'accès complet (catalogue, Classici, Notizie, outils IA plafonnés en crédits mensuels) avec un compte gratuit.",
-          "Le compte : adresse e-mail valide ou compte Google, vérification de l'adresse pour les outils IA, suppression possible à tout moment.",
-          "La responsabilité : les contenus pédagogiques et les traductions, y compris ceux produits par l'intelligence artificielle, sont fournis à titre indicatif.",
-        ],
-      },
-      {
-        h2: 'Un service gratuit',
-        p: [
-          "Ce qui est inclus et pourquoi le site est gratuit sont expliqués sur la page Gratuit. Aucun paiement n'est demandé ni collecté.",
+          "Un service gratuit : textes gradués, classiques, traduction, audio, dictionnaire et jeux, sans paiement ni publicité.",
+          "Un compte facultatif, réservé aux personnes d'au moins 15 ans ou disposant de l'accord de leur représentant légal.",
+          "Un usage personnel et pédagogique des contenus, y compris en classe ; pas de copie en masse ni de republication.",
+          "La responsabilité : engagée pour une faute imputable à l'éditeur, dans les limites de la loi.",
+          "Le droit suisse, sans priver les consommateurs de la protection de leur pays de résidence.",
         ],
       },
     ],
     links: [
-      ['/abonnement', 'Leggendo est gratuit'],
       ['/confidentialite', 'Politique de confidentialité'],
       ['/mentions-legales', 'Mentions légales'],
       ['/contact', 'Nous contacter'],
@@ -255,7 +253,7 @@ export const STATIC_PAGE_CONTENT = {
   '/deleteAccount': {
     h1: 'Supprimer mon compte Leggendo',
     intro: [
-      "Vous pouvez supprimer votre compte Leggendo et les données qui y sont associées à tout moment, depuis le site web ou depuis les applications Android et iOS.",
+      "Vous pouvez supprimer votre compte Leggendo et les données qui y sont associées à tout moment, depuis le site web ou depuis les applications.",
     ],
     sections: [
       {
@@ -263,21 +261,20 @@ export const STATIC_PAGE_CONTENT = {
         ul: [
           "Connectez-vous à votre compte, sur le site ou dans l'application.",
           "Ouvrez la page de suppression de compte et confirmez votre demande.",
-          "Votre compte et les données associées (progression, mots favoris, textes créés) sont alors supprimés.",
+          "Votre compte et toutes les données associées (progression, mots favoris, textes créés, écrits corrigés, dialogues) sont alors effacés immédiatement.",
         ],
       },
       {
         h2: 'À savoir avant de supprimer',
         p: [
           "La suppression du compte est définitive : votre progression et vos mots favoris ne pourront pas être récupérés.",
-          "Pour toute question sur vos données ou si vous ne parvenez pas à vous connecter, écrivez-nous via la page de contact.",
+          `Si vous ne parvenez pas à vous connecter, écrivez à ${CONTACT_EMAIL} depuis l'adresse de votre compte : la demande est traitée sous 30 jours.`,
         ],
       },
     ],
     links: [
       ['/contact', 'Nous contacter'],
       ['/confidentialite', 'Politique de confidentialité'],
-      ['/abonnement', 'Leggendo est gratuit'],
     ],
   },
 
@@ -308,7 +305,7 @@ export const NAV_LINKS = [
   ['/giochi', 'Giochi'],
   ['/test-de-niveau', 'Test de niveau'],
   ['/methode', 'Méthode'],
-  ['/abonnement', 'Gratuit'],
+  ['/abonnement', 'Abonnement'],
 ]
 
 export const FOOTER_LINKS = [
@@ -320,5 +317,5 @@ export const FOOTER_LINKS = [
   ['/contact', 'Contact'],
   ['/mentions-legales', 'Mentions légales'],
   ['/confidentialite', 'Confidentialité'],
-  ['/conditions', 'Conditions'],
+  ['/conditions', 'CGU / CGV'],
 ]

@@ -9,17 +9,27 @@ import {
   FREE_CLASSICI_BOOK_IDS,
   FREE_CLASSICI_PREVIEW_BOOK_IDS,
   isFreeClassiciChapter,
+  paidPlansEnabled,
 } from './catalogAccess.js'
 
 export { EXAMPLE_COUNT, FREE_CLASSICI_BOOK_IDS, FREE_CLASSICI_PREVIEW_BOOK_IDS, isFreeClassiciChapter }
+
+// Vente active ? (voir catalogAccess.js) — sinon aucune page, aucun lien ni
+// aucun appel vers Stripe, Google Play ou l'App Store.
+export const PAID_PLANS = paidPlansEnabled()
+
+// Fonctions IA (Créer son texte, Scrivi, Dialogo, Notizie) : désactivées tant
+// que VITE_AI_FEATURES ne vaut pas « true ». Le fournisseur configuré dans
+// leggendo-server/llm.mjs traite les consignes des utilisateurs hors UE et
+// Suisse : ne réactiver qu'après bascule vers un fournisseur européen ou
+// suisse (le serveur a son propre interrupteur, AI_ENABLED).
+export const AI_FEATURES = import.meta.env.VITE_AI_FEATURES === 'true'
 
 export const EXAMPLE_TEXTS = exampleTexts
 export const EXAMPLE_TEXT_IDS = EXAMPLE_TEXTS.map((t) => t.id)
 
 // Un visiteur est « connecté » soit réellement, soit lorsque Firebase n'est pas
 // configuré (mode développement) — on ne peut alors pas verrouiller l'accès.
-// Depuis le passage en mode gratuit (GRATUIT.md), c'est le seul critère
-// d'accès au contenu complet.
 export function isLoggedIn() {
   return !firebaseReady || !!currentUser.value
 }
@@ -77,8 +87,8 @@ function clearPendingRoleRefresh() {
   }
 }
 
-// À appeler juste avant une action qui change le rôle (modification depuis
-// l'administration) : le prochain contrôle d'accès renouvellera le token de
+// À appeler juste avant une action qui change le rôle (redirection vers le
+// paiement Stripe) : le prochain contrôle d'accès renouvellera le token de
 // force pour voir les nouvelles claims sans attendre ni se reconnecter.
 export function markRoleMayHaveChanged() {
   try {
@@ -94,10 +104,8 @@ function roleFromClaims(claims) {
   return claims.premium ? 'premium' : 'gratuit'
 }
 
-// Rôle de l'utilisateur, lu depuis les custom claims du token Firebase (posés
-// par adminSetUserRole — voir functions/index.js). Il ne conditionne plus
-// l'accès au contenu (mode gratuit), seulement le plafond de crédits IA côté
-// serveur et l'affichage dans l'administration.
+// Rôle réel de l'utilisateur, lu depuis les custom claims du token Firebase
+// (posés par le webhook Stripe / adminSetUserRole — voir functions/index.js).
 // On lit le token en cache : Firebase le renouvelle seul (~1 h), et un appel
 // réseau à chaque contrôle d'accès casserait la navigation hors ligne. Le
 // renouvellement forcé est réservé aux moments où le rôle vient réellement de
@@ -120,51 +128,82 @@ export async function getUserRole({ forceRefresh = false } = {}) {
 }
 
 // Renouvellement explicite du token, après un changement de rôle avéré
-// (rôle modifié depuis l'administration).
+// (paiement finalisé, rôle modifié depuis l'administration).
 export function refreshUserRole() {
   return getUserRole({ forceRefresh: true })
 }
 
-// Mode gratuit (GRATUIT.md) : il n'y a plus de formule payante. Tout compte
-// connecté a accès au catalogue complet, aux Classici, aux Notizie et aux
-// outils IA (avec un plafond mensuel de crédits, tranché par le serveur —
-// leggendo-server/quota.mjs). Le rôle ne sert plus qu'à l'administration
-// (plafond de crédits plus élevé pour `premium_plus`/`enseignant`, attribués
-// à la main). Les fonctions ci-dessous gardent leur nom pour ne pas toucher
-// à tous les appelants : elles répondent désormais « connecté ou non ».
-//
-// En dev sans Firebase configuré, il n'y a pas de compte : on ne verrouille
-// rien (comme isLoggedIn).
-
-// Outils IA (Créer son texte, Scrivi, Dialogo) et Notizie.
-export async function hasAiAccess() {
-  return isLoggedIn()
+// Essai Premium IA de 10 jours accordé à l'inscription (voir
+// README_TARIFICATION.md, § Essai Premium IA à l'inscription, et
+// functions/index.js, onUserCreated/revertExpiredTrials). Le claim
+// `trialEnd` (secondes epoch) n'est posé que par ce mécanisme ; sa présence
+// aux côtés de `role: premium_plus` et sans `periodEnd` (jamais posé par un
+// vrai paiement) signale un essai en cours plutôt qu'un abonnement payant.
+// Ceci n'affiche qu'un compte à rebours indicatif : le retour au gratuit à
+// l'expiration est décidé côté serveur (revertExpiredTrials), pas ici.
+export async function getTrialInfo() {
+  const user = currentUser.value
+  if (!PAID_PLANS || !user) return { active: false, daysRemaining: 0 }
+  try {
+    const token = await user.getIdTokenResult()
+    const { role, trialEnd, periodEnd } = token.claims
+    if (role !== 'premium_plus' || !trialEnd || periodEnd) {
+      return { active: false, daysRemaining: 0 }
+    }
+    const remainingMs = trialEnd * 1000 - Date.now()
+    if (remainingMs <= 0) return { active: false, daysRemaining: 0 }
+    return { active: true, daysRemaining: Math.ceil(remainingMs / 86400000) }
+  } catch {
+    return { active: false, daysRemaining: 0 }
+  }
 }
 
-// Ancien nom (« Premium IA »), conservé pour les vues qui l'importent.
-export const isPremiumPlus = hasAiAccess
+// Hiérarchie des rôles (README_TARIFICATION.md) : un rôle supérieur inclut
+// les droits du rôle précédent — gratuit < premium < premium_plus < enseignant.
+// « Premium IA » est le nom commercial de `premium_plus` ; l'identifiant
+// technique reste inchangé pour éviter une migration inutile.
+export async function isPremiumPlus() {
+  if (!AI_FEATURES) return false
+  const role = await getUserRole()
+  return role === 'premium_plus' || role === 'enseignant'
+}
 
-// Catalogue complet : tout compte connecté — l'aperçu public (EXAMPLE_TEXTS)
-// reste lisible sans compte. Le vrai contrôle est dans firestore.rules.
+// Catalogue complet (README_TARIFICATION.md) : réservé à Premium et
+// au-dessus — un compte gratuit connecté ne suffit pas (contrairement à
+// l'ancien contrôle « connecté = débloqué »). En dev sans Firebase configuré,
+// il n'y a pas de rôle à vérifier : on ne verrouille rien (comme isLoggedIn).
 export async function hasCatalogAccess() {
-  return isLoggedIn()
+  if (!PAID_PLANS || !firebaseReady) return true
+  const role = await getUserRole()
+  return role === 'premium' || role === 'premium_plus' || role === 'enseignant'
 }
 
-// Classiques adaptés (« Classici ») : même règle que le catalogue. L'aperçu
-// gratuit ci-dessous reste lisible sans compte.
+// Classiques adaptés (« Classici ») : catalogue complet réservé à Premium et
+// au-dessus, comme le reste de la bibliothèque (voir README_TARIFICATION.md
+// — l'aperçu gratuit ci-dessous couvre le compte Gratuit).
 export async function hasClassiciAccess() {
   return hasCatalogAccess()
 }
 
-// Correction d'écriture (« Scrivi ») et dialogue simulé (« Dialogo ») : le
-// refus réel (adresse non vérifiée, crédits épuisés) est rendu par le
-// serveur ; ceci ne sert qu'à afficher ou masquer l'accès côté client.
+// Correction d'écriture (« Scrivi », leggendo-server POST /correct) : mêmes
+// rôles que la génération IA — premium_plus/enseignant, pas d'essai gratuit
+// (choix documenté dans leggendo-server/quota.mjs). Le refus réel est rendu
+// par le serveur ; ceci ne sert qu'à afficher ou masquer l'accès côté client.
 export async function hasCorrectionAccess() {
-  return hasAiAccess()
+  if (!AI_FEATURES) return false
+  if (!firebaseReady) return true
+  return isPremiumPlus()
 }
 
+// Dialogue simulé (« Dialogo », leggendo-server POST /dialogue) : mêmes
+// rôles que la correction — premium_plus/enseignant, pas d'essai gratuit
+// (choix documenté dans leggendo-server/quota.mjs, dialogueQuotaError). Le
+// refus réel est rendu par le serveur ; ceci ne sert qu'à afficher ou
+// masquer l'accès côté client.
 export async function hasDialogueAccess() {
-  return hasAiAccess()
+  if (!AI_FEATURES) return false
+  if (!firebaseReady) return true
+  return isPremiumPlus()
 }
 
 // Aperçu gratuit de Classici pour tout utilisateur connecté (README_TARIFICATION.md) :

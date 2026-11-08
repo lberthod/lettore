@@ -35,9 +35,9 @@ const canStart = computed(() => {
   if (quota.value.type !== 'credits') return false
   return quota.value.remaining >= DIALOGUE_COST
 })
-// Adresse e-mail non vérifiée : le serveur refuse tout outil IA (quota.mjs)
-// — bannière de blocage plutôt que refus serveur après coup.
-const blocked = computed(() => quota.value?.emailVerified === false)
+// Rôle sans crédits (gratuit, premium lecture) : le dialogue fait partie de
+// Premium IA — bannière de blocage plutôt que refus serveur après coup.
+const blocked = computed(() => quota.value && quota.value.type !== 'credits')
 
 // --- État de la session ---
 // phase: choose (cartes) | chat (conversation) | feedback (bilan)
@@ -258,9 +258,9 @@ function speak(text) {
       </p>
 
       <p v-if="blocked" class="quota-banner blocked">
-        Confirmez votre adresse e-mail pour utiliser vos crédits de dialogue :
-        un lien vous a été envoyé à l'inscription (voir
-        <RouterLink :to="{ name: 'profile' }">Mon profil</RouterLink>).
+        Le dialogue simulé fait partie de la formule
+        <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink> — votre
+        formule actuelle ne l'inclut pas.
       </p>
       <p v-else-if="quota?.type === 'credits'" class="quota-banner">
         {{ quota.remaining }} crédit{{ quota.remaining > 1 ? 's' : '' }} sur

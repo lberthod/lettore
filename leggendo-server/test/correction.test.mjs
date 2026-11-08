@@ -1,5 +1,5 @@
-// Tests de la correction pédagogique (Phase 5) : droit d'accès (adresse
-// vérifiée, crédits mensuels), consommation/remboursement transactionnels du crédit,
+// Tests de la correction pédagogique (Phase 5) : droit d'accès (rôles à
+// crédits uniquement), consommation/remboursement transactionnels du crédit,
 // validation d'entrée et contrôle structurel de la sortie LLM.
 
 import { test } from 'node:test'
@@ -25,9 +25,9 @@ import {
 } from '../schema.mjs'
 
 const gratuit = { uid: 'u1', role: 'gratuit', premium: false, emailVerified: true }
-const nonVerifie = { uid: 'u2', role: 'gratuit', premium: false, emailVerified: false }
-const premiumIA = { uid: 'u3', role: 'premium_plus', premium: true, emailVerified: true }
-const enseignant = { uid: 'u4', role: 'enseignant', premium: true, emailVerified: true }
+const premium = { uid: 'u2', role: 'premium', premium: true }
+const premiumIA = { uid: 'u3', role: 'premium_plus', premium: true }
+const enseignant = { uid: 'u4', role: 'enseignant', premium: true }
 
 function makeStore() {
   return createJobStore(new FakeFirestore())
@@ -35,12 +35,15 @@ function makeStore() {
 
 // --- correctionQuotaError (quota.mjs) ---
 
-test("correction refusée tant que l'adresse e-mail n'est pas vérifiée", () => {
-  assert.match(correctionQuotaError(nonVerifie, freshQuota()), /Vérifiez votre adresse/)
+test('correction refusée aux comptes gratuit et premium (réservée aux rôles à crédits)', () => {
+  // Choix documenté dans quota.mjs : pas d'essai gratuit pour la correction —
+  // l'essai existant est le capital unique de génération, le partager serait
+  // trompeur et un compteur d'essai séparé rouvrirait l'abus par comptes jetables.
+  assert.match(correctionQuotaError(gratuit, freshQuota()), /Premium IA/)
+  assert.match(correctionQuotaError(premium, freshQuota()), /Premium IA/)
 })
 
-test('correction autorisée pour tout compte vérifié sous la limite', () => {
-  assert.equal(correctionQuotaError(gratuit, freshQuota()), null)
+test('correction autorisée pour Premium IA et Enseignant sous la limite', () => {
   assert.equal(correctionQuotaError(premiumIA, freshQuota()), null)
   assert.equal(correctionQuotaError(enseignant, freshQuota()), null)
 })
@@ -66,15 +69,15 @@ test('reserveCorrection consomme 1 crédit et crée le document dans la même tr
   assert.equal(doc.data().cost, CORRECTION_COST)
 })
 
-test('reserveCorrection refuse un compte non vérifié sans rien créer ni consommer', async () => {
+test('reserveCorrection refuse un compte gratuit sans rien créer ni consommer', async () => {
   const store = makeStore()
   const ref = store.correctionsCollection.doc('c-refused')
-  await assert.rejects(() => store.reserveCorrection(nonVerifie, ref), QuotaExceededError)
+  await assert.rejects(() => store.reserveCorrection(gratuit, ref), QuotaExceededError)
 
   const doc = await ref.get()
   assert.equal(doc.exists, false, 'aucun document créé quand le droit est refusé')
-  const status = await store.getQuotaStatus(nonVerifie)
-  assert.equal(status.used, 0, 'rien n’est consommé')
+  const status = await store.getQuotaStatus(gratuit)
+  assert.equal(status.remaining, 1, "l'essai gratuit de génération reste intact")
 })
 
 test('reserveCorrection refuse quand les crédits sont épuisés, sans créer de document', async () => {

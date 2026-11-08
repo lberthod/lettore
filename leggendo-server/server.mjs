@@ -34,7 +34,7 @@ import {
   DIALOGUE_COST,
   MAX_DIALOGUE_TURNS,
   resolveRole,
-  isFreeAccount,
+  isTrialLikeAccount,
 } from './quota.mjs'
 import { createJobStore, ActiveJobError } from './jobs.mjs'
 import { sendPushToUser } from './push.mjs'
@@ -144,7 +144,7 @@ const TRIAL_ALERT_PER_HOUR = Number(process.env.TRIAL_ALERT_PER_HOUR || 20)
 const trialRate = createRateWindow({ windowMs: 60 * 60 * 1000 })
 
 function watchTrialRate(user, ip) {
-  if (!isFreeAccount(user)) return
+  if (!isTrialLikeAccount(user)) return
   const count = trialRate.hit()
   if (count >= TRIAL_ALERT_PER_HOUR && count % TRIAL_ALERT_PER_HOUR === 0) {
     console.warn(
@@ -231,6 +231,15 @@ function logGeneration({ user, size, level, jobId, status, startedAt, usage, err
     error,
   })
 }
+
+// Interrupteur des fonctions IA (passage en 100 % gratuit, octobre 2026) : le
+// fournisseur par défaut (llm.mjs) traite les consignes hors UE et Suisse.
+// Tant que AI_ENABLED ne vaut pas « 1 », les routes qui transmettent une
+// saisie de l'utilisateur à un modèle répondent 503, avant toute
+// authentification ni décompte de crédit. Ne réactiver qu'avec un fournisseur
+// européen ou suisse (GLM_BASE_URL / GLM_MODEL).
+const AI_ENABLED = process.env.AI_ENABLED === '1'
+const AI_ROUTE_RE = /^\/leggendo\/(generate|correct|dialogue)(\/|$)/
 
 // --- Correction synchrone (Phase 5) ---
 // Une correction est bien plus courte qu'une génération : la réponse est
@@ -349,8 +358,13 @@ const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`)
 
   try {
+    if (!AI_ENABLED && req.method === 'POST' && AI_ROUTE_RE.test(url.pathname)) {
+      send(503, { error: 'Les fonctions IA de Leggendo sont désactivées.' })
+      return
+    }
+
     if (req.method === 'GET' && url.pathname === '/leggendo/health') {
-      send(200, { ok: true, model: GLM_MODEL })
+      send(200, { ok: true, ai: AI_ENABLED, model: GLM_MODEL })
       return
     }
 
@@ -394,7 +408,7 @@ const server = http.createServer(async (req, res) => {
       // ratelimit.mjs). Vérifié avant la réservation, enregistré seulement
       // si celle-ci réussit — une demande refusée n'a rien coûté en IA.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const isTrial = isFreeAccount(user)
+      const isTrial = isTrialLikeAccount(user)
       const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrial })
       if (ipError) {
         console.warn(
@@ -511,7 +525,7 @@ const server = http.createServer(async (req, res) => {
       // c'est le nombre d'appels IA déclenchés depuis une origine réseau).
       // Un compte en essai Premium IA compte comme siège d'essai par IP.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isFreeAccount(user) })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       if (ipError) {
         console.warn(
           `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (correction)`
@@ -531,7 +545,7 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
-      ipLimiter.record(ip, { uid: user.uid, trial: isFreeAccount(user) })
+      ipLimiter.record(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       console.log(
         `[correction ${correctionId}] ${user.email || user.uid} (${user.role}) — ${text.length} caractères`
       )
@@ -618,7 +632,7 @@ const server = http.createServer(async (req, res) => {
       // MAX_DIALOGUE_TURNS, pas par le compteur IP). Un compte en essai
       // compte comme siège d'essai par IP.
       const ip = clientIp(req, { trustProxy: TRUST_PROXY })
-      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isFreeAccount(user) })
+      const ipError = ipLimiter.check(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       if (ipError) {
         console.warn(
           `⚠ ALERTE ABUS : limite par IP atteinte pour ${ip} — ${user.email || user.uid} (${user.role}) : ${ipError} (dialogue)`
@@ -638,7 +652,7 @@ const server = http.createServer(async (req, res) => {
         }
         throw err
       }
-      ipLimiter.record(ip, { uid: user.uid, trial: isFreeAccount(user) })
+      ipLimiter.record(ip, { uid: user.uid, trial: isTrialLikeAccount(user) })
       console.log(
         `[dialogue ${sessionId}] ${user.email || user.uid} (${user.role}) — ouverture ${scenarioId} ${level}`
       )

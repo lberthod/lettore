@@ -35,16 +35,21 @@ watch(() => generation.status, (s) => {
   if (s === 'done' || s === 'error') refreshQuota()
 })
 
-// Les crédits gratuits exigent une adresse confirmée (leggendo-server/quota.mjs) :
+// L'essai gratuit exige une adresse confirmée (leggendo-server/quota.mjs) :
 // sans cela, créer des comptes jetables en série suffirait à consommer le
 // fournisseur IA. Comparaison stricte à false : un serveur qui ne renvoie pas
 // encore le champ ne doit pas bloquer l'écran, c'est lui qui tranche.
-const needsVerification = computed(() => quota.value?.emailVerified === false)
+const needsVerification = computed(
+  () => quota.value?.type === 'trial' && quota.value.emailVerified === false
+)
 
 const sizeCost = { corto: 1, medio: 2, lungo: 3, molto_lungo: 4 }
 const canGenerate = computed(() => {
   if (!quota.value) return true // pas chargé : ne bloque pas, le serveur tranchera
-  if (needsVerification.value) return false
+  if (quota.value.type === 'no_access') return false
+  if (quota.value.type === 'trial') {
+    return quota.value.remaining > 0 && !needsVerification.value
+  }
   return quota.value.remaining >= (sizeCost[size.value] || 1)
 })
 
@@ -160,9 +165,17 @@ function answer(qi, oi) {
       <RouterLink :to="{ name: 'my-texts' }">→ Mes textes créés</RouterLink>
     </p>
 
-    <div v-if="needsVerification" class="quota-banner blocked">
+    <p v-if="quota?.type === 'no_access'" class="quota-banner blocked">
+      La génération de textes fait partie de la formule
+      <RouterLink :to="{ name: 'pricing' }">Premium IA</RouterLink> — votre
+      formule actuelle ne l'inclut pas.
+    </p>
+    <div
+      v-else-if="needsVerification && quota.remaining > 0"
+      class="quota-banner blocked"
+    >
       <p class="verify-line">
-        Confirmez votre adresse e-mail pour débloquer vos crédits de génération :
+        Confirmez votre adresse e-mail pour débloquer votre génération d'essai :
         un lien vous a été envoyé à l'inscription.
       </p>
       <p class="verify-actions">
@@ -176,6 +189,14 @@ function answer(qi, oi) {
       <p v-if="verifyInfo" class="verify-info">{{ verifyInfo }}</p>
       <p v-if="verifyError" class="verify-error">{{ verifyError }}</p>
     </div>
+    <p v-else-if="quota?.type === 'trial'" class="quota-banner">
+      {{ quota.remaining > 0
+        ? 'Il vous reste votre génération d’essai gratuite.'
+        : 'Génération d’essai déjà utilisée.' }}
+      <RouterLink v-if="quota.remaining === 0" :to="{ name: 'pricing' }">
+        Passer à Premium IA
+      </RouterLink>
+    </p>
     <p v-else-if="quota?.type === 'credits'" class="quota-banner">
       {{ quota.remaining }} crédit{{ quota.remaining > 1 ? 's' : '' }} sur
       {{ quota.limit }} restant{{ quota.remaining > 1 ? 's' : '' }} ce mois-ci.

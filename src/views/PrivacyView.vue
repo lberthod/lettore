@@ -1,157 +1,173 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import SceneLayout from '../components/SceneLayout.vue'
+import { CONTACT_EMAIL, PUBLISHER, LEGAL_UPDATED, LEGAL_UPDATED_ISO } from '../lib/legal.js'
+import { analyticsConsent, reopenConsentChoice } from '../lib/consent.js'
+
+const CONSENT_LABEL = {
+  granted: 'acceptée',
+  denied: 'refusée',
+}
 </script>
 
 <template>
   <SceneLayout title="Riservat" accent="ezza" tagline="Confidentialité">
-    <p class="hint">Dernière mise à jour : 22 octobre 2026</p>
-    <!-- A RELIRE PAR UN JURISTE : l'ensemble de cette page (base légale, consentement, transferts internationaux). -->
+    <p class="hint">
+      Dernière mise à jour :
+      <time :datetime="LEGAL_UPDATED_ISO">{{ LEGAL_UPDATED }}</time>
+    </p>
 
     <h2>1. Responsable du traitement</h2>
     <p>
-      Leggendo, Loïc Berthod, Suisse —
-      <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>. Site :
-      leggendo.fr.
+      {{ PUBLISHER.name }}, {{ PUBLISHER.address }} —
+      <a :href="`mailto:${CONTACT_EMAIL}`">{{ CONTACT_EMAIL }}</a>.
+      Site : leggendo.fr.
     </p>
 
-    <h2>2. Données collectées</h2>
+    <h2>2. Sans compte</h2>
+    <p>
+      Vous pouvez lire tous les textes sans créer de compte. Nous ne
+      collectons alors aucune donnée personnelle, sauf si vous acceptez la
+      mesure d'audience (section 4). Comme tout serveur web, notre hébergeur
+      enregistre des journaux techniques (adresse IP, page demandée, date),
+      utilisés uniquement pour la sécurité et le bon fonctionnement du site
+      et effacés au plus tard après 90 jours.
+    </p>
+
+    <h2>3. Avec un compte (facultatif)</h2>
     <ul>
       <li>
-        <strong>Compte</strong> : adresse e-mail et, le cas échéant, nom
-        d'affichage (connexion par e-mail ou compte Google).
+        <strong>Compte</strong> : adresse e-mail, nom d'affichage le cas
+        échéant, méthode de connexion (e-mail ou Google).
       </li>
       <li>
-        <strong>Progression</strong> : textes lus, favoris, préférences de
-        lecture, textes que vous créez, synchronisés avec votre compte.
+        <strong>Progression</strong> : textes lus, mots favoris, préférences
+        de lecture et historique d'activité, synchronisés entre vos appareils.
       </li>
       <li>
-        <strong>Statistiques d'usage</strong> : le site et les applications
-        utilisent Google Analytics (via Firebase Analytics) pour mesurer
-        l'audience et le parcours (pages vues, clics sur les boutons, textes
-        ouverts). Cette mesure est active pour tous les visiteurs ; elle
-        repose sur un identifiant technique pseudonyme et sur l'adresse IP
-        traitée par Google. Les statistiques ne servent qu'à améliorer le
-        service, pas à de la publicité.
+        <strong>Textes créés, écrits corrigés et dialogues</strong> : ces
+        fonctions d'intelligence artificielle sont désactivées depuis octobre
+        2026. Les contenus que vous aviez produits avec elles restent
+        enregistrés sur votre compte jusqu'à sa suppression.
       </li>
       <li>
-        <strong>Notifications push</strong> (applications Android et iOS,
-        uniquement si vous les acceptez) : un jeton d'appareil Firebase Cloud
-        Messaging est enregistré sur votre compte pour vous envoyer les
-        rappels de série quotidienne, l'annonce de nouveaux textes et la
-        fin d'une génération de texte. Vous pouvez les désactiver à tout
-        moment dans les réglages de votre téléphone ; le jeton est retiré de
-        votre compte à la déconnexion.
-      </li>
-      <li>
-        <strong>Paiements</strong> : voir la section 4.
+        <strong>Notifications push</strong> (applications mobiles, uniquement
+        si vous les acceptez) : un jeton d'appareil, retiré à la déconnexion.
       </li>
     </ul>
     <p>
-      Sans compte, nous ne collectons aucune donnée personnelle autre que les
-      statistiques d'usage décrites ci-dessus.
+      La création d'un compte est réservée aux personnes d'au moins 15 ans
+      ou disposant de l'accord de leur représentant légal.
     </p>
 
-    <h2>3. Finalités et base légale</h2>
+    <h2>4. Mesure d'audience (Google Analytics)</h2>
     <p>
-      Ces données servent à gérer votre compte et votre progression
-      (exécution du contrat), le plafond mensuel des outils IA (intérêt
-      légitime de limiter les abus), les notifications push (votre accord, via la
-      demande d'autorisation du système) et la mesure d'audience (intérêt
-      légitime d'améliorer le service). Elles ne sont jamais vendues ni
-      transmises à des tiers à des fins publicitaires.
+      Avec votre accord seulement, le site utilise Google Analytics (via
+      Firebase) pour compter les visites et les pages consultées. Tant que
+      vous n'avez pas cliqué « Accepter », aucun script ni cookie d'analyse
+      n'est chargé ; si vous refusez, le site fonctionne de la même façon.
+      Les cookies <code>_ga</code> expirent au plus tard après 13 mois, et les
+      statistiques sont conservées au maximum 14 mois par Google. Elles ne
+      servent qu'à améliorer le site, jamais à de la publicité.
     </p>
-    <!-- A RELIRE PAR UN JURISTE : la mesure d'audience GA4 est actuellement active sans bandeau de consentement ; la base légale (intérêt légitime vs consentement ePrivacy/RGPD) est à valider. -->
+    <p>
+      Votre choix actuel :
+      <strong>{{ CONSENT_LABEL[analyticsConsent] || 'pas encore exprimé' }}</strong>.
+      <button type="button" class="link-btn" @click="reopenConsentChoice">
+        Modifier mon choix
+      </button>
+    </p>
 
-    <h2>4. Sous-traitants et destinataires</h2>
+    <h2>5. Finalités et bases légales</h2>
+    <ul>
+      <li>Gérer votre compte et synchroniser votre progression : exécution du service que vous demandez.</li>
+      <li>Mesure d'audience : votre consentement, retirable à tout moment.</li>
+      <li>Notifications push : votre consentement, donné dans la demande d'autorisation du téléphone.</li>
+      <li>Journaux techniques et prévention des abus : intérêt légitime à sécuriser le service.</li>
+    </ul>
+    <p>
+      Vos données ne sont jamais vendues ni utilisées à des fins publicitaires.
+    </p>
+
+    <h2>6. Sous-traitants</h2>
     <ul>
       <li>
-        <strong>Firebase / Google LLC</strong> — authentification, base de
-        données, fonctions serveur, Analytics et Cloud Messaging (notifications
-        push).
+        <strong>Infomaniak Network SA</strong> (Suisse) — hébergement du site.
       </li>
       <li>
-        <strong>Hébergement</strong> — Infomaniak Network SA (Suisse) pour le
-        site et le serveur de génération.
-      </li>
-      <li>
-        <strong>Fournisseurs de modèles d'IA</strong> — lorsque vous
-        générez, corrigez ou dialoguez avec un
-        texte, les consignes que vous saisissez (thème, niveau, texte à
-        corriger ou message) sont envoyées par notre serveur à un fournisseur
-        de modèle de langage tiers : actuellement DeepSeek, avec
-        possibilité de recourir à GLM ou Kimi. Nous n'envoyons pas votre
-        adresse e-mail à ces fournisseurs ; évitez toutefois de saisir des
-        informations personnelles dans vos consignes.
+        <strong>Google LLC (Firebase)</strong> — authentification, base de
+        données et, si vous l'acceptez, Google Analytics et les notifications
+        push.
       </li>
     </ul>
-
-    <h2>5. Transferts hors de Suisse et de l'UE/EEE</h2>
     <p>
-      Google (États-Unis), Apple et les fournisseurs de modèles d'IA
-      peuvent traiter des données hors de Suisse et de l'Union européenne,
-      notamment aux États-Unis et en Chine pour les fournisseurs d'IA.
-      Les garanties applicables dépendent de chaque fournisseur (clauses
-      contractuelles types, cadre de protection des données UE-États-Unis
-      pour les entités certifiées, etc.) ; nous ne maîtrisons pas ces
-      mécanismes et vous invitons à consulter les politiques de
-      confidentialité de ces fournisseurs.
-    </p>
-    <!-- A RELIRE PAR UN JURISTE : transferts hors UE/CH (États-Unis, Chine) et garanties réellement en place avec chaque fournisseur ; à compléter/valider. -->
-
-    <h2>6. Partage public (rôle Enseignant)</h2>
-    <p>
-      Les comptes dotés du rôle Enseignant peuvent générer une URL publique pour partager un
-      texte créé. Toute personne disposant de ce lien peut consulter le texte
-      sans créer de compte Leggendo ; aucune donnée n'est collectée auprès de
-      ces visiteurs par notre service de comptes. Seul le titulaire du compte
-      reste responsable du contenu qu'il choisit de partager.
+      Leggendo ne vend rien : aucun prestataire de paiement n'est utilisé.
+      Les fonctions d'intelligence artificielle sont désactivées : aucune
+      donnée n'est transmise à un fournisseur de modèles d'IA. Jusqu'en
+      octobre 2026, les consignes saisies dans « Créer son texte »,
+      « Scrivi » et « Dialogo » étaient envoyées à DeepSeek (Chine), sans
+      votre adresse e-mail.
     </p>
 
-    <h2>7. Application mobile (Android / iOS)</h2>
+    <h2>7. Transferts hors de Suisse et de l'UE</h2>
     <p>
-      Les applications Android et iOS de Leggendo utilisent le microphone
-      pour les exercices de prononciation : vous répétez une phrase en
-      italien et la reconnaissance vocale du système (Google sur Android,
-      Apple sur iOS) transcrit ce que vous dites afin d'évaluer les mots
-      reconnus. L'audio est traité par le service de reconnaissance vocale
-      du système d'exploitation et n'est ni stocké ni transmis à nos
-      serveurs ; seul le résultat texte de la transcription est utilisé,
-      localement, pour l'exercice en cours. Les applications ne contiennent
-      aucun SDK publicitaire ; les données transmises sont celles décrites
-      aux sections 2 à 5 (compte, Firebase dont Analytics et notifications
-      push, paiements, IA).
+      Google peut traiter des données aux États-Unis. Google LLC est
+      certifiée au Data Privacy Framework UE–États-Unis et Suisse–États-Unis,
+      reconnus comme offrant un niveau de protection adéquat ; les clauses
+      contractuelles types de Google s'appliquent en complément.
     </p>
 
-    <h2>8. Cookies et stockage local</h2>
+    <h2>8. Stockage local</h2>
     <p>
-      Le site utilise le stockage local de votre navigateur pour mémoriser
-      vos préférences de lecture et permettre le fonctionnement hors ligne
-      (PWA). Google Analytics peut déposer ou lire un identifiant technique
-      dans votre navigateur pour la mesure d'audience. Aucun cookie
-      publicitaire n'est utilisé.
+      Le site enregistre dans votre navigateur vos préférences de lecture,
+      votre progression hors connexion et votre choix de mesure d'audience,
+      et met en cache ses fichiers pour fonctionner hors ligne. Ces données
+      restent sur votre appareil et ne nécessitent pas de consentement, car
+      elles sont indispensables au service que vous utilisez.
     </p>
 
-    <h2>9. Conservation et suppression</h2>
+    <h2>9. Durées de conservation</h2>
+    <ul>
+      <li>Données de compte et progression : jusqu'à la suppression du compte.</li>
+      <li>Statistiques Google Analytics : 14 mois au maximum ; cookies : 13 mois au maximum.</li>
+      <li>Choix de mesure d'audience : 6 mois, puis la question vous est reposée.</li>
+      <li>Journaux techniques du serveur (adresse IP) : 90 jours au maximum.</li>
+      <li>Messages envoyés via la page Contact : le temps de traiter votre demande.</li>
+    </ul>
+
+    <h2>10. Suppression du compte</h2>
     <p>
-      Vos données de compte sont conservées tant que votre compte est actif.
-      Vous pouvez supprimer vous-même votre compte depuis la page « Mon
-      profil » : le compte, votre progression, vos textes créés, vos tâches de
-      génération et votre quota sont alors supprimés immédiatement et
-      définitivement de nos bases. Vous pouvez aussi écrire à
-      <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>. Les
-      données détenues par Google (Analytics) obéissent à leurs propres
-      durées de conservation.
+      Vous pouvez supprimer votre compte à tout moment depuis votre profil ou
+      la page <RouterLink :to="{ name: 'delete-account' }">Supprimer mon compte</RouterLink>.
+      Sont alors effacés immédiatement : le compte, la progression, les mots
+      favoris, les textes créés, les écrits soumis à la correction, les
+      dialogues, les crédits et tâches de génération et les traces de l'ancien
+      essai gratuit. Seuls subsistent des compteurs techniques anonymes
+      (nombre et coût des anciennes générations, sans lien avec vous). Vous
+      pouvez aussi demander la suppression par e-mail.
     </p>
 
-    <h2>10. Vos droits</h2>
+    <h2>11. Vos droits</h2>
     <p>
-      Conformément à la loi fédérale suisse sur la protection des données
-      (nLPD) et au RGPD, vous disposez d'un droit d'accès, de rectification,
-      de suppression, de limitation, d'opposition et de portabilité de vos
-      données. Pour les exercer, écrivez à
-      <a href="mailto:lberthod@gmail.com">lberthod@gmail.com</a>. Vous pouvez
-      aussi saisir le Préposé fédéral à la protection des données et à la
-      transparence (PFPDT) ou l'autorité de contrôle de votre pays.
+      Selon la loi fédérale suisse sur la protection des données (nLPD) et le
+      RGPD, vous pouvez accéder à vos données, les rectifier, les supprimer,
+      en limiter le traitement, vous y opposer et en demander la portabilité.
+      Écrivez à <a :href="`mailto:${CONTACT_EMAIL}`">{{ CONTACT_EMAIL }}</a> :
+      nous répondons sous 30 jours. Vous pouvez aussi saisir le Préposé
+      fédéral à la protection des données et à la transparence (PFPDT) ou,
+      en France, la CNIL.
     </p>
   </SceneLayout>
 </template>
+
+<style scoped>
+.link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #8f5220;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>

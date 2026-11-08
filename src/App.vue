@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import NetworkBanner from './components/NetworkBanner.vue'
+import ConsentBanner from './components/ConsentBanner.vue'
 import NativeTabBar from './components/NativeTabBar.vue'
 import NativeAccountButton from './components/NativeAccountButton.vue'
 import { initProgressSync } from './lib/progressSync.js'
@@ -92,6 +93,7 @@ function onPushKeydown(e) {
   </main>
   <NativeTabBar v-if="isNativeApp" />
   <NativeAccountButton v-if="isNativeApp" />
+  <ConsentBanner />
 
   <!-- Écran explicatif des notifications : affiché après un premier texte
        terminé, jamais à la connexion. La demande système n'a lieu qu'au tap

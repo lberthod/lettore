@@ -176,6 +176,13 @@ function dropStalePublicFiles() {
 }
 
 export default defineConfig({
+  // Interrupteur de vente (src/lib/catalogAccess.js) remplacé par un littéral :
+  // Rollup élimine les branches mortes, si bien que la page Abonnement et le
+  // code Stripe / Google Play / App Store n'entrent pas dans le build gratuit
+  // (vérifié par scripts/check-build-leaks.mjs).
+  define: {
+    'import.meta.env.VITE_PAID_PLANS': JSON.stringify(process.env.VITE_PAID_PLANS ?? 'false'),
+  },
   plugins: [
     freeContentPlugin(),
     catalogPlugin(),

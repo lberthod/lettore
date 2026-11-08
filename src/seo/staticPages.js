@@ -6,6 +6,7 @@
 // `document`) : il doit pouvoir être importé tel quel côté Node.
 
 import { LEVEL_LANDING_PAGES } from './landingPages.js'
+import { paidPlansEnabled } from '../lib/catalogAccess.js'
 
 export const SITE_URL = 'https://leggendo.fr'
 
@@ -18,7 +19,9 @@ export const DEFAULT_DESCRIPTION =
 // contenu sous forme de données (catalogue, textes). Pour les autres pages
 // indexables, seul le <head> (titre/description/canonical) est corrigé.
 // noindex : exclue du sitemap et marquée <meta name="robots" content="noindex">.
-export const ROUTES = [
+// paid : n'existe que si la vente est active (paidPlansEnabled) — sinon ni
+// page prérendue, ni entrée de sitemap, et le routeur redirige.
+const ALL_ROUTES = [
   {
     path: '/',
     title: DEFAULT_TITLE,
@@ -69,13 +72,14 @@ export const ROUTES = [
     path: '/contact',
     title: 'Contact — Leggendo',
     description:
-      "Une question, une suggestion ou un problème avec Leggendo ? Écrivez-nous : nous répondons aux demandes sur les textes, les comptes et les applications.",
+      "Une question, une suggestion ou un problème avec Leggendo ? Écrivez-nous : nous répondons aux demandes sur les textes, votre compte et les applications.",
   },
   {
     path: '/abonnement',
-    title: 'Gratuit — Leggendo',
+    paid: true,
+    title: 'Abonnement — Leggendo',
     description:
-      "Leggendo est gratuit : tous les textes gradués en italien avec traduction française et audio, les Classici, les Notizie et des crédits IA chaque mois, avec un simple compte.",
+      "Accédez à tous les textes gradués en italien avec traduction française et audio. Découvrez les formules d'abonnement de Leggendo.",
   },
   {
     path: '/verbi',
@@ -124,7 +128,7 @@ export const ROUTES = [
     path: '/conditions',
     title: "Conditions d'utilisation — Leggendo",
     description:
-      "Conditions générales d'utilisation de Leggendo : service gratuit, compte utilisateur, contenus générés par IA, propriété intellectuelle et limites de responsabilité.",
+      "Conditions d'utilisation de Leggendo, service gratuit de lecture en italien : accès, compte, contenus, responsabilité et droit applicable.",
   },
   {
     path: '/deleteAccount',
@@ -159,6 +163,8 @@ export const ROUTES = [
     noindex: true,
   },
 ]
+
+export const ROUTES = ALL_ROUTES.filter((r) => !r.paid || paidPlansEnabled())
 
 export function findRoute(path) {
   return ROUTES.find((r) => r.path === path)
